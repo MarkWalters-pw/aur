@@ -1,0 +1,30 @@
+name: Build
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - name: Update
+        run: $HOME/arch/update
+
+      - name: Setup environment
+        run: $HOME/arch/installarch
+
+      - name: Build package
+        run: $HOME/arch/buildpkg
+
+      - name: Test package
+        run: pwd
+
+      - name: Cleanup environment
+        run: $HOME/arch/removearch
+

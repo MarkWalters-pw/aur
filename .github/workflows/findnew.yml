@@ -1,0 +1,15 @@
+name: FindNewVersion
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - name: Update
+        run: $HOME/arch/update
+
+      - name: Find new version and update
+        run: $HOME/arch/findnew
+

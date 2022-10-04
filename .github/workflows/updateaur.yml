@@ -1,0 +1,15 @@
+name: UpdateAUR
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - name: Update
+        run: $HOME/arch/update
+
+      - name: Update AUR
+        run: $HOME/arch/updateaur
+
