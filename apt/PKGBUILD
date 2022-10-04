@@ -19,6 +19,7 @@ provides=('libapt-inst' 'libapt-pkg' 'libapt-pkg-dev' 'apt-utils')
 source=("https://salsa.debian.org/apt-team/apt/-/archive/$pkgver/apt-$pkgver.tar.bz2")
 sha512sums=('f24789ac9502a0c9e5e2597e24142ca61f34a2a364771001349121d2bdc37b2a20395ec1afa0098a01d0c384f8d4fe9554ea8af2fe6064bd11c3db10e68131f6')
 
+#
 build() {
   cd "$srcdir/$pkgbase-$pkgver"
 
