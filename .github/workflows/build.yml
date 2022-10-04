@@ -23,7 +23,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Setup environment
-        run: pwd
+        run: ls /ram/runner
 
       - name: Build package
         run: pwd
