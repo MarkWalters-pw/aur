@@ -22,12 +22,18 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - name: Update
+        run: $HOME\arch\update
+
       - name: Setup environment
-        run: ls /ram/runner
+        run: $HOME\arch\installarch
 
       - name: Build package
         run: pwd
 
       - name: Test package
         run: pwd
+
+      - name: Cleanup environment
+        run: $HOME\arch\removearch
 
