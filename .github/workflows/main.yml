@@ -3,12 +3,14 @@ name: Build
 on:
   push:
     branches: [ "master" ]
-    paths:
-      - apt
+    paths-ignore:
+      - '.github/**'
+      - pkg.lst
   pull_request:
     branches: [ "master" ]
-    paths:
-      - apt
+    paths-ignore:
+      - '.github/**'
+      - pkg.lst
 
   workflow_dispatch:
 
