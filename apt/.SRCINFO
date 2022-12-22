@@ -1,6 +1,6 @@
 pkgbase = apt
-	pkgver = 2.5.3
-	pkgrel = 1
+	pkgver = 2.5.4
+	pkgrel = 2
 	url = https://salsa.debian.org/apt-team/apt
 	arch = i686
 	arch = x86_64
@@ -16,6 +16,7 @@ pkgbase = apt
 	makedepends = perl-text-wrapi18n
 	makedepends = perl-locale-gettext
 	makedepends = perl-yaml-tiny
+	makedepends = perl-syntax-keyword-try
 	makedepends = perl-term-readkey
 	makedepends = perl-sgmls
 	makedepends = perl-module-build
@@ -28,7 +29,7 @@ pkgbase = apt
 	provides = libapt-pkg
 	provides = libapt-pkg-dev
 	provides = apt-utils
-	source = https://salsa.debian.org/apt-team/apt/-/archive/2.5.3/apt-2.5.3.tar.bz2
+	source = https://salsa.debian.org/apt-team/apt/-/archive/2.5.4/apt-2.5.4.tar.bz2
 	sha512sums = f24789ac9502a0c9e5e2597e24142ca61f34a2a364771001349121d2bdc37b2a20395ec1afa0098a01d0c384f8d4fe9554ea8af2fe6064bd11c3db10e68131f6
 
 pkgname = apt
