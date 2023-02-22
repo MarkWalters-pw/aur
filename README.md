@@ -7,3 +7,9 @@ To use this repo append the following to /etc/paru.conf
 [mwaur]
 URL = https://github.com/MarkWalters-pw/aur.git
 ```
+Then install with: 
+`paru -Sy --needed --noconfirm focalboard-server`
+
+or
+
+`paru -Sy --needed --noconfirm mwaur/focalboard-server`
