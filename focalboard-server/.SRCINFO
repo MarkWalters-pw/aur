@@ -14,7 +14,9 @@ pkgbase = focalboard-server
 	conflicts = focalboard-server
 	backup = opt/focalboard-7.8.2-1/config.json
 	source = focalboard-server::git+https://github.com/mattermost/focalboard.git#tag=v7.8.2
+	source = mattermost-server::git+https://github.com/mattermost/mattermost-server#tag=v7.8.0
 	source = focalboard.service
+	sha256sums = SKIP
 	sha256sums = SKIP
 	sha256sums = 8b3037f093de8610ff50aff2aba3c31e137af0067fda508291a1abfbdd4c72b1
 

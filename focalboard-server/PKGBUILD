@@ -20,9 +20,11 @@ options=()
 install=focalboard.install
 changelog=
 source=("${pkgname}::git+https://github.com/mattermost/focalboard.git#tag=v${pkgver}"
+        "mattermost-server::git+https://github.com/mattermost/mattermost-server#tag=v7.8.0"
         'focalboard.service')
 noextract=()
 sha256sums=('SKIP'
+            'SKIP'
             '8b3037f093de8610ff50aff2aba3c31e137af0067fda508291a1abfbdd4c72b1')
 validpgpkeys=()
 
