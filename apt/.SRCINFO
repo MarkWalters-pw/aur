@@ -1,6 +1,6 @@
 pkgbase = apt
-	pkgver = 2.6.0
-	pkgrel = 1
+	pkgver = 2.7.0
+	pkgrel = 2
 	url = https://salsa.debian.org/apt-team/apt
 	arch = i686
 	arch = x86_64
@@ -20,6 +20,7 @@ pkgbase = apt
 	makedepends = perl-locale-gettext
 	makedepends = perl-yaml-tiny
 	makedepends = perl-syntax-keyword-try
+	makedepends = dpkg
 	makedepends = perl-term-readkey
 	makedepends = perl-sgmls
 	makedepends = perl-module-build
@@ -29,8 +30,8 @@ pkgbase = apt
 	provides = libapt-pkg
 	provides = libapt-pkg-dev
 	provides = apt-utils
-	source = https://salsa.debian.org/apt-team/apt/-/archive/2.6.0/apt-2.6.0.tar.bz2
-	sha512sums = 41f37a38cfb57b8791b76888aa8a5f0808130758b9dc5c1ab989074d055717030e59ca69d31f2443cf38309245126e792721642d15d4bb4063e151b67b1329b0
+	source = https://salsa.debian.org/apt-team/apt/-/archive/2.7.0/apt-2.7.0.tar.bz2
+	sha512sums = aec8603b535d0b89007b6a967150f1633900b3f0f3191c85bb84a78ef8069fcd5e838858ad22ba23b8e3c2e29e39d27438b0d23e2edbbdc91d1ca2fdbf3b7f76
 
 pkgname = apt
 	pkgdesc = Command-line package manager used on Debian-based systems
