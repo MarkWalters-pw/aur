@@ -7,7 +7,7 @@
 
 pkgbase=apt
 pkgname=('apt' 'apt-docs')
-pkgver=2.7.0
+pkgver=2.7.1
 pkgrel=2
 arch=('i686' 'x86_64')
 url='https://salsa.debian.org/apt-team/apt'
@@ -17,7 +17,7 @@ makedepends=('cmake' 'docbook-xsl' 'doxygen' 'git' 'gtest' 'w3m' 'triehash' 'po4
              'perl-term-readkey' 'perl-sgmls' 'perl-module-build' 'perl-unicode-linebreak' 'perl-pod-parser')
 provides=('libapt-inst' 'libapt-pkg' 'libapt-pkg-dev' 'apt-utils')
 source=("https://salsa.debian.org/apt-team/apt/-/archive/$pkgver/apt-$pkgver.tar.bz2")
-sha512sums=('aec8603b535d0b89007b6a967150f1633900b3f0f3191c85bb84a78ef8069fcd5e838858ad22ba23b8e3c2e29e39d27438b0d23e2edbbdc91d1ca2fdbf3b7f76')
+sha512sums=('4f11897157ff63285eeb5a8647bf56ad2b035d0fed7174304dfa9506f9a0ffc0decd38d5b1adbff601ab3b4a1fb488ed7499d6d3998833c9c98e8b67a75aa003')
 
 build() {
   cd "$srcdir/$pkgbase-$pkgver"
