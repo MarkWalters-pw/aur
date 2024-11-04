@@ -1,0 +1,20 @@
+pkgbase = audacious-gtk3
+	pkgdesc = Lightweight, advanced audio player focused on audio quality
+	pkgver = 4.4.2
+	pkgrel = 1
+	url = https://audacious-media-player.org/
+	install = audacious.install
+	arch = i686
+	arch = x86_64
+	license = BSD
+	makedepends = meson
+	makedepends = glib2-devel
+	depends = gtk3
+	depends = glib2
+	optdepends = unzip: zipped skins support
+	provides = audacious
+	conflicts = audacious
+	source = https://distfiles.audacious-media-player.org/audacious-4.4.2.tar.bz2
+	sha256sums = 34509504f8c93b370420d827703519f0681136672e42d56335f26f7baec95005
+
+pkgname = audacious-gtk3

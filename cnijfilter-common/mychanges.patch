@@ -1,0 +1,548 @@
+diff -ruN cnijfilter-source-4.10-1.orig/backendnet/backend/cnijnetlm.c cnijfilter-source-4.10-1/backendnet/backend/cnijnetlm.c
+--- cnijfilter-source-4.10-1.orig/backendnet/backend/cnijnetlm.c	2013-12-24 07:39:15.000000000 +0330
++++ cnijfilter-source-4.10-1/backendnet/backend/cnijnetlm.c	2020-09-17 19:44:53.592370556 +0430
+@@ -252,6 +252,7 @@
+ 		
+ 		// waitpid( g_pid, NULL, 0) ;		/* child process wait		*/
+ 		child_pid = wait(&child_status);
++		(void) child_pid;
+ 		
+ 		if (!WIFEXITED(child_status)){
+ 			return( CANON_STS_NG ) ;
+@@ -361,6 +362,9 @@
+ 			fds.events = POLLOUT;
+ 			
+ 			pollst = poll(&fds, 1, polltime);
++			if (pollst == -1) {
++				goto error;
++			}
+ 			
+ 			if (fds.revents & POLLOUT){
+ 				fseek(tempfp, read_position, SEEK_SET);
+diff -ruN cnijfilter-source-4.10-1.orig/backendnet/lmonitor/cnijnetchk.c cnijfilter-source-4.10-1/backendnet/lmonitor/cnijnetchk.c
+--- cnijfilter-source-4.10-1.orig/backendnet/lmonitor/cnijnetchk.c	2013-12-24 07:39:15.000000000 +0330
++++ cnijfilter-source-4.10-1/backendnet/lmonitor/cnijnetchk.c	2020-09-17 19:44:53.592370556 +0430
+@@ -337,7 +337,7 @@
+ 	bufsize = (src[0] << 8) + src[1]; 
+ 	buf = (char*)&(src[2]);
+ 
+-	len = strlen(buf);
++	len = strnlen(buf, bufsize);
+ 	if (len > 1023) len = 1023;
+ 	
+ 	keylen = strlen(key);
+diff -ruN cnijfilter-source-4.10-1.orig/bscc2sts/src/langmon.c cnijfilter-source-4.10-1/bscc2sts/src/langmon.c
+--- cnijfilter-source-4.10-1.orig/bscc2sts/src/langmon.c	2013-12-24 07:39:15.000000000 +0330
++++ cnijfilter-source-4.10-1/bscc2sts/src/langmon.c	2020-09-17 19:44:53.592370556 +0430
+@@ -258,7 +258,7 @@
+ 
+ static int print_normal()
+ {
+-	int error = 0;
++	//int error = 0;
+ 	int r_size;
+ 	int w_size;
+ 	char *buf;
+@@ -274,7 +274,7 @@
+ 			w_size = write(PRNT_PATH, ptr, r_size);
+ 			if(w_size < 0){
+ 				/* write error */
+-				error = -1;
++				//error = -1;
+ 				goto print_normal_exit;
+ 			}
+ 			ptr += w_size;
+diff -ruN cnijfilter-source-4.10-1.orig/bscc2sts/src/lm_print.c cnijfilter-source-4.10-1/bscc2sts/src/lm_print.c
+--- cnijfilter-source-4.10-1.orig/bscc2sts/src/lm_print.c	2013-12-24 07:39:15.000000000 +0330
++++ cnijfilter-source-4.10-1/bscc2sts/src/lm_print.c	2020-09-17 19:44:53.592370556 +0430
+@@ -244,13 +244,17 @@
+ 		ptr = buf;
+ 		/* data print(output) loop */
+ 		for(;r_size > 0;r_size -= w_size){
++#ifdef DEBUG
+ 			int err;
++#endif
+ 
+ 			signal_block(sigmask);   /* signal block */
+ 			get_printer_sem(sem_id); /* printer lock */
+ 
+ 			w_size = p_dvacs->ptdev_write(dev_path, ptr, r_size); /* data write -> printer */
++#ifdef DEBUG
+ 			err = errno;
++#endif
+ #ifdef DATA_LOG
+ 			if(log_hand >=0 && w_size > 0)
+ 				write(log_hand, ptr, w_size);
+diff -ruN cnijfilter-source-4.10-1.orig/bscc2sts/src/lm_status.c cnijfilter-source-4.10-1/bscc2sts/src/lm_status.c
+--- cnijfilter-source-4.10-1.orig/bscc2sts/src/lm_status.c	2013-12-24 07:39:15.000000000 +0330
++++ cnijfilter-source-4.10-1/bscc2sts/src/lm_status.c	2020-09-17 19:44:53.592370556 +0430
+@@ -516,7 +516,9 @@
+ 	int dev_path = PRNT_PATH;
+ 	short	cnclerr = -1;
+ 	char *cmd_wrbuf = NULL;
++#ifdef DEBUG
+ 	short i=0;
++#endif
+ 
+ 	/* write command buffer */
+ 	cmd_wrbuf = (char *)malloc(MAX_STATBUF); /* 4096 */
+@@ -579,7 +581,9 @@
+ 
+ 		/* wait "CNCL_CHECK_START2:response" */
+ 		cnclerr = -1;
++#ifdef DEBUG
+ 		i = 0;
++#endif
+ 		while( cnclerr != CNCL_OK ){
+ #ifdef DEBUG
+ 			fprintf(log_path, "CNCL_CHECK_START2:response @  i : %d\n",i);
+diff -ruN cnijfilter-source-4.10-1.orig/cngpij/cngpij/bjcups.c cnijfilter-source-4.10-1/cngpij/cngpij/bjcups.c
+--- cnijfilter-source-4.10-1.orig/cngpij/cngpij/bjcups.c	2013-12-24 07:39:15.000000000 +0330
++++ cnijfilter-source-4.10-1/cngpij/cngpij/bjcups.c	2020-09-17 19:44:53.595703924 +0430
+@@ -660,22 +660,6 @@
+ 
+ 
+ 
+-static cups_lang_t * bjcupsLangDefault( )
+-{
+-	cups_lang_t	*pLanguage;
+-	char		*tLang;	
+-	
+-	if( (tLang = getenv("LC_ALL"))==NULL)
+-			tLang = getenv("LANG");
+-	
+-	pLanguage = cupsLangDefault();
+-	setlocale(LC_ALL,tLang);
+-	
+-	return pLanguage;
+-}
+-
+-
+-
+ static short getDeviceURI( const char *pDestName, char *pDeviceURI, short bufSize)
+ {
+ /*** Parameters start ***/
+@@ -683,7 +667,6 @@
+ 	ipp_t			*pRequest,					// Pointer to CUPS IPP request.
+ 					*pResponse;					// Pointer to CUPS IPP response.
+ 	ipp_attribute_t	*pAttribute;				// Pointer to CUPS attributes.
+-	cups_lang_t		*pLanguage;					// Pointer to language.
+ 	char			*pPrinter = NULL;			// Pointer to printer name.
+ 	char			*pDUri = NULL;				// Pointer to Device uri.
+ 	short			retVal = -1;	// Return value.
+@@ -695,41 +678,34 @@
+ 		goto onErr;
+ 	}
+ 	else {
+-		pRequest = ippNew();
+-		
+-		pRequest->request.op.operation_id = CUPS_GET_PRINTERS;
+-		pRequest->request.op.request_id   = 1;
+-		
+-		pLanguage = bjcupsLangDefault();	// cupsLangDefault() -> bjcupsLangDefault() for cups-1.1.19
+-		
+-		ippAddString(pRequest, IPP_TAG_OPERATION, IPP_TAG_CHARSET, "attributes-charset", NULL, cupsLangEncoding(pLanguage));
+-		ippAddString(pRequest, IPP_TAG_OPERATION, IPP_TAG_LANGUAGE, "attributes-natural-language", NULL, pLanguage->language);
++		pRequest = ippNewRequest(CUPS_GET_PRINTERS);
++
+ 		ippAddString(pRequest, IPP_TAG_OPERATION, IPP_TAG_URI, "printer-uri", NULL, NULL);
+ 		
+ 		if ((pResponse = cupsDoRequest(pHTTP, pRequest, "/")) != NULL) {
+-			if (pResponse->request.status.status_code > IPP_OK_CONFLICT) {
++			if (ippGetStatusCode(pResponse) > IPP_OK_CONFLICT) {
+ 				fputs("ERROR: IPP ERROR\n", stderr);
+ 				goto onErr;
+ 			}
+ 			else {
+-				pAttribute = pResponse->attrs;
++        pAttribute = ippFirstAttribute(pResponse);
+ 
+ 				while (pAttribute != NULL) {
+-					while (pAttribute != NULL && pAttribute->group_tag != IPP_TAG_PRINTER) {
+-						pAttribute = pAttribute->next;
++					while (pAttribute != NULL && ippGetGroupTag(pAttribute) != IPP_TAG_PRINTER) {
++            pAttribute = ippNextAttribute(pResponse);
+ 					}
+ 					if (pAttribute == NULL) {
+ 						break;
+ 					}
+ 					
+-					while (pAttribute != NULL && pAttribute->group_tag == IPP_TAG_PRINTER) {
+-						if (strcmp(pAttribute->name, "printer-name") == 0 && pAttribute->value_tag == IPP_TAG_NAME) {
+-							pPrinter = pAttribute->values[0].string.text;
++					while (pAttribute != NULL && ippGetGroupTag(pAttribute) == IPP_TAG_PRINTER) {
++						if (strcmp(ippGetName(pAttribute), "printer-name") == 0 && ippGetValueTag(pAttribute) == IPP_TAG_NAME) {
++              pPrinter = ippGetString(pAttribute, 0, NULL);
+ 						}
+-						if (strcmp(pAttribute->name, "device-uri") == 0 && pAttribute->value_tag == IPP_TAG_URI) {
+-							pDUri = pAttribute->values[0].string.text;
++						if (strcmp(ippGetName(pAttribute), "device-uri") == 0 && ippGetValueTag(pAttribute) == IPP_TAG_URI) {
++              pDUri = ippGetString(pAttribute, 0, NULL);
+ 						}
+-						pAttribute = pAttribute->next;
++            pAttribute = ippNextAttribute(pResponse);
+ 					}
+ 
+ 					if (strcasecmp(pDestName, pPrinter) == 0) {
+@@ -738,7 +714,7 @@
+ 					}
+ 					
+ 					if (pAttribute != NULL)
+-						 pAttribute = pAttribute->next;
++            pAttribute = ippNextAttribute(pResponse);
+ 				}
+ 			}
+ 			
+@@ -748,8 +724,6 @@
+ 			pDeviceURI = '\0';
+ 			goto onErr;
+ 		}
+-		
+-		cupsLangFree(pLanguage);
+ 		httpClose(pHTTP);
+ 	}
+ 	
+diff -ruN cnijfilter-source-4.10-1.orig/cngpij/cngpij/getipc.c cnijfilter-source-4.10-1/cngpij/cngpij/getipc.c
+--- cnijfilter-source-4.10-1.orig/cngpij/cngpij/getipc.c	2013-12-24 07:39:15.000000000 +0330
++++ cnijfilter-source-4.10-1/cngpij/cngpij/getipc.c	2020-09-17 19:44:53.595703924 +0430
+@@ -60,59 +60,57 @@
+ 
+ 	while( (client_fd = accept(server_fd, (struct sockaddr *)&sun, &len)) >= 0 )
+ 	{
++#define READ_FD_AND_BREAK_UPON_ERROR(FD, BUF, LEN) \
++		if ( read(FD, BUF, LEN) == -1 ) \
++		{ \
++			ret = RET_ERROR; \
++			break; \
++		}
+ 		/* read command first */
+-		read(client_fd, buf, IPCCMDLEN);
++		READ_FD_AND_BREAK_UPON_ERROR(client_fd, buf, IPCCMDLEN);
+ 
+ 		if( strcmp(buf, "PRINT") == 0 )
+ 		{											/* PRINT command */
+-			read(client_fd, pipc, sizeof(IPCU));
+-			close(client_fd);
++			READ_FD_AND_BREAK_UPON_ERROR(client_fd, pipc, sizeof(IPCU));
+ 			ret = RET_PRINT;
+ 			break;
+ 		}
+ 		else if( strcmp(buf, "CANCEL") == 0 )
+ 		{											/* CANCEL command */
+-			close(client_fd);
+ 			ret = RET_CANCEL;
+ 			break;
+ 		}
+ 		else if( strcmp(buf, "PDATA") == 0 )
+ 		{											/* PDATA command (for maintenance) */
+-			read(client_fd, pipc, sizeof(IPCU));
+-			close(client_fd);
++			READ_FD_AND_BREAK_UPON_ERROR(client_fd, pipc, sizeof(IPCU));
+ 			ret = RET_PDATA;
+ 			break;
+ 		}
+ 		else if( strcmp(buf, "POWEROFF") == 0 )
+ 		{											/* POWEROFF (for maintenance. added in 09_2h) */
+-			read(client_fd, pipc, sizeof(IPCU));
+-			close(client_fd);
++			READ_FD_AND_BREAK_UPON_ERROR(client_fd, pipc, sizeof(IPCU));
+ 			ret = RET_POWEROFF;
+ 			break;
+ 		}
+ 		else if( strcmp(buf, "FDATA") == 0 )
+ 		{											/* FDATA command (for maintenance) */
+-			read(client_fd, pipc, sizeof(IPCU));
+-			close(client_fd);
++			READ_FD_AND_BREAK_UPON_ERROR(client_fd, pipc, sizeof(IPCU));
+ 			ret = RET_FDATA;
+ 			break;
+ 		}
+ 		else if( strcmp(buf, "WDATA") == 0 )
+ 		{											/* WDATA command (for maintenance) */
+-			read(client_fd, pipc, sizeof(IPCU));
+-			close(client_fd);
++			READ_FD_AND_BREAK_UPON_ERROR(client_fd, pipc, sizeof(IPCU));
+ 			ret = RET_WDATA;
+ 			break;
+ 		}
+ 		else if( strcmp(buf, "EXECLM") == 0 )
+ 		{											/* EXECLM command (to invoke Language Manager) */
+-			close(client_fd);
+ 			ret = RET_EXECLM;
+ 			break;
+ 		}
+ 		else
+ 		{
+-			close(client_fd);
+ 			ret = RET_ERROR;
+ 			break;
+ 		}
+@@ -120,6 +118,8 @@
+ 
+ 	if(client_fd < 0)
+ 		return RET_ERROR;
++	else
++		close(client_fd);
+ 
+ 	close(server_fd);
+ 	unlink(sname);
+diff -ruN cnijfilter-source-4.10-1.orig/cngpijmnt/src/getipc.c cnijfilter-source-4.10-1/cngpijmnt/src/getipc.c
+--- cnijfilter-source-4.10-1.orig/cngpijmnt/src/getipc.c	2013-12-24 07:39:15.000000000 +0330
++++ cnijfilter-source-4.10-1/cngpijmnt/src/getipc.c	2020-09-17 19:44:53.595703924 +0430
+@@ -62,59 +62,57 @@
+ 
+ 	while( (client_fd = accept(server_fd, (struct sockaddr *)&sun, &len)) >= 0 )
+ 	{
++#define READ_FD_AND_BREAK_UPON_ERROR(FD, BUF, LEN) \
++		if ( read(FD, BUF, LEN) == -1 ) \
++		{ \
++			ret = RET_ERROR; \
++			break; \
++		}
+ 		/* read command first */
+-		read(client_fd, buf, IPCCMDLEN);
++		READ_FD_AND_BREAK_UPON_ERROR(client_fd, buf, IPCCMDLEN);
+ 
+ 		if( strcmp(buf, "PRINT") == 0 )
+ 		{											/* PRINT command */
+-			read(client_fd, pipc, sizeof(IPCU));
+-			close(client_fd);
++			READ_FD_AND_BREAK_UPON_ERROR(client_fd, pipc, sizeof(IPCU));
+ 			ret = RET_PRINT;
+ 			break;
+ 		}
+ 		else if( strcmp(buf, "CANCEL") == 0 )
+ 		{											/* CANCEL command */
+-			close(client_fd);
+ 			ret = RET_CANCEL;
+ 			break;
+ 		}
+ 		else if( strcmp(buf, "PDATA") == 0 )
+ 		{											/* PDATA command (for maintenance) */
+-			read(client_fd, pipc, sizeof(IPCU));
+-			close(client_fd);
++			READ_FD_AND_BREAK_UPON_ERROR(client_fd, pipc, sizeof(IPCU));
+ 			ret = RET_PDATA;
+ 			break;
+ 		}
+ 		else if( strcmp(buf, "POWEROFF") == 0 )
+ 		{											/* POWEROFF (for maintenance. added in 09_2h) */
+-			read(client_fd, pipc, sizeof(IPCU));
+-			close(client_fd);
++			READ_FD_AND_BREAK_UPON_ERROR(client_fd, pipc, sizeof(IPCU));
+ 			ret = RET_POWEROFF;
+ 			break;
+ 		}
+ 		else if( strcmp(buf, "FDATA") == 0 )
+ 		{											/* FDATA command (for maintenance) */
+-			read(client_fd, pipc, sizeof(IPCU));
+-			close(client_fd);
++			READ_FD_AND_BREAK_UPON_ERROR(client_fd, pipc, sizeof(IPCU));
+ 			ret = RET_FDATA;
+ 			break;
+ 		}
+ 		else if( strcmp(buf, "WDATA") == 0 )
+ 		{											/* WDATA command (for maintenance) */
+-			read(client_fd, pipc, sizeof(IPCU));
+-			close(client_fd);
++			READ_FD_AND_BREAK_UPON_ERROR(client_fd, pipc, sizeof(IPCU));
+ 			ret = RET_WDATA;
+ 			break;
+ 		}
+ 		else if( strcmp(buf, "EXECLM") == 0 )
+ 		{											/* EXECLM command (to invoke Language Manager) */
+-			close(client_fd);
+ 			ret = RET_EXECLM;
+ 			break;
+ 		}
+ 		else
+ 		{
+-			close(client_fd);
+ 			ret = RET_ERROR;
+ 			break;
+ 		}
+@@ -122,6 +120,8 @@
+ 
+ 	if(client_fd < 0)
+ 		return RET_ERROR;
++	else
++		close(client_fd);
+ 
+ 	close(server_fd);
+ 	unlink(sname);
+diff -ruN cnijfilter-source-4.10-1.orig/cngpijmnt/src/main.c cnijfilter-source-4.10-1/cngpijmnt/src/main.c
+--- cnijfilter-source-4.10-1.orig/cngpijmnt/src/main.c	2013-12-24 07:39:15.000000000 +0330
++++ cnijfilter-source-4.10-1/cngpijmnt/src/main.c	2020-09-17 19:44:53.595703924 +0430
+@@ -283,22 +283,6 @@
+ 
+ 
+ 
+-static cups_lang_t * bjcupsLangDefault( )
+-{
+-	cups_lang_t	*pLanguage;
+-	char		*tLang;	
+-	
+-	if( (tLang = getenv("LC_ALL"))==NULL)
+-			tLang = getenv("LANG");
+-	
+-	pLanguage = cupsLangDefault();
+-	setlocale(LC_ALL,tLang);
+-	
+-	return pLanguage;
+-}
+-
+-
+-
+ static short getDeviceURI( const char *pDestName, char *pDeviceURI, short bufSize)
+ {
+ /*** Parameters start ***/
+@@ -306,7 +290,6 @@
+ 	ipp_t			*pRequest,					// Pointer to CUPS IPP request.
+ 					*pResponse;					// Pointer to CUPS IPP response.
+ 	ipp_attribute_t	*pAttribute;				// Pointer to CUPS attributes.
+-	cups_lang_t		*pLanguage;					// Pointer to language.
+ 	char			*pPrinter = NULL;			// Pointer to printer name.
+ 	char			*pDUri = NULL;				// Pointer to Device uri.
+ 	short			retVal = -1;	// Return value.
+@@ -318,41 +301,34 @@
+ 		goto onErr;
+ 	}
+ 	else {
+-		pRequest = ippNew();
+-		
+-		pRequest->request.op.operation_id = CUPS_GET_PRINTERS;
+-		pRequest->request.op.request_id   = 1;
++		pRequest = ippNewRequest(CUPS_GET_PRINTERS);
+ 		
+-		pLanguage = bjcupsLangDefault();	// cupsLangDefault() -> bjcupsLangDefault() for cups-1.1.19
+-		
+-		ippAddString(pRequest, IPP_TAG_OPERATION, IPP_TAG_CHARSET, "attributes-charset", NULL, cupsLangEncoding(pLanguage));
+-		ippAddString(pRequest, IPP_TAG_OPERATION, IPP_TAG_LANGUAGE, "attributes-natural-language", NULL, pLanguage->language);
+ 		ippAddString(pRequest, IPP_TAG_OPERATION, IPP_TAG_URI, "printer-uri", NULL, NULL);
+ 		
+ 		if ((pResponse = cupsDoRequest(pHTTP, pRequest, "/")) != NULL) {
+-			if (pResponse->request.status.status_code > IPP_OK_CONFLICT) {
++			if (ippGetStatusCode(pResponse) > IPP_OK_CONFLICT) {
+ 				fputs("ERROR: IPP ERROR\n", stderr);
+ 				goto onErr;
+ 			}
+ 			else {
+-				pAttribute = pResponse->attrs;
++				pAttribute = ippFirstAttribute(pResponse);
+ 
+ 				while (pAttribute != NULL) {
+-					while (pAttribute != NULL && pAttribute->group_tag != IPP_TAG_PRINTER) {
+-						pAttribute = pAttribute->next;
++					while (pAttribute != NULL && ippGetGroupTag(pAttribute) != IPP_TAG_PRINTER) {
++						pAttribute = ippNextAttribute(pResponse);
+ 					}
+ 					if (pAttribute == NULL) {
+ 						break;
+ 					}
+ 					
+-					while (pAttribute != NULL && pAttribute->group_tag == IPP_TAG_PRINTER) {
+-						if (strcmp(pAttribute->name, "printer-name") == 0 && pAttribute->value_tag == IPP_TAG_NAME) {
+-							pPrinter = pAttribute->values[0].string.text;
++					while (pAttribute != NULL && ippGetGroupTag(pAttribute) == IPP_TAG_PRINTER) {
++						if (strcmp(ippGetName(pAttribute), "printer-name") == 0 && ippGetValueTag(pAttribute) == IPP_TAG_NAME) {
++							pPrinter = ippGetString(pAttribute, 0, NULL);
+ 						}
+-						if (strcmp(pAttribute->name, "device-uri") == 0 && pAttribute->value_tag == IPP_TAG_URI) {
+-							pDUri = pAttribute->values[0].string.text;
++						if (strcmp(ippGetName(pAttribute), "device-uri") == 0 && ippGetValueTag(pAttribute) == IPP_TAG_URI) {
++							pDUri = ippGetString(pAttribute, 0, NULL);
+ 						}
+-						pAttribute = pAttribute->next;
++						pAttribute =ippNextAttribute(pResponse);
+ 					}
+ 
+ 					if (strcasecmp(pDestName, pPrinter) == 0) {
+@@ -361,7 +337,7 @@
+ 					}
+ 					
+ 					if (pAttribute != NULL)
+-						 pAttribute = pAttribute->next;
++						 pAttribute = ippNextAttribute(pResponse);
+ 				}
+ 			}
+ 			
+@@ -371,8 +347,6 @@
+ 			pDeviceURI = '\0';
+ 			goto onErr;
+ 		}
+-		
+-		cupsLangFree(pLanguage);
+ 		httpClose(pHTTP);
+ 	}
+ 	
+diff -ruN cnijfilter-source-4.10-1.orig/cnijnpr/src/cnijnpr.c cnijfilter-source-4.10-1/cnijnpr/src/cnijnpr.c
+--- cnijfilter-source-4.10-1.orig/cnijnpr/src/cnijnpr.c	2013-12-24 07:39:15.000000000 +0330
++++ cnijfilter-source-4.10-1/cnijnpr/src/cnijnpr.c	2020-09-17 19:48:19.677933956 +0430
+@@ -32,9 +32,9 @@
+ #include <signal.h>
+ #include <sys/ioctl.h>
+ #include <net/if.h>
+-#include <sys/sysctl.h>
+ #include <config.h>
+ #include <fcntl.h>
++#include <unistd.h>
+ 
+ #include <dlfcn.h>
+ #include "cncl.h"
+@@ -96,7 +96,7 @@
+ /*		argv[8]: /dev/usb/lp0                 */
+ /*                                            */
+ /**********************************************/
+-int main (int argc, const char **argv)
++int main (int argc, const char *argv[])
+ {
+ 	int		fd;
+ 	int		rtn = 0 ;
+@@ -301,7 +301,7 @@
+ 			datawrite01:
+ 			//printf("child :X--- buf[0] ---X = %s\n", &buf[0]);
+ 			//printf("child :X--- buf[1] ---X = %s\n", &buf[1]);
+-			wrtn = write(fd, buf, STATUS_BUF + 1); /* for bug fix Ver.3.20 buf[0] */
++			wrtn = write(fd, buf, STATUS_BUF); /* for bug fix Ver.3.20 buf[0] */
+ 			//wrtn = write(fd, buf, 4096); /* for bug fix Ver.3.20 buf[0] */
+ 
+ 			if( fdusb > 0 ) {
+@@ -583,7 +583,7 @@
+ /************************************************/
+ /*             get_printer_devid               */
+ /************************************************/
+-static int get_printer_devid(fdusb)
++static int get_printer_devid(int fdusb)
+ {
+ 	char	devid[1024];
+ 	char	*ivec = NULL;
+diff -ruN cnijfilter-source-4.10-1.orig/pstocanonij/filter/pstocanonij.c cnijfilter-source-4.10-1/pstocanonij/filter/pstocanonij.c
+--- cnijfilter-source-4.10-1.orig/pstocanonij/filter/pstocanonij.c	2013-12-24 07:39:15.000000000 +0330
++++ cnijfilter-source-4.10-1/pstocanonij/filter/pstocanonij.c	2020-09-17 19:44:53.595703924 +0430
+@@ -387,7 +387,7 @@
+ 			{
+ 				if( !IS_BLANK(*p_code)  )
+ 					break;
+-				*p_code++;
++				p_code++;
+ 			}
+ 			while( *p_code != '\0' )
+ 			{
+@@ -1322,7 +1322,7 @@
+ 
+ int exec_filter(char *cmd_buf, int ofd, int fds[2])
+ {
+-	int status = 0;
++	//int status = 0;
+ 	int	child_pid = -1;
+ 	char *filter_param[4];
+ 	char shell_buf[256];
+@@ -1362,7 +1362,7 @@
+ 				execv(shell_buf, filter_param);
+ 						
+ 				fprintf(stderr, "execl() error\n");
+-				status = -1;
++				//status = -1;
+ 			}
+ 		}
+ 		else if( child_pid != -1 )

@@ -1,0 +1,9 @@
+post_install() {
+  echo
+  echo "-------------------------------------------------"
+  echo " You need to install audacious-plugins-gtk3 now. "
+  echo " It cannot be added as dependency because        "
+  echo " this would cause a circular dependency.         "
+  echo "-------------------------------------------------"
+  echo
+}

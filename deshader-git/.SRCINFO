@@ -1,0 +1,43 @@
+pkgbase = deshader-git
+	pkgdesc = Shader debugging via GLSL code instrumentation. This is preliminary package, does not coply with all package guidelines.
+	pkgver = re11bb4f
+	pkgrel = 1
+	url = https://github.com/OSDVF/deshader
+	arch = armv7h
+	arch = aarch64
+	arch = x86_64
+	arch = i686
+	license = GPL-3.0-or-later
+	makedepends = git
+	makedepends = zig=0.13.0
+	makedepends = binutils
+	makedepends = unzip
+	makedepends = curl
+	makedepends = zip
+	makedepends = tar
+	makedepends = pkgconf
+	depends = gtk3
+	depends = webkit2gtk
+	optdepends = vcpkg: for building with system'S VCPKG; downloaded internally at build when not present
+	optdepends = bun: for building Editor with system's bun; downloaded internally at build when not present
+	optdepends = wolfssl: will be installed by VCPKG when not present
+	optdepends = glslang: will be installed by VCPKG when not present
+	optdepends = libnfd: will be installed by VCPKG when not present
+	provides = deshader=re11bb4f
+	provides = deshader-run=re11bb4f
+	provides = libdeshader.so
+	conflicts = deshader
+	conflicts = deshader-run
+	options = !lto
+	source = deshader.desktop
+	source = 48.png
+	source = 256.png
+	source = scalable.svg
+	source = git+https://github.com/OSDVF/deshader.git
+	sha256sums = a6ba07a7cd31917da89e94930cba71e78f079dccfc7449b537247ded63822e3d
+	sha256sums = 00bcebeeb6423504e5b877c398751bfa15df23266131ffe1fb3058e2f1511de4
+	sha256sums = dd20694f4cc973e44ce5df87a7da166515aa9df6a8045fa13df726980308aa92
+	sha256sums = 7869f875bc5c6144b149f34e5ae13327707fbd12394db057976012d3240ada8e
+	sha256sums = SKIP
+
+pkgname = deshader-git

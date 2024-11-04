@@ -1,8 +1,6 @@
 # MW AUR
 
-This is where I test out package updates before pushing to the AUR.  Currently I only help maintain apt and triehash. 
-
-To use this repo you need the latest version of paru-git and append the following to /etc/paru.conf
+To use this repo you need the latest version of paru-bin and append the following to /etc/paru.conf
 ```
 [mwaur]
 URL = https://github.com/MarkWalters-pw/aur.git
@@ -13,3 +11,7 @@ Then install with:
 or
 
 `paru -Sy --needed --noconfirm mwaur/focalboard-server`
+
+
+The AUR has rate a daily rate limit of 4000 reqeusts. This repo is also an attempt to avoid rate limits.
+

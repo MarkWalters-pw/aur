@@ -1,0 +1,21 @@
+pkgbase = dnsenum2
+	pkgdesc = Enumerate DNS information from a domain and discover non-contiguous ip blocks
+	pkgver = 1.3.2
+	pkgrel = 1
+	url = https://github.com/SparrowOchon/dnsenum2
+	arch = any
+	license = GPL-2.0-or-later
+	depends = perl
+	depends = perl-net-dns
+	depends = perl-net-ip
+	depends = perl-net-netmask
+	depends = perl-string-random
+	optdepends = perl-net-whois-ip: whois queries support
+	optdepends = perl-html-parser: google scraping support
+	optdepends = perl-www-mechanize: google scraping support
+	optdepends = perl-xml-writer: xml output support
+	conflicts = dnsenum
+	source = dnsenum2-1.3.2.tar.gz::https://github.com/SparrowOchon/dnsenum2/archive/refs/tags/v1.3.2.tar.gz
+	sha512sums = 47915d3a61223898aa50b7d96993ac6dce26027e1ab6ed4f373d7e4df7e293583657f0c030fde00f6ec34e04a0d83a505abbcb0dbbf4db27cb29676cb3979156
+
+pkgname = dnsenum2

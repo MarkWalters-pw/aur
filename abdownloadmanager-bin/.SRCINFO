@@ -1,0 +1,26 @@
+pkgbase = abdownloadmanager-bin
+	pkgdesc = A Download Manager that speeds up your downloads
+	pkgver = 1.4.1
+	pkgrel = 1
+	url = https://abdownloadmanager.com/
+	arch = x86_64
+	license = Apache-2.0
+	depends = glibc
+	depends = java-runtime
+	depends = zlib
+	depends = alsa-lib
+	depends = libglvnd
+	depends = libxi
+	depends = freetype2
+	depends = libxtst
+	depends = libxrender
+	depends = fontconfig
+	depends = libx11
+	depends = libxext
+	provides = abdownloadmanager
+	conflicts = abdownloadmanager
+	options = !debug
+	source = https://github.com/amir1376/abdownloadmanager/releases/download/v1.4.1/ABDownloadManager_1.4.1_linux.deb
+	sha256sums = 654ca099e7b928ffe93bbbf96f342f2b1dc0a3c76b0bdf6ca3253572d3501669
+
+pkgname = abdownloadmanager-bin

@@ -1,0 +1,36 @@
+pkgbase = firefox-beta-bin-all-localizations
+	pkgdesc = Perl script for installing latest FF beta in the language of your choice
+	pkgver = 133.0b4
+	pkgrel = 1
+	url = https://www.mozilla.com/firefox/channel/#beta
+	arch = i686
+	arch = x86_64
+	license = MPL
+	license = GPL
+	license = LGPL
+	makedepends = perl-file-slurp
+	makedepends = perl-lwp-protocol-https
+	makedepends = perl-switch
+	depends = alsa-lib
+	depends = gtk3
+	depends = libxt
+	depends = dbus-glib
+	depends = nss
+	optdepends = networkmanager: Location detection via available WiFi networks
+	optdepends = ffmpeg: additional video and audio decoders
+	optdepends = hunspell: Spell checking
+	optdepends = hyphen: Hyphenation
+	optdepends = libnotify: Notification integration
+	optdepends = pulseaudio: Audio support
+	provides = firefox=133.0b4
+	conflicts = firefox-beta-bin
+	source = firefox-beta-bin.desktop
+	source = ff-downloader.pl
+	source = firefox-beta.sh
+	source = policies.json
+	md5sums = 4c0ca11a8034b53c0c5b7b9830442cd7
+	md5sums = b4d5afd97c8ac229f6027d7853c73c0c
+	md5sums = 68c9e357994d714b25f91be9db2a8594
+	md5sums = 2756ce31c6f1fbabd237a268f4339155
+
+pkgname = firefox-beta-bin-all-localizations

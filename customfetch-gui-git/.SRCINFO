@@ -1,0 +1,24 @@
+pkgbase = customfetch-gui-git
+	pkgdesc = Highly customizable and fast system information fetch program (with GUI mode)
+	pkgver = 0.10.1.r0.bc3769d
+	pkgrel = 1
+	url = https://github.com/Toni500github/customfetch
+	arch = x86_64
+	arch = aarch64
+	license = BSD-3-Clause
+	makedepends = base-devel
+	depends = gtk3
+	depends = gtkmm3
+	optdepends = ttf-liberation: Font to be used for GUI (recommended)
+	optdepends = wayland-client: Library for getting the Wayland compositor faster
+	optdepends = dconf: Alternative to the slow gsettings command
+	optdepends = libxfce4util: Query XFCE4 version faster
+	conflicts = customfetch
+	conflicts = customfetch-gui
+	conflicts = customfetch-git
+	conflicts = customfetch-bin
+	conflicts = customfetch-gui-bin
+	source = git+https://github.com/Toni500github/customfetch.git
+	sha256sums = SKIP
+
+pkgname = customfetch-gui-git

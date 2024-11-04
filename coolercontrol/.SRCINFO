@@ -1,0 +1,34 @@
+pkgbase = coolercontrol
+	pkgdesc = A program to monitor and control your cooling devices
+	pkgver = 1.4.4
+	pkgrel = 1
+	url = https://gitlab.com/coolercontrol/coolercontrol
+	arch = x86_64
+	license = GPL-3.0-or-later
+	checkdepends = appstream-glib
+	checkdepends = desktop-file-utils
+	makedepends = appmenu-gtk-module
+	makedepends = cargo
+	makedepends = gtk3
+	makedepends = libappindicator-gtk3
+	makedepends = librsvg
+	makedepends = libvips
+	makedepends = nodejs>=18
+	makedepends = npm
+	makedepends = openssl
+	makedepends = webkit2gtk-4.1
+	depends = gcc-libs
+	depends = glibc
+	depends = gtk3
+	depends = hicolor-icon-theme
+	depends = libappindicator-gtk3
+	depends = webkit2gtk-4.1
+	depends = coolercontrold
+	depends = coolercontrol-liqctld
+	provides = coolercontrol
+	conflicts = coolercontrol
+	options = !lto
+	source = https://gitlab.com/coolercontrol/coolercontrol/-/archive/1.4.4/coolercontrol-1.4.4.tar.gz
+	sha256sums = acf5a27111122230d243e66eae85212f9c01a402b12028a8918fc785414bb713
+
+pkgname = coolercontrol

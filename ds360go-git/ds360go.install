@@ -1,0 +1,14 @@
+post_install() {
+  for u in $(w -h | awk '{if (!seen[$1]++) print $1}'); do
+    systemctl -M "$u@" --user daemon-reload
+  done
+  udevadm control --reload
+}
+
+post_upgrade() {
+  post_install "$1"
+}
+
+post_remove() {
+  post_install "$1"
+}

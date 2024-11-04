@@ -1,0 +1,22 @@
+all_off="$(tput sgr0)"
+bold="${all_off}$(tput bold)"
+blue="${bold}$(tput setaf 4)"
+red="${bold}$(tput setaf 1)"
+
+warn() {
+  printf "${blue}==>${red} WARN:${bold} $1${all_off}\n"
+}
+
+post_install() {
+  warn "If you're having issues with DBus denying access to tpm2-abrmd daemon"
+  warn "please add your user to the tss group:"
+  warn "useradd -aG tss <your_username>"
+}
+
+post_upgrade() {
+  post_install
+}
+
+post_remove() {
+  post_install
+}

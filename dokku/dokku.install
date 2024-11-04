@@ -1,0 +1,170 @@
+#!/bin/bash
+set -eo pipefail
+[[ $TRACE ]] && set -x
+
+readonly DOKKU_ROOT="${DOKKU_ROOT:-/home/dokku}"
+readonly DOKKU_LIB_ROOT="${DOKKU_LIB_PATH:-/var/lib/dokku}"
+readonly DOKKU_LOGS_DIR="${DOKKU_LOGS_DIR:-/var/log/dokku}"
+
+call-sshcommand() {
+  if [[ -x /usr/bin/sshcommand ]]; then
+    /usr/bin/sshcommand "$@"
+  else
+    echo "Unable to find sshcommand binary" 1>&2
+    exit 1
+  fi
+}
+
+setup-user() {
+  echo "Setting up dokku user"
+  call-sshcommand create dokku /usr/bin/dokku
+  grep -i -E "^docker" /etc/group || groupadd docker
+  usermod -aG docker dokku
+  mkdir -p "${DOKKU_ROOT}/.ssh" "${DOKKU_ROOT}/.dokkurc"
+  touch "${DOKKU_ROOT}/.ssh/authorized_keys"
+  chown -R dokku:dokku "${DOKKU_ROOT}/.ssh" "${DOKKU_ROOT}/.dokkurc"
+}
+
+setup-storage() {
+  echo "Setting up storage directories"
+  mkdir -p "${DOKKU_LIB_ROOT}/data" "${DOKKU_LIB_ROOT}/data/storage"
+  chown dokku:dokku "${DOKKU_LIB_ROOT}/data"
+}
+
+setup-plugins() {
+  echo "Deleting invalid plugins"
+  if [ -f "${DOKKU_LIB_ROOT}/core-plugins/available/" ]; then
+    find "${DOKKU_LIB_ROOT}/core-plugins/available/" -type d -empty -delete
+  fi
+  if [ -f "${DOKKU_LIB_ROOT}/core-plugins/enabled/" ]; then
+    find "${DOKKU_LIB_ROOT}/core-plugins/enabled/" -type d -empty -delete
+  fi
+  if [ -f "${DOKKU_LIB_ROOT}/plugins/available/" ]; then
+    find "${DOKKU_LIB_ROOT}/plugins/available/" -type d -empty -delete
+  fi
+  if [ -f "${DOKKU_LIB_ROOT}/plugins/enabled/" ]; then
+    find "${DOKKU_LIB_ROOT}/plugins/enabled/" -type d -empty -delete
+  fi
+
+  echo "Setting up plugin directories"
+  # should be replaced by `plugn init`
+  mkdir -p "${DOKKU_LIB_ROOT}/core-plugins/available" "${DOKKU_LIB_ROOT}/plugins/available"
+  mkdir -p "${DOKKU_LIB_ROOT}/core-plugins/enabled" "${DOKKU_LIB_ROOT}/plugins/enabled"
+  touch "${DOKKU_LIB_ROOT}/core-plugins/config.toml" "${DOKKU_LIB_ROOT}/plugins/config.toml"
+
+  echo "Migrating old plugins"
+  find "${DOKKU_LIB_ROOT}/plugins" -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | while read -r plugin; do
+    if [ "${plugin}" = "available" ] || [ "${plugin}" = "enabled" ]; then
+      continue
+    elif [ -f "${DOKKU_LIB_ROOT}/plugins/${plugin}/.core" ]; then
+      rm -rf "${DOKKU_LIB_ROOT}/plugins/${plugin}"
+    elif [ ! -d "${DOKKU_LIB_ROOT}/plugins/available/${plugin}" ]; then
+      mv "${DOKKU_LIB_ROOT}/plugins/${plugin}" "${DOKKU_LIB_ROOT}/plugins/available"
+    fi
+  done
+
+  echo "Enabling all core plugins"
+  find "${DOKKU_LIB_ROOT}/core-plugins/available" -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | while read -r plugin; do
+    if [ ! -d "${DOKKU_LIB_ROOT}/plugins/available/${plugin}" ]; then
+      ln -s "${DOKKU_LIB_ROOT}/core-plugins/available/${plugin}" "${DOKKU_LIB_ROOT}/plugins/available/${plugin}"
+      PLUGIN_PATH="${DOKKU_LIB_ROOT}/core-plugins" plugn enable "${plugin}"
+      PLUGIN_PATH="${DOKKU_LIB_ROOT}/plugins" plugn enable "${plugin}"
+    fi
+  done
+  find -L "${DOKKU_LIB_ROOT}/core-plugins" -type l -delete
+  find -L "${DOKKU_LIB_ROOT}/plugins" -type l -delete
+  chown dokku:dokku -R "${DOKKU_LIB_ROOT}/plugins" "${DOKKU_LIB_ROOT}/core-plugins"
+
+  echo "Install all core plugins"
+  echo -e "#!/bin/sh\\n\\n~/.basher/bash -l \$1 \"\$2 \$3\"" > /tmp/login-basher
+  chmod +x /tmp/login-basher
+  BASH_BIN=/tmp/login-basher dokku plugin:install --core
+  rm /tmp/login-basher
+
+  echo "%dokku ALL=(ALL) NOPASSWD:/usr/bin/crontab -l -u dokku" > /etc/sudoers.d/dokku-crontab
+  echo "%dokku ALL=(ALL) NOPASSWD:/usr/bin/crontab -r -u dokku" >> /etc/sudoers.d/dokku-crontab
+  echo "%dokku ALL=(ALL) NOPASSWD:/usr/bin/crontab -u dokku *" >> /etc/sudoers.d/dokku-crontab
+  chmod 440 /etc/sudoers.d/dokku-crontab
+
+  rm -f /etc/update-motd.d/99-dokku
+  sed -i 's/ syslog dokku$/ root dokku/g' /etc/logrotate.d/dokku
+}
+
+setup-sshcommand() {
+  echo "Ensure proper sshcommand path"
+  echo '/usr/bin/dokku' > "${DOKKU_ROOT}/.sshcommand"
+  if [[ -f .ssh/authorized_keys ]]; then
+    sed -i.bak 's#/usr/local/bin/dokku#/usr/bin/dokku#' "${DOKKU_ROOT}/.ssh/authorized_keys"
+    rm "${DOKKU_ROOT}/.ssh/authorized_keys"
+  fi
+}
+
+post_install() {
+  setup-user
+  setup-storage
+  setup-plugins
+  setup-sshcommand
+
+  echo "
+    If using virtualhost routing is desired (eg. my-app => my-app.dokku.me), set a global domain for your server:
+      $ dokku domains:set-global dokku.me
+
+    Setup a user's ssh key for deployment by passing in the public ssh key as shown:
+      $ echo 'CONTENTS_OF_ID_RSA_PUB_FILE' | dokku ssh-keys:add admin
+
+    To enable nginx autoconfiguration, add to your /etc/nginx/nginx.conf in http section:
+      include /etc/nginx/conf.d/*.conf;
+    And reload nginx:
+      $ sudo systemctl reload nginx
+  "
+}
+
+post_upgrade() {
+  post_install "$1"
+}
+
+pre_remove() {
+  echo "Destroying deployed applications"
+  for app in $(DOKKU_QUIET_OUTPUT=1 dokku apps:list); do
+    dokku --force apps:destroy "$app"
+  done
+
+  # HACK: Only disable core plugins, as we don't know what data users store in non-core plugin directories
+  echo "Disabling all core plugins"
+  find "${DOKKU_LIB_ROOT}/core-plugins/available" -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | while read -r plugin; do
+    if [[ ! -d "${DOKKU_LIB_ROOT}/plugins/available/$plugin" ]]; then
+      rm "${DOKKU_LIB_ROOT}/plugins/available/$plugin"
+      PLUGIN_PATH="${DOKKU_LIB_ROOT}/core-plugins" plugn disable "$plugin"
+      PLUGIN_PATH="${DOKKU_LIB_ROOT}/plugins" plugn disable "$plugin"
+    fi
+  done
+
+  dokku cleanup
+}
+
+post_remove() {
+  rm -f /var/cache/dokku-completion
+  rm -f /etc/systemd/system/dokku-redeploy.service
+  rm -f /etc/systemd/system/dokku-retire.timer
+  rm -f /etc/systemd/system/dokku-retire.service
+  rm -f /etc/logrotate.d/dokku
+  rm -f /etc/sudoers.d/dokku-crontab
+
+  # Remove nginx configuration
+  rm -f /etc/nginx/conf.d/dokku.conf
+
+  # Remove data and logs
+  rm -rf "${DOKKU_LIB_ROOT}"
+  rm -rf "${DOKKU_LOGS_DIR}"
+
+  # Remove dokku user and group
+  userdel -r dokku || true
+  groupdel dokku &>/dev/null
+
+  echo "
+    Please remove to your /etc/nginx/nginx.conf in http section:
+      include /etc/nginx/conf.d/*.conf;
+    And reload nginx:
+      $ sudo systemctl reload nginx
+  "
+}

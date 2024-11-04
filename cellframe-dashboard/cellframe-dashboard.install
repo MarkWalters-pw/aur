@@ -1,0 +1,33 @@
+showmsg() {
+BOLD=$(tput bold)
+NORMAL=$(tput sgr0)
+
+echo -e "
+${BOLD}RUNNING CELLFRAME DASHBOARD${NORMAL}
+
+    1.) Enable and run systemd service with ${BOLD}sudo systemctl enable --now cellframe-dashboard.service${NORMAL}
+    2.) Launch Cellframe Dashboard from application menu
+    "
+}
+
+post_install() {
+    showmsg
+}
+
+post_upgrade() {
+    echo ":: Executing systemctl daemon-reload..."
+    systemctl daemon-reload
+
+    systemctl is-active --quiet cellframe-dashboard.service \
+    && echo ":: Restarting cellframe-dashboard.service..." \
+    && systemctl restart cellframe-dashboard.service \
+    || true
+}
+
+pre_remove() {
+    systemctl is-active --quiet cellframe-dashboard.service \
+    && systemctl stop cellframe-dashboard.service \
+    && systemctl disable cellframe-dashboard.service \
+    || true
+    systemctl daemon-reload
+}
