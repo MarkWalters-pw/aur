@@ -1,0 +1,8 @@
+post_upgrade() {
+	echo ">>    The Reto network is unofficial. Do not trade more than you're"
+	echo ">>    willing to lose!"
+}
+
+post_install() {
+	post_upgrade
+}

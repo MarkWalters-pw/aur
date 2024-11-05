@@ -1,0 +1,12 @@
+[Unit]
+Description=Home Assistant Desktop Companion
+Documentation=https://github.com/tobias-kuendig/hacompanion
+After=network.target
+
+[Service]
+EnvironmentFile=-%E/hacompanion/env
+ExecStart=/usr/bin/hacompanion -config %E/hacompanion/config.toml
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

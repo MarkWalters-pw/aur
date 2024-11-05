@@ -1,0 +1,26 @@
+pkgbase = gromacs
+	pkgdesc = A versatile package to perform molecular dynamics, i.e. simulate the Newtonian equations of motion for systems with hundreds to millions of particles.
+	pkgver = 2024.3
+	pkgrel = 3
+	url = http://www.gromacs.org/
+	arch = x86_64
+	license = LGPL
+	makedepends = cmake
+	makedepends = gcc13
+	depends = lapack
+	depends = fftw
+	depends = zlib
+	depends = hwloc
+	depends = gcc13-libs
+	depends = tinyxml2
+	optdepends = cuda: Nvidia GPU support
+	optdepends = vmd: Accesibility to other trajectory formats (ONLY WHEN COMPILING)
+	optdepends = perl: needed for demux.pl and xplor2gmx.pl
+	optdepends = opencl-clover-mesa: OpenCL support for AMD/Intel GPU
+	optdepends = opencl-rusticl-mesa: OpenCL support for AMD/Intel GPU
+	optdepends = opencl-nvidia: OpenCL support for Nvidia GPU
+	options = !libtool
+	source = https://gitlab.com/gromacs/gromacs/-/archive/v2024.3/gromacs-v2024.3.tar.gz
+	sha256sums = f1a7cbf5417dd850fc5a542bc54e82945b639f0abf3ead632733cdaec34f4815
+
+pkgname = gromacs

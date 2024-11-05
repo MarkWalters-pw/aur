@@ -1,0 +1,26 @@
+pkgbase = guake-git
+	pkgdesc = Top-down terminal for Gnome using gtk3 and vte3
+	pkgver = 3.10.16.gdf9fbbee
+	pkgrel = 1
+	url = https://guake.github.io/
+	arch = any
+	license = GPL-2.0-or-later
+	makedepends = git
+	makedepends = python-pip
+	makedepends = make
+	depends = libkeybinder3
+	depends = libnotify
+	depends = libutempter
+	depends = libwnck3
+	depends = python-cairo
+	depends = python-dbus
+	depends = python-gobject
+	depends = python-pbr
+	depends = vte3
+	depends = python-yaml
+	provides = guake
+	conflicts = guake
+	source = git+https://github.com/Guake/guake.git
+	sha512sums = SKIP
+
+pkgname = guake-git

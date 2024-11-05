@@ -1,0 +1,10 @@
+[Unit]
+Description=GNUnet user service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/lib/gnunet/libexec/gnunet-service-arm -c ~/.config/gnunet.conf
+
+[Install]
+WantedBy=multi-user.target

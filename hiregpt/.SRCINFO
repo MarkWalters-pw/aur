@@ -1,0 +1,21 @@
+pkgbase = hiregpt
+	pkgdesc = Job application made easy with OpenAI GPT model.Use system-wide electron.
+	pkgver = 0.2.0
+	pkgrel = 10
+	url = https://github.com/jaejaywoo/HireGPT
+	arch = any
+	license = MIT
+	makedepends = npm
+	makedepends = gendesk
+	makedepends = nvm
+	makedepends = curl
+	makedepends = python
+	depends = electron23
+	options = !strip
+	options = !emptydirs
+	source = hiregpt-0.2.0.tar.gz::https://github.com/jaejaywoo/HireGPT/archive/refs/tags/v0.2.0.tar.gz
+	source = hiregpt.sh
+	sha256sums = 0314ae43b6671d7e80e261c096c76cdb564c509104b1cfbca20b1340ebb87ebd
+	sha256sums = 291f50480f5a61bc9c68db7d44cd0412071128706baa868a9cb854f8779a1980
+
+pkgname = hiregpt

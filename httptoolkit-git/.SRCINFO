@@ -1,0 +1,28 @@
+pkgbase = httptoolkit-git
+	pkgdesc = A beautiful, cross-platform & open-source HTTP(S) proxy, analyzer and client.Use system-wide electron.
+	pkgver = 1.19.0.r0.g66e6875
+	pkgrel = 1
+	url = https://httptoolkit.com/
+	arch = any
+	license = AGPL-3.0-or-later
+	makedepends = npm
+	makedepends = git
+	makedepends = nvm
+	makedepends = gendesk
+	makedepends = gcc
+	makedepends = cmake
+	makedepends = curl
+	depends = electron29
+	depends = mercurial
+	depends = nodejs
+	depends = java-runtime
+	provides = httptoolkit=1.19.0
+	conflicts = httptoolkit
+	options = !strip
+	options = !emptydirs
+	source = httptoolkit.git::git+https://github.com/httptoolkit/httptoolkit-desktop.git
+	source = httptoolkit.sh
+	sha256sums = SKIP
+	sha256sums = 291f50480f5a61bc9c68db7d44cd0412071128706baa868a9cb854f8779a1980
+
+pkgname = httptoolkit-git

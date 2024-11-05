@@ -1,0 +1,19 @@
+pkgbase = homebridge
+	pkgdesc = HomeKit support for the impatient
+	pkgver = 1.8.5
+	pkgrel = 1
+	url = https://github.com/homebridge/homebridge
+	arch = any
+	license = Apache
+	makedepends = npm
+	makedepends = jq
+	depends = nodejs
+	optdepends = homebridge-config-ui-x: for web-based management tool
+	noextract = homebridge-1.8.5.tgz
+	options = !emptydirs
+	options = !strip
+	source = https://registry.npmjs.org/homebridge/-/homebridge-1.8.5.tgz
+	sha512sums = a2fa80235068a6c0f45f0135819a16658ae82e7da720d9d0f13c0778a8ea48f3c32b9486d129616c2e69a5c99c8e7f5253dc48b1228e719f50ba73f1a53ed5c7
+	b2sums = 7f45ff9e62e9e86aaffc4eabf6b18948d2b7de865590533ef265d42b5f088342d9a97c4f97be15eabb82a4c14810c87e731937e22834b301e8b4714798cf5536
+
+pkgname = homebridge

@@ -1,0 +1,27 @@
+pkgbase = hdtv
+	pkgdesc = Nuclear spectrum analysis tool on top of the ROOT data analysis toolkit
+	pkgver = 24.10
+	pkgrel = 2
+	url = https://github.com/janmayer/hdtv
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = python-docutils
+	depends = glibc
+	depends = cern-vdt
+	depends = libx11
+	depends = python
+	depends = root
+	depends = python-matplotlib
+	depends = python-prompt_toolkit
+	depends = python-setuptools
+	depends = python-scipy
+	depends = python-traitlets
+	depends = python-uncertainties
+	provides = hdtv
+	conflicts = hdtv
+	options = !emptydirs
+	source = https://github.com/janmayer/hdtv/archive/v24.10.tar.gz
+	sha256sums = e54093917e5037efc747e8fc164d105f61f5e334fd65d0194bbed8b0a753b6e0
+
+pkgname = hdtv

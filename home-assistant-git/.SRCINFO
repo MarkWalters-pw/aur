@@ -1,0 +1,29 @@
+pkgbase = home-assistant-git
+	pkgdesc = Open source home automation that puts local control and privacy first
+	pkgver = 2024.10.2
+	pkgrel = 1
+	url = https://home-assistant.io/
+	arch = any
+	license = APACHE
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-setuptools-git
+	makedepends = python-wheel
+	depends = bluez-libs
+	depends = ffmpeg
+	depends = gcc
+	depends = lapack
+	depends = libffi
+	depends = libjpeg-turbo
+	depends = libtiff
+	depends = openjpeg2
+	depends = openssl
+	depends = python
+	depends = tzdata
+	depends = zlib
+	source = home-assistant-git::git+https://github.com/home-assistant/core.git#tag=6952d2420f38a793bbaf1375089d0e611f8e7766
+	source = home-assistant-git.service
+	b2sums = e679eaf30a24cc879fa0181916bb1956f2a96f63633c870d97d8c99b91f85e2ce522001840ea3d448c685947199ea3951a83744dccfa8e425bc9dde6026ad50b
+	b2sums = 289b6d19fa36b8bcea5790da13b83211eb44fcda889a24bf07a2ef70e806b5bb138c8f6387057d153e109a3bdabd0f4009c171fc82e021cdfd43db376704d416
+
+pkgname = home-assistant-git

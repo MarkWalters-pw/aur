@@ -1,0 +1,20 @@
+pkgbase = furtherance
+	pkgdesc = Track your time without being tracked
+	pkgver = 24.10.5
+	pkgrel = 1
+	url = https://github.com/unobserved-io/Furtherance
+	arch = x86_64
+	license = GPL-3.0-or-later
+	makedepends = cargo
+	depends = fontconfig
+	depends = freetype2
+	depends = gcc-libs
+	depends = glibc
+	depends = hicolor-icon-theme
+	depends = libx11
+	depends = libxss
+	options = !lto
+	source = furtherance-24.10.5.tar.gz::https://github.com/unobserved-io/Furtherance/archive/refs/tags/24.10.5.tar.gz
+	sha256sums = c665617e373401615d1dbc3cbed5d6a3e0dea01d1dd274cad264417741558e06
+
+pkgname = furtherance

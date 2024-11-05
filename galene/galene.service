@@ -1,0 +1,22 @@
+[Unit]
+Description=Galène videoconferencing server
+Documentation=https://galene.org
+Documentation=file:///usr/share/doc/galene/README.html
+After=network.target
+
+[Service]
+Type=simple
+User=galene
+Group=galene
+WorkingDirectory=~
+ExecStart=/usr/bin/galene -static /usr/share/galene/static
+Restart=on-failure
+LimitNOFILE=65536
+Environment=PION_LOG_TRACE=""
+Environment=PION_LOG_DEBUG=""
+Environment=PION_LOG_INFO="ice"
+Environment=PION_LOG_WARNING="all"
+Environment=PION_LOG_ERROR="all"
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,17 @@
+pkgbase = gatk
+	pkgdesc = Genome Analysis Toolkit https://doi.org/10.1101/gr.107524.110
+	pkgver = 4.6.1.0
+	pkgrel = 1
+	url = https://software.broadinstitute.org/gatk
+	arch = any
+	license = BSD
+	makedepends = git
+	makedepends = java-environment=17
+	makedepends = git-lfs
+	depends = java-runtime=17
+	depends = python
+	depends = r
+	source = gatk.sh
+	sha256sums = acc059e37c9e9e9053815095d3eecd00cd115d22f4c14bc4b97d7a5be13234c4
+
+pkgname = gatk

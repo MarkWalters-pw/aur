@@ -1,0 +1,23 @@
+pkgbase = fronde
+	pkgdesc = An opinionated static website generator for Emacs Org mode
+	pkgver = 0.6.0
+	pkgrel = 1
+	url = https://etienne.depar.is/fronde
+	arch = any
+	license = custom:WTFPL
+	checkdepends = ruby-rspec
+	checkdepends = ruby-simplecov
+	depends = emacs
+	depends = ruby>=3.3.0
+	depends = ruby<3.4.0
+	depends = ruby-i18n
+	depends = ruby-liquid
+	depends = ruby-nokogiri>=1.15
+	depends = ruby-rainbow
+	depends = ruby-rake
+	depends = ruby-webrick
+	options = !emptydirs
+	source = https://git.umaneti.net/fronde/snapshot/fronde-0.6.0.tar.gz
+	sha512sums = ddd04bf0ca9c3b2d436de5fe1af79e74704c8cf7dad1c5efcbd751b23db6a107f9b913fdb74fe97108642efb95ffd58dd708ab158f3f0d0f8b44b15e58a6884f
+
+pkgname = fronde

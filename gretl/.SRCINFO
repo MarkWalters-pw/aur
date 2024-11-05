@@ -1,0 +1,23 @@
+pkgbase = gretl
+	pkgdesc = A cross-platform software package for econometric analysis, written in the C programming language
+	pkgver = 2024c
+	pkgrel = 1
+	url = http://gretl.sourceforge.net/
+	arch = x86_64
+	license = GPL-3.0-only
+	depends = gtksourceview3
+	depends = blas
+	depends = curl
+	depends = lapack
+	depends = mpfr
+	depends = fftw
+	depends = gnuplot
+	depends = gmp
+	optdepends = readline: provides a nice editable command line in gretlcli
+	optdepends = JSON-GLib: provides for parsing of data from various websites
+	optdepends = openmpi: provides means for dividing labor among multiple nodes
+	options = !makeflags
+	source = https://downloads.sourceforge.net/project/gretl/gretl/2024c/gretl-2024c.tar.xz
+	sha256sums = 5fb7a81590ff8e0da0bdecbab686c77e2dfda9d79097a81cca93f800bc7b4f4f
+
+pkgname = gretl

@@ -1,0 +1,15 @@
+--- a/gpt4all-chat/CMakeLists.txt	2024-07-28 02:17:29.000000000 +0800
++++ b/gpt4all-chat/CMakeLists.txt	2024-08-08 10:36:24.999923967 +0800
+@@ -306,7 +306,11 @@
+ target_link_libraries(chat
+     PRIVATE llmodel)
+ 
+-
++if(LINUX)
++  set_target_properties(chat PROPERTIES
++    OUTPUT_NAME gpt4all-chat
++  )
++endif()
+ # -- install --
+ 
+ set(COMPONENT_NAME_MAIN ${PROJECT_NAME})

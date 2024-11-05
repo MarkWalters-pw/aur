@@ -1,0 +1,23 @@
+pkgbase = gnuradio-m2k-git
+	pkgdesc = A GNURadio out-of-tree module for interfacing with ADALM2000
+	pkgver = r45.a7bd915
+	pkgrel = 1
+	url = https://github.com/analogdevicesinc/gr-m2k
+	arch = x86_64
+	license = GPL-3.0-or-later
+	makedepends = swig
+	makedepends = cmake
+	makedepends = git
+	makedepends = ninja
+	makedepends = boost
+	makedepends = pybind11
+	makedepends = doxygen
+	depends = gnuradio
+	depends = gnuradio-companion
+	depends = libm2k
+	provides = gnuradio-m2k
+	conflicts = gnuradio-m2k
+	source = git+https://github.com/analogdevicesinc/gr-m2k.git
+	sha256sums = SKIP
+
+pkgname = gnuradio-m2k-git

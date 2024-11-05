@@ -1,0 +1,18 @@
+# Maintainer: Booomeii <604772159@qq.com>
+
+pkgname=gear-bin
+pkgver={{ version }}
+pkgrel=1
+pkgdesc="Web3 Ultimate Execution Engine"
+arch=(x86_64)
+url="https://github.com/gear-tech/gear"
+licenses=(GPL3)
+provides=("gear")
+conflicts=("gear")
+source=({{ source }})
+sha256sums=('{{ sha256sum }}')
+options=('!debug')
+
+package() {
+    install -Dm755 "${srcdir}/gear" "${pkgdir}/usr/bin/gear"
+}
