@@ -1,0 +1,19 @@
+pkgbase = dprint-bin
+	pkgdesc = Pluggable and configurable code formatting platform
+	pkgver = 0.47.5
+	pkgrel = 1
+	url = https://github.com/dprint/dprint
+	arch = x86_64
+	arch = aarch64
+	license = MIT
+	depends = gcc-libs
+	provides = dprint
+	conflicts = dprint
+	source = LICENSE
+	sha256sums = 43f8cfbeca17eccd83fc98f27d211073eaee5574fc3162f345acc196d6190ce7
+	source_x86_64 = dprint-bin-0.47.5-x86_64.zip::https://github.com/dprint/dprint/releases/download/0.47.5/dprint-x86_64-unknown-linux-gnu.zip
+	sha256sums_x86_64 = 123c20d147485e4cac60823e63c13f2cf9157615e5ffea61b431243f61227343
+	source_aarch64 = dprint-bin-0.47.5-aarch64.zip::https://github.com/dprint/dprint/releases/download/0.47.5/dprint-aarch64-unknown-linux-gnu.zip
+	sha256sums_aarch64 = dfb1e4046d6a48ccaa7fbdcc0c64a23ad8da12463b67a1b08737d5a94e144e48
+
+pkgname = dprint-bin

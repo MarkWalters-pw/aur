@@ -1,0 +1,36 @@
+pkgbase = cellframe-node
+	pkgdesc = Cellframe blockchain node with a powerful SDK
+	pkgver = 5.3.r3032.a018d95
+	pkgrel = 1
+	url = https://cellframe.net
+	install = cellframe-node.install
+	arch = x86_64
+	arch = aarch64
+	license = LGPL3
+	makedepends = git
+	makedepends = cmake
+	makedepends = python3
+	makedepends = libxslt
+	depends = logrotate
+	depends = libxcrypt-compat
+	provides = cellframe-node
+	provides = cellframe-node-cli
+	provides = cellframe-node-tool
+	provides = cellframe-node-config
+	replaces = cellframe-node-debug
+	options = !debug
+	options = !strip
+	source = git+https://gitlab.demlabs.net/cellframe/cellframe-node.git#commit=a018d95af6b9a909959a668f89bdc437c72b95af
+	source = cellframe-node.logrotate
+	source = cellframe-node.service
+	source = cellframe-node-asan.service
+	source = cellframe-node-tmpfiles.conf
+	source = cellframe-node-sysusers.conf
+	md5sums = SKIP
+	md5sums = a10650eb138f6fe0c4bbefa6557ffb4f
+	md5sums = 4bf9cc7596903ffa5aba7fa7922d9016
+	md5sums = da837da689d3741cae9366eefc86d9b3
+	md5sums = e334310bf6cd6c4bbe612733eee928e0
+	md5sums = ecead745d3492224d2a5a2f7d9d561b0
+
+pkgname = cellframe-node

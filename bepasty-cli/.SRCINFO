@@ -1,0 +1,18 @@
+pkgbase = bepasty-cli
+	pkgdesc = CLI client for bepasty-server.
+	pkgver = r55.d48e9d1
+	pkgrel = 1
+	url = https://github.com/bepasty/bepasty-client-cli
+	arch = any
+	license = BSD
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python
+	depends = python-requests
+	depends = python-magic
+	provides = bepasty-cli
+	conflicts = bepasty-cli
+	source = bepasty-cli::git+https://github.com/bepasty/bepasty-client-cli.git
+	md5sums = SKIP
+
+pkgname = bepasty-cli

@@ -1,0 +1,14 @@
+pkgbase = bgm-mpd-git
+	pkgdesc = MPD client to play music with gaps between tracks, like video game background music
+	pkgver = v1.r1.ga899f18
+	pkgrel = 1
+	url = https://git.sr.ht/~nytpu/bgm-mpd
+	arch = any
+	license = AGPL-3.0-only
+	makedepends = git
+	depends = libmpdclient
+	provides = bgm-mpd
+	source = git+https://git.sr.ht/~nytpu/bgm-mpd
+	sha256sums = SKIP
+
+pkgname = bgm-mpd-git

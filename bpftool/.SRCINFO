@@ -1,0 +1,28 @@
+pkgbase = bpftool
+	pkgdesc = tool for inspection and simple manipulation of eBPF programs and maps
+	pkgver = 7.5.0
+	pkgrel = 1
+	url = https://github.com/libbpf/bpftool
+	arch = x86_64
+	arch = aarch64
+	arch = riscv64
+	license = GPL-2.0-only OR BSD-2-Clause
+	makedepends = git
+	makedepends = python-docutils
+	makedepends = clang
+	makedepends = llvm
+	makedepends = binutils
+	depends = libelf
+	depends = zlib
+	depends = llvm-libs
+	depends = libcap
+	optdepends = clang: idem
+	conflicts = bpftool-bin
+	conflicts = bpftool-git
+	source = git+https://github.com/libbpf/bpftool#tag=v7.5.0
+	source = git+https://github.com/libbpf/libbpf.git
+	validpgpkeys = 4A4DFD51EB67B2C7FE9F6E52057DE720301C09B6
+	b2sums = a36b3871cd103cadbc1bcefe2142ceb6ed45c6c04a71085b498cb72bcee66842ce41b127a66f984894635f5e4a6cdd47c17db9323edc2d10a41d84fdcf903f6c
+	b2sums = SKIP
+
+pkgname = bpftool

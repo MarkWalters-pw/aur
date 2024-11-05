@@ -1,0 +1,22 @@
+pkgbase = eureka
+	pkgdesc = A map editor for the classic DOOM games
+	pkgver = 2.0.2
+	pkgrel = 1
+	url = http://eureka-editor.sourceforge.net/
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = cmake
+	makedepends = git
+	makedepends = python
+	depends = fltk
+	depends = glu
+	depends = gmock
+	depends = gtest
+	depends = libxpm
+	options = !buildflags
+	options = !staticlibs
+	source = https://github.com/ioan-chera/eureka-editor/archive/refs/tags/eureka-2.0.2.tar.gz
+	sha256sums = 29ac38fdcb46a4ac2f2a56899abd7fd0994759cf0b74538043fcfbab9b19f88e
+
+pkgname = eureka

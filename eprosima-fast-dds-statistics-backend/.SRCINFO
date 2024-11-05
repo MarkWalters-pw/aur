@@ -1,0 +1,18 @@
+pkgbase = eprosima-fast-dds-statistics-backend
+	pkgdesc = eProsima Fast DDS Statistics Backend is a C++ library that provides collection and procession the statistics measurements reported by Fast DDS Statistics Module.
+	pkgver = 2.1.0
+	pkgrel = 1
+	url = https://github.com/eProsima/Fast-DDS-statistics-backend
+	arch = x86_64
+	license = Apache
+	makedepends = ninja
+	makedepends = cmake
+	depends = tinyxml
+	depends = asio
+	depends = eprosima-fast-cdr
+	depends = eprosima-fast-dds
+	provides = eprosima-fast-dds-statistics-backend
+	source = https://github.com/eProsima/Fast-DDS-statistics-backend/archive/refs/tags/v2.1.0.tar.gz
+	sha512sums = 0002941120b23053f439773c7d90702fa996dbe3c84b069c4148ce75e0af98c38facd18297c549218ab4705bce46e0af03205714945522c4826ce935c5e2a42f
+
+pkgname = eprosima-fast-dds-statistics-backend

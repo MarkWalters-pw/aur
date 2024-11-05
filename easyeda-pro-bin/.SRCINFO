@@ -1,0 +1,26 @@
+pkgbase = easyeda-pro-bin
+	pkgdesc = EasyEDA Professional Edition
+	pkgver = 2.2.32.3.1
+	pkgrel = 1
+	url = https://pro.easyeda.com/
+	install = easyeda-pro-bin.install
+	arch = x86_64
+	arch = aarch64
+	license = LicenseRef-EasyEDA-Proprietary
+	depends = gtk3
+	depends = nss
+	depends = alsa-lib
+	provides = easyeda-pro
+	conflicts = easyeda-pro
+	conflicts = easyeda-pro-git
+	conflicts = easyeda-pro-electron
+	source = LICENSE-2.2.32.3.1.html::https://easyeda.com/page/legal
+	source = easyeda-pro-bin.install
+	sha256sums = SKIP
+	sha256sums = ab64abe7821e4ea37a0e4d1f77c94f37d6a51c7df2038ba7b609c640adf8e51d
+	source_x86_64 = easyeda-pro-x86_64-2.2.32.3.1.zip::https://image.easyeda.com/files/easyeda-pro-linux-x64-2.2.32.3.1.zip
+	sha256sums_x86_64 = e5e2a51f9fee1aff98284e1bbb01f8a39bba441163f8a41d65e8f347cce28133
+	source_aarch64 = easyeda-pro-aarch64-2.2.32.3.1.zip::https://image.easyeda.com/files/easyeda-pro-linux-arm64-2.2.32.3.1.zip
+	sha256sums_aarch64 = 9543db52cc5f6bf4e3cb5adb59cac430c406bd13f2e3001c4066461cc58a2551
+
+pkgname = easyeda-pro-bin

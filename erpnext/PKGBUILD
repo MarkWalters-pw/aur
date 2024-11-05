@@ -1,0 +1,90 @@
+#!/usr/bin/env bash
+# shellcheck disable=SC2034
+# shellcheck disable=SC2154
+# The PKGBUILD for ERPNext.
+# Maintainer: Matheus <matheusgwdl@protonmail.com>
+# Contributor: Matheus <matheusgwdl@protonmail.com>
+
+readonly _version_frappe="v15.46.0"
+
+pkgname="erpnext"
+pkgver="15.40.0"
+pkgrel="1"
+pkgdesc="Free and open source Enterprise Resource Planning (ERP)."
+arch=("x86_64")
+url="https://github.com/frappe/${pkgname}"
+license=("GPL-3.0-or-later")
+depends=("frappe-bench" "libmaxminddb" "mariadb" "nodejs" "python" "python-pycups" "wkhtmltopdf")
+makedepends=("npm" "python-build" "python-installer" "python-virtualenv")
+optdepends=("apache: HTTP server"
+    "certbot: Creates SSL certificates."
+    "nginx: HTTP server"
+    "redisearch: Faster database reading.")
+install="${pkgname}.install"
+source=("${pkgname}-v${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz"
+    "${pkgname}.sh"
+    "${pkgname}.sysusers"
+    "${pkgname}.tmpfiles")
+sha512sums=("c68d43d8e93c2e6e7e6cfabe640f19085d42e30d14f52a3f41506d61f27416e7cd7b0485be31332dd0845d56fd041d1a36b03760c76c5eb10f816221e9fdfc4b"
+    "70baf45505c3cd21886fd7c820b528c655c5fa8c382f7991092ea14846eb42f43a8899232610f2dc213ea6a3cc6ead43130c083de676ecd4c93caca9283aa36e"
+    "d8614473bd72404bec058981d2c9c3a91ed08b931539236a5d22209e5fdc6dc044ea719c8ed336bd8e64a49508cd290a5431bf339b87b0331bd9ede1d055e8ce"
+    "661ca81b73544884c3024ec2c5fad689101c72f7467cf7720934bdded67eecdb666096365c4f8abe20c2fd13a1a5c831a990490872024fe3093e35459be8d47b")
+
+build()
+{
+    cd "${srcdir}"/ || exit 1
+    bench init --frappe-branch "${_version_frappe}" "${pkgname}"
+    cd "${srcdir}"/"${pkgname}"/ || exit 1
+    bench get --branch v"${pkgver}" --resolve-deps "${pkgname}" "${url}.git"
+    bench new-site --db-name "${pkgname}" --set-default "${pkgname}"
+    bench --site "${pkgname}" install-app "${pkgname}"
+}
+
+package()
+{
+    # Assure that the directories exist.
+    mkdir -p "${pkgdir}"/usr/bin/
+    mkdir -p "${pkgdir}"/usr/lib/sysusers.d/
+    mkdir -p "${pkgdir}"/usr/share/doc/"${pkgname}"/
+    mkdir -p "${pkgdir}"/usr/share/webapps/"${pkgname}"/
+
+    # Install the software.
+    cp -r "${srcdir}"/"${pkgname}"/* "${pkgdir}"/usr/share/webapps/"${pkgname}"/
+    install -Dm755 "${srcdir}"/"${pkgname}".sh "${pkgdir}"/usr/bin/"${pkgname}"
+    install -Dm644 "${srcdir}"/"${pkgname}".sysusers "${pkgdir}"/usr/lib/sysusers.d/"${pkgname}".conf
+    install -Dm644 "${srcdir}"/"${pkgname}".tmpfiles "${pkgdir}"/usr/lib/tmpfiles.d/"${pkgname}".conf
+
+    ## Edit paths which were written during the build process. Configuration files are going to be altered as well as .pyc.
+    declare -r _files=$(grep -lr "${srcdir}"/"${pkgname}/" "${pkgdir}"/usr/share/webapps/"${pkgname}"/)
+    echo "${_files}" | xargs sed -i "s|${srcdir}/${pkgname}/|/usr/share/webapps/${pkgname}/|g"
+
+    ## Rebuild the software since their contents were manipulated.
+    rm -r "${pkgdir}"/usr/share/webapps/"${pkgname}"/env/
+    python -m venv "${pkgdir}"/usr/share/webapps/"${pkgname}"/env/
+    "${pkgdir}"/usr/share/webapps/"${pkgname}"/env/bin/python -m pip install wheel
+
+    for _path in "${pkgdir}/usr/share/webapps/${pkgname}/apps/frappe/" "${pkgdir}/usr/share/webapps/${pkgname}/apps/erpnext/"; do
+        "${pkgdir}"/usr/share/webapps/"${pkgname}"/env/bin/python -m pip install -e "${_path}"
+        cd "${_path}" || exit 1
+        yarn install
+        yarn --check-files
+    done
+
+    cd "${pkgdir}"/usr/share/webapps/"${pkgname}"/ || exit 1
+    bench build --hard-link --production
+    bench build --app "${pkgname}" --hard-link --production
+
+    ## Edit the paths for Python modules.
+    echo "/usr/share/webapps/${pkgname}/apps/erpnext/" > "${pkgdir}"/usr/share/webapps/"${pkgname}"/env/lib/python3.11/site-packages/erpnext.pth
+    echo "/usr/share/webapps/${pkgname}/apps/frappe/" > "${pkgdir}"/usr/share/webapps/"${pkgname}"/env/lib/python3.11/site-packages/frappe.pth
+
+    ## Correct symlinks.
+    rm "${pkgdir}"/usr/share/webapps/"${pkgname}"/apps/erpnext/erpnext/public/node_modules
+    ln -s /usr/share/webapps/"${pkgname}"/apps/erpnext/node_modules/ "${pkgdir}"/usr/share/webapps/"${pkgname}"/apps/erpnext/erpnext/public/node_modules
+
+    rm "${pkgdir}"/usr/share/webapps/"${pkgname}"/apps/frappe/frappe/public/node_modules
+    ln -s /usr/share/webapps/"${pkgname}"/apps/frappe/node_modules/ "${pkgdir}"/usr/share/webapps/"${pkgname}"/apps/frappe/frappe/public/node_modules
+
+    # Install the documentation.
+    install -Dm644 "${srcdir}"/"${pkgname}"-"${pkgver}"/README.md "${pkgdir}"/usr/share/doc/"${pkgname}"/
+}

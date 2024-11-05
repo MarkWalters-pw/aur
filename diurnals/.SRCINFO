@@ -1,0 +1,18 @@
+pkgbase = diurnals
+	pkgdesc = Receive a daily popup to notify about upcoming Todoist tasks
+	pkgver = 1.0.2
+	pkgrel = 1
+	url = https://github.com/SSS-Says-Snek/diurnals
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = meson
+	depends = python-gobject
+	depends = libadwaita
+	depends = python-todoist-api-python
+	depends = python-schedule
+	depends = python-attrs
+	source = git+https://github.com/SSS-Says-Snek/diurnals.git#tag=1.0.2
+	sha256sums = SKIP
+
+pkgname = diurnals

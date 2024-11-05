@@ -1,0 +1,36 @@
+pkgbase = cambalache
+	pkgdesc = A new RAD tool for Gtk 4 and 3
+	pkgver = 0.92.1
+	pkgrel = 1
+	url = https://gitlab.gnome.org/jpu/cambalache
+	arch = x86_64
+	license = LGPL-2.1-only
+	makedepends = git
+	makedepends = gobject-introspection
+	makedepends = meson
+	makedepends = ninja
+	makedepends = wayland-protocols
+	depends = cairo
+	depends = dconf
+	depends = gdk-pixbuf2
+	depends = glib2
+	depends = gtk3
+	depends = gtk4
+	depends = gtksourceview5
+	depends = hicolor-icon-theme
+	depends = libadwaita
+	depends = libhandy
+	depends = libxkbcommon
+	depends = pango
+	depends = pixman
+	depends = python
+	depends = python-gobject
+	depends = python-lxml
+	depends = wayland
+	depends = webkit2gtk-4.1
+	depends = webkitgtk-6.0
+	depends = wlroots>=0.18.0
+	source = https://gitlab.gnome.org/jpu/cambalache/-/archive/0.92.1/cambalache-0.92.1.tar.gz
+	sha512sums = 3ef3fd11dc1fbac2c4293038eb6a391e9043c00ff2bf41bc479b3058b661cb10e93a6d3d40beeb5292fd1836fbf60b37d93e6a1ad2798de98a0c61e91574e321
+
+pkgname = cambalache

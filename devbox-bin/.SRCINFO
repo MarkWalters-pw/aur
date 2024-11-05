@@ -1,0 +1,24 @@
+pkgbase = devbox-bin
+	pkgdesc = A command-line tool that lets you easily create isolated shells for development.Written in Go.Prebuilt version.
+	pkgver = 0.13.6
+	pkgrel = 1
+	url = https://www.jetpack.io/devbox/
+	arch = aarch64
+	arch = armv7h
+	arch = i686
+	arch = x86_64
+	license = Apache-2.0
+	depends = docker
+	depends = nix
+	provides = devbox=0.13.6
+	conflicts = devbox
+	source_aarch64 = devbox-0.13.6-aarch64.tar.gz::https://github.com/jetpack-io/devbox/releases/download/0.13.6/devbox_0.13.6_linux_arm64.tar.gz
+	sha256sums_aarch64 = 969914bd362dd653055d627cdaf5fadfe82aa946f680b77cbf1de4d06f4fe6b7
+	source_armv7h = devbox-0.13.6-armv7h.tar.gz::https://github.com/jetpack-io/devbox/releases/download/0.13.6/devbox_0.13.6_linux_arm64.tar.gz
+	sha256sums_armv7h = 969914bd362dd653055d627cdaf5fadfe82aa946f680b77cbf1de4d06f4fe6b7
+	source_i686 = devbox-0.13.6-i686.tar.gz::https://github.com/jetpack-io/devbox/releases/download/0.13.6/devbox_0.13.6_linux_386.tar.gz
+	sha256sums_i686 = 313c79d56fa6ab7fe13b388a71e5aa08ec5ce9ee5a8d096395e9d2a6c2767b0b
+	source_x86_64 = devbox-0.13.6-x86_64.tar.gz::https://github.com/jetpack-io/devbox/releases/download/0.13.6/devbox_0.13.6_linux_amd64.tar.gz
+	sha256sums_x86_64 = aeb2ea7bf00cac87c942183b9b32f095bb989dc01812040aa76b072a39fce0f6
+
+pkgname = devbox-bin

@@ -1,0 +1,17 @@
+pkgbase = byedpi
+	pkgdesc = A simple and fast software designed to bypass Deep Packet Inspection
+	pkgver = 0.15
+	pkgrel = 2
+	url = https://github.com/hufrea/byedpi
+	arch = aarch64
+	arch = armv6h
+	arch = armv7h
+	arch = x86_64
+	license = MIT
+	depends = glibc
+	options = !debug
+	backup = etc/byedpi.conf
+	source = https://github.com/hufrea/byedpi/archive/v0.15/byedpi-0.15.tar.gz
+	b2sums = adceb3106c16d8aefe2040d8f12d9118107b23d2eac57f4a295f7800b655e889e6507f8800d1f0cc46e1365df2c987c764c68f6ab3df9a0dee3a226746e195c7
+
+pkgname = byedpi

@@ -1,0 +1,21 @@
+pkgbase = bilive-danmaku-git
+	pkgdesc = Bilibili live danmaku client.Use system-wide electron.一个开源的 bilibili 直播弹幕姬.
+	pkgver = 1.0.9.r0.g590e9f1
+	pkgrel = 1
+	url = https://github.com/Beats0/bilive-danmaku
+	arch = any
+	license = MIT
+	makedepends = npm
+	makedepends = git
+	makedepends = nvm
+	makedepends = gendesk
+	makedepends = curl
+	depends = electron26
+	provides = bilive-danmaku=1.0.9
+	conflicts = bilive-danmaku
+	source = bilive-danmaku.git::git+https://github.com/Beats0/bilive-danmaku.git
+	source = bilive-danmaku.sh
+	sha256sums = SKIP
+	sha256sums = 291f50480f5a61bc9c68db7d44cd0412071128706baa868a9cb854f8779a1980
+
+pkgname = bilive-danmaku-git

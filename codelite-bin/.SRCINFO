@@ -1,0 +1,23 @@
+pkgbase = codelite-bin
+	pkgdesc = A cross platform C/C++/PHP and Node.js IDE written in C++
+	pkgver = 17.0
+	pkgrel = 1
+	url = https://codelite.org/
+	arch = x86_64
+	license = GPL2
+	depends = webkit2gtk
+	depends = gtk3
+	depends = gcc-libs
+	depends = libtiff5
+	optdepends = graphviz: callgraph visualization
+	optdepends = gcc: compiler
+	optdepends = gdb: debugger
+	optdepends = valgrind: debugger
+	optdepends = php: php IDE capabilities
+	optdepends = nodejs: for Node.js IDE
+	provides = codelite
+	conflicts = codelite
+	source_x86_64 = https://repos.codelite.org/ubuntu/pool/universe/c/codelite/codelite_17.0-1unofficial.jammy_amd64.deb
+	sha256sums_x86_64 = 245b7e9be74f56e43ce04add4db72c9af253a396d7c14a0996cf468741e50fd0
+
+pkgname = codelite-bin

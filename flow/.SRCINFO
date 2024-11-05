@@ -1,0 +1,30 @@
+pkgbase = flow
+	pkgdesc = A static type checker for JavaScript
+	pkgver = 0.251.1
+	pkgrel = 1
+	url = https://flow.org
+	arch = x86_64
+	arch = aarch64
+	license = MIT
+	makedepends = ocaml>=5.2.0
+	makedepends = camlp-streams>=5.0.1
+	makedepends = dune>=3.2.0
+	makedepends = ocaml-base>=0.16.3
+	makedepends = ocaml-dtoa>=0.3.2
+	makedepends = ocaml-fileutils>=0.6.4
+	makedepends = ocaml-inotify>=2.4.1
+	makedepends = ocaml-lwt>=5.7.0
+	makedepends = ocaml-lwt_log>=1.1.1
+	makedepends = ocaml-ppx_deriving
+	makedepends = ocaml-ppx_gen_rec
+	makedepends = ocaml-ppx_expect>=0.17.0
+	makedepends = ocaml-ppx_let>=0.14.0
+	makedepends = ocaml-ppxlib>=0.32.1
+	makedepends = ocaml-visitors
+	makedepends = ocaml-wtf8
+	depends = libev
+	optdepends = bash-completion: Tab completion support for bash
+	source = flow-0.251.1.tar.gz::https://github.com/facebook/flow/archive/v0.251.1.tar.gz
+	b2sums = 08d433b8e384fcb7d6b0ba9ca2f729611bb60564fc0babf5512a280e10348d1d607b247be2a277b22cf88b44046839d8d53645e5259c082578fce51a0bfd1d4a
+
+pkgname = flow

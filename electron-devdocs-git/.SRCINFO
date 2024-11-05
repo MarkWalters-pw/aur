@@ -1,0 +1,22 @@
+pkgbase = electron-devdocs-git
+	pkgdesc = An devdocs desktop client.Use system-wide electron.
+	pkgver = 5.2.0.r16.g03b77b7
+	pkgrel = 1
+	url = https://github.com/gengjiawen/electron-devdocs
+	arch = any
+	license = MIT
+	makedepends = npm
+	makedepends = git
+	makedepends = nvm
+	makedepends = gendesk
+	makedepends = curl
+	makedepends = pnpm
+	depends = electron29
+	provides = electron-devdocs=5.2.0
+	conflicts = electron-devdocs
+	source = electron-devdocs.git::git+https://github.com/gengjiawen/electron-devdocs.git
+	source = electron-devdocs.sh
+	sha256sums = SKIP
+	sha256sums = 291f50480f5a61bc9c68db7d44cd0412071128706baa868a9cb854f8779a1980
+
+pkgname = electron-devdocs-git

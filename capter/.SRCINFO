@@ -1,0 +1,25 @@
+pkgbase = capter
+	pkgdesc = A simple cross-platform screenshot tool made in rust
+	pkgver = v2.2.2
+	pkgrel = 1
+	url = https://github.com/decipher3114/capter
+	arch = x86_64
+	license = Apache-2.0
+	makedepends = rust
+	makedepends = gtk3
+	makedepends = xdotool
+	makedepends = libayatana-appindicator
+	makedepends = libxcb
+	makedepends = libxrandr
+	makedepends = dbus
+	depends = git
+	depends = gtk3
+	depends = xdotool
+	depends = libayatana-appindicator
+	depends = libxcb
+	depends = libxrandr
+	depends = dbus
+	source = git+https://github.com/decipher3114/capter
+	md5sums = SKIP
+
+pkgname = capter

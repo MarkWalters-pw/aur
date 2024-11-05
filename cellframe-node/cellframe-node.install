@@ -1,0 +1,46 @@
+_showmsg() {
+BOLD=$(tput bold)
+NORMAL=$(tput sgr0)
+
+echo -e "
+${BOLD}NODE CONFIGURATION FILES${NORMAL}
+
+    By default, no configuration files are provided. For enabling sane default configuration, run (as root):
+
+    ${BOLD}cellframe-node-config -i /opt/cellframe-node/share/default.setup${NORMAL}
+    
+${BOLD}STARTING CELLFRAME NODE${NORMAL}
+
+    Use the provided systemd unit file and launch node with cellframe-node-config tool (as root):
+
+    ${BOLD}cellframe-node-config -e service enable${NORMAL}
+    ${BOLD}cellframe-node-config -e service start${NORMAL}
+    
+${BOLD}RUNNING A MASTERNODE${NORMAL}
+
+    View the prerequisites and instructions at:
+
+    ${BOLD}https://wiki.cellframe.net/02.+Learn/Cellframe+Node/Master+Node+Manual+Setup${NORMAL}\n"
+}
+
+post_install() {
+    _showmsg
+}
+
+post_upgrade() {
+    echo ":: Executing systemctl daemon-reload..."
+    systemctl daemon-reload
+
+    systemctl is-active --quiet cellframe-node.service \
+    && echo ":: Restarting cellframe-node.service..." \
+    && systemctl restart cellframe-node.service \
+    || echo ":: cellframe-node.service not enabled, skipping restart..."
+}
+
+pre_remove() {
+    systemctl is-active --quiet cellframe-node.service \
+    && systemctl stop cellframe-node.service \
+    && systemctl disable cellframe-node.service \
+    || true
+    systemctl daemon-reload
+}

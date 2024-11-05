@@ -1,0 +1,18 @@
+pkgbase = fcitx5-mcbopomofo-git
+	pkgdesc = McBopomofo for fcitx5
+	pkgver = 2.8.r0.1fbc7e1
+	pkgrel = 1
+	url = https://github.com/openvanilla/fcitx5-mcbopomofo
+	arch = x86_64
+	license = MIT
+	makedepends = cmake
+	makedepends = extra-cmake-modules
+	makedepends = git
+	depends = fcitx5
+	depends = fmt
+	provides = fcitx5-mcbopomofo
+	conflicts = fcitx5-mcbopomofo
+	source = fcitx5-mcbopomofo::git+https://github.com/openvanilla/fcitx5-mcbopomofo.git
+	sha512sums = SKIP
+
+pkgname = fcitx5-mcbopomofo-git

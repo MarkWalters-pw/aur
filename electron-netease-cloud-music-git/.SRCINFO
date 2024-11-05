@@ -1,0 +1,23 @@
+pkgbase = electron-netease-cloud-music-git
+	pkgdesc = UNOFFICIAL client for music.163.com . Powered by Electron, Vue, and Muse-UI.Use system-wide electron.
+	pkgver = 0.9.38.r15.gdd77617
+	pkgrel = 1
+	url = https://encm.rocka.me/
+	arch = any
+	license = GPL-3.0-only
+	makedepends = npm
+	makedepends = git
+	makedepends = nvm
+	makedepends = gendesk
+	makedepends = icoutils
+	makedepends = curl
+	makedepends = yarn
+	depends = electron33
+	provides = electron-netease-cloud-music=0.9.38
+	conflicts = electron-netease-cloud-music
+	source = electron-netease-cloud-music.git::git+https://github.com/Rocket1184/electron-netease-cloud-music.git
+	source = electron-netease-cloud-music.sh
+	sha256sums = SKIP
+	sha256sums = 291f50480f5a61bc9c68db7d44cd0412071128706baa868a9cb854f8779a1980
+
+pkgname = electron-netease-cloud-music-git

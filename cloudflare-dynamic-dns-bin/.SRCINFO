@@ -1,0 +1,22 @@
+pkgbase = cloudflare-dynamic-dns-bin
+	pkgdesc = Dynamic DNS client for Cloudflare with IPv6/IPv4 support
+	pkgver = 4.3.8
+	pkgrel = 1
+	url = https://github.com/zebradil/cloudflare-dynamic-dns
+	license = MIT
+	conflicts = cloudflare-dynamic-dns
+	provides = cloudflare-dynamic-dns
+	arch = aarch64
+	source_aarch64 = https://github.com/Zebradil/cloudflare-dynamic-dns/releases/download/4.3.8/cloudflare-dynamic-dns_linux_arm64.tar.gz
+	sha256sums_aarch64 = af69497d755c348eb05987e293bc8067251a0e579d11a635a3ed831561227a36
+	arch = armv7h
+	source_armv7h = https://github.com/Zebradil/cloudflare-dynamic-dns/releases/download/4.3.8/cloudflare-dynamic-dns_linux_armv7.tar.gz
+	sha256sums_armv7h = 208a0e809945f1a3190c2a17c5771fa71b58c25ab647056acada2eac9373f62d
+	arch = i686
+	source_i686 = https://github.com/Zebradil/cloudflare-dynamic-dns/releases/download/4.3.8/cloudflare-dynamic-dns_linux_386.tar.gz
+	sha256sums_i686 = 8bf1e0661393e19472eea809e2d824e05e263aa51c155d6c5fbf79117c17ae25
+	arch = x86_64
+	source_x86_64 = https://github.com/Zebradil/cloudflare-dynamic-dns/releases/download/4.3.8/cloudflare-dynamic-dns_linux_amd64.tar.gz
+	sha256sums_x86_64 = 3137e872cf2bc7d8d6dc7cbd3eda625d0fecc29efec04bcf1285a7330a11f15d
+	
+pkgname = cloudflare-dynamic-dns-bin

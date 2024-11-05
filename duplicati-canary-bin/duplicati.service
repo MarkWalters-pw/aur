@@ -1,0 +1,13 @@
+[Unit]
+Description=Duplicati
+After=network.target
+
+[Service]
+ExecStart=/opt/duplicati/duplicati-server --webservice-port=8200
+Restart=on-abort
+EnvironmentFile=-/etc/default/duplicati
+User=duplicati
+Group=duplicati
+
+[Install]
+WantedBy=default.target

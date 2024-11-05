@@ -1,0 +1,24 @@
+pkgbase = bio-tbtools
+	pkgdesc = GUI/CommandLine Tool Box for biologistists to utilize NGS data. \ https://doi.org/10.1016/j.molp.2023.09.010
+	pkgver = 2.138
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/CJ-Chen/TBtools-II
+	arch = x86_64
+	license = unknown
+	makedepends = unzip
+	makedepends = gendesk
+	depends = java-runtime>=11
+	depends = bash
+	optdepends = blast+: BLAST support
+	optdepends = diamond: quick blast(needed in quick MCScanx scan) support
+	optdepends = mcscanx: collinear scan support
+	optdepends = hmmer: HMM Search support
+	optdepends = muscle: align support
+	optdepends = trimal: large scale align support
+	optdepends = iqtree: maximum likelihood phylogenomic tree support
+	optdepends = kaks_calculator: kaks calculate support
+	source = https://github.com/CJ-Chen/TBtools-II/releases/download/2.138/TBtools_JRE1.6.jar
+	sha256sums = b8e5161d1ba83d5378722dcadfa6d7cbaeadde4de0536a1f55425e35a86340e3
+
+pkgname = bio-tbtools

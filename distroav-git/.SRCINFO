@@ -1,0 +1,22 @@
+pkgbase = distroav-git
+	pkgdesc = Network A/V in OBS Studio with NewTek's NDI technology
+	pkgver = 6.0.0.r0.g9871ed6
+	pkgrel = 1
+	url = https://github.com/DistroAV/DistroAV
+	install = distroav.install
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	makedepends = cmake
+	depends = avahi
+	depends = libndi
+	depends = obs-studio
+	depends = sndio
+	provides = obs-ndi
+	provides = distroav
+	conflicts = obs-ndi-bin
+	conflicts = distroav
+	source = git+https://github.com/DistroAV/DistroAV.git
+	sha256sums = SKIP
+
+pkgname = distroav-git

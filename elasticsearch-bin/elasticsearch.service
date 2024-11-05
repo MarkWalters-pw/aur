@@ -1,0 +1,36 @@
+[Unit]
+Description=Elasticsearch
+Wants=elasticsearch-keystore.service
+Wants=network-online.target
+After=elasticsearch-keystore.service
+After=network-online.target
+
+[Service]
+User=elasticsearch
+Group=elasticsearch
+Type=simple
+RuntimeDirectory=elasticsearch
+PrivateTmp=true
+Environment=ES_HOME=/usr/share/elasticsearch
+Environment=ES_PATH_CONF=/etc/elasticsearch
+Environment=PID_DIR=/run/elasticsearch
+Environment=ES_SD_NOTIFY=true
+EnvironmentFile=-/etc/default/elasticsearch
+WorkingDirectory=/var/lib/elasticsearch
+PermissionsStartOnly=true
+ExecStartPre=/usr/share/elasticsearch/bin/elasticsearch-keystore upgrade
+ExecStart=/usr/share/elasticsearch/bin/elasticsearch -p ${PID_DIR}/elasticsearch.pid
+StandardOutput=journal
+StandardError=inherit
+LimitNOFILE=65535
+LimitNPROC=4096
+LimitAS=infinity
+LimitFSIZE=infinity
+TimeoutStopSec=0
+KillSignal=SIGTERM
+KillMode=process
+SendSIGKILL=no
+SuccessExitStatus=143
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,19 @@
+pkgbase = cometbft-bin
+	pkgdesc = CometBFT: A distributed, Byzantine fault-tolerant, deterministic state machine replication engine, and fork of Tendermint Core.
+	pkgver = 0.38.13
+	pkgrel = 1
+	url = https://cometbft.com
+	arch = x86_64
+	arch = aarch64
+	arch = armv6h
+	license = Apache
+	provides = cometbft
+	conflicts = cometbft
+	source_x86_64 = https://github.com/cometbft/cometbft/releases/download/v0.38.13/cometbft_0.38.13_linux_amd64.tar.gz
+	sha256sums_x86_64 = 39eff76604ac0b7ffb6e0071a590388062a4c49f01cc34ea9792150437b3d421
+	source_aarch64 = https://github.com/cometbft/cometbft/releases/download/v0.38.13/cometbft_0.38.13_linux_arm64.tar.gz
+	sha256sums_aarch64 = e6206b1961a675baa1ab84da87982b46409e17d17618f045bbf52f1b248bf6a7
+	source_armv6h = https://github.com/cometbft/cometbft/releases/download/v0.38.13/cometbft_0.38.13_linux_armv6.tar.gz
+	sha256sums_armv6h = 8152a9e83b5456c90cd97198587ed5442cec9b6395dac4998e029d4b6d5a8864
+
+pkgname = cometbft-bin

@@ -1,0 +1,15 @@
+[Unit]
+Description=Cloudflare Tunnel client daemon for %i
+After=network.target
+Wants=network.target
+
+[Service]
+AmbientCapabilities=CAP_NET_BIND_SERVICE
+User=cloudflared
+Group=cloudflared
+Type=simple
+ExecStart=/usr/bin/cloudflared --config /etc/cloudflared/%i.yml --no-autoupdate tunnel run
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,15 @@
+pkgbase = dafny-bin
+	pkgdesc = Dafny is a verification-aware programming language
+	pkgver = 4.9.0
+	pkgrel = 1
+	url = https://github.com/dafny-lang/dafny
+	arch = x86_64
+	license = MIT
+	depends = dotnet-runtime
+	provides = dafny
+	conflicts = dafny
+	options = staticlibs
+	source = dafny-4.9.0.zip::https://github.com/dafny-lang/dafny/releases/download/v4.9.0/dafny-4.9.0-x64-ubuntu-20.04.zip
+	sha256sums = b21575395f2fe3dbcaca09a8219fe29c99d248134e516e95dc3f0c3687d16c27
+
+pkgname = dafny-bin

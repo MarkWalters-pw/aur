@@ -1,0 +1,27 @@
+pkgbase = dolfinx
+	pkgdesc = Next generation FEniCS problem solving environment
+	pkgver = 0.9.0.post1
+	pkgrel = 1
+	url = https://github.com/FEniCS/dolfinx
+	arch = x86_64
+	license = LGPL-3.0-or-later
+	license = GPL-3.0-or-later
+	checkdepends = catch2
+	makedepends = cmake
+	makedepends = doxygen
+	makedepends = texlive-plaingeneric
+	makedepends = texlive-fontsrecommended
+	makedepends = texlive-latexextra
+	depends = adios2
+	depends = boost
+	depends = kahip
+	depends = parmetis-git
+	depends = pugixml
+	depends = python-fenics-ffcx
+	depends = scotch
+	depends = petsc
+	depends = spdlog
+	source = dolfinx-0.9.0.post1.tar.gz::https://github.com/FEniCS/dolfinx/archive/v0.9.0.post1.tar.gz
+	sha512sums = 5aa98937f00e37a57f0c5b083f1475d4ce0cf1bec6ccca5a8556cf1e8e9a180f48f5094f3526f57af08cb73e19e32a3eb9f81050840fa5b15a19bdfccc99ed68
+
+pkgname = dolfinx

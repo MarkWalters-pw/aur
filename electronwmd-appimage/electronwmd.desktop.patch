@@ -1,0 +1,9 @@
+--- squashfs-root/electronwmd.desktop
++++ squashfs-root/electronwmd.desktop
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+ Name=electronwmd
+-Exec=AppRun --no-sandbox %U
++Exec=/usr/bin/electronwmd %U
+ Terminal=false
+ Type=Application

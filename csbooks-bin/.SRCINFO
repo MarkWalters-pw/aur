@@ -1,0 +1,18 @@
+pkgbase = csbooks-bin
+	pkgdesc = A smart book management and reading software,also a PDF reader, EPUB reader, MOBI reader and DJVU file reader.Prebuilt version.Use system-wide electron.
+	pkgver = 8.2.2
+	pkgrel = 3
+	url = https://caesiumstudio.com/csbooks/
+	arch = x86_64
+	license = LicenseRef-custom
+	depends = electron13
+	provides = csbooks=8.2.2
+	conflicts = csbooks
+	source = csbooks-bin-8.2.2.pacman::https://github.com/caesiumstudio/csBooks-updates/releases/download/latest/csBooks-8.2.2.pacman
+	source = LICENSE-8.2.2.html
+	source = csbooks.sh
+	sha256sums = a6f544e1b9a6546701a304b651b9ab6f34b20866ad832f88378085bcc666a95e
+	sha256sums = a54c7d4ad986843b71f0b31fc110e5c5b62634518198731207e503e8642f5d4b
+	sha256sums = 291f50480f5a61bc9c68db7d44cd0412071128706baa868a9cb854f8779a1980
+
+pkgname = csbooks-bin

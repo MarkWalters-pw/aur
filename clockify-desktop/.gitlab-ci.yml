@@ -1,0 +1,35 @@
+include:
+  - project: "common/gitlab-helper"
+    ref: master
+    file: "ci-helper.yml"
+
+workflow: !reference [ .common, workflow ]
+
+variables:
+  PKG_NAME: "clockify-desktop"
+
+stages:
+- build
+- test
+- deploy
+
+build-clockify-desktop:
+  extends: .arch-build
+  image: ${CI_REGISTRY}/common/gitlab-helper/archlinux-yay:master
+  needs: []
+
+test-clockify-desktop:
+  extends: .arch-test
+  image: ${CI_REGISTRY}/common/gitlab-helper/archlinux-yay:master
+  needs: ["build-clockify-desktop"]
+  after_script:
+  # This is not a very sophisticated test but at least checks the binary is
+  # in place and there are all shared libs found in the system
+  - |
+    if [[ -n $(ldd /opt/Clockify/clockify | grep "not found") ]]; then
+      ldd /opt/Clockify/clockify | grep "not found"
+      exit 1
+    fi
+
+deploy-clockify-desktop:
+  extends: .arch-deploy

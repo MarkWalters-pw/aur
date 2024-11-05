@@ -1,0 +1,19 @@
+pkgbase = crc
+	pkgdesc = Manage local OpenShift 4.x cluster, optimized for testing and development purposes
+	pkgver = 2.43.0
+	pkgrel = 1
+	url = https://github.com/crc-org/crc
+	arch = x86_64
+	license = Apache-2.0
+	makedepends = git
+	makedepends = go
+	depends = glibc
+	depends = gpgme
+	depends = firewalld
+	depends = libvirt
+	depends = networkmanager
+	depends = qemu-base
+	source = crc-2.43.0::git+https://github.com/crc-org/crc#tag=v2.43.0
+	sha256sums = dfa09c423f994eebe0876157a24490f8a88fe9f5ab3e88e11d8e69e13ad11ae2
+
+pkgname = crc

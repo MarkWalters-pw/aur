@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [ ! -e "$HOME/.cdmem" ]; then 
+    echo $HOME > ~/.cdmem
+fi
+
+\cd $(cat ~/.cdmem) 2> /dev/null
+
+if [ "$?" -ne "0" ]; then
+    echo "cd: previous directory ($(cat ~/.cdmem)) is inaccessible"
+    return 1
+fi
+
+
+alias cd='source cd-memo'

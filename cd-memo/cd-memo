@@ -1,0 +1,35 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+    set -- "$HOME"
+fi
+
+if [ "$1" = "-" ]; then
+    \cd - 2> /dev/null
+
+    if [ "$?" -ne "0" ]; then
+        echo "cd: previous directory ($OLDPWD) is inaccessible"
+        return 1
+    fi
+
+    echo $OLDPWD > ~/.cdmem
+
+elif [ "$1" = "--" ]; then
+    \cd $(cat ~/.cdmem) 2> /dev/null
+
+    if [ "$?" -ne "0" ]; then
+        echo "cd: previous directory ($(cat ~/.cdmem)}) is inaccessible"
+        return 1
+    fi
+
+    cat ~/.cdmem
+
+elif [ -d "$1" ]; then
+    echo $(realpath "$1") > ~/.cdmem
+    \cd "$1"
+
+else
+    echo "cd: no such file or directory: $1"
+    return 1
+fi
+

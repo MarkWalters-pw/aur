@@ -1,0 +1,32 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index c134892..cdf7327 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -316,7 +316,7 @@ endif()
+ 
+ # This line needs to be updated manually with any new/deleted object files; cmake discourages GLOBbing source files
+ add_executable(bolt
+-    modules/fmt/src/format.cc src/main.cxx src/browser.cxx src/browser/app.cxx src/browser/client.cxx
++    src/main.cxx src/browser.cxx src/browser/app.cxx src/browser/client.cxx
+     src/browser/client_posix.cxx src/browser/resource_handler.cxx src/browser/window_launcher.cxx
+     ${WINDOW_LAUNCHER_OS_SPECIFIC} src/mime.cxx src/file_manager/directory.cxx client_cmake_gen.cxx
+     "${LIBRARY_IPC_OS_SPECIFIC}" ${BOLT_FILE_MANAGER_LAUNCHER_GEN} ${BOLT_STUB_INJECT_CXX}
+@@ -331,7 +331,7 @@ endif()
+ if(BOLT_PLUGIN_LIB_NAME)
+     target_compile_definitions(bolt PUBLIC BOLT_LIB_NAME="${BOLT_PLUGIN_LIB_NAME}" BOLT_PLUGINS)
+ endif()
+-target_include_directories(bolt PUBLIC ${CEF_ROOT} modules/fmt/include)
++target_include_directories(bolt PUBLIC ${CEF_ROOT})
+ set_target_properties(bolt PROPERTIES CXX_STANDARD 20 CXX_EXTENSIONS OFF)
+ target_link_libraries(bolt PUBLIC libcef_dll_wrapper)
+ if(UNIX AND NOT APPLE)
+@@ -358,6 +358,9 @@ elseif(APPLE)
+     # TODO: mac support
+ endif()
+ 
++find_package(fmt REQUIRED)
++target_link_libraries(bolt PUBLIC fmt)
++
+ # compilation setting for enabling chromium dev tools
+ if(BOLT_DEV_SHOW_DEVTOOLS)
+     target_compile_definitions(bolt PUBLIC BOLT_DEV_SHOW_DEVTOOLS)

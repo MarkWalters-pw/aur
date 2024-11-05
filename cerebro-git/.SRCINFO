@@ -1,0 +1,21 @@
+pkgbase = cerebro-git
+	pkgdesc = An open-source launcher to improve your productivity and efficiency.Use system-wide electron.
+	pkgver = 0.11.0.r22.gbcabb5b
+	pkgrel = 1
+	url = https://www.cerebroapp.com/
+	arch = any
+	license = MIT
+	makedepends = npm
+	makedepends = yarn
+	makedepends = git
+	makedepends = nvm
+	makedepends = gendesk
+	depends = electron20
+	provides = cerebro=0.11.0
+	conflicts = cerebro
+	source = cerebro.git::git+https://github.com/cerebroapp/cerebro.git
+	source = cerebro.sh
+	sha256sums = SKIP
+	sha256sums = 291f50480f5a61bc9c68db7d44cd0412071128706baa868a9cb854f8779a1980
+
+pkgname = cerebro-git

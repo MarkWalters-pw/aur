@@ -1,0 +1,21 @@
+pkgbase = duckdb-bin
+	pkgdesc = An in-process SQL OLAP database management system
+	pkgver = 1.1.2
+	pkgrel = 1
+	url = https://duckdb.org
+	arch = aarch64
+	arch = x86_64
+	license = MIT
+	provides = duckdb
+	conflicts = duckdb
+	conflicts = duckdb-git
+	source_aarch64 = duckdb_cli-linux-aarch64-1.1.2-1.zip::https://github.com/duckdb/duckdb/releases/download/v1.1.2/duckdb_cli-linux-aarch64.zip
+	source_aarch64 = libduckdb-linux-aarch64-1.1.2-1.zip::https://github.com/duckdb/duckdb/releases/download/v1.1.2/libduckdb-linux-aarch64.zip
+	sha256sums_aarch64 = d0040fe19970f3b104e4858acd449a09242f9189f591b943a6f43281c11fc4df
+	sha256sums_aarch64 = b1ddf97f57f43cfa688285c202e7db163a5dabeb7319ff353b1e6e3ad5ed530c
+	source_x86_64 = duckdb_cli-linux-amd64-1.1.2-1.zip::https://github.com/duckdb/duckdb/releases/download/v1.1.2/duckdb_cli-linux-amd64.zip
+	source_x86_64 = libduckdb-linux-amd64-1.1.2-1.zip::https://github.com/duckdb/duckdb/releases/download/v1.1.2/libduckdb-linux-amd64.zip
+	sha256sums_x86_64 = 461d949dd4e8e03949dddf65398426adeaa67b459c2fca1316208bcac36aaac7
+	sha256sums_x86_64 = 1fd60cbac6409410926e4fe4c22dff0fb74ef540d4544ba10c56ce6b4dc2186e
+
+pkgname = duckdb-bin

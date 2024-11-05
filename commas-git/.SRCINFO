@@ -1,0 +1,21 @@
+pkgbase = commas-git
+	pkgdesc = A hackable, pluggable terminal, and also a command runner.Use system-wide electron.
+	pkgver = 0.35.0.r2.g2af4fd3
+	pkgrel = 1
+	url = https://github.com/CyanSalt/commas
+	arch = x86_64
+	license = ISC
+	makedepends = gendesk
+	makedepends = git
+	makedepends = nvm
+	makedepends = npm
+	makedepends = curl
+	depends = electron32
+	provides = commas
+	conflicts = commas
+	source = commas.git::git+https://github.com/CyanSalt/commas.git
+	source = commas.sh
+	sha256sums = SKIP
+	sha256sums = 291f50480f5a61bc9c68db7d44cd0412071128706baa868a9cb854f8779a1980
+
+pkgname = commas-git

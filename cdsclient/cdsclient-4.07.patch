@@ -1,0 +1,77 @@
+diff -u cdsclient-4.07_old/Makefile.in cdsclient-4.07/Makefile.in
+--- cdsclient-4.07_old/Makefile.in	2024-10-22 14:52:43.000000000 +0200
++++ cdsclient-4.07/Makefile.in	2024-10-23 10:16:47.291874276 +0200
+@@ -42,7 +42,8 @@
+ LIBDIR  = $(PREFIX)/lib
+ BINDIR  = $(PREFIX)/bin
+ SHSDIR  = $(PREFIX)/bin
+-MANDIR  = $(PREFIX)/man
++SHRDIR  = $(PREFIX)/share/cdsclient
++MANDIR  = $(PREFIX)/share/man
+ ###########
+ # NOTE: The definition below is required only on SOLARIS
+ #       Comment the following line if required
+@@ -66,7 +67,7 @@
+ CFLAGS = $(C_OPT) $(DEBUG) $(SYS) -I.
+ 
+ # FILES		--------------------------------
+-VERFILE = $(PREFIX)/versions
++VERFILE = $(SHRDIR)/versions
+ EXPORT_COMPIL=@EXPORT_COMPIL@
+ EXPORT_INIT=@EXPORT_INIT@
+ EXPORT_CVS_OPT=@EXPORT_CVS_OPT@
+@@ -103,7 +104,7 @@
+ # RULES		--------------------------------
+ .SUFFIXES: .o .c 
+ .c.o:
+-	$(CC) $(CFLAGS) -c $<
++	$(CC) -fhardened $(CFLAGS) -c $<
+ 
+ # DEPENDENCIES	--------------------------------
+ 
+@@ -122,7 +123,7 @@
+ #		rm -f $$f; ln finducac2 $$f; done
+ 
+ aclient: aclient.o $(OBJ)
+-	$(CC) $@.o $(OBJ) $(LIBSYS) -o $@
++	$(CC) -fhardened $@.o $(OBJ) $(LIBSYS) -o $@
+ 	$(STRIP) $@
+ 
+ wwwget: wwwget.c
+@@ -139,7 +140,7 @@
+ 
+ install_man: $(MAN)
+ 	if [ -d $(MANDIR) ]; then echo $(MANDIR) exists; \
+-	else mkdir $(MANDIR); fi 
++	else mkdir -p $(MANDIR); fi 
+ 	for f in $(MAN); do \
+ 	    e=`echo $$f | cut -d. -f2`;  \
+ 	    if [ -d $(MANDIR)/man$$e ] ; then echo $(MANDIR)/man$$e exists ; \
+@@ -148,15 +149,15 @@
+ 	done
+ 
+ install_h: $(INC)
+-	test -d $(INCDIR) || mkdir $(INCDIR)
++	test -d $(INCDIR) || mkdir -p $(INCDIR)
+ 	$(COPY) $(INC) $(INCDIR)
+ 
+ install_bin: $(BIN)
+-	test -d $(BINDIR) || mkdir $(BINDIR)
++	test -d $(BINDIR) || mkdir -p $(BINDIR)
+ 	$(COPY) $(BIN) $(BINDIR)
+ 
+ install_shs: Makefile
+-	test -d $(SHSDIR) || mkdir $(SHSDIR)
++	test -d $(SHSDIR) || mkdir -p $(SHSDIR)
+ 	ractools=""; test -r $(RACatCDS) && ractools=$(RACatCDS)/*; \
+         test -z "$$ractools" || ls -l $$ractools; \
+ 	cdsutil="$(SHSatCDS)"; test -z "$(atCDS)" && cdsutil=""; \
+@@ -164,6 +165,8 @@
+ 	for f in $$ractools; do chmod 755 $(SHSDIR)/`basename $$f`; done
+ 
+ install_info:
++	if [ -d $(SHRDIR) ]; then echo $(SHRDIR) exists; \
++	else mkdir -p $(SHRDIR); fi 
+ 	touch $(VERFILE)
+ 	v=`egrep '$(PACKAGE)' $(VERFILE) |wc -l` ; \
+ 	if test $$v -eq 0 ; then \
