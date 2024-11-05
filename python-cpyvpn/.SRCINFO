@@ -1,0 +1,14 @@
+pkgbase = python-cpyvpn
+	pkgdesc = cpyvpn is pure python implementation of the Checkpoint VPN client.
+	pkgver = 1.6.2
+	pkgrel = 1
+	url = https://gitlab.com/cpvpn/cpyvpn
+	arch = any
+	license = GPL3
+	makedepends = python-setuptools
+	depends = python>=3.7
+	optdepends = networkmanager: tun device configuration and run without root privileges
+	source = https://files.pythonhosted.org/packages/source/c/cpyvpn/cpyvpn-1.6.2.tar.gz
+	sha256sums = ad25a9087c41f0120a6d2984d65bfe9aceb6e6d4dc51dedfea7d915b543e6f71
+
+pkgname = python-cpyvpn

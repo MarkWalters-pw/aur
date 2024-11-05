@@ -1,0 +1,25 @@
+pkgbase = openvswitch-dpdk
+	pkgdesc = Production Quality, Multilayer Open Virtual Switch, with DPDK feature
+	pkgver = 3.4.0
+	pkgrel = 1
+	url = http://openvswitch.org
+	install = openvswitch.install
+	arch = x86_64
+	license = Apache-2.0
+	makedepends = python-six
+	depends = openssl
+	depends = libcap-ng
+	depends = dpdk
+	optdepends = python-six
+	provides = openvswitch
+	options = debug
+	source = http://openvswitch.org/releases/openvswitch-3.4.0.tar.gz
+	source = openvswitch.tmpfiles
+	source = ovsdb-server.service
+	source = ovs-vswitchd.service
+	sha256sums = 196b880832fa2142a6ce833102b2623d8d9291cead6e28bd53cee8480d24e881
+	sha256sums = e8dc21e50fc886bfd6aa55991bdb3cb66907e11b071045452bb12de01a3ecbd9
+	sha256sums = fa2412b81c77921418131a4f6fd38956f50ffcc7b908ec91f94d3607a05d060b
+	sha256sums = 412a8d9a2d71f61b915d5e29c0ba44baae7770f564d885f99460b27a4cf1d398
+
+pkgname = openvswitch-dpdk

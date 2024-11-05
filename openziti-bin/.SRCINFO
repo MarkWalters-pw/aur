@@ -1,0 +1,17 @@
+pkgbase = openziti-bin
+	pkgdesc = An open source zero trust network
+	pkgver = 1.1.15
+	pkgrel = 1
+	url = https://openziti.io
+	arch = x86_64
+	arch = armv7h
+	arch = aarch64
+	license = Apache-2.0
+	source_x86_64 = https://github.com/openziti/ziti/releases/download/v1.1.15/ziti-linux-amd64-1.1.15.tar.gz
+	sha256sums_x86_64 = e44060850361f51194a031a461335c7005527d8993c66612c03941bb0cb82af4
+	source_armv7h = https://github.com/openziti/ziti/releases/download/v1.1.15/ziti-linux-arm-1.1.15.tar.gz
+	sha256sums_armv7h = 827c716b6738e0a248acc40390b206f149cd7de488033c3d1869cf7af71cacf9
+	source_aarch64 = https://github.com/openziti/ziti/releases/download/v1.1.15/ziti-linux-arm64-1.1.15.tar.gz
+	sha256sums_aarch64 = 2f49a8d3a31db55cb88978c3332717cc1558411d64501ad66e49cfd7360642c3
+
+pkgname = openziti-bin

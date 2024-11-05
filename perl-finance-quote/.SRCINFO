@@ -1,0 +1,45 @@
+pkgbase = perl-finance-quote
+	pkgdesc = Get stock and mutual fund quotes from various exchanges
+	pkgver = 1.63
+	pkgrel = 1
+	url = https://metacpan.org/release/Finance-Quote
+	arch = any
+	license = Artistic-1.0-Perl
+	license = GPL-2.0-only
+	checkdepends = perl-test-kwalitee>=0
+	checkdepends = perl-test-perl-critic>=0
+	checkdepends = perl-test-pod>=0
+	checkdepends = perl-test-pod-coverage>=1.00
+	depends = perl-date-manip>=0
+	depends = perl-date-range>=0
+	depends = perl-date-simple>=0
+	depends = perl-datetime>=0
+	depends = perl-datetime-format-iso8601>=0
+	depends = perl-datetime-format-strptime>=0
+	depends = perl-html-parser>=0
+	depends = perl-html-tableextract>=0
+	depends = perl-html-tokeparser-simple>=0
+	depends = perl-html-tree>=0
+	depends = perl-html-treebuilder-xpath>=0
+	depends = perl-http-cookiejar>=0
+	depends = perl-http-cookies>=0
+	depends = perl-http-message>=0
+	depends = perl-io-string>=0
+	depends = perl-json>=0
+	depends = perl-json-parse
+	depends = perl-lwp-protocol-https>=0
+	depends = perl-mozilla-ca>=0
+	depends = perl-readonly>=0
+	depends = perl-spreadsheet-xlsx>=0
+	depends = perl-string-util>=0
+	depends = perl-text-template>=0
+	depends = perl-try-tiny>=0
+	depends = perl-web-scraper>=0
+	depends = perl-xml-libxml>=0
+	depends = perl-libwww>=0
+	depends = perl>=5.10.1
+	options = !emptydirs
+	source = http://search.cpan.org/CPAN/authors/id/B/BP/BPSCHUCK/Finance-Quote-1.63.tar.gz
+	sha512sums = d1dc511e9bbad814d982713a3ad69066901e435751d39b16fd4ec249cb46313b17beb1667661257f50f55a6de1ee486709da889b3fce2e936f1984204a561782
+
+pkgname = perl-finance-quote

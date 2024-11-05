@@ -1,0 +1,17 @@
+pkgbase = openfortivpn-webview-electron
+	pkgdesc = SAML single sing-on and easily retrieve the SVPNCOOKIE needed by openfortivpn
+	pkgver = 1.2.3
+	pkgrel = 1
+	url = https://github.com/gm-vm/openfortivpn-webview
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = npm
+	makedepends = asar
+	depends = electron28
+	provides = openfortivpn-webview
+	conflicts = openfortivpn-webview-qt
+	source = openfortivpn-webview-electron::git+https://github.com/gm-vm/openfortivpn-webview.git#commit=9273bd24605337b633cf22dde8275bc1593c9cb1
+	sha256sums = c3d5fc75fdf3885a8da4f181ed004f6266316767067c6059c79ce3a15e682454
+
+pkgname = openfortivpn-webview-electron

@@ -1,0 +1,66 @@
+diff --git a/bitmap/ff.xbm b/bitmap/ff.xbm
+index 05579fe..00d6d95 100644
+--- a/bitmap/ff.xbm
++++ b/bitmap/ff.xbm
+@@ -1,5 +1,5 @@
+ #define ff_width 15
+ #define ff_height 12
+-static char ff_bits[] = {
++static unsigned char ff_bits[] = {
+    0x00, 0x00, 0x04, 0x01, 0x0c, 0x03, 0x1c, 0x07, 0x3c, 0x0f, 0x7c, 0x1f,
+    0x7c, 0x1f, 0x3c, 0x0f, 0x1c, 0x07, 0x0c, 0x03, 0x04, 0x01, 0x00, 0x00};
+diff --git a/bitmap/play.xbm b/bitmap/play.xbm
+index 4d63679..ea21a06 100644
+--- a/bitmap/play.xbm
++++ b/bitmap/play.xbm
+@@ -1,5 +1,5 @@
+ #define play_width 15
+ #define play_height 12
+-static char play_bits[] = {
++static unsigned char play_bits[] = {
+    0x00, 0x00, 0x0c, 0x00, 0x3c, 0x00, 0xfc, 0x00, 0xfc, 0x03, 0xfc, 0x0f,
+    0xfc, 0x0f, 0xfc, 0x03, 0xfc, 0x00, 0x3c, 0x00, 0x0c, 0x00, 0x00, 0x00};
+diff --git a/bitmap/rewind.xbm b/bitmap/rewind.xbm
+index 929e7a0..d466abf 100644
+--- a/bitmap/rewind.xbm
++++ b/bitmap/rewind.xbm
+@@ -1,5 +1,5 @@
+ #define rewind_width 15
+ #define rewind_height 12
+-static char rewind_bits[] = {
++static unsigned char rewind_bits[] = {
+    0x00, 0x00, 0x40, 0x10, 0x60, 0x18, 0x70, 0x1c, 0x78, 0x1e, 0x7c, 0x1f,
+    0x7c, 0x1f, 0x78, 0x1e, 0x70, 0x1c, 0x60, 0x18, 0x40, 0x10, 0x00, 0x00};
+diff --git a/bitmap/stop.xbm b/bitmap/stop.xbm
+index 01ba707..56150c7 100644
+--- a/bitmap/stop.xbm
++++ b/bitmap/stop.xbm
+@@ -1,5 +1,5 @@
+ #define stop_width 14
+ #define stop_height 12
+-static char stop_bits[] = {
++static unsigned char stop_bits[] = {
+    0x00, 0x00, 0x38, 0x07, 0x38, 0x07, 0x38, 0x07, 0x38, 0x07, 0x38, 0x07,
+    0x38, 0x07, 0x38, 0x07, 0x38, 0x07, 0x38, 0x07, 0x38, 0x07, 0x00, 0x00};
+diff --git a/mdart/mdart_adp.cc b/mdart/mdart_adp.cc
+index a96346e..6bb9225 100644
+--- a/mdart/mdart_adp.cc
++++ b/mdart/mdart_adp.cc
+@@ -105,7 +105,7 @@ void ADP::sendDarq(nsaddr_t reqId, int reqpktId) {
+ #ifdef DEBUG_ADP
+ 	fprintf(stdout, "%.9f\tADP::sendDarq(%d)\t\t\tin node %d\twith address %s\n", CURRENT_TIME, reqId, mdart_->id_, bitString(mdart_->address_));
+ #endif
+-	nsaddr_t dstAdd_ = hash(reqId);
++	nsaddr_t dstAdd_ = ::hash(reqId);
+ #ifdef DEBUG_ADP
+ 	fprintf(stdout, "\tsending darq for node %s\n", bitString(dstAdd_));
+ #endif
+@@ -393,7 +393,7 @@ void ADP::sendDaup() {
+ 	fprintf(stdout, "%.9f\tMDART::sendDaup()\t\t\t\tin node %d\twith address %s\n", CURRENT_TIME, mdart_->id_, bitString(mdart_->address_));
+ //	printDHT();
+ #endif
+-	nsaddr_t dstAdd_ = hash(mdart_->id_);
++	nsaddr_t dstAdd_ = ::hash(mdart_->id_);
+ #ifdef DEBUG_ADP
+ 	fprintf(stdout, "\tsending daup for node  %s\n", bitString(dstAdd_));
+ 	mdart_->routingTable_->print();

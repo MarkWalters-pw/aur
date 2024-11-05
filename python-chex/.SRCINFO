@@ -1,0 +1,27 @@
+pkgbase = python-chex
+	pkgdesc = A library of utilities for helping to write reliable JAX code
+	pkgver = 0.1.87
+	pkgrel = 1
+	url = https://github.com/google-deepmind/chex
+	arch = any
+	groups = deepmind
+	groups = jax
+	license = Apache
+	checkdepends = python-cloudpickle
+	checkdepends = python-dm-tree
+	checkdepends = python-pytest
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python-absl
+	depends = python-jax>=0.4.16
+	depends = python-numpy
+	depends = python-toolz
+	depends = python-typing_extensions
+	source = chex-0.1.87.tar.gz::https://github.com/google-deepmind/chex/archive/refs/tags/v0.1.87.tar.gz
+	source = chex.diff
+	sha256sums = 983b979a07a61ac3d04d1f8701ff8ac5abb6cb580c3e04dc188c599d660e3627
+	sha256sums = SKIP
+
+pkgname = python-chex

@@ -1,0 +1,99 @@
+Changes in version 0.26.3 (2024-08-06)
+
+  Fixes:
+    - Fixes an issue where CLI argument --property foo="" is effectively parsed
+      as --property foo="true". This is now parsed as an empty string (#596).
+
+    - Fixes a regression where amending a globbed import or globbed read results
+      in a PklBugException (#607).
+
+    - Fixes an issue around using file() notation when using the pkl-gradle
+      plugin on Windows (#611).
+
+
+Changes in version 0.26.2 (2024-07-18)
+
+  Fixes:
+    - Fixes a possible race condition where multiple concurrent Pkl evaluations
+      results in a thrown exception when downloading packages (#584).
+
+
+Changes in version 0.26.1 (2024-06-28)
+
+  Fixes:
+    - Fixes a regression where native executables fail to run on some
+      environments that don’t support newer CPU features (#551).
+
+    - Fixes a PklBugException when passing . as a project directory to pkl
+      project resolve and pkl project package (#544).
+
+  Changes:
+    - Disable revocation checking of TLS certificates (#553).
+
+    - As part of HTTP improvements in 0.26, we unwittingly fixed a bug where Pkl
+      does not actually perform cert revocation checks when making HTTPS
+      requests. This fix, unfortunately, caused a regression in some cases. For
+      example, this happens when connecting to a server that bears a public
+      trust certificate, while in an environment with no internet access. This
+      is because the HTTP client needs to check the revocation status of all
+      certificates in the chain.
+
+      Revocation checks are a nuanced topic with some benefits, and also with its
+      own problem areas. For this reason, revocation checking is disabled for
+      Pkl’s native CLIs. Users of Pkl’s Java APIs will respect the revocation
+      settings set in the JVM.
+
+
+Changes in version 0.26.0 (2024-06-17)
+
+  This release brings Windows support, improvements to controlling how Pkl talks
+  over HTTP, and also fixes a scoping bug around typealiases.
+
+  https://pkl-lang.org/main/current/release-notes/0.26.html
+
+
+Changes in version 0.25.3 (2024-03-26)
+
+  Fixes:
+    - Fixes some issues with generated pkldoc websites (#357, #362)
+    - Fixes a bug where amending a module that defines an abstract class might
+      cause a Java AssertionError (#319)
+    - Fixes a bug where a for/when generator within a lambda declared with new
+      {} syntax might not resolve variables correctly (#297)
+    - Fixes a bug where const and local modifiers are not exported when
+      obtaining a class’s mirror in pkl:reflect (#265).
+
+  Miscellaneous:
+    - Documentation improvements (#93, #106, #143, #205, #214, #224, #257, #270,
+      #282, #283, #299, #337, #340)
+
+    - Build script improvements (#253, #314, #333, #338)
+
+  Changes:
+    - Add jpkl to the set of artifacts released to GitHub (#314)
+
+
+Changes in version 0.25.2 (2024-02-08)
+
+  Fixes:
+    - Fixes some issues with generated pkldoc websites (#70, #81, #96)
+    - Fixes an issue where a PklBugException produces an incorrect URL to file
+      issues (#73)
+
+  Miscellaneous:
+    - Documentation fixes (#21, #29, #41, #44, #51, #57, #60, #64, #68, #74,
+      #77, #78, #82, #84, #86, #89, #91, #104)
+
+    - Build script improvements (#53, #83)
+
+
+Changes in version 0.25.1 (2024-02-01)
+
+  Fixes:
+    - Fixes an issue where pkl-tools fat jar is empty.
+
+
+Changes in version 0.25.0 (2024-02-01)
+
+  This is the initial release of Pkl, a programming language for creating
+  configuration.

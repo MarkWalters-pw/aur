@@ -1,0 +1,21 @@
+pkgbase = pystand
+	pkgdesc = Install Python Versions From The Python-Build-Standalone Project
+	pkgver = 1.12
+	pkgrel = 1
+	url = https://github.com/bulletmark/pystand
+	arch = any
+	license = GPL-3.0-or-later
+	makedepends = python-setuptools
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = python-setuptools-scm
+	depends = python>=3.8
+	depends = python-argcomplete
+	depends = python-packaging
+	depends = python-platformdirs
+	depends = python-pygithub
+	source = pystand-1.12.tar.gz::https://github.com/bulletmark/pystand/archive/1.12.tar.gz
+	sha1sums = e289fd73010392e54c3f5e40e55416bbcd214096
+
+pkgname = pystand

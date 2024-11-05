@@ -1,0 +1,18 @@
+pkgbase = noseyparker
+	pkgdesc = find secrets and sensitive information in textual data and Git history
+	pkgver = 0.20.0
+	pkgrel = 1
+	url = https://github.com/praetorian-inc/noseyparker
+	arch = x86_64
+	license = Apache-2.0
+	makedepends = boost
+	makedepends = cargo
+	makedepends = cmake
+	makedepends = pkgconfig
+	depends = gcc-libs
+	depends = glibc
+	options = !lto
+	source = noseyparker-0.20.0::https://github.com/praetorian-inc/noseyparker/archive/refs/tags/v0.20.0.zip
+	sha256sums = 4f24d2aef1267d3ba8b4b44a572991ba3fe1f79dc5723c5af022cedfb2fb7730
+
+pkgname = noseyparker

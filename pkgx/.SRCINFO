@@ -1,0 +1,16 @@
+pkgbase = pkgx
+	pkgdesc = Run Anything
+	pkgver = 1.2.2
+	pkgrel = 1
+	url = https://pkgx.sh
+	install = pkgx.install
+	arch = x86_64
+	license = Apache-2.0
+	makedepends = deno
+	depends = gcc-libs
+	depends = glibc
+	options = !strip
+	source = pkgx-1.2.2.tar.gz::https://github.com/pkgxdev/pkgx/archive/v1.2.2.tar.gz
+	sha512sums = 5818ca2914a880064cae9f2c40413b0e41b3f675b4c6164a8a4ba961cdff50ca9d235ba5851a8723c1cf59f3516a5a1a545f3a226867b1edf482b478be803cb9
+
+pkgname = pkgx

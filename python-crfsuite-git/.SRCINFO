@@ -1,0 +1,25 @@
+pkgbase = python-crfsuite-git
+	pkgdesc = A python binding for crfsuite
+	pkgver = v0.9.11.r0.g77b4717
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/scrapinghub/python-crfsuite
+	arch = x86_64
+	license = MIT
+	makedepends = python-build
+	makedepends = python-wheel
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = cython
+	makedepends = git
+	depends = python
+	provides = python-crfsuite
+	conflicts = python-crfsuite
+	source = git+https://github.com/scrapinghub/python-crfsuite.git
+	source = git+https://github.com/chokkan/crfsuite.git
+	source = git+https://github.com/chokkan/liblbfgs.git
+	sha512sums = SKIP
+	sha512sums = SKIP
+	sha512sums = SKIP
+
+pkgname = python-crfsuite-git

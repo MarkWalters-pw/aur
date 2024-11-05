@@ -1,0 +1,35 @@
+pkgbase = pacwrap-git
+	pkgdesc = A package manager which facilitates Arch-based bubblewrap containers.
+	pkgver = 0.8.6.r10.33dd491
+	pkgrel = 1
+	url = https://pacwrap.sapphirus.org/
+	arch = x86_64
+	license = GPLv3-only
+	makedepends = cargo
+	makedepends = busybox
+	makedepends = fakechroot
+	makedepends = fakeroot
+	makedepends = git
+	makedepends = libalpm.so=15
+	makedepends = pacman
+	makedepends = zstd
+	options = !lto
+	source = pacwrap::git+https://github.com/pacwrap/pacwrap.git
+	md5sums = SKIP
+
+pkgname = pacwrap-git
+	depends = bash
+	depends = bubblewrap
+	depends = gnupg
+	depends = libalpm.so>=14
+	depends = libseccomp
+	depends = pacman
+	depends = pacwrap-dist-git=0.8.6.r10.33dd491
+	depends = zstd
+	optdepends = xdg-dbus-proxy
+	provides = pacwrap
+	conflicts = pacwrap
+
+pkgname = pacwrap-dist-git
+	provides = pacwrap-dist
+	conflicts = pacwrap-dist

@@ -1,0 +1,14 @@
+pkgbase = oink
+	pkgdesc = A lightweight DDNS client for Porkbun
+	pkgver = 1.3.1
+	pkgrel = 1
+	url = https://github.com/RLado/Oink
+	arch = x86_64
+	license = MIT
+	makedepends = go
+	depends = glibc
+	backup = etc/oink_ddns/config.json
+	source = https://github.com/RLado/Oink/archive/refs/tags/v1.3.1.tar.gz
+	sha256sums = 8fc5ecb3493f9879547764e3e1eee37ae128b1bd803831ddc8ac198d2dd13aba
+
+pkgname = oink

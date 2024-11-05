@@ -1,0 +1,25 @@
+pkgbase = python-aodhclient
+	pkgdesc = Client library for the Aodh API
+	pkgver = 3.6.0
+	pkgrel = 1
+	url = https://docs.openstack.org/python-aodhclient/
+	arch = any
+	license = Apache
+	checkdepends = python-oslotest
+	checkdepends = python-stestr
+	checkdepends = python-testtools
+	makedepends = python-setuptools
+	depends = python-pbr
+	depends = python-cliff
+	depends = python-osc-lib
+	depends = python-oslo-i18n
+	depends = python-oslo-serialization
+	depends = python-oslo-utils
+	depends = python-osprofiler
+	depends = python-keystoneauth1
+	depends = python-six
+	depends = python-pyparsing
+	source = https://tarballs.opendev.org/openstack/python-aodhclient/aodhclient-3.6.0.tar.gz
+	sha512sums = 4f168a1d54d376c397b233328f3949bdb7ad388d6caa4ed500600a6b95c330514bd017a1e4780e814b2977fce6a48534c1e7cc8722b889ceec054e4fd623bbbf
+
+pkgname = python-aodhclient

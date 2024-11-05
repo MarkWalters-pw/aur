@@ -1,0 +1,27 @@
+pkgbase = python-av
+	pkgdesc = Pythonic bindings for FFmpeg
+	pkgver = 13.1.0
+	pkgrel = 1
+	url = https://pyav.basswood-io.com
+	arch = x86_64
+	arch = i686
+	license = BSD-3-Clause
+	checkdepends = autopep8
+	checkdepends = flake8
+	checkdepends = python-editorconfig
+	checkdepends = python-isort
+	checkdepends = python-pytest
+	checkdepends = python-sphinx
+	makedepends = cython
+	makedepends = python-google-api-core
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	makedepends = pkgconf
+	depends = ffmpeg
+	depends = python
+	depends = python-numpy
+	depends = python-pillow
+	source = av-13.1.0.tar.gz::https://github.com/PyAV-Org/PyAV/archive/refs/tags/v13.1.0.tar.gz
+	b2sums = 0c34d65a23998af1b61c7ac4610891f3e38dfa8cf6f5eadaf123eea61c4cf010a7a48de8ef26db195b48edc06e256cb5a94794212f0d7c6ae4a3e82ae5725b3e
+
+pkgname = python-av

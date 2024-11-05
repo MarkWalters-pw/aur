@@ -1,0 +1,24 @@
+pkgbase = ostinato
+	pkgdesc = Cross-platform network packet/traffic generator and analyzer
+	pkgver = 1.3.0
+	pkgrel = 1
+	url = http://ostinato.org/
+	arch = i686
+	arch = x86_64
+	license = GPL
+	depends = protobuf
+	depends = qt5-base
+	depends = qt5-script
+	depends = libpcap
+	optdepends = wireshark-cli
+	optdepends = gzip
+	optdepends = diffutils
+	optdepends = awk
+	source = https://github.com/pstavirs/ostinato/archive/v1.3.0.tar.gz
+	source = ostinato.desktop
+	source = ostinato.png
+	sha256sums = cbc4ff88ccef3bb6fb5d9ae0b4a3d15509e50817435d09d8d37acb903fbf22d5
+	sha256sums = 1afc5727cdd0480a81cc5cd4ae478d0b77086ae4689e3daed44d9693cb874de7
+	sha256sums = f6cba049e6c2f482298a7a15822cfae22f253289529f55687088fe8fc887a930
+
+pkgname = ostinato

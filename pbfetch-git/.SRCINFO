@@ -1,0 +1,22 @@
+pkgbase = pbfetch-git
+	pkgdesc = An unbelievably customizable hardware/software fetch
+	pkgver = r355.dac032a
+	pkgrel = 1
+	url = https://github.com/pennybelle/pbfetch
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	license = Apache-2.0
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = python-hatchling
+	makedepends = git
+	depends = python-psutil
+	depends = tk
+	provides = pbfetch-git
+	conflicts = pbfetch-git
+	source = git+https://github.com/pennybelle/pbfetch.git#branch=main
+	sha256sums = SKIP
+
+pkgname = pbfetch-git
