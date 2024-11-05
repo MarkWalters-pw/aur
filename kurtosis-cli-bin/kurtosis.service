@@ -1,0 +1,14 @@
+[Unit]
+Description=Starts kurtosis service
+
+[Service]
+Type=forking
+Restart=always
+ExecStart=/usr/bin/kurtosis engine start
+ExecReload=/usr/bin/kurtosis engine restart
+ExecStop=/usr/bin/kurtosis engine stop
+FailureAction=restart
+RemainAfterExit=yes
+
+[Install]
+WantedBy=default.target

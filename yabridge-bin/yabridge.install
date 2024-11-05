@@ -1,0 +1,6 @@
+post_upgrade() {
+  cat <<EOF
+If you are upgrading from a previous version of yabridge, then don't forget to
+run 'yabridgectl sync' after this upgrade.
+EOF
+}

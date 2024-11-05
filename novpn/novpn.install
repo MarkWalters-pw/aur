@@ -1,0 +1,31 @@
+post_install() {
+    /usr/bin/novpn_ns configure_default
+    systemctl daemon-reload
+    systemctl enable novpn.service
+    systemctl start novpn.service
+}
+
+
+
+pre_upgrade() {
+    /usr/bin/novpn_ns down
+    systemctl stop novpn.service
+    systemctl disable novpn.service
+}
+
+post_upgrade() {
+    systemctl daemon-reload
+    systemctl enable novpn.service
+    systemctl start novpn.service
+}
+
+
+pre_remove() {
+    /usr/bin/novpn_ns down
+    systemctl stop novpn.service
+    systemctl disable novpn.service
+}
+
+post_remove() {
+    systemctl daemon-reload
+}

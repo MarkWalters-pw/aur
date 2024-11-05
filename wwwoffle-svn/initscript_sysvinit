@@ -1,0 +1,95 @@
+#!/bin/bash
+
+# source application-specific settings
+
+# The controlling will be by sourcing '/etc/conf.d/wwwoffle'.
+WWWOFFLE_CONFIG_FILE=''
+WWWOFFLED_EXTRA_ARGS=''
+
+_initconffile='/etc/conf.d/wwwoffle'
+[ -f "${_initconffile}" ] && . "${_initconffile}"
+
+_pretty_name="wwwoffle"
+_DAEMON="/usr/sbin/wwwoffled"
+_DAEMON_ARGS=(
+              -c "${WWWOFFLE_CONFIG_FILE}"
+              ${WWWOFFLED_EXTRA_ARGS}
+             )
+
+
+. /etc/rc.conf
+. /etc/rc.d/functions
+
+_check_conf_file_var() {
+  if [ -z "${WWWOFFLE_CONFIG_FILE}" ]; then
+    echo "ERROR: Variable 'WWWOFFLE_CONFIG_FILE' not set or empty in '${_initconffile}'".
+    echo "ERROR: This variable needs to be set to the configuration file to use."
+    return 1
+  fi
+}
+
+PID=`pidof -o %PPID "${_DAEMON}"` || true
+case "$1" in
+  start)
+    stat_busy "Starting ${_pretty_name}"
+    _check_conf_file_var && [ -z "$PID" ] && "${_DAEMON}" "${_DAEMON_ARGS[@]}"
+    if [ $? -gt 0 ]; then
+      stat_fail
+    else
+      add_daemon wwwoffle
+      stat_done
+    fi
+  ;;
+  stop)
+    stat_busy "Stopping ${_pretty_name}"
+    if [ ! -z "${PID}" ]; then
+      kill "${PID}"
+    else
+      _pids="$(pidof "${_DAEMON}")"
+      for _pid in ${_pids}; do
+        kill "${_pid}" &> /dev/null
+      done
+    fi
+    sleep 1
+    _pids="$(pidof "${_DAEMON}")"
+    for _pid in ${_pids}; do
+      kill -9 "${_pid}" &> /dev/null
+    done
+    sleep 1
+    _running="$(pidof "${_DAEMON}" | tr ' ' '\n' | wc -l)"
+    if [ ${_running} -gt 0 ]; then
+      echo "Failed to stop or kill all ${_DAEMON} processes."
+      echo "Remaining processes: ${_running}."
+      stat_fail
+    else
+      rm_daemon wwwoffle
+      stat_done
+    fi
+  ;;
+  restart)
+    $0 stop
+    sleep 5
+    $0 start
+    ;;
+  reload)
+    stat_busy "Re-reading configuration file of ${_pretty_name}"
+    _check_conf_file_var && wwwoffle -c "${WWWOFFLE_CONFIG_FILE}" -config
+    if [ $? -gt 0 ]; then
+      stat_fail
+    else
+      stat_done
+    fi
+  ;;
+  status)
+    stat_busy "Querying status of ${_pretty_name}"
+    _check_conf_file_var && wwwoffle -c "${WWWOFFLE_CONFIG_FILE}" -status
+    if [ $? -gt 0 ]; then
+      stat_fail
+    else
+      stat_done
+    fi
+  ;;
+  *)
+    echo "usage: $0 {start|stop|restart|reload|status}"
+  ;;
+esac

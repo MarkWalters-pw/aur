@@ -1,0 +1,19 @@
+pkgbase = osbuild-composer
+	pkgdesc = An HTTP service for building bootable OS images
+	pkgver = 124
+	pkgrel = 1
+	url = https://www.osbuild.org
+	arch = x86_64
+	license = Apache
+	checkdepends = go
+	makedepends = go
+	makedepends = systemd
+	depends = dnf
+	depends = qemu
+	depends = osbuild
+	depends = systemd
+	depends = btrfs-progs
+	source = osbuild-composer-124.tar.gz::https://github.com/osbuild/osbuild-composer/archive/refs/tags/v124.tar.gz
+	sha256sums = 2c8b39a27cbc2e1167cf506a8655b90e79c62b3b5081eca61c9edb4e05eb8cd3
+
+pkgname = osbuild-composer

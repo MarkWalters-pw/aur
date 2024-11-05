@@ -1,0 +1,24 @@
+pkgbase = code-features-insiders
+	pkgdesc = Unblock some features in Code OSS, including features in VSCode Insiders
+	pkgver = 1.95.0
+	pkgrel = 2
+	url = https://github.com/microsoft/vscode
+	install = code-features-insiders.install
+	arch = any
+	license = unknown
+	depends = code
+	depends = python
+	depends = org.freedesktop.secrets
+	optdepends = icu69: for MS-vsliveshare.vsliveshare extension to work
+	provides = code-features
+	conflicts = code-features
+	source = code-features-insiders.hook
+	source = patch.py
+	source = patch.json
+	source = update.py
+	md5sums = a270718448070ecda3050b7569510105
+	md5sums = 9ed6f3972479ab6d3d053e7c47ead55a
+	md5sums = b6b44696b8b0997c0723adad1962b800
+	md5sums = 6923dcf184f1aa4948839c844d531581
+
+pkgname = code-features-insiders

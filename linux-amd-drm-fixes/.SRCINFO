@@ -1,0 +1,41 @@
+pkgbase = linux-amd-drm-fixes
+	pkgdesc = Linux kernel fixes with bleeding edge AMD DRM drivers
+	pkgver = 6.12.2024.10.31
+	pkgrel = 1
+	url = https://kernel.org/
+	arch = x86_64
+	license = GPL2
+	makedepends = bc
+	makedepends = cpio
+	makedepends = gettext
+	makedepends = git
+	makedepends = libelf
+	makedepends = pahole
+	makedepends = python
+	makedepends = perl
+	makedepends = tar
+	makedepends = xz
+	options = !strip
+	options = !debug
+	source = linux-amd-drm-fixes::git+https://gitlab.freedesktop.org/agd5f/linux#tag=amd-drm-fixes-6.12-2024-10-31
+	source = config::https://raw.githubusercontent.com/archlinux/svntogit-packages/packages/linux/trunk/config
+	sha256sums = a64415bcdcb2819bb30f9581d68fce7bcb130b034d55cdbb6f3c35104919e7f1
+	sha256sums = 6b337a9d3cfdc00005589a80b8d36fa500f6a92ed21565a3aceec48d7202a7da
+
+pkgname = linux-amd-drm-fixes
+	pkgdesc = The Linux kernel fixes with bleeding edge AMD DRM drivers kernel and modules
+	depends = coreutils
+	depends = kmod
+	depends = initramfs
+	optdepends = wireless-regdb: to set the correct wireless channels of your country
+	optdepends = linux-firmware: firmware images needed for some devices
+	provides = VIRTUALBOX-GUEST-MODULES
+	provides = WIREGUARD-MODULE
+	provides = KSMBD-MODULE
+
+pkgname = linux-amd-drm-fixes-headers
+	pkgdesc = Headers and scripts for building modules for the Linux kernel fixes with bleeding edge AMD DRM drivers kernel
+	depends = pahole
+
+pkgname = linux-amd-drm-fixes-docs
+	pkgdesc = Documentation for the Linux kernel fixes with bleeding edge AMD DRM drivers kernel

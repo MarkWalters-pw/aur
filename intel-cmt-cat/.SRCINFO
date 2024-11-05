@@ -1,0 +1,15 @@
+pkgbase = intel-cmt-cat
+	pkgdesc = User space software for Intel(R) Resource Director Technology
+	pkgver = 24.05
+	pkgrel = 1
+	url = https://github.com/intel/intel-cmt-cat
+	arch = x86_64
+	license = BSD
+	makedepends = git
+	makedepends = gcc
+	provides = intel-cmt-cat
+	conflicts = intel-cmt-cat
+	source = intel-cmt-cat-24.05.tar.gz::https://github.com/intel/intel-cmt-cat/archive/refs/tags/v24.05.tar.gz
+	sha256sums = 5ed6c712f967f10e4160da72a0e4880caad29795f99c9ae1ce9d5832939705f0
+
+pkgname = intel-cmt-cat

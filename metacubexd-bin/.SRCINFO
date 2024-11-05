@@ -1,0 +1,19 @@
+pkgbase = metacubexd-bin
+	pkgdesc = Clash.Meta Dashboard, The Official One, XD (Precompiled version)
+	pkgver = 1.169.0
+	pkgrel = 1
+	url = https://github.com/MetaCubeX/metacubexd
+	arch = any
+	license = MIT
+	optdepends = clash: A rule-based tunnel in Go
+	optdepends = sing-box: The universal proxy platform
+	optdepends = clash-meta: Another Clash Kernel by MetaCubeX, deprecated name
+	optdepends = mihomo: Another Clash Kernel by MetaCubeX
+	provides = metacubexd
+	conflicts = metacubexd
+	source = metacubexd-bin-1.169.0.tgz::https://github.com/MetaCubeX/metacubexd/releases/download/v1.169.0/compressed-dist.tgz
+	source = https://github.com/MetaCubeX/metacubexd/raw/main/LICENSE
+	sha256sums = f67779e6457ed982c1045d90a73d07a6e1f8239ffccf3a80d9350c1f10a0b3eb
+	sha256sums = cd0735ba06f26a0008bbca399890c7ca87fe129aacc302c2e33fb03e60a4e8c3
+
+pkgname = metacubexd-bin

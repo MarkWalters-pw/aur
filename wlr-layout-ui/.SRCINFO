@@ -1,0 +1,23 @@
+pkgbase = wlr-layout-ui
+	pkgdesc = GUI to configure your screens
+	pkgver = 1.6.14
+	pkgrel = 1
+	url = https://github.com/fdev31/wlr-layout-ui
+	arch = any
+	license = MIT
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-poetry
+	depends = python
+	depends = python-pyglet
+	depends = python-tomli-w
+	depends = python-tomli
+	optdepends = wlr-randr: To apply the configuration on other wlroots systems
+	optdepends = hyprland: To apply the configuration on Hyprland (recommended),
+	optdepends = xorg-xrandr: To apply the configuration on X11
+	provides = wlr-layout-ui
+	conflicts = wlr-layout-ui
+	source = wlr-layout-ui-1.6.14.tar.gz::https://github.com/fdev31/wlr-layout-ui/archive/refs/tags/1.6.14.tar.gz
+	md5sums = 5c3c3329f57ac842193d4abb34167488
+
+pkgname = wlr-layout-ui

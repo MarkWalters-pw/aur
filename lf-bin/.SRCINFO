@@ -1,0 +1,23 @@
+pkgbase = lf-bin
+	pkgdesc = A terminal file manager inspired by ranger (Precompiled binary from official repository)
+	pkgver = 33
+	pkgrel = 1
+	url = https://github.com/gokcehan/lf
+	arch = i686
+	arch = x86_64
+	arch = armv7h
+	license = MIT
+	provides = lf
+	conflicts = lf
+	conflicts = lf-git
+	conflicts = lf-sixel-git
+	options = !strip
+	options = !emptydirs
+	source_i686 = lf-33-linux-386.tar.gz::https://github.com/gokcehan/lf/releases/download/r33/lf-linux-386.tar.gz
+	sha256sums_i686 = 26adfa88b66bc85a839d2390bbdb629e17fd3e2224cdfbab939b1b58be6f7abf
+	source_x86_64 = lf-33-linux-amd64.tar.gz::https://github.com/gokcehan/lf/releases/download/r33/lf-linux-amd64.tar.gz
+	sha256sums_x86_64 = 912eec333b664c4f2500fdbebbf92bec4d316ff68e6a6e31bb61126c51a1f9e1
+	source_armv7h = lf-33.linux-arm.tar.gz::https://github.com/gokcehan/lf/releases/download/r33/lf-linux-arm.tar.gz
+	sha256sums_armv7h = dd65f848a89b02b7b72edead1301f3c10399963a764601b780cc871414e48ad1
+
+pkgname = lf-bin

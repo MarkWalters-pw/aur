@@ -1,0 +1,14 @@
+[Unit]
+Description=CrateDB Server
+After=network.target
+
+[Service]
+User=crate
+EnvironmentFile=-/etc/crate/crate.env
+ExecStart=/usr/share/crate/bin/crate -Cpath.conf=/etc/crate -Cpath.home=/usr/share/crate -Cpath.logs=/var/log/crate
+
+LimitMEMLOCK=infinity
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target

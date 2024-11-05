@@ -1,0 +1,14 @@
+pkgbase = cppfront
+	pkgdesc = Experimental C++ Syntax 2->Syntax 1 compiler
+	pkgver = 0.8.0
+	pkgrel = 1
+	url = https://github.com/hsutter/cppfront
+	arch = x86_64
+	license = Apache-2.0 WITH LLVM-exception
+	makedepends = gcc
+	makedepends = git
+	conflicts = cppfront-git
+	source = cppfront-0.8.0.tar.gz::https://github.com/hsutter/cppfront/archive/v0.8.0.tar.gz
+	sha256sums = 7fb573599960bc0a46a71ed103ff97adbf938d4a0df754dc952a44fdcacfc571
+
+pkgname = cppfront

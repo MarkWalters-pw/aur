@@ -1,0 +1,42 @@
+pkgbase = linux-neptune-65
+	pkgdesc = SteamOS linux-neptune 6.5 mirrored from Valve
+	pkgver = 6.5.0.valve22
+	pkgrel = 1
+	url = https://gitlab.steamos.cloud/jupiter/linux-integration/-/tree/6.5.0-valve22
+	arch = x86_64
+	license = GPL2
+	makedepends = bc
+	makedepends = libelf
+	makedepends = pahole
+	makedepends = cpio
+	makedepends = perl
+	makedepends = tar
+	makedepends = xz
+	makedepends = gettext
+	makedepends = git
+	makedepends = openssh
+	options = !strip
+	options = !debug
+	source = archlinux-linux-neptune::git+https://gitlab.com/evlaV/linux-integration.git#tag=6.5.0-valve22
+	source = config
+	source = config-neptune
+	sha256sums = SKIP
+	sha256sums = 5aff0f8584e01165dc20cd107df338f57a13ce7f0da14e07f4c9097cd748469f
+	sha256sums = 8a2f6844c09df44bb09e858a518c4f69150d12557450a351778010acc9079154
+
+pkgname = linux-neptune-65
+	pkgdesc = The SteamOS linux-neptune 6.5 mirrored from Valve kernel and modules
+	depends = coreutils
+	depends = kmod
+	depends = initramfs
+	optdepends = wireless-regdb: to set the correct wireless channels of your country
+	optdepends = linux-firmware: firmware images needed for some devices
+	provides = VIRTUALBOX-GUEST-MODULES
+	provides = WIREGUARD-MODULE
+	provides = KSMBD-MODULE
+	replaces = virtualbox-guest-modules-arch
+	replaces = wireguard-arch
+
+pkgname = linux-neptune-65-headers
+	pkgdesc = Headers and scripts for building modules for the SteamOS linux-neptune 6.5 mirrored from Valve kernel
+	depends = pahole

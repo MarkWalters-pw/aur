@@ -1,0 +1,35 @@
+pkgbase = autobrr
+	pkgdesc = The modern download automation tool for torrents
+	pkgver = 1.48.0
+	pkgrel = 2
+	url = https://autobrr.com
+	arch = x86_64
+	license = GPL-2.0-or-later
+	makedepends = git
+	makedepends = go
+	makedepends = pnpm
+	depends = glibc
+	optdepends = postgresql: postgresql database
+	optdepends = sabnzbd: usenet downloader
+	optdepends = qbittorrent: torrent downloader
+	optdepends = deluge: torrent downloader
+	optdepends = rtorrent: torrent downloader
+	optdepends = transmission-cli: torrent downloader (CLI and daemon)
+	optdepends = transmission-gtk: torrent downloader (GTK+)
+	optdepends = transmission-qt: torrent downloader (Qt)
+	optdepends = porla: A high performance BitTorrent client for servers and seedboxes
+	optdepends = sonarr: Smart PVR for newsgroup and torrent users
+	optdepends = radarr: Movie organizer/manager for usenet and torrent users
+	optdepends = lidarr: Music collection manager for newsgroup and torrent users
+	optdepends = readarr: Ebook and audiobook collection manager for newsgroup and torrent users
+	optdepends = whisparr: Adult movie organizer/manager for usenet and torrent users
+	source = autobrr-1.48.0::git+https://github.com/autobrr/autobrr#tag=v1.48.0
+	source = autobrr.service
+	source = autobrr.sysusers
+	source = autobrr.tmpfiles
+	sha256sums = 53ff55e5ac1811225b8a05454fcac341d554429abcaff837f0b7bd167f18a09a
+	sha256sums = 90b920d9a1b0ad616e340556f826e8354ce75a331548370726de253ad5c302d6
+	sha256sums = 780adccd60ca1ca465668d163d19bb892df7c42e03e442bda0c095ca3ee6eed1
+	sha256sums = c8d7972c67963aa3f720176e2fb351f3c0ea8be8f1ed84a46b7a13ea8d032bb3
+
+pkgname = autobrr

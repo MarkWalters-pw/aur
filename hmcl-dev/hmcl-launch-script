@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -o errexit
+
+if [[ "${1}" != '-p' ]]; then
+  WORKDIR="${XDG_CONFIG_HOME:-${HOME}/.config}/hmcl"
+  mkdir -p "${WORKDIR}"
+  cd "${WORKDIR}"
+fi
+
+exec /usr/bin/java -jar '/usr/share/java/hmcl/hmcl.jar' "${@}"

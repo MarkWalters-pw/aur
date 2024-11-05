@@ -1,0 +1,47 @@
+pkgbase = wwwoffle-svn
+	pkgdesc = Simple caching proxy server with special features (request, recursive fetch, subscription, modify HTML, ...) for use with dial-up internet links. Includes startup scripts for OpenRC, System V init, systemd.
+	pkgver = 2.9j+svn2260.d20241022
+	pkgrel = 1
+	epoch = 1
+	url = http://www.gedanken.org.uk/software/wwwoffle/
+	install = wwwoffle.install
+	arch = arm
+	arch = arm64
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = subversion
+	depends = gnutls
+	depends = libgcrypt
+	depends = zlib
+	optdepends = openrc: For openrc iniscript.
+	optdepends = systemd: For systemd init'script'.
+	optdepends = sysvinit: For system-V-style initscript.
+	optdepends = perl: For 'scripts/README.CONF-html.pl' script which creates an HTML version of 'README.CONF'.
+	optdepends = ruby: For 'contrib/eregister/eregister' tool which indexes the cache.
+	provides = wwwoffle=2.9j+svn2260.d20241022
+	provides = wwwoffle-sysvinit=2.9j+svn2260.d20241022
+	provides = wwwoffle-openrc=2.9j+svn2260.d20241022
+	provides = wwwoffle-systemd=2.9j+svn2260.d20241022
+	conflicts = wwwoffle
+	conflicts = wwwoffle-sysvinit
+	conflicts = wwwoffle-openrc
+	conflicts = wwwoffle-systemd
+	replaces = wwwoffle<=2.9j+svn2260.d20241022
+	options = emptydirs
+	backup = etc/conf.d/wwwoffle
+	backup = etc/wwwoffle/wwwoffle.conf
+	source = wwwoffle::svn+http://gedanken.org.uk/svn/wwwoffle/trunk
+	source = conf_d_wwwoffle
+	source = initscript_openrc
+	source = initscript_systemd
+	source = initscript_sysvinit
+	source = wwwoffle.install
+	sha256sums = SKIP
+	sha256sums = 5491ffc23ae113db4b46167883594b5bcb6f1bbd0ce11432bc45047efbd635d2
+	sha256sums = d9451db92f979a6573cecbab23c26b6ca8ea026ef61b22ec4b61c0c9051142e9
+	sha256sums = 03bebce87a0da1b383666ab7a95b9810e15f2a024c0954f09c959d342c5d9c87
+	sha256sums = 0c43f92f81504838ad0c6ede968afe222b1d30312569676bf6952892d48724b3
+	sha256sums = 106f4ce3de6d6ea020e8dcd8a4fd4f78ed2ae855e8a953a8783134e4d2cfba12
+
+pkgname = wwwoffle-svn

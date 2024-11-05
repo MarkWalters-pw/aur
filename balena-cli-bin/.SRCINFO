@@ -1,0 +1,22 @@
+pkgbase = balena-cli-bin
+	pkgdesc = balena.io command line interface
+	pkgver = 20.0.2
+	pkgrel = 1
+	url = https://balena.io/
+	arch = x86_64
+	license = APACHE
+	optdepends = docker: balena build/deploy
+	optdepends = python2: balena preload
+	optdepends = openssh: balena ssh
+	optdepends = linux-aufs: balena preload/build/deploy --build
+	optdepends = avahi: balena scan
+	provides = balena-cli
+	replaces = resin-cli
+	options = !strip
+	source = https://github.com/balena-io/balena-cli/releases/download/v20.0.2/balena-cli-v20.0.2-linux-x64-standalone.zip
+	source = https://raw.githubusercontent.com/balena-io/balena-cli/a08ac447a36e039ea4f952ee2477f920b91ff53b/completion/balena-completion.bash
+	sha256sums = 9d4d28a62625c2945e4c1df79d61258fbae36cd2126d58971b0fea9237dabeed
+	sha256sums = 73035fd6887a71a6ae5313ab7a16dac9ac53c196caf8db44133ff4434aea4c88
+	optdepends_x86_64 = lib32-glibc: emulated builds
+
+pkgname = balena-cli-bin

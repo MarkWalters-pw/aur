@@ -1,0 +1,55 @@
+pkgbase = linux-nitrous
+	pkgver = 6.11.6
+	pkgrel = 1
+	url = https://gitlab.com/xdevs23/linux-nitrous
+	arch = x86_64
+	license = GPL2
+	makedepends = clang>=16
+	makedepends = llvm>=16
+	makedepends = lld>=16
+	makedepends = bc
+	makedepends = cpio
+	makedepends = gettext
+	makedepends = libelf
+	makedepends = pahole
+	makedepends = perl
+	makedepends = python
+	makedepends = tar
+	makedepends = xz
+	makedepends = graphviz
+	makedepends = imagemagick
+	makedepends = python-sphinx
+	makedepends = texlive-latexextra
+	makedepends = coreutils
+	makedepends = git
+	makedepends = inetutils
+	makedepends = kmod
+	makedepends = lzop
+	makedepends = rust
+	makedepends = ccache
+	options = !strip
+	source = https://gitlab.com/xdevs23/linux-nitrous/-/archive/v6.11.6-1/linux-nitrous-v6.11.6-1.tar.gz
+	source = linux-nitrous.preset
+	sha256sums = c6b142b68eaf0b7e8d1bed8e775cb3fca52a4e41343706696c7cb109fe1cb930
+	sha256sums = 59cf1dfe08c144868ad87705dd62a0400921c042b1e12691e42cf214fe9a9402
+
+pkgname = linux-nitrous
+	pkgdesc = Modified Linux kernel optimized for Skylake X and newer, compiled using clang
+	install = linux-nitrous.install
+	depends = coreutils
+	depends = kmod
+	depends = initramfs
+	optdepends = wireless-regdb: to set the correct wireless channels of your country
+	optdepends = linux-nitrous-headers=6.11.6-1: to build DKMS modules against this kernel
+	optdepends = linux-firmware: Additional firmware blobs
+	provides = WIREGUARD-MODULE
+	provides = NTFS3-MODULE
+	provides = BINDER-MODULE
+	provides = binder_linux-dkms=6.11.6
+	backup = etc/mkinitcpio.d/linux-nitrous.preset
+
+pkgname = linux-nitrous-headers
+	pkgdesc = Header files and scripts for building modules for Linux kernel (tagged git version)
+	depends = dkms
+	depends = lld>=16
+	depends = clang>=16

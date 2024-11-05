@@ -1,0 +1,60 @@
+#!/usr/bin/openrc-run
+# OpenRC wwwoffle script
+
+## The controlling environment variable should be set within /etc/conf.d/wwwoffle!
+
+_DAEMON="/usr/sbin/wwwoffled"
+_DAEMON_ARGS=(
+              -c "${WWWOFFLE_CONFIG_FILE}"
+              ${WWWOFFLED_EXTRA_ARGS}
+             )
+
+extra_started_commands="reload status"
+
+depend() {
+  use logger dns
+}
+
+_check_conf_file_var() {
+  if [ -z "${WWWOFFLE_CONFIG_FILE}" ]; then
+    eerror "Variable 'WWWOFFLE_CONFIG_FILE' not set or empty in '/etc/conf.d/wwwoffle'".
+    eerror "This variable needs to be set to the configuration file to use."
+    return 1
+  fi
+}
+
+start() {
+  ebegin "Starting $(basename "${_DAEMON}"): Executing ${_DAEMON} ${_DAEMON_ARGS[@]}"
+  _check_conf_file_var && start-stop-daemon --start --exec "${_DAEMON}" -- "${_DAEMON_ARGS[@]}"
+  eend "$?"
+}
+
+stop() {
+  ebegin "Stopping $(basename "${_DAEMON}")"
+  start-stop-daemon --stop --exec "${_DAEMON}" || {
+    sleep 1
+    _pids="$(pidof "${_DAEMON}")"
+    for _pid in ${_pids}; do
+      kill -9 "${_pid}" &> /dev/null
+    done
+  }
+  sleep 1
+  _running="$(pidof "${_DAEMON}" | tr ' ' '\n' | wc -l)"
+  if [ ${_running} -gt 0 ]; then
+    eerror "Failed to stop or kill all ${_DAEMON} processes."
+    eerror "Remaining processes: ${_running}."
+  fi
+  eend "${_running}"
+}
+
+reload() {
+  ebegin "Re-reading configuration file for $(basename "${_DAEMON}")"
+  _check_conf_file_var && wwwoffle -c "${WWWOFFLE_CONFIG_FILE}" -config
+  eend "$?"
+}
+
+status() {
+  ebegin "Querying status of $(basename "${_DAEMON}")"
+  _check_conf_file_var && wwwoffle -c "${WWWOFFLE_CONFIG_FILE}" -status
+  eend "$?"
+}
