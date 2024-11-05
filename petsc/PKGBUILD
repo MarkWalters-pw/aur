@@ -1,0 +1,101 @@
+# Maintainer: Martin Diehl <aur@martin-diehl.net>
+# Contributor: Andreas Bilke <abilke at cosy dot sbg dot ac dot at>
+# Contributor: Myles English <myles at rockhead dot biz>
+# Contributor: Lucas H. Gabrielli <heitzmann at gmail dot com>
+pkgver=3.22.0
+pkgrel=1
+pkgname=petsc
+pkgdesc="Portable, extensible toolkit for scientific computation"
+arch=('i686' 'x86_64')
+url="https://petsc.org"
+license=('BSD')
+options=(staticlibs)
+# note: zlib is not really needed by PETSc, but netcdf requires an HDF5 version with zlib
+depends=('openmpi' 'lapack' 'hdf5-openmpi' 'fftw-openmpi' 'superlu' 'suitesparse' 'libyaml' 'gsl' 'libjpeg-turbo' 'netcdf-openmpi' 'zfp' 'zlib'
+         'python-numpy' 'python-mpi4py')
+makedepends=('gcc' 'gcc-fortran' 'cmake' 'cython' 'python-setuptools')
+provides=('petsc4py')
+optdepends=(
+  'hypre: support for HYPRE'
+  'kokkos: support Kokkos'
+  'metis: support for METIS'
+  'mumps: support for MUMPS'
+  'parmetis: support for ParMETIS'
+  'scalapack: support for ScaLAPACK'
+  'scotch: support for Scotch'
+  'superlu_dist: support for SuperLU_DIST'
+  'triangle: support for Triangle'
+  'trilinos-ml: support for ML (part of Trilinos)'
+  'zoltan: support for zoltan'
+  )
+
+install=petsc.install
+source=(http://web.cels.anl.gov/projects/petsc/download/release-snapshots/${pkgname}-${pkgver}.tar.gz
+        test_optdepends.sh)
+sha512sums=('be7f57f6d416e54a7ef9242fb0a156ec7e51c80aa6e07671b12b8b44a43474c5a2060d8efaa68f74a6ceaf74bb58330adbe7715f5a617ec128ed2f6bd83edb28'
+            'aef377e84e6bf5aea114f97b1bac8301203e3a6e736cacb49f01a2e95a29022062fc0d9e85fe8ba1ae9bdc1ffa6c007a031327c185e4966d3393adf038fc0993')
+
+PETSC_ARCH=linux-c-opt
+_install_dir=/opt/petsc/${PETSC_ARCH}
+
+build() {
+  cd ${pkgname}-${pkgver}
+  export PETSC_DIR=${PWD}
+  export PETSC_ARCH=${PETSC_ARCH}
+
+  CONFOPTS="--with-shared-libraries=1 \
+            --with-petsc4py=1 \
+            --with-mpi-f90module-visibility=0 \
+            --with-bison=0 \
+            --with-cmake=0 \
+            --with-mpi-dir=/usr \
+            --with-zfp=1 \
+            --with-netcdf=1 \
+            --with-libjpeg=1 \
+            --with-yaml=1 \
+            --with-fftw=1 \
+            --with-gsl=1 \
+            --with-zlib=1 \
+            --with-superlu-lib=-lsuperlu --with-superlu-include=/usr/include/superlu \
+            --with-suitesparse=1 \
+            --with-hdf5=1 --with-hdf5-fortran-bindings=1 \
+            $(sh ${srcdir}/test_optdepends.sh)"
+
+  echo './configure' ${CONFOPTS}
+  echo 'CFLAGS='${CFLAGS}
+  echo 'CXXFLAGS='${CXXFLAGS}
+  echo 'FFLAGS='${FFLAGS}
+  echo 'LDFLAGS='${LDFLAGS}
+  echo 'MAKEFLAGS='${MAKEFLAGS}
+
+  ./configure --prefix=${_install_dir} ${CONFOPTS} \
+              "CFLAGS=$CFLAGS" \
+              "CXXFLAGS=$CXXFLAGS" \
+              "FFLAGS=$FFLAGS" \
+              "LDFLAGS=$LDFLAGS" \
+              "MAKEFLAGS=$MAKEFLAGS"
+
+  make all
+}
+
+package() {
+  cd ${pkgname}-${pkgver}
+  export PETSC_DIR=${PWD}
+  export PETSC_ARCH=${PETSC_ARCH}
+
+  make DESTDIR=${pkgdir} install
+
+  install -Dm 644 LICENSE ${pkgdir}/usr/share/licenses/$pkgname/LICENSE
+
+  mkdir -p ${pkgdir}/etc/profile.d
+  echo export PETSC_DIR=${_install_dir} > ${pkgdir}/etc/profile.d/petsc.sh
+  echo export PYTHONPATH=${_install_dir}/lib:'${PYTHONPATH}' >> ${pkgdir}/etc/profile.d/petsc.sh
+  chmod +x ${pkgdir}/etc/profile.d/petsc.sh
+
+  # show where the shared libraries are
+  install -dm 755 ${pkgdir}/etc/ld.so.conf.d/
+  echo ${_install_dir}/lib > ${pkgdir}/etc/ld.so.conf.d/petsc.conf
+
+  # install pkgconfig settings
+  install -Dm 644 ${PETSC_ARCH}/lib/pkgconfig/PETSc.pc ${pkgdir}/usr/share/pkgconfig/PETSc.pc
+}

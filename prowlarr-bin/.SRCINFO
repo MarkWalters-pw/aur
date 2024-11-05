@@ -1,0 +1,52 @@
+pkgbase = prowlarr-bin
+	pkgdesc = Indexer manager/proxy for usenet and torrent users.
+	pkgver = 1.25.4.4818
+	pkgrel = 2
+	url = https://prowlarr.com
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	groups = servarr-bin
+	license = GPL-3.0-or-later
+	depends = gcc-libs
+	depends = glibc
+	depends = zlib
+	depends = sqlite
+	optdepends = postgresql: postgresql database
+	optdepends = sabnzbd: usenet downloader
+	optdepends = nzbget: usenet downloader
+	optdepends = qbittorrent: torrent downloader
+	optdepends = deluge: torrent downloader
+	optdepends = rtorrent: torrent downloader
+	optdepends = nodejs-flood: torrent downloader
+	optdepends = vuze: torrent downloader
+	optdepends = aria2: torrent downloader
+	optdepends = transmission-cli: torrent downloader (CLI and daemon)
+	optdepends = transmission-gtk: torrent downloader (GTK+)
+	optdepends = transmission-qt: torrent downloader (Qt)
+	optdepends = jackett: torrent indexer proxy
+	optdepends = nzbhydra2: torznab and usenet indexer proxy
+	optdepends = sonarr: automatically integrates with and syncs indexers
+	optdepends = radarr: automatically integrates with and syncs indexers
+	optdepends = lidarr: automatically integrates with and syncs indexers
+	optdepends = readarr: automatically integrates with and syncs indexers
+	optdepends = whisparr: automatically integrates with and syncs indexers
+	provides = prowlarr
+	conflicts = prowlarr
+	options = !debug
+	source = prowlarr.service
+	source = prowlarr.tmpfiles
+	source = prowlarr.sysusers
+	source = package_info
+	sha256sums = 21ca63506b3cffcca8dcd95e1bdf3fa8415f1bc134c31a153b51b573dc31d390
+	sha256sums = 4c3f9b5fa71810697efbe60f20a2cba24fd1b997d5372c3726457b197d61ccb5
+	sha256sums = 08d51099f09721b173233e58172c486025c16034dd89e73ccb42b647dcc34c4b
+	sha256sums = 6a674e395e0ab4d8b213e02e7ec72871049ca0dc0d1805fafdad0be32267903a
+	source_x86_64 = Prowlarr.master.1.25.4.4818.linux-core-x64.tar.gz::https://prowlarr.servarr.com/v1/update/master/updatefile?version=1.25.4.4818&os=linux&runtime=netcore&arch=x64
+	sha256sums_x86_64 = 120a7e53f23d8b53d073f32bb8645a3a926d0d0510032466bb89c2ef57bc7d63
+	source_aarch64 = Prowlarr.master.1.25.4.4818.linux-core-arm64.tar.gz::https://prowlarr.servarr.com/v1/update/master/updatefile?version=1.25.4.4818&os=linux&runtime=netcore&arch=arm64
+	sha256sums_aarch64 = c74850fc464633c5e322aa4f18ccf14ec2fba1483860cbdcff135fbe653fb091
+	source_armv7h = Prowlarr.master.1.25.4.4818.linux-core-arm.tar.gz::https://prowlarr.servarr.com/v1/update/master/updatefile?version=1.25.4.4818&os=linux&runtime=netcore&arch=arm
+	sha256sums_armv7h = 4c5efa52ec67b4d18637a4a4418cf3c2f2f079decd1cb22accc5631d89857f68
+
+pkgname = prowlarr-bin

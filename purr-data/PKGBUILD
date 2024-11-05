@@ -1,0 +1,133 @@
+# -*- shell-script -*-
+# Maintainer: <aggraef at gmail.com>
+# Contributor: <aggraef at gmail.com>
+
+# This is Jonathan Wilkes' nw.js variant of Pd-L2Ork nick-named "Purr-Data".
+# Basically, it is Pd-L2Ork with the Tk GUI replaced with a JavaScript GUI
+# implemented using nw.js (http://nwjs.io/).
+
+# This package can be installed alongside pd-l2ork, as well as vanilla pd or
+# pd-extended. To avoid conflicts with any of these, the main contents of the
+# package can be found under /opt/purr-data by default (you can change this
+# with the prefix variable below). Thus cyclist, pdsend, pdreceive and
+# purr-data's main pd-l2ork binary itself can be found under
+# /opt/purr-data/bin. The include and library files are under the same
+# prefix. Also, a symbolic link purr-data is created under /usr/bin so that
+# the program can be invoked easily from the command line. Likewise, links to
+# the include and lib directories are created under /usr/include/purr-data and
+# /usr/lib/purr-data, so that 3rd party externals know where to find these.
+
+pkgname=purr-data
+pkgver=2.20.0.r5324.c74c2de4
+pkgrel=1
+pkgdesc="Jonathan Wilkes' nw.js variant of Pd-L2Ork (git version)"
+url="https://agraef.github.io/purr-data/"
+arch=('i686' 'x86_64')
+license=('BSD')
+depends=('bluez-libs' 'desktop-file-utils' 'dssi' 'fftw'
+  'fluidsynth' 'freeglut' 'ftgl' 'glew'
+  'gsl' 'gsm' 'hicolor-icon-theme' 'imagemagick' 'jack' 'ladspa' 'lame'
+  'libdc1394' 'libdv' 'libgl' 'libiec61883' 'libjpeg' 'libquicktime'
+  'libxxf86vm' 'libtiff' 'libraw1394'
+  'libv4l' 'libvorbis' 'portaudio'
+  'smpeg' 'speex' 'stk' 'zlib' 'lua'
+  'alsa-lib' 'gconf' 'gtk2' 'gtk3' 'nss' 'libxtst' 'libxss' 'ttf-dejavu')
+makedepends=('autoconf' 'automake' 'libtool' 'git' 'rsync')
+conflicts=('purr-data')
+install=purr-data.install
+options=('!makeflags' '!strip')
+# If you want jwilke's upstream source, then please use the purr-data-git
+# package. Here we use the "release" branch from purr-data's GH mirror, which
+# is usually more up-to-date than the upstream source and has all the latest
+# bugfixes and features.
+source=("$pkgname::git+https://github.com/agraef/purr-data.git#branch=release")
+md5sums=('SKIP')
+# nw.js sdk binaries
+nwjsname=nwjs-sdk
+nwjsver=0.55.0
+source_common="http://dl.nwjs.io/v$nwjsver/$nwjsname-v$nwjsver-linux"
+source_i686=("$source_common-ia32.tar.gz")
+source_x86_64=("$source_common-x64.tar.gz")
+md5sums_i686=('e770757de2fc9bcbec8bb3fbe6d7d1c6')
+md5sums_x86_64=('ac7680788544c457daee11aaf69798fe')
+
+if [ "$CARCH" = "i686" ]; then
+  _arch="ia32"
+elif [ "$CARCH" = "x86_64" ]; then
+  _arch="x64"
+fi
+
+# Installation prefix. This must be something other than /usr if you want to
+# install Purr Data alongside Pd-L2Ork. Note that some items such as desktop
+# files and icons will still be installed under /usr so that the system finds
+# them, but they will be renamed to prevent name clashes with files from the
+# pd-l2ork package.
+prefix=${prefix:-/opt/purr-data}
+
+# Run 'makepkg buildopt=incremental' for an incremental build (this skips
+# recompiling Gem which takes a *long* time to build) or 'makepkg
+# buildopt=light' for a light one (only essential externals).
+buildopt=${buildopt:-V=0 dpkg=disabled}
+# Use this for parallel Gem builds (much faster) and less verbose make output
+# (this only works with externals using automake-generated Makefiles, i.e. Gem).
+# We also add dpkg=disabled to prevent the deb build in case you have the
+# Debian packaging tools installed.
+#buildopt=${buildopt:-GEM_MAKEFLAGS=-j12 V=0 dpkg=disabled}
+
+pkgver() {
+  cd $srcdir/$pkgname
+  printf "%s.r%s.%s" "$(grep PD_L2ORK_VERSION pd/src/m_pd.h | sed 's|^.define *PD_L2ORK_VERSION *"\(.*\)".*|\1|')" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+prepare() {
+  cd $srcdir/$pkgname
+  # first make sure that we get the sources in pristine state again, so that
+  # our patches apply cleanly
+  make realclean
+  # check out the latest source of all submodules
+  make checkout
+  # copy the nw.js sources to where purr-data wants them
+  rm -rf pd/nw/nw
+  cp -a $srcdir/$nwjsname-v$nwjsver-linux-$_arch pd/nw/nw
+}
+
+build() {
+  unset CFLAGS CPPFLAGS CXXFLAGS DEBUG_CFLAGS DEBUG_CXXFLAGS LDFLAGS INCLUDES
+  cd $srcdir/$pkgname
+  make prefix="$prefix" $buildopt
+}
+
+check() {
+  # also do a `make check`, to be on the safe side
+  cd $srcdir/$pkgname
+  make prefix="$prefix" check
+}
+
+package() {
+  cd $srcdir/$pkgname
+  make install prefix="$prefix" DESTDIR="$pkgdir"
+  cd "$srcdir/$pkgname/packages/linux_make/build"
+  # Create a link to the executable.
+  mkdir -p "$pkgdir/usr/bin"
+  ln -sf $prefix/bin/pd-l2ork "$pkgdir/usr/bin/purr-data"
+  # Create links to the include and lib directories.
+  mkdir -p "$pkgdir/usr/include"
+  ln -sf $prefix/include/pd-l2ork "$pkgdir/usr/include/purr-data"
+  mkdir -p "$pkgdir/usr/lib"
+  ln -sf $prefix/lib/pd-l2ork "$pkgdir/usr/lib/purr-data"
+  # Edit bash completion file.
+  sed -e 's/pd-l2ork/purr-data/g' < "$pkgdir/etc/bash_completion.d/pd-l2ork" > "$pkgdir/etc/bash_completion.d/purr-data"
+  rm -f "$pkgdir/etc/bash_completion.d/pd-l2ork"
+  # For now we just remove the Emacs mode as it will conflict with the
+  # pd-l2ork package.
+  rm -rf "$pkgdir/usr/share/emacs/site-lisp"
+  # Edit the library paths in the default user.settings file so that it
+  # matches our install prefix.
+  cd "$pkgdir$prefix/lib/pd-l2ork"
+  sed -e "s!/usr/lib/pd-l2ork!$prefix/lib/pd-l2ork!g" -i default.settings
+  # Remove libtool archives and extra object files.
+  cd "$pkgdir$prefix"
+  rm -f lib/pd-l2ork/extra/*/*.la lib/pd-l2ork/extra/*/*.pd_linux_o
+}
+
+# vim:set ts=2 sw=2 et:

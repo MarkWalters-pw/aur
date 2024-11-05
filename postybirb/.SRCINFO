@@ -1,0 +1,25 @@
+pkgbase = postybirb
+	pkgdesc = An application that helps artists post art and other multimedia to multiple websites more quickly.Use system-wide electron.
+	pkgver = 4.0.1
+	pkgrel = 3
+	url = https://www.postybirb.com/
+	arch = x86_64
+	license = BSD-3-Clause
+	makedepends = npm
+	makedepends = yarn
+	makedepends = git
+	makedepends = nvm
+	makedepends = gendesk
+	makedepends = cmake
+	makedepends = gcc
+	makedepends = curl
+	depends = electron24
+	provides = postybirb
+	conflicts = postybirb
+	conflicts = postybirb-plus
+	source = postybirb-4.0.1::https://github.com/mvdicarlo/postybirb/archive/refs/tags/v4.0.1.tar.gz
+	source = postybirb.sh
+	sha256sums = a4d8cac51aff8d0f7f5a9487a9d34f9f4db46c894e6659c3904dc102bf7a22aa
+	sha256sums = 291f50480f5a61bc9c68db7d44cd0412071128706baa868a9cb854f8779a1980
+
+pkgname = postybirb

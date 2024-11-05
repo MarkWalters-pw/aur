@@ -1,0 +1,22 @@
+pkgbase = python-array-api-compat
+	pkgdesc = A wrapper around NumPy and other array libraries to make them compatible with the Array API standard.
+	pkgver = 1.9.1
+	pkgrel = 1
+	url = https://data-apis.org/array-api-compat/
+	arch = any
+	license = MIT
+	makedepends = python-setuptools
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = python
+	optdepends = python-numpy
+	optdepends = python-cupy
+	optdepends = python-jax
+	optdepends = python-pytorch
+	optdepends = python-dask
+	optdepends = python-sparse
+	source = python-array-api-compat-1.9.1.tar.gz::https://github.com/data-apis/array-api-compat/archive/refs/tags/1.9.1.tar.gz
+	sha256sums = 10c024689908b4c09cb0342859523f9521f614dc03570ce1e10536f4f1ba69a9
+
+pkgname = python-array-api-compat

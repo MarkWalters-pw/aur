@@ -1,0 +1,21 @@
+pkgbase = pixelorama
+	pkgdesc = A free & open-source 2D sprite editor
+	pkgver = 1.0.3
+	pkgrel = 2
+	url = https://orama-interactive.itch.io/pixelorama
+	arch = x86_64
+	license = MIT
+	makedepends = curl
+	makedepends = godot>=4.3
+	makedepends = unzip
+	depends = hicolor-icon-theme
+	depends = libglvnd
+	depends = libxcursor
+	depends = libxi
+	depends = libxinerama
+	depends = libxrandr
+	provides = pixelorama
+	source = Pixelorama-1.0.3.tar.gz::https://github.com/Orama-Interactive/Pixelorama/archive/v1.0.3.tar.gz
+	b2sums = ebdc3f432b06167cc2ea45b6b33594cccc92772b4d158a4ab32fdef6db7cf22ec9c29fa9872b0ab1837b12b331635ef2f42502efda2645dfca77d5aa1fc7ce9a
+
+pkgname = pixelorama

@@ -1,0 +1,20 @@
+pkgbase = python-deepxde
+	pkgdesc = Library for scientific machine learning
+	pkgver = 1.12.2
+	pkgrel = 1
+	url = https://github.com/lululxvi/deepxde
+	arch = any
+	license = LGPL-2.1-or-later
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools-scm
+	makedepends = python-wheel
+	depends = python-scikit-optimize
+	optdepends = python-tensorflow-probability: TensorFlow backend support
+	optdepends = python-pytorch: backend: PyTorch backend support
+	optdepends = python-flax: JAX backend support
+	optdepends = python-paddlepaddle: PaddlePaddle backend support
+	source = deepxde-1.12.2.tar.gz::https://github.com/lululxvi/deepxde/archive/v1.12.2.tar.gz
+	sha512sums = 62a05b1d2ab1d759e2c30dc50420ede4577b7a032e4bfc1e7d66d048ccc011ce27381acb19d89ab1608bea40e8c452693deb41dc8790d0d4aaa168ee4f13d029
+
+pkgname = python-deepxde

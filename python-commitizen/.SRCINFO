@@ -1,0 +1,24 @@
+pkgbase = python-commitizen
+	pkgdesc = Create committing rules for projects, auto bump versions, and auto changelog generation
+	pkgver = 3.30.0
+	pkgrel = 2
+	url = https://github.com/commitizen-tools/commitizen
+	arch = any
+	license = MIT
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = python-argcomplete
+	depends = python-colorama
+	depends = python-decli
+	depends = python-jinja
+	depends = python-packaging
+	depends = python-pyaml
+	depends = python-questionary
+	depends = python-termcolor
+	depends = python-tomlkit
+	depends = python-importlib-metadata
+	source = python-commitizen-3.30.0.tar.gz::https://github.com/commitizen-tools/commitizen/archive/refs/tags/v3.30.0.tar.gz
+	sha256sums = 3c33b25efa64b20a733c984363e2950efdbd661207f122bed2bd2467309dfd9f
+
+pkgname = python-commitizen

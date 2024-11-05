@@ -1,0 +1,22 @@
+# Be sure to use `systemctl edit prowlarr` to modify this service with an override.conf because
+# direct changes will be overwritten by package updates.
+
+[Unit]
+Description=Prowlarr Daemon
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=prowlarr
+Group=prowlarr
+SyslogIdentifier=prowlarr
+Environment=XDG_DATA_HOME=/var/lib/prowlarr
+WorkingDirectory=/usr/lib/prowlarr
+ExecStart=/usr/lib/prowlarr/bin/Prowlarr -nobrowser -data=/var/lib/prowlarr
+Restart=on-failure
+RestartSec=5
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target

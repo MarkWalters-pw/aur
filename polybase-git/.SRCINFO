@@ -1,0 +1,22 @@
+pkgbase = polybase-git
+	pkgdesc = Multi-dialect database management system.Use system-wide electron.
+	pkgver = r3.3b0316a
+	pkgrel = 1
+	url = https://github.com/Jgrtowy/PolyBase
+	arch = any
+	license = BSD-2-Clause
+	makedepends = npm
+	makedepends = git
+	makedepends = nvm
+	makedepends = gendesk
+	makedepends = icoutils
+	makedepends = curl
+	depends = electron28
+	provides = polybase=r3.3b0316a
+	conflicts = polybase
+	source = polybase.git::git+https://github.com/Jgrtowy/PolyBase.git
+	source = polybase.sh
+	sha256sums = SKIP
+	sha256sums = 291f50480f5a61bc9c68db7d44cd0412071128706baa868a9cb854f8779a1980
+
+pkgname = polybase-git

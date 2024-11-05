@@ -1,0 +1,22 @@
+pkgbase = python-jaxlib-bin
+	pkgdesc = XLA library for JAX - binary package
+	pkgver = 0.4.35
+	pkgrel = 1
+	url = https://github.com/google/jax
+	arch = x86_64
+	arch = aarch64
+	license = Apache
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = python-ml-dtypes>=0.2.0
+	depends = python-numpy>=1.24
+	depends = python-scipy>=1.10
+	provides = python-jaxlib=0.4.35
+	conflicts = python-jaxlib
+	noextract = jaxlib-0.4.35-cp312-cp312-manylinux2014_x86_64.whl
+	source_x86_64 = https://files.pythonhosted.org/packages/cp312/j/jaxlib/jaxlib-0.4.35-cp312-cp312-manylinux2014_x86_64.whl
+	sha256sums_x86_64 = 04d1db3bf0050d120238bfb9b686b58fefcc4d9dd9e2d96aecd3f68a1f1f5e0a
+	source_aarch64 = https://files.pythonhosted.org/packages/cp312/j/jaxlib/jaxlib-0.4.35-cp312-cp312-manylinux2014_aarch64.whl
+	sha256sums_aarch64 = 187cb6929dc139b75d952d67c33118473c1b4105525a3e5607f064e7b8efdc74
+
+pkgname = python-jaxlib-bin

@@ -1,0 +1,21 @@
+pkgbase = python-htmltools
+	pkgdesc = Tools for creating, manipulating, and writing HTML from Python
+	pkgver = 0.6.0
+	pkgrel = 1
+	url = https://github.com/posit-dev/py-htmltools
+	arch = any
+	license = MIT
+	checkdepends = python-pytest>=6.2.4
+	checkdepends = python-syrupy>=4.6.0
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = ipython
+	depends = python-packaging>=20.9
+	depends = python-typing_extensions
+	depends = python>=3.8
+	source = python-htmltools-0.6.0.tar.gz::https://github.com/posit-dev/py-htmltools/archive/refs/tags/v0.6.0.tar.gz
+	b2sums = 9fd807f82d6d537181d6a7a605908cffa1f131f80629da9fd34c4f3ffcd2d81c336acdf013c43889e82d1ea848d34002f8e6eb591374401795d01c1d09ba3ae6
+
+pkgname = python-htmltools

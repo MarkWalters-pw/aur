@@ -1,0 +1,21 @@
+pkgbase = pomotro
+	pkgdesc = A Desktop Pomodoro Clock.Use system-wide electron.
+	pkgver = 1.1
+	pkgrel = 8
+	url = https://github.com/Ranork/Pomotro
+	arch = x86_64
+	license = GPL-3.0-only
+	makedepends = gendesk
+	makedepends = nvm
+	makedepends = npm
+	makedepends = yarn
+	depends = electron25
+	depends = nodejs
+	conflicts = pomotro
+	options = !emptydirs
+	source = pomotro-1.1.tar.gz::https://github.com/Ranork/Pomotro/archive/refs/tags/v1.1.tar.gz
+	source = pomotro.sh
+	sha256sums = ece2bec903b745285f459bf8a4a1d4a70af531e10bac7d8d50c6f9701724e0b8
+	sha256sums = 291f50480f5a61bc9c68db7d44cd0412071128706baa868a9cb854f8779a1980
+
+pkgname = pomotro

@@ -1,0 +1,22 @@
+pkgbase = progress-git
+	pkgdesc = Shows running coreutils basic commands and displays stats
+	pkgver = 0.17.r0.g208422a
+	pkgrel = 1
+	url = https://github.com/Xfennec/progress
+	arch = i686
+	arch = x86_64
+	license = GPL-3.0-or-later
+	makedepends = gcc
+	makedepends = make
+	makedepends = git
+	depends = glibc
+	depends = ncurses
+	provides = progress=0.17
+	provides = cv
+	conflicts = progress
+	conflicts = cv
+	replaces = cv
+	source = progress::git+https://github.com/Xfennec/progress
+	sha256sums = SKIP
+
+pkgname = progress-git

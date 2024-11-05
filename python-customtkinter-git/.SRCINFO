@@ -1,0 +1,23 @@
+pkgbase = python-customtkinter-git
+        pkgdesc = A modern and customizable python UI-library based on Tkinter.
+        pkgver = r583.10f34d2
+        pkgrel = 2
+        url = https://github.com/TomSchimansky/CustomTkinter
+        arch = x86_64
+        license = MIT
+        makedepends = python-build
+        makedepends = python-installer
+        makedepends = python-wheel
+        makedepends = python-setuptools
+        makedepends = git
+        depends = python
+        depends = tk
+        depends = python-darkdetect
+        depends = python-typing_extensions
+        depends = python-packaging
+        provides = python-customtkinter
+        conflicts = python-customtkinter
+        source = git+https://github.com/TomSchimansky/CustomTkinter.git
+        md5sums = SKIP
+
+pkgname = python-customtkinter-git

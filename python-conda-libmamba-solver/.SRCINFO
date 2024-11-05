@@ -1,0 +1,17 @@
+pkgbase = python-conda-libmamba-solver
+	pkgdesc = The libmamba based solver for conda.
+	pkgver = 24.9.1a
+	pkgrel = 2
+	url = https://github.com/conda/conda-libmamba-solver
+	arch = any
+	license = BSD-3-Clause
+	makedepends = python-hatch-vcs
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = python-libmambapy
+	depends = python-boltons
+	source = python-conda-libmamba-solver-24.9.1a.tar.gz::https://github.com/conda/conda-libmamba-solver/archive/6fe4cd9325f23074f781d8915cf5d4e0c725dbb1.tar.gz
+	sha256sums = 924f8bc472f5fd4052db11434704001d41314e23b0e87feeed1ba7649dca4bd0
+
+pkgname = python-conda-libmamba-solver

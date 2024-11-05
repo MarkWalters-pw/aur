@@ -1,0 +1,19 @@
+pkgbase = python-adios4dolfinx
+	pkgdesc = Wrappers for reading/writing DOLFINx meshes/functions with ADIOS2
+	pkgver = 0.9.0
+	pkgrel = 1
+	url = https://github.com/jorgensd/adios4dolfinx
+	arch = any
+	license = MIT
+	checkdepends = python-pytest
+	checkdepends = python-ipyparallel
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python-fenics-dolfinx
+	depends = adios2
+	source = adios4dolfinx-0.9.0.tar.gz::https://github.com/jorgensd/adios4dolfinx/archive/v0.9.0.tar.gz
+	sha512sums = ecebeffc0c7ab7b9d83d38f2f475e6460728bec2f9d02d14dd6dc0d9962d2fa856b97e035a01396ad220cb239090aef42c11ec0647731b126b1f9e48c92bc3a3
+
+pkgname = python-adios4dolfinx

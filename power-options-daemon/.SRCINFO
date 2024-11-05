@@ -1,0 +1,25 @@
+pkgbase = power-options-daemon
+	pkgdesc = The core daemon for Power Options, a blazingly fast power management solution.
+	pkgver = 1.2.2
+	pkgrel = 1
+	url = https://github.com/thealexdev23/power-options
+	install = daemon.install
+	arch = x86_64
+	license = MIT
+	makedepends = cargo
+	depends = acpid
+	depends = pciutils
+	depends = usbutils
+	depends = yad
+	optdepends = brightnessctl: needed for brightness settings
+	optdepends = net-tools: needed to disable ethernet cards
+	optdepends = net-tools: needed to disable ethernet cards
+	optdepends = xorg-xrandr: needed for screen settings
+	optdepends = xorg-xset: needed to configure screen turn off timeout
+	optdepends = xautolock: needed to configure system suspend timeout
+	provides = power-options-daemon
+	conflicts = power-options-daemon-git
+	source = power-options-daemon-1.2.2.tar.gz::https://github.com/thealexdev23/power-options/archive/v1.2.2.tar.gz
+	sha256sums = SKIP
+
+pkgname = power-options-daemon

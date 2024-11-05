@@ -1,0 +1,20 @@
+pkgbase = python-enocean-git
+	pkgdesc = EnOcean library for Python
+	pkgver = 0.31.r174.80a253b
+	pkgrel = 2
+	url = https://github.com/kipe/enocean
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python
+	depends = python-beautifulsoup4
+	depends = python-pyserial
+	provides = python-enocean
+	conflicts = python-enocean
+	source = enocean::git+https://github.com/kipe/enocean.git
+	source = https://github.com/kipe/enocean/pull/138.patch
+	sha512sums = SKIP
+	sha512sums = 3c1585ce10832788b79776c5f1dd255b364a7d5763a91e05295e005c2ec8ad26e2cf6456b801cf77762cf0a2e975871a9f3a71904fef134496fd21537dc41a24
+
+pkgname = python-enocean-git

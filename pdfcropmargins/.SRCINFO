@@ -1,0 +1,20 @@
+pkgbase = pdfcropmargins
+	pkgdesc = Automatically crops the margins of PDF files
+	pkgver = 2.1.4
+	pkgrel = 1
+	url = https://pypi.org/project/pdfCropMargins/
+	install = pdfcropmargins.install
+	arch = any
+	license = GPL
+	makedepends = python-pip
+	depends = python-setuptools
+	depends = python-wheel
+	depends = python-pymupdf
+	depends = python-pypdf
+	optdepends = ghostscript
+	optdepends = poppler
+	conflicts = python-pysimplegui
+	source = https://files.pythonhosted.org/packages/ca/09/b0b036f00fdbec15196ab4f85bd8bb81d0daea0bad32d05c74c0317ae46c/pdfCropMargins-2.1.4-py2.py3-none-any.whl
+	md5sums = 10fcc5b24997c59d5906516da008a875
+
+pkgname = pdfcropmargins
