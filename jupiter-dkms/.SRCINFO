@@ -1,0 +1,14 @@
+pkgbase = jupiter-dkms
+	pkgdesc = Jupiter ACPI platform driver (DKMS)
+	pkgver = 6.1.9.valve2
+	pkgrel = 1
+	url = https://github.com/firlin123/jupiter-dkms
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	depends = dkms
+	conflicts = steamdeck-dkms
+	source = git+https://github.com/firlin123/jupiter-dkms.git#tag=f4545384339049d03a11f94f774c33de837abf2d
+	b2sums = SKIP
+
+pkgname = jupiter-dkms

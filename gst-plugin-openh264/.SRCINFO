@@ -1,0 +1,17 @@
+pkgbase = gst-plugin-openh264
+	pkgdesc = GStreamer open-source multimedia framework OpenH264 plugins
+	pkgver = 1.24.8
+	pkgrel = 1
+	url = https://gstreamer.freedesktop.org/
+	arch = x86_64
+	license = LGPL
+	makedepends = meson
+	makedepends = glib2-devel
+	depends = gst-plugins-base-libs
+	depends = openh264
+	conflicts = gst-plugins-openh264
+	replaces = gst-plugins-openh264
+	source = https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.24.8.tar.xz
+	sha256sums = 35ad70de3d7cbca3089f33bb77c45750daad2ae93d79827fdbb469fa8aba84eb
+
+pkgname = gst-plugin-openh264

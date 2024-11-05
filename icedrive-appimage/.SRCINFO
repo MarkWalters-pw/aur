@@ -1,0 +1,15 @@
+pkgbase = icedrive-appimage
+	pkgdesc = A secure and fast cloud storage with Twofish encryption (portable app)
+	pkgver = 2.0
+	pkgrel = 1
+	url = https://icedrive.net
+	arch = x86_64
+	license = custom
+	depends = fuse2
+	depends = zlib
+	depends = hicolor-icon-theme
+	options = !strip
+	source = https://cdn.icedrive.net/static/apps/portable/Icedrive_Portable-x86_64-2.0.AppImage
+	sha512sums = SKIP
+
+pkgname = icedrive-appimage

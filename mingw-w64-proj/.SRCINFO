@@ -1,0 +1,21 @@
+pkgbase = mingw-w64-proj
+	pkgdesc = Cartographic Projections library (mingw-w64)
+	pkgver = 9.5.0
+	pkgrel = 1
+	url = https://proj.org/
+	arch = any
+	license = MIT
+	makedepends = mingw-w64-cmake
+	makedepends = mingw-w64-wine
+	makedepends = mingw-w64-nlohmann-json
+	depends = mingw-w64-crt
+	depends = mingw-w64-sqlite
+	depends = mingw-w64-libtiff
+	depends = mingw-w64-curl
+	options = !strip
+	options = !buildflags
+	options = staticlibs
+	source = https://github.com/OSGeo/PROJ/releases/download/9.5.0/proj-9.5.0.tar.gz
+	sha256sums = 659af0d558f7c5618c322fde2d3392910806faee8684687959339021fa207d99
+
+pkgname = mingw-w64-proj

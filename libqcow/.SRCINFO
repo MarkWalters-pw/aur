@@ -1,0 +1,20 @@
+pkgbase = libqcow
+	pkgdesc = Library and tools to support QEMU copy-on-write image format (QCOW, QCOW2), including a FUSE-based mount utility
+	pkgver = 20240308
+	pkgrel = 1
+	url = https://github.com/libyal/libqcow/
+	arch = i686
+	arch = x86_64
+	license = LGPL3
+	makedepends = zlib
+	makedepends = openssl
+	makedepends = python
+	depends = fuse
+	depends = openssl
+	source = https://github.com/libyal/libqcow/releases/download/20240308/libqcow-alpha-20240308.tar.gz
+	source = https://github.com/libyal/libqcow/releases/download/20240308/libqcow-alpha-20240308.tar.gz.asc
+	validpgpkeys = 0ED9020DA90D3F6E70BD3945D9625E5D7AD0177E
+	sha256sums = 354275bfa9e40f6bf03138d6b939c3a8e290e2f594b13873973ee8660f612051
+	sha256sums = SKIP
+
+pkgname = libqcow

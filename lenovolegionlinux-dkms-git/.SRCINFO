@@ -1,0 +1,21 @@
+pkgbase = lenovolegionlinux-dkms-git
+	pkgdesc = LenovoLegionLinux (LLL) DKMS module
+	pkgver = r255.714cd25
+	pkgrel = 0
+	url = https://github.com/johnfanv2/LenovoLegionLinux
+	install = lenovolegionlinux.install
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = lm_sensors
+	makedepends = i2c-tools
+	makedepends = dmidecode
+	depends = lenovolegionlinux-git
+	depends = dkms
+	options = !makeflags
+	options = !buildflags
+	options = !strip
+	source = lenovolegionlinux::git+https://github.com/johnfanv2/LenovoLegionLinux
+	sha256sums = SKIP
+
+pkgname = lenovolegionlinux-dkms-git

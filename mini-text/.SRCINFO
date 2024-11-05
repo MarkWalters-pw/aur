@@ -1,0 +1,17 @@
+pkgbase = mini-text
+	pkgdesc = A very small and basic text editor
+	pkgver = 1.0.0
+	pkgrel = 1
+	url = https://github.com/Nokse22/mini-text
+	arch = x86_64
+	arch = aarch64
+	license = GPL-3.0-or-later
+	checkdepends = appstream-glib
+	makedepends = git
+	makedepends = meson
+	depends = libadwaita
+	depends = python-gobject
+	source = git+https://github.com/Nokse22/mini-text.git#commit=3634e6c705a052c509834e0de3450c3ff9792be2
+	sha256sums = SKIP
+
+pkgname = mini-text

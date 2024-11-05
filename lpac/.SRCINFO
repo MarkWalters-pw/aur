@@ -1,0 +1,29 @@
+pkgbase = lpac
+	pkgdesc = C-based eUICC LPA
+	pkgver = 2.1.0
+	pkgrel = 2
+	url = https://github.com/estkme-group/lpac
+	arch = x86_64
+	makedepends = cmake
+	makedepends = gcc
+	makedepends = git
+	makedepends = pcsclite
+	makedepends = libcurl.so
+	makedepends = libpcsclite.so
+	depends = glibc
+	source = git+https://github.com/estkme-group/lpac.git#tag=v2.1.0
+	sha256sums = fe10ed77b18f0d5582cf2c38ef1bae2a43468826feb87cbc5689ec9186db2508
+
+pkgname = lpac
+	license = AGPL-3.0-only
+	depends = glibc
+	depends = curl
+	depends = libcurl.so
+	depends = libeuicc
+	depends = libpcsclite.so
+	depends = ccid
+	provides = libeuicc-drivers.so
+
+pkgname = libeuicc
+	license = LGPL-2.1-only
+	provides = libeuicc.so

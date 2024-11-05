@@ -1,0 +1,22 @@
+pkgbase = kcm-grub2-git
+	pkgdesc = A KDE Control Module for configuring the GRUB2 bootloader
+	pkgver = 0.6.4.r269.g6262f8d
+	pkgrel = 1
+	url = https://invent.kde.org/system/kcm-grub2
+	arch = x86_64
+	license = GPL-3.0-or-later
+	makedepends = cmake
+	makedepends = extra-cmake-modules
+	makedepends = git
+	makedepends = kdoctools5
+	depends = grub
+	depends = hwinfo
+	depends = kcmutils5
+	depends = libmagick
+	optdepends = os-prober: To detect other OSes when generating grub.cfg in BIOS systems
+	provides = grub2-editor-frameworks
+	conflicts = grub2-editor-frameworks
+	source = kcm-grub2::git+https://invent.kde.org/system/kcm-grub2.git
+	sha256sums = SKIP
+
+pkgname = kcm-grub2-git

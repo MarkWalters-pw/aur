@@ -1,0 +1,36 @@
+diff --git a/scripts/buildLinux.js b/scripts/buildLinux.js
+new file mode 100644
+index 00000000..e9a35e13
+--- /dev/null
++++ b/scripts/buildLinux.js
+@@ -0,0 +1,17 @@
++const builder = require('electron-builder')
++const Platform = builder.Platform
++const Arch = builder.Arch
++
++require('./createPackage.js')('linux', { arch: Arch.x64 }).then(function (path) {
++  const options = {
++    linux: {
++      target: ['dir']
++    }
++  }
++
++  builder.build({
++    prepackaged: path,
++    targets: Platform.LINUX.createTarget(['dir'], Arch.x64),
++    config: options
++  })
++})
+diff --git a/scripts/createPackage.js b/scripts/createPackage.js
+index 17278d86..a049702e 100644
+--- a/scripts/createPackage.js
++++ b/scripts/createPackage.js
+@@ -141,6 +141,8 @@ module.exports = function (platform, extraOptions) {
+     asar: false,
+     afterPack: afterPack,
+     publish: null,
++    electronDist: '@ELECTRON_DIST@',
++    electronVersion: '@ELECTRON_VERSION@',
+     /*
+     Rebuilding native modules that use nan is currently broken for Electron 32+: https://github.com/nodejs/nan/issues/973
+     This breaks PDFJS -> canvas, which causes packaging to fail.

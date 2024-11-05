@@ -1,0 +1,15 @@
+pkgbase = ivpn-ui
+	pkgdesc = IVPN - Secure VPN for Privacy
+	pkgver = 3.14.17
+	pkgrel = 1
+	url = https://www.ivpn.net
+	install = ivpn-ui.install
+	arch = x86_64
+	license = GPL3
+	makedepends = npm
+	makedepends = nvm
+	depends = ivpn>=3.14.2
+	source = ivpn-ui-src-v3.14.17.tar.gz::https://github.com/ivpn/desktop-app/archive/v3.14.17.tar.gz
+	sha256sums = 2074f1bc3986d19e9a0a0d4e9e00be6eea391c85009d527a305e8d5241da7eca
+
+pkgname = ivpn-ui

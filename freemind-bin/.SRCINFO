@@ -1,0 +1,23 @@
+pkgbase = freemind-bin
+	pkgdesc = A mind mapper, and a hierarchical editor with strong emphasis on folding
+	pkgver = 1.0.1
+	pkgrel = 1
+	url = https://freemind.sourceforge.io/wiki/
+	arch = any
+	license = GPL-2.0-or-later
+	makedepends = libicns
+	depends = hicolor-icon-theme
+	depends = java-runtime<=11
+	depends = sh
+	provides = freemind=1.0.1
+	conflicts = freemind
+	replaces = freemind
+	noextract = freemind-bin-max-1.0.1.zip
+	source = https://downloads.sourceforge.net/freemind/freemind-bin-max-1.0.1.zip
+	source = freemind.svg::https://sourceforge.net/p/freemind/code/ci/master/tree/freemind/images/76812-freemind_v0.4.svg?format=raw
+	source = freemind.desktop
+	b2sums = 4e5b5f1ec41c48d00f70e246e67e66c0d606fba4d4f1cb5709957693d648446a2ee9ecd40d290dda627f65d25176eace5223abff405bcce7655d2604a4fc6e21
+	b2sums = 2399111a45e6c0a6e88bcb612d2dbdbb1deecd0b034986a79303fef65c7608e350f47bffd0b45de21b019a87c4ff69b8ed09eca586bcd8ac03610fd376355b7a
+	b2sums = b86e31437268c243d93aebdb802c269b11c1acdeda1f4fb218ecb8b1a0410ad2c3620a27739cb04b629c2c6976524f3f4b542402d29126aa650e56cc0f367c9e
+
+pkgname = freemind-bin

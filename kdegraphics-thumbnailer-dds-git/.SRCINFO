@@ -1,0 +1,19 @@
+pkgbase = kdegraphics-thumbnailer-dds-git
+	pkgdesc = DDS texture thumbnailer for KDE
+	pkgver = r35.3284d66
+	pkgrel = 1
+	url = https://github.com/xmaciek/kdegraphics-thumbnailer-dds
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = cmake
+	makedepends = extra-cmake-modules
+	depends = qt6-base
+	depends = kio
+	depends = kcoreaddons
+	provides = kdegraphics-thumbnailer-dds
+	conflicts = kdegraphics-thumbnailer-dds
+	source = kdegraphics-thumbnailer-dds::git+https://github.com/xmaciek/kdegraphics-thumbnailer-dds.git
+	sha256sums = SKIP
+
+pkgname = kdegraphics-thumbnailer-dds-git

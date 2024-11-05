@@ -1,0 +1,22 @@
+pkgbase = gpupad-git
+	pkgdesc = A flexible GLSL shader editor and IDE
+	pkgver = latest
+	pkgrel = 6
+	url = https://github.com/houmain/gpupad
+	arch = x86_64
+	license = GPL3
+	makedepends = cmake
+	makedepends = git
+	depends = qt6-declarative
+	depends = qt6-multimedia
+	depends = libdrm
+	depends = openimageio
+	provides = gpupad
+	conflicts = gpupad
+	source = git+https://github.com/houmain/gpupad.git
+	source = git+https://github.com/houmain/KDGpu.git
+	md5sums = SKIP
+	md5sums = SKIP
+
+pkgname = gpupad-git
+

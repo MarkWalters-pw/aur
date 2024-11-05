@@ -1,0 +1,24 @@
+pkgbase = garage
+	pkgdesc = Garage, an S3-compatible distributed object store for self-hosted deployments
+	pkgver = 1.0.1
+	pkgrel = 1
+	url = https://garagehq.deuxfleurs.fr
+	arch = x86_64
+	arch = i686
+	arch = arm
+	arch = aarch64
+	license = AGPL-3.0-only
+	makedepends = cargo
+	makedepends = pkgconf
+	depends = gcc-libs
+	depends = libsodium
+	depends = zstd
+	depends = lmdb
+	source = garage-1.0.1.tar.gz::https://git.deuxfleurs.fr/Deuxfleurs/garage/archive/v1.0.1.tar.gz
+	source = liblmdb.pc
+	sha256sums = b10c609acb94102b2aa40596b767bb5ba104283bf7cdf337e0d9ab56aff328b2
+	sha256sums = d86900623f582ae61441766e68710c6875fb7cda42ce856fc63b7186be04859a
+	b2sums = 799de3e9c62f81a1eb0d54a82a71368efb0aa0f5785df18fc2363205e14685aa4a974ce940c660aca477eddf5e98e5726dcf32672bd2136fa99454c9229a332e
+	b2sums = 35ff7d3ca6c25c2a45bb86b54621d93c368da91522abec5a90437d64ac7159873137fe9fd7eeff2bd53e831b1fab97f6fcbc3a89270db96c9b23d9749c128f9a
+
+pkgname = garage

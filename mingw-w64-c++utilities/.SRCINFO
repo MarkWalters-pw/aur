@@ -1,0 +1,24 @@
+pkgbase = mingw-w64-c++utilities
+	pkgdesc = Common C++ classes and routines such as argument parser, IO and conversion utilities (mingw-w64)
+	pkgver = 5.26.1
+	pkgrel = 1
+	url = https://github.com/Martchus/cpp-utilities
+	arch = any
+	license = GPL-2-or-later
+	checkdepends = mingw-w64-cppunit
+	checkdepends = mingw-w64-wine
+	makedepends = mingw-w64-gcc
+	makedepends = mingw-w64-cmake
+	makedepends = ninja
+	depends = mingw-w64-crt
+	depends = mingw-w64-libiconv
+	depends = mingw-w64-boost
+	optdepends = c++utilities-doc: API documentation
+	options = !buildflags
+	options = staticlibs
+	options = !strip
+	options = !emptydirs
+	source = c++utilities-5.26.1.tar.gz::https://github.com/Martchus/cpp-utilities/archive/v5.26.1.tar.gz
+	sha256sums = 25b02e1d2deb669d2f7f734f8b67653820732703ad00a9cce611dd63a5853f4d
+
+pkgname = mingw-w64-c++utilities

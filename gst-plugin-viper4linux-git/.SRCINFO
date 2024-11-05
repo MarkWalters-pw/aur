@@ -1,0 +1,21 @@
+pkgbase = gst-plugin-viper4linux-git
+	pkgdesc = ViPER FX core wrapper plugin for gstreamer
+	pkgver = r36.a5c1b03
+	pkgrel = 2
+	url = https://github.com/Audio4Linux/gst-plugin-viperfx
+	arch = x86_64
+	license = custom
+	makedepends = git
+	makedepends = cmake
+	depends = gst-plugins-base-libs
+	depends = libviperfx
+	provides = gst-plugin-viper4linux
+	provides = gst-plugin-viperfx
+	provides = libgstviperfx.so
+	conflicts = gst-plugin-viper4linux
+	conflicts = gst-plugin-viperfx
+	conflicts = gst-plugin-jamesdsp
+	source = git+https://github.com/Audio4Linux/gst-plugin-viperfx.git
+	sha256sums = SKIP
+
+pkgname = gst-plugin-viper4linux-git

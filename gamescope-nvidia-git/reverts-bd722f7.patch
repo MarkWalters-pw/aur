@@ -1,0 +1,188 @@
+From 6384251e5d547059f4839008aa4a34217c9be556 Mon Sep 17 00:00:00 2001
+From: detiam <dehe_tian@outlook.com>
+Date: Sun, 11 Aug 2024 17:56:18 +0800
+Subject: [PATCH] reverts bd722f7
+
+---
+ src/rendervulkan.cpp           | 64 +++++++---------------------------
+ src/rendervulkan.hpp           |  6 ----
+ src/reshade_effect_manager.cpp |  4 +--
+ 3 files changed, 14 insertions(+), 60 deletions(-)
+
+diff --git a/src/rendervulkan.cpp b/src/rendervulkan.cpp
+index 01b8e94..f4a1ee7 100644
+--- a/src/rendervulkan.cpp
++++ b/src/rendervulkan.cpp
+@@ -375,7 +375,6 @@ bool CVulkanDevice::selectPhysDev(VkSurfaceKHR surface)
+ 				}
+ 
+ 				m_queueFamily = computeOnlyIndex == ~0u ? generalIndex : computeOnlyIndex;
+-				m_generalQueueFamily = generalIndex;
+ 				m_physDev = cphysDev;
+ 
+ 				if ( env_to_bool( getenv( "GAMESCOPE_FORCE_GENERAL_QUEUE" ) ) )
+@@ -392,7 +391,7 @@ bool CVulkanDevice::selectPhysDev(VkSurfaceKHR surface)
+ 
+ 	VkPhysicalDeviceProperties props;
+ 	vk.GetPhysicalDeviceProperties( m_physDev, &props );
+-	vk_log.infof( "selecting physical device '%s': queue family %x (general queue family %x)", props.deviceName, m_queueFamily, m_generalQueueFamily );
++	vk_log.infof( "selecting physical device '%s': queue family %x", props.deviceName, m_queueFamily );
+ 
+ 	return true;
+ }
+@@ -512,22 +511,12 @@ bool CVulkanDevice::createDevice()
+ 		.globalPriority = VK_QUEUE_GLOBAL_PRIORITY_REALTIME_EXT
+ 	};
+ 
+-	VkDeviceQueueCreateInfo queueCreateInfos[2] = 
+-	{
+-		{
+-			.sType = VK_STRUCTURE_TYPE_DEVICE_QUEUE_CREATE_INFO,
+-			.pNext = gamescope::Process::HasCapSysNice() ? &queueCreateInfoEXT : nullptr,
+-			.queueFamilyIndex = m_queueFamily,
+-			.queueCount = 1,
+-			.pQueuePriorities = &queuePriorities
+-		},
+-		{
+-			.sType = VK_STRUCTURE_TYPE_DEVICE_QUEUE_CREATE_INFO,
+-			.pNext = gamescope::Process::HasCapSysNice() ? &queueCreateInfoEXT : nullptr,
+-			.queueFamilyIndex = m_generalQueueFamily,
+-			.queueCount = 1,
+-			.pQueuePriorities = &queuePriorities
+-		},
++	VkDeviceQueueCreateInfo queueCreateInfo = {
++		.sType = VK_STRUCTURE_TYPE_DEVICE_QUEUE_CREATE_INFO,
++		.pNext = gamescope::Process::HasCapSysNice() ? &queueCreateInfoEXT : nullptr,
++		.queueFamilyIndex = m_queueFamily,
++		.queueCount = 1,
++		.pQueuePriorities = &queuePriorities
+ 	};
+ 
+ 	std::vector< const char * > enabledExtensions;
+@@ -599,8 +588,8 @@ bool CVulkanDevice::createDevice()
+ 	VkDeviceCreateInfo deviceCreateInfo = {
+ 		.sType = VK_STRUCTURE_TYPE_DEVICE_CREATE_INFO,
+ 		.pNext = &features2,
+-		.queueCreateInfoCount = m_queueFamily == m_generalQueueFamily ? 1u : 2u,
+-		.pQueueCreateInfos = queueCreateInfos,
++		.queueCreateInfoCount = 1,
++		.pQueueCreateInfos = &queueCreateInfo,
+ 		.enabledExtensionCount = (uint32_t)enabledExtensions.size(),
+ 		.ppEnabledExtensionNames = enabledExtensions.data(),
+ 	};
+@@ -628,17 +617,9 @@ bool CVulkanDevice::createDevice()
+ 	VkResult res = vk.CreateDevice(physDev(), &deviceCreateInfo, nullptr, &m_device);
+ 	if ( res == VK_ERROR_NOT_PERMITTED_KHR && gamescope::Process::HasCapSysNice() )
+ 	{
+-		fprintf(stderr, "vkCreateDevice failed with a high-priority queue (general + compute). Falling back to regular priority (general).\n");
+-		queueCreateInfos[1].pNext = nullptr;
++		fprintf(stderr, "vkCreateDevice failed with a high-priority queue. Falling back to regular priority.\n");
++		queueCreateInfo.pNext = nullptr;
+ 		res = vk.CreateDevice(physDev(), &deviceCreateInfo, nullptr, &m_device);
+-
+-
+-		if ( res == VK_ERROR_NOT_PERMITTED_KHR && gamescope::Process::HasCapSysNice() )
+-		{
+-			fprintf(stderr, "vkCreateDevice failed with a high-priority queue (compute). Falling back to regular priority (all).\n");
+-			queueCreateInfos[0].pNext = nullptr;
+-			res = vk.CreateDevice(physDev(), &deviceCreateInfo, nullptr, &m_device);
+-		}
+ 	}
+ 
+ 	if ( res != VK_SUCCESS )
+@@ -652,10 +633,6 @@ bool CVulkanDevice::createDevice()
+ 	#undef VK_FUNC
+ 
+ 	vk.GetDeviceQueue(device(), m_queueFamily, 0, &m_queue);
+-	if ( m_queueFamily == m_generalQueueFamily )
+-		m_generalQueue = m_queue;
+-	else
+-		vk.GetDeviceQueue(device(), m_generalQueueFamily, 0, &m_generalQueue);
+ 
+ 	return true;
+ }
+@@ -830,24 +807,7 @@ bool CVulkanDevice::createPools()
+ 		return false;
+ 	}
+ 
+-	VkCommandPoolCreateInfo generalCommandPoolCreateInfo = {
+-		.sType = VK_STRUCTURE_TYPE_COMMAND_POOL_CREATE_INFO,
+-		.flags = VK_COMMAND_POOL_CREATE_RESET_COMMAND_BUFFER_BIT,
+-		.queueFamilyIndex = m_generalQueueFamily,
+-	};
+-
+-	res = vk.CreateCommandPool(device(), &generalCommandPoolCreateInfo, nullptr, &m_generalCommandPool);
+-	if ( res != VK_SUCCESS )
+-	{
+-		vk_errorf( res, "vkCreateCommandPool failed" );
+-		return false;
+-	}
+-
+-	VkDescriptorPoolSize poolSizes[3] {
+-		{
+-			VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER,
+-			uint32_t(m_descriptorSets.size()),
+-		},
++	VkDescriptorPoolSize poolSizes[2] {
+ 		{
+ 			VK_DESCRIPTOR_TYPE_STORAGE_IMAGE,
+ 			uint32_t(m_descriptorSets.size()) * 2,
+diff --git a/src/rendervulkan.hpp b/src/rendervulkan.hpp
+index ebae5aa..2b10528 100644
+--- a/src/rendervulkan.hpp
++++ b/src/rendervulkan.hpp
+@@ -758,11 +758,8 @@ public:
+ 	inline VkPhysicalDevice physDev() {return m_physDev; }
+ 	inline VkInstance instance() { return m_instance; }
+ 	inline VkQueue queue() {return m_queue;}
+-	inline VkQueue generalQueue() {return m_generalQueue;}
+ 	inline VkCommandPool commandPool() {return m_commandPool;}
+-	inline VkCommandPool generalCommandPool() {return m_generalCommandPool;}
+ 	inline uint32_t queueFamily() {return m_queueFamily;}
+-	inline uint32_t generalQueueFamily() {return m_generalQueueFamily;}
+ 	inline VkBuffer uploadBuffer() {return m_uploadBuffer;}
+ 	inline VkPipelineLayout pipelineLayout() {return m_pipelineLayout;}
+ 	inline int drmRenderFd() {return m_drmRendererFd;}
+@@ -813,17 +810,14 @@ protected:
+ 	VkPhysicalDevice m_physDev = nullptr;
+ 	VkInstance m_instance = nullptr;
+ 	VkQueue m_queue = nullptr;
+-	VkQueue m_generalQueue = nullptr;
+ 	VkSamplerYcbcrConversion m_ycbcrConversion = VK_NULL_HANDLE;
+ 	VkSampler m_ycbcrSampler = VK_NULL_HANDLE;
+ 	VkDescriptorSetLayout m_descriptorSetLayout = VK_NULL_HANDLE;
+ 	VkPipelineLayout m_pipelineLayout = VK_NULL_HANDLE;
+ 	VkDescriptorPool m_descriptorPool = VK_NULL_HANDLE;
+ 	VkCommandPool m_commandPool = VK_NULL_HANDLE;
+-	VkCommandPool m_generalCommandPool = VK_NULL_HANDLE;
+ 
+ 	uint32_t m_queueFamily = -1;
+-	uint32_t m_generalQueueFamily = -1;
+ 
+ 	int m_drmRendererFd = -1;
+ 	dev_t m_drmPrimaryDevId = 0;
+diff --git a/src/reshade_effect_manager.cpp b/src/reshade_effect_manager.cpp
+index fa37a5c..f8cdc20 100644
+--- a/src/reshade_effect_manager.cpp
++++ b/src/reshade_effect_manager.cpp
+@@ -862,7 +862,7 @@ bool ReshadeEffectPipeline::init(CVulkanDevice *device, const ReshadeEffectKey &
+ 		VkCommandBufferAllocateInfo commandBufferAllocateInfo =
+         {
+ 			.sType              = VK_STRUCTURE_TYPE_COMMAND_BUFFER_ALLOCATE_INFO,
+-			.commandPool        = device->generalCommandPool(),
++			.commandPool        = device->commandPool(),
+ 			.level              = VK_COMMAND_BUFFER_LEVEL_PRIMARY,
+ 			.commandBufferCount = 1
+ 		};
+@@ -875,7 +875,7 @@ bool ReshadeEffectPipeline::init(CVulkanDevice *device, const ReshadeEffectKey &
+ 			return false;
+ 		}
+ 
+-        m_cmdBuffer.emplace(device, cmdBuffer, device->generalQueue(), device->generalQueueFamily());
++        m_cmdBuffer.emplace(device, cmdBuffer, device->queue(), device->queueFamily());
+     }
+ 
+     // Create Uniform Buffer
+-- 
+2.46.0
+

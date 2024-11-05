@@ -1,0 +1,16 @@
+pkgbase = mingw-w64-cminpack
+	pkgdesc = A C/C++ rewrite of the MINPACK software (mingw-w64)
+	pkgver = 1.3.11
+	pkgrel = 1
+	url = http://devernay.free.fr/hacks/cminpack/cminpack.html
+	arch = any
+	license = BSD
+	makedepends = mingw-w64-cmake
+	depends = mingw-w64-cblas
+	options = !buildflags
+	options = staticlibs
+	options = !strip
+	source = https://github.com/devernay/cminpack/archive/v1.3.11.tar.gz
+	sha256sums = 45675fac0a721a1c7600a91a9842fe1ab313069db163538f2923eaeddb0f46de
+
+pkgname = mingw-w64-cminpack

@@ -1,0 +1,28 @@
+pkgbase = fmt10
+	pkgdesc = Open-source formatting library for C++
+	pkgver = 10.2.1
+	pkgrel = 1
+	url = https://fmt.dev
+	arch = x86_64
+	license = MIT
+	makedepends = cmake
+	makedepends = doxygen
+	makedepends = git
+	makedepends = ninja
+	makedepends = npm
+	makedepends = python-breathe
+	makedepends = python-docutils
+	makedepends = python-jinja
+	makedepends = python-six
+	makedepends = python-sphinx
+	makedepends = python-wheel
+	depends = gcc-libs
+	provides = libfmt.so
+	source = git+https://github.com/fmtlib/fmt.git#tag=e69e5f977d458f2650bb346dadf2ad30c5320281
+	source = fmt-no-pip-no-virtualenv.patch
+	source = fmt-10.0.0-sphinx.patch
+	b2sums = e79699a46afe099007f9ad4b5ba063fbd8a90575535cd006452c7e648d4a6131460407ecfeb824c7e4d64d793f9e09ff2953afd7f997cd4a273b9422b832e46b
+	b2sums = 0bc421afdc4c2527525ce2e21740c9f72e05431394fb4710c1a8fa6d3bb2ee20d0630e2a76ddbac3c0ba27c1ab08f0c8e27d060def1370721b1c94246cbbf0ff
+	b2sums = 4eabdf38317e22e6b650b91821f1fab50bb3641e4f9a63847cb9b823becd3a4106fe47df37c8dc886f5fe1d1d3e529136c867459105df07c359582214d6fa01f
+
+pkgname = fmt10

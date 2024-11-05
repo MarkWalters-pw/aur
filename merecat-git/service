@@ -1,0 +1,9 @@
+[Unit]
+Description=Simple, small, and fast HTTP server
+
+[Service]
+Restart=always
+ExecStart=/usr/bin/merecat -n
+
+[Install]
+WantedBy=multi-user.target

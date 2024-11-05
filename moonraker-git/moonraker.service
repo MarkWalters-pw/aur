@@ -1,0 +1,17 @@
+[Unit]
+Description=Moonraker Klipper HTTP Server
+After=network.target klipper.service
+
+[Service]
+Type=simple
+User=klipper
+SupplementaryGroups=moonraker-admin
+SyslogIdentifier=moonraker
+RemainAfterExit=yes
+EnvironmentFile=/var/opt/moonraker/systemd/moonraker.env
+ExecStart=/opt/moonraker/bin/python -m moonraker -n $MOONRAKER_ARGS
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,24 @@
+pkgbase = freecord-git
+	pkgdesc = A Discord clone but more secure + proxy feature | under construction
+	pkgver = 1.0.0.beta.r0.gd86a52e
+	pkgrel = 1
+	url = https://github.com/MR-MKZ/Freecord
+	arch = any
+	license = MIT
+	makedepends = npm
+	makedepends = git
+	makedepends = nvm
+	makedepends = gendesk
+	makedepends = gcc
+	makedepends = cmake
+	makedepends = curl
+	makedepends = asar
+	depends = electron30
+	provides = freecord=1.0.0.beta
+	conflicts = freecord
+	source = freecord.git::git+https://github.com/MR-MKZ/Freecord.git
+	source = freecord.sh
+	sha256sums = SKIP
+	sha256sums = 291f50480f5a61bc9c68db7d44cd0412071128706baa868a9cb854f8779a1980
+
+pkgname = freecord-git

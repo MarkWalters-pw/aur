@@ -1,0 +1,19 @@
+pkgbase = ibus-bamboo-git
+	pkgdesc = A Vietnamese IME for IBus
+	pkgver = 0.8.4.rc6+22+ge858def
+	pkgrel = 1
+	url = https://github.com/BambooEngine/ibus-bamboo
+	arch = any
+	license = GPL3
+	makedepends = go
+	makedepends = libibus
+	makedepends = libx11
+	makedepends = gtk3
+	makedepends = libxtst
+	optdepends = ibus
+	conflicts = ibus-bamboo
+	options = !strip
+	source = ibus-bamboo-git::git+https://github.com/BambooEngine/ibus-bamboo
+	md5sums = SKIP
+
+pkgname = ibus-bamboo-git

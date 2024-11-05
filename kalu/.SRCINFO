@@ -1,0 +1,24 @@
+pkgbase = kalu
+	pkgdesc = Upgrade notifier w/ AUR support, watched (AUR) packages, news
+	pkgver = 4.5.2
+	pkgrel = 2
+	url = https://github.com/Thulinma/kalu
+	install = kalu.install
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	license = GPL3+
+	makedepends = perl
+	makedepends = groff
+	depends = dbus
+	depends = polkit
+	depends = gtk3
+	depends = pacman>=6.1
+	depends = pacman<7.1
+	depends = curl
+	depends = libnotify
+	depends = notification-daemon
+	source = https://github.com/Thulinma/kalu/archive/refs/tags/4.5.2.tar.gz
+	md5sums = d112db6a3fffb5dffe95f4e3f4db1caf
+
+pkgname = kalu

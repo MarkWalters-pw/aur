@@ -1,0 +1,79 @@
+#!/usr/bin/env bash
+
+_USER="${SUDO_USER:-$USER}"
+_UI_APP_USER_DIR="/home/${_USER}/.config/IVPN"
+_UI_APP_USER_DIR_OLD="/home/${_USER}/.config/ivpn-ui" #(old productName='ivpn-ui' for app ver < 3.3.x)
+_AUTOSTART_FILE="/home/${_USER}/.config/autostart/ivpn-ui.desktop"
+
+silent() {
+  "$@" > /dev/null 2>&1
+}
+
+copySettingsFromOldAppVer() {
+  if [ -d $_UI_APP_USER_DIR ] ; then
+    # if application cache data already exists - do nothing
+    echo "[ ] App cache data already exists"
+  else
+    if [ -d $_UI_APP_USER_DIR_OLD ] ; then
+      echo "[+] Upgrading old app version cache data ..."
+      mv $_UI_APP_USER_DIR_OLD $_UI_APP_USER_DIR || echo "[-] Failed"
+    fi
+  fi
+}
+
+killapp() {
+  echo "[+] Checking for 'ivpn-ui' running processes ..."
+  ps aux | grep /opt/ivpn/ui/bin/ivpn-ui | grep -v grep  > /dev/null 2>&1
+
+  if [ $? -eq 0 ]; then
+    echo "[!] Detected: IVPN app is running"
+
+    echo "[+] Killing all 'ivpn-ui' processes ..."
+    # We should be careful here: WE SHOULD NOT KILL THIS SCRIPT :)
+    # (which also can have 'ivpn-ui' in process description)
+    silent kill -TERM $(ps aux | grep /opt/ivpn/ui/bin/ivpn-ui | grep -v grep | awk '{print $2}')
+    silent sleep 2
+
+    ps aux | grep /opt/ivpn/ui/bin/ivpn-ui | grep -v grep  > /dev/null 2>&1
+    if [ $? -eq 0 ]; then
+      silent kill -KILL $(ps aux | grep /opt/ivpn/ui/bin/ivpn-ui | grep -v grep | awk '{print $2}')
+    fi
+  fi
+}
+
+erase_leftovers() {
+  if [ -d $_UI_APP_USER_DIR ] ; then
+    echo "[+] Removing application cache data: '$_UI_APP_USER_DIR' ..."
+    rm -rf $_UI_APP_USER_DIR || echo "[-] Failed"
+  fi
+  if [ -d $_UI_APP_USER_DIR_OLD ] ; then
+    echo "[+] Removing application cache data (old app version): '$_UI_APP_USER_DIR_OLD' ..."
+    rm -rf $_UI_APP_USER_DIR_OLD || echo "[-] Failed"
+  fi
+
+  if [ -f $_AUTOSTART_FILE ]; then
+    echo "[+] Removing application autostart file: '$_AUTOSTART_FILE' ..."
+    rm $_AUTOSTART_FILE || echo "[-] Failed"
+  fi
+}
+
+# --- install hooks ---
+pre_install() {
+  killapp;
+}
+
+pre_upgrade() {
+  killapp;
+}
+
+pre_remove() {
+  killapp;
+}
+
+post_upgrade() {
+  copySettingsFromOldAppVer;
+}
+
+post_remove() {
+	erase_leftovers;
+}

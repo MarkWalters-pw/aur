@@ -1,0 +1,24 @@
+pkgbase = lammps-git
+	pkgdesc = Large-scale Atomic/Molecular Massively Parallel Simulator
+	pkgver = patch_29Aug2024.r251.g2995cb7
+	pkgrel = 1
+	url = https://lammps.sandia.gov/
+	arch = x86_64
+	license = GPL
+	makedepends = cmake>=3.1
+	makedepends = git
+	makedepends = python-pip
+	makedepends = python-build
+	depends = fftw
+	depends = openmpi
+	depends = ffmpeg
+	depends = libpng
+	optdepends = clang
+	optdepends = python
+	optdepends = python-mpi4py
+	provides = lammps
+	conflicts = lammps
+	source = git+https://github.com/lammps/lammps.git
+	sha512sums = SKIP
+
+pkgname = lammps-git

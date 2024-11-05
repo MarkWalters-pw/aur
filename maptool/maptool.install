@@ -1,0 +1,7 @@
+post_install() {
+	xdg-mime install '/usr/share/java/maptool/maptool-mimeinfo.xml'
+}
+
+pre_remove() {
+	xdg-mime uninstall '/usr/share/java/maptool/maptool-mimeinfo.xml'
+}

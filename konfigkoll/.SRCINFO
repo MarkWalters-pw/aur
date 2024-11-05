@@ -1,0 +1,17 @@
+pkgbase = konfigkoll
+	pkgdesc = Personal system configuration manager for Arch Linux
+	pkgver = 0.1.9
+	pkgrel = 1
+	url = https://github.com/VorpalBlade/paketkoll
+	arch = x86_64
+	arch = i686
+	arch = armv7h
+	arch = aarch64
+	license = MPL-2.0
+	makedepends = cargo
+	makedepends = cmake
+	options = !lto
+	source = konfigkoll-0.1.9.tar.gz::https://github.com/VorpalBlade/paketkoll/archive/refs/tags/konfigkoll-v0.1.9.tar.gz
+	sha256sums = 003d43557cd40230cece9f05ddafe75d008d8d527de597e1f74308c34cec37c1
+
+pkgname = konfigkoll

@@ -1,0 +1,23 @@
+pkgbase = libblake
+	pkgdesc = Library for the BLAKE-family of hashing functions
+	pkgver = 3.0
+	pkgrel = 1
+	url = https://github.com/maandree/libblake
+	arch = i686
+	arch = x86_64
+	license = custom:ISC
+	checkdepends = glibc
+	checkdepends = musl
+	makedepends = glibc
+	makedepends = musl
+	makedepends = gcc
+	source = libblake-3.0.tar.gz::https://github.com/maandree/libblake/archive/3.0.tar.gz
+	sha256sums = 1b2a07aa398375eb5505e156577ab8df920ded99fb4a99fbae8559207e189f03
+
+pkgname = libblake
+	pkgdesc = Library for the BLAKE-family of hashing functions
+	depends = glibc
+
+pkgname = libblake-musl
+	pkgdesc = Library for the BLAKE-family of hashing functions (musl version)
+	depends = musl

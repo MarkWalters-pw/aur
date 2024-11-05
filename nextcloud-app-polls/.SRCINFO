@@ -1,0 +1,18 @@
+pkgbase = nextcloud-app-polls
+	pkgdesc = Poll app for Nextcloud
+	pkgver = 7.2.3
+	pkgrel = 1
+	url = https://github.com/nextcloud/polls
+	arch = any
+	groups = nextcloud-apps
+	license = AGPL-3.0-or-later
+	makedepends = npm
+	makedepends = composer
+	makedepends = yq
+	makedepends = rsync
+	source = polls-7.2.3.tar.gz::https://github.com/nextcloud/polls/archive/v7.2.3.tar.gz
+	sha512sums = 01850ac6fdac492af584b267ade5bfda1f8d38b34fc226bedeec44b54588c8b6f1fd60f64d4563fd9214c776185ef94e6a62d56ffda7c72cdd98838bb9661265
+
+pkgname = nextcloud-app-polls
+	depends = nextcloud>=
+	depends = nextcloud<

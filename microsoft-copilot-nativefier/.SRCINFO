@@ -1,0 +1,22 @@
+pkgbase = microsoft-copilot-nativefier
+	pkgdesc = Microsoft Copilot desktop app (electron)
+	pkgver = 32.1.2
+	pkgrel = 1
+	url = https://copilot.microsoft.com
+	arch = armv7l
+	arch = i686
+	arch = x86_64
+	license = custom
+	makedepends = imagemagick
+	makedepends = nodejs-nativefier
+	makedepends = unzip
+	depends = gtk3
+	depends = libxss
+	depends = nss
+	optdepends = libindicator-gtk3
+	source = microsoft-copilot-nativefier.png
+	source = microsoft-copilot-nativefier.desktop
+	sha256sums = 013fb8cc232b0a5a14df505f8f7d5ae8366da51bfb52bf4b54e77f6b30a4518c
+	sha256sums = b33b06b923ef7a9e2f3d64ebcba61f0c5e72c5986ec94c496bbf97ac516ea36a
+
+pkgname = microsoft-copilot-nativefier

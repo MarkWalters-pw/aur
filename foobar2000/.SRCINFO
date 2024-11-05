@@ -1,0 +1,25 @@
+pkgbase = foobar2000
+	pkgdesc = An advanced freeware audio player (uses Wine)
+	pkgver = 2.1.6
+	pkgrel = 1
+	url = https://www.foobar2000.org
+	install = foobar2000.install
+	arch = i686
+	arch = x86_64
+	license = custom
+	makedepends = p7zip
+	makedepends = wget
+	depends = wine
+	depends = desktop-file-utils
+	source = foobar2000_v2.1.6.exe::https://www.foobar2000.org/download
+	source = LICENSE
+	source = foobar2000.sh
+	source = foobar2000.png
+	source = foobar2000.desktop
+	sha256sums = cf4a67c8d5731a2328eb4a81de40ead108f9dec585d5278df98563cd3653254d
+	sha256sums = 134cf36d7631628bfa4a3830704aa6a9efb6e265660b31d5b487df97aaa32721
+	sha256sums = e9d1f7a8dc182f780d0fb15818c2837ebe0b70abcbef1c849a4185da7c09be7c
+	sha256sums = 2031e952d1d1d6cb4c2ff2b879421149f3f0780ca5d3ac03bc9c23fcbbd053d6
+	sha256sums = 2b6134997e55ce5ef5014dc266cda71b763949ad683d321246a5143333dd1fa0
+
+pkgname = foobar2000

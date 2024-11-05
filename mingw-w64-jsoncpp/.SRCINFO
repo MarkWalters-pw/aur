@@ -1,0 +1,17 @@
+pkgbase = mingw-w64-jsoncpp
+	pkgdesc = A C++ library for interacting with JSON (mingw-w64)
+	pkgver = 1.9.6
+	pkgrel = 1
+	url = https://github.com/open-source-parsers/jsoncpp
+	arch = any
+	license = MIT
+	license = custom:Public_Domain
+	makedepends = mingw-w64-cmake
+	depends = mingw-w64-crt
+	options = !strip
+	options = !buildflags
+	options = staticlibs
+	source = jsoncpp-1.9.6.tar.gz::https://github.com/open-source-parsers/jsoncpp/archive/1.9.6.tar.gz
+	sha256sums = f93b6dd7ce796b13d02c108bc9f79812245a82e577581c4c9aabe57075c90ea2
+
+pkgname = mingw-w64-jsoncpp

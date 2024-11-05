@@ -1,0 +1,20 @@
+pkgbase = ngsolve-git
+	pkgdesc = A general purpose Finite Element Library on top of Netgen.
+	pkgver = 6.2.2405.r0.ge34d7dc
+	pkgrel = 1
+	url = https://github.com/ngsolve/ngsolve
+	arch = x86_64
+	arch = i686
+	license = LGPL-2.1-only
+	makedepends = git
+	makedepends = cmake
+	makedepends = python-pillow
+	makedepends = python-numpy
+	depends = lapack
+	depends = blas
+	source = git+https://github.com/NGSolve/ngsolve.git
+	source = git+https://github.com/NGSolve/netgen.git
+	md5sums = SKIP
+	md5sums = SKIP
+
+pkgname = ngsolve-git

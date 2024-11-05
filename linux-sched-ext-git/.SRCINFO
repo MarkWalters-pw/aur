@@ -1,0 +1,43 @@
+pkgbase = linux-sched-ext-git
+	pkgdesc = Linux Kernel based on the sched_ext branch
+	pkgver = 6.11.0.r1295922.g902d67a2d40f
+	pkgrel = 1
+	url = http://www.kernel.org/
+	arch = x86_64
+	license = GPL-2.0-only
+	makedepends = bc
+	makedepends = libelf
+	makedepends = git
+	makedepends = pahole
+	makedepends = cpio
+	makedepends = perl
+	makedepends = tar
+	makedepends = xz
+	makedepends = python
+	options = !strip
+	source = git+https://git.kernel.org/pub/scm/linux/kernel/git/tj/sched_ext.git#branch=for-6.12
+	source = https://gitlab.com/sirlucjan/kernel-patches/raw/master/next/arch-patches-sep/0001-ZEN-Add-sysctl-and-CONFIG-to-disallow-unprivileged-C.patch
+	source = https://gitlab.com/sirlucjan/kernel-patches/raw/master/next/arch-patches-sep/0002-arch-Kconfig-Default-to-maximum-amount-of-ASLR-bits.patch
+	source = config
+	b2sums = SKIP
+	b2sums = efe75d4575d6b788a36a1e90d1e0e0325a134a254b31e6b82da911579252f661a01b21a5b36aceb0e5f2f617dfd17915ddcb8fbf4fce36a327607533815a334e
+	b2sums = 38afff5ca38dcfdba13fb077a5e3df32fbbbb97c8cb9b55e8c674f3cadcc5dd163e2c6472f8365ef10bfeb5bcc11d64b78ee0366bddea124d3f61b21314a5468
+	b2sums = b1d5581a6f7e8da87b0eaf20fae7752eb401f1c87c8febf64dd1ff5c86a11170175196bdaa38129c5624a0f4a2a4ec3adef7753f63211224a69b51b29635626c
+
+pkgname = linux-sched-ext-git
+	pkgdesc = The Linux Kernel based on the sched_ext branch kernel and modules
+	depends = coreutils
+	depends = kmod
+	depends = initramfs
+	depends = scx-scheds
+	optdepends = wireless-regdb: to set the correct wireless channels of your country
+	optdepends = linux-firmware: firmware images needed for some devices
+	optdepends = modprobed-db: Keeps track of EVERY kernel module that has ever been probed - useful for those of us who make localmodconfig
+	provides = VIRTUALBOX-GUEST-MODULES
+	provides = WIREGUARD-MODULE
+	provides = KSMBD-MODULE
+
+pkgname = linux-sched-ext-git-headers
+	pkgdesc = Headers and scripts for building modules for the Linux Kernel based on the sched_ext branch kernel
+	depends = linux-sched-ext-git
+	depends = pahole

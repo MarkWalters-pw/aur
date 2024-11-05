@@ -1,0 +1,17 @@
+pkgbase = merecat-git
+	pkgdesc = Small and made-easy HTTP/HTTPS server based on Jef Poskanzer's thttpd
+	pkgver = r999.606774e
+	pkgrel = 3
+	url = https://github.com/troglobit/merecat
+	arch = x86_64
+	license = custom:2BSD
+	makedepends = git
+	depends = confuse
+	provides = merecat
+	conflicts = merecat
+	source = merecat-git::git+https://github.com/troglobit/merecat
+	source = merecat-git.no-php-cgi.patch
+	sha256sums = SKIP
+	sha256sums = fa06dbec48572849d3c488b594229154179ed89667a044528ec3fdece6816f99
+
+pkgname = merecat-git

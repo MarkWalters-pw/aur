@@ -1,0 +1,108 @@
+# Maintainer: Setpill
+pkgname=lnd-bin
+_pkgname=lnd
+pkgver=0.18.3_beta
+_pkgver="${pkgver//_/-}"
+__pkgver="${_pkgver//\./\\\.}"
+pkgrel=1
+pkgdesc="Lightning Network Daemon ⚡"
+arch=('x86_64')
+url="https://github.com/lightningnetwork/lnd"
+license=('MIT')
+provides=('lnd' 'lncli')
+conflicts=('lnd' 'lnd-git')
+source=(
+    "https://github.com/lightningnetwork/$_pkgname/releases/download/v$_pkgver/$_pkgname-linux-amd64-v$_pkgver.tar.gz"
+    "$_pkgname-LICENSE-v$_pkgver::https://raw.githubusercontent.com/lightningnetwork/$_pkgname/v$_pkgver/LICENSE"
+)
+sha512sums=(
+    'ecca575ca56f8e4202083bc4011d1cf75edcbfee5097f4cc796b20f64054f8fdad7d083171a67f647e1779fb86b11f742698f734d2cc7b50cfa09fa8d8e30ff0'
+    '49de7041d5c7448a8f5cc387e4e820eca2a87c02b70d5a38aa3823354d960843e93ca12bd8b66a13708937539da85b90328bd4c32575792f0aa6755a011ba4bb'
+)
+
+# List of maintainer pubkeys, see https://github.com/lightningnetwork/lnd/tree/master/scripts/keys
+validpgpkeys=(
+    'E97A1AB6C77A1D2B72F50A6F90E00CCB1C74C611' # arshbot
+    '9FC6B0BFD597A94DBF09708280E5375C094198D8' # bhandras
+    '15E7ECF257098A4EF91655EB4CA7FE54A6213C91' # carlaKC
+    '7E81EF6B9989A9CC93884803118759E83439A9B1' # Crypt-iQ
+    '26984CB69EB8C4A26196F7A4D7D916376026F177' # ellemouton
+    'FE5E159A70C436D6AF4D2887B1F8848557AA29D2' # ffranr
+    'F4FC70F07310028424EFC20A8E4256593F177720' # guggero
+    '32F7EA1E7A0339F7D37164B9F82D456EA023C9BF' # hieblmi
+    'EB13A98091E8D67CDD7FC5A7E9FE7FE00AD163A4' # positiveblue
+    'E4D85299674B2D31FAA1892E372CBD7633C61696' # roasbeef
+    '4DC235556B18694E08518DBB671103D881A5F0E4' # sputn1ck
+    '187F6ADD93AE3B0CF335AA6AB984570980684DCC' # ViktorTigerstrom
+    '729E9D9D92C75A5FBFEEE057B5DD717BEF7CA5B1' # wpaulino
+    'E85497D2DBA0EB9ADB0024279BCD95C4FF296868' # yyforyongyu
+)
+
+prepare() {
+    manifestfile="$srcdir/$_pkgname-manifest-v$_pkgver.txt"
+
+    curl -fLso $manifestfile "https://github.com/lightningnetwork/$_pkgname/releases/download/v$_pkgver/manifest-v$_pkgver.txt"
+
+    # Check the binaries match the manifest
+    cat "$manifestfile" \
+        | grep "^[0-9a-f]\{64\}  $_pkgname-linux-amd64-v$__pkgver\(\.tar\.gz\|/lnd\|/lncli\)$" \
+        | sha256sum -c -
+
+    maintainers=(
+        'arshbot'
+        'bhandras'
+        'carlaKC'
+        'Crypt-iQ'
+        'ellemouton'
+        'ffranr'
+        'guggero'
+        'hieblmi'
+        'positiveblue'
+        'roasbeef'
+        'sputn1ck'
+        'ViktorTigerstrom'
+        'wpaulino'
+        'yyforyongyu'
+    )
+
+    numsigs=0
+
+    for (( i=0; i<${#maintainers[@]}; i++ )); do
+        maintainer=${maintainers[$i]}
+        validpgpkey=${validpgpkeys[$i]}
+        # Try to get the signature for this maintainer, skip if doesn't exist
+        signaturefile="$srcdir/$_pkgname-manifest-$maintainer-v$_pkgver.txt.sig"
+        curl -fLso "$signaturefile" \
+            "https://github.com/lightningnetwork/$_pkgname/releases/download/v$_pkgver/manifest-$maintainer-v$_pkgver.sig" \
+            || continue
+
+        echo "[32mFound signature from $maintainer[0m"
+
+        # Verify the signature
+        gpgoutput=$(gpg --status-fd=1 --verify "$signaturefile" "$manifestfile" || true)
+
+        # Check if fingerprint matches whitelisted one
+        fingerprint=$(echo "$gpgoutput" | awk '{ if ($2 == "VALIDSIG") {print $12} }')
+        if [[ ! "${validpgpkey}" = "${fingerprint}" ]]; then
+            echo "[33mNot a valid signature from the whitelisted key for this maintainer, ignoring[0m"
+            continue
+        fi
+
+        numsigs=$((numsigs + 1))
+    done
+
+    # LND maintainers try to provide at least 5 signatures per release; break if we have found less
+    if (( $numsigs < 5 )); then
+        echo "[31mOnly $numsigs valid signatures found; exiting[0m"
+        exit 1
+    fi
+    echo "[32mFound $numsigs valid signatures[0m"
+}
+
+package() {
+    install -Dm 755 "$srcdir/$_pkgname-linux-amd64-v$_pkgver/lncli" -t "$pkgdir/usr/bin";
+    install -Dm 755 "$srcdir/$_pkgname-linux-amd64-v$_pkgver/lnd" -t "$pkgdir/usr/bin";
+
+    install -Dm644 "${srcdir}/$_pkgname-LICENSE-v$_pkgver" -t "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+}
+
