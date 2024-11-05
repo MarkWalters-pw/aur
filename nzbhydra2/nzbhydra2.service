@@ -1,0 +1,17 @@
+# Be sure to use `systemctl edit nzbhydra2` to modify this service with an override.conf because
+# direct changes will be overwritten by package updates.
+
+[Unit]
+Description=NZBHydra2 Daemon
+Documentation=https://github.com/theotherp/nzbhydra2
+After=network.target
+
+[Service]
+User=nzbhydra2
+Group=nzbhydra2
+Type=simple
+ExecStart=/usr/bin/nzbhydra2 --nobrowser --datafolder /var/lib/nzbhydra2
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

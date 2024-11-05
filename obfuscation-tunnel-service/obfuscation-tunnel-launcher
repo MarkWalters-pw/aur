@@ -1,0 +1,79 @@
+#!/bin/bash
+
+help() {
+  echo "usage $0 [--verbose] CONFIG.conf"
+  echo "  see /etc/obfuscation-tunnel/example.conf.example"
+  echo " -v, --verbose - echo to the screen while parsing config file"
+  echo " -vv, --verbose=2 - extra verbose"
+  exit 1
+}
+
+if [[ $# -lt 1 ]] || [[ $# -gt 2 ]]; then
+  help
+elif [[ $# -eq 2 ]]; then
+  case ${1,,} in
+    '-v'|'--verbose'|'--verbose=1') DEBUG=1 ;;
+    '-vv'|'--verbose=2') DEBUG=2 ;;
+	*)
+      echo "Bad Arguments"
+      help
+	  ;;
+  esac
+  file="${2}"
+else
+  file="${1}"
+  unset DEBUG
+fi
+
+if [[ ! -e ${file} ]]; then
+  echo "${file} does not exist"
+  echo
+  help
+else
+
+  echo "Using ${file}"
+
+  [[ -v DEBUG ]] && echo "Printing arguments as they're found"
+  while read line; do
+    k="${line%=*}"
+    v="${line#*=}"
+    if [[ ${k::1} == '#' ]]; then
+      continue
+    fi
+
+	[[ -v DEBUG ]] && echo "  ${k}: ${v}"
+	declare -a args
+    case "${k,,}" in
+	  local|l) args+=( -l "${v}" ) ;;
+      remote|r) args+=( -r "${v}" )  ;;
+      obfuscation|o)[[ ${v} != '0' ]] && args+=( -o "${v}" ) ;;
+      key|k) args+=( -k "${v}" ) ;;
+      socks|socks5|mock|m) args+=( -m "${v}" ) ;;
+      nothread|s) [[ ${v} != '0' ]] && args+=( -s ) ;;
+      verbose|v) [[ ${v} != '0' ]] && args+=( -v ) ;;
+
+      #TCP options
+      encoding|e) args+=( -e "${v}" ) ;;
+
+      #ICMP options
+      pcap|use-pcap|use_pcap|p) args+=( -p "${v}" ) ;;
+      randomid|expectrandomid|e) args+=( -x "${v}" ) ;;
+
+      #DNS options
+      fragment|f) [[ ${v} != '0' ]] && args+=( -f ) ;;
+      domain|d) args+=( -d "${v}" ) ;;
+
+      #TLS options
+	  tls_no_verify|tls-no-verify) [[ ${v} != '0' ]] && args+=('--tls-no-verify') ;;
+	  tls_ca_bundle|tls-ca-bundle) args+=(--tls-ca-bundle "${v}") ;;
+	  tls_cert|tls-cert) args+=(--tls-cert "${v}") ;;
+	  tls_key|tls-key) args+=(--tls-key "${v}") ;;
+    esac
+    [[ $DEBUG -eq 2 ]] && echo "args: ${args[@]}"
+  done <<< "$(grep '=' ${file})"
+
+  [[ -v DEBUG ]] && echo 'Starting tunnel with the following options:'
+  [[ -v DEBUG ]] && echo '  /usr/bin/obfuscation-tunnel '"${args[@]}"
+
+  /usr/bin/obfuscation-tunnel "${args[@]}"
+fi

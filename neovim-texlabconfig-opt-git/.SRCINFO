@@ -1,0 +1,14 @@
+pkgbase = neovim-texlabconfig-opt-git
+	pkgdesc = Forward and Inverse Search for Texlab and neovim
+	pkgver = r64.b817297
+	pkgrel = 1
+	url = https://github.com/f3fora/nvim-texlabconfig
+	arch = x86_64
+	license = Unlicense
+	makedepends = git
+	makedepends = go
+	depends = neovim
+	source = texlabconfig::git+https://github.com/f3fora/nvim-texlabconfig.git
+	sha256sums = SKIP
+
+pkgname = neovim-texlabconfig-opt-git

@@ -1,0 +1,18 @@
+pkgbase = multimail
+	pkgdesc = offline mail packet reader that supports the Blue Wave, QWK, OMEN, SOUP and OPX formats
+	pkgver = 0.52
+	pkgrel = 2
+	url = http://wmcbrine.com/mmail/
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = ppc64le
+	license = GPL3
+	depends = ncurses
+	source = https://github.com/wmcbrine/MultiMail/archive/refs/tags/0.52.tar.gz
+	source = Makefile-DESTDIR.patch
+	sha256sums = 3bfbf5d410dfff8bc33dfba98a7ba382d3168b8f0d79c2cbcbe6e53be9bba24c
+	sha256sums = fe457d7095e5ac1419b425d8aa543abf3a00b3ff2ddf59714d3d0c9902bb6ff8
+
+pkgname = multimail

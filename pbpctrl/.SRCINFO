@@ -1,0 +1,20 @@
+pkgbase = pbpctrl
+	pkgdesc = Control Google Pixel Buds Pro from the Linux command line.
+	pkgver = 0.1.7
+	pkgrel = 1
+	url = https://github.com/qzed/pbpctrl
+	arch = x86_64
+	license = MIT
+	license = Apache
+	makedepends = git
+	makedepends = rust
+	makedepends = cargo
+	makedepends = dbus
+	makedepends = protobuf
+	depends = gcc-libs
+	depends = dbus
+	depends = bluez
+	source = pbpctrl-0.1.7.tar.gz::https://github.com/qzed/pbpctrl/archive/refs/tags/v0.1.7.tar.gz
+	sha256sums = 41926b0903e08e7c0741cfae010d92fbc6806881a515b27131f00b84d5116194
+
+pkgname = pbpctrl

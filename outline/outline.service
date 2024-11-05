@@ -1,0 +1,22 @@
+[Unit]
+Description=Outline server
+After=network.target
+
+[Service]
+User=outline
+Group=outline
+
+Type=simple
+Environment="NODE_ENV=production"
+ExecStart=/usr/bin/yarn start
+WorkingDirectory=/usr/share/webapps/outline
+LimitNOFILE=1048576
+LimitNPROC=64
+PrivateTmp=true
+PrivateDevices=true
+ProtectHome=true
+ProtectSystem=strict
+ReadWritePaths=/usr/share/webapps/outline
+
+[Install]
+WantedBy=multi-user.target

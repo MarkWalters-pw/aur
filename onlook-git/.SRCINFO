@@ -1,0 +1,23 @@
+pkgbase = onlook-git
+	pkgdesc = The open source, local-first Webflow alternative. Design directly in your live React site and publish your changes to code.
+	pkgver = r350.890e108
+	pkgrel = 1
+	url = https://github.com/onlook-dev/studio
+	arch = any
+	license = Apache-2.0
+	makedepends = npm
+	makedepends = git
+	makedepends = nvm
+	makedepends = gendesk
+	makedepends = gcc
+	makedepends = cmake
+	makedepends = curl
+	depends = electron32
+	provides = onlook=r350.890e108
+	conflicts = onlook
+	source = onlook.git::git+https://github.com/onlook-dev/studio.git
+	source = onlook.sh
+	sha256sums = SKIP
+	sha256sums = 291f50480f5a61bc9c68db7d44cd0412071128706baa868a9cb854f8779a1980
+
+pkgname = onlook-git

@@ -1,0 +1,15 @@
+pkgbase = nextcloud-app-files_retention
+	pkgdesc = Nextcloud app to delete files after a specified amount of days
+	pkgver = 1.19.0
+	pkgrel = 1
+	url = https://github.com/nextcloud/files_retention
+	arch = any
+	groups = nextcloud-apps
+	license = AGPL3
+	makedepends = npm
+	makedepends = yq
+	makedepends = rsync
+	source = files_retention-1.19.0.tar.gz::https://github.com/nextcloud/files_retention/archive/v1.19.0.tar.gz
+	sha512sums = d8144ad6f59e7b915c160448b5cdcb15ece3bc34812d370291957241a63d891813131d2444165a153379c0dfde2b446e64a6b6bed514f825c4fe64d9cce88d09
+
+pkgname = nextcloud-app-files_retention

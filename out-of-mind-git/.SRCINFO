@@ -1,0 +1,22 @@
+pkgbase = out-of-mind-git
+	pkgdesc = A tiny timer to keep you focused. Write down what you want to work on, then start the timer!Use system-wide electron.
+	pkgver = 2.0.0.r0.g6befc61
+	pkgrel = 1
+	url = https://github.com/0916dhkim/out-of-mind
+	arch = any
+	license = MIT
+	makedepends = npm
+	makedepends = git
+	makedepends = curl
+	makedepends = gendesk
+	makedepends = nvm
+	depends = electron30
+	depends = nodejs
+	provides = out-of-mind=2.0.0
+	conflicts = out-of-mind
+	source = out-of-mind.git::git+https://github.com/0916dhkim/out-of-mind.git
+	source = out-of-mind.sh
+	sha256sums = SKIP
+	sha256sums = 291f50480f5a61bc9c68db7d44cd0412071128706baa868a9cb854f8779a1980
+
+pkgname = out-of-mind-git

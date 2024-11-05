@@ -1,0 +1,1014 @@
+=== Morgen 2.1.6
+* Bug Fixes
+- Fixed an issue where certain CalDAV accounts could not be connected
+- Fixed a bug causing recurring events to be displayed on the wrong day in some timezones
+- Fixed a problem causing the event detail widget to become unresponsive in some edge cases
+- Fixed an issue causing the wrong organizer to be set when importing external invitations into Google Calendar; now, Morgen also disallows importing multiple times the same event
+- Fixed the colored calendar indicator in the Save button to show the correct calendar color
+- Fixed an issue preventing switching recurrent events to a different calendar
+
+* Improvements
+- Added a loading indicator in the event detail widget to indicate that an event is being updated
+- Prevent entering the alpha channel when defining custom calendar colors, because this is not supported
+- Event colors in dark mode have been slightly adjusted to be less strong
+- Add throttle on the refresh calendars operation, to avoid lag on the calendar view when coming into focus
+- Restore the previous status of the sidebar when the app is launched
+- Ensure that existing events cannot be imported as duplicates
+
+=== Morgen 2.1.7
+* Bug Fixes
+- Fixed a memory leak causing memory usage to grow over time; this should also fix performance degradation over time
+- Fixed an issue where certain CalDAV accounts could not be connected because of a failed service discovery (was actually not fixed in 2.1.6)
+- Fixed an issue causing some recurrence rules not to be updated correctly
+- Fixed an issue where tasks could not be dropped to the all-day section
+- Fixed an issue causing the first occurrence of an event series not to be displayed in some timezones
+- Fixed an issue causing some events to overlap entirely in the Month view
+
+⭐ Improvements
+- The major new feature landed in 2.1.7 is Account Synchronization.
+- Morgen now clears outdated notifications
+- Morgen does not send notifications for events that belong to an inactive calendar anymore
+- The Morgen icon is used for task switcher on Linux as well
+
+
+=== Morgen 2.1.8
+Ouch! We have been reported a crash occurring when trying to edit calendar shortcuts. Morgen 2.1.8 fixes this issue. Since we were at it, we also fixed a problem causing an error when editing some events created with Fastmail.
+
+
+=== Morgen 2.1.9
+* Bug Fixes
+- Fixed an issue causing huge output logs on some systems
+- Fixed a problem delivering notifications and event alerts
+- Fixed an issue preventing the compaction of the database, which could become very large
+- One-off events from a recurrent series are now correctly displayed# 
+
+=== Morgen 2.1.10
+* Bug Fixes
+- Fixed an issue preventing events to be fetched on some CalDAV accounts (Hostgator)
+- The timezone of new events is now by default the timezone chosen in the Settings, rather than the system timezone
+- Fixed the symlink on Linux using the DEB installer
+- Fixed an issue causing sometimes an error when trying to RSVPs to single occurrences of a Google event series
+- Fixed an issue forcing you to click twice to create an event after closing the event panel with escape
+- Fixed an issue causing the wrong parsing of some videoconferencing links in the quick join buttons
+- Fixed a problem making it impossible to copy text from the description of a read-only event
+
+* Improvements
+- The style of the title bar on Windows has been adjusted to be more consistent with other platforms and avoid a white bar on black theme
+- Organizer and attendees are now retained when importing an event into a Caldav provider
+- Availability Sharing functionality now adds the timezone abbreviation next to the time
+- Prevent the use of some shortcuts when the Availability Sharing mode is enabled or when a dialog is open
+- Sanitize attendee email before trying to create a Google Calendar event to avoid errors hard to understand
+
+
+=== Morgen 2.1.11
+Improvements & Fixes
+- Fixed an issue when parsing Exchange events that caused some daily events to be displayed on a wrong day
+- Fixed a problem with the recognition of recurrence rules for Exchange events
+- Fixed a crash when opening the event details widget of some recurring all-day events
+- Certain Google event updates resulted in an “Invalid start time” error message when an event was moved to the day section. This is now solved.
+- Allow for long requests when pulling events on CalDAV accounts
+- Fixed an issue that prevented updating the recurrence rule of an event series in some cases
+- After closing Morgen on Windows, there was a problem that prevented it from being reopened. Fixed now.
+
+
+=== Morgen 2.1.12
+Improvements
+- Several performance improvements were added. Most notably, the navigation with calendar shortcuts should be much more responsive now.
+- Users who have a Gravatar profile will see their avatar picture in Morgen
+- Improved parsing of attendee emails when creating an event to ensure they are valid and support for pasting multiple emails at once
+- The due date of a task can be removed after it has been set
+- The text from the conference room field of the event widget can now be copied
+- Allow invitations to be imported into a Google calendar when the calendar owner is neither the organizer nor an attendee
+- Improved shortcuts for non-US keyboards and fixed zoom using plus button on numeric keypad
+
+Bug Fixes
+- Fixed an issue that may have caused a duplicate event when accepting invitations on Google, along with additional validation checks to prevent this from happening again
+- Calendar shortcuts stopped working after restarting the app. This is fixed now.
+- Fixed an issue where the due date label of a task was not updated after midnight
+- Fixed a problem where the quick join action for meetings with a Google Meet link was not triggered correctly
+- The Windows notification center now displays the Morgen icon and correct application name
+- Fixed a bug that prevented saving task changes after selecting a due date when clicking away
+- In some cases, the tags in the event widget were not correctly recognized. This is now fixed as well.
+
+=== Morgen 2.2.0
+With Morgen 2.2, we are excited to announce a new tool to help you schedule your meetings. Now you can create One-on-One and Permanent Scheduling Links right in your calendar 🥳. Forget about Calendly, Morgen has you covered for most of the scheduling scenarios!
+
+Here is how it works:
+
+1. Select a few options for your next meeting. Optionally, add the name and email address of your invitee to make the booking page feel more personal.
+2. Copy and send the link generated by Morgen. Depending on the scenario, you might want to share the link by email, Slack, Teams, or put it on your webpage.
+3. Your invitee visualizes a page displaying your real-time availability and picks a slot. Morgen checks your calendars to ensure no double booking.
+4. Done, your meeting is scheduled. Reuse your personal scheduling link every time you need it.
+
+Visit https://morgen.so/scheduling to learn more about Morgen Scheduling Links. 
+
+=== Morgen 2.2.1
+Improvements
+- The current time indicator is now updated immediately when the timezone is changed
+- The "first day of the week" is now a setting decoupled from the Regional date/time format. For example, you can now set Monday as the first day of the week, while keeping the English (United States) as the region
+- Morgen now notifies when an update is ready to install by displaying a badge next to the profile icon on Windows and Mac
+- The shortcuts Alt+A and Alt+S now behave like toggles, making it easier to turn on/off the task and the scheduler sidebar
+- You can now use CTRL+S or CTRL+Enter (resp. Cmd+S or Cmd+Enter on Mac) to save events being edited without touching the mouse
+- We reduced the throttle for manual calendar refresh and now Morgen shows a feedback message when CTRL+R is pressed while sync is already in progress
+
+Bug Fixes
+- Fixed the connection to Facebook Events calendar feed
+- Avoid mixed-language availability text (at the moment, English is enforced)
+- Fixed an issue making it impossible to update a single occurrence of an event series when some events in the series had been previously deleted
+- Minor improvements to the style of tasks in the calendar
+- Cancelled meetings from Exchange and Office 365 are not displayed anymore, consistently with other providers
+
+
+=== Morgen 2.2.2
+Ouch! While improving the stability of Google accounts already connected to Morgen, we have broken the possibility to connect additional Google accounts! This release is only about fixing this issue. Apologies to all affected users 🙏
+
+=== Morgen 2.2.3
+Improvements
+- Several performance improvements were added. Most notably, the contacts and location autocompletion now run much smoother.
+- Authentication with Google and Microsoft are now working more reliably
+- General updates for security and performance
+
+Bug Fixes
+- Fixed an issue that could cause the local database to grow disproportionally with some calendar subscriptions
+- Fixed a problem preventing Search to find all the relevant events
+- Some events were not updated when moved from being all-day events to timed events: this is now solved
+- Fixed an issue causing some all-day events to be displayed over two days, instead of one
+
+=== Morgen 2.2.4
+Improvements
+- When you create a scheduling link, you can now set the limit for booking events in the future up to 12 weeks and there are more options for the minimum notice.
+- While searching, it is now possible to use the keyboard tab to switch between Past and Future tabs faster.
+- We increased the area where you can grab the window and drag it around. Before it was hard to find the right locations where this was working.
+- The shortcut C now creates a new event on the visible day/week, rather than jumping to Today.
+- Google introduced an additional step to authenticate: now we provide better guidance on this process.
+
+Bug Fixes
+- Fixed an issue making it impossible to edit start/end times for an event in some cases.
+- Fixed an issue causing non-native notifications on Linux not to be displayed.
+- Fixed a layout issue with timed events expanded to become longer than 24h
+
+=== Morgen 2.2.5
+New
+- You can now define the auto-refresh interval for calendar subscriptions (iCalendar feeds). If you are working with a highly dynamic calendar, you might want to use a refresh interval of 5, 15, or 60 minutes. Instead, if you know that the calendar does not change often, or if it contains a large number of events, you can set the refresh interval to 1 day to save resources.
+
+Improvements
+- We made the parsing of calendar feeds more robust, even for misformatted data.
+- We now show a visual warning when a Scheduling link is not fully synchronized with our servers, to make sure you know when a Scheduling link is ready to be shared.
+- We now use semicolons to separate attendees when communicating with your default mail client. This improves general compatibility.
+
+Bug Fixes
+- Fixed the misalignment of the time labels in weekly and daily views, visible when the resolution was set high.
+- Fixed a problem with editing the available time slots of Permanent Scheduling Links. The available slots were only visible when editing recent links. Now, they are visible for all links.
+- Fixed the Czech and Japanese locale.
+- Fixed an issue causing non-native notifications on Linux not to be displayed (yes, was actually not entirely fixed in the previous release)
+
+=== Morgen 2.2.6
+Improvements
+- Often an event timezone differs from the current local timezone. We have improved the event detail widget to show both the event original time and the time in the local timezone. Moreover, when the start and end timezones are different (long flights are a common example), Morgen now shows both. 
+
+Bug Fixes
+- It is now possible to select and copy text from the Notes field of an event that is not editable.
+- Fixed an issue causing some yearly events to be displayed every month.
+- Fixed an issue preventing the correct update of a weekly event series when the weekday is changed.
+
+
+=== Morgen 2.3.0
+New Features
+- Zapier integration
+
+Improvements
+-Starting from this release, Morgen persists the latest calendar view settings and restores them when you restart the app. For example, if you normally work on the monthly view, you will start from the same monthly view after a restart. Similarly, if you prefer not to see weekends, you will not need to toggle them off every time anymore.
+
+Bug Fixes
+- Fixed the calendar widget not appearing when editing the end date of a recurrence
+- Fixed parsing of some events, which was causing the end date to be wrong (and in the wrong timezone)
+- Fixed notifications with CalDAV calendars, that were not delivered reliably
+- Fixed a minor style issue with the notes fields in the Scheduler sidebar tab
+
+=== Morgen 2.3.1
+New Features
+- Morgen Time Zone Assistant. 
+
+Improvements
+- Events marked as "not busy" are now displayed with different color shade to visually set them apart from busy events.
+- On Linux, the date-time picker gets format directly from the language and locale settings of the system. This makes the widget more consistent with what you see on web apps running in the browser.
+- We improved the way local-only events look like. If you are offline or your connection is unstable, Morgen allows you to continue editing your events. These events, however, are not synchronized with the calendar provider until you are back online, and this release makes this case more apparent.
+
+Bug Fixes
+- Fixed a problem causing duplicate events sometimes appearing in the calendar.
+- Fixed the connection to some CalDAV services, using non-standard connection ports.
+
+=== Morgen 2.3.2
+Bug Fixes
+- Fixed a problem making it impossible to remove calendar accounts when the subscription is expired.
+- Fixed an issue causing the event details popup to appear out of the screen in some cases.
+- Fixed an issue preventing the correct display of error messages during the connection of a calendar account.
+
+=== Morgen 2.3.3
+Improvements
+- Avoid the flickering of the attendee autocompletion widget while typing.
+- Improved the loading time of the scheduling links, that was definitely too long.
+- Now the event widget does not move around like crazy while you are changing the time of the event.
+- Allow selecting and copying the error message in case of a crash.
+- Use Command/CTRL+H to hide and Command/CTRL+M to minimize.
+
+Bug Fixes
+- Fixed the positioning of the event widget appearing out of the screen on the Day view.
+- Fixed a crash occurring when creating a tag without a name.
+- Fixed the visual occlusion for the tag editing tooltip.
+- Fixed an issue making it impossible to remove the event description of an event in Exchange.
+- Fixed an issue preventing the Quick Join button to appear with many all-day events.
+- Fixed time zone helper showing out of the screen on the Day view.
+
+=== Morgen 2.3.4
+Improvements
+- We have made the size of the Morgen panel when using the Alt+C option the same for the Day and the Week views. This makes the transition smoother and gives more space for events and tasks in the Day view.
+- It is now possible to delete a calendar account from a device where the account itself is not authenticated. This covers some edge cases where it was not possible to add or remove an account.
+
+General Fixes
+- We disabled the possibility to RSVP to "This & Future occurrences". The reason is that this operation is not really supported by the calendar protocols and could lead to odd behaviors, like duplicate events. You can still RSVP to single occurrences or the entire event series.
+- We fixed a problem causing some events not to synchronize with the calendar provider immediately. This was a source of confusion as events would appear in Morgen but not immediately on other devices.
+- We fixed a problem delivering event invitations with some providers (e.g. Infomaniak).
+- We fixed a problem fetching events from some CalDAV providers.
+- We fixed a problem with Google Out-of-office (OOO) events. Before these events were displayed as one day longer than they actually were.
+- On a minor note, we fixed the downgrading alert. In general, it is not possible to downgrade Morgen to a previous version. A warning should be displayed if this is detected, but this warning was not displayed on some systems. This is now fixed.
+
+=== Morgen 2.3.5
+Morgen developers communicates the same changelog for 2.3.4 and 2.3.5 - so the latter arguably fixes issues of the former.
+
+=== Morgen 2.3.6
+Improvements
+- Loading calendars with tons of events, especially recurrent ones, is now much faster. This is only the first step towards making Morgen the faster calendar ever.
+- The creation of new events now feels more stable. We have fixed the flickering of the event that was occurring after hitting Save.
+- We have made several UI adjustments that we hope you'll love! For example, the current time indicator, as well as the color of the calendar to which an event belongs, are now more visible, even when the calendar is crowded.
+
+General Fixes
+- We fixed a possible crash sometimes occurring when creating a new event.
+- We improved the repositioning of the Morgen windows on Windows when disconnecting an external screen, and make the Alt+C toggling robust to fast switches.
+- We fixed an issue pushing events to some CalDAV providers.
+
+
+=== Morgen 2.4.0
+With release 2.4.0, we introduced native integrations with Microsoft Teams and Google Meet. You will be able to create ad-hoc rooms for newly-created events. Morgen will generate a one-time virtual room and attach it to your meeting. This works for events booked via Morgen Scheduling Links as well.
+
+You can still configure your permanent meeting rooms in Morgen settings. While this works best with Zoom, where the concept of a "waiting room" is well designed, Microsoft Teams and Google Meet work better with a one-off link generated for each meeting.
+
+To start with Google Meet and Microsoft Teams, visit the Integrations tab in Morgen settings.
+
+ 
+Improvements
+- on the Week, 2 Weeks, or Month view, you can now click on a date and jump into the Day view for that day
+- we gave the event details popup more space to visualize the event notes
+- we have changed the look and feel of this changelog, we are now using Headwayapp, and we love it!
+ 
+Bug Fixes
+- we fixed an issue preventing the use of Morgen Scheduling Links with some CalDAV providers (namely Zoho and Fastmail)
+- the event widget popup was moving too much while editing an event, this is now fixed
+- the declining of events on Office 365 or Outlook was erroneously showing an error message, this is now fixed
+- we fixed a program that could have caused an infinite loop and related memory leaks in some rare cases
+- we fixed a problem preventing the re-scheduling of a task as all-day event
+
+
+=== Morgen 2.4.1
+New Features
+- Landing page: You can now organize your Morgen links in a public page accessible at book.morgen.so/<your-name>. You can decide which links should be visible on your personal booking page, and which ones should stay private (only accessible with a direct link). You can also personalize your booking page title and welcome message, as well as the look and feel with your name, company, and logo.
+- Email reminders for Morgen Links: We know how easy it is to forget an appointment and we don't want this to happen to your attendees. You can now set Morgen to send email reminders to both you and your attendees for all meetings scheduled through a Morgen link. You can add multiple reminders that will be delivered timely before the start of the appointment.
+- White Labeling: Morgen Pro users can now customize the appearance of Morgen link pages, as well as the one of all the emails that are sent to the meeting attendees on your behalf. It is now possible to change your company logo, brand color, and hide references to Morgen.
+
+Improvements
+- It is now possible to embed a Morgen link into your web page
+- Everyone booking a meeting with you with a Morgen link will now receive an additional confirmation by email, including buttons to add the appointment to the calendar
+- The Morgen links are now customizable to look more friendly
+- You can now assign a custom name for each of your calendars. This is handy when you have multiple accounts and some of the calendars have the same name
+- The attendee autocompletion now also relies on the person's name (before it was only looking at the email address)
+
+Bug Fixes
+- We fixed an issue on the Morgen link widget preventing the correct navigation through months
+- We fixed an issue that could sometimes cause events to disappear from the calendar view
+
+=== Morgen 2.4.2
+New Features
+- The native Zoom integration is now available! It took a few weeks for Zoom to perform a security review of Morgen and giving us green light, but finally here it is. As with Google Meet and Microsoft Teams, you can now create an ad-hoc meeting link for each new event scheduled manually or through a Morgen Scheduling link.
+- With the start of 2022, we have decided to replace the closed feedback board with a more open roadmap platform that is accessible from both the Morgen app and our website. Open to everyone, no registration required.
+- You can now embed your Personal Booking page on your website. A button with the instructions to do so have been added to Morgen.
+
+Improvements
+- The one-click Join button for virtual meetings now appears only for meetings you are attending (and not, for example, for meetings that are only on your colleagues calendars)
+- Virtual room links are now displayed in the confirmation and reminder emails that are sent to your attendees, when they book a meeting using a Morgen Scheduling link
+
+Bug Fixes
+- We fixed the categorisation of some CalDAV calendars, erroneously considered read-only, which was preventing the editing of the events
+- We fixed a problem causing some Office 365 accounts to load forever in case of bad internet connection
+- We fixed some layout glitches, like the sidebar header moving behind the macOS traffic light buttons and the scheduler tooltip being hardly readable
+
+
+=== Morgen 2.4.3
+New Features:
+- We now offer the possibility to set up a static IP address for our scheduler to access your calendar when somebody loads one of your Morgen Scheduling Links. This is important if you need to whitelist our servers on your firewall, for example, Azure Conditional Access. This is an option available on-demand in the Morgen Pro plan. If white-listing a location is enough, you'll just need to know that all the requests come from our servers located in Zurich, Switzerland.
+- This release introduces several improvements and fixes for CalDAV calendars. First and foremost, Morgen now fully supports CalDAV delegate access. This means that you can see all calendars that have been shared with you by another person. Before it was only possible to add such calendars by entering their full URL, which was not always easy to find. To see a full list of calendars you have access to, reconnect your account using the "Reconnect" button.
+
+Bug Fixes
+- We fixed an issue affecting some recurrent daily events. Depending on the timezone, it could happen that the series would end one day too early or one day too late. This was affecting CalDAV as well as Exchange calendars and has now been fixed.
+- Again talking about timezones, we fixed a problem parsing some non-standard timezones on CalDAV, which was preventing the correct visualization of these events.
+
+
+
+=== Morgen 2.4.4
+Improvements:
+- While we are finalizing our next big release (spoiler: starts with T, ends with ODOIST 🤫), here we focus on a number of smaller improvements that you have been asking for in the last few weeks 🙏🏻.
+- The event details popup now sticks to its position when the date of the event goes beyond the currently displayed time window.
+- Meetings booked with Morgen Scheduling Links now show the attendee's name first, thus making it easier for you to keep track of the person you are talking to.
+- The Quick Join button is now displayed only for calendars with read & write access - this filters out read-only calendars of your colleagues.
+ 
+Fixes:
+- We fixed a bug preventing the creation of weekly or yearly recurrent events with Exchange/O365.
+- We fixed an issue causing sometimes a lag between the creation of an event in Morgen and its propagation to the calendar provider.
+- We fixed an issue causing some Exchange delegate calendars not to be displayed.
+- We fixed an issue causing some Exchange events not to display the correct RSVP status.
+- We fixed an issue causing some all-day events from Google Calendar to be displayed at midnight instead.
+- We made several other adjustments that make us proud but are a bit too technical to be shared here ✨
+
+=== Morgen 2.5.0
+New Features:
+- Native integrations with your favorite tools, such as Todoist, Google Tasks, Microsoft To Do, and Microsoft Email! While you could already import external tasks via Zapier, implementing the proper pipeline with Zapier is sometimes hard (and expensive 💰). We know that the right experience can only be achieved with more tight integration between Morgen and other tools. Starting today, you can integrate Todoist, Google Tasks, Microsoft To Do, and Outlook email directly, without the need for third-party services. This is just the start, more native integrations will come soon.
+- Recurrent Tasks: Morgen adds full support for recurrent tasks. If you schedule a Morgen task, you can now decide to set it daily, weekly, monthly, or even to follow more complex patterns. The tasks will appear in your calendar so you can better organize your time.
+
+Improvements:
+- Improved Task & Event editor: The Task & Event editor has been reworked to be simpler to use and more consistent. You can now create a task directly from your calendar. We also make the calendar selector easier to find and gave your notes more space.
+- A all-new look for your tasks: Tasks scheduled in your calendar will now appear with a new, clean and minimal style. This sets tasks apart from calendar events, so you know what is coming at a glance.
+- New toggles to customize Morgen to your needs (Hide completed tasks: Morgen can now automatically hide completed tasks from your calendar - completed tasks are marked as free, so they won't block your calendar. Widen current day: you can now decide whether the current day column in the Weekly and 2 Weeks view should be larger than the others.)
+
+Fixes:
+- Fixed a problem of Morgen Scheduling Links with Fastmail calendar.
+- Fixed an issue causing links in the event description to duplicate after each change.
+- Fixed an issue causing some transparent events to be barely readable.
+
+=== Morgen 2.5.1
+New Features:
+- Now Morgen can merge identical events appearing on different calendars: events with the same time and identifier are merged, beautifully. At the same time, you keep the ability to edit each instance individually.
+ 
+Improvements:
+- We improved the parsing of external .ics files, making it more robust to malformed data.
+- We increased the sensitive area for clicks on events, thus making the selection of very short events easier.
+- We made the creation of new events in the calendar more precise, with the event starting time now rounded according to the "Time Dragging Resolution" setting, instead of "Time Display Resolution".
+ 
+Fixes:
+- The confirmation dialog for actions on calendar events was displayed even when not necessary. This has been fixed now.
+- We fixed event invitations with some CalDAV providers.
+- We fixed a problem causing the creation of events to be in a hanging state for too long.
+- We fixed the Notes field, where links were not clickable anymore in the latest release.
+- We fixed a bug causing deleted tags to remain set on events in a sort of invisible state 👻.
+
+=== Morgen 2.5.2
+Fixes:
+- with recent updates, some CalDAV providers started reporting errors while trying to update or create an event. Morgen 2.5.2 fixes this issue.
+
+
+=== Morgen 2.5.3
+New Features:
+- This release contains mostly internal changes to power the awesome features that are coming next, but there is also some great news.
+- In the free plan, the number of meetings that can be booked with a Morgen Scheduling Link increases from 5/month to unlimited! The free includes one active Recurrent Scheduling Link at a time, while One-time Scheduling Links remain unlimited. Not yet explored the full potential of Morgen Scheduling Links? Visit morgen.so/schedule-meetings-with-ease to see how this can simplify your scheduling.
+
+Fixes:
+- We are also bringing some fixes for problems that have been reported to us, for example
+- We fixed an issue saving events with some CalDAV providers.
+- We fixed a problem causing tasks lists to disappear when renamed using an empty title.
+
+=== Morgen 2.5.4
+New Features:
+- We have made some major redesign to our onboarding to guide you through the configuration and first steps with Morgen. This will arguably benefit new users first, but it is the foundation of a proper Help Center that will help everyone use Morgen at its full potential!
+
+Improvements:
+- An improved Month view, where the current day is better highlighted and the time of the events is visible again 😉.
+- We made private Office 365 / Exchange events actually private - it turns out that Microsoft does not redact the private information from your private events. Instead, Microsoft confidently relies on calendar clients to do that 🤔.
+- We added some more options for the duration and buffer time of the Morgen Scheduling Links.
+
+Fixes:
+- We resolved an issue while moving an event from one calendar to another. Before, the event was often not deleted from the old calendar, thus resulting in a duplicate.
+- We fixed a couple of small glitches, with Tasks and Scheduling Links.
+- We fixed a bug causing inconsistent calendar names in different parts of the Morgen app interface.
+
+=== Morgen 2.5.5
+New Features:
+- Flexible Week: Sometimes you want to focus on the near future, sometimes you want to plan ahead. For every use case, Morgen now allows you to quickly customize your week view to display 1 to 10 days. Use Command+number on macOS and CTRL+number on Linux and Windows.
+- Consistent with the Todoist integration, Morgen now displays subtasks from Microsoft To Do.
+
+Improvements:
+- Improved visualization of calendar events that end at midnight.
+- It's now possible to switch calendar views using shortcuts when creating or editing a one-time link.
+
+Fixes:
+- Automatic logouts on Linux using Snaps
+- Google Meet links now correctly redirect to the default browser.
+- Fixed some formatting issues in the scheduling link reminders.
+- Morgen no longer sends out outdated reminders for booked meetings that have been cancelled or rescheduled by the organizer.
+
+=== Morgen 2.5.6
+New Features:
+- Markdown support: We’re excited to introduce markdown support for task names, letting you highlight what’s most important. You can now style task names, applying bold, italic, or hyperlinks. Since markdown to-dos are common in Todoist, imported tasks will now maintain their style when displayed in Morgen, both in the sidebar and calendar.
+
+ 
+Improvements:
+- New: Danish date-time locale
+- New: Right-click contextual menu in the Agenda view
+- Improved: More robust parsing of malformed CalDAV events
+- Improved: Calendar refresh icon is consistent with the sidebar
+ 
+Fixes:
+- An issue that occurred when copying an event where the new timezone differs from the original one has been fixed
+- Morgen custom notifications on Linux are back on track
+- We fixed an issue that caused possible double bookings from scheduling links when clicking twice on the Confirmation button
+
+=== Morgen 2.5.7
+New Features:
+- If you are like us and rely on your calendar throughout the day, you surely enjoy the Morgen global shortcut. With Alt+C (Option+C on macOS) you can bring your calendar to the foreground wherever you are, without searching through tens of open tabs.
+
+Improvements:
+- is particularly helpful if you are working with multiple Google accounts to save you from finding the right Google user in your browser while your call is already starting. Make sure you are logged in on your browser with all your Google accounts for this to work best.
+- cannot be completed within the planned time. With this release, Morgen shows all the tasks that are left behind in the sidebar so you won't forget them in your calendar.
+
+Fixes:
+- We fixed a layout issue in the Month view
+- We fixed a problem preventing some Outlook/Exchange events to be edited
+
+=== Morgen 2.5.8
+New Features:
+- Sometimes copy-pasting an event to another day comes in handy so we made it easier. Use Right click -> Copy followed by Right click -> Paste on an empty slot. You can paste the same events multiple times if you wish.
+
+Improvements:
+- UTC can be selected as a primary or secondary time zone
+- when you copy availability as text, the time zone abbreviation now respects Daylight saving
+- in the (unlikely 😉) case that something goes wrong with one of the tasks or video conferencing integrations, Morgen will let you know more clearly
+- the event merging feature is now enabled by default
+
+=== Morgen 2.5.9
+New Features:
+- Early access to Morgen for iOS and Android is now available. Capacity is still limited, so access to the mobile app is available to Morgen subscribers (personal and pro plans) only at this time. The mobile app includes the most used and relied on Morgen features. We continue to develop, so you can expect it to keep getting better. In the meantime, we want to hear your feedback.
+
+Improvements:
+- Events scheduled in Morgen with a Teams meeting now correctly trigger the Join button in the MS Teams app.
+
+
+Fixes:
+- Sometimes subtasks coming from external sources (Todoist, Microsoft To Do) were displayed in the wrong order. Now they are always anchored to the parent task.
+- We fixed a synchronization issue that could arise with some CalDAV providers.
+- We fixed a problem causing the memory usage of Morgen to grow over time - now Morgen will be less resource intensive on your system.
+
+
+=== Morgen 2.5.10
+New Features:
+- Morgen introduces support for basic formatting options (bold, italic, etc.) for your event notes. This makes it easier to structure your meeting agenda and action items. This is only the first step towards better meeting notes in Morgen, stay tuned ;)
+
+Fixes:
+- we fixed a problem sometimes causing a cryptic error message Missing iCalUID when importing events from a .ics file.
+- we fixed the due date on tasks coming from the Microsoft To Do integrations, which was sometimes off by one day
+
+=== Morgen 2.5.13
+New Features:
+- Webex links can now be added to any event in Morgen in a single click. This new integration is in Beta and is available as part of Morgen Pro. Go to the Integrations tab in the Morgen settings to connect your Webex account.
+
+Improvements:
+- Norwegian local date and time formatting is now supported.
+ 
+=== Morgen 2.5.14, 2.5.15
+No info provided.
+
+=== Morgen 2.5.16
+Improvements:
+- Morgen has a new date & time picker to change the start and end times of an event. We also fixed an issue with the date selection.
+- The Timezone Helper is now easier to read thanks to a clearer indication of what time is highlighted.
+
+Fixes:
+- We fixed two small issues with the event notes: empty lines are no longer added to the notes and formatting tags are not added on Google Calendar events if not needed.
+- We fixed the Contact Us button in the app settings - it was not behaving as expected on some platforms.
+
+=== Morgen 2.5.17
+Improvements:
+- We improved the date & time picker on the event panel. The calendar widget can now be closed by hitting ESC and does not prevent navigation across the event fields using TAB.
+
+Fixes:
+- We fixed an issue causing high CPU (and sometimes GPU) usage by stopping animations that are not needed.
+- We fixed a bug causing some event titles not to be displayed.
+- We fixed the timezone widget, which was not always displayed at the same time highlighted by the cursor on the timeline.
+- We also fixed the authentication with Outlook for those accounts that don't have an @outlook, @hotmail, or other Microsoft email address.
+- We fixed an issue preventing moving an event across two iCloud calendars on the same account.
+
+
+
+=== Morgen 2.5.18
+Improvement:
+- The maximum "No Later than" option of Scheduling Links has been extended to 4 months.
+- Scheduling Links now load faster.
+ 
+Fixes:
+- We fixed some reported issues with the Team's Availability feature. This feature is still in Beta. Please contact us if you'd like to get early access.
+- Fixed an issue preventing the notes of new tasks created in the calendar to be saved.
+- We fixed the validation of attendees' email addresses. Some domains were not recognized correctly.
+- Fixed a crash happening when removing a calendar account.
+
+=== Morgen 2.5.19
+New Features:
+- We've restyled the Month View to make all-day and timed events easier to distinguish at a glance. We're excited to hear what you think about the update.
+
+Improvements:
+- We've tuned performance of the most common calendar interactions, including event creation and deletion, switching between weeks, and making updates.
+- Morgen CalDAV connector now supports Digest Authentication, increasing the number of calendars we support.
+
+=== Morgen 2.5.20
+Fixes:
+- We fixed an issue that was causing calendar events to not be displayed when time zone changes were made or once a computer resumed from sleep.
+
+Improvements:
+- We improved macOS Ventura compatibility, including a fix to avoid the Login Item notification that was popping up every time Morgen launched.
+ 
+=== Morgen 2.6.1
+New Features:
+- Now in closed Beta: Team Availability Sharing. You can also elect to share your consolidated availability, based on your availability across all your calendars (personal and professional) with other Morgen users inside and outside your organization. All event details are excluded. If you work in a team and would like early access, you can request to join the closed beta.
+
+
+Fixes:
+- We fixed an issue causing the event merging functionality to turn off.
+
+Improvements:
+- The tray icon on macOS and Linux has been restyled to better fit the system design and now displays the current date.
+-We added guidance when connecting a calendar account to help you choose between "Office 365" and "Outlook / Exchange."
+- General UI improvements.
+
+=== Morgen 2.6.2
+New Features:
+- Availability Snippet + Time zones: Sharing your availability across time zones via Mail, Slack or Teams is now easier: Simply select your friends' or colleagues' time zone and Morgen will do the conversion for you. Then copy/paste the timeslot into your message.
+
+Fixes:
+- We fixed a bug causing the app to crash while reconnecting some Exchange or Outlook calendar accounts.
+- We fixed the visual glitch occurring while dragging all-day events across days.
+
+Improvements:
+- The Morgen top toolbar is more responsive to the available space and the window size.
+- When you restart Morgen, the task sidebar will be now restored to the tab you used last.
+
+=== Morgen 2.6.3
+New Features:
+- Just in time for the holiday clutter, you can now keep a clean view of your calendar by hiding declined invitations in just one click.
+- Morgen Pro subscribers can now disable the Scheduled with Morgen note on scheduled events in Preferences > General.
+
+Fixes:
+- We fixed a problem that was causing the wrong time to be displayed when selecting your available slots
+- We fixed an issue that could cause calendar events to become unresponsive
+- We fixed an issue that occurred when setting the time of an event in other time zones
+
+=== Morgen 2.6.4
+New Features:
+- Deep links for Things 3, Evernote, Obsidian, Todoist, and other tools are now recognized and clickable in the event and task description.
+- You can now choose to automatically dim down past events. This makes it easier to distinguish what is coming next in your agenda from what's already happened. Dim past events using the toggle in the calendar view dropdown menu.
+- Choose to apply automatic theme switching based on your system settings. That means switching between light and dark mode can now align with the rest of your system. To enable this, go to Preferences > General > Theme.
+- Morgen will now use your system default font. This reduces eye fatigue when working across different apps.
+- Events marked as free are now transparent, easily distinguishing them from events marked as busy.
+
+Improvements:
+- We've made big improvements to event creation and rendering. Creating events is way smoother and you'll notice that when navigating across weeks and months, events appear quickly without delay.
+- Morgen now launches 2X faster. We're focused on improving Morgen's speed such that each interaction will take less than 100ms.
+ 
+Fixes:
+- We fixed a major issue that caused the synchronization of Outlook calendars to fail with events created by Microsoft Bookings.
+- Avoid scrolling the calendar when using Space as a shortcut to toggle the sidebar.
+- We fixed a layout issue on tasks with priority on the Month view.
+
+=== Morgen 2.6.5
+New Features:
+- Task Scheduling more flexible.
+- Overlaying calendar from other people now possible (with O365/Google)
+
+Improvements:
+- We fixed some layout issues caused by the new system font on Windows.
+- Scheduling tasks in the calendar is now faster and smoother.
+- Tasks that are marked as done are now "archived" and not displayed together with open tasks. You can access the Task Archive from the sidebar.
+- The resolution of the tray icon has now been improved on some systems.
+ 
+Fixes:
+- We fixed a problem that could cause the meeting organizer not to be listed among the attendees on Google Calendar.
+- We fixed a bug causing videoconferencing links to be stripped away when importing events from an external file into Google Calendar.
+- We fixed a bug causing the event time not to be displayed on the month view in some cases.
+- We fixed an issue where ghost events were occasionally left in the calendar when discarding a draft.
+
+=== Morgen 2.6.6
+According to the official Changelog, this update only consists of feature changes in the mobile version of Morgen.
+
+
+
+=== Morgen 2.6.7
+New Features:
+- Reorder Task Lists on Desktop: Following the same update on mobile, task lists can now be reordered on desktop as well. Changes made to task list ordering on desktop will sync with the Morgen mobile app, and vice versa.
+
+Fixes:
+- We fixed a problem that caused multiple events to be created when dragging a task into the calendar.
+- We improved the event panel layout to prevent events with long notes from overflowing beyond the app window, which made some information inaccessible.
+- We reduced the sensitivity of events when being dragged across weeks to avoid accidental triggering on large screens.
+
+
+=== Morgen 2.6.8
+New Features:
+- Desktop: With this new release, you can now select a default calendar for tasks that is distinct from the default calendar for events. You can also now choose to make the titles of scheduled tasks' visible by default to those who share your calendar. Like in the past, you can always switch the calendar and other preferences associated with an individual task once it is scheduled.
+
+Improvements:
+- Updated time zone definitions.
+- The current-time line indicator now updates faster when the computer resumes from sleep.
+- Outlook and CalDAV calendars now have a default reminder that will alert you 10 minutes in advance of an event. This can be tuned in Preferences > Accounts.
+- A new style for all-day tasks uses a light background, ensuring tasks extending over multiple days are easily identified.
+- You can now select and copy the title of events regardless of whether you are the organizer. You can also now copy the event and paste its details into any text field outside of Morgen.
+- App icon style updated on Windows.
+
+Fixes:
+- Margins of ordered lists in event or task notes have been fixed.
+- A problem that could cause some events to be covered by other events has been solved.
+- A visual glitch that caused events or tasks to duplicate in the calendar has been fixed.
+- The problem that could cause the location auto-completion field to miss some options has been solved.
+- We fixed an issue impacting event creation in connected Infomaniak calendars after a recent update to their infrastructure.
+
+
+=== Morgen 2.6.9
+Fixes:
+- In this release, we fixed time zone handling for Mexico and made improvements to avoid similar inconsistencies in the future.
+- We also fixed a problem with localization that affected some regions, including Denmark and Japan.
+- Finally, we fixed a problem that affected the updating of all-day recurring events with some CalDAV providers.
+
+
+=== Morgen 2.7.0
+New Features:
+- Morgen's new Command Bar is the fastest way to create tasks and events… right from your keyboard.
+  * If you're in Morgen, use CTRL+K (Cmd+K on macOS) to open the command bar
+  * If you're in another app, use CTRL+Shift+K (Cmd+Shift+K on macOS) to bring Morgen in focus with the Command Bar open
+  * Create events using natural language. You can add attendees, locations, and tags all from the command bar. If you have more than one calendar connected to Morgen, you can also identify in which calendar the event should appear.
+  * Create tasks using natural language. Choose which task list it should be added to, and if you want, schedule the task and set a priority level.
+
+- The Morgen menu bar has a new look and enhanced functionality. Additionally, if you're on macOS, the menu can now also display your upcoming events along with their start time. You can opt out of the enhanced menu bar and choose to only see the Morgen icon with the current date on the menu bar. We recommend moving the Morgen menu bar item right next to the system clock by holding Command (⌘) while dragging it.
+
+Improvements:
+- We're in the mood to celebrate all you achieve! Based on many requests, we've removed limits on confetti. When you mark a task as complete, prepare to see confetti every time. 🎉
+
+
+=== Morgen 2.7.1
+New Features:
+- More customization options.
+
+Fixes:
+- We've resolved an issue that was preventing right-click functionality on a calendar slot.
+- The bug causing the event details panel to vanish upon editing the date has been fixed.
+- A hiccup that was making it impossible to connect certain CalDAV calendars powered by SOGo has been addressed.
+- We've corrected some minor issues with the new Command Bar: tasks now properly adhere to calendar and privacy settings.
+- The date picker now correctly observes the 'First Day of the Week' across all locales.
+
+=== Morgen 2.7.2
+Fixes:
+- A synchronization issue with the mobile app for tasks created from the Command Bar has been fixed. Please run the latest version of the mobile app (120 on iOS, 99 on Android).
+- An issue causing the last meeting of the day to hang in the Menu Bar forever has been fixed.
+- We improved the parsing of time zones for events generated with Outlook and received by a CalDAV provider.
+
+=== Morgen 2.7.3
+New Features:
+- Accessing your Todoist tasks is now faster. Todoist tasks are now linked directly to the Todoist app installed, if available, instead of redirecting to the browser.
+
+ 
+Fixes:
+- Some people reported that the event detail widget was flickering. This has been fixed.
+- An issue that was causing the Notes field to reset in some instances has been rectified.
+- We fixed a small issue with events snapping to an unexpected duration during creation.
+- An issue causing additional new lines to be added to list items within a Google event description has been resolved.
+- An issue causing the deletion of recurring Zoom meetings when a single event occurrence was deleted has been fixed.
+- The time zone information for Egypt and Mexico has been updated.
+
+
+=== Morgen 2.7.4
+New Features:
+- We're excited to announce an official partnership with Fastmail! Fastmail accounts can now be connected faster, more securely and more reliably using OAuth.
+
+Improvements:
+- We've added new options for Morgen scheduling links. You now have more options to choose from when setting meeting durations and can also create scheduling links that don't block your availability even when a meeting is booked. The latter is especially useful when creating links for meetings with multiple people (eg. open group events).
+
+Fixes:
+- On macOS, the Morgen window can now be restored using Command+Tab after being hidden with Command+H.
+- A problem causing the First Day of the Week preference to reset on restart has been fixed.
+
+=== Morgen 2.7.5
+New Features:
+- We improved event merging to now also consider duplicate based on the title and time. For those testing TimeTo, events propagated from one calendar to another will be merged starting from next week.
+
+Improvements:
+- Scheduling of quick tasks just got easier. We've added 5 and 10 minute options for tasks' Estimated Duration, making it easier to schedule quick tasks into your calendar.
+- Notifications, on time every time. Our notification timing is now as precise as a Swiss clock. Notifications pop-up to the exact minute selected in your calendar/event settings.
+- Fastmail primary email selection. We are now using a better heuristic to select your primary Fastmail email address. Please reconnect your Fastmail account if you need the account email to be updated.
+
+=== Morgen 3.0.0
+New Features:
+- Subtasks, the most requested task feature, are now available in Morgen tasks (across Desktop and Mobile).
+- Introducing Open Invites, a quick way to create 1:1 invitations that give timing options for the invitees to choose from. Open Invites have replaced one-time scheduling links.
+- An Upcoming task list has now been added to your task bar, and lists all your Morgen tasks due in the next 7 days. The 'Something left behind' list has now been replaced with 'Overdue'.
+- The sidebar is now resizable.
+
+Improvements:
+- You can now change the titles/notes of individual instances of scheduled recurring tasks. This allows small variations in recurrent tasks without changing the underlying/master task.
+- Morgen is now more colorful. We tuned the palette, added new colors, and improved the color preview.
+- Scheduled tasks are now hidden from the sidebar regardless of when they are scheduled, including those booked far into the future (unless you opt to make scheduled tasks visible in your task lists).
+- You can know pick a Busy/Free default for scheduled tasks.
+- Performance improvements for power task-users.
+- Filter out declined events from appearing in your menu bar, notifications and quick join.
+
+=== Morgen 3.0.1
+New Features:
+- Want to know what's due today? The Today task list will help keep you on track by amalgamating all your Morgen tasks that are due today. This is a great complement to the Upcoming task list that captures tasks that are due in the next 7 days.
+- We've enhanced task filtering options so that you can now filter a subset of lists to be displayed at the same time.
+- Change the Time between slots to decide how far apart each time slot is that is offered to your invitees. Previously, this was always set to the duration of the meeting (i.e. for a 1hr meeting with the first available slot at 8AM, subsequent slots were always shown at 9AM, 10AM, etc.). Now you can make slots available every 15 or 30 minutes to give your attendee more flexibility when picking a time. Tune the Slots starts at option if you want to force the slots to start at a round time (eg. at the full or half hour).
+
+Improvements:
+- Overdue tasks are always displayed in the corresponding list, even if they are scheduled and the Show scheduled tasks option is off.
+- Parent tasks are now always displayed in all lists when any of their subtasks should be displayed in the list according to preferences. For example, a scheduled parent task is displayed even if the Show scheduled tasks option is off if it has unscheduled subtasks.
+- New right-click option on scheduled tasks can be used to Unschedule and delete tasks in a single click.
+- We improved the use of space in the app top bar, only hiding buttons when strictly necessary.
+Several other smaller UI improvements.
+
+Fixes:
+- When the location of a meeting is a link, this will be no longer displayed in the calendar event as a preview.
+- We disabled images in the markdown title of tasks, which was not intended as a feature.
+- We fixed the third-party app protocols detection in the task and event description field (e.g. todoist://…).
+- Removed Close button on Windows notifications which was triggering the start of the videoconferencing meeting.
+- We fixed a problem causing new tasks created in the calendar to appear as "Blocked" or without a title in the sidebar.
+- We fixed the category and attendee dropdowns to avoid overflows on small windows.
+- The copy-pasting of meetings with attendees has been fixed.
+- The end-time picker of the event panel has been fixed. Previously it was showing the wrong event duration for events created in a different time zone.
+
+=== Morgen 3.1.0
+New Features:
+- Team Availability: Create a team, invite your colleagues to join, then pin those you meet with most to your desktop sidebar. You can then click on your colleagues' avatars to see their schedules overlaid with your own for easier meeting scheduling. Like other Morgen scheduling features, the availability shown is based on each person's 'busy calendars' and only shows others when you are free/busy (and not the details of your events). Set up your team in the newly launched Morgen Platform.
+
+Improvement :
+- You can now copy video conferencing links from an event with a right click -> Copy video link
+- The Menu bar now only displays events in the calendars that are toggled on, so you can easily decide what is important to see and what isn't
+ 
+Fixes:
+- We fixed a problem that occurred when creating and updating task lists when filters were enabled
+- We fixed a problem causing the Task Archive not to update when a task was deleted
+- We improved event merging logic to ensure correct titles and colors are displayed
+- The problem that prevented the removal of all notifications from Google Calendar events has been fixed
+
+=== Morgen 3.1.1
+Minor fixes.
+
+=== Morgen 3.1.2
+Minor fixes.
+
+=== Morgen 3.1.3
+No changelog given.
+
+=== Morgen 3.1.6
+No changelog given.
+
+=== Morgen 3.2.2
+No changelog given.
+
+=== Morgen 3.2.3
+Improvements:
+- Deep links. Task and event notes now support new deep link URLs for Craft, Apple Mail, and Spark Mail. This means you will be able to click and open these links directly in the corresponding app.
+- Updating recurring events. It is now possible to change the recurring pattern for future instances only. Before, this kind of change was always affecting all events in a series.
+- Todoist improvements. The default Todoist configuration to import "only tasks assigned to me" has been changed to import "all tasks" to avoid any confusion. You can now also choose to import "all tasks, except those assigned to others".
+- General task UX. It is no longer possible to order tasks by a property used also for grouping. This does not make sense because every task in a group has the same property value anyway.
+
+Fixes:
+- Notion and Linear integrations can now be used on the Morgen free plan until the end of the Beta. Before tasks did not appear on the free plan, which was not intended.
+- A problem causing an unnecessary event update when the Notes field was on focus (even without content changes) has been rectified.
+- We fixed smaller UI issues and made sure the Notion icon is responsive to the light/dark theme during the onboarding.
+
+=== Morgen 3.2.4
+Improvements:
+- Performance: The rendering performance of task labels has been significantly improved. In our tests, rendering a list of tasks with many labels is up to 2x faster (and we plan to keep improving on this).
+- Tasks UX: The width of grouped labels in the task sidebar has been increased for better readability.
+- Keyboard accessibility: We implemented general keyboard accessibility improvements on the task/event details panel and fixed some inconsistencies between its fields.
+
+Fixes:
+- On our Microsoft ToDo integration, we have fixed an authentication issue and restored the possibility to organize tasks by task lists. This was accidentally disabled.
+- Additionally, we fixed some UX edge cases that could cause an error with certain actions.
+- Finally, a problem causing the context menu of an event to appear behind other elements has been rectified.
+
+=== Morgen 3.2.5
+New Features:
+- By popular demand, the Check availability toggle is back. You can now view the availability of meeting invitees while creating a meeting, whether or not they use Morgen. This is done by fetching information directly from your team's Google and Outlook calendars and the information visible to you is based on the permissions of those underlying calendars.
+
+Improvements:
+- The Morgen UI is now more responsive when events are deleted or edited. Additionally, Morgen tasks can be dragged and dropped across lists or priority groups. Simply drop the task onto the name of a group to reassign its list or priority.
+
+Fixes:
+- Connections of incompatible CalDAV accounts to Morgen Cloud are now blocked early in the process to avoid confusion.
+- A problem causing a confirmation request when updating an event without attendees has been fixed.
+- Pinned contacts on the sidebar will now be automatically removed if the contact is no longer part of the team.
+- We fixed the condition that hides completed tasks from the calendar to include tasks closed from the sidebar.
+- An issue preventing typing "S" as the name of a new task list (!) has been rectified.
+
+=== Morgen 3.2.6
+Fixes:
+- This release addresses a problem causing read-only calendar subscriptions to count toward the account limit. This was not intended. The Basic plan includes unlimited read-only calendar feeds, which is allowed again.
+- We fixed a problem making it impossible to manually reorder Morgen tasks when subgrouping is on.
+- The links to the original Todoist tasks now redirect to the browser on Windows and Linux. This change is necessary because the Todoist apps for Windows and Linux do not support linking to a specific task in-app.
+
+=== Morgen 3.3.1
+New Features:
+- ClickUp tasks are now available in Morgen 🥳
+
+=== Morgen 3.4.0
+New Features:
+- Fastmail can now be connected to Morgen Assist. You can enable calendar automation using your Fastmail calendars as source or target calendars for Calendar Propagation, Automated Travel Time, Team Meeting Optimizer, and all other Morgen Assist workflows.
+- Our Outlook sync engine has been reimplemented from scratch to enable more robust authentication with personal Outlook accounts such as @outlook.com, @live.com, and @hotmail.com. If you have previously experienced difficulties connecting these accounts, reconnect using the Outlook (personal) option.
+
+Fixes:
+- A problem causing some long task labels to overflow has been fixed.
+- Morgen now provides better guidance in case of difficulties fetching tasks from third-party sources.
+
+
+=== Morgen 3.4.1
+New Features:
+- Google, Office 365, Outlook, and Fastmail calendars are updated in near real-time when an event is created or updated. This refresh mechanism is automatically enabled for any account that is connected to the Morgen Cloud.
+- A new Due tomorrow list can be enabled in the task sidebar preferences. This option, a complement the Due today and Due soon lists, is ideal for those who like to wrap each day by planning their work for the following day.
+
+Fixes:
+- Previously, personal Outlook accounts such as @outlook.com and @hotmail.com were limited to 10 calendars. This limitation has been lifted. Please reconnect the account if you don't see all your calendars.
+- The "Open in…" button on external tasks was unreliable on Windows and Linux. Now it will always redirect to the browser instead of trying to open the local app, which might not be available. You can still force the opening of the app, by pressing Shift while clicking on the button.
+- We fixed a problem that prevented some links from being opened on browsers.
+- A flickering that occurred when opening event details has been removed.
+- A problem that could cause the calendar synchronization to hang indefinitely has been rectified.
+
+
+=== Morgen 3.4.2 + 3.4.3
+New Features:
+- iCloud can now be connected to Morgen Assist. Deploy calendar automation with your iCloud calendars, including Morgen Assist Calendar Propagation, Automated Travel Time, Team Meeting Optimizer, and more.
+
+Fixes:
+- A problem that caused some duplicate Outlook events to appear on desktop has been fixed.
+- An issue preventing the authentication with some CalDAV providers (such as Zimbra) has been rectified.
+- Removing the estimated duration from a Morgen task was not possible. This has been fixed.
+
+
+=== Morgen 3.4.4
+Improvements:
+- Out-of-Office events from Google Workspace can now be rescheduled from Morgen.
+ 
+Fixes:
+- We improved our CalDAV sync engine to be more robust and provide more detailed logs so we can better identify issues faster.
+- We improved the experience of setting reminders for Scheduling Links.
+- We fixed some edge cases that could allow invalid operations on the calendar, such as deleting read-only events.
+
+=== Morgen 3.4.5
+New Features:
+- Display due dates of tasks created natively in Morgen and imported from Todoist, Notion, Clickup, and Linear, directly on your calendar. When you drag a due date in your calendar to another time, it will sync with the task source, ensuring you have the same due date displayed in both places. You can also add a corresponding scheduled task in one-click to make sure you plan time to get the task done before it's due.
+- Morgen can adjust the due date if a scheduled task falls after it's due. Configure in Preferences > General whether you want Morgen to automatically adjust the due date, prefer to be asked every time, or leave it as is.
+
+Improvements:
+- This desktop release includes significant performance improvements, in particular when the app is launched and while navigating across task sources with many tasks, including opening and closing the sidebar panel.
+
+Fixes:
+- We improved the reliability of the CalDAV (and iCloud) sync to be more robust to special characters in the event filename.
+- A problem updating Google Out-of-Office and Working location events has been rectified.
+
+=== Morgen 3.5.1
+Improvements:
+- Task due dates displayed in the calendar can now be merged with corresponding scheduled tasks when both start at the same time. This reduces visual clutter.
+- When generating a scheduled task from a due date displayed in the all day section by using Block on the calendar, Morgen will time block it at a time when you are free.
+- For tasks imported from an integrated source, you can now quickly copy the link of the original task. This allows you to easily share the link or paste it in a browser of your choice.
+- We improved speed to launch and quit Morgen.
+ 
+Fixes:
+- Scheduled tasks generated from due dates using the Block on the calendar option now respect your default preferences, such as privacy and busy/free settings.
+- In the previous version, links to task sources in Todoist, Notion, and Clickup could not be opened on macOS in instances when the native third-party app was not installed. This has been rectified.
+- We fixed an issue that was causing a flickering of events.
+
+
+
+=== Morgen 3.5.2
+Fixes:
+- We fixed a problem that was causing tasks to be stored in the local database even after the associated task list was deleted. While these orphaned tasks were not displayed, their accumulation may have caused degraded app performance.
+- Now, when a task list is deleted, the tasks within it will also be removed. If you are a heavy Morgen tasks user, we recommend you click Show archived tasks > Delete all to trigger the deletion of closed tasks as well as tasks that no longer belong to a list.
+
+Improvements:
+- Time zone definitions have been updated
+- We optimized some background computation that may have reduced performance following the previous update
+
+
+=== Morgen 3.5.4
+(there was no official version 3.5.3)
+
+Fixes:
+- We fixed an issue that could cause Morgen to crash when moving an event to another calendar with Event merging enabled.
+
+Improvements:
+- Several menus and autocomplete dropdowns have been redesigned for greater consistency.
+- We made significant strides in our ongoing commitment to performance optimization. Load and rendering times, for those who manage a large number of tasks, have substantially improved.
+- The time zone selector in the Open Invite and Scheduling link settings has been enhanced for better usability and consistency.
+- You can now use the time zone selector to change the time zone of copied availability slots, making it easier to share your availability in your contact's time zone.
+ 
+
+
+=== Morgen 3.5.5
+New Features:
+- If your primary account connected to Morgen is Google, it's now faster to sign in to a new device with the new Sign In with Google. Available on desktop and the Morgen web platform.
+
+Improvements:
+- Fetching the Morgen unified availability of team members using Outlook calendars is now significantly faster.
+- When a task is listed in the overdue or due soon lists, the task along with its subtasks will be displayed, regardless of whether those subtasks are overdue or due soon. This provides a more complete picture of the work required to meet due dates.
+- The calendar options in Preferences > Calendars have been migrated to our new design system to improve UI and usability.
+- When a new Morgen task list is created, it will be kept visible even if Hide empty groups is enabled.
+ 
+Fixes:
+- An issue updating and creating new tags for events has been fixed.
+- The color selector for tags, calendars, and task lists is now fully visible again. It was partially cut off in the previous version.
+- We fixed the button to add attendees to an event, which was sometimes unresponsive.
+- An issue with the keyboard shortcut C to create new events, which was not opening the details widget, has been rectified.
+- The time label in the event preview tooltip now updates correctly with a time zone change.
+- Task titles in the task Archive are no longer truncated when there is enough horizontal space.
+
+
+
+=== Morgen 3.5.6
+New Features:
+- Morgen now has multi-person Scheduling Links and Open Invites. Add your colleagues to a link to let Morgen check your consolidated availability. Once an invitee selects a time slot, all co-hosts will be added and invited to the event.
+- New task search and filter options are now available. You can now search and filter tasks across all task integrations in one place, making it easier than ever to find a specific task. We will add the ability to save filters as custom views on your task panel in future iterations. Please let us know what other filtering options you would like.
+
+Improvements:
+- You can now create your Morgen team and invite team members directly from the desktop app, meaning you no longer need to manage your team from the web platform.
+- We improved the UX of the attendee selector.
+ 
+Fixes:
+- We fixed an edge case that caused events organised by you to be displayed with a dashed border as if they were waiting for RSVP.
+- We fixed an issue that could make it impossible to authenticate Outlook accounts due to persistent requests for an admin authorisation, even if this was already granted.
+- A problem that could cause the event panel not to open in some rare cases has been rectified.
+- A bug that was causing unhealthy accounts to appear as correctly connected has been fixed.
+
+
+=== Morgen 3.5.7
+New Features:
+- New task search and filter options are now available. You can now search and filter tasks across all task integrations in one place, making it easier than ever to find a specific task. We will add the ability to save filters as custom views on your task panel in future iterations. Please let us know what other filtering options you would like.
+- Morgen now has multi-person Scheduling Links and Open Invites. Add your colleagues to a link to let Morgen check your consolidated availability. Once an invitee selects a time slot, all co-hosts will be added and invited to the event.
+
+
+Improvements:
+- You can now create your Morgen team and invite team members directly from the desktop app, meaning you no longer need to manage your team from the web platform.
+- We improved the UX of the attendee selector.
+ 
+Fixes:
+- We fixed an edge case that caused events organised by you to be displayed with a dashed border as if they were waiting for RSVP.
+- We fixed an issue that could make it impossible to authenticate Outlook accounts due to persistent requests for an admin authorisation, even if this was already granted.
+- A problem that could cause the event panel not to open in some rare cases has been rectified.
+- A bug that was causing unhealthy accounts to appear as correctly connected has been fixed.
+
+
+=== Morgen 3.5.8
+New Features:
+- Schedule tasks from Obsidian: Sync your Obsidian Tasks to Morgen using the Emoji format. Schedule Obsidian tasks in your calendars and mark them as complete from Morgen. The two way sync allows for task status, done dates, and due dates to be updated in Morgen and synced with your Obsidian vault.
+
+
+=== Morgen 3.5.9
+New Features:
+- You can now change due dates of Morgen, Notion, Todoist, Linear, and Clickup tasks directly from the task panel. Updated due dates will be synced back to their source.
+- We added more options for task filtering, including due date and task size.
+
+Improvements:
+- New Obsidian integration: Choose your default, be it to import tasks from all notes or no notes.
+- New Obsidian integration: Selectively import from notes using the Frontmatter checkbox property called morgen-tasks-include. Hint: Add this property to your Obsidian templates to make it easily accessible in newly created notes.
+- New Obsidian integration: Wikilinks tags ([[ ]]) are no longer displayed in task titles imported by Morgen.
+- New Obsidian integration: The parsing of task IDs has been improved to correctly parse even when IDs are not the last property of a task line.
+- New Obsidian integration: Additionally, we released a new version of the Morgen Tasks Obsidian plugin with:
+- New Morgen Tasks Obsidian Pluging: Support for hiding IDs in read mode.
+- New Morgen Tasks Obsidian Pluging: Support for the Obsidian mobile app.
+- Since P4 is the default priority for all tasks in Todoist, this level is no longer displayed in Morgen. Instead, P4 tasks will be displayed as not having a priority.
+
+Fixes:
+- A problem causing an error during the re-connection of a calendar account with expired credentials has been fixed.
+- We fixed an issue causing the app to crash if a connected Obsidian vault was moved, renamed, or deleted.
+- An issue causing the Obsidian preferences tab not to be accessible for some users has been rectified.
+
+=== Morgen 3.5.10
+New Features:
+- Introducing the Morgen Priority Factor, a new way to hone in on the tasks that need your focus. When looking at a filtered task view, sort tasks by the Morgen Priority Factor to see which tasks we recommend tackling next. Alternatively, you can also now order a filtered task view by due date or priority.
+- day for 5 times") and the LLM will interpret and translate it into a pattern that calendar providers can implement. Not only does this make for an easier way to create the patterns you want, it's more flexible, supports several languages, and can interpret typos.
+
+Improvements:
+- Linear: we added more filtering options for Linear issues, such as Tasks assigned to me or unassigned. Morgen can also now import more issues at once.
+- Google Tasks: assigned tasks from Google Docs in a Google Workspace are now displayed in Morgen.
+- Markdown task titles are now displayed with proper formatting in the event preview widget.
+
+Fixes:
+- CalDAV: an issue causing additional line breaks in event notes has been fixed.
+- A bug causing the wrong display for the month name in the Spanish locale has been fixed.
+- On the event panel, non-editable fields are no longer clickable.
+- A problem preventing the creation of an all-day event on the day daylight savings time changes has been rectified.
+- We fixed an issue that prevented default calendar reminders at "0 minutes before the event".
+- Morgen now ignores free/busy default settings for all-day tasks, which will always be set as free by default.
+- We fixed an issue related to time zone conversion which caused some requests to update due dates of a task when unnecessary.
+- Notion: we fixed a bug that could cause the configuration page to crash.
+- CalDAV: an issue parsing some CalDAV recurring events on mobile has been fixed.
+
+=== Morgen 3.5.11
+Improvements:
+- We improved the reliability of the LLM model that powers the recurrence patterns of events and scheduled tasks.
+
+Fixes:
+- We fixed a bug that caused calendar names to revert to older versions when an account was reconnected.
+- The Event detail panel sometimes moved unexpectedly after a videoconferencing link was added to event Notes. This has been fixed.
+- An issue that could cause Morgen to crash with some Regional formats (e.g. Arabic) has been fixed.
+- An issue that could cause duplicate task creation with some Regional formats (e.g. Korean) has been rectified.
+

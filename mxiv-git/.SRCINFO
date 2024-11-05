@@ -1,0 +1,25 @@
+pkgbase = mxiv-git
+	pkgdesc = Media explorer and interactive viewer.Use system-wide electron.
+	pkgver = r165.9c8f3ae
+	pkgrel = 1
+	url = https://github.com/rvcalisto/mxiv
+	arch = any
+	license = MIT
+	makedepends = gendesk
+	makedepends = git
+	makedepends = nvm
+	makedepends = npm
+	makedepends = curl
+	depends = electron32
+	depends = imagemagick
+	depends = p7zip
+	provides = mxiv
+	conflicts = mxiv
+	options = !strip
+	options = !emptydirs
+	source = mxiv.git::git+https://github.com/rvcalisto/mxiv.git
+	source = mxiv.sh
+	sha256sums = SKIP
+	sha256sums = 291f50480f5a61bc9c68db7d44cd0412071128706baa868a9cb854f8779a1980
+
+pkgname = mxiv-git

@@ -1,0 +1,32 @@
+pkgbase = neovim-zenbones
+	pkgdesc = Contrast-focused Neovim colorscheme
+	pkgver = 4.3.5
+	pkgrel = 1
+	url = https://github.com/mcchrish/zenbones.nvim
+	arch = any
+	license = MIT
+	makedepends = git
+	source = neovim-zenbones::git+https://github.com/mcchrish/zenbones.nvim#commit=006f15a?signed
+	validpgpkeys = 968479A1AFF927E37D1A566BB5690EEEBB952194
+	sha256sums = e10c03e00020c58067496df060abe639b14cdeca1e8a4fd81c5109c44a6c340f
+
+pkgname = neovim-zenbones
+	install = zenbones.install
+	groups = neovim-plugins
+	depends = neovim
+	optdepends = neovim-lush: enhances included Lua-based colorschemes
+	provides = neovim-lightline-zenbones
+	provides = neovim-lualine-zenbones
+	conflicts = neovim-lightline-zenbones
+	conflicts = neovim-lualine-zenbones
+
+pkgname = vim-zenbones
+	pkgdesc = Contrast-focused Vim colorscheme
+	groups = vim-plugins
+	depends = vim
+	provides = vim-lightline-zenbones
+	conflicts = neovim-zenbones
+	conflicts = vim-lightline-zenbones
+
+pkgname = neovim-zenbones-extras
+	pkgdesc = Zenbones color templates for other programs

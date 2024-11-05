@@ -1,0 +1,14 @@
+pkgbase = otree
+	pkgdesc = Object Tree TUI Viewer
+	pkgver = 0.3.0
+	pkgrel = 1
+	url = https://github.com/fioncat/otree
+	arch = x86_64
+	license = MIT
+	makedepends = cargo
+	makedepends = git
+	depends = gcc-libs
+	source = otree-0.3.0::git+https://github.com/fioncat/otree#commit=69e884460f7a986c49c6af8ffe0ca7d1a7b7e2f4
+	sha512sums = 0290fb80bf65dcc769d74881c25538d6076252d5e90d20407cf6d182fd9e357bc3a8064f8d823708636b8f3d817de95c41715607e35c9978b1bc04f0f7809e80
+
+pkgname = otree

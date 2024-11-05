@@ -1,0 +1,31 @@
+pkgbase = ovn
+	pkgdesc = Open Virtual Network
+	pkgver = 24.09.0
+	pkgrel = 2
+	url = https://github.com/ovn-org/ovn
+	arch = x86_64
+	license = Apache
+	makedepends = git
+	makedepends = python
+	depends = openvswitch
+	depends = libxdp
+	depends = numactl
+	depends = libunwind
+	source = git+https://github.com/ovn-org/ovn#tag=v24.09.0
+	source = ovn-controller-vtep.service
+	source = ovn-controller.service
+	source = ovn-db@.service
+	source = ovn-ic-db.service
+	source = ovn-ic.service
+	source = ovn-northd.service
+	source = sysconfig.template
+	sha256sums = 7acb5ecd3226e390389c7b41c9e2e0f4c47ac0c971ae8ea810c65069271e2647
+	sha256sums = 4c749321376d086749ba91f2dac4152f233af93bde8099291eb3e16cb2543915
+	sha256sums = 48a8f2f84466e00dd8323dc1da4916708e6393e75454bec8d407bae65444f380
+	sha256sums = 52b96809234cfcae4e0d0a7f78677d9f5c8aaaa4e6cf88e489b1d4c87544e639
+	sha256sums = f053953c364b69578635a60712c0370d29ae57eea0fb927a5a5968c2c662cb71
+	sha256sums = 180092323affdd6e00741b483eb581dc2ee1b771f8e9366e98640b54872365fb
+	sha256sums = ec9c87b7a6f2d1df27cd0a58791e055e32c964aed1e4c23dbcb69f7019438edf
+	sha256sums = 6bb0f44a927e45978a1ff733167749958ccf96701ffb89141e3c12d4d870372a
+
+pkgname = ovn

@@ -1,0 +1,21 @@
+pkgbase = node-toolkit-git
+	pkgdesc = Common toolbox function collection code.常用工具箱函数合集代码
+	pkgver = 2.1.2.r45.g20ef3ed
+	pkgrel = 1
+	url = https://github.com/FelixZC/node-toolkit
+	arch = any
+	license = MulanPSL-2.0
+	makedepends = gendesk
+	makedepends = npm
+	makedepends = nvm
+	makedepends = curl
+	makedepends = git
+	depends = electron31
+	provides = node-toolkit=2.1.2
+	conflicts = node-toolkit
+	source = node-toolkit.git::git+https://github.com/FelixZC/node-toolkit.git
+	source = node-toolkit.sh
+	sha256sums = SKIP
+	sha256sums = 291f50480f5a61bc9c68db7d44cd0412071128706baa868a9cb854f8779a1980
+
+pkgname = node-toolkit-git

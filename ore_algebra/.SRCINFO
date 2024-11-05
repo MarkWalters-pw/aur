@@ -1,0 +1,19 @@
+pkgbase = ore_algebra
+	pkgdesc = An implementation of Ore algebras for Sage
+	pkgver = 0.5
+	pkgrel = 1
+	url = http://www.risc.jku.at/research/combinat/software/ore_algebra/
+	arch = x86_64
+	license = GPL
+	makedepends = cython
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-pkgconfig
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = sagemath
+	source = git+https://github.com/mkauers/ore_algebra
+	sha256sums = SKIP
+
+pkgname = ore_algebra

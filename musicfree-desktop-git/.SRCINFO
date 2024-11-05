@@ -1,0 +1,25 @@
+pkgbase = musicfree-desktop-git
+	pkgdesc = Plug-in, customized, ad-free music player.Use system-wide electron.插件化、定制化、无广告的免费音乐播放器
+	pkgver = 0.0.5.r0.gbafe820
+	pkgrel = 1
+	url = http://musicfree.upup.fun/
+	arch = any
+	license = GPL-3.0-only
+	makedepends = gendesk
+	makedepends = npm
+	makedepends = nvm
+	makedepends = git
+	makedepends = gcc
+	makedepends = curl
+	makedepends = cmake
+	depends = electron25
+	depends = libvips
+	depends = nodejs
+	conflicts = musicfree-desktop
+	options = !strip
+	source = musicfree-desktop.git::git+https://github.com/maotoumao/MusicFreeDesktop.git
+	source = musicfree-desktop.sh
+	sha256sums = SKIP
+	sha256sums = 291f50480f5a61bc9c68db7d44cd0412071128706baa868a9cb854f8779a1980
+
+pkgname = musicfree-desktop-git

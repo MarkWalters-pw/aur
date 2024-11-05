@@ -1,0 +1,16 @@
+[Unit]
+Description=Ombi
+After=network.target
+
+[Service]
+User=ombi
+Group=ombi
+Type=simple
+SyslogIdentifier=ombi
+WorkingDirectory=/usr/lib/ombi
+ExecStart=/usr/lib/ombi/Ombi --storage /var/lib/ombi --host http://*:5000
+Restart=always
+TimeoutStopSec=30
+
+[Install]
+WantedBy=multi-user.target

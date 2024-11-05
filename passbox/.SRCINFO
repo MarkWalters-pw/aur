@@ -1,0 +1,20 @@
+pkgbase = passbox
+	pkgdesc = A versatile toolbox primarily designed for password management and note-taking.Use system-wide electron.
+	pkgver = 1.0.0
+	pkgrel = 8
+	url = https://github.com/zzk13180/passbox
+	arch = x86_64
+	license = MIT
+	makedepends = gendesk
+	makedepends = npm
+	makedepends = pnpm
+	makedepends = nvm
+	makedepends = curl
+	depends = electron24
+	conflicts = passbox
+	source = passbox-1.0.0.tar.gz::https://github.com/zzk13180/passbox/archive/refs/tags/1.0.0.tar.gz
+	source = passbox.sh
+	sha256sums = 6b0b177b75be068f7e628f107989a761741e7dc860937074f3efe351c27eb4db
+	sha256sums = 291f50480f5a61bc9c68db7d44cd0412071128706baa868a9cb854f8779a1980
+
+pkgname = passbox

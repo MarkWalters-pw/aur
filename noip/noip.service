@@ -1,0 +1,12 @@
+[Unit]
+Description=No-IP Dynamic Update Client
+After=network.target auditd.service
+
+[Service]
+EnvironmentFile=/etc/default/noip-duc
+ExecStart=/usr/bin/noip-duc
+Restart=on-failure
+Type=simple
+
+[Install]
+WantedBy=multi-user.target

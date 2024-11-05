@@ -1,0 +1,15 @@
+pkgbase = mustang-git
+	pkgdesc = New full-featured desktop email, chat and video conference client
+	pkgver = 0.6.12.r1.g9e3a022
+	pkgrel = 1
+	url = https://mustang.im/
+	arch = any
+	license = LicenseRef-EUPL-1.2
+	depends = electron32
+	conflicts = mustang
+	source = mustang.git::git+https://github.com/mustang-im/mustang.git
+	source = mustang.sh
+	sha256sums = SKIP
+	sha256sums = 291f50480f5a61bc9c68db7d44cd0412071128706baa868a9cb854f8779a1980
+
+pkgname = mustang-git

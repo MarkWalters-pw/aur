@@ -1,0 +1,17 @@
+pkgbase = pacautomation
+	pkgdesc = Periodic background service for automated maintenance around pacman.
+	pkgver = 1.0.1
+	pkgrel = 2
+	url = https://gitlab.com/lagru/pacautomation
+	install = pacautomation.install
+	changelog = CHANGELOG.md
+	arch = any
+	license = GPL-2.0-or-later
+	depends = python>=3.11
+	depends = hicolor-icon-theme
+	optdepends = breeze-icons: icons for desktop notifications
+	backup = etc/pacautomation.conf
+	source = https://gitlab.com/lagru/pacautomation/-/archive/v1.0.1/pacautomation-v1.0.1.tar.gz
+	sha256sums = ccba61e124e452d6d5b613a63b922eb926a6cf1b96f29bb58aea218bbda73c4f
+
+pkgname = pacautomation

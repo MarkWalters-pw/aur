@@ -1,0 +1,17 @@
+pkgbase = nix-melt
+	pkgdesc = A ranger-like flake.lock viewer
+	pkgver = 0.1.3
+	pkgrel = 1
+	url = https://github.com/nix-community/nix-melt
+	arch = x86_64
+	arch = i686
+	arch = arm
+	arch = aarch64
+	license = MPL2
+	makedepends = cargo
+	depends = gcc-libs
+	source = nix-melt-0.1.3.tar.gz::https://github.com/nix-community/nix-melt/archive/refs/tags/v0.1.3.tar.gz
+	sha256sums = 21eb7508e310a78451450e1853b3a46b2d407f72845a7ab1c343520cbe03512c
+	b2sums = e441f6091525a20188dd7023f1b5542db51115f309b0b97683d3d98f47369c304e0c25566cbdc8bef5a3e1fe35f49f3547c9fd25fef8f944ca7becea66d4d390
+
+pkgname = nix-melt

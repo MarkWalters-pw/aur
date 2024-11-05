@@ -1,0 +1,19 @@
+pkgbase = moreutils-go-bin
+	pkgdesc = A Go rewrite of moreutils: A collection of the Unix tools that nobody thought to write long ago when Unix was young.
+	pkgver = 0.4.3
+	pkgrel = 1
+	url = https://github.com/gabe565/moreutils
+	license = GPL-3.0
+	conflicts = moreutils-go
+	provides = moreutils
+	arch = aarch64
+	source_aarch64 = https://github.com/gabe565/moreutils-go/releases/download/v0.4.3/moreutils-go_0.4.3_linux_arm64.tar.gz
+	sha256sums_aarch64 = a5b6d2647c55a2e88b1d5912430bf340d9dfd4f4239ed14914d89b4bef31dc11
+	arch = armv7h
+	source_armv7h = https://github.com/gabe565/moreutils-go/releases/download/v0.4.3/moreutils-go_0.4.3_linux_armv7.tar.gz
+	sha256sums_armv7h = d9bac56273ec8b0f84e10526639a2f1f19faa22dc1ca497cc10c1120c3b46dd0
+	arch = x86_64
+	source_x86_64 = https://github.com/gabe565/moreutils-go/releases/download/v0.4.3/moreutils-go_0.4.3_linux_amd64.tar.gz
+	sha256sums_x86_64 = d07db7d195884fd9fd08c927df1058f173831d5bdfafa8437763bce60de23090
+	
+pkgname = moreutils-go-bin

@@ -1,0 +1,27 @@
+output() {
+  while IFS= read line; do
+    echo "-- $line"
+  done
+}
+
+post_install() {
+  output << EOF
+In order to use the openafs-client you have to install the openafs kernel
+module (openafs-modules or openafs-modules-dkms).
+
+You may want to edit /etc/openafs/ThisCell to be your current cell.
+
+Afterwards you can enable and start the openafs-client:
+  systemctl enable openafs-client.service
+  systemctl start openafs-client.service
+EOF
+}
+
+post_remove() {
+    output << EOF
+The following directories have not been removed. You can manually remove them
+after making sure that openafs is not running anymore:
+  /afs
+  /var/cache/openafs
+EOF
+}

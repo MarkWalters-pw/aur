@@ -1,0 +1,20 @@
+pkgbase = nanoqc
+	pkgdesc = Create fastQC-like plots for Oxford Nanopore sequencing data
+	pkgver = 0.10.0
+	pkgrel = 2
+	url = https://github.com/wdecoster/nanoQC
+	arch = any
+	license = GPL3
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	makedepends = python-build
+	makedepends = cython
+	makedepends = python-installer
+	depends = python
+	depends = python-biopython
+	depends = python-numpy
+	depends = python-plotly
+	source = https://files.pythonhosted.org/packages/source/n/nanoQC/nanoQC-0.10.0.tar.gz
+	sha256sums = 5e55b8b244ce7cfb0673fc804f5a0c16dcfc4a03f9aaf84c75b8117d3c3817a6
+
+pkgname = nanoqc

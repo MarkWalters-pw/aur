@@ -1,0 +1,17 @@
+pkgbase = openfaas-cli
+	pkgdesc = Official CLI for OpenFaaS
+	pkgver = 0.16.37
+	pkgrel = 1
+	url = https://github.com/openfaas/faas-cli
+	arch = i686
+	arch = x86_64
+	arch = arm64
+	license = MIT
+	makedepends = go
+	makedepends = git
+	depends = glibc
+	provides = faas-cli
+	source = openfaas-cli-0.16.37.tar.gz::https://github.com/openfaas/faas-cli/archive/0.16.37.tar.gz
+	sha256sums = dfd3a49e61999bc497c08632566e090231dfbeb5a59d0fb9b4d9a213db83b566
+
+pkgname = openfaas-cli

@@ -1,0 +1,70 @@
+# Maintainer: oscarcl <oscar.cowderylack@gmail.com>
+# Contributor: sixpindin <sixpindin@gmail.com>
+pkgname=omnisharp-roslyn
+pkgver=1.39.12
+pkgrel=2
+pkgdesc="OmniSharp server (STDIO) based on Roslyn workspaces"
+arch=('x86_64')
+url="https://github.com/OmniSharp/omnisharp-roslyn"
+license=('MIT')
+depends=('dotnet-sdk')
+makedepends=('git')
+source=("git+$url#tag=v$pkgver")
+sha256sums=('aa68a8d7fa21f3fb2b50f249ec9ebe5ba2cf79b585a3ab7cb65bd977adbd0083')
+
+prepare() {
+    cd "$srcdir/$pkgname"
+
+    # normally the build sets the version from git, we don't have a git repo so
+    # just override it manually
+    sed -i "s/0.0.1-local/$pkgver/" scripts/common.cake
+    sed -i "s/0.0.1.0/${pkgver%.*}.0.0/" scripts/common.cake
+
+    # only built STDIO
+    sed -i 's/"OmniSharp.Stdio.Driver",/"OmniSharp.Stdio.Driver"/;/OmniSharp.Http.Driver/d' build.json
+
+    # only build x86_64-gnu
+    sed -i '/linux-arm64/d;/linux-musl/d;' build.cake
+
+    # don't set RuntimeFrameworkVersion, just build against the version we are using
+    # this is needed since otherwise we will use a crossgen compiler version built
+    # against an older .NET 6 that does not have OpenSSL 3 support
+    sed -i '/RuntimeFrameworkVersion/d;' build.cake
+    sed -i '/RuntimeFrameworkVersion/d;' src/OmniSharp.Stdio.Driver/OmniSharp.Stdio.Driver.csproj
+
+    # use arch-packaged .NET version rather than forcing this version
+    rm global.json
+
+    # use absolute path to global dotnet exe
+    sed -i "s|? \"dotnet\"|? \"$(command -v dotnet)\"|" scripts/common.cake
+
+    # https://github.com/advisories/GHSA-qj66-m88j-hmgj
+    sed -i '/"Microsoft.Extensions.Caching.Memory"/s/$(MicrosoftExtensionPackageVersion)/8.0.1/' Directory.Packages.props
+    sed -i '/"Microsoft.Extensions.Options"/s/$(MicrosoftExtensionPackageVersion)/8.0.2/' Directory.Packages.props
+
+    # https://github.com/advisories/GHSA-8g4q-xg66-9fp4
+    sed -i '/"System.Text.Json"/s/8.0.4/8.0.5/' Directory.Packages.props
+
+    export DOTNET_NOLOGO=1
+
+    dotnet tool restore
+}
+
+build() {
+    cd "$srcdir/$pkgname"
+
+    dotnet cake --target PublishNet6Builds --configuration Release --exclusive --use-global-dotnet-sdk
+}
+
+package() {
+    install -d "$pkgdir/usr/lib"
+    cp -a "$srcdir/$pkgname/artifacts/publish/OmniSharp.Stdio.Driver/linux-x64/net6.0" "$pkgdir/usr/lib/$pkgname"
+
+    install -d "$pkgdir/usr/share/licenses/$pkgname"
+    mv "$pkgdir/usr/lib/$pkgname/license.md" "$pkgdir/usr/share/licenses/$pkgname"
+
+    install -d "$pkgdir/usr/bin"
+    ln -s "../lib/$pkgname/OmniSharp" "$pkgdir/usr/bin/OmniSharp"
+    # for compat
+    ln -s "../lib/$pkgname/OmniSharp" "$pkgdir/usr/bin/omnisharp"
+}

@@ -1,0 +1,20 @@
+pkgbase = partclone-nbd-git
+	pkgdesc = Export partclone/clonezilla images as block devices without restoring them
+	pkgver = r59.7bb76d5
+	pkgrel = 1
+	url = https://github.com/allvpv/partclone-nbd
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = cmake
+	depends = glibc
+	optdepends = partclone: for creating compatible disk images
+	optdepends = clonezilla: for creating compatible disk images
+	provides = partclone-nbd
+	conflicts = partclone-nbd
+	options = !debug
+	options = !strip
+	source = git+https://github.com/allvpv/partclone-nbd.git
+	sha256sums = SKIP
+
+pkgname = partclone-nbd-git

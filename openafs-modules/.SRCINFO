@@ -1,0 +1,21 @@
+pkgbase = openafs-modules
+	pkgdesc = Kernel module for OpenAFS
+	pkgver = 1.8.12.2
+	pkgrel = 1
+	url = http://www.openafs.org
+	install = openafs-modules.install
+	arch = i686
+	arch = x86_64
+	arch = armv7h
+	license = IPL-1.0
+	makedepends = libelf
+	makedepends = linux-headers
+	makedepends = openafs>=1.8.12.1-2
+	depends = openafs
+	conflicts = openafs-features-libafs
+	conflicts = openafs<1.6.6-2
+	options = !emptydirs
+	source = http://openafs.org/dl/openafs/1.8.12.2/openafs-1.8.12.2-src.tar.bz2
+	sha256sums = 1164194cc6ffd75c063c420fb37344e844c1e2edc155529f815ba4c781f45cab
+
+pkgname = openafs-modules

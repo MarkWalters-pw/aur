@@ -1,0 +1,19 @@
+pkgbase = mpdcovergrabber-git
+	pkgdesc = A user service that fetches album covers for the currently playing song in MPD and saves them to the music directory
+	pkgver = 0.r7.99708e5
+	pkgrel = 1
+	url = https://gitlab.com/teraflops/mpdcovergrabber
+	install = mpdcovergrabber-git.install
+	arch = any
+	license = BSD
+	makedepends = git
+	depends = mpd
+	depends = python-requests
+	depends = python-dbus-next
+	depends = mpdris2-rs
+	provides = mpdcovergrabber
+	conflicts = mpdcovergrabber
+	source = git+https://gitlab.com/teraflops/mpdcovergrabber.git
+	sha256sums = SKIP
+
+pkgname = mpdcovergrabber-git

@@ -1,0 +1,26 @@
+From 196e8a1b6f601a7253c12bfef57c88e6a525e15a Mon Sep 17 00:00:00 2001
+Message-ID: <196e8a1b6f601a7253c12bfef57c88e6a525e15a.1727612354.git.rsworktech@outlook.com>
+From: Levi Zim <rsworktech@outlook.com>
+Date: Sun, 29 Sep 2024 16:42:16 +0800
+Subject: [PATCH] Fix boost module import
+
+---
+ scripts/core_common/make_common.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/scripts/core_common/make_common.py b/scripts/core_common/make_common.py
+index 7527aad..607f2b4 100755
+--- a/scripts/core_common/make_common.py
++++ b/scripts/core_common/make_common.py
+@@ -1,7 +1,7 @@
+ #!/usr/bin/env python
+ 
+ import sys
+-sys.path.append('modules')
++sys.path.insert(0, 'modules')
+ sys.path.append('..')
+ 
+ import config
+-- 
+2.46.2
+

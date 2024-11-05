@@ -1,0 +1,21 @@
+pkgbase = osslsigncode-git
+	pkgdesc = OpenSSL based Authenticode signing for PE/MSI/Java CAB files
+	pkgver = r639.db5b4c4
+	pkgrel = 1
+	url = https://github.com/mtrojnar/osslsigncode
+	arch = i686
+	arch = x86_64
+	license = GPL
+	checkdepends = libfaketime
+	makedepends = cmake
+	makedepends = perl
+	makedepends = python
+	makedepends = git
+	depends = curl
+	depends = openssl
+	provides = osslsigncode
+	conflicts = osslsigncode
+	source = git+https://github.com/mtrojnar/osslsigncode.git
+	sha512sums = SKIP
+
+pkgname = osslsigncode-git

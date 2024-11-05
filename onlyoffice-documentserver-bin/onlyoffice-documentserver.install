@@ -1,0 +1,28 @@
+post_install() {
+echo "Now you need to configure database, rabbitmq and redis:
+
+If you use PostgreSQL:
+psql -u postgres -c \"CREATE DATABASE onlyoffice;\"
+psql -u postgres -c \"CREATE USER onlyoffice WITH password 'PASSWORD';\"
+psql -u postgres -c \"GRANT ALL privileges ON DATABASE onlyoffice TO onlyoffice;\"
+psql -hlocalhost -Uonlyoffice -d onlyoffice -f /usr/share/webapps/onlyoffice/documentserver/server/schema/postgresql/createdb.sql
+
+If you use MariaDB:
+CREATE DATABASE onlyoffice;
+CREATE USER 'onlyoffice'@'localhost' IDENTIFIED BY 'PASSWORD';
+GRANT ALL PRIVILEGES ON onlyoffice.* TO 'onlyoffice'@'localhost';
+FLUSH PRIVILEGES;
+mysql -uonlyoffice -p'PASSWORD' onlyoffice < /usr/share/webapps/onlyoffice/documentserver/server/schema/mysql/createdb.sql
+
+RabbitMQ:
+rabbitmqctl add_vhost onlyoffice
+rabbitmqctl add_user onlyoffice PASSWORD
+rabbitmqctl set_permissions -p onlyoffice onlyoffice ".*" ".*" ".*"
+
+Redis can be used with default settings.
+
+After configuring components, edit file:
+    * /etc/webapps/onlyoffice/documentserver/local.json
+
+"
+}

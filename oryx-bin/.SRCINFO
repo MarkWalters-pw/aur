@@ -1,0 +1,22 @@
+pkgbase = oryx-bin
+	pkgdesc = A TUI for sniffing network traffic using eBPF
+	pkgver = 0.4
+	pkgrel = 1
+	url = https://github.com/pythops/oryx
+	arch = x86_64
+	arch = aarch64
+	license = GPL-3.0-only
+	makedepends = help2man
+	depends = gcc-libs
+	source = LICENSE-0.4::https://raw.githubusercontent.com/pythops/oryx/v0.4/LICENSE
+	source = README-0.4::https://raw.githubusercontent.com/pythops/oryx/v0.4/Readme.md
+	source = RELEASE-0.4::https://raw.githubusercontent.com/pythops/oryx/v0.4/Release.md
+	sha512sums = d361e5e8201481c6346ee6a886592c51265112be550d5224f1a7a6e116255c2f1ab8788df579d9b8372ed7bfd19bac4b6e70e00b472642966ab5b319b99a2686
+	sha512sums = 82c0c8efb7a4c5b0ac7863ca953f8e8d5ff979a4d864361c1684efc63cff91365c19ebb2734fb31e462407a3adf097fb1fc711ea2cfbeb5b730b5ea949a4cb71
+	sha512sums = 899b0e1295c78144fe41b22e83ddb4b7b03a90e0860ddbf0d6f589826c50b1b3c9cc4080fef57009c1fbb828abbc9926a915c5947214903a9d55ed9426d4f074
+	source_x86_64 = oryx-x86_64-0.4::https://github.com/pythops/oryx/releases/download/v0.4/oryx-x86_64-unknown-linux-musl
+	sha512sums_x86_64 = 5f4db913f6ce7e4e27e1782b4d5f0103fe85cd167040756cead4888233e8a4d1ca01886ce2d7fc24f08ad421f8a52e36c4281aaebaa261a1cfb46562bb961821
+	source_aarch64 = oryx-x86_64-0.4::https://github.com/pythops/oryx/releases/download/v0.4/oryx-aarch64-unknown-linux-musl
+	sha512sums_aarch64 = 5f4db913f6ce7e4e27e1782b4d5f0103fe85cd167040756cead4888233e8a4d1ca01886ce2d7fc24f08ad421f8a52e36c4281aaebaa261a1cfb46562bb961821
+
+pkgname = oryx-bin

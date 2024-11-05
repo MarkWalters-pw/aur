@@ -1,0 +1,13 @@
+# create "otel" system user
+pre_install() {
+    echo '==> Creating "otel" system user'
+    getent passwd otelcol-contrib >/dev/null || useradd --system --user-group --no-create-home --shell /sbin/nologin otelcol-contrib
+}
+
+pre_remove() {
+    echo '==> Stopping systemd "otelcol-contrib" unit'
+    if command -v systemctl >/dev/null 2>&1; then
+        systemctl stop otelcol-contrib.service
+        systemctl disable otelcol-contrib.service
+    fi
+}

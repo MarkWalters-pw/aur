@@ -1,0 +1,36 @@
+pkgbase = pamac-aur-git
+	pkgdesc = A GUI frontend for libalpm
+	pkgver = 11.7.1.r4.gc486ef0
+	pkgrel = 1
+	url = https://github.com/manjaro/pamac
+	arch = i686
+	arch = pentium4
+	arch = x86_64
+	arch = arm
+	arch = armv6h
+	arch = armv7h
+	arch = aarch64
+	license = GPL-3.0-or-later
+	makedepends = asciidoc
+	makedepends = gettext
+	makedepends = git
+	makedepends = gobject-introspection
+	makedepends = itstool
+	makedepends = meson
+	makedepends = vala
+	makedepends = xorgproto
+	depends = gtk4
+	depends = libadwaita
+	depends = libhandy
+	depends = libnotify
+	depends = libpamac-git
+	optdepends = polkit-gnome: needed for authentication in Cinnamon, Gnome
+	optdepends = lxsession: needed for authentication in Xfce, LXDE etc.
+	provides = pamac=11.7.1
+	conflicts = pamac
+	source = pamac::git+https://github.com/manjaro/pamac.git
+	source = pamac-cli::git+https://github.com/manjaro/pamac-cli.git
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = pamac-aur-git
