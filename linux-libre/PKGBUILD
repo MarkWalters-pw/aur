@@ -1,0 +1,245 @@
+# Maintainer : Daniel Bermond <dbermond@archlinux.org>
+# Contributor: Jonas Heinrich <onny@project-insanity.org>
+# Contributor: André Silva <emulatorman@riseup.net>
+# Contributor: Márcio Silva <coadde@riseup.net>
+# Contributor (Parabola): Nicolás Reynolds <fauno@kiwwwi.com.ar>
+# Contributor (Parabola): Sorin-Mihai Vârgolici <smv@yobicore.org>
+# Contributor (Parabola): Michał Masłowski <mtjm@mtjm.eu>
+# Contributor (Parabola): Luke Shumaker <lukeshu@sbcglobal.net>
+# Contributor (Parabola): Luke R. <g4jc@openmailbox.org>
+
+pkgbase=linux-libre
+pkgver=6.11.6
+pkgrel=1
+pkgdesc='Linux Libre'
+url='https://linux-libre.fsfla.org/'
+arch=(x86_64)
+license=(GPL-2.0-only)
+makedepends=(
+  bc
+  cpio
+  gettext
+  libelf
+  pahole
+  perl
+  python
+  tar
+  xz
+
+  # htmldocs
+  graphviz
+  imagemagick
+  python-sphinx
+  python-yaml
+  texlive-latexextra
+)
+options=('!debug' '!strip')
+_basever="$({ grep -Eq '[0-9]\.[0-9]+\.[0-9]+' <<< "$pkgver" && printf '%s' "${pkgver%.*}"; } || printf '%s' "$pkgver")"
+_srcname="linux-${_basever}"
+source=("https://linux-libre.fsfla.org/pub/linux-libre/releases/${_basever}-gnu/linux-libre-${_basever}-gnu.tar.lz"{,.sign}
+        "http://linux-libre.fsfla.org/pub/linux-libre/releases/${pkgver}-gnu/patch-${_basever}-gnu-${pkgver}-gnu.bz2"{,.sign}
+        'https://repo.parabola.nu/other/linux-libre/logos/logo_linux_'{clut224.ppm,vga16.ppm,mono.pbm}{,.sig}
+        'config')
+sha256sums=('e77016caac51b9d26721689c2f58ae945171bccaa97a98623661c3f826e6068d'
+            'SKIP'
+            '6f6882fa62a757a4c7d09a317b2837a6652d5ad2ec599c233cb5783d61a0b041'
+            'SKIP'
+            'bfd4a7f61febe63c880534dcb7c31c5b932dde6acf991810b41a939a93535494'
+            'SKIP'
+            '6de8a8319271809ffdb072b68d53d155eef12438e6d04ff06a5a4db82c34fa8a'
+            'SKIP'
+            '13bd7a8d9ed6b6bc971e4cd162262c5a20448a83796af39ce394d827b0e5de74'
+            'SKIP'
+            '20ea8c72a7a3d95f71d23b0a789c45770b09677ef57f9cc172f4acef8dd70093')
+validpgpkeys=('474402C8C582DAFBE389C427BCB7CF877E7D47A7'  # Alexandre Oliva
+              '6DB9C4B4F0D8C0DC432CF6E4227CA7C556B2BA78') # David P.
+
+export KBUILD_BUILD_HOST=archlinux
+export KBUILD_BUILD_USER=$pkgbase
+export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
+
+prepare() {
+  cd "$_srcname"
+
+  # freedo boot logo
+  install -m644 -t drivers/video/logo ../logo_linux_{clut224.ppm,vga16.ppm,mono.pbm}
+
+  echo "Setting version..."
+  echo "-$pkgrel" > localversion.10-pkgrel
+  echo "${pkgbase#linux}" > localversion.20-pkgname
+  sed -i 's|^-libre||'      localversion.20-pkgname # minimize diff
+
+  local _src
+  for _src in "${source[@]}"
+  do
+    _src="${_src%%::*}"
+    _src="${_src##*/}"
+    _src="${_src%*.bz2}"
+    [[ "$_src" = *.patch ]] || { [[ "$_src" = patch-* ]] && [[ "$_src" != *.sign ]]; } || continue
+    echo "Applying patch $_src..."
+    patch -Np1 < "../$_src"
+  done
+
+  echo "Setting config..."
+  cp ../config .config
+  make olddefconfig
+  diff -u ../config .config || :
+
+  make -s kernelrelease > version
+  echo "Prepared $pkgbase version $(<version)"
+}
+
+build() {
+  make -C "$_srcname" htmldocs all
+  make -C "${_srcname}/tools/bpf/bpftool" vmlinux.h feature-clang-bpf-co-re='1'
+}
+
+_package() {
+  pkgdesc="The $pkgdesc kernel and modules"
+  depends=(
+    coreutils
+    initramfs
+    kmod
+  )
+  optdepends=(
+    'wireless-regdb: to set the correct wireless channels of your country'
+    'linux-firmware: firmware images needed for some devices'
+  )
+  provides=(
+    KSMBD-MODULE
+    VIRTUALBOX-GUEST-MODULES
+    WIREGUARD-MODULE
+  )
+  replaces=(
+    virtualbox-guest-modules-arch
+    wireguard-arch
+  )
+
+  cd "$_srcname"
+  local _modulesdir="$pkgdir/usr/lib/modules/$(<version)"
+
+  echo "Installing boot image..."
+  # systemd expects to find the kernel here to allow hibernation
+  # https://github.com/systemd/systemd/commit/edda44605f06a41fb86b7ab8128dcf99161d2344
+  install -Dm644 "$(make -s image_name)" "$_modulesdir/vmlinuz"
+
+  # Used by mkinitcpio to name the kernel
+  echo "$pkgbase" | install -Dm644 /dev/stdin "$_modulesdir/pkgbase"
+
+  echo "Installing modules..."
+  ZSTD_CLEVEL=19 make INSTALL_MOD_PATH="$pkgdir/usr" INSTALL_MOD_STRIP=1 \
+    DEPMOD=/doesnt/exist modules_install  # Suppress depmod
+
+  # remove build link
+  rm "$_modulesdir"/build
+}
+
+_package-headers() {
+  pkgdesc="Headers and scripts for building modules for the $pkgdesc kernel"
+  depends=(pahole)
+
+  cd "$_srcname"
+  local _builddir="$pkgdir/usr/lib/modules/$(<version)/build"
+
+  echo "Installing build files..."
+  install -Dt "$_builddir" -m644 .config Makefile Module.symvers System.map \
+    localversion.* version vmlinux tools/bpf/bpftool/vmlinux.h
+  install -Dt "$_builddir/kernel" -m644 kernel/Makefile
+  install -Dt "$_builddir/arch/x86" -m644 arch/x86/Makefile
+  cp -t "$_builddir" -a scripts
+  ln -srt "$_builddir" "$_builddir/scripts/gdb/vmlinux-gdb.py"
+
+  # required when STACK_VALIDATION is enabled
+  install -Dt "$_builddir/tools/objtool" tools/objtool/objtool
+
+  # required when DEBUG_INFO_BTF_MODULES is enabled
+  install -Dt "$_builddir/tools/bpf/resolve_btfids" tools/bpf/resolve_btfids/resolve_btfids
+
+  echo "Installing headers..."
+  cp -t "$_builddir" -a include
+  cp -t "$_builddir/arch/x86" -a arch/x86/include
+  install -Dt "$_builddir/arch/x86/kernel" -m644 arch/x86/kernel/asm-offsets.s
+
+  install -Dt "$_builddir/drivers/md" -m644 drivers/md/*.h
+  install -Dt "$_builddir/net/mac80211" -m644 net/mac80211/*.h
+
+  # https://bugs.archlinux.org/task/13146
+  install -Dt "$_builddir/drivers/media/i2c" -m644 drivers/media/i2c/msp3400-driver.h
+
+  # https://bugs.archlinux.org/task/20402
+  install -Dt "$_builddir/drivers/media/usb/dvb-usb" -m644 drivers/media/usb/dvb-usb/*.h
+  install -Dt "$_builddir/drivers/media/dvb-frontends" -m644 drivers/media/dvb-frontends/*.h
+  install -Dt "$_builddir/drivers/media/tuners" -m644 drivers/media/tuners/*.h
+
+  # https://bugs.archlinux.org/task/71392
+  install -Dt "$_builddir/drivers/iio/common/hid-sensors" -m644 drivers/iio/common/hid-sensors/*.h
+
+  echo "Installing KConfig files..."
+  find . -name 'Kconfig*' -exec install -Dm644 {} "$_builddir/{}" \;
+
+  echo "Removing unneeded architectures..."
+  local arch
+  for arch in "$_builddir"/arch/*/; do
+    [[ $arch = */x86/ ]] && continue
+    echo "Removing $(basename "$arch")"
+    rm -r "$arch"
+  done
+
+  echo "Removing documentation..."
+  rm -r "$_builddir/Documentation"
+
+  echo "Removing broken symlinks..."
+  find -L "$_builddir" -type l -printf 'Removing %P\n' -delete
+
+  echo "Removing loose objects..."
+  find "$_builddir" -type f -name '*.o' -printf 'Removing %P\n' -delete
+
+  echo "Stripping build tools..."
+  local file
+  while read -rd '' file; do
+    case "$(file -Sib "$file")" in
+      application/x-sharedlib\;*)      # Libraries (.so)
+        strip -v $STRIP_SHARED "$file" ;;
+      application/x-archive\;*)        # Libraries (.a)
+        strip -v $STRIP_STATIC "$file" ;;
+      application/x-executable\;*)     # Binaries
+        strip -v $STRIP_BINARIES "$file" ;;
+      application/x-pie-executable\;*) # Relocatable binaries
+        strip -v $STRIP_SHARED "$file" ;;
+    esac
+  done < <(find "$_builddir" -type f -perm -u+x ! -name vmlinux -print0)
+
+  echo "Stripping vmlinux..."
+  strip -v $STRIP_STATIC "$_builddir/vmlinux"
+
+  echo "Adding symlink..."
+  mkdir -p "$pkgdir/usr/src"
+  ln -sr "$_builddir" "$pkgdir/usr/src/$pkgbase"
+}
+
+_package-docs() {
+  pkgdesc="Documentation for the $pkgdesc kernel"
+
+  cd "$_srcname"
+  local _builddir="$pkgdir/usr/lib/modules/$(<version)/build"
+
+  echo "Installing documentation..."
+  local src dst
+  while read -rd '' src; do
+    dst="${src#Documentation/}"
+    dst="$_builddir/Documentation/${dst#output/}"
+    install -Dm644 "$src" "$dst"
+  done < <(find Documentation -name '.*' -prune -o ! -type d -print0)
+
+  echo "Adding symlink..."
+  mkdir -p "$pkgdir/usr/share/doc"
+  ln -sr "$_builddir/Documentation" "$pkgdir/usr/share/doc/$pkgbase"
+}
+
+pkgname=("$pkgbase" "$pkgbase-headers" "$pkgbase-docs")
+for _p in "${pkgname[@]}"; do
+  eval "package_$_p() {
+    $(declare -f "_package${_p#$pkgbase}")
+    _package${_p#$pkgbase}
+  }"
+done

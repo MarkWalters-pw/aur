@@ -1,0 +1,20 @@
+pkgbase = python-pymctranslate
+	pkgdesc = A library of block mappings that can be used to convert from any Minecraft format into any other Minecraft format
+	pkgver = 1.2.29
+	pkgrel = 1
+	url = https://github.com/gentlegiantJGC/PyMCTranslate
+	arch = any
+	license = LicenseRef-Amulet-Team-1.0.0
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-versioneer
+	makedepends = python-wheel
+	depends = python
+	depends = python-amulet-nbt
+	depends = python-numpy
+	source = git+https://github.com/gentlegiantJGC/PyMCTranslate.git#commit=c9921f993304c6276d44fdd3fe5d330301fd31f1
+	sha256sums = SKIP
+
+pkgname = python-pymctranslate

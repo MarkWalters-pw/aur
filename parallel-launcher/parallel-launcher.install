@@ -1,0 +1,13 @@
+post_install() {
+	xdg-mime install /usr/share/parallel-launcher/bps-mime.xml
+	xdg-mime default ca.parallel_launcher.ParallelLauncher.desktop x-scheme-handler/rhdc
+	update-desktop-database /usr/share/applications
+}
+
+pre_remove() {
+	xdg-mime uninstall /usr/share/parallel-launcher/bps-mime.xml
+}
+
+post_upgrade() {
+	rm -f /etc/flatpak/installations.d/parallel-launcher.conf
+}

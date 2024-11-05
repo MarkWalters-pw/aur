@@ -1,0 +1,19 @@
+pkgbase = pygmy-static-bin
+	pkgdesc = Amazee.io's local docker development tool
+	pkgver = 0.13.1
+	pkgrel = 1
+	url = https://github.com/pygmystack/pygmy
+	arch = x86_64
+	license = MIT
+	makedepends = tar
+	provides = pygmy
+	conflicts = pygmy
+	conflicts = pygmy-bin
+	conflicts = pygmy-git
+	conflicts = pygmy-go
+	conflicts = pygmy-go-bin
+	conflicts = pygmy-go-git
+	source = pygmy_0.13.1::https://github.com/pygmystack/pygmy/releases/download/v0.13.1/pygmy_0.13.1_linux_arm64_static.tar.gz
+	sha512sums = ee618895d042d11e401f5f385156f513e255cc3ada963f4baabce79f2dc1321f6942a1779b30fce8b12e09c0c259bcb59be9d76d62d2e99f07d087ad020f8ad7
+
+pkgname = pygmy-static-bin

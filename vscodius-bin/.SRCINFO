@@ -1,0 +1,25 @@
+pkgbase = vscodius-bin
+	pkgdesc = Binary releases of Visual Studio Code without MS branding/telemetry/licensing and various personal workflow improvements.Prebuilt version.
+	pkgver = 1.95.1
+	pkgrel = 1
+	url = https://github.com/RubisetCie/vscodius
+	arch = x86_64
+	license = MIT
+	makedepends = gendesk
+	depends = libxkbfile
+	depends = gtk3
+	depends = nspr
+	depends = alsa-lib
+	depends = nss
+	depends = nodejs
+	provides = vscodius=1.95.1
+	provides = code=1.95.1
+	conflicts = vscodius
+	noextract = vscodius-1.95.1.zip
+	options = !strip
+	source = vscodius-1.95.1.zip::https://github.com/RubisetCie/vscodius/releases/download/v1.95.1/VSCodius-Linux-x64-1.95.1.zip
+	source = LICENSE-1.95.1.txt::https://raw.githubusercontent.com/RubisetCie/vscodius/v1.95.1/LICENSE.txt
+	sha256sums = 179f4209e6ef8408120c4d245c30f67449f2464bbc0347a4ad3523bd8559dda4
+	sha256sums = 9480271317925265e806a9a196aaa33410a962fa9d4d1e248a4a5187bc8c9df9
+
+pkgname = vscodius-bin

@@ -1,0 +1,24 @@
+pkgbase = libqxt-git
+	pkgdesc = Provides a suite of cross-platform utility classes to add functionality not readily available in the Qt toolkit
+	pkgver = 0.6.2.1.r151.g38cf3bd
+	pkgrel = 1
+	url = http://www.libqxt.org
+	arch = x86_64
+	license = CPL
+	license = LGPL2.1
+	makedepends = avahi
+	makedepends = libxrandr
+	makedepends = qt5-tools
+	makedepends = qt5-x11extras
+	makedepends = qt5-xcb-private-headers
+	depends = qt5-base
+	depends = db
+	depends = libssh2
+	optdepends = avahi: Zeroconf support
+	provides = libqxt
+	conflicts = libqxt
+	options = !emptydirs
+	source = git+https://github.com/Brli/libqxt.git#branch=dev
+	sha256sums = SKIP
+
+pkgname = libqxt-git

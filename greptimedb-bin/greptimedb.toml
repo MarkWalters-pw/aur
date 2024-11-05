@@ -1,0 +1,42 @@
+node_id = 0
+mode = 'standalone'
+enable_memory_catalog = false
+
+[wal]
+file_size = '50MB'
+purge_interval = '10m'
+purge_threshold = '1GB'
+read_batch_size = 128
+sync_write = false
+
+[storage]
+type = 'File'
+data_home = '/var/lib/greptimedb/'
+
+[http_options]
+addr = '0.0.0.0:4000'
+timeout = "30s"
+
+[grpc_options]
+addr = '0.0.0.0:4001'
+runtime_size = 8
+
+[mysql_options]
+addr = '0.0.0.0:4002'
+runtime_size = 2
+
+[influxdb_options]
+enable = true
+
+[opentsdb_options]
+addr = "0.0.0.0:4242"
+enable = true
+runtime_size = 2
+
+[prometheus_options]
+enable = true
+
+[postgres_options]
+addr = '0.0.0.0:4003'
+runtime_size = 2
+check_pwd = false

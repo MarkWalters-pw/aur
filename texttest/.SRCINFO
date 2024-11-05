@@ -1,0 +1,26 @@
+pkgbase = texttest
+	pkgdesc = A tool for text-based functional testing
+	pkgver = 4.4.0
+	pkgrel = 1
+	url = https://github.com/texttest/texttest
+	arch = any
+	license = LGPL-2.1-or-later
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = gdk-pixbuf2
+	depends = glib2
+	depends = gtk3
+	depends = pango
+	depends = python
+	depends = python-certifi
+	depends = python-gobject
+	depends = python-matplotlib
+	depends = python-pillow
+	depends = python-psutil
+	optdepends = python-boto: for Amazon EC2 support
+	source = texttest-4.4.0.tar.gz::https://github.com/texttest/texttest/archive/0f024202b56ca913e1149e857f296e6c04a83441.tar.gz
+	sha256sums = 27bbfa733bc0d7d7a763f3c555ffda91e5d2202a402a1f42611e1d2523074ad5
+
+pkgname = texttest

@@ -1,0 +1,17 @@
+pkgbase = screenshot_llm-git
+	pkgdesc = AI-Powered Screenshot Analysis
+	pkgver = 1.0.1.r2.g0ccc623
+	pkgrel = 1
+	url = https://github.com/ThanabordeeN/Screenshot_LLM
+	arch = x86_64
+	license = MIT
+	depends = python
+	depends = tk
+	depends = python-dotenv
+	depends = python-markdown
+	optdepends = ollama: ollama support.
+	conflicts = screenshot_llm
+	source = screenshot_llm-git-git::git+https://github.com/ThanabordeeN/Screenshot_LLM.git
+	b2sums = SKIP
+
+pkgname = screenshot_llm-git

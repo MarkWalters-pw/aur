@@ -1,0 +1,21 @@
+pkgbase = unciv-bin
+	pkgdesc = Open-source remake of Civilization V
+	pkgver = 4.14.3
+	pkgrel = 0
+	url = https://github.com/yairm210/Unciv
+	arch = any
+	license = MPL-2.0
+	depends = java-runtime
+	depends = bash
+	depends = xorg-xrandr
+	provides = unciv
+	conflicts = unciv
+	noextract = Unciv-4.14.3.jar
+	source = Unciv-4.14.3.jar::https://github.com/yairm210/Unciv/releases/download/4.14.3/Unciv.jar
+	source = Unciv-4.14.3.png::https://raw.githubusercontent.com/yairm210/Unciv/4.14.3/extraImages/Icons/Unciv%20icon%20v5.png
+	source = Unciv-4.14.3.zip::https://github.com/yairm210/Unciv/releases/download/4.14.3/linuxFilesForJar.zip
+	md5sums = e2702807e0d83a795f521c88d101415b
+	md5sums = c3f79bbc7e80620b3cdc4f90f21f4d68
+	md5sums = 1c8fbc20e9af4f33c226f36650e7c1e6
+
+pkgname = unciv-bin

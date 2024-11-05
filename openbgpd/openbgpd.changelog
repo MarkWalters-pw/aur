@@ -1,0 +1,147 @@
+## 8.6 - 2024-09-19
+    * Filtered prefixes are now included in the Local-RIB if the config
+      option 'rde rib Loc-RIB include filtered' is set.
+
+    * Add 'bgpctl show rib filtered' to show filtered prefixes.
+
+    * Add 'min-version' RTR config option and default to RTR version 1.
+      Set min-version to 2 to enable draft-ietf-sidrops-8210bis-14 and
+      ASPA support or better define the ASPA table in the config.
+
+    * Adjust RTR ASPA pdu parser to follow draft-ietf-sidrops-8210bis-14
+
+    * Check the max_prefix and max_out_prefix limits on config reload.
+
+    * Fix race condition between TCP-MD5 key removal and session closure
+      to ensure all messages are sent with the proper TCP-MD5 signature.
+
+    * Fix 'nexthop qualify via bgp' by re-evaluating the nexthops when
+      a BGP route is added to the FIB.
+
+    * Handle the CLUSTER_LIST attribute according to RFC7606.
+
+    * Fix some undefined or non-portable behaviour when handling
+      NULL / 0-sized objects.
+
+## 8.5 - 2024-06-26
+    * Include OpenBSD 7.5 errata 004:
+      Repair a withdraw desyncronization problem in bgpd(8).
+      Affected are OpenBGPD 8.2, 8.3 and 8.4.
+
+    * Fix Linux TCP MD5 autoconf detection and improve the code to work
+      in all cases.
+
+    * Double peer description length to 64 characters.
+
+    * Improve handling of bgpd AFI IPv4 sessions over IPv6 only links.
+
+    * Sessions over IPv6 link-local addresses are now always considered
+      to be connected.
+
+    * Allow operators to enforce the presence of certain capabilities.
+
+    * Improve capability negotiation and remove 'announce capabilities'.
+      The 'announce capabilities [yes|no]' neighbor config option needs to be
+      removed from configuration files. Instead individual capabilities
+      need to be disabled.
+
+    * Improve negotiation of the multi-protocol capability and the fallback
+      to IPv4 only mode.
+
+    * Mark RTR and IPv6 BGP packets with DSCP CS6 (network control).
+
+    * Increase RTR PDU limit to 48k and limit number of SPAS to 10'000.
+
+    * Convert the remaining session engine parsers to the new ibuf API.
+
+    * Various changes to autoconf and portable headers for NetBSD support.
+
+## 8.4 - 2024-03-07
+    * Rewrite the internal message passing mechanism to use a new
+      memory-safe API.
+
+    * Rewrite most protocol parsers to use the new memory-safe API.
+      Convert the UPDATE parser, all of RTR, as well as both the MRT
+      dump code in bgpd and the parser in bgpctl.
+
+    * Improve RTR logging, error handling and version negotiation.
+
+    * Switch to autoconf 2.71 to generate the supplied configure scripts.
+
+
+## 8.3 - 2023-10-13
+    * bgpd 8.1 and 8.2 could send a bad COMMUNITY attribute when
+      non-transitive ext-communities are present. A workaround is to
+      add a filter rule to clear non-transitive ext-communities:
+            match to ebgp set ext-community delete ovs *
+      This fix is included in OpenBSD 7.4.
+
+    * Fix a possible fatal error in the RDE when "announce add-path send all"
+      is used. The error is triggered by an ineligible path which is wrongly
+      distributed.
+
+    * Fix selection of the local nexthop for the alternate address family.
+      This is used by 'announce IPv6 unicast' over an IPv4 session or
+      vice-versa.
+
+
+## 8.2 - 2023-10-02
+    * Update ASPA support to follow draft-ietf-sidrops-aspa-verification-16
+      and draft-ietf-sidrops-aspa-profile-16 by making the ASPA lookup
+      tables AFI-agnostic.
+
+    * Fix a fatal error in the Linux netlink parser which was triggered
+      because of a mismatched netlink message size.
+
+    * Rework UPDATE message generation to use the new ibuf API instead
+      of the hand-rolled solution before. 
+
+    * Improve error message in bgpctl for features not supported by the
+      portable version of OpenBGPD.
+
+    * Adjusted example GRACEFUL_SHUTDOWN filter rule in the example config
+      to only match on ebgp sessions.
+
+## 8.1 - 2023-07-12
+    * Include OpenBSD 7.3 errata 002:
+      Avoid fatal errors in bgpd(8) due to incorrect refcounting and
+      mishandling of ASPA objects. Fix bgpctl(8) 'show rib in' by renaming
+      'invalid' into 'disqualified'.
+
+    * Include OpenBSD 7.3 errata 006:
+      Incorrect length handling of path attributes in bgpd(8) can lead to a
+      session reset.
+
+    * Include OpenBSD 7.3 errata 009:
+      When tracking nexthops over IPv6 multipath routes, or when receiving
+      a NOTIFICATION while reaching an internal limit, bgpd(8) could crash.
+
+      When checking the next hop for IPv6 multipath routes, or when receiving
+      a NOTIFICATION while reaching an internal limit, bgpd(8) could crash.
+
+    * Add configure options to adjust WWW_USER and wwwrunstatedir.
+
+    * Fix 'ext-community * *' matching which also affects filters removing
+      all ext-commuinites.
+
+    * Limit the socket buffer size to 64k for all sessions.
+      Limiting the buffer size to a reasonable size ensures that not too many
+      updates end up queued in the TCP stack.
+
+
+## 8.0 - 2023-05-04
+    * Include OpenBSD 7.3 errata 001 (link: https://www.openbsd.org/errata73.html#p001_bgpd):
+      A new ASPA object appeared in the RPKI ecosystem and exposed bugs in
+      bgpd(8) and rpki-client(8).
+
+    * Introduce a semaphore to protect intermittent RTR session data 
+      from being published to the RDE.
+
+    * Add first version of flowspec support. Right now only announcement
+      of flowspec rules is possible.
+
+    * Improve and extend the bgpctl parser to handle commands like
+      `bgpctl show rib 192.0.2.0/24 detail`. Also add various flowspec
+      specific commands.
+
+## This document contains the changelogs as posted in each release announcement on the OpenBSD mailing list.

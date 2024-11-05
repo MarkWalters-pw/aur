@@ -1,0 +1,27 @@
+# Be sure to use `systemctl edit readarr` to modify this service with an override.conf because
+# direct changes will be overwritten by package updates.
+#
+# A user per service w/ shared group setup would have an override like:
+# [Service]
+# Group=sharedgroupname
+# UMask=002
+
+[Unit]
+Description=Readarr Daemon
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=readarr
+Group=readarr
+SyslogIdentifier=readarr
+Environment=XDG_DATA_HOME=/var/lib/readarr
+WorkingDirectory=/usr/lib/readarr
+ExecStart=/usr/lib/readarr/bin/Readarr -nobrowser -data=/var/lib/readarr
+Restart=on-failure
+RestartSec=5
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target

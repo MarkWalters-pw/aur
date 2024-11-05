@@ -1,0 +1,86 @@
+# Maintainer: Chris Billington <chrisjbillington@gmail.com>
+_pkgname=linux-zen
+_pkgver=%PKGVER
+_kernver=%KERNVER
+_zenver=%ZENVER
+_pkgrel=%PKGREL
+pkgbase="${_pkgname}-versioned-bin"
+_KERNNAME=%KERNNAME
+_versioned_pkgname="linux${_pkgver}-${_pkgrel}-zen"
+pkgname=("${_pkgname}-versioned-bin"
+         "${_pkgname}-versioned-headers-bin"
+         "${_pkgname}-versioned-docs-bin"
+         "${_versioned_pkgname}-bin"
+         "${_versioned_pkgname}-headers-bin"
+         "${_versioned_pkgname}-docs-bin")
+pkgver=${_pkgver}
+pkgrel=${_pkgrel}
+pkgdesc="%KERN_PKGDESC | repackaged with a unique package name for each version"
+url="%URL"
+arch=(x86_64)
+license=(GPL2)
+options=('!strip')
+
+_kernpkg=%KERN_PKG
+_headerspkg=%HEADERS_PKG
+_docspkg=%DOCS_PKG
+
+source=("https://archive.archlinux.org/packages/.all/${_kernpkg}"
+        "https://archive.archlinux.org/packages/.all/${_headerspkg}"
+        "https://archive.archlinux.org/packages/.all/${_docspkg}")
+
+noextract=("${source[@]##*/}")
+
+sha256sums=(SKIP) # To be filled in by updpkgsums
+
+package_linux-zen-versioned-bin() {
+  pkgdesc="Metapackage depending on ${_versioned_pkgname}-bin"  
+  depends=("${_versioned_pkgname}-bin")
+  optdepends=('grub-hook: to run grub-mkconfig when kernels are added/removed')
+}
+
+package_linux-zen-versioned-headers-bin() {
+  pkgdesc="Metapackage depending on ${_versioned_pkgname}-headers-bin"  
+  depends=("${_versioned_pkgname}-headers-bin")
+}
+
+package_linux-zen-versioned-docs-bin() {
+  pkgdesc="Metapackage depending on ${_versioned_pkgname}-docs-bin"  
+  depends=("${_versioned_pkgname}-docs-bin")
+}
+
+package_linux%PKGVER-%PKGREL-zen-bin() {
+  pkgdesc="%KERN_PKGDESC, version ${_KERNNAME}"
+  %KERN_DEPENDS
+  %KERN_CONFLICTS
+  %KERN_OPTDEPENDS
+  %KERN_PROVIDES
+  %KERN_REPLACES
+  tar -xf "${_kernpkg}" -C "${pkgdir}"
+  rm "${pkgdir}"/{.MTREE,.BUILDINFO,.PKGINFO}
+  sed -ic "s/${_pkgname}/${_KERNNAME}/" "${pkgdir}/usr/lib/modules/${_KERNNAME}/pkgbase"
+}
+
+package_linux%PKGVER-%PKGREL-zen-headers-bin() {
+  pkgdesc="%HEADERS_PKGDESC ${_KERNNAME}"
+  %HEADERS_DEPENDS
+  %HEADERS_CONFLICTS
+  %HEADERS_OPTDEPENDS
+  %HEADERS_PROVIDES
+  %HEADERS_REPLACES
+  tar -xf "${_headerspkg}" -C "${pkgdir}"
+  rm "${pkgdir}"/{.MTREE,.BUILDINFO,.PKGINFO}
+  mv "${pkgdir}/usr/src/"{"${_pkgname}","${_versioned_pkgname}"}
+}
+
+package_linux%PKGVER-%PKGREL-zen-docs-bin() {
+  pkgdesc="%DOCS_PKGDESC ${_KERNNAME}"
+  %DOCS_DEPENDS
+  %DOCS_CONFLICTS
+  %DOCS_OPTDEPENDS
+  %DOCS_PROVIDES
+  %DOCS_REPLACES
+  tar -xf "${_docspkg}" -C "${pkgdir}"
+  rm "${pkgdir}"/{.MTREE,.BUILDINFO,.PKGINFO}
+  mv "${pkgdir}/usr/share/doc/"{"${_pkgname}","${_versioned_pkgname}"}
+}

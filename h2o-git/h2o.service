@@ -1,0 +1,13 @@
+[Unit]
+Description=H2O - the optimized HTTP/1, HTTP/2 server
+After=network-online.target nss-lookup.target remote-fs.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/h2o --mode master --conf /etc/h2o.conf
+ExecReload=/usr/bin/kill -HUP $MAINPID
+ExecStop=/usr/bin/kill -TERM $MAINPID
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

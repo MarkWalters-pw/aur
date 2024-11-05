@@ -1,0 +1,18 @@
+pkgbase = reflex-lexer
+	pkgdesc = RE/flex is the regex-centric, fast lexical analyzer generator for C++ with full Unicode support.
+	pkgver = 5.0.1
+	pkgrel = 1
+	url = https://github.com/Genivia/RE-flex
+	arch = x86_64
+	license = BSD-3-Clause
+	makedepends = gcc
+	makedepends = make
+	optdepends = pcre2: To use PCRE2 as a regex engine
+	optdepends = boost: To use Boost.Regex as a regex engine
+	optdepends = graphviz: To visualize the FSM graphs
+	provides = libreflex.a
+	provides = libreflexmin.a
+	source = https://github.com/Genivia/RE-flex/archive/refs/tags/v5.0.1.tar.gz
+	sha256sums = b74430fe63a6e3e665676d23601e332fcf12714efb798661bf307cb7a230ca4f
+
+pkgname = reflex-lexer

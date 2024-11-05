@@ -1,0 +1,16 @@
+pkgbase = uml_utilities
+	pkgdesc = Utilities for user-mode linux kernel
+	pkgver = 20070815
+	pkgrel = 4
+	url = http://user-mode-linux.sourceforge.net/
+	arch = x86_64
+	arch = i686
+	license = GPL2
+	depends = fuse2
+	depends = perl
+	source = http://user-mode-linux.sourceforge.net/uml_utilities_20070815.tar.bz2
+	source = uml_utilities.patch
+	sha256sums = f815f591a1c177729546969acf720958c5fd72b8d4d36bae26fdc5b64669b60e
+	sha256sums = 57588777015901c51f1adb5f61aace93e953d710c2e0a906b5897725c744e5e3
+
+pkgname = uml_utilities

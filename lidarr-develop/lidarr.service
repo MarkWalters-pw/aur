@@ -1,0 +1,27 @@
+# Be sure to use `systemctl edit lidarr` to modify this service with an override.conf because
+# direct changes will be overwritten by package updates.
+#
+# A user per service w/ shared group setup would have an override like:
+# [Service]
+# Group=sharedgroupname
+# UMask=002
+
+[Unit]
+Description=Lidarr Daemon
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=lidarr
+Group=lidarr
+SyslogIdentifier=lidarr
+Environment=XDG_DATA_HOME=/var/lib/lidarr
+WorkingDirectory=/usr/lib/lidarr
+ExecStart=/usr/lib/lidarr/bin/Lidarr -nobrowser -data=/var/lib/lidarr
+Restart=on-failure
+RestartSec=5
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target

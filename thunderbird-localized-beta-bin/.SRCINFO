@@ -1,0 +1,38 @@
+pkgbase = thunderbird-localized-beta-bin
+	pkgdesc = Standalone mail and news reader from mozilla.org — localized beta version
+	pkgver = 133.0b1
+	pkgrel = 1
+	url = https://www.mozilla.org/thunderbird
+	arch = i686
+	arch = x86_64
+	license = MPL-2.0
+	license = GPL-2.0-only
+	license = LGPL-2.1-only
+	depends = dbus-glib
+	depends = ffmpeg
+	depends = gtk3
+	depends = libpulse
+	depends = libxt
+	depends = mime-types
+	depends = nss
+	depends = ttf-font
+	optdepends = hunspell-en_us: Spell checking, American English
+	optdepends = libotr: OTR support for active one-to-one chats
+	optdepends = libnotify: Notification integration
+	provides = thunderbird=133.0b1
+	provides = thunderbird-beta=133.0b1
+	conflicts = thunderbird-beta
+	conflicts = thunderbird-beta-bin
+	source = thunderbird-localized-beta-bin.desktop
+	validpgpkeys = 14F26682D0916CDD81E37B6D61B7B526D98F0353
+	sha256sums = c4595bc8699538078445d23e98f9e6b81880ffd39356c77bc73bf6001810312b
+	source_i686 = thunderbird-localized-beta-bin-133.0b1-linux-i686-en-US.tar.bz2::https://ftp.mozilla.org/pub/thunderbird/releases/133.0b1/linux-i686/en-US/thunderbird-133.0b1.tar.bz2
+	source_i686 = thunderbird-localized-beta-bin-133.0b1-linux-i686-en-US.tar.bz2.asc::https://ftp.mozilla.org/pub/thunderbird/releases/133.0b1/linux-i686/en-US/thunderbird-133.0b1.tar.bz2.asc
+	sha256sums_i686 = 119b212802f215f7362a656aa64922e53adc9cfcf5e8c5e9373ff43131c31416
+	sha256sums_i686 = SKIP
+	source_x86_64 = thunderbird-localized-beta-bin-133.0b1-linux-x86_64-en-US.tar.bz2::https://ftp.mozilla.org/pub/thunderbird/releases/133.0b1/linux-x86_64/en-US/thunderbird-133.0b1.tar.bz2
+	source_x86_64 = thunderbird-localized-beta-bin-133.0b1-linux-x86_64-en-US.tar.bz2.asc::https://ftp.mozilla.org/pub/thunderbird/releases/133.0b1/linux-x86_64/en-US/thunderbird-133.0b1.tar.bz2.asc
+	sha256sums_x86_64 = 6e047875100be686608f4775336bc8480b106f7ac3febe2f881f10d1ac5fd490
+	sha256sums_x86_64 = SKIP
+
+pkgname = thunderbird-localized-beta-bin

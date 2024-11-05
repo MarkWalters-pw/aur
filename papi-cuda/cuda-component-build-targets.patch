@@ -1,0 +1,16 @@
+--- src/components/Makefile_comp_tests.target.in
++++ src/components/Makefile_comp_tests.target.in
+@@ -11,7 +11,12 @@
+ SHLIB   = @SHLIB@
+ PAPILIB = $(datadir)/@LINKLIB@
+ TESTLIB = $(testlibdir)/libtestlib.a
++ifeq ($(NAME),cuda)
++COMMA := ,
++LDFLAGS = $(subst -f,-Xlinker -f,$(subst -Wl$(COMMA),-Xlinker ,@LDFLAGS@)) @LDL@
++else
+ LDFLAGS = @LDFLAGS@ @LDL@
++endif
+ CC	= @CC@
+ F77	= @F77@
+ CC_R	= @CC_R@
+

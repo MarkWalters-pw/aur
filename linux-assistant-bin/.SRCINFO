@@ -1,0 +1,19 @@
+pkgbase = linux-assistant-bin
+	pkgdesc = A daily linux helper with powerful integrated search, routines checks and administrative tasks. The Project is built with flutter and python.Prebuilt version.
+	pkgver = 0.5.4
+	pkgrel = 1
+	url = https://www.linux-assistant.org/
+	arch = x86_64
+	license = GPL-3.0-only
+	depends = gtk3
+	depends = python-gobject
+	depends = python>3
+	depends = libkeybinder3
+	depends = flatpak
+	depends = wmctrl
+	provides = linux-assistant=0.5.4
+	conflicts = linux-assistant
+	source = linux-assistant-0.5.4.deb::https://github.com/Jean28518/linux-assistant/releases/download/v0.5.4/linux-assistant.deb
+	sha256sums = b4e014c3f4155cebcd4fd923f5f1a497edc53835eb61ae278a69522c4687ac35
+
+pkgname = linux-assistant-bin

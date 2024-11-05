@@ -1,0 +1,23 @@
+pkgbase = libloot
+	pkgdesc = A library for the Load Order Optimisation Tool for Starfield, The Elder Scrolls (Morrowind and later) and Fallout (3 and later) games.
+	pkgver = 0.24.5
+	pkgrel = 1
+	url = https://loot.github.io
+	arch = x86_64
+	license = GPL-3.0-only
+	makedepends = git
+	makedepends = boost
+	makedepends = cbindgen
+	makedepends = cmake
+	makedepends = rust
+	makedepends = doxygen
+	makedepends = python-breathe
+	makedepends = python-sphinx
+	depends = tbb
+	depends = icu
+	depends = fmt
+	depends = spdlog
+	source = libloot-0.24.5.tar.gz::https://github.com/loot/libloot/archive/0.24.5.tar.gz
+	sha256sums = d3f5a2e979aec5264b13e4687e1d240c7109552025e9995d1d2a54cbcb3eb8d3
+
+pkgname = libloot

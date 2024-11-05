@@ -1,0 +1,28 @@
+diff -rU1 kate-23.08.2.orig/apps/lib/kateapp.cpp kate-23.08.2/apps/lib/kateapp.cpp
+--- kate-23.08.2.orig/apps/lib/kateapp.cpp	2023-10-10 05:27:51.000000000 +0200
++++ kate-23.08.2/apps/lib/kateapp.cpp	2023-10-31 12:14:09.693601473 +0100
+@@ -101,3 +101,3 @@
+ #if !defined(Q_OS_WIN) && !defined(Q_OS_HAIKU)
+-    // Prohibit using sudo or kdesu (but allow using the root user directly)
++    // Allow running Kate as root, but with a warning
+     if (getuid() == 0) {
+@@ -105,17 +105,4 @@
+         bindtextdomain("kate", KDE_INSTALL_FULL_LOCALEDIR);
+-        if (!qEnvironmentVariableIsEmpty("SUDO_USER")) {
+-            auto message = kli18n(
+-                "Running this editor with sudo can cause bugs and expose you to security vulnerabilities. "
+-                "Instead use this editor normally and you will be prompted for elevated privileges when "
+-                "saving documents if needed.");
+-            std::cout << dgettext("kate", message.untranslatedText()) << std::endl;
+-            exit(EXIT_FAILURE);
+-        } else if (!qEnvironmentVariableIsEmpty("KDESU_USER")) {
+-            auto message = kli18n(
+-                "Running this editor with kdesu can cause bugs and expose you to security vulnerabilities. "
+-                "Instead use this editor normally and you will be prompted for elevated privileges when "
+-                "saving documents if needed.");
+-            std::cout << dgettext("kate", message.untranslatedText()) << std::endl;
+-            exit(EXIT_FAILURE);
+-        }
++        std::cout << "THIS IS POTENTIALLY INSECURE!\nTo edit files as root please use:" << std::endl;
++        std::cout << "SUDO_EDITOR=kate sudoedit <file>" << std::endl;
+     }

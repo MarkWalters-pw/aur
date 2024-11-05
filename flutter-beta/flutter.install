@@ -1,0 +1,13 @@
+post_install() {
+  groupadd -f flutterusers
+  chgrp -R flutterusers /opt/flutter
+  chmod -R g+w /opt/flutter
+}
+
+post_upgrade() {
+  post_install
+}
+
+post_remove() {
+  groupdel flutterusers
+}

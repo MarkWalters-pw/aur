@@ -1,0 +1,270 @@
+# Maintainer:
+# Contributor: Yurii Kolesnykov <root@yurikoles.com>
+
+## options
+if [ -z "$_srcinfo" ] && [ -z "$_pkgver" ]; then
+  : ${_autoupdate:=true}
+fi
+
+## basic info
+_pkgname=thunderbird
+pkgname=thunderbird-beta
+pkgver=133.0b1
+pkgrel=1
+pkgdesc='Beta version of standalone mail and news reader from mozilla.org'
+url="https://www.thunderbird.net/"
+arch=('x86_64')
+license=(
+  'MPL-2.0'
+  'GPL-2.0-only'
+  'LGPL-2.1-only'
+)
+
+depends=(
+  dbus
+  ffmpeg
+  gtk3
+  libpulse
+  libxss
+  libxt
+  mime-types
+  nss
+  ttf-font
+)
+makedepends=(
+  cbindgen
+  clang
+  diffutils
+  imake
+  inetutils
+  jack
+  libotr
+  lld
+  llvm
+  mesa
+  nasm
+  nodejs
+  python
+  rust
+  unzip
+  wasi-compiler-rt
+  wasi-libc
+  wasi-libc++
+  wasi-libc++abi
+  yasm
+  zip
+)
+
+options=(
+  !emptydirs
+  !lto
+  !makeflags
+)
+
+_source_main() {
+  provides=("thunderbird=$_pkgver")
+
+  source=(
+    https://archive.mozilla.org/pub/thunderbird/releases/$_pkgver/source/thunderbird-$_pkgver.source.tar.xz{,.asc}
+    $pkgname.desktop
+    install-dir.patch
+    metainfo.patch
+  )
+  sha256sums=(
+    'SKIP'
+    'SKIP'
+    'c620a080414b15e822073e22685c781a8b1789b93d5474aedcadbd8801945d97'
+    'c959c9f2b60a42dc937f744c018196906727d468d8f1d7402fb4f743484c414b'
+    '3390d127e5dd70a0ff60895bcb044ec4521dd528cd9d6efc27c4ba58df9cca5c'
+  )
+}
+
+validpgpkeys=(
+  # Mozilla Software Releases <release@mozilla.com>
+  # https://blog.mozilla.org/security/2023/05/11/updated-gpg-key-for-signing-firefox-releases/
+  14F26682D0916CDD81E37B6D61B7B526D98F0353
+)
+# Google API keys (see http://www.chromium.org/developers/how-tos/api-keys)
+# Note: These are for Arch Linux use ONLY. For your own distribution, please
+# get your own set of keys. Feel free to contact foutrelis@archlinux.org for
+# more information.
+_google_api_key=AIzaSyDwr302FpOSkGRpLlUpPThNTDPbXcIn_FM
+
+# Mozilla API keys (see https://location.services.mozilla.com/api)
+# Note: These are for Arch Linux use ONLY. For your own distribution, please
+# get your own set of keys. Feel free to contact heftig@archlinux.org for
+# more information.
+_mozilla_api_key=16674381-f021-49de-8622-3021c5942aff
+
+prepare() {
+  mkdir -p mozbuild
+  cd "${_pkgname}-${_pkgver%b*}"
+
+  local src
+  for src in "${source[@]}"; do
+    src="${src%%::*}"
+    src="${src##*/}"
+    [[ $src = *.patch ]] || continue
+    echo "Applying patch $src..."
+    patch -Np1 < "../$src"
+  done
+
+  # Make icon transparent
+  sed -i '/^<rect/d' comm/mail/branding/thunderbird/TB-symbolic.svg
+
+  echo -n "$_google_api_key" > google-api-key
+  echo -n "$_mozilla_api_key" > mozilla-api-key
+  cat > .mozconfig << END
+ac_add_options --enable-application=comm/mail
+mk_add_options MOZ_OBJDIR=${PWD@Q}/obj
+
+ac_add_options --prefix=/usr
+ac_add_options --enable-release
+ac_add_options --enable-hardening
+ac_add_options --enable-optimize
+ac_add_options --enable-rust-simd
+ac_add_options --enable-linker=lld
+ac_add_options --disable-install-strip
+ac_add_options --disable-elf-hack
+ac_add_options --disable-bootstrap
+ac_add_options --with-wasi-sysroot=/usr/share/wasi-sysroot
+
+# Branding
+ac_add_options --enable-official-branding
+ac_add_options --enable-update-channel=aurora
+ac_add_options --with-distribution-id=org.archlinux
+ac_add_options --with-unsigned-addon-scopes=app,system
+ac_add_options --allow-addon-sideload
+export MOZILLA_OFFICIAL=1
+export MOZ_APP_REMOTINGNAME=${pkgname//-/}
+export MOZ_REQUIRE_SIGNING=
+
+# Keys
+ac_add_options --with-google-location-service-api-keyfile=${PWD@Q}/google-api-key
+ac_add_options --with-google-safebrowsing-api-keyfile=${PWD@Q}/google-api-key
+ac_add_options --with-mozilla-api-keyfile=${PWD@Q}/mozilla-api-key
+
+# System libraries
+ac_add_options --with-system-nspr
+ac_add_options --with-system-nss
+
+# Features
+ac_add_options --enable-alsa
+ac_add_options --enable-jack
+ac_add_options --enable-crashreporter
+ac_add_options --disable-updater
+ac_add_options --disable-tests
+END
+}
+
+build() {
+  cd "${_pkgname}-${_pkgver%b*}"
+
+  export MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE=pip
+  export MOZBUILD_STATE_PATH="$srcdir/mozbuild"
+  export MOZ_BUILD_DATE="$(date -u${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH} +%Y%m%d%H%M%S)"
+  export MOZ_NOSPAM=1
+
+  # malloc_usable_size is used in various parts of the codebase
+  CFLAGS="${CFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
+  CXXFLAGS="${CXXFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
+
+  # Breaks compilation since https://bugzilla.mozilla.org/show_bug.cgi?id=1896066
+  CFLAGS="${CFLAGS/-fexceptions/}"
+  CXXFLAGS="${CXXFLAGS/-fexceptions/}"
+
+  echo "Building thunderbird..."
+  ./mach build
+}
+
+package() {
+  cd "${_pkgname}-${_pkgver%b*}"
+  DESTDIR="$pkgdir" ./mach install
+
+  local vendorjs="$pkgdir/usr/lib/$pkgname/browser/defaults/preferences/vendor.js"
+  install -Dm644 /dev/stdin "$vendorjs" << END
+// Use LANG environment variable to choose locale
+pref("intl.locale.requested", "");
+
+// Use system-provided dictionaries
+pref("spellchecker.dictionary_path", "/usr/share/hunspell");
+
+// Disable default mailer checking
+pref("mail.shell.checkDefaultMail", false);
+
+// Don't disable extensions in the application directory
+pref("extensions.autoDisableScopes", 11);
+END
+
+  local distini="$pkgdir/usr/lib/$pkgname/distribution/distribution.ini"
+  install -Dm644 /dev/stdin "$distini" << END
+[Global]
+id=archlinux
+version=1.0
+about=Mozilla Thunderbird Beta for Arch Linux
+
+[Preferences]
+app.distributor=archlinux
+app.distributor.channel=$pkgname
+app.partner.archlinux=archlinux
+END
+
+  # .desktop
+  install -Dm644 ../$pkgname.desktop \
+    "$pkgdir/usr/share/applications/$pkgname.desktop"
+
+  # icons
+  for i in 16 22 24 32 48 64 128 256; do
+    install -Dm644 comm/mail/branding/thunderbird/default${i}.png \
+      "$pkgdir/usr/share/icons/hicolor/${i}x${i}/apps/$pkgname.png"
+  done
+
+  install -Dm644 comm/mail/branding/thunderbird/content/about-logo.svg \
+    "$pkgdir/usr/share/icons/hicolor/scalable/apps/$pkgname.svg"
+
+  install -Dm644 comm/mail/branding/thunderbird/TB-symbolic.svg \
+    "$pkgdir/usr/share/icons/hicolor/symbolic/apps/$pkgname-symbolic.svg"
+
+  install -Dm644 comm/mail/branding/thunderbird/TB-symbolic.svg \
+    "$pkgdir/usr/share/pixmaps/$_pkgname.svg"
+
+  # Use system-provided dictionaries
+  ln -Ts /usr/share/hunspell "$pkgdir/usr/lib/$pkgname/dictionaries"
+  ln -Ts /usr/share/hyphen "$pkgdir/usr/lib/$pkgname/hyphenation"
+
+  # Install a wrapper to avoid confusion about binary path
+  install -Dm755 /dev/stdin "$pkgdir/usr/bin/$pkgname" << END
+#!/bin/sh
+exec /usr/lib/$pkgname/$_pkgname "\$@"
+END
+
+  # Replace duplicate binary with wrapper
+  # https://bugzilla.mozilla.org/show_bug.cgi?id=658850
+  ln -srfv "$pkgdir/usr/bin/$pkgname" "$pkgdir/usr/lib/$pkgname/$_pkgname-bin"
+
+  # Use system certificates
+  local nssckbi="$pkgdir/usr/lib/$pkgname/libnssckbi.so"
+  if [[ -e $nssckbi ]]; then
+    ln -srfv "$pkgdir/usr/lib/libnssckbi.so" "$nssckbi"
+  fi
+}
+
+_update_version() {
+  : ${_pkgver:=$pkgver}
+
+  if [[ "${_autoupdate::1}" != "t" ]]; then
+    return
+  fi
+
+  _pkgver=$(
+    curl -I --no-progress-meter "https://download.mozilla.org/?product=thunderbird-beta-latest&os=linux64&lang=en-US" \
+      | strings | grep -E '^Location: (.*)$' | sed -E 's&^.*/releases/([0-9][^/]+)/.*$&\1&'
+  )
+
+  pkgver() {
+    echo "${_pkgver:?}"
+  }
+}
+
+_update_version
+_source_main

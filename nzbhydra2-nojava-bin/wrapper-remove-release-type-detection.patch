@@ -1,0 +1,13 @@
+--- a/other/wrapper/nzbhydra2wrapperPy3.py
++++ b/other/wrapper/nzbhydra2wrapperPy3.py
+@@ -499,6 +499,10 @@
+ 
+ 
+ def determineReleaseType():
++    forcedReleaseType = os.environ.get('NZBHYDRA_FORCE_GENERIC')
++    if forcedReleaseType is not None:
++        logger.info("Release type " + forcedReleaseType + " forced by environment variable ")
++        return forcedReleaseType
+     if os.path.exists("lib"):
+         releaseType = ReleaseType.GENERIC
+         if os.path.exists("core") or os.path.exists("core.exe"):

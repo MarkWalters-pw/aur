@@ -1,0 +1,26 @@
+pkgbase = freelib-git
+	pkgdesc = Book library manager
+	pkgver = 6.1.25
+	pkgrel = 1
+	url = https://github.com/petrovvlad/freeLib
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = cmake
+	depends = qt6-base
+	depends = qt6-svg
+	depends = qt6-httpserver
+	depends = quazip-qt6
+	depends = onetbb
+	depends = qtkeychain-qt6
+	optdepends = kindlegen: convert to MOBI, AZW3
+	optdepends = djvulibre: djvu covers
+	provides = freelib
+	conflicts = freelib
+	conflicts = freelib-dev-git
+	source = git+https://github.com/petrovvlad/freeLib.git
+	source = freelib-SmtpClient-for-Qt::git+https://github.com/petrovvlad/SmtpClient-for-Qt.git
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = freelib-git

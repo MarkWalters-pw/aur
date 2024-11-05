@@ -1,0 +1,16 @@
+[Unit]
+Description=Nexus 3 Repository OSS
+After=network.target
+
+[Service]
+Type=forking
+LimitNPROC=65536
+LimitNOFILE=65536
+User=nexus
+Group=nexus
+ExecStart=/usr/lib/nexus-oss/bin/nexus start
+ExecStop=/usr/lib/nexus-oss/bin/nexus stop
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target

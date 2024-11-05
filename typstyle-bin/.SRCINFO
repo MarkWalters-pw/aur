@@ -1,0 +1,22 @@
+pkgbase = typstyle-bin
+	pkgdesc = Beautiful and reliable typst code formatter
+	pkgver = 0.12.1
+	pkgrel = 1
+	url = https://github.com/Enter-tainer/typstyle
+	arch = aarch64
+	arch = x86_64
+	arch = armv7h
+	license = Apache-2.0
+	depends = gcc-libs
+	depends = glibc
+	optdepends = typst: For typst compilation
+	provides = typstyle
+	conflicts = typstyle
+	source_aarch64 = typstyle-aarch64-0.12.1::https://github.com/Enter-tainer/typstyle/releases/download/v0.12.1/typstyle-aarch64-unknown-linux-gnu
+	sha256sums_aarch64 = d4d4b20dd30e4c3f3b79059a12717d4da6bab8cdb5751318f1efeac64995bda1
+	source_x86_64 = typstyle-x86_64-0.12.1::https://github.com/Enter-tainer/typstyle/releases/download/v0.12.1/typstyle-x86_64-unknown-linux-gnu
+	sha256sums_x86_64 = 12448a9a3826fd676178cea1e1d09e295fa7532335ccf6c9b91ea6fa37973eca
+	source_armv7h = typstyle-armv7h-0.12.1::https://github.com/Enter-tainer/typstyle/releases/download/v0.12.1/typstyle-arm-unknown-linux-gnueabihf
+	sha256sums_armv7h = c8150f555791da4c95855cdf3167c84d2efea835e48f34c7809e1ef7a29bb127
+
+pkgname = typstyle-bin

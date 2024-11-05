@@ -1,0 +1,26 @@
+pkgbase = python-langchain
+	pkgdesc = Building applications with LLMs through composability
+	pkgver = 0.3.7
+	pkgrel = 1
+	url = https://github.com/langchain-ai/langchain
+	arch = any
+	license = MIT
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-poetry-core
+	makedepends = python-wheel
+	depends = python-aiohttp
+	depends = python-async-timeout
+	depends = python-langchain-core
+	depends = python-langchain-text-splitters
+	depends = python-langsmith
+	depends = python-numpy
+	depends = python-pydantic
+	depends = python-pyyaml
+	depends = python-requests
+	depends = python-sqlalchemy
+	depends = python-tenacity
+	source = langchain-0.3.7.tar.gz::https://files.pythonhosted.org/packages/source/l/langchain/langchain-0.3.7.tar.gz
+	sha256sums = 2e4f83bf794ba38562f7ba0ede8171d7e28a583c0cec6f8595cfe72147d336b2
+
+pkgname = python-langchain

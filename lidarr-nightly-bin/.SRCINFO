@@ -1,0 +1,50 @@
+pkgbase = lidarr-nightly-bin
+	pkgdesc = Music collection manager for newsgroup and torrent users (nightly builds)
+	pkgver = 2.8.1.4442
+	pkgrel = 1
+	url = https://lidarr.audio
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	groups = servarr-nightly-bin
+	license = GPL-3.0-or-later
+	depends = chromaprint
+	depends = gcc-libs
+	depends = glibc
+	depends = zlib
+	depends = sqlite
+	optdepends = postgresql: postgresql database
+	optdepends = sabnzbd: usenet downloader
+	optdepends = nzbget: usenet downloader
+	optdepends = qbittorrent: torrent downloader
+	optdepends = deluge: torrent downloader
+	optdepends = rtorrent: torrent downloader
+	optdepends = nodejs-flood: torrent downloader
+	optdepends = vuze: torrent downloader
+	optdepends = aria2: torrent downloader
+	optdepends = transmission-cli: torrent downloader (CLI and daemon)
+	optdepends = transmission-gtk: torrent downloader (GTK+)
+	optdepends = transmission-qt: torrent downloader (Qt)
+	optdepends = jackett: torrent indexer proxy
+	optdepends = nzbhydra2: torznab and usenet indexer proxy
+	optdepends = prowlarr: torrent and usenet indexer proxy
+	optdepends = autobrr: irc, torrent and usenet indexer proxy
+	provides = lidarr
+	conflicts = lidarr
+	options = !debug
+	source = lidarr.service
+	source = lidarr.tmpfiles
+	source = lidarr.sysusers
+	source = package_info
+	sha256sums = dcbe3d2a3d64a78a4b2b84a3486991a8b90fdd6900d7345004827a168f8b5645
+	sha256sums = abde8989e7ab9dc62b6a501644da5a9253953b6394b890565e00a69cbfd89068
+	sha256sums = 19b36aefd2ef93d4a630ceaefe582573ecdaa72ec21bfb48ce3941ead7b967fb
+	sha256sums = 90a1960fef0d3833cd3635cedd16af3ee9ae6c7b95babc3021f6031d4e44c200
+	source_x86_64 = Lidarr.nightly.2.8.1.4442.linux-core-x64.tar.gz::https://lidarr.servarr.com/v1/update/nightly/updatefile?version=2.8.1.4442&os=linux&runtime=netcore&arch=x64
+	sha256sums_x86_64 = 584842957f8cb36b15a0bd3cfd1b60bd6108804a552a18a37e6a0c75ede7a45e
+	source_aarch64 = Lidarr.nightly.2.8.1.4442.linux-core-arm64.tar.gz::https://lidarr.servarr.com/v1/update/nightly/updatefile?version=2.8.1.4442&os=linux&runtime=netcore&arch=arm64
+	sha256sums_aarch64 = 715df7a9995b4a77fa10d8426673d6b0ab4e41d77d315fbf7cbce98a2daf8f61
+	source_armv7h = Lidarr.nightly.2.8.1.4442.linux-core-arm.tar.gz::https://lidarr.servarr.com/v1/update/nightly/updatefile?version=2.8.1.4442&os=linux&runtime=netcore&arch=arm
+	sha256sums_armv7h = a3bd6de5ccba29fac165461fb266b189b58ae318405aa81a9ecd299b285454a2
+
+pkgname = lidarr-nightly-bin

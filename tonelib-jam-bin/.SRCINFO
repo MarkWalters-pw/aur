@@ -1,0 +1,20 @@
+pkgbase = tonelib-jam-bin
+	pkgdesc = ToneLib Jam – the learning and practice software for guitar players
+	pkgver = 4.8.7
+	pkgrel = 1
+	url = https://tonelib.net/jam-overview/
+	arch = x86_64
+	license = custom
+	depends = gtk3
+	depends = glib2
+	depends = desktop-file-utils
+	depends = alsa-lib
+	depends = harfbuzz
+	depends = fribidi
+	depends = pango
+	depends = freetype2
+	optdepends = jack: JACK output
+	source = tonelib-jam-bin-4.8.7.deb::https://www.tonelib.net/download/ToneLib-Jam-amd64.deb
+	sha256sums = a81084695f6ec3a1c72582bef002be25840adfbe5c63401ede0c62434fac020e
+
+pkgname = tonelib-jam-bin

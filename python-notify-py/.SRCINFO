@@ -1,0 +1,20 @@
+pkgbase = python-notify-py
+	pkgdesc = Cross platform desktop notifications for Python scripts and applications
+	pkgver = 0.3.43
+	pkgrel = 1
+	url = https://github.com/ms7m/notify-py
+	arch = any
+	license = MIT
+	checkdepends = python-coverage
+	makedepends = python-build
+	makedepends = python-wheel
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-poetry-core
+	depends = python
+	depends = python-jeepney
+	depends = python-loguru
+	source = python-notify-py-0.3.43.tar.gz::https://github.com/ms7m/notify-py/archive/refs/tags/v0.3.43.tar.gz
+	sha256sums = 7080a2bfb8b9c020b7de2e54b8169a92ec6a79430affa7a2c90576ccda6cf470
+
+pkgname = python-notify-py

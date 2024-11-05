@@ -1,0 +1,26 @@
+pkgbase = streamlink-twitch-gui
+	pkgdesc = A multi platform Twitch.tv browser for Streamlink
+	pkgver = 2.5.3
+	pkgrel = 1
+	url = https://github.com/streamlink/streamlink-twitch-gui
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = nodejs
+	makedepends = yarn
+	depends = alsa-lib
+	depends = gtk3
+	depends = libxss
+	depends = nss
+	depends = streamlink
+	noextract = nwjs-0.83.0-linux32.tar.gz
+	noextract = nwjs-0.83.0-linux64.tar.gz
+	options = !strip
+	source = streamlink-twitch-gui-2.5.3.tar.gz::https://github.com/streamlink/streamlink-twitch-gui/archive/refs/tags/v2.5.3.tar.gz
+	sha256sums = dac012e1dca9731ac3f95d7bc1d7e0f752abdd82166f89b4697189774b3035e5
+	source_i686 = nwjs-0.83.0-linux32.tar.gz::https://dl.nwjs.io/v0.83.0/nwjs-v0.83.0-linux-ia32.tar.gz
+	sha256sums_i686 = f7df845382a0f251fc7da711988976495dc6c96530e3aac6629b28e5048ffff9
+	source_x86_64 = nwjs-0.83.0-linux64.tar.gz::https://dl.nwjs.io/v0.83.0/nwjs-v0.83.0-linux-x64.tar.gz
+	sha256sums_x86_64 = cb4a0156f560b910dedfdd44b10b3aa98aa44d13f351f9b9d26e8d0ce661fbba
+
+pkgname = streamlink-twitch-gui

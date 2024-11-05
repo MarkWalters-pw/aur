@@ -1,0 +1,49 @@
+pkgbase = readarr-nightly-bin
+	pkgdesc = Ebook and audiobook collection manager for newsgroup and torrent users (nightly builds)
+	pkgver = 0.4.4.2666
+	pkgrel = 1
+	url = https://readarr.com
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	groups = servarr-nightly-bin
+	license = GPL-3.0-or-later
+	depends = gcc-libs
+	depends = glibc
+	depends = zlib
+	depends = sqlite
+	optdepends = postgresql: postgresql database
+	optdepends = sabnzbd: usenet downloader
+	optdepends = nzbget: usenet downloader
+	optdepends = qbittorrent: torrent downloader
+	optdepends = deluge: torrent downloader
+	optdepends = rtorrent: torrent downloader
+	optdepends = nodejs-flood: torrent downloader
+	optdepends = vuze: torrent downloader
+	optdepends = aria2: torrent downloader
+	optdepends = transmission-cli: torrent downloader (CLI and daemon)
+	optdepends = transmission-gtk: torrent downloader (GTK+)
+	optdepends = transmission-qt: torrent downloader (Qt)
+	optdepends = jackett: torrent indexer proxy
+	optdepends = nzbhydra2: torznab and usenet indexer proxy
+	optdepends = prowlarr: torrent and usenet indexer proxy
+	optdepends = autobrr: irc, torrent and usenet indexer proxy
+	provides = readarr
+	conflicts = readarr
+	options = !debug
+	source = readarr.service
+	source = readarr.tmpfiles
+	source = readarr.sysusers
+	source = package_info
+	sha256sums = 09386a5a87038f227e4a0995b37ac7ba561712712ad610323ea7ee8a1bf18c32
+	sha256sums = 3030252218445e3cb27025a1b567deef287ff3d5e2f32abc2d640a771d39ddd5
+	sha256sums = 1576aa21914edaa336d2b37d41ebf54fbaff6eb5099a3f46407cd79164ccdc67
+	sha256sums = 9b505e7e93a71c9d2fdc4689cf4a3cd691e3927b419cf5bb6e1aed43b5a91edc
+	source_x86_64 = Readarr.nightly.0.4.4.2666.linux-core-x64.tar.gz::https://readarr.servarr.com/v1/update/nightly/updatefile?version=0.4.4.2666&os=linux&runtime=netcore&arch=x64
+	sha256sums_x86_64 = 8f0ad79d869c3214043361696b908dedddc63481f36263802572fb939e825897
+	source_aarch64 = Readarr.nightly.0.4.4.2666.linux-core-arm64.tar.gz::https://readarr.servarr.com/v1/update/nightly/updatefile?version=0.4.4.2666&os=linux&runtime=netcore&arch=arm64
+	sha256sums_aarch64 = be68cfd81d30f242847119a8a4ae4d137e2cea0fe9ff723e028feab1ae61f042
+	source_armv7h = Readarr.nightly.0.4.4.2666.linux-core-arm.tar.gz::https://readarr.servarr.com/v1/update/nightly/updatefile?version=0.4.4.2666&os=linux&runtime=netcore&arch=arm
+	sha256sums_armv7h = 5af957a64020b3c6e551e7aa3438ed4677eaa3a1ca911ce2c557d2d0b713090e
+
+pkgname = readarr-nightly-bin
