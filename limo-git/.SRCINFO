@@ -1,0 +1,43 @@
+# Maintainer: Odin Vex <https://aur.archlinux.org/account/OdinVex/>
+# Contributor: None
+
+pkgbase = limo-git
+	pkgdesc = A simple Qt based mod manager.
+	pkgver = r60.f5e28e8
+	pkgrel = 1
+	epoch = 0
+	url = https://github.com/limo-app/limo/
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = boost
+	makedepends = cbindgen
+	makedepends = cmake
+	makedepends = cpr
+	makedepends = git
+	makedepends = jsoncpp
+	makedepends = imagemagick
+	makedepends = libarchive
+	makedepends = libloot
+	makedepends = openssl
+	makedepends = pugixml
+	makedepends = qt5-base
+	makedepends = qt5-svg
+	makedepends = qt5-tools
+	depends = boost-libs
+	depends = cpr
+	depends = jsoncpp
+	depends = libarchive
+	depends = libloot
+	depends = openssl
+	depends = pugixml
+	depends = qt5-base
+	depends = qt5-svg
+	depends = qt5-tools
+	optdepends = doxygen
+	source = limo-git::git+https://github.com/limo-app/limo.git
+	source = unrar-git::git+https://github.com/aawc/unrar.git
+	source = io.github.limo_app.limo.svg
+	cksums = SKIP SKIP 777140566
+
+pkgname = limo-git

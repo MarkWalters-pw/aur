@@ -1,0 +1,60 @@
+change-id = 129295
+
+[llvm]
+targets = "X86"
+experimental-targets = ""
+link-jobs = 1
+
+[build]
+build = "x86_64-unknown-linux-gnu"
+host = ["x86_64-unknown-linux-gnu"]
+target = ["x86_64-unknown-linux-gnu", "i686-pc-windows-gnu", "x86_64-pc-windows-gnu"]
+docs = false
+submodules = false
+locked-deps = true
+vendor = true
+extended = true
+tools = [
+    "cargo",
+    "rustdoc",
+]
+cargo-native-static = true
+
+[install]
+prefix = "@PREFIX@"
+
+[rust]
+codegen-units = 0
+codegen-units-std = 1
+channel = "stable"
+dist-src = false
+lld = true
+llvm-bitcode-linker = false
+deny-warnings = false
+
+[target.x86_64-unknown-linux-gnu]
+cc = "cc"
+cxx = "c++"
+ar = "ar"
+ranlib = "ranlib"
+linker = "cc"
+
+[target.i686-pc-windows-gnu]
+cc = "i686-w64-mingw32-cc"
+cxx = "i686-w64-mingw32-c++"
+ar = "i686-w64-mingw32-ar"
+ranlib = "i686-w64-mingw32-ranlib"
+linker = "i686-w64-mingw32-cc"
+crt-static = true
+
+[target.x86_64-pc-windows-gnu]
+cc = "x86_64-w64-mingw32-cc"
+cxx = "x86_64-w64-mingw32-c++"
+ar = "x86_64-w64-mingw32-ar"
+ranlib = "x86_64-w64-mingw32-ranlib"
+linker = "x86_64-w64-mingw32-cc"
+crt-static = true
+
+[dist]
+compression-formats = ["gz"]
+compression-profile = "fast"

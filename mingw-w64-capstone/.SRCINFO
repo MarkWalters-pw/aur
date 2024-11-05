@@ -1,0 +1,16 @@
+pkgbase = mingw-w64-capstone
+	pkgdesc = Lightweight multi-platform, multi-architecture disassembly framework (mingw-w64)
+	pkgver = 5.0.3
+	pkgrel = 1
+	url = https://www.capstone-engine.org/
+	arch = any
+	license = BSD
+	makedepends = mingw-w64-cmake
+	depends = mingw-w64-crt
+	options = staticlibs
+	options = !buildflags
+	options = !strip
+	source = https://github.com/aquynh/capstone/archive/5.0.3.tar.gz
+	sha256sums = 3970c63ca1f8755f2c8e69b41432b710ff634f1b45ee4e5351defec4ec8e1753
+
+pkgname = mingw-w64-capstone

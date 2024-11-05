@@ -1,0 +1,17 @@
+pkgbase = mingw-w64-log4cplus
+	pkgdesc = A C++ logger very close to Java's log4j (mingw-w64)
+	pkgver = 2.1.2
+	pkgrel = 1
+	url = http://log4cplus.sourceforge.net/
+	arch = any
+	license = GPL
+	checkdepends = mingw-w64-wine
+	makedepends = mingw-w64-cmake
+	depends = mingw-w64-crt
+	options = !strip
+	options = !buildflags
+	options = staticlibs
+	source = https://downloads.sourceforge.net/log4cplus/log4cplus-2.1.2.tar.xz
+	sha512sums = d6285e4964e8eda072b61e0585d5fe08c1d942b688752baf75ba230d49691070156ab4da1803d82d0c09128bcb87e21910e38ee9441df13ff762d527fe431444
+
+pkgname = mingw-w64-log4cplus

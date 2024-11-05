@@ -1,0 +1,102 @@
+#!/usr/bin/env bash
+set -e
+
+CMD0="${0##*/}"
+TS_HOSTNAME="${HOSTNAME}-initrd"
+TS_STATEDIR=/etc/initcpio/tailscale
+PID=""
+
+usage() {
+    cat <<EOF
+${CMD0} launches and configures Tailscale daemon in an isolated environment that doesn't mess with the system service.
+
+usage: ${CMD0} [option...]
+
+The setup script shouldn't require any arguments to get it working, but keep in mind that any extra argument is passed as-is to 'tailscale up'.
+See 'tailscale up --help' for available flags.
+
+i.e.:
+
+  ${CMD0} --hostname ${TS_HOSTNAME} --ssh --login-server=headscale.my.net --authkey=file:node.key
+
+The default value for '--hostname' is the current hostname plus '-initrd' suffix, in this case "${TS_HOSTNAME}".
+
+If in doubt, run '$CMD0' without arguments.
+EOF
+}
+
+info()  { printf >&2 "${CMD0} INFO : %s\n" "$1"; }
+error() { printf >&2 "${CMD0} ERROR: %s\n" "$1"; }
+die()   { error "$@"; exit 1; }
+
+cleanup() {
+  if [[ -n "${SETUPDIR}" ]]; then
+    rm -rf "${SETUPDIR}"
+  fi
+  if [[ -n "$PID" ]]; then
+    kill "$PID" 2>/dev/null
+  fi
+  exit 0
+}
+trap "cleanup" EXIT
+
+# Scan arguments looking for --hostname=VALUE
+FOUND_HOSTNAME_IN_ARGS=no
+for arg in "$@"; do
+  if [[ $arg =~ ^(-h|--help|help)$ ]]; then
+    usage
+    exit 0
+  fi
+  if [[ $arg =~ ^--hostname= ]]; then
+    TS_HOSTNAME=${arg#*=}
+    TS_HOSTNAME=${TS_HOSTNAME//[\"\']}
+    FOUND_HOSTNAME_IN_ARGS=yes
+  fi
+done
+[[ $FOUND_HOSTNAME_IN_ARGS == yes ]] || set -- --hostname="$TS_HOSTNAME" "$@"
+
+SETUPDIR="$(mktemp -d)"
+socket="${SETUPDIR}/tailscaled.sock"
+state="${SETUPDIR}/tailscaled.state"
+
+tailscaled \
+  -state="$state" \
+  -socket="$socket" \
+  -no-logs-no-support \
+  -tun=userspace-networking \
+  >"${SETUPDIR}/setup.log" 2>&1 &
+PID="$!"
+
+# --accept-risk=lose-ssh is fine because we are setting up an isolated tailscaled daemon,
+# it has nothing to do with system tailscale service.
+if ! tailscale --socket="$socket" up --qr --accept-risk=lose-ssh "$@"; then
+  cp -f "${SETUPDIR}/setup.log" /tmp/setup-initcpio-tailscale-daemon.log
+  die "Failed to configure tailscale. Check daemon logs at /tmp/setup-initcpio-tailscale-daemon.log"
+fi
+
+
+[[ "$(id -u)" != 0 ]] && xsu=sudo || xsu=""
+$xsu install -o root -g root -m600 -d "${TS_STATEDIR}"
+$xsu install -o root -g root -m644 -t "${TS_STATEDIR}" "${SETUPDIR}/tailscaled.state"
+$xsu tee "${TS_STATEDIR}/default.env" >/dev/null <<EOF
+# Set the port to listen on for incoming VPN packets.
+# Remote nodes will automatically be informed about the new port number,
+# but you might want to configure this in order to set external firewall
+# settings.
+PORT="41641"
+
+# Extra flags you might want to pass to tailscaled.
+FLAGS=""
+EOF
+
+info "tailscale successfully configured.
+
+Next steps:
+  * Disable key expiry for '${TS_HOSTNAME}' at https://login.tailscale.com/admin/machines
+  * Review ${TS_STATEDIR}/default.env (as root)
+  * Edit /etc/mkinitcpio.conf and add 'tailscale'. A safe choice is to insert it right before 'sd-encrypt' or 'encrypt*' hooks
+  * Run 'mkinitcpio -P' to rebuild initramfs
+  * Check the README at https://github.com/dangra/mkinitcpio-tailscale for security considerations
+
+enjoy!
+"

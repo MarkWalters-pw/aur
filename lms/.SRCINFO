@@ -1,0 +1,26 @@
+pkgbase = lms
+	pkgdesc = Lightweight Music Server. Access your self-hosted music using a web interface
+	pkgver = 3.60.0
+	pkgrel = 1
+	url = https://github.com/epoupon/lms
+	arch = x86_64
+	license = GPL3
+	makedepends = cmake
+	makedepends = wt
+	makedepends = boost
+	makedepends = gtest
+	makedepends = graphicsmagick
+	depends = ffmpeg
+	depends = libarchive
+	depends = libconfig
+	depends = taglib
+	depends = wt
+	backup = etc/lms.conf
+	source = lms-3.60.0.tar.xz::https://github.com/epoupon/lms/archive/v3.60.0.tar.gz
+	source = lms.sysusers
+	source = lms.tmpfiles
+	sha256sums = ae071c2841b056291fe05f28845be37cb839b0b813c5e52a663e6c9fced4f765
+	sha256sums = 9d26489cb828576c8c2296821d52f3a453b2c9d63cdace425e3f312e190601d6
+	sha256sums = 32f537bf3480fbe55d0a9929ba633718fbc16887a68e0ba1a2b3b265c400ed41
+
+pkgname = lms

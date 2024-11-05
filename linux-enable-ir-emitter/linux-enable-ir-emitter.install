@@ -1,0 +1,9 @@
+post_install() {
+  echo ""
+  echo "You can optionally enable the systemd service with:"
+  echo "# systemctl enable linux-enable-ir-emitter --now"
+  echo ""
+  echo "This service automatically executes linux-enable-ir-emitter run"
+  echo "when system is boot, or after waking up from a suspension or hibernation"
+  echo ""
+}

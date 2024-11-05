@@ -1,0 +1,23 @@
+pkgbase = mambaforge
+	pkgdesc = Conda and Mamba package managers configured to use conda-forge
+	pkgver = 24.9.0.0
+	pkgrel = 1
+	url = https://github.com/conda-forge/miniforge
+	install = mambaforge.install
+	arch = x86_64
+	arch = aarch64
+	arch = powerpc64le
+	license = BSD-3-Clause
+	provides = conda
+	provides = mamba
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source_x86_64 = https://github.com/conda-forge/miniforge/releases/download/24.9.0-0/Mambaforge-24.9.0-0-Linux-x86_64.sh
+	sha256sums_x86_64 = 77fb505f6266ffa1b5d59604cf6ba25948627e908928cbff148813957b1c28af
+	source_aarch64 = https://github.com/conda-forge/miniforge/releases/download/24.9.0-0/Mambaforge-24.9.0-0-Linux-aarch64.sh
+	sha256sums_aarch64 = 2d83f58793e9e303746747a683833aec5b9178fb1a313a3f9a56df2d319e23a5
+	source_powerpc64le = https://github.com/conda-forge/miniforge/releases/download/24.9.0-0/Mambaforge-24.9.0-0-Linux-ppc64le.sh
+	sha256sums_powerpc64le = cc083e40b1891611b26b0f63b5df3422cb4f8e1a29204f55caea514ead528eb2
+
+pkgname = mambaforge

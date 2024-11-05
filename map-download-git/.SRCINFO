@@ -1,0 +1,25 @@
+pkgbase = map-download-git
+	pkgdesc = Gaode map, Baidu map (including Baidu custom map), Tencent map,OpenStreetMap,CartoDb,ArcGIS online map, Tianmap,MapBox download.高德地图,百度地图(包括百度自定义地图),腾讯地图,OpenStreetMap,CartoDb,ArcGIS在线地图,天地图,MapBox的下载
+	pkgver = 24.9.5.418.r0.gabe25e2
+	pkgrel = 1
+	url = https://github.com/Hxy1992/MapDownload
+	arch = any
+	license = MIT
+	makedepends = gendesk
+	makedepends = npm
+	makedepends = nvm
+	makedepends = curl
+	makedepends = git
+	makedepends = gcc
+	makedepends = cmake
+	depends = electron16
+	depends = nodejs
+	depends = libvips
+	provides = map-download=24.9.5.418
+	conflicts = map-download
+	source = map-download.git::git+https://github.com/Hxy1992/MapDownload.git
+	source = map-download.sh
+	sha256sums = SKIP
+	sha256sums = 291f50480f5a61bc9c68db7d44cd0412071128706baa868a9cb854f8779a1980
+
+pkgname = map-download-git

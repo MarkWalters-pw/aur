@@ -1,0 +1,19 @@
+pkgbase = mmdebstrap
+	pkgdesc = create a Debian chroot
+	pkgver = 1.5.3
+	pkgrel = 1
+	url = https://gitlab.mister-muffin.de/josch/mmdebstrap
+	arch = any
+	license = MIT
+	depends = apt
+	depends = python
+	depends = perl
+	optdepends = debian-archive-keyring: Debian PKI support
+	optdepends = ubuntu-keyring: Ubuntu PKI support
+	optdepends = qemu-user-static: foreign-architecture support
+	optdepends = qemu-user-static-binfmt: foreign-architecture support
+	optdepends = arch-test: foreign-architecture support
+	source = https://gitlab.mister-muffin.de/josch/mmdebstrap/archive/1.5.3.tar.gz
+	sha256sums = a8d9a13189dbeb664672a9c8a4ab8357b800cf9753fef40c4224d2807320a450
+
+pkgname = mmdebstrap

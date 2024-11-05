@@ -1,0 +1,88 @@
+# Maintainer: Maxime Gauduin <alucryd@archlinux.org>
+# Contributor: Kyle Keen <keenerd@gmail.com>
+# Contributor: Mihai Militaru <mihai militaru at xmpp dot ro>
+# Contributor: carstene1ns <arch carsten-teibes.de>
+
+pkgname=mbedtls-dtls
+pkgver=3.6.2
+pkgrel=1
+pkgdesc='An open source, portable, easy to use, readable and flexible TLS library (with DTLS support)'
+arch=(x86_64)
+url=https://tls.mbed.org
+license=(Apache-2.0)
+depends=(
+  glibc
+  sh
+)
+checkdepends=(python)
+makedepends=(
+  cmake
+  git
+  ninja
+  python
+)
+provides=(
+  libmbedcrypto.so
+  libmbedtls.so
+  libmbedx509.so
+  polarssl
+  mbedtls=${pkgver}
+)
+replaces=(polarssl)
+conflicts=(polarssl mbedtls)
+options=(staticlibs)
+_tag=107ea89daaefb9867ea9121002fbbdf926780e98
+source=(
+  git+https://github.com/Mbed-TLS/mbedtls.git#tag=${_tag}
+  git+http://github.com/Mbed-TLS/mbedtls-framework.git
+)
+b2sums=('a42a5365f4caffa754d57c9a2867eae855f6b084af60d137490d78433e86e556143274c46b4c40cdd2d6eed8c024d4da0ebc0f221b7b59a9dd36ed575874e98c'
+        'SKIP')
+
+prepare() {
+  cd mbedtls
+  git submodule init framework
+  git config submodule.framework.url "${srcdir}/mbedtls-framework"
+  git -c protocol.file.allow=always submodule update framework
+  scripts/config.py set MBEDTLS_HAVE_SSE2
+  scripts/config.py set MBEDTLS_THREADING_C
+  scripts/config.py set MBEDTLS_THREADING_PTHREAD
+  scripts/config.py set MBEDTLS_SSL_DTLS_SRTP
+}
+
+pkgver() {
+  cd mbedtls
+  git describe --tags | sed 's/^v//; s/^mbedtls-//'
+}
+
+build() {
+  export CFLAGS+=' -ffat-lto-objects'
+  cmake -S mbedtls -B build -G Ninja \
+    -DCMAKE_BUILD_TYPE=None \
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DCMAKE_SKIP_RPATH=ON \
+    -DUSE_SHARED_MBEDTLS_LIBRARY=ON \
+    -DUSE_STATIC_MBEDTLS_LIBRARY=ON \
+    -Wno-dev
+  cmake --build build
+}
+
+check() {
+  LD_LIBRARY_PATH="${srcdir}"/build/library ctest --test-dir build
+}
+
+package() {
+  DESTDIR="${pkgdir}" cmake --install build
+
+  # rename generic utils
+  local _prog _baseprog
+  for _prog in "${pkgdir}"/usr/bin/*; do
+  _baseprog=$(basename "$_prog")
+    mv -v "$_prog" "${_prog//$_baseprog/mbedtls_$_baseprog}"
+  done
+
+  # fixup static lib permissions
+  chmod 644 "$pkgdir"/usr/lib/*.a
+}
+
+# vim: ts=2 sw=2 et:

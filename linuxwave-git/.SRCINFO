@@ -1,0 +1,21 @@
+pkgbase = linuxwave-git
+	pkgdesc = Generate music from the entropy of Linux (latest commit)
+	pkgver = 0.2.0.r1.rg8c67bf7
+	pkgrel = 1
+	url = https://github.com/orhun/linuxwave
+	arch = aarch64
+	arch = arm
+	arch = i386
+	arch = riscv64
+	arch = x86_64
+	license = MIT
+	makedepends = clang
+	makedepends = git
+	makedepends = lld
+	makedepends = zig
+	provides = linuxwave
+	conflicts = linuxwave
+	source = git+https://github.com/orhun/linuxwave
+	sha256sums = SKIP
+
+pkgname = linuxwave-git

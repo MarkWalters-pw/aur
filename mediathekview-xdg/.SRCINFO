@@ -1,0 +1,31 @@
+pkgbase = mediathekview-xdg
+	pkgdesc = Access the Mediathek of many German TV stations (store data in XDG_DATA_HOME)
+	pkgver = 14.1.0
+	pkgrel = 3
+	url = https://github.com/mediathekview/mediathekview
+	arch = any
+	license = GPL-3.0-or-later
+	makedepends = maven
+	makedepends = strip-nondeterminism
+	makedepends = java-environment-openjdk=23
+	depends = bash
+	depends = hicolor-icon-theme
+	depends = java-runtime-openjdk=23
+	depends = xdg-user-dirs
+	optdepends = libnotify: to use desktop notifications
+	optdepends = mplayer: for recording streams
+	optdepends = vlc: for stream playback
+	provides = mediathek
+	conflicts = mediathek
+	replaces = mediathek
+	source = mediathekview-14.1.0.tar.gz::https://github.com/mediathekview/mediathekview/archive/refs/tags/14.1.0.tar.gz
+	source = de.mediathekview.MediathekView.desktop
+	source = mediathekview.sh
+	sha512sums = 0498c3d6d0ec671fa2efcdc9ef91be97dcc9a4776ceb398668d70808f10c7065e2597ed72b950422e3f45d976cfb575281d8e9b8074a0dfb38917b340b0556b2
+	sha512sums = 0591f9ca8a79539c3b4bdf81980d83500267f03d6c657e6694f705bf504a2b9b3d846a0ba3c3e750d422812c38d8504c424a86362cbce1229cd603b98afcbee2
+	sha512sums = 1cdae5a1311cacb7b9b16d2f34d9d2ae38a3ba730253244208663654670760dfac80a93c56b22cf327e60e25402fbe0d64fd6012f821762d2ec5e2943b52f50a
+	b2sums = c3323197322d81959644e7fbe0dacf6286e600144b3070d50bd3ee415a7c7de99e5f8fd0f7cb58c35d636b3cdebdef219b143f4d060ab56c110fba8bf85f357b
+	b2sums = c00c4621c1de5ea82760d337e26f0b5287577144a1ff50f010b6148f88161d39778b42d70755d96f43dff13ce1329d069f04f9a74be90e7dd5f520be043d576f
+	b2sums = d6e7e7acfa09c76a7439b173d55fd1c5470535356d7d307674f76c0f3cb5c201ebdd570d1c8ec5506b276b5c5c215e645aa7e9d253d02ff785f9b0c584aeb725
+
+pkgname = mediathekview-xdg

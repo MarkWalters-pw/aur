@@ -1,0 +1,17 @@
+pkgbase = mblaze-git
+	pkgdesc = Unix utilities to deal with Maildir
+	pkgver = r1167.ac12552
+	pkgrel = 1
+	url = https://github.com/chneukirchen/mblaze
+	arch = i686
+	arch = x86_64
+	license = publicdomain
+	makedepends = git
+	provides = mblaze
+	conflicts = mblaze
+	conflicts = santoku
+	replaces = santoku-git
+	source = mblaze-git::git+https://github.com/chneukirchen/mblaze
+	md5sums = SKIP
+
+pkgname = mblaze-git

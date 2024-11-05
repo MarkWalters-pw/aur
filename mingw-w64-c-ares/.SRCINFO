@@ -1,0 +1,16 @@
+pkgbase = mingw-w64-c-ares
+	pkgdesc = C library that performs DNS requests and name resolves asynchronously (mingw-w64)
+	pkgver = 1.34.2
+	pkgrel = 1
+	url = https://c-ares.haxx.se/
+	arch = any
+	license = MIT
+	makedepends = mingw-w64-cmake
+	depends = mingw-w64-crt
+	options = !strip
+	options = !buildflags
+	options = staticlibs
+	source = https://github.com/c-ares/c-ares/releases/download/v1.34.2/c-ares-1.34.2.tar.gz
+	sha256sums = 35410aa625cc9ee95b66475f54aea7c81c673fb63d75fad5eee267711503b72a
+
+pkgname = mingw-w64-c-ares

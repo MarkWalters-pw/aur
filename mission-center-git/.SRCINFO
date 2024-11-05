@@ -1,0 +1,23 @@
+pkgbase = mission-center-git
+	pkgdesc = Monitor your CPU, Memory, Disk, Network and GPU usage
+	pkgver = 0.6.0.r41.gd78c07d
+	pkgrel = 2
+	url = https://gitlab.com/mission-center-devs/mission-center
+	arch = x86_64
+	arch = aarch64
+	license = GPL-3.0-or-later
+	checkdepends = appstream-glib
+	makedepends = git
+	makedepends = blueprint-compiler
+	makedepends = cargo
+	makedepends = meson
+	depends = dmidecode
+	depends = libadwaita
+	depends = nvtop
+	provides = mission-center
+	conflicts = mission-center
+	options = !lto
+	source = git+https://gitlab.com/mission-center-devs/mission-center.git
+	sha256sums = SKIP
+
+pkgname = mission-center-git

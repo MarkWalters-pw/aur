@@ -1,0 +1,61 @@
+#!/usr/bin/env bash
+
+build() {
+	if ! pacman -Qi tailscale >/dev/null 2>&1; then
+		error "Package tailscale not installed"
+		return 1
+	fi
+
+	local setupdir="/etc/initcpio/tailscale"
+	for fn in tailscaled.state default.env; do
+		if ! [[ -r "${setupdir}/${fn}" && -s "${setupdir}/${fn}" ]]; then
+			error "Missing configuration file at ${setupdir}/${fn}. Have you run setup-initcpio-tailscale yet?"
+			return 1
+		fi
+	done
+	add_file ${setupdir}/default.env /etc/default/tailscaled
+	add_file ${setupdir}/tailscaled.state /var/lib/tailscale/tailscaled.state
+
+	# tailscale requirements
+	add_module tun
+	add_full_dir /usr/lib/xtables
+	add_all_modules netfilter
+	map add_binary getent iptables ip6tables tailscale tailscaled
+
+	if [[ $(type -t add_systemd_unit ) == function ]]; then
+		add_systemd_unit tailscaled.service
+		add_systemd_drop_in tailscaled.service override <<-EOU
+		[Unit]
+		DefaultDependencies=no
+		After=network-online.target
+		Wants=network-online.target
+		EOU
+		add_symlink /etc/systemd/system/sysinit.target.wants/tailscaled.service \
+								/usr/lib/systemd/system/tailscaled.service
+	else
+		add_runscript
+	fi
+}
+
+help() {
+	cat <<-__EOF_HELP__
+	This hook enables tailscale service within initramfs.
+
+	It copies all required files and binaries to initramfs and runs the Tailscale agent.
+	Configuration is copied from the host into the initramfs per:
+	
+		* /etc/initcpio/tailscale/tailscaled.state to /var/lib/tailscale/tailscaled.state
+
+		* /etc/initcpio/tailscale/default.env to /etc/default/tailscaled
+
+	It works with both, systemd and busybox init systems; whatever you choose remember to also configure network and a ssh server hooks.
+
+	For systemd init, see 'sd-network' and 'sd-tinyssh' hooks provided by mkinitcpio-systemd-extras package.
+
+	Run /usr/bin/setup-initcpio-tailscale if you haven't already to initialize the configuration files at /etc/initcpio/tailscale/.
+
+	For more check https://github.com/dangra/mkinitcpio-tailscale
+	__EOF_HELP__
+}
+
+# vim: noexpandtab

@@ -1,0 +1,11 @@
+--- a/mautrix-meta.yaml	2024-09-16 15:35:02.581799842 +0200
++++ b/mautrix-meta.yaml	2024-09-16 15:36:09.626310409 +0200
+@@ -441,7 +441,7 @@
+           format: pretty-colored
+         - type: file
+           format: json
+-          filename: ./logs/bridge.log
++          filename: /var/log/mautrix-meta/bridge.log
+           max_size: 100
+           max_backups: 10
+           compress: false

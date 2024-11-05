@@ -1,0 +1,20 @@
+pkgbase = lze-web
+	pkgdesc = lze-web
+	pkgver = 7.0
+	pkgrel = 0
+	install = lze-web.install
+	arch = x86_64
+	license = PGP
+	makedepends = tar
+	depends = apache
+	depends = php-apache
+	depends = libnotify
+	depends = wmctrl
+	depends = libpulse
+	depends = brightnessctl
+	depends = playerctl
+	provides = lze-web
+	options = !strip
+	options = !emptydirs
+
+pkgname = lze-web

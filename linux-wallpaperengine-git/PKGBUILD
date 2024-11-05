@@ -1,0 +1,43 @@
+# Maintainer: Alexis Maiquez <aur@almamu.com>
+pkgname=linux-wallpaperengine-git
+_pkgname=linux-wallpaperengine
+pkgver=r483.c400f49
+pkgrel=1
+pkgdesc="use steam's wallpaperengine on linux"
+arch=('x86_64')
+url="https://github.com/Almamu/linux-wallpaperengine"
+license=('GPL3')
+depends=('lz4' 'ffmpeg' 'mpv' 'glfw' 'glew' 'freeglut' 'libpulse')
+makedepends=('git' 'cmake' 'sdl2' 'glm')
+provides=("linux-wallpaperengine")
+source=("${pkgname}::git+https://github.com/Almamu/linux-wallpaperengine.git#branch=main")
+sha512sums=('SKIP')
+optdepends=(
+    'xorg-xrandr: support for X11'
+    'wayland-protocols: support for wayland')
+
+pkgver() {
+    cd "$pkgname"
+        ( set -o pipefail
+          git describe --long 2>/dev/null | sed 's/\([^-]*-g\)/r\1/;s/-/./g' ||
+          printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+        )
+}
+
+build() {
+    cmake -B build -S "$pkgname" \
+        -DCMAKE_BUILD_TYPE='Release' \
+        -DCMAKE_INSTALL_PREFIX="/opt/${_pkgname}" \
+        -Wno-dev
+    cmake --build build
+}
+
+package() {
+    DESTDIR="$pkgdir" cmake --install build
+    # create forwarding script
+    install -d -m755 "${pkgdir}/usr/bin"
+    echo "#!/bin/bash" > ${pkgdir}/usr/bin/${_pkgname}
+    echo "cd /opt/${_pkgname}; ./linux-wallpaperengine \$*" >> ${pkgdir}/usr/bin/${_pkgname}
+    chmod +x ${pkgdir}/usr/bin/${_pkgname}
+    chmod +x ${pkgdir}/opt/${_pkgname}/linux-wallpaperengine
+}

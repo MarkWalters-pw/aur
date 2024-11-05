@@ -1,0 +1,23 @@
+pkgbase = m64py
+	pkgdesc = A Qt5 front-end (GUI) for Mupen64Plus, a cross-platform plugin-based Nintendo 64 emulator
+	pkgver = 0.3.0
+	pkgrel = 1
+	url = https://github.com/mupen64plus/mupen64plus-ui-python
+	arch = any
+	license = GPL
+	makedepends = python-build
+	makedepends = python-distribute
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-setuptools-scm
+	makedepends = python-wheel
+	depends = desktop-file-utils
+	depends = libxkbcommon-x11
+	depends = mupen64plus
+	depends = python-pyqt6-webengine
+	depends = python-pysdl2
+	depends = qt6-tools
+	source = https://github.com/mupen64plus/mupen64plus-ui-python/releases/download/0.3.0/m64py-0.3.0.tar.gz
+	sha256sums = ac81a1b40e2812ac9e27405285e4e0c2b6bddfb32fde28c88300c10112a02f92
+
+pkgname = m64py

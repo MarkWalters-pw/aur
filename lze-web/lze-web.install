@@ -1,0 +1,59 @@
+post_install() {
+  if [ -n "$SUDO_USER" ]; then
+    cu_user="$SUDO_USER"
+else
+    cu_user=$(whoami)
+fi
+
+  mkdir -p /$cu_user
+  mkdir -p /$cu_user/Documents/upload
+  mkdir -p /$cu_user/Pictures
+  mkdir -p /$cu_user/Note
+  mkdir -p /$cu_user/Bookmark
+  mkdir -p /$cu_user/Monitor
+  mkdir -p /$cu_user/trash
+  mkdir -p /$cu_user/data
+  chmod 777  -R /$cu_user
+  chmod 777  -R /opt/lze-web
+  chmod 755 -R /etc/lze-web
+  chmod 766 -R /etc/lze-web/*
+  ln -sf /$cu_user /opt/lze-web/file
+  mv /etc/httpd/conf/httpd.conf /etc/httpd/conf/httpd.conf.back
+  mv /etc/httpd/conf/httpd.conf.lze /etc/httpd/conf/httpd.conf
+  sed -i "202i User $cu_user" /etc/httpd/conf/httpd.conf
+  sed -i "203i Group $cu_user" /etc/httpd/conf/httpd.conf
+  touch /etc/sudoers.d/brightness
+ echo "$cu_user ALL = (root) NOPASSWD: /usr/bin/brightnessctl" > /etc/sudoers.d/brightness
+ if [ ! -e "/etc/lze-web/token" ]; then
+    touch "/etc/lze-web/token"
+fi
+if [ ! -e "/etc/lze-web/password" ]; then
+    touch "/etc/lze-web/password"
+fi
+chmod 777 -R /etc/lze-web/
+  mv /etc/php/php.ini /etc/php/php.ini.bck
+  mv /etc/php/php.ini.lze /etc/php/php.ini
+  xhost +local:
+  systemctl enable httpd.service
+  systemctl restart httpd.service
+}
+post_upgrade() {
+  post_remove
+	post_install
+}
+
+pre_remove() {
+	#
+
+	action="$1"
+	if [ "$2" = "in-favour" ]; then
+	  # Treat conflict remove as an upgrade.
+	  action="upgrade"
+	fi
+
+}
+
+post_remove() {
+mv /etc/httpd/conf/httpd.conf.bck  /etc/httpd/conf/httpd.conf 
+mv /etc/php/php.ini.bck  /etc/php/php.ini
+}

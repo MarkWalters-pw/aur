@@ -1,0 +1,34 @@
+pkgbase = mathics
+	pkgdesc = A general-purpose computer algebra system.
+	pkgver = 7.0.0
+	pkgrel = 3
+	url = https://mathics.org/
+	arch = any
+	license = GPL3
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = python-setuptools
+	depends = mathics-scanner
+	depends = python-sympy
+	depends = python-mpmath
+	depends = python-numpy
+	depends = python-palettable
+	depends = python-pint
+	depends = python-dateutil
+	depends = python-llvmlite
+	depends = python-requests
+	depends = cython
+	depends = python-recordclass
+	depends = python-pillow
+	optdepends = python-ipywidgets: For Manipulate
+	optdepends = python-lxml: for HTML parsing used in builtin/fileformats/html
+	optdepends = python-psutil: SystemMemory and MemoryAvailable
+	optdepends = python-pyocr: Used for TextRecognize
+	optdepends = python-scikit-image>=0.17: FindMinimum can use this; used by Image as well
+	optdepends = python-unidecode: Used in Transliterate
+	optdepends = python-wordcloud: Used in builtin/image.py by WordCloud
+	source = mathics-7.0.0.tar.gz::https://github.com/Mathics3/mathics-core/releases/download/7.0.0/Mathics3-7.0.0.tar.gz
+	sha256sums = d039a5dac244d7342abd29a5663d083ba28a86370f6b5cfddc6604ef42af150b
+
+pkgname = mathics

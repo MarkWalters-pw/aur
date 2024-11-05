@@ -1,0 +1,38 @@
+pkgbase = mkvtoolnix-qt5
+	pkgdesc = Matroska tools (Qt5 version)
+	pkgver = 81.0
+	pkgrel = 2
+	url = https://mkvtoolnix.download/
+	arch = x86_64
+	license = GPL2
+	makedepends = boost
+	makedepends = docbook-xsl
+	makedepends = git
+	makedepends = libdvdread
+	makedepends = libxslt
+	makedepends = po4a
+	makedepends = qt5-multimedia
+	makedepends = qt5-svg
+	makedepends = ruby-erb
+	makedepends = ruby-rake
+	depends = boost-libs
+	depends = cmark
+	depends = curl
+	depends = file
+	depends = flac
+	depends = libogg
+	depends = libvorbis
+	depends = lzo
+	depends = qt5-base
+	depends = zlib
+	optdepends = libebml: instead of the bundled lib
+	optdepends = libmatroska: instead of the bundled lib
+	provides = mkvtoolnix-cli=81.0
+	provides = mkvtoolnix-gui=81.0
+	conflicts = mkvtoolnix-cli
+	conflicts = mkvtoolnix-gui
+	conflicts = mkvtoolnix-git
+	source = https://mkvtoolnix.download/sources/mkvtoolnix-81.0.tar.xz
+	sha256sums = 422f2bec88d5d93547df0c3e1399272a6dc4c23050b45d34343bbdd6d55e5ad6
+
+pkgname = mkvtoolnix-qt5

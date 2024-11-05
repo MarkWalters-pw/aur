@@ -1,0 +1,16 @@
+pkgbase = mcreator
+	pkgdesc = Make Minecraft Java Edition mods, Bedrock Edition Add-Ons, and data packs using visual graphical programming or integrated IDE
+	pkgver = 2024.3.42716
+	pkgrel = 1
+	url = https://mcreator.net
+	arch = x86_64
+	license = GPL-3.0-or-later
+	noextract = mcreator-2024.3.42716.tar.gz
+	source = mcreator-2024.3.42716.tar.gz::https://github.com/mcreator/mcreator/releases/download/2024.3.42716/MCreator.2024.3.Linux.64bit.tar.gz
+	source = mcreator.desktop
+	b2sums = 0f82978ed299bfcdf05dedd39ee555608913531c88850647470a9ac8207cde253e557fe0062560e3aed76bf86cd59d2d21b0a0186aa7200376d20890afab3d84
+	b2sums = ac5a53421869276596ebbc7cccfa7d20aeb63ea3a556d0b77a0b9b936176bcbabe7771be60fc5b034ec79a49da5f4aa538b79e1c6edca478a5614f49ec478d6f
+
+pkgname = mcreator
+	depends = glibc
+	depends = java-runtime=21
