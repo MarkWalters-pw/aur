@@ -1,0 +1,19 @@
+pkgbase = python-pyrtlsdr-git
+	pkgdesc = A Python wrapper for librtlsdr
+	pkgver = 0.3.0
+	pkgrel = 2
+	url = https://github.com/pyrtlsdr/pyrtlsdr
+	arch = any
+	license = GPL3
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = python-setuptools
+	depends = rtl-sdr
+	provides = python-pyrtlsdr
+	conflicts = python-pyrtlsdr
+	source = pyrtlsdr::git+https://github.com/pyrtlsdr/pyrtlsdr
+	sha256sums = SKIP
+
+pkgname = python-pyrtlsdr-git

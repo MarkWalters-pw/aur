@@ -1,0 +1,22 @@
+pkgbase = python-tryton
+	pkgdesc = Tryton desktop client
+	pkgver = 7.2.8
+	pkgrel = 1
+	url = https://tryton.org
+	arch = any
+	license = GPL-3.0-or-later
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python-cairo
+	depends = python-dateutil
+	depends = python-gobject
+	optdepends = python-goocalendar: calendar support
+	optdepends = python-playsound: sound support
+	provides = tryton
+	conflicts = tryton
+	source = https://pypi.org/packages/source/t/tryton/tryton-7.2.8.tar.gz
+	sha512sums = 57f3dc4bb527784243763cf886b129be423929750b69b7ea8641bc1193369b75c2d9c57bf3b110e2d8b617a56d8c166ec2284a5d86ffb848da32e2d475e5ee60
+
+pkgname = python-tryton

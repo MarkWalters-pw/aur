@@ -1,0 +1,19 @@
+pkgbase = python-tensortrax
+	pkgdesc = Math on (Hyper-Dual) Tensors with Trailing Axes
+	pkgver = 0.26.0
+	pkgrel = 1
+	url = https://github.com/adtzlr/tensortrax
+	arch = any
+	license = GPL-3.0-or-later
+	checkdepends = python-pytest
+	checkdepends = python-scipy
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python-numpy
+	depends = python-joblib
+	source = tensortrax-0.26.0.tar.gz::https://github.com/adtzlr/tensortrax/archive/v0.26.0.tar.gz
+	sha512sums = 039c1529d25842c0fb306ea2778a54777b703fbd09ed9618804352b019a52250e07339a153f81faed11a94ef6e43ec0f65a0891b646012bf34ae91801b03ec14
+
+pkgname = python-tensortrax

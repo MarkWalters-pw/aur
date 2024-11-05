@@ -1,0 +1,18 @@
+pkgbase = qman-git
+	pkgdesc = A more modern manual page viewer for our terminals
+	pkgver = 1.0.3
+	pkgrel = 2
+	url = https://github.com/plp13/qman
+	arch = x86_64
+	license = BSD-2-CLAUSE
+	makedepends = git
+	makedepends = meson
+	makedepends = pandoc-cli
+	makedepends = python-cogapp
+	depends = ncurses
+	depends = libinih
+	depends = zlib
+	source = qman-git::git+https://github.com/plp13/qman.git
+	sha256sums = SKIP
+
+pkgname = qman-git

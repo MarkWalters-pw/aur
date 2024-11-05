@@ -1,0 +1,27 @@
+pkgbase = python-spdx-tools
+	pkgdesc = A Python library to parse, validate and create SPDX documents.
+	pkgver = 0.8.3
+	pkgrel = 1
+	url = https://github.com/spdx/tools-python
+	arch = any
+	license = GPL2
+	checkdepends = python-pytest
+	checkdepends = python-pyshacl
+	checkdepends = python-tzdata
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = python
+	depends = python-click
+	depends = python-yaml
+	depends = python-xmltodict
+	depends = python-rdflib
+	depends = python-beartype
+	depends = python-uritools
+	depends = python-license-expression
+	depends = python-ply
+	depends = python-semantic-version
+	source = git+https://github.com/spdx/tools-python.git#tag=v0.8.3
+	sha512sums = SKIP
+
+pkgname = python-spdx-tools

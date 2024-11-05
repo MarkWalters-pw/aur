@@ -1,0 +1,24 @@
+pkgbase = python-panel
+	pkgdesc = The powerful data exploration & web app framework for Python
+	pkgver = 1.5.3
+	pkgrel = 1
+	url = https://panel.holoviz.org
+	arch = any
+	license = BSD-3-Clause
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-hatchling
+	makedepends = python-wheel
+	makedepends = npm
+	depends = python-bokeh
+	depends = python-pyviz_comms
+	depends = python-markdown
+	depends = python-markdown-it-py
+	depends = python-linkify-it-py
+	depends = python-mdit-py-plugins
+	depends = python-tqdm
+	depends = python-bleach
+	source = panel-1.5.3.tar.gz::https://github.com/holoviz/panel/archive/v1.5.3.tar.gz
+	sha512sums = 540b5c8a5b95f4ca72937e9c103b73f7c9ba6d59bbe5e4a9f505905abf0e0a9dcd3f47631271713a041f14ed8aeeae47602fff060b3738b73f23031559821da5
+
+pkgname = python-panel

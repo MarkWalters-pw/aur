@@ -1,0 +1,25 @@
+pkgbase = r-cytolib
+	pkgdesc = C++ infrastructure for representing and interacting with the gated cytometry data
+	pkgver = 2.18.0
+	pkgrel = 1
+	url = https://bioconductor.org/packages/cytolib
+	arch = x86_64
+	license = AGPL-3.0-only
+	makedepends = boost
+	makedepends = r-bh
+	makedepends = r-rhdf5lib
+	depends = boost-libs
+	depends = hdf5
+	depends = lapack
+	depends = protobuf
+	depends = r-rprotobuflib
+	optdepends = r-knitr
+	optdepends = r-rmarkdown
+	source = https://bioconductor.org/packages/release/bioc/src/contrib/cytolib_2.18.0.tar.gz
+	source = shared-cytolib.patch
+	md5sums = 315a10e5ab4beca630554a17eaf56853
+	md5sums = 9bd107e22883f8ae7c72f8fc3fca9c96
+	b2sums = 905f87f4573acd9588b401a1a9c5898b381540e72ba31e875df12ceb6530c3d6ba0dbe9fd3ed7f92d94f40742a24062d9aef6ef36837742751e3207444ae3362
+	b2sums = 1d838f25582856c2a7ba811999ae92808265720e8bd6079b4396d3722bab3f445ec7e70722badac2d5617439784a279abacda788f66e49906b35120f12037bcb
+
+pkgname = r-cytolib

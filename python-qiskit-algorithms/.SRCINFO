@@ -1,0 +1,20 @@
+pkgbase = python-qiskit-algorithms
+	pkgdesc = A library of quantum algorithms for Qiskit
+	pkgver = 0.3.1
+	pkgrel = 2
+	url = https://github.com/qiskit-community/qiskit-algorithms
+	arch = any
+	license = Apache-2.0
+	checkdepends = python-ddt
+	checkdepends = python-pytest
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python-qiskit
+	depends = python-numpy
+	depends = python-scipy
+	source = qiskit-algorithms-0.3.1.tar.gz::https://github.com/qiskit-community/qiskit-algorithms/archive/refs/tags/0.3.1.tar.gz
+	b2sums = 6ea3517c51ef297faf22cce0fe23207642c3d0f13e9d97371cea56189da69ec6c6194888964511a3d734006219309cc671b3447c7929db42dc6a39eec9d94a59
+
+pkgname = python-qiskit-algorithms

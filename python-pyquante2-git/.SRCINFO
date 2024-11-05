@@ -1,0 +1,26 @@
+pkgbase = python-pyquante2-git
+	pkgdesc = Python Quantum Chemistry Reloaded. This is a rewrite of the standard PyQuante program to clean up things that have been nagging me. (git version)
+	pkgver = r596.fa02f54
+	pkgrel = 1
+	url = https://github.com/rpmuller/pyquante2
+	arch = i686
+	arch = x86_64
+	license = BSD
+	checkdepends = python-pytest
+	makedepends = cython
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python
+	depends = python-numpy
+	depends = python-setuptools
+	provides = python-pyquante2
+	conflicts = python-pyquante2
+	source = git+https://github.com/rpmuller/pyquante2
+	source = cython.patch
+	sha256sums = SKIP
+	sha256sums = c356b30444728453426f4c2c759d34c6aba1928deec86355c8d2d08160ed1c55
+
+pkgname = python-pyquante2-git

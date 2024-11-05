@@ -1,0 +1,32 @@
+pkgbase = python-nodejs-wheel
+	pkgdesc = Unoffical Node.js wheels
+	pkgver = 22.11.0
+	pkgrel = 1
+	url = https://pypi.org/project/nodejs-wheel/
+	arch = x86_64
+	license = MIT
+	makedepends = python-installer
+	makedepends = python-build
+	makedepends = python-scikit-build-core
+	makedepends = python-setuptools-scm
+	makedepends = python-wheel
+	makedepends = python-hatchling
+	makedepends = python-hatch-vcs
+	depends = python
+	noextract = nodejs-22.11.0.tar.gz
+	options = !lto
+	source = python-nodejs-wheel-22.11.0.tar.gz::https://github.com/njzjz/nodejs-wheel/archive/refs/tags/v22.11.0.tar.gz
+	source = nodejs-22.11.0.tar.gz::https://github.com/nodejs/node/archive/refs/tags/v22.11.0.tar.gz
+	sha256sums = 66a58de579f1d2fb64aa021ef324877375beb0b86596d4ddb4edfadcbb714f81
+	sha256sums = 80353744f00436fcba4d45e9ff836dd08cf578c2400e7b72d121e65cfe0529e2
+
+pkgname = python-nodejs-wheel
+	pkgdesc = Unoffical Node.js wheels (CLI tools)
+	depends = python
+	depends = python-nodejs-wheel-binaries
+	provides = nodejs=22.11.0
+	provides = npm
+	conflicts = nodejs
+	conflicts = npm
+
+pkgname = python-nodejs-wheel-binaries

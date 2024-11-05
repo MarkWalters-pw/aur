@@ -1,0 +1,17 @@
+pkgbase = python-pyodbc
+	pkgdesc = ODBC module for Python
+	pkgver = 5.2.0
+	pkgrel = 1
+	url = https://github.com/mkleehammer/pyodbc
+	arch = x86_64
+	license = MIT
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python
+	depends = unixodbc
+	source = https://github.com/mkleehammer/pyodbc/archive/5.2.0/python-pyodbc-5.2.0.tar.gz
+	sha512sums = 645dc77c0b767f05bc959b3ba05696ca7bcec5b772f2863d74686686c9b22b73aac86693d6bdeb0df7559cd6d5f0bd909c7119808389830a322710e366e398e9
+
+pkgname = python-pyodbc

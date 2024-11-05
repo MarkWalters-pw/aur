@@ -1,0 +1,23 @@
+pkgbase = python-tiledb
+	pkgdesc = Pythonic interface to the TileDB array storage manager
+	pkgver = 0.32.5
+	pkgrel = 1
+	url = https://github.com/TileDB-Inc/TileDB-Py
+	arch = x86_64
+	license = MIT
+	makedepends = cython
+	makedepends = pybind11
+	makedepends = python-scikit-build-core
+	makedepends = python-setuptools-scm
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = capnproto
+	depends = aws-sdk-cpp
+	depends = spdlog
+	depends = python-numpy
+	depends = python-packaging
+	source = https://files.pythonhosted.org/packages/source/t/tiledb/tiledb-0.32.5.tar.gz
+	sha256sums = faa507115731742e4eb0fbfec7be41310efcc46523afc188440b2d26ed48d361
+
+pkgname = python-tiledb

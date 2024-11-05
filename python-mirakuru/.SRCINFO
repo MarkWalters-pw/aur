@@ -1,0 +1,20 @@
+pkgbase = python-mirakuru
+	pkgdesc = Start your subprocess and wait for a clear indication that it's running
+	pkgver = 2.5.3
+	pkgrel = 1
+	url = https://github.com/ClearcodeHQ/mirakuru
+	arch = any
+	license = LGPL-3.0-only
+	checkdepends = openbsd-netcat
+	checkdepends = procps-ng
+	checkdepends = python-daemon
+	checkdepends = python-pytest
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = python
+	depends = python-psutil
+	source = python-mirakuru-2.5.3.tar.gz::https://github.com/ClearcodeHQ/mirakuru/archive/v2.5.3.tar.gz
+	sha256sums = f736d029c6716d3326a2f5178dc68344e41719a8a25237f55eb6579487791bcf
+
+pkgname = python-mirakuru

@@ -1,0 +1,19 @@
+pkgbase = python-rcon
+	pkgdesc = Python 3 RCON client library and scripts
+	pkgver = 2.4.8
+	pkgrel = 1
+	url = https://github.com/coNQP/rcon
+	arch = any
+	license = GPLv3
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools-scm
+	makedepends = python-wheel
+	depends = python
+	depends = python-setuptools
+	optdepends = python-gobject: for GUI support
+	source = rcon::git+https://github.com/coNQP/rcon.git#tag=2.4.8
+	md5sums = 557e28270f9bfd081d124ae926f01b96
+
+pkgname = python-rcon

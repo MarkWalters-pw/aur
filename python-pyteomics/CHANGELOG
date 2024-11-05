@@ -1,0 +1,1366 @@
+4.7.5
+-----
+
+- Fix `#159 <https://github.com/levitsky/pyteomics/issues/159>`_.
+
+
+4.7.4
+-----
+
+- Fix call signature for :py:func:`pepxml.read` and make it a full alias to :py:class:`pepxml.PepXML`.
+- Disable indexing of pepXML in :py:func:`pepxml.DataFrame`, which fixes creation of dataframes from files
+  with non-unique spectrum IDs.
+- Allow iteration over search hits instead of spectrum queries with :py:meth:`pyteomics.pepxml.PepXML.search_hits`.
+  :py:func:`pyteomics.pepxml.DataFrame` has a new argument `by`, which accepts values "spectrum_query" (default)
+  and "search_hit" (new).
+- Fix `#156 <https://github.com/levitsky/pyteomics/issues/156>`_.
+- Fix `#157 <https://github.com/levitsky/pyteomics/issues/157>`_
+  (`#158 <https://github.com/levitsky/pyteomics/pull/158>`_ by Joshua Klein).
+
+
+4.7.3
+-----
+
+ - Add compatibility with NumPy 2.0.
+ - Fix `#153 <https://github.com/levitsky/pyteomics/issues/153>`_. MGF parser now recognizes precursor charge specified
+   on the PEPMASS line. If CHARGE is also specified, it is ignored.
+
+4.7.2
+-----
+
+- Fix pickling of resolved ProForma modifications (`#144 <https://github.com/levitsky/pyteomics/pull/144>`_
+  by Joshua Klein).
+- Fix a deprecation warning in :py:mod:`pyteomics.mass.unimod` (`#126 <https://github.com/levitsky/pyteomics/pull/126>`_
+  by Ralf Gabriels).
+- Add caching for modifications resolvers in :py:mod:`pyteomics.proforma`
+  (`#148 <https://github.com/levitsky/pyteomics/pull/148>`_ by Joshua Klein).
+- Add support for constant terminal modifications in :py:mod:`pyteomics.proforma`
+  (`148 <https://github.com/levitsky/pyteomics/pull/148>`_ by Joshua Klein).
+- Fix an exception in :py:mod:`pyteomics.ms1` when an information string has only one token
+  (`#149 <https://github.com/levitsky/pyteomics/issues/149>`_).
+
+
+4.7.1
+-----
+
+ - Fix issue with :py:func:`calculate_mass` with a `composition` keyword argument.
+
+
+4.7
+---
+
+ - Make :py:class:`proforma.MassModification` objects hashable
+   (`#130 <https://github.com/levitsky/pyteomics/pull/130>`_ by Joshua Klein).
+ - Fix `#132 <https://github.com/levitsky/pyteomics/issues/132>`_
+   (`#133 <https://github.com/levitsky/pyteomics/pull/133>`_ by Joshua Klein).
+ - Fix thermolysin cleavage rule (`#135 <https://github.com/levitsky/pyteomics/issues/135>`_).
+ - Fix `#136 <https://github.com/levitsky/pyteomics/issues/136>`_.
+ - :py:func:`pyteomics.mass.mass.calculate_mass` now supports `ProForma <https://www.psidev.info/proforma>`_.
+   A sequence or a :py:class:`proforma.ProForma` object can be passed with the `proforma` keyword argument
+   (`#137 <https://github.com/levitsky/pyteomics/pull/137>`_).
+ - Fix: restored the ability of :py:class:`IndexedTextReader` parsers (:py:class:`pyteomics.mgf.IndexedMGF`,
+   :py:class:`pyteomics.fasta.IndexedFASTA`, etc.) to load the byte offset index from a previously saved byte offset file
+   (created with :py:meth:`cls.prebuild_byte_offset_file` or :py:meth:`reader.write_byte_offsets`)
+   (`#142 <https://github.com/levitsky/pyteomics/pull/142>`_).
+ - API change: uncodumented method :py:meth:`_build_index` of indexing XML parsers renamed to :py:meth:`build_byte_index`
+   (`#142 <https://github.com/levitsky/pyteomics/pull/142>`_).
+ - Add a warning when creating an :py:class:`IndexedTextReader` instance with an empty offset index.
+   This warning can be disabled by passing `warn_if_empty=False`
+   (`#138 <https://github.com/levitsky/pyteomics/pull/138>`_).
+
+
+4.6.3
+-----
+
+ - Fix `#122 <https://github.com/levitsky/pyteomics/issues/122>`_.
+ - Fix `#124 <https://github.com/levitsky/pyteomics/issues/124>`_
+   (in `#125 <https://github.com/levitsky/pyteomics/pull/125>`_ by Seth Just).
+ - Fix `#128 <https://github.com/levitsky/pyteomics/issues/128>`_
+   (in `#129 <https://github.com/levitsky/pyteomics/pull/129>`_ by Joshua Klein).
+
+
+4.6.2
+-----
+
+ - :py:func:`pyteomics.fasta.write` can now write entries with parsed sequences
+   (`#120 <https://github.com/levitsky/pyteomics/pull/120>`_ by Vladimir Gorshkov, Joshua Klein and Lev Levitsky).
+ - Fix `#119 <https://github.com/levitsky/pyteomics/issues/119>`_.
+ - Fix import issue with :py:mod:`pyteomics.pylab_aux`.
+
+
+4.6.1
+-----
+
+ - Make :py:func:`pyteomics.mgf.write` work with a regular list of ints as "charge" param.
+ - Add mean absolute error (MAE) regression in :py:mod:`pyteomics.achrom`
+   (`#117 <https://github.com/levitsky/pyteomics/pull/117>`_ by Mark Ivanov).
+ - Fix `#115 <https://github.com/levitsky/pyteomics/issues/115>`_ and `#118 <https://github.com/levitsky/pyteomics/issues/118>`_.
+ - Remove :py:class:`auxiliary.Version`. :py:class:`pyteomics.version.VersionInfo` can be used instead.
+ - For target-decoy calculations, :py:mod:`pandas` is assumed to be 0.17 or newer.
+
+
+4.6
+---
+
+ - When passing an existing file (by name) to :py:func:`pyteomics.mgf.write` or :py:func:`pyteomics.fasta.write` and
+   other writing functions, **the file will be opened for writing by default**. Previously, it would be opened for
+   appending with a warning about the upcoming change. Please be aware that existing files will be overwritten
+   if passed by name. The rationale for this is better reproducibility if the same code is run multiple
+   times. You can use the `file_mode` argument of the writing functions to override this behaviour, or pass your own
+   file objects.
+ - Add a special warning when trying to write a single spectrum with :py:func:`pyteomics.mgf.write`.
+   See also: `Writing one or more MGF spectra to a file <https://github.com/levitsky/pyteomics/discussions/109>`_.
+ - In :py:func:`pyteomics.mass.mass.calculate_mass`, the `absolute` parameter is now `True` by default.
+   When calculating *m/z* for negative charges, the returned value will be positive by default.
+ - Fix issue #98 (`#99 <https://github.com/levitsky/pyteomics/pull/99>`_ and
+   `#101 <https://github.com/levitsky/pyteomics/pull/101>`_ by Joshua Klein).
+ - Fix issue #91 (`#92 <https://github.com/levitsky/pyteomics/pull/92>`_ by Joshua Klein).
+ - Fix issue #96.
+ - Update the UniProt header pattern (fix rare parsing errors with
+   :py:class:`pyteomics.fasta.UniProt` and :py:class:`pyteomics.fasta.IndexedUniProt`) in
+   `#93 <https://github.com/levitsky/pyteomics/pull/93>`_.
+ - Update the UniRef header pattern (fix parsing errors with
+   :py:class:`pyteomics.fasta.UniRef` and :py:class:`pyteomics.fasta.IndexedUniRef`) in
+   `#102 <https://github.com/levitsky/pyteomics/pull/102>`_. Some keys are removed from the output.
+ - Fix pickling issues with :py:class:`pyteomics.mgf.IndexedMGF`, :py:class:`pyteomics.ms1.IndexedMS1`,
+   :py:class:`pyteomics.ms2.IndexedMS2` (#108).
+ - Add "charge array" and "resolution array" to the output of MS2 parsers (#108). Add new arguments `read_charges`
+   and `read_resolutions` to disable parsing, and `convert_arrays` to govern the creation of NumPy arrays
+   (and masked arrays).
+
+
+4.5.6
+-----
+
+ - New function :py:func:`pyteomics.proforma.set_unimod_path` allowing the ProForma parsing machinery
+   to work with a local Unimod copy (`#85 <https://github.com/levitsky/pyteomics/pull/85>`_ by Joshua Klein).
+   See `documentation <https://pyteomics.readthedocs.io/en/latest/api/proforma.html#cv-disk-caching>`_ for a usage example.
+ - New method :py:meth:`pyteomics.proforma.Proforma.fragments` to generate m/z for an ion series
+   (`#85 <https://github.com/levitsky/pyteomics/pull/85>`_ by Joshua Klein).
+ - New function :py:func:`pyteomics.parser.to_proforma` helps convert *modX* sequences to ProForma.
+ - Fix: prevent :func:`pyteomics.mass.mass.fast_mass2` from changing `aa_mass`.
+ - Update :py:func:`pyteomics.pylab_aux.annotate_spectrum` for compatibility with latest :py:mod:`spectrum_utils`.
+   Pyteomics is now compatible with :py:mod:`spectrum_utils` 0.4.0 and newer.
+
+
+4.5.5
+-----
+
+- Fix issue #77.
+
+
+4.5.4
+-----
+
+ - Fix issue #74.
+ - In :func:`pyteomics.auxiliary.fdr`, raise :exc:`PyteomicsError` instead of :exc:`ZeroDivisionError` when
+   using formula 1 on input without any target PSMs.
+ - Provide more accurate amino acid masses in :py:data:`mass.std_aa_mass`.
+ - Fix SyntaxError in :py:mod:`pyteomics.pylab_aux` on Python 2.7.
+
+
+4.5.3
+-----
+
+ - Fix ThreadPool shutdown and add new parameter `ephemeral_pool` in :py:class:`pyteomics.usi.PROXIAggregator`
+   (`#67 <https://github.com/levitsky/pyteomics/pull/67>`_ by Joshua Klein).
+ - Bugfix in `pyteomics.proforma.GenericModificationResolver` (`#68 <https://github.com/levitsky/pyteomics/issues/68>`_ by Joshua Klein).
+ - New helper function :py:func:`pyteomics.fasta.decoy_entries`.
+ - New arguments `charge_carrier`, `absolute` in :py:func:`mass.calculate_mass` and
+   :py:meth:`mass.Composition.mass` (`#61 <https://github.com/levitsky/pyteomics/pull/61>`_).
+   Charge is now only handled in :py:meth:`Composition.mass` and not :py:meth:`Composition.__init__`.
+ - Bugfix in :py:mod:`pyteomics.tandem` (`#71 <https://github.com/levitsky/pyteomics/pull/71>`_ by @superrino130).
+
+
+4.5.2
+-----
+
+ - Support Python 3.10.
+
+
+4.5.1
+-----
+
+ - Add `max_length` parameter in :py:func:`pyteomics.parser.cleave`.
+ - Bugfix in :py:func:`pyteomics.parser.cleave` for `semi=True`.
+ - Add `regex` parameter in :py:func:`pyteomics.parser.cleave` and warn for possible typos in cleavage rule names.
+ - Add functions :py:func:`parser.icleave` (generator) and :py:func:`parser.xcleave` (list) to produce
+   peptide sequences with indices and possible repetitions.
+ - Bugfixes (`#63 <https://github.com/levitsky/pyteomics/pull/63>`_ and `#64 <https://github.com/levitsky/pyteomics/pull/64>`_
+   by Joshua Klein).
+
+
+4.5
+---
+
+ - Add support for `mzMLb <https://www.biorxiv.org/content/10.1101/2020.02.13.947218v3>`_
+   (`#35 <https://github.com/levitsky/pyteomics/pull/35>`_
+   and `#38 <https://github.com/levitsky/pyteomics/pull/38>`_ by Joshua Klein)
+   with new module :py:mod:`pyteomics.mzmlb`.
+
+ - Add ProteomeExchange backend for PROXI requests and implement an aggregator for responses from all backends
+   (`#36 <https://github.com/levitsky/pyteomics/pull/36>`_,
+   `#45 <https://github.com/levitsky/pyteomics/pull/45>`_, and
+   `#55 <https://github.com/levitsky/pyteomics/pull/55>`_ by Joshua Klein)
+   in :py:mod:`pyteomics.usi`.
+
+ - Add support for `ProForma <https://www.psidev.info/proforma>`_
+   (`#37 <https://github.com/levitsky/pyteomics/pull/37>`_ by Joshua Klein)
+   in new module :py:mod:`pyteomics.proforma`.
+
+ - New arguments `keep_nterm_M` and `fix_aa` in :py:func:`pyteomics.fasta.shuffle`
+   (`#54 <https://github.com/levitsky/pyteomics/pull/54>`_ by Vladimir Gorshkov).
+
+ - Fix for unwanted warnings in :py:func:`pyteomics.auxiliary.file_helpers._check_use_index` when
+   `use_index` is explicitly passed (`#52 <https://github.com/levitsky/pyteomics/issues/52>`_).
+
+ - Update the default XML schema for featureXML and fix issues with incorrectly specified data types
+   (`#53 <https://github.com/levitsky/pyteomics/pull/53>`_).
+
+ - Add a new backend for spectrum annotation and plotting. :py:func:`pyteomics.pylab_aux.plot_spectrum` and
+   :py:func:`pyteomics.pylab_aux.annotate_spectrum` can now use
+   `spectrum_utils <https://github.com/bittremieux/spectrum_utils>`_ under the hood
+   (`#43 <https://github.com/levitsky/pyteomics/pull/43>`_).
+
+   See new `Example 4 <examples/example_annotation.html>`_ for demonstration.
+
+ - New function :py:func:`pyteomics.pylab_aux.mirror` for making a
+   `spectrum_utils <https://github.com/bittremieux/spectrum_utils>`_ mirror plot.
+
+ - :py:func:`pyteomics.pylab_aux.plot_spectrum` and :py:func:`pyteomics.pylab_aux.annotate_spectrum` now
+   always return :py:class:`matplotlib.pyplot.Axes`.
+
+ - Add a warning when passing an existing file by name in writing functions.
+   The default mode for output files will change from `'a'` to `'w'` in a future version.
+
+
+4.4.2
+-----
+
+ - Add cleavage rules from `MS ontology <http://purl.obolibrary.org/obo/MS_1001045>`_ as
+   :py:data:`pyteomics.parser.psims_rules`. :py:func:`pyteomics.parser.cleave` now understands keys and accessions from
+   :py:data:`psims_rules` as rules.
+
+ - Improve mzIdentML parser performance (and possibly others in some cases) by relying more on offset indexes
+   (`#34 <https://github.com/levitsky/pyteomics/pull/34>`_ by Joshua Klein).
+
+ - Extend the :py:class:`pyteomics.mztab.MzTab` parser with auto-generated properties. Almost all metadata entities are
+   now exposed as properties on the parser object (`#23 <https://github.com/levitsky/pyteomics/pull/23>`_ by Joshua Klein).
+
+ - Fix the version parsing in :py:mod:`pyteomics.mztab` to support shorter vMzTab version strings
+   (`#24 <https://github.com/levitsky/pyteomics/pull/24>`_ by Donavan See).
+
+ - Tweak the :py:class:`pyteomics.pepxml.PepXML` parser to present some values that were previously reported as None.
+
+ - Fix compatibility with :py:mod:`SQLAlchemy` 1.4 (`#32 <https://github.com/levitsky/pyteomics/pull/32>`_ by Joshua Klein).
+
+
+4.4.1
+-----
+
+ - Further tweaked behavior of :py:func:`pyteomics.auxiliary.file_helpers._check_use_index`, which is responsible for
+   handling of `use_index` in :py:func:`read` functions in parser modules.
+
+ - Fix indexing when element identifiers contain XML-escaped characters
+   (`#20 <https://github.com/levitsky/pyteomics/pull/20>`_ by Joshua Klein).
+
+ - Add support for MzTab 2.0 (`#22 <https://github.com/levitsky/pyteomics/pull/22>`_ by @annalefarova).
+
+ - Also, check out the `Pyteomics Discussions page <https://github.com/levitsky/pyteomics/discussions>`_!
+   You can use it to share your thoughts, ask questions, discuss coding practices, etc.
+
+
+4.4
+---
+
+ - New module :py:mod:`pyteomics.usi` implements a minimal Universal Spectrum Identifier parser and PROXI client
+   (`#11 <https://github.com/levitsky/pyteomics/pull/11>`_ by Joshua Klein).
+
+ - Support peak annotations in MGF (`#12 <https://github.com/levitsky/pyteomics/pull/12>`_ by Julian Müller).
+
+ - Provide version information in :py:mod:`pyteomics.version` (`#14 <https://github.com/levitsky/pyteomics/pull/14>`_).
+
+ - Make the order of isoforms reproducible in :py:func:`pyteomics.parser.isoforms`
+   (`#15 <https://github.com/levitsky/pyteomics/issues/15>`_).
+
+ - Rename `types` keyword argument to `ion_types` in :py:func:`pyteomics.pylab_aux.annotate_spectrum`.
+
+ - Fix `#16 <https://github.com/levitsky/pyteomics/issues/16>`_, a bug introduced in 4.3.3.
+
+
+4.3.3
+-----
+
+ - Add :py:func:`pyteomics.electrochem.gravy` (`#9 <https://github.com/levitsky/pyteomics/pull/9>`_ by Vladimir Gorshkov).
+
+ - Fixes and improvements in :py:func:`pyteomics.pepxml.roc_curve` (`#10 <https://github.com/levitsky/pyteomics/pull/10>`_
+   by Andrey Rozenberg).
+
+ - Changes in guessing behavior of :py:func:`read` functions.
+
+   In modules that implement :ref:`indexing parsers <indexing>` for non-XML formats (MGF, FASTA, PEFF, ms1/ms2),
+   when a parser is instantiated using :py:func:`read`, the parser class to instantiate is guessed
+   based on the mode of the file object passed to :py:func:`read` (text or binary).
+
+   With some file-like objects, mode cannot be easily deduced without consuming some of the data.
+   You will now see more warnings in case `use_index` is not explicitly passed to :py:func:`read` and reading mode is not obvious.
+   There will also be warnings if `use_index` is specified but the file is opened in the wrong mode.
+   To avoid all of this, you are encouraged to instantiate parser classes directly,
+   or explicitly specify `use_index` to :py:func:`read` in all corner cases.
+
+
+4.3.2
+-----
+
+Fix `#7 <https://github.com/levitsky/pyteomics/issues/7>`_.
+
+
+4.3.1
+-----
+
+Technical release.
+
+
+4.3
+---
+
+First release after the move to Github. Issue and PR numbers from now on refer to the
+`Github repo <https://github.com/levitsky/pyteomics>`_. Archive of the Bibucket issues and PRs is stored
+`here <https://levitsky.github.io/bitbucket_backup/#!/levitsky/pyteomics>`_.
+
+Changes in this release:
+
+ - New module :py:mod:`pyteomics.openms.idxml`.
+
+ - Fix `#3 <https://github.com/levitsky/pyteomics/issues/3>`_, `#5 <https://github.com/levitsky/pyteomics/issues/5>`_,
+   and some issues in :py:mod:`tandem`.
+
+
+4.2
+---
+
+ - Changes in XML XPath implementation.
+   For standard XML parser classes, this only means a minor change in performance
+   (should be a slight improvement, most noticeable for :py:class:`TandemXML`).
+
+   - For custom classes: the implementation of xpath evaluation in :py:meth:`pyteomics.xml.XML.iterfind` has changed.
+     Pseudo-conditions are now not supported. Instead, an attempt is made to support full XPath.
+     The main difference is that the XPath is evaluated on XML elements,
+     whereas pseudo-conditions used to be evaluated for complete Python dictionaries.
+     To reproduce old behavior, you can just write an explicit `if` statement at an appropriate place.
+     New implementation allows actually skipping the elements that do not satisfy the XPath predicate.
+     When writing classes which by default iterate over elements based on a complex XPath, set
+     :py:attr:`_default_iter_path` instead of :py:attr:`_default_iter_tag`.
+
+     .. warning ::
+       Beware that if :py:attr:`_default_iter_path` differs from :py:attr:`_default_iter_tag` and you use indexing,
+       all elements corresponding to :py:attr:`_default_iter_tag` will be indexed.
+       This is a limitation of the index building procedure.
+       This discrepancy will lead to confusing behavior
+       (length checks, membership tests and other things based on index
+       will not correspond to items returned by iteration).
+       :py:meth:`map` calls will also operate on the full index.
+
+
+ - New keyword arguments `queue_size`, `queue_timeout` and `processes` for indexed parsers with support for :py:meth:`map`.
+
+ - New method :py:meth:`mass.Unimod.by_id`.
+   Also, :py:class:`mass.Unimod` now supports dict-like queries with record IDs.
+
+ - Reduce memory footprint for unit primitives (PR #35 by Joshua Klein).
+
+ - New functions :py:func:`pyteomics.auxiliary.sigma_T` and :py:func:`pyteomics.auxiliary.sigma_fdr`.
+
+ - Fix issues #44, #46, #47, #48.
+
+
+4.1.2
+-----
+
+Bugfix: fix the standard mass value for pyrrolysine (issue #42).
+
+
+4.1.1
+-----
+
+ - Add `numpress <https://dx.doi.org/10.1074%2Fmcp.O114.037879>`_ support for mzML and mzXML files.
+   To read files compressed with Numpress, install `pynumpress`
+   (`PyPI <https://pypi.org/project/pynumpress/>`_, `GitHub <https://github.com/mobiusklein/pynumpress>`_).
+
+ - Bugfixes.
+
+API changes
+...........
+
+ - In :py:func:`ms1.read` and :py:func:`ms2.read`, the default value for `use_index` is now :py:const:`False`.
+   Using the indexed parsers may result in incorrect behavior if the "first" scan number in S-lines is not unique.
+
+
+4.1
+---
+
+- New module :py:mod:`pyteomics.mztab` provides a parser for `mzTab files <http://www.psidev.info/mztab>`_.
+
+- New module :py:mod:`pyteomics.ms2` provides a parser for **ms2** files.
+  This is in fact an alias to :py:mod:`ms1`, which handles both formats.
+
+- Added index saving functionality for :py:class:`pyteomics.mgf.IndexedMGF`.
+
+- New helper functions :py:func:`pyteomics.pylab_aux.plot_spectrum` and :py:func:`pyteomics.pylab_aux.annotate_spectrum`.
+
+- The `rule` and `exception` arguments in :py:func:`pyteomics.parser.cleave` can be keys from :py:const:`expasy_rules`.
+
+- Fixes.
+
+
+4.0.1
+-----
+
+Fix issue `#35 <hhttps://levitsky.github.io/bitbucket_backup/#!/levitsky/pyteomics/issues/35/page/1>`_
+(incorrect order of deserialized offset indexes on older Python versions).
+
+
+4.0
+---
+
+ .. seealso::
+    `Pyteomics 4.0: five years of development of a Python proteomics framework
+    <https://pubs.acs.org/doi/10.1021/acs.jproteome.8b00717>`_
+
+
+ - Add parameters `semi` and `exception` in :py:func:`pyteomics.parser.cleave`.
+
+ - Add new parameter `encoding` in file writers.
+
+ - Add new parameters `write_charges` and `use_numpy` in :py:func:`pyteomics.mgf.write`.
+   Speed up the writing when :py:mod:`numpy` is available.
+
+ - :ref:`Indexing text parsers <indexing>`. This release introduces a family of parser classes for text files.
+   These parsers create byte offsets of indexed entries to allow random access by unique key or by positional index,
+   "rich" access by slices and, in case of MGF/mzML/mzXML, by retention time range.
+   All indexing parsers, text- or XML-based, now have a unified interface.
+
+   - New class :py:class:`pyteomics.mgf.IndexedMGF` is now the recommended way to parse MGF files.
+     It supports fast access by spectrum titles by using an index of byte offsets.
+     The old, sequential parser is preserved under its name, :py:class:`pyteomics.mgf.MGF`.
+     The function :py:func:`pyteomics.mgf.read` now returns an instance of one of the two classes,
+     based on the `use_index` argument and the type of `source`.
+     The common ancestor class, :py:class:`pyteomics.mgf.MGFBase`, can be used for type checking.
+
+   - New FASTA parsing classes:
+
+     - :py:class:`pyteomics.fasta.FASTABase` - common ancestor, suitable for type checking;
+
+       - :py:class:`pyteomics.fasta.FASTA` - text-mode, sequential parser; does
+         what the old :py:func:`fasta.read` was doing. Additionally, the following subclasses perform
+         format-specific parsing of FASTA headers:
+
+         - :py:class:`pyteomics.fasta.UniProt`;
+         - :py:class:`pyteomics.fasta.UniParc`;
+         - :py:class:`pyteomics.fasta.UniRef`;
+         - :py:class:`pyteomics.fasta.UniMes`;
+         - :py:class:`pyteomics.fasta.SPD`;
+         - :py:class:`pyteomics.fasta.NCBI`;
+
+       - :py:class:`pyteomics.fasta.IndexedFASTA` - binary-mode, indexing parser.
+         Supports direct indexing by header string;
+
+         - :py:class:`pyteomics.fasta.TwoLayerIndexedFASTA` - additionally supports
+           indexing by extracted header fields. Format-specific second indexes are available in
+           subclasses:
+
+           - :py:class:`pyteomics.fasta.IndexedUniProt`;
+           - :py:class:`pyteomics.fasta.IndexedUniParc`;
+           - :py:class:`pyteomics.fasta.IndexedUniRef`;
+           - :py:class:`pyteomics.fasta.IndexedUniMes`;
+           - :py:class:`pyteomics.fasta.IndexedSPD`;
+           - :py:class:`pyteomics.fasta.IndexedNCBI`.
+
+     :py:func:`pyteomics.fasta.read` now returns an instance of one of these classes,
+     depending on the arguments `use_index` and `flavor`.
+
+    - :py:class:`pyteomics.ms1.IndexedMS1` and :py:class:`pyteomics.ms1.MS1` are available for ms1 format.
+
+   *(In collaboration with J. Klein)*
+
+ - Multiprocessing support: all indexed XML and text file parsers now expose a :py:meth:`map` method.
+   This method can map a user-supplied function to each file entry in separate processes (or simply
+   parallelize the parsing itself).
+   Additionally, objects returned by :py:func:`chain` functions and :py:meth:`iterfind` methods also expose
+   the :py:meth:`map` interface to allow parallelizing the work over multiple files and when iterating over
+   non-default XML tree elements.
+   The order of entries is not preserved in the output.
+   *(In collaboration with J. Klein)*
+
+ - New module :py:mod:`pyteomics.peff` implements the :py:class:`IndexedPEFF` parser for protein databases
+   in the new PSI standard format, `PEFF <http://www.psidev.info/peff>`_. *(Contributed by J. Klein)*
+
+ - New module :py:mod:`pyteomics.traml` implements the :py:class:`TraML` parser for the PSI standard format
+   for SRM data, `TraML <http://www.psidev.info/traml>`_. *(In collaboration with J. Klein)*
+
+ - :py:class:`pyteomics.protxml.ProtXML` now also supports indexing and multiprocessing.
+
+ - Removed parameter `skip_empty_cvparam_values` in XML parsers. In cvParam elements, missing "value"
+   attribute is now always equivalent to the case when it is equal to an empty string. This affects
+   the structure of items produced by MzML and MzIdentML parsers.
+
+ - Multiple fixes and improvements.
+
+
+3.5.1
+-----
+
+Technical release to update the package metadata on PyPI.
+Project documentation on pythonhosted.org has been deleted.
+Latest documentation is available at: https://pyteomics.readthedocs.io/.
+
+
+3.5
+---
+
+ - Preserve accession information on cvParam elements in mzML parser.
+   Dictionaries produced by the parser can now be queried by accession using
+   :py:func:`pyteomics.auxiliary.cvquery`.
+   *(Contributed by J. Klein)*
+
+ - Add optional `decode_binary` argument in
+   :py:class:`pyteomics.mzml.MzML` and :py:class:`pyteomics.mzxml.MzXML`.
+   When set to `False`, the parsers provide binary records suitable for decoding on demand.
+   *(Contributed by J. Klein)*
+
+ - Add method :py:meth:`write_byte_offsets` in :py:class:`pyteomics.mzml.MzML`,
+   :py:class:`pyteomics.mzxml.MzXML` and :py:class:`pyteomics.mzid.MzIdentML`.
+   Byte offsets can be loaded later to speed up random access.
+   *(Contributed by J. Klein)*
+
+ - Random access to MGF spectrum entries.
+
+   - Add function :py:func:`pyteomics.mgf.get_spectrum`.
+
+   - Add class :py:class:`pyteomics.mgf.MGF`. :py:func:`mgf.read` is now an alias to the class.
+     The class can be used for indexing using spectrum titles.
+
+   This functionality will be changed in upcoming versions.
+
+ - New module :py:mod:`pyteomics.protxml` for parsing of ProteinProphet output files.
+
+ - Add PeptideProphet and iProphet analysis information to the output of :py:func:`pyteomics.pepxml.DataFrame`.
+
+ - New parameter `huge_tree` in XML parser constructors and :py:func:`read` functions.
+   It is passed to the underlying :py:mod:`lxml` calls. Default value is `False`.
+   Set to `True` to overcome errors such as: `XMLSyntaxError: xmlSAX2Characters: huge text node`.
+
+ - New parameter `skip_empty_cvparam_values` in XML parser constructors.
+   It instructs the parser to treat the empty "value" attributes in cvParam elements as if they were not there.
+   This is helpful in cases when such empty "values" are present in one vendor's file and absent in another:
+   enabling the parameter will result in more unified output.
+   Default value is `False`.
+
+ - Change the default value for `read_schema` to :py:const:`False` in XML parsing modules.
+
+ - Change the default value for `retrieve_refs` to :py:const:`True` in MzIdentML constructor.
+
+ - Implement `retrieve_refs` for :py:class:`pyteomics.mzml.MzML`.
+   *(Contributed by J. Klein)*
+
+ - New parameter `keep_cterm` in decoy generation functions in :py:mod:`pyteomics.fasta`.
+
+ - New parameters `decoy_prefix` and `decoy_suffix` in all format-specific FDR filtering functions.
+   If the standard :py:func:`is_decoy` function works for your files, you can use these parameters to
+   specify either the prefix or the suffix appended to the protein names in decoy entries.
+
+ - New ion types in :py:data:`pyteomics.mass.std_ion_comp`.
+
+ - Bugfixes.
+
+
+3.4.2
+-----
+
+ - New module :py:mod:`pyteomics.ms1` for parsing of MS1 files.
+
+ - :py:class:`mass.Composition` constructor now accepts `ion_type` and `charge` parameters.
+
+ - New functions :py:func:`pyteomics.mzid.DataFrame` and :py:func:`pyteomics.mzid.filter_df`.
+   Their behavior may be refined later on.
+
+ - Changes in behavior of :py:func:`pyteomics.auxiliary.filter` and :py:func:`pyteomics.auxiliary.qvalues`:
+
+   - both functions now always return DataFrames with :py:class:`pandas.DataFrame` input and `full_output=True`.
+
+   - string values of `key`, `is_decoy` and `pep` are substituted with simple itemgetter functions for
+     non-pandas, non-numpy input;
+
+   - additional parameters `score_label`, `decoy_label`, `pep_label`, and `q_label` for output control.
+
+ - Performance optimizations in XML parsing code.
+
+
+3.4.1
+-----
+
+ - Add selenocysteine ("U") and pyrrolysine ("O") to :py:data:`pyteomics.mass.std_aa_mass` and
+   :py:data:`pyteomics.mass.std_aa_comp`.
+
+ - An optional parameter `encoding` is now accepted by text file readers (:py:func:`pyteomics.mgf.read`
+   and :py:func:`pyteomics.fasta.read`). This can be useful for MGF files with non-ASCII spectrum
+   titles or comments.
+
+ - New function :py:func:`pyteomics.mass.mass.isotopologues`.
+
+ - Performance improvements in :py:func:`pyteomics.electrochem.pI`.
+
+ - Fix the issue in :py:mod:`pyteomics.xml` which resulted in very long processing times for indexed XML files
+   with a byte ordering mark (BOM).
+
+ - Support all standard and non-standard data array names in :py:mod:`pyteomics.mzml`.
+
+ - Change default value of ``retrieve_refs`` in :py:func:`pyteomics.mzid.read` to :py:const:`True`.
+
+ - Preserve unit information extracted from cvParam tags in PSI XML files.
+
+ - Fix in :py:mod:`pyteomics.mzxml`, other minor fixes.
+
+
+3.4
+---
+
+ - New module :py:mod:`pyteomics.mzxml` for parsing of MzXML files.
+
+ - New parameter `dtype` in :py:func:`pyteomics.mgf.read`, :py:func:`pyteomics.mzml.read`
+   and :py:func:`pyteomics.mzxml.read`
+   allows changing the dtype of arrays yielded by the parsers.
+
+ - :py:mod:`pyteomics.featurexml` moved into a subpackage :py:mod:`pyteomics.openms`.
+
+ - New module :py:mod:`pyteomics.openms.trafoxml` for OpenMS transformation files.
+
+ - Bugfix in XML indexing code to make it work on Python 3.x versions prior to 3.5.
+
+ - Bugfix in :py:func:`pyteomics.pylab_aux.scatter_trend` (support for lists and other non-ndarrays).
+
+ - Performance improvements in :py:mod:`pyteomics.achrom` calibration functions.
+
+
+3.3.1
+-----
+
+New submodule :py:mod:`pyteomics.featurexml` with a parser for OpenMS **featureXML** files.
+
+
+3.3
+---
+
+ - mzML and mzIdentML parsers can now create an index of element offsets.
+   This allows quick random access to elements by unique ID.
+
+ - mzML parsers now come in two flavors: :py:class:`pyteomics.mzml.MzML` and
+   :py:class:`pyteomics.mzml.PreIndexedMzML`. The latter uses the byte offsets
+   listed at the end of the file.
+
+ - New parameters `convert_arrays` and `read_charges` in :py:func:`mgf.read`
+   allow using it without :py:mod:`numpy` and possibly improve performance.
+   The default behavior is retained.
+
+ - Performance optimizations in :py:func:`mgf.read` and :py:func:`parser.cleave`.
+
+ - New decoy generation mode called "fused decoy", described in the `paper accepted to JASMS
+   <http://dx.doi.org/10.1007/s13361-016-1436-7>`_.
+
+API changes
+...........
+
+ - :py:func:`pyteomics.parser.cleave` no longer accepts the `labels` argument.
+   It is emphasized that the input sequences are expected to be in plain one-letter
+   notation, but no checks are performed.
+
+ - :py:func:`DataFrame` functions in :py:mod:`pepxml` and :py:mod:`tandem` now
+   extract more protein-related information. The list-like protein-related values
+   can be reported as lists or packed into strings, depending on the optional
+   paramter `sep`. Some column names have changed as a result.
+
+ - Call signatures of :py:func:`pyteomics.fasta.decoy_sequence` and the functions using it
+   are slightly changed. Standard modes are now also exposed as individual functions.
+
+
+3.2
+---
+
+New submodule :py:mod:`pyteomics.mass.unimod` contains rewritten machinery
+for handling of Unimod relational databases (contributed by Joshua Klein).
+This is a substitution and extension for the old :py:class:`mass.Unimod` class.
+:py:mod:`pyteomics.mass.unimod` requires SQLAlchemy.
+
+Other changes:
+
+ - New function :py:func:`pyteomics.auxiliary.linear_regression_perpendicular`
+   provides a linear fit minimizing distances from data points to the fit line
+   (as opposed to :py:func:`pyteomics.auxiliary.linear_regression`, which
+   minimizes vertical distances).
+
+ - Both new and old linear regression functions now accept a single array of shape (N, 2).
+
+ - :py:func:`pyteomics.pylab_aux.scatter_trend` now has an optional parameter
+   `regression` which can be a callable performing the regression.
+   Also, the regression equation is now the label of the regression line, not
+   the scatter plot.
+
+ - Another two new parameters for :py:func:`pyteomics.pylab_aux.scatter_trend`
+   are `sigma_kwargs` and `sigma_values`.
+
+ - :py:mod:`pyteomics.pylab_aux` functions :py:func:`plot_line` and
+   :py:func:`scatter_trend` now return the objects they create.
+
+ - Writer functions (:py:func:`pyteomics.mgf.write`, :py:func:`pyteomics.fasta.write`,
+   :py:func:`pyteomics.fasta.write_decoy_db`) now accept a `file_mode` argument that
+   overrides the mode in which the file is opened.
+
+ - In :py:func:`pyteomics.mgf.write` one can now override the format spec for fragment m/z,
+   intensity and charge values using the optinal `fragment_format` argument. Key order and
+   key-value parameter formatters are now also handled via optional arguments.
+
+ - :py:func:`pyteomics.fasta.decoy_db` now supports `ignore_comments` and `parser` arguments.
+
+
+3.1.1
+-----
+
+ - Bugfix in :py:mod:`pyteomics.auxiliary`.
+
+ - New parameter `show_legend` in :py:func:`pyteomics.pylab_aux.scatter_trend`.
+
+ - Performance improvements in :py:mod:`pyteomics.parser`.
+
+
+3.1
+---
+
+This release offers integration with the great :py:mod:`pandas` library.
+Working with :py:func:`qvalues` and :py:func:`!filter` functions
+is now much easier if you have your PSMs in a :py:class:`DataFrame`.
+Many search engines use CSV as their output format, allowing direct
+creation of :py:class:`DataFrame` objects. New functions
+:py:func:`pyteomics.tandem.DataFrame` and :py:func:`pyteomics.pepxml.DataFrame`
+faciliatate creation of DataFrames from corresponding formats.
+
+Also, :py:func:`qvalues`, :py:func:`!filter` and :py:func:`fdr` functions can now use
+posterior error probabilities (PEPs) instead of using decoys for q-value calculation.
+
+ - In :py:func:`qvalues` and :py:func:`!filter` functions,
+   `key` and `is_decoy` can now be array-like objects or strings
+   (as well as functions and iterators).
+   If a string is given, it is used as a field name in the PSM array
+   or :py:class:`DataFrame`. :py:func:`fdr` functions also support strings
+   and iterables as arguments.
+
+ - New parameter `pep` in :py:func:`qvalues`, :py:func:`!filter` and :py:func:`fdr` functions.
+   It can be callable, array-like, or iterator. Conflicts with decoy-related
+   parameters. Compatible with `key`, but makes it optional.
+
+ - Fixed the behavior of :py:func:`filter.chain` functions. They now treat
+   the `full_output` argument the same way as :py:func:`!filter` functions.
+
+ - Fixed the issue that caused exceptions when calling :py:func:`fasta.decoy_db`
+   and :py:func:`fasta.write_decoy_db` with explicitly given `mode` (signature
+   for creation of :py:class:`pyteomics.auxiliary.FileReader` objects slightly changed).
+
+ - Pyteomics now uses `setuptools` and is a namespace package.
+
+ - Minor fixes.
+
+
+API changes
+...........
+
+- Default value of `remove_decoy` in :py:func:`qvalues` is now :py:const:`False`.
+
+
+3.0.1
+-----
+
+ - Added `legend_kwargs` as a keyword argument to
+   :py:func:`pyteomics.pylab_aux.scatter_trend`.
+
+ - Minor fixes.
+
+
+3.0.0
+-----
+
+ - XML parsers are now implemented as objects, each format has its own class.
+   Those classes can be instantiated using the same arguments as :py:func:`read`
+   functions accepted, and support direct iteration and the ``with`` syntax.
+   The :py:func:`read` functions are now simple aliases to the corresponding
+   constructors.
+
+ - As a result, functions :py:func:`iterfind`, :py:func:`version_info` and
+   :py:func:`get_by_id` functions are now deprecated in favor of methods
+   :py:meth:`iterfind` and :py:meth:`get_by_id` and attribute
+   :py:attr:`version_info` of corresponding instances.
+
+ - In :py:func:`pyteomics.mgf.write`, the order of keys and the format of values
+   are now controlled via module-level variables.
+
+ - In :py:mod:`pyteomics.electrochem`, correction for pK of terminal groups
+   depending on the terminal residue is implemented; example set of pK and
+   corrected pK added.
+
+ - Imports of external dependencies are delayed where possible, so that
+   unnecessary :py:exc:`ImportErrors` do not occur.
+
+ - :py:func:`local_fdr` renamed to :py:func:`qvalues` in :py:mod:`pepxml`,
+   :py:mod:`mzid`, :py:mod:`tandem` and :py:mod:`auxiliary`.
+   :py:func:`local_fdr` did not reflect the semantics of the function.
+   The algorithm has been also corrected so that the array of q-values
+   is always sorted (as it should be by definition).
+
+ - :py:func:`qvalues` now also accepts a parameter `full_output` which keeps the
+   PSMs alongside their scores and associated q-values.
+
+ - All :py:func:`fdr`, :py:func:`qvalues`, and :py:func:`!filter` functions
+   now accept a new parameter `correction`. It is used for more accurate
+   estimation of the number of false positives using TDA (`paper with explanation
+   <http://dx.doi.org/10.1021/acs.jproteome.6b00144>`_).
+
+ - :py:func:`!filter` functions now support both iterator protocol and context
+   manager protocol. They now also accept the `full_output` parameter, which has
+   the following meaning: if :py:const:`True` (default), then an array of PSMs
+   is directly returned by the function. Otherwise, an iterator is returned, as
+   before. The array takes some memory, but this way is usually around 2x faster.
+
+ - New function :py:func:`pyteomics.pylab_aux.plot_qvalue_curve`.
+
+ - :py:class:`pyteomics.mass.Composition` objects now have a :py:meth:`mass`
+   method (equivalent to :py:func:`pyteomics.mass.calculate_mass`.
+
+ - Also, :py:class:`Composition` and objects returned by
+   :py:func:`pyteomics.parser.amino_acid_composition` now inherit from
+   :py:class:`collections.defaultdict` **and** :py:class:`collections.Counter`.
+
+ - Decoy-related functions in :py:mod:`pyteomics.fasta` now accept a new parameter
+   `keep_nterm` that preserves the N-terminal residue in the generated decoy
+   sequences.
+
+ - Minor fixes.
+
+API changes
+...........
+
+ - In :py:func:`pyteomics.pylab_aux.scatter_trend`, keyword arguments for
+   :py:func:`pylab.scatter` and :py:func:`pylab.plot` are now accepted as dicts
+   `scatter_kwargs` and `plot_kwargs`. Keyword argument `alpha` is now not
+   accepted and should be put in the appropriate dict.
+ - In :py:func:`pyteomics.pylab_aux.plot_function_3d` and
+   :py:func:`pyteomics.pylab_aux.plot_function_contour`, arbitrary kwargs can
+   now also be passed to the plotting function.
+ - :py:func:`!filter` functions do not support context manager protocol by
+   default. To keep using them as iterators / context managers, specify
+   ``full_output=False`` (see above for details).
+
+
+2.5.5
+-----
+
+Fix for a memory leak in :py:func:`pyteomics.mzid.get_by_id`, which affects
+:py:func:`pyteomics.mzid.read` with ``retrieve_refs=True``.
+
+
+2.5.4
+-----
+
+ - New functions :py:func:`local_fdr` in :py:mod:`pepxml`, :py:mod:`mzid`, and
+   :py:mod:`tandem`. The function returns a NumPy array with PSM scores and
+   corresponding values of local FDR.
+
+ - New parameter `iterative` in :py:func:`read` functions of XML parsing
+   modules. Parsing of mzIdentML files with ``retrieve_refs=True`` got
+   significantly faster.
+
+
+2.5.3
+-----
+
+ - Universally applicable modifications are now allowed in
+   :py:func:`pyteomics.parser.isoforms`.
+
+ - It is now also possible to specify non-terminal modifications which are
+   only applicable to terminal residues.
+
+ - Fix in :py:func:`pyteomics.parser.parse`: if the `labels` argument is
+   provided, it needs to contain standard terminal groups if they are present
+   in the sequence or if `show_unmodified_termini` is set to :py:const:`True`.
+
+ - :py:class:`pyteomics.mass.Composition` instances are now pickleable.
+
+ - Performance improvements.
+
+
+2.5.2
+-----
+
+ - New parameter `reverse` in all :py:func:`!filter` functions.
+
+ - New function :py:func:`pyteomics.mass.fast_mass2`, which is analogous to
+   :py:func:`pyteomicsmass.fast_mass`, but supports full *modX* notation and
+   is several times slower.
+
+ - Fix in :py:func:`pyteomics.pepxml.read` for compatibility with files
+   produced with Mascot2XML utility.
+
+ - Unknown labels now allowed in :py:mod:`pyteomics.electrochem` and
+   :py:mod:`pyteomics.achrom` functions in accordance with new general policy.
+
+
+2.5.1
+-----
+
+ - Bugfixes in :py:func:`pyteomics.parser.isoforms`:
+
+   - handling of the `labels` argument is now in accordance with new policy
+   - solved memory problems when using `max_mods`
+
+ - :py:func:`pyteomics.parser.cleave` does not require a valid *modX* sequence
+   by default.
+
+
+2.5.0
+-----
+
+ - :py:func:`pyteomics.parser.amino_acid_composition` now accepts "split"
+   parsed sequences.
+
+ - Cleavage rules in :py:data:`pyteomics.parser.expasy_rules` updated.
+
+ - Helper function :py:func:`pyteomics.parser.num_sites` counts the number
+   of cleavage sites in a sequence.
+
+ - Helper function :py:func:`pyteomics.parser.match_modX` does essentially
+   the same as :py:func:`pyteomics.parser.is_modX`, but returns a
+   :py:class:`re.match` object or :py:const:`None` instead of a :py:class:`bool`.
+
+ - Bugfix in :py:func:`pyteomics.auxiliary.filter`, which didn't work correctly
+   with iterators.
+
+ - Added a new parameter ``max_mods`` in :py:func:`pyteomics.parser.isoforms`.
+
+API changes
+...........
+
+ - The boolean ``overlap`` parameter in :py:func:`pyteomics.parser.cleave` is
+   replaced with an integer ``min_length``. Since ``min_length`` uses
+   :py:func:`pyteomics.parser.length`, the ``labels`` keyword argument is now
+   accepted by :py:func:`cleave` and :py:func:`num_sites`, if needed. With
+   carefully designed cleavage rules, all cleavage functions work
+   with *modX* sequences.
+
+ - The ``labels`` argument in :py:func:`pyteomics.parser.parse` and related
+   functions has changed its meaning. :py:func:`parse` won't raise an exception
+   for non-standard labels in sequences if the ``labels`` keyword argument is
+   not given.
+
+ - The *modX* notation specification is now more strict to avoid ambiguity:
+   only zero or two terminal groups can be present in a *modX* sequence.
+   Sequences with one terminal group specified will be supported where possible,
+   but be advised that sequences such as "H-OH" are intrinsically ambiguous.
+
+
+2.4.3
+-----
+
+ - Added the ``ratio`` keyword argument for FDR calculation.
+
+ - Minor changes in :py:func:`iterfind` functions of file parsers.
+
+ - Bugfix in :py:func:`pyteomics.mgf.write` (duplication of pepmass key).
+
+ - Removed non-functional parameter ``read_schema`` for
+   :py:func:`pyteomics.tandem.read`.
+
+
+2.4.2
+-----
+
+ - Bugfix in :py:func:`pyteomics.mass.most_probable_isotopic_composition`.
+   The bug manifested itself after version **2.4.0**, when
+   :py:data:`pyteomics.mass.nist_mass` was expanded. Also, the format of the
+   returned value is now in accordance with the documentation.
+
+
+2.4.1
+-----
+
+ - New function :py:func:`pyteomics.auxiliary.filter` for filtering lists
+   of PSMs not coming directly from files in supported formats.
+
+ - Also, a format-agnostic helper function :py:func:`pyteomics.auxiliary.fdr`.
+
+
+2.4.0
+-----
+
+ - New functions for filtering to a certain FDR level based on target-decoy
+   strategy, as well as for FDR estimation, in :py:mod:`pyteomics.tandem`,
+   :py:mod:`pyteomics.pepxml` and :py:mod:`pyteomics.mzid`. The functions are
+   called :py:func:`!filter` (beware of shadowing the built-in function) and
+   :py:func:`fdr` (in each of the modules). Chained versions
+   :py:func:`filter.chain` and :py:func:`filter.chain.from_iterable` are
+   also available. See `Data Access <data.html#general-notes>`_ for more info.
+
+ - New function :py:func:`pyteomics.parser.coverage` for sequence coverage
+   calculation.
+
+ - New function :py:func:`pyteomics.fasta.decoy_chain`, a chained version of
+   :py:func:`pyteomics.fasta.decoy_db`.
+
+ - New elements in :py:data:`pyteomics.mass.nist_mass`. Pretty much all elements
+   are there now.
+
+ - Fix in :py:func:`pyteomics.parser.parse` to cover some fancy corner cases.
+
+ - Bugfix in :py:mod:`pyteomics.tandem`: modification info is now fully extracted.
+
+ - :py:func:`pyteomics.mass.isotopic_composition_abundance` is now able to
+   calculate abundances for larger molecules.
+
+   .. note::
+       Rounding errors may be significant in this case.
+
+
+2.3.0
+-----
+
+ - New parameter "read_schema" in :py:func:`read` functions of XML parsing modules.
+   When set to :py:const:`False`, disables the attempts to fetch an auxiliary file
+   and obtain structure information about the file being parsed.
+
+ - New function :py:func:`chain` in all modules that have a :py:func:`read`
+   function, for convenient chaining of multiple files. :py:func:`chain` only
+   works as a context manager. Use :py:func:`itertools.chain` in other cases.
+   The ``chain.from_iterable`` form is also available as a context manager.
+
+ - New function :py:func:`pyteomics.auxiliary.print_tree` for exploration of
+   complex nested dicts produced by XML parsers.
+
+ - New sets of retention coefficients in :py:mod:`pyteomics.achrom`.
+
+ - Bugfix in :py:mod:`pyteomics.pepxml`. The bug caused an exception when parsing
+   some pepXML files.
+
+ - The output of :py:func:`pyteomics.mgf.read` now always contains a masked
+   array of charges.
+
+ - Other minor fixes.
+
+API change
+..........
+
+ - In :py:func:`pyteomics.mgf.read` the precursor charge is now always represented
+   by a list of ints (a :py:class:`ChargeList` object).
+
+
+2.2.2
+-----
+
+ - Bugfix in :py:mod:`pyteomics.tandem`. The info about all proteins is now
+   extracted.
+
+
+2.2.1
+-----
+
+ - Update parsers for FASTA headers.
+
+ - NamedTuple for FASTA entries is now defined globally, which should solve
+   pickling problems.
+
+
+2.2.0
+-----
+
+ - New module :py:mod:`pyteomics.tandem` for reading output files of X!Tandem
+   search engine.
+
+
+2.1.6
+-----
+
+ - Fix in :py:mod:`pyteomics.pepxml`. pepXML files generated by TPP are now
+   processed without errors.
+
+
+2.1.5
+-----
+
+ - Fix in :py:mod:`pyteomics.pepxml`. 'modified_peptide' is now always available.
+
+ - Fix in :py:mod:`pyteomics.mass` (issue #2 in the bug tracker).
+
+ - Improved arithmetics for :py:class:`Composition` objects.
+
+
+2.1.4
+-----
+
+ - In :py:mod:`fasta`, :py:func:`decoy_db` now doesn't write to file, but returns
+   an iterator over FASTA records. The old :py:func:`decoy_db` is now called
+   :py:func:`write_decoy_db`, which is equivalent to :py:func:`decoy_db` combined
+   with :py:func:`write`.
+
+Bugfixes:
+
+ - In :py:func:`pyteomics.mgf.read`, the charges, if present, are returned as a
+   masked array now. Previously, an exception occurred if charges were missing
+   for some of the fragments.
+
+ - Values in :py:data:`mass.nist_mass` corrected.
+
+ - Other minor corrections.
+
+
+2.1.3
+-----
+
+ - Adjust the behavior affected by the bug fixed in 2.1.2. `name` attributes
+   of `<cvParam>` elements in the absence of `value` attributes are now collected
+   in a list under the `'name'` key.
+
+ - Add support for overlapping matches in :py:func:`parser.cleave`.
+
+
+2.1.2
+-----
+
+ - Bugfix in XML parsers. The bug caused the mzML parser to break on some files.
+   The fix can slightly change the format of the output.
+
+
+2.1.1
+-----
+
+ - Rename keys in the dicts returned by :py:func:`mgf.read` to facilitate
+   writing code working with both MGF and mzML.
+
+ - The items yielded by :py:func:`fasta.read` now have attributes `description`
+   and `sequence`.
+
+
+2.1.0
+-----
+
+ - New sets of retention coefficients in :py:mod:`achrom`.
+
+ - :py:class:`mass.Composition` now only stores non-zero ints.
+
+ - :py:mod:`fasta` now has tools for parsing of FASTA headers.
+
+ - File parsers now implement the `context manager protocol
+   <http://docs.python.org/reference/datamodel.html#with-statement-context-managers>`_.
+   We recommend using `with` statements to avoid resource leaks.
+
+API changes
+...........
+
+ - 'pepmass' is now a tuple in the output of :py:func:`mgf.read` (to allow
+   reading precursor intensities).
+
+ - new function :py:func:`fasta.parse` for convenient parsing of FASTA headers.
+
+ - :py:data:`fasta.std_parsers` stores parsers for common UniProt header formats.
+
+ - new parameter *parser* in :py:func:`fasta.read` allows to apply parsing while
+   reading a FASTA file.
+
+ - `close` parameter removed in all functions that do file I/O. The unified
+   behavior is: if the parameter is a file object, it won't be closed by the
+   function. If a file path is given, the file object will be created and closed
+   inside the corresponding function.
+
+
+2.0.3
+-----
+
+ - Added new class :py:class:`pyteomics.mass.Unimod`. The interface is
+   experimental and may change.
+
+ - Improved :py:func:`iterfind` function in XML-reading modules.
+
+ - :py:class:`pyteomics.mass.Composition` objects now support multiplication by
+   :py:class:`int`.
+
+ - Bugfix in :py:func:`auxiliary.linear_regression`.
+
+
+2.0.2
+-----
+
+ - Added new function :py:func:`iterfind` in :py:mod:`pyteomics.mzid`,
+   :py:mod:`pyteomics.pepxml` and :py:mod:`pyteomics.mzml`.
+
+
+2.0.1
+-----
+
+API changes
+...........
+
+ - :py:func:`pyteomics.parser.peptide_length` is renamed to
+   :py:func:`pyteomics.parser.length`.
+
+
+2.0.0
+-----
+
+ - Added :py:mod:`mzid` module for parsing of mzIdentML files.
+
+ - Fixed bugs, improved tests.
+
+API changes
+...........
+
+ - top-module functions in :py:mod:`fasta`, :py:mod:`mgf`, :py:mod:`mzml`,
+   :py:mod:`pepxml`, as well as :py:mod:`mzid`, are now called :py:func:`read`.
+
+ - in :py:mod:`parser`, :py:func:`parse_sequence` renamed to :py:func:`parse`.
+   It now accepts an optional parameter `allow_unknown_modifications`.
+
+ - :py:func:`mgf.write_mgf` and :py:func:`fasta.write_fasta` renamed to
+   :py:func:`write`.
+
+ - the output format of all :py:func:`read` functions has changed.
+
+
+1.2.5
+-----
+
+ - Include Apache license version 2.0:
+   http://www.opensource.org/licenses/Apache-2.0
+
+ - Minor bugfix in :py:mod:`pyteomics.fasta`.
+
+
+1.2.4
+-----
+
+ - Changes in :py:mod:`pyteomics.mass`.
+
+API changes
+...........
+
+ - :py:class:`Composition` objects can be created using positional first
+   argument, which will be treated as a sequence or (upon failure) as a formula.
+   This means that all functions relying on Composition
+   (:py:func:`calculate_mass`, :py:func:`most_probable_isotopic_composition`,
+   :py:func:`isotopic_composition_abundance`) allow that as well. However, it's
+   of no use for the latter.
+
+ - :py:class:`Composition` entries for modifications can be added to *aa_comp*
+   and used in composition and mass calculations. This way the specified group
+   will be added to any residue bearing this modification.
+
+ - That being said, the :py:func:`add_modifications` function is not needed
+   anymore and has been removed.
+
+ - Addition and subtraction of :py:class:`Composition` objects now produces a
+   :py:class:`Composition` object, allowing addition/subtraction of multiple
+   objects.
+
+ - :py:class:`Composition` is now a subclass of
+   :py:class:`collections.defaultdict` so one can safely retrieve values
+   without checking if a key exists.
+
+
+1.2.3
+-----
+
+ - :py:func:`pyteomics.parser.isoforms` now allows terminal modifications.
+
+ - Bugfixes in :py:func:`pyteomics.parser.parse_sequence`.
+
+ - New function :py:func:`pyteomics.parser.tostring` converts parsed sequences
+   to strings.
+
+ - Helper function :py:func:`pyteomics.parser.is_modX` added to check *modX* labels.
+
+API changes
+...........
+
+ - :py:func:`pyteomics.parser.isoforms` now returns a generator object
+
+
+1.2.2
+-----
+
+ - Bugfix in :py:mod:`pyteomics.pepxml`: modification info is now extracted.
+
+ - New optional boolean argument 'split' in :py:func:`pyteomics.parser.parse_sequence()`
+   allows to generate a list of tuples where modifications are separated from the
+   residues instead of a regular list of labels. In *labels* not only *modX* labels
+   are now allowed, but also separate *mod* prefixes. Such modifications are
+   assumed to be applicable to any residue.
+
+
+1.2.1
+-----
+
+ - Memory usage **significantly** decreased when parsing large mzML and pepXML
+   files.
+
+
+1.2.0
+-----
+
+ - Added support for Python 3. Python 2.7 is still supported, Python 2.6 is not.
+
+
+1.1.1
+-----
+
+ - New function called :py:func:`add_modifications()` added in
+   :py:mod:`pyteomics.mass`. It updates *aa_comp*.
+ - Also, :py:func:`pyteomics.parser.isoforms` is a new function to get
+   all possible modified sequences of a peptide.
+
+
+1.1.0
+-----
+
+ - New module added - :py:mod:`pyteomics.mgf`. It is intended for reading and
+   writing files in Mascot Generic Format.
+
+
+1.0.2
+-----
+
+ - In :py:mod:`pyteomics.pepxml` module, now all search hits are read from file
+   (not only the top hit).
+
+API changes:
+............
+
+ - :py:func:`pyteomics.pepxml.read`: information specific to search hits is now
+   stored in a list under the ``'search_hits'`` key. The list is sorted by hit
+   rank.
+
+
+1.0.1
+-----
+
+ - Fix compatibility issues in :py:mod:`pyteomics.pepxml` module.
+
+
+1.0.0
+-----
+
+ - The first public release of Pyteomics.
+
+API changes:
+............
+
+ - :py:mod:`pyteomics.achrom`: rename ``'length correction factor'`` to
+   ``'length correction parameter'``.
+
+   - :py:func:`pyteomics.achrom.get_RCs_vary_lcf` was renamed to
+     :py:func:`pyteomics.achrom.get_RCs_vary_lcp`.
+   - `length_correction_factor` keyword argument of
+     :py:func:`pyteomics.achrom.get_RCs` was renamed to `lcp`.
+

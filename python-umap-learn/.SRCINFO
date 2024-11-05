@@ -1,0 +1,19 @@
+pkgbase = python-umap-learn
+	pkgdesc = Uniform Manifold Approximation and Projection
+	pkgver = 0.5.7
+	pkgrel = 1
+	url = https://github.com/lmcinnes/umap
+	arch = any
+	license = BSD-3-Clause
+	checkdepends = python-pytest
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python-pynndescent
+	depends = python-tqdm
+	depends = onetbb
+	source = umap-release-0.5.7.tar.gz::https://github.com/lmcinnes/umap/archive/release-0.5.7.tar.gz
+	sha512sums = 84bdee369953daf07ec03c20f091d372ba2719859d315c76d32d52e95c7feff868131997238cc61e96bc639f2e45188bd4c2590933ada7ac382eaa8484d351c9
+
+pkgname = python-umap-learn
