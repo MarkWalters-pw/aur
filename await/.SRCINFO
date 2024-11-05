@@ -1,0 +1,19 @@
+pkgbase = await
+	pkgdesc = 28kb small memory footprint single binary that run list of commands in parallel and waits for their termination
+	pkgver = 1.0.7
+	pkgrel = 1
+	url = https://await-cli.app/
+	arch = aarch64
+	arch = armv6h
+	arch = armv7h
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = wget
+	makedepends = tar
+	provides = await
+	conflicts = await
+	source = https://github.com/slavaGanzin/await/releases/download/1.0.7/await-1.0.7-x86_64-unknown-linux-gnu.tar.gz
+	sha256sums = SKIP
+
+pkgname = await

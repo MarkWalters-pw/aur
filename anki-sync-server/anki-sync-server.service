@@ -1,0 +1,15 @@
+[Unit]
+Description=Anki sync server
+Documentation=https://docs.ankiweb.net/sync-server.html
+After=network.target
+
+[Service]
+Type=simple
+User=anki-sync-server
+WorkingDirectory=/var/lib/anki-sync-server
+EnvironmentFile=/etc/default/anki-sync-server
+ExecStart=/usr/bin/anki-sync-server
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

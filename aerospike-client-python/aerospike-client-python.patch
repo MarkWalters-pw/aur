@@ -1,0 +1,11 @@
+--- aerospike-15.0.0/setup.py   2024-04-10 00:24:58.000000000 +0200
++++ aerospike-15.0.0-new/setup.py       2024-05-20 02:15:47.000000000 +0200
+@@ -152,7 +152,7 @@
+     extra_compile_args = extra_compile_args + [
+         '-rdynamic', '-finline-functions'
+     ]
+-    libraries = libraries + ['rt']
++    libraries = libraries + ['rt', 'uv']
+     AEROSPIKE_C_TARGET = AEROSPIKE_C_HOME + '/target/Linux-' + machine
+ elif WINDOWS:
+     libraries.clear()

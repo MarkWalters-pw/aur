@@ -1,0 +1,37 @@
+pkgbase = activitywatch
+	pkgdesc = automatically tracks how you spend time on your devices
+	pkgver = 0.13.2
+	pkgrel = 1
+	url = https://github.com/ActivityWatch/activitywatch
+	arch = x86_64
+	license = MPL2
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-poetry-core
+	makedepends = python-pip
+	makedepends = npm
+	depends = python
+	depends = python-jsonschema
+	depends = python-peewee
+	depends = python-platformdirs
+	depends = python-iso8601
+	depends = python-strict-rfc3339
+	depends = python-tomlkit
+	depends = python-deprecation
+	depends = python-timeslot
+	depends = python-requests
+	depends = python-persist-queue
+	depends = python-click
+	depends = python-tabulate
+	depends = python-flask
+	depends = python-flask-restx
+	depends = python-flask-cors
+	depends = python-importlib-metadata
+	depends = python-werkzeug
+	depends = python-pyqt6
+	depends = python-pynput
+	depends = python-xlib
+	source = git+https://github.com/ActivityWatch/activitywatch.git#tag=v0.13.2
+	sha512sums = SKIP
+
+pkgname = activitywatch

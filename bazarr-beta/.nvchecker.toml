@@ -1,0 +1,6 @@
+[bazarr-beta]
+source = "git"
+git = "https://github.com/morpheus65535/bazarr.git"
+prefix = "v"
+from_pattern = "(\\d+)\\.(\\d+)\\.(\\d+)-beta\\.(\\d+)"
+to_pattern = "\\1.\\2.\\3_beta.\\4"

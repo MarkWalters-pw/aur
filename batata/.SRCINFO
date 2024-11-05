@@ -1,0 +1,22 @@
+pkgbase = batata
+	pkgdesc = An opinionated tiled stackable terminal emulator
+	pkgver = 0.2.0
+	pkgrel = 1
+	url = https://github.com/hugopl/batata
+	arch = x86_64
+	license = MIT
+	makedepends = make
+	makedepends = git
+	makedepends = crystal>=1.13.3
+	makedepends = shards>=0.18.0
+	makedepends = libyaml
+	depends = gc
+	depends = libevent
+	depends = pcre2
+	depends = gtk4>=1:4.16.2
+	depends = libadwaita>=1:1.6.0
+	depends = vte4>=0.78.0
+	source = batata-0.2.0.tar.gz::https://github.com/hugopl/batata/archive/v0.2.0.tar.gz
+	sha256sums = 822746c87780c56c437da6d1e8c756ab8234efdb9bb0df95ee1a84bc635d7bd9
+
+pkgname = batata

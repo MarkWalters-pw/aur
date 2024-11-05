@@ -1,0 +1,18 @@
+pkgbase = aocc
+	pkgdesc = AMD Optimizing C/C++ Compiler
+	pkgver = 5.0.0
+	pkgrel = 2
+	url = https://developer.amd.com/amd-aocc/
+	install = aocc.install
+	arch = x86_64
+	license = custom
+	optdepends = env-modules
+	options = staticlibs
+	options = !strip
+	options = libtool
+	source = local://aocc-compiler-5.0.0.tar
+	source = local://modulefile
+	sha256sums = 966fac2d2c759e9de6e969c10ada7a7b306c113f7f1e07ea376829ec86380daa
+	sha256sums = SKIP
+
+pkgname = aocc

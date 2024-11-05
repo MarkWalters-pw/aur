@@ -1,0 +1,19 @@
+pkgbase = babi
+pkgdesc = A text editor, eventually...
+pkgver = 1.5.7
+pkgrel = 5
+url = https://github.com/asottile/babi
+arch = any
+license = MIT
+makedepends = python-setuptools
+makedepends = python-build
+depends = python-onigurumacffi>=0.0.18
+depends = babi-grammars
+depends = python-identify
+provides = babi
+conflicts = babi
+conflicts = babi-git
+source = https://files.pythonhosted.org/packages/source/b/babi/babi-1.5.7.tar.gz
+sha256sums = d1eecf63455c3c609436c8d0cecc0468d7c49c1a70f64adf2c3ca687eb80071b
+
+pkgname = babi
