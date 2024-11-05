@@ -1,0 +1,19 @@
+pkgbase = puma-dev-git
+	pkgdesc = A tool to manage rack apps in development with puma
+	pkgver = 0.18.3.r0.gdb9ec15
+	pkgrel = 1
+	url = https://github.com/puma/puma-dev
+	install = puma-dev-git.install
+	arch = x86_64
+	license = BSD-3-Clause
+	makedepends = git
+	makedepends = go
+	depends = authbind
+	provides = puma-dev
+	conflicts = puma-dev
+	source = puma-dev-git::git+https://github.com/puma/puma-dev
+	source = user.service
+	md5sums = SKIP
+	md5sums = 308627b449810f382900a2e2d263862e
+
+pkgname = puma-dev-git

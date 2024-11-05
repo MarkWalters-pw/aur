@@ -1,0 +1,32 @@
+pkgbase = python-pyvo
+	pkgdesc = Astropy affiliated package for accessing Virtual Observatory data and services
+	pkgver = 1.6
+	pkgrel = 1
+	url = https://pyvo.readthedocs.io
+	arch = any
+	license = BSD-3-Clause
+	checkdepends = python-pytest-astropy-header
+	checkdepends = python-pytest-doctestplus
+	checkdepends = python-pytest-remotedata
+	checkdepends = python-requests-mock
+	checkdepends = python-pillow
+	makedepends = python-setuptools-scm
+	makedepends = python-wheel
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-sphinx-astropy
+	makedepends = python-matplotlib
+	makedepends = python-astropy
+	makedepends = graphviz
+	source = https://files.pythonhosted.org/packages/source/p/pyvo/pyvo-1.6.tar.gz
+	md5sums = db15b558555e7597609963677e76070e
+
+pkgname = python-pyvo
+	depends = python-astropy>=4.1
+	depends = python-requests
+	optdepends = python-pillow: all functions
+	optdepends = python-defusedxml: all functions
+	optdepends = python-pyvo-doc: Documentation for PyVO
+
+pkgname = python-pyvo-doc
+	pkgdesc = Documentation for Python PyVO module

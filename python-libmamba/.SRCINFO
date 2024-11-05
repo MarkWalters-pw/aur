@@ -1,0 +1,34 @@
+pkgbase = python-libmamba
+	pkgdesc = The fast cross-platform package manager
+	pkgver = 2.0.1
+	pkgrel = 1
+	url = https://github.com/mamba-org/mamba
+	arch = x86_64
+	license = BSD-3-Clause
+	makedepends = cli11
+	makedepends = spdlog
+	makedepends = tl-expected
+	makedepends = nlohmann-json
+	makedepends = ccache
+	makedepends = python-cmake>=3.18
+	makedepends = doctest
+	makedepends = python-ninja
+	makedepends = pybind11
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-scikit-build>=0.13
+	makedepends = python-setuptools>=42
+	makedepends = python-wheel
+	depends = fmt
+	depends = libsolv
+	depends = python>=3.9
+	depends = reproc
+	depends = yaml-cpp>=0.8.0
+	depends = simdjson
+	provides = libmamba=2.0.1
+	provides = python-libmambapy=2.0.1
+	conflicts = micromamba
+	source = mamba-2024.09.30-2.0.1.tar.gz::https://github.com/mamba-org/mamba/archive/refs/tags/2024.09.30.tar.gz
+	sha512sums = ee56b6b7f4c80c29babe22b40fa2d1c8a7e1a9bfe463ff159055aa795faa10ea2703ba41fe4dd859ee9cf5b05a2ece06448e74bebe990ce374e1c88c3273f71a
+
+pkgname = python-libmamba

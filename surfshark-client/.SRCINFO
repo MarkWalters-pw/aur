@@ -1,0 +1,20 @@
+pkgbase = surfshark-client
+	pkgdesc = Surfshark VPN GUI client for Linux. Encrypt your internet activity so no one can track or steal your data. Increase your privacy and avoid tracking by using a different IP address. Keep your digital freedom and security while using unprotected networks.
+	pkgver = 3.1.0.4987
+	pkgrel = 1
+	url = https://surfshark.com
+	install = surfshark-client.install
+	arch = x86_64
+	license = custom:surfshark
+	depends = alsa-lib
+	depends = at-spi2-core
+	depends = gjs
+	depends = nss
+	depends = org.freedesktop.secrets
+	depends = wireguard-tools
+	options = !strip
+	options = !emptydirs
+	source = https://ocean.surfshark.com/debian/pool/main/s/surfshark_3.1.0_amd64.deb
+	sha512sums = 086e75b8b70bb0889628cd7c734fd784af3108b6568025c82af8b48c0ac9c2f478e075be22770659a8f4ff5e066ae67565eb64dba93c6cf141294bbb9ab6c6b9
+
+pkgname = surfshark-client

@@ -1,0 +1,30 @@
+pkgbase = yesplaymusic-bin
+	pkgdesc = A third party music application for Netease Music.Prebuilt version.Use system-wide electron.高颜值的第三方网易云播放器.
+	pkgver = 0.4.8_2
+	pkgrel = 3
+	url = https://music.qier222.com/
+	arch = aarch64
+	arch = armv7h
+	arch = x86_64
+	license = MIT
+	depends = electron13
+	provides = yesplaymusic=0.4.8_2
+	conflicts = yesplaymusic
+	conflicts = yesplaymusic-electron
+	conflicts = yesplaymusicosd-electron
+	conflicts = yesplaymusicosd-origin
+	conflicts = my-yesplaymusic
+	conflicts = r3play
+	conflicts = r3playx
+	source = LICENSE-0.4.8_2::https://raw.githubusercontent.com/qier222/YesPlayMusic/v0.4.8-2/LICENSE
+	source = yesplaymusic.sh
+	sha256sums = c33378c6fd12e6d040cedd06dc0d1bedfca74fd66bc46cc2cf10cc10e0906be6
+	sha256sums = 291f50480f5a61bc9c68db7d44cd0412071128706baa868a9cb854f8779a1980
+	source_aarch64 = yesplaymusic-0.4.8_2-aarch64.deb::https://github.com/qier222/YesPlayMusic/releases/download/v0.4.8-2/yesplaymusic_0.4.8_arm64.deb
+	sha256sums_aarch64 = 3cfd1aa726d2391aa578e068825760215d6d619a9aa3c919e3be26b80103a5dd
+	source_armv7h = yesplaymusic-0.4.8_2-armv7h.deb::https://github.com/qier222/YesPlayMusic/releases/download/v0.4.8-2/yesplaymusic_0.4.8_armv7l.deb
+	sha256sums_armv7h = 13ccd225abbd4d5beb6fcee95648f5aae551809ffd1eefe1b37cf446980d5ad3
+	source_x86_64 = yesplaymusic-0.4.8_2-x86_64.deb::https://github.com/qier222/YesPlayMusic/releases/download/v0.4.8-2/yesplaymusic_0.4.8_amd64.deb
+	sha256sums_x86_64 = 8935a2fad64651053b27599c98c76559748aa581b2e263007aaf4237d7e19d9f
+
+pkgname = yesplaymusic-bin

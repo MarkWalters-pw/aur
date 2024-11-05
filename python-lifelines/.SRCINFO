@@ -1,0 +1,19 @@
+pkgbase = python-lifelines
+	pkgdesc = Survival analysis in Python
+	pkgver = 0.30.0
+	pkgrel = 1
+	url = https://github.com/CamDavidsonPilon/lifelines
+	arch = any
+	license = MIT
+	makedepends = python-setuptools
+	depends = ipython
+	depends = python-autograd-gamma
+	depends = python-matplotlib
+	depends = python-pandas
+	depends = python-scikit-learn
+	depends = python-formulaic
+	options = !emptydirs
+	source = python-lifelines-0.30.0.tar.gz::https://github.com/CamDavidsonPilon/lifelines/archive/refs/tags/v0.30.0.tar.gz
+	sha256sums = 3d474c138d941f48c3b7a7b116b35823ab90e303e09b6f1e9a01e982a5f9e671
+
+pkgname = python-lifelines

@@ -1,0 +1,24 @@
+diff --git a/flowCore/src/fcsTextParse.cpp b/flowCore/src/fcsTextParse.cpp
+index 524f9ad..8cd6b7a 100644
+--- a/flowCore/src/fcsTextParse.cpp
++++ b/flowCore/src/fcsTextParse.cpp
+@@ -128,7 +128,7 @@ typedef std::vector<myPair> myPairs;
+ 			 std::string serror = "uneven number of tokens: ";
+ 		     serror.append(boost::lexical_cast<std::string>(j));
+ 		     serror.append("\n");
+-  			  Rprintf(serror.data());
++  			  Rprintf("%s", serror.data());
+ 			    Rprintf("The last keyword is dropped.\n");
+ 
+ 		 }
+diff --git a/flowCore/tests/testthat.R b/flowCore/tests/testthat.R
+index c979b0d..6d81483 100644
+--- a/flowCore/tests/testthat.R
++++ b/flowCore/tests/testthat.R
+@@ -1,6 +1,5 @@
+ library(testthat)
+ library(flowCore)
+-library(flowStats)
+ 
+ 
+ test_check("flowCore")

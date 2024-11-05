@@ -1,0 +1,25 @@
+pkgbase = python-albumentations
+	pkgdesc = Fast image augmentation library and easy to use wrapper around other libraries
+	pkgver = 1.4.21
+	pkgrel = 1
+	url = https://github.com/albumentations-team/albumentations
+	arch = any
+	license = MIT
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python-albucore
+	depends = python-numpy
+	depends = python-opencv
+	depends = python-pydantic
+	depends = python-scikit-image
+	depends = python-scipy
+	depends = python-typing_extensions
+	depends = python-yaml
+	optdepends = python-pytorch: for transforms from pytorch
+	optdepends = python-torchvision: for transforms from torchvision
+	source = albumentations-1.4.21.tar.gz::https://github.com/albumentations-team/albumentations/archive/1.4.21.tar.gz
+	sha512sums = d5ca3cbb2f3ff6fd4e0e01c4ea10a24f967c93c46b0efc81daf965fef5aca7f826e8a4a20cd013fd1e573ca7f50e2e6cecc08cacd915913a0cd2bf4b47ec8d3a
+
+pkgname = python-albumentations

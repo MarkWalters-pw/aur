@@ -1,0 +1,27 @@
+pkgbase = static-web-server-bin
+	pkgdesc = Static Web Server (sws): A cross-platform, high-performance and asynchronous web server for static files-serving (official binary version)
+	pkgver = 2.33.1
+	pkgrel = 1
+	url = https://static-web-server.net
+	arch = x86_64
+	arch = i686
+	arch = armv6h
+	arch = armv7h
+	arch = aarch64
+	license = Apache
+	license = MIT
+	provides = static-web-server
+	provides = sws
+	conflicts = sws
+	source_x86_64 = static_web_server_x86_64_2.33.1.tar.gz::https://github.com/static-web-server/static-web-server/releases/download/v2.33.1/static-web-server-v2.33.1-x86_64-unknown-linux-gnu.tar.gz
+	sha256sums_x86_64 = 9a1cbad49f7cb5499e7411d764e5b014e7cdc5f6abad29b11bd8a22b808dce5b
+	source_i686 = static_web_server_i686_2.33.1.tar.gz::https://github.com/static-web-server/static-web-server/releases/download/v2.33.1/static-web-server-v2.33.1-i686-unknown-linux-gnu.tar.gz
+	sha256sums_i686 = 00775b48c71e9953de814681256cef7fe413d9960d613aefafff090fe78b08fc
+	source_armv6h = static_web_server_armv6h_2.33.1.tar.gz::https://github.com/static-web-server/static-web-server/releases/download/v2.33.1/static-web-server-v2.33.1-arm-unknown-linux-musleabihf.tar.gz
+	sha256sums_armv6h = 75dcefb85ee98f08e2297a9b014e900c12e67cffccb21ac1b792969a4f3e734c
+	source_armv7h = static_web_server_armv7h_2.33.1.tar.gz::https://github.com/static-web-server/static-web-server/releases/download/v2.33.1/static-web-server-v2.33.1-armv7-unknown-linux-musleabihf.tar.gz
+	sha256sums_armv7h = b9a75022c2559132d3c50ae0ee5b9b52401f5c4e9870195c411a342b1900f893
+	source_aarch64 = static_web_server_aarch64_2.33.1.tar.gz::https://github.com/static-web-server/static-web-server/releases/download/v2.33.1/static-web-server-v2.33.1-aarch64-unknown-linux-gnu.tar.gz
+	sha256sums_aarch64 = 6b7b1fdcd521f9e7a85c3aa4e9fc6cee0f54e8055e7e4dc8e148fe15fc9843ee
+
+pkgname = static-web-server-bin

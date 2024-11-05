@@ -1,0 +1,57 @@
+pkgbase = upower-nosystemd-git
+	pkgdesc = Abstraction for enumerating power devices, listening to device events and querying history and statistics. Built without systemd dependencies. Latest Git checkout.
+	pkgver = 1.90.6+4.r1749.20241008.422ac4b
+	pkgrel = 1
+	url = http://upower.freedesktop.org
+	install = upower-nocritical.install
+	arch = i686
+	arch = x86_64
+	license = GPL-2.0-or-later
+	makedepends = pacman
+	makedepends = docbook-xsl
+	makedepends = git
+	makedepends = glib2-devel
+	makedepends = gobject-introspection
+	makedepends = intltool
+	makedepends = meson
+	makedepends = python
+	depends = gcc-libs
+	depends = glibc
+	depends = libgudev
+	depends = libimobiledevice
+	depends = libusb
+	optdepends = gobject-introspection-runtime: For /usr/lib/upower/integration-test.py.
+	optdepends = python>=3: For /usr/lib/upower/{integration-test.py,output_checker.py}.
+	optdepends = python-dbus: For /usr/lib/upower/integration-test.py.
+	optdepends = python-dbusmock: For /usr/lib/upower/integration-test.py.
+	optdepends = python-gobject: For For /usr/lib/upower/integration-test.py.
+	optdepends = python-packaging: For /usr/lib/upower/integration-test.py.
+	optdepends = umockdev: For For /usr/lib/upower/integration-test.py.
+	provides = upower=1.90.6+4.r1749.20241008.422ac4b
+	provides = upower-nocritical=1.90.6+4.r1749.20241008.422ac4b
+	provides = upower-nosystemd=1.90.6+4.r1749.20241008.422ac4b
+	provides = upower-git=1.90.6+4.r1749.20241008.422ac4b
+	conflicts = upower
+	conflicts = upower-nocritical-nosystemd-git<1.90.4+10.r1708
+	replaces = upower-nocritical-nosystemd-git<=1.90.4+10.r1708.20240523.669a1c2
+	options = emptydirs
+	backup = etc/UPower/UPower.conf
+	source = upower::git+https://gitlab.freedesktop.org/upower/upower.git
+	source = upower-nocritical.install
+	sha256sums = SKIP
+	sha256sums = a1e260af0dd05ab9c933a8f0f8f8abf83e4faea5caba6b3750554d36422bb0b8
+
+pkgname = upower-nosystemd-git
+	depends = gcc-libs
+	depends = glibc
+	depends = libgudev
+	depends = libimobiledevice
+	depends = libusb
+	depends = libglib-2.0.so
+	depends = libgobject-2.0.so
+	depends = libgio-2.0.so
+	provides = upower=1.90.6+4.r1749.20241008.422ac4b
+	provides = upower-nocritical=1.90.6+4.r1749.20241008.422ac4b
+	provides = upower-nosystemd=1.90.6+4.r1749.20241008.422ac4b
+	provides = upower-git=1.90.6+4.r1749.20241008.422ac4b
+	provides = libupower-glib.so

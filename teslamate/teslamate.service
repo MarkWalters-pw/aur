@@ -1,0 +1,19 @@
+[Unit]
+Description=TeslaMate
+After=network.target
+After=postgresql.service
+
+[Service]
+Type=simple
+User=teslamate
+Group=teslamate
+Restart=on-failure
+RestartSec=5
+EnvironmentFile=/etc/teslamate.conf
+WorkingDirectory=/usr/share/webapps/teslamate
+ExecStartPre=/usr/share/webapps/teslamate/bin/teslamate eval "TeslaMate.Release.migrate"
+ExecStart=/usr/share/webapps/teslamate/bin/teslamate start
+ExecStop=/usr/share/webapps/teslamate/bin/teslamate stop
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,24 @@
+pkgbase = peazip
+	pkgdesc = Cross-platform file and archive manager (Qt6)
+	pkgver = 10.0.0
+	pkgrel = 3
+	url = https://github.com/peazip/PeaZip
+	arch = i686
+	arch = x86_64
+	license = LGPL-3.0-or-later
+	makedepends = git
+	makedepends = lazarus
+	makedepends = xmlstarlet
+	depends = qt6pas
+	optdepends = unace
+	optdepends = upx
+	options = !debug
+	source = peazip::git+https://github.com/peazip/PeaZip.git#commit=2a48cd1421634f2fdd4ab83bf4e4a5933effcbf0
+	sha256sums = SKIP
+
+pkgname = peazip
+	depends = qt6pas
+	depends = brotli
+	depends = p7zip
+	depends = zstd
+	depends = hicolor-icon-theme

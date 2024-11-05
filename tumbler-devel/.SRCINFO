@@ -1,0 +1,34 @@
+pkgbase = tumbler-devel
+	pkgdesc = D-Bus service for applications to request thumbnails
+	pkgver = 4.19.2
+	pkgrel = 1
+	url = https://docs.xfce.org/xfce/tumbler/start
+	arch = i686
+	arch = x86_64
+	arch = armv7h
+	arch = aarch64
+	groups = xfce4-devel
+	license = GPL2
+	license = LGPL
+	makedepends = glib2-devel
+	makedepends = ffmpegthumbnailer
+	makedepends = poppler-glib
+	makedepends = libgsf
+	makedepends = libopenraw
+	makedepends = freetype2
+	makedepends = libgepub
+	depends = gdk-pixbuf2
+	depends = libxfce4util
+	optdepends = ffmpegthumbnailer: for video thumbnails
+	optdepends = poppler-glib: for PDF thumbnails
+	optdepends = libgsf: for ODF thumbnails
+	optdepends = libopenraw: for RAW thumbnails
+	optdepends = freetype2: for font thumbnails
+	optdepends = libgepub: for epub thumbnails
+	provides = tumbler=4.19.2
+	conflicts = tumbler
+	backup = etc/xdg/tumbler/tumbler.rc
+	source = https://archive.xfce.org/src/xfce/tumbler/4.19/tumbler-4.19.2.tar.bz2
+	sha256sums = e8ca7dafbcdc526b8ec7abcd1523311392dc743f26930c30863117d2866d2d4c
+
+pkgname = tumbler-devel

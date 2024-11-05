@@ -1,0 +1,27 @@
+pkgbase = r-chemmineob
+	pkgdesc = R interface to a subset of OpenBabel functionalities
+	pkgver = 1.44.0
+	pkgrel = 1
+	url = https://bioconductor.org/packages/ChemmineOB
+	arch = x86_64
+	license = Artistic-2.0
+	checkdepends = r-chemminer
+	checkdepends = r-runit
+	makedepends = eigen
+	makedepends = r-bh
+	depends = openbabel
+	depends = r-biocgenerics
+	depends = r-rcpp
+	depends = r-zlibbioc
+	optdepends = r-biocmanager
+	optdepends = r-biocstyle
+	optdepends = r-chemminer
+	optdepends = r-knitr
+	optdepends = r-knitrbootstrap
+	optdepends = r-rmarkdown
+	optdepends = r-runit
+	source = https://bioconductor.org/packages/release/bioc/src/contrib/ChemmineOB_1.44.0.tar.gz
+	md5sums = 4e3f20d57c46d1ff27d1ed273ef4d4c4
+	b2sums = 6f523ab5cda5aaebd3c0119d150940b473e9cc3610b62aae16ccc217aa35c2b6d32f9baf74d7b26e7cb17ec4dba6e3f81a4c369907d5608dc9bd573cbad323be
+
+pkgname = r-chemmineob

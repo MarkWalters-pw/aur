@@ -1,0 +1,17 @@
+post_install() {
+echo "Now you need to create database and check credentials in config files:
+    * /etc/teslamate.conf
+    * /var/lib/grafana/conf/provisioning/datasources/teslamate.yml
+
+Create the teslamate database:
+# psql -U postgres -c \"create database teslamate;\"
+# psql -U postgres -c \"create user teslamate with encrypted password 'secret';\"
+# psql -U postgres -c \"grant all privileges on database teslamate to teslamate;\"
+# psql -U postgres -c \"ALTER USER teslamate WITH SUPERUSER;\"
+
+To install needed grafana plugins run the following:
+# grafana-cli plugins install natel-discrete-panel
+# grafana-cli plugins install grafana-piechart-panel
+# grafana-cli plugins install grafana-worldmap-panel
+# grafana-cli plugins install pr0ps-trackmap-panel"
+}

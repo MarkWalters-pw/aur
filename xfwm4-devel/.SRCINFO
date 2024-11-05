@@ -1,0 +1,25 @@
+pkgbase = xfwm4-devel
+	pkgdesc = Xfce window manager (development snapshot)
+	pkgver = 4.19.0
+	pkgrel = 1
+	url = https://www.xfce.org/
+	arch = i686
+	arch = x86_64
+	arch = armv7h
+	arch = aarch64
+	groups = xfce4-devel
+	license = GPL2
+	makedepends = intltool
+	depends = libxfce4ui
+	depends = xfconf
+	depends = libwnck3
+	depends = libepoxy
+	depends = libxpresent
+	depends = hicolor-icon-theme
+	provides = xfwm4=4.19.0
+	conflicts = xfwm4
+	options = !libtool
+	source = https://archive.xfce.org/src/xfce/xfwm4/4.19/xfwm4-4.19.0.tar.bz2
+	sha256sums = 73546c60c348bcbe088fd990f7d5d1d6a6eca4226f956c109d3655c00583b9cf
+
+pkgname = xfwm4-devel
