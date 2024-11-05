@@ -1,0 +1,26 @@
+pkgbase = lbry-gtk-git
+	pkgdesc = Native desktop LBRY client
+	pkgver = r530.5a0432f
+	pkgrel = 1
+	url = https://codeberg.org/MorsMortium/lbry-gtk
+	arch = x86_64
+	license = GPL-3.0-or-later
+	makedepends = git
+	depends = python
+	depends = python-gobject
+	depends = python-cairo
+	depends = gtk3
+	depends = lbrynet
+	depends = jansson
+	depends = curl
+	depends = md4c
+	depends = pcre2
+	depends = imagemagick
+	depends = sqlite
+	depends = hicolor-icon-theme
+	provides = lbry-gtk
+	conflicts = lbry-gtk
+	source = lbry-gtk-git::git+https://codeberg.org/MorsMortium/lbry-gtk.git
+	sha512sums = SKIP
+
+pkgname = lbry-gtk-git

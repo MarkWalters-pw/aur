@@ -1,0 +1,18 @@
+pkgbase = nccl-git
+	pkgdesc = Library for NVIDIA multi-GPU and multi-node collective communication primitives
+	pkgver = 2.23.4.1.r3.2ea4ee9
+	pkgrel = 1
+	url = https://github.com/NVIDIA/nccl.git
+	arch = x86_64
+	license = BSD
+	makedepends = git
+	makedepends = cuda
+	depends = glibc
+	depends = gcc-libs
+	optdepends = openmpi: Use NCCL with MPI
+	provides = nccl
+	conflicts = nccl
+	source = git+https://github.com/NVIDIA/nccl.git
+	md5sums = SKIP
+
+pkgname = nccl-git

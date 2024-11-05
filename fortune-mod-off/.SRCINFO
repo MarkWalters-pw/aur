@@ -1,0 +1,21 @@
+pkgbase = fortune-mod-off
+	pkgdesc = The Fortune Cookie Program from BSD games, with the offensive quotes added back in
+	pkgver = 3.22.0
+	pkgrel = 1
+	url = https://www.shlomifish.org/open-source/projects/fortune-mod/
+	arch = x86_64
+	license = BSD-4-Clause-UC
+	makedepends = cmake
+	makedepends = rinutils
+	depends = glibc
+	depends = recode
+	provides = fortune-mod
+	conflicts = fortune-mod
+	source = https://github.com/shlomif/fortune-mod/releases/download/fortune-mod-3.22.0/fortune-mod-3.22.0.tar.xz
+	source = not-a-game.patch
+	sha512sums = 54726bad10a986b71a98de6eaed2ec56bbd28aeb245eea04254f2aa84fa4658d3bac148a0d1f3b8f44ed539b3a4d40379fc9d6438a1dba419a5c05a3180e3537
+	sha512sums = c4ef10c6d7bdb15ceec020d27e11c489ff56ed573b7efc0cf7465026514f153f789444cd7e2996d0fd9bb0f923c4eeeaf0eaa46a0bfacbc36712917e4f5d6c04
+	b2sums = 9edddea4c059314a22351bf088035284cf74983c714165bf52e50f1de00a300f3d04dc4e510ca8b4f3d78c89a4523e7b413a40ca4d6924c0fe94d3f11319c1d4
+	b2sums = 5283fde623cd0d304f073d59ff648d671323d8638876c629e8e8f175de00c3d9a1f807f0a9dfce3d9c9a56299dc1824062b013a4ce0541ee5fcea97c53f6ecec
+
+pkgname = fortune-mod-off

@@ -1,0 +1,7 @@
+post_install() {
+	bash /opt/jacartauc/scripts/PLIST/Linux/update_all_plists.sh
+}
+
+post_remove() {
+	mv /etc/libccid_Info.plist.*.backup /etc/libccid_Info.plist
+}

@@ -1,0 +1,25 @@
+pkgbase = ezra-bible-app
+	pkgdesc = A modern and user-friendly Bible app for desktops, tablets and mobiles focussing on topical study
+	pkgver = 1.15.0
+	pkgrel = 1
+	url = https://ezrabibleapp.net
+	arch = x86_64
+	license = GPL-2.0-or-later
+	makedepends = cmake
+	makedepends = git
+	makedepends = npm
+	makedepends = python-setuptools
+	makedepends = subversion
+	makedepends = unzip
+	depends = alsa-lib
+	depends = gtk3
+	depends = nodejs
+	depends = nss
+	conflicts = ezra-project
+	options = !lto
+	source = git+https://github.com/ezra-bible-app/ezra-bible-app.git#tag=1.15.0
+	source = git+https://github.com/ezra-project/apidocs.ezrabibleapp.net.git
+	sha256sums = 13cf397e500dfce622bce9b60aa618d051d8fbf78eece650ab082b20458aee02
+	sha256sums = SKIP
+
+pkgname = ezra-bible-app

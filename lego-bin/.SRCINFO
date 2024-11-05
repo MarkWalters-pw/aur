@@ -1,0 +1,23 @@
+pkgbase = lego-bin
+	pkgdesc = Lets Encrypt client and ACME library written in Go
+	pkgver = 4.19.0
+	pkgrel = 1
+	url = https://go-acme.github.io/lego/
+	arch = x86_64
+	arch = i686
+	arch = armv7h
+	arch = aarch64
+	license = MIT
+	provides = lego
+	conflicts = lego-git
+	conflicts = lego
+	source_x86_64 = https://github.com/go-acme/lego/releases/download/v4.19.0/lego_v4.19.0_linux_amd64.tar.gz
+	sha256sums_x86_64 = 926e33001050a8abec58ca8f11f2673283a3ea87451bd4aa4887421214c5ca68
+	source_i686 = https://github.com/go-acme/lego/releases/download/v4.19.0/lego_v4.19.0_linux_386.tar.gz
+	sha256sums_i686 = f172f15bfbbdc6f75b21ade742e599343146c4921f5ed81900ab86cef25d4189
+	source_armv7h = https://github.com/go-acme/lego/releases/download/v4.19.0/lego_v4.19.0_linux_armv7.tar.gz
+	sha256sums_armv7h = bf5c387a622be30385aa3e76fcce58f014c83e35edf4f795797fb4ae088f0a9a
+	source_aarch64 = https://github.com/go-acme/lego/releases/download/v4.19.0/lego_v4.19.0_linux_arm64.tar.gz
+	sha256sums_aarch64 = d589dc176a5b8af57024cb32bdbaba477940eb4a6b140766a4c94b98a1a51044
+
+pkgname = lego-bin

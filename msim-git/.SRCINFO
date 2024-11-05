@@ -1,0 +1,16 @@
+pkgbase = msim-git
+	pkgdesc = Light-weight MIPS R4000 and RISC-V system simulator
+	pkgver = 482a575
+	pkgrel = 1
+	url = https://d3s.mff.cuni.cz/software/msim/
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = imake
+	depends = readline
+	provides = msim
+	conflicts = msim
+	source = msim-git::git+https://github.com/d-iii-s/msim.git
+	md5sums = SKIP
+
+pkgname = msim-git

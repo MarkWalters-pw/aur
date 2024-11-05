@@ -1,0 +1,26 @@
+pkgbase = limine-snapper-sync-git
+	pkgdesc = The tool syncs Snapper snapshots with Limine bootloader
+	pkgver = r82.beea78d
+	pkgrel = 1
+	url = https://gitlab.com/Zesko/limine-snapper-sync
+	arch = any
+	license = GPL3
+	makedepends = git
+	makedepends = maven
+	depends = bash
+	depends = java-environment-openjdk>=17
+	depends = limine
+	depends = snapper
+	depends = btrfs-progs
+	depends = inotify-tools
+	optdepends = dunst: Displays a desktop notification for one-click restoration.
+	optdepends = limine-dracut-support: Automates kernel installation/removal and Limine boot entry management.
+	optdepends = rsync: Provides an alternative method for restoring snapshots.
+	optdepends = journalctl-desktop-notification: Sends desktop notifications for errors, including detected hardware issues.
+	optdepends = b3sum: Blake3 fast hash function that avoids duplication.
+	conflicts = limine-snapper-sync
+	backup = etc/limine-snapper-sync.conf
+	source = git+https://gitlab.com/Zesko/limine-snapper-sync.git
+	sha1sums = SKIP
+
+pkgname = limine-snapper-sync-git

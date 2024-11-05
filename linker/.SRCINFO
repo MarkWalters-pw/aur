@@ -1,0 +1,16 @@
+pkgbase = linker
+	pkgdesc = Open links according to content.
+	pkgver = r16.55786e6
+	pkgrel = 1
+	url = https://codeberg.org/MorsMortium/linker
+	arch = any
+	license = GPL-3.0-or-later
+	makedepends = git
+	depends = python
+	depends = python-appdirs
+	depends = hicolor-icon-theme
+	conflicts = linker
+	source = linker::git+https://codeberg.org/MorsMortium/linker.git
+	sha512sums = SKIP
+
+pkgname = linker

@@ -1,0 +1,110 @@
+pkgbase = jdk
+	pkgdesc = Oracle Java
+	pkgver = 23
+	pkgrel = 1
+	url = https://www.oracle.com/java/
+	arch = x86_64
+	license = LicenseRef-Custom
+	makedepends = python-html2text
+	noextract = jdk-23_doc-all.zip
+	source = https://download.oracle.com/java/23/archive/jdk-23_linux-x64_bin.tar.gz
+	source = https://download.oracle.com/otn_software/java/jdk/23+37/3c5b90190c68498b986a97f276efd28a/jdk-23_doc-all.zip
+	source = jdk-23_doc-license.html::https://download.oracle.com/otndocs/jcp/java_se-23-final-spec/license.html
+	source = java.desktop
+	source = jconsole.desktop
+	source = jshell.desktop
+	source = java_16.png
+	source = java_48.png
+	source = LICENSE
+	sha256sums = 6e35269e6f31ef80246045f704b41ff5b4ecf9811ba1f6c8ff54a25c84afaa27
+	sha256sums = bcb93d726121f31162f8e76c434e8ca7995f98f27d88171aa917233f15ddbfa6
+	sha256sums = bcbf71218372b9f8f6012c90903e98bd768f7e24b595e49d522fae27a50be0aa
+	sha256sums = bafae9abf1ea803e9476b6d1f72b167b00fcbc9cb92ab9e361b3762c3b09db0b
+	sha256sums = 1d79c97f7166ccdb2478315c07984c7fe6d36ac602b0ecbbcdd466b7a5fa75ea
+	sha256sums = 2630fe1ffd7f20592f9e7a0fdabd241c566a125523c724c4422273d375689963
+	sha256sums = d27fec1d74f7a3081c3d175ed184d15383666dc7f02cc0f7126f11549879c6ed
+	sha256sums = 7cf8ca096e6d6e425b3434446b0835537d0fc7fe64b3ccba7a55f7bd86c7e176
+	sha256sums = 20becfcac0bdeaa29a76e6966d727f8cc79381354cbd5d530cdec823954df19f
+
+pkgname = jre
+	pkgdesc = Oracle Java Runtime Environment
+	install = jre.install
+	depends = java-runtime-common
+	depends = ca-certificates-utils
+	depends = freetype2
+	depends = libx11
+	depends = libxext
+	depends = libxi
+	depends = libxtst
+	depends = libxrender
+	optdepends = alsa-lib: for basic sound support
+	optdepends = gtk2: for the Gtk+ 2 look and feel - desktop usage
+	optdepends = gtk3: for the Gtk+ 3 look and feel - desktop usage
+	provides = java-runtime=23
+	provides = java-runtime-jdk23
+	provides = jre23-jdk=23-1
+	provides = java-runtime-headless=23
+	provides = java-runtime-headless-jdk=23
+	provides = jre23-jdk-headless=23-1
+	conflicts = jdk
+	backup = etc/java-jdk/management/jmxremote.access
+	backup = etc/java-jdk/management/jmxremote.password.template
+	backup = etc/java-jdk/management/management.properties
+	backup = etc/java-jdk/security/policy/limited/default_US_export.policy
+	backup = etc/java-jdk/security/policy/limited/default_local.policy
+	backup = etc/java-jdk/security/policy/limited/exempt_local.policy
+	backup = etc/java-jdk/security/policy/unlimited/default_US_export.policy
+	backup = etc/java-jdk/security/policy/unlimited/default_local.policy
+	backup = etc/java-jdk/security/policy/README.txt
+	backup = etc/java-jdk/security/java.policy
+	backup = etc/java-jdk/security/java.security
+	backup = etc/java-jdk/logging.properties
+	backup = etc/java-jdk/net.properties
+	backup = etc/java-jdk/sound.properties
+
+pkgname = jdk
+	pkgdesc = Oracle Java Development Kit
+	install = jdk.install
+	depends = java-environment-common
+	depends = java-runtime-common
+	depends = ca-certificates-utils
+	depends = freetype2
+	depends = libx11
+	depends = libxext
+	depends = libxi
+	depends = libxtst
+	depends = libxrender
+	depends = zlib
+	depends = hicolor-icon-theme
+	optdepends = alsa-lib: for basic sound support
+	optdepends = gtk2: for the Gtk+ 2 look and feel - desktop usage
+	optdepends = gtk3: for the Gtk+ 3 look and feel - desktop usage
+	provides = java-environment=23
+	provides = java-environment-jdk=23
+	provides = jdk23-jdk=23-1
+	provides = jre
+	provides = java-runtime=23
+	provides = java-runtime-jdk23
+	provides = jre23-jdk=23-1
+	provides = java-runtime-headless=23
+	provides = java-runtime-headless-jdk=23
+	provides = jre23-jdk-headless=23-1
+	conflicts = jre
+	backup = etc/java-jdk/management/jmxremote.access
+	backup = etc/java-jdk/management/jmxremote.password.template
+	backup = etc/java-jdk/management/management.properties
+	backup = etc/java-jdk/security/policy/limited/default_US_export.policy
+	backup = etc/java-jdk/security/policy/limited/default_local.policy
+	backup = etc/java-jdk/security/policy/limited/exempt_local.policy
+	backup = etc/java-jdk/security/policy/unlimited/default_US_export.policy
+	backup = etc/java-jdk/security/policy/unlimited/default_local.policy
+	backup = etc/java-jdk/security/policy/README.txt
+	backup = etc/java-jdk/security/java.policy
+	backup = etc/java-jdk/security/java.security
+	backup = etc/java-jdk/logging.properties
+	backup = etc/java-jdk/net.properties
+	backup = etc/java-jdk/sound.properties
+
+pkgname = jdk-doc
+	pkgdesc = Oracle Java documentation
+	arch = any

@@ -1,0 +1,20 @@
+pkgbase = libcoap
+	pkgdesc = C-Implementation of CoAP
+	pkgver = 4.3.5
+	pkgrel = 1
+	url = https://libcoap.net/
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	license = BSD2
+	license = GPL2
+	makedepends = git
+	makedepends = doxygen
+	makedepends = asciidoc
+	provides = coap-client
+	provides = coap-rd
+	provides = coap-server
+	source = https://github.com/obgm/libcoap/archive/refs/tags/v4.3.5.tar.gz
+	sha256sums = a417ed26ec6c95c041b42353b5b6fad1602e2bf42a6e26c09863450e227b7b5f
+
+pkgname = libcoap

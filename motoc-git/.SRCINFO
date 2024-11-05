@@ -1,0 +1,16 @@
+pkgbase = motoc-git
+	pkgdesc = Monado Tracking Origin Calibrator
+	pkgver = 0.3.3.r0.834a7f6
+	pkgrel = 1
+	url = https://github.com/galister/motoc
+	arch = x86_64
+	license = GPL-3.0-or-later
+	makedepends = git
+	makedepends = cargo
+	depends = openxr
+	provides = motoc
+	conflicts = motoc
+	source = motoc::git+https://github.com/galister/motoc.git
+	sha256sums = SKIP
+
+pkgname = motoc-git

@@ -1,0 +1,18 @@
+pkgbase = gotify-tray-cpp
+	pkgdesc = A tray notification application for receiving messages from a Gotify server.
+	pkgver = 0.0.5
+	pkgrel = 3
+	url = https://github.com/seird/gotify-tray-cpp
+	arch = x86_64
+	license = GPL-3.0-or-later
+	makedepends = git
+	makedepends = cmake
+	depends = qt6-base
+	depends = qt6-websockets
+	depends = hicolor-icon-theme
+	depends = glibc
+	depends = gcc-libs
+	source = gotify-tray-cpp-0.0.5.tar.gz::https://github.com/seird/gotify-tray-cpp/archive/v0.0.5.tar.gz
+	sha256sums = 1d6caecd98f7f6533ba413c12604831bd63be6f3bb3d22f74a9276a9683ae96a
+
+pkgname = gotify-tray-cpp

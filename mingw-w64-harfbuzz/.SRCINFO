@@ -1,0 +1,34 @@
+pkgbase = mingw-w64-harfbuzz
+	pkgdesc = OpenType text shaping engine (mingw-w64)
+	pkgver = 10.0.1
+	pkgrel = 1
+	url = https://harfbuzz.github.io/
+	arch = any
+	license = MIT
+	makedepends = glib2-devel
+	makedepends = mingw-w64-meson
+	makedepends = mingw-w64-cairo
+	makedepends = mingw-w64-icu
+	makedepends = python
+	makedepends = ragel
+	makedepends = git
+	depends = mingw-w64-crt
+	depends = mingw-w64-glib2
+	depends = mingw-w64-graphite
+	depends = mingw-w64-freetype2
+	options = !strip
+	options = staticlibs
+	options = !buildflags
+	source = git+https://github.com/harfbuzz/harfbuzz?signed#tag=10.0.1
+	validpgpkeys = 053D20F17CCCA9651B2C6FCB9AB24930C0B997A2
+	validpgpkeys = 9F377DDB6D3153A48EB3EB1E63CC496475267693
+	validpgpkeys = 2277650A4E8BDFE4B7F6BE419FEE04E5D3531115
+	validpgpkeys = EACF64F53455E2771BA661A4803B21859F015E4E
+	b2sums = 71834bb36eb6bffce10b479d22043836d155bde0bd02a90565a17c47c93ca8b1bcb1d3409b7ae6de3a5c0dda4f59499c58dad1c1657f05c9f34f8dda6a832e1b
+
+pkgname = mingw-w64-harfbuzz
+
+pkgname = mingw-w64-harfbuzz-icu
+	pkgdesc = OpenType text shaping engine (ICU integration, mingw-w64)
+	depends = mingw-w64-harfbuzz
+	depends = mingw-w64-icu

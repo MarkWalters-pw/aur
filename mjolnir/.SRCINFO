@@ -1,0 +1,23 @@
+pkgbase = mjolnir
+	pkgdesc = A moderation tool for Matrix.
+	pkgver = 1.8.3
+	pkgrel = 3
+	url = https://github.com/matrix-org/mjolnir
+	arch = any
+	license = Apache-2.0
+	makedepends = yarn
+	depends = nodejs
+	optdepends = python-mjolnir-synapse_antispam: Mjolnir antispam module for matrix-synapse
+	backup = etc/mjolnir/config/production.yaml
+	source = https://github.com/matrix-org/mjolnir/archive/refs/tags/v1.8.3.tar.gz
+	source = mjolnir
+	source = mjolnir.service
+	source = mjolnir.sysusers
+	source = mjolnir.tmpfiles
+	sha256sums = 0e134ab1339b666629718a81d923410f3af31559afbe4d6dc8f895aba4ef5192
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = mjolnir

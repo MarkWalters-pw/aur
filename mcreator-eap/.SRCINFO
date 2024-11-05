@@ -1,0 +1,16 @@
+pkgbase = mcreator-eap
+	pkgdesc = Make Minecraft Java Edition mods, Bedrock Edition Add-Ons, and data packs using visual graphical programming or integrated IDE (EAP release)
+	pkgver = 2024.3.39215
+	pkgrel = 2
+	url = https://mcreator.net
+	arch = x86_64
+	license = GPL-3.0-or-later
+	noextract = mcreator-eap-2024.3.39215.tar.gz
+	source = mcreator-eap-2024.3.39215.tar.gz::https://github.com/mcreator/mcreator/releases/download/2024.3.39215/MCreator.EAP.2024.3.39215.Linux.64bit.tar.gz
+	source = mcreator.desktop
+	b2sums = 335afb7156ccd6ef9ce9f1055caf638e64130fefb4e53cb55c710f40af09f7540184bb0527e985d386995d2d249273ea10dba1886adf316500cf0db43cabf75e
+	b2sums = c4227c9cb09a4c0db1fd368f4815d890da16b3bf08552d5bf3766f5ad9706444e5ed42cd591422ddd326e295faa6c302d2144f2c6963598df6cca14537d13248
+
+pkgname = mcreator-eap
+	depends = glibc
+	depends = java-runtime=21

@@ -1,0 +1,34 @@
+pkgbase = libosmocore-git
+	pkgdesc = Osmocom core library
+	pkgver = 1.10.0.r17.cc16f2be0
+	pkgrel = 1
+	url = https://osmocom.org/projects/libosmocore/wiki/Libosmocore
+	arch = x86_64
+	arch = i686
+	license = GPL-2.0-or-later
+	makedepends = git
+	makedepends = python
+	depends = pcsclite
+	depends = talloc
+	depends = libusb
+	depends = lksctp-tools
+	depends = libmnl
+	depends = gnutls
+	depends = systemd-libs
+	depends = liburing
+	provides = libosmocore=1.10.0.r17.cc16f2be0
+	provides = libosmocodec.so=4-64
+	provides = libosmocoding.so=0-64
+	provides = libosmocore.so=22-64
+	provides = libosmoctrl.so=0-64
+	provides = libosmogb.so=14-64
+	provides = libosmogsm.so=20-64
+	provides = libosmoisdn.so=0-64
+	provides = libosmosim.so=2-64
+	provides = libosmousb.so=0-64
+	provides = libosmovty.so=13-64
+	conflicts = libosmocore
+	source = git+https://gitea.osmocom.org/osmocom/libosmocore.git
+	sha256sums = SKIP
+
+pkgname = libosmocore-git

@@ -1,0 +1,16 @@
+pkgbase = libmodplug-git
+	pkgdesc = A MOD playing library
+	pkgver = r461.gd1b97ed
+	pkgrel = 1
+	url = https://modplug-xmms.sourceforge.net/
+	arch = i686
+	arch = x86_64
+	license = LicenseRef-libmodplug
+	makedepends = git
+	depends = gcc-libs
+	provides = libmodplug=r461.gd1b97ed
+	conflicts = libmodplug
+	source = git+https://github.com/Konstanty/libmodplug.git
+	sha256sums = SKIP
+
+pkgname = libmodplug-git

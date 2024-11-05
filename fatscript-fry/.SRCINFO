@@ -1,0 +1,19 @@
+pkgbase = fatscript-fry
+	pkgdesc = fry - FatScript Interpreter
+	pkgver = 3.3.2
+	pkgrel = 1
+	url = https://fatscript.org/
+	arch = any
+	groups = fatscript
+	license = GPL3
+	makedepends = git
+	makedepends = gcc
+	makedepends = bash
+	makedepends = libcurl-compat
+	depends = libcurl-compat
+	optdepends = openssl: for SSL/TLS support
+	optdepends = libffi: for DLL/FFI support
+	source = git+https://gitlab.com/fatscript/fry.git#tag=v3.3.2
+	sha256sums = SKIP
+
+pkgname = fatscript-fry

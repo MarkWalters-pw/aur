@@ -1,0 +1,15 @@
+[Unit]
+Description=OpenPGP keyserver
+After=network.target postgresql.service
+
+[Service]
+Type=simple
+User=hockeypuck
+WorkingDirectory=/var/lib/hockeypuck
+ExecStart=/usr/bin/hockeypuck -config /etc/hockeypuck/hockeypuck.conf
+ExecReload=/bin/kill -s HUP $MAINPID
+TimeoutSec=120
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

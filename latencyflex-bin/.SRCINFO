@@ -1,0 +1,15 @@
+pkgbase = latencyflex-bin
+	pkgdesc = Vendor and game agnostic latency reduction middleware (binary release)
+	pkgver = 0.1.1
+	pkgrel = 4
+	url = https://github.com/ishitatsuyuki/LatencyFleX
+	arch = x86_64
+	license = Apache-2.0
+	optdepends = latencyflex-proton-ge-custom: symlinks for proton-ge-custom (and -bin) system installation
+	provides = latencyflex
+	conflicts = latencyflex
+	conflicts = latencyflex-git
+	source = https://github.com/ishitatsuyuki/LatencyFleX/releases/download/v0.1.1/latencyflex-v0.1.1.tar.xz
+	sha256sums = c992ebd2f43c99ab4a84a6ffce692d9aae4cc2571536a5854ae2e79b6951e78a
+
+pkgname = latencyflex-bin

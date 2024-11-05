@@ -1,0 +1,16 @@
+pkgbase = hailort
+	pkgdesc = Hailo AI accelerator runtime for Hailo AI PCIe devices
+	pkgver = 4.19.0
+	pkgrel = 1
+	url = https://hailo.ai/
+	arch = aarch64
+	arch = x86_64
+	license = GPL-2.0
+	makedepends = cmake
+	makedepends = gcc
+	depends = hailo-pci
+	provides = libhailort.so
+	source = https://github.com/hailo-ai/hailort/archive/v4.19.0.tar.gz
+	sha256sums = 92ab5613ee83cd5b85724b06aa6fcb04a6ac0784ef75a51f6884dc736dc0fd7d
+
+pkgname = hailort

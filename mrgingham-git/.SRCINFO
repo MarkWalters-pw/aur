@@ -1,0 +1,29 @@
+pkgbase = mrgingham-git
+	pkgdesc = Chessboard corner-finder for a camera calibration system
+	pkgver = v1.24.r4.g3841c22
+	pkgrel = 1
+	url = https://github.com/dkogan/mrgingham
+	arch = i686
+	arch = x86_64
+	license = LGPL-2.1-or-later
+	makedepends = make
+	makedepends = gcc
+	makedepends = mawk
+	makedepends = mrbuild
+	makedepends = boost
+	depends = bash
+	depends = gcc-libs
+	depends = glibc
+	depends = opencv
+	depends = python
+	depends = python-gnuplotlib
+	depends = python-numpy
+	depends = python-numpysane
+	depends = python-scipy
+	depends = vnlog
+	provides = mrgingham
+	conflicts = mrgingham
+	source = mrgingham::git+https://github.com/dkogan/mrgingham.git#branch=master
+	md5sums = SKIP
+
+pkgname = mrgingham-git

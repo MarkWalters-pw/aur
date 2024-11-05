@@ -1,0 +1,21 @@
+pkgbase = mauikit-filebrowsing-git
+	pkgdesc = MauiKit File Browsing utilities and controls
+	pkgver = 4.0.0.r2.gd4569fa
+	pkgrel = 1
+	url = https://invent.kde.org/maui/mauikit-filebrowsing
+	arch = x86_64
+	arch = i686
+	arch = armv7h
+	arch = aarch64
+	license = GPL3
+	makedepends = git
+	makedepends = cmake
+	makedepends = extra-cmake-modules
+	depends = mauikit-git
+	depends = kio
+	provides = mauikit-filebrowsing
+	conflicts = mauikit-filebrowsing
+	source = git+https://invent.kde.org/maui/mauikit-filebrowsing.git
+	sha256sums = SKIP
+
+pkgname = mauikit-filebrowsing-git

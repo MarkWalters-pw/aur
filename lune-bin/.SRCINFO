@@ -1,0 +1,17 @@
+pkgbase = lune-bin
+	pkgdesc = [Precompiled Binaries] A standalone Luau script runtime
+	pkgver = 0.8.9
+	pkgrel = 1
+	url = https://lune-org.github.io/docs
+	arch = x86_64
+	arch = aarch64
+	license = MPL2
+	depends = glibc
+	provides = lune
+	conflicts = lune
+	source_x86_64 = https://github.com/filiptibell/lune/releases/download/v0.8.9/lune-0.8.9-linux-x86_64.zip
+	sha256sums_x86_64 = eb30bdde967ba97951a4e0cafa0a197396ddd68dfc58e1b60349129c178eee8b
+	source_aarch64 = https://github.com/filiptibell/lune/releases/download/v0.8.9/lune-0.8.9-linux-aarch64.zip
+	sha256sums_aarch64 = 913b07e1c42b8f8fc9e11a1f9d8b07e903e97efcf42b109d60326e85f5cc3cb7
+
+pkgname = lune-bin

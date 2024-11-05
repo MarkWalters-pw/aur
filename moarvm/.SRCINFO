@@ -1,0 +1,16 @@
+pkgbase = moarvm
+	pkgdesc = A VM with adaptive optimization and JIT compilation, built for Rakudo
+	pkgver = 2024.09
+	pkgrel = 1
+	url = http://moarvm.com/
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	license = PerlArtistic
+	makedepends = perl>=5.8
+	depends = zstd
+	options = !makeflags
+	source = http://moarvm.com/releases/MoarVM-2024.09.tar.gz
+	b2sums = 2ae388c6bf688894dfe4c8693bf34464618af9539b04528b02b689a9f0b32734e5625078f63bb1b9fc558aa608884d11b58e3e425ac6bb0aee21088edefc37a7
+
+pkgname = moarvm

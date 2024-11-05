@@ -1,0 +1,101 @@
+#!/hint/bash
+# Maintainer : bartus <arch-user-repoᘓbartus.33mail.com>
+# Contributor: Filipe Laíns (FFY00) <filipe.lains@gmail.com>
+# Contributor: Iru Cai <mytbk920423@gmail.com>
+# Contributor: Alexander Hunziker <alex.hunziker@gmail.com>
+# Contributor: Alessio Biancalana <dottorblaster@gmail.com>
+
+pkgname=gimp-git
+_pkgname=${pkgname%-git}
+provides=(gimp)
+conflicts=(gimp)
+epoch=2
+pkgver=2.99.1.r1398.f7ac033777
+pkgrel=1
+pkgdesc="GNU Image Manipulation Program"
+arch=('i686' 'x86_64')
+url="https://www.gimp.org"
+license=('GPL' 'LGPL')
+depends=(
+	'lcms2>=@_lcms_version@'
+	'libwmf>=@_wmf_version@'
+	'icu'
+	'enchant'
+	'libgexiv2>=@_gexiv2_version@'
+	'librsvg>=@_rsvg_version@'
+	'desktop-file-utils'
+	'libexif>=0.6.15'
+	'libart-lgpl>=2.3.19'
+	'dbus-glib'
+	'gtk-doc>=@_gtkdoc_version@'
+	'poppler-glib>=@_poppler_version@'
+	'poppler-data>=@_poppler_data_version@'
+	'openexr>=@_openexr_version@'
+	'mypaint-brushes1>=@_libmypaint_version@'
+	'babl-git>=@_babl_version@'
+	'gegl-git>=@_gegl_version@'
+	'cairo>=@_cairo_version@'
+	'appstream-glib>=@_appstream_glib_version@'
+	'gobject-introspection>=@_introspection_version@'
+	)
+makedepends+=('git' 'intltool>=0.40.1'
+             'alsa-lib>=1.0.0' 'libxslt' 'glib-networking'
+             'alsa-lib' 'curl' 'ghostscript' 'libxpm' 'webkit2gtk'
+             'libheif' 'libwebp' 'libmng' 'iso-codes' 'aalib' 'zlib'
+             'gjs' 'python-gobject' 'python-packaging' 'luajit' 'meson'
+             'glib2-devel'
+             )
+checkdepends=('xorg-server-xvfb')
+optdepends=('gutenprint: for sophisticated printing only as gimp has built-in cups print support'
+            'alsa-lib: for MIDI event controller module'
+            'curl: for URI support'
+            'ghostscript: for postscript support'
+            'libxpm: XPM support'
+            'webkit2gtk: HTML renderer and web content engine'
+            'libheif: HEIF support'
+            'libwebp: WebP support'
+            'libmng: MNG support'
+            'iso-codes: Language support'
+            'aalib: ASCII art support'
+            'zlib: Compression routines'
+            'gjs: JavaScript scripting support'
+            'luajit: LUA scripting support'
+            )
+source=('git+https://gitlab.gnome.org/GNOME/gimp.git'
+        "gimp-data::git+https://gitlab.gnome.org/GNOME/gimp-data"
+        'linux.gpl')
+sha512sums=('SKIP'
+            'SKIP'
+            '6f33d57f242fa8ce04b65e06a712bd54677306a45b22cb853fbe348089cd4673bd4ed91073074fe067166fe8951c370f8bbbc386783e3ed5170d52e9062666fe')
+
+pkgver() {
+# shellcheck disable=SC2183,SC2046
+  printf "%s.r%s.%s" \
+    $(grep -zoP "(?s)^project\(.*?version: '\K[0-9.]+(?=\'.*?\))" ${_pkgname}/meson.build|tr -d '\0') \
+    "$(git -C $_pkgname rev-list "$(git -C $_pkgname describe --abbrev=0)"..HEAD --count)" \
+    "$(git -C $_pkgname log --pretty=format:'%h' -n 1)"
+}
+
+prepare() {
+  git -C "$srcdir/gimp" config submodule.gimp-data.url "$srcdir/gimp-data"
+  git -C "$srcdir/gimp" -c protocol.file.allow=always submodule update --init
+}
+
+build() {
+  meson "${srcdir}/${_pkgname}"\
+        "${srcdir}/build"\
+        --prefix=/usr \
+        -Dbug-report-url='https://github.com/bartoszek/AUR-gimp-git/issues'
+  export NINJA_STATUS="[%p | %f<%r<%u | %cbps ] "
+# shellcheck disable=SC2046 # allow MAKEFLAGS to split when passing multiple flags.
+  ninja $(grep -oP -- '-+[A-z]+ ?[0-9]*'<<<"${MAKEFLAGS:--j1}") -C "${srcdir}/build"
+}
+
+check() {
+  ninja -C "${srcdir}/build" test
+}
+
+package() {
+  DESTDIR="${pkgdir}" ninja -C "${srcdir}/build" install
+  install -Dm 644 "${srcdir}/linux.gpl" "${pkgdir}/usr/share/gimp/2.99/palettes/Linux.gpl"
+}

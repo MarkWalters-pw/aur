@@ -1,0 +1,15 @@
+pkgbase = nginx-mod-http-knock
+	pkgdesc = Nginx module ngx_http_knock_module to guard websites with a secret handshake
+	pkgver = r11.3afcd02
+	pkgrel = 1
+	url = https://github.com/PhillipTaylor/ngx_http_knock_module
+	arch = x86_64
+	license = MIT
+	makedepends = nginx
+	makedepends = nginx-src
+	makedepends = git
+	source = nginx-mod-http-knock::git+https://github.com/PhillipTaylor/ngx_http_knock_module.git#commit=3afcd025ad3eda80fbe21eb606d1ce14ae614d4c
+	sha256sums = 62ab79a3e46adbf44d427c3dbe99ac16853aa2c45a6e14b8d88cb92a3765fe2e
+
+pkgname = nginx-mod-http-knock
+	depends = nginx

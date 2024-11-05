@@ -1,0 +1,7 @@
+post_install() {
+  echo 'You must add yourself to the mock group in order to run mock.'
+}
+
+post_remove() {
+  echo 'Make sure to empty out /var/lib/mock and /var/cache/mock'
+}

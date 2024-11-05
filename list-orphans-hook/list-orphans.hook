@@ -1,0 +1,11 @@
+[Trigger]
+Operation = Remove
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = *
+
+[Action]
+Description = Checking for orphaned packages...
+When = PostTransaction
+Exec = /usr/bin/list-orphans

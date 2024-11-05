@@ -1,0 +1,27 @@
+pkgbase = monero-gui-static-bin
+	pkgdesc = Monero: the secure, private, untraceable peer-to-peer currency
+	pkgver = 0.18.3.4
+	pkgrel = 1
+	url = https://www.getmonero.org/downloads/#gui
+	arch = x86_64
+	license = BSD-3-Clause
+	depends = glib2
+	depends = glibc
+	depends = libglvnd
+	depends = libx11
+	depends = libxcb
+	depends = libxkbcommon
+	depends = libxkbcommon-x11
+	depends = systemd-libs
+	depends = xcb-util-image
+	depends = xcb-util-keysyms
+	depends = xcb-util-renderutil
+	depends = xcb-util-wm
+	provides = monero
+	provides = monero-gui
+	conflicts = monero
+	conflicts = monero-gui
+	source = https://downloads.getmonero.org/gui/monero-gui-linux-x64-v0.18.3.4.tar.bz2
+	sha256sums = 2866f3a2be30e4c4113e6274cad1d6698f81c37ceebc6e8f084c57230a0f70a6
+
+pkgname = monero-gui-static-bin

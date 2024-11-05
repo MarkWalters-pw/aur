@@ -1,0 +1,19 @@
+pkgbase = kube-score-bin
+	pkgdesc = Kubernetes object analysis with recommendations for improved reliability and security
+	pkgver = 1.19.0
+	pkgrel = 1
+	url = https://github.com/zegl/kube-score
+	arch = x86_64
+	arch = aarch64
+	arch = armv6h
+	license = MIT
+	provides = kube-score
+	conflicts = kube-score
+	source_x86_64 = https://github.com/zegl/kube-score/releases/download/v1.19.0/kube-score_1.19.0_linux_amd64.tar.gz
+	sha256sums_x86_64 = a5b10e509bd845f0bc32a529f4e8165c021877f924ee6f6be66678039f75a761
+	source_aarch64 = https://github.com/zegl/kube-score/releases/download/v1.19.0/kube-score_1.19.0_linux_arm64.tar.gz
+	sha256sums_aarch64 = 96b24dda719b75fa7b6d14e5423553bffa09688bd6f9400789b623e30f0e3541
+	source_armv6h = https://github.com/zegl/kube-score/releases/download/v1.19.0/kube-score_1.19.0_linux_armv6.tar.gz
+	sha256sums_armv6h = 6931b3835a1fd63ea087b02518fdc2ace707098e7d45e4d30acef2c8e4bc796f
+
+pkgname = kube-score-bin

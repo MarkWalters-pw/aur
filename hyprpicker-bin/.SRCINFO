@@ -1,0 +1,28 @@
+pkgbase = hyprpicker-bin
+	pkgdesc = A wlroots-compatible Wayland color picker that does not suck.
+	pkgver = 0.4.1
+	pkgrel = 1
+	url = https://github.com/hyprwm/hyprpicker
+	arch = x86_64
+	license = BSD-3-Clause
+	depends = wayland
+	depends = libxkbcommon
+	depends = cairo
+	depends = wayland-protocols
+	depends = libjpeg
+	depends = hyprutils>=0.2.0
+	depends = hyprwayland-scanner>=0.4.0
+	optdepends = wl-clipboard: --autocopy
+	provides = hyprpicker-bin
+	conflicts = hyprpicker-git
+	conflicts = hyprpicker-bin
+	source = v0.4.1.tar.gz::https://github.com/hyprwm/hyprpicker/releases/download/v0.4.1/v0.4.1.tar.gz
+	source = LICENSE::https://raw.githubusercontent.com/hyprwm/hyprpicker/refs/heads/main/LICENSE
+	source = hyprpicker.1::https://raw.githubusercontent.com/hyprwm/hyprpicker/refs/heads/main/doc/hyprpicker.1
+	source = README.md::https://raw.githubusercontent.com/hyprwm/hyprpicker/refs/heads/main/README.md
+	sha256sums = 02e3f6d491bde24308be844cc328045d7c12b947dd1da2dc6c041cb233e7f5ac
+	sha256sums = ea36a60a50dfa150ca3c5816cb6b0ad5b559da380e9f5b2babd4abbf7962a35a
+	sha256sums = 1729492b6d9a5ed0e070ef5dc440aa4d68ffb17bc5cef928fb13e18d26f8813a
+	sha256sums = b31535aee9069f48b0bfa21337d37568bb61c1bdfa404b3b5d08818741dd4fbf
+
+pkgname = hyprpicker-bin

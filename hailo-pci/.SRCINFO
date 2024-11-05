@@ -1,0 +1,15 @@
+pkgbase = hailo-pci
+	pkgdesc = Hailo AI accelerator PCIe driver and matching firmware
+	pkgver = 4.19.0
+	pkgrel = 1
+	url = https://hailo.ai/
+	arch = aarch64
+	arch = x86_64
+	license = GPL-2.0
+	makedepends = gcc
+	provides = hailo8_fw.bin
+	provides = hailo_pci.ko
+	source = https://github.com/hailo-ai/hailort-drivers/archive/v4.19.0.tar.gz
+	sha256sums = 0c687d229968ba3092ee214ed45be8ccaedf005f8a2c4fb8f26c439608c960e9
+
+pkgname = hailo-pci

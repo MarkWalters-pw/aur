@@ -1,0 +1,18 @@
+pkgbase = iwdgui
+	pkgdesc = A graphical frontend for IWD, Intel's iNet Wireless Daemon
+	pkgver = 0.3.0
+	pkgrel = 2
+	url = https://gitlab.com/hfernh/iwdgui
+	arch = any
+	license = BSD
+	makedepends = python-setuptools
+	makedepends = python-pip
+	depends = python>=3.10
+	depends = python-gobject
+	depends = gtk3
+	depends = python-netifaces
+	depends = dbus-python
+	source = https://files.pythonhosted.org/packages/source/i/iwdgui/iwdgui-0.3.0.tar.gz
+	sha256sums = fd4f02a778d2edf3f9d6552744a5d2427fb45f78ff0ed8eb15654b5fdb2a3ef2
+
+pkgname = iwdgui

@@ -1,0 +1,25 @@
+pkgbase = hysteria
+	pkgdesc = A powerful, lightning fast and censorship resistant proxy
+	pkgver = 2.5.2
+	pkgrel = 1
+	url = https://hysteria.network/
+	install = hysteria.install
+	arch = x86_64
+	license = MIT
+	makedepends = go
+	makedepends = git
+	depends = glibc
+	optdepends = v2ray-rules-dat: geoip/geosite data originating from V2Ray
+	optdepends = meta-rules-dat: geoip/geosite data originating from MetaCubeX
+	source = hysteria-git::git+https://github.com/apernet/hysteria.git#tag=app/v2.5.2
+	source = hysteria@.service
+	source = hysteria-server@.service
+	source = sysusers.conf
+	source = tmpfiles.conf
+	sha256sums = SKIP
+	sha256sums = 7f67a976138c60741ebc0dc7ba4e8ad6d284cf45f130a435a5c65aa836446d05
+	sha256sums = 2142db7d6bfb7df5180357f5b4b25401cf3a788624c567e58fa3ecec00a58c75
+	sha256sums = 44f1cb2fedfc94dc396ceb215e62237dbc8c74c035c45a3430c1f3748d266dd9
+	sha256sums = 1e93d9f2b312eaf02ac00229106cd796e0cd54a9a468a0a8d3ae843399c1c310
+
+pkgname = hysteria

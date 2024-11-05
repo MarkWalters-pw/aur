@@ -1,0 +1,19 @@
+pkgbase = guitar
+	pkgdesc = Open source Git GUI Client
+	pkgver = 1.2.0
+	pkgrel = 2
+	url = https://soramimi.github.io/Guitar/
+	arch = x86_64
+	arch = i686
+	arch = armv7h
+	arch = aarch64
+	license = GPL-2.0-only
+	makedepends = cmake
+	makedepends = qt5-tools
+	depends = qt5-svg
+	depends = git
+	depends = file
+	source = guitar-1.2.0.tar.gz::https://github.com/soramimi/Guitar/archive/v1.2.0.tar.gz
+	sha256sums = e1f4b2571a44dc763b62957f7633e92baabcaf0fb3f2d4cc7e0d68ec78275ff5
+
+pkgname = guitar

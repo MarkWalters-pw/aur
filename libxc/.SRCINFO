@@ -1,0 +1,17 @@
+pkgbase = libxc
+	pkgdesc = A library of exchange-correlation functionals for density-functional theory
+	pkgver = 7.0.0
+	pkgrel = 1
+	url = https://libxc.gitlab.io
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	license = MPL-2.0
+	makedepends = gcc-fortran
+	makedepends = cmake
+	depends = python-numpy
+	options = staticlibs
+	source = https://gitlab.com/libxc/libxc/-/archive/7.0.0/libxc-7.0.0.tar.gz
+	sha512sums = ae50760cb4afb37af26cbc5cf819d1bfaa2fa1fc01509b73a4e2533ca772cff5750493974f63f573cf5748ed1007e21c7611d3840b3fa50a3e77e74f7a027988
+
+pkgname = libxc

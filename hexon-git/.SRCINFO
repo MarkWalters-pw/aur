@@ -1,0 +1,17 @@
+pkgbase = hexon-git
+	pkgdesc = heXon is a free and open source twin-stick-shooter created using the Dry game engine.
+	pkgver = r628.0e69b10
+	pkgrel = 1
+	url = https://gitlab.com/luckeyproductions/games/hexon
+	arch = x86_64
+	license = GPL-2.0-or-later
+	makedepends = git
+	makedepends = qt5-base
+	depends = dry
+	depends = hicolor-icon-theme
+	provides = hexon
+	conflicts = hexon
+	source = hexon-git::git+https://gitlab.com/luckeyproductions/games/hexon.git
+	sha512sums = SKIP
+
+pkgname = hexon-git

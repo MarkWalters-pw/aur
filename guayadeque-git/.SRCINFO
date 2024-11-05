@@ -1,0 +1,25 @@
+pkgbase = guayadeque-git
+	pkgdesc = Lightweight music player
+	pkgver = 0.5.2.r0.gca56337c
+	pkgrel = 3
+	url = https://github.com/thothix/guayadeque
+	arch = x86_64
+	arch = i686
+	license = GPL-3.0-only
+	makedepends = cmake
+	makedepends = git
+	depends = wxsqlite3
+	depends = wxwidgets-gtk3
+	depends = taglib
+	depends = gst-plugins-base
+	depends = gst-plugins-good
+	depends = jsoncpp
+	optdepends = gst-libav: additional codecs
+	optdepends = gst-plugins-bad: additional codecs
+	optdepends = gst-plugins-ugly: additional codecs
+	provides = guayadeque
+	conflicts = guayadeque
+	source = git+https://github.com/thothix/guayadeque.git
+	sha512sums = SKIP
+
+pkgname = guayadeque-git

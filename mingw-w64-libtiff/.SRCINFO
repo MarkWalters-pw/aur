@@ -1,0 +1,21 @@
+pkgbase = mingw-w64-libtiff
+	pkgdesc = Library for manipulation of TIFF images (mingw-w64)
+	pkgver = 4.7.0
+	pkgrel = 1
+	url = https://libtiff.gitlab.io/libtiff/
+	arch = any
+	license = custom
+	makedepends = git
+	makedepends = mingw-w64-configure
+	depends = mingw-w64-libjpeg-turbo
+	depends = mingw-w64-zlib
+	depends = mingw-w64-xz
+	options = !strip
+	options = staticlibs
+	options = !buildflags
+	source = git+https://gitlab.com/libtiff/libtiff.git?signed#tag=v4.7.0
+	validpgpkeys = EBDFDB21B020EE8FD151A88DE301047DE1198975
+	validpgpkeys = B1FA7D81EEB8E66399178B9733EBBFC47B3DD87D
+	b2sums = 15c36e609a96fe58ffb6123d0f99dbed22e3af532e1b2f72347b3fb37932437d85ae2e7489edb67553e3339da3742693abe2d38dcc3d8fe3c3a6df9be38ca948
+
+pkgname = mingw-w64-libtiff

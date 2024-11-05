@@ -1,0 +1,21 @@
+pkgbase = kreya-bin
+	pkgdesc = GUI client for gRPC and REST APIs
+	pkgver = 1.15.0
+	pkgrel = 1
+	url = https://kreya.app/
+	arch = x86_64
+	license = custom
+	depends = hicolor-icon-theme
+	depends = gtk3
+	depends = webkit2gtk
+	provides = kreya
+	conflicts = kreya
+	options = !strip
+	source = https://stable-downloads.kreya.app/Kreya-linux-x64.tar.gz
+	source = kreya_256x256.png
+	source = kreya.desktop
+	sha256sums = 41a608c1298a3988e94451ea0d0a870c998186ba0ecda461df18d83ed8555426
+	sha256sums = 15877fa13b3f0c379c4a70131daebdc199e83a1ad18d5daa1c93309815adcd7c
+	sha256sums = SKIP
+
+pkgname = kreya-bin

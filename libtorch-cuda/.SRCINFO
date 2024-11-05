@@ -1,0 +1,17 @@
+pkgbase = libtorch-cuda
+	pkgdesc = PyTorch C++ API
+	pkgver = 2.4.1
+	pkgrel = 1
+	url = https://pytorch.org/
+	arch = x86_64
+	license = BSD
+	provides = libtorch
+	conflicts = libtorch
+	options = !strip
+	options = libtool
+	options = staticlibs
+	options = !debug
+	source = libtorch_cu124-2.4.1.zip::https://download.pytorch.org/libtorch/cu124/libtorch-shared-with-deps-2.4.1%2Bcu124.zip
+	b2sums = 1d84546cdbe1c3b8a3bae114ec9cfd2866b7c4625c4abf8d2aa87b0f908c27fe82b0b28bdfe08ca35632693774c033c95d54ad2a54470e1f72a17b5b3120ef23
+
+pkgname = libtorch-cuda

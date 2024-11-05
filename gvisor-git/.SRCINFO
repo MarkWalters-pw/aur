@@ -1,0 +1,17 @@
+pkgbase = gvisor-git
+	pkgdesc = OCI container sandbox runtime focused on security, efficiency, and ease of use
+	pkgver = 20241007.0
+	pkgrel = 1
+	url = https://gvisor.dev
+	arch = x86_64
+	arch = aarch64
+	license = Apache-2.0
+	makedepends = git
+	makedepends = go
+	optdepends = docker: for Docker runtime support
+	provides = gvisor
+	conflicts = gvisor
+	source = git+https://github.com/google/gvisor#branch=go
+	sha512sums = SKIP
+
+pkgname = gvisor-git
