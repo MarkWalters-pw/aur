@@ -1,0 +1,35 @@
+pkgbase = electron30-bin
+	pkgdesc = Build cross platform desktop apps with web technologies — prebuilt
+	pkgver = 30.5.1
+	pkgrel = 1
+	url = https://electronjs.org
+	arch = aarch64
+	arch = armv7h
+	arch = x86_64
+	license = MIT
+	license = LicenseRef-custom
+	depends = alsa-lib
+	depends = gtk3
+	depends = nss
+	optdepends = kde-cli-tools: file deletion support (kioclient5)
+	optdepends = pipewire: WebRTC desktop sharing under Wayland
+	optdepends = qt6-base: enable Qt6 with --enable-features=AllowQt
+	optdepends = gtk4: for --gtk-version=4 (GTK4 IME might work better on Wayland)
+	optdepends = trash-cli: file deletion support (trash-put)
+	optdepends = xdg-utils: open URLs with desktop`s default
+	provides = electron30=30.5.1
+	conflicts = electron30
+	source_aarch64 = electron30-chromedriver-30.5.1-aarch64.zip::https://github.com/electron/electron/releases/download/v30.5.1/chromedriver-v30.5.1-linux-arm64.zip
+	source_aarch64 = electron30-30.5.1-aarch64.zip::https://github.com/electron/electron/releases/download/v30.5.1/electron-v30.5.1-linux-arm64.zip
+	sha256sums_aarch64 = 3722d46929fd2c7b33c17d37464a08150e60d9269053eb67195795254fb5e947
+	sha256sums_aarch64 = eb31470c0d7cd6e23e7ce0d89cc93a2356c9dac8bcc997e335353b8aa995afa0
+	source_armv7h = electron30-chromedriver-30.5.1-armv7h.zip::https://github.com/electron/electron/releases/download/v30.5.1/chromedriver-v30.5.1-linux-armv7l.zip
+	source_armv7h = electron30-30.5.1-armv7h.zip::https://github.com/electron/electron/releases/download/v30.5.1/electron-v30.5.1-linux-armv7l.zip
+	sha256sums_armv7h = a786d51f834c24b768bd415bf9a2fc5c1d9abdf9dc0b1a091bf9a8ff101becfe
+	sha256sums_armv7h = 224bd46983e503101c756c72d10b195f14712a7a56438718acb126017dd04edf
+	source_x86_64 = electron30-chromedriver-30.5.1-x86_64.zip::https://github.com/electron/electron/releases/download/v30.5.1/chromedriver-v30.5.1-linux-x64.zip
+	source_x86_64 = electron30-30.5.1-x86_64.zip::https://github.com/electron/electron/releases/download/v30.5.1/electron-v30.5.1-linux-x64.zip
+	sha256sums_x86_64 = 688e4da8dbcb7dbfacab6f29341d96736e6d06e4c8029835b83ef30b69885b01
+	sha256sums_x86_64 = ec4707783d39e86005f42899e30ae59e50dd5d9c7f28531ed494eb43f2361403
+
+pkgname = electron30-bin

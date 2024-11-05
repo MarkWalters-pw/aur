@@ -1,0 +1,35 @@
+post_install() {
+  #set up the /var/run directory
+  systemd-tmpfiles --create /usr/lib/tmpfiles.d/courier-mta.conf
+
+  # perform all the tasks required of a standard Courier install
+  echo Performing install-configure...
+  /usr/lib/courier/sysconftool /etc/courier/*.dist > /etc/courier/install-configure-$1.log
+  echo "...output saved to /etc/courier/install-configure-$1.log"
+  echo "Don't forget to configure an account to receive postmaster mail"
+  makealiases
+  makesmtpaccess
+  /usr/bin/mkdhparams
+}
+
+pre_upgrade() {
+  # the file courier-imapd.conf is renamed to courier-mta.conf from version 0.77.0-2
+  [ -f /usr/lib/tmpfiles.d/courier-imapd.conf ] && rm -f /usr/lib/tmpfiles.d/courier-imapd.conf
+  [ "${1%%.*}" = "1" ] && [ "${2%%.*}" != "1" ] && echo "Please make sure you have read the guidance on pre-unicode maildir names."
+}
+
+post_upgrade() {
+  echo Performing install-configure...
+  /usr/lib/courier/sysconftool /etc/courier/*.dist > /etc/courier/install-configure-$1.log
+}
+
+pre_remove() {
+  # there may be many files not part of the original installation that would be useful to save
+  # so save the whole configuration directory rather than try to list all possibilities
+  # in backup().
+  mv -f /etc/courier /etc/courier-$1
+  echo "/etc/courier has been saved as /etc/courier-$1 - you may remove this folder if you wish."
+
+  # clean up temporary storage
+  rm -rf /run/courier /var/spool/courier
+}

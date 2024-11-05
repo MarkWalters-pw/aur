@@ -1,0 +1,23 @@
+pkgbase = cosmic-applets-git
+	pkgdesc = Applets for COSMIC Panel
+	pkgver = 1.0.0.alpha.2.r0.g3670f12
+	pkgrel = 2
+	url = https://github.com/pop-os/cosmic-applets
+	arch = x86_64
+	arch = aarch64
+	license = GPL-3.0-only
+	makedepends = cargo
+	makedepends = git
+	makedepends = just
+	makedepends = mold
+	depends = cosmic-icons-git
+	depends = dbus
+	depends = libinput
+	depends = libpulse
+	depends = libxkbcommon
+	provides = cosmic-applets
+	conflicts = cosmic-applets
+	source = git+https://github.com/pop-os/cosmic-applets.git
+	sha256sums = SKIP
+
+pkgname = cosmic-applets-git

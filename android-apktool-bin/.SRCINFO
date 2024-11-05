@@ -1,0 +1,18 @@
+pkgbase = android-apktool-bin
+	pkgdesc = A tool for reverse engineering Android .apk files
+	pkgver = 2.10.0
+	pkgrel = 1
+	url = https://github.com/iBotPeaches/Apktool
+	arch = any
+	license = Apache-2.0
+	depends = java-runtime>=8
+	provides = android-apktool
+	conflicts = android-apktool
+	conflicts = android-apktool-git
+	noextract = apktool_2.10.0.jar
+	source = https://github.com/iBotPeaches/Apktool/releases/download/v2.10.0/apktool_2.10.0.jar
+	source = apktool
+	sha256sums = c0350abbab5314248dfe2ee0c907def4edd14f6faef1f5d372d3d4abd28f0431
+	sha256sums = 48a5c9d664c88c8beac4a85461e84437d104a42dac6334322a3bafca12b63bae
+
+pkgname = android-apktool-bin

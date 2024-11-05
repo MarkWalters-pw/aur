@@ -1,0 +1,110 @@
+pkgbase = claws-mail-gtk2-git
+	pkgdesc = A GTK based e-mail client. Latest git checkout, built against 'gtk2'. Patched to use charset supersets to decode titles and to display protected headers.
+	pkgver = 3.21.0+2.r11815.20240610.e6f6d119d
+	pkgrel = 2
+	epoch = 0
+	url = https://www.claws-mail.org/
+	arch = i686
+	arch = x86_64
+	license = GPL3.0-or-later
+	makedepends = git
+	makedepends = python>=3
+	makedepends = spamassassin
+	makedepends = bogofilter
+	makedepends = dillo
+	makedepends = gumbo-parser
+	makedepends = libcanberra
+	makedepends = libgdata
+	makedepends = libical
+	makedepends = libnotify
+	makedepends = libytnef
+	makedepends = poppler-glib
+	makedepends = pygtk
+	makedepends = docbook-utils
+	makedepends = lynx
+	makedepends = texlive-core
+	makedepends = texlive-formatsextra
+	depends = cairo
+	depends = compface
+	depends = dbus-glib
+	depends = desktop-file-utils
+	depends = enchant
+	depends = gdk-pixbuf2
+	depends = glib2
+	depends = glibc
+	depends = gnutls
+	depends = gpgme
+	depends = gtk2
+	depends = hicolor-icon-theme
+	depends = libice
+	depends = libetpan
+	depends = libsm
+	depends = libldap
+	depends = librsvg
+	depends = nettle
+	depends = pango
+	depends = startup-notification
+	optdepends = claws-mail-theme-basicsvg: BasicSVG icon theme for Claws Mail.
+	optdepends = claws-mail-tango-theme: Tango icon theme for Claws Mail.
+	optdepends = papirus-claws-mail-theme: Papirus icon theme for Claws Mail.
+	optdepends = claws-mail-plugin-reloader: Reload plugins from the 'tools' menu (for development).
+	optdepends = bash: for some extra tools.
+	optdepends = at-spi2-core: for many plugins.
+	optdepends = bogofilter: for bogofilter plugin.
+	optdepends = curl: for vcalendar, rssyl and spamreport plugins.
+	optdepends = dbus: for notification plugin.
+	optdepends = libx11: for notification plugin.
+	optdepends = dillo: for dillo html viewer plugin.
+	optdepends = expat: for rssyl plugin.
+	optdepends = fontconfig: for litehtml_viewer plugin.
+	optdepends = freetype2: for litehtml_viewer plugin.
+	optdepends = gcc-libs: for litehtml_viewer plugin.
+	optdepends = gumbo-parser: for litehtml_viewer plugin.
+	optdepends = ghostscript: for pdf viewer plugin.
+	optdepends = harfbuzz: for many plugins
+	optdepends = jpilot: for jpilot (palm pilot connection) plugin.
+	optdepends = libarchive: for archive plugin and various other plugins.
+	optdepends = libcanberra: for notification plugin.
+	optdepends = libgpg-error: for GPG and S-MIME plugins.
+	optdepends = libical: for vcalendar plugin.
+	optdepends = libnotify: for notification plugin.
+	optdepends = libytnef: for tnef_parse plugin.
+	optdepends = libxcrypt: for perl plugin.
+	optdepends = perl: needed for some tools and perl plugin.
+	optdepends = poppler-glib: for pdf viewer plugin.
+	optdepends = python2: needed for some tools and python plugin.
+	optdepends = python>=3: for some tools/ plugins.
+	optdepends = spamassassin: for spamassassin plugin.
+	optdepends = zlib: for many plugins.
+	optdepends = json-glib: for gdata plugin.
+	optdepends = libgdata: for gdata plugin.
+	optdepends = libgoa: for gdata plugin.
+	optdepends = libxml2: for gdata plugin.
+	optdepends = libsoup: for gdata and fancy html viewer plugins.
+	provides = claws=3.21.0+2.r11815.20240610.e6f6d119d
+	provides = claws-mail=3.21.0+2.r11815.20240610.e6f6d119d
+	provides = claws-mail-gtk2=3.21.0+2.r11815.20240610.e6f6d119d
+	provides = claws-mail-title-superset=3.21.0+2.r11815.20240610.e6f6d119d
+	provides = claws-mail-protectedheaders=3.21.0+2.r11815.20240610.e6f6d119d
+	provides = claws-mail-bash-completion
+	provides = claws-mail-extra-plugins=3.21.0+2.r11815.20240610.e6f6d119d
+	conflicts = claws
+	conflicts = claws-mail
+	conflicts = claws-mail-gtk2
+	conflicts = claws-mail-bash-completion
+	conflicts = claws-mail-extra-plugins
+	conflicts = sylpheed-claws
+	replaces = claws-mail-extra-plugins
+	replaces = sylpheed-claws
+	source = claws-mail::git://git.claws-mail.org/claws.git#branch=gtk2
+	source = 0001_encoding.diff::https://aur.archlinux.org/cgit/aur.git/plain/0001_encoding.diff?h=claws-mail-title-superset
+	source = 0002_protectedheaders.patch::http://web.archive.org/web/20240721164745/https://www.thewildbeast.co.uk/claws-mail/bugzilla/attachment.cgi?id=2331
+	source = 0002_protectedheaders.patch.AUTHORS.patch
+	source = protectedheaders.patch.for-gtk2.patch
+	sha256sums = SKIP
+	sha256sums = 79e2b664d039f5cc0cf642359923e3d100ffc4ab070fc54c02d5792b624e26f6
+	sha256sums = 383f4ea03102ed2c8f19365b9bf2b757969d1617fcfd0a8375126f388cc60301
+	sha256sums = 1b505ea5396961e3c7fed5eb6478609644ba22324c3e4c03346aca017b095116
+	sha256sums = 3b1e568398950eb93d879353cfd6d49d81f7e1790c24972f36846f22ef4106cb
+
+pkgname = claws-mail-gtk2-git

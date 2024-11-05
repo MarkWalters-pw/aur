@@ -1,0 +1,111 @@
+diff --git a/package.json b/package.json
+index 1844f3cc..f1b16209 100644
+--- a/package.json
++++ b/package.json
+@@ -54,99 +54,28 @@
+       "devices/"
+     ],
+     "afterSign": ".erb/scripts/notarize.js",
+-    "mac": {
+-      "target": [
+-        "dmg"
+-      ],
+-      "type": "distribution",
+-      "hardenedRuntime": true,
+-      "entitlements": "assets/entitlements.mac.plist",
+-      "entitlementsInherit": "assets/entitlements.mac.plist",
+-      "gatekeeperAssess": false,
+-      "category": "public.app-category.developer-tools",
+-      "extraFiles": [
+-        "dependencies/darwin_amd64",
+-        "dependencies/get-platformio.py"
+-      ]
+-    },
+-    "dmg": {
+-      "contents": [
+-        {
+-          "x": 130,
+-          "y": 220
+-        },
+-        {
+-          "x": 410,
+-          "y": 220,
+-          "type": "link",
+-          "path": "/Applications"
+-        }
+-      ]
+-    },
+-    "win": {
+-      "target": [
+-        "nsis"
+-      ],
+-      "extraFiles": [
+-        "dependencies/windows_amd64",
+-        "dependencies/get-platformio.py"
+-      ]
+-    },
+-    "nsis": {
+-      "oneClick": false,
+-      "allowToChangeInstallationDirectory": true
+-    },
++    "electronDist": "%%ELECTRON_DIST%%",
++    "electronVersion": "%%ELECTRON_VERSION%%",
+     "linux": {
+       "target": [
+-        "zip",
+-        "deb",
+-        "pacman",
+-        "rpm"
++        "dir",
++        "pacman"
+       ],
+       "category": "Development",
+       "extraFiles": [
+         "dependencies/get-platformio.py"
+       ]
+     },
+-    "rpm": {
+-      "executableArgs": [
+-        "--no-sandbox"
+-      ],
+-      "depends": [
+-        "git",
+-        "python3"
+-      ]
+-    },
+     "pacman": {
+-      "executableArgs": [
+-        "--no-sandbox"
++      "fpm": [
++        "--pacman-compression=none"
+       ],
+-      "depends": [
+-        "git",
+-        "python3"
+-      ]
+-    },
+-    "snap": {
+-      "executableArgs": [
+-        "--no-sandbox"
+-      ],
+-      "stagePackages": [
+-        "default",
+-        "git",
+-        "python3"
+-      ]
+-    },
+-    "deb": {
+       "executableArgs": [
+         "--no-sandbox"
+       ],
+       "depends": [
+         "git",
+-        "python3",
+-        "python3-setuptools",
+-        "libnotify4",
+-        "libxtst6",
+-        "libnss3"
++        "python3"
+       ]
+     },
+     "directories": {

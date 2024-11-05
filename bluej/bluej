@@ -1,0 +1,19 @@
+#!/bin/sh
+unset JFXPATH
+
+if [ -e /usr/lib/jvm/java-21-openjfx/lib/javafx.base.jar ]; then
+        JFXPATH=/usr/lib/jvm/java-21-openjfx/lib
+else
+        JFXPATH=/usr/lib/jvm/java-21-openjdk/lib
+fi
+
+CP="/opt/bluej/boot.jar"
+JAVAFXJARS=`ls -1 $JFXPATH/javafx* | paste -sd ":" -`
+#JAVAFXJARS=`ls -1 /opt/bluej/javafx* | paste -sd ":" -`
+CP="$CP:$JAVAFXJARS"
+
+archlinux-java-run -a 21 -b 21 -- \
+	-Djdk.gtk.version=2 \
+        -Dawt.useSystemAAFontSettings=on -Xmx512M \
+        -cp "$CP" bluej.Boot \
+        "$@"

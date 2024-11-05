@@ -1,0 +1,16 @@
+pkgbase = acme-git
+	pkgdesc = Cross-assembler for MOS 6502, 6510, 4502, 65816, 65C02, 65CE02, R65C02, W65C02 and C64DTV2 CPUs
+	pkgver = r74.99fae48
+	pkgrel = 2
+	url = https://github.com/meonwax/acme
+	arch = i686
+	arch = x86_64
+	license = GPL-2.0-only
+	makedepends = git
+	depends = glibc
+	provides = acme
+	conflicts = acme
+	source = git+https://github.com/meonwax/acme.git
+	sha256sums = SKIP
+
+pkgname = acme-git

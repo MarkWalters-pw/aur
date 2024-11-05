@@ -1,0 +1,16 @@
+pkgbase = dealer
+	pkgdesc = bridge hand generator
+	pkgver = 20211121
+	pkgrel = 1
+	url = https://packages.debian.org/bookworm/dealer
+	arch = x86_64
+	license = LicenseRef-public-domain
+	depends = perl
+	source = http://deb.debian.org/debian/pool/main/d/dealer/dealer_20211121+ds.orig.tar.xz
+	source = http://deb.debian.org/debian/pool/main/d/dealer/dealer_20211121+ds-1.debian.tar.xz
+	source = fix-missing-declarations.patch
+	sha256sums = 8fae9755a3f6fdc39578a1113a3a51f5aedf1f025e900b9380a37261219300b7
+	sha256sums = 883a4ae46af2fc7a83691907f5f808afbfb1e5e759c67ff6e4b8fec68df6ab7d
+	sha256sums = a665f3c63180ab3d75f1e527f3bf545a5c6b817b3cd745949da6e2846860223b
+
+pkgname = dealer

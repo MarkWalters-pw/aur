@@ -1,0 +1,14 @@
+[Unit]
+Description=Courier POP3 (SSL) Daemon
+Requires=authdaemond.service
+After=authdaemond.service
+
+[Service]
+Type=forking
+ExecStart=/usr/sbin/pop3d-ssl start
+ExecStop=/usr/sbin/pop3d-ssl stop
+ExecReload=/usr/sbin/pop3d-ssl restart
+PIDFile=/run/courier/pop3d-ssl.pid
+
+[Install]
+WantedBy=multi-user.target

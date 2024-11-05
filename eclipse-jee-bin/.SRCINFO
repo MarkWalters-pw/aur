@@ -1,0 +1,23 @@
+pkgbase = eclipse-jee-bin
+	pkgdesc = Highly extensible IDE (Enterprise Java and Web version)
+	pkgver = 4.33
+	pkgrel = 1
+	epoch = 2
+	url = https://www.eclipse.org/
+	arch = x86_64
+	arch = aarch64
+	license = EPL
+	depends = java-runtime>=21
+	depends = webkit2gtk
+	depends = unzip
+	provides = eclipse=4.33-1
+	conflicts = eclipse
+	options = !strip
+	source = eclipse.desktop
+	sha512sums = 9da29da1fe9e4ac4b8f1a4faef158155399574752a317addf90f6a068019ad62906f8ce1db11e543c7fee7dbf3dd8273aa34fc86ff2354420371cdf9b017cdf3
+	source_x86_64 = eclipse-jee-2024-09-R-linux-gtk-x86_64.tar.gz::https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2024-09/R/eclipse-jee-2024-09-R-linux-gtk-x86_64.tar.gz&r=1
+	sha512sums_x86_64 = 0dfc8262a8af9aa0c97912bdb16d0be0f838ccefd780ee8bf2d3e525054dd1bd59635f946218827555a723f311af57bde015f9abc1180f4088c76f951ab037fc
+	source_aarch64 = eclipse-jee-2024-09-R-linux-gtk-aarch64.tar.gz::https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2024-09/R/eclipse-jee-2024-09-R-linux-gtk-aarch64.tar.gz&r=1
+	sha512sums_aarch64 = 2d5276f5b2d22df9e34df36e8f5b49a51c6dcd4cca03a963c6d979aa45291d31641a86f6b7a161ddbefbcc244be89738587d4b1ef342e85a9d5300c8d1e061a6
+
+pkgname = eclipse-jee-bin

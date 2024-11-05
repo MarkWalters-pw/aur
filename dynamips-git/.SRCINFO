@@ -1,0 +1,19 @@
+pkgbase = dynamips-git
+	pkgdesc = Cisco Router Emulator
+	pkgver = 0.2.23.r536.ab50526
+	pkgrel = 1
+	url = https://github.com/GNS3/dynamips
+	arch = i686
+	arch = x86_64
+	license = GPL-2.0-only
+	makedepends = git
+	makedepends = cmake
+	depends = glibc
+	depends = libelf
+	depends = libpcap
+	provides = dynamips=0.2.23.r536.ab50526
+	conflicts = dynamips
+	source = git+https://github.com/GNS3/dynamips.git
+	b2sums = SKIP
+
+pkgname = dynamips-git

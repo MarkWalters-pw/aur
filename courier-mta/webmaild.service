@@ -1,0 +1,14 @@
+[Unit]
+Description=Courier Webmail Daemon
+Requires=authdaemond.service
+After=authdaemond.service
+
+[Service]
+Type=forking
+ExecStart=/usr/sbin/webmaild start
+ExecStop=/usr/sbin/webmaild stop
+ExecReload=/usr/sbin/webmaild reload
+PIDFile=/run/courier/sqwebmaild.pid
+
+[Install]
+WantedBy=multi-user.target

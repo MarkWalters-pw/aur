@@ -1,0 +1,21 @@
+pkgbase = android-armv7a-eabi-glib2
+	pkgdesc = Low level core library (Android armv7a-eabi)
+	pkgver = 2.82.1
+	pkgrel = 1
+	url = https://wiki.gnome.org/Projects/GLib
+	arch = any
+	groups = android-glib2
+	license = LGPL2.1
+	makedepends = android-meson
+	depends = android-armv7a-eabi-libffi
+	depends = android-armv7a-eabi-pcre2
+	depends = android-armv7a-eabi-gettext
+	depends = android-armv7a-eabi-zlib
+	options = !strip
+	options = !buildflags
+	options = staticlibs
+	options = !emptydirs
+	source = https://download.gnome.org/sources/glib/2.82/glib-2.82.1.tar.xz
+	md5sums = d101f1acab6805d4d6d3104e9634b8e3
+
+pkgname = android-armv7a-eabi-glib2

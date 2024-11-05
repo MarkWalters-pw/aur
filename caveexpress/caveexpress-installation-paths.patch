@@ -1,0 +1,22 @@
+--- macros.cmake.orig	2021-05-31 05:11:41.232027690 -0400
++++ macros.cmake	2021-05-31 05:13:06.426611147 -0400
+@@ -721,8 +721,8 @@
+ 		if (LINUX AND NOT TESTS AND NOT STEAMLINK)
+ 			set(SHARE_DIR "share")
+ 			set(GAMES_DIR "${SHARE_DIR}/${_EXE_TARGET}")
+-			set(ICON_DIR "${SHARE_DIR}/icons")
+-			set(BIN_DIR "games")
++			set(ICON_DIR "${SHARE_DIR}/pixmaps")
++			set(BIN_DIR "bin")
+ 			configure_file(${ROOT_DIR}/contrib/installer/linux/editor.in ${PROJECT_BINARY_DIR}/${_EXE_TARGET}-editor)
+ 			configure_file(${ROOT_DIR}/contrib/installer/linux/desktop.in ${PROJECT_BINARY_DIR}/${_EXE_TARGET}.desktop)
+ 			configure_file(${ROOT_DIR}/contrib/installer/linux/snapcraft.yaml.in ${PROJECT_BINARY_DIR}/${_EXE_TARGET}.snapcraft.yaml)
+@@ -847,7 +847,7 @@
+ 		else()
+ 			set(ICON "${_EXE_TARGET}-icon.png")
+ 			if (EXISTS ${ROOT_DIR}/contrib/${ICON})
+-				install(FILES ${ROOT_DIR}/contrib/${ICON} DESTINATION ${ICON_DIR} COMPONENT ${_EXE_TARGET})
++				install(FILES ${ROOT_DIR}/contrib/${ICON} DESTINATION ${ICON_DIR} RENAME ${_EXE_TARGET}.png COMPONENT ${_EXE_TARGET})
+ 			endif()
+ 		endif()
+ 	endif()

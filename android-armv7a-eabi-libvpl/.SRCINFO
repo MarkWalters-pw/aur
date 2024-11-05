@@ -1,0 +1,20 @@
+pkgbase = android-armv7a-eabi-libvpl
+	pkgdesc = Intel Video Processing Library (Android armv7a-eabi)
+	pkgver = 2.13.0
+	pkgrel = 1
+	url = https://intel.github.io/libvpl/
+	arch = any
+	license = MIT
+	makedepends = android-cmake
+	makedepends = android-armv7a-eabi-libpciaccess
+	depends = android-armv7a-eabi-libdrm
+	depends = android-armv7a-eabi-libva
+	depends = android-armv7a-eabi-libx11
+	options = !strip
+	options = !buildflags
+	options = staticlibs
+	options = !emptydirs
+	source = https://github.com/intel/libvpl/archive/v2.13.0/libvpl-2.13.0.tar.gz
+	md5sums = c423c877260dba129772d4e2059386e4
+
+pkgname = android-armv7a-eabi-libvpl

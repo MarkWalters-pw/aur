@@ -1,0 +1,13 @@
+[Unit]
+Description=Courier Daemon
+Requires=authdaemond.service
+After=authdaemond.service
+
+[Service]
+Type=forking
+ExecStart=/usr/sbin/courier start
+ExecStop=/usr/sbin/courier stop
+ExecReload=/usr/sbin/courier restart
+
+[Install]
+WantedBy=multi-user.target

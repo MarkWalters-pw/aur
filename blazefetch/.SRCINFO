@@ -1,0 +1,22 @@
+pkgbase = blazefetch
+	pkgdesc = A lite & blazing fast system info fetch utility
+	pkgver = 2.9.17
+	pkgrel = 1
+	url = https://github.com/rifsxd/blazefetch
+	arch = any
+	license = MIT
+	makedepends = cmake
+	makedepends = ninja
+	makedepends = gcc
+	depends = libx11
+	depends = networkmanager
+	depends = playerctl
+	depends = figlet
+	depends = pciutils
+	depends = mesa-utils
+	provides = blazefetch
+	conflicts = blazefetch-git
+	source = https://github.com/rifsxd/blazefetch/releases/download/2.9.17/src-blazefetch-2.9.17.tar.gz
+	sha256sums = f02a335a91bd708b6d57d6c503f1d519b030992ca85d76d9bb4610b51e357294
+
+pkgname = blazefetch

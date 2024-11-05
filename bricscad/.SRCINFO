@@ -1,0 +1,26 @@
+pkgbase = bricscad
+	pkgdesc = CAD Software for People Who Build the Future
+	pkgver = 24.2.07
+	pkgrel = 1
+	url = https://www.bricsys.com/
+	install = bricscad.install
+	arch = x86_64
+	license = custom
+	depends = alsa-lib
+	depends = glu
+	depends = libxcrypt-compat
+	depends = libxkbfile
+	depends = nss
+	depends = openmotif
+	depends = webkit2gtk
+	depends = xcb-util-image
+	depends = xcb-util-keysyms
+	depends = xcb-util-renderutil
+	depends = xcb-util-wm
+	optdepends = bricscad-communicator>=24: Addtional import/export file format support
+	conflicts = bricscad-cn
+	options = !strip
+	source = manual://BricsCAD-V24.2.07-1-en_US-amd64.deb
+	sha256sums = bff5d2d282003611425e3ae7b7fd5aa6ce91fdb6759d00b6660f1d9979849085
+
+pkgname = bricscad

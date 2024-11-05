@@ -1,0 +1,14 @@
+pkgbase = discord-webview
+	pkgdesc = A simple webview application to access discord, without having spyware running in the background
+	pkgver = 1.0.0
+	pkgrel = 1
+	url = https://git.4rkal.com/4rkal/discord-desktop
+	arch = x86_64
+	license = MIT
+	makedepends = go
+	depends = glibc
+	depends = webkit2gtk
+	source = main.go
+	sha256sums = d41ca58419d1ec0e668d77c521297174b463c51358a4e9d25fa40f84d251827b
+
+pkgname = discord-webview

@@ -1,0 +1,27 @@
+pkgbase = drumlabooh
+	pkgdesc = LV2/VSTi drum machine that supports Hydrogen, Drumlabooh and SFZ drumkits
+	pkgver = 6.0.0
+	pkgrel = 1
+	url = https://github.com/psemiletov/drumlabooh
+	arch = x86_64
+	groups = lv2-plugins
+	groups = pro-audio
+	license = GPL
+	makedepends = git
+	makedepends = cmake
+	depends = glibc
+	depends = gcc-libs
+	depends = alsa-lib
+	depends = freetype2
+	depends = libx11
+	depends = libxcomposite
+	depends = libxcursor
+	depends = libxext
+	depends = libxinerama
+	depends = libxrandr
+	depends = libxrender
+	provides = drumlabooh
+	source = https://github.com/psemiletov/drumlabooh/archive/6.0.0.tar.gz
+	md5sums = c320d57fc6ce52b71210c961375b4dda
+
+pkgname = drumlabooh

@@ -1,0 +1,15 @@
+pkgbase = blender-plugin-vectex
+	pkgdesc = Vectex is a SVG vector texture plugin for Blender
+	pkgver = 0.9
+	pkgrel = 3
+	url = http://code.google.com/p/vectex/
+	arch = i686
+	arch = x86_64
+	license = GPL
+	depends = blender
+	source = https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/vectex/vectex-0.9-fix.tar.bz2
+	source = 64bit.patch
+	sha256sums = 6da59482f658f35fb676eb632d1653b6038d8b57ef3121c47e6446805fa15750
+	sha256sums = 2e9f86abb9125ccc6d9f41f8751a7eefc32a1183b69bc7868ddb4c5c9820d11f
+
+pkgname = blender-plugin-vectex

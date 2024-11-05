@@ -1,0 +1,13 @@
+pkgbase = cproxy
+	pkgdesc = Easy per application transparent proxy built on cgroup.
+	pkgver = 4.2.1
+	pkgrel = 3
+	url = https://github.com/NOBLES5E/cproxy
+	arch = x86_64
+	license = AGPL
+	makedepends = cargo
+	depends = iptables
+	source = cproxy-4.2.1.tar.gz::https://github.com/NOBLES5E/cproxy/archive/refs/tags/v4.2.1.tar.gz
+	sha512sums = 511090a5200c275cf71986262dd0f36b5f6ec04c5221e0e3d50e27c2c9080e6f3eeb48f13b410a28df0d393a5c825e3432e537c1e4aeb6f28e78d60694a95c7f
+
+pkgname = cproxy

@@ -1,0 +1,26 @@
+pkgbase = far2l-git
+	pkgdesc = Linux port of FAR v2
+	pkgver = r5025.7b5fb8e3
+	pkgrel = 1
+	url = https://github.com/elfmz/far2l
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	makedepends = cmake
+	depends = libxml2
+	depends = fmt
+	depends = uchardet
+	depends = wxwidgets-gtk3
+	optdepends = libxi: TTY X11 backend
+	optdepends = openssl: FTPS support in NetRocks
+	optdepends = libssh: SFTP support in NetRocks
+	optdepends = smbclient: SMB support in NetRocks
+	optdepends = libnfs: NFS support in NetRocks
+	optdepends = neon: WebDAV support in NetRocks
+	optdepends = pcre: custom archives support in multiarc
+	optdepends = libarchive: more archive type support in multiarc
+	source = git+https://github.com/elfmz/far2l
+	sha256sums = SKIP
+
+pkgname = far2l-git

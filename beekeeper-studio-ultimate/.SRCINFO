@@ -1,0 +1,20 @@
+pkgbase = beekeeper-studio-ultimate
+	pkgdesc = Modern and easy to use SQL client for MySQL, Postgres, SQLite, SQL Server, and more - Ultimate edition
+	pkgver = 4.6.8
+	pkgrel = 1
+	url = https://github.com/beekeeper-studio/ultimate-releases
+	arch = x86_64
+	arch = aarch64
+	license = LicenseRef-BeekeeperStudioApplicationEULA
+	depends = electron18
+	options = !strip
+	source = electron-launcher.sh
+	source = LICENSE.md
+	b2sums = 54b46275a83a6099b22bc511a6293178abccccad6d1cc36bf812166f93f75b1379a3201dac9ee85e05cf7c3b0de7e94829fd3fb619ccca513924ebf3101850f0
+	b2sums = b5f0a224b71c8ec5966333cc24bdd59a58728175448e88a4779e100823b76f25088a934775ba5eb2c13d110e4f5889d11d2a0c3ee3b965489f644561659dd176
+	source_x86_64 = beekeeper-studio-ultimate-4.6.8-x86_64.AppImage::https://github.com/beekeeper-studio/ultimate-releases/releases/download/v4.6.8/Beekeeper-Studio-Ultimate-4.6.8.AppImage
+	b2sums_x86_64 = d00b45d3e28d4f537cea515f6ff289c8e0532be808e57f31c982653c6cfad30b269231c0c80cb7dfd61d640f4a90943961e4f1393f345b79129e9f7f050dd3a1
+	source_aarch64 = beekeeper-studio-ultimate-4.6.8-aarch64.AppImage::https://github.com/beekeeper-studio/ultimate-releases/releases/download/v4.6.8/Beekeeper-Studio-Ultimate-4.6.8-arm64.AppImage
+	b2sums_aarch64 = 9213b8680e929ea491d3837d2aaea8c0584935c908b433f2e29d10bfb1750201c1d2bca61b4e3512049253a9883de975cc7f7407989e727ee602036dec5ba0f6
+
+pkgname = beekeeper-studio-ultimate

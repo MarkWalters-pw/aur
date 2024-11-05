@@ -1,0 +1,17 @@
+pkgbase = android-armv7a-eabi-fmt
+	pkgdesc = Open-source formatting library for C++ (Android armv7a-eabi)
+	pkgver = 11.0.2
+	pkgrel = 1
+	url = https://fmt.dev
+	arch = any
+	license = MIT
+	makedepends = android-cmake
+	depends = android-ndk
+	options = !strip
+	options = !buildflags
+	options = staticlibs
+	options = !emptydirs
+	source = https://github.com/fmtlib/fmt/archive/refs/tags/11.0.2.tar.gz
+	md5sums = 3fe10c5184c8ecd0d2f9536c1b1ae95c
+
+pkgname = android-armv7a-eabi-fmt

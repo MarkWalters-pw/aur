@@ -1,0 +1,14 @@
+[Unit]
+Description=Courier ESMTP Daemon
+Requires=authdaemond.service
+After=authdaemond.service courier-courierfilter.service
+
+[Service]
+Type=forking
+ExecStart=/usr/sbin/esmtpd start
+ExecStop=/usr/sbin/esmtpd stop
+ExecReload=/usr/sbin/esmtpd restart
+PIDFile=/run/courier/esmtpd.pid
+
+[Install]
+WantedBy=multi-user.target

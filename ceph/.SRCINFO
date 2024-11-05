@@ -1,0 +1,474 @@
+pkgbase = ceph
+	pkgdesc = Distributed, fault-tolerant storage platform delivering object, block, and file system
+	pkgver = 18.2.4
+	pkgrel = 3
+	url = https://ceph.com/
+	arch = x86_64
+	license = GPL-2.0-or-later OR LGPL-2.1-or-later OR LGPL-3.0-or-later
+	checkdepends = inetutils
+	checkdepends = xmlstarlet
+	checkdepends = python-nose
+	checkdepends = python-pycodestyle
+	checkdepends = python-pylint
+	checkdepends = python-pytest
+	checkdepends = python-pytest-cov
+	makedepends = bash
+	makedepends = boost
+	makedepends = boost-libs
+	makedepends = cmake
+	makedepends = coreutils
+	makedepends = cryptsetup
+	makedepends = curl
+	makedepends = cython
+	makedepends = expat
+	makedepends = fmt
+	makedepends = fuse3
+	makedepends = gawk
+	makedepends = gcc-libs
+	makedepends = git
+	makedepends = glibc
+	makedepends = gperf
+	makedepends = gperftools
+	makedepends = java-runtime
+	makedepends = jq
+	makedepends = jre11-openjdk-headless
+	makedepends = junit
+	makedepends = keyutils
+	makedepends = libaio
+	makedepends = libatomic_ops
+	makedepends = libcap
+	makedepends = libcap-ng
+	makedepends = libcurl-compat
+	makedepends = libedit
+	makedepends = libgudev
+	makedepends = libnl
+	makedepends = librabbitmq-c
+	makedepends = librdkafka
+	makedepends = libutil-linux
+	makedepends = libuv
+	makedepends = libxcrypt
+	makedepends = lua
+	makedepends = lz4
+	makedepends = nss
+	makedepends = oath-toolkit
+	makedepends = openssl
+	makedepends = pkgconf
+	makedepends = python
+	makedepends = snappy
+	makedepends = sqlite
+	makedepends = systemd-libs
+	makedepends = thrift
+	makedepends = util-linux
+	makedepends = xfsprogs
+	makedepends = zlib
+	makedepends = zstd
+	makedepends = python-bcrypt
+	makedepends = python-cherrypy
+	makedepends = python-coverage
+	makedepends = python-dateutil
+	makedepends = python-jinja
+	makedepends = python-packaging
+	makedepends = python-pecan
+	makedepends = python-prettytable
+	makedepends = python-pyjwt
+	makedepends = python-pyopenssl
+	makedepends = python-requests
+	makedepends = python-scipy
+	makedepends = python-setuptools
+	makedepends = python-sphinx
+	makedepends = python-typing_extensions
+	makedepends = python-werkzeug
+	makedepends = python-yaml
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools-rust
+	makedepends = python-wheel
+	options = emptydirs
+	options = !lto
+	source = https://download.ceph.com/tarballs/ceph-18.2.4.tar.gz
+	source = ceph.sysusers
+	source = ceph.sudoers
+	source = ceph-13.2.2-dont-install-sysvinit-script.patch
+	source = ceph-disable-empty-readable.sh-test.patch
+	source = ceph-17.2.5-logrotate-ignore-dups.patch
+	source = ceph-17.2.4-tox-flake8-git-ls-files.patch
+	source = ceph-17.2.4-test-bluefs-split.patch
+	source = ceph-17.2.4-pybind-unmock-cythonize.patch
+	source = ceph-17.2.5-fix-iterator-depreciations.patch
+	source = ceph-17.2.5-rgw-client-boost-string-view.patch
+	source = ceph-17.2.6-mgr-dashboard-cherrypy-18.patch
+	source = ceph-17.2.6-mgr-dashboard-pylint-217.patch
+	source = ceph-17.2.6-cython-fixes.patch
+	source = ceph-18.2.0-fmt10-fixes.patch
+	source = ceph-18.2.0-fix-ecode-shec-test.patch
+	source = ceph-18.2.0-backport-log-runway-expansion.patch
+	source = ceph-18.2.2-mgr-alias-ceph-bcrypt.patch
+	source = ceph-18.2.2-backport-ceph-volume-unbound-var.patch
+	source = ceph-18.2.2-gcc-14-fixes.patch
+	source = ceph-18.2.2-std-atomic-depreciations.patch
+	source = ceph-18.2.2-test-mempool-shard-select-disable.patch
+	source = ceph-18.2.2-disable-mypy-flake8-tests.patch
+	source = ceph-18.2.2-py312-fixes.patch
+	source = ceph-18.2.4-boost-1.86-fixes.patch
+	source = ceph-18.2.4-fmt-formatter-const.patch
+	source = python-bcrypt-4.1.3.tar.gz::https://github.com/pyca/bcrypt/archive/4.1.3.tar.gz
+	source = python-bcrypt-prefix-ceph.patch
+	source = python-bcrypt-allow-subinterpreters.patch
+	sha512sums = a4ebb4e14032e6ab8e1fd8836f39234b771cb0a4b655166e9c69493a2c0d687064af4bb35523d0501629605521854e49f5c53a56279f72810d108c76f4f88c5b
+	sha512sums = 4354001c1abd9a0c385ba7bd529e3638fb6660b6a88d4e49706d4ac21c81b8e829303a20fb5445730bdac18c4865efb10bc809c1cd56d743c12aa9a52e160049
+	sha512sums = 41dbc1c395cdf9b3edf5c5d91bbc90f416b4338ad964fa3471f26a4312d3ec2a5dcebbc351a1640dc4b047b4f71aa134ac7486747e5f62980092b0176e7567f5
+	sha512sums = ea069b75b786c22166c609b127b512802cc5c6e9512d792d7b7b34d276f5b86d57c8c35cfc7b5c855a59c0ba87ba1aabe2ca26da72b26bff46b6ba8410ddb27e
+	sha512sums = 2234d005df71b3b6013e6b76ad07a5791e3af7efec5f41c78eb1a9c92a22a67f0be9560be59b52534e90bfe251bcf32c33d5d40163f3f8f7e7420691f0f4a222
+	sha512sums = b12cabda7184721c494edd22250fd05019694d2bc445722d100cdefab5385bd25c2267a029d2f6053932fa6717e38c4314385afd986969ee2744d745b53c8b58
+	sha512sums = 31e578b240ceaaf1216b56cdce654661eed6529ef642ecad164a02669e850100a49a85dc70f3d744671e2c5dad10aee64be7d091fa33007cb8fc6788a4336799
+	sha512sums = 5b43ba48dde8b7371d4b3976aa3a27ab3ad3a10e110479a101b8f222590bbd6aca318f3ac117f851596fc23daafb53aaa566e055dc9694ab16ab1170e8f77763
+	sha512sums = 781a01e622a70d56bf1948bdc0b427ffa95a86cec7dd9d26c6007a9ec024a942a8ca55f2acc3d37344862f1d6bf11cae998d8071754cd841a66bfba4ec9c58bf
+	sha512sums = 612faebfb5eec3651832f349ea3c23b50d2386889ff77592b0acff653049efdc5c2254f63c30d88b9a730813bf1f1945dda0d0beab0db7db3e0708ba8d057a40
+	sha512sums = 02ca1a9bf15f9cd6f474f264ba2bf66ae725bac990a7cac315dabe377c66935a7afd8117f18a1f82c78bdf9ab2c3e5a2a227f2ffc166974dd7bb99b290f1f233
+	sha512sums = 79be1630ae4a599509e5d789d4aefe412ce47e67ad482f853664fa4b01e063c20593e3da668e6a776ad038fb07606ae948eea41bab20776c33c87f9ab49505e0
+	sha512sums = c767a8e6fd02ea2ab88e99b50b206d0f825acdf177136ded38d93594fc7663b7c9612af7195b85e0b2b501d8ee482af5e088e9abb5ebee7b8a69e0153ce89782
+	sha512sums = 0c5124693bd317a73707dfd34b17664cc05233aec08e07739fe08fc9a73be7a1f4446052b1addde832cba141a382c35f45e60c89a00bb7dab81cee7ed6be07e1
+	sha512sums = 24f0a0e543cb9ee4006340362b43c9927861b3f0403aa929a0713a5a51220b5186f2a8c36d74a36970eeb230bace5239bf471d2f5b463ed3d9c311ad3da5a26c
+	sha512sums = 9a1183c08f8799b14235c9271519203cbf93e48ca3a8607d3a0500910efca5379c8a08421c377227f93d8436a850f5ca99784f28aaa920e55f0457c657511f17
+	sha512sums = e238b326609636bc7dd10cec59290e22898948ef105c49643c38d2621abf16c2efcf9581b0b6bad65066607510c9827d00a7abdb14f2054701cc33b7101ea054
+	sha512sums = 692b9cea0199366fdfbcaff2d9590e3a1e439b948a1a5030215e81fcc8a22ac562b3261e2057470cc8acc20f404869a5a0c4550177788dc2f824523e5267b1eb
+	sha512sums = 11fae8997e4df4b706245f467dc396d84f1fb48db8e569b1665a4963eb77292415a2493cae033bed23765d82269a3cd6a5bf12c1ba52e3700a63db6ad983ca5a
+	sha512sums = 3f3a4795dfc58910972fa15a7ca8a4c3206d45351a15db66d8e93da64c7726c5f45256114b20f032d8011ab131ee20d2d8373207ad7e188a2978cf50854e10f1
+	sha512sums = 2c90c69b3e236622c9fb83214fe7f781c9fcb0de1b372e7837d9963780ead9c2926c347177c03fb94eb05fd838514f3afab42aa50b7c9ac800c34bf59c48b02e
+	sha512sums = 0ed97f2fb764ec8f7e01be45256377a6b2f451c865348b25b12ca9ef70c7120a0bf62321a9402cc4362618fde3a38ccfcd6eec738fe8cc067f17399700c273f3
+	sha512sums = 3a6d2bee9a403ac7a0a1216fd704bb86337abf2498c1e90be70e8221779705c47cdc994f7147bcac5b99b939aa20dd0359c5eaf02224ae80183fbb7c1b7df792
+	sha512sums = 15c6a1d2bdd524a7836ad9bad12c4103a32274ad1fa5182231bcbc626e44fcfbdba04b6d55c67ef13952821da46df68e0b51ab4534c3a8830eac301e18662195
+	sha512sums = 73f72759a3d628575447b7607b7e27b0bab4a70b206c91daa717d461ada5fd9985c16f5782d9cb4406bd314ae9cf683cca43ab426505ab21f99141518e32533d
+	sha512sums = a053c2e0abf91528fa39723784f274daeec4ca078464a7e4ebe50c1f2f2264130bf746be59d3899e114c08cf43e5e6af2b84023254a0329670e50a2bca4c51a7
+	sha512sums = 59a5aafc729a6e7ac61121469bbca73809d87cafc1b16dcb0701c33fccc6298eff1071680c364042c46f91d701830a414e6ecf0bff4bee9500e4ce146dcad974
+	sha512sums = 26e4569396005f7461764dbe57634ab6d20ca9bfe777b4eeae3def8e3c887333b4d64470ad1db15a8170979f85372c111abfc043bdc1deae219183cc7539980e
+	sha512sums = 477e9f70c985da94c25bcac21f0f4f148623563a4c97b7249524cd82867ec2042488f37f966e75de636e6f835f9be6a8f9ea435374d714ca7d0d0cd71340b0b8
+
+pkgname = ceph-common
+	pkgdesc = Ceph Storage common libraries and dependencies
+	depends = ceph-compressor=18.2.4-3
+	depends = ceph-crypto=18.2.4-3
+	depends = ceph-erasure=18.2.4-3
+	depends = boost-libs
+	depends = curl
+	depends = glibc
+	depends = keyutils
+	depends = libutil-linux
+	depends = nss
+	depends = systemd-libs
+	depends = bash
+	depends = fmt
+	depends = cryptsetup
+	depends = libxcrypt
+	depends = libaio
+	depends = libcap
+	depends = gperftools
+	provides = libceph-common.so
+	provides = libceph_ebd_vdo.so
+
+pkgname = ceph-compressor
+	pkgdesc = Ceph Storage compressor libs
+	depends = gcc-libs
+	depends = lz4
+	depends = snappy
+	depends = zlib
+	depends = zstd
+
+pkgname = ceph-crypto
+	pkgdesc = Ceph Storage crypto libs
+	depends = gcc-libs
+	depends = openssl
+
+pkgname = ceph-erasure
+	pkgdesc = Ceph Storage erasure coding libs
+	depends = gcc-libs
+
+pkgname = ceph-tools
+	pkgdesc = Ceph Storage miscellaneous tooling and utilities
+	depends = ceph-base=18.2.4-3
+	depends = bash
+	depends = boost-libs
+	depends = gperftools
+	depends = libaio
+	depends = libcap
+	depends = snappy
+
+pkgname = ceph-test
+	pkgdesc = Ceph Storage tools for benchmarking and testing live clusters
+	depends = ceph-base=18.2.4-3
+	depends = libcap
+	depends = libaio
+	depends = boost-libs
+	depends = fmt
+	depends = gperftools
+	depends = snappy
+
+pkgname = ceph-volume
+	pkgdesc = Ceph Storage utility for preparing block devices for use as OSDs
+	depends = python-ceph-common=18.2.4-3
+	depends = ceph-osd=18.2.4-3
+	depends = python
+	depends = lvm2
+	depends = python-setuptools
+	depends = python-importlib-metadata
+
+pkgname = ceph-cephadm
+	pkgdesc = Ceph Storage adminstration and configuration utility
+	depends = python
+	depends = podman
+	provides = cephadm
+	conflicts = cephadm
+
+pkgname = ceph-node-proxy
+	pkgdesc = Ceph Storage daemon for cephadm deployments to collect RedFishAPI hardware metrics
+	depends = python
+
+pkgname = ceph-rados
+	pkgdesc = Ceph Storage utilities and tools for librados
+	depends = librados=18.2.4-3
+	depends = gcc-libs
+
+pkgname = ceph-base
+	pkgdesc = Ceph Storage cluster base utilities and configuration
+	depends = ceph-common=18.2.4-3
+	depends = librados=18.2.4-3
+	depends = python-ceph-common=18.2.4-3
+	depends = python-rados=18.2.4-3
+	depends = python
+	backup = etc/logrotate.d/ceph
+	backup = etc/sudoers.d/90-ceph
+
+pkgname = ceph-mon
+	pkgdesc = Ceph Storage cluster monitor daemon, for distributed state storage via PAXOS
+	depends = ceph-base=18.2.4-3
+	depends = bash
+	depends = boost-libs
+	depends = fmt
+	depends = gperftools
+	depends = snappy
+
+pkgname = ceph-mgr
+	pkgdesc = Ceph Storage cluster manager daemon, the API gateway for cluster management
+	depends = ceph-base=18.2.4-3
+	depends = python-cephfs=18.2.4-3
+	depends = python-rbd=18.2.4-3
+	depends = libcephsqlite=18.2.4-3
+	depends = sqlite
+	depends = python
+	depends = boost-libs
+	depends = fmt
+	depends = gperftools
+	depends = python-bcrypt
+	depends = python-cheroot
+	depends = python-cherrypy
+	depends = python-coverage
+	depends = python-dateutil
+	depends = python-jinja
+	depends = python-jsonpatch
+	depends = python-packaging
+	depends = python-pecan
+	depends = python-prettytable
+	depends = python-pyopenssl
+	depends = python-requests
+	depends = python-scipy
+	depends = python-setuptools
+	depends = python-typing_extensions
+	depends = python-urllib3
+	depends = python-werkzeug
+	depends = python-yaml
+	optdepends = cephadm: Required if cluster is managed via cephadm
+	optdepends = python-kubernetes: For mgr/module:rook,k8sevents
+	optdepends = python-numpy: For mgr/module:diskprediction_local
+	optdepends = python-influxdb: For mgr/module:influx
+
+pkgname = ceph-osd
+	pkgdesc = Ceph Storage cluster object storage daemon, for managing block devices
+	depends = ceph-base=18.2.4-3
+	depends = fuse3
+	depends = bash
+	depends = boost-libs
+	depends = fmt
+	depends = gperftools
+	depends = libaio
+	depends = snappy
+	depends = systemd-libs
+	depends = python
+	optdepends = ceph-volume: For preparing block devices for OSD daemons
+	optdepends = ceph-node-proxy: For RedFishAPI hardware metrics
+	optdepends = smartmontools: disk monitoring via S.M.A.R.T
+	optdepends = nvme-cli: disk monitoring for NVMe drives
+	backup = etc/sysctl.d/90-ceph-osd.conf
+
+pkgname = ceph-mds
+	pkgdesc = Ceph Storage cluster metadata server, the API gateway for CephFS
+	depends = ceph-base=18.2.4-3
+	depends = lua
+	depends = fmt
+	depends = gperftools
+
+pkgname = ceph-rbd
+	pkgdesc = Ceph Storage utilities and tooling for librbd
+	depends = librbd=18.2.4-3
+	depends = libnl
+	depends = fmt
+	depends = fuse3
+	depends = gperftools
+	depends = boost-libs
+	depends = bash
+	depends = cryptsetup
+	backup = etc/udev/rules.d/50-ceph-rbd.rules
+
+pkgname = ceph-cephfs
+	pkgdesc = Ceph Storage utilities and tooling for libcephfs
+	depends = libcephfs=18.2.4-3
+	depends = fuse3
+	depends = fmt
+	depends = gperftools
+	depends = libcap-ng
+	depends = lua
+	depends = python
+	optdepends = cephfs-shell: Shell access to a CephFS filesystem
+	optdepends = cephfs-top: Usage and metrics for CephFS, inspired by top(1)
+
+pkgname = ceph-rgw
+	pkgdesc = Ceph Storage cluster RADOS Object Gateway daemon, for serving RESTful traffic
+	depends = librgw=18.2.4-3
+	depends = gawk
+	depends = oath-toolkit
+	depends = boost-libs
+	depends = expat
+	depends = gperftools
+	depends = librabbitmq-c
+	depends = librdkafka
+	depends = lua
+
+pkgname = librados
+	pkgdesc = Ceph Storage client library to the RADOS distributed object store
+	depends = ceph-common=18.2.4-3
+	depends = bash
+	depends = boost-libs
+	depends = fmt
+	depends = lua
+	depends = oath-toolkit
+	provides = libradosstriper.so
+	provides = librados.so
+
+pkgname = libcephfs
+	pkgdesc = Ceph Storage client library for CephFS, a distributed POSIX filesystem
+	depends = librados=18.2.4-3
+	depends = fmt
+	provides = libcephfs.so
+
+pkgname = librbd
+	pkgdesc = Ceph Storage client library for RADOS block devices
+	depends = librados=18.2.4-3
+	depends = cryptsetup
+	depends = fmt
+	provides = librbd.so
+	provides = libceph_librbd_parent_cache.so
+
+pkgname = librgw
+	pkgdesc = Ceph Storage client library to RADOS Object Gateway, a S3 and Swift compatible REST API
+	depends = librados=18.2.4-3
+	depends = librabbitmq-c
+	depends = lua
+	depends = librdkafka
+	depends = expat
+	depends = boost-libs
+	depends = gperftools
+	provides = librgw.so
+
+pkgname = libcephsqlite
+	pkgdesc = Ceph Storage client library for a RADOS backed sqlite3 VFS extension
+	depends = librados=18.2.4-3
+	depends = fmt
+	provides = libcephsqlite.so
+
+pkgname = python-ceph-common
+	pkgdesc = Ceph Storage python module for common classes, objects and types
+	depends = ceph-common=18.2.4-3
+	depends = python
+	depends = python-setuptools
+	depends = python-prettytable
+	depends = python-yaml
+
+pkgname = python-rados
+	pkgdesc = Ceph Storage python library for librados
+	depends = python-ceph-common=18.2.4-3
+	depends = librados=18.2.4-3
+	depends = libxcrypt
+
+pkgname = python-rbd
+	pkgdesc = Ceph Storage python library for librbd
+	depends = python-ceph-common=18.2.4-3
+	depends = python-rados=18.2.4-3
+	depends = librbd=18.2.4-3
+	depends = libxcrypt
+
+pkgname = python-cephfs
+	pkgdesc = Ceph Storage python library for libcephfs
+	depends = python-ceph-common=18.2.4-3
+	depends = python-rados=18.2.4-3
+	depends = libcephfs=18.2.4-3
+	depends = libxcrypt
+
+pkgname = python-rgw
+	pkgdesc = Ceph Storage python library for librgw
+	depends = python-ceph-common=18.2.4-3
+	depends = python-rados=18.2.4-3
+	depends = librgw=18.2.4-3
+	depends = libxcrypt
+
+pkgname = cephfs-top
+	pkgdesc = Ceph Storage utility for a top(1) inspired curses TUI for CephFS metrics
+	depends = python-ceph-common=18.2.4-3
+	depends = python-cephfs=18.2.4-3
+	depends = python
+
+pkgname = cephfs-shell
+	pkgdesc = Ceph Storage utility for accessing a CephFS filesystem shell
+	depends = python-ceph-common=18.2.4-3
+	depends = python-cephfs=18.2.4-3
+	depends = python
+	depends = python-cmd2
+	depends = python-colorama
+
+pkgname = java-cephfs
+	pkgdesc = Ceph Storage JNI bindings for CephFS
+	depends = libcephfs=18.2.4-3
+	depends = java-runtime
+
+pkgname = ceph
+	pkgdesc = Ceph Storage full install [VIRTUAL]
+	depends = ceph-libs=18.2.4-3
+	depends = ceph-cluster=18.2.4-3
+	depends = ceph-rados=18.2.4-3
+	depends = ceph-rbd=18.2.4-3
+	depends = ceph-cephfs=18.2.4-3
+	depends = ceph-tools=18.2.4-3
+	depends = ceph-test=18.2.4-3
+	depends = python-rados=18.2.4-3
+	depends = python-rbd=18.2.4-3
+	depends = python-cephfs=18.2.4-3
+	depends = python-rgw=18.2.4-3
+
+pkgname = ceph-libs
+	pkgdesc = Ceph Storage client libraries [VIRTUAL]
+	depends = librados=18.2.4-3
+	depends = librbd=18.2.4-3
+	depends = libcephfs=18.2.4-3
+	depends = librgw=18.2.4-3
+	depends = libcephsqlite=18.2.4-3
+
+pkgname = ceph-cluster
+	pkgdesc = Ceph Storage cluster daemons and components [VIRTUAL]
+	depends = ceph-mon=18.2.4-3
+	depends = ceph-mgr=18.2.4-3
+	depends = ceph-osd=18.2.4-3
+	depends = ceph-mds=18.2.4-3
+	depends = ceph-rgw=18.2.4-3
+	depends = ceph-volume=18.2.4-3
+
+pkgname = ceph-cli
+	pkgdesc = Ceph Storage CLI utility [VIRTUAL]
+	depends = ceph-base=18.2.4-3

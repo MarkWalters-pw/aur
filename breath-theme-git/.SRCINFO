@@ -1,0 +1,23 @@
+pkgbase = breath-theme-git
+	pkgdesc = Breath Plasma Look & Feel packages by Manjaro Team
+	pkgver = r270.1b708941
+	pkgrel = 1
+	url = https://gitlab.manjaro.org/artwork/themes/breath
+	arch = any
+	license = LGPL-2.0-or-later
+	license = CC-BY-SA-4.0
+	license = GPL-3.0-only
+	license = GPL-2.0-or-later
+	makedepends = extra-cmake-modules
+	makedepends = git
+	makedepends = libplasma
+	depends = breeze
+	depends = plasma-workspace
+	provides = breath-wallpaper
+	provides = plasma-themes-breath
+	provides = sddm-breath-theme
+	provides = yakuake-skin-breath
+	source = git+https://gitlab.manjaro.org/artwork/themes/breath.git
+	sha256sums = SKIP
+
+pkgname = breath-theme-git

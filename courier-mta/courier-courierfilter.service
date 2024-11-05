@@ -1,0 +1,12 @@
+[Unit]
+Description=Courier filter Daemon
+
+[Service]
+Type=forking
+ExecStart=/usr/sbin/courierfilter start
+ExecStop=/usr/sbin/courierfilter stop
+ExecReload=/usr/sbin/courierfilter restart
+PIDFile=/run/courier/courierfilter.pid
+
+[Install]
+WantedBy=multi-user.target

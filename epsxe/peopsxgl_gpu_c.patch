@@ -1,0 +1,29 @@
+--- gpu.org	2024-09-13 12:14:41.673946173 -0400
++++ gpu.c	2024-09-13 12:17:37.146199700 -0400
+@@ -20,6 +20,7 @@
+ //#define NOVMODE
+ 
+ #include "stdafx.h"
++#include <sys/wait.h>
+ 
+ #if defined (_MACGL)
+ #include "drawgl.h"
+@@ -1093,7 +1094,7 @@
+ #if defined (_MACGL)
+    *disp = display;
+ #else
+-   *disp=(unsigned long *)display;                       // return display ID to main emu
++   *disp=(unsigned long)display;                       // return display ID to main emu
+ #endif
+   }
+ 
+@@ -3061,7 +3062,7 @@
+ 		return;
+ 	}
+ 
+-	sprintf(cfg, "%s/.pcsxr/plugins/cfg/cfgpeopsxgl", getenv("HOME"));
++	sprintf(cfg, "%s/.epsxe/plugins/cfgpeopsxgl", getenv("HOME"));
+ 	if (stat(cfg, &buf) != -1) {
+ 		int pid = fork();
+ 		if (pid == 0) {
+

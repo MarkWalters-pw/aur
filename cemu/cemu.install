@@ -1,0 +1,19 @@
+post_upgrade() {
+	if [ $(vercmp $2 2.0.182-1) -lt 0 ]; then cat << EOF
+The location of the keys file recently changed from
+$XDG_CONFIG_HOME (defaults to ~/.config/Cemu/keys.txt) to
+$XDG_DATA_HOME (defaults to ~/.local/share/Cemu/keys.txt).
+EOF
+	fi
+	if [ $(vercmp $2 2.1) -lt 0 ]; then cat << EOF
+Before 2.1, this package modified the AppName to be "cemu".
+With 2.1, we are following upstream again in this regard.
+This means that all the data directories should now be called "Cemu" instead of "cemu".
+To apply this change, run:
+
+mv ~/.config/cemu ~/.config/Cemu
+mv ~/.local/share/cemu ~/.local/share/Cemu
+mv ~/.cache/cemu ~/.cache/Cemu
+EOF
+	fi
+}
