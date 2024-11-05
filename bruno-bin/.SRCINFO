@@ -1,0 +1,21 @@
+pkgbase = bruno-bin
+	pkgdesc = Opensource API Client for Exploring and Testing APIs
+	pkgver = 1.33.0
+	pkgrel = 1
+	url = https://www.usebruno.com/
+	arch = x86_64
+	license = MIT
+	depends = c-ares
+	depends = gtk3
+	depends = libevent
+	depends = nss
+	depends = wayland
+	depends = alsa-lib
+	provides = bruno
+	conflicts = bruno
+	source = https://github.com/usebruno/bruno/releases/download/v1.33.0/bruno_1.33.0_amd64_linux.deb
+	source = LICENSE-1.33.0::https://raw.githubusercontent.com/usebruno/bruno/v1.33.0/license.md
+	sha256sums = 29dade261963122fc82915ad3e33f203144c695a3045a1886492ca54459dceca
+	sha256sums = 8891070a847e5047bf77d38d88d7dfbab1beab41e37c802b9f5b23f2bbb9c7be
+
+pkgname = bruno-bin

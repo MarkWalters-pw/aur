@@ -1,0 +1,28 @@
+post_install() {
+    # Remind the user the activate the product 
+    echo
+    echo "The launcher is called agisoft-metashape-pro"
+    echo
+    echo "Run the following command to activate the product"
+    echo
+    echo "sudo agisoft-metashape-pro --activate 11111-22222-33333-44444-55555"
+    echo
+    echo "NOTE: the number after "--activate" is your node-locked license"
+    echo
+}
+
+pre_remove() {
+    echo "Deactivating the product..."
+    agisoft-metashape-pro --deactivate 2>/dev/null
+}
+
+post_remove() {
+    rm -rf /opt/agisoft/metashape-pro
+    rm -d /opt/agisoft 2>/dev/null
+    echo
+    echo "The users data were kept at the below locations"
+    echo "\$HOME/.agisoft"
+    echo "\$HOME/.config/Agisoft"
+    echo "\$HOME/.local/share/Agisoft"
+    echo
+}

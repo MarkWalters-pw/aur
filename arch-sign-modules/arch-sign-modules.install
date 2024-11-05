@@ -1,0 +1,32 @@
+#!/bin/sh
+
+MODULES=$(find /var/lib/dkms -mindepth 1 -maxdepth 1 -type d -exec basename {} \;)
+
+post_install() {
+	local dkms_dir=/etc/dkms dkms_link= x=
+	local kernel_sign=${dkms_dir}/kernel-sign.conf
+
+	for x in $MODULES; do
+		dkms_link="$dkms_dir/$x.conf"
+		if [ ! -L $dkms_link ]; then
+			echo "Creating DKMS symlink: $kernel_sign => $dkms_link"
+			ln -sf $kernel_sign $dkms_link
+		fi
+	done
+}
+
+post_upgrade() {
+	post_install
+}
+
+post_remove() {
+	local dkms_dir=/etc/dkms dkms_link= x=
+
+	for x in $MODULES; do
+		dkms_link="$dkms_dir/$x.conf"
+		if [ -L $dkms_link ]; then
+			echo "Removing DKMS symlink: $dkms_link"
+			rm -f $dkms_link
+		fi
+	done
+}

@@ -1,0 +1,28 @@
+## arg 1:  the new package version
+## arg 2:  the old package version
+
+post_upgrade() {
+  # define the versions for which a change is needed
+	for test in 2.101-1 2.201-1 2.202-1 2.208-1 2.212-1 2.213-1 2.221-1 2.224-1; do
+		if [ "$(vercmp $2 $test)" -lt 0 ]; then
+      cat <<END
+
+>>> New features/changes have been made with this release.
+    Check \$XDG_CONFIG_HOME/clean-chroot-manager.conf against
+    /usr/share/clean-chroot-manager/ccm.skel to ensure it is updated!
+
+END
+		fi
+	done
+
+	for test in 2.217-1; do
+		if [ "$(vercmp $2 $test)" -lt 0 ]; then
+      cat <<END
+
+>>> WARNING: Changes to this release require some users to nuke any existing
+             buildroot before using ccm with this release!
+
+END
+		fi
+	done
+}

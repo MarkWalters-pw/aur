@@ -1,0 +1,22 @@
+pkgbase = ashell-git
+	pkgdesc = A ready to go Wayland status bar for Hyprland
+	pkgver = r174.8f57e68
+	pkgrel = 1
+	url = https://github.com/MalpenZibo/ashell.git
+	arch = x86_64
+	license = MIT
+	makedepends = cargo
+	makedepends = git
+	makedepends = wayland-protocols
+	makedepends = clang
+	depends = libxkbcommon
+	depends = wayland
+	depends = dbus
+	depends = libpipewire
+	depends = libpulse
+	provides = ashell
+	conflicts = ashell
+	source = ashell::git+https://github.com/MalpenZibo/ashell.git
+	b2sums = SKIP
+
+pkgname = ashell-git

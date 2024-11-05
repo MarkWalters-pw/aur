@@ -1,0 +1,19 @@
+pkgbase = asciinema-git
+	pkgdesc = Record and share your terminal sessions
+	pkgver = 3.0.0rc.3.r26.g2728a10
+	pkgrel = 2
+	url = https://github.com/asciinema/asciinema
+	arch = x86_64
+	license = GPL-3.0-only
+	makedepends = git
+	makedepends = cargo
+	depends = gcc-libs
+	depends = glibc
+	provides = asciinema
+	conflicts = asciinema
+	options = !lto
+	options = !debug
+	source = asciinema-git::git+https://github.com/asciinema/asciinema.git
+	sha256sums = SKIP
+
+pkgname = asciinema-git

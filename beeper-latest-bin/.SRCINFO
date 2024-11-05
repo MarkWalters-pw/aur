@@ -1,0 +1,17 @@
+pkgbase = beeper-latest-bin
+	pkgdesc = A unified messaging app
+	pkgver = 3.109.1
+	pkgrel = 1
+	url = https://beeper.com/
+	arch = x86_64
+	license = LicenseRef-beeper
+	provides = beeper
+	conflicts = beeper
+	options = !strip
+	options = !debug
+	source = beeper-3.109.1x86_64.AppImage::https://download.beeper.com/linux/appImage/x64
+	sha256sums = SKIP
+
+pkgname = beeper-latest-bin
+	depends = hicolor-icon-theme
+	depends = electron

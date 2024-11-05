@@ -1,0 +1,17 @@
+pkgbase = brother-mfc-l3780cdw
+	pkgdesc = LPR and CUPS driver for the Brother MFC-L3780CDW
+	pkgver = 3.5.1_1
+	pkgrel = 1
+	url = https://support.brother.com/g/b/downloadend.aspx?c=us&lang=en&prod=mfcl3780cdw_us_as&os=128&dlid=dlf105764_000&flang=4&type3=10283
+	arch = i686
+	arch = x86_64
+	license = LicenseRef-brother
+	depends = cups
+	depends = ghostscript
+	depends = perl
+	optdepends = brscan4: scanner support
+	source = https://download.brother.com/welcome/dlf105764/mfcl3780cdwpdrv-3.5.1-1.i386.deb
+	sha256sums = 0973b0836578c0c3b55298b07046a86d5c57eea9d7118d20f06cfb68bc35ffec
+	depends_x86_64 = lib32-glibc
+
+pkgname = brother-mfc-l3780cdw

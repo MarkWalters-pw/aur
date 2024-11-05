@@ -1,0 +1,21 @@
+pkgbase = android-backup-extractor-git
+	pkgdesc = Utility to extract and repack Android backups created with adb backup
+	pkgver = r147.g70730dd
+	pkgrel = 2
+	url = https://github.com/nelenkov/android-backup-extractor
+	arch = any
+	license = custom:Apache
+	makedepends = git
+	makedepends = apache-ant
+	makedepends = java-environment>=11
+	depends = bcprov>=1.71
+	depends = java-runtime-headless>=11
+	depends = sh
+	provides = abe.jar
+	provides = android-backup-extractor
+	conflicts = abe
+	conflicts = android-backup-extractor
+	source = android-backup-extractor-git::git+https://github.com/nelenkov/android-backup-extractor.git
+	b2sums = SKIP
+
+pkgname = android-backup-extractor-git

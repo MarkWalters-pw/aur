@@ -1,0 +1,19 @@
+pkgbase = bruno-git
+	pkgdesc = Opensource API Client for Exploring and Testing APIs
+	pkgver = 1.33.0.r0.gdce96e0f
+	pkgrel = 1
+	url = https://www.usebruno.com/
+	arch = x86_64
+	license = MIT
+	makedepends = nvm
+	makedepends = asar
+	depends = electron31
+	depends = alsa-lib
+	provides = bruno
+	conflicts = bruno
+	source = bruno::git+https://github.com/usebruno/bruno#branch=main
+	source = com.usebruno.app.Bruno.desktop
+	sha256sums = SKIP
+	sha256sums = 7bad0d66e67fdaaf99d1b7b32ba2f119b7d6dba12ecfdb398c39ee3c81bbe051
+
+pkgname = bruno-git

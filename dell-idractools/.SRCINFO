@@ -1,0 +1,18 @@
+pkgbase = dell-idractools
+	pkgdesc = Dell iDRAC Tools (RACADM, VMCLI, IPMI Tool)
+	pkgver = 11.2.1.0.528
+	pkgrel = 1
+	url = https://www.dell.com/support/home/en-us/drivers/driversdetails?driverid=j72j9&oscode=rhel8&productcode=poweredge-r7525
+	arch = x86_64
+	license = GPL2
+	license = LGPL2
+	makedepends = rpmextract
+	conflicts = dell-srvadmin
+	conflicts = dell-mgmtstat
+	source = https://dl.dell.com/FOLDER12112987M/1/Dell-iDRACTools-Web-LX-11.2.1.0-528_A00.tar.gz.sign
+	source = https://dl.dell.com/FOLDER12112988M/1/Dell-iDRACTools-Web-LX-11.2.1.0-528_A00.tar.gz
+	validpgpkeys = 42550ABD1E80D7C1BC0BAD851285491434D8786F
+	sha256sums = SKIP
+	sha256sums = 5df8cb37391eff84b473daff9c30f79e824440c5cf9d4fb8be3ceafb9a9a686a
+
+pkgname = dell-idractools

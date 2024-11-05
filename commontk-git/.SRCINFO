@@ -1,0 +1,23 @@
+pkgbase = commontk-git
+	pkgdesc = set of common support code for medical imaging, surgical navigation, and related purposes
+	pkgver = 2023.07.13.r158.gd7ce6d91
+	pkgrel = 1
+	url = https://github.com/commontk/CTK
+	arch = x86_64
+	license = Apache-2.0
+	checkdepends = xorg-server-xvfb
+	makedepends = git
+	makedepends = cmake
+	makedepends = qt5-svg
+	makedepends = qt5-tools
+	makedepends = python
+	depends = qt5-base
+	depends = gcc-libs
+	depends = glibc
+	optdepends = python: For scripting support
+	provides = commontk
+	conflicts = commontk
+	source = git+https://github.com/commontk/CTK.git
+	sha256sums = SKIP
+
+pkgname = commontk-git

@@ -1,0 +1,21 @@
+pkgbase = deltachat-desktop-git
+	pkgdesc = A privacy oriented chat application built on e-mail
+	pkgver = monorepo.testrelease.rc1.r7.gbdca27289
+	pkgrel = 1
+	url = https://github.com/deltachat/deltachat-desktop
+	arch = any
+	license = GPL
+	makedepends = pnpm
+	makedepends = nodejs
+	makedepends = git
+	makedepends = python
+	source = deltachat-desktop-git::git+https://git@github.com/deltachat/deltachat-desktop.git
+	source = deltachat-desktop.desktop
+	source = deltachat-desktop.sh
+	source = deltachat-desktop.xml
+	sha256sums = SKIP
+	sha256sums = bdd5740b8d051fe9b4d3bace656b2475a322352f9826eb329a0daf0a7bf3a4c2
+	sha256sums = 3a546d9aa79e0d4faa090523e7774fded1ffdeb22995bd013e9cb40e20117dd0
+	sha256sums = 851a593350fa064dfcb8ea2a021dc997c908c7568c3ceb5dab6809209958b9aa
+
+pkgname = deltachat-desktop-git

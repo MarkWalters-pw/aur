@@ -1,0 +1,32 @@
+pkgbase = dustforce-hib-dustmod
+	pkgdesc = A fast-paced 2D action platformer (Humble Bundle version, with Dustmod)
+	pkgver = 1.0+h20141222_24.8.1
+	pkgrel = 2
+	url = http://dustmod.com/
+	arch = x86_64
+	license = custom:commercial
+	depends = mesa
+	depends = libgl
+	depends = sdl2
+	depends = libxdamage
+	depends = freealut
+	depends = libidn11
+	depends = libvorbis
+	depends = libxft
+	depends = xdg-utils
+	depends = openssl-1.0
+	noextract = linux64_drmfree
+	source = hib://Dustforce-Linux-2014-12-22.sh
+	source = hib://dustforce_dx_07012015.zip
+	source = http://dustkid.com/getdustmod/linux64_drmfree
+	source = dustmod-patch::http://dustkid.com/backend8/dustmod_package4.php?platform=linux64_drmfree
+	source = dustforce-dustmod
+	source = dustforce-hib-dustmod.desktop
+	sha256sums = f7bc7ac00ef9166c0b4550e1fc120ffe78307e92be1e379f9c40a4513660fae1
+	sha256sums = 386c82e28eb08eea443b9881ea360cc10f29d9baf7bdafa90457a96e75b3c72c
+	sha256sums = 03eba46c134e43d76fbd13e0b0ad8cab39db54e15cb9a6aca8bc45b7c50fe58d
+	sha256sums = a23973f2fbaefabd597a397098609527df171a790b5f1d25ffa16b7092bb8292
+	sha256sums = ff3c4e8cb45f6e931b6545c55064aaf644b885eb99947b6e32c953faea77a3ce
+	sha256sums = 031d9d6a6ed41c4f6c69ea7dc7037d1a53f656e37f16d33f220ca25db7e2912b
+
+pkgname = dustforce-hib-dustmod

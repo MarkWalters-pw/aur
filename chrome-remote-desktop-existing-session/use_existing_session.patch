@@ -1,0 +1,55 @@
+--- a/opt/google/chrome-remote-desktop/chrome-remote-desktop	2022-04-23 17:34:24.118136150 +0300
++++ b/opt/google/chrome-remote-desktop/chrome-remote-desktop	2022-04-23 17:33:56.083833805 +0300
+@@ -109,6 +109,8 @@
+ 
+ X_LOCK_FILE_TEMPLATE = "/tmp/.X%d-lock"
+ FIRST_X_DISPLAY_NUMBER = 20
++EXISTING_X_DISPLAY_FILE_PATH = os.path.join(CONFIG_DIR, "Xsession")
++X_SESSION_FILE_TEMPLATE = "/tmp/.X11-unix/X%d"
+ 
+ # Amount of time to wait between relaunching processes.
+ SHORT_BACKOFF_TIME = 5
+@@ -514,6 +516,25 @@
+       return True
+     return False
+ 
++  def _use_existing_session(self):
++    with open(EXISTING_X_DISPLAY_FILE_PATH) as fh:
++      try:
++        display = int(fh.readline().rstrip())
++      except ValueError:
++        logging.error("Display is not a number")
++        sys.exit(1)
++    if not os.path.exists(X_SESSION_FILE_TEMPLATE % display):
++      logging.error("Xorg session file doesn't exist")
++      sys.exit(1)
++
++    logging.info("Using existing Xorg session: %d" % display)
++    self.child_env["DISPLAY"] = ":%d" % display
++    self.child_env["CHROME_REMOTE_DESKTOP_SESSION"] = "1"
++
++    # Set SSH_AUTH_SOCK to the file name to listen on.
++    if self.ssh_auth_sockname:
++      self.child_env["SSH_AUTH_SOCK"] = self.ssh_auth_sockname
++
+   def launch_session(self, server_args, backoff_time):
+     """Launches process required for session and records the backoff time
+     for inhibitors so that process restarts are not attempted again until
+@@ -522,10 +543,13 @@
+     self._init_child_env()
+     self.setup_audio()
+     self._setup_gnubby()
+-    self._launch_server(server_args)
+-    if not self._launch_pre_session():
+-      # If there was no pre-session script, launch the session immediately.
+-      self.launch_desktop_session()
++    if os.path.exists(EXISTING_X_DISPLAY_FILE_PATH):
++      self._use_existing_session()
++    else:
++      self._launch_server(server_args)
++      if not self._launch_pre_session():
++        # If there was no pre-session script, launch the session immediately.
++        self.launch_desktop_session()
+     self.server_inhibitor.record_started(MINIMUM_PROCESS_LIFETIME,
+                                       backoff_time)
+     self.session_inhibitor.record_started(MINIMUM_PROCESS_LIFETIME,

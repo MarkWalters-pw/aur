@@ -1,0 +1,16 @@
+pkgbase = dualsensectl
+	pkgdesc = Tool for controlling Sony PlayStation 5 DualSense controller on Linux
+	pkgver = 0.5
+	pkgrel = 1
+	url = https://github.com/nowrep/dualsensectl
+	arch = x86_64
+	license = GPL2
+	makedepends = make
+	makedepends = gcc
+	depends = dbus
+	depends = hidapi
+	conflicts = dualsensectl-git
+	source = dualsensectl-0.5.tar.gz::https://github.com/nowrep/dualsensectl/archive/refs/tags/v0.5.tar.gz
+	sha512sums = 0d700293c72615fd0aeddc774be09844498d4ca530d9f49d45ce3137ffe7408490fc6efddf6ccaf91253e3d9c7a63b36ebce0680d449d1900bdfa276fa618206
+
+pkgname = dualsensectl

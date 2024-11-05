@@ -1,0 +1,17 @@
+pkgbase = digimend-kernel-drivers-dkms
+	pkgdesc = Linux kernel modules (DKMS) for non-Wacom USB graphics tablets
+	pkgver = 13
+	pkgrel = 1
+	url = https://digimend.github.io
+	install = digimend-kernel-drivers-dkms.install
+	arch = any
+	license = GPL2
+	depends = dkms
+	depends = systemd
+	depends = xf86-input-wacom
+	source = digimend-kernel-drivers-dkms-v13.tar.gz::https://github.com/DIGImend/digimend-kernel-drivers/archive/refs/tags/v13.tar.gz
+	source = Makefile
+	sha256sums = ee3fcd2eaa32bee4e5ce742c81e31d7290893772c3931d1888b32fe34ec0f3c8
+	sha256sums = bacc8a6b0c5fdbc95b9ef6072c9db6afc56958c0f8e539d4338b8895377355fe
+
+pkgname = digimend-kernel-drivers-dkms

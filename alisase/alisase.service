@@ -1,0 +1,14 @@
+[Unit]
+Description=AliSASE Daemon Service
+After=network-online.target nftables.service iptables.service
+
+[Service]
+Type=forking
+ExecStart=/usr/local/bin/alisase-bin/3.4.2/alisasesvc --daemon
+KillSignal=SIGKILL
+KillMode=mixed
+SuccessExitStatus=0 1 255
+RestartPreventExitStatus=
+
+[Install]
+WantedBy=multi-user.target

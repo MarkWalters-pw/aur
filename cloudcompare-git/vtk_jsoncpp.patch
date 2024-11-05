@@ -1,0 +1,40 @@
+Submodule plugins/core/Standard/qMasonry contains modified content
+diff --git a/plugins/core/Standard/qMasonry/qAutoSeg/CMakeLists.txt b/plugins/core/Standard/qMasonry/qAutoSeg/CMakeLists.txt
+index fac947c..513522b 100644
+--- a/plugins/core/Standard/qMasonry/qAutoSeg/CMakeLists.txt
++++ b/plugins/core/Standard/qMasonry/qAutoSeg/CMakeLists.txt
+@@ -26,6 +26,8 @@ if ( PLUGIN_STANDARD_MASONRY_QAUTO_SEG )
+ 	# Find Packages
+ 	# Find PCL
+ 	#set( PCL_DIR "C:/Program Files/PCL 1.9.1") #DGM: can't do that as it will obviously conflict with most of the users settings ;)
++	set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} /usr/lib/cmake/vtk )
++	find_package( JsonCpp REQUIRED )
+ 	find_package( PCL 1.9.1 REQUIRED )
+ 
+ 	# Find OpenCV
+diff --git a/plugins/core/Standard/qMasonry/qManualSeg/CMakeLists.txt b/plugins/core/Standard/qMasonry/qManualSeg/CMakeLists.txt
+index f2da8a7..6a7552d 100644
+--- a/plugins/core/Standard/qMasonry/qManualSeg/CMakeLists.txt
++++ b/plugins/core/Standard/qMasonry/qManualSeg/CMakeLists.txt
+@@ -24,6 +24,8 @@ if ( PLUGIN_STANDARD_MASONRY_QMANUAL_SEG )
+ 	# Find Packages
+ 	# Find PCL
+ 	#set( PCL_DIR "C:/Program Files/PCL 1.9.1") #DGM: can't do that as it will obviously conflict with most of the users settings ;)
++	set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} /usr/lib/cmake/vtk )
++	find_package( JsonCpp REQUIRED )
+ 	find_package( PCL 1.9.1 REQUIRED )
+ 
+ 	# Find OpenCV
+diff --git a/plugins/core/Standard/qPCL/PclUtils/CMakeLists.txt b/plugins/core/Standard/qPCL/PclUtils/CMakeLists.txt
+index a78dd7129..5b5c1e2af 100644
+--- a/plugins/core/Standard/qPCL/PclUtils/CMakeLists.txt
++++ b/plugins/core/Standard/qPCL/PclUtils/CMakeLists.txt
+@@ -2,6 +2,8 @@ project( QPCL_PLUGIN_UTILS_LIB )
+ 
+ find_package( Qt5 COMPONENTS Widgets REQUIRED )
+ 
++set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} /usr/lib/cmake/vtk )
++find_package( JsonCpp REQUIRED )
+ find_package( PCL 1.9 REQUIRED )
+ 
+ add_library( ${PROJECT_NAME} STATIC )

@@ -1,0 +1,19 @@
+pkgbase = astro-bin
+	pkgdesc = A habit tracker for your terminal with a GitHub style activity graph
+	pkgver = 0.0.36
+	pkgrel = 1
+	url = https://astro.joaofnds.com/
+	license = MIT
+	conflicts = astro
+	provides = astro
+	arch = aarch64
+	source_aarch64 = https://github.com/joaofnds/astro/releases/download/0.0.36/astro_0.0.36_linux_arm64.tar.gz
+	sha256sums_aarch64 = 1c4f8428848c051be47e4d91e2642e5eab8301bf43613e137baf53c0d494d4f3
+	arch = i686
+	source_i686 = https://github.com/joaofnds/astro/releases/download/0.0.36/astro_0.0.36_linux_386.tar.gz
+	sha256sums_i686 = c75820a2c3c9f560f095bb57520f156b0066f842d12c953be880da2e99dcb53e
+	arch = x86_64
+	source_x86_64 = https://github.com/joaofnds/astro/releases/download/0.0.36/astro_0.0.36_linux_amd64.tar.gz
+	sha256sums_x86_64 = 7bd8ced139462621c0482fb175f910ad0556fc97bb768369d3061f08be1d3077
+	
+pkgname = astro-bin

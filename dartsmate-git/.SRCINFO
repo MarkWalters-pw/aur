@@ -1,0 +1,22 @@
+pkgbase = dartsmate-git
+	pkgdesc = Analyze, compare and track your darts games with DartsMate
+	pkgver = 0.1.2.r4.g7ad85b5
+	pkgrel = 1
+	url = https://github.com/derechtenap/dartsmate
+	arch = any
+	license = LicenseRef-unknown
+	makedepends = npm
+	makedepends = git
+	makedepends = nvm
+	makedepends = gendesk
+	makedepends = gcc
+	makedepends = curl
+	depends = electron21
+	provides = dartsmate=0.1.2
+	conflicts = dartsmate
+	source = dartsmate.git::git+https://github.com/derechtenap/dartsmate.git
+	source = dartsmate.sh
+	sha256sums = SKIP
+	sha256sums = 291f50480f5a61bc9c68db7d44cd0412071128706baa868a9cb854f8779a1980
+
+pkgname = dartsmate-git

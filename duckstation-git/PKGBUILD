@@ -1,0 +1,181 @@
+# Contributor: katt <magunasu.b97@gmail.com>
+
+pkgname=duckstation-git
+_pkgname=duckstation
+pkgver=0.1.r7423.g5540d07
+pkgdesc='A Sony PlayStation (PSX) emulator, focusing on playability, speed, and long-term maintainability (git version)'
+pkgrel=1
+arch=(x86_64 aarch64)
+url=https://github.com/stenzek/duckstation
+license=(CC-BY-NC-ND-4.0)
+depends=(
+    sh
+    glibc
+    gcc-libs
+    sdl2
+    qt6-base
+    libwebp.so
+    libjpeg.so
+    libpng16.so
+    libxrandr
+    libx11
+    freetype2 libfreetype.so
+    libzstd.so
+    libz.so
+    libdbus-1.so
+    libcurl.so
+    systemd-libs libudev.so
+    hicolor-icon-theme
+    ffmpeg
+)
+makedepends=(
+    git
+    yq
+    cmake
+    clang
+    lld
+    llvm
+    extra-cmake-modules
+    qt6-tools
+    qt6-wayland
+    libdrm
+    libpulse
+    alsa-lib
+    sndio
+    ninja
+    jack
+    python
+    spirv-headers
+    patchelf
+)
+optdepends=(
+    'qt6-wayland: Wayland support'
+    'libpulse: Pulseaudio support'
+    'sndio: Small audio support'
+    'alsa-lib: ALSA support'
+    'jack: JACK support'
+)
+provides=(duckstation)
+conflicts=(duckstation)
+source=(
+    git+"$url".git
+    stenzek.shaderc::git+https://github.com/stenzek/shaderc.git
+    spirv-cross::git+https://github.com/KhronosGroup/SPIRV-Cross.git
+    libbacktrace::git+https://github.com/ianlancetaylor/libbacktrace.git
+    stenzek.cpuinfo::git+https://github.com/stenzek/cpuinfo.git
+    stenzek.discord-rpc::git+https://github.com/stenzek/discord-rpc.git
+    stenzek.soundtouch::git+https://github.com/stenzek/soundtouch.git
+    stenzek.lunasvg::git+https://github.com/stenzek/lunasvg.git
+    duckstation-qt.desktop
+    duckstation-qt.sh)
+sha256sums=('SKIP'
+            'SKIP'
+            'SKIP'
+            'SKIP'
+            'SKIP'
+            'SKIP'
+            'SKIP'
+            'SKIP'
+            'ec2d7358f81598390a8ceca2d1974be3e5f7c45602b550c89a1e9323ab45474b'
+            '221a8fc0d1f0cebdf281acc26484e98ebbb59f876e12fdef3f03cf91380e31f5')
+
+pkgver() {
+    cd "$srcdir/$_pkgname"
+    git describe --long --abbrev=7 | sed 's/^v//;s/\([^-]*-g\)/r\1/;s/-/./g'
+}
+
+prepare() {
+    # checkout correct versions of deps
+    yq -cr '.modules[] | select(type == "string")' "$srcdir/duckstation/scripts/flatpak/org.duckstation.DuckStation.yaml" \
+      | while read -r dep ; do
+            local dep_name=$(yq -cr ".name" "$srcdir/duckstation/scripts/flatpak/$dep")
+            local dep_url=$(yq -cr '.sources[0].type + "+" + .sources[0].url' "$srcdir/duckstation/scripts/flatpak/$dep")
+            for src in "${source[@]}"; do
+                local src_name=${src%%::*}
+                local src_url=${src##*::}
+                if [ "$src_name" = "$dep_name" ] || [ "$src_url" = "$dep_url" ]; then
+                    local dep_ver=$(yq -cr ".sources[0].tag // .sources[0].commit" "$srcdir/duckstation/scripts/flatpak/$dep")
+                    echo "Checking out $dep_ver for $src_name..."
+                    git -C "$srcdir/$src_name" checkout -q "$dep_ver"
+                fi
+            done
+        done
+}
+
+build() {
+    # Build deps with cmake
+    yq -cr '.modules[] | select(type == "string")' "$srcdir/duckstation/scripts/flatpak/org.duckstation.DuckStation.yaml" \
+      | while read -r dep ; do
+            local dep_name=$(yq -cr 'select(.buildsystem == "cmake-ninja").name' "$srcdir/duckstation/scripts/flatpak/$dep")
+            if [ -n "$dep_name" ]; then
+                local dep_url=$(yq -cr '.sources[0].type + "+" + .sources[0].url' "$srcdir/duckstation/scripts/flatpak/$dep")
+                for src in "${source[@]}"; do
+                    local src_name=${src%%::*}
+                    local src_url=${src##*::}
+                    if [ "$src_name" = "$dep_name" ] || [ "$src_url" = "$dep_url" ]; then
+                        echo "Building $dep_name..."
+                        cmake -B "build-$dep_name" -S "$src_name" \
+                            -G Ninja \
+                            -DCMAKE_C_COMPILER=clang \
+                            -DCMAKE_CXX_COMPILER=clang++ \
+                            -DCMAKE_EXE_LINKER_FLAGS_INIT="-fuse-ld=lld" \
+                            -DCMAKE_MODULE_LINKER_FLAGS_INIT="-fuse-ld=lld" \
+                            -DCMAKE_SHARED_LINKER_FLAGS_INIT="-fuse-ld=lld" \
+                            -DCMAKE_INSTALL_PREFIX=/usr \
+                            $(yq -cr '[."config-opts"[] | select(. | test("_COMPILER") | not)] | join(" ")' "$srcdir/duckstation/scripts/flatpak/$dep")
+                        ninja -C "build-$dep_name"
+                        DESTDIR="$srcdir/deps" ninja -C "build-$dep_name" install
+                    fi
+                done
+            fi
+      done
+
+    echo "Building libbacktrace..."
+
+    pushd libbacktrace
+    autoreconf -fi
+    CFLAGS="$CFLAGS -ffat-lto-objects" ./configure --prefix="$srcdir/deps/usr"
+    make
+    make install
+    popd
+
+    echo "Building duckstation..."
+
+    cmake -B build -S duckstation \
+        -G Ninja \
+        -DCMAKE_BUILD_TYPE=None \
+        -DCMAKE_C_COMPILER=clang \
+        -DCMAKE_CXX_COMPILER=clang++ \
+        -DCMAKE_C_FLAGS="$CFLAGS -Wno-error=format-security" \
+        -DCMAKE_CXX_FLAGS="$CXXFLAGS -Wno-error=format-security" \
+        -DCMAKE_EXE_LINKER_FLAGS_INIT="-fuse-ld=lld" \
+        -DCMAKE_MODULE_LINKER_FLAGS_INIT="-fuse-ld=lld" \
+        -DCMAKE_SHARED_LINKER_FLAGS_INIT="-fuse-ld=lld" \
+        -DCMAKE_INTERPROCEDURAL_OPTIMIZATION=ON \
+        -DCMAKE_PREFIX_PATH="$srcdir/deps/usr" \
+        -DCMAKE_BUILD_RPATH=/usr/lib/duckstation \
+        -DCMAKE_SKIP_RPATH=ON \
+        -DBUILD_NOGUI_FRONTEND=OFF \
+        -DBUILD_QT_FRONTEND=ON \
+        -Wno-dev
+    ninja -C build
+}
+
+package() {
+    # Install everything into /usr/lib/duckstation
+    install -m 755 -d "${pkgdir}/usr/lib"
+    cp -drv --no-preserve='ownership' build/bin "${pkgdir}/usr/lib/${_pkgname}"
+    # Install bundled libraries
+    find "${srcdir}/deps/usr/lib" -name '*.so*' -exec cp -dv --no-preserve='ownership' '{}' "${pkgdir}/usr/lib/${_pkgname}/" \;
+
+    # rpath
+    patchelf --force-rpath --set-rpath "/usr/lib/${_pkgname}" "${pkgdir}/usr/lib/${_pkgname}/$_pkgname-qt"
+
+    # Install additional license
+    install -Dvm644 "${pkgdir}/usr/lib/${_pkgname}/resources/thirdparty.html" "${pkgdir}/usr/share/licenses/${pkgname}/thirdparty.html"
+
+    install -Dvm755 "${srcdir}/duckstation-qt.sh" "${pkgdir}/usr/bin/duckstation-qt"
+    install -Dvm644 "${srcdir}/duckstation-qt.desktop" "${pkgdir}/usr/share/applications/duckstation-qt.desktop"
+    install -Dvm644 "${pkgdir}/usr/lib/${_pkgname}/resources/images/duck.png" "${pkgdir}/usr/share/icons/hicolor/64x64/apps/duckstation-qt.png"
+}
+

@@ -1,0 +1,22 @@
+pkgbase = battery-advisor
+	pkgdesc = A simple tool to monitor and notify about battery status. Built with Python.
+	pkgver = 1.2.1
+	pkgrel = 1
+	url = https://github.com/fer-hnndz/battery-advisor
+	arch = any
+	license = MIT
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = python
+	depends = python-psutil
+	depends = python-toml
+	depends = python-gobject
+	depends = libnotify
+	depends = python-pystray
+	depends = python-systemd
+	backup = etc/battery-advisor/defaultSettings.toml
+	source = https://files.pythonhosted.org/packages/source/b/battery_advisor/battery_advisor-1.2.1.tar.gz
+	sha256sums = 2e40d3b6855c418c75d757cba720a7b93b2b98be055287e507bed82c20ebd447
+
+pkgname = battery-advisor

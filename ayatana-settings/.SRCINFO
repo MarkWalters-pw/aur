@@ -1,0 +1,19 @@
+pkgbase = ayatana-settings
+	pkgdesc = Configuration tool for tweaking all Ayatana system indicators
+	pkgver = 24.10.1
+	pkgrel = 1
+	url = https://github.com/AyatanaIndicators/ayatana-settings
+	arch = i686
+	arch = x86_64
+	arch = pentium4
+	license = GPL-3.0-or-later
+	makedepends = cmake-extras
+	makedepends = intltool
+	depends = gtk4
+	depends = glib2
+	depends = glibc
+	depends = hicolor-icon-theme
+	source = ayatana-settings-24.10.1.tar.gz::https://github.com/AyatanaIndicators/ayatana-settings/archive/24.10.1.tar.gz
+	md5sums = 510b3de6694a456825aeb039c9fc7968
+
+pkgname = ayatana-settings

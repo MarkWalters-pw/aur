@@ -1,0 +1,22 @@
+pkgbase = bash.d
+	pkgdesc = Subscripts for GNU Bash shells
+	pkgver = 1564076224
+	pkgrel = 1
+	url = https://github.com/GNU-Pony/bash.d
+	arch = any
+	license = GPL3
+	makedepends = make
+	makedepends = findutils
+	makedepends = grep
+	makedepends = coreutils
+	depends = bash
+	depends = coreutils
+	optdepends = libnotify: for alert.bash
+	optdepends = sed: for palette.bash
+	optdepends = git: for git branch in prompt.bash
+	optdepends = acpi: for battery status in prompt.bash
+	optdepends = featherweight: for featherweight status in prompt.bash
+	source = https://github.com/GNU-Pony/bash.d/archive/1564076224.tar.gz
+	sha256sums = 4c22ee9708d56d437c768161e18fa464ef259807711c8aafe05e43540d59ba14
+
+pkgname = bash.d

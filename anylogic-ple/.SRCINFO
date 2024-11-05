@@ -1,0 +1,20 @@
+pkgbase = anylogic-ple
+	pkgdesc = AnyLogic Personal Learning Edition - for beginners and students
+	pkgver = 8.9.1
+	pkgrel = 1
+	url = https://www.anylogic.com
+	arch = x86_64
+	license = custom
+	depends = glibc
+	optdepends = chromium: alternative browser for model animating
+	optdepends = firefox: alternative browser for model animating
+	optdepends = webkitgtk: it may be required because of libwebkitgtk-1.0 dependency (not building as of now, only binary)
+	provides = anylogic
+	conflicts = anylogic
+	options = !strip
+	source = https://files.anylogic.com/anylogic-ple-8.9.1.linux.x86_64.tgz.bin
+	source = anylogic-ple.desktop
+	sha256sums = ffe11605522cf399f1d9d7dab569f572df5dd0cd0864a24b9cbb827101e9921f
+	sha256sums = e4ba5ff1344d0a60fa8625739fe442c5b9c995fb51c1cd48839291abf6a8bf55
+
+pkgname = anylogic-ple
