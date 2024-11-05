@@ -1,0 +1,19 @@
+pkgbase = imewlconverter
+	pkgdesc = 一款开源免费的输入法词库转换程序
+	pkgver = 3.1.1
+	pkgrel = 2
+	url = https://github.com/studyzy/imewlconverter
+	arch = x86_64
+	arch = armv7h
+	arch = aarch64
+	license = GPL-3.0-or-later
+	makedepends = dotnet-sdk-8.0
+	depends = dotnet-runtime-8.0
+	provides = imewlconverter
+	conflicts = imewlconverter
+	replaces = imewlconverter-bin
+	replaces = imewlconverter-cli
+	source = imewlconverter-3.1.1.tar.gz::https://github.com/studyzy/imewlconverter/archive/refs/tags/v3.1.1.tar.gz
+	sha256sums = b52bed95de6b3f435ba9d2df8016e82282f0ea2ecccc1d8fecab55d70d403f70
+
+pkgname = imewlconverter

@@ -1,0 +1,19 @@
+pkgbase = iceborne
+	pkgdesc = A pure front-end live barrage display and broadcasting tool.Use system-wide electron.一个纯前端的直播弹幕显示和播报工具
+	pkgver = 1.3.0
+	pkgrel = 3
+	url = https://github.com/liuxian496/iceborne
+	arch = any
+	license = MIT
+	makedepends = gendesk
+	makedepends = nvm
+	makedepends = npm
+	makedepends = curl
+	depends = electron25
+	conflicts = iceborne
+	source = iceborne-1.3.0.tar.gz::https://github.com/liuxian496/iceborne/archive/refs/tags/v1.3.0.tar.gz
+	source = iceborne.sh
+	sha256sums = 4eb6200d9352df337cd6eafa9c9ae04e42b7a2cd20d08569513e58a7c2d44c87
+	sha256sums = 291f50480f5a61bc9c68db7d44cd0412071128706baa868a9cb854f8779a1980
+
+pkgname = iceborne

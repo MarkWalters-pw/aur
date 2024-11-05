@@ -1,0 +1,19 @@
+pkgbase = lifecycler
+	pkgdesc = Terminal aquarium
+	pkgver = 0.2.9
+	pkgrel = 1
+	url = https://github.com/cxreiff/lifecycler
+	arch = x86_64
+	license = MIT
+	license = Apache-2.0
+	license = CC0-1.0
+	makedepends = cargo
+	makedepends = wayland
+	depends = gcc-libs
+	depends = alsa-lib
+	depends = systemd-libs
+	optdepends = wayland: Wayland support
+	source = lifecycler-0.2.9.tar.gz::https://github.com/cxreiff/lifecycler/archive/v0.2.9.tar.gz
+	sha512sums = a888798e3b061a6763b8d5c9c2cd0401bc902b1d279b65b18c2fea3ceb785af1d32a42092d2ba902286afed07905cdd07544de6056f8474b0dc30518ec6e42be
+
+pkgname = lifecycler

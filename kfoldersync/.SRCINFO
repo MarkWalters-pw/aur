@@ -1,0 +1,23 @@
+pkgbase = kfoldersync
+	pkgdesc = Folder synchronization and backup tool for KDE
+	pkgver = 3.4.1
+	pkgrel = 2
+	url = https://store.kde.org/p/1127677
+	install = kfoldersync.install
+	arch = x86_64
+	license = GPLv3
+	depends = plasma-workspace
+	depends = hicolor-icon-theme
+	depends = kconfigwidgets5
+	depends = kdbusaddons5
+	depends = kitemviews5
+	depends = kwindowsystem5
+	depends = kxmlgui5
+	source = https://download.opensuse.org/repositories/home:/ecsos:/Backup/openSUSE_Tumbleweed/x86_64/kfoldersync-3.4.1-7.93.x86_64.rpm
+	source = https://download.opensuse.org/repositories/home:/ecsos:/Backup/openSUSE_Tumbleweed/noarch/kfoldersync-lang-3.4.1-7.93.noarch.rpm
+	source = kfoldersync.install
+	md5sums = 8556e299bdd8b29db1cabc24460b7b6b
+	md5sums = f420ca8a5cdddff1b36697dd9ac51346
+	md5sums = 262fc1597fb332894d1367f510a7f39b
+
+pkgname = kfoldersync

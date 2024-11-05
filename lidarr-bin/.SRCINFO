@@ -1,0 +1,50 @@
+pkgbase = lidarr-bin
+	pkgdesc = Music collection manager for newsgroup and torrent users.
+	pkgver = 2.7.1.4417
+	pkgrel = 2
+	url = https://lidarr.audio
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	groups = servarr-bin
+	license = GPL-3.0-or-later
+	depends = chromaprint
+	depends = gcc-libs
+	depends = glibc
+	depends = zlib
+	depends = sqlite
+	optdepends = postgresql: postgresql database
+	optdepends = sabnzbd: usenet downloader
+	optdepends = nzbget: usenet downloader
+	optdepends = qbittorrent: torrent downloader
+	optdepends = deluge: torrent downloader
+	optdepends = rtorrent: torrent downloader
+	optdepends = nodejs-flood: torrent downloader
+	optdepends = vuze: torrent downloader
+	optdepends = aria2: torrent downloader
+	optdepends = transmission-cli: torrent downloader (CLI and daemon)
+	optdepends = transmission-gtk: torrent downloader (GTK+)
+	optdepends = transmission-qt: torrent downloader (Qt)
+	optdepends = jackett: torrent indexer proxy
+	optdepends = nzbhydra2: torznab and usenet indexer proxy
+	optdepends = prowlarr: torrent and usenet indexer proxy
+	optdepends = autobrr: irc, torrent and usenet indexer proxy
+	provides = lidarr
+	conflicts = lidarr
+	options = !debug
+	source = lidarr.service
+	source = lidarr.tmpfiles
+	source = lidarr.sysusers
+	source = package_info
+	sha256sums = dcbe3d2a3d64a78a4b2b84a3486991a8b90fdd6900d7345004827a168f8b5645
+	sha256sums = abde8989e7ab9dc62b6a501644da5a9253953b6394b890565e00a69cbfd89068
+	sha256sums = 19b36aefd2ef93d4a630ceaefe582573ecdaa72ec21bfb48ce3941ead7b967fb
+	sha256sums = fa802821da0c2844b72fbe72d4b58c5b10f9c22a0805deb735d96f137029a5c4
+	source_x86_64 = Lidarr.master.2.7.1.4417.linux-core-x64.tar.gz::https://lidarr.servarr.com/v1/update/master/updatefile?version=2.7.1.4417&os=linux&runtime=netcore&arch=x64
+	sha256sums_x86_64 = 6eb26d8370f102a6d6b281f080400d617967bfbb182225f0d02404042655679f
+	source_aarch64 = Lidarr.master.2.7.1.4417.linux-core-arm64.tar.gz::https://lidarr.servarr.com/v1/update/master/updatefile?version=2.7.1.4417&os=linux&runtime=netcore&arch=arm64
+	sha256sums_aarch64 = 950d4c35fbe8ca5b52cc06d922a42fa2b384a88ad97c5f815cd98e27be77f01b
+	source_armv7h = Lidarr.master.2.7.1.4417.linux-core-arm.tar.gz::https://lidarr.servarr.com/v1/update/master/updatefile?version=2.7.1.4417&os=linux&runtime=netcore&arch=arm
+	sha256sums_armv7h = 2aaeb7494feda325889b429a9a6ef0acab2eee0d09eef2455c4bed15f50fa9b3
+
+pkgname = lidarr-bin

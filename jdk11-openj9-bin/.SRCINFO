@@ -1,0 +1,22 @@
+pkgbase = jdk11-openj9-bin
+	pkgdesc = IBM Semeru OpenJ9 with openjdk11
+	pkgver = 11.0.24b8_openj9_0.46.0
+	pkgrel = 1
+	url = https://developer.ibm.com/languages/java/semeru-runtimes/downloads
+	arch = x86_64
+	license = custom
+	depends = java-environment-common
+	depends = ca-certificates-utils
+	depends = nss
+	provides = java-environment=11
+	provides = java-environment-openjdk=11
+	provides = java-runtime=11
+	provides = java-runtime-openjdk=11
+	provides = java-runtime-headless=11
+	provides = java-runtime-headless-openjdk=11
+	conflicts = jdk11-openj9
+	options = !strip
+	source = https://github.com/ibmruntimes/semeru11-binaries/releases/download/jdk-11.0.24%2B8_openj9-0.46.0/ibm-semeru-open-jdk_x64_linux_11.0.24_8_openj9-0.46.0.tar.gz
+	sha256sums = 09d96625790f3191acb531495a4ea2033488f1936c24af7eef7839425b41f28b
+
+pkgname = jdk11-openj9-bin

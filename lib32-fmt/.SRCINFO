@@ -1,0 +1,17 @@
+pkgbase = lib32-fmt
+	pkgdesc = Open-source formatting library for C++
+	pkgver = 11.0.2
+	pkgrel = 1
+	url = https://github.com/fmtlib/fmt
+	arch = x86_64
+	license = MIT
+	makedepends = cmake
+	makedepends = git
+	makedepends = ninja
+	depends = fmt
+	depends = lib32-gcc-libs
+	depends = lib32-glibc
+	source = git+https://github.com/fmtlib/fmt.git#tag=11.0.2
+	b2sums = 18b6d66c2159b2f8bd0baf2e1df7514fde09cf6a25441710d40e386abd9baa49b62859c4d8a71b77f0d1550c32fc62826c95fdacf4397e24cc6ea205a0c50798
+
+pkgname = lib32-fmt

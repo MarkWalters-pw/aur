@@ -1,0 +1,24 @@
+pkgbase = kdocker-git
+	pkgdesc = An application to help you dock any application into the system tray (git version)
+	pkgver = 6.1.r2.fe7bd0e
+	pkgrel = 1
+	url = https://github.com/user-none/KDocker
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	makedepends = ninja
+	makedepends = clang
+	makedepends = make
+	makedepends = gcc
+	makedepends = cmake
+	makedepends = pod2man
+	depends = qt6-base
+	depends = libxpm
+	depends = libxmu
+	conflicts = kdocker
+	replaces = kdocker
+	source = kdocker::git+https://github.com/user-none/KDocker.git
+	md5sums = SKIP
+
+pkgname = kdocker-git

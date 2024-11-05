@@ -1,0 +1,27 @@
+pkgbase = jujutsu-git
+	pkgdesc = Git-compatible VCS that is both simple and powerful
+	pkgver = 0.22.0.r109.gb795bf956
+	pkgrel = 1
+	url = https://github.com/martinvonz/jj
+	arch = i686
+	arch = x86_64
+	arch = armv6h
+	arch = armv7h
+	license = Apache-2.0
+	makedepends = cargo
+	makedepends = git
+	makedepends = openssh
+	depends = gcc-libs
+	depends = glibc
+	depends = libgit2
+	depends = libgit2.so
+	depends = libssh2
+	depends = libssh2.so
+	provides = jj
+	provides = jujutsu
+	conflicts = jj
+	conflicts = jujutsu
+	source = jujutsu-git::git+https://github.com/martinvonz/jj
+	sha256sums = SKIP
+
+pkgname = jujutsu-git

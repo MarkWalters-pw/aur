@@ -1,0 +1,21 @@
+pkgbase = jitsi-meet-prosody-bin
+	pkgdesc = Jitsi Meet Prosody Plugins binary
+	pkgver = 1.0.8206
+	pkgrel = 1
+	url = https://jitsi.org/jitsi-meet/
+	install = jitsi.install
+	arch = any
+	license = Apache
+	makedepends = tar
+	optdepends = prosody
+	optdepends = lua52
+	optdepends = lua52-sec
+	optdepends = lua52-zip
+	optdepends = lua52-event
+	provides = jitsi-meet-prosody
+	conflicts = jitsi-meet-prosody
+	options = !strip
+	source = https://download.jitsi.org/stable/jitsi-meet-prosody_1.0.8206-1_all.deb
+	sha256sums = a6df1d807c546f5e5a1dc115ed94afd8aeaa7696b3228be4278f261528081330
+
+pkgname = jitsi-meet-prosody-bin

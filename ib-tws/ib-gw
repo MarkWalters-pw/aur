@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Load system-wide settings and per-user overrides
+. /etc/ib-gw.conf
+[[ -f $HOME/.config/ib-gw.conf ]] && . $HOME/.config/ib-gw.conf
+
+cd /usr/share/ib-tws/jars
+/usr/share/ib-tws/jre/bin/java -cp \* $JAVA_FLAGS ibgateway.GWClient $IB_CONFIG_DIR

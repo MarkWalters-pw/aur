@@ -1,0 +1,36 @@
+pkgbase = intel-graphics-compiler-bin
+	pkgdesc = Intel Graphics Compiler for OpenCL (pre-compiled binaries)
+	pkgver = 1.0.17791.9
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/intel/intel-graphics-compiler/
+	arch = x86_64
+	license = MIT
+	license = Apache-2.0 WITH LLVM-exception
+	makedepends = git
+	depends = gcc-libs
+	depends = zlib
+	provides = intel-graphics-compiler
+	provides = intel-opencl-clang
+	conflicts = intel-graphics-compiler
+	conflicts = intel-opencl-clang
+	noextract = intel-igc-core_1.0.17791.9_amd64.deb
+	noextract = intel-igc-media_1.0.17791.9_amd64.deb
+	noextract = intel-igc-opencl-devel_1.0.17791.9_amd64.deb
+	noextract = intel-igc-opencl_1.0.17791.9_amd64.deb
+	options = !strip
+	options = !emptydirs
+	source = https://github.com/intel/intel-graphics-compiler/releases/download/igc-1.0.17791.9/intel-igc-core_1.0.17791.9_amd64.deb
+	source = https://github.com/intel/intel-graphics-compiler/releases/download/igc-1.0.17791.9/intel-igc-media_1.0.17791.9_amd64.deb
+	source = https://github.com/intel/intel-graphics-compiler/releases/download/igc-1.0.17791.9/intel-igc-opencl-devel_1.0.17791.9_amd64.deb
+	source = https://github.com/intel/intel-graphics-compiler/releases/download/igc-1.0.17791.9/intel-igc-opencl_1.0.17791.9_amd64.deb
+	source = git+https://github.com/intel/opencl-clang.git#commit=470cf0018e1ef6fc92eda1356f5f31f7da452abc
+	source = LICENSE
+	sha256sums = 9738542d9beb0e883d159bac8c170e08f1450a0b09ce81166e270351d173560b
+	sha256sums = f17389ca86593be2a9753e615246802844a2ed7cc6517d3f0f921f940770d71f
+	sha256sums = b929a46016ed4acf5e56b3cee1995add7391d4c4c547c9fb63b9fd073f17fb4e
+	sha256sums = c3b35c0ce1d31c07b1d5598935a4fdaefbe05e34b4f4bf9f72908b422bc16d53
+	sha256sums = 19214ef9956892960ebd10c91f13cde103ccd270aa4681bdeeb048eb500cd165
+	sha256sums = 72d9ed65b0068110b0dcef7e2b52cd32d90ceaeb743b7b6fb8ad07265f230716
+
+pkgname = intel-graphics-compiler-bin

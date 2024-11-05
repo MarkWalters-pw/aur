@@ -1,0 +1,23 @@
+pkgbase = image-stitching-git
+	pkgdesc = This Image Stitcher was specifically built to stitch images in a horizontal layout one after the other from left to right. Primarily used for stitching multiple seperate images of a single scratch together.Use system-wide electron.
+	pkgver = 1.4.r1.gf07e2cd
+	pkgrel = 1
+	url = https://github.com/DevanshuSawant/image-stitching-electron-app
+	arch = any
+	license = MIT
+	makedepends = gendesk
+	makedepends = npm
+	makedepends = nvm
+	makedepends = curl
+	makedepends = git
+	makedepends = python
+	makedepends = python-setuptools
+	depends = electron27
+	provides = image-stitching=1.4
+	conflicts = image-stitching
+	source = image-stitching.git::git+https://github.com/DevanshuSawant/image-stitching-electron-app.git
+	source = image-stitching.sh
+	sha256sums = SKIP
+	sha256sums = 291f50480f5a61bc9c68db7d44cd0412071128706baa868a9cb854f8779a1980
+
+pkgname = image-stitching-git

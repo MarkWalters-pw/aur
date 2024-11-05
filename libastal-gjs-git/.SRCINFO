@@ -1,0 +1,17 @@
+pkgbase = libastal-gjs-git
+	pkgdesc = gjs bindings for libstal.
+	pkgver = r439.dcc3870
+	pkgrel = 2
+	url = https://github.com/Aylur/astal
+	arch = x86_64
+	groups = libastal
+	license = LGPL-2.1-only
+	makedepends = git
+	makedepends = meson
+	depends = gjs
+	depends = libastal-git
+	depends = libastal-io-git
+	source = git+https://github.com/Aylur/astal.git
+	sha256sums = SKIP
+
+pkgname = libastal-gjs-git

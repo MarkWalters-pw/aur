@@ -1,0 +1,32 @@
+[Unit]
+Description=Jitsi-Meet Conference Focus
+After=network-online.target
+
+[Service]
+Environment=PATH=/usr/lib/jvm/java-11-openjdk/bin:/bin:/usr/bin:/usr/local/bin
+EnvironmentFile=/etc/jicofo/config
+User=jicofo
+ExecStart=/usr/lib/jicofo/jicofo.sh ${JICOFO_OPTS}
+WorkingDirectory=/var/lib/jicofo
+StateDirectory=jicofo
+StateDirectoryMode=0750
+LogsDirectory=jicofo
+LogsDirectoryMode=0750
+ConfigurationDirectory=jicofo
+ConfigurationDirectoryMode=0700
+
+Restart=on-failure
+SuccessExitStatus=143
+RestartPreventExitStatus=78
+
+# Hardening
+NoNewPrivileges=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectHome=yes
+ProtectKernelTunables=yes
+ProtectControlGroups=yes
+ProtectSystem=strict
+
+[Install]
+WantedBy=multi-user.target

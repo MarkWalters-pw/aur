@@ -1,0 +1,15 @@
+pkgbase = kotatsu-dl-git
+	pkgdesc = Easy-to-use cli manga downloader with a 1k+ sources supported
+	pkgver = 0.1
+	pkgrel = 1
+	url = https://github.com/KotatsuApp/kotatsu-dl
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = java-runtime-headless>=17
+	optdepends = bash-completion: bash completion support
+	noextract = kotatsu-dl.git
+	source = git+https://github.com/KotatsuApp/kotatsu-dl.git
+	sha256sums = SKIP
+
+pkgname = kotatsu-dl-git

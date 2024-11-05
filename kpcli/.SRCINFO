@@ -1,0 +1,26 @@
+pkgbase = kpcli
+	pkgdesc = Command line browser of KeePassX database files (*.kdb)
+	pkgver = 4.1.2
+	pkgrel = 1
+	url = http://sourceforge.net/projects/kpcli/
+	arch = any
+	license = PerlArtistic
+	license = GPL
+	depends = perl
+	depends = perl-file-keepass
+	depends = perl-file-kdbx
+	depends = perl-term-shellui
+	depends = perl-term-readkey
+	depends = perl-term-readline-gnu
+	depends = perl-sort-naturally
+	depends = perl-clone
+	depends = perl-xml-parser
+	optdepends = perl-expect: import Keepass KDBX4 files
+	optdepends = perl-capture-tiny
+	optdepends = perl-clipboard
+	source = kpcli-4.1.2.pl::https://sourceforge.net/projects/kpcli/files/kpcli-4.1.2.pl/download
+	source = kpcli-4.1.2-README::https://sourceforge.net/projects/kpcli/files/README.txt/download
+	sha256sums = 86fc820bc7945cd9b577583efe4127565951268902860256ceea100795ddf23f
+	sha256sums = d2834b0d46127d18a0ff418a7343327c3e6f40543b77b1d6f88247fcde3f9dd6
+
+pkgname = kpcli

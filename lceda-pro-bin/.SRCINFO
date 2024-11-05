@@ -1,0 +1,25 @@
+pkgbase = lceda-pro-bin
+	pkgdesc = 免费、专业、强大的国产PCB设计工具
+	pkgver = 2.2.32.3.1
+	pkgrel = 1
+	url = https://pro.lceda.cn/
+	install = lceda-pro-bin.install
+	arch = x86_64
+	arch = aarch64
+	license = LicenseRef-LCEDA-Proprietary
+	depends = gtk3
+	depends = nss
+	depends = alsa-lib
+	provides = lceda-pro
+	conflicts = lceda-pro
+	conflicts = lceda-pro-git
+	source = LICENSE-2.2.32.3.1.html::https://lceda.cn/page/legal
+	source = lceda-pro-bin.install
+	sha256sums = SKIP
+	sha256sums = afba3c6712227a37c08783b3cc1a97ae71e90dc2f575409213d2773372220697
+	source_x86_64 = lceda-pro-x86_64-2.2.32.3.1.zip::https://image.lceda.cn/files/lceda-pro-linux-x64-2.2.32.3.1.zip
+	sha256sums_x86_64 = 8d7610a8f85eccd57c37ff5455705054e6d1adf05301d869f27a11001da769be
+	source_aarch64 = lceda-pro-aarch64-2.2.32.3.1.zip::https://image.lceda.cn/files/lceda-pro-linux-arm64-2.2.32.3.1.zip
+	sha256sums_aarch64 = 806dd77bc6cec72ade29a6db34a9c13dd9eef7d0116a8b948ebc8491ea4a599d
+
+pkgname = lceda-pro-bin

@@ -1,0 +1,27 @@
+pkgbase = isoimagewriter-git
+	pkgdesc = Program to write hybrid ISO files onto USB disks
+	pkgver = 24.01.90.r92.g9b7dee7
+	pkgrel = 1
+	url = https://apps.kde.org/isoimagewriter/
+	arch = x86_64
+	license = GPL-3.0-or-later
+	makedepends = git
+	makedepends = extra-cmake-modules
+	depends = gcc-libs
+	depends = glibc
+	depends = gpgme
+	depends = karchive
+	depends = kcoreaddons
+	depends = kcrash
+	depends = ki18n
+	depends = kiconthemes
+	depends = kwidgetsaddons
+	depends = qgpgme-qt6
+	depends = qt6-base
+	depends = solid
+	provides = isoimagewriter
+	conflicts = isoimagewriter
+	source = git+https://invent.kde.org/utilities/isoimagewriter.git
+	sha512sums = SKIP
+
+pkgname = isoimagewriter-git

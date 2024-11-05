@@ -1,0 +1,23 @@
+pkgbase = lceda-pro
+	pkgdesc = 免费、专业、强大的国产PCB设计工具
+	pkgver = 2.2.32.3.1
+	pkgrel = 1
+	url = https://pro.lceda.cn/
+	install = lceda-pro.install
+	arch = x86_64
+	license = LicenseRef-LCEDA-Proprietary
+	makedepends = aria2
+	depends = alsa-lib
+	depends = bash
+	depends = coreutils
+	depends = electron
+	depends = gcc-libs
+	depends = glibc
+	depends = gtk3
+	depends = hicolor-icon-theme
+	depends = libpulse
+	depends = nss
+	source = lceda-pro.install
+	sha256sums = afba3c6712227a37c08783b3cc1a97ae71e90dc2f575409213d2773372220697
+
+pkgname = lceda-pro

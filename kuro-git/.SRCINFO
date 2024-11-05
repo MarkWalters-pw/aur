@@ -1,0 +1,22 @@
+pkgbase = kuro-git
+	pkgdesc = An elegant Microsoft ToDo desktop client for Linux (a fork of Ao).Use system-wide electron.
+	pkgver = 9.0.0.r11.g29c84ee
+	pkgrel = 1
+	url = https://github.com/davidsmorais/kuro
+	arch = x86_64
+	license = MIT
+	makedepends = npm
+	makedepends = yarn
+	makedepends = git
+	makedepends = nvm
+	makedepends = gendesk
+	makedepends = curl
+	depends = electron22
+	provides = kuro=9.0.0
+	conflicts = kuro
+	source = kuro.git::git+https://github.com/davidsmorais/kuro.git
+	source = kuro.sh
+	sha256sums = SKIP
+	sha256sums = 291f50480f5a61bc9c68db7d44cd0412071128706baa868a9cb854f8779a1980
+
+pkgname = kuro-git
