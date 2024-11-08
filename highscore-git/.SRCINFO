@@ -1,0 +1,34 @@
+pkgbase = highscore-git
+	pkgdesc = A rewrite of Highscore, formerly gnome-games
+	pkgver = r869.b1d9f20
+	pkgrel = 2
+	url = https://gitlab.gnome.org/World/highscore
+	arch = x86_64
+	arch = aarch64
+	license = GPL-3.0-or-later
+	makedepends = git
+	makedepends = meson
+	makedepends = vala
+	depends = hicolor-icon-theme
+	depends = libadwaita>=1.6
+	depends = libgee
+	depends = libhighscore-git
+	depends = libmanette
+	depends = libmirage
+	depends = libpulse
+	depends = sdl2
+	optdepends = blastem-highscore-git: BlastEm core
+	optdepends = bsnes-highscore-git: BSNES core
+	optdepends = desmume-highscore-git: DeSmuME core
+	optdepends = gearsystem-highscore-git: Gearsystem core
+	optdepends = mednafen-highscore-git: Mednafen core
+	optdepends = mgba-highscore-git: mGBA core
+	optdepends = mupen64plus-highscore-git: Mupen64Plus core
+	optdepends = nestopia-highscore-git: Nestopia JG core
+	optdepends = prosystem-highscore-git: ProSystem JG core
+	provides = highscore
+	conflicts = highscore
+	source = git+https://gitlab.gnome.org/World/highscore.git
+	sha256sums = SKIP
+
+pkgname = highscore-git

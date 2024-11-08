@@ -1,0 +1,15 @@
+pkgbase = cashc
+	pkgdesc = CashScript compiler for Bitcoin Cash.
+	pkgver = 0.10.0
+	pkgrel = 1
+	url = https://github.com/CashScript/cashscript
+	arch = x86_64
+	license = MIT
+	makedepends = npm
+	depends = nodejs
+	noextract = cashc-0.10.0.tgz
+	options = !strip
+	source = cashc-0.10.0.tgz::https://registry.npmjs.org/cashc/-/cashc-0.10.0.tgz
+	sha256sums = f64287e9d6db70c7333428a42895d859c7fb97a0eefc94d4cf166568622b1f5d
+
+pkgname = cashc

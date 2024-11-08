@@ -1,0 +1,34 @@
+pkgbase = weewx
+	pkgdesc = Software for logging data from weather stations
+	pkgver = 5.1.0
+	pkgrel = 2
+	url = http://www.weewx.com/
+	arch = any
+	license = GPL-3.0-or-later
+	makedepends = mkdocs
+	makedepends = mkdocs-material
+	makedepends = mkdocs-material-extensions
+	makedepends = python
+	makedepends = python-cheetah3
+	makedepends = python-configobj
+	makedepends = python-regex
+	source = weewx-5.1.0.tar.xz::https://github.com/weewx/weewx/archive/refs/tags/v5.1.0.tar.gz
+	source = weewx.sysusers
+	source = weewx.tmpfiles
+	sha512sums = 858300d210a40f1b72aa3aa19a32dc433ace56ca656661081e3aa1d999994de9e5603f2b0580156c2cd358f51a79b5f1321c148253607291531126862cb36feb
+	sha512sums = 6015b870143f6b8ae094b3f94ad53323be8a083f11c177dc508315fb3bbc20dd318124e6ccd41ba9d0388828e18c4b4ae6ce7c4a35ac0cab442eca9e8bbbca2d
+	sha512sums = e97b287acf53c55d30f4e1a4d533fe5c649fac44080095fa1052f6f1cc9a55b6b0592d63c63a4a241e7007894e882648d5c4c4a221da69666e284637c5a3e15e
+
+pkgname = weewx
+	depends = python
+	depends = python-cheetah3
+	depends = python-configobj
+	depends = python-pillow
+	optdepends = python-pyserial: serial port support
+	optdepends = python-pyusb: USB port support
+	optdepends = python-pyephem: extended celestial information
+	optdepends = python-pymysql: MySQL or MariaDB support
+	backup = etc/weewx/weewx.conf
+
+pkgname = weewx-docs
+	pkgdesc = Documentation for WeeWX

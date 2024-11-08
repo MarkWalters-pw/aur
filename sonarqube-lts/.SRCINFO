@@ -1,0 +1,27 @@
+pkgbase = sonarqube-lts
+	pkgdesc = An open source platform for continuous inspection of code quality
+	pkgver = 9.9.7.96285
+	pkgrel = 1
+	url = http://www.sonarqube.org/
+	arch = x86_64
+	license = LGPL3
+	depends = java-runtime=17
+	depends = fontconfig
+	depends = freetype2
+	optdepends = postgresql: A sophisticated object-relational DBMS
+	provides = sonarqube
+	conflicts = sonarqube
+	options = !strip
+	backup = etc/webapps/sonarqube/sonar.properties
+	source = https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.9.7.96285.zip
+	source = sonarqube.service
+	source = sonarqube.tmpfiles
+	source = sonarqube.sysusers
+	source = 99-sonarqube.conf
+	sha256sums = 82eb93a1380dac4725ad24fd94a11917fb2e0ac6b9a9c98b20e436ed2a50f351
+	sha256sums = b99f23d98b730a8b2e0ddc602dca68dddd080114e309ae34fbce99c98ad55f8d
+	sha256sums = b0204a7b86289929765c651627e9b55d02ae1f0da34184d2c05c7929d1222932
+	sha256sums = 8edc5ca392fad3ebbe339ef2a4de3b27a897b732ad7bd5ad472822aac30f0e1c
+	sha256sums = 2052545a15ef9655b5835b8c9bf09936fad5bff990b964b86cfcfeb8eac23f48
+
+pkgname = sonarqube-lts

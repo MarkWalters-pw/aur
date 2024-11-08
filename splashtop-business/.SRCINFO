@@ -1,0 +1,27 @@
+pkgbase = splashtop-business
+	pkgdesc = Splashtop Business. Remotely access your desktop from any device from anywhere!
+	pkgver = 3.7.0.0
+	pkgrel = 2
+	url = https://www.splashtop.com/business
+	install = splashtop-business.install
+	arch = x86_64
+	license = Proprietary
+	depends = gcc-libs
+	depends = glibc
+	depends = keyutils
+	depends = libcap
+	depends = libpulse
+	depends = libxcb
+	depends = qt5-base
+	depends = util-linux-libs
+	depends = xcb-util-keysyms
+	depends = xcb-util
+	depends = xdotool
+	depends = zlib
+	optdepends = bash-completion: Bash completion support
+	provides = splashtop-business
+	options = !strip
+	source = https://download.splashtop.com/linuxclient/splashtop-business_Ubuntu_v3.7.0.0_amd64.tar.gz
+	sha256sums = da63268fc5399ea1b7bb1e48d082ae6ff31b8ce7da494d81116603ebbfedf82f
+
+pkgname = splashtop-business

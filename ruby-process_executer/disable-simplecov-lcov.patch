@@ -1,0 +1,16 @@
+diff --git a/spec/spec_helper.rb b/spec/spec_helper.rb
+index 5f54fbc..e24fc81 100644
+--- a/spec/spec_helper.rb
++++ b/spec/spec_helper.rb
+@@ -15,10 +15,9 @@ end
+ # Setup simplecov
+ 
+ require 'simplecov'
+-require 'simplecov-lcov'
+ require 'json'
+ 
+-SimpleCov.formatters = [SimpleCov::Formatter::HTMLFormatter, SimpleCov::Formatter::LcovFormatter]
++SimpleCov.formatters = [SimpleCov::Formatter::HTMLFormatter]
+ 
+ # Report if the test coverage was below the configured threshold
+ #

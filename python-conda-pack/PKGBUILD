@@ -1,0 +1,35 @@
+# Maintainer: Carlos Aznarán <caznaranl@uni.pe>
+_base=conda-pack
+pkgname=python-${_base}
+pkgdesc="Package conda environments for redistribution"
+pkgver=0.8.0
+pkgrel=1
+arch=(any)
+url="https://github.com/${_base/-pack/}/${_base}"
+license=(BSD-3-Clause)
+depends=(python conda)
+makedepends=(python-build python-installer python-setuptools python-wheel)
+source=(${_base}-${pkgver}.tar.gz::${url}/archive/${pkgver}.tar.gz)
+sha512sums=('6b853614bbab63b14373bdc25d2d8e53ebfd6e1da76515602bca2af070da636d30900c101ca8c6a54a7c8e70f9674392cf8978b1d41339e366b5b0be821f1808')
+
+prepare() {
+  if hash conda 2>/dev/null; then
+    echo "Conda detected."
+  else
+    echo
+    echo -e "\e[1m\e[5m\e[31mPlease make sure that (ana/mini)conda is sourced in bashrc, zshrc, etc.\e[0m"
+    echo
+    return 1
+  fi
+}
+
+build() {
+  cd ${_base}-${pkgver}
+  python -m build --wheel --skip-dependency-check --no-isolation
+}
+
+package() {
+  cd ${_base}-${pkgver}
+  PYTHONPYCACHEPREFIX="${PWD}/.cache/cpython/" python -m installer --destdir="${pkgdir}" dist/*.whl
+  install -Dm 644 LICENSE.txt -t "${pkgdir}/usr/share/licenses/${pkgname}"
+}

@@ -1,0 +1,12 @@
+post_install() {
+  if [ ! -f /etc/mautrix-telegram/config.yaml ]; then
+    cp /usr/lib/python3.8/site-packages/mautrix_telegram/example-config.yaml /etc/mautrix-telegram/config.yaml
+    sed -i -e "s|database: sqlite:///mautrix-telegram.db|database: sqlite:////var/lib/mautrix-telegram/mautrix-telegram.db|" /etc/mautrix-telegram/config.yaml
+  fi
+
+  if [ ! -f /etc/mautrix-telegram/registration.yaml ]; then
+    python -m mautrix_telegram -g -c /etc/mautrix-telegram/config.yaml -r /etc/mautrix-telegram/registration.yaml
+  fi
+}
+
+# vim: ts=2 sw=2 et:

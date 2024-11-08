@@ -1,0 +1,17 @@
+pkgbase = guile-reader
+	pkgdesc = a simple framework for building readers for GNU Guile
+	pkgver = 0.6.3
+	pkgrel = 3
+	url = http://www.nongnu.org/guile-reader
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = gperf
+	makedepends = git
+    makedepends = gcc9-bin
+	depends = guile
+	options = !strip
+	source = http://download.savannah.nongnu.org/releases/guile-reader/guile-reader-0.6.3.tar.gz
+	sha256sums = 38c2b444eadbb8c0cab78d90a44ec3ebff42bd410c5b84a91018cee7eb64d2bb
+
+pkgname = guile-reader

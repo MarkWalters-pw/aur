@@ -1,0 +1,14 @@
+pkgbase = salvage-bin
+	pkgdesc = Copy files comfortably and automate your backups.Prebuilt version
+	pkgver = 2.3.0
+	pkgrel = 1
+	url = https://github.com/RenanSui/salvage
+	arch = x86_64
+	license = MIT
+	depends = webkit2gtk-4.1
+	provides = salvage=2.3.0
+	conflicts = salvage
+	source = salvage-2.3.0.rpm::https://github.com/RenanSui/salvage/releases/download/2.3.0/Salvage-2.3.0-1.x86_64.rpm
+	sha256sums = beeabcaea3e7661241344c97087aef5f8b5d0cdf8bffb623c49f8d8adf04cfa2
+
+pkgname = salvage-bin

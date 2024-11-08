@@ -1,0 +1,19 @@
+pkgbase = omm-bin
+	pkgdesc = A keyboard-driven task manager for the command line
+	pkgver = 0.5.1
+	pkgrel = 1
+	url = https://tools.dhruvs.space/omm
+	arch = x86_64
+	arch = i686
+	arch = aarch64
+	license = MIT
+	provides = omm
+	conflicts = omm
+	source_x86_64 = omm-0.5.1-x86_64.tar.gz::https://github.com/dhth/omm/releases/download/v0.5.1/omm_0.5.1_linux_amd64.tar.gz
+	sha256sums_x86_64 = e75769f9845ce0f039c59fcda9d9fe91887c4acff7bd134c638ed15d9b8268f7
+	source_i686 = omm-0.5.1-i686.tar.gz::https://github.com/dhth/omm/releases/download/v0.5.1/omm_0.5.1_linux_386.tar.gz
+	sha256sums_i686 = 26ac30473657e3ec37953ed7b08da1e29b1b773f217310915d7a714a0dbdb17d
+	source_aarch64 = omm-0.5.1-aarch64.tar.gz::https://github.com/dhth/omm/releases/download/v0.5.1/omm_0.5.1_linux_arm64.tar.gz
+	sha256sums_aarch64 = 7984d4be3ba6e8d9b30c61dbe7c9b4f74fe72946bfd731223972a307c36dd104
+
+pkgname = omm-bin

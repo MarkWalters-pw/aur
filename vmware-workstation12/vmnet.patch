@@ -1,0 +1,627 @@
+--- a/vmnet/Makefile
++++ b/vmnet/Makefile
+@@ -43,7 +43,11 @@
+ endif
+ 
+ 
++ifdef KVERSION
++VM_UNAME = $(KVERSION)
++else
+ VM_UNAME = $(shell uname -r)
++endif
+ 
+ # Header directory for the running kernel
+ ifdef LINUXINCLUDE
+@@ -100,6 +104,13 @@ auto-build: $(DRIVER_KO)
+ $(DRIVER): $(DRIVER_KO)
+ 	if [ $< -nt $@ ] || [ ! -e $@ ] ; then cp -f $< $@; fi
+ 
++# Use SUBDIRS on 2.x, 3.x, 4.x.  Use M on newer kernels.
++ifeq ($(filter-out 2 3 4,$(firstword $(subst ., ,$(VM_UNAME)))),)
++DIRVAR := SUBDIRS
++else
++DIRVAR := M
++endif
++
+ # Pass gcc version down the chain, so we can detect if kernel attempts to use unapproved compiler
+ VM_CCVER := $(VMCCVER)
+ export VM_CCVER
+@@ -117,7 +128,7 @@ prebuild:: ;
+ postbuild:: ;
+ 
+ $(DRIVER_KO): prebuild
+-	$(MAKE) -C $(BUILD_DIR) SUBDIRS=$$PWD SRCROOT=$$PWD/$(SRCROOT) \
++	$(MAKE) -C $(BUILD_DIR) $(DIRVAR)=$$PWD SRCROOT=$$PWD/$(SRCROOT) \
+ 	  MODULEBUILDDIR=$(MODULEBUILDDIR) modules
+ 	$(MAKE) -C $$PWD SRCROOT=$$PWD/$(SRCROOT) \
+ 	  MODULEBUILDDIR=$(MODULEBUILDDIR) postbuild
+--- a/vmnet/bridge.c
++++ b/vmnet/bridge.c
+@@ -26,6 +26,9 @@
+ #include <linux/slab.h>
+ #include <linux/poll.h>
+ 
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(6, 4, 10)
++#include <net/gso.h>
++#endif
+ #include <linux/netdevice.h>
+ #include <linux/etherdevice.h>
+ #include <linux/mm.h>
+@@ -65,7 +65,7 @@
+ #endif
+ 
+ #if LOGLEVEL >= 4
+-static struct timeval vnetTime;
++static u64 vnetTime;
+ #endif
+ 
+ typedef struct VNetBridge VNetBridge;
+@@ -636,7 +636,7 @@ VNetBridgeReceiveFromVNet(VNetJack
+ 	 unsigned long flags;
+ 	 int i;
+ 
+-	 atomic_inc(&clone->users);
++	 clone = skb_get(clone);
+ 
+ 	 clone->dev = dev;
+ 	 clone->protocol = eth_type_trans(clone, dev);
+@@ -687,16 +687,13 @@
+ 	 }
+          spin_unlock_irqrestore(&bridge->historyLock, flags);
+ 
+-         /*
+-          * We used to cli() before calling netif_rx() here. It was probably
+-          * unneeded (as we never did it in netif.c, and the code worked). In
+-          * any case, now that we are using netif_rx_ni(), we should certainly
+-          * not do it, or netif_rx_ni() will deadlock on the cli() lock --hpreg
+-          */
+-
+-	 netif_rx_ni(clone);
++#if LINUX_VERSION_CODE < KERNEL_VERSION(5, 18, 0)
++         netif_rx_ni(clone);
++#else
++         netif_rx(clone);
++#endif
+ #	 if LOGLEVEL >= 4
+-	 do_gettimeofday(&vnetTime);
++	 vnetTime = ktime_get_ns();
+ #	 endif
+       }
+    }
+@@ -1576,7 +1576,7 @@
+  *----------------------------------------------------------------------
+  */
+ 
+-void
++static void
+ VNetBridgeSendLargePacket(struct sk_buff *skb,        // IN: packet to split
+                           VNetBridge *bridge)         // IN: bridge
+ {
+@@ -1661,12 +1661,11 @@ VNetBridgeReceiveFromDev(struct sk_buff
+ 
+ #  if LOGLEVEL >= 4
+    {
+-      struct timeval now;
+-      do_gettimeofday(&now);
++      u64 now;
++
++      now = ktime_get_ns();
+       LOG(3, (KERN_DEBUG "bridge-%s: time %d\n",
+-	      bridge->name,
+-	      (int)((now.tv_sec * 1000000 + now.tv_usec)
+-                    - (vnetTime.tv_sec * 1000000 + vnetTime.tv_usec))));
++	      bridge->name, (int)((now - vnetTime) / NSEC_PER_USEC)));
+    }
+ #  endif
+ 
+--- a/vmnet/driver.c
++++ b/vmnet/driver.c
+@@ -51,18 +51,6 @@
+ #include "vmnetInt.h"
+ 
+ /*
+- * Initialization and creation routines from other files.
+- * Putting them here reduces the need for so many header files.
+- */
+-
+-extern int VNetUserIf_Create(VNetPort **ret);
+-extern int VNetNetIf_Create(char *devName, VNetPort **ret, int hubNum);
+-extern int VNetBridge_Create(char *devName, uint32 flags, VNetJack *hubJack,
+-                             VNetPort **ret);
+-extern int VNetUserListener_Create(uint32 classMask, VNetJack *hubJack, VNetPort **ret);
+-
+-
+-/*
+  *  Structure for cycle detection of host interfaces.  This
+  *  struct is only used by VNetCycleDetectIf().
+  */
+@@ -279,7 +279,7 @@
+ /*
+  *----------------------------------------------------------------------
+  *
+- * init_module --
++ * LinuxDriverInit --
+  *
+  *      linux module entry point. Called by /sbin/insmod command.
+  *      Initializes module and Registers this driver for a
+@@ -295,8 +283,8 @@
+  *----------------------------------------------------------------------
+  */
+ 
+-int
+-init_module(void)
++static int
++LinuxDriverInit(void)
+ {
+    int retval;
+ 
+@@ -358,7 +358,7 @@
+ /*
+  *----------------------------------------------------------------------
+  *
+- * cleanup_module --
++ * LinuxDriverExit --
+  *
+  *      Called by /sbin/rmmod.  Unregisters this driver for a
+  *      vnet major #, and deinitializes the modules.  The 64-bit
+@@ -374,8 +362,8 @@
+  *----------------------------------------------------------------------
+  */
+ 
+-void
+-cleanup_module(void)
++static void
++LinuxDriverExit(void)
+ {
+    unregister_chrdev(VNET_MAJOR_NUMBER, "vmnet");
+    VNetProtoUnregister();
+@@ -1705,3 +1705,5 @@
+  * by default (i.e., neither mkinitrd nor modprobe will accept it).
+  */
+ MODULE_INFO(supported, "external");
++module_init(LinuxDriverInit);
++module_exit(LinuxDriverExit);
+--- a/vmnet/netif.c
++++ b/vmnet/netif.c
+@@ -219,7 +219,11 @@
+ 
+    memset(&netIf->stats, 0, sizeof netIf->stats);
+ 
++#if LINUX_VERSION_CODE < KERNEL_VERSION(5, 15, 0)
+    memcpy(dev->dev_addr, netIf->port.paddr, sizeof netIf->port.paddr);
++#else
++   eth_hw_addr_set(dev, netIf->port.paddr);
++#endif
+ 
+    if (register_netdev(dev) != 0) {
+       LOG(0, (KERN_NOTICE "%s: could not register network device\n",
+@@ -311,7 +315,11 @@
+    /* send to the host interface */
+    skb->dev = netIf->dev;
+    skb->protocol = eth_type_trans(skb, netIf->dev);
++#if LINUX_VERSION_CODE < KERNEL_VERSION(5, 18, 0)
+    netif_rx_ni(skb);
++#else
++   netif_rx(skb);
++#endif
+    netIf->stats.rx_packets++;
+ 
+    return;
+@@ -498,7 +506,11 @@
+       return -EINVAL;
+    }
+    memcpy(netIf->port.paddr, addr->sa_data, dev->addr_len);
+-   memcpy(dev->dev_addr, addr->sa_data, dev->addr_len);
++#if LINUX_VERSION_CODE < KERNEL_VERSION(5, 15, 0)
++   memcpy(dev->dev_addr, netIf->port.paddr, dev->addr_len);
++#else
++   eth_hw_addr_set(dev, netIf->port.paddr);
++#endif
+    return 0;
+ }
+ 
+--- a/vmnet/procfs.c
++++ a/vmnet/procfs.c
+@@ -137,6 +137,7 @@ VNetProcShow(struct seq_file *p, // IN:
+ }
+ 
+ 
++#if LINUX_VERSION_CODE < KERNEL_VERSION(4, 18, 0)
+ /*
+  *----------------------------------------------------------------------
+  *
+@@ -168,6 +169,7 @@ static struct file_operations fops = {
+    .release = single_release,
+ };
+ #endif
++#endif
+ 
+ 
+ /*
+@@ -203,7 +205,12 @@ VNetProcMakeEntryInt(VNetProcEntry   *pa
+       } else {
+          ent->data   = data;
+          ent->fn     = fn;
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(4, 18, 0)
++         ent->pde    = proc_create_single_data(name, mode, parent->pde,
++                                               VNetProcShow, ent);
++#else
+          ent->pde    = proc_create_data(name, mode, parent->pde, &fops, ent);
++#endif
+       }
+       if (ent->pde != NULL) {
+          *ret = ent;
+--- a/vmnet/smac.c
++++ b/vmnet/smac.c
+@@ -4119,7 +4119,7 @@
+ 
+ void SMACINT
+ SMAC_SetMac(SMACState *state,  // IN: state to update
+-	    uint8 *mac)        // IN: pointer to host adapter's MAC
++	    const uint8 *mac)  // IN: pointer to host adapter's MAC
+ {
+    VNETKdPrintCall(("SMAC_SetMac"));
+    ASSERT(state);
+--- a/vmnet/smac.h
++++ b/vmnet/smac.h
+@@ -72,7 +72,7 @@
+ void SMACINT
+ SMAC_InitState(struct SMACState **ptr);           // IN: state to alloc/init
+ void SMACINT
+-SMAC_SetMac(struct SMACState *state, uint8 *mac); // IN: state, and host MAC
++SMAC_SetMac(struct SMACState *state, const uint8 *mac); // IN: state, and host MAC
+ void SMACINT
+ SMAC_CleanupState(struct SMACState **ptr);        // IN: state to cleanup/dealloc
+ 
+--- a/vmnet/userif.c
++++ b/vmnet/userif.c
+@@ -84,11 +84,11 @@ static int  VNetUserIfSetUplinkState(VNe
+ extern unsigned int  vnet_max_qlen;
+ 
+ #if COMPAT_LINUX_VERSION_CHECK_LT(3, 2, 0)
+-#   define compat_kmap(page) kmap(page)
+-#   define compat_kunmap(page) kunmap(page)
+-#else
+-#   define compat_kmap(page) kmap((page).p)
+-#   define compat_kunmap(page) kunmap((page).p)
++#   define skb_frag_page(frag) (frag)->page
++#   define skb_frag_size(frag) (frag)->size
++#endif
++#if COMPAT_LINUX_VERSION_CHECK_LT(5, 4, 0)
++#   define skb_frag_off(frag) (frag)->page_offset
+ #endif
+ 
+ /*
+@@ -115,16 +115,7 @@ UserifLockPage(VA addr) // IN
+    struct page *page = NULL;
+    int retval;
+ 
+-   down_read(&current->mm->mmap_sem);
+-#if LINUX_VERSION_CODE >= KERNEL_VERSION(4, 9, 0)
+-   retval = get_user_pages(addr, 1, FOLL_WRITE, &page, NULL);
+-#elif LINUX_VERSION_CODE >= KERNEL_VERSION(4, 6, 0)
+-   retval = get_user_pages(addr, 1, 1, 0, &page, NULL);
+-#else
+-   retval = get_user_pages(current, current->mm, addr,
+-                           1, 1, 0, &page, NULL);
+-#endif
+-   up_read(&current->mm->mmap_sem);
++   retval = get_user_pages_fast(addr, 1, FOLL_WRITE, &page);
+ 
+    if (retval != 1) {
+       return NULL;
+@@ -152,16 +143,21 @@ UserifLockPage(VA addr) // IN
+  */
+ 
+ static INLINE int
+-VNetUserIfMapPtr(VA uAddr,        // IN: pointer to user memory
++VNetUserIfMapPtr(VA64 uAddr,      // IN: pointer to user memory
+                  size_t size,     // IN: size of data
+                  struct page **p, // OUT: locked page
+                  void **ptr)      // OUT: kernel mapped pointer
+ {
+-   if (!access_ok(VERIFY_WRITE, (void *)uAddr, size) ||
+-       (((uAddr + size - 1) & ~(PAGE_SIZE - 1)) !=
+-        (uAddr & ~(PAGE_SIZE - 1)))) {
++   uint8 v;
++
++   /* Check area does not straddle two pages. */
++   if ((uAddr & (PAGE_SIZE - 1)) + size > PAGE_SIZE) {
+       return -EINVAL;
+    }
++   /* Check if it is user's area.  UserifLockPage() checks writability. */
++   if (copy_from_user(&v, (void *)(unsigned long)uAddr, sizeof v) != 0) {
++      return -EFAULT;
++   }
+ 
+    *p = UserifLockPage(uAddr);
+    if (*p == NULL) {
+@@ -173,7 +169,7 @@ VNetUserIfMapPtr(VA uAddr,        // IN:
+ }
+ 
+ static INLINE int
+-VNetUserIfMapUint32Ptr(VA uAddr,        // IN: pointer to user memory
++VNetUserIfMapUint32Ptr(VA64 uAddr,      // IN: pointer to user memory
+                        struct page **p, // OUT: locked page
+                        uint32 **ptr)    // OUT: kernel mapped pointer
+ {
+@@ -218,7 +214,7 @@ VNetUserIfSetupNotify(VNetUserIF *userIf
+       return -EBUSY;
+    }
+ 
+-   if ((retval = VNetUserIfMapUint32Ptr((VA)vn->pollPtr, &pollPage,
++   if ((retval = VNetUserIfMapUint32Ptr(vn->pollPtr, &pollPage,
+                                         &pollPtr)) < 0) {
+       return retval;
+    }
+@@ -236,7 +232,7 @@ VNetUserIfSetupNotify(VNetUserIF *userIf
+       goto error_free;
+    }
+ 
+-   if ((retval = VNetUserIfMapUint32Ptr((VA)vn->recvClusterPtr,
++   if ((retval = VNetUserIfMapUint32Ptr(vn->recvClusterPtr,
+                                         &recvClusterPage,
+                                         &recvClusterCount)) < 0) {
+       goto error_free;
+@@ -546,6 +542,50 @@
+ /*
+  *----------------------------------------------------------------------
+  *
++ * VNetCsumAndCopyToUser --
++ *
++ *      Checksum data and copy them to userspace.
++ *
++ * Results:
++ *      folded checksum (non-zero value) on success,
++ *      err set to 0 on success, negative errno on failure.
++ *
++ * Side effects:
++ *      Data copied to the buffer.
++ *
++ *----------------------------------------------------------------------
++ */
++
++static unsigned int
++VNetCsumAndCopyToUser(const void *src,   // IN: Source
++                      void *dst,         // IN: Destination
++                      int len,           // IN: Bytes to copy
++                      int *err)          // OUT: Error code
++{
++   unsigned int csum;
++
++#if COMPAT_LINUX_VERSION_CHECK_LT(5, 10, 0)
++   csum = csum_and_copy_to_user(src, dst, len, 0, err);
++#elif LINUX_VERSION_CODE < KERNEL_VERSION(5, 19, 0)
++   csum = csum_and_copy_to_user(src, dst, len);
++   *err = (csum == 0) ? -EFAULT : 0;
++#else
++   if (!user_access_begin(dst, len)) {
++      *err = -EFAULT;
++      csum = 0;
++   } else {
++      *err = 0;
++      csum = csum_partial_copy_nocheck(src, dst, len);
++      user_access_end();
++   }
++#endif
++   return csum;
++}
++
++
++/*
++ *----------------------------------------------------------------------
++ *
+  * VNetCsumCopyDatagram --
+  *
+  *      Copy part of datagram to userspace doing checksum at same time.
+@@ -585,7 +581,7 @@ VNetCsumCopyDatagram(const struct sk_buf
+       return -EINVAL;
+    }
+ 
+-   csum = csum_and_copy_to_user(skb->data + offset, curr, len, 0, &err);
++   csum = VNetCsumAndCopyToUser(skb->data + offset, curr, len, &err);
+    if (err) {
+       return err;
+    }
+@@ -594,20 +595,20 @@ VNetCsumCopyDatagram(const struct sk_buf
+    for (frag = skb_shinfo(skb)->frags;
+ 	frag != skb_shinfo(skb)->frags + skb_shinfo(skb)->nr_frags;
+ 	frag++) {
+-      if (frag->size > 0) {
++      if (skb_frag_size(frag) > 0) {
+ 	 unsigned int tmpCsum;
+ 	 const void *vaddr;
+ 
+-	 vaddr = compat_kmap(frag->page);
+-	 tmpCsum = csum_and_copy_to_user(vaddr + frag->page_offset,
+-					 curr, frag->size, 0, &err);
+-	 compat_kunmap(frag->page);
++	 vaddr = kmap(skb_frag_page(frag));
++         tmpCsum = VNetCsumAndCopyToUser(vaddr + skb_frag_off(frag),
++                                         curr, skb_frag_size(frag), &err);
++	 kunmap(skb_frag_page(frag));
+ 
+ 	 if (err) {
+ 	    return err;
+ 	 }
+ 	 csum = csum_block_add(csum, tmpCsum, curr - buf);
+-	 curr += frag->size;
++	 curr += skb_frag_size(frag);
+       }
+    }
+ 
+Fixing VMWare Player on Linux when using DHCP addresses: https://www.nikhef.nl/~janjust/vmnet/
+@@ -1021,6 +1028,9 @@
+    userIf = (VNetUserIF *)port->jack.private;
+    hubJack = port->jack.peer;
+ 
++   /* never send link down events */
++   if (!linkUp) return 0;
++
+    if (port->jack.state == FALSE || hubJack == NULL) {
+       return -EINVAL;
+    }
+--- a/vmnet/vm_basic_types.h
++++ b/vmnet/vm_basic_types.h
+@@ -921,6 +921,27 @@
+ #define ALIGNED(n)
+ #endif
+ 
++#ifndef __has_attribute
++# define __has_attribute(x) 0
++#endif
++
++/*
++ * COUNTED_BY attribute may be attached to the C99 flexible array
++ * member of a structure. It indicates that the number of the elements
++ * of the array is given by the field "member" in the same structure as
++ * the flexible array member. Compilers may use this information to
++ * improve detection of object size information for such structures
++ * and provide better results in compile-time diagnostics and runtime
++ * features like the array bound sanitizer.
++ *
++ * https://people.kernel.org/kees/bounded-flexible-arrays-in-c
++ */
++
++#if __has_attribute(__counted_by__)
++# define COUNTED_BY(member) __attribute__((__counted_by__(member)))
++#else
++# define COUNTED_BY(member)
++#endif
+ /*
+  * Once upon a time, this was used to silence compiler warnings that
+  * get generated when the compiler thinks that a function returns
+--- a/vmnet/vmnetInt.h
++++ b/vmnet/vmnetInt.h
+@@ -62,8 +62,13 @@
+     compat_skb_set_network_header(skb, sizeof (struct ethhdr)),  \
+     dev_queue_xmit(skb)                                   \
+   )
+-#define dev_lock_list()    read_lock(&dev_base_lock)
+-#define dev_unlock_list()  read_unlock(&dev_base_lock)
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(6, 9, 0)
++#   define dev_lock_list()    rcu_read_lock()
++#   define dev_unlock_list()  rcu_read_unlock()
++#else
++#   define dev_lock_list()    read_lock(&dev_base_lock)
++#   define dev_unlock_list()  read_unlock(&dev_base_lock)
++#endif
+ #ifdef VMW_NETDEV_HAS_NET
+ #   define DEV_GET(x)      __dev_get_by_name(&init_net, (x)->name)
+ #   ifdef VMW_NETDEV_HAS_DEV_NET
+--- a/vmnet/vnetEvent.c
++++ b/vmnet/vnetEvent.c
+@@ -60,10 +60,12 @@
+ 
+ struct VNetEvent_EventNode {
+    VNetEvent_EventNode *nextEvent;
+-   VNet_EventHeader event;
++   union {
++       VNet_EventHeader header;
++       VNet_LinkStateEvent lse;
++   } event;
+ };
+ 
+-#define EVENT_NODE_HEADER_SIZE offsetof(struct VNetEvent_EventNode, event)
+ 
+ struct VNetEvent_Mechanism {
+    VNetKernel_SpinLock lock;          /* mechanism lock */
+@@ -369,6 +371,10 @@
+       return VNetKernel_EINVAL;
+    }
+ 
++   if (e->size > sizeof(p->event)) {
++      return VNetKernel_EINVAL;
++   }
++
+    /* lock */
+    VNetKernel_SpinLockAcquire(&m->lock);
+    m->handlerTask = VNetKernel_ThreadCurrent();
+@@ -378,22 +384,15 @@
+    while (TRUE) {
+        p = *q;
+        if (p == NULL ||
+-           (p->event.eventId == e->eventId && p->event.type == e->type)) {
++           (p->event.header.eventId == e->eventId && p->event.header.type == e->type)) {
+                break;
+            }
+       q = &p->nextEvent;
+    }
+ 
+-   /* remove previously sent event */
+-   if (p != NULL && p->event.size != e->size) {
+-      *q = p->nextEvent;
+-      VNetKernel_MemoryFree(p);
+-      p = NULL;
+-   }
+-
+    /* insert new event into event list*/
+    if (p == NULL) {
+-      p = VNetKernel_MemoryAllocate(EVENT_NODE_HEADER_SIZE + e->size);
++      p = VNetKernel_MemoryAllocate(sizeof(*p));
+       if (p == NULL) {
+          m->handlerTask = NULL;
+          VNetKernel_SpinLockRelease(&m->lock);
+@@ -485,8 +484,8 @@
+    while (s != NULL) {
+       e = s->firstEvent;
+       while (e != NULL) {
+-         if ((e->event.classSet & classMask) != 0) {
+-            h(data, &e->event);
++         if ((e->event.header.classSet & classMask) != 0) {
++            h(data, &e->event.header);
+          }
+          e = e->nextEvent;
+       }
+--- a/vmnet/vnetInt.h
++++ b/vmnet/vnetInt.h
+@@ -226,6 +226,14 @@
+ extern void VNetProc_Cleanup(void);
+ 
+ 
++int VNetNetIf_Create(char *devName, VNetPort **ret, int hubNum);
++int VNetUserIf_Create(VNetPort **ret);
++int VNetBridge_Create(const char *devName, uint32 flags, VNetJack *hubJack,
++                      VNetPort **ret);
++int VNetUserListener_Create(uint32 classMask, VNetJack *hubJack,
++                            VNetPort **port);
++
++
+ /*
+  *----------------------------------------------------------------------
+  *
+--- a/vmnet/vnetUserListener.c
+--- b/vmnet/vnetUserListener.c
+@@ -42,10 +42,12 @@
+ 
+ struct VNetUserListener_EventNode {
+    VNetUserListener_EventNode *nextEvent;
+-   VNet_EventHeader event;
++   union {
++       VNet_EventHeader header;
++       VNet_LinkStateEvent lse;
++   } event;
+ };
+ 
+-#define EVENT_NODE_HEADER_SIZE offsetof(struct VNetUserListener_EventNode, event)
+ 
+ typedef struct VNetUserListener {
+    VNetPort port;                          /* base port/jack */
+@@ -220,7 +222,7 @@
+    VNetUserListener_EventNode *t;
+ 
+    /* allocate and initialize event node */
+-   t = kmalloc(EVENT_NODE_HEADER_SIZE + e->size, GFP_ATOMIC);
++   t = kmalloc(sizeof *t, GFP_ATOMIC);
+    if (t == NULL) {
+       LOG(0, (KERN_DEBUG "VNetUserListenerEventHandler, out of memory\n"));
+       return;
+@@ -299,7 +301,7 @@
+    spin_unlock(&userListener->lock);
+ 
+    /* return data and free event */
+-   n = t->event.size;
++   n = t->event.header.size;
+    if (count < n) {
+       n = count;
+    }

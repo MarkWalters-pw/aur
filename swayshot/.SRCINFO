@@ -1,0 +1,22 @@
+pkgbase = swayshot
+	pkgdesc = Sway screenshots: screen, window or region. Also it uploads them to 0x0.st.
+	pkgver = 2.8.0
+	pkgrel = 1
+	url = https://github.com/vitalijr2/swayshot
+	arch = any
+	license = GPL3
+	depends = sway
+	depends = grim
+	depends = slurp
+	depends = jq
+	optdepends = wl-clipboard: copy the full path to clipboard
+	optdepends = xsel: copy the full path to clipboard
+	optdepends = xclip: copy the full path to clipboard
+	optdepends = curl: upload a screenshot to x0.at
+	optdepends = libnotify: show message with path or URL
+	optdepends = xdg-user-dirs: XDG user directories
+	backup = etc/sway/config.d/swayshot.conf
+	source = https://github.com/vitalijr2/swayshot/archive/refs/tags/2.8.0.tar.gz
+	sha256sums = 2d8eb8ca34ee448bb5e04d3e6632bc999fff976a5efd5c2feb194ad3b7e2585b
+
+pkgname = swayshot

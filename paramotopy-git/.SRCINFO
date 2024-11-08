@@ -1,0 +1,25 @@
+pkgbase = paramotopy-git
+	pkgdesc = Parallel parameter homotopy through Bertini
+	pkgver = 1.0.3.7.r15.48174f3
+	pkgrel = 2
+	url = https://paramotopy.com
+	arch = x86_64
+	license = custom:Paramotopy license
+	makedepends = git
+	makedepends = boost>=1.53
+	makedepends = gmp
+	depends = glibc
+	depends = gcc-libs
+	depends = boost-libs>=1.53
+	depends = bertini
+	depends = mpfr
+	depends = openmpi
+	optdepends = paramotopy-docs: HTML documentation
+	provides = paramotopy=1.0.3.7
+	conflicts = paramotopy
+	source = paramotopy::git+https://github.com/ofloveandhate/paramotopy.git
+	source = paramotopy_fix_deprecated_boost_timer.patch
+	sha256sums = SKIP
+	sha256sums = e355ddea4c31f22c008e63f0418a2a6e77103b6779763a817604daaa3b644c21
+
+pkgname = paramotopy-git

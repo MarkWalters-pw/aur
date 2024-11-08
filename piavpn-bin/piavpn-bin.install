@@ -1,0 +1,64 @@
+# copy-pasted from install.sh in .run file, but with rt_tables copying logic, for if needed
+function addRoutingTable() {
+    local highestIndex=$(awk '/^[0-9]/{print $1}' /etc/iproute2/rt_tables | sort -n | tail -1)
+    local newIndex=$(($highestIndex + 1))
+    local routingTable="$1"
+
+    if ! grep -q "$routingTable" /etc/iproute2/rt_tables; then
+        echo -e "$newIndex\t$routingTable" >> /etc/iproute2/rt_tables
+    fi
+}
+
+pre_install() {
+	groupadd piavpn
+	groupadd piahnsd
+
+	if ! cat /etc/iproute2/rt_tables > /dev/null 2>&1 # If this doesn't exist, create it!
+	then
+		mkdir -p /etc/iproute2
+		cp /usr/share/iproute2/rt_tables /etc/iproute2/rt_tables
+	fi
+
+	addRoutingTable piavpnrt
+	addRoutingTable piavpnOnlyrt
+	addRoutingTable piavpnWgrt
+	addRoutingTable piavpnFwdrt
+}
+
+post_install() {
+	echo "You need to start the daemon with 'sudo systemctl start piavpn.service'"
+	echo "Also run 'sudo systemctl enable piavpn.service' to make it automatically start at boot"
+}
+
+pre_remove() {
+	systemctl stop piavpn.service
+	systemctl disable piavpn.service
+}
+
+post_remove() {
+	sed -i '/.*piavpnrt$/d' /etc/iproute2/rt_tables
+	sed -i '/.*piavpnOnlyrt$/d' /etc/iproute2/rt_tables
+	sed -i '/.*piavpnWgrt$/d' /etc/iproute2/rt_tables
+	sed -i '/.*piavpnFwdrt$/d' /etc/iproute2/rt_tables
+	groupdel piavpn
+	groupdel piahnsd
+
+	if diff -q /usr/share/iproute2/rt_tables /etc/iproute2/rt_tables > /dev/null 2>&1 # If files are identical
+	then
+		echo "/etc/iproute2/rt_tables is identical to default at /usr/share/iproute2/rt_tables, removing"
+		rm /etc/iproute2/rt_tables
+		rmdir /etc/iproute2
+	fi
+}
+
+post_upgrade() {
+	if ! grep -q piavpnFwdrt /etc/iproute2/rt_tables; then
+		addRoutingTable piavpnFwdrt
+	fi
+	systemctl daemon-reload
+	if systemctl is-active piavpn >/dev/null; then
+		systemctl restart piavpn.service
+		echo ":: Don't forget to reconnect to your vpn if needed"
+	fi
+}
+

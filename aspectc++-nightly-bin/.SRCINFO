@@ -1,0 +1,17 @@
+pkgbase = aspectc++-nightly-bin
+	pkgdesc = Nightly build of AspectC++, a set of C++ language extensions to facilitate aspect-oriented programming with C/C++
+	pkgver = 2.3
+	pkgrel = 2
+	url = http://aspectc.org/
+	arch = i686
+	arch = x86_64
+	license = GPL
+	depends = libxml2
+	depends = gcc-libs
+	conflicts = aspectc++-bin
+	source_i686 = https://www.aspectc.org/daily/aspectcpp-linux-daily.tar.gz
+	sha512sums_i686 = SKIP
+	source_x86_64 = https://www.aspectc.org/daily/aspectcpp-linux64-daily.tar.gz
+	sha512sums_x86_64 = SKIP
+
+pkgname = aspectc++-nightly-bin

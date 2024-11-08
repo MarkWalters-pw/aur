@@ -1,0 +1,19 @@
+pkgbase = python-ipyopt
+	pkgdesc = Python interface to Ipopt
+	pkgver = 0.12.9
+	pkgrel = 1
+	url = https://gitlab.com/ipyopt-devs/ipyopt
+	arch = x86_64
+	license = BSD-3-Clause
+	checkdepends = python-scipy
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	makedepends = cython
+	depends = coin-or-ipopt
+	depends = python-numpy
+	source = https://gitlab.com/ipyopt-devs/ipyopt/-/archive/0.12.9/ipyopt-0.12.9.tar.gz
+	sha512sums = 318e1af30cc04a028bacd0ba787a66e5f17ef10ad57633c32f5b45b44dbd27161184e69e1a43481afcfc4e66c5957a631c253c6379a4e3d4d85cdabcb2b5bcb6
+
+pkgname = python-ipyopt

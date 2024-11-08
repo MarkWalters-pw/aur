@@ -1,0 +1,17 @@
+pkgbase = mbtserver
+	pkgdesc = Memory-based tagger-generator and tagger server.
+	pkgver = 0.16
+	pkgrel = 2
+	url = https://languagemachines.github.io/mbt
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	depends = ticcutils>=0.24
+	depends = timbl
+	depends = timblserver
+	depends = mbt
+	options = !libtool
+	source = https://github.com/LanguageMachines/mbtserver/archive/v0.16.tar.gz
+	md5sums = c5d60b278d7e3d7a4c54003019275c73
+
+pkgname = mbtserver

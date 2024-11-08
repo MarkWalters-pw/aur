@@ -1,0 +1,15 @@
+pkgbase = kaniko
+	pkgdesc = Build Container Images In Kubernetes
+	pkgver = 1.23.2
+	pkgrel = 1
+	url = https://github.com/GoogleContainerTools/kaniko
+	arch = x86_64
+	license = Apache
+	makedepends = go
+	depends = glibc
+	optdepends = bash: run_in_docker.sh script
+	options = !lto
+	source = https://github.com/GoogleContainerTools/kaniko/archive/refs/tags/v1.23.2.tar.gz
+	sha256sums = 5aad6f2501388fe9e9faa3d1151e933fff4f8d8349cfc99695305011f10ddb5a
+
+pkgname = kaniko

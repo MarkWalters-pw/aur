@@ -1,0 +1,21 @@
+pkgbase = tkn-bin
+	pkgdesc = A CLI for interacting with Tekton!
+	pkgver = 0.38.0
+	pkgrel = 1
+	url = https://github.com/tektoncd/cli
+	arch = aarch64
+	arch = ppc64le
+	arch = s390x
+	arch = x86_64
+	license = Apache 2.0
+	provides = tkn
+	source_aarch64 = tkn-bin_0.38.0_aarch64::https://github.com/tektoncd/cli/releases/download/v0.38.0/tkn_0.38.0_Linux_aarch64.tar.gz
+	sha256sums_aarch64 = cd4e786d4a2d8b56ae698ff923044dd9ca03b3e93bb0290884334e09a8ec43ad
+	source_ppc64le = tkn-bin_0.38.0_ppc64le::https://github.com/tektoncd/cli/releases/download/v0.38.0/tkn_0.38.0_Linux_ppc64le.tar.gz
+	sha256sums_ppc64le = e0b8468f36db0beabedba9d168756dd328fb27c61cba3a4b742c0d75ba23da32
+	source_s390x = tkn-bin_0.38.0_s390x::https://github.com/tektoncd/cli/releases/download/v0.38.0/tkn_0.38.0_Linux_s390x.tar.gz
+	sha256sums_s390x = 1338dbb56512fc16cc947393af28b0827953fa2438ebdbec73e9b1b183e3b001
+	source_x86_64 = tkn-bin_0.38.0_x86_64.tar.gz::https://github.com/tektoncd/cli/releases/download/v0.38.0/tkn_0.38.0_Linux_x86_64.tar.gz
+	sha256sums_x86_64 = 527c3b550a64cd20e86bba79c210c4836c40e367b5b5a6ec0d6ba35f05ea23fe
+
+pkgname = tkn-bin

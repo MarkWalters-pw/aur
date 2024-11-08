@@ -1,0 +1,15 @@
+pkgbase = cobaltstrike_brute-git
+	pkgdesc = Cobalt Strike Team Server Password Brute Forcer
+	pkgver = r8.f26eeea
+	pkgrel = 2
+	url = https://github.com/isafe/cobaltstrike_brute
+	arch = any
+	license = Apache
+	makedepends = git
+	depends = python
+	provides = cobaltstrike_brute
+	conflicts = cobaltstrike_brute
+	source = cobaltstrike_brute::git+https://github.com/isafe/cobaltstrike_brute.git
+	sha256sums = SKIP
+
+pkgname = cobaltstrike_brute-git

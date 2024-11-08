@@ -1,0 +1,8 @@
+post_install() {
+echo "Your user must belong to the realtime group in order to use wineasio."
+echo "This can be done with sudo usermod -aG realtime \$(whoami)"
+echo ""
+echo "For registering wineasio as an ASIO driver run:"
+echo "wine64 regsvr32 /usr/lib/wine/x86_64-windows/wineasio64.dll"
+}
+# vim:set ts=2 sw=2 et:

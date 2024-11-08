@@ -1,0 +1,20 @@
+pkgbase = tartufo
+	pkgdesc = Searches through git repositories for high entropy strings and secrets, digging deep into commit history
+	pkgver = 5.0.2
+	pkgrel = 1
+	url = https://tartufo.readthedocs.io/
+	arch = any
+	license = GPL-2.0-only
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = python-pygit2
+	depends = python-gitpython
+	depends = python-click
+	depends = python-colorama
+	depends = python-tomlkit
+	depends = python-cached-property
+	source = https://files.pythonhosted.org/packages/source/t/tartufo/tartufo-5.0.2.tar.gz
+	sha256sums = d7f680da7aadc91840d2bde2605a9e71fa635ac1c6ee39490fb11e9a1494ff58
+
+pkgname = tartufo

@@ -1,0 +1,20 @@
+[Unit]
+Description=Sia host daemon
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/hostd -env -openui=false
+Restart=always
+RestartSec=15
+
+User=hostd
+Group=hostd
+UMask=007
+
+WorkingDirectory=~
+
+Environment="HOSTD_CONFIG_FILE=/etc/hostd.yml"
+
+[Install]
+WantedBy=multi-user.target

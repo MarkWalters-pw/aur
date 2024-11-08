@@ -1,0 +1,24 @@
+pkgbase = python-conda-package-streaming
+	pkgdesc = An efficient library to read from new and old format .conda and .tar.bz2 conda packages
+	pkgver = 0.10.0
+	pkgrel = 4
+	url = https://github.com/conda/conda-package-streaming
+	arch = x86_64
+	license = BSD-3-Clause
+	checkdepends = python-pytest
+	checkdepends = python-pytest-cov
+	checkdepends = python-pytest-mock
+	checkdepends = python-boto3
+	checkdepends = python-bottle
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-flit-core
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python
+	depends = python-requests
+	depends = python-zstandard
+	source = conda-package-streaming-0.10.0.tar.gz::https://github.com/conda/conda-package-streaming/archive/refs/tags/v0.10.0.tar.gz
+	sha512sums = f4f1efb609a77a4c28e230e1c23b0ee65f682228643dc93bb4055edd3111e31f853f5af672bd551d09e219374589d110f349c3f4899c5f881cae25600ba0eceb
+
+pkgname = python-conda-package-streaming

@@ -1,0 +1,23 @@
+pkgbase = ruby-webrobots
+	pkgdesc = A Ruby library to help write robots.txt compliant web robots
+	pkgver = 0.1.2
+	pkgrel = 3
+	url = https://github.com/knu/webrobots
+	arch = any
+	license = BSD-2-Clause
+	checkdepends = ruby-bundler
+	checkdepends = ruby-nokogiri
+	checkdepends = ruby-rake
+	checkdepends = ruby-shoulda
+	checkdepends = ruby-simplecov
+	checkdepends = ruby-test-unit
+	checkdepends = ruby-vcr
+	checkdepends = ruby-webmock
+	makedepends = rubygems
+	makedepends = ruby-rdoc
+	depends = ruby
+	options = !emptydirs
+	source = https://github.com/knu/webrobots/archive/v0.1.2.tar.gz
+	sha256sums = 08a5d80307c7654d90294ed4a9742506cc6638ef467afe93fcd1906b49228c69
+
+pkgname = ruby-webrobots

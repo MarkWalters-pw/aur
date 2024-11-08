@@ -1,0 +1,15 @@
+pkgbase = proploader
+	pkgdesc = Parallax Propeller loader supporting both serial and wifi downloads
+	pkgver = 1.0_37
+	pkgrel = 2
+	url = https://github.com/parallaxinc/PropLoader
+	arch = x86_64
+	arch = i686
+	license = LicenseRef-MIT
+	makedepends = openspin
+	provides = proploader
+	conflicts = proploader-git
+	source = https://github.com/parallaxinc/PropLoader/archive/v1.0-37.tar.gz
+	md5sums = d758a0bfe2f477ecbffb130159f58cb3
+
+pkgname = proploader

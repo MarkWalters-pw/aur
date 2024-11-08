@@ -1,0 +1,15 @@
+pkgbase = queercat-git
+	pkgdesc = A version of lolcat with options for some lgbtq+ flags.
+	pkgver = r24.551c199
+	pkgrel = 1
+	url = https://github.com/Elsa002/queercat
+	arch = any
+	license = Unlicense
+	makedepends = gcc
+	makedepends = git
+	provides = queercat
+	conflicts = queercat
+	source = queercat-git::git+https://github.com/Elsa002/queercat
+	sha512sums = SKIP
+
+pkgname = queercat-git

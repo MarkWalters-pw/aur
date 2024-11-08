@@ -1,0 +1,25 @@
+pkgbase = gdevelop
+	pkgdesc = A full-featured, open source game engine, allowing to create HTML5 with powerful visual scripting.
+	pkgver = 5.4.208
+	pkgrel = 1
+	url = https://gdevelop.io
+	arch = x86_64
+	arch = armv7l
+	arch = arm64
+	license = MIT
+	makedepends = npm
+	makedepends = git
+	makedepends = jq
+	makedepends = clang
+	depends = electron22
+	provides = gdevelop=5.4.208
+	conflicts = gdevelop-bin
+	conflicts = gdevelop-git
+	source = gdevelop::git+https://github.com/4ian/GDevelop.git#tag=v5.4.208
+	source = emsdk::git+https://github.com/emscripten-core/emsdk.git
+	source = gdevelop.desktop
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = 240f24320686eff28e9d5226440d5f195098c1f59bff030bbfa88ed07aa72244
+
+pkgname = gdevelop

@@ -1,0 +1,17 @@
+pkgbase = note-manager
+	pkgdesc = Simple CLI notes manager
+	pkgver = 1.23.0
+	pkgrel = 1
+	url = https://github.com/thek4n/note
+	arch = any
+	license = MIT
+	depends = git
+	optdepends = fzf: find notes
+	optdepends = bat: render notes in terminal
+	optdepends = tree: tree of notes
+	optdepends = ripgrep: find notes by content
+	conflicts = note-manager
+	source = note-manager::git+https://github.com/thek4n/note.git#tag=v1.23.0
+	sha256sums = SKIP
+
+pkgname = note-manager

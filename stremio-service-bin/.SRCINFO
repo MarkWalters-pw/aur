@@ -1,0 +1,19 @@
+pkgbase = stremio-service-bin
+	pkgdesc = The companion app of Stremio Web
+	pkgver = 0.1.13
+	pkgrel = 1
+	url = https://github.com/Stremio/stremio-service
+	arch = x86_64
+	license = GPL-2.0
+	depends = cairo
+	depends = gcc-libs
+	depends = gdk-pixbuf2
+	depends = glib2
+	depends = gtk3
+	depends = libayatana-appindicator
+	provides = stremio-service
+	conflicts = stremio-service
+	source = stremio-service_v0.1.13-x86_64.deb::https://github.com/Stremio/stremio-service/releases/download/v0.1.13/stremio-service_amd64.deb
+	sha256sums = 36c2d83f43a2af84ae47ca41eb4d7bca636b70af2ed7e85f67a43ad864104f0a
+
+pkgname = stremio-service-bin

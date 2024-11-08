@@ -1,0 +1,18 @@
+pkgbase = open-enclave-bin
+	pkgdesc = Open Enclave SDK
+	pkgver = 0.19.7
+	pkgrel = 1
+	url = https://openenclave.io/sdk/
+	changelog = open-enclave.changelog.md
+	arch = x86_64
+	license = Apache-2.0
+	optdepends = openssl-1.1: for bundled tools and linked with host part when building
+	optdepends = clang14: can build
+	options = !strip
+	options = !debug
+	source = https://github.com/openenclave/openenclave/releases/download/v0.19.7/Ubuntu_2004_open-enclave_0.19.7_amd64.deb
+	source = LICENSES
+	sha256sums = 1ee27053e9442619111b5252e02e381895ab79782450bd446faf85fa0cc510cd
+	sha256sums = a9c03d39d11e672c5f1df92576d8e02ee40c661830c9e759ed90b749193f4970
+
+pkgname = open-enclave-bin

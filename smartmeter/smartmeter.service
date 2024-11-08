@@ -1,0 +1,17 @@
+[Unit]
+Description=Smartmeter
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/smartmeter -c /etc/smartmeter/smartmeter.conf
+User=smartmeter
+Group=smartmeter
+NoNewPrivileges=yes
+ProtectSystem=full
+ProtectHome=true
+PrivateTmp=true
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

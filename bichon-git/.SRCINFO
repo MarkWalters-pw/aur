@@ -1,0 +1,15 @@
+pkgbase = bichon-git
+	pkgdesc = TUI for reviewing GitLab merge requests
+	pkgver = r461.f4c9d17
+	pkgrel = 1
+	url = https://gitlab.com/bichon-project/bichon
+	arch = x86_64
+	license = Apache
+	makedepends = git
+	makedepends = go
+	provides = bichon
+	conflicts = bichon
+	source = git+https://gitlab.com/bichon-project/bichon
+	sha256sums = SKIP
+
+pkgname = bichon-git

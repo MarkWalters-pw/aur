@@ -1,0 +1,19 @@
+pkgbase = rism-bin
+	pkgdesc = Application-specific browser based on tauri
+	pkgver = 1.0.0
+	pkgrel = 1
+	url = https://github.com/thorio/rism
+	arch = x86_64
+	license = GPL3
+	depends = libappindicator-gtk3
+	depends = gtk3
+	depends = librsvg
+	depends = webkit2gtk
+	depends = libsoup
+	provides = rism
+	conflicts = rism
+	options = !strip
+	source = https://github.com/thorio/rism/releases/download/v1.0.0/rism-x86_64.deb
+	sha256sums = ab57d5262506e627ef30fcea9d47f8137fc34cba9cd7a8ae5fff32d7418d323a
+
+pkgname = rism-bin

@@ -1,0 +1,21 @@
+pkgbase = libkomparediff2-git
+	pkgdesc = Library to compare files and strings
+	pkgver = 24.08.0.r7.g62d8f88
+	pkgrel = 1
+	url = https://invent.kde.org/sdk/libkomparediff2
+	arch = x86_64
+	license = GPL-2.0-or-later
+	license = LGPL-2.0-or-later
+	makedepends = cmake
+	makedepends = extra-cmake-modules
+	makedepends = git
+	makedepends = kdoctools
+	makedepends = ninja
+	depends = kio
+	depends = kxmlgui
+	provides = libkomparediff2
+	conflicts = libkomparediff2=24.08.0
+	source = libkomparediff2::git+https://invent.kde.org/sdk/libkomparediff2.git#branch=master
+	sha1sums = SKIP
+
+pkgname = libkomparediff2-git

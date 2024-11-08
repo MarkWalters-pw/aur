@@ -1,0 +1,29 @@
+pkgbase = ericw-tools-git
+	pkgdesc = Quake/Hexen 2 Map compiling tools
+	pkgver = 2.0.0.alpha8.r22.g6c9b681b
+	pkgrel = 1
+	url = https://ericwa.github.io/ericw-tools
+	arch = x86_64
+	license = GPL3
+	makedepends = cmake
+	makedepends = git
+	makedepends = python-sphinx
+	makedepends = python-sphinx-furo
+	makedepends = python-sphinx-autobuild
+	depends = embree3
+	depends = groff
+	depends = tbb
+	provides = ericw-tools
+	conflicts = ericw-tools
+	source = ericw-tools::git+https://github.com/ericwa/ericw-tools.git#branch=brushbsp
+	source = fmt::git+https://github.com/fmtlib/fmt.git
+	source = json::git+https://github.com/ArthurSonzogni/nlohmann_json_cmake_fetchcontent.git
+	source = nanobench::git+https://github.com/martinus/nanobench
+	source = pareto::git+https://github.com/alandefreitas/pareto.git
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = ericw-tools-git

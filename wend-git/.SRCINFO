@@ -1,0 +1,18 @@
+pkgbase = wend-git
+	pkgdesc = Minimal presentation tool for Wayland
+	pkgver = r225.dc3867f
+	pkgrel = 1
+	url = https://sr.ht/~tardypad/wend/
+	arch = any
+	license = GPL3
+	makedepends = git
+	makedepends = meson
+	makedepends = scdoc
+	makedepends = wayland-protocols
+	depends = libxkbcommon
+	depends = pango
+	depends = wayland
+	source = git+https://git.sr.ht/~tardypad/wend
+	sha512sums = SKIP
+
+pkgname = wend-git

@@ -1,0 +1,23 @@
+pkgbase = wubi-dict-editor
+	pkgdesc = Five-stroke code assistant for Rime based on electron development.五笔码表助手 for Rime,基于 electron 开发.
+	pkgver = 1.28
+	pkgrel = 2
+	url = https://github.com/KyleBing/wubi-dict-editor
+	arch = x86_64
+	license = GPL-3.0-only
+	makedepends = npm
+	makedepends = yarn
+	makedepends = nvm
+	makedepends = gendesk
+	makedepends = libicns
+	makedepends = curl
+	depends = electron24
+	depends = nodejs
+	conflicts = wubi-dict-editor
+	options = !emptydirs
+	source = wubi-dict-editor-1.28.tar.gz::https://github.com/KyleBing/wubi-dict-editor/archive/refs/tags/v1.28.tar.gz
+	source = wubi-dict-editor.sh
+	sha256sums = 2112e865f6093fae701c5973f18ded3b3e7a17642d69bad62744358e56488eca
+	sha256sums = 291f50480f5a61bc9c68db7d44cd0412071128706baa868a9cb854f8779a1980
+
+pkgname = wubi-dict-editor

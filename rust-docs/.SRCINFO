@@ -1,0 +1,22 @@
+pkgbase = rust-docs
+	pkgdesc = Rust documentations.
+	pkgver = 1.82.0
+	pkgrel = 1
+	epoch = 1
+	url = https://www.rust-lang.org/
+	arch = x86_64
+	arch = i686
+	arch = aarch64
+	license = Apache-2.0
+	license = MIT
+	options = docs
+	options = !strip
+	options = !debug
+	source_x86_64 = https://static.rust-lang.org/dist/rust-docs-1.82.0-x86_64-unknown-linux-gnu.tar.gz
+	sha256sums_x86_64 = d5223e4e04d5cd70573a0d300dd4892873f1f3298c10fdf2a391902612bfd561
+	source_i686 = https://static.rust-lang.org/dist/rust-docs-1.82.0-i686-unknown-linux-gnu.tar.gz
+	sha256sums_i686 = d0eb6c5238667c556cf611681d6afb5d6f70fa65097c61877f6f62dd2f0793be
+	source_aarch64 = https://static.rust-lang.org/dist/rust-docs-1.82.0-aarch64-unknown-linux-gnu.tar.gz
+	sha256sums_aarch64 = 98448370a96317317a9dd37960c5356f9d40ecfd4648f73c4a5fe2749846b37f
+
+pkgname = rust-docs

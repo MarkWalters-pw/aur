@@ -1,0 +1,19 @@
+pkgbase = ultrastar-manager
+	pkgdesc = Qt program used to manage USDX songs
+	pkgver = r1211.7764a98
+	pkgrel = 1
+	url = https://github.com/UltraStar-Deluxe/UltraStar-Manager
+	arch = x86_64
+	license = GPL2
+	makedepends = qt6-tools
+	makedepends = git
+	depends = qt6-base
+	depends = qt6-multimedia
+	depends = libmediainfo
+	depends = taglib
+	depends = cld2-git
+	depends = pulseaudio-alsa
+	source = git+https://github.com/UltraStar-Deluxe/UltraStar-Manager.git
+	md5sums = SKIP
+
+pkgname = ultrastar-manager

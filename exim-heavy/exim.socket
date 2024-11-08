@@ -1,0 +1,12 @@
+[Unit]
+Description=Exim Mail Transfer Agent
+Documentation=man:exim
+Documentation=https://exim.org/docs.html
+Conflicts=exim.service
+
+[Socket]
+ListenStream=25
+Accept=yes
+
+[Install]
+WantedBy=sockets.target

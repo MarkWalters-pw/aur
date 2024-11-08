@@ -1,0 +1,16 @@
+pkgbase = gcac
+	pkgdesc = API-based replacement bash completion script for git clone
+	pkgver = 1.0.3
+	pkgrel = 1
+	url = https://gitlab.com/dpeukert/gcac
+	arch = any
+	license = GPL-3.0-or-later
+	depends = bash-completion
+	depends = curl
+	depends = git
+	depends = jq
+	depends = openssh
+	source = gcac-1.0.3.tar.gz::https://gitlab.com/dpeukert/gcac/-/archive/1.0.3/gcac-1.0.3.tar.gz
+	b2sums = 335d1a41510febd288b5add373b9619124dcd58ca258eebe89c952796e1135e97086dd78b0f53eb44e6eb36c4e81b8d99011800f8fa7909f9cc664c7e2e9ba6f
+
+pkgname = gcac

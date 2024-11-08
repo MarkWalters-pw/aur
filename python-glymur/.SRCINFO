@@ -1,0 +1,35 @@
+pkgbase = python-glymur
+	pkgdesc = Tools for accessing JPEG2000 files
+	pkgver = 0.13.6
+	pkgrel = 1
+	url = https://glymur.readthedocs.org
+	arch = any
+	license = MIT
+	checkdepends = python-pytest
+	checkdepends = python-numpy
+	checkdepends = python-lxml
+	checkdepends = python-scikit-image
+	checkdepends = python-gdal
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-numpydoc
+	makedepends = python-sphinx_rtd_theme
+	makedepends = python-lxml
+	source = https://github.com/quintusdias/glymur/archive/refs/tags/v0.13.6.tar.gz
+	source = fix-sphinx8-intersphinx.patch
+	md5sums = 68ce97d344a389b7dc63a4cc87f5c128
+	md5sums = c95fe75b7d3b0e8d1de91a7d9dfc2c2a
+
+pkgname = python-glymur
+	depends = python-numpy
+	depends = python-lxml
+	depends = python-packaging
+	optdepends = openjpeg2
+	optdepends = python-gdal
+	optdepends = python-scikit-image
+	optdepends = python-glymur-doc: Documentation for Python Glymur
+
+pkgname = python-glymur-doc
+	pkgdesc = Documentation for Python Glymur module

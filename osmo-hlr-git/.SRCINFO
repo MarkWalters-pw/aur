@@ -1,0 +1,24 @@
+pkgbase = osmo-hlr-git
+	pkgdesc = Osmocom HLR for GSUP protocol towards OsmoSGSN and OsmoCSCN
+	pkgver = 1.8.0.r0.gc819234a
+	pkgrel = 1
+	url = https://osmocom.org/projects/osmo-hlr
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	license = AGPL-3.0-or-later
+	makedepends = git
+	depends = libosmocore-git
+	depends = libosmo-abis-git
+	depends = talloc
+	depends = sqlite
+	provides = osmo-hlr=1.8.0.r0.gc819234a
+	provides = libosmo-gsup-client.so=0-64
+	provides = libosmo-mslookup.so=1-64
+	conflicts = osmo-hlr
+	backup = etc/osmocom/osmo-hlr.cfg
+	source = git+https://gitea.osmocom.org/cellular-infrastructure/osmo-hlr.git
+	sha256sums = SKIP
+
+pkgname = osmo-hlr-git

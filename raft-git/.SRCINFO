@@ -1,0 +1,19 @@
+pkgbase = raft-git
+	pkgdesc = Asynchronous C implementation of the Raft consensus protocol
+	pkgver = 0.22.1.r8.g5032ee9a
+	pkgrel = 1
+	url = https://raft.readthedocs.io/
+	arch = i686
+	arch = x86_64
+	license = LGPL-3.0-only WITH LGPL-3.0-linking-exception
+	makedepends = git
+	depends = glibc
+	depends = libuv
+	depends = lz4
+	provides = raft=0.22.1.r8.g5032ee9a
+	conflicts = raft
+	options = staticlibs
+	source = git+https://github.com/cowsql/raft.git
+	sha256sums = SKIP
+
+pkgname = raft-git

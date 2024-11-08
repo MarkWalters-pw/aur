@@ -1,0 +1,22 @@
+pkgbase = spx-translation
+	pkgdesc = Syndication Translator (Google +deepl).Use system-wide electron.聚合翻译程序(谷歌+deepl)
+	pkgver = 2.0.5_1
+	pkgrel = 5
+	url = https://github.com/mlmdflr/spx-translation
+	arch = x86_64
+	license = MIT
+	makedepends = gendesk
+	makedepends = pnpm
+	makedepends = npm
+	makedepends = nvm
+	makedepends = python
+	makedepends = gcc
+	makedepends = curl
+	depends = electron25
+	conflicts = spx-translation
+	source = spx-translation-2.0.5_1.tar.gz::https://github.com/mlmdflr/spx-translation/archive/refs/tags/vv2.0.5-1.tar.gz
+	source = spx-translation.sh
+	sha256sums = ecbed1c6b9c538cabc3de2b2d58b513a299a96bfceb19af355aafaca5dae1cce
+	sha256sums = 291f50480f5a61bc9c68db7d44cd0412071128706baa868a9cb854f8779a1980
+
+pkgname = spx-translation

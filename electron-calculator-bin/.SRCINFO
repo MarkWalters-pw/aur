@@ -1,0 +1,18 @@
+pkgbase = electron-calculator-bin
+	pkgdesc = Simple electron calculator app
+	pkgver = 1.1.2
+	pkgrel = 6
+	url = https://github.com/Alex313031/electron-calculator
+	arch = x86_64
+	license = BSD-3-Clause
+	depends = electron22
+	provides = electron-calculator
+	conflicts = electron-calculator
+	source = electron-calculator-1.1.2.deb::https://github.com/Alex313031/electron-calculator/releases/download/1.1.2/electron-calculator_1.1.2_amd64.deb
+	source = LICENSE-1.1.2::https://raw.githubusercontent.com/Alex313031/electron-calculator/1.1.2/LICENSE
+	source = electron-calculator.sh
+	sha256sums = a24c56eb012c763c6c10ddf137ff4c72c0d8898776083baed52085bb78023664
+	sha256sums = 0971f64facd7071ec5e71edbac78a59937e0a82e1b1599ee45e5ce0e4735623e
+	sha256sums = 2b2e8aeed33fd71c521e49fd54fb2fa81218d16aef8bccb88d77909055ab8051
+
+pkgname = electron-calculator-bin

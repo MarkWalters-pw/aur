@@ -1,0 +1,20 @@
+pkgbase = blueblack
+	pkgdesc = Automatically switch between light/dark mode
+	pkgver = 1.0.4
+	pkgrel = 1
+	url = https://github.com/smitropoulos/blueblack
+	arch = any
+	license = GPL
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = python-yaml>=6.0.1
+	depends = python-requests>=2.31.0
+	depends = python-xdg-base-dirs
+	depends = python-jsonschema>=4.21.1
+	provides = blueblack
+	conflicts = blueblack
+	source = https://github.com/smitropoulos/blueblack/archive/refs/tags/v1.0.4.tar.gz
+	sha256sums = 901c6fe61e38b327ede74acf52342584bbc1df9907c3a330665e031400577997
+
+pkgname = blueblack

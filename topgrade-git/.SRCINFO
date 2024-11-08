@@ -1,0 +1,17 @@
+pkgbase = topgrade-git
+	pkgdesc = Upgrade all the things
+	pkgver = 15.0.0.r28.g1958fe1
+	pkgrel = 1
+	url = https://topgrade-rs.github.io
+	arch = x86_64
+	arch = aarch64
+	license = GPL-3.0-or-later
+	makedepends = cargo
+	makedepends = git
+	depends = gcc-libs
+	provides = topgrade
+	conflicts = topgrade
+	source = git+https://github.com/topgrade-rs/topgrade.git
+	sha256sums = SKIP
+
+pkgname = topgrade-git

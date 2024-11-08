@@ -1,0 +1,56 @@
+pkgbase = theseus-ship
+	pkgdesc = Wayland and X11 Compositor for the KDE Plasma desktop (formerly kwinft)
+	pkgver = 6.2.0
+	pkgrel = 1
+	url = https://github.com/winft/theseus-ship
+	install = theseus-ship.install
+	arch = x86_64
+	arch = aarch64
+	license = LGPL-2.1-only
+	makedepends = breeze
+	makedepends = extra-cmake-modules
+	makedepends = git
+	makedepends = kdeclarative
+	makedepends = kdoctools
+	makedepends = knotifications
+	makedepends = kxmlgui
+	makedepends = microsoft-gsl
+	makedepends = ninja
+	makedepends = xorg-xwayland
+	depends = wlroots
+	depends = kauth
+	depends = kcmutils
+	depends = kconfigwidgets
+	depends = kdecoration
+	depends = kglobalaccel
+	depends = kidletime
+	depends = kpackage
+	depends = kquickcharts
+	depends = kservice
+	depends = ksvg
+	depends = libepoxy
+	depends = libplasma
+	depends = libqaccessibilityclient-qt6
+	depends = pixman
+	depends = qt6-5compat
+	depends = qt6-declarative
+	depends = qt6-tools
+	depends = kcrash
+	depends = kdbusaddons
+	depends = knewstuff
+	depends = kscreenlocker
+	depends = qt6-multimedia
+	depends = wrapland
+	optdepends = qt6-virtualkeyboard: virtual keyboard support
+	provides = kwin=6.2.0
+	provides = kwinft=6.2.0
+	provides = theseus-ship=6.2.0
+	conflicts = kwin
+	conflicts = kwinft
+	conflicts = theseus-ship
+	source = como-0.3.0.tar.gz::https://github.com/winft/como/archive/refs/tags/v0.3.0.tar.gz
+	source = theseus-ship-6.2.0.tar.gz::https://github.com/winft/theseus-ship/archive/refs/tags/v6.2.0.tar.gz
+	sha256sums = 5a4c9b531bd2ccdad2a262e83f94d8cf585b6422280f5963cb5c6cc432ae031a
+	sha256sums = 1f3567a4b1dd1a69046fe8669d624f4245733a72354025f127e732f4600fde18
+
+pkgname = theseus-ship

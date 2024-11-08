@@ -1,0 +1,22 @@
+pkgbase = sdformat13
+	pkgdesc = Simulation Description Format (SDFormat) parser and description files.
+	pkgver = 13.8.0
+	pkgrel = 1
+	url = https://github.com/gazebosim/sdformat
+	arch = any
+	license = Apache
+	makedepends = cmake
+	makedepends = doxygen
+	makedepends = gz-cmake=3
+	makedepends = pybind11
+	makedepends = python
+	makedepends = ruby
+	depends = tinyxml2
+	depends = urdfdom
+	depends = gz-math=7
+	depends = gz-utils=2
+	provides = sdformat=13
+	source = https://github.com/gazebosim/sdformat/archive/sdformat13_13.8.0.tar.gz
+	sha256sums = 4ac462c149d178f128a63a69604aca1b973e3e8cf0863f3d84225dae3c912ef9
+
+pkgname = sdformat13

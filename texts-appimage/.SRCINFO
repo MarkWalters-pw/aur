@@ -1,0 +1,19 @@
+pkgbase = texts-appimage
+	pkgdesc = All of your messages in one inbox
+	pkgver = 0.83.22
+	pkgrel = 1
+	url = https://texts.com/
+	arch = x86_64
+	license = Proprietary
+	depends = libnotify
+	depends = libappindicator-gtk3
+	depends = fuse2
+	depends = fuse3
+	depends = fuse-common
+	depends = libsecret
+	noextract = Texts-Linux-x64-v0.82.6-fa5f182cfb.AppImage
+	options = !strip
+	source_x86_64 = Texts-Linux-x64-v0.83.22-7d25a7dd28.AppImage::https://texts.com//api/install/linux/x86_64/builds/Texts-Linux-x64-v0.82.6-7d25a7dd28.AppImage
+	sha512sums_x86_64 = 7d25a7dd285acb654fc3d2331dae872fd2401a75d35d216ede39b11bac8ce27d3161fe8b6aa608cae8f86cde33863fff9117219f8a4a7760505d56895439b44e
+
+pkgname = texts-appimage

@@ -1,0 +1,21 @@
+pkgbase = yewtube
+	pkgdesc = Terminal-based YouTube player and downloader
+	pkgver = 2.12.0
+	pkgrel = 1
+	url = https://github.com/mps-youtube/yewtube
+	arch = any
+	license = GPL3
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python-pip
+	depends = python-pylast
+	depends = python-pyperclip
+	depends = python-requests
+	depends = youtube-search-python
+	depends = yt-dlp
+	source = yewtube-2.12.0.tar.gz::https://github.com/mps-youtube/yewtube/archive/refs/tags/v2.12.0.tar.gz
+	b2sums = f26ee60ba7efbc54c1a92c844e9b3b850f4e34b7e8ba1dae85b7b0c342e5e9c098d6da5df48193d9e57b0258f4a5f2512cc2011d9abebe425c482bacdbd0907d
+
+pkgname = yewtube

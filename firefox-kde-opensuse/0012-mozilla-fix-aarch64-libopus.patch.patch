@@ -1,0 +1,22 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Wolfgang Rosenauer <wr@rosenauer.org>
+Date: Thu, 5 Sep 2019 08:25:38 +0200
+Subject: [PATCH] mozilla-fix-aarch64-libopus.patch
+
+---
+ media/libopus/silk/arm/arm_silk_map.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/media/libopus/silk/arm/arm_silk_map.c b/media/libopus/silk/arm/arm_silk_map.c
+index a91f79b59f70f4f892aa1e373a335571d1c83ae6..a6c4193efc71ddb2b9cd111eedc10bc17580c165 100644
+--- a/media/libopus/silk/arm/arm_silk_map.c
++++ b/media/libopus/silk/arm/arm_silk_map.c
+@@ -28,7 +28,7 @@ POSSIBILITY OF SUCH DAMAGE.
+ # include "config.h"
+ #endif
+ 
+-#include "main_FIX.h"
++#include "../fixed/main_FIX.h"
+ #include "NSQ.h"
+ #include "SigProc_FIX.h"
+ 

@@ -1,0 +1,18 @@
+pkgbase = argc-git
+	pkgdesc = An elegant command-line argument parser (git)
+	pkgver = 1.20.1.r1.ga76b206
+	pkgrel = 1
+	url = https://github.com/sigoden/argc
+	arch = x86_64
+	license = MIT
+	license = Apache-2.0
+	makedepends = cargo
+	makedepends = git
+	depends = gcc-libs
+	provides = argc
+	conflicts = argc
+	options = !lto
+	source = git+https://github.com/sigoden/argc
+	sha512sums = SKIP
+
+pkgname = argc-git

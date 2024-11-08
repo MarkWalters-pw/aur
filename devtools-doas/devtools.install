@@ -1,0 +1,9 @@
+post_install() {
+	echo "===================================================================="
+	echo "Check your /etc/doas.conf to make sure that root is able to use doas"
+	echo "This can be done with the rule"
+	echo ""
+	echo "    permit nopass keepenv root"
+	echo ""
+	echo "===================================================================="
+}

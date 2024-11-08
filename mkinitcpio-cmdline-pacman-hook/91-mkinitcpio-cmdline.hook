@@ -1,0 +1,15 @@
+[Trigger]
+Type = Path
+Operation = Install
+Operation = Upgrade
+Operation = Remove
+Target = etc/cmdline.d/*
+Target = etc/cmdline
+Target = etc/kernel/cmdline
+
+[Action]
+Description = Updating linux initcpios...
+When = PostTransaction
+Exec = /usr/share/libalpm/scripts/mkinitcpio install
+NeedsTargets
+

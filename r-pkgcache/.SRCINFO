@@ -1,0 +1,33 @@
+pkgbase = r-pkgcache
+	pkgdesc = Cache ‘CRAN’-Like Metadata and R Packages
+	pkgver = 2.2.3
+	pkgrel = 1
+	url = https://cran.r-project.org/package=pkgcache
+	arch = i686
+	arch = x86_64
+	license = MIT
+	depends = r>=3.4
+	depends = r-callr>=2.0.4.9000
+	depends = r-cli>=3.2.0
+	depends = r-curl>=3.2
+	depends = r-filelock
+	depends = r-jsonlite
+	depends = r-processx>=3.3.0.9001
+	depends = r-r6
+	optdepends = r-covr
+	optdepends = r-debugme
+	optdepends = r-desc
+	optdepends = r-fs
+	optdepends = r-mockery
+	optdepends = r-pillar
+	optdepends = r-pingr
+	optdepends = r-rprojroot
+	optdepends = r-sessioninfo
+	optdepends = r-spelling
+	optdepends = r-webfakes>=1.1.5
+	optdepends = r-withr
+	optdepends = r-zip
+	source = https://cran.r-project.org/src/contrib/pkgcache_2.2.3.tar.gz
+	b2sums = 4358b57aeadd2897f9d311b78ffb5cfc2be34e47feee5018e7b2bfd762014e80c807e13fb6d9a2b0777d953c78ec8a78831bfb278dfc7462ed6925156cb5429b
+
+pkgname = r-pkgcache

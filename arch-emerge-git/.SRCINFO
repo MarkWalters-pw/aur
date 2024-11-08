@@ -1,0 +1,13 @@
+pkgbase = arch-emerge-git
+	pkgdesc = A pacman frontend like Gentoo's emerge which manages packages based on a holistic view of the system
+	pkgver = r48.e463f1c
+	pkgrel = 1
+	url = https://github.com/gissf1/arch-emerge
+	arch = any
+	license = ISC
+	makedepends = git
+	backup = etc/emerge/emerge.conf
+	source = git+https://github.com/gissf1/arch-emerge
+	sha256sums = SKIP
+
+pkgname = arch-emerge-git

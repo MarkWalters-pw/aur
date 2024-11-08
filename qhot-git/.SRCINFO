@@ -1,0 +1,25 @@
+pkgbase = qhot-git
+	pkgdesc = Hot reload for nested QML files!
+	pkgver = qt6+1.1.0+2.r89.20240421.9f515c6
+	pkgrel = 1
+	url = https://github.com/patrickelectric/qhot
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	depends = qt6-base
+	depends = qt6-declarative
+	depends = qt6-quick3d
+	depends = qt6-charts
+	depends = qt6-imageformats
+	depends = qt6-location
+	depends = qt6-multimedia
+	depends = qt6-svg
+	depends = qt6-tools
+	depends = qt6-translations
+	depends = qt6-webengine
+	depends = qt6-websockets
+	depends = clang
+	source = git+https://github.com/patrickelectric/qhot.git
+	sha1sums = SKIP
+
+pkgname = qhot-git

@@ -1,0 +1,33 @@
+pkgbase = dynamorio-git
+	pkgdesc = A dynamic instrumentation tool platform
+	pkgver = 10.93.r6456.577db95d9
+	pkgrel = 1
+	url = https://github.com/DynamoRIO/dynamorio
+	arch = x86_64
+	license = BSD
+	license = custom:libelftc
+	license = LGPL2.1
+	makedepends = git
+	makedepends = cmake
+	makedepends = doxygen
+	depends = gcc-libs
+	depends = zlib
+	depends = libunwind
+	depends = snappy
+	depends = lz4
+	depends = perl
+	depends = qt5-base
+	depends = python
+	provides = dynamorio=10.93.r6456.577db95d9
+	options = !strip
+	options = !lto
+	source = dynamorio-git::git+https://github.com/DynamoRIO/dynamorio.git
+	source = git+https://github.com/intel/libipt.git
+	source = git+https://github.com/madler/zlib.git
+	source = 0001-fix-compilation-with-gcc-14.patch
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = 67f72650333680dffada443c424573214a6740b5bfabc92b012a44455ce4fb82
+
+pkgname = dynamorio-git

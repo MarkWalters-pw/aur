@@ -1,0 +1,20 @@
+pkgbase = gxml-git
+	pkgdesc = GObject-based XML parser and writer library
+	pkgver = 0.20.3.r18.g13c93b4
+	pkgrel = 1
+	url = https://wiki.gnome.org/GXml
+	arch = x86_64
+	license = LGPL
+	makedepends = git
+	makedepends = gobject-introspection
+	makedepends = meson
+	makedepends = vala
+	depends = glib2
+	depends = libgee
+	depends = libxml2
+	provides = gxml
+	conflicts = gxml
+	source = git+https://gitlab.gnome.org/GNOME/gxml.git#branch=gxml-0.20
+	sha256sums = SKIP
+
+pkgname = gxml-git

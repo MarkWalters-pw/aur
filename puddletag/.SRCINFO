@@ -1,0 +1,26 @@
+pkgbase = puddletag
+	pkgdesc = An audio tag editor for GNU/Linux
+	pkgver = 2.4.0
+	pkgrel = 1
+	url = https://docs.puddletag.net/
+	arch = any
+	license = GPL-3.0-or-later
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python-configobj
+	depends = python-distro
+	depends = python-mutagen
+	depends = python-pyparsing
+	depends = python-pyqt5
+	depends = python-unidecode
+	depends = qt5-svg
+	optdepends = chromaprint: AcoustID support
+	optdepends = python-levenshtein: faster duplicate matching
+	optdepends = python-lxml: additional tag sources
+	optdepends = quodlibet: QuodLibet library support
+	source = puddletag-2.4.0.tar.gz::https://github.com/puddletag/puddletag/archive/2.4.0.tar.gz
+	sha512sums = a45d3586d6616cfa153fff52747aa7936368bbc56fd62c76e6f23d11fec9f089d801479f075002e77a4c79dcaf44ed567e81002d1d606670ef2a4ae09bb4219a
+
+pkgname = puddletag

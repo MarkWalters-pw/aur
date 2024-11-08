@@ -1,0 +1,26 @@
+pkgbase = python-torchio
+	pkgdesc = Tools for medical image processing in deep learning and PyTorch
+	pkgver = 0.20.1
+	pkgrel = 1
+	url = https://github.com/fepegar/torchio
+	arch = any
+	license = MIT
+	makedepends = python-build
+	makedepends = python-hatchling
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = python-click
+	depends = python-deprecated
+	depends = python-humanize
+	depends = python-matplotlib
+	depends = python-nibabel
+	depends = python-numpy
+	depends = python-pytorch
+	depends = python-scipy
+	depends = python-simpleitk
+	depends = python-torchvision
+	depends = python-tqdm
+	source = python-torchio-0.20.1.tar.gz::https://github.com/fepegar/torchio/archive/v0.20.1.tar.gz
+	sha512sums = 10a846d8bca221b999bff6ee51ba22f8d6257fd63c039c01c3479ff1e0263da6d6a438d1b8964c15913218741e65b5d398975e664e6e531f0f76807fa9c07208
+
+pkgname = python-torchio

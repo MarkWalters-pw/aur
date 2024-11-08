@@ -1,0 +1,20 @@
+pkgbase = zathura-djvu-git
+	pkgdesc = DjVu support for zathura
+	pkgver = 0.2.10.r1.g2a60a41
+	pkgrel = 1
+	url = https://pwmt.org/projects/zathura-djvu
+	arch = x86_64
+	license = custom
+	makedepends = git
+	makedepends = meson
+	makedepends = ninja
+	makedepends = appstream-glib
+	depends = zathura-git
+	depends = djvulibre
+	depends = desktop-file-utils
+	provides = zathura-djvu
+	conflicts = zathura-djvu
+	source = zathura-djvu-git::git+https://github.com/pwmt/zathura-djvu.git#branch=develop
+	md5sums = SKIP
+
+pkgname = zathura-djvu-git

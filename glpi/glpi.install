@@ -1,0 +1,29 @@
+GROUP=http
+USER=http
+
+pre_install() {
+  getent group ${GROUP} > /dev/null || groupadd --system ${GROUP}
+  getent passwd ${USER} > /dev/null || useradd --system --gid ${USER} --home-dir /srv/http --shell /usr/bin/nologin --no-create-home ${USER}
+}
+
+post_install() {
+  chown -R http:http /etc/glpi
+  chown -R http:http /var/log/glpi
+  chown -R http:http /var/lib/glpi
+  chown -R http:http /usr/share/webapps/glpi
+}
+
+pre_upgrade() {
+   pre_install
+}
+
+post_upgrade() {
+   post_install
+   # Needed to update the translations
+   rm -f /var/lib/glpi/_sessions/*
+   echo ">============================================================<"
+   echo -e "To update translations, do the following:\nphp /usr/share/webapps/glpi/bin/console cache:clear\nsystemctl restart httpd\n"
+   echo ">============================================================<"
+}
+
+# vim:set ts=2 sw=2 et:

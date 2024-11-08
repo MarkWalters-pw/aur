@@ -1,0 +1,99 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index c1a02012d..c7d2b54e2 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -386,11 +386,13 @@ endif()
+ 
+ option(BUILD_SHARED_LIBS "Build shared library" OFF)
+ set(XXHASH_BUILD_XXHSUM OFF CACHE BOOL "Build the xxhsum binary")
+-add_subdirectory(core/deps/xxHash/cmake_unofficial)
+-target_link_libraries(${PROJECT_NAME} PRIVATE xxHash::xxhash)
++find_package(PkgConfig)
++pkg_search_module(xxhash REQUIRED IMPORTED_TARGET libxxhash)
++target_link_libraries(${PROJECT_NAME} PRIVATE PkgConfig::xxhash)
+ 
+ option(BUILD_SHARED_LIBS "Build shared library" OFF)
+-add_subdirectory(core/deps/glm)
++find_package(glm REQUIRED)
++target_compile_definitions(glm::glm INTERFACE GLM_ENABLE_EXPERIMENTAL)
+ target_link_libraries(${PROJECT_NAME} PRIVATE glm::glm)
+ 
+ if(USE_VULKAN)
+@@ -455,13 +457,13 @@ if(NOT LIBRETRO)
+ 			target_link_libraries(${PROJECT_NAME} PRIVATE CURL::libcurl)
+ 		endif()
+ 	endif()
+-
++endif()
+ 	find_package(ZLIB)
+ 	if(TARGET ZLIB::ZLIB AND NOT ANDROID AND (NOT WIN32 OR WINDOWS_STORE))
+ 		set(WITH_SYSTEM_ZLIB ON CACHE BOOL "Use system provided zlib library")
+ 		target_link_libraries(${PROJECT_NAME} PRIVATE ZLIB::ZLIB)
+ 	endif()
+-
++if(FALSE)
+ 	find_package(Lua 5.2)
+ 	if(NOT APPLE AND LUA_FOUND)
+ 		target_compile_definitions(${PROJECT_NAME} PRIVATE USE_LUA)
+@@ -471,9 +473,9 @@ if(NOT LIBRETRO)
+ 	endif()
+ endif()
+ 
+-add_subdirectory(core/deps/libchdr EXCLUDE_FROM_ALL)
+-target_link_libraries(${PROJECT_NAME} PRIVATE chdr-static)
+-target_include_directories(${PROJECT_NAME} PRIVATE core/deps/libchdr/include)
++find_package(PkgConfig)
++pkg_search_module(chdr REQUIRED IMPORTED_TARGET libchdr)
++target_link_libraries(${PROJECT_NAME} PRIVATE PkgConfig::chdr)
+ 
+ if(NOT WITH_SYSTEM_ZLIB)
+ 	set(ZLIB_RELATIVE_PATH "core/deps/libchdr/deps/zlib-1.3.1")
+@@ -514,25 +516,24 @@ if(PKG_CONFIG_FOUND AND NOT ANDROID AND NOT APPLE AND NOT LIBRETRO)
+ 		target_compile_definitions(${PROJECT_NAME} PRIVATE USE_PULSEAUDIO)
+ 		target_link_libraries(${PROJECT_NAME} PRIVATE PkgConfig::LIBPULSE)
+ 	endif()
+-
++endif()
+ 	if(USE_HOST_LIBZIP)
+ 		pkg_check_modules(LIBZIP IMPORTED_TARGET libzip)
+ 		if(LIBZIP_FOUND)
+ 			target_link_libraries(${PROJECT_NAME} PRIVATE PkgConfig::LIBZIP)
+ 		endif()
+ 	endif()
+-
++if(FALSE)
+ 	if(ENABLE_OPROFILE)
+ 		target_compile_definitions(${PROJECT_NAME} PRIVATE DYNA_OPROF)
+ 		target_link_libraries(${PROJECT_NAME} PRIVATE opagent)
+ 	endif()
+-
++endif()
+ 	find_package(MiniUPnPc)
+ 	if(MINIUPNP_FOUND)
+ 		target_include_directories(${PROJECT_NAME} PRIVATE ${MINIUPNP_INCLUDE_DIRS})
+ 		target_link_libraries(${PROJECT_NAME} PRIVATE ${MINIUPNP_LIBRARIES})
+ 	endif()
+-endif()
+ 
+ if(UNIX AND NOT APPLE AND NOT ANDROID)
+ 	add_definitions(
+@@ -1341,8 +1342,8 @@ if(USE_VULKAN)
+ 	add_subdirectory(core/deps/Vulkan-Headers)
+ 	target_link_libraries(${PROJECT_NAME} PRIVATE Vulkan::Headers)
+ 
+-	add_subdirectory(core/deps/VulkanMemoryAllocator)
+-	target_compile_options(VulkanMemoryAllocator INTERFACE $<$<AND:$<COMPILE_LANGUAGE:CXX>,$<CXX_COMPILER_ID:AppleClang,Clang>>:-Wno-nullability-completeness>)
++	find_package(VulkanMemoryAllocator REQUIRED)
++	target_compile_options(GPUOpen::VulkanMemoryAllocator INTERFACE $<$<AND:$<COMPILE_LANGUAGE:CXX>,$<CXX_COMPILER_ID:AppleClang,Clang>>:-Wno-nullability-completeness>)
+ 	target_link_libraries(${PROJECT_NAME} PRIVATE GPUOpen::VulkanMemoryAllocator)
+ 
+ 	if(ANDROID AND NOT LIBRETRO AND "arm64" IN_LIST ARCHITECTURE)
+@@ -1546,7 +1547,7 @@ if("arm64" IN_LIST ARCHITECTURE)
+ 	target_sources(${PROJECT_NAME} PRIVATE core/rec-ARM64/rec_arm64.cpp core/rec-ARM64/arm64_regalloc.h)
+ endif()
+ if("x86" IN_LIST ARCHITECTURE OR "x86_64" IN_LIST ARCHITECTURE)
+-	add_subdirectory(core/deps/xbyak EXCLUDE_FROM_ALL)
++	find_package(xbyak REQUIRED)
+ 	target_link_libraries(${PROJECT_NAME} PRIVATE xbyak::xbyak)
+ 	if(CMAKE_SIZEOF_VOID_P EQUAL 4)
+ 		target_sources(${PROJECT_NAME} PRIVATE

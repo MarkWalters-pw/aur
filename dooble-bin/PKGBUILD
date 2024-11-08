@@ -1,0 +1,103 @@
+# Maintainer: Klaus Alexander Seiﬆrup <klaus at seistrup dot dk>
+# Maintainer: zxp19821005 <zxp19821005 at 163 dot com>
+# Contributor: Balló György <ballogyor+arch at gmail dot com>
+# Contributor: zhangkaizhao <zhangkaizhao at gmail dot com>
+pkgname=dooble-bin
+_pkgname=Dooble
+pkgver=2024.08.19
+pkgrel=1
+pkgdesc="Web browser based on QtWebEngine"
+arch=(
+    'aarch64'
+    'x86_64'
+)
+url="https://textbrowser.github.io/dooble"
+_ghurl="https://github.com/textbrowser/dooble"
+license=('LicenseRef-Dooble')
+provides=("${pkgname%-bin}=${pkgver}")
+conflicts=("${pkgname%-bin}")
+depends=(
+    'at-spi2-core'
+    'cairo'
+    'freetype2'
+    'gdk-pixbuf2'
+    'gpgme'
+    'gst-plugins-base-libs'
+    'gstreamer'
+    'gtk3'
+    'libcups'
+    'libdrm'
+    'libglvnd'
+    'libx11'
+    'libxcb'
+    'libxext'
+    'libxkbcommon'
+    'libxkbcommon-x11'
+    'libxrandr'
+    'pango'
+    'postgresql-libs'
+    'qt6-base'
+    'qt6-charts'
+    'qt6-declarative'
+    'qt6-multimedia'
+    'qt6-positioning'
+    'qt6-serialport'
+    'qt6-svg'
+    'qt6-tools'
+    'qt6-wayland'
+    'qt6-webchannel'
+    'qt6-webengine'
+    'unixodbc'
+    'wayland'
+    'xcb-util-cursor'
+    'xcb-util-image'
+    'xcb-util-keysyms'
+    'xcb-util-renderutil'
+    'xcb-util-wm'
+    'libxshmfence'
+    'nspr'
+    'alsa-lib'
+    'krb5'
+    'libxtst'
+    'libxcomposite'
+    'libxfixes'
+    'expat'
+    'libxrender'
+    'libxdamage'
+    'fontconfig'
+    'libxi'
+    'libxkbfile'
+    'nss'
+)
+optdepends=(
+    'bzip2: needed in plugins/multimedia/libffmpegmediaplugin.so'
+)
+makedepends=(
+    'findutils'
+)
+source=(
+  "LICENSE-${pkgver}::https://raw.githubusercontent.com/textbrowser/dooble/${pkgver}/LICENSE"
+  "${pkgname%-bin}.sh"
+)
+source_aarch64=("${pkgname%-bin}-${pkgver}-aarch64.deb::${_ghurl}/releases/download/${pkgver}/${_pkgname}-${pkgver}_arm64.deb")
+source_x86_64=("${pkgname%-bin}-${pkgver}-x86_64.deb::${_ghurl}/releases/download/${pkgver}/${_pkgname}-${pkgver}_amd64.deb")
+sha256sums=('c60bf2d6a8bfdf7c7418bba91c6767cbb4b48dccae36dd5d9ffdb48f756815dd'
+            '6b7934c7d560fb22f89b067bf31c3e6c897d767f45299fff244d923c036498af')
+sha256sums_aarch64=('29f9283827b6458c9efdab4bdd9f4b5f5eb12bd5620388e647f53dae8dc71ebd')
+sha256sums_x86_64=('151b3103e3f14a5259227fa6b25d1d6784e1c8b174212ee6daf212292287ef3c')
+build() {
+    sed -e "s|@appname@|${pkgname%-bin}|g" \
+        -e "s|@runname@|${_pkgname}|g" \
+        -i "${srcdir}/${pkgname%-bin}.sh"
+    bsdtar -xf "${srcdir}/data."*
+    cp "${srcdir}/opt/${pkgname%-bin}/Translations/${pkgname%-bin}_zh_CN_simple.qm" \
+       "${srcdir}/opt/${pkgname%-bin}/Translations/${pkgname%-bin}_zh_CN.qm"
+    sed "s|/usr/bin/${pkgname%-bin}|${pkgname%-bin}|g" -i "${srcdir}/usr/share/applications/${pkgname%-bin}.desktop"
+}
+package() {
+    install -Dm755 "${srcdir}/${pkgname%-bin}.sh" "${pkgdir}/usr/bin/${pkgname%-bin}"
+    cp -r "${srcdir}/opt" "${pkgdir}"
+    install -Dm644 "${srcdir}/LICENSE-${pkgver}" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+    install -Dm644 "${srcdir}/usr/share/pixmaps/${pkgname%-bin}.png" -t "${pkgdir}/usr/share/pixmaps"
+    install -Dm644 "${srcdir}/usr/share/applications/${pkgname%-bin}.desktop" -t "${pkgdir}/usr/share/applications"
+}

@@ -1,0 +1,19 @@
+pkgbase = python-xdoctest
+	pkgdesc = A Python package for executing tests in documentation strings
+	pkgver = 1.2.0
+	pkgrel = 1
+	url = https://github.com/Erotemic/xdoctest
+	arch = any
+	license = Apache-2.0
+	checkdepends = python-pytest
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = python-setuptools
+	depends = python
+	optdepends = python-pygments: for colorized output
+	optdepends = jupyter-nbconvert: for running tests in Jupyter notebooks
+	source = python-xdoctest-1.2.0.tar.gz::https://github.com/Erotemic/xdoctest/archive/refs/tags/v1.2.0.tar.gz
+	b2sums = 5593bfa8a2d4ff6ff13db592e83325c6bd30e6614db969aec7b4072ec788a203024a0e4066b69a34782cc99252d0601a0a3db0c2b70cf5b7f58e9f6dad2de89d
+
+pkgname = python-xdoctest

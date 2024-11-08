@@ -1,0 +1,39 @@
+pkgbase = openocd-raspberrypi-git
+	pkgdesc = Debugging, in-system programming and boundary-scan testing for embedded target devices (git version, raspberrypi fork)
+	pkgver = v0.12.0.r26.gebec950
+	pkgrel = 1
+	url = https://github.com/raspberrypi/openocd
+	arch = i686
+	arch = x86_64
+	arch = arm
+	arch = aarch64
+	license = GPL
+	makedepends = git
+	makedepends = automake>=1.11
+	makedepends = autoconf
+	makedepends = libtool
+	makedepends = tcl
+	depends = libftdi-compat
+	depends = libusb-compat
+	depends = hidapi
+	depends = libudev.so
+	depends = capstone
+	depends = libjaylink
+	provides = openocd=${pkgver}
+	conflicts = openocd
+	conflicts = openocd-git
+	options = !strip
+	source = openocd-raspberrypi-git::git+https://github.com/raspberrypi/openocd.git#branch=sdk-2.0.0
+	source = git+https://github.com/msteveb/jimtcl.git
+	source = git+https://gitlab.zapb.de/libjaylink/libjaylink.git
+	source = git+https://git.savannah.nongnu.org/git/git2cl.git
+	md5sums = SKIP
+	md5sums = SKIP
+	md5sums = SKIP
+	md5sums = SKIP
+	sha1sums = SKIP
+	sha1sums = SKIP
+	sha1sums = SKIP
+	sha1sums = SKIP
+
+pkgname = openocd-raspberrypi-git

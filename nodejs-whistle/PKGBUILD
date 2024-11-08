@@ -1,0 +1,35 @@
+# Maintainer: 	ngdngdc <2959471117 at qq dot com>
+
+_npmname=whistle
+_npmver=2.9.84
+pkgname=nodejs-whistle # All lowercase
+pkgver=2.9.84
+pkgrel=1
+pkgdesc="HTTP, HTTP2, HTTPS, Websocket debugging proxy"
+arch=(any)
+url="https://github.com/avwo/whistle"
+license=(MIT)
+depends=('nodejs' 'npm')
+optdepends=()
+source=(
+	"https://registry.npmjs.org/${_npmname}/-/${_npmname}-${_npmver}.tgz"
+	"whistle.desktop"
+	"${pkgname}.png::https://raw.githubusercontent.com/avwo/whistle/master/biz/webui/htdocs/img/whistle.png"
+)
+noextract=(${_npmname}-${_npmver}.tgz)
+sha1sums=('bc2d450b25ab4e2254bdd18d25b5cdea0eddf487'
+          'ad7056273ff8d5c2798b4ab870f5981288a67c60'
+          '74d44892ab7cac4c4b3f56b24158605ede05c984')
+
+package() {
+	cd $srcdir
+	install -Dm 644 whistle.desktop -t "${pkgdir}"/usr/share/applications/
+	install -Dm 644 nodejs-whistle.png "${pkgdir}"/usr/share/icons/hicolor/160x160/apps/nodejs-whistle.png
+	local _npmdir="$pkgdir/usr/lib/node_modules/"
+	mkdir -p $_npmdir
+	cd $_npmdir
+	npm install -g --prefix "$pkgdir/usr" $_npmname@$_npmver
+	chown -R root:root "$pkgdir"
+}
+
+# vim:set ts=2 sw=2 et:

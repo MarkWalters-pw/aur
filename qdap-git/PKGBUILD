@@ -1,0 +1,75 @@
+# Maintainer: taotieren <admin@taotieren.com>
+
+pkgbase=qdap-git
+pkgname=qdap-git
+pkgver=r39.4f3d58b
+pkgrel=3
+groups=()
+pkgdesc="cmsis-dap upper by a Qt"
+arch=(x86_64
+    aarch64
+    riscv64)
+url="https://github.com/ma6254/QDAP"
+license=('GPL-3.0-only')
+provides=(${pkgname%-git})
+conflicts=(${pkgname%-git})
+depends=(
+    bash
+
+    gcc-libs
+    glibc
+    libusb
+    hidapi
+    qt5-base
+    yaml-cpp)
+makedepends=(git
+    cmake
+    ninja
+    qt5-tools
+    rsync
+    pkgconf)
+optdepends=()
+source=("${pkgname}::git+${url}.git"
+    "git+https://github.com/ma6254/qdap_chips.git")
+sha256sums=('SKIP'
+            'SKIP')
+
+pkgver() {
+    cd "${srcdir}/${pkgname}"
+    (
+        set -o pipefail
+        git describe --long --tag --abbrev=7 2>/dev/null | sed 's/^v//g;s/\([^-]*-g\)/r\1/;s/-/./g' ||
+            printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short=7 HEAD)"
+    )
+}
+
+prepare() {
+    git -C "${srcdir}/${pkgname}" clean -dfx
+}
+
+build() {
+    # see：https://wiki.archlinux.org/title/CMake_package_guidelines
+    cmake -S ${pkgname} \
+        -DCMAKE_BUILD_TYPE=None \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -B build \
+        -G Ninja
+
+    ninja -C build
+}
+
+package() {
+    DESTDIR="${pkgdir}" ninja -C "${srcdir}"/build install
+    install -dm0755 "${pkgdir}/usr/share/${pkgname%-git}/chips"
+    cd ${srcdir}/qdap_chips
+    rsync -av --exclude='.*' . ${pkgdir}/usr/share/${pkgname%-git}/chips/
+    mv ${pkgdir}/usr/bin/QDAP "${pkgdir}/usr/share/${pkgname%-git}/"
+    install -Dm755 /dev/stdin "${pkgdir}/usr/bin/${pkgname%-git}" <<EOF
+#!/usr/bin/env bash
+
+cd /usr/share/qdap/
+
+./QDAP
+EOF
+    sed -i 's|/usr/bin/QDAP|/usr/bin/qdap|g' ${pkgdir}/usr/share/applications/io.github.ma6254.qdap.desktop
+}

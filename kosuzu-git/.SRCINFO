@@ -1,0 +1,23 @@
+pkgbase = kosuzu-git
+	pkgdesc = a danbooru downloader and viewer that support translation notes
+	pkgver = r5.r0.62f6a73
+	pkgrel = 1
+	url = https://github.com/nostrenz/kosuzu
+	arch = x86_64
+	license = GPL-3.0-or-later
+	makedepends = git
+	depends = qt5-base
+	provides = kosuzu
+	conflicts = kosuzu
+	source = git+https://github.com/nostrenz/kosuzu
+	source = git+https://github.com/stachenov/quazip
+	source = git+https://github.com/itay-grudev/SingleApplication
+	source = kosuzu.png
+	source = kosuzu.desktop
+	md5sums = SKIP
+	md5sums = SKIP
+	md5sums = SKIP
+	md5sums = SKIP
+	md5sums = SKIP
+
+pkgname = kosuzu-git

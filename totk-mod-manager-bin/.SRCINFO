@@ -1,0 +1,17 @@
+pkgbase = totk-mod-manager-bin
+	pkgdesc = Open-source application, designed to assist players of Zelda: Tears of the Kingdom on the Yuzu emulator in managing mods for the game
+	pkgver = 0.9.7
+	pkgrel = 3
+	url = https://github.com/vasilvestre/totk-mod-manager-for-switch-emulators
+	arch = x86_64
+	license = BSD-3-Clause
+	depends = openssl-1.1
+	depends = webkit2gtk
+	provides = totk-mod-manager
+	replaces = totk-mod-manager
+	replaces = totk-mod-manager-git
+	options = !strip
+	source_x86_64 = totk-mod-manager-0.9.7.deb::https://github.com/vasilvestre/totk-mod-manager-for-switch-emulators/releases/download/v0.9.7/zelda-tears-of-the-kingdom-mod-manager_0.9.6_amd64.deb
+	sha256sums_x86_64 = 42e95d1d06e4450b5889c39bddcb5d2c9883f8a5d771feddea2bbd0e8b8a04ba
+
+pkgname = totk-mod-manager-bin

@@ -1,0 +1,23 @@
+pkgbase = ttfviewer-bin
+	pkgdesc = A small tool for developers to view and preview various ttf font/icon image formats. It is based on Qt and opencv frameworks and supports windows/linux/macos.
+	pkgver = 0.2.8
+	pkgrel = 3
+	url = https://github.com/QQxiaoming/TTFviewer
+	arch = x86_64
+	license = GPL-3.0-only
+	depends = libxcb
+	depends = fontconfig
+	depends = libgpg-error
+	depends = freetype2
+	depends = libx11
+	depends = libglvnd
+	depends = xdg-utils
+	provides = ttfviewer=0.2.8
+	conflicts = ttfviewer
+	options = !strip
+	source = ttfviewer-0.2.8.deb::https://github.com/QQxiaoming/TTFviewer/releases/download/V0.2.8/TTFviewer_Linux_V028_x86_64.deb
+	source = ttfviewer.sh
+	sha256sums = 00499788373ff93088bdccd67e26f3f1acb9bdc8e24e011421e54657a90838f7
+	sha256sums = 3d8053b94a958cd265875f371678edf2d298b992a2eccadf093cd6b97d1cbf21
+
+pkgname = ttfviewer-bin

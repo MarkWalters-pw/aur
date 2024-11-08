@@ -1,0 +1,24 @@
+pkgbase = gdown
+	pkgdesc = Download a large file from Google Drive
+	pkgver = 5.2.0
+	pkgrel = 1
+	url = https://github.com/wkentaro/gdown
+	arch = any
+	license = MIT
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = git
+	makedepends = python-hatch-vcs
+	makedepends = python-hatch-fancy-pypi-readme
+	depends = python
+	depends = python-tqdm
+	depends = python-filelock
+	depends = python-pysocks
+	depends = python-six
+	depends = python-beautifulsoup4
+	depends = python-requests
+	source = git+https://github.com/wkentaro/gdown.git#tag=v5.2.0
+	sha512sums = f5284bb5860e35079a2a26605d32a7a36ddf7c46efcd144befcee90c82ab9b55a69e2efce4de1459882a35be019f4946fdbf9512cdddfbf4d383869d55ec21e7
+
+pkgname = gdown

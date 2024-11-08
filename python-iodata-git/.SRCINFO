@@ -1,0 +1,24 @@
+pkgbase = python-iodata-git
+	pkgdesc = Python library for reading, writing, and converting computational chemistry file formats and generating input files. (git version)
+	pkgver = 1.0.0a4.r1532.0ca750f
+	pkgrel = 1
+	url = https://iodata.readthedocs.io/en/latest/index.html
+	arch = any
+	license = LGPL-3.0
+	checkdepends = python-pytest
+	checkdepends = python-pytest-xdist
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-setuptools-scm
+	makedepends = python-wheel
+	depends = python-attrs
+	depends = python-numpy
+	depends = python-scipy
+	provides = python-iodata
+	conflicts = python-iodata
+	source = git+https://github.com/theochem/iodata
+	sha256sums = SKIP
+
+pkgname = python-iodata-git

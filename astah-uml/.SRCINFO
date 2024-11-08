@@ -1,0 +1,20 @@
+pkgbase = astah-uml
+	pkgdesc = Lightweight and easy-to-use UML2.x modeler (With trial)
+	pkgver = 9.2.0.0248cd.0
+	pkgrel = 1
+	url = https://astah.net/products/astah-uml
+	arch = i686
+	arch = x86_64
+	license = custom
+	depends = java-runtime=8
+	depends = lib32-glibc
+	depends = hicolor-icon-theme
+	depends = bash
+	conflicts = astah-community
+	conflicts = astah-professional
+	options = !emptydirs
+	options = !strip
+	source = http://cdn.change-vision.com/files/astah-uml-9.2.0.0248cd-0.noarch.rpm
+	sha256sums = 2783399f4a45bc3060a46bbde9eb3aa8c57484f857871e6894f34c23057287f4
+
+pkgname = astah-uml

@@ -1,0 +1,18 @@
+pkgbase = fselect
+	pkgdesc = Find files with SQL-like queries
+	pkgver = 0.8.6
+	pkgrel = 2
+	url = https://github.com/jhspetersson/fselect
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = rust
+	makedepends = cmake
+	depends = gcc-libs
+	provides = fselect
+	conflicts = fselect-git
+	options = !lto
+	source = 0.8.6.tar.gz::https://github.com/jhspetersson/fselect/archive/0.8.6.tar.gz
+	sha512sums = 6a0e89f2112e4bd118e5df84c84606d7c2f08f39bd137a8ddeff543acbd7fe5df60e58ddd82d6ef24b73f551dc7f5dfc0964154f838f168398c556f636a8595a
+
+pkgname = fselect

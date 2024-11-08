@@ -1,0 +1,18 @@
+pkgbase = mkeditor-bin
+	pkgdesc = The simple markdown editor.
+	pkgver = 2.6.1
+	pkgrel = 1
+	url = https://versyxdigital.github.io/mkeditor
+	arch = x86_64
+	license = MIT
+	depends = electron31
+	provides = mkeditor=2.6.1
+	conflicts = mkeditor
+	source = mkeditor-2.6.1.deb::https://github.com/mkeditorOSS/mkeditor/releases/download/v2.6.1/mkeditor-setup-v2.6.1_amd64.deb
+	source = LICENSE-2.6.1::https://raw.githubusercontent.com/mkeditorOSS/mkeditor/v2.6.1/LICENSE
+	source = mkeditor.sh
+	sha256sums = dd85d78d0b49d043a36bb82e784d056e14d6d7d9e2161c42f890d177e0d74137
+	sha256sums = 67d4f80f84e373092380eeee58220700bb16566d3cfcc0d1d6141f971adfca98
+	sha256sums = 2b2e8aeed33fd71c521e49fd54fb2fa81218d16aef8bccb88d77909055ab8051
+
+pkgname = mkeditor-bin

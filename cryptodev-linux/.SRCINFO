@@ -1,0 +1,19 @@
+pkgbase = cryptodev-linux
+	pkgdesc = Kernel module providing access to Linux kernel cryptographic drivers from userspace
+	pkgver = 1.14
+	pkgrel = 1
+	url = http://cryptodev-linux.org/
+	arch = i686
+	arch = x86_64
+	arch = armv6h
+	arch = armv7h
+	license = GPL
+	makedepends = linux-headers
+	depends = linux
+	optdepends = openssl-cryptodev: OpenSSL with cryptodev support
+	provides = cryptodev_friendly
+	conflicts = cryptodev_friendly
+	source = https://github.com/cryptodev-linux/cryptodev-linux/archive/cryptodev-linux-1.14.tar.gz
+	sha256sums = 67223d5bee4749028e78e87372cee3bca79d9a20f7b6cb915aa080c59d2a2d98
+
+pkgname = cryptodev-linux

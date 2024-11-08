@@ -1,0 +1,21 @@
+pkgbase = rest-server-bin
+	pkgdesc = Rest Server is a high performance HTTP server that implements restics REST backend API.
+	pkgver = 0.13.0
+	pkgrel = 1
+	url = https://github.com/restic/rest-server
+	arch = i686
+	arch = x86_64
+	arch = armv7h
+	arch = aarch64
+	license = BSD
+	options = !strip
+	source_i686 = https://github.com/restic/rest-server/releases/download/v0.13.0/rest-server_0.13.0_linux_386.tar.gz
+	sha256sums_i686 = ba987ed5308ca263cb7ffe8ecf8aae108bef96a96a682bba437040cd8ab4f1e5
+	source_x86_64 = https://github.com/restic/rest-server/releases/download/v0.13.0/rest-server_0.13.0_linux_amd64.tar.gz
+	sha256sums_x86_64 = b7f357628a2cf9bdbce56a44b0ae7125de79b72af55b232a5c1aec3f732f3a49
+	source_armv7h = https://github.com/restic/rest-server/releases/download/v0.13.0/rest-server_0.13.0_linux_armv7.tar.gz
+	sha256sums_armv7h = 4b7fc3f7a51281b20c580278315f37d83aeb7f76924830da37a26b245efa52df
+	source_aarch64 = https://github.com/restic/rest-server/releases/download/v0.13.0/rest-server_0.13.0_linux_arm64.tar.gz
+	sha256sums_aarch64 = 21b19d1d96de99ee6e02af5da6418c8e8559a4a81850916108b184b926d2c6fd
+
+pkgname = rest-server-bin

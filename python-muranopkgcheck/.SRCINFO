@@ -1,0 +1,27 @@
+pkgbase = python-muranopkgcheck
+	pkgdesc = Murano package validator tool
+	pkgver = 0.3.0
+	pkgrel = 9
+	url = https://docs.openstack.org/$_name/
+	arch = any
+	license = Apache
+	checkdepends = python-subunit
+	checkdepends = python-oslotest
+	checkdepends = python-oslotest
+	checkdepends = python-testrepository
+	checkdepends = python-testscenarios
+	checkdepends = python-testtools
+	checkdepends = python-stestr
+	checkdepends = python-mock
+	makedepends = python-setuptools
+	depends = python-pbr
+	depends = python-yaml
+	depends = python-yaql
+	depends = python-six
+	depends = python-stevedore
+	depends = python-semantic-version
+	depends = python-oslo-i18n
+	source = https://tarballs.opendev.org/openstack/murano-pkg-check/murano-pkg-check-0.3.0.tar.gz
+	sha512sums = cbff1d819a352eb30213403a294507109630675c506c663adc2b90571d4e011fbce253ddbc59b59318cf303ca35585d978b077d3210c27812f0c235d735b04eb
+
+pkgname = python-muranopkgcheck

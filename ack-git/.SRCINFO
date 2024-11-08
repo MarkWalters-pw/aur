@@ -1,0 +1,20 @@
+pkgbase = ack-git
+	pkgdesc = The Amsterdam Compiler Kit
+	pkgver = dev.r0.gd43c7bd00
+	pkgrel = 3
+	url = http://tack.sourceforge.net/
+	arch = i686
+	arch = x86_64
+	license = BSD
+	makedepends = git
+	makedepends = flex
+	makedepends = bison
+	makedepends = ed
+	makedepends = lua
+	depends = glibc
+	source = git+https://github.com/davidgiven/ack
+	source = ack-cpm-aslod.patch
+	md5sums = SKIP
+	md5sums = def54bc99c19c95bbfa134ef4d3be9cf
+
+pkgname = ack-git

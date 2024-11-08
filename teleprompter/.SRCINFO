@@ -1,0 +1,17 @@
+pkgbase = teleprompter
+	pkgdesc = Stay on track during speeches
+	pkgver = 1.0.1
+	pkgrel = 1
+	url = https://github.com/Nokse22/teleprompter
+	arch = x86_64
+	arch = aarch64
+	license = GPL-3.0-or-later
+	checkdepends = appstream-glib
+	makedepends = git
+	makedepends = meson
+	depends = libadwaita
+	depends = python-gobject
+	source = git+https://github.com/Nokse22/teleprompter.git#commit=bbd36400d131fd934704282b8892a3387ff2d784
+	sha256sums = SKIP
+
+pkgname = teleprompter

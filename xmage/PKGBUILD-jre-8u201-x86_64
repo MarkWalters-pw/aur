@@ -1,0 +1,82 @@
+# Maintainer: Aidan Coward <aidan -dot- coward -at- gmail -dot- com>
+# Feedback is appreciated
+
+pkgname=xmage
+pkgver=1.4.54
+pkgrel=0
+_java_version=8u201
+_java_dir=jre1.8.0_201
+
+pkgdesc="Java-based program for playing Magic:The Gathering, including client and server"
+
+arch=('x86_64')
+url="http://xmage.de"
+license=('MIT')
+
+
+source=(
+	"http://beta.xmage.today/files/mage-full_1.4.54-dev_2024-09-25_13-04.zip"
+	'https://raw.githubusercontent.com/magefree/mage/master/LICENSE.txt'
+	'https://raw.githubusercontent.com/magefree/Launcher/master/src/main/resources/icon-mage.png'
+	'http://xmage.today/java/jre-8u201-linux-x64.tar.gz'
+)
+sha256sums=("b2ce2053e827a299f0b2c1b143ffa8ed9d5b3c998941f85e57efa41ec7d1c6b4" 
+	"SKIP"
+	"SKIP"
+	'12c745fbb8735bf450b8c6ba6f649bebe19915f05742975e443bdc8566170352'
+)
+
+optdepends=('wmname: change window manager name for compatibility with certain WMs')
+install="${pkgname}.install"
+
+package() {
+
+	cd "${srcdir}"
+
+	echo "changing file format of included scripts..."
+	awk '{ sub("\r$", ""); print }' xmage/mage-client/startClient.sh > xmage/mage-client/startClient-unix.sh
+	awk '{ sub("\r$", ""); print }' xmage/mage-server/startServer.sh > xmage/mage-server/startServer-unix.sh
+
+	echo "changing default locations of scripts..."
+	sed -i 's|\.\/lib|\/usr\/share\/xmage\/xmage\/mage-client\/lib|' xmage/mage-client/startClient-unix.sh
+	sed -i 's|\.\/lib|\/usr\/share\/xmage\/xmage\/mage-server\/lib|' xmage/mage-server/startServer-unix.sh
+
+	echo "adding cd to relevant /usr/share/xmage/ directory..."
+	sed -i '2i cd /usr/share/xmage/xmage/mage-client' xmage/mage-client/startClient-unix.sh
+	sed -i '2i cd /usr/share/xmage/xmage/mage-server' xmage/mage-server/startServer-unix.sh
+
+	echo "changing location of java binary for x86_64 architecture..."
+	sed -i "s|java|/usr/share/xmage/${_java_dir}/bin/java|g" xmage/mage-client/startClient-unix.sh
+	sed -i "s|java|/usr/share/xmage/${_java_dir}/bin/java|g" xmage/mage-server/startServer-unix.sh
+
+	echo "increasing default memory limit of client and server"
+	sed -i 's|-Xmx512m|-Xmx2048m|g' xmage/mage-client/startClient-unix.sh
+	sed -i 's|-Xmx512m|-Xmx2048m|g' xmage/mage-server/startServer-unix.sh
+
+	echo "moving files..."
+	install -Dm755 xmage/mage-client/startClient-unix.sh "${pkgdir}"/usr/bin/mage-client
+	install -Dm755 xmage/mage-server/startServer-unix.sh "${pkgdir}"/usr/bin/mage-server
+
+	echo "creating /usr/share/xmage..."
+	install -dm755 "${pkgdir}"/usr/share/xmage
+
+	echo "copying files to /usr/share/xmage..."
+	cp -ra ./* "${pkgdir}"/usr/share/xmage/
+	
+	echo "setting permissions of /usr/share/xmage..."
+	chmod -R a+rwx "${pkgdir}"/usr/share/xmage
+
+	echo "installing license: ${license}..."
+	install -Dm644 LICENSE.txt "${pkgdir}"/usr/share/licences/"${pkgname}"/LICENSE.txt
+	
+	echo "installing mage-server systemd unit file to /usr/lib/systemd/system..."
+	mkdir -p "${pkgdir}"/usr/lib/systemd/system
+	install -m755 ../mage-server.service "${pkgdir}"/usr/lib/systemd/system
+	
+	echo "installing icon and .desktop file..."
+	mkdir -p "${pkgdir}"/usr/share/icons
+	install -m755 icon-mage.png "${pkgdir}"/usr/share/icons/
+	mkdir -p "${pkgdir}"/usr/share/applications
+	install -m755 ../xmage.desktop "${pkgdir}"/usr/share/applications/xmage.desktop
+}
+

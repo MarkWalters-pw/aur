@@ -1,0 +1,25 @@
+pkgbase = freefilesync-bin
+	pkgdesc = Folder comparison and synchronization
+	pkgver = 13.7
+	pkgrel = 1
+	url = https://freefilesync.org
+	install = .install
+	arch = i686
+	arch = x86_64
+	license = custom
+	depends = gtk2
+	depends = libxxf86vm
+	provides = freefilesync
+	conflicts = freefilesync
+	options = !strip
+	options = !debug
+	source = dlagent
+	source = freefilesync-bin-13.7.tar.gz::https://freefilesync.org/download/FreeFileSync_13.7_Linux.tar.gz
+	sha256sums = 21ad62ebf8659bb49a27d1cb1ff29fb7073f206a0ebd4c44340a9afa2b7da218
+	sha256sums = 13b6443f4e1f03bc7c37fe9d260435886ad80ee292c0a3b5b9cdeb763576e31b
+	depends_i686 = lib32-at-spi2-core
+	depends_i686 = lib32-gdk-pixbuf2
+	depends_i686 = lib32-libsm
+	depends_i686 = lib32-pango
+
+pkgname = freefilesync-bin

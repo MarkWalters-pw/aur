@@ -1,0 +1,20 @@
+pkgbase = tonelib-bass-drive-bin
+	pkgdesc = ToneLib Bass Drive – Full power of the legendary drive pedal for the highest string gauges
+	pkgver = 1.5.0
+	pkgrel = 1
+	url = https://tonelib.net/tl-bassdrive.html
+	arch = x86_64
+	license = custom
+	depends = gtk3
+	depends = glib2
+	depends = desktop-file-utils
+	depends = alsa-lib
+	depends = harfbuzz
+	depends = fribidi
+	depends = pango
+	depends = freetype2
+	optdepends = jack: JACK output
+	source = tonelib-bass-drive-bin-1.5.0.deb::https://tonelib.net/download/ToneLib-BassDrive-amd64.deb
+	sha256sums = 1726d49b588f0b3a8ed55312bd10825036b6f963b8fb8510f29d006f74631cb7
+
+pkgname = tonelib-bass-drive-bin

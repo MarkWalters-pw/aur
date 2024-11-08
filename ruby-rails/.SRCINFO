@@ -1,0 +1,24 @@
+pkgbase = ruby-rails
+	pkgdesc = Full-stack web application framework.
+	pkgver = 7.2.1
+	pkgrel = 1
+	url = http://www.rubyonrails.org
+	arch = any
+	license = MIT
+	depends = ruby
+	depends = ruby-activesupport
+	depends = ruby-actionpack
+	depends = ruby-actionview
+	depends = ruby-activemodel
+	depends = ruby-activerecord
+	depends = ruby-actionmailer
+	depends = ruby-railties
+	depends = ruby-bundler
+	depends = ruby-sprockets-rails
+	depends = ruby-actioncable
+	noextract = rails-7.2.1.gem
+	options = !emptydirs
+	source = https://rubygems.org/downloads/rails-7.2.1.gem
+	sha256sums = fd5684e5d007220960666a3a8b31a57cd1c8cd7f60d88cb40e28e95f1911b705
+
+pkgname = ruby-rails

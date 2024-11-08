@@ -1,0 +1,17 @@
+pkgbase = jsonbox-bin
+	pkgdesc = A cross platform JSON formatting tool跨平台的json格式化工具
+	pkgver = 2.3.4
+	pkgrel = 1
+	url = https://docs.r-xnoro.com/jsonbox
+	arch = x86_64
+	license = Apache-2.0
+	makedepends = fuse2
+	depends = electron19
+	provides = jsonbox=2.3.4
+	conflicts = jsonbox
+	source = jsonbox-2.3.4.AppImage::https://docs.r-xnoro.com/jsonbox/dist/jsonbox-2.3.4-linux-x86_64.AppImage
+	source = jsonbox.sh
+	sha256sums = c3dcefcdd759f1ca15db54adf688719b925ef342ea03122b1cf1c12e453ccc82
+	sha256sums = c053a7b3ed8b0b4d77f78e81ab8a4c61cbfd773a9298b3f3a187e5df89c125c2
+
+pkgname = jsonbox-bin

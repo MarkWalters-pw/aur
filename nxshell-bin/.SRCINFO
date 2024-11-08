@@ -1,0 +1,22 @@
+pkgbase = nxshell-bin
+	pkgdesc = An easy to use new terminal.
+	pkgver = 1.9.3
+	pkgrel = 8
+	url = https://nxshell.github.io/
+	arch = x86_64
+	license = MIT
+	makedepends = fuse2
+	makedepends = asar
+	depends = electron17
+	depends = nodejs
+	provides = nxshell=1.9.3
+	conflicts = nxshell
+	options = !strip
+	source = nxshell-1.9.3.AppImage::https://github.com/nxshell/nxshell/releases/download/v1.9.3/NxShell-x86_64-linux-1.9.3-202303220832.AppImage
+	source = LICENSE-1.9.3::https://raw.githubusercontent.com/nxshell/nxshell/main/LICENSE
+	source = nxshell.sh
+	sha256sums = 6824f48a9b3d453bc6ec660bc566d07defac8be9a60a7798a1f2122b4a16631d
+	sha256sums = 5f6da76746b239458fc480805f2e761e4d95b023169b99bb2c333e5bbc125fb7
+	sha256sums = 291f50480f5a61bc9c68db7d44cd0412071128706baa868a9cb854f8779a1980
+
+pkgname = nxshell-bin

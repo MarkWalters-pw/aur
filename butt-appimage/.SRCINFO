@@ -1,0 +1,17 @@
+pkgbase = butt-appimage
+	pkgdesc = Easy to use, multi OS streaming tool (AppImage release).
+	pkgver = 1.43.0
+	pkgrel = 1
+	url = https://danielnoethen.de/butt/
+	arch = x86_64
+	license = GPL-2.0-or-later
+	depends = fuse2
+	provides = butt
+	conflicts = butt
+	options = !strip
+	source = https://danielnoethen.de/butt/release/1.43.0/butt-1.43.0-x86_64.AppImage
+	source = https://danielnoethen.de/butt/release/1.43.0/butt-1.43.0.tar.gz
+	sha256sums = fb7337ae8217019bed67c3cc367ce942faf097ccf35eef7d4c5f3246f1e499b1
+	sha256sums = c4572e489f25cfe2c6460854452ff3df83c0907c7034af09b3896a15cf63e780
+
+pkgname = butt-appimage

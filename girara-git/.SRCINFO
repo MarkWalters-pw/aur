@@ -1,0 +1,23 @@
+pkgbase = girara-git
+	pkgdesc = User interface library focused on simplicity and minimalism
+	pkgver = 0.4.4.r1.g23b4ed7
+	pkgrel = 1
+	url = https://pwmt.org/projects/girara
+	arch = x86_64
+	license = Zlib
+	makedepends = git
+	makedepends = meson
+	makedepends = ninja
+	makedepends = doxygen
+	makedepends = check
+	depends = gtk3
+	depends = glib2
+	depends = json-c
+	depends = pango
+	depends = glibc
+	provides = girara
+	conflicts = girara
+	source = girara-git::git+https://github.com/pwmt/girara.git#branch=develop
+	md5sums = SKIP
+
+pkgname = girara-git

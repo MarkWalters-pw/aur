@@ -1,0 +1,26 @@
+pkgbase = termux-language-server
+	pkgdesc = Language server for build.sh, PKGBUILD, ebuild
+	pkgver = 0.0.27
+	pkgrel = 1
+	url = https://github.com/termux/termux-language-server
+	arch = any
+	license = GPL3
+	makedepends = python-installer
+	depends = python-tree-sitter-bash
+	depends = python-platformdirs
+	depends = python-lsp-tree-sitter
+	depends = python-fqdn
+	depends = python-rfc3987
+	depends = namcap
+	depends = pyalpm
+	optdepends = portage
+	provides = pkgbuild-language-server
+	provides = portage-language-server
+	conflicts = pkgbuild-language-server
+	conflicts = portage-language-server
+	replaces = pkgbuild-language-server
+	replaces = portage-language-server
+	source = https://files.pythonhosted.org/packages/py3/t/termux_language_server/termux_language_server-0.0.27-py3-none-any.whl
+	sha256sums = cf28eaba0989e745ff05e1c711494a581c54f10bc3a7e75c6e9e5ac0ac012cad
+
+pkgname = termux-language-server

@@ -1,0 +1,30 @@
+pkgbase = armv7l-gcc
+	pkgdesc = The GNU Compiler Collection - cross compiler for armv7l
+	pkgver = 14.2.1
+	pkgrel = 1
+	url = https://gcc.gnu.org/
+	arch = x86_64
+	license = GPL
+	license = LGPL
+	license = FDL
+	makedepends = armv7l-binutils
+	makedepends = git
+	makedepends = armv7l-linux-api-headers
+	depends = libmpc
+	depends = zstd
+	depends = libisl
+	depends = armv7l-glibc
+	depends = armv7l-binutils
+	provides = armv7l-gcc
+	conflicts = armv7l-gcc
+	options = !emptydirs
+	options = !strip
+	options = staticlibs
+	source = git+https://sourceware.org/git/gcc.git#commit=04696df09633baf97cdbbdd6e9929b9d472161d3
+	validpgpkeys = F3691687D867B81B51CE07D9BBE43771487328A9
+	validpgpkeys = 86CFFCA918CF3AF47147588051E8B148A9999C34
+	validpgpkeys = 13975A70E63C361C73AE69EF6EEB81F8981C74C7
+	validpgpkeys = D3A93CAD751C2AF4F8C7AD516C35B99309B5FA62
+	sha256sums = a0c5c9a2e09198436b0bcccba6deef7cb439a5364d56ffbb9ac17a9d24240034
+
+pkgname = armv7l-gcc

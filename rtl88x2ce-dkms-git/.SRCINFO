@@ -1,0 +1,17 @@
+pkgbase = rtl88x2ce-dkms-git
+	pkgdesc = Realtek RTL8822CE WLAN GNU/Linux Driver
+	pkgver = r50.eb2fff0
+	pkgrel = 1
+	url = https://github.com/juanro49/rtl88x2ce-dkms
+	arch = i686
+	arch = x86_64
+	license = unknown
+	makedepends = git
+	depends = dkms
+	depends = bc
+	depends = linux-headers
+	conflicts = rtl88x2ce-dkms
+	source = git+https://github.com/juanro49/rtl88x2ce-dkms.git
+	sha256sums = SKIP
+
+pkgname = rtl88x2ce-dkms-git

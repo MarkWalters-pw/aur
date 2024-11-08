@@ -1,0 +1,16 @@
+pkgbase = audio-share
+	pkgdesc = Audio Share can share computer's audio to Android phone over network, so your phone becomes the speaker of computer
+	pkgver = 0.1.0
+	pkgrel = 1
+	url = https://github.com/mkckr0/audio-share
+	arch = x86_64
+	license = Apache-2.0
+	makedepends = vcpkg
+	makedepends = cmake
+	depends = libpipewire
+	source = audio-share-0.1.0.tar.gz::https://github.com/mkckr0/audio-share/archive/refs/tags/v0.1.0.tar.gz
+	source = git+https://github.com/microsoft/vcpkg
+	b2sums = 2ecf161baf8231c7c02a1c46591e0d768771c8efbf9ec96bd36d5ee8e822124c91336b9da26a61b4416585d4e8d32da1a1079e23aeb0ae84597f244ea874a740
+	b2sums = SKIP
+
+pkgname = audio-share

@@ -1,0 +1,26 @@
+diff a/qrender/ffmpeg-0.6.7/CMakeLists.txt b/qdvdauthor-2.3.1/qrender/ffmpeg-0.6.7/CMakeLists.txt
+--- a/qrender/ffmpeg-0.6.7/CMakeLists.txt
++++ b/qrender/ffmpeg-0.6.7/CMakeLists.txt
+@@ -1,12 +1,12 @@
+ ########### install files ###############
+ 
+-INSTALL(FILES lib/libavcodec.so.52            DESTINATION  lib64/)
+-INSTALL(FILES lib/libavcodec.so.52.72.2       DESTINATION  lib64/)
+-INSTALL(FILES lib/libavdevice.so.52           DESTINATION  lib64/)
+-INSTALL(FILES lib/libavdevice.so.52.2.0       DESTINATION  lib64/)
+-INSTALL(FILES lib/libavformat.so.52           DESTINATION  lib64/)
+-INSTALL(FILES lib/libavformat.so.52.64.2      DESTINATION  lib64/)
+-INSTALL(FILES lib/libavutil.so.50             DESTINATION  lib64/)
+-INSTALL(FILES lib/libavutil.so.50.15.1        DESTINATION  lib64/)
+-INSTALL(FILES lib/libswscale.so.0             DESTINATION  lib64/)
+-INSTALL(FILES lib/libswscale.so.0.11.0        DESTINATION  lib64/)
++INSTALL(FILES lib/libavcodec.so.52            DESTINATION  /opt/lib/)
++INSTALL(FILES lib/libavcodec.so.52.72.2       DESTINATION  /opt/lib/)
++INSTALL(FILES lib/libavdevice.so.52           DESTINATION  /opt/lib/)
++INSTALL(FILES lib/libavdevice.so.52.2.0       DESTINATION  /opt/lib/)
++INSTALL(FILES lib/libavformat.so.52           DESTINATION  /opt/lib/)
++INSTALL(FILES lib/libavformat.so.52.64.2      DESTINATION  /opt/lib/)
++INSTALL(FILES lib/libavutil.so.50             DESTINATION  /opt/lib/)
++INSTALL(FILES lib/libavutil.so.50.15.1        DESTINATION  /opt/lib/)
++INSTALL(FILES lib/libswscale.so.0             DESTINATION  /opt/lib/)
++INSTALL(FILES lib/libswscale.so.0.11.0        DESTINATION  /opt/lib/)

@@ -1,0 +1,18 @@
+pkgbase = android-armv7a-eabi-xkeyboard-config
+	pkgdesc = X keyboard configuration files (Android armv7a-eabi)
+	pkgver = 2.42
+	pkgrel = 1
+	url = https://gitlab.freedesktop.org/xkeyboard-config/xkeyboard-config
+	arch = any
+	license = LicenseRef-xkeyboard-config
+	makedepends = android-meson
+	makedepends = android-armv7a-eabi-libxslt
+	makedepends = python
+	options = !strip
+	options = !buildflags
+	options = staticlibs
+	options = !emptydirs
+	source = https://xorg.freedesktop.org/archive/individual/data/xkeyboard-config/xkeyboard-config-2.42.tar.xz
+	sha256sums = a6b06ebfc1f01fc505f2f05f265f95f67cc8873a54dd247e3c2d754b8f7e0807
+
+pkgname = android-armv7a-eabi-xkeyboard-config

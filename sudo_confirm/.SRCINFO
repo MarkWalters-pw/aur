@@ -1,0 +1,19 @@
+pkgbase = sudo_confirm
+	pkgdesc = A sudo plugin providing a final chance for confirmation before actually executing a command
+	pkgver = 0.2.1
+	pkgrel = 1
+	url = https://github.com/e792a8/sudo_confirm
+	install = sudo_confirm.install
+	arch = x86_64
+	arch = i686
+	arch = pentium4
+	arch = arm
+	arch = armv7h
+	arch = armv6h
+	arch = aarch64
+	license = MIT
+	depends = sudo>=1.8.0
+	source = sudo_confirm-0.2.1.tar.gz::https://github.com/e792a8/sudo_confirm/archive/v0.2.1.tar.gz
+	sha256sums = 8c0eba60b5012dcb66ec4c52cbf5896b6d8004f9112ceb2977dfb7c4162a112b
+
+pkgname = sudo_confirm

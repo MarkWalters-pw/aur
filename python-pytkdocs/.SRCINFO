@@ -1,0 +1,23 @@
+pkgbase = python-pytkdocs
+	pkgdesc = Load Python objects documentation
+	pkgver = 0.16.2
+	pkgrel = 1
+	url = https://mkdocstrings.github.io/pytkdocs
+	arch = any
+	license = ISC
+	checkdepends = python-pytest
+	checkdepends = python-docstring-parser
+	checkdepends = python-django
+	checkdepends = python-marshmallow
+	checkdepends = python-pydantic
+	makedepends = python-pdm-backend
+	makedepends = python-build
+	makedepends = python-installer
+	source = https://files.pythonhosted.org/packages/source/p/pytkdocs/pytkdocs-0.16.2.tar.gz
+	md5sums = f0ad3bdb44c8ab7b153874f604efc61c
+
+pkgname = python-pytkdocs
+	depends = python>=3.8
+	depends = python-astunparse>=1.6
+	depends = python-typing_extensions>=3.7
+	optdepends = python-docstring-parser>=0.7: numpy-style

@@ -1,0 +1,23 @@
+pkgbase = ruby-tty-config
+	pkgdesc = A highly customisable application configuration interface
+	pkgver = 0.6.0
+	pkgrel = 1
+	url = https://github.com/piotrmurach/tty-config
+	arch = any
+	license = MIT
+	checkdepends = ruby-bundler
+	checkdepends = ruby-rake
+	checkdepends = ruby-rspec
+	checkdepends = ruby-inifile
+	checkdepends = ruby-java-properties
+	checkdepends = ruby-rhcl
+	checkdepends = ruby-toml
+	checkdepends = ruby-xml-simple
+	makedepends = rubygems
+	makedepends = ruby-rdoc
+	depends = ruby
+	options = !emptydirs
+	source = ruby-tty-config-0.6.0.tar.gz::https://github.com/piotrmurach/tty-config/archive/89bdc6ef9bc72f309e2baf6db21522444c496c48.tar.gz
+	sha256sums = 502214512421164d554ffea43dcefab22a4ed94b2571492c3d9cfa86ac66a4f2
+
+pkgname = ruby-tty-config

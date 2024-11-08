@@ -1,0 +1,20 @@
+pkgbase = zathura-ps-git
+	pkgdesc = PostScript support for zathura
+	pkgver = 0.2.8.r1.g69f23a9
+	pkgrel = 1
+	url = https://pwmt.org/projects/zathura-ps
+	arch = x86_64
+	license = Zlib
+	makedepends = git
+	makedepends = meson
+	makedepends = ninja
+	makedepends = appstream-glib
+	depends = zathura-git
+	depends = libspectre
+	depends = desktop-file-utils
+	provides = zathura-ps
+	conflicts = zathura-ps
+	source = zathura-ps-git::git+https://github.com/pwmt/zathura-ps.git#branch=develop
+	md5sums = SKIP
+
+pkgname = zathura-ps-git

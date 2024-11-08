@@ -1,0 +1,27 @@
+pkgbase = rtt-rstudio
+	pkgdesc = R-Studio is a powerful cost-effective undelete and data recovery software utility (non-free).
+	pkgver = 5.4.191346
+	pkgrel = 1
+	url = https://www.r-studio.com/data_recovery_linux/
+	arch = x86_64
+	arch = i686
+	license = custom
+	depends = xdg-utils
+	depends = polkit
+	depends = hicolor-icon-theme
+	depends = gcc-libs
+	depends = glibc
+	depends = alsa-lib
+	depends = freetype2
+	provides = r-studio-for-linux-bin
+	conflicts = r-studio-for-linux-bin
+	source = rtt-rstudio-eula-PopupEulaDRC-R-Studio-For-Linux.html::https://www.r-studio.com/includes/eula/PopupEulaDRC.shtml?R-Studio-for-Linux,
+	source = rtt-rstudio-Free-Linux-Recovery-Manual.pdf::https://www.r-studio.com/downloads/Free_Linux_Recovery_Manual.pdf
+	sha512sums = SKIP
+	sha512sums = c567249d385e6fbaf548bd79d0523cafd6b13d404d3be139ffa4925437f135aa0ac027d48d734186466116f395a84e831f088667acf13207947ebfe97e890f5a
+	source_x86_64 = https://www.r-studio.com/downloads/RStudio5_x64.rpm
+	sha512sums_x86_64 = 16c731ac6ad050e1f590da8f01b2bda7f22d3412dc42d80bdb6c2593567bf5307f62cf62f202ac492c8ce0d8ca18b94bf00238bf988d1fe02342561d18ae2706
+	source_i686 = https://www.r-studio.com/downloads/RStudio5_i386.rpm
+	sha512sums_i686 = d56085987e3700e19fe9b56db5a67786f5cdf81538aec0da1a52a98dc15a89b24893860dd2397bf70c17bee775128c3842fb6fb3c8bd6e221740cf8c8f4440ed
+
+pkgname = rtt-rstudio

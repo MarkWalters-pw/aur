@@ -1,0 +1,26 @@
+pkgbase = hellpot
+	pkgdesc = HellPot is a portal to endless suffering meant to punish unruly HTTP bots.
+	pkgver = 0.4.5
+	pkgrel = 1
+	url = https://github.com/yunginnanet/HellPot
+	arch = x86_64
+	arch = aarch64
+	arch = riscv64
+	license = MIT
+	makedepends = go
+	makedepends = git
+	provides = hellpot
+	conflicts = hellpot
+	backup = etc/hellpot/config.toml
+	source = hellpot::git+https://github.com/yunginnanet/HellPot.git#tag=v0.4.5
+	source = service
+	source = tmpfiles
+	source = sysusers
+	source = config.toml
+	sha256sums = 477dd095824ce8879ef3200ff95ded209ec3515340299df3b5975233ab27de30
+	sha256sums = 0136fd65b73e678d12ddff09cd5f71bfea360787cf7955770fe95b64dabe8274
+	sha256sums = a370bd1f4f1caa1aa4777e3a6cb6c752f711721c9913e09c78a11d304bc53b37
+	sha256sums = d462d4a84021cb2ce0052ba6c46ad0ea6e7aab7a9459d048de892d8503a99aee
+	sha256sums = 5663856679a38a69572683f9720c4a20aeaf3eb6a26f5ca067e23d4fcc2b28ac
+
+pkgname = hellpot

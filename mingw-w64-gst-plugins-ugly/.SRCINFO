@@ -1,0 +1,21 @@
+pkgbase = mingw-w64-gst-plugins-ugly
+	pkgdesc = GStreamer Multimedia Framework Ugly Plugins (mingw-w64)
+	pkgver = 1.24.5
+	pkgrel = 1
+	url = http://gstreamer.freedesktop.org/
+	arch = any
+	license = LGPL
+	makedepends = glib2-devel
+	makedepends = mingw-w64-meson
+	makedepends = mingw-w64-x264
+	makedepends = mingw-w64-opencore-amr
+	depends = mingw-w64-gst-plugins-base
+	optdepends = mingw-w64-x264: H.264 video encoder plugin
+	optdepends = mingw-w64-opencore-amr: Adaptive Multi-Rate Narrow-Band audio codec plugin
+	options = !strip
+	options = !buildflags
+	options = staticlibs
+	source = http://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.24.5.tar.xz
+	sha256sums = 333267b6e00770440a4a00402910dd59ed8fd619eaebf402815fbe111da7776d
+
+pkgname = mingw-w64-gst-plugins-ugly

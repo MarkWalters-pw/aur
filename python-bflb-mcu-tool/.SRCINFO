@@ -1,0 +1,20 @@
+pkgbase = python-bflb-mcu-tool
+	pkgdesc = BOUFFALOLAB MCU TOOL
+	pkgver = 1.9.0
+	pkgrel = 1
+	url = https://pypi.org/project/bflb-mcu-tool
+	arch = any
+	license = MIT
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = python-setuptools
+	depends = gcc-libs
+	depends = glibc
+	depends = libusb
+	depends = python
+	options = !strip
+	source = bflb-mcu-tool-1.9.0.tar.gz::https://files.pythonhosted.org/packages/source/b/bflb-mcu-tool/bflb-mcu-tool-1.9.0.tar.gz
+	sha256sums = 297f252c2954d141024c9130a562054f4cb8a2a3bf67a7714c2e3ac6bfe07cc7
+
+pkgname = python-bflb-mcu-tool

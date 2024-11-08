@@ -1,0 +1,18 @@
+pkgbase = proctl
+	pkgdesc = Github Project Manager
+	pkgver = 2024.08.25
+	pkgrel = 1
+	url = https://github.com/HeCodes2Much/proctl
+	arch = any
+	groups = therepoclub
+	license = MIT
+	makedepends = git
+	depends = bash
+	depends = coreutils
+	optdepends = git: generating default config automatically
+	optdepends = fzf: -pick-license, -pick-language, -new-template flags
+	optdepends = ncurses: for the colors
+	source = proctl-2024.08.25.tar.gz::https://github.com/HeCodes2Much/proctl/archive/2024.08.25.tar.gz
+	sha256sums = e8393f42e20cf0df411ad14962dd4c04ff3eab6884275548d3d46c78c97fdc31
+
+pkgname = proctl

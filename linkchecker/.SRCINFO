@@ -1,0 +1,22 @@
+pkgbase = linkchecker
+	pkgdesc = check links in web documents or full websites
+	pkgver = 10.5.0
+	pkgrel = 1
+	url = https://github.com/linkcheck/linkchecker
+	arch = any
+	license = GPL2
+	makedepends = python-hatch-vcs
+	makedepends = python-hatchling>=1.8.0
+	makedepends = python-installer
+	makedepends = python-polib
+	makedepends = python-setuptools-scm>=7.1.0
+	depends = python>=3.9
+	depends = python-beautifulsoup4>=4.8.1
+	depends = python-dnspython>=2.0
+	depends = python-requests>=2.20
+	optdepends = python-argcomplete>=1.8.1: For command-line completion
+	optdepends = python-pdfminer>=20181108: For reading PDF files
+	source = https://github.com/linkcheck/linkchecker/archive/v10.5.0.tar.gz
+	b2sums = f3ae96c8c067a6d0281811a118612e330e3fa0b59ac05402dd4b55bb6d3b87c2e9d8c9c21b6df04c938d59261e93d1e737762067145265603d16a2ae00ae6753
+
+pkgname = linkchecker

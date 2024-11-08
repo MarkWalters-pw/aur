@@ -1,0 +1,21 @@
+pkgbase = ruby-ruby2ruby
+	pkgdesc = Provides a means of generating pure ruby code easily
+	pkgver = 2.5.1
+	pkgrel = 1
+	url = https://github.com/seattlerb/ruby2ruby
+	arch = any
+	license = MIT
+	checkdepends = ruby-racc
+	makedepends = ruby-rake
+	makedepends = ruby-hoe
+	makedepends = ruby-minitest
+	makedepends = ruby-rdoc
+	makedepends = rubygems
+	depends = ruby
+	depends = ruby-ruby_parser
+	depends = ruby-sexp_processor
+	options = !emptydirs
+	source = https://github.com/seattlerb/ruby2ruby/archive/v2.5.1/ruby2ruby-2.5.1.tar.gz
+	sha256sums = 6a5c8e4f55097c69b3aaf6952e061531c4296c37cf306cce07e50ca6a065d146
+
+pkgname = ruby-ruby2ruby

@@ -1,0 +1,15 @@
+pkgbase = scitopdf
+	pkgdesc = Script to quickly fetch scientific papers from Sci-Hub or Libgen.
+	pkgver = 0.7.2
+	pkgrel = 1
+	url = https://github.com/dougy147/scitopdf.git
+	arch = x86_64
+	arch = i686
+	license = GPL3
+	makedepends = git
+	provides = scitopdf
+	conflicts = scitopdf-git
+	source = scitopdf::git+https://github.com/dougy147/scitopdf.git#tag=v0.7.2
+	md5sums = SKIP
+
+pkgname = scitopdf

@@ -1,0 +1,22 @@
+pkgbase = scrcpy-git
+	pkgdesc = Display and control your Android device
+	pkgver = 2.6.1_r2501.g44b3fd82
+	pkgrel = 1
+	url = https://github.com/Genymobile/scrcpy
+	arch = x86_64
+	license = Apache-2.0
+	makedepends = git
+	makedepends = meson
+	depends = android-tools
+	depends = ffmpeg
+	depends = sdl2
+	depends = glibc
+	depends = libusb
+	provides = scrcpy
+	conflicts = scrcpy
+	source = git+https://github.com/Genymobile/scrcpy.git
+	source = https://github.com/Genymobile/scrcpy/releases/download/v2.6.1/scrcpy-server-v2.6.1
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = scrcpy-git

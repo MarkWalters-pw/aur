@@ -1,0 +1,19 @@
+pkgbase = perl-tkx
+	pkgdesc = Yet another Tk interface
+	pkgver = 1.10
+	pkgrel = 4
+	url = http://search.cpan.org/dist/Tkx
+	arch = any
+	license = Artistic-1.0-Perl
+	license = GPL-1.0-or-later
+	checkdepends = xorg-server-xvfb
+	checkdepends = ttf-font
+	depends = perl>=5.008
+	depends = perl-tcl>=1
+	depends = tk
+	options = !emptydirs
+	source = https://cpan.metacpan.org/authors/id/C/CA/CAC/Tkx-1.10.tar.gz
+	md5sums = edbb92ced28998612fd1e3a864be0887
+	sha512sums = 95264a6cf0894f69dbc26c48e7e8772383c64aa9c2f5fc037a7f57a608ae1309f5a9f7570abfa5f0570a43b2a977594ee9caaacfeef48f9370fc4d99087f7dac
+
+pkgname = perl-tkx

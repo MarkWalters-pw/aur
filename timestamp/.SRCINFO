@@ -1,0 +1,15 @@
+pkgbase = timestamp
+	pkgdesc = Rename EXIF and XMP files to reflect date found in metadata
+	pkgver = 1.1.1
+	pkgrel = 1
+	url = https://github.com/amot-dev/timestamp
+	arch = x86_64
+	license = GPL-3.0-only
+	makedepends = gcc>=14
+	depends = glibc
+	depends = gcc-libs
+	depends = exiv2
+	source = timestamp-1.1.1.tar.gz::https://github.com/amot-dev/timestamp/archive/refs/tags/v1.1.1.tar.gz
+	sha256sums = a64f0523c7bd527a53fd529d524cdf0d35387aa63858913179faf8b80a37d2e0
+
+pkgname = timestamp

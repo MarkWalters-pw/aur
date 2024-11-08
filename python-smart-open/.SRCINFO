@@ -1,0 +1,27 @@
+pkgbase = python-smart-open
+	pkgdesc = Utils for streaming large files (S3, HDFS, GCS, Azure Blob Storage, gzip, bz2...)
+	pkgver = 7.0.5
+	pkgrel = 1
+	url = https://github.com/piskvorky/smart_open
+	arch = any
+	license = MIT
+	checkdepends = python-nose
+	checkdepends = python-wrapt
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	makedepends = python-build
+	makedepends = python-installer
+	source = https://files.pythonhosted.org/packages/source/s/smart_open/smart_open-7.0.5.tar.gz
+	md5sums = e26329aca66b36264db8eea68a5933cf
+
+pkgname = python-smart-open
+	depends = python>=3.7
+	depends = python-wrapt
+	optdepends = python-boto3: s3, AWS support
+	optdepends = python-google-cloud-storage: gcs, Google Cloud Storage support
+	optdepends = python-azure-storage-blob: Azure support
+	optdepends = python-azure-common: Azure support
+	optdepends = python-azure-core: Azure support
+	optdepends = python-requests: http, webdfs support
+	optdepends = python-paramiko: ssh support
+	optdepends = python-zstandard: ast support

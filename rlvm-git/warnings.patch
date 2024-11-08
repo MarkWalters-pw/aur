@@ -1,0 +1,10 @@
+--- a/vendor/xclannad/file.cc
++++ b/vendor/xclannad/file.cc
+@@ -260,7 +260,6 @@
+     int real_region_count = 0;
+     std::set<REGION> unique_regions;
+     const char* head = _inbuf + 9;
+-    bool overlaid_image = head_size > 1;
+     for (int i = 0; i < head_size; i++) {
+       region_table[i].x1 = read_little_endian_int(head+0);
+       region_table[i].y1 = read_little_endian_int(head+4);

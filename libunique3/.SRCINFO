@@ -1,0 +1,19 @@
+pkgbase = libunique3
+	pkgdesc = Library for writing single instance applications for GTK3
+	pkgver = 3.0.2
+	pkgrel = 11
+	url = https://wiki.gnome.org/Attic/LibUnique
+	arch = i686
+	arch = x86_64
+	license = LGPL
+	makedepends = gtk-doc
+	makedepends = gobject-introspection
+	makedepends = glib2
+	makedepends = glib2-devel
+	depends = gtk3
+	provides = libunique3
+	conflicts = libunique3
+	source = http://ftp.gnome.org/pub/gnome/sources/libunique/3.0/libunique-3.0.2.tar.xz
+	sha256sums = a8f02ce073e2b920cca8ac45d418e7cb64438ad0814780c5912c6d63f8a4e038
+
+pkgname = libunique3

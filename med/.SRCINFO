@@ -1,0 +1,19 @@
+pkgbase = med
+	pkgdesc = MED: interoperable format for data interchange between mesh based solvers
+	pkgver = 5.0.0
+	pkgrel = 1
+	url = https://www.salome-platform.org/downloads
+	arch = x86_64
+	license = LGPL-3.0
+	makedepends = gcc-fortran
+	makedepends = swig
+	makedepends = cmake
+	depends = hdf5
+	depends = tk
+	depends = python
+	source = https://files.salome-platform.org/Salome/medfile/med-5.0.0.tar.bz2
+	source = hdf5-1.14.patch
+	sha256sums = 267e76d0c67ec51c10e3199484ec1508baa8d5ed845c628adf660529dce7a3d4
+	sha256sums = SKIP
+
+pkgname = med

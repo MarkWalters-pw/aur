@@ -1,0 +1,17 @@
+pkgbase = lu5
+	pkgdesc = Lua interpreter for Creative Coding
+	pkgver = 0.1.6
+	pkgrel = 4
+	url = https://github.com/matiasvlevi/lu5
+	arch = x86_64
+	license = MIT
+	depends = lua
+	depends = glfw
+	depends = glu
+	depends = freetype2
+	source = lu5-0.1.6.tar.gz::https://github.com/matiasvlevi/lu5/archive/refs/tags/v0.1.6.tar.gz
+	source = lua.tar.gz::https://github.com/matiasvlevi/lua/archive/refs/tags/v5.4.0-b.tar.gz
+	sha256sums = a30ab3cad85e8aba41648aa5ccc47d82b3c2fd1cfab75850e992edc5983652ee
+	sha256sums = 897eb0281bfd9aa30a77a76ebc9acfc6f0cea39b529ead244a472999af98e3be
+
+pkgname = lu5

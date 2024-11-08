@@ -1,0 +1,23 @@
+pkgbase = python-apex-git
+	pkgdesc = A PyTorch Extension: Tools for easy mixed precision and distributed training in Pytorch
+	pkgver = 22.03.r245.g59b80ee8
+	pkgrel = 1
+	url = https://github.com/NVIDIA/apex
+	arch = x86_64
+	license = BSD
+	makedepends = git
+	makedepends = numactl
+	makedepends = python-setuptools
+	makedepends = python-pip
+	depends = python
+	depends = cuda
+	depends = python-pytorch-cuda
+	depends = python-sympy
+	provides = python-apex
+	conflicts = python-apex
+	source = git+https://github.com/NVIDIA/apex
+	source = https://patch-diff.githubusercontent.com/raw/NVIDIA/apex/pull/1791.diff
+	sha256sums = SKIP
+	sha256sums = 5e9eac8d5eb578b834a268bdf42b85c937fcad3fe895a26e5813ec134c3cb152
+
+pkgname = python-apex-git

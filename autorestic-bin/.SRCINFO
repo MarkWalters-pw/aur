@@ -1,0 +1,23 @@
+pkgbase = autorestic-bin
+  pkgdesc = High level CLI utility for restic
+  pkgver = 1.8.3
+  pkgrel = 1
+  url = https://github.com/cupcakearmy/autorestic
+  arch = i686
+  arch = x86_64
+  arch = armv7h
+  arch = aarch64
+  license = Apache
+  depends = restic
+  provides = autorestic
+  conflicts = autorestic
+  source_i686 = autorestic-1.8.3-i685.bz2::https://github.com/cupcakearmy/autorestic/releases/download/v1.8.3/autorestic_1.8.3_linux_386.bz2
+  sha256sums_i686 = 3fd866b8e87d0bc1c58d570740182c058ed32052641d11894b4a3072e8001d9a
+  source_x86_64 = autorestic-1.8.3-x86_64.bz2::https://github.com/cupcakearmy/autorestic/releases/download/v1.8.3/autorestic_1.8.3_linux_amd64.bz2
+  sha256sums_x86_64 = be05d25deafd9c4fc407e50f78dcb06df0d0a718af7f1fe485c5d154e47f3072
+  source_armv7h = autorestic-1.8.3-armv7h.bz2::https://github.com/cupcakearmy/autorestic/releases/download/v1.8.3/autorestic_1.8.3_linux_arm.bz2
+  sha256sums_armv7h = c6ff0afb6225652cd79590478514576ade1590dfba9a4b386645c91645cb11fa
+  source_aarch64 = autorestic-1.8.3-aarch64.bz2::https://github.com/cupcakearmy/autorestic/releases/download/v1.8.3/autorestic_1.8.3_linux_arm64.bz2
+  sha256sums_aarch64 = 6d0534dccb43f4faa677cd0ca8e9b00bece3fa15eb78ce4d49fdac2819d2c027
+
+pkgname = autorestic-bin

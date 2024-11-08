@@ -1,0 +1,24 @@
+pkgbase = runjs-bin
+	pkgdesc = The JavaScript playgroundfor your desktop, Explore and experiment with JavaScript and TypeScript, visualise your ideas and get instant feedback as you type.
+	pkgver = 3.0.3
+	pkgrel = 1
+	url = https://github.com/lukehaas/RunJS
+	arch = x86_64
+	arch = aarch64
+	license = Commercial
+	depends = nss
+	depends = libxss
+	depends = libnotify
+	depends = libsecret
+	depends = libappindicator-gtk3
+	depends = util-linux-libs
+	depends = xdg-utils
+	provides = runjs
+	conflicts = runjs
+	conflicts = runjs-git
+	source_x86_64 = runjs-bin-3.0.3.deb::https://github.com/lukehaas/RunJS/releases/download/v3.0.3/runjs_3.0.3_amd64.deb
+	sha256sums_x86_64 = 9bf8083dbda0279a1c779c10c28ebfcfa7278e7479ffba316a5986ab97311a1e
+	source_aarch64 = runjs-bin-3.0.3.deb::https://github.com/lukehaas/RunJS/releases/download/v3.0.3/runjs_3.0.3_arm64.deb
+	sha256sums_aarch64 = 9bf8083dbda0279a1c779c10c28ebfcfa7278e7479ffba316a5986ab97311a1e
+
+pkgname = runjs-bin

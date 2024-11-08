@@ -1,0 +1,18 @@
+pkgbase = newrelic-php5
+	pkgdesc = PHP Monitoring Agent
+	pkgver = 11.0.0.13
+	pkgrel = 1
+	url = https://newrelic.com/php
+	install = newrelic-php5.install
+	arch = aarch64
+	arch = x86_64
+	license = Apache-2.0
+	noextract = newrelic-php5-11.0.0.13.tar.gz
+	backup = etc/php/conf.d/newrelic.ini
+	source = newrelic-php5-11.0.0.13.tar.gz::https://download.newrelic.com/php_agent/archive/11.0.0.13/newrelic-php5-11.0.0.13-linux.tar.gz
+	b2sums = 6a1f7017bf3a10fcd6cc00be846574a89802271cd609eaf70efc4452d48c23c300966d2e24f2bb9552ec11da1d8812558838f4bcbca60ba3c41aec4a422de815
+
+pkgname = newrelic-php5
+	depends = glibc
+	depends = php
+	optdepends = logrotate: log rotation support

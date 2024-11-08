@@ -1,0 +1,24 @@
+pkgbase = uivonim-git
+	pkgdesc = Fork of the Veonim Neovim GUI.Use system-wide electron.
+	pkgver = 0.29.0.r112.ge63bfe5
+	pkgrel = 1
+	url = https://github.com/smolck/uivonim
+	arch = any
+	license = AGPL-3.0-only
+	makedepends = npm
+	makedepends = git
+	makedepends = nvm
+	makedepends = gendesk
+	makedepends = gcc
+	depends = electron27
+	depends = nodejs
+	provides = uivonim=0.29.0
+	conflicts = uivonim
+	options = !strip
+	options = !emptydirs
+	source = uivonim.git::git+https://github.com/smolck/uivonim.git
+	source = uivonim.sh
+	sha256sums = SKIP
+	sha256sums = 291f50480f5a61bc9c68db7d44cd0412071128706baa868a9cb854f8779a1980
+
+pkgname = uivonim-git

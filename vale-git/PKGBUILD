@@ -1,0 +1,38 @@
+# Maintainer: Yuanji <self@gimo.me>
+pkgname=vale-git
+_pkgname=vale
+pkgver=3.7.1.r0.g871dafd1
+pkgrel=1
+pkgdesc="A syntax-aware linter for prose built with speed and extensibility in mind."
+arch=('x86_64')
+url="https://github.com/errata-ai/vale"
+license=('MIT')
+makedepends=('git' 'go')
+conflicts=('vale')
+provides=('vale')
+source=("vale::git+https://github.com/errata-ai/vale.git#branch=v3")
+sha256sums=("SKIP")
+
+pkgver() {
+	cd "${srcdir}/${_pkgname}"
+	git describe --long --tags | sed 's/^v//;s/\([^-]*-g\)/r\1/;s/-/./g'
+}
+
+build() {
+	export CGO_CPPFLAGS="${CPPFLAGS}"
+	export CGO_CFLAGS="${CFLAGS}"
+	export CGO_CXXFLAGS="${CXXFLAGS}"
+	export CGO_LDFLAGS="${LDFLAGS}"
+	export GOFLAGS="-buildmode=pie -mod=readonly -modcacherw"
+	export GOPATH="${srcdir}/gopath"
+	export PATH="${srcdir}/gopath/bin:$PATH"
+
+	cd "${srcdir}/${_pkgname}"
+	go build -ldflags "-compressdwarf=false -linkmode external -s -w -X main.version=${pkgver}" -o bin/vale ./cmd/vale
+}
+
+package() {
+	install -Dm755 "${srcdir}/${_pkgname}/bin/${_pkgname}" "${pkgdir}/usr/bin/${_pkgname}"
+	install -Dm644 "${srcdir}/${_pkgname}/README.md" "${pkgdir}/usr/share/doc/${pkgname}/README.md"
+	install -Dm644 "${srcdir}/${_pkgname}/LICENSE" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+}

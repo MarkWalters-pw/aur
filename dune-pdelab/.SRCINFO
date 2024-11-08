@@ -1,0 +1,23 @@
+pkgbase = dune-pdelab
+	pkgdesc = New generalized discretization module for a wide range of discretization methods
+	pkgver = 2.9
+	pkgrel = 1
+	url = https://dune-project.org/modules/dune-pdelab
+	arch = x86_64
+	license = LGPL3
+	license = custom:GPL2 with runtime exception
+	makedepends = doxygen
+	makedepends = graphviz
+	makedepends = eigen
+	depends = dune-functions>=2.9.0
+	depends = dune-alugrid>=2.9.0
+	depends = superlu
+	depends = arpackpp
+	depends = suitesparse
+	optdepends = doxygen: Generate the class documentation from C++ sources
+	optdepends = eigen: Lightweight C++ template library for vector and matrix math
+	optdepends = dune-multidomaingrid: for Multiple-Domain Grid Function Space test for Poisson
+	source = https://gitlab.dune-project.org/pdelab/dune-pdelab/-/archive/releases/2.9/dune-pdelab-releases-2.9.tar.gz
+	sha512sums = 57e99a988129dc122e05c129a3c82283f6753f6b88ff91f00f87c72e8b021c53374799e4d1cc2d58937610b25d157d280911756f77e88712a39bbceb068f5ce6
+
+pkgname = dune-pdelab

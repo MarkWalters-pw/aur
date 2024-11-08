@@ -1,0 +1,20 @@
+pkgbase = python-msgpack-numpy-git
+	pkgdesc = Serialize numpy arrays using msgpack
+	pkgver = 0.4.8.r2.g20c5e5b
+	pkgrel = 1
+	url = https://github.com/lebedov/msgpack-numpy
+	arch = any
+	license = BSD-3-Clause
+	makedepends = git
+	makedepends = python-setuptools
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = python-numpy
+	depends = python-msgpack
+	provides = python-msgpack-numpy
+	conflicts = python-msgpack-numpy
+	source = git+https://github.com/lebedov/msgpack-numpy.git
+	sha256sums = SKIP
+
+pkgname = python-msgpack-numpy-git

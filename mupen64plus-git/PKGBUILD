@@ -1,0 +1,78 @@
+# Maintainer: Daniel Bermond <dbermond@archlinux.org>
+
+# NOTE:
+# The additional field in $pkgver is in the format 'YYYMMDD.HHMMSS', which
+# is the the date (in UTC time) of the last git commit from all git sources.
+# This additional field allows to trigger an upgrade in the package when any
+# mupen64plus component receives a new commit.
+
+pkgname=mupen64plus-git
+pkgver=2.6.0.r0.gb0d68c20.20240715.010852
+pkgrel=1
+pkgdesc='Nintendo64 Emulator (git version)'
+arch=('x86_64')
+url='https://www.mupen64plus.org/'
+license=('GPL-2.0-or-later')
+depends=('freetype2' 'glu' 'hicolor-icon-theme' 'libgl' 'libpng' 'libsamplerate'
+         'minizip' 'sdl2' 'sdl2_net' 'speexdsp' 'vulkan-icd-loader' 'zlib')
+makedepends=('git' 'nasm' 'vulkan-headers')
+provides=('mupen64plus')
+conflicts=('mupen64plus')
+source=('git+https://github.com/mupen64plus/mupen64plus-core.git'
+        'git+https://github.com/mupen64plus/mupen64plus-rsp-hle.git'
+        'git+https://github.com/mupen64plus/mupen64plus-video-rice.git'
+        'git+https://github.com/mupen64plus/mupen64plus-video-glide64mk2.git'
+        'git+https://github.com/mupen64plus/mupen64plus-audio-sdl.git'
+        'git+https://github.com/mupen64plus/mupen64plus-input-sdl.git'
+        'git+https://github.com/mupen64plus/mupen64plus-ui-console.git'
+        '010-mupen64plus-install-fix.patch')
+sha256sums=('SKIP'
+            'SKIP'
+            'SKIP'
+            'SKIP'
+            'SKIP'
+            'SKIP'
+            'SKIP'
+            '57d44edf46bafc6dbdf82e6db204c50bac1c2ea5c07aef7d3f84818f87e671a5')
+
+_m64p_components='core rsp-hle video-rice video-glide64mk2 audio-sdl input-sdl ui-console'
+
+prepare() {
+    bsdtar -xf "${srcdir}/mupen64plus-core/tools/m64p_helper_scripts.tar.gz" m64p_install.sh
+    patch -Np1 -i 010-mupen64plus-install-fix.patch
+}
+
+pkgver() {
+    local _component
+    local _date
+    local _latest_date
+    local _tag
+    
+    for _component in $_m64p_components
+    do
+        _date="$(TZ='UTC' date -d "$(git -C "mupen64plus-${_component}" log -1 --date='short' --pretty='format:%ci')" '+%Y%m%d.%H%M%S')"
+        [ "$(vercmp "$_date" "$_latest_date")" -gt '0' ] && _latest_date="$_date"
+    done
+    
+    _tag="$(git -C mupen64plus-core tag --list --sort='-v:refname' '[[:digit:]]*' | head -n1)"
+    printf "${_tag}.r%s.g%s.${_latest_date}" "$(git -C mupen64plus-core rev-list --count "${_tag}..HEAD")" \
+                                             "$(git -C mupen64plus-core rev-parse --short HEAD)"
+    
+}
+
+build() {
+    local _component
+    for _component in $_m64p_components
+    do
+        printf '%s\n' "  -> Building component '${_component}'..."
+        make -C "mupen64plus-${_component}/projects/unix" clean
+        make -C "mupen64plus-${_component}/projects/unix" PREFIX='/usr' NETPLAY='1' all
+    done
+}
+
+package() {
+    # set LDCONFIG since we are using fakeroot and scripts run root commands by checking the uid
+    ./m64p_install.sh DESTDIR="$pkgdir" PREFIX='/usr' LDCONFIG='true'
+    
+    ln -s "$(find "${pkgdir}/usr/lib" -regex '.*libmupen64plus.so.[0-9]*' -exec basename {} +)" "${pkgdir}/usr/lib/libmupen64plus.so"
+}

@@ -1,0 +1,10 @@
+[Unit]
+Description=Endpoint Verification Service
+
+[Service]
+Type=oneshot
+ExecStart=/opt/google/endpoint-verification/bin/endpoint-verification start
+RemainAfterExit=yes
+
+[Install]
+WantedBy=graphical.target

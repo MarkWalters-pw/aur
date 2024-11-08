@@ -1,0 +1,22 @@
+pkgbase = prometheus-x509-certificate-exporter
+	pkgdesc = metric exporter for x509 certificates
+	pkgver = 3.14.0
+	pkgrel = 1
+	url = https://github.com/enix/x509-certificate-exporter
+	arch = armv7h
+	arch = aarch64
+	arch = x86_64
+	license = MIT
+	makedepends = go
+	backup = etc/conf.d/prometheus-x509-certificate-exporter
+	source = https://github.com/enix/x509-certificate-exporter/archive/refs/tags/v3.14.0.zip
+	source = prometheus-x509-certificate-exporter
+	source = systemd.service
+	sha512sums = 07bbcefc5ceb43b70acfabc75bcc812e84f6fede67d40b34ff5896cb620e11961d1c915a27c7c0ff77f7f24fe7749dafa54975b5ffb154f1ffeecfc86cbfe2a8
+	sha512sums = 2fd59748f9cb4018456befcc07bb1e4a68cbe5d5bf30faa74e4bc607c241623ee66d6ea7765a5bcd707dfa2a1eb674b7e2e766e27fc0c462c0db1b5ec6aa13ac
+	sha512sums = a95d01a84340bdcfbc833f5b78976432bdca1c567f55a3c56eb2ef3b95a64488d38482ddb965d535b6a8f66ea4b34f51a2bf0bd8098f7d3af81ff4fd63ec3b5a
+	b2sums = 59ba038f9b5d2eab4a89263c846d6acb03433d154d338137daeb5e47d60ce3ecc7fd3fe5b1b9dfd73fd8f14609d6d40a74218a4b6e9f2a214ee9773e06807f74
+	b2sums = 41d9f7daeeedddc11056ac3b8e741afbab80c5779ce3823aa2d88f179e779c0715ccf8c471d645ef74df87f0f7c33cbec92a0ecdae148bd80f83670b6446038c
+	b2sums = c7bfafa8f30cbde623909875c6bce8784261bb3bf38a4c3cb6b36745866558df4d1cf2e7d95c12ac47622863f1e91cce7febb01a5499c51a024019026c165033
+
+pkgname = prometheus-x509-certificate-exporter

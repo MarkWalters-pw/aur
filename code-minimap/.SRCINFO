@@ -1,0 +1,14 @@
+pkgbase = code-minimap
+	pkgdesc = High performance code minimap render
+	pkgver = 0.6.7
+	pkgrel = 1
+	url = https://github.com/wfxr/code-minimap
+	arch = x86_64
+	license = Apache-2.0 OR MIT
+	makedepends = git
+	makedepends = rust
+	depends = gcc-libs
+	source = git+https://github.com/wfxr/code-minimap.git#tag=v0.6.7
+	b2sums = bbeda1b573ca22ac1a9e2bc1e792ff9068459d8044f9cba2b42e9d221f1755306134168496b0c0d56731c5ad8140b7fd612b690494de885ef9b353eec9414f74
+
+pkgname = code-minimap

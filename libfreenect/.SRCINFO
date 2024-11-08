@@ -1,0 +1,26 @@
+pkgbase = libfreenect
+	pkgdesc = Drivers and libraries for the Xbox Kinect device on Linux
+	pkgver = 0.7.5
+	pkgrel = 1
+	url = https://github.com/OpenKinect/libfreenect
+	arch = x86_64
+	license = GPL-2.0-or-later
+	makedepends = cmake
+	makedepends = libxmu
+	makedepends = cython
+	makedepends = python-numpy
+	makedepends = python-setuptools
+	depends = glibc
+	depends = gcc-libs
+	depends = bash
+	depends = libusb
+	depends = libgl
+	depends = glu
+	depends = freeglut
+	depends = python
+	optdepends = opencv: support for python demos
+	optdepends = python-matplotlib: support for python demos
+	source = libfreenect-0.7.5.tar.gz::https://github.com/OpenKinect/libfreenect/archive/v0.7.5.tar.gz
+	sha256sums = 3c668053db726206a8c3a92e92e91ef7a64407968f422b9c4b828d0fd234c866
+
+pkgname = libfreenect

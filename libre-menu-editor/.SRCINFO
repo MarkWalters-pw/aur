@@ -1,0 +1,18 @@
+pkgbase = libre-menu-editor
+	pkgdesc = Customize the menu
+	pkgver = 1.7.2
+	pkgrel = 1
+	url = https://codeberg.org/libre-menu-editor/libre-menu-editor
+	arch = any
+	license = GPL3
+	makedepends = git
+	makedepends = make
+	depends = python
+	depends = python-gobject
+	depends = gtk4
+	depends = libadwaita
+	depends = xdg-utils
+	source = git+https://codeberg.org/libre-menu-editor/libre-menu-editor.git#tag=v1.7.2
+	sha256sums = SKIP
+
+pkgname = libre-menu-editor

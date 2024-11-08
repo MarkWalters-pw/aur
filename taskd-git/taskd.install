@@ -1,0 +1,24 @@
+pre_install() {
+  # add taskd group if it doesn't exist
+  getent group taskd &> /dev/null || groupadd --system taskd
+
+  # add taskd user if it doesn't exist
+  getent passwd taskd &> /dev/null || \
+      useradd --system -m -d /var/lib/taskd -g taskd taskd
+
+  mkdir -p /var/log/taskd
+  chown taskd:taskd /var/log/taskd
+}
+
+post_install() {
+  echo ">>> Please follow the configuration instructions at"
+  echo "    /usr/lib/taskd/taskd.notes to finish setting up Taskserver."
+}
+
+pre_upgrade() {
+  pre_install
+}
+
+post_upgrade() {
+  post_install
+}

@@ -1,0 +1,21 @@
+pkgbase = uutils-coreutils-git
+	pkgdesc = GNU Coreutils rewritten in Rust
+	pkgver = 0.0.27.r279.gdb40287
+	pkgrel = 1
+	url = https://github.com/uutils/coreutils
+	arch = x86_64
+	license = MIT
+	makedepends = cargo
+	makedepends = git
+	makedepends = python-sphinx
+	makedepends = rust
+	depends = gcc-libs
+	depends = glibc
+	depends = oniguruma
+	provides = uutils-coreutils=0.0.27
+	conflicts = uutils-coreutils
+	options = !lto
+	source = uutils-coreutils::git+https://github.com/uutils/coreutils.git
+	sha256sums = SKIP
+
+pkgname = uutils-coreutils-git

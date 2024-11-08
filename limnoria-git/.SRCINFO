@@ -1,0 +1,26 @@
+pkgbase = limnoria-git
+	pkgdesc = An IRC bot based on Supybot, with sqlite3 support and other features (dev channel)
+	pkgver = 2024.05.31.r3.g01cdfee53
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/ProgVal/Limnoria
+	arch = any
+	license = BSD-3-Clause
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = python-setuptools
+	depends = python
+	optdepends = python-chardet: to detect encoding of incoming IRC lines, if they are not in UTF-8
+	optdepends = python-gnupg: for authenticated based on GPG tokens
+	optdepends = python-pysocks: for SOCKS proxy (IRC via Tor)
+	optdepends = python-cryptography: Fediverse plugin support
+	optdepends = python-feedparser: RSS plugin support
+	optdepends = python-dateutil: enable fancy time string parsing in the Time plugin
+	provides = limnoria
+	conflicts = limnoria
+	source = limnoria-git::git+https://github.com/ProgVal/Limnoria.git
+	md5sums = SKIP
+
+pkgname = limnoria-git

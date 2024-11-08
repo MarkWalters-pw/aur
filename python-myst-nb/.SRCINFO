@@ -1,0 +1,52 @@
+pkgbase = python-myst-nb
+	pkgdesc = Parse and execute ipynb files in Sphinx
+	pkgver = 1.1.2
+	pkgrel = 1
+	url = https://myst-nb.readthedocs.io
+	arch = any
+	license = BSD-3-Clause
+	checkdepends = python-pytest-param-files
+	checkdepends = python-pytest-regressions
+	checkdepends = python-beautifulsoup4
+	checkdepends = python-ipywidgets
+	checkdepends = python-jupyter-cache
+	checkdepends = python-matplotlib
+	checkdepends = python-myst-parser
+	checkdepends = python-nbdime
+	checkdepends = python-pandas
+	checkdepends = python-sphinx
+	checkdepends = python-sympy
+	checkdepends = jupyter-nbconvert
+	checkdepends = python-jupytext
+	makedepends = python-flit-core
+	makedepends = python-build
+	makedepends = python-installer
+	source = python-myst-nb-1.1.2.tar.gz::https://github.com/executablebooks/MyST-NB/archive/refs/tags/v1.1.2.tar.gz
+	md5sums = ebca42bf36b65e6fefbb40fdab2a67a7
+
+pkgname = python-myst-nb
+	depends = python-importlib-metadata
+	depends = ipython
+	depends = python-jupyter-cache>=0.5
+	depends = python-myst-parser>=1.0.0
+	depends = jupyter-nbclient
+	depends = python-sphinx>=5
+	depends = python-yaml
+	depends = python-typing_extensions
+	depends = python-ipykernel
+	optdepends = pre-commit: code_style
+	optdepends = python-alabaster: rtd
+	optdepends = python-altair: rtd
+	optdepends = python-bokeh: rtd
+	optdepends = coconut-lang: rtd
+	optdepends = python-jupytext: rtd
+	optdepends = python-matplotlib: rtd
+	optdepends = python-numpy: rtd
+	optdepends = python-pandas: rtd
+	optdepends = python-plotly: rtd
+	optdepends = python-sphinx-book-theme: rtd
+	optdepends = python-sphinx-copybutton: rtd
+	optdepends = python-sphinx-panels: rtd
+	optdepends = python-sphinx_design: rtd
+	optdepends = python-sphinxcontrib-bibtex: rtd
+	optdepends = python-sympy: rtd

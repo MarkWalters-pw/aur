@@ -1,0 +1,15 @@
+pkgbase = berty-bin
+	pkgdesc = A secure peer-to-peer messenger which works with or without internet access, cellular data or trust in the network and uses IPFS.
+	pkgver = 2.470.2
+	pkgrel = 1
+	url = https://github.com/berty/berty
+	arch = x86_64
+	license = Apache
+	license = MIT
+	depends = glibc
+	provides = berty
+	conflicts = berty
+	source = berty-2.470.2.tar.gz::https://github.com/berty/berty/releases/download/v2.470.2/berty_linux_amd64.tar.gz
+	b2sums = 2df6fb8b638c6003fe3608e97cf02c333ae89ebc54f2181e4898f6135e6cdf004c3e983cee5c45be76a7b61ed2287736024d34f1fbfe04b6cf642d60b6b4334f
+
+pkgname = berty-bin

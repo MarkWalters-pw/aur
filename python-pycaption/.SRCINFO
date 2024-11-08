@@ -1,0 +1,20 @@
+pkgbase = python-pycaption
+	pkgdesc = Python module to read/write popular video caption formats
+	pkgver = 2.2.12
+	pkgrel = 1
+	url = https://github.com/pbs/pycaption
+	arch = any
+	license = Apache
+	checkdepends = python-pytest
+	checkdepends = python-pytest-lazy-fixture
+	makedepends = python-setuptools
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = python-beautifulsoup4
+	depends = python-lxml
+	depends = python-cssutils
+	source = python-pycaption-2.2.12.tar.gz::https://files.pythonhosted.org/packages/source/p/pycaption/pycaption-2.2.12.tar.gz
+	sha512sums = 97f918ca99da1ec32503bbf3c28a4543e237885c1bd488bc3578000d4457458e1931b22933e7e5a1911f1b37f1f02029fbbe1db429a1b4fc9510d4df214d90fe
+
+pkgname = python-pycaption

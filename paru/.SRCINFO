@@ -1,0 +1,24 @@
+pkgbase = paru
+	pkgdesc = Feature packed AUR helper
+	pkgver = 2.0.4
+	pkgrel = 1
+	url = https://github.com/morganamilo/paru
+	arch = i686
+	arch = pentium4
+	arch = x86_64
+	arch = arm
+	arch = armv7h
+	arch = armv6h
+	arch = aarch64
+	license = GPL-3.0-or-later
+	makedepends = cargo
+	depends = git
+	depends = pacman
+	depends = libalpm.so>=14
+	optdepends = bat: colored pkgbuild printing
+	optdepends = devtools: build in chroot and downloading pkgbuilds
+	backup = etc/paru.conf
+	source = paru-2.0.4.tar.gz::https://github.com/Morganamilo/paru/archive/v2.0.4.tar.gz
+	sha256sums = b9c67f1390caacc949c2eb2a254e8cf37778f382c3c6b8d057fa6feb6eaeb0f9
+
+pkgname = paru

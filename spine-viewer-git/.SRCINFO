@@ -1,0 +1,23 @@
+pkgbase = spine-viewer-git
+	pkgdesc = A simple viewer for spine.Use system-wide electron.
+	pkgver = 1.1.1.r5.g555a66e
+	pkgrel = 1
+	url = https://github.com/anosu/Spine-Viewer
+	arch = any
+	license = MIT
+	makedepends = npm
+	makedepends = git
+	makedepends = nvm
+	makedepends = gendesk
+	makedepends = icoutils
+	makedepends = curl
+	depends = electron30
+	depends = ffmpeg
+	provides = spine-viewer=1.1.1
+	conflicts = spine-viewer
+	source = spine-viewer.git::git+https://github.com/anosu/Spine-Viewer.git
+	source = spine-viewer.sh
+	sha256sums = SKIP
+	sha256sums = 291f50480f5a61bc9c68db7d44cd0412071128706baa868a9cb854f8779a1980
+
+pkgname = spine-viewer-git

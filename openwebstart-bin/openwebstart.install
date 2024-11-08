@@ -1,0 +1,24 @@
+I4J_INSTALL_LOCATION="/opt/OpenWebStart"
+
+post_install() {
+  if [ -d "${I4J_INSTALL_LOCATION}/jre/lib" ]; then
+    old_pwd200=$(pwd)
+    cd "${I4J_INSTALL_LOCATION}/jre"
+    for pack_file in "lib/"*.jar.pack ; do
+      if [ -f "${pack_file}" ]; then
+        jar_file=$(echo "${pack_file}" | awk '{ print substr($0,1,length($0)-5) }')
+        bin/unpack200 -r "${pack_file}" "${jar_file}" > /dev/null 2>&1
+      fi
+    done
+    for pack_file in "lib/ext/"*.jar.pack; do
+      if [ -f "${pack_file}" ]; then
+        jar_file=$(echo "${pack_file}" | awk '{ print substr($0,1,length($0)-5) }')
+        bin/unpack200 -r "${pack_file}" "${jar_file}" > /dev/null 2>&1
+      fi
+    done
+    bin/java -Xshare:dump >/dev/null 2>&1
+    cd "${old_pwd200}"
+  fi
+  xdg-icon-resource install --size 512 --context mimetypes "${I4J_INSTALL_LOCATION}/App-Icon-512.png" application-x-java-jnlp-file
+  mv "${I4J_INSTALL_LOCATION}/Icon-512.png" "${I4J_INSTALL_LOCATION}/.install4j/javaws.png"
+}

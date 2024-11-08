@@ -1,0 +1,26 @@
+pkgbase = android-aarch64-libx11
+	pkgdesc = X11 client-side library (Android aarch64)
+	pkgver = 1.8.10
+	pkgrel = 1
+	url = https://xorg.freedesktop.org/
+	arch = any
+	groups = android-libx11
+	license = custom
+	makedepends = android-configure
+	makedepends = android-aarch64-xorg-util-macros
+	makedepends = android-aarch64-xtrans
+	depends = android-aarch64-libxcb
+	depends = android-aarch64-xorgproto
+	options = !strip
+	options = !buildflags
+	options = staticlibs
+	options = !emptydirs
+	source = https://xorg.freedesktop.org//releases/individual/lib/libX11-1.8.10.tar.xz
+	source = https://xorg.freedesktop.org//releases/individual/lib/libX11-1.8.10.tar.xz.sig
+	source = 0001-Fix-missing-symbols.patch
+	validpgpkeys = 4A193C06D35E7C670FA4EF0BA2FB9E081F2D130E
+	md5sums = 5b8fa54e0ef94136b56f887a5e6cf6c9
+	md5sums = SKIP
+	md5sums = 7aa12ed8ce6ef220c1e0b8c2b2982d27
+
+pkgname = android-aarch64-libx11

@@ -1,0 +1,17 @@
+pkgbase = modprobed-db-git
+	pkgdesc = Keeps track of EVERY kernel module ever used - useful for those of us who make localmodconfig :)
+	pkgver = 2.44.0.g8e0e3c9
+	pkgrel = 1
+	url = https://wiki.archlinux.org/index.php/Modprobed-db
+	install = readme.install
+	arch = any
+	license = MIT
+	makedepends = git
+	depends = kmod
+	optdepends = sudo
+	provides = modprobed-db
+	conflicts = modprobed-db
+	source = git+https://github.com/graysky2/modprobed-db
+	sha256sums = SKIP
+
+pkgname = modprobed-db-git

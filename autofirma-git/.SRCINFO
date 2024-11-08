@@ -1,0 +1,30 @@
+pkgbase = autofirma-git
+	pkgdesc = Cliente de firma electrónica ofrecido por la Administración Pública
+	pkgver = r6855.d5868a024
+	pkgrel = 1
+	url = https://firmaelectronica.gob.es/
+	arch = any
+	license = GPL-2.0-or-later AND EUPL-1.1
+	makedepends = git
+	makedepends = java-environment=11
+	makedepends = maven
+	depends = java-runtime=11
+	provides = autofirma
+	conflicts = autofirma
+	conflicts = autofirma-bin
+	source = clienteafirma::git+https://github.com/ctt-gob-es/clienteafirma.git
+	source = clienteafirma-external::git+https://github.com/ctt-gob-es/clienteafirma-external.git#commit=cd4447d7ecd53279f2f70fbff13a2d0a3d718768
+	source = autofirma
+	source = autofirma.desktop
+	source = autofirma.js
+	source = autofirma.svg
+	source = EUPL-1.1.txt
+	b2sums = SKIP
+	b2sums = SKIP
+	b2sums = 2eca1245aa7e44228fac9fbb871b90d765402ebdfeaa476fa807e7bdaedb039353980c5fdfaf560ecc943386bbee90d4ae048b85b516b4653bf699328d10fc87
+	b2sums = cbedb1aff6ea64e44569d4a3249bd3707a5bc2fadf956ab27f62a71198cfed3f07170f40965bbbd2b4b9a587d165fe8b6a19c3f85aa87eaf8c5897d899d9b6e8
+	b2sums = 835597fed89382057b48f01537dacc43aeef342372678fbeb6d486c6cded7ee41911b910e200e7c1c34bd1cbb0e25854e6e56dea68115bcde759b84d2d0a6147
+	b2sums = 3397abf9b38b8e187ec7a1fa59e91c974568d520a2604487aa5dda56c590756560d38d46152ed5765eb6746956265107a7ff8d448f9090dc7f75a2b74d36513b
+	b2sums = 2075fa9b5aba397bbd0e211a3092d21b885f6bd7c881a2ab9d9935ddf2d68d37a0a1b5159762a3cb52fb96ceb1a6cfad0051bd7255dae9b1f8ed0dda1f467674
+
+pkgname = autofirma-git

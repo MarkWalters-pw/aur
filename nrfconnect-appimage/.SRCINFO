@@ -1,0 +1,14 @@
+pkgbase = nrfconnect-appimage
+	pkgdesc = Cross-platform development software for Bluetooth Low Energy and cIoT
+	pkgver = 5.0.2
+	pkgrel = 1
+	url = https://www.nordicsemi.com/Products/Development-tools/nRF-Connect-for-desktop
+	arch = x86_64
+	license = Commercial
+	depends = jlink-software-and-documentation
+	optdepends = nrf-udev
+	options = !strip
+	source = https://github.com/NordicSemiconductor/pc-nrfconnect-launcher/releases/download/v5.0.2/nrfconnect-5.0.2-x86_64.AppImage
+	sha512sums = b991f94afadbb5297d870a27ac64d2b7fb8abb6eaf5d5c3bc013079d27337b46fb6e386152e20aea16a12f2c1f9d2d2a944d538ab9e1c0d34166f0b2c8e2f2d1
+
+pkgname = nrfconnect-appimage

@@ -1,0 +1,20 @@
+pkgbase = python-yaql
+	pkgdesc = YAQL - Yet Another Query Language
+	pkgver = 3.0.0
+	pkgrel = 2
+	url = https://yaql.readthedocs.io
+	arch = any
+	license = Apache
+	checkdepends = python-fixtures
+	checkdepends = python-testtools
+	checkdepends = python-stestr
+	makedepends = python-setuptools
+	depends = python-six
+	depends = python-pbr
+	depends = python-babel
+	depends = python-dateutil
+	depends = python-ply
+	source = https://tarballs.opendev.org/openstack/yaql/yaql-3.0.0.tar.gz
+	sha512sums = 79800862fd0ef13b3595656f02b09f137aed30fb0f92e7f8d3ffd261160ff4bfdec6e1a6239217e7fd5ba078eb70367ca16eb12853e28917d8fcbbfe08b290dd
+
+pkgname = python-yaql

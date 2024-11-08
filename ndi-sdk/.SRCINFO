@@ -1,0 +1,17 @@
+pkgbase = ndi-sdk
+	pkgdesc = NewTek NDI SDK
+	pkgver = 6.0.1.r139791.20240506
+	pkgrel = 1
+	url = https://ndi.tv/sdk/
+	arch = x86_64
+	license = LicenseRef-custom
+	depends = avahi
+	provides = libndi
+	conflicts = libndi
+	noextract = Install_NDI_SDK_v6.0.1.r139791.20240506_Linux.tar.gz
+	options = !strip
+	options = !debug
+	source = Install_NDI_SDK_v6.0.1.r139791.20240506_Linux.tar.gz::https://downloads.ndi.tv/SDK/NDI_SDK_Linux/Install_NDI_SDK_v6_Linux.tar.gz
+	sha256sums = e56c0c6286a733debc8b45103121a2385d5f7306fff570231669b3b2d76b9558
+
+pkgname = ndi-sdk

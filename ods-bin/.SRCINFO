@@ -1,0 +1,16 @@
+pkgbase = ods-bin
+	pkgdesc = CLI for Open Data Schema
+	pkgver = 0.0.1
+	pkgrel = 1
+	url = https://github.com/open-data-schema/ods
+	arch = x86_64
+	arch = i686
+	license = MIT
+	provides = ods
+	conflicts = ods
+	source_x86_64 = ods-bin-0.0.1.zip::https://github.com/open-data-schema/ods/releases/download/v0.0.1/ods-v0.0.1-x86_64-unknown-linux-gnu.zip
+	sha256sums_x86_64 = 2ca58310e5bf04400a4749f9e30293d510e1ee27be373c1d99d5c274086fbc61
+	source_i686 = ods-bin-0.0.1.zip::https://github.com/open-data-schema/ods/releases/download/v0.0.1/ods-v0.0.1-i686-unknown-linux-gnu.zip
+	sha256sums_i686 = a4190e661a2178d9d60929d4f464910e3ceedec8d400f357bf8272cb5812e7da
+
+pkgname = ods-bin

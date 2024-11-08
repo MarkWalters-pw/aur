@@ -1,0 +1,16 @@
+pkgbase = secure-delete
+	pkgdesc = Secure file, disk, swap, memory erasure utilities(Fork of THC util)
+	pkgver = 3.1a
+	pkgrel = 1
+	url = https://github.com/GIJack/secure_delete
+	install = secure-delete.install
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	depends = glibc
+	depends = sh
+	conflicts = srm
+	source = secure-delete-3.1-a.tar.gz::https://github.com/GIJack/secure_delete/archive/3.1-a.tar.gz
+	sha256sums = 2bb8d1f9dbfd2e14f194ee88c730ef8abb8737bf183f715f45b9ca17d59bcebf
+
+pkgname = secure-delete

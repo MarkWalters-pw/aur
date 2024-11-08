@@ -1,0 +1,24 @@
+pkgbase = gridcoinresearchd
+	pkgdesc = GridCoin is a cryptocurrency that helps science via BOINC - daemon
+	pkgver = 3.7.11.0
+	pkgrel = 1
+	url = https://gridcoin.us
+	arch = i686
+	arch = x86_64
+	arch = armv7h
+	arch = aarch64
+	license = custom:gridcoin
+	makedepends = boost
+	makedepends = db
+	depends = boost-libs
+	depends = libzip
+	depends = miniupnpc
+	depends = curl
+	depends = boinc
+	conflicts = gridcoinresearch-daemon
+	replaces = gridcoinresearch-daemon
+	source = gridcoinresearch-3.7.11.0.tar.gz::https://github.com/gridcoin/Gridcoin-Research/archive/3.7.11.0.tar.gz
+	sha256sums = 2d4e87d607f334a4b973f58a444b1978941e06bd58049ce58536a81281b127b3
+
+pkgname = gridcoinresearchd
+

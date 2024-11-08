@@ -1,0 +1,24 @@
+pkgbase = kubeadm-bin
+	pkgdesc = Kubernetes.io kubeadm binary
+	pkgver = 1.31.0
+	pkgrel = 2
+	url = http://kubernetes.io
+	arch = x86_64
+	arch = armv7l
+	arch = armv7h
+	arch = aarch64
+	license = apache
+	depends = kubelet-bin
+	depends = conntrack-tools
+	depends = iptables
+	depends = iproute2
+	depends = util-linux
+	depends = crictl
+	provides = kubeadm
+	conflicts = kubeadm
+	source = 10-kubeadm.conf
+	source = kubeadm-bin-1.31.0-amd64::https://storage.googleapis.com/kubernetes-release/release/v1.31.0/bin/linux/amd64/kubeadm
+	b2sums = 074744d327227c32661befcff7651209438090fbd75890ad3b5a32ada1fbdf8901dbd132c7093ed353901f1ea7505c97089a5a89a104f57cb7f53a342eecc7e8
+	b2sums = 48c8313a9a6163bfede2f38b3bb5237e5b73172b5e0bc48658ee2df29d937572aafa82452b7762631c7697f6929db54856a3f5a78947817882d8c3f0b592a87f
+
+pkgname = kubeadm-bin

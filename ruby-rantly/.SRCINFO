@@ -1,0 +1,22 @@
+pkgbase = ruby-rantly
+	pkgdesc = Ruby Imperative Random Data Generator and Quickcheck
+	pkgver = 2.0.0
+	pkgrel = 1
+	url = https://github.com/rantly-rb/rantly
+	arch = any
+	license = MIT
+	checkdepends = ruby-minitest
+	checkdepends = ruby-rake
+	checkdepends = ruby-simplecov
+	checkdepends = ruby-rubocop
+	checkdepends = ruby-rubocop-performance
+	makedepends = rubygems
+	makedepends = ruby-rdoc
+	depends = ruby
+	options = !emptydirs
+	source = https://github.com/rantly-rb/rantly/archive/2.0.0.tar.gz
+	source = https://github.com/rantly-rb/rantly/commit/73768bff7928d60c6b7c03aea5d15ea6206d1620.patch
+	sha256sums = 510a61c89cb87dd99d2219be5baa892fb2646739be44844d84a9732a787d05ed
+	sha256sums = 6b640dd97452e3ea372c4c03cb2cfcddb64848c686a9e6642c602bbf1aa83b42
+
+pkgname = ruby-rantly

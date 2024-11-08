@@ -1,0 +1,27 @@
+pkgbase = ds9
+	pkgdesc = SAOImage DS9: Astronomical Data Visualization Application
+	pkgver = 8.6
+	pkgrel = 1
+	url = http://hea-www.harvard.edu/RD/ds9/
+	arch = x86_64
+	license = GPL2
+	makedepends = gcc
+	makedepends = make
+	makedepends = automake
+	makedepends = autoconf
+	makedepends = zip
+	depends = libx11
+	depends = zlib
+	depends = libxslt
+	depends = libxml2
+	depends = libxft
+	depends = tcl
+	depends = tk
+	options = !strip
+	options = !lto
+	source = ds9-8.6.tar.gz::https://github.com/SAOImageDS9/SAOImageDS9/archive/v8.6.tar.gz
+	source = ds9.desktop
+	md5sums = 7d0dd2e41d52c21270d7d3fae747ed8f
+	md5sums = f1738e4ec665ae9afd1b65b86e6a07f1
+
+pkgname = ds9

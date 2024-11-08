@@ -1,0 +1,40 @@
+pkgbase = proxmox-backup-client
+	pkgdesc = Client for Proxmox Backup Server
+	pkgver = 3.2.7
+	pkgrel = 2
+	url = https://pbs.proxmox.com
+	arch = x86_64
+	arch = aarch64
+	license = AGPL3
+	makedepends = cargo
+	makedepends = clang
+	makedepends = git
+	makedepends = llvm
+	makedepends = patchelf
+	makedepends = python-docutils
+	makedepends = python-sphinx
+	depends = acl
+	depends = fuse3
+	depends = gcc-libs
+	depends = openssl
+	options = !lto
+	source = proxmox-backup-client-3.2.7::git://git.proxmox.com/git/proxmox-backup.git#tag=v3.2.7
+	source = proxmox::git://git.proxmox.com/git/proxmox.git#commit=3545d67b1f3624a920e0a2c2150041e2eb267029
+	source = proxmox-fuse::git://git.proxmox.com/git/proxmox-fuse.git
+	source = pxar::git://git.proxmox.com/git/pxar.git
+	source = pathpatterns::git://git.proxmox.com/git/pathpatterns.git
+	source = 0001-re-route-dependencies-not-available-on-crates.io-to-.patch
+	source = 0002-docs-drop-all-but-client-man-pages.patch
+	source = 0003-sys-cherry-pick-type-cast-fix-for-foreign-arch-build.patch
+	source = elf-strip-unused-dependencies.sh
+	sha512sums = SKIP
+	sha512sums = SKIP
+	sha512sums = SKIP
+	sha512sums = SKIP
+	sha512sums = SKIP
+	sha512sums = SKIP
+	sha512sums = SKIP
+	sha512sums = SKIP
+	sha512sums = SKIP
+
+pkgname = proxmox-backup-client

@@ -1,0 +1,18 @@
+pkgbase = serenity
+	pkgdesc = The configuration generator for sing-box
+	pkgver = 1.0.0beta.20
+	pkgrel = 1
+	url = https://github.com/SagerNet/serenity
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	license = custom:GPL-3.0-or-later WITH name use or association addition
+	makedepends = go
+	depends = glibc
+	optdepends = sing-box
+	backup = etc/serenity/config.json
+	source = serenity-1.0.0beta.20.tar.gz::https://github.com/SagerNet/serenity/archive/v1.0.0-beta.20.tar.gz
+	sha256sums = 58f3d0f472b543cf10d1229738e41ff83786d7dfb710aaddaf3e9e46e7a431da
+
+pkgname = serenity

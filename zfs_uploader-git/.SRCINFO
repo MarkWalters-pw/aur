@@ -1,0 +1,27 @@
+pkgbase = zfs_uploader-git
+	pkgdesc = Simple program for backing up full and incremental ZFS snapshots to Amazon S3
+	pkgver = 0.9.0.r11.g0b9de48
+	pkgrel = 2
+	url = https://github.com/ddebeau/zfs_uploader
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = zfs-utils>=0.8.1
+	depends = python
+	depends = python-apscheduler
+	depends = python-boto3
+	depends = python-click
+	provides = zfs_uploader
+	conflicts = zfs_uploader
+	source = git+https://github.com/ddebeau/zfs_uploader
+	source = zfs_uploader.service
+	source = 0001-use-absolute-path.patch
+	md5sums = SKIP
+	md5sums = cc654c64ccd1d1e9c1c32c3974d61624
+	md5sums = fa0cd0018fe94c6b4a69c28ae9ff8f6b
+
+pkgname = zfs_uploader-git

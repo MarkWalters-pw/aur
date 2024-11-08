@@ -1,0 +1,15 @@
+
+pkgname=ttop
+
+post_install() {
+    systemctl daemon-reload
+    systemctl start "${pkgname}.timer"
+}
+
+pre_remove() {
+    systemctl stop "${pkgname}.timer"
+}
+
+post_remove() {
+    systemctl daemon-reload
+}

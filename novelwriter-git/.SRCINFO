@@ -1,0 +1,22 @@
+pkgbase = novelwriter-git
+	pkgdesc = A markdown-like document editor for writing novels
+	pkgver = 2.5.r4.gb7da56a
+	pkgrel = 1
+	url = https://github.com/vkbo/novelWriter
+	arch = any
+	license = GPL-3.0-or-later
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python
+	provides = novelwriter
+	conflicts = novelwriter
+	source = novelwriter::git+https://github.com/vkbo/novelWriter.git
+	sha256sums = SKIP
+
+pkgname = novelwriter-git
+	depends = python
+	depends = python-pyenchant
+	depends = python-pyqt5

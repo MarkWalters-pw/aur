@@ -1,0 +1,18 @@
+pkgbase = xcursor-cz-hickson-black
+	pkgdesc = Understated cursor theme - black, tailless
+	pkgver = 20210706
+	pkgrel = 0
+	url = https://github.com/charakterziffer/cursor-toolbox
+	arch = any
+	license = GPL3
+	makedepends = git
+	makedepends = xorg-xcursorgen
+	source = git+https://github.com/charakterziffer/cursor-toolbox#commit=02a7977b3d009525c95787c756fce8d824960e4c
+	source = build.patch
+	sha512sums = SKIP
+	sha512sums = c2b8792e0a9afd639864608dc674acbc1a368d9a83cd46dd3422403961af2b001c3eb004269eb701fcd34f4cfceaca5912a751a6ecd68ad08901ec94e0afb972
+
+pkgname = xcursor-cz-hickson-black
+
+pkgname = xcursor-cz-hickson-white
+	pkgdesc = Understated cursor theme - white, tailless

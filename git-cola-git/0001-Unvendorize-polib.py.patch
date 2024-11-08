@@ -1,0 +1,58 @@
+From db1b91ab1b84b3a81d2da89e8a6617104a910f32 Mon Sep 17 00:00:00 2001
+From: Christoph Erhardt <fedora@sicherha.de>
+Date: Mon, 24 Apr 2023 22:11:10 +0200
+Subject: [PATCH] Unvendorize polib.py
+
+---
+ cola/i18n.py   | 6 +-----
+ pyproject.toml | 2 +-
+ setup.cfg      | 2 +-
+ 3 files changed, 3 insertions(+), 7 deletions(-)
+
+diff --git a/cola/i18n.py b/cola/i18n.py
+index b44c2516..a7ea2bff 100644
+--- a/cola/i18n.py
++++ b/cola/i18n.py
+@@ -1,12 +1,8 @@
+ """i18n and l10n support for git-cola"""
+ import locale
+ import os
+-
+-try:
+-    import polib
+-except ImportError:
+-    from . import polib
+ import sys
++import polib
+ 
+ from . import core
+ from . import resources
+diff --git a/pyproject.toml b/pyproject.toml
+index 08177485..56d7e297 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -24,7 +24,7 @@ git-dag = "cola.dag:main"
+ git-cola-sequence-editor = "cola.sequenceeditor:main"
+ 
+ [build-system]
+-requires = ["setuptools>=42", "setuptools_scm[toml]>=3.4.1"]
++requires = ["setuptools>=42", "setuptools_scm[toml]>=3.4.1", "polib>=1.1.1"]
+ build-backend = "setuptools.build_meta"
+ 
+ [tool.cercis]
+diff --git a/setup.cfg b/setup.cfg
+index eb4e9d14..2fb1ec0e 100644
+--- a/setup.cfg
++++ b/setup.cfg
+@@ -25,7 +25,7 @@ packages =
+ include_package_data = true
+ install_requires =
+ 	importlib_metadata; python_version<"3.8"
+-	polib >= 1.0.0
++	polib >= 1.1.1
+ 	qtpy >= 1.1.0
+ zip_safe = false
+ 
+-- 
+2.44.0
+

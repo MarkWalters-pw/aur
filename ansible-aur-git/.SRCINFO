@@ -1,0 +1,15 @@
+pkgbase = ansible-aur-git
+	pkgdesc = Ansible module to manage packages from the AUR
+	pkgver = 0.11.1.r0.gfe05001
+	pkgrel = 1
+	url = https://github.com/kewlfft/ansible-aur
+	arch = any
+	license = GPL-3.0-or-later
+	makedepends = git
+	depends = ansible-core
+	provides = ansible-aur
+	conflicts = ansible-aur
+	source = ansible-aur-git::git+https://github.com/kewlfft/ansible-aur.git
+	sha256sums = SKIP
+
+pkgname = ansible-aur-git

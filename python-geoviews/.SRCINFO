@@ -1,0 +1,21 @@
+pkgbase = python-geoviews
+	pkgdesc = Simple, concise geographical visualization in Python
+	pkgver = 1.13.0
+	pkgrel = 1
+	url = https://github.com/pyviz/geoviews
+	arch = any
+	license = BSD-3-Clause
+	checkdepends = python-pytest
+	checkdepends = python-geopandas
+	checkdepends = python-spatialpandas
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-hatchling
+	makedepends = python-wheel
+	makedepends = npm
+	depends = python-cartopy
+	depends = python-holoviews
+	source = geoviews-1.13.0.tar.gz::https://github.com/pyviz/geoviews/archive/v1.13.0.tar.gz
+	sha512sums = 920f6141e8b63175784edab69ca0bc2a87e2db8e4266711579d65cd11ceb4184e62356d851928ac4d66e5f37cd7ff228ffa4f8a50277ce78d785ac935b927d3b
+
+pkgname = python-geoviews

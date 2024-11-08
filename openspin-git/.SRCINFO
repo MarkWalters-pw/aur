@@ -1,0 +1,15 @@
+pkgbase = openspin-git
+	pkgdesc = Open Source Spin interpreter for the Parallax Propeller
+	pkgver = 1.00.78.r14.gd1991aa
+	pkgrel = 1
+	url = https://github.com/parallaxinc/OpenSpin
+	arch = x86_64
+	arch = i686
+	license = MIT
+	provides = openspin-git
+	provides = openspin
+	conflicts = openspin-git-git
+	source = git+https://github.com/parallaxinc/OpenSpin
+	sha256sums = SKIP
+
+pkgname = openspin-git

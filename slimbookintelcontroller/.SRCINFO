@@ -1,0 +1,22 @@
+pkgbase = slimbookintelcontroller
+	pkgdesc = Application for the performance management of Intel processors
+	pkgver = 1.0beta
+	pkgrel = 2
+	url = https://github.com/slimbook/slimbookintelcontroller
+	install = slimbookintelcontroller.install
+	arch = any
+	license = GPL-3.0-or-later
+	depends = gtk3
+	depends = intel-undervolt
+	depends = libayatana-appindicator
+	depends = libnotify
+	depends = mokutil
+	depends = pciutils
+	depends = python-dbus
+	depends = python-gobject
+	depends = python-pillow
+	depends = systemd-libs
+	source = https://launchpad.net/~slimbook/+archive/ubuntu/slimbook/+files/slimbookintelcontroller_1.0beta_all.deb
+	sha256sums = d0d031f4313d6bc5aae420406af8b796610f311171fb2410febf6090876acc57
+
+pkgname = slimbookintelcontroller

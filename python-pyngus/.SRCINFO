@@ -1,0 +1,18 @@
+pkgbase = python-pyngus
+	pkgdesc = A connection oriented messaging framework using QPID Proton
+	pkgver = 2.3.1
+	pkgrel = 4
+	url = https://github.com/kgiusti/pyngus
+	arch = any
+	license = Apache-2.0
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	makedepends = tar
+	depends = python
+	depends = python-qpid-proton
+	source = python-pyngus-2.3.1.tar.gz::https://files.pythonhosted.org/packages/source/p/pyngus/pyngus-2.3.1.tar.gz
+	b2sums = ee1aa0110e8f331c97eaeaa11929e2fe645bb4df03111df6f2a67a246668b24b3f1f9fef78012f039282c60733af167da3bc748a1b128597bc83a75e7c17f445
+
+pkgname = python-pyngus

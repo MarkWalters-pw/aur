@@ -1,0 +1,19 @@
+pkgbase = manictime-bin
+	pkgdesc = ManicTime automatically records your computer usage.
+	pkgver = 2024.2.0.1
+	pkgrel = 1
+	url = https://www.manictime.com/download/linux
+	arch = x86_64
+	license = custom
+	depends = libappindicator-gtk3
+	depends = libx11
+	depends = glibc
+	depends = libxss
+	depends = gss-ntlmssp
+	depends = krb5
+	depends = icu
+	options = staticlibs
+	source = manictime-bin-2024.2.0.1.tar.gz::https://cdn.manictime.com/setup/linux/v2024_2_0_1/manictime-arch-2024.2.0.1-linux-x64.tar.gz
+	sha256sums = 29f237ee16cba3771ae35f63ac22a263111b4895d6933e9d153f3dbd5b11d875
+
+pkgname = manictime-bin

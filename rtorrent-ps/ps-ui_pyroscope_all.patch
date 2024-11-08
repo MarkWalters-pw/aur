@@ -1,0 +1,11 @@
+--- a/src/rpc/object_storage.h
++++ b/src/rpc/object_storage.h
+@@ -143,6 +143,8 @@ public:
+   const torrent::Object& set_c_str_list(const char* str, const torrent::Object::list_type& object) { return set_list(torrent::raw_string::from_c_str(str), object); }
+   const torrent::Object& set_str_list(const std::string& str, const torrent::Object::list_type& object) { return set_list(torrent::raw_string::from_string(str), object); }
+ 
++  const torrent::Object& set_color_string(const torrent::raw_string& key, const std::string& object);
++
+   void                   list_push_back(const torrent::raw_string& key, const torrent::Object& object);
+   void                   list_push_back_str(const std::string& str, const torrent::Object& object) { list_push_back(torrent::raw_string::from_string(str), object); }
+ 

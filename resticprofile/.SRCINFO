@@ -1,0 +1,17 @@
+pkgbase = resticprofile
+	pkgdesc = Configuration profiles manager and scheduler for restic backup
+	pkgver = 0.29.0
+	pkgrel = 1
+	url = https://github.com/creativeprojects/resticprofile
+	arch = x86_64
+	arch = aarch64
+	license = GPL3
+	makedepends = go
+	makedepends = git
+	depends = glibc
+	depends = restic
+	options = !lto
+	source = git+https://github.com/creativeprojects/resticprofile.git#tag=v0.29.0
+	sha256sums = b92ff546f2a261b39b241c4bf17edec7a2f5b9d15e7c59919f2ea9eb38ea6ba5
+
+pkgname = resticprofile

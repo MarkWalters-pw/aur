@@ -1,0 +1,13 @@
+pkgbase = riscv-gnu-toolchain-bin
+	pkgdesc = Meta-package for a pre-compiled GNU toolchain for riscv32 and riscv64, linux and ELF.
+	pkgver = 2024.10.28
+	pkgrel = 1
+	url = https://github.com/riscv-collab/riscv-gnu-toolchain
+	arch = any
+	license = GPL2
+	depends = riscv32-gnu-toolchain-elf-bin
+	depends = riscv32-gnu-toolchain-glibc-bin
+	depends = riscv64-gnu-toolchain-elf-bin
+	depends = riscv64-gnu-toolchain-glibc-bin
+
+pkgname = riscv-gnu-toolchain-bin

@@ -1,0 +1,28 @@
+post_install() {
+    echo "post install"
+    groupadd veeam
+    systemctl daemon-reload
+    systemctl enable veeamservice.service
+    systemctl restart veeamservice.service    
+    echo "."
+}
+
+pre_upgrade() {
+    echo "pre update"
+    echo "."
+}
+
+post_upgrade() {
+    echo "post upgrade"
+    systemctl daemon-reload
+    systemctl restart veeamservice.service
+    echo "."
+}
+
+pre_remove() {
+    echo "pre remove"
+    systemctl stop veeamservice.service
+    systemctl disable veeamservice.service
+    rm -rf /var/log/veeam
+    echo "."
+}

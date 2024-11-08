@@ -1,0 +1,36 @@
+# Maintainer: "Amhairghin" Oscar Garcia Amor (https://ogarcia.me)
+
+pkgname=kdash
+pkgver=0.6.1
+pkgrel=1
+pkgdesc='A simple and fast dashboard for Kubernetes'
+arch=('arm' 'armv6h' 'armv7h' 'aarch64' 'i686' 'x86_64')
+url='https://kdash.cli.rs/'
+license=('MIT')
+depends=('gcc-libs' 'libxcb')
+makedepends=('python' 'rust')
+options=('!lto')
+source=("${pkgname}-${pkgver}.tar.gz::https://github.com/kdash-rs/${pkgname}/archive/refs/tags/v${pkgver}.tar.gz")
+b2sums=('1e4ad87af78bb8f548d1d028fad81119656b8df1074c33c01c38bf4a4f0876a8691936c544c3ab07529c639853bd3278409dc36291a74afea1b656d1560f9273')
+
+prepare() {
+  cd "${pkgname}-${pkgver}"
+  cargo fetch --locked
+}
+
+build() {
+  cd "${pkgname}-${pkgver}"
+  cargo build --frozen --release --target-dir=target
+}
+
+package() {
+  # binary
+  install -Dm755 "${srcdir}/${pkgname}-${pkgver}/target/release/${pkgname}" \
+    "${pkgdir}/usr/bin/${pkgname}"
+  # readme
+  install -Dm644 "${srcdir}/${pkgname}-${pkgver}/README.md" \
+    "${pkgdir}/usr/share/doc/${pkgname}/README.md"
+  # license
+  install -D -m644 "${srcdir}/${pkgname}-${pkgver}/LICENSE" \
+    "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+}

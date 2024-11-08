@@ -1,0 +1,31 @@
+pkgbase = mingw-w64-qt5-declarative
+	pkgdesc = Classes for QML and JavaScript languages (mingw-w64)
+	pkgver = 5.15.15+kde+r25
+	pkgrel = 1
+	url = https://www.qt.io/
+	arch = i686
+	arch = x86_64
+	groups = mingw-w64-qt5
+	license = GPL3
+	license = LGPL3
+	license = FDL
+	license = custom
+	makedepends = mingw-w64-gcc
+	makedepends = mingw-w64-vulkan-headers
+	makedepends = mingw-w64-pkg-config
+	makedepends = python
+	makedepends = git
+	depends = mingw-w64-qt5-base
+	options = !strip
+	options = !buildflags
+	options = staticlibs
+	source = git+https://invent.kde.org/qt/qt/qtdeclarative#commit=310c124dac82d711ab15309a9cb0b9d95db9ea8f
+	source = 0001-Ensure-static-plugins-are-exported.patch
+	source = 0002-Prevent-exporting-QML-parser-symbols-on-static-build.patch
+	source = 0003-Disable-d3d12-requiring-fxc.exe.patch
+	sha256sums = SKIP
+	sha256sums = abda755efe3356b04a1f619a6dbc72a7d2e40e92c2247abb6f728af76fbde7f0
+	sha256sums = 0beadf093f9e260002ea72ed498e7797b1bc76dec15d602bb8137c02150f0663
+	sha256sums = 142e54b455aa4798d71cef1997ea42d9d1aef10a8434e33826a0aa316c31d2d8
+
+pkgname = mingw-w64-qt5-declarative

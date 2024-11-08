@@ -1,0 +1,18 @@
+pkgbase = gut-bin
+	pkgdesc = An alternative git CLI for Windows, macOS, and Linux
+	pkgver = 0.3.0
+	pkgrel = 1
+	url = https://gut-cli.dev
+	arch = x86_64
+	arch = i386
+	arch = aarch64
+	license = MIT
+	provides = gut
+	source_x86_64 = gut-bin-0.3.0.tar.gz::https://github.com/julien040/gut/releases/download/0.3.0/gut_Linux_x86_64.tar.gz
+	sha256sums_x86_64 = 39735351db45f7d91a6d52b556a92efb9d749f17e04a73f9be923dff7cd0eef2
+	source_i386 = gut-bin-0.3.0.tar.gz::https://github.com/julien040/gut/releases/download/0.3.0/gut_Linux_i386.tar.gz
+	sha256sums_i386 = 9b5f5c507602cfa976a424501a8a2dfaab13d435771fb555b83349d495ac0210
+	source_aarch64 = gut-bin-0.3.0.tar.gz::https://github.com/julien040/gut/releases/download/0.3.0/gut_Linux_arm64.tar.gz
+	sha256sums_aarch64 = 0fecfbac1b2f94a8d30fa2215c06911361d9f679f38bab5b4cae342abdfdace5
+
+pkgname = gut-bin

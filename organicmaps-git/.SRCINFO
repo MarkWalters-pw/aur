@@ -1,0 +1,32 @@
+pkgbase = organicmaps-git
+	pkgdesc = A free offline maps app for travelers, tourists, hikers, and cyclists based on top of crowd-sourced OpenStreetMap data
+	pkgver = 2024.06.19_3
+	pkgrel = 1
+	url = https://github.com/organicmaps/organicmaps
+	arch = x86_64
+	arch = aarch64
+	arch = riscv64
+	license = Apache
+	makedepends = git
+	makedepends = git-lfs
+	makedepends = gendesk
+	makedepends = libxml2
+	makedepends = jq
+	depends = cmake>=3.22.1
+	depends = mesa
+	depends = libglvnd
+	depends = libc++
+	depends = freetype2
+	depends = sqlite
+	depends = qt6-base
+	depends = icu
+	depends = clang
+	depends = ninja
+	depends = python3
+	depends = qt6-svg
+	depends = qt6-positioning
+	optdepends = ccache: faster compilation
+	optdepends = qt6-wayland: for Wayland users
+	conflicts = organicmaps-bin
+
+pkgname = organicmaps-git

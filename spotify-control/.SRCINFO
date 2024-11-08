@@ -1,0 +1,14 @@
+pkgbase = spotify-control
+	pkgdesc = Control Spotify from the command line
+	pkgver = 1.1.0
+	pkgrel = 1
+	url = https://github.com/AlexONEX/spotify-control
+	arch = x86_64
+	license = MIT
+	makedepends = cargo
+	depends = spotify
+	optdepends = libnotify: Allows the `now-playing` notification to be shown
+	source = spotify-control-1.1.0.tar.gz::https://github.com/AlexONEX/spotify-control/archive/refs/tags/v1.1.0.tar.gz
+	sha256sums = 4d83afe787a34c10cbbdf4846c841d018cad6c6a6757ffefe048b922ce187c80
+
+pkgname = spotify-control

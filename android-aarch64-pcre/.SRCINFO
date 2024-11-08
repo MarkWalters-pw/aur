@@ -1,0 +1,24 @@
+pkgbase = android-aarch64-pcre
+	pkgdesc = A library that implements Perl 5-style regular expressions (Android aarch64)
+	pkgver = 8.45
+	pkgrel = 2
+	url = http://www.pcre.org/
+	arch = any
+	license = BSD
+	makedepends = android-configure
+	makedepends = android-aarch64-bzip2
+	makedepends = android-aarch64-zlib
+	depends = android-ndk
+	optdepends = android-aarch64-bzip2
+	optdepends = android-aarch64-zlib
+	options = !strip
+	options = !buildflags
+	options = staticlibs
+	options = !emptydirs
+	source = http://downloads.sourceforge.net/pcre/pcre-8.45.tar.bz2
+	source = http://downloads.sourceforge.net/pcre/pcre-8.45.tar.bz2.sig
+	validpgpkeys = 45F68D54BBE23FB3039B46E59766E084FB0F43D8
+	md5sums = 4452288e6a0eefb2ab11d36010a1eebb
+	md5sums = SKIP
+
+pkgname = android-aarch64-pcre

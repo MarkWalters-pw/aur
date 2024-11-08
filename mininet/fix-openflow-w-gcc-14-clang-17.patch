@@ -1,0 +1,37 @@
+diff --git a/lib/backtrace.c b/lib/backtrace.c
+index 5b61ffe..f77e489 100644
+--- a/lib/backtrace.c
++++ b/lib/backtrace.c
+@@ -123,6 +123,6 @@ backtrace_capture(struct backtrace *bt)
+     }
+     bt->n_frames = n;
+ #else
+-    bt->n_frames = backtrace(bt->frames, BACKTRACE_MAX_FRAMES);
++    bt->n_frames = backtrace((void **)bt->frames, BACKTRACE_MAX_FRAMES);
+ #endif
+ }
+diff --git a/lib/flow.c b/lib/flow.c
+index 523eff0..ee28622 100644
+--- a/lib/flow.c
++++ b/lib/flow.c
+@@ -210,7 +210,7 @@ flow_extract(struct ofpbuf *packet, uint16_t in_port, struct flow *flow)
+                 }
+             }
+         } else if (flow->dl_type == htons(ETH_TYPE_ARP)) {
+-            const struct arp_eth_header *arp = pull_arp(&b);
++            const struct arp_eth_header *arp = (struct arp_eth_header *)pull_arp(&b);
+             if (arp) {
+                 if (arp->ar_pro == htons(ARP_PRO_IP) && arp->ar_pln == IP_ADDR_LEN) {
+                     flow->nw_src = arp->ar_spa;
+diff --git a/lib/socket-util.c b/lib/socket-util.c
+index c7b5d6d..5b3d602 100644
+--- a/lib/socket-util.c
++++ b/lib/socket-util.c
+@@ -42,6 +42,7 @@
+ #include <stdio.h>
+ #include <string.h>
+ #include <sys/resource.h>
++#include <sys/stat.h>
+ #include <sys/un.h>
+ #include <unistd.h>
+ #include "fatal-signal.h"

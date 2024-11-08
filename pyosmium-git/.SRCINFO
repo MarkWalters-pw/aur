@@ -1,0 +1,23 @@
+pkgbase = pyosmium-git
+	pkgdesc = Python bindings for libosmium
+	pkgver = 4.0.0.r0.g3091925
+	pkgrel = 1
+	url = http://osmcode.org/pyosmium
+	arch = x86_64
+	arch = i686
+	license = custom
+	makedepends = git
+	makedepends = pybind11
+	makedepends = python-setuptools
+	makedepends = cmake
+	makedepends = boost-libs
+	depends = boost
+	depends = libosmium
+	depends = python
+	depends = protozero
+	provides = pyosmium
+	conflicts = pyosmium
+	source = pyosmium::git+https://github.com/osmcode/pyosmium.git
+	md5sums = SKIP
+
+pkgname = pyosmium-git

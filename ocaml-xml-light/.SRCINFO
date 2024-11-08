@@ -1,0 +1,20 @@
+pkgbase = ocaml-xml-light
+	pkgdesc = Objective Caml lightweight xml parser
+	pkgver = 2.5
+	pkgrel = 4
+	url = https://github.com/ncannasse/xml-light
+	arch = i686
+	arch = x86_64
+	license = LGPL-2.1-or-later
+	makedepends = dune
+	depends = glibc
+	depends = ocaml
+	options = !strip
+	options = !makeflags
+	options = staticlibs
+	source = https://github.com/ncannasse/xml-light/releases/download/2.5/xml-light-2.5.tbz
+	source = META
+	md5sums = b15b3ddfc73159052e9cd734290d10bd
+	md5sums = ad22cde4d3a944673d3b0a25a1e835dc
+
+pkgname = ocaml-xml-light

@@ -1,0 +1,15 @@
+pkgbase = transg-tui-git
+	pkgdesc = Transmission remote TUI client
+	pkgver = r28.3d06006
+	pkgrel = 3
+	url = https://github.com/PanAeon/transg-tui
+	arch = x86_64
+	license = MIT
+	makedepends = cargo
+	makedepends = git
+	provides = transg-tui
+	conflicts = transg-tui
+	source = transg-tui-git::git+https://github.com/PanAeon/transg-tui.git
+	sha256sums = SKIP
+
+pkgname = transg-tui-git

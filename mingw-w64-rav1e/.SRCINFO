@@ -1,0 +1,23 @@
+pkgbase = mingw-w64-rav1e
+	pkgdesc = An AV1 encoder focused on speed and safety (mingw-w64)
+	pkgver = 0.7.1
+	pkgrel = 1
+	url = https://github.com/xiph/rav1e/
+	arch = any
+	license = custom:BSD
+	makedepends = cargo-c
+	makedepends = git
+	makedepends = nasm
+	makedepends = mingw-w64-gcc
+	makedepends = mingw-w64-rust
+	makedepends = mingw-w64-wine
+	depends = mingw-w64-crt
+	options = !strip
+	options = !buildflags
+	options = staticlibs
+	source = git+https://github.com/xiph/rav1e.git#tag=a8d05d0c43826a465b60dbadd0ab7f1327d75371
+	source = Cargo-rav1e-0.7.1.lock::https://github.com/xiph/rav1e/releases/download/v0.7.1/Cargo.lock
+	b2sums = SKIP
+	b2sums = 7cbeaff87ca4e9db469be06cbead0c5b05af2064d6d5f12f97f5999992017b66a24bc19ed4eaf69f7d6579732f843f3e93f30d9581b8c8344728d3e3773a0f79
+
+pkgname = mingw-w64-rav1e

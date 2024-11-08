@@ -1,0 +1,8 @@
+pre_remove() {
+	if [ -e /opt/Autodesk/Adlm/R25 ]
+	then
+		rmdir --ignore-fail-on-non-empty /opt/Autodesk/Adlm/R25
+		rmdir --ignore-fail-on-non-empty /opt/Autodesk/Adlm
+		rmdir --ignore-fail-on-non-empty /opt/Autodesk
+	fi
+}

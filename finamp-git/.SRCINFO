@@ -1,0 +1,23 @@
+pkgbase = finamp-git
+	pkgdesc = An open source Jellyfin music player
+	pkgver = 2272.049185c4
+	pkgrel = 1
+	url = https://github.com/jmshrv/finamp
+	arch = x86_64
+	arch = aarch64
+	license = MPL-2.0
+	makedepends = git
+	makedepends = flutter-tool
+	makedepends = flutter-target-linux
+	makedepends = clang
+	makedepends = cmake
+	makedepends = ninja
+	makedepends = xz
+	depends = gtk3
+	depends = pango
+	provides = finamp
+	conflicts = finamp
+	source = finamp::git+https://github.com/jmshrv/finamp.git#branch=redesign
+	b2sums = SKIP
+
+pkgname = finamp-git

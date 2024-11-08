@@ -1,0 +1,24 @@
+# Maintainer: Dave Shoreman <aur [plus] mpv-thumbnail-script at dsdev dot io>
+# Contributor: Dimitris Kiziridis <ragouel at outlook dot com>
+
+post_install() {
+    mkdir -p /etc/mpv/scripts
+
+    ln -s /usr/share/mpv/scripts/mpv_thumbnail_script_client_osc.lua /etc/mpv/scripts
+    ln -s /usr/share/mpv/scripts/mpv_thumbnail_script_server.lua /etc/mpv/scripts
+
+    echo -e " >>> \e[33mAfter installation, make sure to set 'osc=no' in your mpv.conf!\e[0m\n\n" \
+        ">>> Default keybinding to generate thumbnails: [\e[32mShift + T\e[37m]\n\n" \
+        ">>> \e[1;34mIf you don't want this plugin to autoload, delete the symlinks:\n" \
+        "  rm /etc/mpv/scripts/mpv_thumbnail_script_{server,client_osc},lua\e[0m\n"
+}
+
+post_remove() {
+    rm -f /etc/mpv/scripts/mpv_thumbnail_script_client_osc.lua
+    rm -f /etc/mpv/scripts/mpv_thumbnail_script_server.lua
+}
+
+post_upgrade() {
+    # respect user's choice—don't create symlinks/configs on update
+    true
+}

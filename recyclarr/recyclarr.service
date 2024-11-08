@@ -1,0 +1,20 @@
+# Be sure to use `systemctl edit recyclarr` to modify this service with an override.conf because
+# direct changes will be overwritten by package updates.
+
+[Unit]
+Description=Recyclarr Daemon
+Wants=network-online.target
+After=network-online.target
+ConditionPathExists=/etc/recyclarr/recyclarr.yml
+
+[Service]
+Type=oneshot
+User=recyclarr
+Group=recyclarr
+SyslogIdentifier=recyclarr
+ExecStart=/usr/lib/recyclarr/recyclarr sync --app-data /var/lib/recyclarr --config /etc/recyclarr/recyclarr.yml
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

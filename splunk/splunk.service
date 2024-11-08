@@ -1,0 +1,22 @@
+[Unit]
+Description=Splunk Enterprise
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+Restart=always
+ExecStart=/opt/splunk/bin/splunk _internal_launch_under_systemd --answer-yes --no-prompt --accept-license
+KillMode=mixed
+KillSignal=SIGINT
+TimeoutStopSec=360
+LimitNOFILE=65536
+LimitRTPRIO=99
+SuccessExitStatus=51 52
+RestartPreventExitStatus=51
+RestartForceExitStatus=52
+User=splunk
+Group=splunk
+
+[Install]
+WantedBy=multi-user.target

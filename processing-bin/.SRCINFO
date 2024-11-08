@@ -1,0 +1,15 @@
+pkgbase = processing-bin
+	pkgdesc = Programming environment for creating images, animations and interactions.
+	pkgver = 4.3
+	pkgrel = 6
+	url = https://processing.org/
+	arch = x86_64
+	license = GPL-2.0-only
+	depends = alsa-lib
+	provides = processing=4.3
+	conflicts = processing
+	options = !strip
+	source = processing-4.3.tgz::https://github.com/processing/processing4/releases/download/processing-1293-4.3/processing-4.3-linux-x64.tgz
+	sha256sums = 3f655b3076158148e7ca9ac94a380d35b925436a5829e9d653715a3146ef3e33
+
+pkgname = processing-bin

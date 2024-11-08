@@ -1,0 +1,16 @@
+pkgbase = rustpython-git
+	pkgdesc = A Python3 Interpreter written in Rust
+	pkgver = r11862.2a26ed009
+	pkgrel = 1
+	url = https://github.com/RustPython/RustPython
+	arch = x86_64
+	arch = i686
+	license = MIT
+	makedepends = rust
+	makedepends = python
+	options = !buildflags
+	options = !strip
+	source = git+https://github.com/RustPython/RustPython.git
+	md5sums = SKIP
+
+pkgname = rustpython-git

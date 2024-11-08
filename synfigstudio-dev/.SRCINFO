@@ -1,0 +1,29 @@
+pkgbase = synfigstudio-dev
+	pkgdesc = Professional vector animation program (GUI)
+	pkgver = 1.5.3
+	pkgrel = 1
+	url = https://synfig.org
+	arch = i686
+	arch = x86_64
+	arch = armv7
+	arch = aarch64
+	arch = riscv32
+	arch = riscv64
+	license = GPL3
+	makedepends = openexr
+	makedepends = imagemagick
+	makedepends = xorg-fonts-100dpi
+	makedepends = xorg-fonts-75dpi
+	makedepends = xorg-fonts-misc
+	makedepends = xorg-fonts-type1
+	makedepends = intltool
+	makedepends = etl-dev>=1.5.0
+	depends = gtkmm3
+	depends = synfig-dev>=1.5.0
+	depends = sdl_image
+	provides = synfigstudio-dev
+	conflicts = synfigstudio
+	source = https://github.com/synfig/synfig/archive/v1.5.3.tar.gz
+	sha512sums = 799d5c6de004acc553c0242598b23dcafc31f1c176e7b45d1f38cf79aa4d57de474e993805b240440b707ebf9aed53634e74798d35f962f7e13d5a7c5a41b86f
+
+pkgname = synfigstudio-dev

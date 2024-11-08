@@ -1,0 +1,12 @@
+post_install() {
+	echo
+	echo "==> xmage's files are located in /usr/share/xmage"
+	echo "==> For details, check /usr/share/xmage/README.txt"
+}
+
+post_upgrade() {
+	echo
+	echo "==> Release notes can be found at"
+	echo "==> https://github.com/magefree/mage/wiki/Release-changes"
+	echo
+}

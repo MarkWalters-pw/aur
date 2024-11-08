@@ -1,0 +1,19 @@
+pkgbase = bees-git
+	pkgdesc = Best-Effort Extent-Same, a btrfs deduplicator daemon
+	pkgver = 0.10.r3.g75131f3
+	pkgrel = 1
+	url = https://github.com/Zygo/bees
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = discount
+	makedepends = btrfs-progs
+	makedepends = systemd
+	depends = util-linux-libs
+	depends = bash
+	provides = bees
+	conflicts = bees
+	source = git+https://github.com/zygo/bees.git#branch=master
+	sha256sums = SKIP
+
+pkgname = bees-git

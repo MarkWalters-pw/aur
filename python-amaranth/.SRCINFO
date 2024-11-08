@@ -1,0 +1,33 @@
+pkgbase = python-amaranth
+	pkgdesc = A modern hardware definition language and toolchain based on Python (formerly nMigen)
+	pkgver = 0.5.0.r0.ga0750b8
+	pkgrel = 1
+	url = https://github.com/amaranth-lang/amaranth
+	arch = any
+	license = BSD
+	checkdepends = python-pytest
+	checkdepends = yosys>0.16
+	checkdepends = symbiyosys-git
+	checkdepends = yices
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = python-setuptools-scm
+	makedepends = python-jschon
+	makedepends = python-packaging
+	makedepends = python-pdm-backend
+	depends = python
+	depends = python-jinja
+	depends = python-pyvcd
+	optdepends = python-paramiko: for remote builds
+	provides = python-nmigen=0.5.0.r0.ga0750b8
+	provides = python-amaranth=0.5.0.r0.ga0750b8
+	conflicts = python-nmigen
+	conflicts = python-nmigen-git
+	conflicts = python-amaranth-git
+	replaces = python-nmigen
+	source = git+https://github.com/amaranth-lang/amaranth.git
+	sha256sums = SKIP
+
+pkgname = python-amaranth

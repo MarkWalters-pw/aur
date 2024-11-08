@@ -1,0 +1,49 @@
+# Maintainer: aksr <aksr at t-com dot me>
+# Contributor: karu1 <.1me.io7@gmail.com>
+
+pkgname=rar2fs-git
+_pkgname=rar2fs
+pkgver=1.29.7.r1.gba480df
+_unrarver=7.0.9
+pkgrel=1
+pkgdesc="Fuse file system for reading Rar archives"
+arch=("i686" "x86_64")
+license=("GPL-3.0-only")
+url="https://github.com/hasse69/rar2fs"
+url="https://hasse69.github.io/rar2fs/"
+depends=(fuse2 glibc gcc-libs)
+makedepends=(git autoconf automake)
+source=("http://www.rarlab.com/rar/unrarsrc-${_unrarver}.tar.gz"
+	git+https://github.com/hasse69/rar2fs.git)
+md5sums=('a18509f604f31cf7a73473ee97d08ce5'
+         'SKIP')
+sha1sums=('3aadbeaaf6cedc7b914e4c8673fa1a646417a070'
+          'SKIP')
+sha256sums=('505c13f9e4c54c01546f2e29b2fcc2d7fabc856a060b81e5cdfe6012a9198326'
+            'SKIP')
+sha512sums=('4dff760bd69275dcd9bacac7a8fa9a6e68e2d047ea3775abc16a80d9a6e277b686153faafb1b711582d86eabfdf3254c601d9f585b28104dbd85ece4868876ed'
+            'SKIP')
+provides=("$_pkgname")
+conflicts=("$_pkgname")
+
+build() {
+  cd "$srcdir/unrar"
+  make lib
+  echo "Starting Build $pkgname source"
+  cd "$srcdir/$_pkgname"
+  autoreconf -vfi
+  ./configure --prefix=/usr --sbindir=/usr/bin --with-unrar=../unrar
+  make
+}
+
+pkgver() {
+  cd ${_pkgname}
+  git describe --long --tags | sed 's/v//; s/\([^-]*-g\)/r\1/;s/-/./g'
+}
+
+
+package() {
+  cd "$srcdir/$_pkgname"
+  make install DESTDIR="$pkgdir"
+  install -Dm644 AUTHORS ChangeLog COPYING NEWS rarconfig.example README -t "${pkgdir}/usr/share/doc/${_pkgname}"
+}

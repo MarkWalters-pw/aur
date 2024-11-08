@@ -1,0 +1,25 @@
+pkgbase = pfetch-rs
+	pkgdesc = A rewrite of the pfetch system information tool in Rust
+	pkgver = 2.11.0
+	pkgrel = 1
+	url = https://github.com/Gobidev/pfetch-rs
+	arch = i686
+	arch = pentium4
+	arch = x86_64
+	arch = arm
+	arch = armv7h
+	arch = armv6h
+	arch = aarch64
+	license = MIT
+	makedepends = cargo
+	depends = gcc-libs
+	depends = glibc
+	depends = sqlite
+	provides = pfetch
+	conflicts = pfetch-rs-bin
+	conflicts = pfetch
+	conflicts = pfetch-git
+	source = pfetch-2.11.0.tar.gz::https://static.crates.io/crates/pfetch/pfetch-2.11.0.crate
+	b2sums = 0188d7d379b6b657514129562274e7a37c26f25fd6a1a0394ef086516d88e5b0e7ceedabbd0f4d453817e923d286d5cf06834072321c58e9f087582d691039c9
+
+pkgname = pfetch-rs

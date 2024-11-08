@@ -1,0 +1,22 @@
+pkgbase = sticky-git
+	pkgdesc = A sticky notes app for the Linux desktop
+	pkgver = 1.21.r0.gf713dc5
+	pkgrel = 1
+	url = https://github.com/collinss/sticky
+	arch = any
+	license = GPL-2.0-or-later
+	makedepends = git
+	makedepends = meson
+	makedepends = ninja
+	depends = gspell
+	depends = gtk3
+	depends = python
+	depends = python-gobject
+	depends = python-xapp
+	depends = xapp
+	provides = sticky=1.21
+	conflicts = sticky
+	source = git+https://github.com/collinss/sticky.git
+	sha256sums = SKIP
+
+pkgname = sticky-git

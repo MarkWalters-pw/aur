@@ -1,0 +1,20 @@
+pkgbase = slint-cpp
+	pkgdesc = Declarative GUI toolkit to build native user interfaces for Rust, C++, or JavaScript apps
+	pkgver = 1.8.0
+	pkgrel = 1
+	url = https://github.com/slint-ui/slint/
+	arch = i686
+	arch = x86_64
+	license = GPL-3.0-or-later
+	makedepends = cmake>=3.21
+	makedepends = rust>=1.70
+	depends = freetype2
+	depends = libglvnd
+	depends = libx11
+	depends = mesa
+	depends = wayland
+	options = strip
+	source = https://github.com/slint-ui/slint/archive/refs/tags/v1.8.0.tar.gz
+	sha256sums = bbc532d097be73daa4bccaffb10992315cf406336b90be4ce0604a4c798ed3b1
+
+pkgname = slint-cpp

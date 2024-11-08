@@ -1,0 +1,49 @@
+diff --git a/src/Makefile.in b/src/Makefile.in
+index c120325b..8c8fc2cd 100644
+--- a/src/Makefile.in
++++ b/src/Makefile.in
+@@ -111,12 +111,12 @@ install:: release
+ 	echo "LANG:fr,French" >> $(DESTDIR)$(INSTALL_PREFIX)/DECtalk.conf
+ 
+ 	-mkdir -p $(DESTDIR)/usr/bin/
+-	-ln -sf $(DESTDIR)$(INSTALL_PREFIX)/gspeak $(DESTDIR)/usr/bin/gspeak
+-	-ln -sf $(DESTDIR)$(INSTALL_PREFIX)/say $(DESTDIR)/usr/bin/say
+-	-ln -sf $(DESTDIR)$(INSTALL_PREFIX)/windic $(DESTDIR)/usr/bin/windic
+-	-ln -sf $(DESTDIR)$(INSTALL_PREFIX)/dtmemory $(DESTDIR)/usr/bin/dtmemory
+-	-ln -sf $(DESTDIR)$(INSTALL_PREFIX)/aclock $(DESTDIR)/usr/bin/aclock
+-	-ln -sf $(DESTDIR)$(INSTALL_PREFIX)/tools/* $(DESTDIR)/usr/bin/
++	-ln -sf $(INSTALL_PREFIX)/gspeak $(DESTDIR)/usr/bin/gspeak
++	-ln -sf $(INSTALL_PREFIX)/say $(DESTDIR)/usr/bin/say
++	-ln -sf $(INSTALL_PREFIX)/windic $(DESTDIR)/usr/bin/windic
++	-ln -sf $(INSTALL_PREFIX)/dtmemory $(DESTDIR)/usr/bin/dtmemory
++	-ln -sf $(INSTALL_PREFIX)/aclock $(DESTDIR)/usr/bin/aclock
++	-ln -sf $(INSTALL_PREFIX)/tools/* $(DESTDIR)/usr/bin/
+ 
+ english_release:
+ 	$(MAKE) -f Makefile.sub "LANGUAGE=ENGLISH -DENGLISH_US -DACNA" \
+diff --git a/src/configure.ac b/src/configure.ac
+index 8890bba5..c1be4f3e 100644
+--- a/src/configure.ac
++++ b/src/configure.ac
+@@ -184,7 +184,7 @@ AC_SUBST(ALIGN_OPT)dnl
+ 
+ WARN_FLAGS=" -threads -w1"
+ case "$target" in
+-	*-*-linux-*) WARN_FLAGS=" -Wall -Wno-missing-braces -Wno-pointer-sign -Wno-unused-variable -Wno-unused-but-set-variable -Wno-unused-function" ;;
++	*-*-linux-*) WARN_FLAGS=" -Wall -Wno-missing-braces -Wno-pointer-sign -Wno-unused-variable -Wno-unused-but-set-variable -Wno-unused-function -Wno-incompatible-pointer-types -Wno-implicit-function-declaration" ;;
+ 	*-apple-darwin*) WARN_FLAGS=" -Wall -Wno-missing-braces -Wno-pointer-sign -Wno-unused-variable -Wno-unused-but-set-variable -Wno-unused-function" ;;
+ 	powerpc-apple-*) WARN_FLAGS=" -Wall" ;;
+ 	sparc-sun-*) WARN_FLAGS=" " ;;
+diff --git a/src/dtalkml/src/Makefile.in b/src/dtalkml/src/Makefile.in
+index 0808bdf2..02f4ff23 100644
+--- a/src/dtalkml/src/Makefile.in
++++ b/src/dtalkml/src/Makefile.in
+@@ -54,7 +54,7 @@ INCLUDES= -I$(INCLUDE_DIR) -I$(API_DIR) -I$(CMD_DIR) -I$(LTS_DIR) \
+ 	     -I$(OSF_DIR) -I$(PH_DIR) -I$(DECTALKF_H)\
+              -I$(PROTOS_DIR) -I$(NT_DIR) -I$(STD_INCLUDE) 
+ 
+-CFLAGS= -MMD $(DEBUG_FLAGS) $(OPTO_FLAGS) $(INCLUDES) $(DEFINES)
++CFLAGS= -MMD $(DEBUG_FLAGS) $(OPTO_FLAGS) $(WARN_FLAGS) $(INCLUDES) $(DEFINES)
+ 
+ DTALK_ML_SRC=dtalk_ml.c init.c
+ 

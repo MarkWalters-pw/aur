@@ -1,0 +1,52 @@
+pkgbase = scanpy
+	pkgdesc = Single-Cell Analysis in Python
+	pkgver = 1.10.3
+	pkgrel = 1
+	url = https://github.com/theislab/scanpy
+	arch = any
+	license = BSD
+	makedepends = python-hatch
+	makedepends = python-hatch-vcs
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = python-anndata>=0.8
+	depends = python-numpy>=1.23
+	depends = python-matplotlib>=3.6
+	depends = python-pandas>=1.5
+	depends = python-scipy>=1.8
+	depends = python-seaborn>=0.13
+	depends = python-h5py>=3.1
+	depends = python-tqdm
+	depends = python-scikit-learn>=0.24
+	depends = python-statsmodels>=0.13
+	depends = python-patsy
+	depends = python-networkx>=2.7
+	depends = python-natsort
+	depends = python-joblib
+	depends = python-numba>=0.56
+	depends = python-umap-learn>=0.5.1
+	depends = python-pynndescent>=0.5.13
+	depends = python-packaging>=21.3
+	depends = python-session-info
+	depends = python-legacy-api-wrap>=1.4
+	optdepends = python-igraph: PAGA support (also transitively needed for Louvain/Leiden)
+	optdepends = python-louvain-igraph: Louvain clustering
+	optdepends = python-leidenalg: leiden community detection
+	optdepends = python-bbknn: Batch balanced KNN (batch correction)
+	optdepends = python-rapids: GPU-driven calculation of neighbors
+	optdepends = python-magic-impute: MAGIC imputation method
+	optdepends = python-skmisc: For seurat_v3 highly_variable_genes method
+	optdepends = python-harmonypy: Harmony dataset integration algorithm
+	optdepends = python-scanorama: Scanorama dataset integration algorithm
+	optdepends = python-scikit-image: Cell doublet detection with scrublet
+	optdepends = rapids-cudf: NVIDIA RAPIDS acceleration
+	optdepends = rapids-cuml: NVIDIA RAPIDS acceleration
+	optdepends = rapids-cugraph: NVIDIA RAPIDS acceleration
+	optdepends = python-dask: Dask parallelization
+	provides = scanpy
+	provides = python-scanpy
+	source = https://files.pythonhosted.org/packages/source/s/scanpy/scanpy-1.10.3.tar.gz
+	sha256sums = 0a644d8fa173ac1c62aed4255de7031bf7501c7ad4441cf6ce99cd638b32f880
+
+pkgname = scanpy

@@ -1,0 +1,19 @@
+pkgbase = castsponsorskip-bin
+	pkgdesc = Skip YouTube ads and sponsorships on all local Google Cast devices
+	pkgver = 0.8.0
+	pkgrel = 1
+	url = https://github.com/gabe565/CastSponsorSkip
+	license = GPL-3.0
+	conflicts = castsponsorskip
+	provides = castsponsorskip
+	arch = aarch64
+	source_aarch64 = https://github.com/gabe565/CastSponsorSkip/releases/download/v0.8.0/castsponsorskip_0.8.0_linux_arm64.tar.gz
+	sha256sums_aarch64 = c8a53a46b8e0dee680e18c3a5d9a03a950ddcd3304e4e93e2181d837ba8e2af7
+	arch = armv7h
+	source_armv7h = https://github.com/gabe565/CastSponsorSkip/releases/download/v0.8.0/castsponsorskip_0.8.0_linux_armv7.tar.gz
+	sha256sums_armv7h = e2aa4f95b35eea0fb51afd9bdbd41be7e3d2e377805e3853f339069f5c8d49e0
+	arch = x86_64
+	source_x86_64 = https://github.com/gabe565/CastSponsorSkip/releases/download/v0.8.0/castsponsorskip_0.8.0_linux_amd64.tar.gz
+	sha256sums_x86_64 = a4398c7cdafbdd98ec83c213f3ac1205d014090ec6f3f90823276415f7fd0f49
+	
+pkgname = castsponsorskip-bin

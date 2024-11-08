@@ -1,0 +1,13 @@
+MATH = /usr/include/stan/
+BOOST = /usr/include
+EIGEN = /usr/include/eigen3
+OPENCL = /usr/include/CL
+SUNDIALS = /usr/include/sundials
+RAPIDJSON = /usr/include/rapidjson/
+CLI11 = /usr/include/
+SUNDIALS_TARGETS =
+TBB_INC = /usr/include
+TBB_LIB = /usr/lib
+CXXFLAGS+=-std=c++17 -fPIC -pthread -D_REENTRANT   -DTBB_INTERFACE_NEW -DBOOST_DISABLE_ASSERTS
+CXXFLAGS+=-I /usr/include -I$(RAPIDJSON) -I $(EIGEN) -I $(SUNDIALS)/include -I $(SUNDIALS)/src/sundials -I$(MATH)
+CXXFLAGS+=-I src -I stan/src

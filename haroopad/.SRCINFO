@@ -1,0 +1,27 @@
+pkgbase = haroopad
+	pkgdesc = A markdown enabled document processor
+	pkgver = 0.13.2
+	pkgrel = 1
+	url = http://pad.haroopress.com/
+	install = haroopad.install
+	changelog = changelog
+	arch = i686
+	arch = x86_64
+	license = custom
+	depends = xdg-utils
+	depends = desktop-file-utils
+	depends = gconf
+	depends = python
+	depends = alsa-lib
+	depends = gtk2
+	depends = libnotify
+	depends = nss
+	options = !strip
+	source = x-markdown.xml
+	sha256sums = 8261b526007db35c8691b3b6bf79cf40639a5e53fa81f1dd1fa4ea1cf5c440dd
+	source_i686 = https://bitbucket.org/rhiokim/haroopad-download/downloads/haroopad-v0.13.2-ia32.deb
+	sha256sums_i686 = c592389ba183af5dedf542adfce074707077d6d581137579f05eb2f996143233
+	source_x86_64 = https://bitbucket.org/rhiokim/haroopad-download/downloads/haroopad-v0.13.2-x64.deb
+	sha256sums_x86_64 = 46eddf00972e5b27fbe2da835ab0ae2c2f30e7daf2d1c615905bf603e445d1b4
+
+pkgname = haroopad

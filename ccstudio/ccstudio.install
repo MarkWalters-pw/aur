@@ -1,0 +1,49 @@
+_dir=/opt/ccstudio/ccs
+_grp=ccstudio
+
+post_install() {
+    # Since CCS manages its own updates, and treats it's install directory
+    # as its working directory, we can't leave it owned by root
+    #
+    # This is still hacky, since files that CCS creates will be
+    # created under user's group, not ccstudio group, and running
+    # CCS via newgrp is not a solution, since it would affect project
+    # files (which we do want created under user's group).
+
+    getent group ${_grp} &>/dev/null || {
+        echo ">>> Creating group ${_grp}"
+        groupadd $_grp
+    }
+
+    chgrp -R $_grp $_dir
+
+    echo ">>> On first launch, run ccstudio as root in order for CCS to register "
+    echo ">>> software bundles installed into the filesystem by related packages: "
+    echo ">>> 	 sudo ccstudio"
+    echo ">>>"
+    echo ">>> Then, remove the left-over garbage files that are owned by root and "
+    echo ">>> cause an error when ccstudio is started by by regular user:"
+    echo ">>>    sudo rm -r /tmp/browsercore-*"
+    echo ">>>"
+    echo ">>> Run this command as each user who will run CCS, to add to '${_grp}' group:"
+    echo ">>>    sudo usermod -a -G ${_grp} \$(whoami)"
+    echo ">>>"
+    echo ">>> When multiple users run CCS, beware that on each run CCS creates "
+    echo ">>> /tmp/browsercore-* directory permissioned to one user, and fails to "
+    echo ">>> read it when run under a different user, so delete the dir as a "
+    echo ">> workaround."
+}
+
+post_upgrade() {
+    chgrp -R $_grp $_dir
+}
+
+post_remove() {
+    # Since CCS treats its install direcotry as working directory, trash is left.
+    # NOTE: other directories (${_dir}/tools) might have also been created, but
+    # some are owned by other packages (e.g. compiler), so be conservative.
+    rm -rf ${_dir}/eclipse
+
+    # NOTE: we do not remove the group, to not orphan files
+    # in case some files don't get removed.
+}

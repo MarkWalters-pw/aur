@@ -1,0 +1,28 @@
+From e14d300bbe51344e8a13a1544c01e0b2d1feafdd Mon Sep 17 00:00:00 2001
+From: Martchus <martchus@gmx.net>
+Date: Sun, 18 Sep 2016 18:58:25 +0200
+Subject: [PATCH 14/32] Fix linking against shared/static PostgreSQL
+
+---
+ src/plugins/sqldrivers/configure.json | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/plugins/sqldrivers/configure.json b/src/plugins/sqldrivers/configure.json
+index cfff531cf93..74e9de3b38a 100644
+--- a/src/plugins/sqldrivers/configure.json
++++ b/src/plugins/sqldrivers/configure.json
+@@ -90,9 +90,9 @@
+             },
+             "headers": "libpq-fe.h",
+             "sources": [
+-                { "type": "pkgConfig", "args": "libpq" },
+                 { "type": "psqlConfig" },
+-                { "type": "psqlEnv", "libs": "-llibpq -lws2_32 -ladvapi32", "condition": "config.win32" },
++                { "type": "psqlEnv", "libs": "-lpq -lpgcommon -lpgport -lintl -lssl -lcrypto -lcrypt32 -lshell32 -lws2_32 -lsecur32 -liconv", "condition": "config.win32 && !features.shared" },
++                { "type": "psqlEnv", "libs": "-lpq", "condition": "config.win32 && features.shared" },
+                 { "type": "psqlEnv", "libs": "-lpq", "condition": "!config.win32" }
+             ]
+         },
+-- 
+2.46.0
+

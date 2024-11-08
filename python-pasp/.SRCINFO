@@ -1,0 +1,27 @@
+pkgbase = python-pasp
+	pkgdesc = Probabilistic answer set programming
+	pkgver = 0.0.5.post1
+	pkgrel = 1
+	url = https://github.com/kamel-usp/dpasp
+	arch = any
+	license = MIT
+	makedepends = python-setuptools
+	makedepends = gcc
+	makedepends = python-numpy
+	makedepends = ncurses
+	depends = python
+	depends = clingo
+	depends = python-lark-parser
+	depends = python-numpy
+	depends = python-numpy
+	depends = ncurses
+	optdepends = python-pytorch
+	optdepends = python-pytorch-cuda
+	optdepends = python-pytorch-opt
+	optdepends = python-pytorch-opt-cuda
+	provides = python-pasp
+	conflicts = python-pasp
+	source = https://files.pythonhosted.org/packages/source/p/pasp_plp/pasp_plp-0.0.5.post1.tar.gz
+	sha256sums = d4e5e690a9549942e1e0a30fb52b424c859f229bd91fa0cbfec25023dce2fea9
+
+pkgname = python-pasp

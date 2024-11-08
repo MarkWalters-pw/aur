@@ -1,0 +1,19 @@
+pkgbase = topgrade-bin
+	pkgdesc = Invoke the upgrade procedure of multiple package managers
+	pkgver = 16.0.1
+	pkgrel = 1
+	url = https://github.com/topgrade-rs/topgrade
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	license = GPL3
+	provides = topgrade
+	conflicts = topgrade
+	source_x86_64 = topgrade_x86_64-16.0.1.tar.gz::https://github.com/topgrade-rs/topgrade/releases/download/v16.0.1/topgrade-v16.0.1-x86_64-unknown-linux-musl.tar.gz
+	b2sums_x86_64 = 5d9f1dfbd17d8f13a78d74b8283d5dca079be4a9a083176758eb3cb5b601be8501c9260fea653394ab80c704572aaf0c0e965078609e68c945a22933ef81346f
+	source_aarch64 = topgrade_aarch64-16.0.1.tar.gz::https://github.com/topgrade-rs/topgrade/releases/download/v16.0.1/topgrade-v16.0.1-aarch64-unknown-linux-musl.tar.gz
+	b2sums_aarch64 = 6830fb21206b2507fb16f58bcf995f2f14a19b9805c744e08fe10cb70567ac5dc85816f9d891d09b7f5c531f63e0b859e503a55d68eec4e44eec066c9100f9d1
+	source_armv7h = topgrade_armv7h-16.0.1.tar.gz::https://github.com/topgrade-rs/topgrade/releases/download/v16.0.1/topgrade-v16.0.1-armv7-unknown-linux-gnueabihf.tar.gz
+	b2sums_armv7h = 261a599503dfd66a411dfa7c2e3c62e8b59a732b13b4029e3a1eb453ca101ee83c7310e2f1c46e849668c0829a79dbcb665d5f60f33e9b462350e94f56843f73
+
+pkgname = topgrade-bin

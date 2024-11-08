@@ -1,0 +1,19 @@
+pkgbase = uksmdstats-git
+	pkgdesc = Statistics output for uksmd, a userspace KSM helper daemon. Latest git checkout.
+	pkgver = 1.2.11.r114.20240625.7d10cac
+	pkgrel = 1
+	epoch = 0
+	url = https://github.com/CachyOS/uksmd
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = bash
+	depends = gettext
+	optdepends = uksmd: To utilise the kernel side UKSMD feature.
+	optdepends = UKSMD-BUILTIN: Necessary kernel support.
+	provides = uksmdstats=1.2.11.r114.20240625.7d10cac
+	conflicts = uksmdstats
+	source = uksmdstats-CachyOS::git+https://github.com/CachyOS/uksmd.git
+	sha256sums = SKIP
+
+pkgname = uksmdstats-git

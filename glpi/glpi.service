@@ -1,0 +1,14 @@
+[Unit]
+Description=GLPI
+
+[Service]
+User=glpi
+WorkingDirectory=/usr/share/webapps/glpi
+ExecStart=/usr/bin/php -S localhost:8080
+PrivateTmp=yes
+ProtectHome=yes
+ProtectSystem=yes
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

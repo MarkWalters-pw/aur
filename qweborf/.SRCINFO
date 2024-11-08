@@ -1,0 +1,17 @@
+pkgbase = qweborf
+	pkgdesc = Share files using the HTTP protocol. Allows using webdac. Provides Qt frontend.
+	pkgver = 1.2
+	pkgrel = 1
+	url = https://codeberg.org/ltworf/weborf
+	arch = any
+	license = GPL3
+	makedepends = python-pyqt5
+	makedepends = python-setuptools
+	depends = python
+	depends = weborf
+	depends = desktop-file-utils
+	conflicts = qweborf-git
+	source = https://codeberg.org/ltworf/weborf/releases/download/1.2/weborf_1.2.orig.tar.gz
+	sha256sums = eff00f5e0846f13a540a014b6e97ed4e6abcfd4e255a3f3dc7151832c7c50902
+
+pkgname = qweborf

@@ -1,0 +1,21 @@
+pkgbase = mojo-git
+	pkgdesc = Mojo Programming Language - Repository: https://github.com/Sharktheone/arch-mojo
+	pkgver = 24.4
+	pkgrel = 2
+	url = https://developer.modular.com/download
+	install = mojo-git.install
+	arch = x86_64
+	license = custom:modular
+	depends = modular
+	depends = mojo-libs
+	depends = python
+	depends = libbsd
+	depends = libmd
+	depends = icu
+	depends = xz
+	depends = glibc
+	depends = gcc-libs
+	depends = ncurses
+	depends = zlib
+
+pkgname = mojo-git

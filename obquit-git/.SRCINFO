@@ -1,0 +1,20 @@
+pkgbase = obquit-git
+	pkgdesc = Shutdown/reboot/logout utility script
+	pkgver = r59.f84aa4e
+	pkgrel = 1
+	url = https://github.com/dglava/obquit
+	arch = any
+	license = GPL-3.0-or-later
+	makedepends = git
+	makedepends = python-setuptools
+	makedepends = python-installer
+	makedepends = python-build
+	makedepends = python-wheel
+	depends = python
+	depends = python-gobject
+	depends = python-cairo
+	depends = gtk3
+	source = git+https://github.com/dglava/obquit.git
+	md5sums = SKIP
+
+pkgname = obquit-git

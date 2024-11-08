@@ -1,0 +1,11 @@
+# # Udev rules for setting PCI configurations
+ACTION=="add", SUBSYSTEM=="pci", ATTR{vendor}=="0x1022", ATTR{device}=="0x14ee", RUN+="/usr/bin/setpci -s 00:02.2 68.b=3:3"
+ACTION=="add", SUBSYSTEM=="pci", ATTR{vendor}=="0x1022", ATTR{device}=="0x14ef", RUN+="/usr/bin/setpci -s 00:03.1 68.b=3:3"
+ACTION=="add", SUBSYSTEM=="pci", ATTR{vendor}=="0x1022", ATTR{device}=="0x14ef", RUN+="/usr/bin/setpci -s 00:04.1 68.b=3:3"
+ACTION=="add", SUBSYSTEM=="pci", ATTR{vendor}=="0x1022", ATTR{device}=="0x14ee", RUN+="/usr/bin/setpci -s 00:02.3 68.b=3:3"
+ACTION=="add", SUBSYSTEM=="pci", ATTR{vendor}=="0x1022", ATTR{device}=="0x14eb", RUN+="/usr/bin/setpci -s 00:08.1 68.b=3:3"
+ACTION=="add", SUBSYSTEM=="pci", ATTR{vendor}=="0x1022", ATTR{device}=="0x14eb", RUN+="/usr/bin/setpci -s 00:08.2 68.b=3:3"
+ACTION=="add", SUBSYSTEM=="pci", ATTR{vendor}=="0x1002", ATTR{device}=="0x1640", RUN+="/usr/bin/setpci -s c4:00.1 74.b=3:3"
+ACTION=="add", SUBSYSTEM=="pci", ATTR{vendor}=="0x1022", ATTR{device}=="0x14eb", RUN+="/usr/bin/setpci -s 00:08.2 68.b=3:3"
+ACTION=="add", SUBSYSTEM=="pci", ATTR{vendor}=="0x1022", ATTR{device}=="0x14ec", RUN+="/usr/bin/setpci -s c5:00.0 74.b=3:3"
+ACTION=="add", SUBSYSTEM=="pci", ATTR{vendor}=="0x1022", ATTR{device}=="0x1502", RUN+="/usr/bin/setpci -s c5:00.1 74.b=3:3"

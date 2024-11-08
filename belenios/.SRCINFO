@@ -1,0 +1,31 @@
+pkgbase = belenios
+	pkgdesc = State-of-the-art secure, private and verifiable voting system
+	pkgver = 2.5.1
+	pkgrel = 1
+	url = https://gitlab.inria.fr/belenios/belenios.git
+	arch = x86_64
+	license = GPL
+	makedepends = dune
+	makedepends = git
+	makedepends = gmp
+	makedepends = libsodium
+	makedepends = pkg-config
+	makedepends = m4
+	makedepends = sqlite3
+	makedepends = openssl
+	makedepends = curl
+	makedepends = zip
+	makedepends = unzip
+	makedepends = ncurses
+	makedepends = gd
+	makedepends = cracklib
+	makedepends = jq
+	makedepends = sed
+	depends = ocaml
+	depends = opam
+	depends = npm
+	depends = nodejs
+	source = belenios-2.5.1::git+https://gitlab.inria.fr/belenios/belenios.git#tag=55f9dc8ea92a8ff60e4e93d3473bfd496e179616
+	sha256sums = SKIP
+
+pkgname = belenios

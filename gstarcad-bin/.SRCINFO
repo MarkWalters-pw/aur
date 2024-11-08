@@ -1,0 +1,25 @@
+pkgbase = gstarcad-bin
+	pkgdesc = 浩辰 CAD.Free trial for 30 days
+	pkgver = 24.1
+	pkgrel = 5
+	url = https://www.gstarcad.com/cad_linux
+	arch = aarch64
+	arch = x86_64
+	license = LicenseRef-custom
+	depends = qt5-base
+	depends = qt5-svg
+	depends = curl
+	depends = sqlite
+	depends = openssl-1.1
+	depends = libpng12
+	provides = gstarcad=24.1
+	conflicts = gstarcad
+	options = !strip
+	source = gstarcad.sh
+	sha256sums = 98059fc1a3005687212f6aea6116ff74aa5413c5d0507cbd3b98c743cdd1ffbe
+	source_aarch64 = gstarcad-24.1-aarch64.deb::https://official-cn.gstarcad.cn/linux/2024/sp1/deb/gstarcad_24.1_arm64.deb
+	sha256sums_aarch64 = bee290f7578d2c7ede25551b8ebf978834812d27fb1868dd8f800ae0f85656dc
+	source_x86_64 = gstarcad-24.1-x86_64.deb::https://official-cn.gstarcad.cn/linux/2024/sp1/deb/gstarcad_24.1_amd64.deb
+	sha256sums_x86_64 = cac879546a1ad8aabad0246d95ea25f77b628a0879392f570269f50882a8e8b5
+
+pkgname = gstarcad-bin

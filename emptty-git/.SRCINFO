@@ -1,0 +1,22 @@
+pkgbase = emptty-git
+	pkgdesc = Dead simple CLI Display Manager on TTY
+	pkgver = 0.12.1.r13.2abb75b
+	pkgrel = 1
+	url = https://github.com/tvrzna/emptty
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = go
+	depends = pam
+	depends = libx11
+	optdepends = xorg-server: default display server
+	optdepends = xorg-xauth: required if using xorg-server
+	optdepends = util-linux: mcookie required if using xorg-server
+	optdepends = wayland: alternative to xorg-server
+	provides = emptty
+	conflicts = emptty
+	backup = etc/emptty/conf
+	source = emptty::git+https://github.com/tvrzna/emptty.git
+	sha256sums = SKIP
+
+pkgname = emptty-git

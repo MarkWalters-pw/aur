@@ -1,0 +1,34 @@
+pkgbase = radiotray-ng-git
+	pkgdesc = An Internet radio player for Linux
+	pkgver = 0.2.9dev+18+ad24857
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/ebruck/radiotray-ng
+	arch = i686
+	arch = x86_64
+	arch = armv6h
+	arch = armv7h
+	arch = aarch64
+	license = GPL
+	makedepends = cmake
+	makedepends = boost
+	makedepends = lsb-release
+	makedepends = git
+	depends = boost-libs
+	depends = curl
+	depends = gst-plugins-good
+	depends = jsoncpp
+	depends = libappindicator-gtk3
+	depends = libbsd
+	depends = libnotify
+	depends = libxdg-basedir
+	depends = glibmm
+	depends = wxwidgets-gtk3
+	optdepends = python-lxml: Convert radiotray bookmarks to radiotray-ng format
+	provides = radiotray-ng=0.2.9dev+18+ad24857
+	conflicts = radiotray-ng
+	options = !libtool
+	source = radiotray-ng::git+https://github.com/ebruck/radiotray-ng#branch=v0.2.9-dev
+	sha256sums = SKIP
+
+pkgname = radiotray-ng-git

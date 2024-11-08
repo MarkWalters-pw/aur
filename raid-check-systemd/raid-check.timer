@@ -1,0 +1,9 @@
+[Unit]
+Description=Run periodic raid volume scrub
+
+[Timer]
+OnCalendar=Thu *-*-8,9,10,11,12,13,14 10:30:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target

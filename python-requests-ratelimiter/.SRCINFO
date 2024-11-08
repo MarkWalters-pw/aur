@@ -1,0 +1,16 @@
+pkgbase = python-requests-ratelimiter
+	pkgdesc = Rate-limiting for the requests library
+	pkgver = 0.7.0
+	pkgrel = 1
+	url = https://github.com/JWCook/requests-ratelimiter
+	arch = any
+	license = MIT
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-poetry-core
+	depends = python-requests
+	depends = python-pyrate-limiter
+	source = requests-ratelimiter-0.7.0.tar.gz::https://github.com/JWCook/requests-ratelimiter/archive/v0.7.0.tar.gz
+	sha512sums = 6d8b0a01cb62dc1458e3da6aabffa7eec9179021dcff2c307cf7e633fb189dbc30a9cfa7205fe22c426409d689bcc13f2b08769dcb98feaa8a0a098bc7b037dc
+
+pkgname = python-requests-ratelimiter

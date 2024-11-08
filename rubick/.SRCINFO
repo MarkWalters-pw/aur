@@ -1,0 +1,25 @@
+pkgbase = rubick
+	pkgdesc = 🔧Electron based open source toolbox, free integration of rich plug-ins.Use system-wide electron.基于 electron 的开源工具箱，自由集成丰富插件。
+	pkgver = 4.2.9
+	pkgrel = 2
+	url = https://rubick.vip/
+	arch = x86_64
+	license = MIT
+	makedepends = yarn
+	makedepends = nvm
+	makedepends = npm
+	makedepends = gendesk
+	makedepends = libxtst
+	makedepends = libicns
+	makedepends = graphicsmagick
+	makedepends = xz
+	makedepends = curl
+	makedepends = gcc
+	depends = electron26
+	conflicts = rubick
+	source = rubick-4.2.9.tar.gz::https://github.com/rubickCenter/rubick/archive/refs/tags/v4.2.9.tar.gz
+	source = rubick.sh
+	sha256sums = fb721dbddce585b98771b811ec480fa3222eb8ffcaf9a90c8c5418182ef88c8f
+	sha256sums = 291f50480f5a61bc9c68db7d44cd0412071128706baa868a9cb854f8779a1980
+
+pkgname = rubick

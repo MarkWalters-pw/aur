@@ -1,0 +1,26 @@
+pkgbase = scrotty
+	pkgdesc = Screenshot program for the framebuffer
+	pkgver = 2.0
+	pkgrel = 1
+	url = https://github.com/maandree/scrotty
+	install = scrotty.install
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	license = custom:GFDL1.3
+	makedepends = glibc
+	makedepends = libpng
+	makedepends = make
+	makedepends = coreutils
+	makedepends = pkg-config
+	makedepends = gcc
+	makedepends = gettext
+	makedepends = texinfo>=4.11
+	makedepends = auto-auto-complete
+	depends = linux
+	depends = glibc
+	depends = libpng
+	source = https://github.com/maandree/scrotty/archive/2.0.tar.gz
+	sha256sums = 466528d6ecf0138f57c40541258389686e22771c28d40f28c00825faaeaab1a3
+
+pkgname = scrotty

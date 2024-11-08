@@ -1,0 +1,18 @@
+pkgbase = android-x86-libdeflate
+	pkgdesc = Heavily optimized library for DEFLATE/zlib/gzip compression and decompression (Android x86)
+	pkgver = 1.21
+	pkgrel = 1
+	url = https://github.com/ebiggers/libdeflate
+	arch = any
+	groups = android-libdeflate
+	license = MIT
+	makedepends = android-cmake
+	depends = android-ndk
+	options = !strip
+	options = !buildflags
+	options = staticlibs
+	options = !emptydirs
+	source = https://github.com/ebiggers/libdeflate/archive/refs/tags/v1.21.tar.gz
+	md5sums = 2eb438e8c465c6fbde9bc20f4813ee60
+
+pkgname = android-x86-libdeflate

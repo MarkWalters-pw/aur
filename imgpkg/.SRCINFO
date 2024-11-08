@@ -1,0 +1,14 @@
+pkgbase = imgpkg
+	pkgdesc = Store application configuration files in Docker/OCI registries
+	pkgver = 0.43.1
+	pkgrel = 1
+	url = https://carvel.dev/imgpkg
+	arch = any
+	license = apache-2.0
+	makedepends = bash
+	makedepends = go
+	provides = imgpkg
+	source = imgpkg-0.43.1::https://github.com/carvel-dev/imgpkg/archive/v0.43.1.tar.gz
+	sha256sums = 0b137a2efba7a8fd453cfd3dabe2c15861c62bbd5439143191a0202ec5af1bb3
+
+pkgname = imgpkg

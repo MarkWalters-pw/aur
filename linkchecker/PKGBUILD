@@ -1,0 +1,28 @@
+# Maintainer: Marco Rubin <marco.rubin@protonmail.com>
+# Contributor: Brett Cornwall <ainola@archlinux.org>
+# Contributor: Sergey Mastykov
+
+_name=LinkChecker
+pkgname=linkchecker
+pkgver=10.5.0
+pkgrel=1
+pkgdesc="check links in web documents or full websites"
+arch=('any')
+url="https://github.com/linkcheck/linkchecker"
+license=('GPL2')
+depends=('python>=3.9' 'python-beautifulsoup4>=4.8.1' 'python-dnspython>=2.0' 'python-requests>=2.20')
+makedepends=('python-hatch-vcs' 'python-hatchling>=1.8.0' 'python-installer' 'python-polib' 'python-setuptools-scm>=7.1.0')
+optdepends=('python-argcomplete>=1.8.1: For command-line completion'
+            'python-pdfminer>=20181108: For reading PDF files')
+source=("$url/archive/v$pkgver.tar.gz")
+b2sums=('f3ae96c8c067a6d0281811a118612e330e3fa0b59ac05402dd4b55bb6d3b87c2e9d8c9c21b6df04c938d59261e93d1e737762067145265603d16a2ae00ae6753')
+
+build() {
+    cd $pkgname-$pkgver
+    hatchling build
+}
+
+package() {
+    cd $pkgname-$pkgver
+    python -m installer --destdir="$pkgdir" dist/*.whl
+}

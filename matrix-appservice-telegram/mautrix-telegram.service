@@ -1,0 +1,16 @@
+[Unit]
+Description=A Matrix-Telegram hybrid puppeting/relaybot bridge
+
+[Service]
+Environment=FFMPEG_BINARY=/usr/bin/ffmpeg
+ExecStart=/usr/bin/python -m mautrix_telegram -c /etc/mautrix-telegram/config.yaml -r /etc/mautrix-telegram/registration.yaml
+WorkingDirectory=/var/lib/mautrix-telegram/
+ConfigurationDirectory=mautrix-telegram
+StateDirectory=mautrix-telegram
+Restart=on-failure
+ReadWritePaths=/etc/mautrix-telegram /var/lib/mautrix-telegram /var/log/matrix-synapse
+User=mx-telegram
+DynamicUser=true
+
+[Install]
+WantedBy=multi-user.target

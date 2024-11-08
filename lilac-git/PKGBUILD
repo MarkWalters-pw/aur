@@ -1,0 +1,48 @@
+# Maintainer: malacology
+# Maintainer: Chih-Hsuan Yen <yan12125@gmail.com>
+# Maintainer: lilydjwg <lilydjwg@gmail.com>
+
+_pkgname=lilac
+pkgname=$_pkgname-git
+pkgver=r1172.5017595
+pkgrel=1
+pkgdesc='The build bot for archlinuxcn'
+arch=(any)
+url='https://github.com/archlinuxcn/lilac'
+license=(GPL-3.0-only)
+depends=(python git devtools nvchecker gnupg pid_children fakeroot bubblewrap pacman-contrib bash
+         python-requests python-lxml python-yaml python-tomli python-tomli-w pyalpm
+         python-structlog python-prctl python-fluent.runtime)
+makedepends=(python-setuptools-scm python-psycopg2)
+optdepends=(
+  'smtp-forwarder: for sending error reports'
+  'python-psycopg2: for recording build results in a database'
+)
+checkdepends=(python-pytest python-pytest-asyncio)
+provides=("$_pkgname=$pkgver")
+conflicts=("$_pkgname")
+source=('git+https://github.com/archlinuxcn/lilac.git')
+sha256sums=('SKIP')
+
+pkgver() {
+  cd $_pkgname
+  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+build() {
+  cd $_pkgname
+  python setup.py build
+}
+
+check() {
+  cd $_pkgname
+  pytest
+}
+
+package() {
+  cd $_pkgname
+  python setup.py install --root="$pkgdir" --optimize=1 --skip-build
+  install -Dm644 config.toml.sample scripts/dbsetup.sql -t "$pkgdir"/usr/share/doc/lilac
+  install -Dm755 scripts/cleanup-dblck "$pkgdir"/usr/bin/cleanup-dblck
+  install -Dm644 scripts/cleanup-dblck.service "$pkgdir"/usr/lib/systemd/system/cleanup-dblck.service
+}

@@ -1,0 +1,19 @@
+pkgbase = sonusmix-git
+	pkgdesc = Next-gen Pipewire audio routing tool
+	pkgver = r195.7369dab
+	pkgrel = 1
+	url = https://codeberg.org/sonusmix/sonusmix
+	arch = x86_64
+	license = MPL-2.0
+	makedepends = clang
+	makedepends = cargo
+	makedepends = git
+	depends = pipewire
+	depends = gtk4
+	conflicts = sonusmix
+	source = git+https://codeberg.org/sonusmix/sonusmix
+	source = sonusmix.desktop
+	sha256sums = SKIP
+	sha256sums = 25bd717926a2f427dc8ed113d4f3ccb50bc36e7bab82a3911a6d2acd5457a8bd
+
+pkgname = sonusmix-git

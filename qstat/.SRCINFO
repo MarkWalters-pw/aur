@@ -1,0 +1,17 @@
+pkgbase = qstat
+	pkgdesc = A command-line program that displays information about Internet game servers.
+	pkgver = 2.17
+	pkgrel = 2
+	url = https://github.com/Unity-Technologies/qstat
+	arch = i686
+	arch = x86_64
+	license = Artistic-2.0
+	depends = glibc
+	conflicts = qstat-cvs
+	conflicts = qstat-svn
+	conflicts = qstat-git
+	backup = etc/qstat.cfg
+	source = qstat-2.17.tar.gz::https://github.com/Unity-Technologies/qstat/archive/refs/tags/v2.17.tar.gz
+	sha512sums = 880549d220a9a9046910bc2e5564b09349870110c77249b66d2ca77143327c83473da31c00e7b70df45f48e6a5bcb3310487f73983d745a69e6aa6278a125278
+
+pkgname = qstat

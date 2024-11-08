@@ -1,0 +1,18 @@
+pkgbase = terra
+	pkgdesc = Low-level system programming language
+	pkgver = 1.2.0
+	pkgrel = 1
+	url = https://terralang.org/
+	arch = x86_64
+	license = MIT
+	makedepends = ninja
+	makedepends = cmake
+	makedepends = python
+	options = !lto
+	options = !buildflags
+	source = terra-1.2.0.tar.gz::https://github.com/terralang/terra/archive/refs/tags/release-1.2.0.tar.gz
+	source = terra-llvm-18.1.8.tar.xz::https://github.com/llvm/llvm-project/releases/download/llvmorg-18.1.8/llvm-project-18.1.8.src.tar.xz
+	b2sums = a2921f7ab0bf85181cdb2a8a2c8eaa50bcf93853eeb0c485e9cfeb5fd456afa99950c4a338b67f4b56531c62f8ebafd75f6cc859b887b4a02bf55aa3943c6f29
+	b2sums = a950492f1dbfb874dff63b1ffef86468169ba2f211a9733ec2d4cf30040f7f277ef00f048bb44dee9f97d7d762f0f241f19e5a2a7b0b49217d3821ddfc8c354f
+
+pkgname = terra

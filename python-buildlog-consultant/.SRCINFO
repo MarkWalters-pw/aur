@@ -1,0 +1,19 @@
+pkgbase = python-buildlog-consultant
+	pkgdesc = Build log parser and analyser
+	pkgver = 0.0.39
+	pkgrel = 1
+	url = https://github.com/jelmer/buildlog-consultant
+	arch = x86_64
+	license = GPL-2.0-or-later
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools-rust
+	makedepends = python-wheel
+	depends = python-debian
+	depends = python-pyaml
+	depends = python-requirements-parser
+	optdepends = python-openai
+	source = buildlog-consultant-0.0.39.tar.gz::https://github.com/jelmer/buildlog-consultant/archive/refs/tags/v0.0.39.tar.gz
+	sha256sums = 2bc1fa8245547f7bebcc02cccdcffd4a699c772ce35ac6f78f6fd22da49fa1e3
+
+pkgname = python-buildlog-consultant

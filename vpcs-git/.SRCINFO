@@ -1,0 +1,20 @@
+pkgbase = vpcs-git
+	pkgdesc = Simple Virtual PC Simulator
+	pkgver = 0.8.3.r231.a19e146
+	pkgrel = 1
+	url = https://github.com/GNS3/vpcs
+	arch = i686
+	arch = x86_64
+	license = BSD-2-Clause
+	makedepends = gcc
+	makedepends = git
+	makedepends = make
+	depends = glibc
+	provides = vpcs=0.8.3.r231.a19e146
+	conflicts = vpcs
+	source = git+https://github.com/GNS3/vpcs.git
+	source = enable_custom_flags.patch
+	b2sums = SKIP
+	b2sums = 435cae026481bbed95de26573f67f0ab76ec91eb2376074829219cc5779465645cdf5e8eb63614a05e1c82fbe95120dbd7bcedc56497234e3d7edb2839be5175
+
+pkgname = vpcs-git

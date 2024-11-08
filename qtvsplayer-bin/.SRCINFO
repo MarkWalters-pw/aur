@@ -1,0 +1,24 @@
+pkgbase = qtvsplayer-bin
+	pkgdesc = Read local video files of Hikvision devices and display blue, green and red vectors.
+	pkgver = 1.0.52_6
+	pkgrel = 1
+	url = https://github.com/surfzoid/QtVsPlayer
+	arch = aarch64
+	arch = x86_64
+	license = GPL-3.0-only
+	depends = freetype2
+	depends = util-linux-libs
+	depends = qt5-base
+	depends = libx11
+	depends = libglvnd
+	depends = openal
+	provides = qtvsplayer=1.0.52_6
+	conflicts = qtvsplayer
+	source = qtvsplayer.sh
+	sha256sums = bf4d06acb51b2b677a5d01fce315343fc787fe38618d2a26acc2f0701996073b
+	source_aarch64 = qtvsplayer-1.0.52_6-aarch64.rpm::https://github.com/surfzoid/QtVsPlayer/releases/download/1.0.52-6/QtVsPlayer-1.0.52-6.surf.mlo.aarch64.rpm
+	sha256sums_aarch64 = 54b422fc6aae74d13b96222a212bba9273067a5bdc2a2796b51aa662ece46a7b
+	source_x86_64 = qtvsplayer-1.0.52_6-x86_64.rpm::https://github.com/surfzoid/QtVsPlayer/releases/download/1.0.52-6/QtVsPlayer-1.0.52-6.surf.mlo.x86_64.rpm
+	sha256sums_x86_64 = 6cdd77d0f287672879d736b2803da203d515314bda12ecce59be90fd5ed8544e
+
+pkgname = qtvsplayer-bin

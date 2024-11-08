@@ -1,0 +1,24 @@
+pkgbase = vfox-bin
+	pkgdesc = A cross-platform and extendable version manager with support for Java, Node.js, Flutter, .Net & more
+	pkgver = 0.6.0
+	pkgrel = 1
+	url = https://vfox.lhan.me/
+	arch = aarch64
+	arch = armv7h
+	arch = i686
+	arch = x86_64
+	license = Apache-2.0
+	depends = bash
+	optdepends = zsh
+	provides = vfox=0.6.0
+	conflicts = vfox
+	source_aarch64 = vfox-0.6.0-aarch64.deb::https://github.com/version-fox/vfox/releases/download/v0.6.0/vfox_0.6.0_linux_aarch64.deb
+	sha256sums_aarch64 = bf064adacf7266cc903148a23c770208169fb8e83c6bd8b883213a5f10f4fc73
+	source_armv7h = vfox-0.6.0-armv7h.deb::https://github.com/version-fox/vfox/releases/download/v0.6.0/vfox_0.6.0_linux_armv7.deb
+	sha256sums_armv7h = e58c8a03c4568595a0f5bd278c3b91c14c522c12d182212cbba0e2bd83959af7
+	source_i686 = vfox-0.6.0-i686.deb::https://github.com/version-fox/vfox/releases/download/v0.6.0/vfox_0.6.0_linux_i386.deb
+	sha256sums_i686 = f733095a97de942e7b40aaf21218fbc95884d3c7df1595bf64c1b667cbe3c293
+	source_x86_64 = vfox-0.6.0-x86_64.deb::https://github.com/version-fox/vfox/releases/download/v0.6.0/vfox_0.6.0_linux_x86_64.deb
+	sha256sums_x86_64 = 71420724b6dde6abd3221db87c70f96fa1441e95f0225ad17a2bf85276a83a0e
+
+pkgname = vfox-bin

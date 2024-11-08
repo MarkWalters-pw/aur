@@ -1,0 +1,27 @@
+pkgbase = indicator-sensors
+	pkgdesc = Hardware sensor monitor AppIndicator (temperatures, fan speeds, voltages, ...)
+	pkgver = 1.4
+	pkgrel = 2
+	url = https://github.com/alexmurray/indicator-sensors
+	install = indicator-sensors.install
+	arch = x86_64
+	license = GPL-3.0-or-later
+	makedepends = glib2-devel
+	makedepends = gnome-common
+	makedepends = intltool
+	depends = ayatana-ido
+	depends = dconf
+	depends = gobject-introspection
+	depends = libappindicator-gtk3
+	depends = libatasmart
+	depends = libayatana-appindicator
+	depends = libayatana-indicator
+	depends = libnotify
+	depends = libpeas
+	depends = lm_sensors
+	depends = udisks2
+	optdepends = libxnvctrl: NVIDIA GPU support
+	source = indicator-sensors-1.4.tar.gz::https://github.com/alexmurray/indicator-sensors/archive/1.4.tar.gz
+	sha256sums = 72bad13c56f56f27babcb354441fe9fed8ab10589d718889e7521c76a93007f8
+
+pkgname = indicator-sensors

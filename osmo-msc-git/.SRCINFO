@@ -1,0 +1,30 @@
+pkgbase = osmo-msc-git
+	pkgdesc = Osmocom's Mobile Switching Center for 2G and 3G circuit-switched mobile networks
+	pkgver = 1.12.1.r0.g00cb24d73
+	pkgrel = 1
+	url = https://osmocom.org/projects/osmomsc
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	license = AGPL-3.0-or-later AND GPL-2.0-or-later
+	makedepends = git
+	depends = libosmocore-git
+	depends = libosmo-abis-git
+	depends = libosmo-netif-git
+	depends = libosmo-sigtran-git
+	depends = libosmo-gsup-client.so
+	depends = libosmo-mgcp-client.so
+	depends = libosmo-ranap.so
+	depends = libasn1c.so
+	depends = libsmpp34.so
+	depends = lksctp-tools
+	depends = sqlite
+	depends = talloc
+	provides = osmo-msc=1.12.1.r0.g00cb24d73
+	conflicts = osmo-msc
+	backup = etc/osmocom/osmo-msc.cfg
+	source = git+https://gitea.osmocom.org/cellular-infrastructure/osmo-msc.git
+	sha256sums = SKIP
+
+pkgname = osmo-msc-git

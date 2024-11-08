@@ -1,0 +1,14 @@
+pkgbase = git-interactive-rebase-tool-bin
+	pkgdesc = Native cross-platform full feature terminal-based sequence editor for git interactive rebase
+	pkgver = 2.4.1
+	pkgrel = 1
+	url = https://github.com/MitMaro/git-interactive-rebase-tool
+	install = git-interactive-rebase-tool.install
+	arch = x86_64
+	license = GPL3
+	provides = git-interactive-rebase-tool
+	conflicts = git-interactive-rebase-tool
+	source = https://github.com/MitMaro/git-interactive-rebase-tool/releases/download/2.4.1/git-interactive-rebase-tool-2.4.1-debian-sid_amd64.deb
+	sha256sums = bcc69e00d20d0d42e4225b10f0fbe19742c19e141141593ef74304a02b502556
+
+pkgname = git-interactive-rebase-tool-bin

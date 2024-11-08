@@ -1,0 +1,25 @@
+pkgbase = termius-deb
+	pkgdesc = Desktop SSH Client (deb release)
+	pkgver = 9.7.2
+	pkgrel = 1
+	url = https://termius.com
+	arch = x86_64
+	license = LicenseRef-Termius
+	makedepends = links
+	provides = termius
+	conflicts = termius
+	conflicts = termius-beta
+	source = termius-rolling.deb::https://autoupdate.termius.com/linux/Termius.deb
+	source = termius.sh
+	b2sums = SKIP
+	b2sums = 16be5f2c2d1134875ac9a284138d2fc6d2133f3588d4efd34422be1c99caddf37e88c53c8b1a1286de0e6ae0d2a806983c2bf91abcff269295fc487bdde56051
+
+pkgname = termius-deb
+	depends = electron21-bin
+	depends = gcc-libs
+	depends = glib2
+	depends = glibc
+	depends = libsecret
+	depends = systemd-libs
+	depends = zlib
+	optdepends = libappindicator-gtk3: Systray indicator support

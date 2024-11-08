@@ -1,0 +1,15 @@
+pkgbase = ttf-ibm-plex-git
+	pkgdesc = IBM Plex
+	pkgver = 1.4.1.r2.gdec2bc78
+	pkgrel = 1
+	url = https://ibm.github.io/type/
+	arch = any
+	license = SIL Open Font License, Version 1.1
+	makedepends = git
+	depends = fontconfig
+	depends = xorg-font-utils
+	source = ttf-ibm-plex-git::git+https://github.com/IBM/plex.git
+	sha256sums = SKIP
+
+pkgname = ttf-ibm-plex-git
+

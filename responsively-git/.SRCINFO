@@ -1,0 +1,23 @@
+pkgbase = responsively-git
+	pkgdesc = A modified web browser that helps in responsive web development. A web developer's must have dev-tool.Use system-wide electron.
+	pkgver = 1.15.0.r23.g080b2e2
+	pkgrel = 1
+	url = https://responsively.app/
+	arch = any
+	license = AGPL-3.0-only
+	makedepends = npm
+	makedepends = yarn
+	makedepends = git
+	makedepends = nvm
+	makedepends = gendesk
+	makedepends = cmake
+	makedepends = gcc
+	depends = electron27
+	provides = responsively=1.15.0
+	conflicts = responsively
+	source = responsively.git::git+https://github.com/responsively-org/responsively-app.git
+	source = responsively.sh
+	sha256sums = SKIP
+	sha256sums = 291f50480f5a61bc9c68db7d44cd0412071128706baa868a9cb854f8779a1980
+
+pkgname = responsively-git

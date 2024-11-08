@@ -1,0 +1,14 @@
+pkgbase = ampart
+	pkgdesc = A partition tool to modify Amlogic's proprietary eMMC partition format and FDT
+	pkgver = 1.4.1
+	pkgrel = 1
+	url = https://github.com/7Ji/ampart
+	arch = x86_64
+	arch = aarch64
+	license = GPL3
+	depends = glibc
+	depends = zlib
+	source = ampart-1.4.1.tar.gz::https://github.com/7Ji/ampart/archive/refs/tags/v1.4.1.tar.gz
+	sha256sums = a4426dec656261235f5c1925a9e3daa31fa87a165f1f1153cb7fee4387854591
+
+pkgname = ampart

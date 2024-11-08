@@ -1,0 +1,33 @@
+pkgbase = xmlmind-xmleditor
+	pkgdesc = IDE for editing XML files
+	pkgver = 10.9.0
+	pkgrel = 1
+	url = https://www.xmlmind.com/xmleditor
+	install = xxe.install
+	arch = any
+	license = Custom
+	makedepends = libicns
+	makedepends = icoutils
+	makedepends = gendesk
+	depends = java-runtime>=8
+	depends = perl
+	optdepends = cups-pdf: for the ability to print into PDF-files
+	provides = xxe
+	source = https://www.xmlmind.com/xmleditor/_download/xxe-perso-10_9_0.zip
+	source = https://www.xmlmind.com/xmleditor/_download/xxe-devdocs-10_9_0.zip
+	source = xxe.sh
+	source = xxeconvert.sh
+	source = xmltool.sh
+	source = authvalue.sh
+	source = xmltool.1
+	source = icon64x64.png
+	sha256sums = df066c9f799ae55ffb82b8f45c3ab822041d74b46f01c220f0df677b8089ea4a
+	sha256sums = 8b56ac921cab31c4b48877128ff85fed1ea0cc393d078ec1273a5ae03ceceb42
+	sha256sums = 72d24d6216f0fe5515edb50c38566d3f1f3ce134634a0da04fbb32ac3a216452
+	sha256sums = 3f04f7b1ecb934a96f15ed75e0593e545d7f820a95705710b39a2916377c57fa
+	sha256sums = 40fd7e5f73eaf9f05adabd29715f3dc2d78f4eeddb9440bdd3aece1341308a01
+	sha256sums = 61251006be3625075958f6257d5eb5eba983115312d7df32e4449a2847c5ca7f
+	sha256sums = dd1efd7074aef4b28c130a781f21e34ada3f9b15673ad9df61ff77dba4930482
+	sha256sums = 9c97b679944fa57e9aab3e3143fb23f2c4dba5e70d10127bfa99d60233a2d76f
+
+pkgname = xmlmind-xmleditor

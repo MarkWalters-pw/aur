@@ -1,0 +1,19 @@
+pkgbase = ipfs-cluster-bin
+	pkgdesc = ipfs-cluster-service, ipfs-cluster-ctl, ipfs-cluster-follow
+	pkgver = 1.1.1
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/ipfs/ipfs-cluster
+	changelog = changelog
+	arch = x86_64
+	license = MIT
+	license = APACHE
+	depends = glibc
+	source = https://dist.ipfs.io/ipfs-cluster-service/v1.1.1/ipfs-cluster-service_v1.1.1_linux-amd64.tar.gz
+	source = https://dist.ipfs.io/ipfs-cluster-ctl/v1.1.1/ipfs-cluster-ctl_v1.1.1_linux-amd64.tar.gz
+	source = https://dist.ipfs.io/ipfs-cluster-follow/v1.1.1/ipfs-cluster-follow_v1.1.1_linux-amd64.tar.gz
+	b2sums = 5546d26cc6b95d22e1cd926e6e6333b8000ea1a549ecf04cb26565e1f00a59a4083811ee863413a3e210e1672170522d225a5d36e3e4089244afc07a1c643206
+	b2sums = 8ed28398c9fe9b4ec5f7722f7554869ff3fb8653aaf7a4d810f719e8a2c4359afd74fbff5e4596b1980b2dad4d938306cedbe89123cdd770f6419eb1d8b462a0
+	b2sums = 579f11163efb55d4b39bf64028d13178d13a0d87380423aa032055a6792538f37785543dae811d4c03b75eb0169c906ce2a1e75d8a43a0aeefc09624ee802265
+
+pkgname = ipfs-cluster-bin

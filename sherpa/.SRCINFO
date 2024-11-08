@@ -1,0 +1,21 @@
+pkgbase = sherpa
+	pkgdesc = A particle physics package for Monte Carlo simulation of collider events.
+	pkgver = 3.0.0
+	pkgrel = 1
+	url = https://sherpa-team.gitlab.io/
+	arch = x86_64
+	arch = i686
+	license = GPL3
+	depends = lhapdf
+	depends = fastjet
+	depends = hepmc
+	depends = hepmc2
+	depends = openmpi
+	depends = openloops
+	depends = rivet
+	depends = root
+	depends = pythia8
+	source = https://gitlab.com/sherpa-team/sherpa/-/archive/v3.0.0/sherpa-v3.0.0.tar.gz
+	md5sums = 70f2251d4ba614623a395f1ce3a8384d
+
+pkgname = sherpa

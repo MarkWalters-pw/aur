@@ -1,0 +1,13 @@
+[Unit]
+Description=Tango database device server
+After=mariadb.service
+Requires=mariadb.service
+
+[Service]
+Restart=always
+RestartSec=10s
+User=tango-db
+ExecStart=/usr/bin/Databaseds 2 -ORBendPoint giop:tcp:0.0.0.0:10000
+
+[Install]
+WantedBy=multi-user.target

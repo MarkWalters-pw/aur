@@ -1,0 +1,19 @@
+pkgbase = python-pyfwup
+	pkgdesc = Python Firmware Upgrader, a DFU (and similar) utility for Python
+	pkgver = 0.5.2
+	pkgrel = 1
+	url = https://github.com/greatscottgadgets/pyfwup
+	arch = any
+	license = BSD-3-Clause
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-pyproject-patcher
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python
+	depends = python-pyusb
+	depends = python-tqdm
+	source = pyfwup-0.5.2.tar.gz::https://github.com/greatscottgadgets/pyfwup/archive/0.5.2.tar.gz
+	sha512sums = e1c0b36d08a5255f5a276e51370f52877474c3f81471d004038fe31a8d8346f80e5e23eede355c13eebbb6b6576eaa852e0c1e58e47249bbb852f31659b4b25c
+
+pkgname = python-pyfwup

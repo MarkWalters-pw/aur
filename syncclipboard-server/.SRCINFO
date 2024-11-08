@@ -1,0 +1,22 @@
+pkgbase = syncclipboard-server
+	pkgdesc = Cross-Platform Cipboard Syncing Solution (Server)
+	pkgver = 2.8.7
+	pkgrel = 1
+	url = https://github.com/Jeric-X/SyncClipboard
+	arch = x86_64
+	arch = aarch64
+	license = MIT
+	makedepends = dotnet-sdk-6.0
+	depends = aspnet-runtime-6.0
+	backup = etc/syncclipboard/appsettings.json
+	backup = etc/syncclipboard/appsettings.Development.json
+	source = syncclipboard-2.8.7.tar.gz::https://github.com/Jeric-X/SyncClipboard/archive/refs/tags/v2.8.7.tar.gz
+	source = syncclipboard.service
+	source = syncclipboard.sysusers
+	source = syncclipboard.tmpfiles
+	sha256sums = 634e199b681be4324f936a063dbd1855954bf09d176c7ba7ced95c782127bf81
+	sha256sums = 39543906762fa52358b57f8450e57d007c860c862e400a839e72f0e5b6fa44ef
+	sha256sums = c926ecd545f945ac27cf4b2e54004f0d6847d58f012b9dda5b4e8416523e991c
+	sha256sums = bf6ce00dbedafc8b2874818138c37d8371cb165721c5b88293c64f216cee1c66
+
+pkgname = syncclipboard-server

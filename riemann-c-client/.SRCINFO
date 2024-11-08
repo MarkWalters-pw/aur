@@ -1,0 +1,20 @@
+pkgbase = riemann-c-client
+	pkgdesc = Riemann C driver library and CLI client
+	pkgver = 2.2.2
+	pkgrel = 1
+	url = https://git.madhouse-project.org/algernon/riemann-c-client
+	arch = i686
+	arch = x86_64
+	arch = armv7h
+	license = LGPL3
+	makedepends = git
+	makedepends = autoconf
+	makedepends = automake
+	depends = zlib
+	depends = protobuf-c
+	depends = gnutls
+	depends = json-c
+	source = https://git.madhouse-project.org/algernon/riemann-c-client/archive/riemann-c-client-2.2.2.tar.gz
+	sha256sums = 468c2d6cb4095e581927005a1dab13656f5a9355e4c68a3a25fceb5c6798a72f
+
+pkgname = riemann-c-client

@@ -1,0 +1,25 @@
+pkgbase = pyobd
+	pkgdesc = An OBD-II compliant car diagnostic tool
+	pkgver = 1.19
+	pkgrel = 1
+	url = https://github.com/barracuda-fsh/pyobd
+	arch = x86_64
+	license = GPL-2.0-only
+	makedepends = pyinstaller
+	makedepends = pyside6-tools
+	makedepends = icoutils
+	makedepends = python-wxpython
+	makedepends = python-pyserial
+	makedepends = python-numpy
+	makedepends = python-tornado
+	makedepends = python-pint
+	makedepends = pyside6
+	makedepends = icoutils
+	makedepends = gendesk
+	depends = glibc
+	depends = hicolor-icon-theme
+	depends = zlib
+	source = https://github.com/barracuda-fsh/pyobd/archive/refs/tags/v1.19.tar.gz
+	sha256sums = 94ce6f7574cff7ed3a8412002c06a6bea2251fed0bb1f890db33ad080154d10f
+
+pkgname = pyobd

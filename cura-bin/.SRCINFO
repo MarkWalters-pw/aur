@@ -1,0 +1,22 @@
+pkgbase = cura-bin
+	pkgdesc = State-of-the-art slicer app to prepare your 3D models for your 3D printer
+	pkgver = 5.8.1
+	pkgrel = 1
+	url = https://ultimaker.com/software/ultimaker-cura
+	arch = x86_64
+	license = LGPL3
+	makedepends = util-linux
+	depends = fuse2
+	depends = xdg-desktop-portal
+	optdepends = mesa: for use with the closed source nvidia driver under wayland
+	provides = cura
+	conflicts = cura
+	options = !strip
+	source = https://github.com/Ultimaker/Cura/releases/download/5.8.1/UltiMaker-Cura-5.8.1-linux-X64.AppImage
+	source = AppRun.env.patch
+	source = UltiMaker-Cura
+	sha512sums = 7d50eb25690ab0c8beb350d50fcd8cc5435d61f599b2bf9046e476cc7efb88b50821b4333ef33ffc6f428d700a2c3afee924d9b57eefe49c4131a9e6dbfa5000
+	sha512sums = 833f5d8e73ed142bfe67dc0b22b10dc914bd2a5208c83301387a590ba59909e047ad8bb2b3e3b916fe81d673374f90fbfdf003bcb2d336efa2c1fb0ce9c2d072
+	sha512sums = 706bfd5d7f46ba859fa1caddefe18504a8e82cd494d0279b5207191cdf2bca102e47bb4feee94d93d41a36e2f4aa5d71d2d2a398cbdcee8fd5c3d22b6b00a2de
+
+pkgname = cura-bin

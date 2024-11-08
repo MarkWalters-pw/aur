@@ -1,0 +1,28 @@
+pkgbase = nuitka
+	pkgdesc = Python compiler with full language support and CPython compatibility
+	pkgver = 2.4
+	pkgrel = 1
+	url = https://nuitka.net
+	arch = any
+	license = Apache-2.0
+	checkdepends = ccache
+	checkdepends = fuse2
+	checkdepends = python-boto3
+	checkdepends = python-brotli
+	checkdepends = strace
+	makedepends = gdb
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	depends = libxml2
+	depends = patchelf
+	depends = python
+	depends = python-appdirs
+	depends = python-setuptools>=42.0
+	depends = python-wheel
+	depends = scons
+	optdepends = ccache: for caching builds
+	source = https://nuitka.net/releases/Nuitka-2.4.tar.bz2
+	b2sums = 04824cb7fe0551bba2480d3b0e2478022a068a2a96b10cb906dd3c042fdb11df76e95ecfcc0ed2e783ac194e69dd47352d282a068416e49abde16292c09ff1bd
+
+pkgname = nuitka

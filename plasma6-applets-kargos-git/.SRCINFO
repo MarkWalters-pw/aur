@@ -1,0 +1,16 @@
+pkgbase = plasma6-applets-kargos-git
+	pkgdesc = KDE Plasma port of GNOME Argos and OSX BitBar - plasma6 version
+	pkgver = r104.71c2c62
+	pkgrel = 1
+	url = https://github.com/sanniou/kargos
+	arch = any
+	license = GPL-3.0
+	makedepends = git
+	makedepends = cmake
+	makedepends = extra-cmake-modules
+	provides = plasma6-applets-kargos
+	conflicts = plasma6-applets-kargos
+	source = plasma6-applets-kargos::git+https://github.com/sanniou/kargos.git#branch=master
+	md5sums = SKIP
+
+pkgname = plasma6-applets-kargos-git

@@ -1,0 +1,29 @@
+pkgbase = moodle-dl
+	pkgdesc = A Moodle downloader that downloads course content fast from Moodle (eg. lecture pdfs)
+	pkgver = 2.3.11
+	pkgrel = 1
+	url = https://github.com/C0D3D3V/Moodle-DL
+	arch = any
+	license = GPL3
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = ffmpeg
+	depends = python>=3.7
+	depends = python-aiodns>=3.0.0
+	depends = python-aiofiles>=22.1.0
+	depends = python-aiohttp>=3.8.4
+	depends = python-certifi>=2020.4.5.2
+	depends = python-colorama>=0.4.6
+	depends = python-colorlog>=6.7.0
+	depends = python-html2text>=2020.1.16
+	depends = python-readchar>=4.0.3
+	depends = python-requests>=2.24.0
+	depends = python-sentry_sdk>=0.13.5
+	depends = python-xmpppy>=0.7.1
+	depends = yt-dlp>=2021.10.22
+	source = https://github.com/C0D3D3V/Moodle-DL/archive/2.3.11.tar.gz
+	b2sums = dc05a5b920cb89002e802ec5590c044a9b87017f35e9eee96dce7dc066b4d7878b327b4a7b61b15c214e2b765181ad3ed807c310c5b61c5a539f7302aa588638
+
+pkgname = moodle-dl

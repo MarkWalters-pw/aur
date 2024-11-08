@@ -1,0 +1,17 @@
+pkgbase = mingw-w64-libmixmod
+	pkgdesc = Classification with Mixture Modelling
+	pkgver = 2.1.11
+	pkgrel = 1
+	url = https://github.com/mixmod
+	arch = any
+	license = GPL
+	makedepends = mingw-w64-cmake
+	makedepends = mingw-w64-eigen
+	depends = mingw-w64-crt
+	options = !buildflags
+	options = !strip
+	options = staticlibs
+	source = https://github.com/mixmod/mixmod/archive/refs/tags/v2.1.11.tar.gz
+	sha256sums = e95414decf5b2c2c5eebd7fca10e0100f2d753cbfca0694f4ac75da3b39b005e
+
+pkgname = mingw-w64-libmixmod

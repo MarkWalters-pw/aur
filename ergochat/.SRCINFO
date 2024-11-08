@@ -1,0 +1,36 @@
+pkgbase = ergochat
+	pkgdesc = A modern IRC server written in Go
+	pkgver = 2.14.0
+	pkgrel = 1
+	url = https://github.com/ergochat/ergo
+	install = install
+	arch = i686
+	arch = pentium4
+	arch = x86_64
+	arch = arm
+	arch = armv7h
+	arch = armv6h
+	arch = aarch64
+	license = MIT
+	makedepends = go
+	makedepends = git
+	depends = glibc
+	optdepends = ergochat-ldap: LDAP authentication support
+	provides = oragono
+	conflicts = oragono
+	replaces = oragono
+	backup = etc/oragono.conf
+	backup = etc/ergochat.conf
+	backup = etc/ergochat/ircd.yaml
+	source = git+https://github.com/ergochat/ergo#tag=v2.14.0
+	source = config.patch
+	source = systemd-service-unit.patch
+	source = ergochat.sysusers
+	source = ergochat.tmpfiles
+	sha256sums = SKIP
+	sha256sums = 94ea647a7557002817d077d280e69a95ebce8a94d0806d84e623e44572edf0d2
+	sha256sums = cba63567bbd989c22242d25c8c9dd23a82caded310fbddc1532e551d5adea708
+	sha256sums = 1912d91aff30318dfafedbdf6c786f096ff897962736bd960acf7130859cdff2
+	sha256sums = 3fbd033a9a7c92859f6e26005db2ddeddda3816b0e735f7772f10c4da4df0266
+
+pkgname = ergochat

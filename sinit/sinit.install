@@ -1,0 +1,5 @@
+post_install() {
+  echo "==> To use sinit, add the following kernel parameter"
+  echo "    in your bootloader's configuration file:"
+  echo "        init=/sbin/sinit"
+}

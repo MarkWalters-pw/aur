@@ -1,0 +1,13 @@
+pkgbase = mkinitcpio-cmdline-pacman-hook
+	pkgdesc = Pacman hook to trigger mkinicpio when /etc/cmdline, /etc/cmdline.d/* or /etc/kernel/cmdline is modified by packages
+	pkgver = 1.0.0
+	pkgrel = 2
+	url = https://github.com/trijpstra-fourlights/mkinitcpio-cmdline-pacman-hook
+	arch = any
+	license = MIT
+	depends = pacman
+	depends = mkinitcpio
+	source = 91-mkinitcpio-cmdline.hook
+	sha256sums = fb4c186025094d85fc54c81ce6c1aff2ff3645e6c1e888c0303d57362ea33b23
+
+pkgname = mkinitcpio-cmdline-pacman-hook

@@ -1,0 +1,19 @@
+pkgbase = python-ripser
+	pkgdesc = A Lean Persistent Homology Library for Python
+	pkgver = 0.6.10
+	pkgrel = 1
+	url = https://github.com/scikit-tda/ripser.py
+	changelog = CHANGELOG.md
+	arch = x86_64
+	license = MIT
+	checkdepends = python-pytest
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	makedepends = cython
+	depends = python-persim
+	source = ripser.py-0.6.10.tar.gz::https://github.com/scikit-tda/ripser.py/archive/v0.6.10.tar.gz
+	sha512sums = 03f69adb25781ed1ce1f3127d754bf6a8851ca9524f59b712b508c3c3450161d770c994a4b687d1fd0d48131ff2bce386018c2f02e588bb68a32e83427dd631b
+
+pkgname = python-ripser

@@ -1,0 +1,17 @@
+pkgbase = qq-git
+	pkgdesc = jq inspired interoperable config format transcoder with interactive querying; JSON/YAML/TOML/XML/... support; MIT license - git development version
+	pkgver = v0.2.1.re.1.ga871a13
+	pkgrel = 2
+	url = https://github.com/JFryy/qq/
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = go
+	makedepends = jq
+	provides = qq
+	conflicts = qq
+	source = qq::git+https://github.com/JFryy/qq.git
+	md5sums = SKIP
+
+pkgname = qq-git

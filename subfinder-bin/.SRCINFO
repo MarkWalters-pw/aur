@@ -1,0 +1,16 @@
+pkgbase = subfinder-bin
+	pkgdesc = A subdomain discovery tool that discovers valid subdomains for websites
+	pkgver = 2.6.7
+	pkgrel = 1
+	url = https://github.com/projectdiscovery/subfinder
+	arch = x86_64
+	license = MIT
+	depends = glibc
+	provides = subfinder
+	conflicts = subfinder
+	source = subfinder-bin-2.6.7.zip::https://github.com/projectdiscovery/subfinder/releases/download/v2.6.7/subfinder_2.6.7_linux_amd64.zip
+	source = https://raw.githubusercontent.com/projectdiscovery/subfinder/v2.6.7/LICENSE.md
+	b2sums = 23365fa0ffb62c33533205dcf91b4f416be19cad230042f128610ec9c257bb5774f1285f2a882d0fa86d8c3284bd431e9f90f54d6cb81cf6b37c3b12f598784b
+	b2sums = c699be7ccfc40564b59bfa217e254c9553678f343466becebad5017d81310d7b7519837a9a25df2e09e16b6e1bd5a209d7aeb039662a206dd8966b9697c02ede
+
+pkgname = subfinder-bin

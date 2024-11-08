@@ -1,0 +1,18 @@
+pkgbase = rpmdevtools
+	pkgdesc = RPM Development Tools
+	pkgver = 9.6
+	pkgrel = 2
+	url = https://pagure.io/rpmdevtools
+	arch = any
+	license = GPL-2.0-or-later AND GPL-2.0-only
+	makedepends = bash-completion
+	makedepends = help2man
+	depends = python
+	depends = python-progressbar
+	depends = python-requests
+	depends = rpm-tools
+	optdepends = unzip: for zip support in rpmdev-extract command
+	source = https://releases.pagure.org/rpmdevtools/rpmdevtools-9.6.tar.xz
+	sha256sums = 794c97afeb6e81867497b84d2ecfd42dc8c984f59fbab8282f5396419ca7cb9e
+
+pkgname = rpmdevtools

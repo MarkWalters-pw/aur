@@ -1,0 +1,24 @@
+pkgbase = debmake
+	pkgdesc = Helper script to make the Debian source package
+	pkgver = 4.4.0
+	pkgrel = 4
+	url = https://salsa.debian.org/debian/debmake
+	arch = any
+	license = LicenseRef-debmake
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = devscripts
+	depends = dpkg
+	depends = python
+	depends = python-debian
+	depends = rsync
+	optdepends = strace
+	optdepends = wget
+	optdepends = curl
+	source = debmake-4.4.0::git+https://salsa.debian.org/debian/debmake.git#tag=debian/4.4.0-4
+	md5sums = SKIP
+
+pkgname = debmake

@@ -1,0 +1,13 @@
+diff --git a/make.sh b/make.sh
+index c9bfebc..3e76e8d 100755
+--- a/make.sh
++++ b/make.sh
+@@ -3,7 +3,7 @@
+ # Copyright (C) 2018 Gerhard Großmann
+ 
+ # Set the name of your cursor theme
+-themetitle='My Cursor Theme'
++: ${themetitle:='My Cursor Theme'}
+ 
+ 
+ # For the folder name: Replace forbidden charakters with “-”

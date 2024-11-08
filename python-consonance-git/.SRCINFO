@@ -1,0 +1,19 @@
+pkgbase = python-consonance-git
+	pkgdesc = implements WhatsApp's handshake process which makes use of Noise Pipes from Noise Protocol
+	pkgver = 0.1.5.r1.g40abb98
+	pkgrel = 1
+	url = https://github.com/tgalal/consonance
+	arch = any
+	license = GPL
+	makedepends = python-setuptools
+	makedepends = git
+	depends = python
+	depends = python-transitions
+	depends = python-protobuf
+	depends = python-axolotl-curve25519
+	depends = python-dissononce
+	provides = python-consonance
+	source = python-consonance-git::git+https://github.com/tgalal/consonance
+	sha512sums = SKIP
+
+pkgname = python-consonance-git

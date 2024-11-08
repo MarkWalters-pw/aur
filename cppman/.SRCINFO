@@ -1,0 +1,21 @@
+pkgbase = cppman
+	pkgdesc = C++ 98/11/14/17/20 manual pages for Linux, with source from cplusplus.com and cppreference.com.
+	pkgver = 0.5.7
+	pkgrel = 1
+	url = https://github.com/aitjcize/cppman
+	arch = any
+	license = GPL3
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python
+	depends = python-beautifulsoup4
+	depends = python-html5lib
+	optdepends = vim: For using vim as a pager
+	optdepends = perl: for bash/zsh completion
+	conflicts = cppman-git
+	source = https://github.com/aitjcize/cppman/archive/0.5.7.tar.gz
+	b2sums = cde95de96c1e9c436b5f2372d1e681512163110ce713e799124821d436ff20ca9d1ab73d74d3d72136fba27a36ccf912f1c52a2433cbeded2f721d97b8896cc6
+
+pkgname = cppman

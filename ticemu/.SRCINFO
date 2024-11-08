@@ -1,0 +1,19 @@
+pkgbase = ticemu
+	pkgdesc = Third-party TI-84 Plus CE / TI-83 Premium CE emulator, focused on developer features
+	pkgver = 2.0
+	pkgrel = 1
+	url = https://ce-programming.github.io/CEmu/
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	depends = qt5-base
+	depends = libarchive
+	source = ticemu-2.0.tar.gz::https://github.com/CE-Programming/CEmu/archive/v2.0.tar.gz
+	source = https://github.com/CE-Programming/zdis/archive/7eb89e56d219bbca5ca5cd82c98dce69bd75004b.tar.gz
+	source = https://github.com/adriweb/tivars_lib_cpp/archive/f627164d42e1b8757e70b12c8d8c7913a4496cf0.tar.gz
+	md5sums = 556651cc60756c85684b7eaa224ac2d8
+	md5sums = f4e1cb5120afda89b90d8867d7c89b10
+	md5sums = 872b754ebfb07878d22de6abc651d9b4
+
+pkgname = ticemu
+

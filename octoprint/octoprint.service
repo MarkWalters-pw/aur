@@ -1,0 +1,13 @@
+[Unit]
+Description=Responsive web interface for controlling a 3D printer
+After=network.target
+
+[Service]
+User=octoprint
+Group=octoprint
+Type=simple
+ExecStart=/usr/lib/octoprint/bin/octoprint-serve
+
+[Install]
+WantedBy=multi-user.target
+

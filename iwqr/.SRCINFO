@@ -1,0 +1,19 @@
+pkgbase = iwqr
+	pkgdesc = QR code generator for networks saved using iwd
+	pkgver = 0.1.1
+	pkgrel = 1
+	url = https://gitlab.com/krenyy/iwqr
+	arch = i686
+	arch = pentium4
+	arch = x86_64
+	arch = arm
+	arch = armv7h
+	arch = armv6h
+	arch = aarch64
+	license = GPL3
+	makedepends = cargo
+	depends = iwd
+	source = iwqr-0.1.1.tar.gz::https://gitlab.com/krenyy/iwqr/-/archive/v0.1.1/iwqr-v0.1.1.tar.gz
+	sha256sums = ba15034e078b42d4f9acd24c6e9fb7efccc0015067ccc29f3ad8e058b89f2aa6
+
+pkgname = iwqr

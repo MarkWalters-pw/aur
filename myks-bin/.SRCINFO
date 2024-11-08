@@ -1,0 +1,19 @@
+pkgbase = myks-bin
+	pkgdesc = Configuration framework for Kubernetes applications
+	pkgver = 4.2.4
+	pkgrel = 1
+	url = https://github.com/mykso/myks
+	license = MIT
+	optdepends = vendir: for downloading from external sources
+	optdepends = git: for smart detection of changes
+	optdepends = helm: for rendering helm charts
+	conflicts = myks
+	provides = myks
+	arch = aarch64
+	source_aarch64 = https://github.com/mykso/myks/releases/download/v4.2.4/myks_4.2.4_linux_arm64.tar.gz
+	sha256sums_aarch64 = 42c5fa3095343d777626f7b469d3dd72c4f87c5fa7377a33542ac4e9a2fe6bcc
+	arch = x86_64
+	source_x86_64 = https://github.com/mykso/myks/releases/download/v4.2.4/myks_4.2.4_linux_amd64.tar.gz
+	sha256sums_x86_64 = 45fdf541cbe85bb3b785a2adcb8b91cc1fd5de03a67487c37ad11f320feeeaa1
+	
+pkgname = myks-bin

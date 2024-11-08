@@ -1,0 +1,40 @@
+pkgbase = xpybar
+	pkgdesc = A highly extensible minimalistic dock panel configured in Python 3
+	pkgver = 1.20.2
+	pkgrel = 1
+	url = https://codeberg.org/maandree/xpybar
+	install = xpybar.install
+	arch = any
+	license = GPL3
+	license = AGPL3
+	makedepends = make
+	makedepends = coreutils
+	makedepends = sed
+	makedepends = zip
+	makedepends = auto-auto-complete
+	makedepends = texinfo
+	depends = python3
+	depends = argparser-python
+	depends = python-xlib>=0.18
+	depends = xorg-xrandr
+	optdepends = alarm: for limiting the time of a file search in locks
+	optdepends = curl: for Internet services
+	optdepends = file: for image support
+	optdepends = findutils: for file search in locks
+	optdepends = graphicsmagick: for image support
+	optdepends = hdparm: hdparm: for hdparm support
+	optdepends = ii: for ii support
+	optdepends = imagemagick: for image support
+	optdepends = inotify-tools: for ii and inotify support
+	optdepends = iputils: for ping support
+	optdepends = librsvg: for image support
+	optdepends = linux: most of the monitors require Linux's procfs or sysfs
+	optdepends = pdeath: for automatic killing of child processes on exit
+	optdepends = python-pyalsaaudio: for ALSA volume control
+	optdepends = python-pytz: for timezone support
+	optdepends = python-sysv-ipc: for ropty example
+	optdepends = solar-python: for solar data (>= 2.5)
+	source = xpybar-1.20.2.tar.gz::https://codeberg.org/maandree/xpybar/archive/1.20.2.tar.gz
+	sha256sums = 77a0a04199c7cce72613c8c361891dab2b4158f06fac1e197dcd06ed6f249298
+
+pkgname = xpybar

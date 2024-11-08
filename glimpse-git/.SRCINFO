@@ -1,0 +1,19 @@
+pkgbase = glimpse-git
+	pkgdesc = A simple GTK3 launcher/finder utility.
+	pkgver = r66.1cb3747
+	pkgrel = 1
+	url = https://github.com/jaspwr/glimpse
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	license = GPL3
+	makedepends = rust
+	makedepends = cargo
+	makedepends = git
+	depends = xdg-utils
+	depends = gtk3
+	depends = sqlite
+	source = glimpse-git::git+https://github.com/jaspwr/glimpse#branch=main
+	sha256sums = SKIP
+
+pkgname = glimpse-git

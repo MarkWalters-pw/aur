@@ -1,0 +1,26 @@
+pkgbase = ropper-git
+	pkgdesc = Show information about binary files and find gadgets to build rop chains for different architectures
+	pkgver = 1.13.10.r0.ga1141ab
+	pkgrel = 1
+	url = https://github.com/sashs/Ropper
+	arch = any
+	license = BSD-3-Clause
+	checkdepends = python-pytest
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = python-setuptools
+	depends = python
+	depends = python-capstone
+	depends = python-filebytes
+	depends = python-z3-solver
+	depends = python-pyvex
+	depends = python-archinfo
+	provides = ropper
+	provides = python-ropper
+	conflicts = ropper
+	source = ropper-git::git+https://github.com/sashs/Ropper.git
+	sha512sums = SKIP
+
+pkgname = ropper-git

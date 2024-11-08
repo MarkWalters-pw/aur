@@ -1,0 +1,10 @@
+[Unit]
+Description=Daily Recyclarr Sync
+
+[Timer]
+OnCalendar=daily
+RandomizedDelaySec=360min
+Persistent=true
+
+[Install]
+WantedBy=timers.target

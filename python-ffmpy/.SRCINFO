@@ -1,0 +1,17 @@
+pkgbase = python-ffmpy
+	pkgdesc = A simple Python wrapper for ffmpeg
+	pkgver = 0.4.0
+	pkgrel = 1
+	url = https://github.com/Ch00k/ffmpy
+	arch = any
+	license = MIT
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = python-poetry-core
+	depends = python
+	depends = ffmpeg
+	source = ffmpy-0.4.0.tar.gz::https://github.com/Ch00k/ffmpy/archive/refs/tags/0.4.0.tar.gz
+	sha256sums = 11d04a042c69bcd80cc343a835f670fa485421fc46a719c86d5229cac693a0a8
+
+pkgname = python-ffmpy

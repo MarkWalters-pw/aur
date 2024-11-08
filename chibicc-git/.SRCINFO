@@ -1,0 +1,18 @@
+pkgbase = chibicc-git
+	pkgdesc = Small C11 compiler
+	pkgver = 20240805
+	pkgrel = 1
+	url = https://github.com/rui314/chibicc
+	arch = i686
+	arch = x86_64
+	arch = armv7h
+	arch = aarch64
+	license = MIT
+	makedepends = git
+	depends = glibc
+	source = https://github.com/rui314/chibicc/archive/main.zip
+	source = chibicc-include-path.patch
+	sha256sums = SKIP
+	sha256sums = cf4252b2809360022a36a62b190b80940c771c5c1439ced4bbd3bcd04d7244ad
+
+pkgname = chibicc-git

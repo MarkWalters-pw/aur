@@ -1,0 +1,20 @@
+pkgbase = kubelet-bin
+	pkgdesc = Kubernetes.io kubelet binary
+	pkgver = 1.31.0
+	pkgrel = 1
+	url = http://kubernetes.io
+	arch = x86_64
+	arch = armv7l
+	arch = armv7h
+	arch = aarch64
+	license = apache
+	provides = kubelet
+	conflicts = kubelet
+	conflicts = kubernetes
+	conflicts = kubernetes-bin
+	source = kubelet.service
+	source = kubelet-bin-1.31.0-amd64::https://storage.googleapis.com/kubernetes-release/release/v1.31.0/bin/linux/amd64/kubelet
+	b2sums = edaa6c5354476c2047d75c0984321aa2fa92dae715c15555b6923fe08a88bfdebc94a7e72bc87c3f187ae98fd9ce1c257b9a7a9e1b6ef36a5faccba1946d4835
+	b2sums = ca2cfda0c412f04341be6f22944b4a74f4398fc36f4f6f18485684dd15b26c23fad3851914196f1cc7ab21eca29c011adec973ccc9a6fba1fecc61e042218204
+
+pkgname = kubelet-bin

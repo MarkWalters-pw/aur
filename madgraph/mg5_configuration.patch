@@ -1,0 +1,106 @@
+diff --git a/input/mg5_configuration.txt b/input/mg5_configuration.txt
+--- a/input/mg5_configuration.txt
++++ b/input/mg5_configuration.txt
+@@ -46,11 +46,11 @@
+ 
+ #! Prefered WebBrower
+ #! If None: try to find one available on the system
+-# web_browser = None
++web_browser = xdg-open
+ 
+ #! Prefered PS viewer
+ #!  If None: try to find one available on the system
+-# eps_viewer = None
++eps_viewer = xdg-open
+ 
+ #! Time allowed to answer question (if no answer takes default value)
+ #!  0: No time limit
+@@ -60,14 +60,14 @@
+ #!  Defines the path to the pythia8 installation directory (i.e. the
+ #!  on containing the lib, bin and include directories) .
+ #!  If using a relative path, that starts from the mg5 directory
+-# pythia8_path = ./HEPTools/pythia8
++pythia8_path = /usr
+ 
+ #! MG5aMC_PY8_interface path
+ #!  Defines the path of the C++ driver file that is used by MG5_aMC to
+ #!  steer the Pythia8 shower.
+ #!  Can be installed directly from within MG5_aMC with the following command:
+ #!     MG5_aMC> install mg5amc_py8_interface
+-# mg5amc_py8_interface_path = ./HEPTools/MG5aMC_PY8_interface 
++mg5amc_py8_interface_path = /opt/madgraph/pythia8-interface
+ 
+ #! Herwig++/Herwig7 paths
+ #!  specify here the paths also to HepMC ant ThePEG
+@@ -76,14 +76,14 @@
+ #!  WARNING: if Herwig7 has been installed with the bootstrap script,
+ #!  then please set thepeg_path and hepmc_path to the same value as
+ #!  hwpp_path
+-# hwpp_path = 
+-# thepeg_path = 
+-# hepmc_path = 
++hwpp_path = /usr
++thepeg_path = /usr
++hepmc_path = /usr
+ 
+ #! Control when MG5 checks if he is up-to-date.
+ #! Enter the number of day between two check (0 means never)
+ #! A question is always asked before any update
+-# auto_update = 7
++auto_update = 0
+ 
+ ################################################################################
+ #  INFO FOR MADEVENT / aMC@NLO 
+@@ -137,19 +137,19 @@
+ 
+ #! Pythia-PGS Package
+ #!  relative path start from main directory
+-# pythia-pgs_path = ./pythia-pgs
++pythia-pgs_path = /opt/madgraph/pythia-pgs
+ 
+ #! Delphes Package
+ #!  relative path start from main directory
+-# delphes_path = ./Delphes
++delphes_path = /usr
+ 
+ #! MadAnalysis4 fortran-based package [for basic analysis]
+ #!  relative path start from main directory
+-# madanalysis_path = ./MadAnalysis
++madanalysis_path = ./MadAnalysis
+ 
+ #! MadAnalysis5 python-based Package [For advanced analysis]
+ #!  relative path start from main directory
+-# madanalysis5_path = ./HEPTools/madanalysis5/madanalysis5
++madanalysis5_path = /opt/madanalysis5
+ 
+ #! ExRootAnalysis Package
+ #!  relative path start from main directory
+@@ -158,16 +158,16 @@
+ #! TOPDRAWER PATH
+ #!  Path to the directory containing td executables
+ #!  relative path start from main directory
+-# td_path = ./td
++td_path = td
+ 
+ #! lhapdf-config --can be specify differently depending of your python version
+ #!  If None: try to find one available on the system
+ # lhapdf_py2 = lhapdf-config
+-# lhapdf_py3 = lhapdf-config
++lhapdf_py3 = lhapdf-config
+ 
+ #! fastjet-config
+ #!  If None: try to find one available on the system
+-# fastjet = fastjet-config
++fastjet = fastjet-config
+ 
+ #! MCatNLO-utilities 
+ #!  relative path starting from main directory
+@@ -187,7 +187,7 @@
+ #! if auto: try to find it automatically on the system (default)
+ #! if '' or None: disabling Golem95
+ #! if golem=/PATH/TO/golem/lib: use that speficif installation path for Golem95
+-# golem = auto
++golem = /usr/lib
+ 
+ #! Set the samurai directory containing samurai's library
+ #! It only supports version higher than 2.0.0

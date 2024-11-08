@@ -1,0 +1,24 @@
+pkgbase = ruby-brotli
+	pkgdesc = Brotli compressor/decompressor
+	pkgver = 0.6.0
+	pkgrel = 1
+	url = https://github.com/miyucy/brotli
+	arch = x86_64
+	license = MIT
+	checkdepends = ruby-test-unit
+	checkdepends = ruby-test-unit-rr
+	checkdepends = ruby-rantly
+	makedepends = git
+	makedepends = rubygems
+	makedepends = ruby-rake
+	makedepends = ruby-rake-compiler
+	makedepends = ruby-bundler
+	makedepends = ruby-rdoc
+	depends = ruby
+	options = !emptydirs
+	source = https://github.com/miyucy/brotli/archive/v0.6.0.tar.gz
+	source = git+https://github.com/google/brotli.git#commit=ed738e842d2fbdf2d6459e39267a633c4a9b2f5d
+	sha256sums = 18543ab6d4e9af5519d7feed6ab75ac535d67344dec45dd06c4dc40b1dddbbf1
+	sha256sums = f03d32ffc5f7852aa7bb9da4bd8c09b5c59a7cb636c80a961d77676083f7fa34
+
+pkgname = ruby-brotli

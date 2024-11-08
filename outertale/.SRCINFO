@@ -1,0 +1,21 @@
+pkgbase = outertale
+	pkgdesc = Outertale is an open-source game inspired by Undertale by Toby Fox.
+	pkgver = 5.04
+	pkgrel = 1
+	epoch = 1
+	url = https://gitlab.com/spacey_432/spacetime
+	arch = x86_64
+	license = custom
+	makedepends = asar
+	makedepends = yarn
+	depends = bash
+	depends = electron
+	options = !debug
+	source = https://gitlab.com/spacey_432/spacetime/-/archive/2f76f76db0f22125bf083ad85ec34abf3f4777a4/spacetime-master.zip
+	source = outertale.desktop
+	source = outertale.sh
+	sha256sums = 73cad7f0ec2339a9335c6aa8a87c4e39d338235bc546b804f22345c2ef320e75
+	sha256sums = a70911e9e81ebebe89e3dcc5bf2cf814a1e492e74dc053d94a549ca1fcb52546
+	sha256sums = bf0de08cb414d9e8c1b668d8add0e7ad33b4114d4d1c3777a301623be6c3dde8
+
+pkgname = outertale

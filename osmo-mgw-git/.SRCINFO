@@ -1,0 +1,23 @@
+pkgbase = osmo-mgw-git
+	pkgdesc = Osmocom's Media Gateway for 2G and 3G circuit-switched mobile networks
+	pkgver = 1.13.0.r0.gf1b557988
+	pkgrel = 1
+	url = https://osmocom.org/projects/osmo-mgw/
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	license = GPL-2.0-or-later AND AGPL-3.0-or-later
+	makedepends = git
+	depends = libosmocore-git
+	depends = libosmo-abis-git
+	depends = libosmo-netif-git
+	depends = talloc
+	provides = osmo-mgw=1.13.0.r0.gf1b557988
+	provides = libosmo-mgcp-client.so=14-64
+	conflicts = osmo-mgw
+	backup = etc/osmocom/osmo-mgw.cfg
+	source = git+https://gitea.osmocom.org/cellular-infrastructure/osmo-mgw.git
+	sha256sums = SKIP
+
+pkgname = osmo-mgw-git

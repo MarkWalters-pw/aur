@@ -1,0 +1,26 @@
+pkgbase = freerouting-zh-cn-git
+	pkgdesc = Advanced PCB autorouter
+	pkgver = 1.9.0.r148.gfac1d13
+	pkgrel = 1
+	url = https://github.com/freerouting/freerouting
+	arch = any
+	license = GPL-3.0-only
+	makedepends = git
+	makedepends = java-environment-openjdk=21
+	depends = java-runtime=21
+	optdepends = eagle
+	optdepends = easyeda
+	optdepends = easyeda-pro
+	optdepends = easyeda-router
+	optdepends = lceda
+	optdepends = lceda-pro
+	optdepends = kicad
+	optdepends = pcb-rnd
+	provides = freerouting-zh-cn
+	conflicts = freerouting-zh-cn
+	options = !strip
+	options = !debug
+	source = freerouting-zh-cn::git+https://github.com/freerouting/freerouting.git
+	sha256sums = SKIP
+
+pkgname = freerouting-zh-cn-git

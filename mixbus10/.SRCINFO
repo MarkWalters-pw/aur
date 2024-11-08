@@ -1,0 +1,20 @@
+pkgbase = mixbus10
+	pkgdesc = Harrison Consoles Mixbus DAW (Version 10)
+	pkgver = 10.1.0
+	pkgrel = 1
+	url = https://store.harrisonaudio.com/all-products/mixbus
+	arch = x86_64
+	groups = pro-audio
+	license = EULA
+	makedepends = xdg-user-dirs
+	depends = glibc
+	depends = libcurl-gnutls
+	optdepends = avldrums.lv2: AVLinux drumkits
+	optdepends = gmsynth.lv2: General MIDI LV2 Synth
+	optdepends = setbfree-lv2: Tonewheel organ
+	optdepends = x42-plugins-lv2: Set of plugins and utilities from the X42 Project
+	options = !strip
+	source = https://s3.eu-west-1.amazonaws.com/eu1.download.solidstatelogic.com/Harrison/Mixbus-10.1.0-x86_64.tar
+	sha256sums = 69023fdc10e153b721b62bd82729365dbf331e123d56af6481fd6f7ea21f220c
+
+pkgname = mixbus10

@@ -1,0 +1,19 @@
+[Unit]
+Description=Hyperion ambient light systemd service
+Documentation=https://docs.hyperion-project.org
+StartLimitIntervalSec=30s
+StartLimitBurst=30
+
+[Service]
+Environment=DISPLAY=:0
+ExecStartPre=xrandr --listactivemonitors
+ExecStart=/usr/bin/hyperiond
+WorkingDirectory=/usr/share/hyperion
+TimeoutStopSec=5
+KillMode=mixed
+Restart=always
+RestartSec=10
+
+
+[Install]
+WantedBy=default.target

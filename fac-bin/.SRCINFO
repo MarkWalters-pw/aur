@@ -1,0 +1,16 @@
+pkgbase = fac-bin
+	pkgdesc = Easy-to-use command line tool for fixing git conflicts
+	pkgver = 2.0.0
+	pkgrel = 2
+	url = https://github.com/mkchoi212/fac
+	arch = x86_64
+	license = MIT
+	depends = git
+	provides = fac
+	conflicts = fac
+	source = https://github.com/mkchoi212/fac/raw/v2.0.0/assets/doc/fac.1
+	sha256sums = 9465f6d5f7c83379972bcd816b89914d9dbc661fed87d841e5a377d89e7f29d6
+	source_x86_64 = https://github.com/mkchoi212/fac/releases/download/v2.0.0/fac_2.0.0_linux_amd64.tar.gz
+	sha256sums_x86_64 = 91a58e84e0098a1eee45af950ee5cc80d30c083e2ab24cdbe79dd6be514775d9
+
+pkgname = fac-bin

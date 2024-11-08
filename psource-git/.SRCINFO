@@ -1,0 +1,18 @@
+pkgbase = psource-git
+	pkgdesc = CLI tool to pretty print source code to stdout or directly to the clipboard.
+	pkgver = 0.4.3.f2eae02
+	pkgrel = 1
+	url = https://github.com/frederikstroem/psource
+	arch = x86_64
+	license = MIT
+	checkdepends = cargo
+	makedepends = git
+	makedepends = cargo
+	depends = libgit2.so
+	provides = psource
+	conflicts = psource
+	options = !lto
+	source = psource-git::git+https://github.com/frederikstroem/psource.git
+	sha256sums = SKIP
+
+pkgname = psource-git

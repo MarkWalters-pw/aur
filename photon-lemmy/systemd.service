@@ -1,0 +1,13 @@
+[Unit]
+Description=Photon Lemmy - An alternative front end to Lemmy
+After=network.target
+
+[Service]
+User=photon-lemmy
+WorkingDirectory=/usr/share/photon-lemmy
+ExecStart=/usr/bin/bun build/index.js
+EnvironmentFile=/etc/photon-lemmy/config.env
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,30 @@
+pkgbase = python-bertini_real-git
+	pkgdesc = Python interface for Bertini_real
+	pkgver = 1.7.1.r115.6bd1ddf
+	pkgrel = 1
+	url = https://www.bertinireal.com
+	arch = any
+	license = custom:Bertini license
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = bertini_real
+	depends = python
+	depends = python-algopy
+	depends = python-dill
+	depends = python-glumpy
+	depends = python-matplotlib
+	depends = python-numpy
+	depends = python-scipy
+	depends = python-setuptools
+	depends = python-sympy
+	depends = python-trimesh
+	provides = python-bertini_real=1.7.1
+	conflicts = python-bertini_real
+	source = bertini_real::git+https://github.com/ofloveandhate/bertini_real.git
+	source = python-bertini_real_fix_package_data.patch
+	sha256sums = SKIP
+	sha256sums = 430df15631ef29160638976cbd9339a16321875eeee3c5bd7ba790575d41f4f4
+
+pkgname = python-bertini_real-git

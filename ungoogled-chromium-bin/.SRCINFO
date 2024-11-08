@@ -1,0 +1,50 @@
+pkgbase = ungoogled-chromium-bin
+	pkgdesc = A lightweight approach to removing Google web service dependency
+	pkgver = 130.0.6723.69
+	pkgrel = 2
+	url = https://github.com/ungoogled-software/ungoogled-chromium
+	arch = x86_64
+	license = BSD
+	depends = gtk3
+	depends = nss
+	depends = alsa-lib
+	depends = xdg-utils
+	depends = libxss
+	depends = libcups
+	depends = libgcrypt
+	depends = ttf-liberation
+	depends = systemd
+	depends = dbus
+	depends = libpulse
+	depends = pciutils
+	depends = libva
+	depends = libffi
+	depends = desktop-file-utils
+	depends = hicolor-icon-theme
+	depends = fontconfig
+	depends = brotli
+	depends = libjpeg-turbo
+	depends = icu
+	depends = flac
+	depends = libxml2
+	depends = libwebp
+	depends = minizip
+	depends = opus
+	depends = harfbuzz
+	depends = libxslt
+	depends = libpng
+	depends = freetype2
+	optdepends = pipewire: WebRTC desktop sharing under Wayland
+	optdepends = kdialog: support for native dialogs in Plasma
+	optdepends = gtk4: for --gtk-version=4 (GTK4 IME might work better on Wayland)
+	optdepends = org.freedesktop.secrets: password storage backend on GNOME / Xfce
+	optdepends = kwallet: support for storing passwords in KWallet on Plasma
+	optdepends = upower: Battery Status API support
+	provides = chromium=130.0.6723.69
+	provides = chromedriver=130.0.6723.69
+	conflicts = chromium
+	conflicts = chromedriver
+	source = https://github.com/ungoogled-software/ungoogled-chromium-archlinux/releases/download/130.0.6723.69-2/ungoogled-chromium-130.0.6723.69-2-x86_64.pkg.tar.zst
+	sha256sums = 7a9bb6fd4c65149d2254459f423465c40a441ae310f5933bd112d05c36676fbf
+
+pkgname = ungoogled-chromium-bin

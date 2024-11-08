@@ -1,0 +1,15 @@
+pkgbase = flamenco-worker
+	pkgdesc = Worker for Blender's Flamenco Render System
+	pkgver = 3.2
+	pkgrel = 1
+	url = https://projects.blender.org/studio/flamenco
+	arch = x86_64
+	arch = aarch64
+	license = GPL3
+	makedepends = go
+	depends = ffmpeg
+	options = !lto
+	source = flamenco-worker::git+https://projects.blender.org/studio/flamenco.git#tag=v3.2
+	sha256sums = SKIP
+
+pkgname = flamenco-worker

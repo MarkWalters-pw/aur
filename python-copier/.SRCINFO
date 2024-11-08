@@ -1,0 +1,35 @@
+pkgbase = python-copier
+	pkgdesc = Library and command-line utility for rendering projects templates
+	pkgver = 9.3.1
+	pkgrel = 1
+	url = https://github.com/copier-org/copier
+	arch = any
+	license = MIT
+	checkdepends = python-poethepoet
+	checkdepends = python-pytest
+	checkdepends = python-pytest-cov
+	checkdepends = python-pytest-gitconfig
+	checkdepends = python-pytest-xdist
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = python-poetry-dynamic-versioning
+	depends = python-colorama
+	depends = python-dunamai
+	depends = python-funcy
+	depends = python-jinja
+	depends = python-jinja2-ansible-filters
+	depends = python-packaging
+	depends = python-pathspec
+	depends = python-plumbum
+	depends = python-prompt_toolkit
+	depends = python-pydantic
+	depends = python-pygments
+	depends = python-questionary
+	depends = python-yaml
+	optdepends = git: VCS support
+	source = git+https://github.com/copier-org/copier.git#tag=v9.3.1
+	sha256sums = 084157b8c2c0d1f259563a2613d3f79102d4781b3275cff9bdeb2f21ceb03cd2
+
+pkgname = python-copier

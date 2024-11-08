@@ -1,0 +1,17 @@
+pkgbase = gigolo-git
+	pkgdesc = Frontend to manage connections to remote filesystems using GIO/GVFS
+	pkgver = 0.5.3.r127.g6869f25
+	pkgrel = 1
+	url = https://gitlab.xfce.org/apps/gigolo
+	arch = x86_64
+	license = GPL-2.0-or-later
+	makedepends = git
+	makedepends = xfce4-dev-tools
+	depends = gtk3
+	depends = gvfs
+	provides = gigolo=0.5.3
+	conflicts = gigolo
+	source = gigolo::git+https://gitlab.xfce.org/apps/gigolo.git
+	sha256sums = SKIP
+
+pkgname = gigolo-git

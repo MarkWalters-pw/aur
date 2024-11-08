@@ -1,0 +1,26 @@
+pkgbase = trojita-git
+	pkgdesc = A fast QT IMAP e-mail client
+	pkgver = 0.7.r439.g10033f1b
+	pkgrel = 1
+	url = http://trojita.flaska.net
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = cmake
+	makedepends = boost
+	depends = qt5-webkit
+	depends = qtkeychain
+	depends = qt5-tools
+	depends = qt5-svg
+	depends = mimetic
+	depends = qgpgme-qt5
+	depends = desktop-file-utils
+	depends = sonnet5
+	depends = ragel
+	provides = trojita
+	conflicts = trojita
+	source = git+https://invent.kde.org/pim/trojita.git
+	md5sums = SKIP
+
+pkgname = trojita-git

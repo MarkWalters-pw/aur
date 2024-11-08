@@ -1,0 +1,17 @@
+pkgbase = git-scripts-jwiegley-git
+	pkgdesc = Git scripts written by different people (collected by John Wiegley)
+	pkgver = r236.c7fbb5f
+	pkgrel = 1
+	url = https://github.com/jwiegley/git-scripts
+	arch = any
+	license = unknown
+	depends = git
+	optdepends = perl: git-archive-all, git-flush, git-force-mtimes, git-forest, git-rm-conflicts
+	optdepends = python: git-changelog, git-record
+	optdepends = ruby: git-flatten, git-merge-from-svn, git-opendiff, git-all, git-wtf, git-find, git-rank-contributors
+	source = git+https://github.com/jwiegley/git-scripts.git
+	sha256sums = SKIP
+
+pkgname = git-scripts-jwiegley-git
+	provides = 
+	conflicts = 

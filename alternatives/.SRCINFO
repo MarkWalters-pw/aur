@@ -1,0 +1,15 @@
+pkgbase = alternatives
+	pkgdesc = Fedora's tool to maintain symbolic links determining default commands.
+	pkgver = 1.30
+	pkgrel = 1
+	url = https://github.com/fedora-sysv/chkconfig
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	checkdepends = beakerlib
+	conflicts = chkconfig
+	conflicts = dpkg
+	source = alternatives-1.30.tar.gz::https://github.com/fedora-sysv/chkconfig/archive/refs/tags/1.30.tar.gz
+	sha256sums = f694bb5b993915eab4d73313b094716a6873ed8bfbdf599ba3bcff997471a5fb
+
+pkgname = alternatives

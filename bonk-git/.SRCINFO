@@ -1,0 +1,18 @@
+pkgbase = bonk-git
+	pkgdesc = command-line tool that provides subcommands to modify windows, adjust window properties, change window decorations, and more.
+	pkgver = r69.4523257
+	pkgrel = 1
+	url = https://github.com/FascinatedBox/bonk
+	arch = x86_64
+	license = GPL-2.0-only
+	makedepends = cmake
+	makedepends = make
+	makedepends = git
+	makedepends = libx11
+	makedepends = ruby-ronn-ng
+	depends = libxcb
+	depends = xcb-util-wm
+	source = bonk.git::git+https://github.com/FascinatedBox/bonk
+	sha256sums = SKIP
+
+pkgname = bonk-git

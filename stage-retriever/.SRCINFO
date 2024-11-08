@@ -1,0 +1,20 @@
+pkgbase = stage-retriever
+	pkgdesc = Share multiple screens at once to any meeting app.Use system-wide electron.
+	pkgver = 0.0.2
+	pkgrel = 3
+	url = https://github.com/gabrielesilinic/stage-retriever
+	arch = any
+	license = Apache-2.0
+	makedepends = gendesk
+	makedepends = npm
+	makedepends = nvm
+	makedepends = curl
+	makedepends = git
+	depends = electron28
+	conflicts = stage-retriever
+	source = stage-retriever-0.0.2.tar.gz::https://github.com/gabrielesilinic/stage-retriever/archive/refs/tags/v0.0.2.tar.gz
+	source = stage-retriever.sh
+	sha256sums = b40d796f11ff720dba7a824754fc6871ff5ad7bb454dd96ce6c6bf3d1b1b6d5c
+	sha256sums = 291f50480f5a61bc9c68db7d44cd0412071128706baa868a9cb854f8779a1980
+
+pkgname = stage-retriever

@@ -1,0 +1,16 @@
+pkgbase = passky-desktop-bin
+	pkgdesc = A simple, modern, lightweight, open source and secure password manager.
+	pkgver = 8.1.2
+	pkgrel = 2
+	url = https://github.com/Rabbit-Company/Passky-Desktop
+	arch = x86_64
+	license = GPL-3.0-only
+	depends = electron29
+	provides = passky-desktop=8.1.2
+	conflicts = passky-desktop
+	source = passky-desktop-8.1.2.deb::https://github.com/Rabbit-Company/Passky-Desktop/releases/download/v8.1.2/passky_8.1.2_amd64.deb
+	source = passky-desktop.sh
+	sha256sums = 7ae808969d769ba28859a3d0b093d28331538c05c62293590ec606defa8feb52
+	sha256sums = 2b2e8aeed33fd71c521e49fd54fb2fa81218d16aef8bccb88d77909055ab8051
+
+pkgname = passky-desktop-bin

@@ -1,0 +1,26 @@
+pkgbase = osmo-bsc-git
+	pkgdesc = Osmocom's Base Station Controller for 2G circuit-switched mobile networks
+	pkgver = 1.12.1.r22.g56fa819a9
+	pkgrel = 1
+	url = https://osmocom.org/projects/osmobsc
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	license = GPL-3.0-or-later AND LGPL-2.1-only AND AGPL-3.0-or-later
+	makedepends = git
+	depends = libosmocore-git
+	depends = libosmo-abis-git
+	depends = libosmo-netif-git
+	depends = libosmo-sigtran-git
+	depends = libosmo-mgcp-client.so
+	depends = sqlite
+	depends = libpcap
+	depends = talloc
+	provides = osmo-bsc=1.12.1.r22.g56fa819a9
+	conflicts = osmo-bsc
+	backup = etc/osmocom/osmo-bsc.cfg
+	source = git+https://gitea.osmocom.org/cellular-infrastructure/osmo-bsc
+	sha256sums = SKIP
+
+pkgname = osmo-bsc-git

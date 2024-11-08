@@ -1,0 +1,20 @@
+pkgbase = gridea-bin
+	pkgdesc = A static blog writing client.静态博客写作客户端
+	pkgver = 0.9.3
+	pkgrel = 10
+	url = https://gridea.dev
+	arch = x86_64
+	license = MIT
+	makedepends = fuse2
+	depends = electron7
+	provides = gridea=0.9.3
+	conflicts = gridea
+	options = !emptydirs
+	source = gridea-0.9.3.AppImage::https://github.com/getgridea/gridea/releases/download/v0.9.3/Gridea-0.9.3.AppImage
+	source = LICENSE-0.9.3::https://raw.githubusercontent.com/getgridea/gridea/v0.9.3/LICENSE
+	source = gridea.sh
+	sha256sums = 9538866b640e44e9fd54bc1b3a957d1625648f1c1dd6b942dcd73d22701ede4e
+	sha256sums = d5fd1669066ffaab84a9063cd2792ded7aca1f6f92a972f58ffb5173404b53d2
+	sha256sums = 2b2e8aeed33fd71c521e49fd54fb2fa81218d16aef8bccb88d77909055ab8051
+
+pkgname = gridea-bin

@@ -1,0 +1,15 @@
+pkgbase = pypy3-build
+	pkgdesc = A simple, correct PEP 517 build frontend
+	pkgver = 1.2.2
+	pkgrel = 1
+	url = https://build.pypa.io
+	arch = any
+	license = MIT
+	makedepends = pypy3-installer
+	makedepends = pypy3-flit-core
+	depends = pypy3-packaging
+	depends = pypy3-pyproject-hooks
+	source = build-1.2.2.tar.gz::https://github.com/pypa/build/archive/1.2.2.tar.gz
+	sha512sums = 91e14208680915414a87bd3ba31229510a78d82d5504efc40cf7f9c6a7a698cfa4ff523f85c2dd6a56b5e313fae57134f64f2c328c88cd40efe40236b0b661cc
+
+pkgname = pypy3-build

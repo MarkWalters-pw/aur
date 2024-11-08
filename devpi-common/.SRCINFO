@@ -1,0 +1,23 @@
+pkgbase = devpi-common
+	pkgdesc = Utilities jointly used by devpi-server and devpi-client
+	pkgver = 4.0.4
+	pkgrel = 1
+	url = https://github.com/devpi/devpi
+	changelog = CHANGELOG
+	arch = any
+	groups = devpi
+	license = MIT
+	checkdepends = python-pytest
+	makedepends = python-setuptools
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = python-setuptools-changelog-shortener
+	depends = python-lazy
+	depends = python-py
+	depends = python-requests
+	depends = python-packaging-legacy
+	source = https://files.pythonhosted.org/packages/source/d/devpi-common/devpi_common-4.0.4.tar.gz
+	sha256sums = 235a0a9a45c96e54c60ba6ba2f77d856cf90f1a69c1bee949887e9edc03a41cc
+
+pkgname = devpi-common

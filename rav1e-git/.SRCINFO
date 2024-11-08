@@ -1,0 +1,22 @@
+pkgbase = rav1e-git
+	pkgdesc = The fastest and safest AV1 encoder
+	pkgver = 0.7.1.r43.ge34e772e
+	pkgrel = 1
+	url = https://github.com/xiph/rav1e
+	arch = i686
+	arch = x86_64
+	license = BSD-2-Clause
+	license = LicenseRef-custom
+	makedepends = git
+	makedepends = cargo
+	makedepends = cargo-c
+	makedepends = nasm
+	depends = gcc-libs
+	provides = rav1e=0.7.1.r43.ge34e772e
+	provides = librav1e.so
+	conflicts = rav1e
+	options = staticlibs
+	source = git+https://github.com/xiph/rav1e.git
+	sha256sums = SKIP
+
+pkgname = rav1e-git

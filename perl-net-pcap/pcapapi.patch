@@ -1,0 +1,11 @@
+diff -up src/Net-Pcap-0.20/Makefile.PL.orig src/Net-Pcap-0.20/Makefile.PL
+--- src/Net-Pcap-0.20/Makefile.PL.orig	2022-05-06 04:33:34.450000000 -0600
++++ src/Net-Pcap-0.20/Makefile.PL	2022-05-06 04:36:35.780000000 -0600
+@@ -93,6 +93,7 @@ if( $pcap_version_number > 1009000 ) {
+ }
+ 
+ $options{DEFINE} .= cpp_defines(@funcs);
++$options{DEFINE} .= " -DPCAP_API=\"\" -DHAVE_PCAP_OPEN -DHAVE_PCAP_SETSAMPLING";
+ 
+ # Since PCAP doesn't have a version define, we introduce one:
+ (my $define = $pcap_version_number) =~ s!\.!!;

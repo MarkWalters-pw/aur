@@ -1,0 +1,22 @@
+pkgbase = python-pyreadr
+	pkgdesc = Reads/writes R RData and Rds files into/from pandas data frames
+	pkgver = 0.5.2
+	pkgrel = 1
+	url = https://github.com/ofajardo/pyreadr
+	arch = x86_64
+	license = AGPL-3.0-or-later
+	checkdepends = python-xarray
+	makedepends = cython
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = bzip2
+	depends = python-pandas
+	depends = xz
+	depends = zlib
+	optdepends = python-xarray: for 3D array support
+	source = pyreadr-0.5.2.tar.gz::https://github.com/ofajardo/pyreadr/archive/refs/tags/v5.0.2.tar.gz
+	sha256sums = 5a2cde69ca03b61d1cfc41c3d2f13aa73e090fc17c35d190dd5bfa948fd1680e
+
+pkgname = python-pyreadr

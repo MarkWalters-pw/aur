@@ -1,0 +1,10 @@
+[Unit]
+Description=Automatically adjust screen-brightness
+
+[Service]
+Type=simple
+ExecStartPre=/usr/lib/auto-brightness/wait-for-als-sensor.sh
+ExecStart=/usr/bin/auto-brightness
+
+[Install]
+WantedBy=multi-user.target

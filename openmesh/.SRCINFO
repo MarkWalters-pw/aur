@@ -1,0 +1,20 @@
+pkgbase = openmesh
+	pkgdesc = A generic and efficient data structure for representing and manipulating polygonal meshes
+	pkgver = 11.0.0
+	pkgrel = 1
+	url = http://www.openmesh.org
+	arch = i686
+	arch = x86_64
+	license = BSD-3-Clause
+	makedepends = cmake
+	makedepends = qt5-base
+	depends = gcc-libs
+	depends = glibc
+	depends = libglvnd
+	depends = qt5-base
+	source = openmesh-11.0.0.tar.bz2::https://www.graphics.rwth-aachen.de/media/openmesh_static/Releases/11.0/OpenMesh-11.0.0.tar.bz2
+	source = doc-install.patch
+	b2sums = 5f4eb34365cfeedab8e5de818db955ed1a5ab42d2289e9ab686efda0f3057462848bdee0b53af0f81ddc6ea388ef64eecde923f468beb2078a77f2dff5c04753
+	b2sums = 02336dbec8dddce14fdd6aba042ff356ca3cc5d783269bb8cf9b1f2ab75c8a525fd43fb44e61341db210cdbcb048f6771a3c8c8fd86ed6e46de74c8e0dc60d4a
+
+pkgname = openmesh

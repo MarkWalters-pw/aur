@@ -1,0 +1,26 @@
+pkgbase = python-gpflow
+	pkgdesc = Gaussian process methods in tensorflow
+	pkgver = 2.9.2
+	pkgrel = 1
+	url = https://github.com/GPflow/GPflow
+	arch = any
+	license = MIT
+	checkdepends = python-pytest
+	makedepends = python-setuptools
+	makedepends = findutils
+	depends = python-numpy
+	depends = python-scipy
+	depends = python-multipledispatch
+	depends = python-tensorflow
+	depends = python-tensorflow-probability
+	depends = python-tabulate
+	depends = python-typing_extensions
+	depends = python-packaging
+	depends = python-deprecated
+	depends = python-lark-parser
+	depends = python-check-shapes
+	optdepends = python-matplotlib: Image to tensorboard extra utility
+	source = https://github.com/GPflow/GPflow/archive/v2.9.2.tar.gz
+	sha256sums = a32914c2b581b1dd2ac9a6f40352adb5f6f2c32f53028382e542014dd829553e
+
+pkgname = python-gpflow

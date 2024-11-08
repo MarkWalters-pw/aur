@@ -1,0 +1,16 @@
+pkgbase = snowflake-client
+	pkgdesc = Snowflake Database command line client (snowsql)
+	pkgver = 1.3.1
+	pkgrel = 1
+	epoch = 1
+	url = http://www.snowflake.net/
+	arch = x86_64
+	license = custom:commercial
+	depends = gcc-libs
+	depends = libxcrypt-compat
+	source = snowflake-client-1.3.1.bash::https://sfc-repo.snowflakecomputing.com/snowsql/bootstrap/1.3/linux_x86_64/snowsql-1.3.1-linux_x86_64.bash
+	source = snowflake-client-1.3.1.bash.sig::https://sfc-repo.snowflakecomputing.com/snowsql/bootstrap/1.3/linux_x86_64/snowsql-1.3.1-linux_x86_64.bash.sig
+	sha256sums = 9a59dad2539ab8bda125d0fd923b6b3c4817dabfb5a7f923fd15825efd44f4f9
+	sha256sums = SKIP
+
+pkgname = snowflake-client

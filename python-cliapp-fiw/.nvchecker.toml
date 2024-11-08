@@ -1,0 +1,4 @@
+[python-cliapp-fiw]
+source = "jq"
+url = "https://sources.debian.org/api/src/python-cliapp"
+filter = ".versions | map(.version) | .[]"

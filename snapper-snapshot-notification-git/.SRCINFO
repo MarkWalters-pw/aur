@@ -1,0 +1,16 @@
+pkgbase = snapper-snapshot-notification-git
+	pkgdesc = It is no longer supported. Install 'btrfs-desktop-notification' instead.
+	pkgver = r4.94a129c
+	pkgrel = 1
+	url = https://gitlab.com/Zesko/snapper-snapshot-notification.git
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = bash
+	depends = libnotify
+	provides = snapper-snapshot-notification
+	conflicts = snapper-snapshot-notification
+	source = git+https://gitlab.com/Zesko/snapper-snapshot-notification.git
+	sha1sums = SKIP
+
+pkgname = snapper-snapshot-notification-git

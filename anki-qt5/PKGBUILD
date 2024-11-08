@@ -1,0 +1,159 @@
+# Maintainer: Alexander Bocken <alexander@bocken.org>
+# Contributor: Posi <posi1981@gmail.com>
+# Contributor: Johannes Löthberg <johannes@kyriasis.com>
+# Contributor: Sergej Pupykin <pupykin.s+arch@gmail.com>
+# Contributor: Timm Preetz <timm@preetz.us>
+# Contributor: Michael 'manveru' Fellinger <m.fellinger@gmail.com>
+# Contributor: Dave Pretty <david dot pretty at gmail dot com>
+
+# anki -> git rev-parse --short=8 $pkgver
+# ftl -> git submodule
+declare -gA _tags=(
+ [ftl_core]="b4813a328f44c8224d2649adbdbcbef095db9a40"
+ [ftl_desktop]="b95608421ba2ba1cdca407933aff9ba25d567e12"
+ [anki]="a5c90890"
+)
+declare -gA _caches=(
+    [yarn]="yarn-cache"
+    [cargo]="cargo-cache"
+)
+
+pkgname=anki-qt5
+pkgver=24.06.3
+pkgrel=2
+pkgdesc="Helps you remember facts (like words/phrases in a foreign language) - Qt5 Build"
+url="https://apps.ankiweb.net/"
+license=('AGPL3')
+arch=('x86_64')
+provides=('anki')
+conflicts=('anki' 'anki-bin' 'anki-git')
+depends=(
+    # anki & aqt
+    'python>=3.9'
+    'python-beautifulsoup4'
+    'python-waitress>=2.0.0'
+    'python-requests'
+    'python-pyqt5-webengine'
+
+    # anki
+    'python-decorator'
+    'python-markdown'
+    'python-orjson'
+    'python-protobuf>=4.21'
+    'python-pysocks'
+    'python-distro'
+
+    #aqt
+    'python-flask-cors' # python-flask required for anki & aqt but a dependency of -cors
+    'python-jsonschema'
+    'python-send2trash'
+    'python-certifi'
+    'python-pyqt5>=5.14'
+    'qt5-svg'
+)
+
+makedepends=(
+    'rsync'
+    'git'
+    'ninja'
+    'cargo'
+    'python-installer'
+    'python-wheel'
+    'nodejs>=20'
+    'yarn'
+    'mold'
+)
+optdepends=(
+    'lame: record sound'
+    'mpv: play sound. prefered over mplayer'
+    'mplayer: play sound'
+    'texlive-most: render LaTex in cards'
+)
+changelog="$pkgname.changelog"
+source=("$pkgname-$pkgver.tar.gz::https://github.com/ankitects/anki/archive/refs/tags/${pkgver}.tar.gz"
+        "anki-core-i18n-${_tags[ftl_core]}.tar.gz::https://github.com/ankitects/anki-core-i18n/archive/${_tags[ftl_core]}.tar.gz"
+        "anki-desktop-ftl-${_tags[ftl_desktop]}.tar.gz::https://github.com/ankitects/anki-desktop-ftl/archive/${_tags[ftl_desktop]}.tar.gz"
+        "no-update.patch"
+        "strip-formatter-deps.patch"
+        "strip-type-checking-deps.patch"
+        "force_qt5.patch"
+        "strip-python-pip-system-certs.patch"
+)
+sha256sums=('d0c9d819e87bc404fff7ca7c74880ff8ce1024c683ef939ba312bf37377bbf5f'
+            'aba298094f38c3fbdedae32a959322178d82ba76ac14155d70fcb9f685dd3024'
+            '69281d29573f787dc4520f7f86fc9b95f989353eabcf964819efed7dba42a4e6'
+            'cc546f4e5af642af89f82be0375800c2721dd904c0a212cf46f6459495b75bff'
+            '9858fefa254812980d252b29fc6f32bd19bb83ee7e5a96d72c707626ed5193a7'
+            '198bc2ec14439e3ba41a03c4823f07df4b0c559c1dcbdaf678416ed12a720c2e'
+            '02767ace172813cb2e8196838905dbc5fc7e26f853e988b9ff0bfc5276645a31'
+            '2506cf9d5b0c47a2c519ec4bb0ef87e7921dca8db5cae39b0dae265d01e253b3'
+)
+
+prepare() {
+    cd "anki-$pkgver"
+
+    patch -p1 < "$srcdir/force_qt5.patch"
+    patch -p1 < "$srcdir/no-update.patch"
+    patch -p1 < "$srcdir/strip-formatter-deps.patch"
+    patch -p1 < "$srcdir/strip-type-checking-deps.patch"
+    patch -p1 < "$srcdir/strip-python-pip-system-certs.patch"
+    sed -i 's/opt-level = 1$/opt-level= 3/' Cargo.toml	# optimize more
+    sed -i 's/channel = "[0-9\.]*"$/channel = "stable"/' rust-toolchain.toml # use most recent stable rust toolchain
+    # Build process wants .git/HEAD to be present. Workaround to be able to use tarballs
+    mkdir -p out .git
+    touch .git/HEAD
+    echo "${_tags[anki]}" > out/buildhash	# manually write the buildhash into out/buildhash to avoid git dependency in build
+
+    # place translations in build dir
+    rm -r ftl/core-repo ftl/qt-repo
+    ln -sT "${srcdir}"/anki-core-i18n-${_tags[ftl_core]} ftl/core-repo
+    ln -sT "${srcdir}"/anki-desktop-ftl-${_tags[ftl_desktop]} ftl/qt-repo
+
+    #force update for 'rustup' package users (not necesarry for 'rust' package users)
+    pacman -Qo $(which cargo) | grep -q rustup && rustup update
+    # fetch rust packages
+    export CARGO_HOME="$srcdir/${_caches[cargo]}"       # do not litter in ~
+    cargo update time@0.3.34 --precise 0.3.36	# allows to build with newer rust versions https://github.com/time-rs/time/issues/693
+    cargo fetch --locked --target "$CARCH-unknown-linux-gnu"
+
+    # fetch node packages already in prepare()
+    export YARN_CACHE_FOLDER="$srcdir/${_caches[yarn]}" # do not litter in ~
+    yarn install --immutable --modules-folder out/node_modules --ignore-scripts
+    ln -sf out/node_modules ./
+
+    # mask pip-sync as we provide dependencies ourselves
+    local venv="out/pyenv"
+    python -m venv --system-site-packages --without-pip "$venv"
+    printf '#!/bin/bash\nexit 0' > "$venv/bin/pip-sync"
+    chmod +x "$venv/bin/pip-sync"
+}
+build() {
+    cd "anki-$pkgver"
+    export YARN_CACHE_FOLDER="$srcdir/${_caches[yarn]}" # do not litter in ~
+
+    #use local binaries instead of downloading them
+    export PYTHON_BINARY=$(which python)
+    export PROTOC_BINARY=$(which protoc)
+    export NODE_BINARY=$(which node)
+    export YARN_BINARY=$(which yarn)
+
+    export CARGO_HOME="$srcdir/${_caches[cargo]}"    # do not litter in ~
+    export RELEASE=2	        # anki-internal variable for optimization
+
+    export OFFLINE_BUILD=1 # do not download anything, disables git checks
+    # use fat LTO objects, allows for LTO, needed for rust crate "ring"
+    # See https://gitlab.archlinux.org/archlinux/packaging/packages/pacman/-/issues/20 and https://github.com/briansmith/ring/issues/1444
+    # export CFLAGS+=' -ffat-lto-objects'
+    # ./ninja wheels -v
+    mold -run ./ninja wheels -v
+}
+
+package() {
+    cd "anki-$pkgver"
+    for file in out/wheels/*.whl; do
+    	python -m installer --destdir="$pkgdir" $file
+    done
+
+    install -Dm644 qt/bundle/lin/anki.desktop "$pkgdir"/usr/share/applications/anki.desktop
+    install -Dm644 qt/bundle/lin/anki.png "$pkgdir"/usr/share/pixmaps/anki.png
+}

@@ -1,0 +1,17 @@
+pkgbase = saturn
+	pkgdesc = A cross-platform, all-in-one machinima studio for Super Mario 64.
+	pkgver = 1.1.0
+	pkgrel = 4
+	arch = x86_64
+	makedepends = gcc
+	makedepends = make
+	makedepends = git
+	makedepends = python3
+	depends = sdl2
+	depends = glew
+	source = https://github.com/Llennpie/Saturn/archive/legacy.tar.gz
+	source = makepkg.patch
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = saturn

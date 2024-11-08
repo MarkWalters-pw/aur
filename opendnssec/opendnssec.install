@@ -1,0 +1,29 @@
+post_install() {
+    if [ -z "`grep '^opendnssec:' /etc/group`" ]; then
+        groupadd -g 227 opendnssec
+    fi
+    if [ -z "`grep '^opendnssec:' /etc/passwd`" ]; then
+        useradd -u 227 -d /var/lib/opendnssec -g opendnssec -s /bin/false opendnssec
+    fi
+    
+    systemd-tmpfiles --create opendnssec.conf
+
+    echo ">> You need an HSM implementation (try softhsm)"
+}
+
+
+post_upgrade() {
+    post_install $1
+    OLD=$(echo $2 | sed "s/\(.*\)\.\(.*\)\.\(.*\)/\1\.\2/g")
+    NEW=$(echo $1 | sed "s/\(.*\)\.\(.*\)\.\(.*\)/\1\.\2/g")
+    if [ $OLD != "2.0" -a $NEW == "2.0" ]; then
+        echo ">> NOTICE: UPGRADE TO 2.0"
+        echo "This update requires upgrading the database"
+	echo "Read /usr/share/opendnssec/1.4-2.0_db_convert/README.md"
+        echo "for instructions on how to convert the DB to the new format"
+    fi
+}
+
+post_remove() {
+    userdel opendnssec
+}

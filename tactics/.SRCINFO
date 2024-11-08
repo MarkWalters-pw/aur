@@ -1,0 +1,17 @@
+pkgbase = tactics
+	pkgdesc = Build your soccer lineup
+	pkgver = 0.8
+	pkgrel = 1
+	url = https://gitlab.com/leesonwai/tactics
+	arch = x86_64
+	arch = aarch64
+	license = GPL-3.0-only
+	checkdepends = appstream-glib
+	makedepends = git
+	makedepends = glib2-devel
+	makedepends = meson
+	depends = libadwaita
+	source = git+https://gitlab.com/leesonwai/tactics.git#commit=74e9e287f85e692ea52b28f0fc7ff3c2ef5cbc07
+	sha256sums = SKIP
+
+pkgname = tactics

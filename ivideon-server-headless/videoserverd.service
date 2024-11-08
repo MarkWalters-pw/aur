@@ -1,0 +1,22 @@
+[Unit]
+Description=Ivideon Videoserverd
+After=network.target network-online.target nss-lookup.target
+Requires=network.target
+ConditionPathExists=/etc/videoserverd.conf
+
+[Service]
+Type=simple
+User=videoserverd
+PIDFile=/run/videoserverd/videoserverd.pid
+ExecStart=/opt/ivideon/ivideon-server/videoserver -c /etc/videoserverd.conf -d /var/log/videoserverd/dumps
+ExecReload=/usr/bin/kill -HUP $MAINPID
+TimeoutSec=30s
+Restart=on-failure
+RestartSec=5s
+StartLimitInterval=60
+StartLimitBurst=5
+KillMode=process
+SendSIGKILL=yes
+
+[Install]
+WantedBy=multi-user.target

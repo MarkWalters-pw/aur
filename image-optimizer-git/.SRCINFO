@@ -1,0 +1,21 @@
+pkgbase = image-optimizer-git
+	pkgdesc = Simple lossless compression (latest commit)
+	pkgver = 0.1.25.r0.g8212165
+	pkgrel = 1
+	url = https://github.com/gijsgoudzwaard/image-optimizer
+	arch = x86_64
+	arch = i686
+	license = MIT
+	checkdepends = appstream-glib
+	makedepends = git
+	makedepends = meson
+	makedepends = vala
+	depends = granite
+	depends = optipng
+	depends = jpegoptim
+	provides = image-optimizer
+	conflicts = image-optimizer
+	source = git+https://github.com/gijsgoudzwaard/image-optimizer.git
+	sha256sums = SKIP
+
+pkgname = image-optimizer-git

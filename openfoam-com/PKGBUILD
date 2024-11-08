@@ -1,0 +1,154 @@
+# Maintainer: Carlos Aznarán <caznaranl@uni.pe>
+# Contributor: Norbert Weber <norbert.weber_at_hzdr.de>
+# Contributor: Marc Olesen
+# Contributor: Xwang <xwaang1976@gmail.com>
+# Contributor: George Eleftheriou <eleftg>
+# Contributor: Andrew Fischer <andrew_at_apastron.co>
+# Contributor: <gucong43216@gmail.com>
+
+# Installs as (for example)
+# /opt/OpenFOAM/OpenFOAM-v2406
+
+_distname=OpenFOAM
+pkgname=${_distname,,}-com
+pkgver=v2406
+_dist=${_distname}-${pkgver}
+pkgrel=2
+pkgdesc="The open source CFD toolbox (www.openfoam.com)"
+arch=(i686 x86_64)
+url="https://www.${pkgname//-/.}"
+license=(GPL-3.0-or-later)
+install="${pkgname}.install"
+depends=(cgal fftw boost openmpi paraview scotch parmetis-git kahip) # petsc hypre
+source=(https://dl.${pkgname//-/.}/source/${pkgver}/${_dist}.tgz
+  file://update_to_std_optional.patch
+  file://update_to_std_variant.patch)
+md5sums=('0d01e49d7973978cd3dcaf766f1b782a'
+         'f55627be57b69cf305bd7dbdca75371a'
+         '83086e4cc19d0e156b8d72f5f537515d')
+
+prepare() {
+  if [ -n "$WM_PROJECT_DIR" ]; then
+    echo
+    echo -e "\e[1m\e[5m\e[31mPlease make sure that no OpenFOAM version is sourced in bashrc.\e[0m"
+    echo
+    return 1
+  fi
+
+  projectDir="${srcdir}/${_dist}"
+
+  # Generate and install the system preferences file
+  echo "# Preferences for arch-linux
+export WM_COMPILER_TYPE=system
+export WM_MPLIB=SYSTEMOPENMPI
+# End" \
+    >"${projectDir}"/etc/prefs.sh
+
+  # Configure components.
+  # Use system values for boost/cgal, fftw, kahip, metis, paraview, scotch
+  # -petsc petsc-system -hypre hypre-system -mpfr mpfr-system -gmp gmp-system
+
+  "${projectDir}"/bin/tools/foamConfigurePaths \
+    -adios adios-system \
+    -boost boost-system \
+    -cgal cgal-system \
+    -fftw fftw-system \
+    -kahip kahip-system \
+    -metis metis-system \
+    -paraview paraview-system \
+    -scotch scotch-system \
+    ;
+
+    # https://develop.openfoam.com/Development/openfoam/-/issues/3234
+    cd "$projectDir"
+    sed -i 's/g++$(COMPILER_VERSION) -std=c++14/g++$(COMPILER_VERSION) -std=c++17/g' wmake/rules/General/Gcc/c++
+    patch -p1 -i ../update_to_std_optional.patch
+    patch -p1 -i ../update_to_std_variant.patch
+}
+
+build() {
+  if [ -n "$WM_PROJECT_DIR" ]; then
+    echo
+    echo -e "\e[1m\e[5m\e[31mPlease make sure that no OpenFOAM version is sourced in bashrc.\e[0m"
+    echo
+    return 1
+  fi
+
+  projectDir="${srcdir}/${_dist}"
+  [ -f "$projectDir/etc/bashrc" ] || {
+    echo "No $projectDir/etc/bashrc found"
+    return 1
+  }
+
+  # Avoid external influence on the environment
+  export FOAM_CONFIG_MODE="o"
+  unset FOAM_SETTINGS
+
+  set +e # Turn errexit off
+
+  source "$projectDir"/etc/bashrc '' ||
+    echo "Ignore spurious sourcing error"
+
+  # it seems, the bashrc file destroys 'projectDir'
+  projectDir="${srcdir}/${_dist}"
+
+  set -e # Turn errexit back on
+  cd "$projectDir" || exit
+
+  # Dummy application for testing
+  #./applications/test/00-dummy/Allwmake
+
+  ./Allwmake -j -log=log.build
+
+  # Check log for this type of content:
+  #
+  #   api   = 2006
+  #   patch = 1
+  #   bin   = 283 entries
+  #   lib   = 139 entries
+
+  [ -f log.build ] || {
+    echo "No log.build file - build failed entirely"
+    exit 1
+  }
+
+  bins="$(cat log.build | sed -ne 's/.*bin *= *\([0-9][0-9]*\).*/\1/p;' | sed -ne '$p')"
+  libs="$(cat log.build | sed -ne 's/.*lib *= *\([0-9][0-9]*\).*/\1/p;' | sed -ne '$p')"
+
+  if [ "${bins:=0}" = 0 ] || [ "${libs:=0}" = 0 ]; then
+    echo
+    echo "Build failed with $bins executables and $libs libraries"
+    echo "Check the log.build file"
+    echo
+    exit 1
+  fi
+
+  # Remove intermediate build artifacts
+  rm -rf "${projectDir}/build"
+}
+
+package() {
+  cd ${srcdir}
+
+  # Installation directories
+  parentDir="${pkgdir}/opt/${_distname}"
+  projectDir="${parentDir}/${_dist}"
+
+  # Create destination directories
+  install -d "${parentDir}" "${pkgdir}"/etc/profile.d || return 1
+
+  # Copy package to pkgdir
+  cp -r "${srcdir}/${_dist}" "${parentDir}" || return 1
+
+  # Permission fixes - for system-wide install and use
+  chmod -R go+r "${pkgdir}"/opt
+  chmod -R 755 "${projectDir}"/bin
+  chmod -R 755 "${projectDir}"/etc
+
+  [ -e "${projectDir}"/ThirdParty ] ||
+    echo "system dependencies" >|"${projectDir}"/ThirdParty
+
+  # create aliases
+  echo "alias of='source /opt/${_distname}/${_dist}/etc/bashrc'" >>"${pkgdir}/etc/profile.d/${pkgname}.sh"
+  echo "alias paraFoam='paraFoam -builtin'" >>"${pkgdir}/etc/profile.d/${pkgname}.sh"
+}

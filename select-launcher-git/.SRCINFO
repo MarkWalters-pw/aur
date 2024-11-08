@@ -1,0 +1,21 @@
+pkgbase = select-launcher-git
+	pkgdesc = Official launcher for all games made by select.Use system-wide electron.
+	pkgver = 3.0.0.beta.13.r3.g5fb693d
+	pkgrel = 1
+	url = https://select-launcher.onrender.com/
+	arch = any
+	license = LicenseRef-CommerciaStandardLicense
+	makedepends = npm
+	makedepends = git
+	makedepends = nvm
+	makedepends = gendesk
+	makedepends = curl
+	depends = electron27
+	provides = select-launcher=3.0.0.beta.13
+	conflicts = select-launcher
+	source = select-launcher.git::git+https://github.com/select-studios/Select-Launcher.git
+	source = select-launcher.sh
+	sha256sums = SKIP
+	sha256sums = 291f50480f5a61bc9c68db7d44cd0412071128706baa868a9cb854f8779a1980
+
+pkgname = select-launcher-git

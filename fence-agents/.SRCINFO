@@ -1,0 +1,25 @@
+pkgbase = fence-agents
+	pkgdesc = OCF fence agents for rgmanager and pacemaker
+	pkgver = 4.15.0
+	pkgrel = 1
+	url = http://clusterlabs.org/
+	arch = x86_64
+	license = GPL2
+	makedepends = libxslt
+	makedepends = python
+	makedepends = libvirt
+	makedepends = libxml2
+	makedepends = python-boto3
+	makedepends = python-suds
+	makedepends = python-google-auth
+	depends = python-pexpect
+	depends = python-pycurl
+	depends = python-requests
+	optdepends = python-boto3: for aws
+	optdepends = python-suds: for ovh and vmware_soap
+	optdepends = python-google-auth: for gce
+	optdepends = libvirt: for virt
+	source = fence-agents-4.15.0.tar.gz::https://github.com/ClusterLabs/fence-agents/archive/v4.15.0.tar.gz
+	sha256sums = 9faaf0e50b6f25edb5df47e85a815f0a770a9d5cf4a020f24ece6b368454f725
+
+pkgname = fence-agents

@@ -1,0 +1,23 @@
+pkgbase = sparrow-wallet
+	pkgdesc = Desktop Bitcoin Wallet focused on security and privacy. Free and open source
+	pkgver = 2.0.0
+	pkgrel = 1
+	url = https://sparrowwallet.com/
+	arch = x86_64
+	license = Apache-2.0
+	makedepends = gendesk
+	depends = hicolor-icon-theme
+	depends = alsa-lib
+	depends = libxtst
+	depends = libxrender
+	depends = freetype2
+	depends = libxcrypt-compat
+	source = https://github.com/sparrowwallet/sparrow/releases/download/2.0.0/sparrow-2.0.0-x86_64.tar.gz
+	source = https://github.com/sparrowwallet/sparrow/releases/download/2.0.0/sparrow-2.0.0-manifest.txt
+	source = https://github.com/sparrowwallet/sparrow/releases/download/2.0.0/sparrow-2.0.0-manifest.txt.asc
+	validpgpkeys = D4D0D3202FC06849A257B38DE94618334C674B40
+	sha256sums = 678ac0dca39b3c03ae25e23e4f3c986970f2a6d0310405b36090d3a6552fc39d
+	sha256sums = aa390ac375a66d105ffb2a9c4886155a6633f0cdeed89c6706b891d0473f0bb0
+	sha256sums = SKIP
+
+pkgname = sparrow-wallet

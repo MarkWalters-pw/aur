@@ -1,0 +1,27 @@
+pkgbase = auto-cpufreq-git
+	pkgdesc = Automatic CPU speed & power optimizer
+	pkgver = 2.3.0.r16.ga7df94d
+	pkgrel = 1
+	url = https://github.com/AdnanHodzic/auto-cpufreq
+	install = auto-cpufreq.install
+	arch = any
+	license = LGPL-3.0
+	makedepends = git
+	makedepends = python-setuptools
+	makedepends = python-pip
+	depends = python-distro
+	depends = python-poetry
+	depends = python-psutil
+	depends = python-click
+	depends = dmidecode
+	optdepends = cpufreqctl: CPU Power Manager
+	optdepends = gnome-shell-extension-cpufreq: CPU Power Manager for GNOME Shell
+	optdepends = thermald: Thermal Daemon - recommended by upstream
+	provides = auto-cpufreq
+	conflicts = auto-cpufreq
+	source = git+https://github.com/AdnanHodzic/auto-cpufreq.git
+	source = auto-cpufreq.service
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = auto-cpufreq-git

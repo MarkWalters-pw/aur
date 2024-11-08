@@ -1,0 +1,19 @@
+pkgbase = python-pint-xarray
+	pkgdesc = A convenience wrapper for using pint with xarray.
+	pkgver = 0.4
+	pkgrel = 1
+	url = https://github.com/xarray-contrib/pint-xarray
+	arch = any
+	license = Apache
+	checkdepends = python-pytest
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = python
+	depends = python-numpy
+	depends = python-xarray
+	depends = python-pint
+	source = python-pint-xarray-0.4.tar.gz::https://github.com/xarray-contrib/pint-xarray/archive/refs/tags/v0.4.tar.gz
+	sha256sums = 6a7b7f6721e052938bd7e4ab3acdacd6ee81aff7401052a35f04073afaa84a0c
+
+pkgname = python-pint-xarray

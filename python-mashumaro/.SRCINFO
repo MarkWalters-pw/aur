@@ -1,0 +1,27 @@
+pkgbase = python-mashumaro
+	pkgdesc = A fast and well tested serialization library on top of dataclasses.
+	pkgver = 3.13.1
+	pkgrel = 1
+	url = https://github.com/Fatal1ty/mashumaro
+	arch = any
+	license = Apache
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = python-pytest
+	makedepends = python-pytest-mock
+	makedepends = python-orjson
+	makedepends = python-tomli-w
+	depends = python
+	depends = python-pendulum
+	depends = python-ciso8601
+	depends = python-typing_extensions
+	optdepends = python-pyyaml: for YAML serialization
+	optdepends = python-msgpack: for msgpack serialization
+	optdepends = python-tomli: for TOML deserialization
+	optdepends = python-tomli-w: for TOML serialization
+	optdepends = python-orjson: for JSON serialization
+	source = python-mashumaro-3.13.1.tar.gz::https://github.com/Fatal1ty/mashumaro/archive/v3.13.1.tar.gz
+	sha256sums = 373a0f22f902fc304626a081d37e261b89d419c6747cbde713bff14e54253c8f
+
+pkgname = python-mashumaro

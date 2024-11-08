@@ -1,0 +1,20 @@
+pkgbase = twa
+	pkgdesc = Tiny web auditor with strong opinions
+	pkgver = 1.11.0
+	pkgrel = 1
+	url = https://github.com/trailofbits/twa
+	arch = any
+	license = MIT
+	checkdepends = shellcheck
+	checkdepends = testssl.sh
+	makedepends = git
+	depends = bash
+	depends = bind-tools
+	depends = curl
+	depends = jq
+	depends = netcat
+	optdepends = testssl.sh: for testssl-based checks
+	source = git+https://github.com/trailofbits/twa.git#tag=v1.11.0
+	b2sums = e4c36068f0bf957abbeb2f11b6c0addb401415275cbb5795ad461f8f71bf64a7ec9453979c27e9162dad9e402b30009db4a22cff5c1041ba46ea902dd38cbeba
+
+pkgname = twa

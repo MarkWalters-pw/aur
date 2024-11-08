@@ -1,0 +1,57 @@
+image: base/devel
+
+stages:
+  - test
+  - deploy
+
+test:
+  stage: test
+  only:
+    - master
+  before_script:
+    - pacman -Syuw --noconfirm
+    - pacman -Syyu namcap --noconfirm
+    - useradd somebody
+    - echo "somebody ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+  script:
+    - sudo -u somebody ./test.sh
+
+github:
+  stage: deploy
+  before_script:
+    - pacman -Syuw --noconfirm
+    - pacman -Syyu git --noconfirm
+    - git checkout "$CI_BUILD_REF_NAME"
+    - git remote add github https://"$GITHUB_USERNAME":"$GITHUB_TOKEN"@github.com/sanduhrs/arch-aur-traefik-bin
+  script:
+    - git push github
+  environment:
+    name: staging
+    url: https://github.com/sanduhrs/arch-aur-traefik-bin
+  only:
+    - branches
+  when: on_success
+
+aur:
+  stage: deploy
+  before_script:
+    - pacman -Syuw --noconfirm
+    - pacman -Syyu git openssh --noconfirm
+    - eval $(ssh-agent -s)
+    - ssh-add <(echo "$SSH_PRIVATE_KEY")
+    # For Docker builds disable host key checking. Be aware that by adding that
+    # you are suspectible to man-in-the-middle attacks.
+    # WARNING: Use this only with the Docker executor, if you use it with shell
+    # you will overwrite your user's SSH config.
+    - mkdir -p ~/.ssh
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+    - git checkout "$CI_BUILD_REF_NAME"
+    - git remote add aur ssh://aur@aur.archlinux.org/traefik-bin.git
+  script:
+    - git push aur
+  environment:
+    name: production
+    url: https://aur.archlinux.org/packages/traefik-bin
+  only:
+    - master
+  when: manual

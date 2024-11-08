@@ -1,0 +1,19 @@
+pkgbase = solidity
+	pkgdesc = Smart contract programming language.
+	pkgver = 0.8.26
+	pkgrel = 1
+	url = https://github.com/ethereum/solidity
+	arch = x86_64
+	license = GPL-3.0-or-later
+	checkdepends = evmone
+	makedepends = boost
+	makedepends = cmake
+	depends = boost-libs
+	optdepends = cvc4: SMT checker
+	optdepends = z3: SMT checker
+	conflicts = solidity-bin
+	conflicts = solidity-git
+	source = solidity-v0.8.26.tar.gz::https://github.com/ethereum/solidity/releases/download/v0.8.26/solidity_0.8.26.tar.gz
+	sha512sums = ac799b64a792a857469e06d258225865acfca715b191d0e8df471429827725e0cbe631e57938f2bb7560e3d1629223ef0e24652480f385ed581ac96269fe2e29
+
+pkgname = solidity

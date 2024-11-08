@@ -1,0 +1,12 @@
+diff --git a/SendFile.xs b/SendFile.xs
+index e94c190..9a3ffb8 100644
+--- a/SendFile.xs
++++ b/SendFile.xs
+@@ -3,6 +3,7 @@
+ #include "XSUB.h"
+ 
+ #include <unistd.h>
++#include <sys/sendfile.h>
+ 
+ 
+ MODULE = IO::SendFile		PACKAGE = IO::SendFile		

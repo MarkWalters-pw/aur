@@ -1,0 +1,20 @@
+pkgbase = coreboot-configurator-git
+	pkgdesc = A simple GUI to change settings in coreboot's CBFS, via the nvramtool utility
+	pkgver = 11.0.gb27400d
+	pkgrel = 1
+	url = https://github.com/StarLabsLtd/coreboot-configurator
+	arch = x86_64
+	license = GPL2
+	makedepends = ninja
+	makedepends = meson
+	makedepends = git
+	makedepends = inkscape
+	depends = nvramtool
+	depends = yaml-cpp
+	depends = qt5-base
+	depends = qt5-svg
+	provides = coreboot-configurator
+	source = git+https://github.com/StarLabsLtd/coreboot-configurator.git
+	sha256sums = SKIP
+
+pkgname = coreboot-configurator-git

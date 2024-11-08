@@ -1,0 +1,19 @@
+pkgbase = psc-package-git
+	pkgdesc = A package manager for PureScript based on package sets
+	pkgver = 0.6.2.r1.2817cfd
+	pkgrel = 1
+	url = https://github.com/purescript/psc-package
+	arch = x86_64
+	license = BSD3
+	makedepends = ghc
+	makedepends = stack
+	makedepends = git
+	makedepends = awk
+	makedepends = zsh
+	provides = psc-package
+	conflicts = psc-package
+	conflicts = psc-package-bin
+	source = psc-package::git+https://github.com/purescript/psc-package.git#branch=master
+	sha1sums = SKIP
+
+pkgname = psc-package-git

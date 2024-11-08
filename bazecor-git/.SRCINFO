@@ -1,0 +1,22 @@
+pkgbase = bazecor-git
+	pkgdesc = Graphical configurator for Dygma Raise. Development branch
+	pkgver = 1.4.3.4439
+	pkgrel = 1
+	url = https://github.com/Dygmalab/Bazecor
+	install = bazecor.install
+	arch = x86_64
+	license = GPL3
+	makedepends = yarn
+	makedepends = git
+	makedepends = nvm
+	makedepends = squashfs-tools
+	makedepends = python
+	makedepends = jq
+	depends = fuse
+	provides = bazecor
+	conflicts = bazecor
+	options = !strip
+	source = bazecor-git::git+https://github.com/Dygmalab/Bazecor.git#branch=development
+	cksums = SKIP
+
+pkgname = bazecor-git

@@ -1,0 +1,25 @@
+pkgbase = patool-git
+	pkgdesc = portable command line archive file manager (git checkout)
+	pkgver = 2.4.0.r0.gecd605c
+	pkgrel = 1
+	url = https://wummel.github.io/patool/
+	arch = any
+	license = GPL-3-only
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = python-setuptools
+	makedepends = python-argcomplete
+	depends = python
+	optdepends = lz4: extracting LZ4 archives
+	optdepends = p7zip: extracting ZIP and 7z files
+	optdepends = unarchiver: extracting various formats
+	optdepends = unrar: extracting RAR files
+	optdepends = zstd: extracting ZSTANDARD files
+	provides = patool
+	conflicts = patool
+	source = git+https://github.com/wummel/patool.git
+	sha256sums = SKIP
+
+pkgname = patool-git

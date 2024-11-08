@@ -1,0 +1,15 @@
+pkgbase = emulsion-bin
+	pkgdesc = A fast and minimalistic image viewer (binary release)
+	pkgver = 11.0
+	pkgrel = 1
+	url = https://github.com/ArturKovacs/emulsion
+	arch = x86_64
+	license = MIT
+	depends = hicolor-icon-theme
+	depends = libavif
+	provides = emulsion
+	conflicts = emulsion
+	source = https://github.com/ArturKovacs/emulsion/releases/download/v11.0/Emulsion-Linux.deb-v11.0.deb
+	sha256sums = e9564387333592cd6dbc16dbeeb9dc4243d00a15d67bc821afd3c6e57c12b568
+
+pkgname = emulsion-bin

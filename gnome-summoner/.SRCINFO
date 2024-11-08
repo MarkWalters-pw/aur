@@ -1,0 +1,25 @@
+pkgbase = gnome-summoner
+	pkgdesc = Launcher for Gnome that doesn't search, it summons
+	pkgver = 0.1.1
+	pkgrel = 1
+	url = https://codeberg.org/mkhl/gnome-summoner
+	arch = i686
+	arch = x86_64
+	arch = armv6h
+	arch = armv7h
+	license = 0BSD
+	checkdepends = appstream
+	checkdepends = desktop-file-utils
+	checkdepends = glib2
+	makedepends = blueprint-compiler
+	makedepends = cargo
+	makedepends = meson
+	depends = glibc
+	depends = gcc-libs
+	depends = glib2
+	depends = gtk4
+	depends = libadwaita
+	source = gnome-summoner-0.1.1.tar.gz::https://codeberg.org/mkhl/gnome-summoner/archive/v0.1.1.tar.gz
+	sha512sums = fbde5a7ff6978d2692ef00a32d521fa4cb19695634b753632bec0d0f94882edf4fec1b2823ad52330a95028d9fd2001528ebdff80b2d59c1461dec12e0306832
+
+pkgname = gnome-summoner

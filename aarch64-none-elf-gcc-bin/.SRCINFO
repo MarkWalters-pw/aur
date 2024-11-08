@@ -1,0 +1,21 @@
+pkgbase = aarch64-none-elf-gcc-bin
+	pkgdesc = The GNU Compiler Collection - cross compiler for ARM64 target
+	pkgver = 13.3.rel1
+	pkgrel = 1
+	url = https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads
+	arch = x86_64
+	license = GPL
+	license = LGPL
+	provides = aarch64-none-elf-gcc
+	provides = aarch64-none-elf-gcc-binutils
+	provides = aarch64-none-elf-gdb
+	conflicts = aarch64-none-elf-toolchain
+	conflicts = aarch64-none-elf-gcc
+	conflicts = aarch64-none-elf-gcc-binutils
+	conflicts = aarch64-none-elf-gdb
+	options = !strip
+	options = !debug
+	source = https://developer.arm.com/-/media/Files/downloads/gnu/13.3.rel1/binrel/arm-gnu-toolchain-13.3.rel1-x86_64-aarch64-none-elf.tar.xz
+	sha256sums = 7fedf894040580b1db747d06ac5d4263c46e591ffe7695656d1da5accb00a159
+
+pkgname = aarch64-none-elf-gcc-bin

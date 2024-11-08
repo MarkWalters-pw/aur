@@ -1,0 +1,18 @@
+pkgbase = cross-install-git
+	pkgdesc = POSIX-complient cross-platform install command
+	pkgver = 1.2.0.r7.gf9c1bad
+	pkgrel = 1
+	url = https://gitlab.com/stefanwimmer128/cross-install
+	arch = any
+	license = MPL2
+	checkdepends = shellcheck
+	makedepends = git
+	makedepends = getoptions
+	makedepends = moreutils
+	depends = sh
+	provides = cross-install
+	conflicts = cross-install
+	source = cross-install::git+https://gitlab.com/stefanwimmer128/cross-install.git
+	sha256sums = SKIP
+
+pkgname = cross-install-git

@@ -1,0 +1,33 @@
+# Maintainer: gifnksm <makoto.nksm+aur@gmail.com>
+_pkgname=souko
+pkgname=${_pkgname}-bin
+pkgver=0.2.1
+pkgrel=1
+epoch=
+pkgdesc="Provides an easy way to organize clones of remote git repositories"
+arch=('x86_64' 'aarch64')
+url="https://github.com/gifnksm/souko"
+license=('MIT' 'Apache-2.0')
+depends=('gcc-libs' 'zlib')
+conflicts=('souko')
+provides=('souko')
+source_x86_64=("https://github.com/gifnksm/$_pkgname/releases/download/v$pkgver/$_pkgname-v$pkgver-x86_64-unknown-linux-gnu.tar.gz")
+source_aarch64=("https://github.com/gifnksm/$_pkgname/releases/download/v$pkgver/$_pkgname-v$pkgver-aarch64-unknown-linux-gnu.tar.gz")
+sha256sums_x86_64=('471f021640e580c23b71f742a0306d8acd101590abd5a755335efee032ed2260')
+sha256sums_aarch64=('0bb6280928f9f9f8bfc4eb691ed7162d9195fff29f981d9728faf9cf81a20f7a')
+
+package() {
+        cd "$srcdir/"
+
+        install -Dm 755 souko -t "${pkgdir}/usr/bin/"
+
+        install -Dm 644 man/*.1 -t "${pkgdir}/usr/share/man/man1/"
+
+        install -Dm 644 completion/_souko -t "${pkgdir}/usr/share/zsh/site-functions/"
+        install -Dm 644 completion/souko.bash -t "${pkgdir}/usr/share/bash-completion/completions/"
+        install -Dm 644 completion/souko.fish -t "${pkgdir}/usr/share/fish/vendor_completions.d/"
+
+        install -Dm 644 LICENSE-* -t "${pkgdir}/usr/share/licenses/${pkgname}"
+        install -Dm 644 README.md -t "${pkgdir}/usr/share/doc/${pkgname}"
+
+}

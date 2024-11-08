@@ -1,0 +1,22 @@
+pkgbase = anymeal-git
+	pkgdesc = Recipe management software. Supports MealMaster recipes, import, export, search, display, edit, and printing them.
+	pkgver = r8ba41e4
+	pkgrel = 1
+	url = https://github.com/wedesoft/anymeal
+	arch = x86_64
+	license = GPL3
+	makedepends = autoconf
+	makedepends = automake
+	makedepends = libtool
+	makedepends = flex
+	makedepends = gtest
+	makedepends = qt5-tools
+	makedepends = git
+	depends = sqlite
+	depends = qt5-base
+	depends = recode
+	conflicts = anymeal
+	source = git+https://github.com/wedesoft/anymeal.git
+	sha256sums = SKIP
+
+pkgname = anymeal-git

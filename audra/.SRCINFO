@@ -1,0 +1,18 @@
+pkgbase = audra
+	pkgdesc = A bullet-hell Touhou fangame, written in Rust and Vulkan.
+	pkgver = 0.4.0
+	pkgrel = 1
+	url = https://codeberg.org/raubarno/audra
+	arch = x86_64
+	license = GPL3
+	makedepends = gcc
+	makedepends = cmake
+	makedepends = cargo
+	makedepends = git
+	makedepends = shaderc
+	depends = libxkbcommon-x11
+	depends = vulkan-icd-loader
+	source = audra-0.4.0.tar.gz::https://codeberg.org/raubarno/audra/archive/v0.4.0.tar.gz
+	sha512sums = b5708897d52ac9e4f08ec754b6e9e51c98ed84ab018644826bc834a6194cc24fe3363d473b96b56f1f228fa92aaed455624d8a957e69c5fd08120d89426f49d8
+
+pkgname = audra

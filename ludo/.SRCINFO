@@ -1,0 +1,26 @@
+pkgbase = ludo
+	pkgdesc = Ludo is a minimalist frontend for emulators
+	pkgver = 0.17.2
+	pkgrel = 2
+	url = https://github.com/libretro/ludo
+	arch = x86_64
+	arch = armv7h
+	license = GPL3
+	makedepends = go
+	makedepends = git
+	makedepends = wget
+	makedepends = unzip
+	makedepends = libxi
+	makedepends = libxinerama
+	makedepends = libxrandr
+	depends = glfw-x11
+	depends = openal
+	depends = mesa
+	source = git+https://github.com/libretro/ludo
+	source = ludo.toml
+	source = ludo.desktop
+	sha256sums = SKIP
+	sha256sums = c7ee8acced118b64c6edd54260bc31a976ef551337dcf57d2e45cbfafbe8c84b
+	sha256sums = 139eedd5dd868717b46032cd9773bc63b692237c37e6da4450357a3f56a18042
+
+pkgname = ludo

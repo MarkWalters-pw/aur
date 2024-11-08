@@ -1,0 +1,24 @@
+pkgbase = python-cloudkittyclient
+	pkgdesc = Client library for the CloudKitty API
+	pkgver = 5.2.0
+	pkgrel = 1
+	url = https://docs.openstack.org/python-cloudkittyclient/
+	arch = any
+	license = Apache
+	checkdepends = python-oslotest
+	checkdepends = python-stestr
+	checkdepends = python-openstackclient
+	makedepends = python-setuptools
+	depends = python-pbr
+	depends = python-cliff
+	depends = python-keystoneauth1
+	depends = python-oslo-utils
+	depends = python-oslo-log
+	depends = python-yaml
+	depends = python-jsonpath-rw-ext
+	depends = python-os-client-config
+	depends = python-osc-lib
+	source = https://tarballs.opendev.org/openstack/python-cloudkittyclient/python-cloudkittyclient-5.2.0.tar.gz
+	sha512sums = 32993c37a41f04cbdcfd14e97d17bf5d70ac2c192af18817892ea9cd9dc73ecd8a9f9f681e4d13c62d6559e446c61324d6ee2e8dfb4ed70e5bc7fa858edbf0cd
+
+pkgname = python-cloudkittyclient

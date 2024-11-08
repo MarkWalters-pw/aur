@@ -1,0 +1,22 @@
+pkgbase = rider
+	pkgdesc = A cross-platform .NET IDE by JetBrains.
+	pkgver = 2024.2.7
+	pkgrel = 1
+	epoch = 1
+	url = https://www.jetbrains.com/rider/
+	arch = x86_64
+	arch = aarch64
+	license = Commercial
+	makedepends = gendesk
+	optdepends = mono: .NET runtime
+	optdepends = msbuild: build .NET Core projects
+	provides = rider
+	conflicts = rider
+	options = !strip
+	options = staticlibs
+	source_x86_64 = https://download-cf.jetbrains.com/rider/JetBrains.Rider-2024.2.4.tar.gz
+	sha256sums_x86_64 = 71dda49ff9b2eeb982c0d9ea8ff70fde3f45ddc98e2be95c260bdc9cfbba7e42
+	source_aarch64 = https://download-cf.jetbrains.com/rider/JetBrains.Rider-2024.2.4-aarch64.tar.gz
+	sha256sums_aarch64 = 5848b1949a01c11bbd48a0b048470d160dad808dc0cfa14872a3448c8f9fbffa
+
+pkgname = rider

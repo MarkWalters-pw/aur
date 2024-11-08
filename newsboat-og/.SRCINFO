@@ -1,0 +1,27 @@
+pkgbase = newsboat-og
+	pkgdesc = An RSS/Atom feed reader for text terminals (old gen)
+	pkgver = 2.13.2
+	pkgrel = 2
+	url = https://github.com/andreasbaumann/newsboat-og
+	arch = x86_64
+	arch = i486
+	arch = i686
+	arch = pentium4
+	license = MIT
+	makedepends = asciidoc
+	depends = curl
+	depends = hicolor-icon-theme
+	depends = json-c
+	depends = libxml2
+	depends = sqlite
+	depends = stfl
+	optdepends = perl: for pinboard.pl
+	optdepends = python: for exportOPMLWithTags.py
+	optdepends = ruby: for feedgrabber.rb, heise.rb, and slashdot.rb
+	conflicts = newsboat
+	replaces = newsbeuter
+	options = !makeflags
+	source = https://github.com/andreasbaumann/newsboat-og/archive/r2.13.2.tar.gz
+	sha256sums = b6646c92e87590b8780111a03ecda139faa846c1fb030bf02f0d89edbff9b8cc
+
+pkgname = newsboat-og

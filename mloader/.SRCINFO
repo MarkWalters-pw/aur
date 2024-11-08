@@ -1,0 +1,18 @@
+pkgbase = mloader
+	pkgdesc = Command-line tool to download manga from mangaplus
+	pkgver = 1.1.12
+	pkgrel = 1
+	url = https://github.com/hurlenko/mloader
+	arch = any
+	license = GPL3
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python-click
+	depends = python-protobuf
+	depends = python-requests
+	source = mloader-1.1.12.tar.gz::https://github.com/hurlenko/mloader/archive/refs/tags/1.1.12.tar.gz
+	sha256sums = 24201e8c936e7790ea98b4e2edec4fdb16742851b752a1b95a83550219d2141a
+
+pkgname = mloader

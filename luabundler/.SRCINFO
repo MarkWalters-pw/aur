@@ -1,0 +1,16 @@
+pkgbase = luabundler
+	pkgdesc = CLI tool for bundling several Lua files into a single file
+	pkgver = 1.2.3
+	pkgrel = 1
+	url = https://github.com/Benjamin-Dobell/luabundler
+	arch = any
+	groups = lua
+	license = MIT
+	makedepends = npm
+	depends = nodejs
+	options = !debug
+	options = !strip
+	source = luabundler-1.2.3.tar.gz::https://github.com/Benjamin-Dobell/luabundler/archive/v1.2.3.tar.gz
+	sha512sums = b61d918c8b31d18852ea73adb1bf4bff3c8e9b8b379f1be2d366e2eafe421ace5cf02e480fd0a0fca466df78e081a76267358a1d5f9d83a670b4ca51723c4737
+
+pkgname = luabundler

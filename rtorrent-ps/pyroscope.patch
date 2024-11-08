@@ -1,0 +1,38 @@
+--- a/src/command_helpers.cc
++++ b/src/command_helpers.cc
+@@ -51,6 +51,7 @@ void initialize_command_peer();
+ void initialize_command_local();
+ void initialize_command_logging();
+ void initialize_command_network();
++void initialize_command_pyroscope();
+ void initialize_command_groups();
+ void initialize_command_throttle();
+ void initialize_command_tracker();
+@@ -70,6 +71,7 @@ initialize_commands() {
+   initialize_command_file();
+   initialize_command_ip();
+   initialize_command_peer();
++  initialize_command_pyroscope();
+   initialize_command_throttle();
+   initialize_command_tracker();
+   initialize_command_scheduler();
+--- a/src/Makefile.am
++++ b/src/Makefile.am
+@@ -173,6 +173,7 @@ libsub_root_a_SOURCES = \
+ 	command_logging.cc \
+ 	command_network.cc \
+ 	command_peer.cc \
++	command_pyroscope.cc \
+ 	command_throttle.cc \
+ 	command_tracker.cc \
+ 	command_scheduler.cc \
+--- a/src/ui/download_list.h
++++ b/src/ui/download_list.h
+@@ -99,6 +99,7 @@ public:
+   void                disable();
+ 
+   void                activate_display(Display d);
++  ElementBase*        display(Display d) { return d < DISPLAY_MAX_SIZE ? m_uiArray[d] : 0; }
+ 
+   core::View*         current_view();
+   void                set_current_view(const std::string& name);

@@ -1,0 +1,23 @@
+pkgbase = filebrowser-git
+	pkgdesc = Standalone web file manager
+	pkgver = 2.30.0.r16.g8e67a12f
+	pkgrel = 2
+	url = https://filebrowser.org/
+	arch = x86_64
+	license = Apache-2.0
+	makedepends = git
+	makedepends = go
+	makedepends = nodejs
+	makedepends = npm
+	makedepends = go.rice
+	depends = glibc
+	provides = filebrowser
+	conflicts = filebrowser
+	options = emptydirs
+	options = !lto
+	source = git+https://github.com/filebrowser/filebrowser.git
+	source = filebrowser@.service
+	sha512sums = SKIP
+	sha512sums = 0846815afbb3c5ccbb097a5361461ca0ada69e04246935afb123f4609d09cd61f9e3fe50e3b6698b3e4c1f335cbb0aa3d998cae13b422e2989aad62ed7ce4682
+
+pkgname = filebrowser-git

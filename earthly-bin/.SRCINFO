@@ -1,0 +1,18 @@
+pkgbase = earthly-bin
+	pkgdesc = Build automation for the container era
+	pkgver = 0.8.15
+	pkgrel = 1
+	url = https://earthly.dev
+	install = earthly-bin.install
+	arch = x86_64
+	license = custom:BSL,
+	license = MPL-2.0
+	depends = git
+	optdepends = docker: Using Docker as runtime
+	optdepends = podman: Using podman as runtime
+	provides = earthly
+	conflicts = earthly
+	source = earthly-bin-0.8.15::https://github.com/earthly/earthly/releases/download/v0.8.15/earthly-linux-amd64
+	sha512sums = 75a372cbb05e533b1519d55e0209c329327f3021b740d3f5922b164955d54f03008bc98d4cee6bb06f68e94760af9e3af1d910013c95b86298a93a98dd61faae
+
+pkgname = earthly-bin

@@ -1,0 +1,17 @@
+pkgbase = checkio-client
+	pkgdesc = Command-line tool for playing CheckiO games.
+	pkgver = 0.3.4
+	pkgrel = 1
+	url = https://github.com/CheckiO/checkio-client
+	install = checkio-client.install
+	arch = any
+	license = GPL2
+	makedepends = python-pip
+	depends = python
+	depends = python-exscript
+	depends = python-aiohttp
+	depends = python-pid
+	source = git+https://github.com/CheckiO/checkio-client.git
+	sha256sums = SKIP
+
+pkgname = checkio-client

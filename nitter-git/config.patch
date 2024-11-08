@@ -1,0 +1,13 @@
+diff --git a/nitter.conf b/nitter.conf
+index 0d4deb7..881be3d 100644
+--- a/nitter.conf
++++ b/nitter.conf
+@@ -5,7 +5,7 @@ address = "0.0.0.0"
+ port = 8080
+ https = false  # disable to enable cookies when not using https
+ httpMaxConnections = 100
+-staticDir = "./public"
++staticDir = "/usr/share/nitter/public"
+
+ [Cache]
+ listMinutes = 240  # how long to cache list info (not the tweets, so keep it high)

@@ -1,0 +1,24 @@
+pkgbase = skaffold-git
+	pkgdesc = A command line tool that facilitates continuous development for Kubernetes applications
+	pkgver = 2.13.2
+	pkgrel = 1
+	url = https://github.com/GoogleContainerTools/skaffold
+	arch = x86_64
+	license = Apache-2.0
+	makedepends = git
+	makedepends = go
+	makedepends = go-licenses
+	makedepends = python
+	depends = docker
+	depends = glibc
+	depends = kompose
+	optdepends = kubectl: For Kubernetes support
+	optdepends = minikube: To use Minikube
+	provides = skaffold
+	conflicts = skaffold
+	options = !lto
+	source = skaffold::git+https://github.com/GoogleContainerTools/skaffold.git#tag=v2.13.2
+	sha512sums = 126b9a3c82b4df3a1ab4c4f12b8dd8ad89aca344190089bf7f7d44d0d8dd233cd70a91b2cfbeac14670e3b2ad75a51ebc3d8effc2ddd4d5003f7e4d6cbcd0112
+	b2sums = 7ae0ff553404bcaf4337253ca1a7bd5f358f187f42529d26fc58bebab9b0e955ae2a4d380ae368a230edac91b67c9f027fbbf19e8a4c10eeeea4293f40a89089
+
+pkgname = skaffold-git

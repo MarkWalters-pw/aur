@@ -1,0 +1,20 @@
+pkgbase = spongebob-cli-git
+	pkgdesc = Watch classic spongebob from the terminal!
+	pkgver = r109.4cc8c51
+	pkgrel = 1
+	url = https://github.com/trakBan/spongebob-cli
+	arch = any
+	license = GPL-3.0-only
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python-requests
+	depends = python-beautifulsoup4
+	depends = python-prettytable
+	optdepends = mpv: default video player
+	optdepends = wget: default video downloader
+	provides = spongebob-cli
+	conflicts = spongebob-cli
+	source = spongebob-cli::git+https://github.com/trakBan/spongebob-cli#branch=main
+	sha256sums = SKIP
+
+pkgname = spongebob-cli-git

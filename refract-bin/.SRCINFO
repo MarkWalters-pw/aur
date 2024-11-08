@@ -1,0 +1,16 @@
+pkgbase = refract-bin
+	pkgdesc = Guided AVIF/JPEG XL/WebP conversion for JPEG and PNG sources.
+	pkgver = 0.11.11
+	pkgrel = 1
+	url = https://github.com/Blobfolio/refract
+	install = refract-bin.install
+	arch = x86_64
+	license = WTFPL
+	makedepends = zstd
+	depends = gtk3
+	options = !strip
+	options = !emptydirs
+	source = https://github.com/Blobfolio/refract/releases/download/v0.11.11/refract_0.11.11-1_amd64.deb
+	sha512sums = a0f4152e5d1493899ab7006e5eb26c077f73a112bf379fd02728b9935697631330d1743ebe5f7a5b973412a665250d658fed50c89123d0a17c1ec8337997df6a
+
+pkgname = refract-bin

@@ -1,0 +1,23 @@
+pkgbase = desq-utils-notifier
+	pkgdesc = Notification daemon for DesQ
+	pkgver = 0.0.8
+	pkgrel = 2
+	url = https://gitlab.com/DesQ/DesQUtils/Notifier
+	arch = x86_64
+	arch = aarch64
+	license = GPL3
+	makedepends = meson
+	makedepends = ninja
+	depends = qt5-base
+	depends = libdesq
+	depends = qt5-svg
+	depends = dfl-applications
+	depends = dfl-settings
+	depends = dfl-utils
+	depends = dfl-notification
+	depends = dfl-xdg
+	depends = dfl-wayqt
+	source = https://gitlab.com/DesQ/DesQUtils/Notifier/-/archive/v0.0.8/Notifier-v0.0.8.tar.gz
+	md5sums = 3888347860d14eda40ea87ce69e40cbf
+
+pkgname = desq-utils-notifier

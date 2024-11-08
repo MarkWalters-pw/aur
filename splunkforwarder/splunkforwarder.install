@@ -1,0 +1,59 @@
+SPLUNK_HOME="/opt/splunkforwarder"
+
+post_install() {
+	if [ ! -f "$SPLUNK_HOME/etc/splunk-launch.conf" ]; then
+		sed "s%# SPLUNK_HOME=.*%SPLUNK_HOME=$SPLUNK_HOME%g" "$SPLUNK_HOME/etc/splunk-launch.conf.default" > "$SPLUNK_HOME/etc/splunk-launch.conf"
+	fi
+
+	# Build the post-install message in steps:
+	touch "$SPLUNK_HOME/ftr"
+	echo "-------------------------------------------------------------------------" > "$SPLUNK_HOME/ftr"
+	echo "Splunk has been installed in:" >> "$SPLUNK_HOME/ftr"
+	echo "	$SPLUNK_HOME" >> "$SPLUNK_HOME/ftr"
+	echo "" >> "$SPLUNK_HOME/ftr"
+	echo "To start Splunk, run the command:" >> "$SPLUNK_HOME/ftr"
+	echo "	$SPLUNK_HOME/bin/splunk start" >> "$SPLUNK_HOME/ftr"
+	echo "" >> "$SPLUNK_HOME/ftr"
+	echo "" >> "$SPLUNK_HOME/ftr"
+	echo "To use the Splunk web interface, point your browser to:" >> "$SPLUNK_HOME/ftr"
+	echo "	http://$HOSTNAME:8000" >> "$SPLUNK_HOME/ftr"
+	echo "" >> "$SPLUNK_HOME/ftr"
+	echo "" >> "$SPLUNK_HOME/ftr"
+	echo "Complete documentation is at http://docs.splunk.com/Documentation/Splunk" >> "$SPLUNK_HOME/ftr"
+	echo "-------------------------------------------------------------------------" >> "$SPLUNK_HOME/ftr"
+
+	echo "Splunk forwarder has been installed to $SPLUNK_HOME"
+	echo "You can start Splunk by running 'systemctl start splunkforwarder'"
+}
+
+pre_upgrade() {
+	echo "Attempting to stop the installed Splunk Server..."
+	systemctl stop splunkforwarder
+}
+
+post_upgrade() {
+	# Build the post-upgrade message in steps:
+	touch "$SPLUNK_HOME/ftr"
+	echo "-------------------------------------------------------------------------" > "$SPLUNK_HOME/ftr"
+	echo "Splunk has been updated in:" >> "$SPLUNK_HOME/ftr"
+	echo "	$SPLUNK_HOME" >> "$SPLUNK_HOME/ftr"
+	echo "" >> "$SPLUNK_HOME/ftr"
+	echo "To start Splunk, run the command:" >> "$SPLUNK_HOME/ftr"
+	echo "	$SPLUNK_HOME/bin/splunk start" >> "$SPLUNK_HOME/ftr"
+	echo "" >> "$SPLUNK_HOME/ftr"
+	echo "" >> "$SPLUNK_HOME/ftr"
+	echo "To use the Splunk web interface, point your browser to:" >> "$SPLUNK_HOME/ftr"
+	echo "	http://$HOSTNAME:8000" >> "$SPLUNK_HOME/ftr"
+	echo "" >> "$SPLUNK_HOME/ftr"
+	echo "" >> "$SPLUNK_HOME/ftr"
+	echo "Complete documentation is at http://docs.splunk.com/Documentation/Splunk" >> "$SPLUNK_HOME/ftr"
+	echo "-------------------------------------------------------------------------" >> "$SPLUNK_HOME/ftr"
+
+	echo "Splunk forwarder has been upgraded in $SPLUNK_HOME"
+	echo "Run 'systemctl start splunkforwarder' to complete the upgrade."
+}
+
+pre_remove() {
+	echo "Attempting to stop the installed Splunk Server..."
+	systemctl stop splunkforwarder
+}

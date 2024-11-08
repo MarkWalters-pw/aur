@@ -1,0 +1,30 @@
+pkgbase = python-laspy
+	pkgdesc = Pythonic interface for .LAS LIDAR files
+	pkgver = 2.5.4
+	pkgrel = 1
+	url = https://github.com/laspy/laspy
+	changelog = CHANGELOG.md
+	arch = any
+	license = BSD-2-Clause
+	checkdepends = python-pytest
+	makedepends = git
+	makedepends = python-myst-parser
+	makedepends = python-setuptools
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = python-sphinx
+	depends = python-numpy
+	depends = python-rich
+	depends = python-typer
+	optdepends = python-lazrs: LAZ and COPC support
+	optdepends = python-laszip: LAZ support
+	optdepends = python-pyproj: CRS support
+	optdepends = python-requests: COPC support over HTTPS
+	source = git+https://github.com/laspy/laspy#commit=a32c7aa40?signed
+	source = modify_doc_conf.patch
+	validpgpkeys = 44B238524D21C5064D7081BD5022EF94BE848C51
+	sha256sums = SKIP
+	sha256sums = b93fabcad532b5b7062ff8e659ded69167f27872f093023734a2cfca8b8d0d19
+
+pkgname = python-laspy

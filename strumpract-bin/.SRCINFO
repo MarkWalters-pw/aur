@@ -1,0 +1,25 @@
+pkgbase = strumpract-bin
+	pkgdesc = Various tools for musicians.
+	pkgver = 3.8.0
+	pkgrel = 2
+	url = https://github.com/fredvs/strumpract
+	arch = aarch64
+	arch = i686
+	arch = x86_64
+	license = LGPL-2.1-only
+	makedepends = gendesk
+	depends = alsa-lib
+	depends = pipewire-jack
+	depends = libvorbis
+	depends = libogg
+	depends = libx11
+	provides = strumpract=3.8.0
+	conflicts = strumpract
+	source_aarch64 = strumpract-3.8.0-aarch64.zip::https://github.com/fredvs/strumpract/releases/download/3.8.0/StrumPract_3_8_0_linux_rpi-aarch64.zip
+	sha256sums_aarch64 = a0628787e91d202367c4783dc1fa7cf4f311e40c0b0d5172378167f8f050e41d
+	source_i686 = strumpract-3.8.0-i686.zip::https://github.com/fredvs/strumpract/releases/download/3.8.0/StrumPract_3_8_0_linux_i386.zip
+	sha256sums_i686 = fb2f9da1de81af313298301ef6c540097584ecc11ecfe2cc76a818f4af54dc0e
+	source_x86_64 = strumpract-3.8.0-x86_64.zip::https://github.com/fredvs/strumpract/releases/download/3.8.0/StrumPract_3_8_0_linux_amd64.zip
+	sha256sums_x86_64 = 478d4e52985cd97a3c39e0b2da0584208394faa7ef44c951356e42270fb05db0
+
+pkgname = strumpract-bin

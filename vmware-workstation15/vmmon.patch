@@ -1,0 +1,592 @@
+--- a/vmmon/Makefile
++++ b/vmmon/Makefile
+@@ -43,7 +43,11 @@
+ endif
+ 
+ 
++ifdef KVERSION
++VM_UNAME = $(KVERSION)
++else
+ VM_UNAME = $(shell uname -r)
++endif
+ 
+ # Header directory for the running kernel
+ ifdef LINUXINCLUDE
+@@ -137,7 +141,6 @@
+ endif
+ 
+ # Add Spectre options when available
+-CC_OPTS += $(call vm_check_gcc,-mindirect-branch=thunk -mindirect-branch-register,)
+ 
+ include $(SRCROOT)/Makefile.kernel
+ 
+--- a/vmmon/common/task.c
++++ b/vmmon/common/task.c
+@@ -542,7 +542,7 @@
+  *-----------------------------------------------------------------------------
+  */
+ 
+-Selector
++static Selector
+ TaskGetFlatWriteableDataSegment(void)
+ {
+    DTR hostGDTR;
+--- a/vmmon/common/vmx86.c
++++ b/vmmon/common/vmx86.c
+@@ -56,7 +56,11 @@
+ #include "x86svm.h"
+ #include "x86cpuid_asm.h"
+ #if defined(__linux__)
++#if LINUX_VERSION_CODE < KERNEL_VERSION(6, 8, 0)
+ #include <asm/timex.h>
++#else
++#include <linux/timex.h>
++#endif
+ #endif
+ #include "perfctr.h"
+ #include "x86vtinstr.h"
+@@ -583,7 +587,7 @@
+  *-----------------------------------------------------------------------------
+  */
+ 
+-void
++static void
+ Vmx86FreeVMDriver(VMDriver *vm)
+ {
+    Vmx86_Free(vm->ptRootMpns);
+@@ -616,7 +620,7 @@
+  *-----------------------------------------------------------------------------
+  */
+ 
+-VMDriver *
++static VMDriver *
+ Vmx86AllocVMDriver(uint32 numVCPUs)
+ {
+    VMDriver *vm = Vmx86_Calloc(1, sizeof *vm, TRUE);
+--- a/vmmon/include/pgtbl.h
++++ b/vmmon/include/pgtbl.h
+@@ -25,7 +25,9 @@
+ #include "compat_pgtable.h"
+ #include "compat_spinlock.h"
+ #include "compat_page.h"
++#include "compat_version.h"
+ 
++#if COMPAT_LINUX_VERSION_CHECK_LT(4, 10, 0)
+ 
+ /*
+  *-----------------------------------------------------------------------------
+@@ -107,17 +109,31 @@
+    return mpn;
+ }
+ 
++static INLINE MPN
++UserVa2MPN(VA addr)  // IN
++{
++   struct mm_struct *mm;
++   MPN mpn;
++
++   /* current->mm is NULL for kernel threads, so use active_mm. */
++   mm = current->active_mm;
++   spin_lock(&mm->page_table_lock);
++   mpn = PgtblVa2MPNLocked(mm, addr);
++   spin_unlock(&mm->page_table_lock);
++   return mpn;
++}
+ 
++#else
+ /*
+  *-----------------------------------------------------------------------------
+  *
+- * PgtblVa2MPN --
++ * UserVa2MPN --
+  *
+  *    Walks through the hardware page tables of the current process to try to
+  *    find the page structure associated to a virtual address.
+  *
+  * Results:
+- *    Same as PgtblVa2MPNLocked()
++ *    MPN associated with the given virtual address
+  *
+  * Side effects:
+  *    None
+@@ -126,17 +142,22 @@
+  */
+ 
+ static INLINE MPN
+-PgtblVa2MPN(VA addr)  // IN
++UserVa2MPN(VA addr)  // IN
+ {
+-   struct mm_struct *mm;
++   struct page *page;
++   int npages;
+    MPN mpn;
+ 
+-   /* current->mm is NULL for kernel threads, so use active_mm. */
+-   mm = current->active_mm;
+-   spin_lock(&mm->page_table_lock);
+-   mpn = PgtblVa2MPNLocked(mm, addr);
+-   spin_unlock(&mm->page_table_lock);
++   npages = get_user_pages_unlocked(addr, 1, &page, 0);
++   if (npages != 1) {
++      return INVALID_MPN;
++   }
++
++   mpn = page_to_pfn(page);
++   put_page(page);
++
+    return mpn;
+ }
++#endif /* COMPAT_LINUX_VERSION_CHECK_LT(4, 10, 0) */
+ 
+ #endif /* __PGTBL_H__ */
+--- a/vmmon/include/vm_basic_defs.h
++++ b/vmmon/include/vm_basic_defs.h
+@@ -50,7 +50,10 @@
+  * References:
+  *   C90 7.17, C99 7.19, C11 7.19
+  */
+-#if !defined(VMKERNEL)
++/* Use linux/stddef.h when building Linux kernel modules. */
++#ifdef KBUILD_MODNAME
++#  include <linux/stddef.h>
++#elif !defined(VMKERNEL)
+ #  include <stddef.h>
+ #else
+    /*
+--- a/vmmon/include/vm_basic_types.h
++++ b/vmmon/include/vm_basic_types.h
+@@ -897,6 +897,27 @@
+ #define ALIGNED(n)
+ #endif
+ 
++#ifndef __has_attribute
++# define __has_attribute(x) 0
++#endif
++
++/*
++ * COUNTED_BY attribute may be attached to the C99 flexible array
++ * member of a structure. It indicates that the number of the elements
++ * of the array is given by the field "member" in the same structure as
++ * the flexible array member. Compilers may use this information to
++ * improve detection of object size information for such structures
++ * and provide better results in compile-time diagnostics and runtime
++ * features like the array bound sanitizer.
++ *
++ * https://people.kernel.org/kees/bounded-flexible-arrays-in-c
++ */
++
++#if __has_attribute(__counted_by__)
++# define COUNTED_BY(member) __attribute__((__counted_by__(member)))
++#else
++# define COUNTED_BY(member)
++#endif
+ 
+ /*
+  * Once upon a time, this was used to silence compiler warnings that
+--- a/vmmon/include/x86cpuid.h
++++ b/vmmon/include/x86cpuid.h
+@@ -88,10 +88,10 @@
+ typedef
+ #include "vmware_pack_begin.h"
+ struct CPUIDQuery {
+-   uint32 eax;                // IN
+-   uint32 ecx;                // IN
+-   uint32 numLogicalCPUs;     // IN/OUT
+-   CPUIDReply logicalCPUs[0]; // OUT
++   uint32 eax;                                          // IN
++   uint32 ecx;                                          // IN
++   uint32 numLogicalCPUs;                               // IN/OUT
++   CPUIDReply logicalCPUs[] COUNTED_BY(numLogicalCPUs); // OUT
+ }
+ #include "vmware_pack_end.h"
+ CPUIDQuery;
+--- a/vmmon/include/x86msr.h
++++ b/vmmon/include/x86msr.h
+@@ -69,9 +69,9 @@
+ typedef
+ #include "vmware_pack_begin.h"
+ struct MSRQuery {
+-   uint32 msrNum;           // IN
+-   uint32 numLogicalCPUs;   // IN/OUT
+-   MSRReply logicalCPUs[0]; // OUT
++   uint32 msrNum;                                     // IN
++   uint32 numLogicalCPUs;                             // IN/OUT
++   MSRReply logicalCPUs[] COUNTED_BY(numLogicalCPUs); // OUT
+ }
+ #include "vmware_pack_end.h"
+ MSRQuery;
+--- a/vmmon/linux/driver.c
++++ b/vmmon/linux/driver.c
+@@ -246,7 +246,7 @@
+ /*
+  *----------------------------------------------------------------------
+  *
+- * init_module --
++ * LinuxDriverInit --
+  *
+  *      linux module entry point. Called by /sbin/insmod command
+  *
+@@ -258,8 +258,8 @@
+  *----------------------------------------------------------------------
+  */
+ 
+-int
+-init_module(void)
++static int
++LinuxDriverInit(void)
+ {
+    int retval;
+ 
+@@ -340,7 +340,7 @@
+ /*
+  *----------------------------------------------------------------------
+  *
+- * cleanup_module --
++ * LinuxDriverExit --
+  *
+  *      Called by /sbin/rmmod
+  *
+@@ -348,8 +348,8 @@
+  *----------------------------------------------------------------------
+  */
+ 
+-void
+-cleanup_module(void)
++static void
++LinuxDriverExit(void)
+ {
+    /*
+     * XXX smp race?
+@@ -1448,3 +1448,5 @@
+  * by default (i.e., neither mkinitrd nor modprobe will accept it).
+  */
+ MODULE_INFO(supported, "external");
++module_init(LinuxDriverInit);
++module_exit(LinuxDriverExit);
+--- a/vmmon/linux/hostif.c
++++ b/vmmon/linux/hostif.c
+@@ -47,6 +47,8 @@
+ #include <asm/asm.h>
+ #include <asm/io.h>
+ #include <asm/page.h>
++#include <asm/tlbflush.h>
++#include <asm/irq_vectors.h>
+ #include <asm/uaccess.h>
+ #include <linux/capability.h>
+ #include <linux/kthread.h>
+@@ -54,6 +56,7 @@
+ #include <linux/hrtimer.h>
+ #include <linux/signal.h>
+ #include <linux/taskstats_kern.h> // For linux/sched/signal.h without version check
++#include <linux/eventfd.h>
+ 
+ #include "vmware.h"
+ #include "x86apic.h"
+@@ -80,6 +83,13 @@
+ #error CONFIG_HIGH_RES_TIMERS required for acceptable performance
+ #endif
+ 
++/* task's state is read-once rather than volatile from 5.14-rc2. */
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(5, 15, 0) || defined(get_current_state)
++#define get_task_state(task) READ_ONCE((task)->__state)
++#else
++#define get_task_state(task) ((task)->state)
++#endif
++
+ /*
+  * Although this is not really related to kernel-compatibility, I put this
+  * helper macro here for now for a lack of better place --hpreg
+@@ -463,7 +473,7 @@
+       ASSERT(vcpuid < vm->numVCPUs);
+       t = vm->vmhost->vcpuSemaTask[vcpuid];
+       VCPUSet_Remove(&req, vcpuid);
+-      if (t && (t->state & TASK_INTERRUPTIBLE)) {
++      if (t && (get_task_state(t) & TASK_INTERRUPTIBLE)) {
+          wake_up_process(t);
+       }
+    }
+@@ -614,6 +617,15 @@
+    MutexUnlock(&fastClockMutex, callerID);
+ }
+ 
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(5, 8, 0)
++static int crosspage_set_exec(pte_t *pte, unsigned long addr, void *data)
++{
++	struct page *p = data;
++
++	set_pte(pte, mk_pte(p, VM_PAGE_KERNEL_EXEC));
++	return 0;
++}
++#endif
+ 
+ /*
+  *----------------------------------------------------------------------
+@@ -634,7 +646,29 @@
+ static void *
+ MapCrossPage(struct page *p)  // IN:
+ {
++#if COMPAT_LINUX_VERSION_CHECK_LT(5, 8, 0)
+    return vmap(&p, 1, VM_MAP, VM_PAGE_KERNEL_EXEC);
++#else
++   void *addr;
++
++   addr = vmap(&p, 1, VM_MAP, VM_PAGE_KERNEL_EXEC);
++   if (!addr)
++	   return NULL;
++
++   /* Starting with 5.8, vmap() always sets the NX bit, but the cross
++    * page needs to be executable. */
++   if (apply_to_page_range(current->mm, (unsigned long)addr, PAGE_SIZE,
++			   crosspage_set_exec, p)) {
++      vunmap(addr);
++      return NULL;
++   }
++
++   preempt_disable();
++   __flush_tlb_all();
++   preempt_enable();
++
++   return addr;
++#endif
+ }
+ 
+ 
+@@ -1193,7 +1234,7 @@
+    void *uvAddr = VA64ToPtr(uAddr);
+    int retval = PAGE_LOCK_SUCCESS;
+ 
+-   *mpn = PgtblVa2MPN((VA)uvAddr);
++   *mpn = UserVa2MPN((VA)uvAddr);
+ 
+    /*
+     * On failure, check whether the page is locked.
+@@ -1221,7 +1262,7 @@
+             volatile int c;
+ 
+             get_user(c, (char *)uvAddr);
+-            *mpn = PgtblVa2MPN((VA)uvAddr);
++            *mpn = UserVa2MPN((VA)uvAddr);
+             if (*mpn == entryPtr->mpn) {
+ #ifdef VMX86_DEBUG
+                printk(KERN_DEBUG "Page %p disappeared from %s(%u)... "
+@@ -1451,11 +1492,11 @@
+ 
+       /*
+        * Verify for debugging that VA and MPN make sense.
+-       * PgtblVa2MPN() can fail under high memory pressure.
++       * UserVa2MPN() can fail under high memory pressure.
+        */
+ 
+       if (va != NULL) {
+-         MPN lookupMpn = PgtblVa2MPN((VA)va);
++         MPN lookupMpn = UserVa2MPN((VA)va);
+ 
+          if (lookupMpn != INVALID_MPN && mpn != lookupMpn) {
+             Warning("Page lookup fail %#"FMT64"x %016" FMT64 "x %p\n",
+@@ -1739,7 +1773,10 @@
+    lockedPages += global_page_state(NR_PAGETABLE);
+ #endif
+    /* NR_SLAB_* moved from zone to node in 4.13. */
+-#if LINUX_VERSION_CODE >= KERNEL_VERSION(4, 13, 0)
++
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(5, 9, 0)
++   lockedPages += global_node_page_state_pages(NR_SLAB_UNRECLAIMABLE_B);
++#elif LINUX_VERSION_CODE >= KERNEL_VERSION(4, 13, 0)
+    lockedPages += global_node_page_state(NR_SLAB_UNRECLAIMABLE);
+ #else
+    lockedPages += global_page_state(NR_SLAB_UNRECLAIMABLE);
+@@ -2389,16 +2426,26 @@
+ static Bool
+ isVAReadable(VA r)  // IN:
+ {
+-   mm_segment_t old_fs;
+    uint32 dummy;
+    int ret;
+ 
++#if defined(HAVE_GET_KERNEL_NOFAULT) || LINUX_VERSION_CODE >= KERNEL_VERSION(5, 17, 0)
++   /*
++    * Exists from 5.10, first indicated by HAVE_GET_KERNEL_NOFAULT,
++    * and from post-5.17 just existing everywhere.
++    */
++   ret = get_kernel_nofault(dummy, (void *)r);
++#else
++   {
++   mm_segment_t old_fs;
++ 
+    old_fs = get_fs();
+    set_fs(KERNEL_DS);
+    r = APICR_TO_ADDR(r, APICR_VERSION);
+    ret = HostIF_CopyFromUser(&dummy, r, sizeof dummy);
+    set_fs(old_fs);
+-
++   }
++#endif
+    return ret == 0;
+ }
+ #endif
+@@ -2553,7 +2596,6 @@
+                      uint64 *args)   // IN:
+ {
+    struct file *file;
+-   mm_segment_t old_fs;
+    int res;
+    int waitFD = args[0];
+    int timeoutms = args[2];
+@@ -2566,22 +2610,19 @@
+       return MX_WAITERROR;
+    }
+ 
+-   old_fs = get_fs();
+-   set_fs(KERNEL_DS);
+-
+    {
+       struct poll_wqueues table;
+       unsigned int mask;
+ 
+       poll_initwait(&table);
+-      current->state = TASK_INTERRUPTIBLE;
++      __set_current_state(TASK_INTERRUPTIBLE);
+       mask = file->f_op->poll(file, &table.pt);
+       if (!(mask & (POLLIN | POLLERR | POLLHUP))) {
+          vm->vmhost->vcpuSemaTask[vcpuid] = current;
+          schedule_timeout(timeoutms * HZ / 1000);  // convert to Hz
+          vm->vmhost->vcpuSemaTask[vcpuid] = NULL;
+       }
+-      current->state = TASK_RUNNING;
++      __set_current_state(TASK_RUNNING);
+       poll_freewait(&table);
+    }
+ 
+@@ -2590,9 +2631,11 @@
+     * the code to happily deal with a pipe or an eventfd. We only care about
+     * reading no bytes (EAGAIN - non blocking fd) or sizeof(uint64).
+     */
+-
+-   res = file->f_op->read(file, (char *) &value, sizeof value, &file->f_pos);
+-
++#if LINUX_VERSION_CODE < KERNEL_VERSION(4, 14, 0)
++   res = kernel_read(file, file->f_pos, (char *)&value, sizeof value);
++#else
++   res = kernel_read(file, &value, sizeof value, &file->f_pos);
++#endif
+    if (res == sizeof value) {
+       res = MX_WAITNORMAL;
+    } else {
+@@ -2601,7 +2644,6 @@
+       }
+    }
+ 
+-   set_fs(old_fs);
+    fput(file);
+ 
+    /*
+@@ -2658,7 +2705,7 @@
+        */
+       struct task_struct *t =
+          (struct task_struct *)xchg(&vm->vmhost->vcpuSemaTask[vcpuid], NULL);
+-      if (t && (t->state & TASK_INTERRUPTIBLE)) {
++      if (t && (get_task_state(t) & TASK_INTERRUPTIBLE)) {
+          wake_up_process(t);
+       }
+    } ROF_EACH_VCPU_IN_SET_WITH_MAX();
+@@ -2688,8 +2730,8 @@
+ int
+ HostIF_SemaphoreSignal(uint64 *args)  // IN:
+ {
++   struct eventfd_ctx *eventfd;
+    struct file *file;
+-   mm_segment_t old_fs;
+    int res;
+    int signalFD = args[1];
+    uint64 value = 1;  // make an eventfd happy should it be there
+@@ -2699,22 +2741,36 @@
+       return MX_WAITERROR;
+    }
+ 
+-   old_fs = get_fs();
+-   set_fs(KERNEL_DS);
++   /*
++    * If it's eventfd, use specific eventfd interface as kernel writes
++    * to eventfd may not be allowed in kernel 5.10 and later.
++    */
++   eventfd = eventfd_ctx_fileget(file);
++   if (!IS_ERR(eventfd)) {
++#if COMPAT_LINUX_VERSION_CHECK_LT(6, 8, 0)
++      eventfd_signal(eventfd, 1);
++#else
++      eventfd_signal(eventfd);
++#endif
++      fput(file);
++      return MX_WAITNORMAL;
++   }
+ 
+    /*
+     * Always write sizeof(uint64) bytes. This works fine for eventfd and
+     * pipes. The data written is formatted to make an eventfd happy should
+     * it be present.
+     */
+-
+-   res = file->f_op->write(file, (char *) &value, sizeof value, &file->f_pos);
++#if LINUX_VERSION_CODE < KERNEL_VERSION(4, 14, 0)
++   res = kernel_write(file, (char *)&value, sizeof value, file->f_pos);
++#else
++   res = kernel_write(file, &value, sizeof value, &file->f_pos);
++#endif
+ 
+    if (res == sizeof value) {
+       res = MX_WAITNORMAL;
+    }
+ 
+-   set_fs(old_fs);
+    fput(file);
+ 
+    /*
+@@ -2932,7 +2997,7 @@
+  *-----------------------------------------------------------------------------
+  */
+ 
+-Bool
++static Bool
+ HostIFCheckTrackedMPN(VMDriver *vm, // IN: The VM instance
+                       MPN mpn)      // IN: The MPN
+ {
+@@ -3052,7 +3117,7 @@
+  *----------------------------------------------------------------------
+  */
+ 
+-int
++static int
+ HostIFWritePhysicalWork(MA ma,             // MA to be written to
+                         VA64 addr,         // src data to write
+                         Bool kernelBuffer, // is the buffer in kernel space?
+@@ -3211,7 +3276,7 @@
+  *----------------------------------------------------------------------
+  */
+ 
+-int
++static int
+ HostIFStartTimer(Bool rateChanged,  //IN: Did rate change?
+                  unsigned int rate) //IN: current clock rate
+ {
+@@ -3261,12 +3326,9 @@
+ HostIFFastClockThread(void *unused)  // IN:
+ {
+    int res;
+-   mm_segment_t oldFS;
+    unsigned int rate = 0;
+    unsigned int prevRate = 0;
+ 
+-   oldFS = get_fs();
+-   set_fs(KERNEL_DS);
+    allow_signal(SIGKILL);
+ 
+    while ((rate = linuxState.fastClockRate) > MIN_RATE) {
+@@ -3289,8 +3351,6 @@
+    }
+ 
+  out:
+-   set_fs(oldFS);
+-
+    /*
+     * Do not exit thread until we are told to do so.
+     */

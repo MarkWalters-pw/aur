@@ -1,0 +1,25 @@
+pkgbase = agave
+	pkgdesc = Legacy colorscheme designer tool for GNOME2
+	pkgver = 0.4.7
+	pkgrel = 13
+	url = https://web.archive.org/web/20170327063642/http://home.gna.org/colorscheme/
+	arch = x86_64
+	license = GPL
+	makedepends = libxslt
+	makedepends = gnome-doc-utils
+	makedepends = intltool
+	makedepends = boost
+	depends = libglademm
+	depends = gtkmm
+	source = http://archive.ubuntu.com/ubuntu/pool/universe/a/agave/agave_0.4.7.orig.tar.gz
+	source = agave-0.4.7-mdv-fix-str-fmt.patch
+	source = schemebox.patch
+	source = drop-libgnome.patch
+	source = fix-build-without-gconf.patch
+	sha256sums = 4005361ab1b137029c7d50afbbfbae7d83bdde7cec3e155a85eed59f6ec4e6fc
+	sha256sums = 132008f0bbe040c59bbc134d9ca3eb244967a66f95bf113d94e976b8ed776c6c
+	sha256sums = dc93ef15cf96a62e2d8d21d6e360428305d3ba6640742a8e9c3a6a2c6aeaf665
+	sha256sums = 8f1a1ecc7f3887de540187e8d10448c44eacb20cb5b1e7db62c7c9318ca861cc
+	sha256sums = 225f9a5cfebea4f9c1d4120611394eb148ffb9a6c151e79f749df1749e015c91
+
+pkgname = agave

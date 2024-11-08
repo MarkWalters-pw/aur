@@ -1,0 +1,35 @@
+pkgbase = quark-player-bin
+	pkgdesc = An Electron based Web Video Services Player, supporting Netflix, Youtube, Twitch, Floatplane, Hulu and More!
+	pkgver = 3.4.2
+	pkgrel = 1
+	url = https://github.com/Alex313031/quark-player
+	arch = x86_64
+	license = MIT
+	depends = gtk3
+	depends = pango
+	depends = expat
+	depends = mesa
+	depends = libdrm
+	depends = libxcb
+	depends = libxfixes
+	depends = nss
+	depends = hicolor-icon-theme
+	depends = libxkbcommon
+	depends = cairo
+	depends = libxrandr
+	depends = at-spi2-core
+	depends = libxdamage
+	depends = libx11
+	depends = libxext
+	depends = nspr
+	depends = libcups
+	depends = libxcomposite
+	depends = alsa-lib
+	provides = quark-player=3.4.2
+	conflicts = quark-player
+	source = quark-player-3.4.2.deb::https://github.com/Alex313031/quark-player/releases/download/v3.4.2/quark-player_3.4.2_amd64.deb
+	source = LICENSE.md::https://raw.githubusercontent.com/Alex313031/quark-player/v3.4.2/LICENSE.md
+	sha256sums = c6e5fdaad0492e946b01d730407164ee6ee619efc63b9e32d9f7590800a2b864
+	sha256sums = c4fe7e3a4559feeb6d7f78a50ba0850e1c61854be4f4c2e674dbb060de88eae2
+
+pkgname = quark-player-bin

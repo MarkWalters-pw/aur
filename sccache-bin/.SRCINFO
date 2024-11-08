@@ -1,0 +1,22 @@
+pkgbase = sccache-bin
+	pkgdesc = Shared compilation cache
+	pkgver = 0.8.2
+	pkgrel = 1
+	url = https://github.com/mozilla/sccache
+	arch = aarch64
+	arch = armv7h
+	arch = i686
+	arch = x86_64
+	license = Apache-2.0
+	provides = sccache=0.8.2
+	conflicts = sccache
+	source_aarch64 = https://github.com/mozilla/sccache/releases/download/v0.8.2/sccache-v0.8.2-aarch64-unknown-linux-musl.tar.gz
+	sha256sums_aarch64 = d4b6c04edf7ed687a50be0d3d899dca01bc3037dcf99f16bc46a7b9a76f78db9
+	source_armv7h = https://github.com/mozilla/sccache/releases/download/v0.8.2/sccache-v0.8.2-armv7-unknown-linux-musleabi.tar.gz
+	sha256sums_armv7h = 627425cb2d01dca1bc260777edcacc56a4d021bb99232c62893de2aac8fd5497
+	source_i686 = https://github.com/mozilla/sccache/releases/download/v0.8.2/sccache-v0.8.2-i686-unknown-linux-musl.tar.gz
+	sha256sums_i686 = 88cbdb0d54cac06750b040642856c5843e7d8c0ca1b5c30dd346b77842ebda87
+	source_x86_64 = https://github.com/mozilla/sccache/releases/download/v0.8.2/sccache-v0.8.2-x86_64-unknown-linux-musl.tar.gz
+	sha256sums_x86_64 = ecda4ddc89a49f1ec6f35bdce5ecbf6f205b399a680d11119d4ce9f6d962104e
+
+pkgname = sccache-bin

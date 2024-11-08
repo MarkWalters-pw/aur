@@ -1,0 +1,22 @@
+pkgbase = osmo-bts
+	pkgdesc = Osmocom's GSM BTS (Base Transceiver Station) with A-bis/IP interface
+	pkgver = 1.8.0
+	pkgrel = 1
+	url = https://osmocom.org/projects/osmobts
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	license = GPL-2.0-or-later AND AGPL-3.0-or-later
+	depends = libosmocore
+	depends = libosmo-abis
+	depends = libosmo-netif
+	depends = talloc
+	depends = ortp
+	conflicts = osmo-bts-git
+	backup = etc/osmocom/osmo-bts-trx.cfg
+	backup = etc/osmocom/osmo-bts-virtual.cfg
+	source = https://downloads.osmocom.org/releases/osmo-bts/osmo-bts-1.8.0.tar.bz2
+	sha256sums = 9c8be362c751e52d81bfd8f57719adf863292ea811874989e61fc345060e0bba
+
+pkgname = osmo-bts

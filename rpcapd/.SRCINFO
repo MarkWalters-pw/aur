@@ -1,0 +1,17 @@
+pkgbase = rpcapd
+	pkgdesc = A remote packet capture daemon
+	pkgver = 1.10.5
+	pkgrel = 1
+	url = http://www.tcpdump.org/
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	license = BSD
+	makedepends = bison
+	source = http://www.tcpdump.org/release/libpcap-1.10.5.tar.xz
+	source = http://www.tcpdump.org/release/libpcap-1.10.5.tar.xz.sig
+	validpgpkeys = 1F166A5742ABB9E0249A8D30E089DEF1D9C15D0D
+	sha256sums = 84fa89ac6d303028c1c5b754abff77224f45eca0a94eb1a34ff0aa9ceece3925
+	sha256sums = SKIP
+
+pkgname = rpcapd

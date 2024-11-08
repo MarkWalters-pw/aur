@@ -1,0 +1,22 @@
+pkgbase = android-armv7a-eabi-libva
+	pkgdesc = Video Acceleration (VA) API for Linux (Android armv7a-eabi)
+	pkgver = 2.22.0
+	pkgrel = 1
+	url = https://01.org/linuxmedia/vaapi
+	arch = any
+	groups = android-libva
+	license = MIT
+	makedepends = android-meson
+	depends = android-armv7a-eabi-libdrm
+	depends = android-armv7a-eabi-libx11
+	depends = android-armv7a-eabi-libxext
+	depends = android-armv7a-eabi-libxfixes
+	options = !strip
+	options = !buildflags
+	options = staticlibs
+	options = !emptydirs
+	backup = opt/android-libs/armv7a-eabi/etc/libva.conf
+	source = https://github.com/intel/libva/archive/refs/tags/2.22.0.tar.gz
+	md5sums = 8dba13313d724b5e930f06e65b7437e2
+
+pkgname = android-armv7a-eabi-libva

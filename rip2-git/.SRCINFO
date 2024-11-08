@@ -1,0 +1,18 @@
+pkgbase = rip2-git
+	pkgdesc = A safe and ergonomic alternative to rm
+	pkgver = r577.76e6604
+	pkgrel = 1
+	url = https://github.com/MilesCranmer/rip2
+	arch = i686
+	arch = x86_64
+	license = GPL-3.0-or-later
+	makedepends = cargo
+	makedepends = git
+	optdepends = fish: fish completions
+	optdepends = zsh: zsh completions
+	provides = rip
+	conflicts = rip
+	source = rip2-git::git+https://github.com/MilesCranmer/rip2
+	sha1sums = SKIP
+
+pkgname = rip2-git

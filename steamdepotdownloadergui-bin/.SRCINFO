@@ -1,0 +1,20 @@
+pkgbase = steamdepotdownloadergui-bin
+	pkgdesc = Easily download older versions of games from Steam using DepotDownloader.Prebuilt version.Use system-wide electron.
+	pkgver = 2.4.3
+	pkgrel = 1
+	url = https://github.com/mmvanheusden/SteamDepotDownloaderGUI
+	arch = aarch64
+	arch = x86_64
+	license = GPL-3.0-only
+	makedepends = fuse2
+	depends = electron32
+	provides = steamdepotdownloadergui=2.4.3
+	conflicts = steamdepotdownloadergui
+	source = steamdepotdownloadergui.sh
+	sha256sums = 291f50480f5a61bc9c68db7d44cd0412071128706baa868a9cb854f8779a1980
+	source_aarch64 = steamdepotdownloadergui-2.4.3-aarch64.AppImage::https://github.com/mmvanheusden/SteamDepotDownloaderGUI/releases/download/v2.4.3/SteamDepotDownloaderGUI-linux-v2.4.3-arm64.AppImage
+	sha256sums_aarch64 = f841cddb481a10e5938282cb8e8092dc620f686b4ac17357d3e91063cb183dbe
+	source_x86_64 = steamdepotdownloadergui-2.4.3-x86_64.AppImage::https://github.com/mmvanheusden/SteamDepotDownloaderGUI/releases/download/v2.4.3/SteamDepotDownloaderGUI-linux-v2.4.3-x64.AppImage
+	sha256sums_x86_64 = bd2be5e3c7431cc81cb22a888fd3cfe9d19a2c2f1d0ecb3438a29934363cd366
+
+pkgname = steamdepotdownloadergui-bin

@@ -1,0 +1,22 @@
+pkgbase = mcrl2
+	pkgdesc = A formal specification language with an associated toolset.
+	pkgver = 202407.1
+	pkgrel = 1
+	url = http://www.mcrl2.org
+	install = mcrl2.install
+	arch = i686
+	arch = x86_64
+	license = Boost
+	makedepends = boost
+	makedepends = cmake
+	makedepends = gcc>=7.0
+	depends = qt6-base
+	depends = glu
+	depends = hicolor-icon-theme
+	optdepends = python: for easily running the included examples
+	provides = mcrl2
+	conflicts = mcrl2
+	source = http://mcrl2.org/download/release/mcrl2-202407.1.tar.gz
+	sha256sums = 5613fd0454ae8f160c71056ee8fea4eb2887d94521081dcff8f8fef48afbc7ab
+
+pkgname = mcrl2

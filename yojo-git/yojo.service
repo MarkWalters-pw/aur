@@ -1,0 +1,13 @@
+[Unit]
+Description=CI bridge from Forgejo/Gitea to SourceHut
+After=network.target
+
+[Service]
+Type=simple
+User=yojo
+Restart=always
+WorkingDirectory=/var/lib/yojo
+ExecStart=/usr/bin/yojo -config /etc/yojo/config
+
+[Install]
+WantedBy=multi-user.target

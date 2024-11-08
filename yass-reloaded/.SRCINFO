@@ -1,0 +1,23 @@
+pkgbase = yass-reloaded
+	pkgdesc = Editor for creating, fine-tuning, organizing and printing Ultrastar karaoke songs
+	pkgver = 2024.10
+	pkgrel = 1
+	url = https://github.com/DoubleDee73/Yass
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = unzip
+	depends = jdk-openjdk>=22
+	depends = java-openjfx>=22
+	depends = gtk2
+	depends = bash
+	noextract = Yass-Reloaded-2024.10.jar
+	options = !strip
+	source = https://github.com/DoubleDee73/Yass/releases/download/2024.10/Yass-Reloaded-2024.10.jar
+	source = yass-reloaded.desktop
+	source = yass-reloaded.sh
+	sha256sums = 6fb2a9d627e0063817dad28e5a95518fc6afb06a2c70c1f5d80b230d947b9b61
+	sha256sums = 3302b96b565e374f6de96c7139407bf8ee7b4bc206405f7489ee2cb109a57382
+	sha256sums = 8566b476712d18152416b1c3c7402ec222c007857c6d8fc7e53d603113f5ed1f
+
+pkgname = yass-reloaded

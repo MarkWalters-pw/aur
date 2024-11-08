@@ -1,0 +1,50 @@
+pkgbase = whisparr-nightly-bin
+	pkgdesc = Adult movie organizer/manager for usenet and torrent users (nightly builds)
+	pkgver = 2.0.0.548
+	pkgrel = 2
+	url = https://whisparr.com
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	groups = servarr-nightly-bin
+	license = GPL-3.0-or-later
+	depends = gcc-libs
+	depends = glibc
+	depends = zlib
+	depends = sqlite
+	depends = ffmpeg
+	optdepends = postgresql: postgresql database
+	optdepends = sabnzbd: usenet downloader
+	optdepends = nzbget: usenet downloader
+	optdepends = qbittorrent: torrent downloader
+	optdepends = deluge: torrent downloader
+	optdepends = rtorrent: torrent downloader
+	optdepends = nodejs-flood: torrent downloader
+	optdepends = vuze: torrent downloader
+	optdepends = aria2: torrent downloader
+	optdepends = transmission-cli: torrent downloader (CLI and daemon)
+	optdepends = transmission-gtk: torrent downloader (GTK+)
+	optdepends = transmission-qt: torrent downloader (Qt)
+	optdepends = jackett: torrent indexer proxy
+	optdepends = nzbhydra2: torznab and usenet indexer proxy
+	optdepends = prowlarr: torrent and usenet indexer proxy
+	optdepends = autobrr: irc, torrent and usenet indexer proxy
+	provides = whisparr
+	conflicts = whisparr
+	options = !debug
+	source = whisparr.service
+	source = whisparr.tmpfiles
+	source = whisparr.sysusers
+	source = package_info
+	sha256sums = e700c5398ca63a053963bb6969988cf489a72cc9507a2b11ff0f90e9e2615f31
+	sha256sums = 4ad46e1c00e60b96cf3df222d996eb24ff96fad4999442d3d3c5e5248c7d7530
+	sha256sums = d9ea6c40d38602ec0ee25f44f3cec462aba03bc12455e166f79666abeb062338
+	sha256sums = 50da66b86fb42b6457a84c61fe02af5845599fd67f538c79457713795d96d8ed
+	source_x86_64 = Whisparr.nightly.2.0.0.548.linux-core-x64.tar.gz::https://whisparr.servarr.com/v1/update/nightly/updatefile?version=2.0.0.548&os=linux&runtime=netcore&arch=x64
+	sha256sums_x86_64 = 9982c3431012e9657c096cc6d604a33e5dfb489695a0b576d4c7a1d5c464e39c
+	source_aarch64 = Whisparr.nightly.2.0.0.548.linux-core-arm64.tar.gz::https://whisparr.servarr.com/v1/update/nightly/updatefile?version=2.0.0.548&os=linux&runtime=netcore&arch=arm64
+	sha256sums_aarch64 = b348f7658a92d1fa7cc8bc4f5cfdb906f2f32eded48ac97673ef78b1a31610cc
+	source_armv7h = Whisparr.nightly.2.0.0.548.linux-core-arm.tar.gz::https://whisparr.servarr.com/v1/update/nightly/updatefile?version=2.0.0.548&os=linux&runtime=netcore&arch=arm
+	sha256sums_armv7h = 02af6f5c891839d7dbb23a9dfde88b24fc512ebd303f872b96de405b30038cc0
+
+pkgname = whisparr-nightly-bin

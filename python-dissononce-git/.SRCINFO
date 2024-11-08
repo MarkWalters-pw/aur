@@ -1,0 +1,17 @@
+pkgbase = python-dissononce-git
+	pkgdesc = python implementation for Noise Protocol Framework
+	pkgver = 0.34.3.r4.g1a5b468
+	pkgrel = 1
+	url = https://github.com/tgalal/dissononce
+	arch = any
+	license = MIT
+	makedepends = python-setuptools
+	makedepends = git
+	depends = python
+	depends = python-cryptography
+	depends = python-transitions
+	provides = python-dissononce
+	source = python-dissononce-git::git+https://github.com/tgalal/dissononce
+	sha512sums = SKIP
+
+pkgname = python-dissononce-git

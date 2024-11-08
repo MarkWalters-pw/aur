@@ -1,0 +1,16 @@
+pkgbase = mergestat-bin
+	pkgdesc = Query git repositories with SQL. Generate reports, perform status checks, analyze codebases.
+	pkgver = 0.6.2
+	pkgrel = 1
+	url = https://github.com/mergestat/mergestat-lite
+	arch = x86_64
+	license = MIT
+	depends = pcre
+	depends = openssl
+	conflicts = askgit-bin
+	source = mergestat-0.6.2.tar.gz::https://github.com/mergestat/mergestat-lite/releases/download/v0.6.2/mergestat-linux-amd64.tar.gz
+	source = https://raw.githubusercontent.com/mergestat/mergestat/main/LICENSE
+	sha256sums = bfad589440c939760b7da3474d027e6d786c80d4592ce1bbcea4bc722e64d139
+	sha256sums = 21c4613291ed2cf8965a0616d62ac36bed429733590f1d920e14a48326bf5933
+
+pkgname = mergestat-bin

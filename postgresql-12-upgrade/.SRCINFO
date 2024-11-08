@@ -1,0 +1,37 @@
+pkgbase = postgresql-12-upgrade
+	pkgdesc = PostgreSQL build for migrating between major versions with pg_upgrade
+	pkgver = 12.19
+	pkgrel = 1
+	url = https://www.postgresql.org/
+	arch = x86_64
+	license = custom:PostgreSQL
+	makedepends = python
+	makedepends = perl
+	makedepends = tcl>=8.6.0
+	makedepends = systemd
+	makedepends = llvm
+	makedepends = clang
+	depends = postgresql-libs>=12
+	depends = libxml2
+	depends = openssl>=1.0.0
+	depends = pam
+	depends = zlib
+	depends = icu
+	depends = systemd-libs
+	depends = libldap
+	depends = krb5
+	depends = llvm-libs
+	optdepends = python: for PL/Python 3 support
+	optdepends = perl: for PL/Perl support
+	optdepends = tcl: for PL/Tcl support
+	options = debug
+	source = https://ftp.postgresql.org/pub/source/v12.19/postgresql-12.19.tar.bz2
+	source = postgresql-perl-rpath.patch
+	md5sums = 20da36a5dd7800e00008c0250c8ceb75
+	md5sums = e57d161913b0d6dc5962bf51f9dc180e
+	sha256sums = 617e3de52c22e822f4f57d01d5b2240503e198a9eccaf598a851109bd18e6fbb
+	sha256sums = fe5ba692eb357b66c03d07a319fb1c512b5b639642e7f0ae30edf5acbd1064fb
+	b2sums = d858108017ad9fd1c9813080c18f21cf2574f2b21a9881ae35e0291f3710664890983e71a2cd1c45f10b4c1ff8ab19d9d2383e35217b55e8e67b72b2673bec29
+	b2sums = 518fd5fac1545e26d071521fb5f812a229a5366c3855acf934cc3acf2bb244e5daadefea46b7e79bd0d457c64ad07faaf186310fbcb66e910b6b0595378eb271
+
+pkgname = postgresql-12-upgrade

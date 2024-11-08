@@ -1,0 +1,22 @@
+pkgbase = melt-bin
+	pkgdesc = Backup and restore Ed25519 SSH keys with seed words
+	pkgver = 0.6.2
+	pkgrel = 1
+	url = https://charm.sh/
+	license = MIT
+	conflicts = melt
+	provides = melt
+	arch = aarch64
+	source_aarch64 = https://github.com/charmbracelet/melt/releases/download/v0.6.2/melt_0.6.2_Linux_arm64.tar.gz
+	sha256sums_aarch64 = 12cdf4ee09b5fea8bba9388495912c19c784c844f407dddadb86e1d2b7b63acd
+	arch = armv7h
+	source_armv7h = https://github.com/charmbracelet/melt/releases/download/v0.6.2/melt_0.6.2_Linux_armv7.tar.gz
+	sha256sums_armv7h = deaa82d0ba3e8cf67e3ea9e1ad4cd2267f80bbe23d9ec854e628004915c72d24
+	arch = i686
+	source_i686 = https://github.com/charmbracelet/melt/releases/download/v0.6.2/melt_0.6.2_Linux_i386.tar.gz
+	sha256sums_i686 = b3660a496b04b63fb7765d1f78666aef0330e01a3b13317e735ab0f1fa6e6e77
+	arch = x86_64
+	source_x86_64 = https://github.com/charmbracelet/melt/releases/download/v0.6.2/melt_0.6.2_Linux_x86_64.tar.gz
+	sha256sums_x86_64 = 82f543dcade2244a86196a506a28dcd41b55d5e0be71d692d291fc4f6803ac82
+	
+pkgname = melt-bin

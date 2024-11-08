@@ -1,0 +1,17 @@
+pkgbase = cloudflarespeedtest-git
+	pkgdesc = XIU2/CloudflareSpeedTest 🌩 “Choose Your Own Preferred IP” Test Cloudflare CDN latency and speed, get the fastest IP! Written in go.
+	pkgver = 2.2.5.20.g84cbd29
+	pkgrel = 1
+	url = https://github.com/XIU2/CloudflareSpeedTest
+	arch = aarch64
+	arch = riscv64
+	arch = x86_64
+	license = GPL-3.0-only
+	makedepends = git
+	depends = go
+	provides = cloudflarespeedtest
+	conflicts = cloudflarespeedtest
+	source = cloudflarespeedtest::git+https://github.com/XIU2/CloudflareSpeedTest.git
+	sha256sums = SKIP
+
+pkgname = cloudflarespeedtest-git

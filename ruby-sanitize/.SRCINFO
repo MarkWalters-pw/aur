@@ -1,0 +1,20 @@
+pkgbase = ruby-sanitize
+	pkgdesc = Ruby HTML and CSS sanitizer
+	pkgver = 6.1.3
+	pkgrel = 1
+	url = https://github.com/rgrove/sanitize
+	arch = any
+	license = MIT
+	checkdepends = ruby-bundler
+	checkdepends = ruby-minitest
+	checkdepends = ruby-rake
+	makedepends = rubygems
+	makedepends = ruby-rdoc
+	depends = ruby
+	depends = ruby-crass
+	depends = ruby-nokogiri
+	options = !emptydirs
+	source = https://github.com/rgrove/sanitize/archive/v6.1.3/sanitize-6.1.3.tar.gz
+	sha256sums = 144206266f2516c2de7c015253117b479ce6c52c1e830b145c58a39a3bd8b973
+
+pkgname = ruby-sanitize

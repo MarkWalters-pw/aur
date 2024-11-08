@@ -1,0 +1,25 @@
+pkgbase = lix-git
+	pkgdesc = An action-puzzle game inspired by Lemmings
+	pkgver = 0.10.21.r1712198474.629c7121
+	pkgrel = 1
+	url = https://www.lixgame.com/
+	arch = i686
+	arch = x86_64
+	license = custom:CC0
+	makedepends = d-compiler
+	makedepends = dub
+	makedepends = git
+	makedepends = jq
+	makedepends = pkgconf
+	depends = allegro
+	depends = d-runtime
+	depends = enet
+	depends = hicolor-icon-theme
+	provides = lix
+	conflicts = lix
+	source = lix-git::git+https://github.com/SimonN/lix-unstable.git
+	source = lix-git-music-1.1.zip::https://www.lixgame.com/dow/lix-music.zip
+	sha512sums = SKIP
+	sha512sums = 280fd25a479ac8dd24475b014234270a12ab34edca7fb2f7ce4b768259111b1e7626d3ba37ac13d810f0653d23d7c9f212776e94d2c0b31a0de580864771ce9f
+
+pkgname = lix-git

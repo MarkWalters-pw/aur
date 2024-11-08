@@ -1,0 +1,16 @@
+pkgbase = clad
+	pkgdesc = Enables automatic differentiation for C++
+	pkgver = 1.7
+	pkgrel = 1
+	url = https://github.com/vgvassilev/clad
+	arch = x86_64
+	license = LGPL
+	makedepends = cmake
+	makedepends = python
+	makedepends = git
+	depends = llvm
+	depends = clang
+	source = git+https://github.com/vgvassilev/clad#tag=v1.7
+	sha256sums = 51e3e02a118bedd7d407dbfc12c8a93eb59dbe1c5f44fdf580147e19a319802e
+
+pkgname = clad

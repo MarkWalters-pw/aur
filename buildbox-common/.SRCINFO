@@ -1,0 +1,30 @@
+pkgbase = buildbox-common
+	pkgdesc = Shared protocol-buffer definitions and various helper functions
+	pkgver = 1.2.11
+	pkgrel = 1
+	url = https://buildgrid.build
+	arch = x86_64
+	license = Apache
+	makedepends = benchmark
+	makedepends = c-ares
+	makedepends = cmake
+	makedepends = git
+	makedepends = gmock
+	makedepends = ninja
+	depends = gflags
+	depends = google-glog
+	depends = grpc
+	depends = gtest
+	depends = util-linux-libs
+	depends = fuse3
+	depends = bubblewrap
+	conflicts = buildbox-casd
+	conflicts = buildbox-fuse
+	conflicts = buildbox-run-bubblewrap
+	replaces = buildbox-casd
+	replaces = buildbox-fuse
+	replaces = buildbox-run-bubblewrap
+	source = git+https://gitlab.com/BuildGrid/buildbox/buildbox-common#tag=1.2.11&commit=40eaacd9863aefde23955e23adc3b61aa01fe2d7
+	sha256sums = SKIP
+
+pkgname = buildbox-common

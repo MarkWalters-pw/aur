@@ -1,0 +1,39 @@
+--- getBiosVendor.js	2024-03-31 10:43:49.740231653 +0800
++++ getBiosVendor.js	2024-03-31 10:45:10.287380245 +0800
+@@ -43,13 +43,7 @@
+ function getLinuxBiosVendor() {
+     var sudo = require('sudo-prompt');
+     return new Promise(function (resolve) {
+-        sudo.exec('dmidecode -s bios-vendor', { name: 'Easinote' }, function (err, stdout) {
+-            if (err) {
+-                return resolve('');
+-            }
+-            var output = stdout.toString().replace(/\r?\n|\r/g, '');
+-            return resolve(output || '');
+-        });
++        return resolve('seewo');
+     });
+ }
+ exports.getLinuxBiosVendor = getLinuxBiosVendor;
+@@ -99,20 +93,7 @@
+ exports.readBiosVendorFile = readBiosVendorFile;
+ var _isSeewoVendor;
+ function judgeIsSeewoVendor() {
+-    // log.info(`获取_isSeewoVendor： ${_isSeewoVendor}`);
+-    if (typeof _isSeewoVendor === 'boolean') {
+-        return _isSeewoVendor;
+-    }
+-    var process = require('process');
+-    var platform = process.platform;
+-    if (platform !== 'linux') {
+-        _isSeewoVendor = false;
+-        return false;
+-    }
+-    var biosVendor = readBiosVendorFile();
+-    console.log("\n  \u83B7\u53D6biosVendor: ".concat(biosVendor, "\n  platform: ").concat(platform, "\n  staticResourcePath: ").concat(config_1["default"].staticResourcePath, "\n  filePath: ").concat(vendorPath, "\n  "));
+-    _isSeewoVendor = 'SEEWO' === biosVendor.trim() || 'CUSTOMER' === biosVendor.trim(); // 判断是否是希沃大板设备
+-    return _isSeewoVendor;
++    return true;
+ }
+ exports.judgeIsSeewoVendor = judgeIsSeewoVendor;
+ /**

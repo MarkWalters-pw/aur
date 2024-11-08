@@ -1,0 +1,16 @@
+pkgbase = azure-static-web-apps-cli-bin
+	pkgdesc = Azure Static Web Apps CLI
+	pkgver = 2.0.1
+	pkgrel = 1
+	url = https://github.com/Azure/static-web-apps-cli
+	arch = any
+	license = MIT
+	makedepends = npm
+	depends = nodejs
+	optdepends = libsecret: for storing secrets
+	provides = azure-static-web-apps-cli
+	conflicts = azure-static-web-apps-cli
+	source = azure-static-web-apps-cli-2.0.1.tgz::https://github.com/Azure/static-web-apps-cli/releases/download/v2.0.1/azure-static-web-apps-cli-2.0.1.tgz
+	b2sums = d99bcf43e9a9293070a4cd24fd52e1aaaecf71a412dbfd96b42908089fec1fe1cff99d15a971484fa8ebec51fe6b304256e81ade5c5773d955c176c90e7bca9a
+
+pkgname = azure-static-web-apps-cli-bin

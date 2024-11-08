@@ -1,0 +1,24 @@
+pkgbase = cartero-git
+	pkgdesc = Make HTTP requests and test APIs
+	pkgver = v0.1.0.r32.80bef74
+	pkgrel = 1
+	url = https://github.com/danirod/cartero
+	arch = x86_64
+	license = GPL-3.0-or-later
+	makedepends = blueprint-compiler
+	makedepends = git
+	makedepends = meson
+	makedepends = rust
+	depends = curl
+	depends = glib2
+	depends = gtk4
+	depends = gtksourceview5
+	depends = libadwaita
+	depends = openssl
+	provides = cartero
+	conflicts = cartero
+	options = !lto
+	source = cartero::git+https://github.com/danirod/cartero.git
+	sha256sums = SKIP
+
+pkgname = cartero-git

@@ -1,0 +1,25 @@
+#!/usr/bin/bash
+#
+#   bolt.sh - Compile with the fast bolt compiler
+#
+
+[[ -n "$LIBMAKEPKG_BUILDENV_BOLT_SH" ]] && return
+LIBMAKEPKG_BUILDENV_BOLT_SH=1
+
+LIBRARY=${LIBRARY:-'/usr/share/makepkg'}
+
+source "$LIBRARY/util/option.sh"
+
+build_options+=('bolt')
+buildenv_functions+=('buildenv_bolt')
+
+buildenv_bolt() {
+    if
+    check_buildoption "bolt" "y"; then
+         export PATH="$HOME/.toolchain/llvm/bin:$PATH"
+         export CC=clang
+		 export CXX=clang++
+ 		 export CC_LD=lld
+  		 export CXX_LD=lld
+    fi
+}

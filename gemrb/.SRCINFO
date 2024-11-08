@@ -1,0 +1,20 @@
+pkgbase = gemrb
+	pkgdesc = OSS implementation of Bioware's Infinity Engine which supports eg. Baldur's Gate
+	pkgver = 0.9.3
+	pkgrel = 1
+	url = https://www.gemrb.org/
+	install = gemrb.install
+	arch = x86_64
+	license = GPL
+	makedepends = cmake
+	depends = python
+	depends = sdl2
+	depends = sdl2_mixer
+	depends = openal
+	depends = hicolor-icon-theme
+	depends = libpng
+	depends = freetype2
+	source = https://github.com/gemrb/gemrb/archive/v0.9.3.tar.gz
+	sha1sums = aa762099b02fb2dbd65896615020a6d952c5cfcc
+
+pkgname = gemrb

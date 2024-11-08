@@ -1,0 +1,23 @@
+pkgbase = r-rust
+	pkgdesc = Ratio-of-Uniforms Simulation with Transformation
+	pkgver = 1.4.3
+	pkgrel = 1
+	url = https://cran.r-project.org/package=rust
+	arch = x86_64
+	license = GPL-2.0-or-later
+	checkdepends = r-testthat
+	makedepends = r-rcpparmadillo
+	depends = blas
+	depends = lapack
+	depends = r-rcpp
+	optdepends = r-bang
+	optdepends = r-knitr
+	optdepends = r-microbenchmark
+	optdepends = r-revdbayes
+	optdepends = r-rmarkdown
+	optdepends = r-testthat
+	source = https://cran.r-project.org/src/contrib/rust_1.4.3.tar.gz
+	md5sums = 76e4a31f057f6e760dcedab092ca4982
+	b2sums = 1c421d7fb127b62acfa1865ce1149ce9194ae35dd20d22e0e62a3eaf22cbf03a893458687dfd759548755762250fe26b309581f28debb6215ccd05036e84121f
+
+pkgname = r-rust

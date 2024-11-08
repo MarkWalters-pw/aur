@@ -1,0 +1,23 @@
+pkgbase = kime
+	pkgdesc = Korean IME
+	pkgver = 3.1.1
+	pkgrel = 1
+	url = https://github.com/Riey/kime
+	arch = any
+	license = GPL3
+	makedepends = cargo
+	makedepends = clang
+	makedepends = llvm
+	makedepends = cmake
+	makedepends = cairo
+	makedepends = libxcb
+	makedepends = dbus
+	depends = noto-fonts-cjk
+	optdepends = gtk3: gtk3 support
+	optdepends = gtk4: gtk4 support
+	optdepends = qt5-base: qt5 support
+	optdepends = qt6-base: qt6 support
+	source = kime-3.1.1.tar.gz::https://github.com/Riey/kime/archive/v3.1.1.tar.gz
+	sha256sums = d401170d822b5d5ebae683a2651273f2b73cdd2f75c8ff3b6c747a846f02961b
+
+pkgname = kime

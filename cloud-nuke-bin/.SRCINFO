@@ -1,0 +1,19 @@
+pkgbase = cloud-nuke-bin
+	pkgdesc = AWS cloud account cleaning tool
+	pkgver = 0.37.2
+	pkgrel = 1
+	url = https://github.com/gruntwork-io/cloud-nuke
+	arch = x86_64
+	arch = i386
+	arch = aarch64
+	license = MIT
+	provides = cloud-nuke
+	conflicts = cloud-nuke
+	source_x86_64 = cloud-nuke-0.37.2-x86_64::https://github.com/gruntwork-io/cloud-nuke/releases/download/v0.37.2/cloud-nuke_linux_amd64
+	sha512sums_x86_64 = 5ce69aca88d11e15f8bb1800ff974acdf2103f72d77347a79f6b67759c678a0cd0c86119a1767243e62e70fc63c1d3391d1feb86e7a2f6061aaf092fa3946f54
+	source_i386 = cloud-nuke-0.37.2-i386::https://github.com/gruntwork-io/cloud-nuke/releases/download/v0.37.2/cloud-nuke_linux_386
+	sha512sums_i386 = c1a63015b6b5cf7cd86d77a27e756afe6f97060ada1899f04e6dbbdb7d738cdb47b24deff7969ed7bef1fad9670b89bb9ee258e125713993c750eacb32dca92d
+	source_aarch64 = cloud-nuke-0.37.2-aarch64::https://github.com/gruntwork-io/cloud-nuke/releases/download/v0.37.2/cloud-nuke_linux_arm64
+	sha512sums_aarch64 = da713ca204cdbec74777f97ab9d0cacc6d1bc384edbe27fc20ca823c64da06ea42fc610e737190139dcd6bfb23c803c047e4cb27596e46b57bd6b1756683dc19
+
+pkgname = cloud-nuke-bin

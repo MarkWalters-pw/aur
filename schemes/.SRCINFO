@@ -1,0 +1,17 @@
+pkgbase = schemes
+	pkgdesc = GtkSourceView style scheme creator and editor
+	pkgver = 46.0
+	pkgrel = 1
+	url = https://gitlab.gnome.org/chergert/schemes
+	arch = x86_64
+	arch = aarch64
+	license = GPL3
+	checkdepends = appstream-glib
+	makedepends = meson
+	depends = libadwaita
+	depends = gtksourceview5
+	depends = libpanel
+	source = https://gitlab.gnome.org/chergert/schemes/-/archive/46.0/schemes-46.0.tar.gz
+	b2sums = 3f4347cb89c578efc973d9b2a5402d3fdb54d023750efb473099fb9f4d0325624ec0487a55e36546a3ff3f03916f77b78a643a673dc41a1916f52d2cbef9dd75
+
+pkgname = schemes

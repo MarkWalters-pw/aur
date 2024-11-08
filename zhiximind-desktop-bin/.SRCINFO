@@ -1,0 +1,18 @@
+pkgbase = zhiximind-desktop-bin
+	pkgdesc = 知犀思维导图官方版
+	pkgver = 3.1.6
+	pkgrel = 1
+	url = https://www.zhixi.com
+	arch = x86_64
+	license = ISC
+	depends = electron22
+	provides = zhiximind-desktop=3.1.6
+	conflicts = zhiximind-desktop
+	source = zhiximind-desktop-3.1.6.deb::https://www.zhixi.com/download/linux?channel=21C8B557
+	source = LICENSE-3.1.6.html::https://www.zhixi.com/user-agreement
+	source = zhiximind-desktop.sh
+	sha256sums = a054260d1b4a77b4891ff7bbc12a3a5d4cf2a921384c3b16bdf7eea2a8526660
+	sha256sums = f7a7d08cb28de3cdd420ef7cb033247b012a6ceef69eca1d868b056baaf47f16
+	sha256sums = 291f50480f5a61bc9c68db7d44cd0412071128706baa868a9cb854f8779a1980
+
+pkgname = zhiximind-desktop-bin

@@ -1,0 +1,18 @@
+pkgbase = totp-cli-rofi
+	pkgdesc = Simple CLI TOTP tool with rofi integration
+	pkgver = 1.1.1
+	pkgrel = 1
+	url = https://github.com/eldiaboloz/totp-cli-rofi
+	arch = any
+	license = MIT
+	depends = fzf
+	depends = rofi
+	depends = jq
+	depends = gnupg
+	depends = oath-toolkit
+	depends = xdotool
+	depends = bash
+	source = totp-cli-rofi-1.1.1.tar.gz::https://github.com/eldiaboloz/totp-cli-rofi/archive/v1.1.1.tar.gz
+	sha256sums = c73dff089d47e02ce3a99a7211bd5b0d220186d6edcb089e03a1ccfaa69999de
+
+pkgname = totp-cli-rofi

@@ -1,0 +1,21 @@
+pkgbase = gossip-git
+	pkgdesc = gossip nostr client, rust, egui based.
+	pkgver = .r2635.g72ffea6a
+	pkgrel = 1
+	url = https://github.com/mikedilger/gossip
+	arch = x86_64
+	license = MIT
+	makedepends = cargo
+	makedepends = cmake
+	makedepends = ffmpeg
+	makedepends = git
+	makedepends = mold
+	optdepends = xdg-utils
+	provides = gossip-git
+	conflicts = gossip-git
+	source = gossip-git::git+https://github.com/mikedilger/gossip.git
+	source = gossip-git.desktop
+	sha256sums = SKIP
+	sha256sums = 3629a8d3fbe5ea9e7e008b28b0c108e03dfdeb5a0747df6a3728989dc8477a00
+
+pkgname = gossip-git

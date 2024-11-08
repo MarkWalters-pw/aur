@@ -1,0 +1,22 @@
+pkgbase = fluidd-git
+	pkgdesc = Klipper web frontend
+	pkgver = r2026.3f1d22ea
+	pkgrel = 1
+	url = https://docs.fluidd.xyz/
+	arch = any
+	license = GPL3
+	makedepends = git
+	makedepends = npm
+	makedepends = nodejs-lts-iron
+	optdepends = nginx: serve via HTTP
+	optdepends = ustreamer: webcam streaming support
+	provides = fluidd
+	conflicts = fluidd
+	source = git+https://github.com/fluidd-core/fluidd.git#branch=develop
+	source = fluidd-klipper.cfg
+	source = fluidd-nginx.conf
+	sha256sums = SKIP
+	sha256sums = 8cc7f8e97459cc9e529363f63151a205d4a3702a1d20ce864d9f7d7b51a4e1cf
+	sha256sums = e7b5ad3cf3024961e072add95e7367076874330dde8b1594e3410354005fbc7b
+
+pkgname = fluidd-git

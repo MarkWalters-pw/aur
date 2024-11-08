@@ -1,0 +1,22 @@
+pkgbase = payme-git
+	pkgdesc = QR code generator (ASCII and PNG) for SEPA payments (latest git commit)
+	pkgver = 1.2.2.r0.gffd6285
+	pkgrel = 2
+	url = https://github.com/jovandeginste/payme
+	arch = aarch64
+	arch = arm
+	arch = armv6h
+	arch = armv7h
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = go
+	depends = glibc
+	provides = payme
+	conflicts = payme
+	options = lto
+	source = git+https://github.com/jovandeginste/payme.git
+	sha256sums = SKIP
+
+pkgname = payme-git

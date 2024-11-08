@@ -1,0 +1,23 @@
+pkgbase = libvpl-tools-git
+	pkgdesc = Tools for Intel Video Processing Library (git version)
+	pkgver = 1.1.0.r0.gdf0e9d8
+	pkgrel = 1
+	url = https://github.com/intel/libvpl-tools/
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = cmake
+	makedepends = libpciaccess
+	makedepends = wayland-protocols
+	depends = libdrm
+	depends = libva
+	depends = libvpl-git
+	depends = libx11
+	depends = vpl-runtime
+	depends = wayland
+	provides = libvpl-tools
+	conflicts = libvpl-tools
+	source = git+https://github.com/intel/libvpl-tools.git
+	sha256sums = SKIP
+
+pkgname = libvpl-tools-git

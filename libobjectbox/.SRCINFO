@@ -1,0 +1,19 @@
+pkgbase = libobjectbox
+	pkgdesc = C/C++ database for objects and structs
+	pkgver = 0.21.0
+	pkgrel = 1
+	url = https://github.com/objectbox/objectbox-c
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	license = Apache
+	license = custom
+	depends = gcc-libs
+	source_x86_64 = libobjectbox-0.21.0-x86_64.tar.gz::https://github.com/objectbox/objectbox-c/releases/download/v0.21.0/objectbox-linux-x64.tar.gz
+	sha256sums_x86_64 = 334962788af54b0a3c8dff47f6be56a7ab544292a776be36b337f46173a929a2
+	source_aarch64 = libobjectbox-0.21.0-aarch64.tar.gz::https://github.com/objectbox/objectbox-c/releases/download/v0.21.0/objectbox-linux-aarch64.tar.gz
+	sha256sums_aarch64 = 9bcebd50adfe10ea0e42e4df84c73e9d1a4c70a1a44f41f261ee1d81c7278d44
+	source_armv7h = libobjectbox-0.21.0-aarch64.tar.gz::https://github.com/objectbox/objectbox-c/releases/download/v0.21.0/objectbox-linux-armv7hf.tar.gz
+	sha256sums_armv7h = bef62ebca976aa242c7245d3de809808cbd404033335e221f0eb469ac312d834
+
+pkgname = libobjectbox

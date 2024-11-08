@@ -1,0 +1,27 @@
+# Be sure to use `systemctl edit whisparr` to modify this service with an override.conf because
+# direct changes will be overwritten by package updates.
+#
+# A user per service w/ shared group setup would have an override like:
+# [Service]
+# Group=sharedgroupname
+# UMask=002
+
+[Unit]
+Description=Whisparr Daemon
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=whisparr
+Group=whisparr
+SyslogIdentifier=whisparr
+Environment=XDG_DATA_HOME=/var/lib/whisparr
+WorkingDirectory=/usr/lib/whisparr
+ExecStart=/usr/lib/whisparr/bin/Whisparr -nobrowser -data=/var/lib/whisparr
+Restart=on-failure
+RestartSec=5
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target

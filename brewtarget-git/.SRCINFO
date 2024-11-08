@@ -1,0 +1,27 @@
+pkgbase = brewtarget-git
+	pkgdesc = Brewing recipe designer and calculator (Git version)
+	pkgver = 4.0.2.r0.g0b1b936
+	pkgrel = 1
+	url = https://www.brewtarget.beer/
+	arch = x86_64
+	license = GPL-3.0-or-later AND WTFPL AND (CC-BY-SA-3.0 OR LGPL-3.0-or-later) AND LGPL-2.1-only
+	makedepends = boost
+	makedepends = cmake
+	makedepends = git
+	makedepends = meson
+	makedepends = pandoc-bin
+	makedepends = qt5-tools
+	depends = qt5-base
+	depends = qt5-multimedia
+	depends = qt5-svg
+	depends = xalan-c
+	depends = xerces-c
+	optdepends = postgresql-libs: PostgreSQL database support
+	provides = brewtarget
+	conflicts = brewtarget
+	source = git+https://github.com/Brewtarget/brewtarget.git
+	source = git+https://github.com/tristanpenman/valijson
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = brewtarget-git

@@ -1,0 +1,20 @@
+pkgbase = pmount-safe-removal
+	pkgdesc = mount removable devices as normal user, with safe removal of device
+	pkgver = 0.9.23
+	pkgrel = 10
+	url = https://packages.qa.debian.org/p/pmount.html
+	arch = i686
+	arch = x86_64
+	license = GPL-2.0-or-later
+	makedepends = intltool
+	depends = glibc
+	depends = util-linux-libs
+	provides = pmount=0.9.23
+	conflicts = pmount
+	backup = etc/pmount.allow
+	source = http://ftp.de.debian.org/debian/pool/main/p/pmount/pmount_0.9.23.orig.tar.bz2
+	source = patch
+	md5sums = db19f5bf3151b1b41705ec7bafa439d3
+	md5sums = a1c8ef20e809ab63b7f89d2c68b05620
+
+pkgname = pmount-safe-removal

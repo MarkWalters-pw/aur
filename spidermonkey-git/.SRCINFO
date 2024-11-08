@@ -1,0 +1,20 @@
+pkgbase = spidermonkey-git
+	pkgdesc = Mozilla's JavaScript engine used in Firefox
+	pkgver = 130.0a1+20240803.1+gd92a07556499
+	pkgrel = 1
+	url = https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey
+	arch = i686
+	arch = x86_64
+	license = MPL-2.0
+	makedepends = cargo
+	makedepends = git
+	makedepends = python3
+	depends = gcc-libs
+	depends = sh
+	depends = zlib
+	provides = spidermonkey
+	conflicts = spidermonkey
+	source = gecko-dev::git+https://github.com/mozilla/gecko-dev.git
+	md5sums = SKIP
+
+pkgname = spidermonkey-git

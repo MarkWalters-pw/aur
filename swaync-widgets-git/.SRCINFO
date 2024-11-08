@@ -1,0 +1,20 @@
+pkgbase = swaync-widgets-git
+	pkgdesc = A tool for dynamically updating swaync config files based on states.
+	pkgver = r25.5352701
+	pkgrel = 1
+	url = https://github.com/luiz734/swaync-widgets/
+	arch = i686
+	arch = pentium4
+	arch = x86_64
+	arch = arm
+	arch = armv7h
+	arch = armv6h
+	arch = aarch64
+	arch = riscv64
+	license = MIT
+	makedepends = go>=1.21
+	provides = swaync-widgets
+	source = swaync-widgets::git+https://github.com/luiz734/swaync-widgets/
+	sha256sums = SKIP
+
+pkgname = swaync-widgets-git

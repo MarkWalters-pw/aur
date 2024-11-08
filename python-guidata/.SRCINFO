@@ -1,0 +1,26 @@
+pkgbase = python-guidata
+	pkgdesc = Python library generating graphical user interfaces for easy dataset editing and display
+	pkgver = 3.7.1
+	pkgrel = 1
+	url = https://github.com/PlotPyStack/guidata
+	arch = any
+	license = BSD-3-Clause
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = python-pydantic
+	depends = python-qtpy
+	depends = python-pyqt5-datavisualization
+	depends = python-pyqt5-webengine
+	depends = python-h5py
+	depends = python-pandas
+	depends = python-matplotlib
+	depends = python-beautifulsoup4
+	depends = python-sphinx
+	depends = python-setuptools
+	depends = python-pytest
+	optdepends = spyder: GUI-based test launcher, dict/array editor
+	source = guidata-3.7.1.tar.gz::https://github.com/PlotPyStack/guidata/archive/refs/tags/v3.7.1.tar.gz
+	sha256sums = 04ce2db58ef34dddb0406202f96bffd4c1c716bd90b81791e74a523ade920af3
+
+pkgname = python-guidata

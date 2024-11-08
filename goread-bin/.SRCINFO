@@ -1,0 +1,22 @@
+pkgbase = goread-bin
+	pkgdesc = Read RSS/Atom feeds right in the terminal
+	pkgver = 1.6.5
+	pkgrel = 1
+	url = https://github.com/TypicalAM/goread
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	license = GPL-3.0-only
+	provides = goread
+	conflicts = goread
+	noextract = goread-bin-1.6.5-i686
+	noextract = goread-bin-1.6.5-x86_64
+	noextract = goread-bin-1.6.5-aarch64
+	source_i686 = goread-bin-1.6.5-i686::https://github.com/TypicalAM/goread/releases/download/v1.6.5/goread_Linux_i386
+	sha256sums_i686 = 7a4b0ab17fb3e8c5c2b0afdbef04c0a1e0ce51fc7925f0adbf9e3dd0d1646eee
+	source_x86_64 = goread-bin-1.6.5-x86_64::https://github.com/TypicalAM/goread/releases/download/v1.6.5/goread_Linux_x86_64
+	sha256sums_x86_64 = 8921b4bb2cdb0cc339699bedf477749b1e8e246b53e38e3007e27817c5dd2a2c
+	source_aarch64 = goread-bin-1.6.5-aarch64::https://github.com/TypicalAM/goread/releases/download/v1.6.5/goread_Linux_arm64
+	sha256sums_aarch64 = 6d92e32cd3fc93b7a765a9ea075c5b8d7c51aeb87227dae3c88a3c1c770ad6e9
+
+pkgname = goread-bin

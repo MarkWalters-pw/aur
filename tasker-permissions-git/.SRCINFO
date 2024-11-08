@@ -1,0 +1,21 @@
+pkgbase = tasker-permissions-git
+	pkgdesc = Utility to easily grant Tasker permissions
+	pkgver = 0.2.0.r4.g29860cb
+	pkgrel = 2
+	url = https://github.com/joaomgcd/Tasker-Permissions
+	arch = x86_64
+	license = Apache-2.0
+	makedepends = git
+	makedepends = npm
+	depends = android-tools
+	depends = electron33
+	provides = tasker-permissions
+	conflicts = tasker-permissions
+	source = git+https://github.com/joaomgcd/Tasker-Permissions.git
+	source = tasker-permissions.desktop
+	source = tasker-permissions.sh
+	sha256sums = SKIP
+	sha256sums = 018509800d5dcf4b9030c5dff291355476715443b412127f2eca712d764334cb
+	sha256sums = ef4aef82872934ce7872ad8d5695b5a8efd2e633bfd5c404ade04ce7309a6a85
+
+pkgname = tasker-permissions-git

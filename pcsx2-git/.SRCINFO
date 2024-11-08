@@ -1,0 +1,61 @@
+pkgbase = pcsx2-git
+	pkgdesc = A Sony PlayStation 2 emulator
+	pkgver = 2.1.100.r0.g31b567287
+	pkgrel = 1
+	url = https://github.com/PCSX2/pcsx2
+	install = pcsx2-git.install
+	arch = x86_64
+	license = GPLV3
+	makedepends = cmake
+	makedepends = extra-cmake-modules
+	makedepends = clang
+	makedepends = lld
+	makedepends = llvm
+	makedepends = git
+	makedepends = ninja
+	makedepends = libpulse
+	makedepends = libpipewire
+	makedepends = p7zip
+	makedepends = ccache
+	makedepends = libjpeg-turbo
+	makedepends = qt6-tools
+	makedepends = qt6-wayland
+	depends = libaio
+	depends = libpcap
+	depends = libglvnd
+	depends = libxrandr
+	depends = alsa-lib
+	depends = ffmpeg
+	depends = sdl2
+	depends = lld
+	depends = qt6-base
+	depends = qt6-svg
+	depends = soundtouch
+	depends = wayland
+	depends = libpng
+	depends = hicolor-icon-theme
+	depends = xcb-util-cursor
+	optdepends = qt6-wayland: Wayland support
+	optdepends = libpulse: Pulseaudio support
+	optdepends = libpipewire: Pipewire support
+	provides = pcsx2
+	conflicts = pcsx2
+	options = !lto
+	source = git+https://github.com/PCSX2/pcsx2.git
+	source = git+https://github.com/PCSX2/pcsx2_patches.git
+	source = git+https://github.com/ianlancetaylor/libbacktrace.git#commit=ad106d5fdd5d960bd33fae1c48a351af567fd075
+	source = git+https://github.com/google/shaderc.git#tag=v2024.1
+	source = git+https://github.com/KhronosGroup/glslang.git#commit=142052fa30f9eca191aa9dcf65359fcaed09eeec
+	source = git+https://github.com/KhronosGroup/SPIRV-Headers.git#commit=5e3ad389ee56fca27c9705d093ae5387ce404df4
+	source = git+https://github.com/KhronosGroup/SPIRV-Tools.git#commit=dd4b663e13c07fea4fbb3f70c1c91c86731099f7
+	source = ShaderName.patch
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = pcsx2-git

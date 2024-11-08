@@ -1,0 +1,32 @@
+pkgbase = kcc-beta
+	pkgdesc = Kindle Comic Converter converts comic files or folders to ePub or Panel View MOBI
+	pkgver = 6.2.0b2
+	pkgrel = 3
+	url = https://github.com/darodi/kcc
+	arch = any
+	license = ISC
+	makedepends = python-setuptools
+	depends = python
+	depends = pyside6
+	depends = python-pillow
+	depends = python-psutil
+	depends = python-requests
+	depends = python-slugify
+	depends = python-raven
+	depends = python-mozjpeg-lossless-optimization
+	depends = python-natsort
+	depends = python-distro
+	depends = python-setuptools
+	depends = python-packaging
+	optdepends = kindlegen>=2.9: for .mobi generation
+	optdepends = p7zip: for zip/CBZ, rar/CBZ, 7z/CB7 support
+	provides = kcc
+	conflicts = kcc
+	source = kindlecomicconverter.desktop
+	source = https://github.com/darodi/kcc/archive/refs/tags/v6.2.0b2.tar.gz
+	md5sums = f25b30fbc1bc1db491173215fe411789
+	md5sums = c38b66c6d8c2199ee0f20cfe18e26712
+	sha256sums = 3502c38d756f5a812ac06f63fe25e062d8720f620ffd7d25641e6accef9fdd9f
+	sha256sums = 75146da16b0d850305fcc60097b7a071c95a4a0cceb0fcb1e36414b5dc7ea549
+
+pkgname = kcc-beta

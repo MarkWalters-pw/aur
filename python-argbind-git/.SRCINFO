@@ -1,0 +1,22 @@
+pkgbase = python-argbind-git
+	pkgdesc = Build CLIs via docstrings and type annotations, with YAML support (built from latest commit)
+	pkgver = r112.e3e0b8d
+	pkgrel = 1
+	url = https://github.com/pseeth/argbind/
+	arch = x86_64
+	license = MIT
+	checkdepends = python-pytest
+	checkdepends = python-pytest-cov
+	checkdepends = python-pytorch
+	checkdepends = python-torchvision
+	makedepends = python-wheel
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = git
+	depends = python
+	depends = python-pyaml
+	depends = python-docstring-parser
+	source = python-argbind-git::git+https://github.com/pseeth/argbind#branch=main
+	sha512sums = SKIP
+
+pkgname = python-argbind-git

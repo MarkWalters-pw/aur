@@ -1,0 +1,19 @@
+pkgbase = python-trame-router
+	pkgdesc = Core components for trame widgets
+	pkgver = 2.3.0
+	pkgrel = 1
+	url = https://github.com/Kitware/trame-router
+	arch = any
+	license = MIT
+	checkdepends = python-pytest
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	makedepends = nodejs
+	makedepends = npm
+	depends = python-trame-client
+	source = trame-router-2.3.0.tar.gz::https://github.com/Kitware/trame-router/archive/v2.3.0.tar.gz
+	sha512sums = 90f9d4ea8c11ff15012afaa580b024d1e638d696a419e85c1ba4ead20c21b3584822aeb843f6440fd0ed6ff852dc85ecced24c2a76fa45d4632f945d8ffa815b
+
+pkgname = python-trame-router

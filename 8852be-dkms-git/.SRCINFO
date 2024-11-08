@@ -1,0 +1,16 @@
+pkgbase = 8852be-dkms-git
+	pkgdesc = Realtek RTL8852BE Wi-Fi driver for Radxa.
+	pkgver = 1.15.10.0.5.0.4
+	pkgrel = 1
+	url = https://github.com/radxa-pkg/8852be-dkms
+	arch = any
+	license = GPL
+	makedepends = git
+	depends = dkms
+	depends = bc
+	depends = linux-headers
+	conflicts = 8852be
+	source = git+https://github.com/radxa-pkg/8852be-dkms.git
+	sha256sums = SKIP
+
+pkgname = 8852be-dkms-git

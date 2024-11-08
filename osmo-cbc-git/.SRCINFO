@@ -1,0 +1,28 @@
+pkgbase = osmo-cbc-git
+	pkgdesc = Osmocom Cell Broadcast Centre
+	pkgver = 0.5.0.r0.g637874e
+	pkgrel = 1
+	url = https://osmocom.org/projects/osmo-cbc
+	arch = x86_64
+	arch = i686
+	license = AGPL-3.0-or-later AND MIT
+	makedepends = git
+	depends = libosmocore-git
+	depends = libosmo-netif-git
+	depends = lksctp-tools
+	depends = talloc
+	depends = jansson
+	depends = orcania
+	depends = ulfius
+	optdepends = python: for osmo-cbc-apitool.py
+	optdepends = python-requests: for osmo-cbc-apitool.py
+	provides = osmo-cbc=0.5.0.r0.g637874e
+	provides = libosmo-sbcap.so=2-64
+	conflicts = osmo-cbc
+	backup = etc/osmocom/osmo-cbc.cfg
+	source = git+https://gitea.osmocom.org/cellular-infrastructure/osmo-cbc.git
+	source = LICENSE-MIT
+	sha256sums = SKIP
+	sha256sums = 323c587d0ccf10e376f8bf9a7f31fb4ca6078105194b42e0b1e0ee2bc9bde71f
+
+pkgname = osmo-cbc-git

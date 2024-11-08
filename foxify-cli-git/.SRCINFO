@@ -1,0 +1,24 @@
+pkgbase = foxify-cli-git
+	pkgdesc = Firefox Command-Line Theme Manager
+	pkgver = 4a780aa
+	pkgrel = 3
+	url = https://github.com/M4cs/foxify-cli
+	arch = any
+	license = GPL3
+	makedepends = python-setuptools
+	makedepends = git
+	depends = python
+	depends = python-requests
+	depends = python-ruamel-yaml
+	depends = python-psutil
+	depends = python-fuzzywuzzy
+	depends = python-tqdm
+	depends = python-colorama
+	depends = python-levenshtein
+	depends = python-gitpython
+	provides = foxify-cli
+	conflicts = foxify-cli
+	source = foxify-cli-git::git+https://github.com/M4cs/foxify-cli.git
+	sha256sums = SKIP
+
+pkgname = foxify-cli-git

@@ -1,0 +1,22 @@
+pkgbase = open-webui-git
+	pkgdesc = Web UI and OpenAI API for various LLM runners, including Ollama
+	pkgver = 0.3.8.r16.geff736a
+	pkgrel = 1
+	url = https://openwebui.com/
+	install = open-webui-git.install
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = npm
+	depends = python311
+	provides = stable-diffusion-ui
+	options = !strip
+	options = !debug
+	source = open-webui-git::git+https://github.com/open-webui/open-webui
+	source = open-webui.service
+	source = open-webui.conf
+	sha1sums = SKIP
+	sha1sums = 9b789adb8d91f15ece2187af4aec810847d4b0b2
+	sha1sums = fb015c224b9529988823f0e24d65ab4a004d30c0
+
+pkgname = open-webui-git

@@ -1,0 +1,21 @@
+pkgbase = pineappl
+	pkgdesc = PineAPPL is not an extension of APPLgrid. Installs pineappl_cli, pineappl library and python package
+	pkgver = 0.8.1
+	pkgrel = 1
+	url = https://nnpdf.github.io/pineappl/
+	arch = any
+	license = GPL3
+	makedepends = python-setuptools
+	makedepends = maturin
+	makedepends = python-pip
+	makedepends = cargo
+	makedepends = cargo-c
+	depends = lhapdf
+	depends = python-pkgconfig
+	depends = python-numpy
+	provides = pineappl
+	options = !lto
+	source = https://github.com/NNPDF/pineappl/archive/v0.8.1.tar.gz
+	md5sums = e5b3683995a247a465bea6908dfc8d52
+
+pkgname = pineappl

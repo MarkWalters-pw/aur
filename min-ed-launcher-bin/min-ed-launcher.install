@@ -1,0 +1,8 @@
+post_install() {
+    echo '==> Please manually configure your game launch options'
+    echo '  -> Refer to https://github.com/rfvgyhn/min-ed-launcher#setup'
+}
+
+post_remove() {
+    echo '==> Remember to revert your game launch options'
+}

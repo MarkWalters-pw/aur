@@ -1,0 +1,11 @@
+[Trigger]
+Type = Path
+Operation = Remove
+Target = usr/lib/modules/*/pkgbase
+Target = usr/src/*/dkms.conf
+
+[Action]
+Description = Removing UKI images...
+When = PreTransaction
+Exec = /usr/bin/dracut-ukify -y
+NeedsTargets

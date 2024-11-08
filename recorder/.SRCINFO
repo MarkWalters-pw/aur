@@ -1,0 +1,19 @@
+pkgbase = recorder
+	pkgdesc = Simple audio recorder
+	pkgver = 1.0.19
+	pkgrel = 1
+	url = https://github.com/alexkdeveloper/recorder
+	arch = x86_64
+	arch = aarch64
+	license = GPL-3.0-or-later
+	checkdepends = appstream-glib
+	makedepends = git
+	makedepends = meson
+	makedepends = vala
+	depends = gstreamer
+	depends = libadwaita
+	depends = libpulse
+	source = git+https://github.com/alexkdeveloper/recorder.git#commit=7eabcd78950758fe1f1246d76f6267a8ff81875e
+	sha256sums = SKIP
+
+pkgname = recorder

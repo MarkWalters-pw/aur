@@ -1,0 +1,21 @@
+pkgbase = fan-control
+	pkgdesc = Control your fans with different behaviors
+	pkgver = 24.8.23
+	pkgrel = 1
+	url = https://github.com/wiiznokes/fan-control
+	arch = x86_64
+	license = MIT
+	makedepends = cargo
+	makedepends = clang
+	makedepends = git
+	makedepends = just
+	depends = gcc-libs
+	depends = hicolor-icon-theme
+	depends = libxkbcommon
+	depends = lm_sensors
+	source = git+https://github.com/wiiznokes/fan-control.git#tag=24.8.23
+	source = git+https://github.com/wiiznokes/libsensors.git
+	sha256sums = 44162d8154b1c2e8215949ac1ac5e39498d759f38283f3121aedd63e9a4111d6
+	sha256sums = SKIP
+
+pkgname = fan-control

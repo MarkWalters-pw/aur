@@ -1,0 +1,18 @@
+pkgbase = adapterremoval
+	pkgdesc = Remove remnant adapter sequences from High-Throughput Sequencing (HTS) data and trim low quality bases from the 3 prime end
+	pkgver = 2.3.4
+	pkgrel = 2
+	url = https://github.com/MikkelSchubert/adapterremoval
+	arch = x86_64
+	license = GPL3
+	makedepends = python-sphinx
+	makedepends = libdeflate
+	makedepends = isa-l
+	depends = glibc
+	depends = gcc-libs
+	depends = bzip2
+	depends = zlib
+	source = adapterremoval-2.3.4.tar.gz::https://github.com/MikkelSchubert/adapterremoval/archive/refs/tags/v2.3.4.tar.gz
+	sha256sums = a4433a45b73ead907aede22ed0c7ea6fbc080f6de6ed7bc00f52173dfb309aa1
+
+pkgname = adapterremoval

@@ -1,0 +1,15 @@
+post_install() {
+	echo "
+    	Add \`acpi_override\` to the HOOKS array in /etc/mkinitcpio.conf:
+
+	HOOKS=(... acpi_override)
+
+	Then, regenerate the initramfs \`mkinitcpio -P\` and reboot. 
+	"
+}
+
+pre_remove() {
+	echo "
+	Remove \`acpi_override\` from the HOOKS array in /etc/mkinitcpio.conf if not needed anymore.
+	"
+}

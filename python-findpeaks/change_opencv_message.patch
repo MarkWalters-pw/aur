@@ -1,0 +1,16 @@
+--- findpeaks/stats.py
++++ findpeaks/stats.py
+@@ -37,11 +37,8 @@
+ # %% Import cv2
+ def _import_cv2():
+     # Only for 2D images required
+-    try:
+-        import cv2
+-        return cv2
+-    except:
+-        raise ImportError('cv2 must be installed manually. Try to: <pip install opencv-python>')
++    import cv2
++    return cv2
+ 
+ 
+ # %% Scaling

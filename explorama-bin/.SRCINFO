@@ -1,0 +1,17 @@
+pkgbase = explorama-bin
+	pkgdesc = A user-friendly data analytics tool designed specifically for subject matter experts and individuals without in-depth technical knowledge.
+	pkgver = 1.0.0_alpha.4
+	pkgrel = 4
+	url = https://github.com/Explorama/Explorama
+	arch = x86_64
+	license = EPL-1.0
+	makedepends = fuse2
+	depends = electron28
+	provides = explorama=1.0.0_alpha.4
+	conflicts = explorama
+	source = explorama-1.0.0_alpha.4.AppImage::https://github.com/Explorama/Explorama/releases/download/v1.0.0-alpha.4/Explorama-linux.AppImage
+	source = explorama.sh
+	sha256sums = 356f67ebff6927811a5d3d14a4993d5fdfaf75523e288b15f9f04373db661103
+	sha256sums = 2b2e8aeed33fd71c521e49fd54fb2fa81218d16aef8bccb88d77909055ab8051
+
+pkgname = explorama-bin

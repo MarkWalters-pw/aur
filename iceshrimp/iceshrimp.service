@@ -1,0 +1,57 @@
+[Unit]
+Description=Iceshrimp daemon
+
+Requires=postgresql.service redis.service
+After=postgresql.service redis.service
+
+[Service]
+Type=simple
+Restart=on-failure
+
+User=iceshrimp
+Group=iceshrimp
+
+Environment="NODE_ENV=production"
+Environment="COREPACK_HOME=/var/lib/iceshrimp/cache/corepack"
+Environment="YARN_HOME=/var/lib/iceshrimp/cache/yarn"
+Environment="ICESHRIMP_CONFIG=/etc/iceshrimp/configuration.yml"
+Environment="ICESHRIMP_MEDIA_DIR=/var/lib/iceshrimp/files"
+Environment="ICESHRIMP_CUSTOM_DIR=/usr/share/iceshrimp/custom"
+
+WorkingDirectory=/usr/share/iceshrimp
+SyslogIdentifier=iceshrimp
+ExecStart=/usr/bin/corepack yarn migrateandstart
+
+ReadOnlyPaths=/usr/share/iceshrimp
+ReadOnlyPaths=/etc/iceshrimp/configuration.yml
+ReadWritePaths=/var/lib/iceshrimp/files
+ReadWritePaths=/var/lib/iceshrimp/cache
+NoExecPaths=/var/lib/iceshrimp/cache
+NoExecPaths=/var/lib/iceshrimp/files
+
+RestrictSUIDSGID=true
+RestrictNamespaces=true
+
+PrivateTmp=true
+PrivateDevices=true
+PrivateUsers=true
+
+ProtectHostname=true
+ProtectClock=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectKernelLogs=true
+ProtectControlGroups=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectProc=invisible
+
+SystemCallArchitectures=native
+SystemCallFilter=@system-service
+SystemCallErrorNumber=EPERM
+
+LockPersonality=true
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target

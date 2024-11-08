@@ -1,0 +1,22 @@
+pkgbase = anycubic-slicer
+	pkgdesc = G-code generator for 3D printers (Anycubic fork of Prusa Slicer)
+	pkgver = 1.4.4
+	pkgrel = 1
+	url = https://github.com/ANYCUBIC-3D/AnycubicSlicer
+	arch = x86_64
+	license = AGPL-3.0-only
+	makedepends = innoextract
+	makedepends = convmv
+	depends = bash
+	depends = wine
+	optdepends = slicer-udev: 3D printer connection rules
+	provides = anycubic-slicer
+	options = strip
+	source = https://workbentch.s3.us-east-2.amazonaws.com/acslicer/prod/AnycubicSlicerInstaller_win64_release_v1.4.4_20240705_202530.exe
+	source = anycubic-slicer
+	source = anycubic-slicer.desktop
+	sha256sums = 96ba536a5f524a0ecfe31a196c344746c9ff3bd21aaaa8258120a81cafa5c33d
+	sha256sums = 81e84e163b77bf0dd4a0db8fb51d2ded38c6e41160353f22ce1da960f74d0f6d
+	sha256sums = fa16cc1657321a00681fd6caf3fdb7233b999114b8140f283546094075e3b6dc
+
+pkgname = anycubic-slicer

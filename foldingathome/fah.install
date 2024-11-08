@@ -1,0 +1,65 @@
+#Adapted from upsteam Debian install scripts
+
+pre_install() {
+	NAME=fah-client
+	CLIENT_HOME=/var/lib/$NAME
+
+	# Create group if it does not exist
+	if ! getent group $NAME >/dev/null; then
+		groupadd --system $NAME || true
+	fi
+
+	# Create user if it does not exist
+	if ! getent passwd $NAME >/dev/null; then
+		useradd --system --gid $NAME --shell /usr/bin/nologin \
+		--home-dir $CLIENT_HOME --no-create-home \
+		--groups video $NAME || true
+	fi
+}
+
+post_install() {
+	NAME=fah-client
+	CLIENT_CONFIG=/etc/$NAME
+	CLIENT_LOGS=/var/log/$NAME
+	CLIENT_HOME=/var/lib/$NAME
+
+	#Set expected ownerships
+	chown $NAME:$NAME $CLIENT_CONFIG/
+	chown $NAME:$NAME $CLIENT_CONFIG/config.xml
+	chown $NAME:$NAME $CLIENT_LOGS/
+	chown $NAME:$NAME $CLIENT_LOGS/log.txt
+	chown $NAME:$NAME $CLIENT_HOME/
+
+	echo
+	echo "The Folding@home client is now installed"
+	echo
+	echo "File locations:"
+	echo
+	echo "   Logs: /var/log/$NAME"
+	echo "   Data: /var/lib/$NAME"
+	echo " Config: $CLIENT_CONFIG"
+	echo
+	echo "Service commands:"
+	echo
+	echo "  systemctl status $NAME"
+	echo "  systemctl enable $NAME"
+	echo "  systemctl start $NAME"
+	echo "  systemctl stop $NAME"
+	echo "  systemctl restart $NAME"
+	echo
+	echo "Access the web interface by going to"
+	echo " https://v8-4.foldingathome.org/"
+	echo
+	echo "If upgrading from v7 move /etc/fahclient/config.xml to $CLIENT_CONFIG to retain settings"
+	echo
+}
+
+pre_remove() {
+	NAME=fah-client
+	systemctl stop $NAME
+}
+
+post_remove() {
+	NAME=fah-client
+	userdel $NAME
+}

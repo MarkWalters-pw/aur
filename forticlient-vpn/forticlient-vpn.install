@@ -1,0 +1,257 @@
+pre_install () {
+	BACKUP_DIR=/etc/forticlient/.old
+	FCT_CONFIG=/etc/forticlient/config.xml
+	EC_CONFIG=/opt/forticlient/XMLs/ecdata.xml
+
+	# Backup old XML configurations if they exist so they can
+	# be imported on start up if upgrading from an older FCT version
+	if [ -f $FCT_CONFIG ] || [ -f $EC_CONFIG ]; then
+		mkdir $BACKUP_DIR && chmod 0600 $BACKUP_DIR
+	else
+		exit 0
+	fi
+
+	if [ -d $BACKUP_DIR ] && [ $(stat -c "%a" $BACKUP_DIR) -eq 600 ] && [ -f $FCT_CONFIG ]; then
+		cp $FCT_CONFIG $BACKUP_DIR
+	fi
+
+	if [ -d $BACKUP_DIR ] && [ $(stat -c "%a" $BACKUP_DIR) -eq 600 ] && [ -f $EC_CONFIG ]; then
+		cp $EC_CONFIG $BACKUP_DIR
+	fi
+
+	exit 0
+}
+
+pre_upgrade () {
+	
+	pre_install
+
+	# Check if forticlient is registered to EMS if it's an uninstall
+	if [ -f /opt/forticlient/.fct_ec_registered ] && [ "$action" != "upgrade" ]; then
+		echo "============================================================="
+		echo "Error: Unable to uninstall forticlient while connected to EMS"
+		echo "============================================================="
+		exit 1
+	fi
+
+	# Remove old symlink when upgrading from older versions
+	if [ -f /usr/bin/FortiClient ]; then
+		pkill -f /usr/bin/FortiClient
+		rm -rf /usr/bin/FortiClient
+	fi
+	
+	#  Remove old symlink to FortiClient scheduler
+	if [ -f /lib/systemd/system/forticlient-scheduler.service ]; then
+		rm -rf /lib/systemd/system/forticlient-scheduler.service || true
+	fi
+	if [ -f /usr/lib/systemd/system/forticlient-scheduler.service ]; then
+		rm -rf /usr/lib/systemd/system/forticlient-scheduler.service || true
+	fi
+}
+
+post_install() {
+	# Remove older version directories and files when upgrading
+	if [ -d /usr/bin/forticlient ]; then
+		pkill -f /usr/bin/forticlient
+		rm -rf /usr/bin/forticlient
+	fi
+
+	# Remove old configuration files when upgrading from older versions
+	if [ -f /etc/forticlient/config.xml ]; then
+		rm -rf /etc/forticlient/config.xml
+	fi
+
+	if [ -f /etc/forticlient/config_backup.xml ]; then
+		rm -rf /etc/forticlient/config_backup.xml
+	fi
+
+	# Remove old pid lock
+	if [ -f /tmp/.forticlient/fortivpn.pid ]; then
+		rm -rf /tmp/.forticlient/fortivpn.pid
+	fi
+
+	if [ -f /opt/forticlient/Fortitray.desktop ]; then
+		ln -sf /opt/forticlient/Fortitray.desktop /etc/xdg/autostart/Fortitray.desktop
+	fi
+
+	if [ -f /opt/forticlient/Fortivpn.desktop ]; then
+		ln -sf /opt/forticlient/Fortivpn.desktop /etc/xdg/autostart/Fortivpn.desktop
+	fi
+
+	# Restore permissions to all files
+	if [ -f /opt/forticlient/.repackaged ] && [ -f /opt/forticlient/.acl ]; then
+	(
+		cd /
+		setfacl --restore /opt/forticlient/.acl
+	)
+	fi
+
+	if [ -f /etc/forticlient/servers.conf ]; then
+		chmod 600 /etc/forticlient/servers.conf
+	fi
+
+	# Keep old database when upgrading from older versions
+	if [ ! -d /var/lib/forticlient ] || [ ! -O /var/lib/forticlient ]; then
+		rm -rf /var/lib/forticlient
+		mkdir -m 755 /var/lib/forticlient
+	fi
+
+	if [ -f /etc/forticlient/config.db ]; then
+		if [ -O /etc/forticlient/config.db ]; then
+		    mv /etc/forticlient/config.db /var/lib/forticlient/config.db
+		else
+		    # Old database cannot be trusted and should be replaced
+		    # So ems connection info is lost and fct has to register to ems again
+		    rm -f /etc/forticlient/config.db /opt/forticlient/.fct_ec_registered
+		fi
+	fi
+
+	if [ ! -f /var/lib/forticlient/config.db ]; then
+		cp /opt/forticlient/.config.db.init /var/lib/forticlient/config.db
+	fi
+
+	chmod 600 /var/lib/forticlient/config.db
+
+	# Create CLI symlink to launch from terminal
+	if [ -f /opt/forticlient/forticlient-cli ]; then
+		ln -sf /opt/forticlient/forticlient-cli /usr/bin/forticlient
+	fi
+
+	# Launch fortitray
+	if [ -f /opt/forticlient/fortitraylauncher ]; then
+		if [ ! -z "$(logname 2>/dev/null)" ]; then
+		    user="$(logname 2>/dev/null)"
+		elif [ ! -z "$SUDO_USER" ]; then
+		    user="$SUDO_USER"
+		else
+		    user=$(users 2>/dev/null | cut -d ' ' -f1)
+		fi
+
+		GUI_ENV=
+
+		# Attempt to get the GUI environment variables so fortitray will actually display correctly
+		for p in $(pgrep -u "$user" dbus-daemon); do
+		    if [ -z "$(xargs -0 -L1 -a /proc/$p/cmdline | grep '^--config-file=')" ]; then
+		        continue
+		    fi
+
+		    OIFS="$IFS"
+		    IFS=$'\n'
+		    for e in $(xargs -0 -L1 -a /proc/$p/environ); do
+		        IFS== read -r left right <<< "$e"
+		        GUI_ENV="$GUI_ENV $left=\"$right\""
+		    done
+		    IFS="$OIFS"
+
+		    break
+		done
+
+		FORTITRAY_CMD="env -i $GUI_ENV setsid /opt/forticlient/fortitraylauncher &>/dev/null &"
+
+		# Start fortitraylauncher while forwarding environment variables needed by Fortitray
+		su $user -c "$FORTITRAY_CMD"
+	fi
+
+	# Update icons cache so icon will show correctly
+	if [ -f /usr/share/icons/hicolor/48x48/apps/forticlient.png ]; then
+		gtk-update-icon-cache -f /usr/share/icons/hicolor || true
+	fi
+
+	# Setup forticlient protocol handler
+	if [ -f /usr/share/applications/forticlient-register.desktop ]; then
+		update-desktop-database
+	fi
+
+	# Stop reload daemons
+	if [ -d /run/systemd/system ]; then
+		systemctl --system daemon-reload > /dev/null || true
+	fi
+}
+
+post_upgrade() {
+
+	post_install
+
+cat << EOF
+
+==> After upgrade, to restore your configuration, copy /etc/forticlient/.old/* to /etc/forticlient/
+
+EOF
+}
+
+pre_remove() {
+	# Stop fortitray
+	if [ -f /tmp/.forticlient/fortitraylauncher ]; then
+		echo "terminate" > /tmp/.forticlient/fortitraylauncher || true
+	fi
+
+	# Remove ZTNA browser certificates
+	if [ -f /usr/bin/certutil ]; then
+		find /home /root -regextype posix-extended \
+		    -regex '(/home/[^/]*|/root)/(.pki/nssdb|.mozilla/firefox/[^/]*default(-release)?)' \
+		    -maxdepth 5 -print0 2>/dev/null |
+		while IFS= read -r -d $'\0' p; do
+		    RUN_USER=$(stat -c '%U' "$p")
+
+		    if [ $? -ne 0 ]; then
+		        continue
+		    fi
+
+		    su - "$RUN_USER" -c '/usr/bin/certutil -D -n "FortiClient ZTNA" -d sql:'"$p"' 2>/dev/null || true'
+		    su - "$RUN_USER" -c '/usr/bin/modutil -delete "FortiClient ZTNA" -dbdir sql:'"$p"' -force 2>/dev/null || true'
+		done
+	fi
+
+	# Remove token from tpm2 database
+	if [ -f /opt/forticlient/tpm2/tpm2_ptool/exe.linux-x86_64-3.7/tpm2_ptool ] && \
+	   [ -d /opt/forticlient/tpm2/bin/ ]; then
+		PATH="/opt/forticlient/tpm2/bin:$PATH" \
+		    /opt/forticlient/tpm2/tpm2_ptool/exe.linux-x86_64-3.7/tpm2_ptool rmtoken \
+		    --label fct-ztna-token --path /opt/forticlient/
+	fi
+
+
+	# Stop forticlient service
+	if [ -d /run/systemd/system ]; then
+		systemctl stop forticlient.service
+	fi
+
+	pkill -f /opt/forticlient
+	exit 0
+}
+
+post_remove() {
+	# Stop reload daemons
+	if [ -d /run/systemd/system ]; then
+		systemctl --system daemon-reload > /dev/null || true
+	fi
+
+	# Remove shared memory
+	rm -rf /var/run/fctc.s || true
+
+	# Remove Fortitray.desktop symlink
+	rm -rf /etc/xdg/autostart/Fortitray.desktop || true
+
+	# Remove fortitraylauncher fifo
+	rm -rf /tmp/.forticlient/fortitraylauncher || true
+
+	# Remove GUI symlink
+	rm -rf /usr/bin/forticlient || true
+	
+	# Remove fortivpn symlink
+	rm -rf /usr/bin/forticlient || true
+
+	# Remove FortiClient service
+	rm -rf /lib/systemd/system/forticlient.service || true
+
+	# Remove FortiClient binaries
+	rm -rf /opt/forticlient || true
+
+	# Remove fortitray policy
+	rm -rf /usr/share/polkit-1/actions/org.fortinet.fortitray.policy || true
+
+	# Remove forticlient policy
+	rm -rf /usr/share/polkit-1/actions/org.fortinet.forticlient.policy || true
+
+	exit 0
+}

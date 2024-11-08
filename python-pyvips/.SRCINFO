@@ -1,0 +1,26 @@
+pkgbase = python-pyvips
+	pkgdesc = Python binding for libvips using cffi
+	pkgver = 2.2.3
+	pkgrel = 1
+	url = https://github.com/libvips/pyvips
+	arch = x86_64
+	license = MIT
+	makedepends = imagemagick
+	makedepends = libheif
+	makedepends = libjxl
+	makedepends = openslide
+	makedepends = poppler-glib
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = glib2
+	depends = glibc
+	depends = libvips
+	depends = python-cffi
+	depends = python-numpy
+	depends = python-pkgconfig
+	source = pyvips-2.2.3.tar.gz::https://github.com/libvips/pyvips/archive/refs/tags/v2.2.3.tar.gz
+	sha256sums = d70f21a557523404884dd2a192505227e1e6a50ed74315d73c416489b43e9414
+
+pkgname = python-pyvips

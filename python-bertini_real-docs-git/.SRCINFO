@@ -1,0 +1,16 @@
+pkgbase = python-bertini_real-docs-git
+	pkgdesc = HTML documentation for python-bertini_real
+	pkgver = 1.7.1.r113.58a8faa
+	pkgrel = 1
+	url = https://www.bertinireal.com
+	arch = any
+	license = custom:Bertini license
+	makedepends = git
+	makedepends = python-bertini_real
+	makedepends = python-sphinx
+	provides = python-bertini_real-docs=1.7.1
+	conflicts = python-bertini_real-docs
+	source = bertini_real::git+https://github.com/ofloveandhate/bertini_real.git
+	sha256sums = SKIP
+
+pkgname = python-bertini_real-docs-git

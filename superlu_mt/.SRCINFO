@@ -1,0 +1,15 @@
+pkgbase = superlu_mt
+	pkgdesc = Set of subroutines to solve a sparse linear system (multithreading extension)
+	pkgver = 4.0.1
+	pkgrel = 1
+	url = https://github.com/xiaoyeli/superlu_mt
+	arch = x86_64
+	license = BSD
+	makedepends = gcc-fortran
+	makedepends = cmake
+	depends = blas
+	options = staticlibs
+	source = https://github.com/xiaoyeli/superlu_mt/archive/refs/tags/v4.0.1.tar.gz
+	sha256sums = b6de5c8ebf8fa6c7c0d607f0607f522454315632ae55b70babf908b94e9602cb
+
+pkgname = superlu_mt

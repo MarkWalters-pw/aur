@@ -1,0 +1,15 @@
+pkgbase = gogextract-git
+	pkgdesc = Unpack GOG Linux installers
+	pkgver = r96.e32f22d
+	pkgrel = 1
+	url = https://framagit.org/IroAlexis/gogextract
+	arch = any
+	license = GPL-3.0-or-later
+	makedepends = git
+	depends = libzip
+	provides = gogextract
+	conflicts = gogextract
+	source = git+https://framagit.org/IroAlexis/gogextract.git
+	sha256sums = SKIP
+
+pkgname = gogextract-git

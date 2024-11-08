@@ -1,0 +1,26 @@
+pkgbase = teams-for-linux-bin
+	pkgdesc = Unofficial Microsoft Teams for Linux client (binary version)
+	pkgver = 1.11.0
+	pkgrel = 1
+	url = https://github.com/IsmaelMartinez/teams-for-linux
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	license = GPL3
+	depends = gtk3
+	depends = libxss
+	depends = nss
+	provides = teams-for-linux
+	conflicts = teams-for-linux
+	conflicts = teams-for-linux-appimage
+	conflicts = teams-for-linux-git
+	conflicts = teams-for-linux-wbundled-electron
+	options = !strip
+	source_x86_64 = https://github.com/IsmaelMartinez/teams-for-linux/releases/download/v1.11.0/teams-for-linux_1.11.0_amd64.deb
+	b2sums_x86_64 = bf4ab799a490ba07fb3c4fbc863c16da066813ac9984208a711e4e473a8bcc6b14d76d772475879757ea2a5b29468182326af4137658453f33f87d50088d5ec3
+	source_aarch64 = https://github.com/IsmaelMartinez/teams-for-linux/releases/download/v1.11.0/teams-for-linux_1.11.0_arm64.deb
+	b2sums_aarch64 = 2a6e57f6459c7023f338bccd41a177163d17bad03086bc5f4f798ad24023b0cdd7415878ee7ce7b6d3822169bd435b37d5d27666717bf7dc5730e62716d9194a
+	source_armv7h = https://github.com/IsmaelMartinez/teams-for-linux/releases/download/v1.11.0/teams-for-linux_1.11.0_armv7l.deb
+	b2sums_armv7h = 18dca38bf9408280442151086c09d9e5f0abe5e265c122d5e5693b7503a74abb9e4023d8667d22233525bacc826592fa830fb73bdcadd206645822f2954ce8e7
+
+pkgname = teams-for-linux-bin

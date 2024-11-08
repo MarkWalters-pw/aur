@@ -1,0 +1,18 @@
+pkgbase = tio-git
+	pkgdesc = A serial device I/O tool
+	pkgver = 3.5.r1.g02cac07
+	pkgrel = 1
+	url = https://github.com/tio/tio
+	arch = x86_64
+	arch = i686
+	license = GPL-2.0-or-later
+	makedepends = git
+	makedepends = meson
+	depends = glib2
+	depends = lua
+	provides = tio
+	conflicts = tio
+	source = git+https://github.com/tio/tio.git
+	sha256sums = SKIP
+
+pkgname = tio-git

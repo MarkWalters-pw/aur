@@ -1,0 +1,17 @@
+pkgbase = qt5-webview
+	pkgdesc = Provides a way to display web content in a QML application
+	pkgver = 5.15.15
+	pkgrel = 2
+	url = https://www.qt.io
+	arch = x86_64
+	groups = qt5
+	license = GPL3
+	license = LGPL3
+	license = FDL
+	license = custom
+	makedepends = git
+	depends = qt5-webengine
+	source = kde-qtwebview::git+https://invent.kde.org/qt/qt/qtwebview#commit=70030514bdaf993517556209503075db15bd1c61
+	sha256sums = 2c27e8926e83b407552eb65e6d3d0429fc3b0063d428eedad39824dc5bb07444
+
+pkgname = qt5-webview

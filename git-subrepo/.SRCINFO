@@ -1,0 +1,17 @@
+pkgbase = git-subrepo
+	pkgdesc = Git submodule alternative
+	pkgver = 0.4.9
+	pkgrel = 1
+	url = https://github.com/ingydotnet/git-subrepo
+	arch = any
+	license = MIT
+	checkdepends = perl
+	depends = bash
+	depends = bashplus
+	depends = git
+	source = git+https://github.com/ingydotnet/git-subrepo.git#tag=0.4.9
+	source = 0001-hardcode-path-to-bashplus.patch
+	sha256sums = f30ca71f4a9115381e266985cb3b63a1c983c52a86a0951799641340dee484a2
+	sha256sums = 2f6d99fa9f253195e87cbe8c443dfc25f2c87342c490acf2f0f3dcf19cc8a23a
+
+pkgname = git-subrepo

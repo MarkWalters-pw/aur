@@ -1,0 +1,26 @@
+pkgbase = vapoursynth-plugin-vsadjust-git
+	pkgdesc = Plugin for Vapoursynth: vsadjust (GIT version)
+	pkgver = r40.83cd4c5
+	pkgrel = 1
+	url = https://github.com/Irrational-Encoding-Wizardry/vs-adjust.git
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-wheel
+	makedepends = python-installer
+	makedepends = python-setuptools
+	depends = vapoursynth
+	depends = vapoursynth-plugin-vstools-git
+	depends = vapoursynth-plugin-vskernels-git
+	depends = vapoursynth-plugin-vsexprtools-git
+	depends = vapoursynth-plugin-vsmasktools-git
+	depends = vapoursynth-plugin-vstransitions-git
+	depends = python
+	depends = python-numpy
+	provides = vapoursynth-plugin-vsadjust
+	conflicts = vapoursynth-plugin-vsadjust
+	source = vsadjust::git+https://github.com/Irrational-Encoding-Wizardry/vs-adjust.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-vsadjust-git

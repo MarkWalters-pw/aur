@@ -1,0 +1,16 @@
+pkgbase = emacs-haskell-mode-git
+	pkgdesc = Haskell mode package for Emacs
+	pkgver = 17.5.r14.g727f72a
+	pkgrel = 1
+	url = https://github.com/haskell/haskell-mode
+	install = emacs-haskell-mode-git.install
+	arch = any
+	license = GPL-3.0-or-later
+	makedepends = emacs
+	makedepends = git
+	provides = emacs-haskell-mode
+	conflicts = emacs-haskell-mode
+	source = emacs-haskell-mode-git::git+https://github.com/haskell/haskell-mode.git
+	sha256sums = SKIP
+
+pkgname = emacs-haskell-mode-git

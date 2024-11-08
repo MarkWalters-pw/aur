@@ -1,0 +1,24 @@
+pkgbase = razercfg
+	pkgdesc = Razer mouse configuration tool
+	pkgver = 0.43
+	pkgrel = 10
+	url = https://bues.ch/cms/hacking/razercfg
+	arch = x86_64
+	license = GPL-2.0-or-later
+	makedepends = cmake
+	makedepends = systemd
+	makedepends = python-setuptools
+	depends = bash
+	depends = hicolor-icon-theme
+	depends = libusb
+	depends = python
+	optdepends = python-pyqt5: for the graphical qrazercfg tool
+	provides = razerd
+	backup = etc/razer.conf
+	source = https://bues.ch/razercfg/razercfg-0.43.tar.xz
+	source = https://bues.ch/razercfg/razercfg-0.43.tar.xz.asc
+	validpgpkeys = 757FAB7CED1814AE15B4836E5FB027474203454C
+	sha512sums = 0d852c86846f14a5da64350e8c0de5288fc9ad6dbbaf4e35b8aea4c9e11eb43269240bc13deac3a49940557846c0e6d73ebefbc26dddc11a47bcc12a3691aca7
+	sha512sums = SKIP
+
+pkgname = razercfg

@@ -1,0 +1,22 @@
+pkgbase = python-pycklink
+	pkgdesc = Python interface for the T-HEAD CKLink
+	pkgver = 0.1.1
+	pkgrel = 1
+	url = https://pypi.org/project/pycklink
+	arch = any
+	license = MIT
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = python-setuptools
+	depends = gcc-libs
+	depends = glibc
+	depends = libusb
+	depends = python
+	provides = cklink
+	provides = pycklink
+	options = !strip
+	source = pycklink-0.1.1.tar.gz::https://files.pythonhosted.org/packages/source/p/pycklink/pycklink-0.1.1.tar.gz
+	sha256sums = 51bddaef6575e4591eca8ed191b8cc6a3e9f694adc0bc46445149b354baafe4b
+
+pkgname = python-pycklink

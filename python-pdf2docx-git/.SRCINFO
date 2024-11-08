@@ -1,0 +1,23 @@
+pkgbase = python-pdf2docx-git
+	pkgdesc = A Python library for converting pdf to docx
+	pkgver = 0.5.8.r21.gb05d1a8
+	pkgrel = 1
+	url = https://github.com/dothinking/pdf2docx
+	arch = any
+	license = AGPL-3.0-only
+	makedepends = python-setuptools
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = git
+	depends = python
+	depends = python-pymupdf
+	depends = python-docx
+	depends = python-fonttools
+	depends = python-numpy
+	depends = python-opencv
+	depends = python-fire
+	source = git+https://github.com/dothinking/pdf2docx.git
+	sha512sums = SKIP
+
+pkgname = python-pdf2docx-git

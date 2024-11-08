@@ -1,0 +1,26 @@
+pkgbase = shutter-encoder
+	pkgdesc = Converter for all formats video|audio|image professionnals codecs and standards - swiss knife tool for Linux
+	pkgver = 18.5
+	pkgrel = 1
+	url = https://www.shutterencoder.com/
+	arch = x86_64
+	license = GPL
+	depends = java-runtime
+	depends = ffmpeg
+	depends = vlc
+	depends = mediainfo
+	depends = dvdauthor
+	depends = mkvtoolnix-cli
+	depends = perl-image-exiftool
+	depends = dcraw
+	depends = p7zip
+	depends = libcanberra
+	depends = uriparser
+	depends = util-linux-libs
+	depends = expat
+	depends = yt-dlp
+	options = !strip
+	source = https://www.shutterencoder.com/Shutter%20Encoder%2018.5%20Linux%2064bits.deb
+	sha256sums = aba9c00809f842ae8d87ce02d8ec7b89bee366c4c7e37788af4a13ca425fde52
+
+pkgname = shutter-encoder

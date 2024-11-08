@@ -1,0 +1,26 @@
+pkgbase = ikiwiki
+	pkgdesc = Wiki compiler
+	pkgver = 3.20200202.4
+	pkgrel = 1
+	url = https://ikiwiki.info
+	arch = any
+	license = GPL-2.0-or-later
+	depends = perl-yaml
+	depends = perl-text-markdown
+	depends = perl-cgi-session
+	depends = perl-cgi-formbuilder
+	depends = perl-timedate
+	depends = perl-html-parser
+	depends = perl-html-scrubber
+	depends = perl-mail-sendmail
+	depends = perl-time-duration
+	depends = perl-uri
+	depends = perl-html-template
+	depends = perl-locale-gettext
+	depends = perl-rpc-xml
+	depends = perl-yaml-libyaml
+	backup = etc/ikiwiki/wikilist
+	source = http://deb.debian.org/debian/pool/main/i/ikiwiki/ikiwiki_3.20200202.4.orig.tar.xz
+	sha256sums = be61813068b6c5f5b77f2b346e41efac59d9f0574b6a361154851f735412fe8f
+
+pkgname = ikiwiki

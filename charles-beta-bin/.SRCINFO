@@ -1,0 +1,17 @@
+pkgbase = charles-beta-bin
+	pkgdesc = Web debugging proxy application (Version 5 Beta)
+	pkgver = 5.0b16
+	pkgrel = 1
+	url = https://www.charlesproxy.com
+	arch = x86_64
+	license = custom
+	makedepends = tar
+	makedepends = zstd
+	depends = hicolor-icon-theme
+	depends = java-runtime=17
+	provides = charles
+	conflicts = charles
+	source = https://www.charlesproxy.com/packages/apt/pool/main/c/charles-proxy-beta/charles-proxy-beta_5.0b16_amd64.deb
+	sha256sums = d84574d12702bef0f9963952fbf5a2c7076b38d938ea2f44fb6a74ef0be609f2
+
+pkgname = charles-beta-bin

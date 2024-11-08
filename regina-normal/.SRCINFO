@@ -1,0 +1,25 @@
+pkgbase = regina-normal
+	pkgdesc = Software for low-dimensional topology
+	pkgver = 7.3
+	pkgrel = 2
+	url = https://regina-normal.github.io
+	arch = x86_64
+	license = GPL-2.0-or-later
+	makedepends = cmake
+	depends = gmp
+	depends = graphviz
+	depends = jansson
+	depends = libxml2
+	depends = popt
+	depends = python3
+	depends = qt6-base
+	depends = qt6-svg
+	depends = tokyocabinet
+	depends = zlib
+	optdepends = doxygen: Generate C++/Python API docs
+	optdepends = cppunit: Build full test suite
+	optdepends = libxslt: Generate the user handbook
+	source = https://github.com/regina-normal/regina/archive/regina-7.3.tar.gz
+	sha256sums = aaa2e2f1b6b5c3a8dc9417ff3ad515efb104863c680ca2337029a81f72d2bfd0
+
+pkgname = regina-normal

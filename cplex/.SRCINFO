@@ -1,0 +1,18 @@
+pkgbase = cplex
+	pkgdesc = A commercial solver for mathematical optimization problems.
+	pkgver = 22.1.1
+	pkgrel = 1
+	url = https://www.ibm.com/products/ilog-cplex-optimization-studio/cplex-optimizer
+	arch = x86_64
+	license = custom
+	depends = gcc-libs
+	optdepends = python310: for Python 3.10 bindings
+	optdepends = python39: for Python 3.9 bindings
+	optdepends = python38: for Python 3.8 bindings
+	options = !strip
+	source = local://cplex_studio2211.linux_x86_64.bin
+	source = installer.properties.template
+	md5sums = 3af3d707b7278d526381cadc9bc7e33c
+	md5sums = f295f6c4ecd0f3a6d2fdca21788efd0f
+
+pkgname = cplex

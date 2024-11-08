@@ -1,0 +1,17 @@
+pkgbase = kipr-git
+	pkgdesc = Command Line Password Manager
+	pkgver = 0.4.1
+	pkgrel = 1
+	url = https://github.com/grahamking/kipr
+	arch = any
+	license = MIT
+	makedepends = cargo
+	makedepends = git
+	depends = gnupg
+	optdepends = xclip: Clipoard functionality
+	provides = kipr
+	conflicts = kipr
+	source = kipr-git::git+https://github.com/grahamking/kipr
+	sha256sums = SKIP
+
+pkgname = kipr-git

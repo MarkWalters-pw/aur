@@ -1,0 +1,18 @@
+pkgbase = android-aarch64-vapoursynth
+	pkgdesc = A video processing framework with simplicity in mind (Android aarch64)
+	pkgver = R69
+	pkgrel = 1
+	url = http://www.vapoursynth.com/
+	arch = any
+	license = LGPL2.1
+	license = custom:OFL
+	makedepends = android-configure
+	depends = android-aarch64-zimg
+	options = !strip
+	options = !buildflags
+	options = staticlibs
+	options = !emptydirs
+	source = https://github.com/vapoursynth/vapoursynth/archive/refs/tags/R69.tar.gz
+	md5sums = 87c61e60a1c3f23796121c635e472638
+
+pkgname = android-aarch64-vapoursynth

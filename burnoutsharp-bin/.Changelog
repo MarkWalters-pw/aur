@@ -1,0 +1,70 @@
+# burnoutsharp-bin .Changelog
+
+## 2024-06-21, burnoutsharp-bin 3.1.13-1
+
+* Bump to 3.1.13
+
+## 2024-06-01, burnoutsharp-bin 3.1.12-1
+
+* Bump to 3.1.12
+
+## 2024-04-05, burnoutsharp-bin 3.1.5-1
+
+* Bump to 3.1.5
+
+## 2024-04-02, burnoutsharp-bin 3.1.4-1
+
+* Bump to 3.1.4
+
+## 2024-03-27, burnoutsharp-bin 3.1.3-1
+
+* Bump to 3.1.3
+
+## 2024-03-16, burnoutsharp-bin 3.1.2-1
+
+* Bump to 3.1.2
+
+## 2024-03-14, burnoutsharp-bin 3.1.1-1
+
+* Bump to 3.1.1
+
+## 2024-02-26, burnoutsharp-bin 3.1.0-1
+
+* Bump to 3.1.0
+
+## 2023-12-04, burnoutsharp-bin 3.0.2-1
+
+* Bump to 3.0.2
+
+## 2023-10-26, burnoutsharp-bin 2.9.0-3
+
+* Remove dependency on `casclib` and `stormlib`; they're actaully unnecessary
+
+## 2023-10-26, burnoutsharp-bin 2.9.0-2
+
+* Cleaned up some testing lines that were commented out, nothing impactful
+
+## 2023-10-26, burnoutsharp-bin 2.9.0-1
+
+* Bump to 2.9.0
+* Project rename to `BinaryObjectScanner` imminent, distribution archive name 
+has already changed
+* Migrated from `mono`-wrapped .NET Framework 4.8 build to native .NET7 build
+ * Remove `mono` dependency
+  * Remove convenience script that simplified `mono` execution
+ * Add `casclib` and `stormlib` dependencies
+ * `Test` binary is now renamed during `package()` execution
+
+None of these changes should be user-impacting.  Check the release notes, as 
+there are some breaking changes in the release binary to be aware of.
+
+## 2023-04-24, burnoutsharp-bin 2.7.0-1
+
+* Bump to 2.7.0
+
+# FAQ
+
+## Why consume the release binary rather than compile from source?
+
+I can't be bothered at the moment.
+

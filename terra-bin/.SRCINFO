@@ -1,0 +1,15 @@
+pkgbase = terra-bin
+	pkgdesc = Low-level system programming language designed to interoperate seamlessly with Lua
+	pkgver = 1.2.0
+	pkgrel = 1
+	url = https://github.com/terralang/terra
+	arch = x86_64
+	license = MIT
+	provides = terra=1.2.0
+	conflicts = terra
+	options = !strip
+	options = !debug
+	source = terra-1.2.0-cc543db.tar.xz::https://github.com/terralang/terra/releases/download/release-1.2.0/terra-Linux-x86_64-cc543db.tar.xz
+	sha256sums = 32f6420330de4d7176396aa36929a76733fe5a1fbc5a0cf8b9a6d270f9630d8d
+
+pkgname = terra-bin

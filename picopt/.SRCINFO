@@ -1,0 +1,26 @@
+pkgbase = picopt
+	pkgdesc = A multi format lossless image optimizer that uses external tools
+	pkgver = 4.0.2
+	pkgrel = 1
+	url = https://github.com/ajslater/picopt
+	arch = any
+	license = GPL-3.0-only
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-poetry-core
+	makedepends = python-wheel
+	depends = python-confuse
+	depends = python-humanize
+	depends = python-piexif
+	depends = python-pyoxipng
+	depends = python-dateutil
+	depends = python-rarfile
+	depends = python-treestamps
+	depends = python-pillow
+	optdepends = gifsicle: for animated GIFs support
+	optdepends = pngout: for optimize PNG images
+	optdepends = mozjpeg: for optimize JPEG images
+	source = https://pypi.org/packages/source/p/picopt/picopt-4.0.2.tar.gz
+	sha512sums = 7ff243ba209793e9921f38178e4591a8b7fb12c1d5a4ad40f38114fdf3cb8758e9ab01f30ab259efdb957a6528fbbaf4ba74735518059c11f6e2ff6793655a5a
+
+pkgname = picopt

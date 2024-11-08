@@ -1,0 +1,17 @@
+pkgbase = terminalimageviewer
+	pkgdesc = Display images in a (modern) terminal using RGB ANSI codes and unicode graphic blocks
+	pkgver = 1.2.1
+	pkgrel = 2
+	url = https://github.com/stefanhaustein/TerminalImageViewer
+	arch = x86_64
+	license = Apache-2.0
+	license = GPL-3.0-or-later
+	depends = gcc-libs
+	depends = glibc
+	depends = imagemagick
+	provides = tiv
+	conflicts = tiv
+	source = TerminalImageViewer-1.2.1.tar.gz::https://github.com/stefanhaustein/TerminalImageViewer/archive/refs/tags/v1.2.1.tar.gz
+	sha256sums = 08d0c30e3ffa47b69d1bce07bea56f04b7deb4a8a79307ce435a4f0852fbcd5f
+
+pkgname = terminalimageviewer

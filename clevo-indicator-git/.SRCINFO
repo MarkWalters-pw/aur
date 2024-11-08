@@ -1,0 +1,15 @@
+pkgbase = clevo-indicator-git
+	pkgdesc = Fan control indicator for Clevo laptops
+	pkgver = r42.b88e763
+	pkgrel = 1
+	url = https://github.com/dbeniamine/clevo-indicator
+	arch = x86_64
+	license = Unlicense
+	makedepends = git
+	depends = libappindicator-gtk3
+	provides = clevo-indicator
+	conflicts = clevo-indicator
+	source = git+https://github.com/dbeniamine/clevo-indicator.git
+	sha256sums = SKIP
+
+pkgname = clevo-indicator-git

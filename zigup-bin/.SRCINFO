@@ -1,0 +1,23 @@
+pkgbase = zigup-bin
+	pkgdesc = Download and manage zig compilers
+	pkgver = v2024_05_05
+	pkgrel = 2
+	url = https://github.com/marler8997/zigup
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	license = MIT-0
+	provides = zigup
+	provides = zig
+	conflicts = zigup
+	conflicts = zig
+	source = https://github.com/marler8997/zigup/archive/refs/tags/v2024_05_05.tar.gz
+	sha256sums = 36bea57e38b7106e61095ff8625d44e0ff0821f79c0c485b36d231787b08b9a4
+	source_x86_64 = https://github.com/marler8997/zigup/releases/download/v2024_05_05/zigup-x86_64-linux.tar.gz
+	sha256sums_x86_64 = 9d3c0784474fed0778f453691f92dc9d075b653e3b8efed2f5da14d346e36ba8
+	source_aarch64 = https://github.com/marler8997/zigup/releases/download/v2024_05_05/zigup-aarch64-linux.tar.gz
+	sha256sums_aarch64 = f9e724488f58223ee19472a009d219b305d1e13f6db03a935a4eb4ee7f6954ba
+	source_armv7h = https://github.com/marler8997/zigup/releases/download/v2024_05_05/zigup-arm-linux.tar.gz
+	sha256sums_armv7h = d642e99e0e7657c4ceaa9cfb179a94dadfade25666e62b819f1a50720456ae79
+
+pkgname = zigup-bin

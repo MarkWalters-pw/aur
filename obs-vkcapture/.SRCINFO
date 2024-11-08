@@ -1,0 +1,28 @@
+pkgbase = obs-vkcapture
+	pkgver = 1.5.1
+	pkgrel = 1
+	url = https://github.com/nowrep/obs-vkcapture
+	arch = x86_64
+	license = GPL-2.0-or-later
+	makedepends = gcc
+	makedepends = cmake
+	makedepends = vulkan-headers
+	makedepends = lib32-gcc-libs
+	makedepends = lib32-vulkan-icd-loader
+	makedepends = lib32-libgl
+	makedepends = lib32-libegl
+	depends = vulkan-icd-loader
+	depends = libgl
+	depends = libegl
+	depends = obs-studio>=27
+	source = https://github.com/nowrep/obs-vkcapture/archive/v1.5.1/obs-vkcapture-1.5.1.tar.gz
+	sha512sums = 9477fd738cdf80e09aad46e58ee5e325aa4f5ae72fbe1cb22918d4910fd997ba2a012ce7ca3b24b1b3734983b94e9b7df391f3deca569a79c90c5d115a1a5eed
+
+pkgname = obs-vkcapture
+	pkgdesc = OBS Linux Vulkan/OpenGL game capture
+
+pkgname = lib32-obs-vkcapture
+	pkgdesc = OBS Linux Vulkan/OpenGL game capture (32-bit)
+	depends = lib32-vulkan-icd-loader
+	depends = lib32-libgl
+	depends = lib32-libegl

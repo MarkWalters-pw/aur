@@ -1,0 +1,11 @@
+--- sdr_bladerf.c.orig	2019-04-20 15:47:33.060626237 -0700
++++ sdr_bladerf.c	2019-04-20 15:47:58.097696846 -0700
+@@ -102,7 +102,7 @@
+     int status;
+ 
+     unsigned rate;
+-    unsigned freq;
++    bladerf_frequency freq;
+     bladerf_lpf_mode lpf_mode;
+     unsigned lpf_bw;
+     bladerf_lna_gain lna_gain;

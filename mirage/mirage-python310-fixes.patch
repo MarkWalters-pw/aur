@@ -1,0 +1,49 @@
+diff --git a/mirage/imgfuncs.c b/mirage/imgfuncs.c
+index f3e9ff6..bd97e98 100644
+--- a/mirage/imgfuncs.c
++++ b/mirage/imgfuncs.c
+@@ -15,7 +15,7 @@ PyObject *rotate_right(PyObject *self, PyObject *args)
+ {
+ 	char *a1;
+ 	char *a2;
+-	int length;
++	Py_ssize_t length;
+ 	int w1, w2;
+ 	int h1, h2;
+ 	int rws1, rws2;
+@@ -62,7 +62,7 @@ PyObject *rotate_left(PyObject *self, PyObject *args)
+ {
+ 	char *a1;
+ 	char *a2;
+-	int length;
++	Py_ssize_t length;
+ 	int w1, w2;
+ 	int h1, h2;
+ 	int rws1, rws2;
+@@ -109,7 +109,7 @@ PyObject *rotate_mirror(PyObject *self, PyObject *args)
+ {
+ 	char *a1;
+ 	char *a2;
+-	int length;
++	Py_ssize_t length;
+ 	int w1, w2;
+ 	int h1, h2;
+ 	int rws1, rws2;
+@@ -152,7 +152,7 @@ PyObject *flip_vert(PyObject *self, PyObject *args)
+ {
+ 	char *a1;
+ 	char *a2;
+-	int length;
++	Py_ssize_t length;
+ 	int w1, w2;
+ 	int h1, h2;
+ 	int rws1, rws2;
+@@ -195,7 +195,7 @@ PyObject *flip_horiz(PyObject *self, PyObject *args)
+ {
+ 	char *a1;
+ 	char *a2;
+-	int length;
++	Py_ssize_t length;
+ 	int w1, w2;
+ 	int h1, h2;
+ 	int rws1, rws2;

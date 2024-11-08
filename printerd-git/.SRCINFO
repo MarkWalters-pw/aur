@@ -1,0 +1,17 @@
+pkgbase = printerd-git
+	pkgdesc = A daemon to manage local and remote printers on Linux.
+	pkgver = 297.f3259d8
+	pkgrel = 1
+	url = https://github.com/hughsie/printerd
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	makedepends = intltool
+	makedepends = gtk-doc
+	depends = gnome-common
+	depends = gobject-introspection
+	source = printerd::git+https://github.com/hughsie/printerd.git
+	sha256sums = SKIP
+
+pkgname = printerd-git

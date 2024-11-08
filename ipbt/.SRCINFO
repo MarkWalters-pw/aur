@@ -1,0 +1,16 @@
+pkgbase = ipbt
+	pkgdesc = A high-tech ttyrec player
+	pkgver = 20240909.a852474
+	pkgrel = 1
+	url = https://www.chiark.greenend.org.uk/~sgtatham/ipbt
+	arch = x86_64
+	license = MIT
+	makedepends = cmake
+	depends = ncurses
+	depends = perl
+	source = https://www.chiark.greenend.org.uk/~sgtatham/ipbt/ipbt-20240909.a852474.tar.gz
+	source = ipbt.patch
+	sha256sums = 89d95b6c806461ac0dc2096732e266dfb288d08cd8cbe68df83cea9fe0895bfe
+	sha256sums = 799d198e16f56e7575e761ec68cbd0e17334cf7ac9790439b7ae7115f84d554f
+
+pkgname = ipbt

@@ -1,0 +1,20 @@
+pkgbase = r-clarabel
+	pkgdesc = Interior Point Conic Optimization Solver
+	pkgver = 0.9.0.1
+	pkgrel = 1
+	url = https://cran.r-project.org/package=clarabel
+	arch = x86_64
+	license = Apache-2.0
+	checkdepends = r-tinytest
+	makedepends = rust
+	depends = blas
+	depends = lapack
+	depends = r
+	optdepends = r-knitr
+	optdepends = r-rmarkdown
+	optdepends = r-tinytest
+	source = https://cran.r-project.org/src/contrib/clarabel_0.9.0.1.tar.gz
+	md5sums = 8060d34194c3c2a320d59fa5c4133c6e
+	b2sums = 55148adb22d425e2b8b8eafba684291a30abc60d1b57fb5aaeb6fb70ea0685fae63cc1a4b0871cdbd36028c9574e665385273fa15c5e9a29be7b414195cf44c8
+
+pkgname = r-clarabel

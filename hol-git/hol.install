@@ -1,0 +1,34 @@
+# See also:
+# https://github.com/HOL-Theorem-Prover/HOL/commit/c2615dd
+
+post_install() {
+    cd /opt/hol
+    poly < tools/smart-configure.sml
+    bin/build --relocbuild
+    cd Manual; make
+
+    cat <<EOF
+*************************************************
+Emacs HOL mode
+*************************************************
+Put
+
+   (autoload 'hol "/opt/hol/tools/hol-mode"
+     "Runs a HOL session in a comint window.
+      With a numeric prefix argument, runs it niced to that level
+      or at level 10 with a bare prefix. " t)
+
+or
+
+   (load "/opt/hol/tools/hol-mode")
+
+into your .emacs file.
+EOF
+}
+
+post_upgrade() {
+    cd /opt/hol
+    poly < tools/smart-configure.sml
+    bin/build --relocbuild
+    cd Manual; make
+}

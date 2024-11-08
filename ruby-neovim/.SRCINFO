@@ -1,0 +1,16 @@
+pkgbase = ruby-neovim
+	pkgdesc = Ruby bindings for Neovim
+	pkgver = 0.10.0
+	pkgrel = 1
+	url = https://github.com/neovim/neovim-ruby
+	arch = any
+	license = MIT
+	depends = neovim
+	depends = ruby
+	depends = ruby-msgpack>=1.1
+	depends = ruby-multi_json
+	noextract = neovim-0.10.0.gem
+	source = https://rubygems.org/downloads/neovim-0.10.0.gem
+	sha256sums = 8d6170279872201106de1a84c27cc40a571ec2584057a3c335b2721e7326833e
+
+pkgname = ruby-neovim

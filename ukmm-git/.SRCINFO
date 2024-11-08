@@ -1,0 +1,22 @@
+pkgbase = ukmm-git
+	pkgdesc = U-King Mod Manager is a tool for managing and merging mods for The Legend of Zelda: Breath of the Wild.
+	pkgver = 0.13.0.r29.g29ced2a
+	pkgrel = 0
+	url = https://github.com/NiceneNerd/ukmm
+	arch = any
+	license = GPL3
+	makedepends = rust-nightly
+	makedepends = git
+	makedepends = coreutils
+	makedepends = sed
+	makedepends = cmake
+	depends = gtk3
+	options = !lto
+	options = !strip
+	options = debug
+	source = git+https://github.com/NiceneNerd/ukmm
+	source = UKMM.desktop
+	sha256sums = SKIP
+	sha256sums = 4e513a4394d130a79803c9216586a31ae423656fafa731ac544325c0d2bc01f8
+
+pkgname = ukmm-git

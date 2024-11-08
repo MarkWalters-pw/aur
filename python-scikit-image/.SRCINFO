@@ -1,0 +1,40 @@
+pkgbase = python-scikit-image
+	pkgdesc = Image processing routines for SciPy
+	pkgver = 0.24.0
+	pkgrel = 1
+	url = http://scikit-image.org
+	arch = i686
+	arch = x86_64
+	license = BSD-3-Clause
+	makedepends = cython>=3.0.4
+	makedepends = python-setuptools>=67
+	makedepends = python-numpy
+	makedepends = meson-python>=0.15
+	makedepends = python-wheel
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-pythran
+	makedepends = python-packaging>=21
+	depends = python-numpy>=1.23
+	depends = python-scipy>=1.9
+	depends = python-networkx>=2.8
+	depends = python-pillow>=9.1
+	depends = python-imageio>=2.33
+	depends = python-tifffile>=2022.8.12
+	depends = python-packaging>=21
+	depends = python-lazy-loader>=0.4
+	optdepends = python-matplotlib>=3.6
+	optdepends = freeimage: for reading various types of image file formats
+	optdepends = python-pyamg: fast cg_mg mode of random walker segmentation
+	optdepends = python-astropy>=5.0: Provides FITS I/O capability
+	optdepends = python-simpleitk: Optional I/O plugin providing a wide variety of formats. including specialized formats using in medical imaging
+	optdepends = python-dask>2021.1.0: used to speed up certain functions
+	optdepends = python-cloudpickle>=0.2.1: necessary to provide the processes scheduler for dask
+	optdepends = python-pooch>=1.6.0
+	optdepends = python-scikit-learn>=1.1
+	optdepends = python-pywavelets>=1.1.1
+	options = !emptydirs
+	source = https://files.pythonhosted.org/packages/source/s/scikit_image/scikit_image-0.24.0.tar.gz
+	sha256sums = 5d16efe95da8edbeb363e0c4157b99becbd650a60b77f6e3af5768b66cf007ab
+
+pkgname = python-scikit-image

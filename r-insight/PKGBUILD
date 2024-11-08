@@ -1,0 +1,144 @@
+# Maintainer: Guoyi Zhang <guoyizhang at malacology dot net>
+
+_pkgname=insight
+_pkgver=0.20.5
+pkgname=r-${_pkgname,,}
+pkgver=${_pkgver//-/.}
+pkgrel=1
+pkgdesc="Easy Access to Model Information for Various Model Objects"
+arch=(any)
+url="https://cran.r-project.org/package=$_pkgname"
+license=('GPL-3.0-only')
+depends=(
+  r
+)
+optdepends=(
+  r-aer
+  r-afex
+  r-aod
+  r-bayesfactor
+  r-bayestestr
+  r-bbmle
+  r-bdsmatrix
+  r-betareg
+  r-bh
+  r-bife
+  r-biglm
+  r-blavaan
+  r-blme
+  r-brms
+  r-broom
+  r-car
+  r-cardata
+  r-censreg
+  r-cgam
+  r-clubsandwich
+  r-cobalt
+  r-coxme
+  r-cplm
+  r-crch
+  r-curl
+  r-datawizard
+  r-effectsize
+  r-emmeans
+  r-epir
+  r-estimatr
+  r-feisr
+  r-fixest
+  r-fungible
+  r-fwb
+  r-gam
+  r-gamlss
+  r-gamlss.data
+  r-gamm4
+  r-gbm
+  r-gee
+  r-geepack
+  r-geor
+  r-ggeffects
+  r-glmmadaptive
+  r-glmmtmb
+  r-glmtoolbox
+  r-gmnl
+  r-gt
+  r-httptest2
+  r-httr
+  r-httr2
+  r-interp
+  r-ivreg
+  r-jm
+  r-knitr
+  r-lavaan
+  r-lavasearch2
+  r-lfe
+  r-lme4
+  r-lmertest
+  r-lmtest
+  r-logistf
+  r-logitr
+  r-marginaleffects
+  r-mclogit
+  r-mclust
+  r-mcmcglmm
+  r-mertools
+  r-metabma
+  r-metadat
+  r-metafor
+  r-metaplus
+  r-mice
+  r-mlogit
+  r-mmrm
+  r-modelbased
+  r-multgee
+  r-mumin
+  r-nestedlogit
+  r-nonnest2
+  r-ordinal
+  r-panelr
+  r-parameters
+  r-parsnip
+  r-pbkrtest
+  r-performance
+  r-plm
+  r-poorman
+  r-proreg
+  r-pscl
+  r-psych
+  r-quantreg
+  r-rcpp
+  r-rcppeigen
+  r-rmarkdown
+  r-rms
+  r-robustbase
+  r-robustlmm
+  r-rstanarm
+  r-rstantools
+  r-rstudioapi
+  r-sandwich
+  r-serp
+  r-speedglm
+  r-statmod
+  r-survey
+  r-svylme
+  r-testthat
+  r-tinytable
+  r-tmb
+  r-truncreg
+  r-tweedie
+  r-vgam
+  r-weightit
+  r-withr
+)
+source=("https://cran.r-project.org/src/contrib/${_pkgname}_${_pkgver}.tar.gz")
+md5sums=('fc9c406129e0cdba773a9bda23f95b28')
+b2sums=('41875131ff011593ff192f15d12c1728922f6e8260e0a760b5198882f74fab73caa44b8def7bb84bee7afebadccc77934a3f9aa5da1f766c25d98da050daa5d6')
+
+build() {
+  mkdir build
+  R CMD INSTALL -l build "$_pkgname"
+}
+
+package() {
+  install -d "$pkgdir/usr/lib/R/library"
+  cp -a --no-preserve=ownership "build/$_pkgname" "$pkgdir/usr/lib/R/library"
+}

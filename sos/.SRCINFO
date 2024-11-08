@@ -1,0 +1,25 @@
+pkgbase = sos
+	pkgdesc = A unified tool for collecting system logs and other debug information
+	pkgver = 4.8.1
+	pkgrel = 2
+	url = https://github.com/sosreport/sos
+	arch = any
+	license = GPL-2.0-only
+	checkdepends = python-coverage
+	checkdepends = python-pycodestyle
+	makedepends = python-sphinx
+	depends = python
+	depends = python-pexpect
+	depends = python-yaml
+	depends = python-magic
+	depends = python-packaging
+	depends = python-boto3
+	depends = python-simplejson
+	depends = python-requests
+	depends = python-setuptools
+	depends = python-selinux
+	optdepends = usbutils
+	source = sos-4.8.1.tar.gz::https://github.com/sosreport/sos/archive/4.8.1.tar.gz
+	sha256sums = 3e680a87537ef632ab3327515cf07c6e8b5bc8dad0642d89193cc195d0423622
+
+pkgname = sos

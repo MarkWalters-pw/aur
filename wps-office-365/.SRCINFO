@@ -1,0 +1,44 @@
+pkgbase = wps-office-365
+	pkgdesc = WPS Office, is an office productivity suite.
+	pkgver = 12.8.2.18605
+	pkgrel = 2
+	url = https://365.wps.cn/
+	arch = x86_64
+	arch = aarch64
+	arch = loong64
+	license = LicenseRef-WPS-EULA
+	makedepends = tar
+	depends = fontconfig
+	depends = libxrender
+	depends = xdg-utils
+	depends = glu
+	depends = libpulse
+	depends = libxss
+	depends = sqlite
+	depends = libtool
+	depends = libtiff
+	depends = libxslt
+	depends = libjpeg-turbo
+	depends = libpng12
+	depends = freetype2
+	optdepends = wps-office-365-fonts: FZ TTF fonts provided by wps office 365
+	optdepends = cups: for printing support
+	options = !strip
+	options = !zipman
+	options = !debug
+	source_x86_64 = https://wps-linux-365.wpscdn.cn/wps/download/ep/Linux365/18605/wps-office_12.8.2.18605.AK.preload.sw_amd64.deb
+	sha256sums_x86_64 = 7f2db7f328dd695ea964e3ee940311265723fc81de4438e0320ad3542d093cb4
+	source_aarch64 = https://wps-linux-365.wpscdn.cn/wps/download/ep/Linux365/18605/wps-office_12.8.2.18605.AK.preload.sw_arm64.deb
+	sha256sums_aarch64 = 0735a908ccc2ce7e11157bdeee855de34e44aeb40b89fe70c06742f77f28517c
+	source_loong64 = https://wps-linux-365.wpscdn.cn/wps/download/ep/Linux365/18605/wps-office_12.8.2.18605.AK.preload.sw_loongarch64.deb
+	sha256sums_loong64 = ad38994277912eeb9f96aca342a7e898ed74ef37b11f0d2bb4bac938835a527b
+
+pkgname = wps-office-365
+	provides = wps-office
+	conflicts = wps-office
+
+pkgname = wps-office-365-xiezuo
+
+pkgname = wps-office-365-fonts
+	provides = wps-office-fonts
+	conflicts = wps-office-fonts

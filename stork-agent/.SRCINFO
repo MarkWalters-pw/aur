@@ -1,0 +1,18 @@
+pkgbase = stork-agent
+	pkgdesc = The agent that monitors Kea DHCP and BIND 9 as part of ISC Stork.
+	pkgver = 1.17.0
+	pkgrel = 1
+	url = https://gitlab.isc.org/isc-projects/stork
+	arch = any
+	license = MPL2
+	makedepends = python
+	makedepends = rake
+	makedepends = sed
+	makedepends = tar
+	makedepends = unzip
+	makedepends = wget
+	backup = etc/stork
+	source = https://downloads.isc.org/isc/stork/1.17.0/stork-1.17.0.tar.gz
+	sha512sums = e6cc5cb575fbce20ed2864be4b2bc2b158c9ff128aedadff532c61679bf8bd1809658021cc3c461cbf7637f4328a8260f05b21f39b20ffe6ffb4e38eb64a0af9
+
+pkgname = stork-agent

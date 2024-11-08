@@ -1,0 +1,21 @@
+pkgbase = pacman-mirrors-helper-git
+	pkgdesc = A convenient tool, designed to simplify repository management and mirror selection.
+	pkgver = r94.f5340a4
+	pkgrel = 1
+	url = https://codeberg.org/Application-Maker/pacman-mirrors-helper
+	arch = any
+	license = GPL-3.0-or-later
+	makedepends = coreutils
+	makedepends = git
+	depends = bash
+	depends = coreutils
+	depends = curl
+	depends = gawk
+	depends = ncurses
+	depends = pacman
+	depends = sed
+	depends = util-linux
+	source = git+https://codeberg.org/Application-Maker/pacman-mirrors-helper.git#branch=main
+	sha256sums = SKIP
+
+pkgname = pacman-mirrors-helper-git

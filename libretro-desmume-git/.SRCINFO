@@ -1,0 +1,29 @@
+pkgbase = libretro-desmume-git
+	pkgdesc = Nintendo DS core
+	pkgver = r6359.b518fec5
+	pkgrel = 1
+	url = https://github.com/libretro/desmume
+	arch = aarch64
+	arch = armv7h
+	arch = i486
+	arch = i686
+	arch = pentium4
+	arch = x86_64
+	groups = libretro
+	license = GPL-2.0-only
+	makedepends = git
+	makedepends = libgl
+	makedepends = libpcap
+	depends = gcc-libs
+	depends = glibc
+	depends = libretro-core-info
+	provides = libretro-desmume=6359.b518fec5
+	conflicts = libretro-desmume
+	source = libretro-desmume::git+https://github.com/libretro/desmume.git
+	b2sums = SKIP
+
+pkgname = libretro-desmume-git
+	depends = gcc-libs
+	depends = glibc
+	depends = libretro-core-info
+	depends = libGL.so

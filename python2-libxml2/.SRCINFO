@@ -1,0 +1,22 @@
+pkgbase = python2-libxml2
+	pkgdesc = Python 2 bindings for the XML parsing library v2
+	pkgver = 2.9.14
+	pkgrel = 1
+	url = https://gitlab.gnome.org/GNOME/libxml2/-/wikis/home
+	arch = x86_64
+	arch = aarch64
+	arch = i686
+	arch = armv7h
+	license = MIT
+	makedepends = git
+	depends = glibc
+	depends = libxml2-2.9
+	depends = python2
+	source = python2-libxml2::git+https://gitlab.gnome.org/GNOME/libxml2.git#commit=7846b0a677f8d3ce72486125fa281e92ac9970e8
+	source = no-fuzz.diff
+	source = https://www.w3.org/XML/Test/xmlts20130923.tar.gz
+	sha256sums = SKIP
+	sha256sums = 3fc010d8c42b93e6d6f1fca6b598a561e9d2c8780ff3ca0c76a31efabaea404f
+	sha256sums = 9b61db9f5dbffa545f4b8d78422167083a8568c59bd1129f94138f936cf6fc1f
+
+pkgname = python2-libxml2

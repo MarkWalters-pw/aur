@@ -1,0 +1,294 @@
+%changelog
+* Thu Jul 01 2021 vrozenfe@redhat.com - 0.1.196-1
+
+* Tue Nov 24 2020 vrozenfe@redhat.com - 0.1.190-1
+- Update to virtio-win-prewhql-0.1-190
+
+* Mon Aug 10 2020 vrozenfe@redhat.com - 0.1.189-1
+- Update to virtio-win-prewhql-0.1-189
+
+* Mon Jul 27 2020 vrozenfe@redhat.com - 0.1.187-1
+- Update to virtio-win-guest-tools-installer to 2951dba
+- Add virtiofs
+
+* Wed Jun 03 2020 Vadim Rozenfeld <vrozenfe@redhat.com> - 0.1.185-1
+- Update virtio-win to build 185
+- Update to spice-qxl-wddm-dod 0.20-0
+- Update to virtio-win-guest-tools-installer to fe746e3
+- Update to qemu-ga-win-101.1.0-1.el7ev
+- Ship spice vdagent
+
+* Mon Mar 23 2020 Cole Robinson <crobinso@redhat.com> - 0.1.173-9
+- Adjust iso settings to fix label length restrictions
+
+* Tue Mar 10 2020 Cole Robinson <crobinso@redhat.com> - 0.1.173-8
+- Update to virtio-win-guest-tools-installer 822f817
+
+* Wed Feb 12 2020 Cole Robinson <crobinso@redhat.com> - 0.1.173-7
+- Force xz RPM compression for RHEL7 compat
+
+* Sat Feb 01 2020 Cole Robinson <crobinso@redhat.com> - 0.1.173-6
+- Update virtio-win-guest-tools-installer to 4bc3ac5
+
+* Thu Jan 23 2020 Cole Robinson <crobinso@redhat.com> - 0.1.173-5
+- Update virtio-win-guest-tools-installer to 187de02
+
+* Mon Jan 20 2020 Cole Robinson <crobinso@redhat.com> - 0.1.173-4
+- Add drivers/by-os and drivers/by-driver to the RPM
+
+* Sun Jan 19 2020 Cole Robinson <crobinso@redhat.com> - 0.1.173-3
+- Add data/info.json to the ISO
+
+* Wed Oct 23 2019 Cole Robinson <crobinso@redhat.com> - 0.1.173-2
+- Add virtio-win-guest-tools-installer msis
+
+* Wed Oct 23 2019 Cole Robinson <crobinso@redhat.com> - 0.1.173-1
+- Update to virtio-win-prewhql-0.1-173
+
+* Wed Sep 04 2019 Cole Robinson <crobinso@redhat.com> - 0.1.172-1
+- Update to virtio-win-prewhql-0.1-172
+- netkvm: Increase timeout of control command completion
+- viostor: add preliminary support for discard (unmap) command
+- vioinput: Fix mistakes in commit 4c9942754912
+- netkvm: RSC support according to virtio spec
+
+* Mon May 20 2019 Cole Robinson <crobinso@redhat.com> - 0.1.171-1
+- Update to virtio-win-prewhql-0.1-171
+- Update to spice-qxl-wddm-dod-0.19-0
+
+* Mon Mar 11 2019 Cole Robinson <crobinso@redhat.com> - 0.1.164-2
+- Add ISO layout for windows install driver detection.
+  viostor and vioscsi only, for now. (Yuri Benditovich)
+
+* Mon Feb 04 2019 Cole Robinson <crobinso@redhat.com> - 0.1.164-1
+- Update to virtio-win-prewhql-0.1-164
+- Update to qemu-ga-win-100.0.0.0-3.el7ev
+- Add win10 arm64 experimental drivers
+
+* Wed Aug 15 2018 Cole Robinson <crobinso@redhat.com> - 0.1.160-1
+- Update to virtio-win-prewhql-0.1-160
+- Update to qemu-ga-win-7.6.2-2.el7ev
+
+* Thu Apr 05 2018 Cole Robinson <crobinso@redhat.com> - 0.1.149-2
+- Update to mingw-qemu-ga-win-7.5.0-2.el7ev
+- qemu guest agent builds based on qemu 2.9.0
+
+* Thu Mar 22 2018 Cole Robinson <crobinso@redhat.com> - 0.1.149-1
+- Update to virtio-win-prewhql-0.1-149
+- BZ#1549455 - [viostor] Event ID: 158 is logged on Win10/WS2016 when two or more virtio-blk disks attached to VM
+- BZ#1537430 - [NetKvm] Import LinkSpeed/Duplex configs from the hypervisor
+- BZ#1351089 - [NetKvm] Don't set MAC address using configuration space in virtio 1.0 device
+
+* Fri Aug 04 2017 Cole Robinson <crobinso@redhat.com> - 0.1.141-1
+- Update to virtio-win-prewhql-0.1-141
+- [NetKVM] Send clone of original announcement NBL
+
+* Mon Jul 17 2017 Cole Robinson <crobinso@redhat.com> - 0.1.140-1
+- Update to virtio-win-prewhql-0.1-140
+- Update to spice-qxl-wddm-dod-0.18-0
+- BZ#1451978: [NetKVM] latest virtio driver (network) for Windows drops lots of packets
+- qxlwddm: Fix physical memory unmapping
+
+* Wed Jun 07 2017 Cole Robinson <crobinso@redhat.com> - 0.1.139-1
+- Update to virtio-win-prewhql-0.1-139
+- BZ#1456403: [NetKVM] Implement MTU report feature of the virtio-net device
+- BZ#1455488: [vioser][ovmf] Guest occured BSOD when hotunplug virtio-serial-pci.
+- BZ#1393772: Add null driver for SM Bus Controller
+
+- Update to spice-qxl-wddm-dod-0.17-0
+- Prepare for hardware compatibility tests for Windows 10
+     - emulation of EDID data
+     - separate thread for rendering operations and display mode change
+     - VSync control
+- Make the driver compatible with Windows 7 device memory scheme
+- Fix problem on VM save/migration
+
+* Thu May 11 2017 Cole Robinson <crobinso@redhat.com> - 0.1.137-1
+- Update to virtio-win-prewhql-0.1-137
+- BZ#1438410 Net-KVM:   Add VlanId property to no_RSS and no_RSC Inf files
+
+* Mon May 01 2017 Cole Robinson <crobinso@redhat.com> - 0.1.136-1
+- Update to virtio-win-prewhql-0.1-136
+- BZ#1369353 - balloon: backport available memory stat support. Trying to mimic what si_mem_available does in Linux. AvailPhys is the sum of memory in free, zero and standby list. CacheBytes is the current size of the system file cache.
+- BZ#1442322 - viostor Cannot enlarge/shrink disk with virtio-blk-pci device.
+- BZ#1438410 - Net-KVM: Add VlanId property to Inf file
+
+* Thu Apr 27 2017 Cole Robinson <crobinso@redhat.com> - 0.1.135-2
+- Update to qemu-ga-win-7.4.5-1
+
+* Mon Apr 03 2017 Cole Robinson <crobinso@redhat.com> - 0.1.135-1
+- Update to virtio-win-prewhql-0.1-135
+- Update to qemu-ga-win-7.4.4-1
+- Bug 1419900 - BSOD of vioser.sys on Win10 in S0->S4->S0 flow
+
+* Sun Mar 26 2017 Cole Robinson <crobinso@redhat.com> - 0.1.134-3
+- Update to qemu-ga-win-7.4.3-1
+
+* Thu Mar 23 2017 Cole Robinson <crobinso@redhat.com> - 0.1.134-2
+- Update to qemu-ga-win-7.4.2-1
+- Install actually signed qxldod drivers (Issue #11)
+
+* Mon Mar 20 2017 Cole Robinson <crobinso@redhat.com> - 0.1.134-1
+- Update to virtio-win-prewhql-0.1-134
+- BZ#1429807 - [virtio-win][whql][netkvm] guests bsod(d1) when running job "NDISTest 6.0 - [1 Machine] - 1c_FaultHandling"
+
+* Mon Mar 13 2017 Cole Robinson <crobinso@redhat.com> - 0.1.133-2
+- Add .dll for vioinput on 2k12* (issue #10)
+
+* Wed Mar 01 2017 Cole Robinson <crobinso@redhat.com> - 0.1.133-1
+- Update to virtio-win-prewhql-0.1-133
+- Update to spice-qxl-wddm-dod-0.16-0
+- BZ#1303510 - Change the copyright on all the Windows drivers to "2017" in virtio-win-prewhql build
+- NetKVM: Implement VIRTIO_NET_F_GUEST_ANNOUNCE feature
+- NetKVM: Make miniportShutdown return immediately on "NdisShutdownBugCheck"
+
+* Wed Feb 22 2017 Cole Robinson <crobinso@redhat.com> - 0.1.132-1
+- Update to virtio-win-prewhql-0.1-132
+- Update to qxlwddm-0.15-0
+- Winxp viostor driver is no longer being updated, will remain locked at the 0.1.130 version
+- Winxp qxl driver is no longer being updated, will remain locked at the spice-space 0.1.18 version
+- BZ#1369353 - [balloon] backport available memory stat support
+- BZ#1419785 - [virtio-win][whql][balloon] Guest WIN8-32 occured BSOD in job "DF - PNP Stop (Rebalance) Device Test (Certification)"
+- pvpanic: Add IOCTL_GET_CRASH_DUMP_HEADER
+- vioinput: Use viohidkmdf.sys instead of mshidkmdf.sys
+- BZ#1403550 - [RFE] viostor.sys Add multi-queue support
+
+* Mon Jan 16 2017 Cole Robinson <crobinso@redhat.com> - 0.1.130-1
+- Update to virtio-win-prewhql-0.1-130
+- BZ#1389445: VirtIO definition of bool as int used by all drivers that use VirtIO library, except (currently) netkvm which is C++ and uses bool as fundamental C++ type.
+- BZ#1389125: viostor - extend viostor driver with STORAGE_REQUEST_BLOCK support
+- BZ#1395790 - vioscsi.sys BSOD when adding CPU to live Windows Server 2012R2 guest
+- BZ#1410964 - 4K virtual drives broken on Windows
+- NetKVM Return correct info for OID_TCP_OFFLOAD_PARAMETERS
+- Balloon: Fix blnsvr race conditions
+- NetKvm: Support WMI commands
+- NetKvm: Use fewer virtio receive SG descriptors
+- NetKvm: Fix race of changing of RSS parameters and TX
+- virtiolib: Fix uninitialized variable in VirtIOWdfFinalizeFeatures
+- NetKVM: Fix 1c_IOCTLCoverage test failure
+- NetKVM: Fix RX kick timing
+- vioscsi: Fix verifier and debug spew due to worker exiting with affinity set. By default the workers have no affinity. We set it to the specific cpu, but KeSetSystemAffinityThreadEx returns 0, as there was no affinity. You still have to KeSetSystemAffinityThreadEx before you exit and reset it back to 0.
+- balloon: Fix completion-cancellation races
+- netkvm: Optimize checksum routine on 64-bit
+
+* Fri Sep 30 2016 Cole Robinson <crobinso@redhat.com> - 0.1.126-2
+- Ship .dll files for vioinput driver
+
+* Tue Sep 27 2016 Cole Robinson <crobinso@redhat.com> - 0.1.126-1
+- Update to virtio-win-prewhql-0.1-126
+- Add virtio-input drivers
+- NetKVM fix SDV problems
+- Debug targets
+- Enable RSC in INF file
+- Enable dynamic RSC offload based on QEMU implementation
+- Use new RSC information fields in virtio_net_hdr_v1
+- Add RSC related definitions based on virtio 1.0 spec to virtio_net.h
+- Sync with Win10 branch
+- Many bug fixes
+
+* Thu Jun 16 2016 Cole Robinson <crobinso@redhat.com> - 0.1.118-2
+- Update to qemu-ga-win-7.3.2-1
+
+* Mon Jun 06 2016 Cole Robinson <crobinso@redhat.com> - 0.1.118-1
+- Update to virtio-win-prewhql-0.1-118
+- BZ#1293249: Fix IOCTL_GET_INFORMATION regression
+- Enable RSC
+- Fix IPv6 offload support with SLIRP
+- Fix MPE HCK test problems
+
+* Sun Apr 10 2016 Cole Robinson <crobinso@redhat.com> - 0.1.117-1
+- Update to virtio-win-prewhql-0.1-117
+- Bug 1321903 [vioscsi]  Windows 10 Installer stuck at Getting files ready for installation with Virtio SCSI
+- Trying out the new build system.
+- vioserial - code rework and cleanup
+- general - switching signing back to SHA-1
+
+* Mon Feb 29 2016 Cole Robinson <crobinso@redhat.com> - 0.1.113-1
+- Update to virtio-win-prewhql-0.1-113
+- Put win10 drivers on the .vfd images
+- BZ 1303510: [virtio-win] Change the copyright on all the Windows drivers to "2016" in virtio-win-prewhql build
+- BZ 1122364: [vioserial] Complete pending write request on port removal
+- BZ 1296099: [vioserial] Fix race in read cancellation logic
+- BZ 1293249: [vioserial] Fix IOCTL_GET_INFORMATION,
+
+* Fri Dec 18 2015 Cole Robinson <crobinso@redhat.com> - 0.1.112-1
+- Update to virtio-win-prewhql-0.1-112
+- BZ 1284769: [viostor] Windows XP installer stucks installing with virtio-drivers
+- BZ 1245957: [viostor] [WHQL][viostor][data-plane]it could not generate dump file on WIN2008-32/64 via WLK while running Crash Dump job
+- BZ 1289406: [vioser] Cannot install vioser driver successfully
+
+* Wed Sep 23 2015 Cole Robinson <crobinso@redhat.com> - 0.1.110-2
+- Update to qxl-win-unsigned-0.1-24
+
+* Tue Sep 22 2015 Cole Robinson <crobinso@redhat.com> - 0.1.110-1
+- Update to virtio-win-prewhql-0.1-110
+- BZ 1223426 NetKVM Fix for performance degradation with multi-queue
+- BZ 1227164 viostor/vioscsi is not digital signed by Redhat
+
+* Sun Aug 30 2015 Cole Robinson <crobinso@redhat.com> - 0.1.109-2
+- Update to qemu-ga-win-7.2.1-1
+
+* Mon Aug 10 2015 Cole Robinson <crobinso@redhat.com> - 0.1.109-1
+- Update to virtio-win-prewhql-0.1-109
+- Bz 1250854 [vioscsi]The job named crash dump failed on windows 2008 -32/64 platform
+
+* Sun Aug 09 2015 Cole Robinson <crobinso@redhat.com> - 0.1.108-1
+- Update to virtio-win-prewhql-0.1-108
+- BZ 1183423#c10 Change the copyright on all the Windows drivers to "2015" in virtio-win-prewhql build
+- BZ 1248977 - [virtio-win][vioscsi] Cannot install vioscsi driver on win7-32&win2008-32 with build107
+- BZ 1234751 [virtio-win][vioscsi]win2012R2 guest bsod(d1) when whql test DPWLK-HotAdd(1104) job
+- BZ 1234741 [virtio-win][vioscsi]win2012 guest bsod(c9) when whql test DPWLK-HotAdd(1104) job
+- BZ 1234507 vioserial crash due to completing a cancellable request
+
+* Sun Aug 09 2015 Cole Robinson <crobinso@redhat.com> - 0.1.106-1
+- Update to virtio-win-prewhql-0.1-106
+- Update to qxl-win-unsigned-0.1-22
+- Update to qxlwddm-0.1-12
+- BZ 1237024  NetKVM Fix payload length calculation in IPv6 header
+- BZ 1183423  Change the copyright on all the Windows drivers to "2015" in virtio-win-prewhql build
+- BZ 1243229  [virtio-win][scsi][windows 10]win10 and win2016 guests bsod with D1 when run job "Bus Reset Test"
+- BZ 1228967  [virtio-win][whql][viostor]job "Flush Test" failed on all guests with build 105
+
+* Thu Jun 04 2015 Cole Robinson <crobinso@redhat.com> - 0.1.105-1
+- Update to virtio-win-prewhql-0.1-105
+- BZ 1223426 NetKVM Fix for performance degradation with multi-queue
+- BZ 1227164 viostor/vioscsi is not digital signed by Redhat
+
+* Mon May 25 2015 Cole Robinson <crobinso@redhat.com> - 0.1.104-1
+- Update to virtio-win-prewhql-0.1-104
+- BZ 1214568 vioscsi Add WMI facility to check the virito-scsi mq enabled
+- BZ 1172920 vioser  bsod on shutdown after device was unplugged
+- BZ 954183  NetKVM  Clean-up SDV run results during clean.bat execution
+- BZ 1067249 balloon device can't be removed when service is running
+- BZ 1190960 NetKVM  [mq]job failed due to "Received some net buffer lists out of order" w/ 4 queues
+- BZ 1067225 viostor Windows guest performing out-of-bounds accesses on virtio device
+- BZ 1195487 viostor Windows guest performing out-of-bounds accesses on virtio device
+
+
+* Tue May 05 2015 Cole Robinson <crobinso@redhat.com> - 0.1.103-2
+- Distribute the pre-release pvpanic driver
+- Distribute the pre-release qxlwddm/qxldod driver
+- Distribute qemupciserial.cat
+
+* Fri May 01 2015 Cole Robinson <crobinso@redhat.com> - 0.1.103-1
+- Update to virtio-win-prewhql-0.1-103
+- BZ 1210166 vioscsi - Add multiqueue support to Windows virtio-scsi driver.
+- BZ 954183  NetKVM - Static driver verifier fails with NetKVM
+- BZ 1190960 NetKVM - job failed due to "Received some net buffer lists out of order" w/ 4 queues
+- BZ 1190968 NetKVM - job "NDISTest 6.0 - [1 Machine] - 1c_Mini6RSSOids" last for hours and never stop w/ 4 queues
+- BZ 996479  pvpanic - RFE:pvpanic driver for windows guest
+- pvpanic driver isn't shipped yet since it has barely been tested
+- Reduce .iso and RPM size by hardlinking identical files (bz 1217644)
+- Ship QXL on the .iso (bz 1217642)
+
+* Sun Apr 26 2015 Cole Robinson <crobinso@redhat.com> - 0.1.102-1
+- Update to virtio-win-prewhql-0.1-102
+
+* Sun Apr 26 2015 Cole Robinson <crobinso@redhat.com> - 0.1.101-1
+- Update to virtio-win-prewhql-0.1-101
+
+* Sun Apr 26 2015 Cole Robinson <crobinso@redhat.com> - 0.1.100-1
+- Update to virtio-win-prewhql-0.1-100
+
+* Sun Apr 26 2015 Cole Robinson <crobinso@redhat.com> - 0.1.96-1
+- Update to virtio-win-prewhql-0.1-96

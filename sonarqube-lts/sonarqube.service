@@ -1,0 +1,20 @@
+[Unit]
+Description=An open source platform for continuous inspection of code quality
+Documentation=http://www.sonarqube.org
+Wants=network.target
+After=network.target
+
+[Service]
+Type=forking
+User=sonarqube
+Group=sonarqube
+Environment=PIDDIR=/var/lib/sonarqube
+SyslogIdentifier=sonarqube
+RuntimeDirectory=sonarqube
+LimitNOFILE=65536
+LimitNPROC=4096
+ExecStart=/usr/share/webapps/sonarqube/bin/linux-x86-64/sonar.sh start
+ExecStop=/usr/share/webapps/sonarqube/bin/linux-x86-64/sonar.sh stop
+
+[Install]
+WantedBy=multi-user.target

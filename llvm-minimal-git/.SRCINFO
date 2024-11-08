@@ -1,0 +1,77 @@
+pkgbase = llvm-minimal-git
+	pkgver = 20.0.0_r510973.d6d60707ec2b
+	pkgrel = 3
+	url = https://llvm.org/
+	arch = x86_64
+	license = Apache-2.0 WITH LLVM-exception
+	makedepends = git
+	makedepends = cmake
+	makedepends = libffi
+	makedepends = libedit
+	makedepends = ncurses
+	makedepends = libxml2
+	makedepends = libxcrypt
+	makedepends = python
+	makedepends = python-setuptools
+	makedepends = zstd
+	options = !lto
+	options = !debug
+	source = git+https://github.com/llvm/llvm-project.git
+	md5sums = SKIP
+	sha512sums = SKIP
+
+pkgname = llvm-minimal-git
+	pkgdesc = Collection of modular and reusable compiler and toolchain technologies, trimmed down git version
+	depends = llvm-libs-minimal-git=20.0.0_r510973.d6d60707ec2b-3
+	depends = zstd
+	depends = zlib
+	depends = glibc
+	depends = gcc-libs
+	optdepends = python: for using lit (LLVM Integrated Tester)
+	optdepends = python-setuptools: for using lit
+	provides = llvm
+	conflicts = llvm
+
+pkgname = llvm-libs-minimal-git
+	pkgdesc = LLVM runtime libraries, trimmed down trunk version
+	depends = gcc-libs
+	depends = zlib
+	depends = libffi
+	depends = libedit
+	depends = ncurses
+	depends = libxml2
+	depends = zstd
+	depends = glibc
+
+pkgname = clang-minimal-git
+	pkgdesc = C language family frontend for LLVM (trimmed down git version)
+	depends = llvm-libs-minimal-git
+	depends = clang-libs-minimal-git
+	depends = gcc-libs
+	depends = glibc
+	optdepends = openmp: OpenMP support in clang with -fopenmp
+	optdepends = python: for scan-view, scan-build, git-clang-format, clang-rename and python bindings
+	optdepends = llvm-minimal-git: referenced by some clang headers
+	provides = compiler-rt
+	provides = clang
+	provides = clang-analyzer
+	provides = clang-tools-extra
+	conflicts = compiler-rt
+	conflicts = clang
+
+pkgname = clang-libs-minimal-git
+	pkgdesc = clang runtime libraries, trunk version
+	depends = llvm-libs-minimal-git=20.0.0_r510973.d6d60707ec2b-3
+	depends = gcc-libs
+	depends = glibc
+	provides = clang-libs
+	conflicts = clang<20.0.0_r510973.d6d60707ec2b-3
+	conflicts = clang-libs
+
+pkgname = clang-opencl-headers-minimal-git
+	pkgdesc = clang headers & include files for OpenCL, trunk version
+	arch = any
+	depends = clang-libs-minimal-git=20.0.0_r510973.d6d60707ec2b-3
+	provides = clang-opencl-headers
+	conflicts = clang<20.0.0_r510973.d6d60707ec2b-3
+	conflicts = clang-opencl-headers

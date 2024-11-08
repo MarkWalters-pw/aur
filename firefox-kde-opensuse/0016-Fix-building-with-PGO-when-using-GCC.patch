@@ -1,0 +1,81 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Thomas Deutschmann <whissi@gentoo.org>
+Date: Thu, 2 Jul 2020 18:05:03 +0200
+Subject: [PATCH] Fix building with PGO when using GCC
+
+Signed-off-by: Thomas Deutschmann <whissi@gentoo.org>
+---
+ build/moz.configure/lto-pgo.configure |  5 +++--
+ build/pgo/profileserver.py            | 26 ++++++++++++++++++++++----
+ 2 files changed, 25 insertions(+), 6 deletions(-)
+
+diff --git a/build/moz.configure/lto-pgo.configure b/build/moz.configure/lto-pgo.configure
+index 5048b367e2686169f7d3f4644b7f629d1553004c..422f7e65b6dc94d223705f954682abe2046522b1 100644
+--- a/build/moz.configure/lto-pgo.configure
++++ b/build/moz.configure/lto-pgo.configure
+@@ -130,11 +130,12 @@ def pgo_flags(
+     compiler, linker, target, profdata, orderfile, target_is_windows, pgo_temporal
+ ):
+     if compiler.type == "gcc":
++        profile_use = "-fprofile-use"
+         return namespace(
+             gen_cflags=["-fprofile-generate"],
+             gen_ldflags=["-fprofile-generate"],
+-            use_cflags=["-fprofile-use", "-fprofile-correction", "-Wcoverage-mismatch"],
+-            use_ldflags=["-fprofile-use"],
++            use_cflags=[profile_use, "-fprofile-correction", "-Wcoverage-mismatch"],
++            use_ldflags=[profile_use],
+         )
+ 
+     if compiler.type in ("clang-cl", "clang"):
+diff --git a/build/pgo/profileserver.py b/build/pgo/profileserver.py
+index aae5e7997dadbee823352d644e5c2330e077ac44..b38f03b0743d48c8a62ada6969d527250c5e3e53 100755
+--- a/build/pgo/profileserver.py
++++ b/build/pgo/profileserver.py
+@@ -11,7 +11,7 @@ import subprocess
+ import sys
+ 
+ import mozcrash
+-from mozbuild.base import BinaryNotFoundException, MozbuildObject
++from mozbuild.base import BinaryNotFoundException, BuildEnvironmentNotFoundException, MozbuildObject
+ from mozfile import TemporaryDirectory
+ from mozhttpd import MozHttpd
+ from mozprofile import FirefoxProfile, Preferences
+@@ -97,9 +97,22 @@ if __name__ == "__main__":
+     locations = ServerLocations()
+     locations.add_host(host="127.0.0.1", port=PORT, options="primary,privileged")
+ 
+-    old_profraw_files = glob.glob("*.profraw")
+-    for f in old_profraw_files:
+-        os.remove(f)
++    using_gcc = False
++    try:
++        if build.config_environment.substs.get("CC_TYPE") == "gcc":
++            using_gcc = True
++    except BuildEnvironmentNotFoundException:
++        pass
++
++    if using_gcc:
++        for dirpath, _, filenames in os.walk("."):
++            for f in filenames:
++                if f.endswith(".gcda"):
++                    os.remove(os.path.join(dirpath, f))
++    else:
++        old_profraw_files = glob.glob("*.profraw")
++        for f in old_profraw_files:
++            os.remove(f)
+ 
+     with TemporaryDirectory() as profilePath:
+         # TODO: refactor this into mozprofile
+@@ -220,6 +233,11 @@ if __name__ == "__main__":
+             print("Firefox exited successfully, but produced a crashreport")
+             sys.exit(1)
+ 
++        if using_gcc:
++            print("Copying profile data...")
++            os.system("pwd");
++            os.system('tar cf profdata.tar.gz `find . -name "*.gcda"`; cd ..; tar xf instrumented/profdata.tar.gz;');
++
+         llvm_profdata = env.get("LLVM_PROFDATA")
+         if llvm_profdata:
+             profraw_files = glob.glob("*.profraw")

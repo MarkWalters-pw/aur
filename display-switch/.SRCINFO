@@ -1,0 +1,23 @@
+pkgbase = display-switch
+	pkgdesc = Turn a $30 USB switch into a full-featured multi-monitor KVM switch
+	pkgver = 1.3.1
+	pkgrel = 2
+	url = https://github.com/haimgel/display-switch
+	arch = x86_64
+	license = MIT
+	makedepends = cargo
+	makedepends = udev
+	depends = libusb
+	backup = etc/display-switch/display-switch.ini
+	source = display-switch-1.3.1.tar.gz::https://codeload.github.com/haimgel/display-switch/tar.gz/refs/tags/1.3.1
+	source = display-switch.sysusers
+	source = 45-display-switch.rules
+	source = display-switch.service
+	source = display-switch.ini
+	sha256sums = dd9269581ff7a659f26e89d56474cdfe6dc2b486a59bf2119fd8f0c0222379e1
+	sha256sums = bf5ee4f9876505628c5ce84e84e918c70d66be70b766d62bb138e294608ffbae
+	sha256sums = af9dbdc771023cd04f5b0c638c30356e6a824b32f0c04ea61fe929c71122bccd
+	sha256sums = 82adef58098d6cb21f9e38459f14844afc43c73df7f2f27eb7bda0107145984c
+	sha256sums = 1ff20643b8b6b1590bcfda26cb2f5323b791040cb164f5b44c944ed9e9b613bc
+
+pkgname = display-switch

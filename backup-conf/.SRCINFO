@@ -1,0 +1,20 @@
+pkgbase = backup-conf
+	pkgdesc = Create a backup of your config files in tree format on the current folder
+	pkgver = 5.2.3
+	pkgrel = 1
+	url = https://github.com/calendulish/backup-conf
+	install = backup-conf.install
+	arch = any
+	license = GPL
+	depends = util-linux
+	depends = gettext
+	depends = sudo
+	optdepends = diffutils: the default diff tool
+	optdepends = colordiff: a colored diff tool
+	optdepends = git: for git management
+	source = https://github.com/calendulish/backup-conf/archive/v5.2.3.tar.gz
+	source = backup-conf.install
+	sha256sums = 11d1b8785b663a741e91e3ed831a3700dff49c95ab1589963a6404c469e09639
+	sha256sums = e014f65a320da2bc0f4578f8a6f58baf0df919b89a271ba1308d0fb3fa5273d9
+
+pkgname = backup-conf

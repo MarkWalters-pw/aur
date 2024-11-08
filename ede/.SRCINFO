@@ -1,0 +1,17 @@
+pkgbase = ede
+	pkgdesc = The lightweight Equinox Desktop Environment
+	pkgver = 2.1
+	pkgrel = 1
+	url = https://edeproject.org/
+	arch = i686
+	arch = x86_64
+	license = LGPL
+	makedepends = ftjam
+	makedepends = asciidoc
+	depends = edelib
+	provides = pekwm
+	conflicts = pekwm
+	source = ede-2.1.tar.gz::https://github.com/edeproject/ede/archive/ede-2.1.tar.gz
+	sha256sums = 65fd31c3dafbd7e79f859bd0bba4dfc6333c655a801d85119834f1345f87767b
+
+pkgname = ede

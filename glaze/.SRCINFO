@@ -1,0 +1,17 @@
+pkgbase = glaze
+	pkgdesc = An Extremely fast, In-Memory JSON and Interface Library for Modern C++
+	pkgver = 3.3.1
+	pkgrel = 1
+	url = https://github.com/stephenberry/glaze
+	arch = any
+	license = MIT
+	makedepends = cmake
+	makedepends = ninja
+	optdepends = clang: for building with clang
+	optdepends = gcc: for building with gcc
+	provides = glaze
+	conflicts = glaze
+	source = glaze-3.3.1.tar.gz::https://github.com/stephenberry/glaze/archive/refs/tags/v3.3.1.tar.gz
+	sha512sums = 87ad455cc29793ce328dbc462fe87a895329def4fb56ae86d349a4f5bb54f8199917c3ccac464210790777980620639beaccc6cc4b346aa41f44ca0b38a7b394
+
+pkgname = glaze

@@ -1,0 +1,15 @@
+pkgbase = owntracks-frontend
+	pkgdesc = Web interface for OwnTracks built with Vue.js
+	pkgver = 2.15.3
+	pkgrel = 1
+	url = https://github.com/owntracks/frontend
+	install = install.sh
+	arch = any
+	makedepends = nvm
+	makedepends = npm
+	optdepends = owntracks-recorder: Server for OwnTracks
+	backup = etc/owntracks-frontend/config.js
+	source = owntracks-frontend-2.15.3.tar.gz::https://github.com/owntracks/frontend/archive/refs/tags/v2.15.3.tar.gz
+	sha256sums = 7ceaaf15dda4a614a94c94e20104a94d422020466ebbeb1ac21d573c26acd9f2
+
+pkgname = owntracks-frontend

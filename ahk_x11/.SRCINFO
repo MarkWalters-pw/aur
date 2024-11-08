@@ -1,0 +1,23 @@
+pkgbase = ahk_x11
+	pkgdesc = AutoHotkey for Linux (X11-based systems)
+	pkgver = 1.0.4
+	pkgrel = 1
+	url = https://github.com/phil294/AHK_X11
+	arch = x86_64
+	arch = x86_64_v3
+	license = GPL-2.0-or-later
+	makedepends = crystal
+	makedepends = shards
+	makedepends = gcc
+	depends = gtk3
+	depends = libnotify
+	depends = libxkbcommon
+	depends = libxinerama
+	depends = libxtst
+	depends = gc
+	source = AHK_X11-1.0.4.tar.gz::https://github.com/phil294/AHK_X11/archive/refs/tags/1.0.4.tar.gz
+	source = AHK_X11-1.0.4-xdotool-7b63eb46631815fd4a10e1fd78a37213250d1193.tar.gz::https://github.com/jordansissel/xdotool/archive/7b63eb46631815fd4a10e1fd78a37213250d1193.tar.gz
+	sha256sums = 9bf8f8d5e114550f699d75a5ed05befcacc3463618ff0d75ef5721a4824cd4e8
+	sha256sums = 0315b2d13a39c0c203e6685bb359006f74386f54ccda9e7b24ac2a7131d77827
+
+pkgname = ahk_x11

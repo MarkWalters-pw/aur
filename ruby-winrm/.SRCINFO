@@ -1,0 +1,23 @@
+pkgbase = ruby-winrm
+	pkgdesc = Ruby library for Windows Remote Management
+	pkgver = 2.3.9
+	pkgrel = 1
+	url = https://github.com/WinRb/WinRM
+	arch = any
+	license = Apache-2.0
+	depends = ruby
+	depends = ruby-builder
+	depends = ruby-erubi
+	depends = ruby-gssapi
+	depends = ruby-gyoku
+	depends = ruby-httpclient
+	depends = ruby-logging
+	depends = ruby-nori
+	depends = ruby-rubyntlm
+	depends = ruby-rexml
+	noextract = winrm-2.3.9.gem
+	options = !emptydirs
+	source = https://rubygems.org/downloads/winrm-2.3.9.gem
+	b2sums = 85d29a2c26125b89b3ee5401d2202c97657f8ccc8ab0d65c9c5583c1f4534a7ae679acc2bd62e36de152f26ad50d40c26edb68459e8605e0d304a8041476cc5c
+
+pkgname = ruby-winrm

@@ -1,0 +1,14 @@
+pkgbase = timewall-bin
+	pkgdesc = Apple dynamic HEIF wallpapers on GNU/Linux
+	pkgver = 1.2.0
+	pkgrel = 1
+	url = https://github.com/bcyran/timewall
+	arch = x86_64
+	license = MIT
+	depends = libheif
+	provides = timewall
+	conflicts = timewall
+	source = https://github.com/bcyran/timewall/releases/download/1.2.0/timewall-1.2.0-x86_64-unknown-linux-gnu.tar.gz
+	sha256sums = fd069edc4044b9a84377b11970303daeda340dbc188a74b83e9790fb3ba1e8a7
+
+pkgname = timewall-bin

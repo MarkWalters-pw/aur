@@ -1,0 +1,16 @@
+pkgbase = tokyonight-gtk-theme-git
+	pkgdesc = A GTK theme based on the Tokyo Night colour palette.
+	pkgver = r70.2f566d89
+	pkgrel = 2
+	url = https://github.com/Fausto-Korpsvart/Tokyo-Night-GTK-Theme
+	arch = any
+	license = GPL3
+	makedepends = git
+	makedepends = sassc
+	depends = gnome-themes-extra
+	optdepends = gtk-engine-murrine
+	options = !strip
+	source = git+https://github.com/Fausto-Korpsvart/Tokyo-Night-GTK-Theme.git
+	sha256sums = SKIP
+
+pkgname = tokyonight-gtk-theme-git

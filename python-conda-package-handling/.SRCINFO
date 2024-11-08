@@ -1,0 +1,18 @@
+pkgbase = python-conda-package-handling
+	pkgdesc = Create and extract conda package of various formats
+	pkgver = 2.3.0
+	pkgrel = 3
+	url = https://github.com/conda/conda-package-handling
+	arch = any
+	license = BSD-3-Clause
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = cython
+	depends = python
+	depends = python-conda-package-streaming
+	options = !emptydirs
+	source = conda-package-handling-2.3.0.tar.gz::https://github.com/conda/conda-package-handling/archive/2.3.0.tar.gz
+	sha512sums = f4e16c1e8a33fe92c70fd48e42d77247fd705eaea1ee8a9e95c52bdcf942a5334bb0b4f3f6492fd0e5defd3f724854b353999350b30bc507d77cc611af6f4c41
+
+pkgname = python-conda-package-handling

@@ -1,0 +1,22 @@
+pkgbase = facetimehd-firmware
+	pkgdesc = Firmware for the FacetimeHD (Broadcom 1570) PCIe webcam
+	pkgver = 1.0.0
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/patjak/facetimehd-firmware
+	arch = any
+	license = unknown
+	makedepends = git
+	makedepends = curl
+	makedepends = xz
+	makedepends = cpio
+	provides = facetimehd-firmware
+	provides = bcwc-pcie-firmware
+	conflicts = facetimehd-firmware
+	conflicts = bcwc-pcie-firmware
+	replaces = facetimehd-firmware
+	replaces = bcwc-pcie-firmware
+	source = facetimehd-firmware::git+https://github.com/patjak/facetimehd-firmware.git#tag=v1.0.0
+	sha256sums = SKIP
+
+pkgname = facetimehd-firmware

@@ -1,0 +1,18 @@
+pkgbase = pass-it-on-server-bin
+	pkgdesc = Pass-it-on server component binary only
+	pkgver = 0.16.0
+	pkgrel = 1
+	url = https://github.com/kwheelans/pass-it-on
+	arch = x86_64
+	arch = aarch64
+	license = MIT
+	provides = pass-it-on-server
+	conflicts = pass-it-on-server
+	source = pass-it-on-server-bin-source-0.16.0.tar.gz::https://github.com/kwheelans/pass-it-on/archive/refs/tags/v0.16.0.tar.gz
+	b2sums = 2b52f04add1f7f1ce2b3798c2874dc8879552e8110dba01a5526802d45d3cecb44f968804f4e6a10cae4820bc488cae31c5119b22f4a04f791196bf801613fb7
+	source_x86_64 = pass-it-on-server-bin-0.16.0.tar.gz::https://github.com/kwheelans/pass-it-on/releases/download/v0.16.0/pass-it-on-server-v0.16.0-x86_64-unknown-linux-gnu.tar.gz
+	b2sums_x86_64 = 047c3b7c33a883da3f4cb1b894039df2a8ce53281c65d7c5fe068723f6d6c97e5e27a7bf9a3eb693dd66b29ca8b31f0dcdae8d882c185efad90de4cd59c72f6f
+	source_aarch64 = pass-it-on-server-bin-0.16.0.tar.gz::https://github.com/kwheelans/pass-it-on/releases/download/v0.16.0/pass-it-on-server-v0.16.0-aarch64-unknown-linux-gnu.tar.gz
+	b2sums_aarch64 = ae03ff9f89b335ca88ac21ba59219f2a695fb79aa9f39e6fc04daa28209a677227b402cd9935364e421a1219998a4aa3e8a7d30b65adadf5aea8fa42745c3e6f
+
+pkgname = pass-it-on-server-bin

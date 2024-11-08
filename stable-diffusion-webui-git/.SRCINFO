@@ -1,0 +1,22 @@
+pkgbase = stable-diffusion-webui-git
+	pkgdesc = Stable Diffusion Web UI (AUTOMATIC1111)
+	pkgver = 1.9.4.r0.gfeee37d
+	pkgrel = 2
+	url = https://github.com/AUTOMATIC1111/stable-diffusion-webui
+	install = stable-diffusion-webui-git.install
+	arch = x86_64
+	license = AGPL3
+	makedepends = git
+	depends = python310
+	depends = wget
+	provides = stable-diffusion-ui
+	noextract = v1-5-pruned-emaonly.safetensors
+	options = !strip
+	source = stable-diffusion-webui-git::git+https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
+	source = stable-diffusion-webui.service
+	source = webui.conf
+	sha1sums = SKIP
+	sha1sums = f7424d43daaa71f738b821ac158a13da14be9030
+	sha1sums = c99dd58ce69d9c35152d3c99af21e4dab552a450
+
+pkgname = stable-diffusion-webui-git

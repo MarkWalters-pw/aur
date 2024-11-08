@@ -1,0 +1,15 @@
+pkgbase = powerpc64-power8-musl-bleeding-edge-toolchain
+	pkgdesc = Ready-to-use cross-compilation toolchain provided by bootlin.com
+	pkgver = 2024.02
+	pkgrel = 1
+	url = https://toolchains.bootlin.com/
+	install = hooks.install-powerpc64-power8-musl-bleeding-edge-toolchain
+	arch = x86_64
+	license = GPL
+	source = https://toolchains.bootlin.com/downloads/releases/toolchains/powerpc64-power8/tarballs/powerpc64-power8--musl--bleeding-edge-2024.02-1.tar.bz2
+	source = profile.sh-powerpc64-power8-musl-bleeding-edge-toolchain
+	sha256sums = 405c7d69aa6538aac7020f53dc414b4dfadd48e95a670e5dd3e70e33402e0a4f
+	sha256sums = f626cbe807237aa06d7eaa19db25359a6a6470bc4371d74b5fe1e7b131dfd6fd
+
+pkgname = powerpc64-power8-musl-bleeding-edge-toolchain
+	options = !strip

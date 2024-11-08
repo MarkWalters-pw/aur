@@ -1,0 +1,19 @@
+pkgbase = b15f-git
+	pkgdesc = The library and software for interacting with the B15F board.
+	pkgver = 1.1
+	pkgrel = 1
+	url = https://github.com/devfix/b15f
+	install = b15f.install
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = make
+	depends = avr-libc
+	depends = avrdude
+	depends = ncurses
+	depends = gcc
+	depends = astyle
+	source = b15f-git::git+https://github.com/devfix/b15f.git
+	sha256sums = SKIP
+
+pkgname = b15f-git

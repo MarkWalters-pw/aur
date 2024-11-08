@@ -1,0 +1,22 @@
+pkgbase = mbed-studio-bin
+	pkgdesc = free IDE and toolchain for Mbed OS 5 application and library development
+	pkgver = 1.4.6
+	pkgrel = 17
+	url = https://os.mbed.com/studio/
+	arch = x86_64
+	license = COMMERCIAL
+	depends = ncurses
+	depends = gnome-keyring
+	depends = fuse2
+	depends = alsa-lib
+	depends = nss
+	provides = mbed-studio
+	options = !strip
+	source = MbedStudio-official-installer.sh::https://studio.mbed.com/installers/latest/linux/MbedStudio.sh
+	source = mbed-studio-bin.sh
+	source = mbed-studio-bin.install
+	md5sums = SKIP
+	md5sums = ba5f16b0d7eeef5b124cd68078a38672
+	md5sums = 7cf4ae1f6777f0c610125a59b0fefca6
+
+pkgname = mbed-studio-bin

@@ -1,0 +1,21 @@
+pkgbase = shadowsocks-go
+	pkgdesc = A versatile and efficient proxy platform for secure communications
+	pkgver = 1.11.3
+	pkgrel = 1
+	url = https://github.com/database64128/shadowsocks-go
+	arch = x86_64
+	arch = aarch64
+	license = AGPL-3.0-or-later
+	makedepends = git
+	makedepends = go
+	optdepends = shadowsocks-go-domain-sets: commonly used domain sets
+	optdepends = shadowsocks-go-geolite2-country: MaxMind GeoLite2 country database
+	backup = etc/shadowsocks-go/config.json
+	backup = etc/shadowsocks-go/server.json
+	backup = etc/shadowsocks-go/client.json
+	backup = etc/shadowsocks-go/upsks.json
+	source = shadowsocks-go::git+https://github.com/database64128/shadowsocks-go.git#tag=v1.11.3?signed
+	validpgpkeys = 4DCED15E346E2923B931D6F71CA27546BEDB8B01
+	b2sums = 4f1777d04289afee43bf699d4c65087fe52fb49c0da82821fdea4c878687d26330d4bc03c3228168964c543cc3a51f7aecb0bc8882162cba8fc4db73345ad7af
+
+pkgname = shadowsocks-go

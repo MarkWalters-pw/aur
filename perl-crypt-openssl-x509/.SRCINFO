@@ -1,0 +1,17 @@
+pkgbase = perl-crypt-openssl-x509
+	pkgdesc = Perl extension to OpenSSL's X509 API
+	pkgver = 2.0.1
+	pkgrel = 1
+	url = http://search.cpan.org/dist/Crypt-OpenSSL-X509
+	arch = x86_64
+	license = GPL
+	license = PerlArtistic
+	checkdepends = perl-test-pod
+	depends = perl
+	depends = perl-convert-asn1
+	depends = perl-crypt-openssl-guess
+	depends = openssl
+	source = http://cpan.perl.org/modules/by-module/Crypt/Crypt-OpenSSL-X509-2.0.1.tar.gz
+	sha512sums = 987a033c3de1ab7ed4a3da012979bb98a8ed1f0766397f564d6996276cc254a3b79982df2f6f956da6cdfd3ad370e23d1e0656afe35ab261c2fc3e0f16b0b64b
+
+pkgname = perl-crypt-openssl-x509

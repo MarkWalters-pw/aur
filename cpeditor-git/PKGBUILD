@@ -1,0 +1,71 @@
+# Maintainer: Ashar Khan <ashar786khan at gmail.com>
+
+pkgname=cpeditor-git
+_pkgname=cpeditor
+pkgver=7.0.1.r11.g1fd0fd67
+pkgrel=1
+pkgdesc='The editor for competitive programming'
+arch=('x86_64')
+url='https://github.com/cpeditor/cpeditor'
+license=('GPL-3.0-or-later')
+depends=(
+    'qt5-base'
+    'qt5-svg'
+    'syntax-highlighting5'
+    'hicolor-icon-theme'
+)
+makedepends=(
+    'cmake'
+    'git'
+    'ninja'
+    'python3'
+    'qt5-tools'
+)
+optdepends=(
+    'cf-tool: submit to Codeforces'
+    'clang: C++ format and language server'
+    'java-environment: compile Java'
+    'java-runtime: execute Java'
+    'python: execute Python'
+    'wakatime: track coding stats'
+)
+provides=('cpeditor')
+conflicts=('cpeditor')
+
+source=(
+    'git+https://github.com/cpeditor/cpeditor.git'
+    'git+https://github.com/cpeditor/QtFindReplaceDialog.git'
+    'git+https://github.com/cpeditor/lsp-cpp.git'
+    'git+https://github.com/itay-grudev/singleapplication.git'
+    'git+https://github.com/MikeMirzayanov/testlib.git'
+    'git+https://github.com/cpeditor/qhttp.git'
+)
+
+md5sums=('SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP')
+
+pkgver() {
+    cd "$_pkgname"
+    git describe --long --tags --abbrev=8 | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
+}
+
+prepare() {
+    cd "$_pkgname"
+
+    for _source in "${source[@]:1}"; do
+        _name=$(basename "$_source" .git)
+        _path="third_party/$_name"
+        git config submodule."$_path".url "$srcdir/$_name"
+        git -c protocol.file.allow=always submodule update --init -- "$_path"
+    done
+}
+
+build() {
+    cd "$_pkgname"
+    cmake -Bbuild -DCMAKE_INSTALL_PREFIX=/usr -DPORTABLE_VERSION=Off -DCMAKE_BUILD_TYPE=Release -GNinja
+    cmake --build build
+}
+
+package() {
+    cd "$_pkgname/build"
+    DESTDIR="$pkgdir/" ninja install
+}

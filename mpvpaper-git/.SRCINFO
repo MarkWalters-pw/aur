@@ -1,0 +1,20 @@
+pkgbase = mpvpaper-git
+	pkgdesc = A video wallpaper program for wlroots based wayland compositors.
+	pkgver = r107.0069bc2
+	pkgrel = 1
+	url = https://github.com/GhostNaN/mpvpaper
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = meson
+	makedepends = ninja
+	makedepends = wayland-protocols
+	depends = mpv
+	depends = wlroots
+	optdepends = socat
+	provides = mpvpaper
+	source = https://github.com/GhostNaN/mpvpaper
+	md5sums = SKIP
+
+pkgname = mpvpaper-git

@@ -1,0 +1,98 @@
+From abb6a341bd3af0611f6f2c695011ce141b43a75d Mon Sep 17 00:00:00 2001
+From: Ernesto Castellotti <mail@ernestocastellotti.it>
+Date: Tue, 14 Nov 2023 12:52:20 +0100
+Subject: [PATCH] Force disable auto update
+
+---
+ .../left/settings/SettingsExperimental.tsx    |  8 ------
+ src/electron/window.ts                        |  9 +++----
+ src/global/actions/ui/misc.ts                 | 26 -------------------
+ 3 files changed, 4 insertions(+), 39 deletions(-)
+
+diff --git a/src/components/left/settings/SettingsExperimental.tsx b/src/components/left/settings/SettingsExperimental.tsx
+index 3a46ffcc6..9c2702bfb 100644
+--- a/src/components/left/settings/SettingsExperimental.tsx
++++ b/src/components/left/settings/SettingsExperimental.tsx
+@@ -120,14 +120,6 @@ const SettingsExperimental: FC<OwnProps & StateProps> = ({
+           onCheck={() => setSettingOption({ shouldDebugExportedSenders: !shouldDebugExportedSenders })}
+         />
+ 
+-        {IS_ELECTRON && (
+-          <Checkbox
+-            label="Enable autoupdates"
+-            checked={Boolean(isAutoUpdateEnabled)}
+-            onCheck={handleIsAutoUpdateEnabledChange}
+-          />
+-        )}
+-
+         <ListItem
+           // eslint-disable-next-line react/jsx-no-bind
+           onClick={handleDownloadLog}
+diff --git a/src/electron/window.ts b/src/electron/window.ts
+index e0ac186e5..e98ac970d 100644
+--- a/src/electron/window.ts
++++ b/src/electron/window.ts
+@@ -145,16 +145,15 @@ export function createWindow(url?: string) {
+ }
+ 
+ function loadWindowUrl(window: BrowserWindow, url?: string, hash?: string): void {
++  if (getIsAutoUpdateEnabled()) {
++    store.set(AUTO_UPDATE_SETTING_KEY, false);
++  }
++
+   if (url && checkIsWebContentsUrlAllowed(url)) {
+     window.loadURL(url);
+   } else if (!app.isPackaged) {
+     window.loadURL(`http://localhost:1234${hash}`);
+     window.webContents.openDevTools();
+-  } else if (getIsAutoUpdateEnabled()) {
+-    window.loadURL(`${process.env.BASE_URL}${hash}`);
+-  } else if (getIsAutoUpdateEnabled() === undefined && IS_FIRST_RUN) {
+-    store.set(AUTO_UPDATE_SETTING_KEY, true);
+-    window.loadURL(`${process.env.BASE_URL}${hash}`);
+   } else {
+     window.loadURL(`file://${__dirname}/index.html${hash}`);
+   }
+diff --git a/src/global/actions/ui/misc.ts b/src/global/actions/ui/misc.ts
+index 8e995a55c..19a272fdb 100644
+--- a/src/global/actions/ui/misc.ts
++++ b/src/global/actions/ui/misc.ts
+@@ -623,35 +623,9 @@ addActionHandler('closeMapModal', (global, actions, payload): ActionReturnType =
+ });
+ 
+ addActionHandler('checkAppVersion', (global): ActionReturnType => {
+-  fetch(`${APP_VERSION_URL}?${Date.now()}`)
+-    .then((response) => response.text())
+-    .then((version) => {
+-      version = version.trim();
+-
+-      if (getIsAppUpdateNeeded(version, APP_VERSION)) {
+-        global = getGlobal();
+-        global = {
+-          ...global,
+-          isAppUpdateAvailable: true,
+-        };
+-        setGlobal(global);
+-      }
+-    })
+-    .catch((err) => {
+-      if (DEBUG) {
+-        // eslint-disable-next-line no-console
+-        console.error('[checkAppVersion failed] ', err);
+-      }
+-    });
+ });
+ 
+ addActionHandler('setIsElectronUpdateAvailable', (global, action, payload): ActionReturnType => {
+-  global = getGlobal();
+-  global = {
+-    ...global,
+-    isElectronUpdateAvailable: Boolean(payload),
+-  };
+-  setGlobal(global);
+ });
+ 
+ addActionHandler('afterHangUp', (global): ActionReturnType => {
+-- 
+2.43.0
+

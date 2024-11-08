@@ -1,0 +1,27 @@
+pkgbase = python-saharaclient
+	pkgdesc = Python client library for Sahara
+	pkgver = 4.2.0
+	pkgrel = 2
+	url = http://docs.openstack.org/python-saharaclient/
+	arch = any
+	license = Apache
+	checkdepends = python-hacking
+	checkdepends = python-mock
+	checkdepends = python-oslotest
+	checkdepends = python-stestr
+	checkdepends = python-requests-mock
+	depends = python-pbr
+	depends = python-babel
+	depends = python-keystoneauth1
+	depends = python-osc-lib
+	depends = python-oslo-log
+	depends = python-oslo-serialization
+	depends = python-oslo-i18n
+	depends = python-oslo-utils
+	depends = python-openstackclient
+	depends = python-requests
+	depends = python-six
+	source = https://tarballs.opendev.org/openstack/python-saharaclient/python-saharaclient-4.2.0.tar.gz
+	sha512sums = 05aa84c630330c87404752eaaebb63d3b52f0d3b9d9c5f8b70a0396f0dc731695cc9015a9d8e3ace8fc1d374c952358525d93a0768e1c8670256f6cba53d085b
+
+pkgname = python-saharaclient

@@ -1,0 +1,16 @@
+pkgbase = honggfuzz-git
+	pkgdesc = Security oriented, feedback-driven, evolutionary, easy-to-use fuzzer
+	pkgver = 2.6.r33.gb4f72b42
+	pkgrel = 1
+	url = https://honggfuzz.dev
+	arch = x86_64
+	license = Apache-2.0
+	makedepends = git
+	depends = binutils
+	depends = libunwind
+	provides = honggfuzz
+	conflicts = honggfuzz
+	source = honggfuzz-git::git+https://github.com/google/honggfuzz.git
+	md5sums = SKIP
+
+pkgname = honggfuzz-git

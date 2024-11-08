@@ -1,0 +1,23 @@
+pkgbase = calendarsync-bin
+	pkgdesc = Stateless CLI tool to sync calendars across different calendaring systems
+	pkgver = 0.10.1
+	pkgrel = 1
+	url = https://github.com/inovex/CalendarSync
+	arch = x86_64
+	arch = armv6
+	arch = armv7
+	arch = arm64
+	license = MIT
+	provides = calendarsync
+	conflicts = calendarsync
+	options = !lto
+	source_x86_64 = calendarsync-0.10.1.tar.gz::https://github.com/inovex/CalendarSync/releases/download/v0.10.1/CalendarSync_0.10.1_linux_amd64.tar.gz
+	sha256sums_x86_64 = 7338261da0f665b6550f4a88da7800c5fb0550bbb3c412930b9ceddf40a7e2db
+	source_armv6 = calendarsync-0.10.1.tar.gz::https://github.com/inovex/CalendarSync/releases/download/v0.10.1/CalendarSync_0.10.1_linux_armv6.tar.gz
+	sha256sums_armv6 = 98946a30b58f85e50732f6130546ab73e47fe4aa70684f59b5054e299a59c059
+	source_armv7 = calendarsync-0.10.1.tar.gz::https://github.com/inovex/CalendarSync/releases/download/v0.10.1/CalendarSync_0.10.1_linux_armv7.tar.gz
+	sha256sums_armv7 = 3e59d95aa02a050bdcf8c6ed478558eae9c427166fac81f9461d7caebb549644
+	source_arm64 = calendarsync-0.10.1.tar.gz::https://github.com/inovex/CalendarSync/releases/download/v0.10.1/CalendarSync_0.10.1_linux_arm64.tar.gz
+	sha256sums_arm64 = ab6aef0892ce020c329990abdb21b92cb10538dd49f4fd3c352cb5391fa4e52a
+
+pkgname = calendarsync-bin

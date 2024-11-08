@@ -1,0 +1,24 @@
+pkgbase = wrkspace-git
+	pkgdesc = Simplify the project launching. Manage Docker containers, execute terminal commands, navigate project pages, and open projects instantly with your preferred text editor – all with a single click.
+	pkgver = 1.2.9.beta.r0.g19aec35
+	pkgrel = 1
+	url = https://wrkspace.co/
+	arch = any
+	license = AGPL-3.0-only
+	makedepends = npm
+	makedepends = git
+	makedepends = nvm
+	makedepends = gendesk
+	makedepends = cmake
+	makedepends = gcc
+	makedepends = curl
+	makedepends = python
+	depends = electron25
+	provides = wrkspace=1.2.9.beta
+	conflicts = wrkspace
+	source = wrkspace.git::git+https://github.com/mfcmatheus/wrkspace.git
+	source = wrkspace.sh
+	sha256sums = SKIP
+	sha256sums = 291f50480f5a61bc9c68db7d44cd0412071128706baa868a9cb854f8779a1980
+
+pkgname = wrkspace-git

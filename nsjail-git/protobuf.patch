@@ -1,0 +1,23 @@
+--- a/Makefile	2024-07-11 03:44:18.209482064 +0200
++++ b/Makefile	2024-07-11 04:00:46.824012406 +0200
+@@ -31,9 +31,9 @@ COMMON_FLAGS += -O2 -c \
+ 	-Wall -Wextra -Werror \
+ 	-Ikafel/include
+ 
+-CXXFLAGS += $(USER_DEFINES) $(COMMON_FLAGS) $(shell pkg-config --cflags protobuf) \
++CXXFLAGS += $(USER_DEFINES) $(COMMON_FLAGS) -I/usr/include/abseil-cpp11 -I/usr/include/protobuf-21 $(shell pkg-config --with-path=/usr/lib/protobuf-21/pkgconfig/ --cflags protobuf) \
+ 	-std=c++17 -fno-exceptions -Wno-unused -Wno-unused-parameter
+-LDFLAGS += -pie -Wl,-z,noexecstack -lpthread $(shell pkg-config --libs protobuf)
++LDFLAGS += -pie -Wl,-z,noexecstack -lpthread -L/usr/lib/protobuf-21 $(shell pkg-config --with-path=/usr/lib/protobuf-21/pkgconfig/ --libs protobuf)
+ 
+ BIN = nsjail
+ LIBS = kafel/libkafel.a
+@@ -85,7 +85,7 @@ kafel/libkafel.a: kafel_init
+ # Sequence of proto deps, which doesn't fit automatic make rules
+ $(SRCS_PB_O): $(SRCS_PB_H) $(SRCS_PB_CXX)
+ $(SRCS_PB_CXX) $(SRCS_PB_H): $(SRCS_PROTO)
+-	protoc --cpp_out=. $(SRCS_PROTO)
++	protoc-21 --cpp_out=. $(SRCS_PROTO)
+ 
+ .PHONY: clean
+ clean:

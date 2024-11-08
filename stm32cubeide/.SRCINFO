@@ -1,0 +1,22 @@
+pkgbase = stm32cubeide
+	pkgdesc = Integrated Development Environment for STM32
+	pkgver = 1.16.1
+	pkgrel = 2
+	url = https://www.st.com/en/development-tools/stm32cubeide.html
+	arch = x86_64
+	license = custom:SLA0048
+	makedepends = imagemagick
+	depends = glibc
+	depends = libusb
+	depends = ncurses5-compat-libs
+	depends = webkit2gtk
+	optdepends = jlink-software-and-documentation
+	optdepends = stlink
+	optdepends = arm-none-eabi-gdb
+	options = !strip
+	source = st-stm32cubeide_1.16.1_22882_20240916_0822_amd64.sh.zip::https://www.st.com/content/ccc/resource/technical/software/sw_development_suite/group1/16/f0/7b/d1/a5/6d/42/66/stm32cubeide-lnx/files/st-stm32cubeide_1.16.1_22882_20240916_0822_amd64.sh.zip/jcr:content/translations/en.st-stm32cubeide_1.16.1_22882_20240916_0822_amd64.sh.zip
+	source = https://www.st.com/resource/en/license/SLA0048_STM32CubeIDE.pdf
+	sha256sums = a455ab7cfb82990913b1569493b8716f32e953e00450f0f6e484c1b8963a8996
+	sha256sums = SKIP
+
+pkgname = stm32cubeide

@@ -1,0 +1,34 @@
+[Unit]
+Description=Hentai@Home but Rusty
+Documentation=https://github.com/james58899/hath-rust/wiki
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+DynamicUser=yes
+User=hath-rust
+EnvironmentFile=/etc/hath-rust.conf
+ExecStart=hath-rust $HATH_EXTRA_ARGS \
+    --cache-dir=/var/lib/hath-rust/cache \
+    --data-dir=/var/lib/hath-rust/data \
+    --download-dir=/var/lib/hath-rust/download \
+    --log-dir=/var/log/hath-rust \
+    --temp-dir=/var/lib/hath-rust/temp
+# Isolation
+WorkingDirectory=/var/lib/hath-rust
+CapabilityBoundingSet=CAP_NET_BIND_SERVICE
+NoNewPrivileges=yes
+# Sandboxing
+StateDirectory=hath-rust
+LogsDirectory=hath-rust
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+PrivateUsers=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+
+[Install]
+WantedBy=multi-user.target
+Alias=hath.service

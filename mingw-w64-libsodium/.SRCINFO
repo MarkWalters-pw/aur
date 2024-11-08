@@ -1,0 +1,19 @@
+pkgbase = mingw-w64-libsodium
+	pkgdesc = A modern, portable, easy to use crypto library (mingw-w64)
+	pkgver = 1.0.20
+	pkgrel = 2
+	url = https://github.com/jedisct1/libsodium
+	arch = any
+	license = custom:ISC
+	makedepends = mingw-w64-configure
+	depends = mingw-w64-crt
+	options = !strip
+	options = !buildflags
+	options = staticlibs
+	source = https://download.libsodium.org/libsodium/releases/libsodium-1.0.20.tar.gz
+	source = https://download.libsodium.org/libsodium/releases/libsodium-1.0.20.tar.gz.sig
+	validpgpkeys = 54A2B8892CC3D6A597B92B6C210627AABA709FE1
+	b2sums = 2f1d8b2dc8a65f95433132b12bdccb7e0e4750326b05c4f42ddd3a74bf568faa2515384bfe94bba2ef420aff35c515d3d44945ea5a68f72e6a73b3a9b5bb234c
+	b2sums = SKIP
+
+pkgname = mingw-w64-libsodium

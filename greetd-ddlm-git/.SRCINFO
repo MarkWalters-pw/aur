@@ -1,0 +1,16 @@
+pkgbase = greetd-ddlm-git
+	pkgdesc = deathowl's dummy login manager
+	pkgver = r25.8a72139
+	pkgrel = 2
+	url = https://github.com/deathowl/ddlm
+	arch = x86_64
+	license = GPL-3.0
+	makedepends = cargo
+	makedepends = git
+	depends = greetd
+	provides = greetd-ddlm
+	conflicts = greetd-ddlm
+	source = greetd-ddlm-git::git+https://github.com/deathowl/ddlm
+	sha256sums = SKIP
+
+pkgname = greetd-ddlm-git

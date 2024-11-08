@@ -1,0 +1,22 @@
+pkgbase = katago-cpu
+	pkgdesc = Baduk engine with no human-provided knowledge. This package is compiles katago with CPU and AVX2 support.
+	pkgver = 1.15.1
+	pkgrel = 1
+	url = https://github.com/lightvector/KataGo
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = cmake
+	makedepends = boost
+	makedepends = eigen
+	depends = libzip
+	depends = boost-libs
+	provides = katago
+	source = katago-cpu::git+https://github.com/lightvector/KataGo#tag=v1.15.1
+	source = kata1-b18c384nbt-s9644029184-d4221915864.bin.gz::https://media.katagotraining.org/uploaded/networks/models/kata1/kata1-b18c384nbt-s9644029184-d4221915864.bin.gz
+	source = kata1-b18c384nbt-s9613886976-d4214024973.bin.gz::https://media.katagotraining.org/uploaded/networks/models/kata1/kata1-b18c384nbt-s9613886976-d4214024973.bin.gz
+	sha512sums = SKIP
+	sha512sums = 43e24435e3691aeb095905362420736623153eae8982b54288fb5cc94e1f9d0ab120f9d75e35c8d696e00ea877dc7fcbc8dbb68b4b7038f2bd285fe0719f6359
+	sha512sums = 1feb96d870b044832cd7ab33c08d12727d9baf3f649df3e72200f7407eb90531243e2fe287d398e996b5b5f5461334e949d0fd6b916bbd79709e89dd41c6b80c
+
+pkgname = katago-cpu

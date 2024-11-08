@@ -1,0 +1,153 @@
+pkgbase = pulseaudio-git
+	pkgdesc = A featureful, general-purpose sound server (development version)
+	pkgver = 17.0.r38.gcba313d8f
+	pkgrel = 1
+	url = http://pulseaudio.org/
+	install = pulseaudio.install
+	arch = i686
+	arch = x86_64
+	arch = armv7h
+	license = LGPL-2.1-or-later
+	makedepends = alsa-lib
+	makedepends = attr
+	makedepends = avahi
+	makedepends = bluez
+	makedepends = bluez-libs
+	makedepends = check
+	makedepends = dbus
+	makedepends = doxygen
+	makedepends = fftw
+	makedepends = git
+	makedepends = gst-plugins-base-libs
+	makedepends = gtk3
+	makedepends = jack2
+	makedepends = libasyncns
+	makedepends = libcap
+	makedepends = libsm
+	makedepends = libsndfile
+	makedepends = libsoxr
+	makedepends = libxtst
+	makedepends = lirc
+	makedepends = meson
+	makedepends = openssl
+	makedepends = orc
+	makedepends = rtkit
+	makedepends = sbc
+	makedepends = speexdsp
+	makedepends = systemd
+	makedepends = tdb
+	makedepends = valgrind
+	makedepends = webrtc-audio-processing-1
+	makedepends = xmltoman
+	makedepends = libwrap
+	makedepends = libltdl
+	makedepends = python-dbus
+	makedepends = python-pyqt5
+	options = !emptydirs
+	source = git+https://gitlab.freedesktop.org/pulseaudio/pulseaudio.git
+	source = pulseaudio.install
+	sha256sums = SKIP
+	sha256sums = 1d4890b10fadb9208c3fefbbed4aca1f22e63a0f102f4c598dc573a55e724cb2
+
+pkgname = pulseaudio-git
+	install = pulseaudio.install
+	depends = alsa-lib
+	depends = fftw
+	depends = libcap
+	depends = libltdl
+	depends = libpulse-git=17.0.r38.gcba313d8f-1
+	depends = libsm
+	depends = libsoxr
+	depends = libxtst
+	depends = orc
+	depends = rtkit
+	depends = speexdsp
+	depends = tdb
+	depends = webrtc-audio-processing-1
+	depends = libwrap
+	depends = libsndfile
+	depends = dconf
+	optdepends = pulseaudio-alsa: ALSA configuration (recommended)
+	optdepends = pulseaudio-bluetooth-git: Bluetooth support
+	optdepends = pulseaudio-equalizer-git: Graphical equalizer
+	optdepends = pulseaudio-jack-git: Jack support
+	optdepends = pulseaudio-lirc-git: IR (lirc) support
+	optdepends = pulseaudio-rtp-git: RTP and RAOP support
+	optdepends = pulseaudio-zeroconf-git: Zeroconf support
+	provides = pulse-native-provider
+	provides = pulseaudio
+	conflicts = pipewire-pulse
+	conflicts = pulseaudio
+	replaces = pulseaudio-gconf<=11.1
+	replaces = pulseaudio-xen<=9.0
+	backup = etc/pulse/daemon.conf
+	backup = etc/pulse/default.pa
+	backup = etc/pulse/system.pa
+
+pkgname = libpulse-git
+	pkgdesc = A featureful, general-purpose sound server (development version) (client library) (development)
+	license = LGPL
+	depends = dbus
+	depends = libasyncns
+	depends = libsndfile
+	depends = libxcb
+	depends = systemd
+	optdepends = glib2: mainloop integration
+	optdepends = pulse-native-provider: PulseAudio backend
+	provides = libpulse
+	conflicts = libpulse
+	backup = etc/pulse/client.conf
+
+pkgname = pulseaudio-lirc-git
+	pkgdesc = IR (lirc) support for PulseAudio (development)
+	depends = lirc
+	depends = pulseaudio-git=17.0.r38.gcba313d8f-1
+	provides = pulseaudio-lirc
+	conflicts = pulseaudio-lirc
+
+pkgname = pulseaudio-zeroconf-git
+	pkgdesc = Zeroconf support for PulseAudio (development)
+	depends = avahi
+	depends = pulseaudio-git=17.0.r38.gcba313d8f-1
+	provides = pulseaudio-zeroconf
+	conflicts = pulseaudio-zeroconf
+
+pkgname = pulseaudio-jack-git
+	pkgdesc = Jack support for PulseAudio (development)
+	depends = jack
+	depends = pulseaudio-git=17.0.r38.gcba313d8f-1
+	provides = pulseaudio-jack
+	conflicts = pulseaudio-jack
+
+pkgname = pulseaudio-bluetooth-git
+	pkgdesc = Bluetooth support for PulseAudio (development)
+	depends = bluez
+	depends = bluez-libs
+	depends = gst-plugins-base-libs
+	depends = pulseaudio-git=17.0.r38.gcba313d8f-1
+	depends = sbc
+	optdepends = gst-plugins-bad: AptX and LDAC support
+	provides = pulseaudio-bluetooth
+	conflicts = pulseaudio-bluetooth
+
+pkgname = pulseaudio-equalizer-git
+	pkgdesc = Graphical equalizer for PulseAudio (development)
+	depends = pulseaudio-git=17.0.r38.gcba313d8f-1
+	depends = python-dbus
+	depends = python-pyqt5
+	depends = fftw
+	depends = python
+	depends = glibc
+	depends = dbus
+	provides = pulseaudio-equalizer
+	conflicts = pulseaudio-equalizer
+
+pkgname = pulseaudio-rtp-git
+	pkgdesc = RTP and RAOP support for PulseAudio (development)
+	depends = gst-plugins-base
+	depends = gst-plugins-base-libs
+	depends = gst-plugins-good
+	depends = openssl
+	depends = pulseaudio-git=17.0.r38.gcba313d8f-1
+	provides = pulseaudio-rtp
+	conflicts = pulseaudio-rtp

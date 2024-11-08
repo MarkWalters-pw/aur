@@ -1,0 +1,18 @@
+pkgbase = android-aarch64-cracklib
+	pkgdesc = Password Checking Library (Android aarch64)
+	pkgver = 2.10.2
+	pkgrel = 1
+	url = https://github.com/cracklib/cracklib
+	arch = any
+	groups = android-cracklib
+	license = GPL
+	makedepends = cracklib
+	depends = android-aarch64-zlib
+	options = !strip
+	options = !buildflags
+	options = staticlibs
+	options = !emptydirs
+	source = https://github.com/cracklib/cracklib/releases/download/v2.10.2/cracklib-2.10.2.tar.gz
+	md5sums = 234837e69d00046ac2b6f6395395e320
+
+pkgname = android-aarch64-cracklib

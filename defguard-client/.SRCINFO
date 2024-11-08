@@ -1,0 +1,22 @@
+pkgbase = defguard-client
+	pkgdesc = WireGuard Desktop Client with Multi-Factor Authentication
+	pkgver = 0.4.0
+	pkgrel = 1
+	url = https://github.com/DefGuard/client
+	arch = x86_64
+	license = custom
+	depends = cairo
+	depends = desktop-file-utils
+	depends = gdk-pixbuf2
+	depends = glib2
+	depends = gtk3
+	depends = hicolor-icon-theme
+	depends = libayatana-appindicator
+	depends = libsoup
+	depends = pango
+	depends = webkit2gtk
+	depends = systemd-resolvconf
+	source_x86_64 = https://github.com/DefGuard/client/releases/download/v0.4.0/defguard-client_0.4.0_amd64.deb
+	sha256sums_x86_64 = 7a291220f22e2933493b571115c2bb51685014f22bb0b784a070b6e1c8657de1
+
+pkgname = defguard-client

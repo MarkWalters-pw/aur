@@ -1,0 +1,35 @@
+pkgbase = upp-nightly
+	pkgdesc = Radical and innovative multiplatform C++ framework (known as U++)
+	pkgver = 17435
+	pkgrel = 1
+	url = http://www.ultimatepp.org
+	arch = any
+	license = BSD
+	depends = gcc
+	depends = make
+	depends = zlib
+	depends = bzip2
+	depends = gtk3
+	depends = libnotify
+	depends = openssl
+	depends = clang
+	depends = pkgconfig
+	depends = gdb
+	conflicts = upp
+	conflicts = theide
+	conflicts = umk
+	options = !makeflags
+	options = emptydirs
+	options = !strip
+	source = https://www.ultimatepp.org/downloads/upp-posix-17435.tar.xz
+	md5sums = 7428188d080313c2e55e3d922491b66c
+
+pkgname = upp-nightly
+	pkgdesc = Radical and innovative multiplatform C++ framework (known as U++)
+	depends = theide-nightly
+
+pkgname = theide-nightly
+	pkgdesc = Modern IDE designed for developing large U++/C++ applications
+
+pkgname = umk-nightly
+	pkgdesc = Command line builder for U++ applications

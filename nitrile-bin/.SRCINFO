@@ -1,0 +1,14 @@
+pkgbase = nitrile-bin
+	pkgdesc = A package manager and build tool for Clean programming language
+	pkgver = 0.4.24
+	pkgrel = 1
+	url = https://clean-and-itasks.gitlab.io/nitrile
+	arch = x86_64
+	license = AGPL-3.0-only
+	depends = glibc
+	depends = gcc-libs
+	options = !strip
+	source = nitrile.tgz::https://gitlab.com/clean-and-itasks/nitrile/-/package_files/138798528/download
+	sha256sums = cbe2e29d846cc83343715a8515eea3328faac465974df2fd75b8cfc2455f0595
+
+pkgname = nitrile-bin

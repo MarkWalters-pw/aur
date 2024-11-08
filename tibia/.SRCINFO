@@ -1,0 +1,19 @@
+pkgbase = tibia
+	pkgdesc = fast-paced free massively multiplayer online role-playing game
+	pkgver = latest
+	pkgrel = 1
+	url = http://www.tibia.com
+	arch = x86_64
+	license = custom
+	makedepends = gendesk
+	makedepends = python-html2text
+	depends = glu
+	depends = libgl
+	depends = libice
+	depends = libxext
+	source = tibia.tar.gz::https://static.tibia.com/download/tibia.x64.tar.gz
+	source = tibia-agreement.php::https://www.tibia.com/support/agreement.php
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = tibia

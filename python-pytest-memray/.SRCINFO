@@ -1,0 +1,21 @@
+pkgbase = python-pytest-memray
+	pkgdesc = A pytest plugin for easy integration of memray memory profiler
+	pkgver = 1.7.0
+	pkgrel = 1
+	url = https://github.com/bloomberg/pytest-memray
+	arch = any
+	license = Apache-2.0
+	checkdepends = python-anyio
+	checkdepends = python-flaky
+	checkdepends = python-pytest-xdist
+	makedepends = python-build
+	makedepends = python-hatch-vcs
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = memray
+	depends = python
+	depends = python-pytest
+	source = python-pytest-memray-1.7.0.tar.gz::https://github.com/bloomberg/pytest-memray/archive/1.7.0.tar.gz
+	sha256sums = ca10a74053ca4d75d160b82cd988182608b1ea0a8274771adf1412a1c6edef0f
+
+pkgname = python-pytest-memray

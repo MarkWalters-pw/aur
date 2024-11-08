@@ -1,0 +1,24 @@
+pkgbase = pantheon-polkit-agent-git
+	pkgdesc = Pantheon Polkit Agent
+	pkgver = 8.0.0.r32.cae6d867
+	pkgrel = 1
+	url = https://github.com/elementary/pantheon-agent-polkit
+	arch = x86_64
+	groups = pantheon-unstable
+	license = GPL3
+	makedepends = git
+	makedepends = granite
+	makedepends = intltool
+	makedepends = meson
+	makedepends = vala
+	depends = glib2
+	depends = glibc
+	depends = gtk3
+	depends = libgranite.so
+	depends = polkit
+	provides = pantheon-polkit-agent
+	conflicts = pantheon-polkit-agent
+	source = pantheon-polkit-agent::git+https://github.com/elementary/pantheon-agent-polkit.git
+	sha256sums = SKIP
+
+pkgname = pantheon-polkit-agent-git

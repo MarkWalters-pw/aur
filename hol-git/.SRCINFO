@@ -1,0 +1,16 @@
+pkgbase = hol-git
+	pkgdesc = HOL4 theorem-proving system
+	pkgver = 20240702
+	pkgrel = 1
+	url = https://hol-theorem-prover.org/
+	install = hol.install
+	arch = x86_64
+	license = BSD
+	depends = polyml
+	depends = graphviz
+	provides = hol
+	conflicts = hol-git
+	source = hol::git+https://github.com/HOL-Theorem-Prover/HOL.git
+	md5sums = SKIP
+
+pkgname = hol-git

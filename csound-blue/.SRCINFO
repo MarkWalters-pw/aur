@@ -1,0 +1,27 @@
+pkgbase = csound-blue
+	pkgdesc = A music composition environment for Csound
+	pkgver = 2.9.1
+	pkgrel = 2
+	url = http://blue.kunstmusik.com/
+	arch = i686
+	arch = x86_64
+	license = GPL-2.0-or-later
+	makedepends = pd
+	makedepends = scons
+	makedepends = swig
+	makedepends = dssi
+	makedepends = boost
+	depends = csound
+	depends = java-environment>=7
+	depends = java-openjfx
+	provides = csound-blue
+	conflicts = csound-blue
+	options = !strip
+	source = https://github.com/kunstmusik/blue/releases/download/2.9.1/blue-linux-2.9.1.zip
+	source = blue.desktop
+	source = icons.tar.gz
+	sha256sums = 0b36dee97570953fc1bb646a7ae80b920624fb3abf8c770ba955f57bf2844e64
+	sha256sums = 06dcc0dbade0b9c2eb904815aefa86d32e8e21de47fd7cd8873f139c1fb24fe6
+	sha256sums = 60240d02dd3f25b9df684efaf93a5fd05e520b5f46e94f24b58de60604dbae36
+
+pkgname = csound-blue

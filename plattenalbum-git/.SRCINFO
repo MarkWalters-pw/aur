@@ -1,0 +1,24 @@
+pkgbase = plattenalbum-git
+	pkgdesc = Connect to your music
+	pkgver = 2.2.0.r0.g5c8572e
+	pkgrel = 1
+	url = https://github.com/SoongNoonien/plattenalbum
+	arch = any
+	license = GPL-3.0-or-later
+	makedepends = git
+	makedepends = meson
+	makedepends = gettext
+	makedepends = glib2
+	depends = python-mpd2>=3.1
+	depends = gtk4
+	depends = python-gobject
+	depends = libadwaita>=1.6.0
+	provides = plattenalbum
+	provides = mpdevil
+	provides = mpdevil-git
+	conflicts = plattenalbum
+	conflicts = mpdevil-git
+	source = git+https://github.com/SoongNoonien/plattenalbum.git
+	md5sums = SKIP
+
+pkgname = plattenalbum-git

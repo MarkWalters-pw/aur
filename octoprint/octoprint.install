@@ -1,0 +1,28 @@
+post_install()
+{
+	systemd-sysusers
+
+	mkdir -p /var/lib/octoprint
+	chown -R octoprint:octoprint /var/lib/octoprint /usr/lib/octoprint/lib
+
+	echo "To start octoprint, run: systemctl start octoprint"
+	echo "To enable octoprint at boot, run: systemctl enable octoprint"
+}
+
+post_upgrade()
+{
+	systemctl daemon-reload
+}
+
+pre_remove()
+{
+	systemctl stop octoprint
+	systemctl disable octoprint
+}
+
+post_remove()
+{
+	# cleanup
+	rm -rf /usr/lib/octoprint
+}
+

@@ -1,0 +1,20 @@
+pkgbase = rez
+	pkgdesc = An integrated package configuration, build and deployment system for software
+	pkgver = 3.2.1
+	pkgrel = 1
+	url = https://github.com/AcademySoftwareFoundation/rez
+	arch = any
+	license = Apache
+	makedepends = python>=3.7
+	makedepends = python-pip
+	makedepends = python-setuptools
+	depends = python>=3
+	depends = python<3.12
+	depends = python-yaml
+	optdepends = bash-completion: command-line autocomplete with bash
+	optdepends = cmake: alternative build system
+	options = !strip
+	source = rez-3.2.1.tar.gz::https://github.com/AcademySoftwareFoundation/rez/archive/refs/tags/3.2.1.tar.gz
+	b2sums = 8ec11bdc891af9d73eafee66e5468676a88b93f47c1c764484dd3413871647d16c510505054c2b27160eb8fd5136bd1df9889fd6dcf7b1723a564e7dd86b2a37
+
+pkgname = rez

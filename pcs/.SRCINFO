@@ -1,0 +1,31 @@
+pkgbase = pcs
+	pkgdesc = pacemaker corosync shell utility for cluster configuration
+	pkgver = 0.11.8
+	pkgrel = 1
+	url = http://clusterlabs.org/
+	arch = any
+	license = GPL2
+	makedepends = wget
+	makedepends = python-setuptools
+	makedepends = python-setuptools-scm
+	makedepends = python-pip
+	makedepends = ruby-bundler
+	makedepends = fontconfig
+	makedepends = ruby-bundler
+	depends = pacemaker
+	depends = python
+	depends = python-dacite
+	depends = python-pycurl
+	depends = python-lxml
+	depends = python-dateutil
+	depends = python-pyparsing
+	depends = python-tornado
+	depends = python-yaml
+	depends = python-urllib3
+	depends = python-simplejson
+	depends = ruby
+	depends = ttf-liberation
+	source = git+https://github.com/ClusterLabs/pcs#commit=694c165b81af4847965afa1cdf61a1441e98dfc4
+	sha256sums = SKIP
+
+pkgname = pcs

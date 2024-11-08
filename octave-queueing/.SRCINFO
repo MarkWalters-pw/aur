@@ -1,0 +1,15 @@
+pkgbase = octave-queueing
+	pkgdesc = The queueing package provides functions for queueing networks and Markov chains analysis
+	pkgver = 1.2.8
+	pkgrel = 1
+	url = https://github.com/mmarzolla/queueing
+	install = octave-queueing.install
+	arch = any
+	groups = octave-forge
+	license = GPL-3.0-or-later
+	depends = octave>=4.0.0
+	noextract = queueing-1.2.8.tar.gz
+	source = queueing-1.2.8.tar.gz::https://github.com/mmarzolla/queueing/archive/refs/tags/1.2.8.tar.gz
+	sha512sums = 67a0a7c36297da5949e29e3b32b96502b7292c4faa83ac470f798a41ca39182dc2e8dd441d4385d7fdf3c0e52533d3c081582ce155967eadff2d2041131e154f
+
+pkgname = octave-queueing

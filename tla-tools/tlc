@@ -1,0 +1,2 @@
+#!/bin/sh
+TLA_JAVA_OPTS="$TLA_JAVA_OPTS $TLC_JAVA_OPTS" exec "$(dirname "$0")"/tla-tools tlc2.TLC $TLC_OPTS "$@"

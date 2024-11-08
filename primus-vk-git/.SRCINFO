@@ -1,0 +1,21 @@
+pkgbase = primus-vk-git
+	pkgdesc = Nvidia Vulkan offloading for Bumblebee
+	pkgver = 1.6.4.r0.g7076c2e
+	pkgrel = 1
+	url = https://github.com/felixdoerre/primus_vk
+	arch = i686
+	arch = x86_64
+	license = BSD-2-Clause
+	makedepends = git
+	makedepends = vulkan-validation-layers
+	depends = bumblebee
+	depends = libxrandr
+	depends = nvidia-utils
+	depends = primus
+	depends = vulkan-icd-loader
+	provides = primus_vk=1.6.4
+	conflicts = primus_vk
+	source = primus_vk::git+https://github.com/felixdoerre/primus_vk.git
+	sha256sums = SKIP
+
+pkgname = primus-vk-git

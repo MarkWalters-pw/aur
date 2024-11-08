@@ -1,0 +1,42 @@
+pkgbase = vcmi-git
+	pkgdesc = Open-source engine for Heroes of Might and Magic III
+	pkgver = 1.5.7.1062.g88f3e982e
+	pkgrel = 1
+	url = http://vcmi.eu
+	install = vcmi-git.install
+	arch = i686
+	arch = x86_64
+	arch = arm
+	arch = armv7h
+	arch = armv6h
+	arch = aarch64
+	license = GPL2
+	makedepends = boost
+	makedepends = cmake
+	makedepends = git
+	makedepends = qt5-tools
+	depends = boost-libs
+	depends = ffmpeg
+	depends = sdl2_image
+	depends = sdl2_mixer
+	depends = sdl2_ttf
+	depends = qt5-base
+	depends = libxkbcommon-x11
+	depends = desktop-file-utils
+	depends = gtk-update-icon-cache
+	depends = hicolor-icon-theme
+	depends = tbb
+	depends = luajit
+	optdepends = innoextract: required by vcmibuilder
+	optdepends = unshield: required by vcmibuilder
+	optdepends = unzip: required by vcmibuilder
+	provides = vcmi
+	conflicts = vcmi
+	source = vcmi-git::git+https://github.com/vcmi/vcmi.git#branch=develop
+	source = git+https://github.com/vcmi/innoextract.git#branch=vcmi
+	source = git+https://github.com/fuzzylite/fuzzylite.git#branch=release
+	md5sums = SKIP
+	md5sums = SKIP
+	md5sums = SKIP
+
+pkgname = vcmi-git

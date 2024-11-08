@@ -1,0 +1,42 @@
+create_tmp(){
+    export TMPDIR=/tmp
+    # avoid re-creating tmp dir when already exists
+    [ ! -d "$KTMP" ] && KTMP=$(mktemp -d -t kesl.XXXXX)
+    echo "$KTMP"
+}
+
+remove_tmp(){
+    KTMP="$1"
+    [ -d "$KTMP" ] && rm -rf "$KTMP"
+}
+
+kesl_updatedb(){
+    # upgrading the database can take a LONG time while any other pacman
+    # jobs would wait until this has been finished. so we start the process but without progress (i.e. running in background)
+    kesl-control --start-task Update
+    echo -e "\n\n\e[93m\e[1mThe AV database update has been started in the background.\nCheck the GUI or watch the progress on the CLI with the following command:\e[0m\nkesl-control --get-task-state Update\n\n\e[93m\e[1mkesl will be fully operational first when this update has been finished\n(especially on new installation this will take a very long time)\e[0m\n\n"
+}
+
+post_install(){
+    #echo $FUNCNAME
+    KTMP=$(create_tmp)
+    /var/opt/kaspersky/kesl-gui/pkgscripts/postinst configure
+
+    # execute the kesl installer with preconfigured settings
+    echo -e "\e[32m\e[1m ... starting '/opt/kaspersky/kesl/bin/kesl-setup.pl' now\e[0m\n(no need to execute it again after installation has finished)."
+    cp /var/opt/kaspersky/kesl/pkgscripts/kesl.ini $KTMP/
+    sed -i "s/@YOU@/$SUDO_USER/g" $KTMP/kesl.ini
+    /opt/kaspersky/kesl/bin/kesl-setup.pl --autoinstall=$KTMP/kesl.ini
+
+    kesl_updatedb
+    remove_tmp "$KTMP"
+}
+
+post_upgrade(){
+    post_install
+}
+
+pre_remove(){
+    echo $FUNCNAME
+    /var/opt/kaspersky/kesl-gui/pkgscripts/prerm remove
+}

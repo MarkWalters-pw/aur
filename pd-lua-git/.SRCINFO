@@ -1,0 +1,18 @@
+pkgbase = pd-lua-git
+	pkgdesc = Lua bindings for Pd
+	pkgver = 0.12.15.r0.ge6046be
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/agraef/pd-lua
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = pkg-config
+	depends = pd
+	depends = lua
+	provides = pd-lua
+	conflicts = pd-lua
+	source = git+https://github.com/agraef/pd-lua.git
+	md5sums = SKIP
+
+pkgname = pd-lua-git

@@ -1,0 +1,10 @@
+[Unit]
+Description=Xmage server
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/mage-server
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target

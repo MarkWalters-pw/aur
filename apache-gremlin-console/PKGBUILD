@@ -1,0 +1,30 @@
+# Maintainer: Philipp Claßen <philipp.classen@posteo.de>
+pkgname=apache-gremlin-console
+pkgver=3.7.2
+pkgrel=1
+pkgdesc="Gremlin console from Apache TinkerPop "
+arch=('any')
+url="https://tinkerpop.apache.org"
+license=('Apache')
+
+depends=('bash' 'java-environment')
+makedepends=()
+source=(https://www.apache.org/dist/tinkerpop/${pkgver}/apache-tinkerpop-gremlin-console-${pkgver}-bin.zip)
+sha256sums=('87710648f291c0c8ec2e91c5cf9f0b771f02c151fd0a0303885003c05ebdb81a')
+
+package() {
+  cd apache-tinkerpop-gremlin-console-${pkgver}
+
+  mkdir -p "${pkgdir}/usr/share/${pkgname}/bin"
+  cp bin/gremlin.sh "${pkgdir}/usr/share/${pkgname}/bin"
+  
+  for i in conf data ext lib ; do
+    cp -R "$i" "${pkgdir}/usr/share/${pkgname}"
+  done
+
+  mkdir -p "${pkgdir}/usr/bin"
+  printf "#!/bin/sh\ncd /usr/share/${pkgname}/bin\n./gremlin.sh \"\$@\"" > "${pkgdir}/usr/bin/gremlin"
+  chmod 755 "${pkgdir}/usr/bin/gremlin"
+
+  install -D -m644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+}

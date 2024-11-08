@@ -1,0 +1,19 @@
+pkgbase = pwgen-go-bin
+	pkgdesc = Command line passphrase generator written in Go
+	pkgver = 0.5.0
+	pkgrel = 1
+	url = https://github.com/gabe565/pwgen-go
+	license = MIT
+	conflicts = pwgen-go
+	provides = pwgen-go
+	arch = aarch64
+	source_aarch64 = https://github.com/gabe565/pwgen-go/releases/download/v0.5.0/pwgen-go_0.5.0_linux_arm64.tar.gz
+	sha256sums_aarch64 = c85c11beadaebbfc104d7f2023500c870983951f73a830d85f1d5f24a7c5c4e2
+	arch = armv7h
+	source_armv7h = https://github.com/gabe565/pwgen-go/releases/download/v0.5.0/pwgen-go_0.5.0_linux_armv7.tar.gz
+	sha256sums_armv7h = b498888004d0e81c57605a5f133dcf233c03e2afda03a17a352aeefc0827a904
+	arch = x86_64
+	source_x86_64 = https://github.com/gabe565/pwgen-go/releases/download/v0.5.0/pwgen-go_0.5.0_linux_amd64.tar.gz
+	sha256sums_x86_64 = 9de71f2af403a7fd5fafe32b367dfc8a4c0df682e81f2f807f8bbb0ee6638057
+	
+pkgname = pwgen-go-bin

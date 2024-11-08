@@ -1,0 +1,345 @@
+--- a/vmmon/Makefile
++++ b/vmmon/Makefile
+@@ -43,7 +43,11 @@
+ endif
+ 
+ 
++ifdef KVERSION
++VM_UNAME = $(KVERSION)
++else
+ VM_UNAME = $(shell uname -r)
++endif
+ 
+ # Header directory for the running kernel
+ ifdef LINUXINCLUDE
+--- a/vmmon/common/task.c
++++ b/vmmon/common/task.c
+@@ -544,7 +544,7 @@
+  *-----------------------------------------------------------------------------
+  */
+ 
+-Selector
++static Selector
+ TaskGetFlatWriteableDataSegment(void)
+ {
+    DTR hostGDTR;
+--- a/vmmon/common/vmx86.c
++++ b/vmmon/common/vmx86.c
+@@ -53,7 +53,11 @@
+ #include "x86svm.h"
+ #include "x86cpuid_asm.h"
+ #if defined(__linux__)
++#if LINUX_VERSION_CODE < KERNEL_VERSION(6, 8, 0)
+ #include <asm/timex.h>
++#else
++#include <linux/timex.h>
++#endif
+ #endif
+ #include "perfctr.h"
+ #include "x86vtinstr.h"
+@@ -699,7 +699,7 @@
+  *-----------------------------------------------------------------------------
+  */
+ 
+-void
++static void
+ Vmx86FreeVMDriver(VMDriver *vm)
+ {
+    Vmx86_Free(vm->ptRootMpns);
+@@ -732,7 +732,7 @@
+  *-----------------------------------------------------------------------------
+  */
+ 
+-VMDriver *
++static VMDriver *
+ Vmx86AllocVMDriver(uint32 numVCPUs)
+ {
+    VMDriver *vm = Vmx86_Calloc(1, sizeof *vm, TRUE);
+--- a/vmmon/include/pgtbl.h
++++ b/vmmon/include/pgtbl.h
+@@ -25,7 +25,9 @@
+ #include "compat_pgtable.h"
+ #include "compat_spinlock.h"
+ #include "compat_page.h"
++#include "compat_version.h"
+ 
++#if COMPAT_LINUX_VERSION_CHECK_LT(4, 10, 0)
+ 
+ /*
+  *-----------------------------------------------------------------------------
+@@ -107,17 +109,31 @@
+    return mpn;
+ }
+ 
++static INLINE MPN
++UserVa2MPN(VA addr)  // IN
++{
++   struct mm_struct *mm;
++   MPN mpn;
++
++   /* current->mm is NULL for kernel threads, so use active_mm. */
++   mm = current->active_mm;
++   spin_lock(&mm->page_table_lock);
++   mpn = PgtblVa2MPNLocked(mm, addr);
++   spin_unlock(&mm->page_table_lock);
++   return mpn;
++}
+ 
++#else
+ /*
+  *-----------------------------------------------------------------------------
+  *
+- * PgtblVa2MPN --
++ * UserVa2MPN --
+  *
+  *    Walks through the hardware page tables of the current process to try to
+  *    find the page structure associated to a virtual address.
+  *
+  * Results:
+- *    Same as PgtblVa2MPNLocked()
++ *    MPN associated with the given virtual address
+  *
+  * Side effects:
+  *    None
+@@ -126,17 +142,22 @@
+  */
+ 
+ static INLINE MPN
+-PgtblVa2MPN(VA addr)  // IN
++UserVa2MPN(VA addr)  // IN
+ {
+-   struct mm_struct *mm;
++   struct page *page;
++   int npages;
+    MPN mpn;
+ 
+-   /* current->mm is NULL for kernel threads, so use active_mm. */
+-   mm = current->active_mm;
+-   spin_lock(&mm->page_table_lock);
+-   mpn = PgtblVa2MPNLocked(mm, addr);
+-   spin_unlock(&mm->page_table_lock);
++   npages = get_user_pages_unlocked(addr, 1, &page, 0);
++   if (npages != 1) {
++      return INVALID_MPN;
++   }
++
++   mpn = page_to_pfn(page);
++   put_page(page);
++
+    return mpn;
+ }
++#endif /* COMPAT_LINUX_VERSION_CHECK_LT(4, 10, 0) */
+ 
+ #endif /* __PGTBL_H__ */
+--- a/vmmon/include/vm_assert.h
++++ b/vmmon/include/vm_assert.h
+@@ -40,7 +40,11 @@
+ 
+ // XXX not necessary except some places include vm_assert.h improperly
+ #include "vm_basic_types.h"
++
++/* No stdarg.h on Linux kernels 5.15+ */
++#ifndef KBUILD_MODNAME
+ #include <stdarg.h>
++#endif
+ 
+ #ifdef __cplusplus
+ extern "C" {
+--- a/vmmon/include/vm_basic_defs.h
++++ b/vmmon/include/vm_basic_defs.h
+@@ -50,7 +50,10 @@
+  * References:
+  *   C90 7.17, C99 7.19, C11 7.19
+  */
+-#if !defined(VMKERNEL)
++/* Use linux/stddef.h when building Linux kernel modules. */
++#ifdef KBUILD_MODNAME
++#  include <linux/stddef.h>
++#elif !defined(VMKERNEL)
+ #  include <stddef.h>
+ #else
+    /*
+--- a/vmmon/include/vm_basic_types.h
++++ b/vmmon/include/vm_basic_types.h
+@@ -934,6 +934,27 @@
+ #define ALIGNED(n)
+ #endif
+ 
++#ifndef __has_attribute
++# define __has_attribute(x) 0
++#endif
++
++/*
++ * COUNTED_BY attribute may be attached to the C99 flexible array
++ * member of a structure. It indicates that the number of the elements
++ * of the array is given by the field "member" in the same structure as
++ * the flexible array member. Compilers may use this information to
++ * improve detection of object size information for such structures
++ * and provide better results in compile-time diagnostics and runtime
++ * features like the array bound sanitizer.
++ *
++ * https://people.kernel.org/kees/bounded-flexible-arrays-in-c
++ */
++
++#if __has_attribute(__counted_by__)
++# define COUNTED_BY(member) __attribute__((__counted_by__(member)))
++#else
++# define COUNTED_BY(member)
++#endif
+ 
+ /*
+  * Once upon a time, this was used to silence compiler warnings that
+--- a/vmmon/include/x86cpuid.h
++++ b/vmmon/include/x86cpuid.h
+@@ -89,10 +89,10 @@
+ } CPUIDReply;
+ 
+ typedef struct CPUIDQuery {
+-   uint32 eax;                // IN
+-   uint32 ecx;                // IN
+-   uint32 numLogicalCPUs;     // IN/OUT
+-   CPUIDReply logicalCPUs[0]; // OUT
++   uint32 eax;                                          // IN
++   uint32 ecx;                                          // IN
++   uint32 numLogicalCPUs;                               // IN/OUT
++   CPUIDReply logicalCPUs[] COUNTED_BY(numLogicalCPUs); // OUT
+ } CPUIDQuery;
+ #pragma pack(pop)
+ #endif
+--- a/vmmon/include/x86msr.h
++++ b/vmmon/include/x86msr.h
+@@ -64,9 +64,9 @@
+ 
+ #pragma pack(push, 1)
+ typedef struct MSRQuery {
+-   uint32 msrNum;           // IN
+-   uint32 numLogicalCPUs;   // IN/OUT
+-   MSRReply logicalCPUs[0]; // OUT
++   uint32 msrNum;                                     // IN
++   uint32 numLogicalCPUs;                             // IN/OUT
++   MSRReply logicalCPUs[] COUNTED_BY(numLogicalCPUs); // OUT
+ } MSRQuery;
+ #pragma pack(pop)
+ 
+--- a/vmmon/linux/driver.c
++++ b/vmmon/linux/driver.c
+@@ -256,7 +256,7 @@
+ /*
+  *----------------------------------------------------------------------
+  *
+- * init_module --
++ * LinuxDriverInit --
+  *
+  *      linux module entry point. Called by /sbin/insmod command
+  *
+@@ -267,8 +267,8 @@
+  *----------------------------------------------------------------------
+  */
+ 
+-int
+-init_module(void)
++static int
++LinuxDriverInit(void)
+ {
+    int retval;
+ 
+@@ -328,7 +328,7 @@
+ /*
+  *----------------------------------------------------------------------
+  *
+- * cleanup_module --
++ * LinuxDriverExit --
+  *
+  *      Called by /sbin/rmmod
+  *
+@@ -336,8 +336,8 @@
+  *----------------------------------------------------------------------
+  */
+ 
+-void
+-cleanup_module(void)
++static void
++LinuxDriverExit(void)
+ {
+    /*
+     * XXX smp race?
+@@ -1450,3 +1450,5 @@
+  * by default (i.e., neither mkinitrd nor modprobe will accept it).
+  */
+ MODULE_INFO(supported, "external");
++module_init(LinuxDriverInit);
++module_exit(LinuxDriverExit);
+--- a/vmmon/linux/hostif.c
++++ b/vmmon/linux/hostif.c
+@@ -1174,7 +1174,7 @@
+    void *uvAddr = VA64ToPtr(uAddr);
+    int retval = PAGE_LOCK_SUCCESS;
+ 
+-   *mpn = PgtblVa2MPN((VA)uvAddr);
++   *mpn = UserVa2MPN((VA)uvAddr);
+ 
+    /*
+     * On failure, check whether the page is locked.
+@@ -1202,7 +1202,7 @@
+             volatile int c;
+ 
+             get_user(c, (char *)uvAddr);
+-            *mpn = PgtblVa2MPN((VA)uvAddr);
++            *mpn = UserVa2MPN((VA)uvAddr);
+             if (*mpn == entryPtr->mpn) {
+ #ifdef VMX86_DEBUG
+                printk(KERN_DEBUG "Page %p disappeared from %s(%u)... "
+@@ -1432,11 +1432,11 @@
+ 
+       /*
+        * Verify for debugging that VA and MPN make sense.
+-       * PgtblVa2MPN() can fail under high memory pressure.
++       * UserVa2MPN() can fail under high memory pressure.
+        */
+ 
+       if (va != NULL) {
+-         MPN lookupMpn = PgtblVa2MPN((VA)va);
++         MPN lookupMpn = UserVa2MPN((VA)va);
+ 
+          if (lookupMpn != INVALID_MPN && mpn != lookupMpn) {
+             Warning("Page lookup fail %#"FMT64"x %016" FMT64 "x %p\n",
+@@ -2356,7 +2332,11 @@
+    int ret;
+ 
+    r = APICR_TO_ADDR(r, APICR_VERSION);
+-#ifdef HAVE_GET_KERNEL_NOFAULT
++#if defined(HAVE_GET_KERNEL_NOFAULT) || LINUX_VERSION_CODE >= KERNEL_VERSION(5, 17, 0)
++   /*
++    * Exists from 5.10, first indicated by HAVE_GET_KERNEL_NOFAULT,
++    * and from post-5.17 just existing everywhere.
++    */
+    ret = get_kernel_nofault(dummy, (void *)r);
+ #else
+    {
+@@ -2940,7 +2944,7 @@
+  *-----------------------------------------------------------------------------
+  */
+ 
+-Bool
++static Bool
+ HostIFCheckTrackedMPN(VMDriver *vm, // IN: The VM instance
+                       MPN mpn)      // IN: The MPN
+ {
+@@ -3060,7 +3064,7 @@
+  *----------------------------------------------------------------------
+  */
+ 
+-int
++static int
+ HostIFWritePhysicalWork(MA ma,             // MA to be written to
+                         VA64 addr,         // src data to write
+                         Bool kernelBuffer, // is the buffer in kernel space?
+@@ -3219,7 +3223,7 @@
+  *----------------------------------------------------------------------
+  */
+ 
+-int
++static int
+ HostIFStartTimer(Bool rateChanged,  //IN: Did rate change?
+                  unsigned int rate) //IN: current clock rate
+ {

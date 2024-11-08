@@ -1,0 +1,16 @@
+pkgbase = lutgen-git
+	pkgdesc = A blazingly fast interpolated LUT utility for arbitrary and popular color palettes (latest git)
+	pkgver = 0.11.0.r0
+	pkgrel = 1
+	url = https://github.com/ozwaldorf/lutgen-rs
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = cargo
+	makedepends = git
+	provides = lutgen
+	conflicts = lutgen
+	source = git+https://github.com/ozwaldorf/lutgen-rs.git
+	md5sums = SKIP
+
+pkgname = lutgen-git

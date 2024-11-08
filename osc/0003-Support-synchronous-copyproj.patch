@@ -1,0 +1,53 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Marko Lemmetty <marko.lemmetty@jollamobile.com>
+Date: Fri, 15 May 2020 14:33:17 +0300
+Subject: [PATCH] Support synchronous copyproj
+
+---
+ osc/commandline.py | 5 +++++
+ osc/core.py        | 2 ++
+ 2 files changed, 7 insertions(+)
+
+diff --git a/osc/commandline.py b/osc/commandline.py
+index 7dae883f95d7a351df0ee3f80c7f3cb3fce6c1cf..a1c6bcf872bd6e5ed08c228a3e7c42f25c01fc44 100644
+--- a/osc/commandline.py
++++ b/osc/commandline.py
+@@ -2115,6 +2115,8 @@ class Osc(cmdln.Cmdln):
+ 
+     @cmdln.option('-b', '--with-binaries', action='store_true',
+                         help='copy the built binaries over to avoid a rebuild')
++    @cmdln.option('-n', '--now', action='store_true',
++                  help='copy synchronously (may take some time to complete)')
+     @cmdln.option('-H', '--with-history', action='store_true',
+                         help='replicate the history of each package.')
+     @cmdln.option('-o', '--make-older', action='store_true',
+@@ -2133,6 +2135,8 @@ class Osc(cmdln.Cmdln):
+ 
+         The user must be able to create DESTPRJ
+ 
++        Normally the copy is done asynchronously
++
+         usage:
+             osc copyprj SOURCEPRJ DESTPRJ
+         """
+@@ -2161,6 +2165,7 @@ class Osc(cmdln.Cmdln):
+                      withhistory = opts.with_history,
+                      makeolder = opts.make_older,
+                      resign = opts.re_sign,
++                     now = opts.now,
+                      comment = comment)
+         print("done cp")
+         print(r)
+diff --git a/osc/core.py b/osc/core.py
+index ab1e0a62ffa34d12ff72de4adc01125bc0e4d538..b9d455773aa846f8d13842560bf030297b8c7d06 100644
+--- a/osc/core.py
++++ b/osc/core.py
+@@ -3822,6 +3822,8 @@ def copy_prj(src_apiurl, src_project, dst_project,
+         query['resign'] = '1'
+     if comment:
+         query['comment'] = comment
++    if now:
++        query['nodelay'] = '1'
+     u = makeurl(src_apiurl, ['source', dst_project], query=query)
+     print("copyprj ", u, file=sys.stderr)
+     f = http_POST(u)

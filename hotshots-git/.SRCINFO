@@ -1,0 +1,17 @@
+pkgbase = hotshots-git
+	pkgdesc = Screenshot and annotation software
+	pkgver = r19.e3712ae
+	pkgrel = 4
+	url = https://github.com/obiwankennedy/HotShots
+	arch = x86_64
+	license = GPL-2.0-or-later
+	makedepends = git
+	makedepends = qt5-tools
+	depends = qt5-x11extras
+	depends = qt5-multimedia
+	provides = hotshots
+	conflicts = hotshots
+	source = hotshots::git+https://github.com/obiwankennedy/HotShots.git
+	sha256sums = SKIP
+
+pkgname = hotshots-git

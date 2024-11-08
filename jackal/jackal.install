@@ -1,0 +1,15 @@
+post_upgrade() {
+cat << EOF
+
+Before starting Jackal, the database needs to be initialized.
+The schema files can be found in /usr/share/jackal/ and instructions can be
+found in /usr/share/doc/jackal.
+
+After configuring the database, restart jackal.service.
+EOF
+}
+
+post_install() {
+  install -dm 750 /var/lib/jackal/
+  sed -i "s/dialback_secret: .*/dialback_secret: $(< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c64)/g" /etc/jackal/jackal.yml
+}

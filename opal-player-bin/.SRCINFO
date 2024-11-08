@@ -1,0 +1,21 @@
+pkgbase = opal-player-bin
+	pkgdesc = Plays relaxing music in the background
+	pkgver = 1.4.0
+	pkgrel = 1
+	url = https://codedead.com/
+	arch = x86_64
+	license = GPL-3.0-only
+	makedepends = fuse2
+	depends = libx11
+	depends = alsa-lib
+	depends = libxtst
+	depends = libxrender
+	provides = opal-player=1.4.0
+	conflicts = opal-player
+	options = !strip
+	source = opal-player-1.4.0.AppImage::https://github.com/CodeDead/opal/releases/download/v1.4.0/Opal-x86_64-1.4.0.AppImage
+	source = opal-player.sh
+	sha256sums = 839fe1acb7ea5d9b13be2dd3eea6c18b5cea7f8b597189a221c73ca6f0b4316a
+	sha256sums = 5f3961fd5b9b5b371f0c4d392b90a21da45ff75d91ced690d552db80c3cb21e7
+
+pkgname = opal-player-bin

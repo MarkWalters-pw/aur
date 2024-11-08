@@ -1,0 +1,23 @@
+pkgbase = crispy-doom
+	pkgdesc = Vanilla-compatible enhanced Doom engine
+	pkgver = 7.0
+	pkgrel = 1
+	url = http://fabiangreffrath.github.io/crispy-doom
+	install = crispy-doom.install
+	arch = x86_64
+	arch = aarch64
+	license = GPL2
+	makedepends = python
+	depends = fluidsynth
+	depends = hicolor-icon-theme
+	depends = libpng
+	depends = libsamplerate
+	depends = sdl2_mixer
+	depends = sdl2_net
+	optdepends = freedm: Free deathmatch game
+	optdepends = freedoom1: Free Ultimate Doom-compatible game
+	optdepends = freedoom2: Free Doom II-compatible game
+	source = https://github.com/fabiangreffrath/crispy-doom/archive/crispy-doom-7.0.tar.gz
+	b2sums = 307a2f98e37ac902e938433d9ee660e301ea38f1f0404354e1c0e3cb7d7c06c576da6711465f050ab7a25e2417edc8845db3ffb018b5eec588799d08084ff578
+
+pkgname = crispy-doom

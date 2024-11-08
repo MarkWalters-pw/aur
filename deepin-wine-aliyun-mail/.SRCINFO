@@ -1,0 +1,27 @@
+pkgbase = deepin-wine-aliyun-mail
+	pkgdesc = Aliyun Mail client on Deepin Wine 6
+	pkgver = 2.7.1.13834
+	pkgrel = 8
+	url = https://mail.aliyun.com/
+	install = deepin-wine-aliyun-mail.install
+	arch = x86_64
+	license = LicenseRef-custom
+	makedepends = p7zip
+	depends = deepin-wine6-stable
+	depends = deepin-wine-helper
+	depends = xdg-utils
+	depends = gtk2
+	conflicts = deepin-wine-aliyun-mail
+	noextract = AliMail-2.7.1.13834.exe
+	source = com.aliyun.mail.deepin_1.6.7.0deepin2_i386.deb::https://com-store-packages.uniontech.com/appstore/pool/appstore/c/com.aliyun.mail.deepin/com.aliyun.mail.deepin_1.6.7.0deepin2_i386.deb
+	source = AliMail-2.7.1.13834.exe::https://aliyun-alimail-desktop.oss-cn-hangzhou.aliyuncs.com/alimail/alimail-standard/latest/AliMail.exe
+	source = fake_simsun.ttc::https://images.xuthus.cc/images/fake_simsun.ttc
+	source = LICENSE.html::https://help.aliyun.com/document_detail/464805.html
+	source = deepin-wine-aliyun-mail.sh
+	sha256sums = 7e020363732d448a29a394afa3f6a5f2c54e600987af599e3a4b6c0edec3a61e
+	sha256sums = f85e4a06c6da0781c4148dbe3ca4cf591996e445449aafb4198a747e22f9c1ce
+	sha256sums = 3e2ed9203a5ce3b2f00b6c942d8fac6b24e7a6e7b1ebc863cee2e27d3ff487db
+	sha256sums = 4e1c8cac900b9eb08b5830106c32913d3a5680230e073648f788dad479fdb0f2
+	sha256sums = 2383c785f8b72f3d3a3529f0a9d8c2be0f03fc01b0b98218601eab421a3301e4
+
+pkgname = deepin-wine-aliyun-mail

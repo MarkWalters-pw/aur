@@ -1,0 +1,18 @@
+pkgbase = sdrpp-headers-git
+	pkgdesc = SDR++ headers for building out-of-tree modules
+	pkgver = r1604.c89763a9
+	pkgrel = 1
+	url = https://github.com/AlexandreRouma/SDRPlusPlus
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	depends = sdrpp-git
+	provides = sdrpp-headers
+	conflicts = sdrpp-headers
+	source = git+https://github.com/AlexandreRouma/SDRPlusPlus
+	source = sdrpp_module.cmake
+	md5sums = SKIP
+	md5sums = SKIP
+
+pkgname = sdrpp-headers-git

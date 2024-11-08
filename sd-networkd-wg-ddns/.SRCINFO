@@ -1,0 +1,14 @@
+pkgbase = sd-networkd-wg-ddns
+	pkgdesc = Systemd-networkd wireguard netdev endpoints DynDNS updater.
+	pkgver = 1.1.0
+	pkgrel = 1
+	url = https://github.com/7Ji/sd-networkd-wg-ddns
+	arch = x86_64
+	arch = aarch64
+	license = AGPL3
+	depends = systemd
+	source = sd-networkd-wg-ddns-1.1.0.tar.gz::https://github.com/7Ji/sd-networkd-wg-ddns/archive/refs/tags/v1.1.0.tar.gz
+	sha256sums = 5c3839f15072295118685987a2e686f6d24336cce2b5d10cf343a3d12946db4d
+
+pkgname = sd-networkd-wg-ddns
+	backup = etc/conf.d/sd-networkd-wg-ddns

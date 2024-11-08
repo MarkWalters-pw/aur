@@ -1,0 +1,24 @@
+pkgbase = gnome-shell-extension-hanabi-git
+	pkgdesc = Live Wallpaper for GNOME
+	pkgver = r271.e5d6e13
+	pkgrel = 1
+	url = https://github.com/jeffshee/gnome-ext-hanabi
+	arch = any
+	license = GPL3
+	makedepends = meson
+	depends = gnome-shell
+	depends = gjs
+	depends = gst-plugins-bad
+	depends = gst-plugins-base
+	depends = gst-plugins-good
+	depends = gstreamer
+	depends = gtk4
+	depends = libadwaita
+	optdepends = clapper: Hanabi can use clappersink for the best performance
+	optdepends = gst-plugin-va: experimental performance improvement for Intel/AMD Wayland users
+	optdepends = gst-libav: required to play mp4 files, among others
+	optdepends = gstreamer-vaapi: Video acceleration for Intel/AMD users
+	source = git+https://github.com/jeffshee/gnome-ext-hanabi
+	b2sums = SKIP
+
+pkgname = gnome-shell-extension-hanabi-git

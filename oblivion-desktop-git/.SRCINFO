@@ -1,0 +1,26 @@
+pkgbase = oblivion-desktop-git
+	pkgdesc = Unofficial Warp Client for Windows/Mac/Linux (GitHub Version)
+	pkgver = 1.6.15.r0.g0327506
+	pkgrel = 1
+	url = https://github.com/bepass-org/oblivion-desktop
+	arch = i686
+	arch = pentium4
+	arch = x86_64
+	arch = arm
+	arch = armv7h
+	arch = armv6h
+	arch = aarch64
+	license = custom:oblivion-desktop
+	makedepends = asar
+	makedepends = gendesk
+	makedepends = git
+	makedepends = npm
+	depends = bash
+	depends = electron27
+	optdepends = libappindicator-gtk3: systray and app indicator support
+	provides = oblivion-desktop
+	conflicts = oblivion-desktop
+	source = oblivion-desktop::git+https://github.com/bepass-org/oblivion-desktop
+	sha256sums = SKIP
+
+pkgname = oblivion-desktop-git

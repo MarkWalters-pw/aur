@@ -1,0 +1,19 @@
+post_install() {
+cat <<'EOF'
+[+] Please enable this input scheme through the `default.custom.yaml` file
+    in the user configuration directory or `rime_deployer` command
+    and re-deploy rime to take effect.
+
+    Example `default.custom.yaml`:
+    
+      patch:
+        schema_list:
+          - schema: flypy
+EOF
+}
+
+post_upgrade() {
+cat <<'EOF'
+[+] Please re-deploy rime to take effect.
+EOF
+}

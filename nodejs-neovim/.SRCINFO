@@ -1,0 +1,15 @@
+pkgbase = nodejs-neovim
+	pkgdesc = Nvim Node.js client and plugin host
+	pkgver = 5.2.1
+	pkgrel = 1
+	url = https://github.com/neovim/node-client
+	arch = any
+	license = MIT
+	makedepends = npm
+	makedepends = jq
+	depends = nodejs
+	noextract = neovim-5.2.1.tgz
+	source = https://registry.npmjs.org/neovim/-/neovim-5.2.1.tgz
+	sha256sums = 309ffa56beeffa0cae6e01e906b4f8b9e7ac66cdef37d677deb697bcd6c83998
+
+pkgname = nodejs-neovim

@@ -1,0 +1,19 @@
+pkgbase = stingray
+	pkgdesc = Custom client for a private Jellyfin server.
+	pkgver = 1.0.2
+	pkgrel = 1
+	url = https://gitlab.com/linuxbombay/stingray
+	arch = x86_64
+	arch = aarch64
+	license = GPL
+	makedepends = unzip
+	depends = libelectron
+	depends = nss
+	depends = gtk3
+	depends = libxss
+	depends = git
+	depends = playerctl
+	source = https://gitlab.com/linuxbombay/stingray/-/archive/1.0.2/stingray-1.0.2.tar.bz2
+	sha256sums = e84efc390060ad57040637f025766d32c3da47bc5f9140b1db48b8a9a7d080a2
+
+pkgname = stingray

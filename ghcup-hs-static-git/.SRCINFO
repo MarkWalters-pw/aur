@@ -1,0 +1,25 @@
+pkgbase = ghcup-hs-static-git
+	pkgdesc = GHC toolchain installer
+	pkgver = 0.1.22.0.r50.g9b76170
+	pkgrel = 1
+	url = https://www.haskell.org/ghcup/
+	install = ghcup-hs.install
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = i686
+	license = LGPL-3.0-only
+	makedepends = git
+	makedepends = stack
+	makedepends = yq
+	optdepends = curl
+	optdepends = wget
+	optdepends = ncurses5-compat-libs: using older ghc's linking against libtinfo.so.5
+	provides = ghcup-hs
+	provides = ghcup-hs-bin
+	conflicts = ghcup-hs
+	conflicts = ghcup-hs-bin
+	source = ghcup-hs-static-git::git+https://github.com/haskell/ghcup-hs#branch=ghc-9.6
+	sha256sums = SKIP
+
+pkgname = ghcup-hs-static-git

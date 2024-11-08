@@ -1,0 +1,137 @@
+#!/bin/env bash
+#--------------------------------------------
+set -Eeuo pipefail
+if [[ -n "${DEBUG:-}" ]]; then
+  set -x
+fi
+trap stack_trace ERR
+function stack_trace() {
+  echo -e "\nThe command '$BASH_COMMAND' triggerd a stacktrace:\nStack Trace:"
+  for (( i = 1; i < ${#FUNCNAME[@]}; i++ )); do
+  echo "    ($i) ${FUNCNAME[$i]:-(top level)} ${BASH_SOURCE[$i]:-(no file)}:${BASH_LINENO[$(( i - 1 ))]}"
+  done
+}
+error(){ printf "\e[1;31m[ERROR]\e[0m %s\n" "${1:-error message missing}" && trap true ERR && return 1; }
+warning(){ printf "\e[1;33m[WARNING]\e[0m %s\n" "$1" >&2; }
+success(){ printf "\e[1;32m[SUCCESS]\e[0m %s\n" "$1" >&2; }
+info(){ printf "\e[1;34m[INFO]\e[0m %s\n" "$1" >&2; }
+green(){ if [[ -t 0 ]]; then printf "\e[1;32m%s\e[0m" "$1"; else printf "%s" "$1"; fi }
+red(){ if [[ -t 0 ]]; then printf "\e[1;31m%s\e[0m" "$1"; else printf "%s" "$1"; fi }
+blue(){ if [[ -t 0 ]]; then printf "\e[1;34m%s\e[0m" "$1"; else printf "%s" "$1"; fi }
+SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
+export SCRIPT_DIR
+#--------------------------------------------
+declare -A janet_lang_git_main__commands
+declare -A janet_lang_git_main__command_descriptions
+janet-lang-git-main::desc(){
+  janet_lang_git_main__commands["$1"]="$1"
+  janet_lang_git_main__command_descriptions["$1"]="$2"
+}
+declare -A janet_lang_git_main__aliases
+janet-lang-git-main::alias(){
+  janet_lang_git_main__aliases["$1"]+="|$2"
+  janet_lang_git_main__commands["$2"]="$1"
+}
+janet-lang-git-main::desc help "Show this help message"
+janet-lang-git-main::help(){
+  case "${1:-list}" in
+    */)
+      printf "Group Commands for %s:\n" "$(green "${1}")"
+      for key in "${!janet_lang_git_main__command_descriptions[@]}"; do
+        if [[ "$key" == "${1}"?* ]]; then
+          local name_without_group="${key:${#1}}"
+          if [[ ( ! "$name_without_group" == */* ) \
+             || "$name_without_group" =~ ^[a-zA-Z0-9]+/$ ]]; then
+            if [[ -v janet_lang_git_main__aliases[$key] ]]; then
+              printf "  %s: %s\n" \
+                     "$(green "$key${janet_lang_git_main__aliases[$key]}")" \
+                     "${janet_lang_git_main__command_descriptions[$key]}"
+            else
+              printf "  %s: %s\n" \
+                     "$(green "$key")" \
+                     "${janet_lang_git_main__command_descriptions[$key]}"
+            fi
+          fi
+        fi
+      done
+      ;;
+    list)
+      echo "Usage: janet-lang-git-main [command]"
+      echo "Commands:"
+      for key in "${!janet_lang_git_main__command_descriptions[@]}"; do
+        if [[ ( ! "$key" == */* ) \
+           || "$key" =~ ^[a-zA-Z0-9_.-]+/$ ]]; then
+          if [[ -v janet_lang_git_main__aliases[$key] ]]; then
+            printf "  %s: %s\n" \
+                   "$(green "$key${janet_lang_git_main__aliases[$key]}")" \
+                   "${janet_lang_git_main__command_descriptions[$key]}"
+          else
+            printf "  %s: %s\n" \
+                   "$(green "$key")" \
+                   "${janet_lang_git_main__command_descriptions[$key]}"
+          fi
+        fi
+      done
+      ;;
+    *)
+      if [[ -v janet_lang_git_main__command_descriptions[$1] ]]; then
+        printf "Usage: janet-lang-git-main %s\n" "$(green "$1")"
+        if [[ -v janet_lang_git_main__aliases[$1] ]]; then
+          printf "Aliases: %s\n" "$(green "${janet_lang_git_main__aliases[$1]//|/ }")"
+        fi
+        printf "%s\n" "${janet_lang_git_main__command_descriptions[$1]}"
+      else
+        error "Unknown command: $1"
+      fi
+      ;;
+  esac
+}
+
+janet-lang-git-main(){
+  local base_zero
+  base_zero="$(basename "$0")"
+  if [[ "$base_zero" = ".main" || "$base_zero" = "janet-lang-git-main" ]]; then
+    command="${1:-help}"
+    shift || true
+  else
+    command="$base_zero"
+  fi
+  if [[ "$command" == */ ]]; then
+    "janet-lang-git-main::help" "$command" "$@"
+  elif [[ -v janet_lang_git_main__commands[$command] ]]; then
+    "janet-lang-git-main::${janet_lang_git_main__commands[$command]}" "$@"
+  else
+    error "Unknown command: $command"
+  fi
+}
+
+######################################### Commands ##########################################
+janet-lang-git-main::desc generate-srcinfo "generate the .SRCINFO from current build (run makepkg before to update version number)"
+janet-lang-git-main::generate-srcinfo(){
+  makepkg --printsrcinfo > .SRCINFO
+  success "Generated .SRCINFO"
+}
+
+janet-lang-git-main::desc push "push to AUR"
+janet-lang-git-main::push(){
+  if git remote get-url aur; then
+    if ! test "$(git remote get-url aur)" = "ssh://aur@aur.archlinux.org/janet-lang-git.git"; then
+      git remote set-url aur "ssh://aur@aur.archlinux.org/janet-lang-git.git"
+    fi
+  else
+    git remote add aur "ssh://aur@aur.archlinux.org/janet-lang-git.git"
+  fi
+  git push aur master
+  success "Pushed to AUR"
+}
+
+janet-lang-git-main::desc clean "clean the directory of temporary files"
+janet-lang-git-main::clean(){
+  git clean -dfX
+  success "Cleaned the directory"
+}
+
+# Run main if not sourced
+if [[ "$0" == "${BASH_SOURCE[0]}" ]]; then
+    janet-lang-git-main "$@"
+fi

@@ -1,0 +1,20 @@
+pkgbase = udev-notify-bzr
+	pkgdesc = Visual hardware notifications for Linux. (Bazaar version)
+	pkgver = 42
+	pkgrel = 1
+	url = https://launchpad.net/udev-notify
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = bzr
+	depends = libnotify
+	depends = udev
+	depends = python-notify2
+	depends = python-pyudev
+	depends = python-dulwich
+	provides = udev-notify-bzr
+	conflicts = udev-notify-bzr
+	source = bzr+lp:~i026e/udev-notify/python3
+	sha1sums = SKIP
+
+pkgname = udev-notify-bzr

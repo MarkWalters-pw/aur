@@ -1,0 +1,28 @@
+pkgbase = php-swow
+	pkgdesc = Swow coroutine IO extension for PHP
+	pkgver = 1.5.3
+	pkgrel = 0
+	url = https://github.com/swow/swow
+	arch = x86_64
+	arch = arm64
+	license = APACHE
+	makedepends = php
+	makedepends = php-legacy
+	makedepends = postgresql-libs
+	depends = glibc
+	source = swow-1.5.3.tar.gz::https://github.com/swow/swow/archive/refs/tags/v1.5.3.tar.gz
+	sha512sums = 1f9862f602c2a385ff40fe062c4f4564c67317ac48ac8ca7d37fbd8da0db964fa7d1a931f5727ed0c4ba8db1c3d522fb95d995e26e5cfbe112a1fa65feefdaa7
+
+pkgname = php-swow
+	depends = glibc
+	depends = php
+	provides = php-swow
+	conflicts = php-swow
+	backup = etc/php/conf.d/swow.ini
+
+pkgname = php-legacy-swow
+	depends = glibc
+	depends = php-legacy
+	provides = php-legacy-swow
+	conflicts = php-legacy-swow
+	backup = etc/php-legacy/conf.d/swow.ini

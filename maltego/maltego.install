@@ -1,0 +1,14 @@
+post_install() {
+  cat <<-EOT
+
+	[+] Run '/usr/bin/maltego' to run the application (if nothing works, check 'java' is in your \$PATH)."
+	>>> Documentation resides at 'https://docs.maltego.com/support/home/'.
+
+	>>> This application isn't functional until you obtain a Maltego Community Edition activation code and account.
+	>>> Register a FREE account for Maltego Community Editon: 'https://www.maltego.com/maltego-id-registration/'.
+
+	>>> This package is known to work with jdk17-openjdk.
+	>>> Please note that it currently doesn't work with jre-openjdk (Java 16).
+
+	EOT
+}

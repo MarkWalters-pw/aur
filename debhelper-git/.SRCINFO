@@ -1,0 +1,29 @@
+pkgbase = debhelper-git
+	pkgdesc = Programs to automate common tasks in debian/rules when building Debian packages
+	pkgver = 13.20.r0.gee766db
+	pkgrel = 1
+	url = https://salsa.debian.org/debian/debhelper
+	arch = any
+	license = GPL-2.0-or-later
+	makedepends = git
+	makedepends = po4a
+	depends = dpkg
+	depends = perl-pod-parser
+	optdepends = dh-make: convert source archives into Debian package source
+	provides = debhelper=13.20
+	conflicts = debhelper
+	conflicts = dh-strip-nondeterminism
+	source = debhelper::git+https://salsa.debian.org/debian/debhelper.git
+	source = strip-nondeterminism::git+https://salsa.debian.org/reproducible-builds/strip-nondeterminism.git
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = debhelper-git
+	depends = dpkg
+	depends = perl-pod-parser
+	depends = binutils
+	depends = file
+	depends = man-db
+	depends = python-html2text
+	depends = strip-nondeterminism
+	depends = po-debconf

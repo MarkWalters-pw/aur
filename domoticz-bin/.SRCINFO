@@ -1,0 +1,21 @@
+pkgbase = domoticz-bin
+	pkgdesc = Web based home automation
+	pkgver = 2024.6
+	pkgrel = 1
+	url = https://www.domoticz.com
+	install = domoticz.install
+	arch = armv7h
+	arch = aarch64
+	arch = x86_64
+	license = GPL3
+	depends = libusb-compat
+	depends = libcurl-gnutls
+	depends = mosquitto
+	conflicts = domoticz
+	conflicts = domoticz-git
+	source = domoticz-bin-2024.6.tar.gz::https://github.com/domoticz/domoticz/releases/download/2024.6/domoticz_linux_x86_64.tgz
+	source = domoticz.service
+	sha256sums = SKIP
+	sha256sums = 908e2848731eef27928f87936f94ff3df280901559fcf5f4754b1a8139e4a38a
+
+pkgname = domoticz-bin

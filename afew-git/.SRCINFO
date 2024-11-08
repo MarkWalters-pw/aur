@@ -1,0 +1,25 @@
+pkgbase = afew-git
+	pkgdesc = Initial tagging script for notmuch mail
+	pkgver = 3.0.1.r63.g65227fa
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/afewmail/afew
+	arch = any
+	license = ISC
+	checkdepends = python-freezegun
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools-scm
+	makedepends = python-sphinx
+	makedepends = python-wheel
+	depends = notmuch
+	depends = python-chardet
+	depends = python-dkim
+	depends = python-setuptools
+	provides = afew
+	conflicts = afew
+	source = git+https://github.com/afewmail/afew.git
+	b2sums = SKIP
+
+pkgname = afew-git

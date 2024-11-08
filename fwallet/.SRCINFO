@@ -1,0 +1,21 @@
+pkgbase = fwallet
+	pkgdesc = A beautiful cross-platform wallet application.
+	pkgver = 1.1.9
+	pkgrel = 2
+	url = https://gitlab.com/TheOneWithTheBraid/f_wallet
+	arch = x86_64
+	arch = aarch64
+	license = EUPL1.2
+	makedepends = flutter-tool
+	makedepends = flutter-target-linux
+	makedepends = cmake
+	depends = gtk3
+	depends = jsoncpp
+	depends = libsecret
+	depends = xdg-user-dirs
+	provides = fwallet
+	conflicts = fwallet
+	source = fwallet-v1.1.9.tar.gz::https://gitlab.com/TheOneWithTheBraid/f_wallet/-/archive/v1.1.9/f_wallet-v1.1.9.tar.gz
+	sha256sums = 8e9e124bbe2d4cad5127acbf223b446071f8fa0d52cd9650501ec7b6a55a6b6e
+
+pkgname = fwallet

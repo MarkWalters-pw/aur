@@ -1,0 +1,46 @@
+[Unit]
+Description=Gotify Server
+After=network.target
+ConditionPathIsDirectory=%L/gotify
+
+[Service]
+Type=simple
+User=gotify
+Group=gotify
+ExecStart=/usr/bin/gotify-server
+
+ConfigurationDirectory=gotify
+LogsDirectory=gotify
+StateDirectory=gotify
+StateDirectoryMode=0700
+StandardOutput=append:%L/gotify/server.log
+
+UMask=0027
+CapabilityBoundingSet=
+AmbientCapabilities=
+LockPersonality=true
+MemoryDenyWriteExecute=true
+NoNewPrivileges=true
+PrivateDevices=true
+PrivateTmp=true
+PrivateUsers=true
+ProtectClock=true
+ProtectControlGroups=true
+ProtectHome=true
+ProtectHostname=true
+ProtectKernelLogs=true
+ProtectKernelModules=true
+ProtectKernelTunables=true
+ProtectSystem=strict
+RemoveIPC=true
+RestrictAddressFamilies=AF_INET AF_INET6
+RestrictNamespaces=true
+RestrictRealtime=true
+RestrictSUIDSGID=true
+SystemCallArchitectures=native
+SystemCallErrorNumber=EPERM
+SystemCallFilter=@system-service
+SystemCallFilter=~@privileged @resources
+
+[Install]
+WantedBy=multi-user.target

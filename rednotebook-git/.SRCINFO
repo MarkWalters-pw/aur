@@ -1,0 +1,19 @@
+pkgbase = rednotebook-git
+	pkgdesc = A simple desktop diary.
+	pkgver = v2.33.r4.gc3e73d23
+	pkgrel = 1
+	url = http://rednotebook.sourceforge.net
+	arch = any
+	license = GPL2
+	depends = python-yaml
+	depends = webkit2gtk
+	depends = hicolor-icon-theme
+	depends = python-gobject
+	depends = gtksourceview3
+	optdepends = python-pyenchant: for spellchecking
+	provides = rednotebook
+	conflicts = rednotebook
+	source = git+https://github.com/jendrikseipp/rednotebook.git
+	md5sums = SKIP
+
+pkgname = rednotebook-git

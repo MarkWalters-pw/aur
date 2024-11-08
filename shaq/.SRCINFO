@@ -1,0 +1,20 @@
+pkgbase = shaq
+	pkgdesc = A bare-bones Shazam CLI client
+	pkgver = 0.0.5
+	pkgrel = 1
+	url = https://github.com/woodruffw/shaq
+	arch = any
+	license = MIT
+	makedepends = python-build
+	makedepends = python-flit-core>=3.2
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = python>=3.10
+	depends = python-pyaudio>=0.2.13
+	depends = python-pydub>=0.25.1
+	depends = python-rich>=13.4
+	depends = python-shazamio>=0.6.0
+	source = https://github.com/woodruffw/shaq/archive/v0.0.5.tar.gz
+	b2sums = 4ab97687337cea0486081e4f68ba155d305fcdd75fec40f931f5d2adfdf75a43e48c8f909838fa3ffffac98313b4f1f4d0523111ac9169c564b3ea250e1b4189
+
+pkgname = shaq

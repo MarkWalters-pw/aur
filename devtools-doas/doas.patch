@@ -1,0 +1,62 @@
+diff -ura --color devtools-1.2.1/src/lib/archroot.sh devtools-1.2.1-patched/src/lib/archroot.sh
+--- devtools-1.2.1/src/lib/archroot.sh	2024-06-18 08:14:22.000000000 -0400
++++ devtools-1.2.1-patched/src/lib/archroot.sh	2024-08-04 17:20:27.581342162 -0400
+@@ -14,11 +14,26 @@
+ 	shift
+ 	local orig_argv=("$@")
+ 
++	local keepenv_cmd=()
++	local bkpIFS="$IFS"
++	local IFS=","
++	read -r -a keepenv_keys <<<$keepenv
++	local IFS="$bkpIFS"
++	for k in ${keepenv_keys[@]}; do
++		keepenv_cmd+=" $k=${!k}"
++	done
++
++	# sudo passes USER by default??
++	keepenv_cmd+=" USER=$USER"
++
++	# If PACMAN_AUTH set, then
++	# ${PACMAN_AUTH} env $keepenv_cmd "${orig_argv[@]}"
++
+ 	(( EUID == 0 )) && return
+-	if type -P sudo >/dev/null; then
+-		exec sudo --preserve-env="${keepenv}" -- "${orig_argv[@]}"
++	if type -P doas >/dev/null; then
++		exec doas env $keepenv_cmd "${orig_argv[@]}"
+ 	else
+-		exec su root -c "$(printf ' %q' "${orig_argv[@]}")"
++		exec su root -c "env $keepenv_cmd $(printf ' %q' "${orig_argv[@]}")"
+ 	fi
+ }
+ 
+diff -ura --color devtools-1.2.1/src/lib/build/build.sh devtools-1.2.1-patched/src/lib/build/build.sh
+--- devtools-1.2.1/src/lib/build/build.sh	2024-06-18 08:14:22.000000000 -0400
++++ devtools-1.2.1-patched/src/lib/build/build.sh	2024-08-24 12:11:53.730290448 -0400
+@@ -514,7 +514,7 @@
+ 	# install all collected packages to the host system
+ 	if (( ${#INSTALL_HOST_PACKAGES[@]} )); then
+ 		msg "Installing built packages to the host system"
+-		sudo pacman -U -- "${INSTALL_HOST_PACKAGES[@]}"
++		doas pacman -U -- "${INSTALL_HOST_PACKAGES[@]}"
+ 	fi
+ 
+ 	# update the binary package repo db as last action
+diff -ura --color devtools-1.2.1/src/makechrootpkg.in devtools-1.2.1-patched/src/makechrootpkg.in
+--- devtools-1.2.1/src/makechrootpkg.in	2024-06-18 08:14:22.000000000 -0400
++++ devtools-1.2.1-patched/src/makechrootpkg.in	2024-08-04 17:20:27.581342162 -0400
+@@ -252,8 +252,11 @@
+ 	chown "$makepkg_user:" "$WORKDIR"
+ 
+ 	# Ensure sources are downloaded
+-	sudo -u "$makepkg_user" --preserve-env=GNUPGHOME,SSH_AUTH_SOCK \
+-		env SRCDEST="$SRCDEST" BUILDDIR="$WORKDIR" \
++	doas -u "$makepkg_user" env \
++		GNUPGHOME="$GNUPGHOME" \
++		SSH_AUTH_SOCK="$SSH_AUTH_SOCK" \
++		SRCDEST="$SRCDEST" \
++		BUILDDIR="$BUILDDIR" \
+ 		makepkg --config="$copydir/etc/makepkg.conf" --verifysource -o "${verifysource_args[@]}" ||
+ 		die "Could not download sources."
+ }

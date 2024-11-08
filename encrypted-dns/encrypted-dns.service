@@ -1,0 +1,20 @@
+[Unit]
+Description=A modern encrypted DNS server (DNSCrypt v2, Anonymized DNSCrypt, DoH)
+Documentation=https://github.com/jedisct1/encrypted-dns-server
+Wants=network-online.target nss-lookup.target
+Before=nss-lookup.target
+
+[Service]
+User=encrypted-dns
+Group=encrypted-dns
+ExecStart=/usr/bin/encrypted-dns -c /var/lib/encrypted-dns/encrypted-dns.toml
+WorkingDirectory=/var/lib/encrypted-dns/
+Restart=on-failure
+
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target

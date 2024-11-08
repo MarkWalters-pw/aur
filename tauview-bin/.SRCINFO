@@ -1,0 +1,18 @@
+pkgbase = tauview-bin
+	pkgdesc = Minimalist image viewer based on Leaflet.js and Tauri.
+	pkgver = 0.0.12
+	pkgrel = 1
+	url = https://github.com/sprout2000/tauview
+	arch = x86_64
+	license = MIT
+	depends = gtk3
+	depends = gdk-pixbuf2
+	depends = webkit2gtk
+	provides = tauview=0.0.12
+	conflicts = tauview
+	source = tauview-0.0.12.deb::https://github.com/sprout2000/tauview/releases/download/v0.0.12/tauview_0.0.12_amd64.deb
+	source = LICENSE-0.0.12.md::https://raw.githubusercontent.com/sprout2000/tauview/v0.0.12/LICENSE.md
+	sha256sums = dc3af0261206c26b324c6d741199b6263ac49ffea50927574fb403366421149e
+	sha256sums = b68cbd15f8aa5af28a19a93bf42d55e909d5ef19570af1855a6c6d4d41645db9
+
+pkgname = tauview-bin

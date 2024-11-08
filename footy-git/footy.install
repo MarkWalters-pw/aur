@@ -1,0 +1,11 @@
+post_install() {
+  cat << EOF
+
+Since footy uses the data provided by football-data.org, an API key is required.
+  
+Set the API key by running footy -k <api-key> or manually create a file with the 
+API key in ~/.config/footy/api-key.txt.
+
+EOF
+}
+

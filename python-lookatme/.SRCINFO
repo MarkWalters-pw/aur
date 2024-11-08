@@ -1,0 +1,24 @@
+pkgbase = python-lookatme
+	pkgdesc = An interactive, extensible, terminal-based markdown presentation tool.
+	pkgver = 3.0.0.rc5
+	pkgrel = 2
+	url = https://github.com/d0c-s4vage/lookatme
+	arch = any
+	license = MIT
+	makedepends = python-setuptools
+	depends = python-pygments
+	depends = python-urwid
+	depends = python-yaml
+	depends = python-mistune
+	depends = python-marshmallow
+	depends = python-click
+	depends = python-markdown-it-py
+	depends = python-linkify-it-py
+	depends = python-dateutil
+	optdepends = python-lookatme-ueberzug: renders images with the image_ueberzug extension
+	optdepends = python-lookatme-render: render code blocks of supported languages into images
+	optdepends = python-lookatme-qrcode: embeds qrcodes in the presentation
+	source = lookatme-3.0.0.rc5.tar.gz::https://github.com/d0c-s4vage/lookatme/archive/v3.0.0-rc5.tar.gz
+	md5sums = 912cf093652093fcaadeda365f62aee7
+
+pkgname = python-lookatme

@@ -1,0 +1,22 @@
+--- main.js	2022-09-28 20:54:22.006485863 +0200
++++ main.js	2022-09-28 20:55:41.526575933 +0200
+@@ -6,7 +6,6 @@
+ const windowStateKeeper = require('electron-window-state');
+ const path = require('path');
+ const url = require('url');
+-const {autoUpdater} = require('electron-updater');
+ const contextMenu = require('electron-context-menu');
+ const {IPC} = require('node-ipc');
+ 
+@@ -59,11 +58,6 @@
+ 			});
+ 			console.log('path', indexPath);
+ 			win.loadURL(indexPath);
+-			
+-			const log = require('electron-log');
+-			log.transports.file.level = 'debug';
+-			autoUpdater.logger = log;
+-			autoUpdater.checkForUpdatesAndNotify();
+ 			// win.webContents.openDevTools();
+ 			win.setMenu(null);
+ 		}

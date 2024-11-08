@@ -1,0 +1,29 @@
+pkgbase = bunsen-utilities-git
+	pkgdesc = Small scripts to use with BunsenLabs.
+	pkgver = r741.28dd596
+	pkgrel = 3
+	url = https://github.com/BunsenLabs/bunsen-utilities
+	arch = any
+	license = GPL-3.0-or-later
+	makedepends = git
+	depends = bunsen-common
+	depends = gtk3
+	depends = libnotify
+	depends = python3
+	depends = python-gobject
+	depends = python-lxml
+	depends = python-psutil
+	depends = python-xdg
+	depends = python-xlib
+	depends = wmctrl
+	depends = xdotool
+	depends = yad
+	depends = bash
+	optdepends = upower: Required for bl-exit
+	optdepends = zenity: Required bl-conkyzen and bl-tint2edit
+	provides = bunsen-utilities
+	conflicts = bunsen-utilities
+	source = bunsen-utilities::git+https://github.com/BunsenLabs/bunsen-utilities.git#branch=boron
+	md5sums = SKIP
+
+pkgname = bunsen-utilities-git

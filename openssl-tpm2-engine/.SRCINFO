@@ -1,0 +1,17 @@
+pkgbase = openssl-tpm2-engine
+	pkgdesc = OpenSSL engine & provider for TPM-backed keys using IBM's TPM2 software stack
+	pkgver = 4.3.0
+	pkgrel = 1
+	url = https://git.kernel.org/pub/scm/linux/kernel/git/jejb/openssl_tpm2_engine.git
+	arch = x86_64
+	license = LGPL2.1
+	checkdepends = swtpm
+	makedepends = git
+	makedepends = help2man
+	depends = openssl
+	depends = ibm-tss
+	conflicts = tpm2-openssl
+	source = openssl-tpm2-engine::git+https://git.kernel.org/pub/scm/linux/kernel/git/jejb/openssl_tpm2_engine.git#tag=v4.3.0
+	sha256sums = 5d2af72dd0091837121012aa4222df2bc6b538fbea25b4823086b3211eaea42a
+
+pkgname = openssl-tpm2-engine

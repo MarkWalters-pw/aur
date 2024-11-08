@@ -1,0 +1,22 @@
+pkgbase = archmage
+	pkgdesc = An extensible reader and decompiler for files in the CHM format
+	pkgver = 0.4.2.1
+	pkgrel = 3
+	url = https://github.com/dottedmag/archmage
+	arch = any
+	license = GPL-2.0-or-later
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = elinks
+	depends = htmldoc
+	depends = python
+	depends = python-beautifulsoup4
+	depends = python-pychm
+	depends = python-setuptools
+	depends = python-sgmllib3k
+	source = archmage::git+https://github.com/dottedmag/archmage.git#commit=a8f632dd0371d155b66a5f74526d56f63bcaa257
+	sha256sums = SKIP
+
+pkgname = archmage

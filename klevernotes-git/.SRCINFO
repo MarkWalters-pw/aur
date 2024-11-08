@@ -1,0 +1,19 @@
+pkgbase = klevernotes-git
+	pkgdesc = A convergent markdown note taking application.
+	pkgver = 0.1_r103.gc820241
+	pkgrel = 2
+	url = https://invent.kde.org/office/klevernotes
+	arch = x86_64
+	groups = kde-applications-git
+	groups = kde-utilities-git
+	license = GPL
+	license = LGPL
+	license = BSD
+	makedepends = extra-cmake-modules
+	makedepends = git
+	depends = kio
+	depends = qt6-webengine
+	source = git+https://invent.kde.org/office/klevernotes.git
+	md5sums = SKIP
+
+pkgname = klevernotes-git

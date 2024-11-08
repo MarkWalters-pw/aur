@@ -1,0 +1,25 @@
+pkgbase = photivo-git
+	pkgdesc = Free and open source photo processor
+	pkgver = 20240904_517cc62
+	pkgrel = 1
+	epoch = 1
+	url = https://photivo.org/
+	arch = x86_64
+	license = GPL-3.0-only
+	makedepends = cmake
+	makedepends = git
+	depends = exiv2
+	depends = fftw
+	depends = graphicsmagick
+	depends = lcms2
+	depends = lensfun
+	depends = liblqr
+	depends = libjpeg-turbo
+	depends = libraw
+	depends = qt6-base
+	provides = photivo
+	conflicts = photivo
+	source = git+https://bitbucket.org/Photivo/photivo.git
+	md5sums = SKIP
+
+pkgname = photivo-git

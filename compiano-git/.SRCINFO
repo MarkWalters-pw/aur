@@ -1,0 +1,24 @@
+pkgbase = compiano-git
+	pkgdesc = a midi controllable software musical instrument
+	pkgver = r223.ebdde61
+	pkgrel = 2
+	url = https://gitlab.gnome.org/hub/compiano.git
+	arch = x86_64
+	license = GPL-3.0-or-later
+	makedepends = git
+	makedepends = ninja
+	makedepends = meson
+	makedepends = cargo
+	depends = gtk4
+	depends = libadwaita
+	depends = alsa-lib
+	depends = libgit2
+	depends = libpanel
+	provides = compiano
+	conflicts = compiano
+	source = git+https://gitlab.gnome.org/hub/compiano.git
+	source = git+https://gitlab.gnome.org/hub/libpanel-rs.git
+	md5sums = SKIP
+	md5sums = SKIP
+
+pkgname = compiano-git

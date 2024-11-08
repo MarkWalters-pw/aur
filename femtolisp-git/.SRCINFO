@@ -1,0 +1,16 @@
+pkgbase = femtolisp-git
+	pkgdesc = lightweight, robust, scheme-like lisp implementation
+	pkgver = r308.0bf4243
+	pkgrel = 2
+	url = https://github.com/lambdaconservatory/femtolisp
+	arch = i686
+	arch = x86_64
+	license = custom:BSD
+	makedepends = git
+	depends = glibc
+	provides = femtolisp
+	conflicts = femtolisp
+	source = git+https://github.com/lambdaconservatory/femtolisp.git
+	md5sums = SKIP
+
+pkgname = femtolisp-git

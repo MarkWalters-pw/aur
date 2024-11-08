@@ -1,0 +1,23 @@
+pkgbase = widgie
+	pkgdesc = A lightweight widget library for applications which do not need a splashscreen.
+	pkgver = 0.3.4
+	pkgrel = 1
+	url = https://gitlab.com/manner/widgie
+	arch = x86_64
+	arch = aarch64
+	license = GPL3
+	makedepends = wayland-protocols
+	makedepends = wayland
+	makedepends = libxkbcommon
+	makedepends = freetype2
+	makedepends = libxkbcommon-x11
+	makedepends = libxcb
+	makedepends = xcb-util-image
+	makedepends = xorgproto
+	optdepends = ttf-dejavu-nerd: (or a nerd font) for icon support
+	conflicts = widgie-git
+	options = staticlibs
+	source = https://gitlab.com/manner/widgie/-/archive/0.3.4/widgie-0.3.4.tar.gz
+	sha256sums = f02c99670d44f9cf15b3cecaeca5c654690caea73ce2ba89defac9853729d63e
+
+pkgname = widgie

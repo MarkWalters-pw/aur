@@ -1,0 +1,17 @@
+pkgbase = bshchk-git
+	pkgdesc = Bash runtime dependency checker
+	pkgver = 1.1.r0.g96d42c6
+	pkgrel = 1
+	url = https://bshchk.blek.codes
+	arch = x86_64
+	arch = aarch64
+	license = GPL3
+	provides = bshchk
+	conflicts = bshchk
+
+	makedepends = go
+
+	source = git+https://git.blek.codes/blek/bshchk.git
+
+pkgname = bshchk-git
+

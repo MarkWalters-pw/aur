@@ -1,0 +1,20 @@
+pkgbase = python-mahotas
+	pkgdesc = Computer Vision in Python
+	pkgver = 1.4.18
+	pkgrel = 1
+	url = https://github.com/luispedro/mahotas
+	arch = x86_64
+	license = MIT
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python-numpy
+	optdepends = python-imread: for function imread support
+	optdepends = python-pillow: for function imread support
+	optdepends = freeimage: for functions imread/imsave support
+	provides = mahotas
+	source = mahotas-1.4.18.tar.gz::https://github.com/luispedro/mahotas/archive/v1.4.18.tar.gz
+	sha512sums = 57ff46be660ddb8827a5e73ff1dc9bbc05b146d06e48a24a6607ffe7d5bb9ee81dda8a1f51edd3e7714cc2a6cb86716420e5c740b3ca670c4d834d4f57b8a15a
+
+pkgname = python-mahotas

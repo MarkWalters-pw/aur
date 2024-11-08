@@ -1,0 +1,22 @@
+pkgbase = r-websocket
+	pkgdesc = 'WebSocket' Client Library
+	pkgver = 1.4.2
+	pkgrel = 1
+	url = https://cran.r-project.org/package=websocket
+	arch = x86_64
+	license = GPL-2.0-only
+	makedepends = r-asioheaders
+	makedepends = r-cpp11
+	makedepends = websocketpp
+	depends = openssl
+	depends = r-later
+	depends = r-r6
+	optdepends = r-httpuv
+	optdepends = r-knitr
+	optdepends = r-rmarkdown
+	optdepends = r-testthat
+	source = https://cran.r-project.org/src/contrib/websocket_1.4.2.tar.gz
+	md5sums = 7f94d3d96306c4afd2b812a04fec0468
+	b2sums = 7e0b023cc18f7d4dcd2dfda4632b42d648d0a2fb00f73077b84d1af35639afb5567195903f78fde9ce8c3e21711f2391852a7bfacc02abfc1dfb1a54ad8c943b
+
+pkgname = r-websocket

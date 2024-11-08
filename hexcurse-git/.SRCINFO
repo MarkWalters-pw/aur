@@ -1,0 +1,16 @@
+pkgbase = hexcurse-git
+	pkgdesc = Versatile ncurses-based hex editor.
+	pkgver = v1.60.0.r92.gefabe05
+	pkgrel = 2
+	url = https://github.com/prso/hexcurse
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	depends = ncurses
+	provides = hexcurse
+	conflicts = hexcurse
+	options = !makeflags
+	source = git+https://github.com/prso/hexcurse
+	md5sums = SKIP
+
+pkgname = hexcurse-git

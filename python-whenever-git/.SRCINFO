@@ -1,0 +1,22 @@
+pkgbase = python-whenever-git
+	pkgdesc = Modern datetime library for Python (built from latest commit)
+	pkgver = 0.6.1.r0.g66592b4
+	pkgrel = 1
+	url = https://github.com/ariebovenberg/whenever
+	arch = aarch64
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools-rust
+	makedepends = python-wheel
+	depends = gcc-libs
+	depends = glibc
+	depends = python
+	provides = python-whenever
+	conflicts = python-whenever
+	source = git+https://github.com/ariebovenberg/whenever.git
+	sha256sums = SKIP
+
+pkgname = python-whenever-git

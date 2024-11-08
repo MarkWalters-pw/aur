@@ -1,0 +1,10 @@
+[Unit]
+Description=Prysm Beacon chain daemon
+After=network-online.target
+
+[Service]
+ExecStart=/usr/bin/prysm-beacon-chain --accept-terms-of-use --execution-endpoint=%h/.ethereum/geth.ipc
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

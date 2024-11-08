@@ -1,0 +1,26 @@
+pkgbase = python-bezier
+	pkgdesc = Helper for Bézier Curves, Triangles, and Higher Order Objects
+	pkgver = 2024.6.20
+	pkgrel = 1
+	url = https://github.com/dhermes/bezier
+	arch = x86_64
+	license = Apache-2.0
+	checkdepends = python-pytest
+	checkdepends = python-scipy
+	checkdepends = python-sympy
+	checkdepends = python-matplotlib
+	checkdepends = python-seaborn
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = bezier
+	depends = python-numpy
+	optdepends = python-matplotlib: for plot helper support
+	optdepends = python-seaborn: for plot helper support
+	optdepends = python-scipy: for convex hull support
+	optdepends = python-sympy: for symbolic support
+	source = bezier-2024.6.20.tar.gz::https://github.com/dhermes/bezier/archive/2024.6.20.tar.gz
+	sha512sums = add582a0e9724c1952fcb99f2727af71e54f537aeae319b1d9445089423d9d67da599303b190b944a48c155a0e21123861b0506b9aa7f458e689ae0a92c4161a
+
+pkgname = python-bezier

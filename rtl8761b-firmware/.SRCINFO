@@ -1,0 +1,20 @@
+pkgbase = rtl8761b-firmware
+	pkgdesc = old firmware for rtl8761b, new firmware have stability problems when used with xbox controller
+	pkgver = 162105963
+	pkgrel = 1
+	url = https://github.com/andrew-ld/rtl8761b-firmware
+	arch = any
+	license = custom
+	depends = linux-firmware
+	source = LICENSE
+	source = rtl8761b_config.bin
+	source = rtl8761b_fw.bin
+	source = rtl8761bu_config.bin
+	source = rtl8761bu_fw.bin
+	md5sums = 673efaa2188a637ba065de22c9fd4c0b
+	md5sums = 783db7913e59ab81adb335684d5f83fb
+	md5sums = 973aa8ee84131d91a0475d8ce7fc680c
+	md5sums = 49951f548b87ea0258d128195ef6e0cf
+	md5sums = 6c3929e6a1d35f4206a8e9f763faf17e
+
+pkgname = rtl8761b-firmware

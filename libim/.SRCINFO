@@ -1,0 +1,40 @@
+pkgbase = libim
+	pkgdesc = Toolkit for digital imaging
+	pkgver = 3.15
+	pkgrel = 4
+	url = https://www.tecgraf.puc-rio.br/im/
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = lsb-release
+	makedepends = lua
+	makedepends = lua51
+	makedepends = lua52
+	makedepends = lua53
+	makedepends = fftw
+	noextract = im-3.15_Sources.tar.gz
+	source = https://downloads.sourceforge.net/project/imtoolkit/3.15/Docs%20and%20Sources/im-3.15_Sources.tar.gz
+	source = https://downloads.sourceforge.net/project/imtoolkit/3.15/Docs%20and%20Sources/im-3.15_Docs.pdf
+	md5sums = 9fb18d151dd8e7e540aa76ae409c37b2
+	md5sums = 794196d4e6d48e3257d7357d7ea62f94
+
+pkgname = libim
+	pkgdesc = Imaging toolkit library
+	depends = zlib
+	depends = libpng
+
+pkgname = lua-im
+	pkgdesc = Lua (5.4) bindings for IM toolkit
+	depends = libim
+
+pkgname = lua51-im
+	pkgdesc = Lua (5.1) bindings for IM toolkit
+	depends = libim
+
+pkgname = lua52-im
+	pkgdesc = Lua (5.2) bindings for IM toolkit
+	depends = libim
+
+pkgname = lua53-im
+	pkgdesc = Lua (5.3) bindings for IM toolkit
+	depends = libim

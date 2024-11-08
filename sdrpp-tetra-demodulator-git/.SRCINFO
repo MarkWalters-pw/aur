@@ -1,0 +1,20 @@
+pkgbase = sdrpp-tetra-demodulator-git
+	pkgdesc = SDR++ module for demodulating TETRA
+	pkgver = r18.9e3a757
+	pkgrel = 1
+	url = https://github.com/cropinghigh/sdrpp-tetra-demodulator
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = cmake
+	makedepends = sdrpp-headers-git
+	makedepends = libosmocore
+	makedepends = unzip
+	depends = sdrpp-git
+	provides = sdrpp-tetra-demodulator
+	conflicts = sdrpp-tetra-demodulator
+	source = git+https://github.com/cropinghigh/sdrpp-tetra-demodulator
+	md5sums = SKIP
+
+pkgname = sdrpp-tetra-demodulator-git

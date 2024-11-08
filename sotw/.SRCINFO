@@ -1,0 +1,27 @@
+pkgbase = sotw
+	pkgdesc = Shadow Of The Wyrm is a single player, traditional roguelike by Julian Day.
+	pkgver = 1.7.2
+	pkgrel = 1
+	url = http://www.shadowofthewyrm.org/
+	arch = x86_64
+	license = MIT
+	makedepends = premake
+	makedepends = git
+	depends = sdl2
+	depends = sdl2_image
+	depends = sdl2_mixer
+	depends = xerces-c
+	depends = zlib
+	depends = ncurses
+	depends = lua51
+	depends = boost
+	depends = gtest
+	provides = sotw
+	conflicts = sotw-dev
+	source = git+https://github.com/prolog/shadow-of-the-wyrm.git
+	source = https://i.imgur.com/z9QmK0X.png
+	validpgpkeys = SKIP
+	md5sums = SKIP
+	md5sums = SKIP
+
+pkgname = sotw

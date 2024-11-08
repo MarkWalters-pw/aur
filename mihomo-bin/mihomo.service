@@ -1,0 +1,13 @@
+[Unit]
+Description=Mihomo Kernel by MetaCubeX.
+After=network.target NetworkManager.service systemd-networkd.service iwd.service
+
+[Service]
+Type=exec
+CapabilityBoundingSet=cap_net_admin
+AmbientCapabilities=cap_net_admin
+Restart=on-abort
+ExecStart=+/usr/bin/mihomo -d /etc/mihomo
+
+[Install]
+WantedBy=multi-user.target

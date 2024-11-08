@@ -1,0 +1,18 @@
+pkgbase = python-wslink
+	pkgdesc = Python/JavaScript library for communicating over WebSocket
+	pkgver = 2.2.1
+	pkgrel = 1
+	url = https://github.com/kitware/wslink
+	arch = any
+	license = BSD-3-Clause
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python-aiohttp
+	optdepends = python-cryptography: SSL support
+	optdepends = ipython: jupyter backend support
+	source = wslink-2.2.1.tar.gz::https://github.com/kitware/wslink/archive/v2.2.1.tar.gz
+	sha512sums = 7cd0ff533b017ebe5f4f0fc8029425f51433bc11b1a3daaccecdf4884cd7e558f61949f10a9f997a6ac78f48d8df05fb7876683aaa3a829985dac5065293b7f8
+
+pkgname = python-wslink

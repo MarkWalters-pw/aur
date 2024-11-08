@@ -1,0 +1,17 @@
+pkgbase = maid-bin
+	pkgdesc = A markdown-based task runner
+	pkgver = 0.1.5
+	pkgrel = 0
+	url = https://github.com/rniii/maid
+	arch = x86_64
+	arch = aarch64
+	license = Apache-2.0
+	provides = maid
+	conflicts = maid
+	conflicts = maid-git
+	options = !strip
+	options = !debug
+	source = maid-bin-0.1.5.tar.gz::https://github.com/rniii/maid/releases/download/v0.1.5/maid-0.1.5.tar.gz
+	sha256sums = 449c3308149bd3fa39803b2a7c2d38fc26c7144d69e4792e38706c4fbfba6d05
+
+pkgname = maid-bin

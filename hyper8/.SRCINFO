@@ -1,0 +1,17 @@
+pkgbase = hyper8
+	pkgdesc = A static site generator for video
+	pkgver = 0.17.1
+	pkgrel = 1
+	url = https://simonrepp.com/hyper8
+	arch = x86_64
+	license = AGPL3
+	makedepends = cmake
+	makedepends = git
+	makedepends = rust
+	depends = ffmpeg
+	depends = rsync
+	options = !lto
+	source = hyper8-0.17.1.tar.gz::https://codeberg.org/simonrepp/hyper8/archive/0.17.1.tar.gz
+	md5sums = bb565ed34c57e916bed30fd3b6443321
+
+pkgname = hyper8

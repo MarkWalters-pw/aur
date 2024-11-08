@@ -1,0 +1,21 @@
+pkgbase = pcloud-drive
+	pkgdesc = pCloud drive. Electron edition.
+	pkgver = 1.14.7
+	pkgrel = 1
+	url = https://www.pcloud.com/
+	arch = x86_64
+	license = custom
+	depends = fuse2
+	depends = zlib
+	depends = hicolor-icon-theme
+	optdepends = libappindicator-gtk3: Tray menu support
+	replaces = pcloud-git
+	replaces = pcloud
+	options = !strip
+	options = !debug
+	source = LICENSE
+	source = pcloud-drive-1.14.7-1.AppImage::https://p-def7.pcloud.com/cBZbBXIzaZIxXkUQ7ZZZFnmKkkZ2ZZsP7ZkZCE4xVZUzZcLZDHZXRZhRZCFZ1LZURZXLZ9pZjFZEzZtpZg8ZhPkU0ZzRl7NIuntFzH3ix40yPg9uSSrysV/pcloud
+	sha256sums = 9dce0249569d9dc9f00217009880458cf669a657ebb6604b4e52be4e875f1a42
+	sha256sums = 325dd87ed089c2ef862bc1829d37029b16ba66ff19146c38eb8c14aebee12e08
+
+pkgname = pcloud-drive

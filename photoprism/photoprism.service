@@ -1,0 +1,17 @@
+# Do not make manual changes to this file.
+# It will be overridden by package upgrades.
+# Use `systemctl edit photoprism` instead!
+
+[Unit]
+Description=Photoprism Service
+Documentation=https://docs.photoprism.app
+After=network.target
+
+[Service]
+User=photoprism
+Restart=on-failure
+RestartSec=10
+ExecStart=/usr/bin/photoprism start
+
+[Install]
+WantedBy=multi-user.target

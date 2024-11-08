@@ -1,0 +1,27 @@
+pkgbase = heimdall-grimler-git
+	pkgdesc = Actively maintained fork of Samsung phone firmware flashing tool
+	pkgver = 2.1.0.r1.1afaefb
+	pkgrel = 3
+	url = https://git.sr.ht/~grimler/Heimdall
+	arch = x86_64
+	arch = i686
+	license = MIT
+	makedepends = git
+	makedepends = cmake
+	makedepends = zlib
+	makedepends = qt5-base
+	depends = gcc-libs
+	depends = glibc
+	depends = libusb
+	optdepends = qt5-base: for Heimdall frontend
+	optdepends = zlib: for Heimdall frontend
+	provides = heimdall=2.1.0.r1.1afaefb
+	provides = heimdall-git=2.1.0.r1.1afaefb
+	conflicts = heimdall
+	conflicts = heimdall-git
+	source = Heimdall::git+https://git.sr.ht/~grimler/Heimdall
+	source = heimdall-frontend.desktop
+	sha512sums = SKIP
+	sha512sums = b9830d3f8d08132ecb2083b1cde875b500358a24dbae0b9217401d542beb5e121534949686a8fb58c8d6294b86cf81b806ca7c94327026017275cc4fbe8cf2a1
+
+pkgname = heimdall-grimler-git

@@ -1,0 +1,24 @@
+pkgbase = authentik-outpost-bin
+	pkgdesc = authentik is an open-source Identity Provider that emphasizes flexibility and versatility.
+	pkgver = 2024.8.0
+	pkgrel = 1
+	url = https://github.com/goauthentik/authentik
+	arch = x86_64
+	arch = aarch64
+	license = MIT
+	source = https://github.com/goauthentik/authentik/releases/download/version/2024.8.0/authentik-outpost-ldap_linux_amd64
+	source = https://github.com/goauthentik/authentik/releases/download/version/2024.8.0/authentik-outpost-proxy_linux_amd64
+	source = https://github.com/goauthentik/authentik/releases/download/version/2024.8.0/authentik-outpost-radius_linux_amd64
+	source = authentik-outpost-ldap.service
+	source = authentik-outpost-proxy.service
+	source = authentik-outpost-radius.service
+	source = authentik-outpost.env
+	sha512sums = 1ccf9dea91c55866fce79f92eb0df2c2cd6faec23ce42ca6ce64b3a08a10fa31ad7332b15d4c044bcca43a3967d191b24258e6a0a8751f761f2c9fd379dbcd81
+	sha512sums = 48487a486f60286f9a930096199ce3e2fda549e6884ec4338f51cea8cac6d179abaae50f4fffac863b24f3d861b22f58817be8e0181a5c25e173414365b65e69
+	sha512sums = df059078b01dfdea2408cd381b288fc1c596bdbd048679b268f20590350f9fcec580ed83387e859040ce46456fd005b1f558c0093575c24182fb17a3eba8337a
+	sha512sums = SKIP
+	sha512sums = SKIP
+	sha512sums = SKIP
+	sha512sums = SKIP
+
+pkgname = authentik-outpost-bin

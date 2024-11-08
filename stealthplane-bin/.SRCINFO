@@ -1,0 +1,22 @@
+pkgbase = stealthplane-bin
+	pkgdesc = A floating web browser app designed to stay on top of other windows for seamless multitasking.
+	pkgver = 1.1.0
+	pkgrel = 1
+	url = https://github.com/mahdi991613487/StealthPlane
+	arch = x86_64
+	license = MIT
+	makedepends = gendesk
+	depends = electron29
+	depends = nodejs
+	provides = stealthplane=1.1.0
+	conflicts = stealthplane
+	options = !strip
+	options = !emptydirs
+	source = stealthplane-1.1.0.zip::https://github.com/mahdi991613487/StealthPlane/releases/download/v1.1.0/stealthplane-linux-x64.zip
+	source = License-1.1.0.txt::https://raw.githubusercontent.com/mahdi991613487/StealthPlane/v1.1.0/LICENSE.txt
+	source = stealthplane.sh
+	sha256sums = afb46b0ec2ecc4b0f00ad6fab9199b1478e51974f711cd5ddcf2b743cc869a4d
+	sha256sums = 738958cc40fe219a82ef6b340c356dd696327904c72aaaffc25858124a5f96fc
+	sha256sums = 2b2e8aeed33fd71c521e49fd54fb2fa81218d16aef8bccb88d77909055ab8051
+
+pkgname = stealthplane-bin

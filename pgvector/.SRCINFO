@@ -1,0 +1,15 @@
+pkgbase = pgvector
+	pkgdesc = A vector similarity search extension for PostgreSQL
+	pkgver = 0.7.2
+	pkgrel = 1
+	url = https://github.com/pgvector/pgvector
+	arch = x86_64
+	arch = i686
+	license = custom
+	makedepends = llvm
+	makedepends = clang
+	depends = postgresql
+	source = https://github.com/pgvector/pgvector/archive/refs/tags/v0.7.2.tar.gz
+	sha256sums = 617fba855c9bcb41a2a9bc78a78567fd2e147c72afd5bf9d37b31b9591632b30
+
+pkgname = pgvector

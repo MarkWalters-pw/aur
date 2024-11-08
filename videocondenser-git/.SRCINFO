@@ -1,0 +1,22 @@
+pkgbase = videocondenser-git
+	pkgdesc = A tool that condenses videos by adjusting playback speed based on volume.
+	pkgver = r24.05cc4dc
+	pkgrel = 1
+	url = https://github.com/frank-monkey/videocondenser
+	arch = x86_64
+	license = GPL
+	makedepends = python-poetry-core
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = git
+	depends = python
+	depends = python-numpy
+	depends = python-audiotsm
+	depends = python-scipy
+	depends = ffmpeg
+	depends = python-ffmpeg-python
+	source = videocondenser-git::git+https://github.com/frank-monkey/videocondenser.git
+	sha256sums = SKIP
+
+pkgname = videocondenser-git

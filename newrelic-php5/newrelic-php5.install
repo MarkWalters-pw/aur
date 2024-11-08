@@ -1,0 +1,30 @@
+post_install() {
+    # Setup "newrelic"
+    useradd --system -M --home / --shell /sbin/nologin newrelic || true
+
+    # Setup permissions
+    mkdir -p /var/log/newrelic
+    chmod 755 /var/log/newrelic
+
+    # When first installing the package, the license key will not be set.
+    # Instead of throwing an error, we want to whine to the user and then exit cleanly.
+    if sed -e '/^[        ]*#/d' "${inifile}" 2>/dev/null | grep -q 'REPLACE_WITH_REAL_KEY' 2>/dev/null; then
+        if [ -z "${NR_SILENT}" ] && [ -z "${SILENT}" ]; then
+            echo "
+:: The service cannot be started until a valid licence is detected in:
+
+   /etc/php/conf.d/newrelic.ini
+
+:: Edit the above file and replace \"newrelic.license\" parameter with your licence key.
+:: More information here:
+
+   https://docs.newrelic.com/docs/apm/agents/php-agent/installation/php-agent-installation-overview/#install-overview
+"
+        fi
+        return 0
+    fi
+}
+
+post_remove() {
+    userdel newrelic || true
+}

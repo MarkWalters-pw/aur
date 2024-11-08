@@ -1,0 +1,15 @@
+pkgbase = zdns-git
+	pkgdesc = A command-line utility that provides high-speed DNS lookups.
+	pkgver = 1.1.0.569.937e22c
+	pkgrel = 2
+	url = https://github.com/zmap/zdns
+	arch = x86_64
+	license = Apache-2.0
+	makedepends = git
+	makedepends = go
+	depends = glibc
+	provides = zdns
+	source = zdns-git::git+https://github.com/zmap/zdns.git#branch=main
+	sha512sums = SKIP
+
+pkgname = zdns-git

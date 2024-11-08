@@ -1,0 +1,924 @@
+--- a/vmmon/Makefile
++++ b/vmmon/Makefile
+@@ -43,7 +43,11 @@
+ endif
+ 
+ 
++ifdef KVERSION
++VM_UNAME = $(KVERSION)
++else
+ VM_UNAME = $(shell uname -r)
++endif
+ 
+ # Header directory for the running kernel
+ ifdef LINUXINCLUDE
+@@ -100,6 +104,13 @@ auto-build: $(DRIVER_KO)
+ $(DRIVER): $(DRIVER_KO)
+ 	if [ $< -nt $@ ] || [ ! -e $@ ] ; then cp -f $< $@; fi
+ 
++# Use SUBDIRS on 2.x, 3.x, 4.x.  Use M on newer kernels.
++ifeq ($(filter-out 2 3 4,$(firstword $(subst ., ,$(VM_UNAME)))),)
++DIRVAR := SUBDIRS
++else
++DIRVAR := M
++endif
++
+ # Pass gcc version down the chain, so we can detect if kernel attempts to use unapproved compiler
+ VM_CCVER := $(VMCCVER)
+ export VM_CCVER
+@@ -117,7 +128,7 @@ prebuild:: ;
+ postbuild:: ;
+ 
+ $(DRIVER_KO): prebuild
+-	$(MAKE) -C $(BUILD_DIR) SUBDIRS=$$PWD SRCROOT=$$PWD/$(SRCROOT) \
++	$(MAKE) -C $(BUILD_DIR) $(DIRVAR)=$$PWD SRCROOT=$$PWD/$(SRCROOT) \
+ 	  MODULEBUILDDIR=$(MODULEBUILDDIR) modules
+ 	$(MAKE) -C $$PWD SRCROOT=$$PWD/$(SRCROOT) \
+ 	  MODULEBUILDDIR=$(MODULEBUILDDIR) postbuild
+--- a/vmmon/common/vmx86.c
++++ b/vmmon/common/vmx86.c
+@@ -58,7 +58,11 @@
+ #include "x86svm.h"
+ #include "x86cpuid_asm.h"
+ #if defined(linux)
++#if LINUX_VERSION_CODE < KERNEL_VERSION(6, 8, 0)
+ #include <asm/timex.h>
++#else
++#include <linux/timex.h>
++#endif
+ #endif
+ #include "x86perfctr.h"
+ 
+--- a/vmmon/include/pgtbl.h
++++ b/vmmon/include/pgtbl.h
+@@ -25,7 +25,9 @@
+ #include "compat_pgtable.h"
+ #include "compat_spinlock.h"
+ #include "compat_page.h"
++#include "compat_version.h"
+ 
++#if COMPAT_LINUX_VERSION_CHECK_LT(4, 10, 0)
+ 
+ /*
+  *-----------------------------------------------------------------------------
+@@ -107,17 +109,31 @@
+    return mpn;
+ }
+ 
++static INLINE MPN
++UserVa2MPN(VA addr)  // IN
++{
++   struct mm_struct *mm;
++   MPN mpn;
++
++   /* current->mm is NULL for kernel threads, so use active_mm. */
++   mm = current->active_mm;
++   spin_lock(&mm->page_table_lock);
++   mpn = PgtblVa2MPNLocked(mm, addr);
++   spin_unlock(&mm->page_table_lock);
++   return mpn;
++}
+ 
++#else
+ /*
+  *-----------------------------------------------------------------------------
+  *
+- * PgtblVa2MPN --
++ * UserVa2MPN --
+  *
+  *    Walks through the hardware page tables of the current process to try to
+  *    find the page structure associated to a virtual address.
+  *
+  * Results:
+- *    Same as PgtblVa2MPNLocked()
++ *    MPN associated with the given virtual address
+  *
+  * Side effects:
+  *    None
+@@ -126,17 +142,22 @@
+  */
+ 
+ static INLINE MPN
+-PgtblVa2MPN(VA addr)  // IN
++UserVa2MPN(VA addr)  // IN
+ {
+-   struct mm_struct *mm;
++   struct page *page;
++   int npages;
+    MPN mpn;
+ 
+-   /* current->mm is NULL for kernel threads, so use active_mm. */
+-   mm = current->active_mm;
+-   spin_lock(&mm->page_table_lock);
+-   mpn = PgtblVa2MPNLocked(mm, addr);
+-   spin_unlock(&mm->page_table_lock);
++   npages = get_user_pages_unlocked(addr, 1, &page, 0);
++   if (npages != 1) {
++      return INVALID_MPN;
++   }
++
++   mpn = page_to_pfn(page);
++   put_page(page);
++
+    return mpn;
+ }
++#endif /* COMPAT_LINUX_VERSION_CHECK_LT(4, 10, 0) */
+ 
+ #endif /* __PGTBL_H__ */
+--- a/vmmon/include/vm_basic_types.h
++++ b/vmmon/include/vm_basic_types.h
+@@ -921,6 +921,28 @@
+ #define ALIGNED(n)
+ #endif
+ 
++#ifndef __has_attribute
++# define __has_attribute(x) 0
++#endif
++
++/*
++ * COUNTED_BY attribute may be attached to the C99 flexible array
++ * member of a structure. It indicates that the number of the elements
++ * of the array is given by the field "member" in the same structure as
++ * the flexible array member. Compilers may use this information to
++ * improve detection of object size information for such structures
++ * and provide better results in compile-time diagnostics and runtime
++ * features like the array bound sanitizer.
++ *
++ * https://people.kernel.org/kees/bounded-flexible-arrays-in-c
++ */
++
++#if __has_attribute(__counted_by__)
++# define COUNTED_BY(member) __attribute__((__counted_by__(member)))
++#else
++# define COUNTED_BY(member)
++#endif
++
+ /*
+  * Once upon a time, this was used to silence compiler warnings that
+  * get generated when the compiler thinks that a function returns
+--- a/vmmon/include/x86cpuid.h
++++ b/vmmon/include/x86cpuid.h
+@@ -79,10 +79,10 @@
+ typedef
+ #include "vmware_pack_begin.h"
+ struct CPUIDQuery {
+-   uint32 eax;                // IN
+-   uint32 ecx;                // IN
+-   uint32 numLogicalCPUs;     // IN/OUT
+-   CPUIDReply logicalCPUs[0]; // OUT
++   uint32 eax;                                          // IN
++   uint32 ecx;                                          // IN
++   uint32 numLogicalCPUs;                               // IN/OUT
++   CPUIDReply logicalCPUs[] COUNTED_BY(numLogicalCPUs); // OUT
+ }
+ #include "vmware_pack_end.h"
+ CPUIDQuery;
+--- a/vmmon/include/x86msr.h
++++ b/vmmon/include/x86msr.h
+@@ -66,9 +66,9 @@
+ typedef
+ #include "vmware_pack_begin.h"
+ struct MSRQuery {
+-   uint32 msrNum;           // IN
+-   uint32 numLogicalCPUs;   // IN/OUT
+-   MSRReply logicalCPUs[0]; // OUT
++   uint32 msrNum;                                     // IN
++   uint32 numLogicalCPUs;                             // IN/OUT
++   MSRReply logicalCPUs[] COUNTED_BY(numLogicalCPUs); // OUT
+ }
+ #include "vmware_pack_end.h"
+ MSRQuery;
+--- a/vmmon/linux/driver.c
++++ b/vmmon/linux/driver.c
+@@ -104,7 +104,9 @@ long LinuxDriver_Ioctl(struct file *filp
+ 
+ static int LinuxDriver_Close(struct inode *inode, struct file *filp);
+ static unsigned int LinuxDriverPoll(struct file *file, poll_table *wait);
+-#if LINUX_VERSION_CODE >= KERNEL_VERSION(4, 11, 0)
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(4, 17, 0)
++static vm_fault_t LinuxDriverFault(struct vm_fault *fault);
++#elif LINUX_VERSION_CODE >= KERNEL_VERSION(4, 11, 0)
+ static int LinuxDriverFault(struct vm_fault *fault);
+ #elif defined(VMW_NOPAGE_2624)
+ static int LinuxDriverFault(struct vm_area_struct *vma, struct vm_fault *fault);
+@@ -115,7 +117,7 @@ static struct page *LinuxDriverNoPage(st
+ #endif
+ static int LinuxDriverMmap(struct file *filp, struct vm_area_struct *vma);
+ 
+-static void LinuxDriverPollTimeout(unsigned long clientData);
++static void LinuxDriverPollTimeout(struct timer_list *clientData);
+ static unsigned int LinuxDriverEstimateTSCkHz(void);
+ 
+ static struct vm_operations_struct vmuser_mops = {
+@@ -201,17 +203,8 @@
+    if (khz != 0) {
+       return khz;
+    }
+-   err = compat_smp_call_function_single(0, LinuxDriverEstimateTSCkHzWork,
+-                                         NULL, 1);
+-   /*
+-    * The smp function call may fail for two reasons, either
+-    * the function is not supportd by the kernel, or the cpu
+-    * went offline. In this unlikely event, we just perform
+-    * the work wherever we can.
+-    */
+-   if (err != 0) {
+-      LinuxDriverEstimateTSCkHzWork(NULL);
+-   }
++
++   LinuxDriverEstimateTSCkHzWork(NULL);
+ 
+    return Atomic_Read(&tsckHz);
+ }
+@@ -227,7 +229,7 @@ LinuxDriverEstimateTSCkHz(void)
+  *----------------------------------------------------------------------
+  */
+ static void
+-LinuxDriverEstimateTSCkHzDeferred(unsigned long data)
++LinuxDriverEstimateTSCkHzDeferred(struct timer_list *data)
+ {
+    LinuxDriverEstimateTSCkHz();
+ }
+@@ -265,9 +267,7 @@ LinuxDriverInitTSCkHz(void)
+    }
+ 
+    Vmx86_ReadTSCAndUptime(&tsckHzStartTime);
+-   tscTimer.function = LinuxDriverEstimateTSCkHzDeferred;
+    tscTimer.expires  = jiffies + 4 * HZ;
+-   tscTimer.data     = 0;
+    add_timer(&tscTimer);
+ }
+ 
+@@ -275,7 +275,7 @@
+ /*
+  *----------------------------------------------------------------------
+  *
+- * init_module --
++ * LinuxDriverInit --
+  *
+  *      linux module entry point. Called by /sbin/insmod command
+  *
+@@ -287,8 +287,8 @@
+  *----------------------------------------------------------------------
+  */
+ 
+-int
+-init_module(void)
++static int
++LinuxDriverInit(void)
+ {
+    int retval;
+ 
+@@ -309,9 +309,13 @@
+     */
+ 
+    init_waitqueue_head(&linuxState.pollQueue);
++#if LINUX_VERSION_CODE < KERNEL_VERSION(4, 15, 0) && !defined(timer_setup)
+    init_timer(&linuxState.pollTimer);
+    linuxState.pollTimer.data = 0;
+-   linuxState.pollTimer.function = LinuxDriverPollTimeout;
++   linuxState.pollTimer.function = (void *)LinuxDriverPollTimeout;
++#else
++   timer_setup(&linuxState.pollTimer, LinuxDriverPollTimeout, 0);
++#endif
+ 
+    linuxState.fastClockThread = NULL;
+    linuxState.fastClockFile = NULL;
+@@ -360,7 +364,13 @@
+        linuxState.deviceName, linuxState.major, linuxState.minor);
+ 
+    HostIF_InitUptime();
++#if LINUX_VERSION_CODE < KERNEL_VERSION(4, 15, 0) && !defined(timer_setup)
+    init_timer(&tscTimer);
++   tscTimer.function = (void *)LinuxDriverEstimateTSCkHzDeferred;
++   tscTimer.data = (unsigned long)&tscTimer;
++#else
++   timer_setup(&tscTimer, LinuxDriverEstimateTSCkHzDeferred, 0);
++#endif
+    LinuxDriverInitTSCkHz();
+    Vmx86_InitIDList();
+ 
+@@ -372,7 +382,7 @@
+ /*
+  *----------------------------------------------------------------------
+  *
+- * cleanup_module --
++ * LinuxDriverExit --
+  *
+  *      Called by /sbin/rmmod
+  *
+@@ -380,8 +390,8 @@
+  *----------------------------------------------------------------------
+  */
+ 
+-void
+-cleanup_module(void)
++static void
++LinuxDriverExit(void)
+ {
+    /*
+     * XXX smp race?
+@@ -741,14 +751,12 @@ void
+ LinuxDriverWakeUp(Bool selective)  // IN:
+ {
+    if (selective && linuxState.pollList != NULL) {
+-      struct timeval tv;
+       VmTimeType now;
+       VMLinux *p;
+       VMLinux *next;
+ 
+       HostIF_PollListLock(1);
+-      do_gettimeofday(&tv);
+-      now = tv.tv_sec * 1000000ULL + tv.tv_usec;
++      now = ktime_get_ns() / NSEC_PER_USEC;
+ 
+       for (p = linuxState.pollList; p != NULL; p = next) {
+          next = p->pollForw;
+@@ -815,12 +823,10 @@ LinuxDriverPoll(struct file *filp,  // I
+       }
+    } else {
+       if (linuxState.fastClockThread && vmLinux->pollTimeoutPtr != NULL) {
+-         struct timeval tv;
++         u64 now = ktime_get_ns() / NSEC_PER_USEC;
+ 
+-         do_gettimeofday(&tv);
+          poll_wait(filp, &vmLinux->pollQueue, wait);
+-         vmLinux->pollTime = *vmLinux->pollTimeoutPtr +
+-                                       tv.tv_sec * 1000000ULL + tv.tv_usec;
++         vmLinux->pollTime = *vmLinux->pollTimeoutPtr + now;
+          if (vmLinux->pollBack == NULL) {
+             HostIF_PollListLock(2);
+             if (vmLinux->pollBack == NULL) {
+@@ -858,7 +864,7 @@ LinuxDriverPoll(struct file *filp,  // I
+  */
+ 
+ static void
+-LinuxDriverPollTimeout(unsigned long clientData)  // IN:
++LinuxDriverPollTimeout(struct timer_list *clientData)  // IN:
+ {
+    LinuxDriverWakeUp(FALSE);
+ }
+@@ -884,7 +890,12 @@ LinuxDriverPollTimeout(unsigned long cli
+  */
+ 
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(4, 11, 0)
+-static int
++static
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(4, 17, 0)
++vm_fault_t
++#else
++int
++#endif
+ LinuxDriverFault(struct vm_fault *fault)     //IN/OUT
+ #elif defined(VMW_NOPAGE_2624)
+ static int LinuxDriverFault(struct vm_area_struct *vma, //IN
+@@ -1067,7 +1078,11 @@ LinuxDriverMmap(struct file *filp,
+       return err;
+    }
+    /* Clear VM_IO, otherwise SuSE's kernels refuse to do get_user_pages */
++#if COMPAT_LINUX_VERSION_CHECK_LT(6, 3, 0)
+    vma->vm_flags &= ~VM_IO;
++#else
++   vm_flags_clear(vma, VM_IO);
++#endif
+ 
+    return 0;
+ }
+@@ -2106,3 +2121,5 @@
+  * by default (i.e., neither mkinitrd nor modprobe will accept it).
+  */
+ MODULE_INFO(supported, "external");
++module_init(LinuxDriverInit);
++module_exit(LinuxDriverExit);
+--- a/vmmon/linux/hostif.c
++++ b/vmmon/linux/hostif.c
+@@ -68,6 +68,8 @@
+ #endif
+ 
+ #include <asm/io.h>
++#include <asm/tlbflush.h>
++#include <asm/irq_vectors.h>
+ #include <asm/uaccess.h>
+ #include <linux/mc146818rtc.h>
+ #include <linux/capability.h>
+@@ -77,6 +79,7 @@
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(4, 11, 0)
+ #include <linux/taskstats_kern.h> // For linux/sched/signal.h without version check
+ #endif
++#include <linux/eventfd.h>
+ 
+ #include "vmware.h"
+ #include "x86apic.h"
+@@ -118,6 +121,13 @@
+ #   define close_rtc(filp, files) filp_close(filp, files)
+ #endif
+ 
++/* task's state is read-once rather than volatile from 5.14-rc2. */
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(5, 15, 0) || defined(get_current_state)
++#define get_task_state(task) READ_ONCE((task)->__state)
++#else
++#define get_task_state(task) ((task)->state)
++#endif
++
+ #define UPTIME_FREQ CONST64(1000000)
+ 
+ /*
+@@ -477,7 +487,7 @@
+    while ((vcpuid = VCPUSet_FindFirst(&req)) != VCPUID_INVALID) {
+       struct task_struct *t = vm->vmhost->vcpuSemaTask[vcpuid];
+       VCPUSet_Remove(&req, vcpuid);
+-      if (t && (t->state & TASK_INTERRUPTIBLE)) {
++      if (t && (get_task_state(t) & TASK_INTERRUPTIBLE)) {
+          wake_up_process(t);
+       }
+    }
+@@ -629,6 +632,15 @@ HostIF_FastClockUnlock(int callerID) //
+    MutexUnlock(&fastClockMutex, callerID);
+ }
+ 
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(5, 8, 0)
++static int crosspage_set_exec(pte_t *pte, unsigned long addr, void *data)
++{
++	struct page *p = data;
++
++	set_pte(pte, mk_pte(p, VM_PAGE_KERNEL_EXEC));
++	return 0;
++}
++#endif
+ 
+ /*
+  *-----------------------------------------------------------------------------
+@@ -695,7 +707,29 @@ HostIF_PollListUnlock(int callerID) // I
+ static void *
+ MapCrossPage(struct page *p)  // IN:
+ {
++#if COMPAT_LINUX_VERSION_CHECK_LT(5, 8, 0)
+    return vmap(&p, 1, VM_MAP, VM_PAGE_KERNEL_EXEC);
++#else
++   void *addr;
++
++   addr = vmap(&p, 1, VM_MAP, VM_PAGE_KERNEL_EXEC);
++   if (!addr)
++	   return NULL;
++
++   /* Starting with 5.8, vmap() always sets the NX bit, but the cross
++    * page needs to be executable. */
++   if (apply_to_page_range(current->mm, (unsigned long)addr, PAGE_SIZE,
++			   crosspage_set_exec, p)) {
++      vunmap(addr);
++      return NULL;
++   }
++
++   preempt_disable();
++   __flush_tlb_all();
++   preempt_enable();
++
++   return addr;
++#endif
+ }
+ 
+ 
+@@ -1053,7 +1094,7 @@
+    void *uvAddr = VA64ToPtr(uAddr);
+    int retval = PAGE_LOCK_SUCCESS;
+ 
+-   *mpn = PgtblVa2MPN((VA)uvAddr);
++   *mpn = UserVa2MPN((VA)uvAddr);
+ 
+    /*
+     * On failure, check whether the page is locked.
+@@ -1081,7 +1122,7 @@
+             volatile int c;
+ 
+             get_user(c, (char *)uvAddr);
+-            *mpn = PgtblVa2MPN((VA)uvAddr);
++            *mpn = UserVa2MPN((VA)uvAddr);
+             if (*mpn == entryPtr->mpn) {
+ #ifdef VMX86_DEBUG
+                printk(KERN_DEBUG "Page %p disappeared from %s(%u)... "
+@@ -1164,16 +1198,7 @@ HostIFGetUserPages(void *uvAddr,
+ {
+    int retval;
+ 
+-   down_read(&current->mm->mmap_sem);
+-#if LINUX_VERSION_CODE >= KERNEL_VERSION(4, 9, 0)
+-   retval = get_user_pages((unsigned long)uvAddr, numPages, 0, ppages, NULL);
+-#elif LINUX_VERSION_CODE >= KERNEL_VERSION(4, 6, 0)
+-   retval = get_user_pages((unsigned long)uvAddr, numPages, 0, 0, ppages, NULL);
+-#else
+-   retval = get_user_pages(current, current->mm, (unsigned long)uvAddr,
+-                           numPages, 0, 0, ppages, NULL);
+-#endif
+-   up_read(&current->mm->mmap_sem);
++   retval = get_user_pages_fast((unsigned long)uvAddr, numPages, 0, ppages);
+ 
+    return retval != numPages;
+ }
+@@ -1359,11 +1391,11 @@
+       
+       /*
+        * Verify for debugging that VA and MPN make sense.
+-       * PgtblVa2MPN() can fail under high memory pressure.
++       * UserVa2MPN() can fail under high memory pressure.
+        */
+ 
+       if (va != NULL) {
+-         MPN lookupMpn = PgtblVa2MPN((VA)va);
++         MPN lookupMpn = UserVa2MPN((VA)va);
+ 
+          if (lookupMpn != INVALID_MPN && mpn != lookupMpn) {
+             Warning("Page lookup fail %#"FMT64"x %016" FMT64 "x %p\n",
+@@ -1574,9 +1599,13 @@ HostIF_EstimateLockedPageLimit(const VMD
+     * since at least 2.6.0.
+     */
+ 
++#if LINUX_VERSION_CODE < KERNEL_VERSION(5, 0, 0)
+    extern unsigned long totalram_pages;
+ 
+    unsigned int totalPhysicalPages = totalram_pages;
++#else
++   unsigned int totalPhysicalPages = totalram_pages();
++#endif
+ 
+ #if LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 28)
+    return MemDefaults_CalcMaxLockedPages(totalPhysicalPages);
+@@ -1594,17 +1623,36 @@ HostIF_EstimateLockedPageLimit(const VMD
+    unsigned int reservedPages = MEMDEFAULTS_MIN_HOST_PAGES;
+    unsigned int hugePages = (vm == NULL) ? 0 :
+       BYTES_2_PAGES(vm->memInfo.hugePageBytes);
+-   unsigned int lockedPages = global_page_state(NR_PAGETABLE) +
+-                              global_page_state(NR_SLAB_UNRECLAIMABLE) +
+-                              global_page_state(NR_UNEVICTABLE) +
+-                              hugePages + reservedPages;
+-   unsigned int anonPages =
++   unsigned int lockedPages = hugePages + reservedPages;
++   unsigned int anonPages;
++   unsigned int swapPages = BYTES_2_PAGES(linuxState.swapSize);
++
++   /* global_page_state is global_zone_page_state in 4.14. */
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(4, 14, 0)
++   lockedPages += global_zone_page_state(NR_PAGETABLE);
++#else
++   lockedPages += global_page_state(NR_PAGETABLE);
++#endif
++   /* NR_SLAB_* moved from zone to node in 4.13. */
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(5, 9, 0)
++   lockedPages += global_node_page_state_pages(NR_SLAB_UNRECLAIMABLE_B);
++#elif LINUX_VERSION_CODE >= KERNEL_VERSION(4, 13, 0)
++   lockedPages += global_node_page_state(NR_SLAB_UNRECLAIMABLE);
++#else
++   lockedPages += global_page_state(NR_SLAB_UNRECLAIMABLE);
++#endif
++   /* NR_UNEVICTABLE moved from global to node in 4.8. */
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(4, 8, 0)
+-      global_page_state(NR_ANON_MAPPED);
++   lockedPages += global_node_page_state(NR_UNEVICTABLE);
+ #else
+-      global_page_state(NR_ANON_PAGES);
++   lockedPages += global_page_state(NR_UNEVICTABLE);
++#endif
++   /* NR_ANON_MAPPED moved & changed name in 4.8. */
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(4, 8, 0)
++   anonPages = global_node_page_state(NR_ANON_MAPPED);
++#else
++   anonPages = global_page_state(NR_ANON_PAGES);
+ #endif
+-   unsigned int swapPages = BYTES_2_PAGES(linuxState.swapSize);
+ 
+    if (anonPages > swapPages) {
+       lockedPages += anonPages - swapPages; 
+@@ -1664,6 +1712,49 @@ HostIF_WaitForFreePages(unsigned int tim
+ /*
+  *----------------------------------------------------------------------
+  *
++ * HostIFGetTime --
++ *
++ *      Reads the current time in UPTIME_FREQ units.
++ *
++ * Results:
++ *      The uptime, in units of UPTIME_FREQ.
++ *
++ * Side effects:
++ *      None.
++ *
++ *----------------------------------------------------------------------
++ */
++
++static uint64
++HostIFGetTime(void)
++{
++#if LINUX_VERSION_CODE < KERNEL_VERSION(5, 0, 0)
++   struct timeval tv;
++
++   do_gettimeofday(&tv);
++   return tv.tv_usec * (UPTIME_FREQ / 1000000) + tv.tv_sec * UPTIME_FREQ;
++#else
++   struct timespec64 now;
++
++   /*
++    * Use raw time used by Posix timers.  This time is not affected by
++    * NTP adjustments, so it may drift from real time and monotonic time,
++    * but it will stay in sync with other timers.
++    */
++   ktime_get_raw_ts64(&now);
++   /*
++    * UPTIME_FREQ resolution is lower than tv_nsec,
++    * so we have to do division...
++    */
++   ASSERT_ON_COMPILE(1000000000 % UPTIME_FREQ == 0);
++   return now.tv_nsec / (1000000000 / UPTIME_FREQ) + now.tv_sec * UPTIME_FREQ;
++#endif
++}
++
++
++/*
++ *----------------------------------------------------------------------
++ *
+  * HostIFReadUptimeWork --
+  *
+  *      Reads the current uptime.  The uptime is based on getimeofday,
+@@ -1692,16 +1783,12 @@ HostIF_WaitForFreePages(unsigned int tim
+ static uint64
+ HostIFReadUptimeWork(unsigned long *j)  // OUT: current jiffies 
+ {
+-   struct timeval tv;
+    uint64 monotime, uptime, upBase, monoBase;
+    int64 diff;
+    uint32 version;
+    unsigned long jifs, jifBase;
+    unsigned int attempts = 0;
+ 
+-   /* Assert that HostIF_InitUptime has been called. */
+-   ASSERT(uptimeState.timer.function);
+-
+  retry:
+    do {
+       version  = VersionedAtomic_BeginTryRead(&uptimeState.version);
+@@ -1710,13 +1797,12 @@ HostIFReadUptimeWork(unsigned long *j)
+       monoBase = uptimeState.monotimeBase;
+    } while (!VersionedAtomic_EndTryRead(&uptimeState.version, version));
+ 
+-   do_gettimeofday(&tv);
++   uptime = HostIFGetTime();
+    upBase = Atomic_Read64(&uptimeState.uptimeBase);
+    
+    monotime = (uint64)(jifs - jifBase) * (UPTIME_FREQ / HZ);
+    monotime += monoBase;
+ 
+-   uptime = tv.tv_usec * (UPTIME_FREQ / 1000000) + tv.tv_sec * UPTIME_FREQ;
+    uptime += upBase;
+    
+    /* 
+@@ -1767,7 +1853,7 @@ HostIFReadUptimeWork(unsigned long *j)
+  */
+ 
+ static void
+-HostIFUptimeResyncMono(unsigned long data)  // IN: ignored
++HostIFUptimeResyncMono(struct timer_list *timer)  // IN: ignored
+ {
+    unsigned long jifs;
+    uintptr_t flags;
+@@ -1821,16 +1907,19 @@ HostIFUptimeResyncMono(unsigned long dat
+ void
+ HostIF_InitUptime(void)
+ {
+-   struct timeval tv;
++   uint64 tm;
+ 
+    uptimeState.jiffiesBase = jiffies;
+-   do_gettimeofday(&tv);
+-   Atomic_Write64(&uptimeState.uptimeBase, 
+-                  -(tv.tv_usec * (UPTIME_FREQ / 1000000) + 
+-                    tv.tv_sec * UPTIME_FREQ));
++   tm = HostIFGetTime();
++   Atomic_Write64(&uptimeState.uptimeBase, -tm);
+ 
++#if LINUX_VERSION_CODE < KERNEL_VERSION(4, 15, 0) && !defined(timer_setup)
+    init_timer(&uptimeState.timer);
+-   uptimeState.timer.function = HostIFUptimeResyncMono;
++   uptimeState.timer.function = (void *)HostIFUptimeResyncMono;
++   uptimeState.timer.data = (unsigned long)&uptimeState.timer;
++#else
++   timer_setup(&uptimeState.timer, HostIFUptimeResyncMono, 0);
++#endif
+    mod_timer(&uptimeState.timer, jiffies + HZ);
+ }
+ 
+@@ -2246,16 +2335,26 @@ HostIF_VMLockIsHeld(VMDriver *vm) // IN
+ static Bool
+ isVAReadable(VA r)  // IN:
+ {
+-   mm_segment_t old_fs;
+    uint32 dummy;
+    int ret;
+    
++#if defined(HAVE_GET_KERNEL_NOFAULT) || LINUX_VERSION_CODE >= KERNEL_VERSION(5, 17, 0)
++   /*
++    * Exists from 5.10, first indicated by HAVE_GET_KERNEL_NOFAULT,
++    * and from post-5.17 just existing everywhere.
++    */
++   ret = get_kernel_nofault(dummy, (void *)r);
++#else
++   {
++   mm_segment_t old_fs;
++ 
+    old_fs = get_fs();
+-   set_fs(get_ds());
++   set_fs(KERNEL_DS);
+    r = APICR_TO_ADDR(r, APICR_VERSION);
+    ret = HostIF_CopyFromUser(&dummy, (void*)r, sizeof(dummy));
+    set_fs(old_fs);
+-
++   }
++#endif
+    return ret == 0;
+ }
+ 
+@@ -2284,7 +2379,7 @@ SetVMAPICAddr(VMDriver *vm, // IN/OUT: d
+    volatile void *hostapic;
+ 
+    ASSERT_ON_COMPILE(APICR_SIZE <= PAGE_SIZE);
+-   hostapic = (volatile void *) ioremap_nocache(ma, PAGE_SIZE);
++   hostapic = (volatile void *) ioremap(ma, PAGE_SIZE);
+    if (hostapic) {
+       if ((APIC_VERSIONREG(hostapic) & 0xF0) == 0x10) {
+ 	 vm->hostAPIC.base = (volatile uint32 (*)[4]) hostapic;
+@@ -2440,7 +2535,6 @@ HostIF_SemaphoreWait(VMDriver *vm,   //
+                      uint64 *args)   // IN:
+ {
+    struct file *file;
+-   mm_segment_t old_fs;
+    int res;
+    int waitFD = args[0];
+    int timeoutms = args[2];
+@@ -2451,22 +2545,19 @@ HostIF_SemaphoreWait(VMDriver *vm,   //
+       return MX_WAITERROR;
+    }
+ 
+-   old_fs = get_fs();
+-   set_fs(get_ds());
+-
+    {
+       struct poll_wqueues table;
+       unsigned int mask;
+       
+       poll_initwait(&table);
+-      current->state = TASK_INTERRUPTIBLE;
++      __set_current_state(TASK_INTERRUPTIBLE);
+       mask = file->f_op->poll(file, &table.pt);
+       if (!(mask & (POLLIN | POLLERR | POLLHUP))) {
+          vm->vmhost->vcpuSemaTask[vcpuid] = current;
+          schedule_timeout(timeoutms * HZ / 1000);  // convert to Hz
+          vm->vmhost->vcpuSemaTask[vcpuid] = NULL;
+       }
+-      current->state = TASK_RUNNING;
++      __set_current_state(TASK_RUNNING);
+       poll_freewait(&table);
+    }
+ 
+@@ -2475,9 +2566,11 @@ HostIF_SemaphoreWait(VMDriver *vm,   //
+     * the code to happily deal with a pipe or an eventfd. We only care about
+     * reading no bytes (EAGAIN - non blocking fd) or sizeof(uint64).
+     */
+-
+-   res = file->f_op->read(file, (char *) &value, sizeof value, &file->f_pos);
+-
++#if LINUX_VERSION_CODE < KERNEL_VERSION(4, 14, 0)
++   res = kernel_read(file, file->f_pos, (char *)&value, sizeof value);
++#else
++   res = kernel_read(file, &value, sizeof value, &file->f_pos);
++#endif
+    if (res == sizeof value) {
+       res = MX_WAITNORMAL;
+    } else {
+@@ -2486,7 +2579,6 @@ HostIF_SemaphoreWait(VMDriver *vm,   //
+       }
+    }
+ 
+-   set_fs(old_fs);
+    fput(file);
+ 
+    /*
+@@ -2539,7 +2638,7 @@
+    FOR_EACH_VCPU_IN_SET(vcs, vcpuid) {
+       struct task_struct *t = vm->vmhost->vcpuSemaTask[vcpuid];
+       vm->vmhost->vcpuSemaTask[vcpuid] = NULL;
+-      if (t && (t->state & TASK_INTERRUPTIBLE)) {
++      if (t && (get_task_state(t) & TASK_INTERRUPTIBLE)) {
+          wake_up_process(t);
+       }
+    } ROF_EACH_VCPU_IN_SET();
+@@ -2569,8 +2668,8 @@ HostIF_SemaphoreForceWakeup(VMDriver *vm
+ int
+ HostIF_SemaphoreSignal(uint64 *args)  // IN:
+ {
++   struct eventfd_ctx *eventfd;
+    struct file *file;
+-   mm_segment_t old_fs;
+    int res;
+    int signalFD = args[1];
+    uint64 value = 1;  // make an eventfd happy should it be there
+@@ -2580,22 +2672,36 @@ HostIF_SemaphoreSignal(uint64 *args)  //
+       return MX_WAITERROR;
+    }
+ 
+-   old_fs = get_fs();
+-   set_fs(get_ds());
++   /*
++    * If it's eventfd, use specific eventfd interface as kernel writes
++    * to eventfd may not be allowed in kernel 5.10 and later.
++    */
++   eventfd = eventfd_ctx_fileget(file);
++   if (!IS_ERR(eventfd)) {
++#if COMPAT_LINUX_VERSION_CHECK_LT(6, 8, 0)
++      eventfd_signal(eventfd, 1);
++#else
++      eventfd_signal(eventfd);
++#endif
++      fput(file);
++      return MX_WAITNORMAL;
++   }
+ 
+    /*
+     * Always write sizeof(uint64) bytes. This works fine for eventfd and
+     * pipes. The data written is formatted to make an eventfd happy should
+     * it be present.
+     */
+-
+-   res = file->f_op->write(file, (char *) &value, sizeof value, &file->f_pos);
++#if LINUX_VERSION_CODE < KERNEL_VERSION(4, 14, 0)
++   res = kernel_write(file, (char *)&value, sizeof value, file->f_pos);
++#else
++   res = kernel_write(file, &value, sizeof value, &file->f_pos);
++#endif
+ 
+    if (res == sizeof value) {
+       res = MX_WAITNORMAL;
+    }
+ 
+-   set_fs(old_fs);
+    fput(file);
+ 
+    /*
+@@ -2834,7 +2951,7 @@
+  *-----------------------------------------------------------------------------
+  */
+ 
+-Bool
++static Bool
+ HostIFCheckTrackedMPN(VMDriver *vm, // IN: The VM instance
+                       MPN mpn)      // IN: The MPN
+ {
+@@ -3256,7 +3373,7 @@
+  *----------------------------------------------------------------------
+  */
+ 
+-int
++static int
+ HostIFStartTimer(Bool rateChanged,  //IN: Did rate change? 
+ 		 unsigned int rate, //IN: current clock rate
+                  struct file *filp) //IN: /dev/rtc descriptor
+@@ -3364,12 +3466,9 @@ HostIFFastClockThread(void *data)  // IN
+ {
+    struct file *filp = (struct file *) data;
+    int res;
+-   mm_segment_t oldFS;
+    unsigned int rate = 0;
+    unsigned int prevRate = 0;
+ 
+-   oldFS = get_fs();
+-   set_fs(KERNEL_DS);
+    allow_signal(SIGKILL);
+    set_user_nice(current, linuxState.fastClockPriority);
+ 
+@@ -3403,8 +3502,6 @@ HostIFFastClockThread(void *data)  // IN
+ 
+  out:
+    LinuxDriverWakeUp(TRUE);
+-   set_fs(oldFS);
+-
+    /*
+     * Do not exit thread until we are told to do so.
+     */
+@@ -3524,7 +3621,6 @@ HostIF_SetFastClockRate(unsigned int rat
+       }
+    } else {
+       if (linuxState.fastClockThread) {
+-         force_sig(SIGKILL, linuxState.fastClockThread);
+          kthread_stop(linuxState.fastClockThread);
+ 	 close_rtc(linuxState.fastClockFile, current->files);
+ 
+@@ -3572,7 +3668,12 @@ HostIF_MapUserMem(VA addr,
+ 
+    ASSERT(handle);
+ 
+-   if (!access_ok(VERIFY_WRITE, p, size)) {
++#if LINUX_VERSION_CODE < KERNEL_VERSION(5, 0, 0)
++   if (!access_ok(VERIFY_WRITE, p, size))
++#else
++   if (!access_ok(p, size))
++#endif
++   {
+       printk(KERN_ERR "%s: Couldn't verify write to uva 0x%p with size %"
+              FMTSZ"u\n", __func__, p, size);
+ 

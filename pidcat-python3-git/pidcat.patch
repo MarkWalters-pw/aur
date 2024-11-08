@@ -1,0 +1,10 @@
+diff --git a/pidcat.py b/pidcat.py
+index 6a23786..4a2b42f 100755
+--- a/pidcat.py
++++ b/pidcat.py
+@@ -359,4 +359,4 @@ def tag_in_tags_regex(tag, tags):
+     message = matcher.sub(replace, message)
+   linebuf += indent_wrap(message)
+-  print(linebuf.encode('utf-8'))
++  print(linebuf)
+

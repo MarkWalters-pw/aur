@@ -1,0 +1,26 @@
+pkgbase = upscayl-rpm-bin
+	pkgdesc = Free and Open Source AI Image Upscaler (binary release, system Electron)
+	pkgver = 2.11.5
+	pkgrel = 2
+	url = https://github.com/upscayl/upscayl
+	arch = x86_64
+	license = AGPL-3.0-only
+	depends = at-spi2-core
+	depends = electron
+	depends = gtk3
+	depends = libnotify
+	depends = libsecret
+	depends = libxss
+	depends = libxtst
+	depends = nss
+	depends = util-linux-libs
+	depends = vulkan-icd-loader
+	depends = xdg-utils
+	optdepends = libappindicator-gtk3
+	provides = upscayl
+	provides = upscayl-bin
+	conflicts = upscayl
+	source = https://github.com/upscayl/upscayl/releases/download/v2.11.5/upscayl-2.11.5-linux.rpm
+	sha256sums = e98aabf3dcbfd8c83e847f05e4ed7a0a077ec61d5d2e9e859825dc671d6cda4a
+
+pkgname = upscayl-rpm-bin

@@ -1,0 +1,21 @@
+pkgbase = simplest-file-renamer-git
+	pkgdesc = Rename your files directly or with your favorite text editor, making use of all your 1337 keyboard shortcuts.Use system-wide electron.
+	pkgver = 1.0.0.r73.g9eea2f0
+	pkgrel = 1
+	url = https://github.com/whyboris/Simplest-File-Renamer
+	arch = any
+	license = MIT
+	makedepends = gendesk
+	makedepends = git
+	makedepends = npm
+	makedepends = nvm
+	makedepends = curl
+	depends = electron31
+	provides = simplest-file-renamer
+	conflicts = simplest-file-renamer
+	source = simplest-file-renamer.git::git+https://github.com/whyboris/Simplest-File-Renamer.git
+	source = simplest-file-renamer.sh
+	sha256sums = SKIP
+	sha256sums = 291f50480f5a61bc9c68db7d44cd0412071128706baa868a9cb854f8779a1980
+
+pkgname = simplest-file-renamer-git

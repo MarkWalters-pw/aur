@@ -1,0 +1,23 @@
+pkgbase = python-oct2py
+	pkgdesc = Python to GNU Octave bridge --> run m-files from python
+	pkgver = 5.7.2
+	pkgrel = 1
+	url = http://github.com/blink1073/oct2py
+	arch = any
+	license = MIT
+	checkdepends = python-pytest-timeout
+	checkdepends = octave-signal
+	checkdepends = python-pandas
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-hatchling
+	makedepends = python-wheel
+	depends = python-scipy
+	depends = jupyter-octave_kernel
+	depends = gnuplot
+	optdepends = python-pandas: for Pandas DataFrames and Series support
+	source = oct2py-5.7.2.tar.gz::http://github.com/blink1073/oct2py/archive/v5.7.2.tar.gz
+	b2sums = 824c28c81ee6fd1770a37799c7e231be0877e4cf74b3af770a5d1c6f69a11ebfbfaface435ebcb99b02b8fc33abb3402c57b984d40e48418ff543cd5c8a2242f
+
+pkgname = python-oct2py

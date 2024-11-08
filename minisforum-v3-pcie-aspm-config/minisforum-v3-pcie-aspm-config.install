@@ -1,0 +1,11 @@
+post_install() {
+	echo "
+	If you're using UKI and do not have \`mkinitcpio-cmdline-pacman-hook\` installed:
+		1. Rebuild initramfs with \`mkinitcpio -P\`
+	"
+	echo "
+	If you're not using UKI:
+		1. Add \`pcie_aspm.policy=powersupersave\` to your kernel params
+		2. Rebuild initramfs with \`mkinitcpio -P\`
+	"
+}

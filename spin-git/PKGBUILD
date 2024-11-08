@@ -1,0 +1,41 @@
+# Maintainer: Kuan-Yen Chou <kuanyenchou@gmail.com>
+
+pkgname=spin-git
+pkgver=6.5.2.r48.g043fc11
+pkgrel=1
+pkgdesc='Explicit state logic model checking tool'
+depends=('glibc')
+optdepends=('tcl: ispin graphical interface'
+            'ispin: GUI for Spin')
+arch=('i686' 'x86_64')
+url='https://spinroot.com/'
+license=('custom:BSD3')
+provides=('spin')
+conflicts=('spin')
+source=("$pkgname"::'git+https://github.com/nimble-code/Spin')
+sha512sums=('SKIP')
+
+pkgver() {
+    cd "$srcdir/$pkgname"
+    if git describe --long --tags >/dev/null 2>&1; then
+        git describe --long --tags | sed 's/^version-//;s/\([^-]*-g\)/r\1/;s/-/./g'
+    else
+        printf 'r%s.%s' "$(git rev-list --count HEAD)" "$(git describe --always)"
+    fi
+}
+
+build() {
+    cd "$srcdir/$pkgname"
+    make -C Src
+    gzip -9c Man/spin.1 > Man/spin.1.gz
+}
+
+package() {
+    cd "$srcdir/$pkgname"
+    install -Dm 755 Src/spin "${pkgdir}/usr/bin/spin"
+    install -Dm 644 Src/LICENSE "${pkgdir}/usr/share/licenses/spin/LICENSE"
+    install -Dm 644 Man/spin.1.gz "${pkgdir}/usr/share/man/man1/spin.1.gz"
+    install -d "${pkgdir}/usr/share/doc/spin/examples"
+    find Examples/ -type f -exec chmod 644 {} +
+    cp -a Examples/* "${pkgdir}/usr/share/doc/spin/examples/"
+}

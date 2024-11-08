@@ -1,0 +1,18 @@
+pkgbase = igdm-bin
+	pkgdesc = Desktop application for Instagram DMs
+	pkgver = 3.0.4
+	pkgrel = 10
+	url = https://github.com/igdmapps/igdm
+	arch = x86_64
+	license = MIT
+	depends = electron10
+	provides = igdm=3.0.4
+	conflicts = igdm
+	source = igdm-3.0.4.deb::https://github.com/igdmapps/igdm/releases/download/v3.0.4/IGdm_3.0.4_amd64.deb
+	source = LICENSE-3.0.4::https://raw.githubusercontent.com/igdmapps/igdm/v3.0.4/LICENSE
+	source = igdm.sh
+	sha256sums = c65181d96bc3886b77e37fe76d4a17626399ed3253a6353b78759fe0a1e40d99
+	sha256sums = cfe59b21a32217b32573315adbcc0f3621aeaa8dec634e54eb30a0cf260867cc
+	sha256sums = 2b2e8aeed33fd71c521e49fd54fb2fa81218d16aef8bccb88d77909055ab8051
+
+pkgname = igdm-bin

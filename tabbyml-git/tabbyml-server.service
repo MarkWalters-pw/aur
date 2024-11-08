@@ -1,0 +1,14 @@
+[Unit]
+Description=Tabby AI coding assistant
+After=network.target
+
+[Service]
+Type=simple
+User=tabbyml
+Group=tabbyml
+WorkingDirectory=/opt/tabbyml
+EnvironmentFile=/etc/tabbyml/server.conf
+ExecStart=/bin/bash -c '/opt/tabbyml/bin/tabby serve ${TABBY_ARGS:+$TABBY_ARGS}'
+
+[Install]
+WantedBy=multi-user.target

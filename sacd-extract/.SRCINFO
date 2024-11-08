@@ -1,0 +1,15 @@
+pkgbase = sacd-extract
+	pkgdesc = Extract DSD files from an SACD image
+	pkgver = 0.3.9.3
+	pkgrel = 1
+	url = https://sacd-ripper.github.io/
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = cmake
+	makedepends = git
+	depends = glibc
+	source = git+https://github.com/sacd-ripper/sacd-ripper.git#tag=0.3.9.3
+	b2sums = 005d101bf9bb4a0c55f718a83727a781cbe8f0b2fc3e76e8129c9d9e8e1d23d32fb38243e2643d0bc2770d61a21522e39a094d76e7e229c2414fa5b514bd70e9
+
+pkgname = sacd-extract

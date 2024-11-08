@@ -1,0 +1,25 @@
+pkgbase = random-browser-git
+	pkgdesc = A little experiment of an internet browser.Use system-wide electron.
+	pkgver = 2.0.0.r0.g81835b1
+	pkgrel = 1
+	url = https://github.com/YisusGaming/random-browser
+	arch = x86_64
+	license = CC-BY-NC-ND-4.0
+	makedepends = gendesk
+	makedepends = git
+	makedepends = npm
+	makedepends = nvm
+	makedepends = yarn
+	makedepends = icoutils
+	depends = electron22
+	depends = nodejs
+	provides = random-browser
+	conflicts = random-browser
+	options = !strip
+	options = !emptydirs
+	source = random-browser.git::git+https://github.com/YisusGaming/random-browser.git
+	source = random-browser.sh
+	sha256sums = SKIP
+	sha256sums = 291f50480f5a61bc9c68db7d44cd0412071128706baa868a9cb854f8779a1980
+
+pkgname = random-browser-git

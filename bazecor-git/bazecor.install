@@ -1,0 +1,14 @@
+# This manually calls the same script that the normal pacman post-install script uses to reload
+# udev. We need to do this explicitly rather than relying on the automatic pacman hook because the
+# hook detects changes to /usr/lib/udev/rules.d rather than /etc/udev/rules.d. We need to install
+# the rules into the /etc location because that is the location that the bazecore checks for the
+# rules. If this install location was not used then the first time bazecore runs it would prompt the
+# user to install the rules
+_reload_udev () {
+    echo "Reloading udev..."
+    /usr/share/libalpm/scripts/systemd-hook udev-reload
+}
+
+post_install () { _reload_udev; }
+post_upgrade () { _reload_udev; }
+post_remove () { _reload_udev; }

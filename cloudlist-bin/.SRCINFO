@@ -1,0 +1,22 @@
+pkgbase = cloudlist-bin
+	pkgdesc = Tool for listing Assets from multiple Cloud Providers
+	pkgver = 1.1.0
+	pkgrel = 1
+	url = https://docs.projectdiscovery.io/tools/cloudlist
+	arch = x86_64
+	arch = i686
+	arch = aarch64
+	arch = arm
+	license = MIT
+	provides = cloudlist
+	conflicts = cloudlist
+	source_x86_64 = cloudlist-1.1.0-x86_64.zip::https://github.com/projectdiscovery/cloudlist/releases/download/v1.1.0/cloudlist_1.1.0_linux_amd64.zip
+	sha256sums_x86_64 = 3bcfd2f472024390ab4e6034276420b6d6d877f2c3e2635e78e4b825a159bba3
+	source_i686 = cloudlist-1.1.0-i686.zip::https://github.com/projectdiscovery/cloudlist/releases/download/v1.1.0/cloudlist_1.1.0_linux_386.zip
+	sha256sums_i686 = 0014d6fe87edce235eb851f7d169f309238d0e128aca15480a6cc6886e3085cc
+	source_aarch64 = cloudlist-1.1.0-aarch64.zip::https://github.com/projectdiscovery/cloudlist/releases/download/v1.1.0/cloudlist_1.1.0_linux_arm64.zip
+	sha256sums_aarch64 = afbb83459360c8bdc4e0b93034cd56840de276dc03ff34f8b6534fc22294ddd5
+	source_arm = cloudlist-1.1.0-arm.zip::https://github.com/projectdiscovery/cloudlist/releases/download/v1.1.0/cloudlist_1.1.0_linux_arm.zip
+	sha256sums_arm = ed3f4049c090a6c049d0d42ea13436dcc021b4a655b6818b064a2624788b133c
+
+pkgname = cloudlist-bin

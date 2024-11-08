@@ -1,0 +1,16 @@
+pkgbase = vrc-get
+	pkgdesc = Open Source command line client of VRChat Package Manager
+	pkgver = 1.8.2
+	pkgrel = 2
+	url = https://github.com/anatawa12/vrc-get
+	arch = x86_64
+	license = MIT
+	makedepends = cargo
+	makedepends = dotnet-sdk
+	depends = gcc-libs
+	depends = glibc
+	options = !lto
+	source = vrc-get-1.8.2.tar.gz::https://github.com/anatawa12/vrc-get/archive/refs/tags/v1.8.2.tar.gz
+	sha256sums = 9dbbaa1addf018e139d87678f8669d0b025502be38afd46f8abd736a3784813c
+
+pkgname = vrc-get

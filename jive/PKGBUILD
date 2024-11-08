@@ -1,0 +1,41 @@
+# Maintainer: Antonio Bartalesi <antonio.bartalesi@gmail.com>
+
+_name="Jive"
+pkgname=${_name,,}
+pkgver=7.44
+_jarfile="${_name}-${pkgver}-jar-with-dependencies.jar"
+pkgrel=1
+pkgdesc="A standalone JAVA application designed to browse and edit the static TANGO database"
+arch=("any")
+url="https://gitlab.com/tango-controls/${_name}"
+license=("GPL-3.0-or-later")
+depends=(java-runtime=17 sh hicolor-icon-theme)
+makedepends=(maven jre17-openjdk)
+source=(
+  https://gitlab.com/tango-controls/${pkgname}/-/archive/${pkgver}/${pkgname}-${pkgver}.tar.gz
+  launcher
+  jive.desktop
+)
+sha256sums=(
+  "18cd2d8f1bee665882867a6b198e39aa967874068f76100fd483a471947bca96"
+  "49f16c646996c55fa65f66b8eb8c948950834a93e9a75c71c9fd1b110d401eee"
+  "1b0d8707be20236241e2d84575227f809c93d239783f14b626c896480927d500"
+)
+
+prepare() {
+  sed -i "s/jar_file/$_jarfile/" launcher
+  sed -i "s/package_name/$pkgname/" launcher
+}
+
+build() {
+  cd ${pkgname}-${pkgver}
+  export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
+  mvn clean package
+}
+
+package() {
+  install -D -m755 ${srcdir}/${pkgname}-${pkgver}/target/${_jarfile} ${pkgdir}/usr/share/java/${pkgname}/${_jarfile}
+  install -D -m755 ${srcdir}/launcher ${pkgdir}/usr/bin/${pkgname}
+  install -D -m755 ${srcdir}/jive.desktop ${pkgdir}/usr/share/applications/jive.desktop
+  install -D -m755 ${srcdir}/${pkgname}-${pkgver}/src/main/resources/jive/jive.png ${pkgdir}/usr/share/icons/hicolor/48x48/apps/jive.png
+}

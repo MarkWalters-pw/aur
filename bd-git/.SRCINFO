@@ -1,0 +1,15 @@
+pkgbase = bd-git
+	pkgdesc = Quickly go back to a parent directory instead of typing "cd ../../.." repeatedly
+	pkgver = v1.03.r2.g4277ad8
+	pkgrel = 1
+	url = https://github.com/vigneshwaranr/bd
+	arch = any
+	license = MIT
+	makedepends = git
+	depends = bash
+	provides = bd
+	conflicts = bd
+	source = bd::git+https://github.com/vigneshwaranr/bd.git
+	md5sums = SKIP
+
+pkgname = bd-git

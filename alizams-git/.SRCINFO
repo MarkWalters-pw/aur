@@ -1,0 +1,25 @@
+pkgbase = alizams-git
+	pkgdesc = Qt6 DICOM Viewer
+	pkgver = 1.9.10.r16.g784b25b
+	pkgrel = 1
+	url = https://www.aliza-dicom-viewer.com/
+	arch = x86_64
+	arch = i686
+	arch = arm
+	arch = armv6h
+	arch = armv7h
+	arch = aarch64
+	license = GPL3
+	makedepends = git
+	makedepends = cmake
+	makedepends = eigen
+	makedepends = qt6-svg
+	depends = qt6-base
+	depends = qt6-5compat
+	depends = insight-toolkit
+	provides = alizams
+	conflicts = alizams
+	source = git+https://github.com/AlizaMedicalImaging/AlizaMS.git
+	sha256sums = SKIP
+
+pkgname = alizams-git
