@@ -1,0 +1,23 @@
+pkgbase = chewing-editor-git
+	pkgdesc = Cross platform chewing user phrase editor
+	pkgver = 0.1.1.r46.g11841ff
+	pkgrel = 2
+	url = https://chewing.im/
+	arch = i686
+	arch = x86_64
+	license = GPL
+	checkdepends = valgrind
+	makedepends = git
+	makedepends = cmake
+	makedepends = help2man
+	makedepends = qt5-tools
+	depends = glibc
+	depends = hicolor-icon-theme
+	depends = libchewing
+	depends = qt5-base
+	provides = chewing-editor=0.1.1.r46.g11841ff
+	conflicts = chewing-editor
+	source = git+https://github.com/chewing/chewing-editor.git
+	sha256sums = SKIP
+
+pkgname = chewing-editor-git

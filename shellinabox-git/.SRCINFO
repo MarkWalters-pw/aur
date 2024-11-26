@@ -1,0 +1,21 @@
+pkgbase = shellinabox-git
+	pkgdesc = Implementation of a web server that can export arbitrary command line tools to a web based terminal emulator
+	pkgver = r431.4f0ecc3
+	pkgrel = 1
+	url = https://github.com/shellinabox/shellinabox
+	arch = any
+	license = GPL2
+	makedepends = git
+	makedepends = gcc
+	makedepends = autoconf
+	makedepends = automake
+	depends = pam
+	depends = openssl
+	backup = usr/lib/systemd/system/shellinabox@.service
+	source = shellinabox@.service
+	source = git+https://github.com/shellinabox/shellinabox
+	md5sums = 9778d64973cd9dd7cf2225cd9af0cd09
+	md5sums = SKIP
+
+pkgname = shellinabox-git
+

@@ -1,0 +1,34 @@
+post_install() {
+    chown -R airvpn:airvpn /etc/airvpn
+    echo "############################################################"
+    echo "#                >>> Group airvpn created <<<              #"
+    echo "# If you want to be able to execute goldcrest as your user #"
+    echo "# add it to the created group using:                       #"
+    echo "#                                                          #"
+    echo "# sudo usermod -aG airvpn <username>                       #"
+    echo "############################################################"
+    systemctl daemon-reload
+    systemctl reload dbus.service
+}
+
+pre_upgrade() {
+    systemctl stop bluetit.service
+}
+
+post_upgrade() {
+    chown -R airvpn:airvpn /etc/airvpn
+    systemctl daemon-reload
+    systemctl reload dbus.service
+}
+
+pre_remove() {
+    systemctl stop bluetit.service
+    systemctl disable bluetit.service
+}
+
+post_remove() {
+    userdel -r airvpn 2>/dev/null
+    getent group airvpn >/dev/null && gpasswd airvpn -M "" && groupdel airvpn
+    systemctl daemon-reload
+    systemctl reload dbus.service
+}

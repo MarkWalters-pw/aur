@@ -1,0 +1,19 @@
+pkgbase = mediaconch
+	pkgdesc = Implementation checker and policy checker for video and audio files (CLI)
+	pkgver = 22.09
+	pkgrel = 1
+	url = http://mediaarea.net
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = libtool
+	makedepends = automake
+	makedepends = autoconf
+	depends = libmediainfo
+	depends = sqlite
+	depends = jansson
+	depends = libxslt
+	source = https://mediaarea.net/download/source/mediaconch/22.09/mediaconch_22.09.tar.bz2
+	sha256sums = ce20b135d870a8e35f916ee7a7e229302a5ac7a9ffa6455c5e5c70d8e3515676
+
+pkgname = mediaconch

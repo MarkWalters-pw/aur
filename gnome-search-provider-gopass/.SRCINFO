@@ -1,0 +1,18 @@
+pkgbase = gnome-search-provider-gopass
+	pkgdesc = GNOME Search Provider for gopass secrets
+	pkgver = 0.1.1
+	pkgrel = 1
+	url = https://codeberg.org/mkhl/gnome-search-provider-gopass
+	arch = i686
+	arch = x86_64
+	arch = armv6h
+	arch = armv7h
+	license = custom:0BSD
+	makedepends = cargo
+	makedepends = sed
+	depends = dbus
+	depends = gnome-desktop
+	source = gnome-search-provider-gopass-0.1.1.tar.gz::https://codeberg.org/mkhl/gnome-search-provider-gopass/archive/v0.1.1.tar.gz
+	sha512sums = 61683cf41815f26a1acf54e7a60adc26708209a301d5e270c208a0ba25f08a6504f0285a5fa10cf88d0561b082af3d4823ec135bf893c0762273d38e5cc03a16
+
+pkgname = gnome-search-provider-gopass

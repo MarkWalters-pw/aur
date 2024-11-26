@@ -1,0 +1,54 @@
+pkgbase = jre7
+	pkgdesc = Oracle Java 7 Runtime Environment (public release - end of support)
+	pkgver = 7u80
+	pkgrel = 1
+	url = https://www.oracle.com/technetwork/java/archive-139210.html
+	install = jre7.install
+	arch = x86_64
+	license = custom:Oracle
+	makedepends = awk
+	depends = ca-certificates-java
+	depends = hicolor-icon-theme
+	depends = java-runtime-common
+	depends = nss
+	depends = xdg-utils
+	optdepends = alsa-lib: for basic sound support
+	optdepends = gtk2: for Gtk+ look and feel (desktop)
+	provides = java-runtime=7
+	provides = java-runtime-headless=7
+	provides = java-web-start=7
+	provides = java-runtime-jre=7
+	provides = java-runtime-headless-jre=7
+	provides = java-web-start-jre=7
+	provides = java-openjfx=7
+	options = !strip
+	backup = etc/java-jre7/amd64/jvm.cfg
+	backup = etc/java-jre7/images/cursors/cursors.properties
+	backup = etc/java-jre7/management/jmxremote.access
+	backup = etc/java-jre7/management/management.properties
+	backup = etc/java-jre7/security/java.policy
+	backup = etc/java-jre7/security/java.security
+	backup = etc/java-jre7/security/javaws.policy
+	backup = etc/java-jre7/content-types.properties
+	backup = etc/java-jre7/flavormap.properties
+	backup = etc/java-jre7/fontconfig.properties.src
+	backup = etc/java-jre7/logging.properties
+	backup = etc/java-jre7/net.properties
+	backup = etc/java-jre7/psfont.properties.ja
+	backup = etc/java-jre7/psfontj2d.properties
+	backup = etc/java-jre7/sound.properties
+	source = manual://jre-7u80-linux-x64.tar.gz
+	source = policytool-jre7.desktop
+	source = readme.sh
+	source = https://download.oracle.com/otn-pub/java/jce/7/UnlimitedJCEPolicyJDK7.zip
+	md5sums = c0e01ae8683b2d8924ce79cd6ce6a691
+	md5sums = db24e699517801b35343cc7ebc93ce88
+	md5sums = 51c8839211cc53f09c9b11a8e28ed1ef
+	md5sums = 5504e2d9029ee2c41730a228758c50e1
+	sha256sums = 4c01efd0d8e80bb6e2f324ec3408ce64f066d4506c7ec93a491f615a4523f4f3
+	sha256sums = 54cc70523556dc4858dd8ba258d78244a0aff01b0867254dd225eba68303a83f
+	sha256sums = f1081b08cfbb467277e95b3794191c9963398579733fa8832425b308b5917711
+	sha256sums = 6774aa9adc740b417868de4f36967275ad15e153645d8ee875fee318caabd6f7
+
+pkgname = jre7
+

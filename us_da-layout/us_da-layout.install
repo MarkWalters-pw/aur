@@ -1,0 +1,19 @@
+set -euo pipefail
+
+cd /usr/share/X11/xkb/rules
+
+post_install() {
+	/usr/share/libalpm/scripts/install-us_da-layout
+}
+
+pre_remove() {
+	awk 'BEGIN { f=1 } /BEGIN us_da/ { f=0 } /END us_da/ { f=1; next } f' evdev.xml | sponge evdev.xml
+}
+
+pre_upgrade() {
+	pre_remove
+}
+
+post_upgrade() {
+	post_install
+}

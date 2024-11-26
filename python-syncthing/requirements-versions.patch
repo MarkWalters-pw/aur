@@ -1,0 +1,21 @@
+diff --unified --recursive --text a/setup.py b/setup.py
+--- a/setup.py	2023-05-16 11:25:58.026066441 +0300
++++ b/setup.py	2023-05-16 11:26:20.499671832 +0300
+@@ -12,8 +12,8 @@
+     url = 'https://github.com/blakev/python-syncthing',
+     license = 'The MIT License',
+     install_requires = [
+-        'python-dateutil==2.8.1',
+-        'requests==2.24.0'
++        'python-dateutil',
++        'requests'
+     ],
+     extras_require = {
+         'dev': [
+@@ -44,4 +44,4 @@
+         'Programming Language :: Python :: 3.8',
+         'Topic :: System :: Archiving :: Mirroring'
+     ],
+-)
+\ No newline at end of file
++)

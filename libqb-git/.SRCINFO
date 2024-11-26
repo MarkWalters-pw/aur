@@ -1,0 +1,20 @@
+pkgbase = libqb-git
+	pkgdesc = Library for providing high performance, reusable features for client-server architecture
+	pkgver = 2.0.4.r0.ga2691b9
+	pkgrel = 1
+	url = https://github.com/ClusterLabs/libqb
+	arch = i686
+	arch = x86_64
+	license = LGPL2.1
+	checkdepends = check
+	makedepends = git
+	makedepends = doxygen
+	makedepends = splint
+	depends = glibc
+	provides = libqb.so
+	provides = libqb=2.0.4-1
+	conflicts = libqb
+	source = libqb-git::git+https://github.com/ClusterLabs/libqb.git
+	md5sums = SKIP
+
+pkgname = libqb-git

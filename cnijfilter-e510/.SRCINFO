@@ -1,0 +1,25 @@
+pkgbase = cnijfilter-e510
+	pkgdesc = Canon IJ Printer Driver (For PIXMA E510 series)
+	pkgver = 3.80
+	pkgrel = 3
+	url = https://www.canon-europe.com/support/consumer_products/products/printers/inkjet/other_pixma/pixma_e514.aspx
+	arch = i686
+	arch = x86_64
+	license = custom
+	makedepends = findutils
+	makedepends = gawk
+	depends = libpng<=1.7.0
+	depends = libtiff
+	depends = gtk2
+	depends = popt
+	source = http://gdlp01.c-wss.com/gds/6/0100005266/01/cnijfilter-source-3.80-2.tar.gz
+	source = cups.patch
+	source = libpng15.patch
+	source = configures.patch
+	sha512sums = 693dad98b8e69bb4bbad3c62a600b0be5073e8765756cd57722038089387ffe532d01daf5a74d3a8aa93fdc14f7de0326b8aa67acce24d105b0dcb25dfd94be5
+	sha512sums = 447be6afc113074c7401c8ffd603e01d7c127708f0038c5e3bb45c9b63543c477f4ee85806d8b90b886a60312936bfa9bedb19cfef6d688eaedbcd7f1fb9f526
+	sha512sums = 0fb36eca8d6db03e5e55d03a81cf2b6bbcf203529611530429cf727582f83ba1db23165082ba2430ee88075cbcaacb13f9bb384c4fd20b23b91c6dc9d0e9cb09
+	sha512sums = 2a5af45a1978ae37dfb5f6ef7c549be0fed2fc50df8acdb565bf9568fa3c0b2beb4441fef9c49ecf9b22f62acf0dd7cc91e48ab3642d2c26ff10f0cbd8071e13
+
+pkgname = cnijfilter-e510
+

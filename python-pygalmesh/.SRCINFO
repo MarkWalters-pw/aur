@@ -1,0 +1,24 @@
+pkgbase = python-pygalmesh
+	pkgdesc = A Python interface to CGAL's meshing tools
+	pkgver = 0.10.6
+	pkgrel = 6
+	url = https://github.com/meshpro/pygalmesh
+	arch = x86_64
+	license = GPL-3.0-or-later
+	checkdepends = python-pytest
+	checkdepends = python-pytest-codeblocks
+	checkdepends = python-pytest-cov
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	makedepends = pybind11
+	makedepends = cgal
+	makedepends = eigen
+	depends = python
+	depends = python-numpy
+	depends = python-meshio
+	source = pygalmesh-0.10.6::https://github.com/meshpro/pygalmesh/archive/refs/tags/v0.10.6.tar.gz
+	sha256sums = 298ae2434bac0881d630c9f7ed37a92a9e00baec04cf86e8acec54d1f7e6e722
+
+pkgname = python-pygalmesh

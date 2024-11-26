@@ -1,0 +1,15 @@
+pkgbase = python-pysigset
+	pkgdesc = Python blocking/suspending signals under Linux/OSX using ctypes sigprocmask access
+	pkgver = 0.4.0
+	pkgrel = 1
+	url = https://github.com/ossobv/pysigset
+	arch = any
+	license = LGPL3
+	makedepends = python-setuptools
+	makedepends = git
+	depends = python
+	source = python-pysigset::git+https://github.com/ossobv/pysigset#tag=v0.4.0?signed
+	validpgpkeys = AD27E9B95AD1CD4DE4CC92BFE4C53075C170E20E
+	sha256sums = SKIP
+
+pkgname = python-pysigset

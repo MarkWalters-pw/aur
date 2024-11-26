@@ -1,0 +1,19 @@
+pkgbase = python-meds
+	pkgdesc = Python and C libraries for reading MEDS files
+	pkgver = 0.9.17
+	pkgrel = 1
+	url = https://github.com/esheldon/meds
+	arch = x86_64
+	license = GPL3
+	checkdepends = python-pytest
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python-fitsio
+	depends = python-esutil
+	depends = python-joblib
+	source = meds-0.9.17.tar.gz::https://github.com/esheldon/meds/archive/v0.9.17.tar.gz
+	sha512sums = dab091074c42a8859d8e176945820145c1fb0fe53f6d70a49b28c7fac0126bd4b03ba8fcc91bd29e05f446099f5d453a03a470070af57b8fff29ff6a94f06183
+
+pkgname = python-meds

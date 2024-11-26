@@ -1,0 +1,16 @@
+pkgbase = me176c-factory
+	pkgdesc = Factory information loader for ASUS MeMO Pad 7 (ME176C(X))
+	pkgver = r4.57390f7
+	pkgrel = 1
+	url = https://github.com/me176c-dev/linux-me176c
+	arch = x86_64
+	groups = me176c
+	license = MIT
+	makedepends = meson
+	depends = glibc
+	optdepends = bluez-utils: to set Bluetooth MAC address on boot
+	source = https://github.com/me176c-dev/linux-me176c/archive/57390f7373d4cc95306a61b3c181a694b04c37e3.tar.gz
+	sha256sums = f52f95bebc25da9c506d1ad78aa5b923ee9ca8955380aaaa98881f4f973f3ec1
+
+pkgname = me176c-factory
+

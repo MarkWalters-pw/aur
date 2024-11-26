@@ -1,0 +1,17 @@
+pkgbase = pidgin-im-gnome-shell-extension
+	pkgdesc = Make Pidgin IM conversations appear in the Gnome Shell message tray
+	pkgver = 31
+	pkgrel = 2
+	url = https://github.com/muffinmad/pidgin-im-gnome-shell-extension
+	arch = any
+	groups = gnome
+	license = GPL
+	makedepends = git
+	depends = pidgin
+	depends = gnome-shell>=3.10
+	depends = telepathy-logger
+	source = git://github.com/muffinmad/pidgin-im-gnome-shell-extension.git#tag=v1.0.3
+	md5sums = SKIP
+
+pkgname = pidgin-im-gnome-shell-extension
+

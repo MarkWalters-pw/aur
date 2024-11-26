@@ -1,0 +1,36 @@
+# Maintainer: Fangrui Song <i at maskray.me>
+# Co-Maintainer: Shengyu Zhang <la@archlinuxcn.org>
+
+pkgname=ccls-git
+_pkgname=ccls
+pkgver=20200615
+pkgrel=1
+pkgdesc='C/C++ language server supporting cross references, hierarchies, completion and semantic highlighting'
+arch=('x86_64')
+url='https://github.com/MaskRay/ccls'
+license=('Apache')
+depends=('clang' 'llvm-libs')
+makedepends=("cmake" "git" "llvm")
+source=('git+https://github.com/MaskRay/ccls.git')
+md5sums=('SKIP')
+
+pkgver() {
+  cd $_pkgname
+  TZ=UTC date -d @$(git log -1 --format=%ct) +%Y%m%d
+}
+
+prepare() {
+  cd $_pkgname
+  git submodule update --init
+}
+
+build() {
+  cd $_pkgname
+  cmake -H. -Bbuild -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_CXX_COMPILER=clang++ -DCLANG_LINK_CLANG_DYLIB=on -DUSE_SYSTEM_RAPIDJSON=off
+  cmake --build build
+}
+
+package() {
+  cd $_pkgname/build
+  make DESTDIR="$pkgdir" install
+}

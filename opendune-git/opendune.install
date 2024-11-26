@@ -1,0 +1,11 @@
+
+post_install() {
+  echo "Copy the sample configuration file, if needed and change path to data files:"
+  echo "install -D /usr/share/doc/opendune/opendune.ini.sample ~/.config/opendune/opendune.ini"
+
+  echo "Remember you need to start timidity, eg 'timidity -iA' for music support."
+}
+
+post_upgrade() {
+  post_install
+}

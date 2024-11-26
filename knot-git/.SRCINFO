@@ -1,0 +1,37 @@
+pkgbase = knot-git
+	pkgdesc = High-performance authoritative-only DNS server, development build
+	pkgver = 3.3.dev.r81.d16319067
+	pkgrel = 1
+	url = https://www.knot-dns.cz/
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = automake
+	makedepends = autoconf
+	makedepends = make
+	makedepends = libtool
+	makedepends = pkg-config
+	depends = libedit
+	depends = gnutls
+	depends = liburcu
+	depends = lmdb
+	depends = libidn2
+	depends = systemd
+	depends = libcap-ng
+	depends = fstrm
+	depends = protobuf-c
+	depends = libmaxminddb
+	depends = libbpf
+	depends = libxdp
+	depends = libnghttp2
+	depends = libmnl
+	depends = ngtcp2
+	provides = knot=3.3.dev.r81.d16319067
+	conflicts = knot
+	options = !strip
+	options = debug
+	backup = etc/knot/knot.conf
+	source = git+https://gitlab.nic.cz/knot/knot-dns.git
+	sha256sums = SKIP
+
+pkgname = knot-git

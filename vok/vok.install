@@ -1,0 +1,58 @@
+
+# tests whether vok is installed
+test_vok() {
+  return `xml sel -t -v 'count(//layoutList/layout/configItem/name[.="vok"])' /usr/share/X11/xkb/rules/evdev.xml`
+}
+
+# insert vok to the layout list
+# uses a nasty trick of appending the vok layout to the end of the file
+# and then moving the layout to its place
+insert_vok() {
+  # prepare a temp file
+  TMPFILE=`mktemp`
+  head -n -1 /usr/share/X11/xkb/rules/evdev.xml >> $TMPFILE
+  cat /usr/share/vok/vok.xml >> $TMPFILE
+  tail -n 1 /usr/share/X11/xkb/rules/evdev.xml >> $TMPFILE
+  # move the vok layout to its place
+  xml ed -L -m '//layout[configItem/name="vok"]' '//layoutList' $TMPFILE
+  # move the temp file to evdev.xml
+  cat $TMPFILE > /usr/share/X11/xkb/rules/evdev.xml
+}
+
+# removes vok from the layout list
+remove_vok() {
+  xml ed -L -d '//layout[configItem/name="vok"]' /usr/share/X11/xkb/rules/evdev.xml
+}
+
+post_install() {
+  perl -ne '/^[[:blank:]]*vok[[:blank:]]{1,}/ && exit 1' /usr/share/X11/xkb/rules/xorg.lst && (
+  sed -i "s/^! layout$/! layout\n  vok             vogo's keyboard (czech)/" /usr/share/X11/xkb/rules/evdev.lst
+  sed -i "s/^! variant$/! variant\n  basic           vok: Qwerty (national chars with AltGr)\n  czech           vok: Qwerty (digits with AltGr)\n  qwertz          vok: Qwertz (national chars with AltGr)\n  czech_qwertz    vok: Qwertz (digits with AltGr)/" /usr/share/X11/xkb/rules/xorg.lst;)
+
+  insert_vok
+
+  echo "-- Please read http://www.abclinuxu.cz/blog/origami/2006/12/21/162644"
+}
+
+post_upgrade() {
+  perl -ne '/^[[:blank:]]*vok[[:blank:]]{1,}/ && exit 1' /usr/share/X11/xkb/rules/xorg.lst && (
+  sed -i "s/^! layout$/! layout\n  vok             vogo's keyboard (czech)/" /usr/share/X11/xkb/rules/xorg.lst
+  sed -i "s/^! variant$/! variant\n  basic           vok: Qwerty (national chars with AltGr)\n  czech           vok: Qwerty (digits with AltGr)\n  qwertz          vok: Qwertz (national chars with AltGr)\n  czech_qwertz    vok: Qwertz (digits with AltGr)/" /usr/share/X11/xkb/rules/xorg.lst;)
+
+  if test_vok ; then
+    insert_vok
+  fi
+
+  echo "-- Please read http://www.abclinuxu.cz/blog/origami/2006/12/21/162644"
+}
+
+pre_remove() {
+  sed -ni '/vok             vogo'\''s keyboard (czech)$/!p' /usr/share/X11/xkb/rules/xorg.lst
+  sed -ni '/  basic           vok: Qwerty (national chars with AltGr)$/!p' /usr/share/X11/xkb/rules/xorg.lst
+  sed -ni '/  czech           vok: Qwerty (digits with AltGr)/!p' /usr/share/X11/xkb/rules/xorg.lst
+  sed -ni '/  qwertz          vok: Qwertz (national chars with AltGr)/!p' /usr/share/X11/xkb/rules/xorg.lst
+  sed -ni '/  czech_qwertz    vok: Qwertz (digits with AltGr)/!p' /usr/share/X11/xkb/rules/xorg.lst
+
+  remove_vok
+}
+

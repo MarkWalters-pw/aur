@@ -1,0 +1,17 @@
+pkgbase = inkscape-applytransforms-git
+	pkgdesc = An Inkscape extension which removes all matrix transforms by applying them recursively to shapes
+	pkgver = r56.aac7ddc
+	pkgrel = 1
+	url = https://github.com/Klowner/inkscape-applytransforms
+	arch = any
+	license = GPL2
+	makedepends = git
+	depends = inkscape
+	depends = python-lxml
+	provides = inkscape-applytransforms
+	conflicts = inkscape-applytransforms
+	source = git+https://github.com/Klowner/inkscape-applytransforms.git
+	md5sums = SKIP
+
+pkgname = inkscape-applytransforms-git
+

@@ -1,0 +1,17 @@
+pkgbase = pacdef-git
+	pkgdesc = multi-backend declarative package manager for Linux
+	pkgver = 1.6.0+r12.g7e85bc3
+	pkgrel = 1
+	url = https://github.com/steven-omaha/pacdef
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = rust
+	depends = gcc-libs
+	provides = pacdef
+	conflicts = pacdef
+	conflicts = pacdef-bin
+	source = git+https://github.com/steven-omaha/pacdef
+	sha256sums = SKIP
+
+pkgname = pacdef-git

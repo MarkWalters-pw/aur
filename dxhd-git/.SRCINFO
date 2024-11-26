@@ -1,0 +1,17 @@
+pkgbase = dxhd-git
+	pkgdesc = An X11 Hotkey Daemon
+	pkgver = 20240bf
+	pkgrel = 0
+	url = https://github.com/dakyskye/dxhd
+	arch = any
+	makedepends = make
+	makedepends = git
+	makedepends = go
+	depends = util-linux
+	provides = dxhd
+	conflicts = dxhd-bin
+	source = dxhd-git::git+https://github.com/dakyskye/dxhd.git
+	md5sums = SKIP
+
+pkgname = dxhd-git
+

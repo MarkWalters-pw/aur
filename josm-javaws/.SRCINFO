@@ -1,0 +1,26 @@
+pkgbase = josm-javaws
+	pkgdesc = An editor for OpenStreetMap written in Java, Java Web Start version (auto updates on startup)
+	pkgver = tested
+	pkgrel = 2
+	url = http://josm.openstreetmap.de/
+	arch = any
+	license = GPL
+	depends = java-runtime
+	depends = java-web-start
+	depends = libxtst
+	depends = ttf-font
+	provides = josm
+	conflicts = josm
+	backup = etc/conf.d/josm
+	source = https://josm.openstreetmap.de/download/josm.jnlp
+	source = https://josm.openstreetmap.de/logo.png
+	source = josm.desktop
+	source = josm
+	source = josm.conf.d
+	sha256sums = a4b196bfe34796c76441586abadafd4e48478caef3debb8248021d3f6ba906fe
+	sha256sums = 4f7ac6e53fe4660a69b183b0d46596f9ee496d4736a2652326c64ebc5e3023fb
+	sha256sums = edfb2cbf2aa7e6582b4d43cd402ea58be7990702e5ffffc3ff7afdc518c28ca9
+	sha256sums = 345bc3e4436f93f4980051ccec226224fa8d6b513cde8da98294cc3b4bcdc9dc
+	sha256sums = c86a73251eed42fcb129ae9b88a0ee3cf03d8d00a9385519ad536d5af0907663
+
+pkgname = josm-javaws

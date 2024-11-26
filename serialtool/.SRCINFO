@@ -1,0 +1,27 @@
+pkgbase = serialtool
+	pkgdesc = A practical Serial-Port/TCP/UDP debugging tool.
+	pkgver = 1.5.7
+	pkgrel = 1
+	url = https://github.com/HoGC/SerialTool
+	install = serialtool.install
+	arch = any
+	license = GPL3
+	makedepends = qscintilla-qt5
+	makedepends = qt5-serialport
+	makedepends = qt5-charts
+	makedepends = qt5-script
+	makedepends = qt5-tools
+	depends = qscintilla-qt5
+	depends = qt5-serialport
+	depends = qt5-charts
+	depends = qt5-script
+	provides = serialtool
+	conflicts = serialtool
+	conflicts = serialtool-git
+	options = !strip
+	source = SerialTool-1.5.7.zip::https://github.com/HoGC/SerialTool/archive/refs/tags/v1.5.7.zip
+	source = serialtool
+	sha256sums = e4847511b9837a394d7609038bcb52fc6cc5a7953dc60ef2c8066515cfe601b0
+	sha256sums = b93065b98d21ce9054da53004edf703d7801fe7657583f4f594eb04f25df672c
+
+pkgname = serialtool

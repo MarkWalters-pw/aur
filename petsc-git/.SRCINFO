@@ -1,0 +1,49 @@
+pkgbase = petsc-git
+	pkgdesc = Portable, extensible toolkit for scientific computation
+	pkgver = 3.21.1.r89.g70699e4d17e
+	pkgrel = 1
+	url = https://petsc.org
+	install = petsc.install
+	arch = i686
+	arch = x86_64
+	license = BSD-2-Clause
+	makedepends = cmake
+	makedepends = cython
+	makedepends = gcc
+	makedepends = gcc-fortran
+	makedepends = python-setuptools
+	makedepends = git
+	depends = hdf5-openmpi
+	depends = fftw-openmpi
+	depends = gsl
+	depends = lapack
+	depends = libjpeg-turbo
+	depends = libyaml
+	depends = netcdf-openmpi
+	depends = python-numpy
+	depends = python-mpi4py
+	depends = superlu
+	depends = suitesparse
+	depends = zlib
+	optdepends = hypre: support for the hypre sparse system solver
+	optdepends = kokkos: support for Kokkos
+	optdepends = metis: support for metis graph partitioning library
+	optdepends = mumps: support for the mumps sparse solver
+	optdepends = parmetis: support for parmetis parallel graph partitioning library
+	optdepends = pastix: support for the pastix solver
+	optdepends = scalapack: support for ScaLAPACK
+	optdepends = scotch: support for Scotch
+	optdepends = superlu_dist: support for the superlu_dist sparse solver
+	optdepends = triangle: support for the two-dimensional quality mesh generator and Delaunay triangulator
+	optdepends = valgrind: support for valgrind to help find memory-management problems in programs
+	optdepends = zoltan: support for zoltan
+	provides = petsc=3.21.1
+	provides = petsc4py=3.21.1
+	conflicts = petsc
+	options = staticlibs
+	source = git+https://gitlab.com/petsc/petsc.git#branch=release
+	source = test_optdepends.sh
+	sha512sums = SKIP
+	sha512sums = e45df388b373b5f8c86567f32f0d79ae275a855a7fd3b4bb9c03d6875351633d4064de701644a4aa2f9eff90d63806f714230298149868b2f6d92a4f21e20cb8
+
+pkgname = petsc-git

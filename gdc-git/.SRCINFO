@@ -1,0 +1,38 @@
+pkgbase = gdc-git
+	pkgdesc = GCC based D compiler
+	pkgver = 10.0.0+v2.086.0
+	pkgrel = 2
+	url = https://gcc.gnu.org/
+	arch = x86_64
+	arch = i686
+	groups = dlang
+	license = GPL3
+	makedepends = git
+	makedepends = gdc
+	source = http://isl.gforge.inria.fr/isl-0.21.tar.bz2
+	source = gcc::git+https://github.com/gcc-mirror/gcc.git#branch=ibuclaw/gdc
+	source = git+https://github.com/D-Programming-GDC/GDMD.git
+	sha256sums = d18ca11f8ad1a39ab6d03d3dcb3365ab416720fcb65b42d69f34f51bf0a0e859
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = gdc-git
+	pkgdesc = Compiler for D programming language which uses gcc backend
+	depends = gcc
+	depends = perl
+	depends = binutils
+	depends = libgphobos
+	provides = d-compiler=v2.086.0
+	provides = gdc
+	conflicts = gdc
+	conflicts = gcc-gdc
+
+pkgname = libgphobos-git
+	pkgdesc = Standard library for D programming language, GDC port
+	provides = d-runtime
+	provides = d-stdlib
+	provides = libgphobos
+	conflicts = libgphobos
+	conflicts = gcc-gdc
+	options = staticlibs
+

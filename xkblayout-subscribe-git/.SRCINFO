@@ -1,0 +1,16 @@
+pkgbase = xkblayout-subscribe-git
+	pkgdesc = Subscribe to X keyboard layout events. useful for updating statusbars.
+	pkgver = r1.bc13b72
+	pkgrel = 4
+	url = https://github.com/koonix/xkblayout-subscribe
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = pkgconf
+	depends = libpulse
+	provides = xkblayout-subscribe
+	conflicts = xkblayout-subscribe
+	source = git+https://github.com/koonix/xkblayout-subscribe.git
+	md5sums = SKIP
+
+pkgname = xkblayout-subscribe-git

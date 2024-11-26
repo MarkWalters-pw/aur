@@ -1,0 +1,20 @@
+pkgbase = jackmix-git
+	pkgdesc = Matrix-mixer for JACK
+	pkgver = r370.fbe4885
+	pkgrel = 1
+	url = https://github.com/kampfschlaefer/jackmix
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = gendesk
+	makedepends = scons
+	depends = qt5-base
+	depends = jack
+	depends = ladish
+	conflicts = jackmix
+	source = jackmix::git+https://github.com/kampfschlaefer/jackmix.git#branch=no-lash
+	source = silence_deprec_errors.patch
+	md5sums = SKIP
+	md5sums = 0ed19b1747391585c597d73cc06f30b1
+
+pkgname = jackmix-git

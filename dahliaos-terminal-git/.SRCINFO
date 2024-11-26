@@ -1,0 +1,23 @@
+pkgbase = dahliaos-terminal-git
+	pkgdesc = Terminal emulator for dahliaOS.
+	pkgver = r50.b0c7a4e
+	pkgrel = 2
+	url = https://github.com/dahliaOS/terminal
+	arch = x86_64
+	license = Apache
+	makedepends = git
+	makedepends = cmake
+	makedepends = ninja
+	makedepends = imagemagick
+	makedepends = clang>=11.0.0
+	depends = gtk3
+	provides = dahliaos-terminal
+	conflicts = dahliaos-terminal
+	source = git+https://github.com/dahliaOS/terminal.git
+	source = dahliaos-terminal.desktop
+	source = https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.10.5-stable.tar.xz
+	sha256sums = SKIP
+	sha256sums = 25840e6169afb96e792b08b77e9ea88c480a24142330b482169e0572c9a55c2b
+	sha256sums = 86643cbfe8acf766a226a6cd4625bb8301c2601ea9bb825448318c8669b72a13
+
+pkgname = dahliaos-terminal-git

@@ -1,0 +1,22 @@
+pkgbase = ignition-common
+	pkgdesc = Provides a set of libraries that cover many different use cases.
+	pkgver = 5.4.2
+	pkgrel = 1
+	url = https://gazebosim.org/libs/common
+	arch = x86_64
+	license = Apache
+	makedepends = ignition-cmake>2
+	makedepends = util-linux
+	depends = ignition-math>6
+	depends = ignition-utils>1
+	depends = tinyxml2
+	depends = freeimage
+	depends = libutil-linux
+	depends = gts
+	depends = ffmpeg4.4
+	depends = gdal
+	depends = assimp
+	source = ignition-common-5.4.2.tar.gz::https://github.com/gazebosim/gz-common/archive/gz-common5_5.4.2.tar.gz
+	sha256sums = 28b06f87b338eb016545ed1df3900a81fe3d1815661dea296a8e8704ab2eacca
+
+pkgname = ignition-common

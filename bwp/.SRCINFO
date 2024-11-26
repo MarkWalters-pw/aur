@@ -1,0 +1,19 @@
+pkgbase = bwp
+	pkgdesc = budlabs wallpaper selector
+	pkgver = 2022.05.26.1
+	pkgrel = 1
+	url = https://github.com/budlabs/bwp
+	arch = any
+	license = MIT
+	makedepends = gawk
+	depends = bash>=4.0.0
+	optdepends = xorg-xrandr: get screen geometry
+	optdepends = i3lock: to lock the computer
+	optdepends = imagemagick: used to resize and blur images
+	optdepends = parallel: convert images in parallel
+	optdepends = feh: to set the wallpaper
+	optdepends = pngquant: compress blurred images
+	source = https://github.com/budlabs/bwp/archive/2022.05.26.1.tar.gz
+	sha256sums = db2d0398d4db5ae5abe439355ab41831e2d4af1b7af7d1cd7ad03c27f97e2abf
+
+pkgname = bwp

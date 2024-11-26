@@ -1,0 +1,15 @@
+pkgbase = vim-todotxt-git
+	pkgdesc = Vim plugin for Todo.txt (git version)
+	pkgver = r288.84b5ae6
+	pkgrel = 1
+	url = https://gitlab.com/dbeniamine/todo.txt-vim
+	install = vim-todotxt-git.install
+	arch = any
+	license = unknown
+	depends = vim
+	conflicts = vim-todotxt
+	source = vim-todotxt-git::git+https://gitlab.com/dbeniamine/todo.txt-vim
+	md5sums = SKIP
+
+pkgname = vim-todotxt-git
+

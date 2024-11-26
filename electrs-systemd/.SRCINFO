@@ -1,0 +1,12 @@
+pkgbase = electrs-systemd
+	pkgdesc = systemd service for electrs
+	pkgver = 1
+	pkgrel = 1
+	arch = any
+	license = Apache
+	depends = bitcoin-daemon
+	depends = electrs
+	source = electrs.service
+	b2sums = 5510d780d023dcd905ffbcb1412507762dcbd27651f3fb0b4278749c202ae8b24d735709ab2c24988daea5cc41f06098d11e4527404d7dee08d660b408a99fdb
+
+pkgname = electrs-systemd

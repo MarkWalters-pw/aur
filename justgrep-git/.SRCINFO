@@ -1,0 +1,16 @@
+pkgbase = justgrep-git
+	pkgdesc = Tool for searching justlog logs and manipulating IRC messages
+	pkgver = r63.690f5db
+	pkgrel = 2
+	url = https://github.com/Mm2PL/justgrep
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = go
+	provides = irc2json
+	provides = justgrep
+	options = zipman
+	source = justgrep::git+https://github.com/Mm2PL/justgrep.git
+	sha256sums = SKIP
+
+pkgname = justgrep-git

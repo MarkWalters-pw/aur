@@ -1,0 +1,76 @@
+2021.11.8:
+- fix for arabic letter "hamza" on windows, issue #9
+
+2021.10.12:
+- new widgets:
+  * AutoWrappingLabel
+  * AutofitLabel
+  * Segment progressbar
+  * DatePicker
+- alternative filechooser, and folderchooser for linux using zenity or kdialog if installed on target system.
+- add center window function
+- fix tooltip truncated text (on windows), issue #8
+
+2021.10.2:
+- fix de-render bidi text.
+
+2021.9.30:
+- [right click menu] fix "button widget" show pressed status on mouse hover
+
+2021.9.28:
+- fix scrolling for ScrollableFrame
+- increase scroll step when scroll horizontally (shift + mousewheel)
+- [ScrolledText] change superclass to tk.Text instead of tk.Frame.
+- tooltip auto adjust position to stay inside screen border.
+
+2021.7.25:
+- fix error sometimes raised by entry bidi-handler.
+
+2021.6.4:
+- Add tooltip to tkinter widgets.
+- used python-bidi and custom reshaper instead of pyfribidi.
+- fixes for right click menu.
+
+2021.5.23:
+- limit bidi support to linux, since windows handle bidi in os level.
+- fixed selected text deletion with delete and bkspace keys in bidi supported entry.
+
+2021.5.10:
+- fix bidi import and fix move_cursor_to_left function.
+
+2021.5.9:
+- Added support to bidi language e.g. Arabic to be shown properly in tkinter widgets.
+
+2021.4.2:
+- revert for unnecessary fix in commit 063e6010 it turned out the problem happen when binding right click to right click menu itself
+
+2021.4.1:
+- Add ability to change scrollbar width in scrollable frame and scrollable text, issue #7
+- right click menu, fix the problem of displaying menu on different widget instead of parent.
+- Added configur_widget function.
+
+2021.3.19:
+- [critical] fix checkbox and radiobutton images
+
+2021.3.18:
+- [progressbar, buttons] reuse images to improve performance
+- [scrollable_frame] improve performance
+
+2021.1.7:
+- Fix button and progressbar style to support more themes.
+- bug fixes.
+
+2020.12.16:
+- Added CheckButton.
+- Added demo example.
+
+2020.9.22:
+- Added RadioButton.
+- Added demo examples.
+
+2020.9.18:
+- Fixed scrolled text bad index and missing scrollbar imports
+- Add limitation to readme
+
+2020.9.16:
+- First release

@@ -1,0 +1,16 @@
+pkgbase = python-discord-self
+	pkgdesc = A fork of the popular discord.py for self-bots
+	pkgver = 1.9.1
+	pkgrel = 1
+	url = https://github.com/dolfies/discord.py-self
+	arch = any
+	license = MIT
+	makedepends = python-setuptools
+	depends = python
+	depends = python-aiohttp
+	optdepends = python-pynacl: Voice support
+	optdepends = libffi: Voice support
+	source = discord.py-self-1.9.1.tar.gz::https://github.com/dolfies/discord.py-self/archive/v1.9.1.tar.gz
+	sha512sums = 675d7cfb58fadf3215d9fee5b4497cd72c604b2ce9e7dda4d967c5c442941143427aa4e377087becacd25da7df0c7e188b68620ed770c966240ea2e4fca011f6
+
+pkgname = python-discord-self

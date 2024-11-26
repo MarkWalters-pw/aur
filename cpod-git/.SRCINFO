@@ -1,0 +1,23 @@
+pkgbase = cpod-git
+	pkgdesc = A simple, beautiful podcast app
+	pkgver = 1.28.0.r27.ga648efd
+	pkgrel = 1
+	url = https://github.com/z-------------/CPod
+	arch = x86_64
+	license = Apache
+	makedepends = git
+	makedepends = gulp
+	makedepends = libxcrypt-compat
+	makedepends = nvm
+	makedepends = yarn
+	depends = alsa-lib
+	depends = gconf
+	depends = gtk3
+	depends = libxss
+	depends = nss
+	provides = cpod
+	conflicts = cpod
+	source = cpod-git::git+https://github.com/z-------------/CPod.git
+	sha256sums = SKIP
+
+pkgname = cpod-git

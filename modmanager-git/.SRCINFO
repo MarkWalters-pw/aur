@@ -1,0 +1,18 @@
+pkgbase = modmanager-git
+	pkgdesc = A Qt-based mod manager for minecraft.
+	pkgver = r424.363f8e0
+	pkgrel = 1
+	url = https://github.com/kaniol-lck/modmanager
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = qt5-tools
+	depends = qt5-base
+	depends = aria2
+	depends = quazip
+	provides = modmanager
+	conflicts = modmanager
+	source = modmanager::git+https://github.com/kaniol-lck/modmanager.git
+	md5sums = SKIP
+
+pkgname = modmanager-git

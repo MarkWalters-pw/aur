@@ -1,0 +1,25 @@
+pkgbase = zig-0.10-bin
+	pkgdesc = a general-purpose programming language and toolchain for maintaining robust, optimal, and reusable software (v0.10.1)
+	pkgver = 0.10.1
+	pkgrel = 1
+	url = https://ziglang.org/
+	arch = x86_64
+	arch = pentium4
+	arch = aarch64
+	arch = armv7h
+	arch = riscv64
+	license = GPL
+	provides = zig=0.10.1
+	conflicts = zig
+	source_x86_64 = https://ziglang.org/download/0.10.1/zig-linux-x86_64-0.10.1.tar.xz
+	sha512sums_x86_64 = 1cf88a492b1a47800e213b8801477f4ffabf269f960d27d1849c5aec805b5db3768c83d4daa4a738532b1b7367e8c6812e3eea47c205ea732d7a6269a47e16dc
+	source_pentium4 = https://ziglang.org/download/0.10.1/zig-linux-x86-0.10.1.tar.xz
+	sha512sums_pentium4 = b507dd64baf5d7e9dcb50445e90e04170c66d6d6e6ac75af7f3d1faec7f5a035749a20dc564c5cf80e9df9a23a33c293966578a535333e21c28ce90a5babf004
+	source_aarch64 = https://ziglang.org/download/0.10.1/zig-linux-aarch64-0.10.1.tar.xz
+	sha512sums_aarch64 = a066114a1fb947cfbacec9fcf2a0b8d11551a757b6aa9b611adc60fcc78d859866a78b17c78b0cc238aea48a87d1caeb88d26c5fd1ed45c9c3f1c563ef78d365
+	source_armv7h = https://ziglang.org/download/0.10.1/zig-linux-armv7a-0.10.1.tar.xz
+	sha512sums_armv7h = 37f655f7d1929baf6c4447a9dee335a34fc1df6c7305c417936335b3482c2ae8109ab29ad3b3525bd19ef4d596a2bbd7db40ebb86017c987d9974532bc5b5de6
+	source_riscv64 = https://ziglang.org/download/0.10.1/zig-linux-riscv64-0.10.1.tar.xz
+	sha512sums_riscv64 = 9bfd3818cd493dc429ef01f33a99f31fdaa55f34218f801627dbce5db8f446f47534483fc5d9e0ea8fb43616ff93cc90cdd2978f97f801729e226767d863c63f
+
+pkgname = zig-0.10-bin

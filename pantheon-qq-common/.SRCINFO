@@ -1,0 +1,23 @@
+pkgbase = pantheon-qq-common
+	pkgdesc = Common dependencies of Pantheon 3D and Pantheon Lite
+	pkgver = 2
+	pkgrel = 1
+	url = https://github.com/quequotion/pantheon-qq
+	arch = any
+	groups = pantheon-qq
+	license = GPL3
+	depends = pantheon-session
+	optdepends = elementary-blue-icon-theme-git: Restore blue folder icons to elementary theme
+	optdepends = file-roller-pantheon: Archive manipulator for GNOME (with elementary OS patches)
+	optdepends = lightdm-gtk-greeter: GTK+ Greeter for LightDM
+	optdepends = numlockx: Turn on the numlock key in X11
+	optdepends = pantheon-dock-instctl-git: Dock for Pantheon (with instance controls)
+	optdepends = xscreensaver-dbus-screenlock: xscreensaver locker for gnome-derivative desktops
+	optdepends = wingpanel-standalone-git: Stylish top panel (with autohide and without Gala dependencies)
+	conflicts = pantheon-workarounds
+	source = pantheon-session-qq
+	source = numlockx-pantheon.desktop
+	sha256sums = f208ab4c523df5eb7716fa37d300f568ab84259ca82aefb06f7a064bcb190174
+	sha256sums = d3c5deda2d6ef11451c2ea68043e4e424dd37858862a0c6251990243872f8311
+
+pkgname = pantheon-qq-common

@@ -1,0 +1,26 @@
+pkgbase = task-maker-git
+	pkgdesc = The new cmsMake!
+	pkgver = r772.8cb6c4d
+	pkgrel = 1
+	url = https://github.com/algorithm-ninja/task-maker
+	arch = i686
+	arch = x86_64
+	arch = armv7h
+	arch = aarch64
+	license = MPL2
+	makedepends = cmake
+	makedepends = gmock
+	makedepends = gtest
+	makedepends = python-pip
+	depends = python
+	depends = python-ruamel-yaml
+	depends = python-traits
+	depends = capnproto
+	depends = pybind11
+	provides = task-maker
+	conflicts = task-maker
+	source = git+https://github.com/algorithm-ninja/task-maker.git
+	sha384sums = SKIP
+
+pkgname = task-maker-git
+

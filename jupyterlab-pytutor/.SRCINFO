@@ -1,0 +1,23 @@
+pkgbase = jupyterlab-pytutor
+	pkgdesc = Python Tutor extension for JupyterLab
+	pkgver = 0.2.0
+	pkgrel = 3
+	url = https://github.com/jupyterlab-contrib/jupyterlab-pytutor
+	arch = any
+	license = BSD-3-Clause
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	makedepends = python-jupyter-packaging
+	makedepends = python-hatch-jupyter-builder
+	makedepends = npm
+	depends = jupyterlab
+	depends = python-hatchling
+	depends = python-hatch-nodejs-version
+	source = jupyterlab-pytutor-0.2.0.tar.gz::https://github.com/jupyterlab-contrib/jupyterlab-pytutor/archive/refs/tags/v0.2.0.tar.gz
+	source = install.json
+	sha256sums = f21f24217649b6d9f848f6fb4d4928f64413eb01a6717a6697961805f2e63e1b
+	sha256sums = 493d16c764f090a6c4350644dc29898a18aab83c95240c59f6b9d98b99e6f9db
+
+pkgname = jupyterlab-pytutor

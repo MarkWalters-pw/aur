@@ -1,0 +1,20 @@
+pkgbase = nbtvol
+	pkgdesc = A simple set of shell scripts and C programs to control bluetooth device volume through PulseAudio
+	pkgver = 1.1.0
+	pkgrel = 1
+	url = https://github.com/Not-Super-Nova/nbtvol
+	arch = x86_64
+	license = GPL3
+	makedepends = gcc>=11.1.0-1
+	makedepends = gcc-libs>=11.1.0-1
+	depends = systemd>=248.3-3
+	depends = dbus>=1.12.20-1
+	depends = sed>=4.8-1
+	depends = grep>=3.6-1
+	depends = coreutils>=8.32-1
+	depends = libpulse>=14.2-3
+	depends = bash>=5.1.008-3
+	source = nbtvol-1.1.0.tar.gz
+	sha512sums = cecf07dc75305745c350f6b18ab01f5e67c049ccfe58402cb3d66390ecb7fcb22d91475ac31e5029b12296f9496399fcb21a23607b223392ee46ea7941aaee2b
+
+pkgname = nbtvol

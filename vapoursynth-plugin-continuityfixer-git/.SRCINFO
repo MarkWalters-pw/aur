@@ -1,0 +1,16 @@
+pkgbase = vapoursynth-plugin-continuityfixer-git
+	pkgdesc = Plugin for Vapoursynth: continuityfixer (GIT version)
+	pkgver = 6.2.gf34d05b
+	pkgrel = 1
+	url = http://forum.doom9.org/showthread.php?t=171785
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	depends = vapoursynth
+	provides = vapoursynth-plugin-continuityfixer
+	conflicts = vapoursynth-plugin-continuityfixer
+	options = debug
+	source = continuityfixer::git+https://github.com/MonoS/VS-ContinuityFixer.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-continuityfixer-git

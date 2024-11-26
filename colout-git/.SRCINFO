@@ -1,0 +1,21 @@
+pkgbase = colout-git
+	pkgdesc = Reads text on stdin and produces colorized and stylized output
+	pkgver = 1.1.r7.g6a8fe89
+	pkgrel = 1
+	url = https://github.com/nojhan/colout
+	arch = any
+	license = GPL-3.0-or-later
+	makedepends = git
+	makedepends = python-setuptools-scm
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = python
+	depends = python-pygments
+	depends = python-babel
+	provides = colout
+	conflicts = colout
+	source = colout-git::git+https://github.com/nojhan/colout
+	sha256sums = SKIP
+
+pkgname = colout-git

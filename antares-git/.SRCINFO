@@ -1,0 +1,19 @@
+pkgbase = antares-git
+	pkgdesc = A window manager for X
+	pkgver = r198.g987787c
+	pkgrel = 1
+	url = https://notabug.org/Leon_Plickat/antares
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	depends = cairo
+	depends = libxinerama
+	provides = antares
+	conflicts = antares
+	source = antares::git+https://notabug.org/Leon_Plickat/antares.git
+	source = Makefile.patch
+	sha256sums = SKIP
+	sha256sums = 1469f6c22656a25211e55715e84f67eb3fa072913fa97345319318a37831428a
+
+pkgname = antares-git
+

@@ -1,0 +1,95 @@
+# This is a default template for a post-install scriptlet.
+# Uncomment only required functions and remove any functions
+# you don't need (and this header).
+
+## arg 1:  the new package version
+pre_install() {
+
+  if [ -d /opt/remoteit-headless ]; then
+    remoteit agent uninstall -y 2>/dev/null || true
+    systemctl disable --now avahi-alias@remoteit.local 2>/dev/null || true
+    systemctl disable --now remoteit-headless 2>/dev/null || true
+    systemctl disable --now connectd 2>/dev/null || true
+    systemctl disable --now connectd_schannel 2>/dev/null || true
+    rm -f /usr/lib/systemd/system/avahi-alias@remoteit.local.service
+    rm -rf /opt/remoteit-headless
+    rm -f /usr/bin/remoteit
+    rm -f /usr/bin/connectd
+    rm -f /usr/bin/muxer
+    rm -f /usr/bin/demuxer
+    rm -f /usr/bin/connectd_task_notify
+    mkdir -p /etc/remoteit
+    rm -f /etc/remoteit/config.json-*
+  fi
+
+  exit 0
+
+}
+
+## arg 1:  the new package version
+post_install() {
+
+  . /usr/share/remoteit/functions.sh
+
+  r3_install_agent
+
+  exit 0
+
+}
+
+## arg 1:  the new package version
+## arg 2:  the old package version
+pre_upgrade() {
+
+  if [ -d /opt/remoteit-headless ]; then
+    remoteit agent uninstall -y 2>/dev/null || true
+    systemctl disable --now avahi-alias@remoteit.local 2>/dev/null || true
+    systemctl disable --now remoteit-headless 2>/dev/null || true
+    systemctl disable --now connectd 2>/dev/null || true
+    systemctl disable --now connectd_schannel 2>/dev/null || true
+    rm -f /usr/lib/systemd/system/avahi-alias@remoteit.local.service
+    rm -rf /opt/remoteit-headless
+    rm -f /usr/bin/remoteit
+    rm -f /usr/bin/connectd
+    rm -f /usr/bin/muxer
+    rm -f /usr/bin/demuxer
+    rm -f /usr/bin/connectd_task_notify
+    mkdir -p /etc/remoteit
+    rm -f /etc/remoteit/config.json-*
+  fi
+
+  exit 0
+
+}
+
+## arg 1:  the new package version
+## arg 2:  the old package version
+post_upgrade() {
+
+  . /usr/share/remoteit/functions.sh
+
+  r3_install_agent
+
+  exit 0
+
+}
+
+## arg 1:  the old package version
+pre_remove() {
+
+  . /usr/share/remoteit/functions.sh
+
+  r3_remove_agent
+
+  exit 0
+
+}
+
+## arg 1:  the old package version
+post_remove() {
+
+  rm -rf /etc/remoteit
+
+  exit 0
+
+}

@@ -1,0 +1,18 @@
+pkgbase = shellex
+	pkgdesc = zsh/urxvt based program launcher
+	pkgver = 0.3
+	pkgrel = 1
+	url = https://github.com/Merovius/shellex/blob/master/doc/autoresize.txt
+	arch = i686
+	arch = x86_64
+	license = BSD
+	depends = zsh
+	depends = rxvt-unicode
+	depends = perl-x11-protocol
+	source = shellex-0.3.tar.gz::https://github.com/Merovius/shellex/archive/0.3.tar.gz
+	source = conf.mk.patch
+	sha512sums = 6c98a982ffcb13ecb7d2ef883799512644ef0c3ba38105caae4206eb163bb587c2fa876963c3313ab8419919c4722bbddc0168a258986ca9913a400e996a2bd6
+	sha512sums = a38b6e9104aa2bcf28e16ea495eb440a201c00145044910e0ec55201a3fe983df18eeb17fb2c1f4e668d9e27aa8bcf7f6d46e7394f4bf49abb65aaaec8a1b0cc
+
+pkgname = shellex
+

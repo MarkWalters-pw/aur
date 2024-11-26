@@ -1,0 +1,49 @@
+diff --git a/build_files/cmake/Modules/FindOpenColorIO.cmake b/build_files/cmake/Modules/FindOpenColorIO.cmake
+index 090032e06ec..f5db181d73d 100644
+--- a/blender-2.79b/build_files/cmake/Modules/FindOpenColorIO.cmake
++++ b/blender-2.79b/build_files/cmake/Modules/FindOpenColorIO.cmake
+@@ -28,7 +28,7 @@ IF(NOT OPENCOLORIO_ROOT_DIR AND NOT $ENV{OPENCOLORIO_ROOT_DIR} STREQUAL "")
+ ENDIF()
+ 
+ SET(_opencolorio_FIND_COMPONENTS
+-  OpenColorIO
++  OpenColorIO1
+   yaml-cpp
+   tinyxml
+ )
+@@ -44,7 +44,7 @@ SET(_opencolorio_SEARCH_DIRS
+ 
+ FIND_PATH(OPENCOLORIO_INCLUDE_DIR
+   NAMES
+-    OpenColorIO/OpenColorIO.h
++    OpenColorIO1/OpenColorIO.h
+   HINTS
+     ${_opencolorio_SEARCH_DIRS}
+   PATH_SUFFIXES
+diff --git a/intern/opencolorio/ocio_impl.cc b/intern/opencolorio/ocio_impl.cc
+index 0e25c89f5d7..f1f99de4bd8 100644
+--- a/blender-2.79b/intern/opencolorio/ocio_impl.cc
++++ b/blender-2.79b/intern/opencolorio/ocio_impl.cc
+@@ -33,7 +33,7 @@
+ #  pragma warning(push)
+ #  pragma warning(disable : 4251 4275)
+ #endif
+-#include <OpenColorIO/OpenColorIO.h>
++#include <OpenColorIO1/OpenColorIO.h>
+ #ifdef _MSC_VER
+ #  pragma warning(pop)
+ #endif
+diff --git a/intern/opencolorio/ocio_impl_glsl.cc b/intern/opencolorio/ocio_impl_glsl.cc
+index df6adc8f34b..24d1ec8a871 100644
+--- a/blender-2.79b/intern/opencolorio/ocio_impl_glsl.cc
++++ b/blender-2.79b/intern/opencolorio/ocio_impl_glsl.cc
+@@ -43,7 +43,7 @@
+ #  pragma warning(push)
+ #  pragma warning(disable : 4251 4275)
+ #endif
+-#include <OpenColorIO/OpenColorIO.h>
++#include <OpenColorIO1/OpenColorIO.h>
+ #ifdef _MSC_VER
+ #  pragma warning(pop)
+ #endif
+

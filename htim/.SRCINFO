@@ -1,0 +1,17 @@
+pkgbase = htim
+	pkgdesc = Htop improved, htop with vim key bindings
+	pkgver = 3.2.0
+	pkgrel = 10
+	url = https://gitlab.com/thelinuxguy9/htim
+	arch = x86_64
+	arch = i686
+	license = GPL2
+	depends = ncurses
+	depends = libnl
+	provides = htop
+	conflicts = htop
+	replaces = htop
+	source = https://gitlab.com/thelinuxguy9/htim/-/archive/master/htim-master.tar.bz2
+	md5sums = 2b89b1e0f69b2fad7b3c20bcee364840
+
+pkgname = htim

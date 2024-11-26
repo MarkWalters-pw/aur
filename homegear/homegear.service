@@ -1,0 +1,12 @@
+[Unit]
+Description=Program to interface smart home devices with home automation software
+After=network.target
+
+[Service]
+Type=simple
+LimitRTPRIO=100
+ExecStart=/usr/bin/homegear
+ExecReload=/usr/bin/kill -HUP $MAINPID
+
+[Install]
+WantedBy=multi-user.target

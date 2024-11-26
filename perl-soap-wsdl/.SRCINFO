@@ -1,0 +1,23 @@
+pkgbase = perl-soap-wsdl
+	pkgdesc = SOAP with WSDL support
+	pkgver = 3.004
+	pkgrel = 1
+	url = https://metacpan.org/pod/SOAP::WSDL
+	arch = any
+	license = PerlArtistic
+	license = GPL
+	checkdepends = perl-cgi
+	checkdepends = perl-test-pod
+	checkdepends = perl-soap-lite
+	checkdepends = perl-test-mockobject
+	depends = perl-libwww
+	depends = perl-xml-parser
+	depends = perl-term-readkey
+	depends = perl-class-std-fast
+	depends = perl-class-load
+	depends = perl-template-toolkit
+	options = !emptydirs
+	source = https://cpan.metacpan.org/authors/id/S/SW/SWALTERS/SOAP-WSDL-3.004.tar.gz
+	sha256sums = e2cc1e42eace8dbb384e509d04644191afcdd8df0fec144376cebafad3f15744
+
+pkgname = perl-soap-wsdl

@@ -1,0 +1,21 @@
+pkgbase = cgmnlm-git
+	pkgdesc = colorful gemini line mode client - fork of gmni
+	pkgver = 1.6
+	pkgrel = 1
+	url = https://sr.ht/~rwa/gemini-clients/
+	arch = x86_64
+	arch = armv7h
+	arch = aarch64
+	license = GPL3
+	makedepends = git
+	makedepends = scdoc
+	depends = bearssl
+	optdepends = xdg-utils
+	provides = cgmnlm
+	conflicts = gmni
+	conflicts = gmni-git
+	conflicts = cgmnlm
+	source = cgmnlm-git::git+https://git.sr.ht/~rwa/cgmnlm
+	sha256sums = SKIP
+
+pkgname = cgmnlm-git

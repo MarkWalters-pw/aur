@@ -1,0 +1,17 @@
+#!/bin/bash
+build(){
+  map add_module firewire-sbp2?
+  # firewire
+  add_checked_modules '/drivers/firewire/'
+}
+
+help() {
+    cat <<HELPEOF
+This hook loads the necessary modules for most block devices using firewire.
+Detection will take place at runtime. To minimize the modules in the image, add
+the autodetect hook too.
+HELPEOF
+}
+
+# vim: set ft=sh ts=4 sw=4 et:
+

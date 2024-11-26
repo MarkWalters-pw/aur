@@ -1,0 +1,20 @@
+pkgbase = mstickereditor
+	pkgdesc = import sticker packs from telegram, to be used at the Maunium sticker picker ...
+	pkgver = 0.3.6
+	pkgrel = 1
+	url = https://crates.io/crates/mstickereditor
+	arch = aarch64
+	arch = i686
+	arch = x86_64
+	license = Apache-2.0
+	makedepends = cargo
+	makedepends = clang
+	makedepends = lld
+	depends = gcc-libs
+	depends = ffmpeg
+	depends = libwebp
+	depends = rlottie
+	source = mstickereditor-0.3.6.tar.gz::https://crates.io/api/v1/crates/mstickereditor/0.3.6/download
+	sha512sums = b477e464835c752a60fff3c3eede476dc6f3a314f219bcbcb7f229ff3cda0b6b110a6d45a2de493a288807f3b49fff8acb49ab88d8458b0b6612adaa1f76eabd
+
+pkgname = mstickereditor

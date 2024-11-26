@@ -1,0 +1,19 @@
+pkgbase = kuro-electron
+	pkgdesc = An Electron wrapper for Microsoft To-Do, use system electron22
+	pkgver = 9.0.0
+	pkgrel = 1
+	url = https://github.com/davidsmorais/kuro
+	arch = any
+	license = MIT
+	depends = libnotify
+	depends = libxtst
+	depends = libxss
+	depends = electron22
+	provides = ao
+	provides = kuro
+	conflicts = ao
+	conflicts = kuro
+	source = https://github.com/davidsmorais/kuro/releases/download/v9.0.0/kuro-9.0.0.pacman
+	sha256sums = 49b928b0d807a71477ba1971741e30636d958bf2f650eebbc48c32bb5f869bb0
+
+pkgname = kuro-electron

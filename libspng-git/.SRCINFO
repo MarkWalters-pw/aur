@@ -1,0 +1,18 @@
+pkgbase = libspng-git
+	pkgdesc = Simple, modern libpng alternative
+	pkgver = 0.7.2.r18.gc4126ad
+	pkgrel = 1
+	url = https://github.com/randy408/libspng
+	arch = x86_64
+	arch = aarch64
+	license = BSD
+	makedepends = git
+	makedepends = meson
+	depends = zlib
+	provides = libspng
+	provides = libspng.so
+	conflicts = libspng
+	source = libspng::git+https://github.com/randy408/libspng
+	sha256sums = SKIP
+
+pkgname = libspng-git

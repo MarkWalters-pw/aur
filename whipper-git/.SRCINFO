@@ -1,0 +1,34 @@
+pkgbase = whipper-git
+	pkgdesc = A Unix CD ripper aiming for accuracy over speed -- forked from morituri
+	pkgver = 0.9.1.dev138+g731453e
+	pkgrel = 1
+	url = https://github.com/whipper-team/whipper
+	arch = any
+	license = GPL3
+	checkdepends = python-twisted
+	makedepends = git
+	makedepends = make
+	makedepends = python-setuptools-scm
+	makedepends = python-docutils
+	depends = cdrdao
+	depends = flac
+	depends = libcdio-paranoia
+	depends = libsndfile
+	depends = python-discid
+	depends = python-mutagen
+	depends = python-musicbrainzngs
+	depends = python-gobject
+	depends = python-pycdio
+	depends = python-ruamel-yaml
+	depends = python-setuptools
+	depends = sox
+	optdepends = python-pillow: for complete cover art support
+	provides = whipper
+	provides = accuraterip-checksum
+	conflicts = whipper
+	conflicts = accuraterip-checksum
+	source = git+https://github.com/whipper-team/whipper.git#branch=develop
+	md5sums = SKIP
+
+pkgname = whipper-git
+

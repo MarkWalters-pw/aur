@@ -1,0 +1,17 @@
+pkgbase = pyenv-git
+	pkgdesc = Easily switch between multiple versions of Python (Git)
+	pkgver = 2.0.0.r0.g1270ca6b
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/pyenv/pyenv
+	arch = any
+	license = MIT
+	depends = bash
+	depends = git
+	provides = pyenv
+	conflicts = pyenv
+	source = git+https://github.com/pyenv/pyenv.git
+	sha512sums = SKIP
+
+pkgname = pyenv-git
+

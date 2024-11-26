@@ -1,0 +1,16 @@
+pkgbase = android-x86-system-image-21
+	pkgdesc = Android x86 Atom System Image, API-21
+	pkgver = r05
+	pkgrel = 1
+	url = https://developer.android.com/studio/index.html
+	arch = any
+	license = custom
+	depends = android-platform-21
+	optdepends = qemu
+	optdepends = libvirt
+	provides = android-x86-system-image-21
+	options = !strip
+	source = https://dl-ssl.google.com/android/repository/sys-img/android/x86-21_r05.zip
+	sha256sums = 2a7d1a01a4a455b989353d16c3f2bc427b6e133300072c790c7650e5e0080095
+
+pkgname = android-x86-system-image-21

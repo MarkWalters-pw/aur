@@ -1,0 +1,18 @@
+pkgbase = stratisd-single
+	pkgdesc = Easy to use local storage management for Linux.
+	pkgver = 0.5.5
+	pkgrel = 0
+	url = https://stratis-storage.github.io/
+	arch = x86_64
+	license = MPL2
+	makedepends = asciidoc
+	makedepends = cargo
+	makedepends = rust
+	makedepends = git
+	provides = stratisd
+	conflicts = stratisd
+	source = stratisd-0.5.5.tar.gz::https://github.com/stratis-storage/stratisd/archive/v0.5.5.tar.gz
+	sha256sums = ca0de355c1ae5caa562b3fae5554eb8bae8f1916b3ef7052ec5d88037eaf0458
+
+pkgname = stratisd-single
+

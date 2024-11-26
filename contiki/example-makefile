@@ -1,0 +1,5 @@
+CONTIKI_PROJECT = your-project-name-here
+all: $(CONTIKI_PROJECT)
+
+CONTIKI = /usr/share/contiki/
+include $(CONTIKI)/Makefile.include

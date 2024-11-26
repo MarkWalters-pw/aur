@@ -1,0 +1,23 @@
+pkgbase = bitwig-studio-beta
+	pkgdesc = Digital audio workstation for music production, remixing and live performance
+	pkgver = 4.4.2
+	pkgrel = 1
+	url = https://www.bitwig.com/
+	arch = x86_64
+	license = custom
+	depends = gtk3
+	depends = lib32-libx11
+	depends = lib32-libxkbcommon
+	depends = libxkbcommon-x11
+	depends = xcb-util
+	depends = xcb-util-wm
+	optdepends = alsa-lib
+	optdepends = jack
+	optdepends = oss
+	optdepends = ffmpeg: MP3 support
+	provides = bitwig-studio
+	options = !strip
+	source = bitwig-studio-4.4.2.deb::https://downloads.bitwig.com/stable/4.4.2/bitwig-studio-4.4.2.deb
+	b2sums = 752c661906e4c3af169b8fb32cfef3892e633c270bb7f2d64962810729501b18fdcab34f927c66aab1a7089e1caca19d220284d4a452fd9712eae5f0ec6b7ee4
+
+pkgname = bitwig-studio-beta

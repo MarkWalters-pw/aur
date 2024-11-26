@@ -1,0 +1,29 @@
+post_install() {
+    GAMEDIR=/usr/local/games/Texmaster2009-3
+    LAUNCHER=$GAMEDIR/texmaster-launcher
+    groupadd -f -g 50 games
+    chgrp games $GAMEDIR $LAUNCHER
+    chmod g+w $GAMEDIR
+    chmod g+s $LAUNCHER
+}
+
+pre_remove() {
+    pre_upgrade
+
+    rm -f $GAMEDIR/*.bmp
+    rm -f $GAMEDIR/Texmaster2009.ubuntu10.04.nv
+    rm -f $GAMEDIR/Texmaster2009.ubuntu10.04.sav
+}
+
+pre_upgrade() {
+    GAMEDIR=/usr/local/games/Texmaster2009-3
+    LAUNCHER=$GAMEDIR/texmaster-launcher
+
+    chmod g-s $LAUNCHER
+    chmod g-w $GAMEDIR
+    chgrp root $GAMEDIR $LAUNCHER
+}
+
+post_upgrade() {
+    post_install
+}

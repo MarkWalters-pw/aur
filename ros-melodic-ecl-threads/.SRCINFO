@@ -1,0 +1,31 @@
+pkgbase = ros-melodic-ecl-threads
+	pkgdesc = ROS - This package provides the c++ extensions for a variety of threaded programming tools.
+	pkgver = 0.62.2
+	pkgrel = 2
+	url = https://wiki.ros.org/ecl_threads
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-melodic-ecl-license
+	makedepends = ros-melodic-ecl-errors
+	makedepends = ros-melodic-ecl-config
+	makedepends = ros-melodic-ecl-utilities
+	makedepends = ros-melodic-ecl-time
+	makedepends = ros-melodic-ecl-concepts
+	makedepends = ros-melodic-ecl-build
+	makedepends = ros-melodic-ecl-exceptions
+	makedepends = ros-melodic-catkin
+	depends = ros-melodic-ecl-license
+	depends = ros-melodic-ecl-errors
+	depends = ros-melodic-ecl-config
+	depends = ros-melodic-ecl-utilities
+	depends = ros-melodic-ecl-time
+	depends = ros-melodic-ecl-concepts
+	depends = ros-melodic-ecl-build
+	depends = ros-melodic-ecl-exceptions
+	source = ros-melodic-ecl-threads-0.62.2.tar.gz::https://github.com/stonier/ecl_core/archive/0.62.2.tar.gz
+	sha256sums = 69d503109878e3a2c4f5be611fc9609078714899cae15fbf7f58119fdbd61e37
+
+pkgname = ros-melodic-ecl-threads
+

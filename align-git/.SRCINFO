@@ -1,0 +1,16 @@
+pkgbase = align-git
+	pkgdesc = A general purpose application for aligning text
+	pkgver = 1.1.3.r0.gc81c6ab
+	pkgrel = 1
+	url = https://github.com/Guitarbum722/align
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = go
+	depends = glibc
+	provides = align
+	conflicts = align
+	source = align-git::git+https://github.com/Guitarbum722/align
+	sha256sums = SKIP
+
+pkgname = align-git

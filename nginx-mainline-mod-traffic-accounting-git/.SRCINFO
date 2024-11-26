@@ -1,0 +1,18 @@
+pkgbase = nginx-mainline-mod-traffic-accounting-git
+	pkgdesc = Monitor the incoming and outgoing traffic metrics in realtime for NGINX (module for mainline nginx) (Git version)
+	pkgver = r99.43c9b9d
+	pkgrel = 2
+	url = https://github.com/Lax/traffic-accounting-nginx-module
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7
+	license = BSD
+	makedepends = nginx-mainline-src
+	depends = nginx-mainline
+	depends = brotli
+	source = git+https://github.com/Lax/traffic-accounting-nginx-module.git
+	sha256sums = SKIP
+
+pkgname = nginx-mainline-mod-traffic-accounting-git
+

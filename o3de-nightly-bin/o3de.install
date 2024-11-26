@@ -1,0 +1,31 @@
+_engver=4.2.0
+
+o3de_python_install() {
+    if [ ! "$(logname 2>&1 >/dev/null)" ]; then
+        _user=$(logname)
+        _group=$(id -g -n ${_user})
+    else
+        _user=root
+        _group=root
+    fi
+
+    # Change ownership to user
+    # Not entirely sure if this is still required
+    chown -R ${_user}:${_group} /opt/O3DE/${_engver}
+
+    # Run O3DE provided python install script as user
+    runuser -l ${_user} -c "/opt/O3DE/${_engver}/python/get_python.sh"
+}
+
+post_install() {
+    o3de_python_install
+
+    tput bold
+    echo NOTE: You may need to increase the maximum file descriptor limit according to the needs of your O3DE Project
+    echo See https://wiki.archlinux.org/title/Limits.conf#nofile
+    tput sgr0
+}
+
+post_upgrade() {
+    o3de_python_install
+}

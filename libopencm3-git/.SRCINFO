@@ -1,0 +1,20 @@
+pkgbase = libopencm3-git
+	pkgdesc = Open Source firmware library for various ARM Cortex microcontrollers
+	pkgver = r2759.3b89fc59
+	pkgrel = 1
+	url = http://www.libopencm3.org/
+	arch = any
+	license = GPL
+	makedepends = git
+	makedepends = arm-none-eabi-gcc
+	makedepends = arm-none-eabi-newlib
+	makedepends = python-yaml
+	options = !strip
+	options = staticlibs
+	options = !buildflags
+	source = git://github.com/libopencm3/libopencm3.git
+	source = 0001-Revert-Drop-install-target-and-documentation.patch
+	sha256sums = SKIP
+	sha256sums = fed65c22533a8fb5a40a5eb0abf65051f6e38d87d1a3d2231094701e222857d5
+
+pkgname = libopencm3-git

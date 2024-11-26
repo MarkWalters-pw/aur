@@ -3,7 +3,7 @@
 To use this repo you need the latest version of paru-bin and append the following to /etc/paru.conf
 ```
 [mwaur]
-URL = https://github.com/MarkWalters-pw/aur.git
+URL = https://github.com/MarkWalters-dev/aur.git
 ```
 Then install with: 
 `paru -Sy --needed --noconfirm focalboard-server`

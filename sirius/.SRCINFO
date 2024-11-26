@@ -1,0 +1,22 @@
+pkgbase = sirius
+	pkgdesc = Domain specific library for electronic structure calculations
+	pkgver = 7.3.0
+	pkgrel = 1
+	url = https://github.com/electronic-structure/SIRIUS
+	arch = x86_64
+	license = BSD
+	makedepends = cmake
+	depends = libvdwxc
+	depends = libxc
+	depends = spglib
+	depends = elpa
+	depends = spfft
+	depends = spla
+	depends = gsl
+	depends = hdf5
+	optdepends = magma: Linear algebra on GPU
+	options = !emptydirs
+	source = sirius-7.3.0.tar.gz::https://github.com/electronic-structure/SIRIUS/archive/v7.3.0.tar.gz
+	sha256sums = 69b5cf356adbe181be6c919032859c4e0160901ff42a885d7e7ea0f38cc772e2
+
+pkgname = sirius

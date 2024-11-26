@@ -1,0 +1,21 @@
+pkgbase = apache-flume-ng
+	pkgdesc = Distributed system for moving large amounts of log data.
+	pkgver = 1.9.0
+	pkgrel = 1
+	url = http://flume.apache.org
+	install = flume-ng.install
+	arch = any
+	license = Apache License
+	makedepends = java-environment
+	depends = java-environment
+	source = http://www.eu.apache.org/dist//flume/1.9.0/apache-flume-1.9.0-bin.tar.gz
+	source = flume-ng-conf
+	source = flume-ng.profile
+	source = flume-ng.service
+	md5sums = cc17aaa30cbd051eaa2cdbecd73c3bab
+	md5sums = 4ee8391d354fb58817efb8ed1058405c
+	md5sums = 9d1e8ab323df2d8dd747f27c51841c1a
+	md5sums = 06ec3866251641e056534657b3d236e3
+
+pkgname = apache-flume-ng
+

@@ -1,0 +1,16 @@
+pkgbase = govarnam-schemes-git
+	pkgdesc = Varnam Language support files for govarnam - Git version
+	pkgver = 1.8.0.r0.gffde8ee
+	pkgrel = 1
+	url = https://www.varnamproject.com/
+	install = govarnam-schemes-git.install
+	arch = x86_64
+	license = MPL
+	makedepends = ruby
+	makedepends = ruby-ffi
+	makedepends = govarnam
+	provides = govarnam-schemes
+	source = git+https://github.com/varnamproject/schemes.git
+	sha256sums = SKIP
+
+pkgname = govarnam-schemes-git

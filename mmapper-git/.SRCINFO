@@ -1,0 +1,17 @@
+pkgbase = mmapper-git
+	pkgdesc = MUD (Multi-User Dungeon) mapper especially written for the MUD MUME
+	pkgver = 23.05.0.r8.gd7efa7b1
+	pkgrel = 1
+	url = https://github.com/MUME/MMapper
+	arch = x86_64
+	license = GPL2
+	makedepends = cmake
+	makedepends = git
+	depends = qt5-base
+	depends = miniupnpc
+	provides = mmapper
+	conflicts = mmapper
+	source = git+https://github.com/MUME/MMapper
+	md5sums = SKIP
+
+pkgname = mmapper-git

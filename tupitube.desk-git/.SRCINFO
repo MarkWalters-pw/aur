@@ -1,0 +1,26 @@
+pkgbase = tupitube.desk-git
+	pkgdesc = A design and authoring tool for digital artists interested in 2D animation.
+	pkgver = r1720.2b833c8e
+	pkgrel = 1
+	url = http://www.maefloresta.com/
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = ruby
+	makedepends = zlib
+	makedepends = libgl
+	depends = qt5-multimedia
+	depends = qt5-svg
+	depends = quazip
+	depends = ffmpeg
+	depends = shared-mime-info
+	provides = tupi
+	conflicts = tupi
+	source = git+https://github.com/xtingray/tupitube.desk.git
+	source = quazip5.patch
+	md5sums = SKIP
+	md5sums = 5c33ca77bf675939d9fb557b31c2f926
+
+pkgname = tupitube.desk-git
+

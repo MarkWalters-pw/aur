@@ -1,0 +1,16 @@
+pkgbase = fish-humantime
+	pkgdesc = Fish plugin for making timestamps human-readable
+	pkgver = 1.0.0
+	pkgrel = 2
+	url = https://github.com/jorgebucaran/humantime.fish
+	arch = any
+	groups = fish-plugins
+	license = MIT
+	makedepends = git
+	depends = fish
+	replaces = fish-humanize-duration
+	source = fish-humantime::git+https://github.com/jorgebucaran/humantime.fish#tag=1.0.0?signed
+	validpgpkeys = CA88B7CBEDCEE375F2376C53E54BA3C0E646DB30
+	sha256sums = SKIP
+
+pkgname = fish-humantime

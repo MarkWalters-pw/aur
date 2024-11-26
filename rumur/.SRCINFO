@@ -1,0 +1,20 @@
+pkgbase = rumur
+	pkgdesc = Yet another Murphi model checker
+	pkgver = 2024.05.07
+	pkgrel = 1
+	url = https://github.com/Smattr/rumur
+	arch = x86_64
+	license = custom:UNLICENSE
+	checkdepends = valgrind
+	checkdepends = z3
+	makedepends = cmake
+	makedepends = bison>=3.3.2
+	makedepends = flex
+	depends = gmp
+	depends = python
+	optdepends = z3: Preferred SMT solver
+	optdepends = cvc4: Alternative SMT solver
+	source = https://github.com/Smattr/rumur/archive/v2024.05.07.tar.gz
+	sha256sums = bf09d11c173280cd4893f7fa452fa3bebe5ad9aae44ea2750e56772acc6ad092
+
+pkgname = rumur

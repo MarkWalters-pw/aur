@@ -1,0 +1,29 @@
+pkgbase = haskell-haxml
+	pkgdesc = Utilities for manipulating XML documents
+	pkgver = 1.25.5
+	pkgrel = 1
+	url = http://hackage.haskell.org/package/HaXml
+	install = haskell-haxml.install
+	arch = i686
+	arch = x86_64
+	license = LGPL
+	depends = ghc
+	depends = haskell-random
+	depends = haskell-polyparse>=1.10
+	depends = haskell-pretty
+	depends = haskell-pretty
+	depends = haskell-filepath
+	provides = FpMLToHaskell
+	provides = XsdToHaskell
+	provides = DtdToHaskell
+	provides = MkOneOf
+	provides = Validate
+	provides = Xtract
+	provides = CanonicaliseLazy
+	provides = Canonicalise
+	options = strip
+	source = https://hackage.haskell.org/packages/archive/HaXml/1.25.5/HaXml-1.25.5.tar.gz
+	sha256sums = cbc51ac4b6128e130f0272a7b42ab464bc865b3c238d6cce6b76e451765c1235
+
+pkgname = haskell-haxml
+

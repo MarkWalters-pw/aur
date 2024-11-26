@@ -1,0 +1,21 @@
+pkgbase = pdsh-genders
+	pkgdesc = Parallel Distributed Shell
+	pkgver = 2.34
+	pkgrel = 1
+	url = https://github.com/chaos/pdsh
+	arch = i686
+	arch = x86_64
+	license = GPL
+	depends = glibc
+	depends = openssh
+	depends = readline
+	depends = genders
+	optdepends = perl: required by the dshbak utility
+	provides = pdsh
+	conflicts = pdsh
+	options = libtool
+	source = https://github.com/chaos/pdsh/releases/download/pdsh-2.34/pdsh-2.34.tar.gz
+	sha256sums = b47b3e4662736ef44b6fe86e3d380f95e591863e69163aa0592e9f9f618521e9
+
+pkgname = pdsh-genders
+

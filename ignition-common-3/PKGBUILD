@@ -1,0 +1,39 @@
+# Maintainer: acxz <akashpatel2008 at yahoo dot com>
+# Maintainer: Homalozoa <nx.tardis@gmail.com>
+# Contributor: Bernd Müller <github@muellerbernd.de>
+
+pkgname=ignition-common-3
+pkgver=3.16.0
+pkgrel=1
+pkgdesc="Provides a set of libraries that cover many different use cases."
+arch=('x86_64')
+url="https://gazebosim.org/libs/common"
+license=('Apache')
+groups=('development')
+depends=('ignition-math=6' 'tinyxml2' 'freeimage' 'libutil-linux' 'gts' 'ffmpeg4.4')
+makedepends=('ignition-cmake=2' 'util-linux')
+provides=("ignition-common=3")
+source=("${pkgname}-${pkgver}.tar.gz::https://github.com/gazebosim/gz-common/archive/ignition-common3_${pkgver}.tar.gz")
+sha256sums=('fcf428cf8732654bfee32dab18d431da9bba3ecfc47e0af89598d64128c81b26')
+
+_dir="gz-common-ignition-common3_${pkgver}"
+
+build() {
+  cd "$srcdir/$_dir"
+
+  mkdir -p build
+  cd build
+
+  export PKG_CONFIG_PATH=/usr/lib/ffmpeg4.4/pkgconfig
+  cmake .. -DCMAKE_BUILD_TYPE="Release" \
+           -DCMAKE_INSTALL_PREFIX="/usr" \
+           -DCMAKE_INSTALL_LIBDIR="lib" \
+           -DBUILD_TESTING:BOOL=False
+
+  make
+}
+
+package() {
+  cd "$srcdir/$_dir/build"
+  make DESTDIR="$pkgdir/" install
+}

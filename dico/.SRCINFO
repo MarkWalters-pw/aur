@@ -1,0 +1,21 @@
+pkgbase = dico
+	pkgdesc = GNU Dictionary Server
+	pkgver = 2.11
+	pkgrel = 1
+	url = http://puszcza.gnu.org.ua/software/dico
+	arch = x86_64
+	license = GPL3
+	depends = python
+	depends = gsasl
+	depends = wordnet-common
+	depends = guile
+	depends = pam
+	depends = pcre
+	source = https://ftp.gnu.org/gnu/dico/dico-2.11.tar.xz
+	source = https://ftp.gnu.org/gnu/dico/dico-2.11.tar.xz.sig
+	validpgpkeys = 325F650C4C2B6AD58807327A3602B07F55D0C732
+	sha1sums = f545452d1ecaf3e07780cf9324082c7a788e4afa
+	sha1sums = SKIP
+
+pkgname = dico
+

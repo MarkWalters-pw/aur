@@ -1,0 +1,21 @@
+pkgbase = webfontkitgenerator-git
+	pkgdesc = Create @font-face kits easily
+	pkgver = 1.0.0
+	pkgrel = 1
+	url = https://github.com/rafaelmardojai/webfontkitgenerator
+	arch = any
+	license = GPL3
+	makedepends = meson
+	makedepends = git
+	depends = gtk4
+	depends = gtksourceview5
+	depends = gst-python
+	depends = libadwaita
+	depends = python-fonttools
+	depends = python-brotli
+	provides = webfontkitgenerator
+	conflicts = webfontkitgenerator
+	source = git+https://github.com/rafaelmardojai/webfontkitgenerator.git
+	sha256sums = SKIP
+
+pkgname = webfontkitgenerator-git

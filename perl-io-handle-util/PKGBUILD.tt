@@ -1,0 +1,41 @@
+# CPAN Name  : IO::Handle::Util
+# Contributor: [% packager %]
+# Generator  : CPANPLUS::Dist::Arch [% version %]
+
+pkgname=[% pkgname %]
+pkgver=[% pkgver %]
+pkgrel=[% pkgrel %]
+pkgdesc='Perl module with functions for working with IO::Handle like objects'
+arch=('any')
+url='[% url %]'
+license=('PerlArtistic' 'GPL')
+makedepends=('perl-module-build-tiny>=0.034')
+depends=('perl-asa' 'perl-io-string' 'perl-sub-exporter')
+source=([% source %])
+options=(!emptydirs)
+md5sums=('[% md5sums %]')
+
+sanitize() {
+	unset PERL5LIB PERL_MM_OPT PERL_MB_OPT PERL_LOCAL_LIB_ROOT
+	export PERL_MM_USE_DEFAULT=1 PERL_AUTOINSTALL="--skipdeps" MODULEBUILDRC=/dev/null
+}
+
+build() {
+	cd [% distdir %]
+	sanitize
+	perl Makefile.PL INSTALLDIRS=vendor
+	make
+}
+
+check() {
+	cd [% distdir %]
+	sanitize
+	make test
+}
+
+package() {
+	cd [% distdir %]
+	sanitize
+	make install DESTDIR="$pkgdir"
+	find "$pkgdir" \( -name .packlist -o -name perllocal.pod \) -delete
+}

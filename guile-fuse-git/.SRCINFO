@@ -1,0 +1,18 @@
+pkgbase = guile-fuse-git
+	pkgdesc = guile bindings for fuse (filesystems in userspace) as a shared library
+	pkgver = 24
+	pkgrel = 1
+	url = http://sph.mn
+	arch = any
+	license = gpl3+
+	makedepends = git
+	makedepends = gcc
+	depends = guile>=2
+	depends = fuse
+	provides = guile-fuse
+	conflicts = guile-fuse
+	source = guile-fuse::git://git.sph.mn/guile-fuse
+	md5sums = SKIP
+
+pkgname = guile-fuse-git
+

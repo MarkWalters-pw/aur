@@ -1,0 +1,24 @@
+pkgbase = xorgxrdp-git
+	pkgdesc = Xorg drivers for xrdp. Git version, devel branch.
+	pkgver = 0.10.1.r24.g4c25520
+	pkgrel = 1
+	url = https://github.com/neutrinolabs/xorgxrdp
+	arch = i686
+	arch = x86_64
+	arch = armv6h
+	arch = armv7l
+	arch = aarch64
+	license = X11
+	checkdepends = check
+	checkdepends = xorg-xdpyinfo
+	makedepends = nasm
+	makedepends = xorg-server-devel
+	makedepends = xrdp-git
+	depends = xorg-server
+	provides = xorgxrdp
+	conflicts = xorgxrdp
+	options = staticlibs
+	source = git+https://github.com/neutrinolabs/xorgxrdp#branch=devel
+	sha256sums = SKIP
+
+pkgname = xorgxrdp-git

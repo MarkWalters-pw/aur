@@ -1,0 +1,23 @@
+pkgbase = tofi
+	pkgdesc = Tiny rofi / dmenu replacement for wlroots-based Wayland compositors.
+	pkgver = 0.9.1
+	pkgrel = 2
+	url = https://github.com/philj56/tofi
+	arch = x86_64
+	license = MIT
+	makedepends = meson
+	makedepends = scdoc
+	makedepends = wayland-protocols
+	depends = freetype2
+	depends = harfbuzz
+	depends = cairo
+	depends = pango
+	depends = wayland
+	depends = libxkbcommon
+	depends = glib2
+	provides = tofi
+	conflicts = tofi
+	source = https://github.com/philj56/tofi/archive/v0.9.1/tofi-0.9.1.tar.gz
+	sha512sums = a14ab5ecf2c6e1ecb0ec3366c436140aa422995d464de513e81e454df0f303fc9661b534a3f40df4f14897629cd0cc299bb449482b676fbf254002731ac02231
+
+pkgname = tofi

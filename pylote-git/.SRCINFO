@@ -1,0 +1,18 @@
+pkgbase = pylote-git
+	pkgdesc = Software making it possible to draw on the screen of the computer, like handling various instruments of geometry.
+	pkgver = r186.981d39e
+	pkgrel = 1
+	url = http://pascal.peter.free.fr/pylote.html
+	arch = any
+	license = GPL
+	depends = python-pyqt5
+	depends = qt5-webkit
+	conflicts = pylote
+	replaces = pylote
+	source = git+https://gitlab.com/edleh/pylote.git
+	source = pylote.desktop
+	sha256sums = SKIP
+	sha256sums = fc068a7425d00a6b8295ae04255cd1860df28f11055478d8d9b64e9d65671b17
+
+pkgname = pylote-git
+

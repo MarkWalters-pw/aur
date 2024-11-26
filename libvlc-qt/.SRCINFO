@@ -1,0 +1,19 @@
+pkgbase = libvlc-qt
+	pkgdesc = A simple library to connect Qt application with libvlc
+	pkgver = 1.1.1
+	pkgrel = 2
+	url = https://github.com/vlc-qt/vlc-qt
+	arch = i686
+	arch = x86_64
+	license = LGPL3
+	makedepends = cmake
+	depends = vlc
+	depends = qt5-declarative
+	provides = libVLCQtCore.so
+	provides = libVLCQtQml.so
+	provides = libVLCQtWidgets.so
+	source = vlc-qt-1.1.1.tar.gz::https://github.com/vlc-qt/vlc-qt/archive/1.1.1.tar.gz
+	sha256sums = bdc8adb85d2c81e2b07630042e38b894b18882f74b3dbb97b33f357b50135bce
+
+pkgname = libvlc-qt
+

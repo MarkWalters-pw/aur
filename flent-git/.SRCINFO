@@ -1,0 +1,22 @@
+pkgbase = flent-git
+	pkgdesc = The FLExible Network Tester.
+	pkgver = 2.0.0.r7.11522824e766
+	pkgrel = 1
+	url = https://flent.org
+	arch = any
+	license = GPL
+	makedepends = git
+	depends = python
+	depends = netperf
+	depends = python-setuptools
+	optdepends = python-matplotlib: for outputting graphs
+	optdepends = python-qtpy: for the GUI
+	provides = flent
+	conflicts = netperf-wrapper
+	conflicts = flent
+	replaces = netperf-wrapper
+	source = git+https://github.com/tohojo/flent.git
+	md5sums = SKIP
+
+pkgname = flent-git
+

@@ -1,0 +1,41 @@
+# Maintainer: acxz <akashpatel2008 at yahoo dot com>
+# Contributor: AchmadFathoni <fathoni DOT id AT gmail DOT com>
+# Contributor: Mykola Dolhyi <0xb000@gmail.com>
+# Contributor: Ramdambo <https://github.com/Ramdambo>
+# Contributor: Bernd Müller <github@muellerbernd.de>
+
+pkgname=ignition-math-6
+pkgver=6.14.0
+pkgrel=1
+pkgdesc="General purpose math library for robot applications."
+arch=('i686' 'x86_64')
+url="https://gazebosim.org/libs/math"
+license=('Apache')
+groups=('development')
+depends=('gcc-libs' 'swig')
+makedepends=('ignition-cmake=2' 'ignition-utils=1' 'eigen' 'python' 'pybind11')
+provides=('ignition-math=6')
+source=("${pkgname}-${pkgver}.tar.gz::https://github.com/gazebosim/gz-math/archive/ignition-math6_${pkgver}.tar.gz")
+sha256sums=("d03a4f68f000e226388959e01e8fbbbd3a984e92a3511a0b2ac1598143f394aa")
+
+_dir="gz-math-ignition-math6_${pkgver}"
+
+build() {
+  cd "$srcdir/$_dir"
+
+  mkdir -p build
+  cd build
+
+  cmake .. -Wno-dev \
+           -DCMAKE_BUILD_TYPE="Release" \
+           -DCMAKE_INSTALL_PREFIX="/usr" \
+           -DCMAKE_INSTALL_LIBDIR="lib" \
+           -DBUILD_TESTING:BOOL=False
+
+  make
+}
+
+package() {
+  cd "$srcdir/$_dir/build"
+  make DESTDIR="$pkgdir/" install
+}

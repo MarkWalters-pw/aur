@@ -1,0 +1,18 @@
+pkgbase = cppkafka-git
+	pkgdesc = Modern C++ Apache Kafka client library (wrapper for librdkafka)
+	pkgver = 0.4.0.r12.g91ac543
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/mfontanini/cppkafka
+	arch = x86_64
+	license = BSD
+	makedepends = git
+	makedepends = cmake
+	makedepends = boost
+	depends = librdkafka-git
+	provides = cppkafka=0.4.0.r12.g91ac543
+	conflicts = cppkafka
+	source = git+https://github.com/mfontanini/cppkafka
+	sha256sums = SKIP
+
+pkgname = cppkafka-git

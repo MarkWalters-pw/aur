@@ -1,0 +1,7 @@
+--- Makefile.am	2021-04-14 02:51:35.000000000 -0600
++++ Makefile.am	2023-03-20 13:27:33.072902743 -0600
+@@ -60,2 +60,2 @@
+-	  $(MKDIR_P) $(DESTDIR)$(datarootdir)/examples/$(PACKAGE)/;\
+-	  cp -r $(PACKAGE)/* $(DESTDIR)$(datarootdir)/examples/$(PACKAGE)/; \
++	  $(MKDIR_P) $(DESTDIR)$(docdir)/examples/;\
++	  cp -r $(PACKAGE)/* $(DESTDIR)$(docdir)/examples/; \

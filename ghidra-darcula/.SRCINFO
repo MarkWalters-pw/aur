@@ -1,0 +1,34 @@
+pkgbase = ghidra-darcula
+	pkgdesc = Software reverse engineering framework (with dark theme)
+	pkgver = 10.2.2
+	pkgrel = 1
+	url = https://ghidra-sre.org
+	arch = x86_64
+	arch = aarch64
+	license = Apache
+	makedepends = fop
+	makedepends = git
+	makedepends = gradle
+	makedepends = unzip
+	depends = bash
+	depends = java-environment=17
+	depends = polkit
+	provides = ghidra
+	conflicts = ghidra
+	conflicts = ghidra-dev
+	conflicts = ghidra-desktop
+	options = !strip
+	source = git+https://github.com/NationalSecurityAgency/ghidra#tag=Ghidra_10.2.2_build
+	source = git+https://github.com/encounter/darcula-laf.git#commit=5f401c27dc0710575d45e13c2c255d78dbe0a4ab
+	source = ghidra.desktop
+	source = ghidra-root.desktop
+	source = ghidra.policy
+	source = darcula.patch
+	sha512sums = SKIP
+	sha512sums = SKIP
+	sha512sums = 4cf019d5bfde5265d667400111fb0c2473caa2457756c9c73e33d6128da3b116bf8d1b8cbb4092bbe27ea65ea5ab46f922e05a1e53ff36b90f76d8fcc4bfc1e7
+	sha512sums = c717029cf31860e27b5563c3ff4b2740d4b1997bc50481214e24c38f12d9acbfa9ca2cbfe594d43071fbf8420ac8f022119c2c23ddef0c717d96860e22eb35c3
+	sha512sums = 0a35f58b1820ac65ce37d09b0a6904ab7018c773c73ecd29bcfda37cbd27f34af868585084b5cd408b1066b7956df043cb1573a1e3d890e173be737d2de51401
+	sha512sums = 86f7290a7380705666f807f825aa2db6d4ff59cbbda319e2467cdb13fa96143f65cd9f37e9150f5f0b984a8ecf26874f251e1b3830d2ff13bb96bfa171de9316
+
+pkgname = ghidra-darcula

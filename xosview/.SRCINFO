@@ -1,0 +1,16 @@
+pkgbase = xosview
+	pkgdesc = Displays system stats such as cpu, memory, swap, and network usage
+	pkgver = 1.24
+	pkgrel = 1
+	url = http://www.pogo.org.uk/~mark/xosview/
+	arch = i686
+	arch = x86_64
+	license = GPL
+	depends = gcc-libs
+	depends = hicolor-icon-theme
+	depends = libxpm
+	options = !debug
+	source = http://www.pogo.org.uk/~mark/xosview/releases/xosview-1.24.tar.gz
+	sha256sums = 6d486c1a5a590d440ee1e2e5b06cea6bdcda7da16ca68d80f368cdfc42d7acb9
+
+pkgname = xosview

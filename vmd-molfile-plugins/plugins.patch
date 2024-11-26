@@ -1,0 +1,62 @@
+--- plugins/Makefile	2020-09-16 21:36:11.000000000 +0300
++++ plugins/Makefile	2020-10-20 00:29:29.170540420 +0300
+@@ -20,11 +20,11 @@
+                 multiseq multiseqdialog phylotree \
+                 psipred seqdata seqedit stamp
+ 
+ # When building from the independent multiseq tree, we'll use an empty list
+ # since the dependency will be dealt with manually.
+-#MSEQBUILDDIRS = 
++MSEQBUILDDIRS = 
+ 
+ # The Intersurf plugin is compiled manually and should only be
+ # listed if the binaries are up-to-date for the target platform(s)
+ #INTERSURF = intersurf
+ INTERSURF = 
+@@ -145,10 +145,11 @@
+   vmdtkcon \
+   zoomseq \
+   $(MSEQBUILDDIRS) \
+   $(INTERSURF)
+ 
++BUILDDIRS = 
+ INCLUDEDIR = include
+ PLUGINHEADERS = vmdplugin.h molfile_plugin.h vmdconio.h
+ 
+ distrib: 
+ 	@echo "Populating distribution directory with compiled plugins"
+--- plugins/Make-arch	2020-12-13 09:21:59.000000000 +0300
++++ plugins/Make-arch	2021-06-21 15:22:48.938827194 +0300
+@@ -333,25 +333,27 @@
+ 	"NM = nm -p" \
+ 	"RANLIB = touch" \
+ 	"SHLD = gcc -shared"
+ 
+ LINUXAMD64:
+-	$(MAKE) dynlibs staticlibs bins \
++	$(MAKE) dynlibs staticlibs \
+ 	"ARCH = LINUXAMD64" \
+ 	"COPTO = -fPIC -m64 -o " \
+ 	"LOPTO = -fPIC -m64 -lstdc++ -o " \
+-	"CC = gcc" \
+-	"CXX = g++" \
++	"CC = gcc-10" \
++	"CXX = g++-10" \
+ 	"DEF = -D" \
+ 	"CCFLAGS = -m64 -O2 -fPIC -Wall" \
+ 	"CXXFLAGS = -m64 -O2 -fPIC -Wall" \
+-	"TCLLDFLAGS = -ltcl8.5 -ldl" \
++	"TCLLDFLAGS = -ltcl8.6 -ldl" \
+ 	"NETCDFLDFLAGS = -lnetcdf " \
++	"NETCDFLIB = -L/usr/lib" \
++	"NETCDFINC = -I/usr/include" \
+ 	"AR = ar" \
+ 	"NM = nm -p" \
+ 	"RANLIB = touch" \
+-	"SHLD = gcc -shared"
++	"SHLD = gcc-10 -shared"
+ 
+ LINUXARM64:
+ 	$(MAKE) dynlibs staticlibs bins \
+ 	"ARCH = LINUXARM64" \
+ 	"COPTO = -fPIC -o " \

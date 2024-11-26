@@ -1,0 +1,19 @@
+pkgbase = fwts-git
+	pkgdesc = The FirmWare Test Suite is a tool to do automatic testing of a PC's firmware
+	pkgver = 23.11.00.r9.ffc2469b
+	pkgrel = 1
+	url = https://github.com/fwts/fwts
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	depends = dtc
+	depends = libbsd
+	depends = pcre
+	depends = json-c
+	provides = fwts
+	conflicts = fwts
+	source = fwts::git+https://github.com/fwts/fwts
+	sha256sums = SKIP
+
+pkgname = fwts-git

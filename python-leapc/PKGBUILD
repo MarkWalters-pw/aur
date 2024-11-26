@@ -1,0 +1,57 @@
+# Maintainer: rodolpheh <rodolphe@lunai.re>
+_commit=2341c6c
+pkgname=python-leapc
+pkgver=0.0.1
+pkgrel=3
+epoch=
+pkgdesc="Open-source Python bindings for the Gemini LeapC API."
+arch=("x86_64")
+url="https://github.com/ultraleap/leapc-python-bindings"
+license=('Apache-2.0')
+groups=()
+depends=("python" "python-cffi" "ultraleap-hand-tracking-service")
+makedepends=("python-build" "python-setuptools")
+checkdepends=()
+optdepends=()
+provides=("python-leapc")
+conflicts=()
+replaces=()
+backup=()
+options=()
+install=
+changelog=
+source=("git+https://github.com/ultraleap/leapc-python-bindings.git#commit=$_commit"
+        "leapc-python-api-init.patch")
+noextract=()
+sha256sums=(SKIP
+            "8834bf822b6dc7eb8c44eaa7cb0b20db6f10c68d3c77e5c972f8ace7163399af")
+validpgpkeys=()
+
+prepare() {
+    cd "leapc-python-bindings"
+
+    # We have to modify the binding as it will try to find the cffi module at the wrong place
+    patch --forward --strip=1 --input="${srcdir}/leapc-python-api-init.patch"
+}
+
+build() {
+    cd "leapc-python-bindings"
+
+    # Build the package with python -m build
+    cd "leapc-cffi"
+    python -m build .
+
+    cd "../leapc-python-api"
+    python -m build .
+}
+
+package() {
+    cd "leapc-python-bindings"
+
+    # Install the package with python -m installer
+    cd "leapc-cffi"
+    python -m installer --destdir="$pkgdir" dist/*.whl
+
+    cd "../leapc-python-api"
+    python -m installer --destdir="$pkgdir" dist/*.whl
+}

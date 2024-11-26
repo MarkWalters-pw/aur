@@ -1,0 +1,21 @@
+pkgbase = paper-note
+	pkgdesc = A pretty note-taking app for GNOME
+	pkgver = 22.11
+	pkgrel = 1
+	url = https://gitlab.com/posidon_software/paper
+	arch = x86_64
+	arch = aarch64
+	license = GPL3
+	checkdepends = appstream-glib
+	makedepends = meson
+	makedepends = gobject-introspection
+	makedepends = blueprint-compiler
+	makedepends = python-gobject
+	makedepends = vala
+	depends = libadwaita
+	depends = gtksourceview5
+	depends = libgee
+	source = https://gitlab.com/posidon_software/paper/-/archive/22.11/paper-22.11.tar.gz
+	b2sums = 6760f8aacb8a23675c59ee5e337f02fa3c47bef2e79c4573fd8975cce6aba1f92c426feebdb959f8c631cb5a09623e5f36dbbe30d23a3ea99a655d4d064f15fb
+
+pkgname = paper-note

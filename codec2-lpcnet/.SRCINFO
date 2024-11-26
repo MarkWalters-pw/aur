@@ -1,0 +1,19 @@
+pkgbase = codec2-lpcnet
+	pkgdesc = Open source speech codec designed for communications quality speech between 450 and 3200 bit/s with support for LPCNet
+	pkgver = 1.2.0
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/drowe67/codec2
+	arch = x86_64
+	arch = aarch64
+	license = LGPL2.1
+	makedepends = cmake
+	depends = lpcnetfreedv
+	provides = freedv
+	provides = codec2
+	conflicts = freedv
+	conflicts = codec2
+	source = https://github.com/drowe67/codec2/archive/1.2.0/codec2-1.2.0.tar.gz
+	sha512sums = a44e6eb3ec60b81e4dfefaa733c4f8a40c5e2e90454e964b14fbce896edd0877e32d917ce878a619d7e7e544c670231d7d0c9cd35659be6989fd18d474443489
+
+pkgname = codec2-lpcnet

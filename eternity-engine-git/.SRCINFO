@@ -1,0 +1,22 @@
+pkgbase = eternity-engine-git
+	pkgdesc = An advanced Doom port with vanilla compatibility
+	pkgver = 4.01.00.r65.76d93cb3
+	pkgrel = 1
+	url = http://eternity.youfailit.net/
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = cmake
+	depends = sdl2
+	depends = sdl2_mixer
+	depends = sdl2_net
+	depends = zlib
+	conflicts = eternity-engine
+	source = eternity::git+https://github.com/team-eternity/eternity.git
+	source = git+https://github.com/Wohlstand/libADLMIDI.git
+	b2sums = SKIP
+	b2sums = SKIP
+
+pkgname = eternity-engine-git
+

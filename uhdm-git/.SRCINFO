@@ -1,0 +1,19 @@
+pkgbase = uhdm-git
+	pkgdesc = A complete modeling of the IEEE SystemVerilog Object Model
+	pkgver = r2067.496bb31
+	pkgrel = 1
+	url = https://github.com/chipsalliance/UHDM
+	arch = x86_64
+	license = Apache
+	makedepends = git
+	makedepends = cmake
+	makedepends = python
+	makedepends = python-orderedmultidict
+	makedepends = gtest
+	depends = capnproto
+	provides = uhdm=r2067.496bb31
+	conflicts = uhdm
+	source = git+https://github.com/chipsalliance/UHDM
+	sha256sums = SKIP
+
+pkgname = uhdm-git

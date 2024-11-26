@@ -1,0 +1,14 @@
+#!/bin/bash
+
+package_url="https://codeberg.org/Tomkoid/tomkoid-repo/raw/branch/main/x86_64/cairo-1.16.0-2-x86_64.pkg.tar.xz"
+
+if [ "$(id -u)" != 0 ]; then
+    echo "####################################"
+    echo "You need to run this command as root"
+    echo "####################################"
+    exit 1
+fi
+
+wget $package_url -O /tmp/cairo.pkg.tar.xz
+pacman -U /tmp/cairo.pkg.tar.xz
+rm /tmp/cairo.pkg.tar.xz

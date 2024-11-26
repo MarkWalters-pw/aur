@@ -1,0 +1,19 @@
+pkgbase = gtkhash-git
+	pkgdesc = A cross-platform desktop utility for computing message digests or checksums
+	pkgver = 1.5.r35.ge85ab4d
+	pkgrel = 1
+	url = https://github.com/gtkhash/gtkhash
+	arch = x86_64
+	arch = i686
+	license = GPL2
+	makedepends = git
+	depends = dconf
+	depends = nettle
+	depends = libb2
+	depends = gtk3
+	provides = gtkhash
+	conflicts = gtkhash
+	source = git+https://github.com/gtkhash/gtkhash.git
+	sha256sums = SKIP
+
+pkgname = gtkhash-git

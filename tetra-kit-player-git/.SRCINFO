@@ -1,0 +1,16 @@
+pkgbase = tetra-kit-player-git
+	pkgdesc = Web application that streams events and files produced by tetra kit.
+	pkgver = r65.ea258fc
+	pkgrel = 2
+	url = https://github.com/sonictruth/tetra-kit-player
+	arch = any
+	license = CUSTOM
+	makedepends = git
+	makedepends = npm
+	depends = tetra-kit-git
+	depends = npm
+	options = !strip
+	source = tetra-kit-player-git::git+https://github.com/sonictruth/tetra-kit-player.git
+	sha256sums = SKIP
+
+pkgname = tetra-kit-player-git

@@ -1,0 +1,88 @@
+# Maintainer:  Dimitris Kiziridis <ragouel at outlook dot com>
+# Maintainer: Shohei Maruyama <cheat.sc.linux@outlook.com>
+# Contributor: Bram Swenson <bram@amplified.work>
+
+pkgbase='concourse'
+pkgname=('concourse' 'concourse-fly-cli' 'concourse-resource-types')
+pkgver=7.11.2
+pkgrel=2
+arch=('x86_64')
+url='https://concourse-ci.org'
+license=('custom:Apache-2.0')
+source=("${pkgname}-${pkgver}.tar.gz::https://github.com/concourse/concourse/archive/v${pkgver}.tar.gz"
+        "https://github.com/concourse/concourse/releases/download/v${pkgver}/concourse-${pkgver}-linux-amd64.tgz"
+        "https://github.com/concourse/concourse/pull/8928/commits/25c789d872f8c782b582341f90adddde0efa204a.patch")
+makedepends=('go' 'yarn')
+sha256sums=('17dc204aa58b1b3604dee32a5679d0c312ae4b72bff5f2560dd29770c6d2c7b6'
+            '9de8cf177372e6afa907700c2ae5f943c9e7ac258aea6afbc6b0fe3ec728d985'
+            'c683c1e94a8450b29ba4a4e0f3e0d9d24cedac57ce924d7522114db42fce8d0a')
+prepare() {
+  cd "${srcdir}/${pkgname}-${pkgver}"
+  mkdir -p "${srcdir}/go"
+  export GOPATH="${srcdir}/go"
+  export PATH=$PATH:"$GOPATH/bin"
+
+  # Change binary asset directory
+  sed -e 's#binariesDir = "/usr/local/concourse/bin"#binariesDir = "/usr/lib/cni"#' -i worker/runtime/cni_network.go
+  sed -e 's#"cni-plugins-dir" default:"/usr/local/concourse/bin"#"cni-plugins-dir" default:"/usr/lib/cni"#' -i worker/workercmd/worker_linux.go
+  sed -e 's#/usr/local/concourse/bin/init#/usr/lib/concourse/bin/init#' -i worker/runtime/spec/mounts.go
+  sed -e 's#"init-bin"   default:"/usr/local/concourse/bin/init"#"init-bin"   default:"/usr/lib/concourse/bin/init"#' -i worker/workercmd/worker_linux.go
+
+  patch -p1 -i ../25c789d872f8c782b582341f90adddde0efa204a.patch
+
+  go get -d ./...
+  yarn
+}
+
+build() {
+  cd "${srcdir}/${pkgname}-${pkgver}"
+  export GOPATH="${srcdir}/go"
+  export PATH=$PATH:"$GOPATH/bin"
+  export CGO_CPPFLAGS="${CPPFLAGS}"
+  export CGO_CFLAGS="${CFLAGS}"
+  export CGO_CXXFLAGS="${CXXFLAGS}"
+  export CGO_LDFLAGS="${LDFLAGS}"
+  export GOFLAGS="-buildmode=pie -trimpath -ldflags=-linkmode=external -ldflags=-X=github.com/concourse/concourse.Version=${pkgver} -mod=readonly -modcacherw"
+
+  yarn build
+  go build -o concourse ./cmd/concourse
+  go build -o fly ./fly
+  gcc -O2 -static cmd/init/init.c -o init
+}
+
+package_concourse() {
+  pkgname=concourse
+  pkgdesc="Concourse is a container-based continuous thing-doer written in Go and Elm"
+  optdepends=('cni-plugins' 'containerd' 'postgresql' 'concourse-resource-types')
+  conflicts=('concourse-bin')
+
+  cd "${srcdir}/${pkgbase}-${pkgver}"
+
+  install -Dm755 "${pkgname}" "${pkgdir}/usr/bin/concourse"
+  install -Dm755 init "${pkgdir}/usr/lib/concourse/bin/init"
+
+  mkdir -p "${pkgdir}/usr/share/licenses/${pkgname}"
+  install -m644 LICENSE.md "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE.md"
+}
+
+package_concourse-fly-cli() {
+  pkgname=concourse-fly-cli
+  pkgdesc="A command line interface that runs a build in a container with ATC"
+  conflicts=('concourse-fly' 'concourse-fly-bin' 'concourse-fly-git' 'fly-cli')
+
+  cd "${srcdir}/${pkgbase}-${pkgver}"
+  install -Dm755 "fly/fly" "${pkgdir}/usr/bin/fly"
+
+  mkdir -p "${pkgdir}/usr/share/licenses/${pkgname}"
+  install -m644 LICENSE.md "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE.md"
+}
+
+package_concourse-resource-types() {
+  pkgname=concourse-resource-types
+  pkgdesc="Concourse basic resource types"
+
+  cd "${srcdir}/${pkgbase}/resource-types"
+
+  install -dm755 "${pkgdir}/usr/lib/${pkgbase}/resource-types"
+  cp -r * "${pkgdir}/usr/lib/${pkgbase}/resource-types/"
+}

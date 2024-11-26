@@ -1,0 +1,23 @@
+pkgbase = typstudio-bin
+	pkgdesc = desktop application for typst
+	pkgver = 0.1.0dev.32
+	pkgrel = 1
+	url = https://github.com/Cubxity/typstudio
+	arch = x86_64
+	license = GPL3
+	depends = glibc
+	depends = hicolor-icon-theme
+	depends = gtk3
+	depends = glib2
+	depends = pango
+	depends = gdk-pixbuf2
+	depends = cairo
+	depends = gcc-libs
+	depends = webkit2gtk
+	depends = libsoup
+	provides = typstudio=0.1.0dev.32
+	conflicts = typstudio
+	source = typstudio-bin-0.1.0dev.32.deb::https://github.com/Cubxity/typstudio/releases/download/v0.1.0-dev.32/typstudio_0.1.0_amd64.deb
+	sha256sums = d302d2e5c9b1644ca9d26b3fb3cb1d9e0da1264a2bb54eec746b5c87eb58f4a6
+
+pkgname = typstudio-bin

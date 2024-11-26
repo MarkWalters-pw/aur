@@ -1,0 +1,17 @@
+[Unit]
+Description=Gopass-Fuse
+PartOf=smartcard.target
+After=smartcard.target
+
+[Service]
+Type=simple
+RuntimeDirectory=gopass
+ExecStartPre=-/usr/bin/timeout 30 /usr/bin/gopass sync
+ExecStart=/usr/bin/gopass-fuse --mount $RUNTIME_DIRECTORY --foreground
+ExecReload=-/bin/gopass sync
+ExecReload=/bin/kill --signal USR1 $MAINPID
+RestartSec=0
+Restart=always
+
+[Install]
+WantedBy=smartcard.target

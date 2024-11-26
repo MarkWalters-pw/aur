@@ -1,0 +1,18 @@
+pkgbase = buck
+	pkgdesc = A fast build system that encourages the creation of small, reusable modules over a variety of platforms and languages.
+	pkgver = 2022.05.05.01
+	pkgrel = 1
+	url = https://buckbuild.com
+	arch = any
+	license = Apache
+	makedepends = jdk11-openjdk
+	makedepends = ant
+	depends = jdk8-openjdk
+	depends = python
+	optdepends = watchman: prevent Buck from parsing all of your build files every time
+	source = buck-2022.05.05.01.tar.gz::https://github.com/facebook/buck/archive/v2022.05.05.01.tar.gz
+	source = buck.shim
+	sha512sums = b6b9c778756418025eafaa3b130fc2edf7d7455b17590af86e2b41d4d66568c235c03715f72de46523c7463fdcf04e4125c3c4df2a5718148c43880e92ef8592
+	sha512sums = 59655cf08e9b4c823893dc1b5eaa9f5e6c10c3f423ff814ea70e83af23f357c75c849c9648345d0c8fe3ed16f4ccf77867ddf62d134a618e745dfaeb9b7f571b
+
+pkgname = buck

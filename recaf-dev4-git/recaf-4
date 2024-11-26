@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# Note: this script was initially made to auto select the latest available Java version.
+# However, the version is now hardcoded (22) to avoid version conflicts with openjfx
+JAVA_PATH="/usr/lib/jvm/java-22-openjdk/"
+
+# Find the executable in the path
+JAVA_EXECUTABLE=$(find $JAVA_PATH -type f -name "java")
+
+# & finally launch the world downloader jar
+$JAVA_EXECUTABLE -jar "/usr/share/java/recaf-4/recaf-4.jar"

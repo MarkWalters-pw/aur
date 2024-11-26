@@ -1,0 +1,16 @@
+pkgbase = krb5-auth-dialog
+	pkgdesc = Monitors Kerberos tickets and pops up a dialog when they are about to expire.
+	pkgver = 43.0
+	pkgrel = 1
+	url = https://honk.sigxcpu.org/piki/projects/krb5-auth-dialog/
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = meson
+	makedepends = itstool
+	makedepends = pam
+	depends = gcr
+	source = http://ftp.gnome.org/pub/GNOME/sources/krb5-auth-dialog/43/krb5-auth-dialog-43.0.tar.xz
+	sha256sums = 0ebf108f0f4bc1247e8cbbfc7c9f4a50afdf7e79ceb4183ef37aec59d4365397
+
+pkgname = krb5-auth-dialog

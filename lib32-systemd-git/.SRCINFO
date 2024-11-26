@@ -1,0 +1,41 @@
+pkgbase = lib32-systemd-git
+	pkgdesc = system and service manager (32-bit git version)
+	pkgver = 253.r64333.d685a5f6a4
+	pkgrel = 1
+	url = https://www.github.com/systemd/systemd
+	arch = x86_64
+	license = GPL2
+	license = LGPL2.1
+	checkdepends = systemd-git=253.r64333.d685a5f6a4
+	makedepends = git
+	makedepends = gperf
+	makedepends = intltool
+	makedepends = lib32-acl
+	makedepends = lib32-bzip2
+	makedepends = lib32-curl
+	makedepends = lib32-dbus
+	makedepends = lib32-gcc-libs
+	makedepends = lib32-glib2
+	makedepends = lib32-gnutls
+	makedepends = lib32-libelf
+	makedepends = lib32-libidn2
+	makedepends = lib32-pcre2
+	makedepends = libxslt
+	makedepends = meson
+	makedepends = python-jinja
+	depends = lib32-gcc-libs
+	depends = lib32-libcap
+	depends = lib32-libgcrypt
+	depends = lib32-libxcrypt
+	depends = lib32-xz
+	depends = lib32-zstd
+	depends = systemd-libs-git=253.r64333.d685a5f6a4
+	provides = libsystemd.so
+	provides = libudev.so
+	provides = lib32-systemd=253.r64333.d685a5f6a4
+	conflicts = lib32-systemd
+	options = strip
+	source = systemd-stable::git+https://github.com/systemd/systemd
+	sha512sums = SKIP
+
+pkgname = lib32-systemd-git

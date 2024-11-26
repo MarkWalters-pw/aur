@@ -1,0 +1,18 @@
+pkgbase = hunspell-ko
+	pkgdesc = Korean hunspell dictionary
+	pkgver = 0.7.94
+	pkgrel = 1
+	url = https://github.com/spellcheck-ko/hunspell-dict-ko
+	arch = any
+	license = GPL3
+	license = custom
+	makedepends = hunspell
+	makedepends = ispell
+	makedepends = qt6-webengine
+	makedepends = python
+	makedepends = python-yaml
+	optdepends = hunspell: the spell checking libraries and apps
+	source = hunspell-dict-ko-0.7.94.tar.gz::https://github.com/spellcheck-ko/hunspell-dict-ko/archive/refs/tags/0.7.94.tar.gz
+	sha512sums = 1dbcd566fdf37c1cdb26601cc546fddd8f91875d4a0a96cd4e5de7ca0f23005404559859b7a4eb4362c35d232ac062c23bdc8f4416feab1c32a76651faecf524
+
+pkgname = hunspell-ko

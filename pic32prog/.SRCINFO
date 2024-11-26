@@ -1,0 +1,20 @@
+pkgbase = pic32prog
+	pkgdesc = Flash programming utility for Microchip PIC32 microcontrollers
+	pkgver = 2.0.204
+	pkgrel = 1
+	url = https://github.com/sergev/pic32prog
+	arch = x86_64
+	license = GPL
+	depends = libusb
+	depends = libusb-compat
+	optdepends = ejtagproxy-git: GDB for PIC32
+	optdepends = microchip-mplabxc32-bin: C/C++ compiler for PIC32
+	provides = pic32prog-git
+	provides = pic32prog-svn
+	conflicts = pic32prog-git
+	conflicts = pic32prog-svn
+	source_x86_64 = https://github.com/sergev/pic32prog/raw/e5258f410c2757d6e4952cecc825d63a3c22adb6/linux64/pic32prog
+	sha512sums_x86_64 = b8d9a775cd61ed9cea8e079a8f0d0ae58dacde93a380895c2024bcc79bec19688a67678fefde1d2f538baaf261ae85c9c7d805b84c70facf9e003602866b9a15
+
+pkgname = pic32prog
+

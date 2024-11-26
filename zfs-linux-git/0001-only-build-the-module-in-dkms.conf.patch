@@ -1,0 +1,32 @@
+diff -pNaru4 a/scripts/dkms.mkconf b/scripts/dkms.mkconf
+--- a/scripts/dkms.mkconf	2024-06-29 15:51:34.396511566 -0400
++++ b/scripts/dkms.mkconf	2024-06-29 15:52:22.466209823 -0400
+@@ -28,16 +28,9 @@ NO_WEAK_MODULES="yes"
+ PRE_BUILD="configure
+   --disable-dependency-tracking
+   --prefix=/usr
+   --with-config=kernel
+-  --with-linux=\$(
+-    if [ -e "\${kernel_source_dir/%build/source}" ]
+-    then
+-      echo "\${kernel_source_dir/%build/source}"
+-    else
+-      echo "\${kernel_source_dir}"
+-    fi
+-  )
++  --with-linux=\${kernel_source_dir}
+   --with-linux-obj="\${kernel_source_dir}"
+   \$(
+     [[ -n \"\${ICP_ROOT}\" ]] && \\
+     {
+@@ -68,9 +61,9 @@ POST_BUILD="scripts/dkms.postbuild
+   -k \${kernelver}
+   -t \${dkms_tree}
+ "
+ AUTOINSTALL="yes"
+-MAKE[0]="make"
++MAKE[0]="make -C module/"
+ STRIP[0]="\$(
+   [[ -r \${PACKAGE_CONFIG} ]] \\
+   && source \${PACKAGE_CONFIG} \\
+   && shopt -q -s extglob \\

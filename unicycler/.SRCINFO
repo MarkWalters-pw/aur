@@ -1,0 +1,20 @@
+pkgbase = unicycler
+	pkgdesc = Hybrid assembly pipeline for bacterial genomes.
+	pkgver = 0.5.0
+	pkgrel = 1
+	url = https://github.com/rrwick/Unicycler/
+	arch = any
+	license = GPL
+	makedepends = gcc
+	makedepends = clang
+	makedepends = python-setuptools
+	optdepends = spades: short read or hybird assembly
+	optdepends = racon: long-read or hybrid assembly
+	optdepends = pilon: polishing
+	optdepends = samtools: polishing
+	optdepends = bowtie2: polishing
+	optdepends = blast+: rotating circular contigs
+	source = https://github.com/rrwick/Unicycler//archive/refs/tags/v0.5.0.tar.gz
+	b2sums = 7e333d2e7b855e2c914ea8488c9f81626eb3a3c9d884bbab7196598416c824c23e3eb27cb9ac3001ec82dc7576fc44558055b86fe3d3c6bdf5d8afaf2592236d
+
+pkgname = unicycler

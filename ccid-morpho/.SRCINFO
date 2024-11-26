@@ -1,0 +1,21 @@
+pkgbase = ccid-morpho
+	pkgdesc = A generic USB Chip/Smart Card Interface Devices driver (SAFRAN MORPHO YpsID Token)
+	pkgver = 1.4.3
+	pkgrel = 2
+	epoch = 1
+	url = https://ccid.apdu.fr/
+	install = ccid-morpho.install
+	arch = x86_64
+	license = LGPL
+	license = GPL
+	makedepends = pkg-config
+	depends = pcsclite
+	depends = libusb
+	optdepends = pcsc-tools
+	provides = ccid=1.4.3
+	conflicts = ccid
+	source = https://alioth-archive.debian.org/releases/pcsclite/ccid/ccid1.4.3/ccid-1.4.3.tar.bz2
+	md5sums = a269baa572be6f93ec57da279c7ec276
+
+pkgname = ccid-morpho
+

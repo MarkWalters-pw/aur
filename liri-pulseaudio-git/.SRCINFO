@@ -1,0 +1,25 @@
+pkgbase = liri-pulseaudio-git
+	pkgdesc = PulseAudio support for Liri Shell
+	pkgver = r165.574d361
+	pkgrel = 1
+	url = https://liri.io
+	arch = i686
+	arch = x86_64
+	arch = armv6h
+	arch = armv7h
+	groups = liri-git
+	license = LGPL3
+	makedepends = git
+	makedepends = qt5-tools
+	makedepends = liri-cmake-shared-git
+	depends = fluid-git
+	depends = pulseaudio
+	provides = liri-pulseaudio
+	conflicts = liri-pulseaudio
+	replaces = liri-pulseaudio
+	options = debug
+	options = !strip
+	source = pulseaudio::git+https://github.com/lirios/pulseaudio.git#branch=develop
+	md5sums = SKIP
+
+pkgname = liri-pulseaudio-git

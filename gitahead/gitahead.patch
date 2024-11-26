@@ -1,0 +1,50 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 0dd8d38..c882a73 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -62,7 +62,7 @@ endif()
+ 
+ find_package(Qt6 COMPONENTS ${QT_MODULES} LinguistTools REQUIRED)
+ 
+-set(QT_TRANSLATIONS_DIR "${Qt6_DIR}/../../../translations")
++set(QT_TRANSLATIONS_DIR "/usr/share/qt/translations")
+ 
+ if(APPLE)
+   foreach(QT_MODULE ${QT_MODULES})
+diff --git a/dep/CMakeLists.txt b/dep/CMakeLists.txt
+index 16c7574..8295db2 100644
+--- a/dep/CMakeLists.txt
++++ b/dep/CMakeLists.txt
+@@ -1,6 +1,5 @@
+ find_package(PkgConfig)
+ 
+-add_subdirectory(openssl)
+ add_subdirectory(libssh2)
+ add_subdirectory(libgit2)
+ 
+diff --git a/dep/libssh2/CMakeLists.txt b/dep/libssh2/CMakeLists.txt
+index 4062762..d4f2593 100644
+--- a/dep/libssh2/CMakeLists.txt
++++ b/dep/libssh2/CMakeLists.txt
+@@ -1,7 +1,7 @@
+ if(PKG_CONFIG_FOUND)
+   pkg_check_modules(LIBSSH2 libssh2)
+ endif()
+-if(NOT LIBSSH2_FOUND)
++if(TRUE)
+   set(BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
+   set(BUILD_TESTING OFF CACHE BOOL "" FORCE)
+ 
+diff --git a/pack/CMakeLists.txt b/pack/CMakeLists.txt
+index dcb5964..df2d336 100644
+--- a/pack/CMakeLists.txt
++++ b/pack/CMakeLists.txt
+@@ -145,7 +145,7 @@ if(UNIX AND NOT APPLE)
+ endif()
+ 
+ # Install SSL libraries.
+-if(NOT APPLE)
++if(FALSE)
+   if(WIN32)
+     set(SSL_LIB_SUFFIX "-3-x64.dll")
+   else()

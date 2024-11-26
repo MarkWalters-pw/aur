@@ -1,0 +1,15 @@
+pkgbase = scalpel-git
+	pkgdesc = Recover files based on their headers, footers and internal data structures. This program is based on Foremost.
+	pkgver = r31.35e1367
+	pkgrel = 1
+	url = https://github.com/sleuthkit/scalpel
+	arch = x86_64
+	license = Apache
+	makedepends = git
+	depends = tre
+	provides = scalpel
+	conflicts = scalpel
+	source = scalpel-git::git+https://github.com/sleuthkit/scalpel.git
+	md5sums = SKIP
+
+pkgname = scalpel-git

@@ -1,0 +1,13 @@
+pkgbase = asus-ux32-fancontrol
+	pkgdesc = Scritps to control fans on Asus UX32A/VD with a temperature/speed curve
+	pkgver = r7.845e464
+	pkgrel = 2
+	url = https://gist.github.com/Juma7C9/8292006
+	arch = any
+	license = GPL
+	depends = acpi_call
+	optdepends = dkms
+	source = fancontrol::git+https://gist.github.com/8292006.git
+	sha256sums = SKIP
+
+pkgname = asus-ux32-fancontrol

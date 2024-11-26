@@ -1,0 +1,19 @@
+pkgbase = python-powerline-gitstatus
+	pkgdesc = A Powerline segment for showing the status of a Git working copy
+	pkgver = 1.3.3
+	pkgrel = 1
+	url = https://github.com/Cyannide/powerline-gitstatus
+	install = python-powerline-gitstatus.install
+	arch = any
+	license = MIT
+	makedepends = python-setuptools
+	depends = python
+	depends = git
+	source = python-powerline-gitstatus::git+https://github.com/Cyannide/powerline-gitstatus.git#tag=v1.3.3
+	source = colorschemes_default.json
+	source = themes_shell_default.json
+	sha256sums = SKIP
+	sha256sums = fa349e0ebea95608f41db180778deed341117478fad4aa682783642b34be2f20
+	sha256sums = b15c603a1b15c2b3f9dcfa77fd90422b1cce0db87b2bdea7c730453921d0dd59
+
+pkgname = python-powerline-gitstatus

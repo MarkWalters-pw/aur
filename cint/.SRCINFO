@@ -1,0 +1,19 @@
+pkgbase = cint
+	pkgdesc = CINT is an interpreter for C and C++ code
+	pkgver = 5.34.38
+	pkgrel = 1
+	url = https://root.cern.ch/cint
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = autoconf
+	makedepends = automake
+	makedepends = gcc
+	depends = readline
+	depends = ncurses
+	depends = termcap
+	source = https://root.cern.ch/download/root_v5.34.38.source.tar.gz
+	sha256sums = 2c3bda69601d94836bdd88283a6585b4774eafc813deb6aa348df0af2922c4d2
+
+pkgname = cint
+

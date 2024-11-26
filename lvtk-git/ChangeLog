@@ -1,0 +1,41 @@
+2024-04-23 Christopher Arndt <aur -at- chrisarndt -dot- de>
+
+	* 2.0.0rc1.r538.g2e47460-2 :
+	Added missing 'boost' make dependency
+	Added missing 'pugl' dependency
+
+2024-03-20 Christopher Arndt <aur -at- chrisarndt -dot- de>
+
+	* 2.0.0rc1.r538.g2e47460-1 :
+	Change build system to meson
+
+2017-01-22 Christopher Arndt <aur -at- chrisarndt -dot- de>
+
+	* 2.0.0.r486.7c0ffdf :
+	Make depends on 'ttl2c-git' instead of 'ttl2c'
+
+2017-01-22 Christopher Arndt <aur -at- chrisarndt -dot- de>
+
+	* 2.0.0.r484.6bfe981-1 :
+	Fixed pkgver
+
+2016-01-18 Christopher Arndt <aur -at- chrisarndt -dot- de>
+
+	* 1.2.0.r21.g6bfe981-2 :
+	ttl2c was moved into its own package. Added it to makedepends
+	Changed 'boost' dependency to 'boost-libs'
+
+	* 1.2.0.r21.g6bfe981-1 :
+    New package version to trigger rebuild
+
+2015-11-07 Christopher Arndt <aur -at- chrisarndt -dot- de>
+
+	* 1.2.0.r16.g065830b-1 :
+    Fix compilation error by linking to missing libboost_system and setting
+    '-std=c++11' in the CXXFLAGS.
+	Fix spelling of 'changelog' field in PKGBUILD.
+
+2015-08-01 Christopher Arndt <aur -at- chrisarndt -dot- de>
+
+	* 1.2.0.r14.g707ad84-1 :
+	Remove patch for missing sstream header (issue #19 fixed).

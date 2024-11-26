@@ -1,0 +1,23 @@
+pkgbase = sasfit
+	pkgdesc = A program for fitting structural models to small angle scattering data
+	pkgver = 0.94.11
+	pkgrel = 1
+	url = https://kur.web.psi.ch/sans1/SANSSoft/sasfit.html
+	arch = x86_64
+	license = GPL
+	makedepends = imagemagick
+	depends = gsl
+	depends = tcl>=8.4
+	depends = libxrender
+	depends = libxfixes
+	depends = f2c
+	depends = fftw
+	depends = sundials
+	options = !strip
+	source = https://github.com/SASfit/SASfit/releases/download/0.94.11/sasfit_0.94.11_linux_x86_64.tar.gz
+	source = sasfiticon.png
+	sha256sums = 71d2a9ea54b1ba074f633113df50865ad038a630e6ecb613d58364b60e4adcdb
+	sha256sums = d2e63bfb783c35c79d24050b7d1d0062a190824d00032862b70a4e903bc74f7c
+
+pkgname = sasfit
+

@@ -1,0 +1,17 @@
+pkgbase = firefox-extension-kdeconnect
+	pkgdesc = kdeconnect addon for firefox.
+	pkgver = 0.1.6
+	pkgrel = 1
+	url = https://addons.mozilla.org/en-US/firefox/addon/kde_connect/
+	arch = x86_64
+	groups = firefox-addons
+	license = GPLV3
+	makedepends = expect
+	depends = firefox
+	depends = kdeconnect
+	source = extension.xpi::https://addons.mozilla.org/firefox/downloads/file/805784/kde_connect-${pkgver}-an+fx-linux.xpi
+	source = https://github.com/pdf/kdeconnect-chrome-extension/releases/download/v0.1.6/kdeconnect-chrome-extension-v0.1.6-linux_amd64.tar.xz
+	sha512sums = SKIP
+	sha512sums = SKIP
+
+pkgname = firefox-extension-kdeconnect

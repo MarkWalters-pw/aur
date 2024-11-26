@@ -1,0 +1,25 @@
+#!/usr/bin/bash
+
+VENV_BIN=/usr/share/webapps/funkwhale/virtualenv/bin
+
+if [[ ! -n "$FUNKWHALE_PATH" ]]; then
+    FUNKWHALE_PATH="${VENV_BIN}"/funkwhale-manage
+fi
+
+if [[ ! -f "$FUNKWHALE_PATH" ]]; then
+    echo "funkwhale-manage executable is not installed in $FUNKWHALE_PATH. Please pass the installation path."
+    exit 1
+fi
+
+sudo -H -u funkwhale bash -c : && RUNAS="sudo -H -u funkwhale"
+
+# change user -> funkwhale
+$RUNAS /bin/bash << EOF
+    # export environment variables
+    set -a; source /srv/funkwhale/config/env; set +a
+
+    # enter virtualenv
+    source "${VENV_BIN}"/activate
+    "${FUNKWHALE_PATH}" $@
+    deactivate
+EOF

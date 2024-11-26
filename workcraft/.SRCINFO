@@ -1,0 +1,18 @@
+pkgbase = workcraft
+	pkgdesc = A framework for interpreted graph models including petri nets and STGs
+	pkgver = 3.3.5
+	pkgrel = 1
+	url = http://www.workcraft.org/
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = gendesk
+	depends = java-runtime
+	optdepends = graphviz: Graph manipulation,
+	optdepends = stack: Concepts support
+	provides = workcraft
+	conflicts = workcraft
+	source = http://www.workcraft.org/_media/download/workcraft-v3.3.5-linux.tar.gz
+	md5sums = 4ea82de15d255f2485bb707928f7ee19
+
+pkgname = workcraft

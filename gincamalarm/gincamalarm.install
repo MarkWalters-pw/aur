@@ -1,0 +1,44 @@
+post_install() {
+    pkgname=gincamalarm
+
+    # Fixing membership
+    chown http: /var/log/$pkgname
+    chown -R http: /etc/$pkgname
+
+    # Reload systemctl
+    systemctl daemon-reload
+
+    echo "Adding gincamalarm in systemctl:"
+    echo "  systemctl enable gincamalarm"
+    echo "  systemctl start gincamalarm"
+
+    echo "Adding this rule in iptables:"
+    echo "  iptables -t filter -A INPUT -p tcp --dport 8090 -j ACCEPT"
+
+    echo "If you use tmpfs method, you must create it and it will be mounted automatically with fstab"
+
+    true
+}
+
+post_upgrade() {
+    # Reload systemctl
+    systemctl daemon-reload
+
+    echo "You should restart gincamalarm"
+    echo "  systemctl restart gincamalarm"
+    echo "If you use tmpfs method, you must create it and it will be mounted automatically with fstab"
+
+    true
+}
+
+pre_remove() {
+    pkgname=gincamalarm
+    # Remove symlink in systemd
+    systemctl disable $pkgname
+    # Stop server
+    systemctl stop $pkgname
+    # Reload systemctl
+    systemctl daemon-reload
+
+    true
+}

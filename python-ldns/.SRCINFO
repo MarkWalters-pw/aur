@@ -1,0 +1,16 @@
+pkgbase = python-ldns
+	pkgdesc = Python bindings for the ldns library for DNS programming
+	pkgver = 1.7.1
+	pkgrel = 1
+	url = https://www.nlnetlabs.nl/projects/ldns/
+	arch = x86_64
+	arch = i686
+	license = BSD
+	makedepends = python-setuptools
+	depends = python
+	depends = ldns
+	depends = python-ipcalc
+	source = https://www.nlnetlabs.nl/downloads/ldns/ldns-1.7.1.tar.gz
+	sha256sums = 8ac84c16bdca60e710eea75782356f3ac3b55680d40e1530d7cea474ac208229
+
+pkgname = python-ldns

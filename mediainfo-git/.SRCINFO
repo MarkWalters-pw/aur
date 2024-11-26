@@ -1,0 +1,17 @@
+pkgbase = mediainfo-git
+	pkgdesc = Utility for displaying technical and tag data for media files
+	pkgver = 23.03.r17.g1a512f2dd
+	pkgrel = 1
+	url = https://mediaarea.net/en/MediaInfo
+	arch = i686
+	arch = x86_64
+	license = BSD
+	makedepends = git
+	depends = glibc
+	depends = libmediainfo
+	provides = mediainfo=23.03.r17.g1a512f2dd
+	conflicts = mediainfo
+	source = git+https://github.com/MediaArea/MediaInfo.git
+	sha256sums = SKIP
+
+pkgname = mediainfo-git

@@ -1,0 +1,24 @@
+#!/sbin/openrc-run
+# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+# Init script for ananicy-cpp
+
+pidfile="/var/run/ananicy-cpp.pid"
+command="/usr/bin/ananicy-cpp"
+logfile="/var/log/ananicy-cpp.log"
+command_background="true"
+command_args="start"
+
+start_pre() {
+	/sbin/sysctl -e kernel.sched_autogroup_enabled=0
+}
+
+stop_post() {
+	/usr/sbin/sysctl -e kernel.sched_autogroup_enabled=1
+}
+
+stop() {
+	start-stop-daemon --stop --pidfile "$pidfile"
+}
+

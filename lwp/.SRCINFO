@@ -1,0 +1,16 @@
+pkgbase = lwp
+	pkgdesc = Lightweight process library
+	pkgver = 2.17
+	pkgrel = 2
+	url = https://github.com/cmusatyalab/coda
+	changelog = NEWS
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	depends = glibc
+	provides = liblwp.so
+	source = coda-common::git+https://github.com/cmusatyalab/coda#tag=lwp-2.17?signed
+	validpgpkeys = 4EEDEE4D29DAE8A18CAFDA18BEC621B96C853813
+	sha256sums = SKIP
+
+pkgname = lwp

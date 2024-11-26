@@ -1,0 +1,25 @@
+pkgbase = wifi-heat-mapper
+	pkgdesc = A Python library for benchmarking Wi-Fi networks to create heatmaps
+	pkgver = 0.2.5
+	pkgrel = 1
+	url = https://github.com/nischay-pro/wifi-heat-mapper
+	arch = any
+	license = GPL3
+	makedepends = python-setuptools
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = python-versioneer-518
+	depends = python>=3.7
+	depends = python-iperf3
+	depends = python-matplotlib
+	depends = python-tqdm
+	depends = python-pillow
+	depends = python-scipy
+	depends = python-numpy
+	depends = python-pysimplegui
+	optdepends = speedtest-cli
+	source = wifi-heat-mapper-0.2.5.tar.gz::https://github.com/nischay-pro/wifi-heat-mapper/archive/0.2.5.tar.gz
+	sha256sums = b8396cd52026dfe31ae4f6016303c362a48ed8f248fa5490bd1de24b363a5e52
+
+pkgname = wifi-heat-mapper

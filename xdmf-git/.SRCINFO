@@ -1,0 +1,22 @@
+pkgbase = xdmf-git
+	pkgdesc = eXtensible Data Model and Format
+	pkgver = 3.0.r2461.04a84bab
+	pkgrel = 1
+	url = https://gitlab.kitware.com/xdmf/xdmf.git
+	arch = i686
+	arch = x86_64
+	license = BSD
+	makedepends = cmake
+	makedepends = boost
+	makedepends = doxygen
+	depends = hdf5
+	depends = libxml2
+	depends = libtiff
+	provides = xdmf
+	conflicts = xdmf
+	source = git+https://gitlab.kitware.com/xdmf/xdmf.git
+	source = hid_t_int64.patch
+	sha256sums = SKIP
+	sha256sums = 41d8707c40e6e5fe3828f0427791e61bf0aee4582cf1e985884edb86cb713f01
+
+pkgname = xdmf-git

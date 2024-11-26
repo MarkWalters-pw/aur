@@ -1,0 +1,11 @@
+[Unit]
+Description=FHEM Perl Server
+After=syslog.target network.target
+
+[Service]
+Type=forking
+User=fhem
+ExecStart=/usr/bin/fhem.pl /etc/fhem.cfg
+
+[Install]
+WantedBy=multi-user.target

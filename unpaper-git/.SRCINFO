@@ -1,0 +1,16 @@
+pkgbase = unpaper-git
+	pkgdesc = Post-processing tool for scanned sheets of paper.
+	pkgver = 6.r299.a2a88fe
+	pkgrel = 1
+	url = https://github.com/unpaper/unpaper
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	depends = ffmpeg
+	provides = unpaper
+	conflicts = unpaper
+	source = unpaper-git::git+https://github.com/unpaper/unpaper.git
+	sha256sums = SKIP
+
+pkgname = unpaper-git

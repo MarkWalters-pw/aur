@@ -1,0 +1,19 @@
+pkgbase = brother-mfc-j4910cdw
+	pkgdesc = LPR, scanner and CUPS drivers for the Brother MFC-J4910CDW
+	pkgver = 20140312
+	pkgrel = 1
+	url = http://support.brother.com/g/s/id/linux/en/index.html
+	install = brother-mfc-j4910cdw.install
+	arch = i686
+	arch = x86_64
+	license = unknown
+	depends = perl
+	depends = a2ps
+	depends = lib32-libcups
+	source = http://download.brother.com/welcome/dlf100750/mfcj4910cdwlpr-3.0.1-1.i386.deb
+	source = http://download.brother.com/welcome/dlf100752/mfcj4910cdwcupswrapper-3.0.1-1.i386.deb
+	sha256sums = 4653a02abe48166d7d101a49b29eaeaff176498060d1d785f212e48cabb89b10
+	sha256sums = 28d9321a23c0e70e7a52f8a76b17c1e30cdea59a6b6ff45356dd1ce8824b3df6
+
+pkgname = brother-mfc-j4910cdw
+

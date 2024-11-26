@@ -1,0 +1,24 @@
+pkgbase = python-taurus
+	pkgdesc = A framework for scientific/industrial CLIs and GUIs
+	pkgver = 5.1.8
+	pkgrel = 1
+	url = https://gitlab.com/taurus-org/taurus
+	arch = any
+	license = LGPL3
+	makedepends = python-setuptools
+	depends = python-pyqt5
+	depends = python-lxml
+	depends = python-click
+	depends = python-pint
+	depends = python-ply
+	optdepends = python-pytango: for integration with TANGO control system
+	optdepends = python-sardana: for integration with Sardana
+	optdepends = python-epics: for integration with EPICS control system
+	optdepends = python-taurus-pyqtgraph: for pyqtgraph based trends
+	optdepends = python-pymca5: for extra pymca5 widgets
+	optdepends = python-guiqwt: for extra guiqwt widgets
+	optdepends = spyder: for a qt based editor within taurus
+	source = taurus-5.1.8.tar.gz::https://gitlab.com/taurus-org/taurus/-/archive/5.1.8/taurus-5.1.8.tar.gz
+	sha256sums = 2fd9bf481fa0b77bee7fc9789150752441a75b98016dd77fffb211eba20aebc1
+
+pkgname = python-taurus

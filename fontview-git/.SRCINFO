@@ -1,0 +1,23 @@
+pkgbase = fontview-git
+	pkgdesc = A simple font viewer
+	pkgver = r219.23a4679
+	pkgrel = 2
+	url = https://github.com/khaledhosny/fontview
+	arch = i686
+	arch = x86_64
+	license = GPLv2
+	makedepends = git
+	makedepends = meson
+	depends = gtk3
+	depends = cairo
+	depends = freetype2
+	depends = pango
+	depends = fribidi
+	depends = fontconfig
+	depends = glib2
+	provides = fontview
+	conflicts = fontview
+	source = git+https://github.com/khaledhosny/fontview.git
+	sha256sums = SKIP
+
+pkgname = fontview-git

@@ -1,0 +1,21 @@
+pkgbase = loongarch64-linux-gnu-glibc
+	pkgdesc = GNU C Library LoongArch target
+	pkgver = 2.36
+	pkgrel = 1
+	url = https://www.gnu.org/software/libc/
+	arch = x86_64
+	groups = loongarch
+	license = GPL
+	license = LGPL
+	makedepends = python
+	depends = loongarch64-linux-gnu-gcc
+	depends = loongarch64-linux-gnu-linux-api-headers
+	options = !buildflags
+	options = !strip
+	options = staticlibs
+	source = https://github.com/yetist/glibc/releases/download/v20220905/glibc-2.36-20220905.tar.xz
+	source = ldd
+	sha1sums = 02d7f190b7f7bf9e23b4a2aab98c14533a04708d
+	sha1sums = ac0c9382c59de66a56bacb7b6dcf75be2dcbaca6
+
+pkgname = loongarch64-linux-gnu-glibc

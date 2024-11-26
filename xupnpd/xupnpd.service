@@ -1,0 +1,14 @@
+[Unit]
+Description=eXtensible UPnP agent
+After=network.target
+Wants=udpxy.service
+
+[Service]
+User=xupnpd
+Group=xupnpd
+Type=simple
+Environment=XUPNPDROOTDIR=/var/lib/xupnpd/
+ExecStart=/usr/bin/xupnpd
+
+[Install]
+WantedBy=multi-user.target

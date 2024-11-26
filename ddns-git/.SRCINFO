@@ -1,0 +1,24 @@
+pkgbase = ddns-git
+	pkgdesc = Automatic provisioning of dynamic DNS
+	pkgver = 2.1.2.r5.g6d1c965
+	pkgrel = 1
+	url = https://github.com/kcolford/ddns
+	arch = any
+	license = GPL
+	makedepends = git
+	depends = bash
+	depends = bind-tools
+	depends = coreutils
+	depends = inetutils
+	depends = sed
+	depends = systemd
+	optdepends = curl: for looking up your ip address
+	optdepends = openssh: for updating SSHFP records
+	optdepends = postfix: MX records will be added if the mail server is online
+	provides = ddns
+	conflicts = ddns
+	source = git+https://github.com/kcolford/ddns
+	md5sums = SKIP
+
+pkgname = ddns-git
+

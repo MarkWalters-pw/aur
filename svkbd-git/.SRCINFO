@@ -1,0 +1,20 @@
+pkgbase = svkbd-git
+	pkgdesc = simple virtual keyboard - git checkout
+	pkgver = 0.4.1.r0.g38faf1c
+	pkgrel = 1
+	url = http://tools.suckless.org/x/svkbd
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = discount
+	depends = libx11
+	depends = libxtst
+	depends = libxft
+	depends = libxinerama
+	provides = svkbd
+	conflicts = svkbd
+	source = git://git.suckless.org/svkbd
+	sha256sums = SKIP
+
+pkgname = svkbd-git

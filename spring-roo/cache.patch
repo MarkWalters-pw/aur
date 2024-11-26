@@ -1,0 +1,11 @@
+--- spring-roo-2.0.0.RELEASE/bin/roo.sh.origin	2018-05-30 10:35:42.113185780 +0800
++++ spring-roo-2.0.0.RELEASE/bin/roo.sh	2018-05-30 10:36:48.287884240 +0800
+@@ -32,7 +32,7 @@
+ 
+ # Store file locations in variables to facilitate Cygwin conversion if needed
+ 
+-ROO_OSGI_FRAMEWORK_STORAGE="$ROO_HOME/cache"
++ROO_OSGI_FRAMEWORK_STORAGE="$HOME/.cache/spring-roo"
+ # echo "ROO_OSGI_FRAMEWORK_STORAGE: $ROO_OSGI_FRAMEWORK_STORAGE"
+ 
+ ROO_AUTO_DEPLOY_DIRECTORY="$ROO_HOME/bundle"

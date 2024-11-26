@@ -1,0 +1,22 @@
+pkgbase = gbcc-git
+	pkgdesc = A Game Boy Color emulator written in C
+	pkgver = r285.e8e4bdc
+	pkgrel = 1
+	url = https://github.com/philj56/GBCC
+	arch = x86_64
+	license = MIT
+	makedepends = meson
+	makedepends = git
+	makedepends = scdoc
+	depends = sdl2
+	depends = gtk3
+	depends = libpng
+	depends = libepoxy
+	depends = openal
+	provides = gbcc
+	conflicts = gbcc
+	source = gbcc-git::git+https://github.com/philj56/GBCC
+	sha512sums = SKIP
+
+pkgname = gbcc-git
+

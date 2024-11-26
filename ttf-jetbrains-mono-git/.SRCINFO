@@ -1,0 +1,14 @@
+pkgbase = ttf-jetbrains-mono-git
+	pkgdesc = Typeface for developers, by JetBrains
+	pkgver = 2.242.r0.gd0a7fbf
+	pkgrel = 1
+	url = https://www.jetbrains.com/lp/mono/
+	arch = any
+	license = custom:OFL
+	makedepends = git
+	provides = ttf-jetbrains-mono
+	conflicts = ttf-jetbrains-mono
+	source = git+https://github.com/JetBrains/JetBrainsMono.git
+	md5sums = SKIP
+
+pkgname = ttf-jetbrains-mono-git

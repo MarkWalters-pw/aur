@@ -1,0 +1,24 @@
+pkgbase = universal-android-debloater-git
+	pkgdesc = A cross-platform GUI debloater for android devices
+	pkgver = 1.0.3.r100.g0dbd9f9
+	pkgrel = 1
+	url = https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation.git
+	arch = x86_64
+	license = GPL-3.0-or-later
+	makedepends = git
+	makedepends = cargo
+	makedepends = clang
+	makedepends = cmake
+	makedepends = mold
+	depends = android-tools
+	depends = gcc-libs
+	provides = universal-android-debloater-git
+	conflicts = universal-android-debloater-opengl
+	conflicts = universal-android-debloater-opengl-bin
+	conflicts = universal-android-debloater
+	conflicts = universal-android-debloater-bin
+	source = git+https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation.git#branch=main
+	md5sums = SKIP
+	sha256sums = SKIP
+
+pkgname = universal-android-debloater-git

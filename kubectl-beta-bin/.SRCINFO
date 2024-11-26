@@ -1,0 +1,16 @@
+pkgbase = kubectl-beta-bin
+	pkgdesc = Command-line tool for deploying and managing applications on Kubernetes (beta)
+	pkgver = 1.19.0_beta.0
+	pkgrel = 1
+	url = https://github.com/kubernetes/kubernetes
+	arch = x86_64
+	license = Apache
+	provides = kubectl
+	conflicts = kubectl
+	conflicts = kubectl-bin
+	conflicts = kubernetes>=1.4.6
+	source = kubectl-1.19.0-beta.0::https://storage.googleapis.com/kubernetes-release/release/v1.19.0-beta.0/bin/linux/amd64/kubectl
+	sha512sums = cf8f8913fe56a8110442bd990ca43b51d3356dba3a99f1a431d75e7250a5d144ca7274c8a6b3525eeb7b35b73457c2145508cb3cde264f81828d70827f7c4793
+
+pkgname = kubectl-beta-bin
+

@@ -1,0 +1,16 @@
+pkgbase = redfetch-git
+	pkgdesc = A fast fetch written in C, with the ppfetch Ascii Art.
+	pkgver = r0.g000649b
+	pkgrel = 1
+	url = https://codeberg.org/redson/Redfetch
+	arch = x86_64
+	license = MIT
+	makedepends = gcc
+	makedepends = make
+	makedepends = git
+	depends = wmctrl
+	provides = redfetch
+	source = redfetch::git+https://codeberg.org/redson/redfetch.git
+	sha256sums = SKIP
+
+pkgname = redfetch-git

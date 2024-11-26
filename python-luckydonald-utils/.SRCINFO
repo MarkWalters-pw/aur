@@ -1,0 +1,22 @@
+pkgbase = python-luckydonald-utils
+	pkgdesc = A collection of generic utilities for use in any python project
+	pkgver = 0.76
+	pkgrel = 1
+	url = https://pypi.org/project/luckydonald-utils/#files
+	arch = any
+	license = GPL3
+	makedepends = python-setuptools
+	depends = python
+	optdepends = python-crypto
+	optdepends = python-magic
+	optdepends = python-pillow
+	optdepends = python-pytz
+	optdepends = python-requests
+	optdepends = python-usersettings
+	source = https://files.pythonhosted.org/packages/87/d1/f77b7a17876883c41e35cdda7f17e842ac422fcdc444d3fae821df1411e2/luckydonald-utils-0.76.tar.gz
+	source = remove-pip-requirement.patch
+	sha256sums = a61764553eb262180e7c53a7f63c38dd9c9abdd32403cfc4ee3839cc628903a0
+	sha256sums = b91159f0ce525c209b6e71179bb38958e52c0b3cb04bba97e5e3f987e51ecb0a
+
+pkgname = python-luckydonald-utils
+

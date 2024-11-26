@@ -1,0 +1,15 @@
+pkgbase = framework-laptop-kmod-dkms-git
+	pkgdesc = Kernel module to expose more Framework Laptop stuff
+	pkgver = r17.a9e8db9
+	pkgrel = 1
+	url = https://github.com/DHowett/framework-laptop-kmod
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	depends = dkms
+	provides = framework-laptop-kmod-dkms
+	conflicts = framework-laptop-kmod-dkms
+	source = framework-laptop-kmod::git+https://github.com/DHowett/framework-laptop-kmod
+	sha256sums = SKIP
+
+pkgname = framework-laptop-kmod-dkms-git

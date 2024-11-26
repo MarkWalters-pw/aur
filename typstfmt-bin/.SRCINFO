@@ -1,0 +1,25 @@
+pkgbase = typstfmt-bin
+	pkgdesc = Basic formatter for the Typst language with a future!
+	pkgver = 0.2.10
+	pkgrel = 1
+	url = https://github.com/astrale-sharp/typstfmt
+	changelog = typstfmt-bin.changelog
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	license = MIT
+	license = Apache-2.0
+	provides = typstfmt
+	conflicts = typstfmt-git
+	source = LICENSE-APACHE::https://raw.githubusercontent.com/astrale-sharp/typstfmt/main/LICENSE-APACHE
+	source = LICENSE-MIT::https://raw.githubusercontent.com/astrale-sharp/typstfmt/main/LICENSE-MIT
+	sha256sums = 3905892d35c90001cd11101d367d4073b773f30fa7ce868748969f4cc1fb24c2
+	sha256sums = 7e302d0694378f3f9584985cf56db84d89b0bcb9f78d04381397349ff50162af
+	source_x86_64 = typstfmt-bin-x86_64-0.2.10.tar.xz::https://github.com/astrale-sharp/typstfmt/releases/download/0.2.10/typstfmt-x86_64-unknown-linux-musl.tar.xz
+	sha256sums_x86_64 = 15211663a65a5cff67390480d21618e11aed54defaa00cde2fde3a3ecf812239
+	source_aarch64 = typstfmt-bin-aarch64-0.2.10.tar.xz::https://github.com/astrale-sharp/typstfmt/releases/download/0.2.10/typstfmt-aarch64-unknown-linux-musl.tar.xz
+	sha256sums_aarch64 = 775ebd2a5905b7b50b8b08c025bbf0ca7d272ee2b7a2b600d2ce2b0ea14baa39
+	source_armv7h = typstfmt-bin-armv7h-0.2.10.tar.xz::https://github.com/astrale-sharp/typstfmt/releases/download/0.2.10/typstfmt-armv7-unknown-linux-musleabi.tar.xz
+	sha256sums_armv7h = 274cb1dbb18c72a84eed47301279b0a39cfe9b44330633ad56d952e5a0336b03
+
+pkgname = typstfmt-bin

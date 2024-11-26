@@ -1,0 +1,20 @@
+pkgbase = nfs2se
+	pkgdesc = Cross-platform wrapper for the Need For Speed™ II SE
+	pkgver = 1.3.0
+	pkgrel = 1
+	install = nfs2se.install
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = gcc-multilib
+	makedepends = yasm
+	depends = lib32-sdl2
+	depends = lib32-libglvnd
+	optdepends = lib32-libpulse: Required for PulseAudio
+	conflicts = nfs2se-git
+	source = https://github.com/zaps166/NFSIISE/releases/download/v1.3.0/nfs2se-src.tar.gz
+	source = nfs2se
+	md5sums = 8f9b41ac587f57dc9e7f6dc575bca22d
+	md5sums = 50da45b125bd78839b60b9a16989c37f
+
+pkgname = nfs2se

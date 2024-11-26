@@ -1,0 +1,13 @@
+post_install() {
+    # Warn users
+    echo '[jupyter-matlab_kernel-git]==> WARNING!'
+    echo 'matlab-engine-for-python is listed as an optional dependency.'
+    echo 'This is intentional; because most users of MATLAB will not use the AUR package.'
+    echo 'For proper integration; you can;'
+    echo '* Install MATLAB Engine API for Python directly from your MATLAB installation'
+    echo '  https://www.mathworks.com/help/matlab/matlab_external/install-the-matlab-engine-for-python.html'
+    echo '  You have to make sure your python can find the package.'
+    echo '* Integrate your MATLAB installation with pacman using the AUR package.'
+    echo '  The current AUR matlab package (2020b) install the python engine systemwide.'
+    echo 'Without a working MATLAB python API installation; the kernel will not work'
+}

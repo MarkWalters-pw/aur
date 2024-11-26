@@ -1,0 +1,19 @@
+pkgbase = python-edgedb
+	pkgdesc = EdgeDB Python driver
+	pkgver = 1.6.0
+	pkgrel = 2
+	url = https://github.com/edgedb/edgedb-python
+	arch = x86_64
+	license = Apache
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools>=42
+	makedepends = python-wheel
+	makedepends = cython0
+	depends = python>=3.7
+	source = https://github.com/edgedb/edgedb-python/archive/refs/tags/v1.6.0.zip
+	source = https://github.com/MagicStack/py-pgproto/archive/1720f8af63725d79454884cfa787202a50eb5430.zip
+	sha256sums = 73bd261a5a042f6d5e75480e0c7ca4a84810ff633575f181257e36d9fae3b4d2
+	sha256sums = 365c610cdcea2b064f9dc445e0f3a1b0d19db94a680d89ef868768878c97ecf2
+
+pkgname = python-edgedb

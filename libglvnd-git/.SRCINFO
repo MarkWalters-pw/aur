@@ -1,0 +1,32 @@
+pkgbase = libglvnd-git
+	pkgdesc = The GL Vendor-Neutral Dispatch library
+	pkgver = 1.7.0.r10.g908086d
+	pkgrel = 1
+	url = https://gitlab.freedesktop.org/glvnd/libglvnd
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = libx11
+	makedepends = meson
+	makedepends = python
+	makedepends = xorgproto
+	depends = glibc
+	depends = libxext
+	depends = mesa
+	depends = opengl-driver
+	provides = libglvnd=1.7.0.r10.g908086d
+	provides = libegl
+	provides = libgl
+	provides = libgles
+	provides = libEGL.so
+	provides = libGL.so
+	provides = libGLdispatch.so
+	provides = libGLESv2.so
+	provides = libGLX.so
+	provides = libOpenGL.so
+	conflicts = libglvnd
+	source = git+https://gitlab.freedesktop.org/glvnd/libglvnd.git
+	sha256sums = SKIP
+
+pkgname = libglvnd-git

@@ -1,0 +1,17 @@
+pkgbase = sescript-git
+	pkgdesc = compiles scheme-like s-expressions to ecmascript/javascript
+	pkgver = 93
+	pkgrel = 1
+	url = http://sph.mn
+	arch = any
+	license = gpl3+
+	makedepends = git
+	depends = guile
+	depends = sph-lib
+	provides = sescript
+	conflicts = sescript
+	source = git://git.sph.mn/sescript
+	md5sums = SKIP
+
+pkgname = sescript-git
+

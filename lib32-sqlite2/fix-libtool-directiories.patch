@@ -1,0 +1,36 @@
+--- Makefile.in.sav	2005-04-24 00:43:23.000000000 +0200
++++ Makefile.in	2021-01-15 14:24:29.144490016 +0100
+@@ -32,6 +32,10 @@
+ #
+ prefix = @prefix@
+ exec_prefix = @exec_prefix@
++libdir = @libdir@
++pkgconfigdir = $(libdir)/pkgconfig
++bindir = @bindir@
++includedir = @includedir@
+ INSTALL = @INSTALL@
+ LIBTOOL = ./libtool
+ RELEASE = @ALLOWRELEASE@
+@@ -465,14 +469,14 @@
+ 	mv $(DOC) doc
+ 
+ install:	sqlite libsqlite.la sqlite.h
+-	$(INSTALL) -d $(DESTDIR)$(exec_prefix)/lib
+-	$(LTINSTALL) libsqlite.la $(DESTDIR)$(exec_prefix)/lib
+-	$(INSTALL) -d $(DESTDIR)$(exec_prefix)/bin
+-	$(LTINSTALL) sqlite $(DESTDIR)$(exec_prefix)/bin
+-	$(INSTALL) -d $(DESTDIR)$(prefix)/include
+-	$(INSTALL) -m 0644 sqlite.h $(DESTDIR)$(prefix)/include
+-	$(INSTALL) -d $(DESTDIR)$(exec_prefix)/lib/pkgconfig; 
+-	$(INSTALL) -m 0644 sqlite.pc $(DESTDIR)$(exec_prefix)/lib/pkgconfig; 
++	$(INSTALL) -d $(DESTDIR)$(bindir)
++	$(INSTALL) -d $(DESTDIR)$(libdir)
++	$(LTINSTALL) libsqlite.la $(DESTDIR)$(libdir)
++	$(LTINSTALL) sqlite $(DESTDIR)$(bindir)
++	$(INSTALL) -d $(DESTDIR)$(includedir)
++	$(INSTALL) -m 0644 sqlite.h $(DESTDIR)$(includedir)
++	$(INSTALL) -d $(DESTDIR)$(pkgconfigdir)
++	$(INSTALL) -m 0644 sqlite.pc $(DESTDIR)$(pkgconfigdir)
+ 
+ clean:	
+ 	rm -f *.lo *.la *.o sqlite@TARGET_EXEEXT@ libsqlite.la sqlite.h opcodes.*

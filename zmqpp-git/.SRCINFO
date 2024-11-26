@@ -1,0 +1,21 @@
+pkgbase = zmqpp-git
+	pkgdesc = High-level C++ binding for ZMQ
+	pkgver = 4.2.0.r47.gba4230d
+	pkgrel = 2
+	url = https://zeromq.github.io/zmqpp/
+	arch = x86_64
+	license = MPL2
+	makedepends = git
+	makedepends = boost
+	depends = glibc
+	depends = gcc-libs
+	depends = boost-libs
+	depends = zeromq
+	provides = zmqpp
+	conflicts = zmqpp
+	source = git+https://github.com/zeromq/zmqpp.git#branch=develop
+	source = https://github.com/zeromq/zmqpp/pull/238/commits/4c0f99a4afd5a88e5e894d84f3eef0e0fb17f58d.patch
+	sha256sums = SKIP
+	sha256sums = 11ccea23fe6482debb9083ccf4e724d87544b43401cacbc20b09a4f745855fc6
+
+pkgname = zmqpp-git

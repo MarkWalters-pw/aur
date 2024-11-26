@@ -1,0 +1,17 @@
+pkgbase = neovim-coc-marketplace-git
+	pkgdesc = coc.nvim extensions marketplace
+	pkgver = 1.4.0.r109.ga1ec912
+	pkgrel = 1
+	url = https://github.com/fannheyward/coc-marketplace
+	arch = any
+	license = MIT
+	makedepends = yarn
+	makedepends = npm
+	makedepends = git
+	depends = neovim-coc
+	provides = neovim-coc-marketplace
+	conflicts = neovim-coc-marketplace
+	source = coc-marketplace::git+https://github.com/fannheyward/coc-marketplace.git
+	sha256sums = SKIP
+
+pkgname = neovim-coc-marketplace-git

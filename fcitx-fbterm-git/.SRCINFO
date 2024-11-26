@@ -1,0 +1,18 @@
+pkgbase = fcitx-fbterm-git
+	pkgdesc = Fbterm support for fcitx
+	pkgver = 0.2.0.r1.ga0ecce1
+	pkgrel = 2
+	url = https://github.com/fcitx/fcitx-fbterm
+	install = fcitx-fbterm-git.install
+	arch = x86_64
+	arch = i686
+	license = GPLv2
+	makedepends = git
+	makedepends = cmake
+	depends = fbterm
+	depends = fcitx
+	provides = fcitx-fbterm
+	source = git+https://github.com/fcitx/fcitx-fbterm
+	md5sums = SKIP
+
+pkgname = fcitx-fbterm-git

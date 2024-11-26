@@ -1,0 +1,32 @@
+pkgbase = ros-noetic-map-server
+	pkgdesc = ROS - map_server provides the map_server ROS Node, which offers map data as a ROS Service.
+	pkgver = 1.16.2
+	pkgrel = 3
+	url = https://wiki.ros.org/map_server
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-rostest
+	makedepends = ros-noetic-tf
+	makedepends = ros-noetic-nav-msgs
+	makedepends = ros-noetic-roscpp
+	makedepends = ros-noetic-catkin
+	makedepends = sdl_image
+	makedepends = yaml-cpp
+	makedepends = bullet
+	depends = ros-noetic-rostest
+	depends = ros-noetic-tf
+	depends = ros-noetic-nav-msgs
+	depends = ros-noetic-roscpp
+	depends = sdl_image
+	depends = yaml-cpp
+	source = ros-noetic-map-server-1.16.2.tar.gz::https://github.com/ros-planning/navigation/archive/1.16.2.tar.gz
+	sha256sums = d83201296e773e2789635fddf39ac18e9465219b18707e53bd2361de4762d205
+
+pkgname = ros-noetic-map-server
+

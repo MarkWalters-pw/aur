@@ -1,0 +1,37 @@
+pkgbase = python-pyfr
+	pkgdesc = Framework for solving advection-diffusion type problems on streaming architectures
+	pkgver = 1.15.0
+	pkgrel = 1
+	url = https://github.com/pyfr/pyfr
+	arch = any
+	license = BSD
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = python>=3.9
+	depends = python-appdirs
+	depends = python-gimmik
+	depends = python-h5py-openmpi
+	depends = python-numpy
+	depends = python-pytools
+	depends = python-mako
+	depends = python-mpi4py
+	depends = python-setuptools
+	optdepends = metis: needed for running PyFR in parallel
+	optdepends = scotch: needed for running PyFR in parallel
+	optdepends = python-pymic: needed for Xeon Phi MIC backend
+	optdepends = python-pycuda: needed for CUDA backend
+	optdepends = cuda: needed for CUDA backend
+	optdepends = python-pyopencl: needed for OpenCL backend
+	optdepends = clblas: needed for OpenCL backend
+	optdepends = cblas: needed for OpenMP backend
+	optdepends = openblas: alternative blas for OpenMP backend
+	optdepends = cgns: for importing CGNS meshes
+	source = python-pyfr::git+https://github.com/pyfr/pyfr#commit=d2a401a?signed
+	source = 001-remove-tests.patch
+	validpgpkeys = AEEA6F51A3521732B684C1049E70614148A0FA1F
+	sha256sums = SKIP
+	sha256sums = 97d817a571eed6f659b9970acf45edd3c9d12d8370d0fe3d998f10cec710b10b
+
+pkgname = python-pyfr

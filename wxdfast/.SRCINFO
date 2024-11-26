@@ -1,0 +1,17 @@
+pkgbase = wxdfast
+	pkgdesc = Multithread download manager
+	pkgver = 0.70.4
+	pkgrel = 1
+	url = https://wxdfast.dxsolutions.org
+	install = wxdfast.install
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = cmake
+	depends = wxwidgets-gtk3
+	depends = aria2
+	depends = openssl
+	source = https://github.com/archdvx/wxdfast/releases/download/v0.70.4/wxdfast-0.70.4.tar.gz
+	md5sums = b2504a36c6a6e5d9f116d8a2d7e26709
+
+pkgname = wxdfast

@@ -1,0 +1,17 @@
+pkgbase = dalarma-git
+	pkgdesc = cli timer that forces you to get up from the computer
+	pkgver = r28.04f9d7b
+	pkgrel = 1
+	url = https://github.com/UnkwUsr/dalarma
+	arch = any
+	license = MIT
+	makedepends = git
+	depends = st
+	depends = wmctrl
+	depends = libnotify
+	provides = dalarma
+	conflicts = dalarma
+	source = dalarma-git::git+https://github.com/UnkwUsr/dalarma
+	sha1sums = SKIP
+
+pkgname = dalarma-git

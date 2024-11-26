@@ -1,0 +1,18 @@
+pkgbase = avisynth-plugin-addgrainc-git
+	pkgdesc = Plugin for Avisynth: addgrainc (GIT version)
+	pkgver = 1.8.4.0.g7e280a2
+	pkgrel = 1
+	url = https://github.com/pinterf/AddGrainC
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = cmake
+	makedepends = avisynthplus
+	depends = libavisynth.so
+	provides = avisynth-plugin-addgrainc
+	conflicts = avisynth-plugin-addgrainc
+	options = debug
+	source = addgrainc::git+https://github.com/pinterf/AddGrainC.git
+	sha256sums = SKIP
+
+pkgname = avisynth-plugin-addgrainc-git

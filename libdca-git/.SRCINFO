@@ -1,0 +1,17 @@
+pkgbase = libdca-git
+	pkgdesc = A library for decoding DTS Coherent Acoustics streams
+	pkgver = 0.0.7.r2.g95c4bd8
+	pkgrel = 1
+	url = https://www.videolan.org/developers/libdca.html
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	depends = glibc
+	provides = libdca=0.0.7.r2.g95c4bd8
+	conflicts = libdca
+	options = staticlibs
+	source = git+https://code.videolan.org/videolan/libdca.git
+	sha256sums = SKIP
+
+pkgname = libdca-git

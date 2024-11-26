@@ -1,0 +1,18 @@
+pkgbase = pritunl-dns-git
+	pkgdesc = Pritunl DNS mapping service
+	pkgver = 105.a8ef4ca
+	pkgrel = 1
+	url = https://github.com/pritunl/pritunl-dns
+	arch = x86_64
+	arch = armv6h
+	arch = armv7h
+	arch = aarch64
+	license = custom
+	makedepends = git
+	depends = go
+	provides = pritunl-dns
+	conflicts = pritunl-dns
+	source = git+https://github.com/pritunl/pritunl-dns
+	sha256sums = SKIP
+
+pkgname = pritunl-dns-git

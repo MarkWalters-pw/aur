@@ -1,0 +1,27 @@
+pkgbase = esp-idf-git
+	pkgdesc = Espressif IoT Development Framework. Official development framework for ESP32.
+	pkgver = 5.2.dev.r3213.4e04c00d1c
+	pkgrel = 1
+	url = https://github.com/espressif/esp-idf
+	install = esp-idf-git.install
+	arch = i686
+	arch = x86_64
+	arch = aarch
+	arch = aarch64
+	arch = armv7h
+	license = Apache
+	depends = ccache
+	depends = cmake
+	depends = dfu-util
+	depends = git
+	depends = gperf
+	depends = libusb
+	depends = ninja
+	depends = python
+	provides = esp-idf
+	conflicts = esp-idf
+	options = !strip
+	source = git+https://github.com/espressif/esp-idf.git
+	md5sums = SKIP
+
+pkgname = esp-idf-git

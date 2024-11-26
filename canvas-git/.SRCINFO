@@ -1,0 +1,18 @@
+pkgbase = canvas-git
+	pkgdesc = A bash script to generate and apply different types of gradient & blured wallpapers.
+	pkgver = r19.e74dda7
+	pkgrel = 5
+	url = https://github.com/dylanaraps/canvas
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = imagemagick
+	depends = feh
+	depends = colorpicker
+	optdepends = xorg-xrandr: to use it with xfce
+	provides = canvas
+	source = canvas::git+https://github.com/adi1090x/canvas.git
+	md5sums = SKIP
+
+pkgname = canvas-git
+

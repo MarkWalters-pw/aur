@@ -1,0 +1,20 @@
+pkgbase = go-scc-git
+	pkgdesc = A very fast accurate code counter with complexity calculations and COCOMO estimates.
+	pkgver = 3.1.0.r8.gfff7a11
+	pkgrel = 1
+	url = https://github.com/boyter/scc
+	arch = i686
+	arch = x86_64
+	license = custom:MIT
+	checkdepends = git
+	checkdepends = go
+	makedepends = git
+	makedepends = go
+	depends = glibc
+	provides = scc
+	conflicts = scc
+	conflicts = scc-git
+	source = git+https://github.com/boyter/scc.git
+	md5sums = SKIP
+
+pkgname = go-scc-git

@@ -1,0 +1,21 @@
+pkgbase = ros-noetic-pybind11-catkin
+	pkgdesc = ROS - The pybind11 package.
+	pkgver = 2.10.3
+	pkgrel = 1
+	url = https://github.com/ipab-slmc/pybind11_catkin
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-catkin
+	depends = python
+	depends = python-numpy
+	depends = eigen
+	source = ros-noetic-pybind11-catkin-2.10.3.tar.gz::https://github.com/wxmerkt/pybind11_catkin-release/archive/release/noetic/pybind11_catkin/2.10.3.tar.gz
+	sha256sums = 709c9c07f4049985ae5cc920306abfa58bfd62a8325ba8fd0a28f78e2d42a594
+
+pkgname = ros-noetic-pybind11-catkin

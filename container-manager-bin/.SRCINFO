@@ -1,0 +1,14 @@
+pkgbase = container-manager-bin
+	pkgdesc = Manager for Docker containers
+	pkgver = 2.2.0
+	pkgrel = 1
+	url = https://github.com/cenkalti/container-manager
+	license = MIT
+	depends = docker
+	conflicts = container-manager
+	provides = container-manager
+	arch = x86_64
+	source_x86_64 = https://github.com/cenkalti/container-manager/releases/download/v2.2.0/container-manager_Linux_x86_64.tar.gz
+	sha256sums_x86_64 = b6f1c2961ffca260954b9d94ba2539d8ce2f4e1564182766e2390a779a64d3a3
+	
+pkgname = container-manager-bin

@@ -1,0 +1,18 @@
+pkgbase = vapoursynth-plugin-nnedi3-git
+	pkgdesc = Plugin for Vapoursynth: nnedi3 (GIT version)
+	pkgver = 12.0.g8c35822
+	pkgrel = 1
+	url = http://forum.doom9.org/showthread.php?t=166434
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	makedepends = yasm
+	depends = vapoursynth
+	depends = vapoursynth-plugin-nnedi3_weights_bin
+	provides = vapoursynth-plugin-nnedi3
+	conflicts = vapoursynth-plugin-nnedi3
+	options = debug
+	source = nnedi3::git+https://github.com/dubhater/vapoursynth-nnedi3.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-nnedi3-git

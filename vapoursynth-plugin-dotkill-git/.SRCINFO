@@ -1,0 +1,16 @@
+pkgbase = vapoursynth-plugin-dotkill-git
+	pkgdesc = Plugin for Vapoursynth: dotkill (GIT version)
+	pkgver = 2.4.g0894899
+	pkgrel = 1
+	url = https://forum.doom9.org/showthread.php?t=173029
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	depends = vapoursynth
+	provides = vapoursynth-plugin-dotkill
+	conflicts = vapoursynth-plugin-dotkill
+	options = debug
+	source = dotkill::git+https://github.com/myrsloik/DotKill.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-dotkill-git

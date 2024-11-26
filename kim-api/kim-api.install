@@ -1,0 +1,23 @@
+# Colored makepkg-like functions
+msg_blue() {
+    printf "${blue}==>${bold} $1${all_off}\n"
+}
+
+note() {
+    printf "${blue}==>${yellow} NOTE:${bold} $1${all_off}\n"
+}
+
+all_off="$(tput sgr0)"
+bold="${all_off}$(tput bold)"
+blue="${bold}$(tput setaf 4)"
+yellow="${bold}$(tput setaf 3)"
+
+post_install() {
+    note "KIM API has been installed with some example models."
+    note "Additional models can be installed using the 'kim-api-collections-management' utility."
+    note "(All) models from OpenKIM.org are available in the openkim-models package."
+}
+
+post_upgrade() {
+    post_install
+}

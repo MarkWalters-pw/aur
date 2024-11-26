@@ -1,0 +1,16 @@
+pkgbase = packwiz-installer
+	pkgdesc = An installer for packwiz modpacks.
+	pkgver = 0.5.13
+	pkgrel = 1
+	url = https://github.com/packwiz/packwiz-installer
+	arch = any
+	license = MIT
+	depends = java-runtime
+	source = packwiz-installer.jar::https://github.com/packwiz/packwiz-installer/releases/download/v0.5.13/packwiz-installer.jar
+	source = packwiz-installer-bootstrap.jar::https://github.com/packwiz/packwiz-installer-bootstrap/releases/download/v0.0.3/packwiz-installer-bootstrap.jar
+	source = packwiz-installer.sh
+	sha256sums = 3cc3ebd57f1ec54a8ceaccc76e193201f8c957c563c9461253d112c5b087d744
+	sha256sums = a8fbb24dc604278e97f4688e82d3d91a318b98efc08d5dbfcbcbcab6443d116c
+	sha256sums = 924aff17bf4ad5fd745c5378d39ec883f685a9b0f4f754828cd99bc83c71df6d
+
+pkgname = packwiz-installer

@@ -1,0 +1,21 @@
+pkgbase = cvise
+	pkgdesc = Super-parallel Python port of the C-Reduce
+	pkgver = 2.10.0
+	pkgrel = 1
+	url = https://github.com/marxin/cvise
+	arch = x86_64
+	license = custom:University of Illinois
+	checkdepends = python-pytest
+	makedepends = cmake
+	makedepends = llvm>9.0.0
+	depends = clang>9.0.0
+	depends = flex
+	depends = python-chardet
+	depends = python-pebble
+	depends = python-psutil
+	depends = unifdef
+	optdepends = colordiff
+	source = https://github.com/marxin/cvise/archive/v2.10.0.tar.gz
+	sha256sums = ee9bdfce6f139d0317c98d9c9b51cc68bcaead059de97aac2cf81d71f2215f54
+
+pkgname = cvise

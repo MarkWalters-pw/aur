@@ -1,0 +1,20 @@
+pkgbase = git-fuzzy-git
+	pkgdesc = interactive git with the help of fzf
+	pkgver = 0.r90
+	pkgrel = 1
+	url = https://github.com/bigH/git-fuzzy
+	arch = any
+	license = MIT
+	depends = bc
+	depends = git
+	depends = fzf
+	optdepends = hub: alternative git client
+	optdepends = git-delta: improved diff highlighting
+	optdepends = diff-so-fancy: improved diff highlighting
+	optdepends = bat: syntax highlighting
+	optdepends = exa
+	conflicts = git-fuzzy
+	source = git+https://github.com/bigH/git-fuzzy.git
+	sha512sums = SKIP
+
+pkgname = git-fuzzy-git

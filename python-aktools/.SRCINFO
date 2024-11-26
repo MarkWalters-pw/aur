@@ -1,0 +1,19 @@
+pkgbase = python-aktools
+	pkgdesc = HTTP server library for AkShare
+	pkgver = 0.0.50
+	pkgrel = 1
+	url = https://github.com/akfamily/aktools
+	arch = any
+	license = MIT
+	makedepends = python-setuptools
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = python-akshare
+	depends = python-fastapi
+	depends = uvicorn
+	depends = python-python-multipart
+	source = python-aktools-0.0.50.tar.gz::https://github.com/akfamily/aktools/archive/v0.0.50.tar.gz
+	sha256sums = f48a321b6d82dcc0e67dce166ccfc68ca9dbc2cce3a18f5063d2ea8a578fd43e
+
+pkgname = python-aktools

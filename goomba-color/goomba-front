@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# WINE Launcher script for Goomba Front
+
+export WINEPREFIX=~/.gba-emu
+export GMBDIR=/usr/share/goomba-color # installation dir for AUR package
+
+cat << EOF
+Goomba Front Linux Loader by Atapi/Sterophonick
+Original Program: (c) 2019? Dwedit?
+
+EOF
+
+cd $GMBDIR
+wine goombafront.exe
+
+if [ $? -eq 53 ]
+then
+    winetricks -q vb6run
+    wine goombafront.exe
+fi

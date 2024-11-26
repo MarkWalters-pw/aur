@@ -1,0 +1,21 @@
+pkgbase = tcl-prompt-git
+	pkgdesc = Tcl plugin for powerlevel10k style prompt and WakaTime time tracking
+	pkgver = r21.f11e245
+	pkgrel = 1
+	url = https://github.com/wakatime/tcl-prompt
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = tcl
+	depends = tclreadline
+	depends = tcllib
+	depends = lsb-release
+	depends = procps-ng
+	optdepends = expect
+	optdepends = vitis
+	optdepends = vivado
+	optdepends = git: get project name
+	source = git+https://github.com/wakatime/tcl-prompt#tag=f11e245093d86967d5dbc10e110f8b0fbbcc4b8f
+	sha256sums = SKIP
+
+pkgname = tcl-prompt-git

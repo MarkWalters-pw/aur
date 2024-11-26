@@ -1,0 +1,17 @@
+pkgbase = python-salib
+	pkgdesc = Tools for sensitivity analysis. Contains Sobol, Morris, and FAST methods
+	pkgver = 1.3.11
+	pkgrel = 1
+	url = http://salib.github.io/SALib/
+	arch = any
+	license = MIT
+	makedepends = python-setuptools
+	source = https://files.pythonhosted.org/packages/source/S/SALib/SALib-1.3.11.tar.gz
+	sha256sums = af07e284ce1e85d2fea6c571b4b3d5c518f70faa518ed890ca4212bd0ad0d3d8
+
+pkgname = python-salib
+	depends = python-numpy
+	depends = python-matplotlib
+	depends = python-scipy
+	depends = python-pandas
+

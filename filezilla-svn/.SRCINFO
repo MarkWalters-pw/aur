@@ -1,0 +1,20 @@
+pkgbase = filezilla-svn
+	pkgdesc = Free, open source FTP, FTPS and SFTP client
+	pkgver = 11020
+	pkgrel = 1
+	url = https://filezilla-project.org
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = subversion
+	makedepends = pugixml
+	makedepends = boost
+	depends = libfilezilla-svn
+	depends = wxwidgets-gtk3
+	depends = xdg-utils
+	provides = filezilla
+	conflicts = filezilla
+	source = filezilla::svn+https://svn.filezilla-project.org/svn/FileZilla3/trunk
+	sha256sums = SKIP
+
+pkgname = filezilla-svn

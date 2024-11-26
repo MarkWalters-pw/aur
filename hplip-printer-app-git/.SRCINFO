@@ -1,0 +1,22 @@
+pkgbase = hplip-printer-app-git
+	pkgdesc = HPLIP Printer Application
+	pkgver = r57.bcce338
+	pkgrel = 1
+	arch = x86_64
+	makedepends = git
+	depends = libcups
+	depends = mupdf-tools
+	source = git+https://github.com/OpenPrinting/hplip-printer-app.git
+	source = git+https://github.com/michaelrsweet/pappl.git
+	source = git+https://github.com/OpenPrinting/pappl-retrofit.git
+	source = git+https://github.com/OpenPrinting/cups-filters.git
+	source = hplip-printer-app-makefile.patch
+	source = pappl-retrofit-makefile.patch
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = ef51e64a325c66ee9a05c236bb9ba863d234c2ebbd17285c2dba8d0de8832d89
+	sha256sums = 6a2532e722d1566274ae0d7f124ff1f51096fb81341ffd7bfe0235dc2eee0bf2
+
+pkgname = hplip-printer-app-git

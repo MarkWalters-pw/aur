@@ -1,0 +1,18 @@
+pkgbase = pacmanity-git
+	pkgdesc = Keeps a list of installed packages in a Gist at your GitHub account
+	pkgver = r53.e181875
+	pkgrel = 3
+	epoch = 2
+	url = https://github.com/dszryan/pacmanity
+	arch = x86_64
+	arch = i686
+	license = GPL
+	makedepends = git
+	depends = pacman>=5.0
+	depends = gist>=4.5.0
+	conflicts = pacmanity
+	source = pacmanity::git+https://github.com/dszryan/pacmanity.git#branch=master
+	sha256sums = SKIP
+
+pkgname = pacmanity-git
+

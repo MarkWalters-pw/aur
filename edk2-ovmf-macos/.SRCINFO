@@ -1,0 +1,17 @@
+pkgbase = edk2-ovmf-macos
+	pkgdesc = A collection of EDK II UEFI firmware files with macOS compatibility.
+	pkgver = r74.527588d
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/foxlet/macOS-Simple-KVM
+	arch = any
+	license = custom
+	makedepends = jshon
+	conflicts = edk2-ovmf-macboot-git
+	source = https://github.com/foxlet/macOS-Simple-KVM/raw/master/firmware/OVMF_CODE.fd
+	source = OVMF_VARS.fd::https://github.com/foxlet/macOS-Simple-KVM/raw/master/firmware/OVMF_VARS-1024x768.fd
+	b2sums = SKIP
+	b2sums = SKIP
+
+pkgname = edk2-ovmf-macos
+

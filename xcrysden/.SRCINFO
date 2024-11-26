@@ -1,0 +1,27 @@
+pkgbase = xcrysden
+	pkgdesc = crystalline and molecular structure visualisation program
+	pkgver = 1.6.2
+	pkgrel = 2
+	url = http://www.xcrysden.org/
+	arch = x86_64
+	license = GPL2
+	depends = tk
+	depends = tcl
+	depends = tk-togl
+	depends = gl2ps
+	depends = fftw
+	depends = bwidget
+	depends = imagemagick
+	depends = gcc-fortran
+	depends = glu
+	depends = libxmu
+	replaces = xcrysden-bin
+	source = http://www.xcrysden.org/download/xcrysden-1.6.2.tar.gz
+	source = fix-xcrysden-install.patch
+	source = Make.sys
+	sha256sums = 811736ee598bec1a5b427fd10e4e063a30dd7cadae96a43a50b36ce90a4f503f
+	sha256sums = 26be6f6d22bed326612f2b9c4b049a32bc9ebe57926254eac1d0e5ee46cb9ca5
+	sha256sums = 0d2f5e60f694e0c71f0cdb265cbd753cd73dcbf1fc708cb35a844248c3a509f2
+
+pkgname = xcrysden
+

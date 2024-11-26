@@ -1,0 +1,23 @@
+pkgbase = kyocera-utax-ta
+	pkgdesc = PPD drivers for Kyocera UTAX TA Triumph Adler CD CDC CLP DC LP P printers copiers wide format
+	pkgver = 9.1.0.20220203
+	pkgrel = 1
+	url = https://www.utax.de/
+	arch = i686
+	arch = x86_64
+	license = custom
+	depends = cups
+	depends = python-pypdf3
+	depends = python-reportlab
+	options = !strip
+	source = TALinuxDriver9.1-20220203.tar.gz::https://catalogue-prod.utax.de/blobs/dc92d4bd-a761-4c0f-a981-0f1efc7c1a7f
+	md5sums = fb465c80027fbeadf5634bc91694793b
+	sha1sums = e425379af9119a05a0f08079e664ad9c5178fdee
+	sha256sums = 86ceca48b1f5e39944c8f3115223ebd018e2f7ded53667c9d3e90afcb4241da4
+
+pkgname = kyocera-utax-ta
+	depends = cups
+	depends = python-pypdf3
+	depends = python-reportlab
+	depends = qt5-base
+	depends = kyocera-cups

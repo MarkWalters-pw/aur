@@ -1,0 +1,19 @@
+pkgbase = kindleunpack
+	pkgdesc = Extract text, images, and metadata from Kindle/Mobi files
+	pkgver = 0.83
+	pkgrel = 3
+	url = https://github.com/kevinhendricks/KindleUnpack
+	arch = any
+	license = GPL-3.0-only
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = python-setuptools
+	depends = python
+	depends = tk
+	source = https://github.com/kevinhendricks/KindleUnpack/archive/v083/KindleUnpack-083.tar.gz
+	source = Installing-with-setuptools.diff
+	sha256sums = cd7a539573dedd1d78a6b49606446aa5a51acb520b4ee0ccb9f5b30deaddad2e
+	sha256sums = 4c4eb18f9716875d90cf6c6b781ece9cbb316e2dcecebd2e89caec142bd25505
+
+pkgname = kindleunpack

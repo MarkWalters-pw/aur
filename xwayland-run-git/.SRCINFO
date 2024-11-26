@@ -1,0 +1,26 @@
+pkgbase = xwayland-run-git
+	pkgdesc = Utilities to run headless X/Wayland clients
+	pkgver = 0.0.4.r2.g2a27815
+	pkgrel = 2
+	url = https://gitlab.freedesktop.org/ofourdan/xwayland-run
+	arch = any
+	license = GPL-2.0-or-later
+	makedepends = git
+	makedepends = meson
+	depends = python
+	optdepends = cage: Wayland compositor (no headless)
+	optdepends = kwin: Wayland compositor
+	optdepends = mutter: Wayland compositor
+	optdepends = weston: Wayland compositor
+	optdepends = xorg-xwayland: X11 server
+	optdepends = xorg-xauth: to run X11 clients
+	provides = wlheadless-run=0.0.4
+	provides = xwayland-run=0.0.4
+	provides = xwfb-run=0.0.4
+	conflicts = wlheadless-run
+	conflicts = xwayland-run
+	conflicts = xwfb-run
+	source = xwayland-run::git+https://gitlab.freedesktop.org/ofourdan/xwayland-run.git
+	sha256sums = SKIP
+
+pkgname = xwayland-run-git

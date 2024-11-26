@@ -1,0 +1,28 @@
+pkgbase = kangaroo-bin
+	pkgdesc = Kangaroo is a SQL client and admin tool for popular databases
+	pkgver = 1.8.1.210430
+	pkgrel = 1
+	url = https://dbkangaroo.github.io/
+	arch = x86_64
+	license = custom
+	makedepends = curl
+	depends = glib2
+	depends = gtk3
+	depends = gdk-pixbuf2
+	depends = libgee
+	depends = json-glib
+	depends = libsoup
+	depends = libgda
+	depends = gtksourceview4
+	depends = webkit2gtk
+	depends = libssh2
+	depends = openssl
+	optdepends = libgda-mysql: MySQL support
+	optdepends = libgda-postgres: PostgreSQL support
+	provides = kangaroo
+	conflicts = kangaroo
+	source = https://github.com/dbkangaroo/kangaroo/releases/download/v1.8.1.210430/kangaroo-1.8.1.210430-arch.tar.gz
+	sha256sums = 7340222fdd5cc61f7c697b10b6b296458ad3bb4797e048f934cc43fcd6d234c7
+
+pkgname = kangaroo-bin
+

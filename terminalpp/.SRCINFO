@@ -1,0 +1,23 @@
+pkgbase = terminalpp
+	pkgdesc = Minimalist, fast, cross-platform terminal emulator
+	pkgver = 0.8.4
+	pkgrel = 3
+	url = https://terminalpp.com
+	arch = x86_64
+	license = MIT
+	makedepends = cmake
+	makedepends = gcc10
+	makedepends = imagemagick
+	makedepends = cloc
+	makedepends = doxygen
+	makedepends = graphviz
+	makedepends = libxext
+	depends = libxft
+	depends = libxcursor
+	depends = hicolor-icon-theme
+	conflicts = terminalpp-git
+	conflicts = terminalpp-bin
+	source = terminalpp-0.8.4.tar.gz::https://github.com/terminalpp/terminalpp/archive/v0.8.4.tar.gz
+	sha512sums = 498755b11e7e14d9aec4450e4f5a9446cb591fd73672ad306d2b292814b3bdbb10b0e6d6248f849b30f531a92f419881c7e59dcfa85117155c0e45aabb8943ad
+
+pkgname = terminalpp

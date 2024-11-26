@@ -1,0 +1,18 @@
+pkgbase = vapoursynth-plugin-readmpls-git
+	pkgdesc = Plugin for Vapoursynth: readmpls (GIT version)
+	pkgver = 5.1.g81d4fbb
+	pkgrel = 1
+	url = https://github.com/HomeOfVapourSynthEvolution/VapourSynth-ReadMpls
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = meson
+	depends = libbluray.so
+	depends = vapoursynth
+	provides = vapoursynth-plugin-readmpls
+	conflicts = vapoursynth-plugin-readmpls
+	options = debug
+	source = readmpls::git+https://github.com/HomeOfVapourSynthEvolution/VapourSynth-ReadMpls.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-readmpls-git

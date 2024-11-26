@@ -1,0 +1,17 @@
+pkgbase = python-hug
+	pkgdesc = A Python framework that makes developing APIs as simple as possible, but no simpler
+	pkgver = 2.6.1
+	pkgrel = 1
+	url = https://github.com/hugapi/hug
+	arch = any
+	license = MIT
+	makedepends = python-pytest-runner
+	depends = python-falcon
+	depends = python-requests
+	depends = python-setuptools
+	source = https://files.pythonhosted.org/packages/source/h/hug/hug-2.6.1.tar.gz
+	source = falcon_ver.patch
+	sha256sums = b0edace2acb618873779c9ce6ecf9165db54fef95c22262f5700fcdd9febaec9
+	sha256sums = 9d059c9bafb31528d118ec78ff5c7e0028ecb98d417076f3e6d26ff117e1244d
+
+pkgname = python-hug

@@ -1,0 +1,30 @@
+pkgbase = duetcontrolserver-bin
+	pkgdesc = Control server application for Duet 3 series
+	pkgver = 3.2.2
+	pkgrel = 1
+	url = https://github.com/Duet3D/DuetSoftwareFramework.git
+	install = duetcontrolserver-bin.install
+	arch = armv7h
+	arch = aarch64
+	license = GPL3
+	depends = duetsoftwareframework>=3.2.2
+	depends = duetruntime>=3.2.2
+	depends = linux>=4.8
+	provides = duetcontrolserver=3.2.2
+	conflicts = duetcontrolserver
+	options = !strip
+	options = staticlibs
+	backup = opt/dsf/conf/config.json
+	source_armv7h = https://pkg.duet3d.com/dists/stable/armv7/binary-armhf/duetcontrolserver_3.2.2_armhf.deb
+	md5sums_armv7h = 09b1e1d1996de9efcff424e9a6754118
+	sha1sums_armv7h = 792997bdc4bd510fe981296f24b890c3e8c8eeb0
+	sha256sums_armv7h = e06923d2e3ed5de8c33a86ddac38596b78d802fff81772dc2886a4127a5f9085
+	sha512sums_armv7h = d911f68c0ed2627f3d4f37a21324f656ff65af838db280114e7a8b4c77bea0235b6f62313ac90ab3a09c6a1240897feecfed6ee7cf6691741e363a984e20f76e
+	source_aarch64 = https://pkg.duet3d.com/dists/stable/armv7/binary-arm64/duetcontrolserver_3.2.2_arm64.deb
+	md5sums_aarch64 = e94c3fa1dcc2ea08a47ec90b9b596246
+	sha1sums_aarch64 = 6b1bb4297f153ff3be6c65df8a1168694b94a5a0
+	sha256sums_aarch64 = cb646067d60d3f5bc0224fd2e83f264f7a6684548d13bfe3efc372a70d87c986
+	sha512sums_aarch64 = d4ef62cab78e37d7511f4c8d5b9f2809c2da6d3fe36079d3788a09308b85482fd798be5b45a0924bf94265e8afe1ef31fbfe83fb0e0342fb42845b1c8099cfba
+
+pkgname = duetcontrolserver-bin
+

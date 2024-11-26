@@ -1,0 +1,28 @@
+pkgbase = madanalysis5
+	pkgver = 1.8.59
+	pkgrel = 1
+	arch = x86_64
+	license = MIT
+	makedepends = gcc
+	makedepends = make
+	depends = tcsh
+	depends = perl
+	depends = python2
+	optdepends = delphes
+	optdepends = zlib
+	optdepends = fastjet
+	optdepends = texlive-core
+	optdepends = texlive-bin
+	source = https://launchpad.net/madanalysis5/trunk/v1.8/+download/MadAnalysis5_v1.8_patch1.tgz
+	source = python2.patch
+	source = no_check.patch
+	source = mg5-ma5-fix.patch
+	source = ma5.exp
+	md5sums = 19192c11544d3971bcf89c6f91e81538
+	md5sums = 1b22af322bf9a845ff4e3aef70eb01db
+	md5sums = 1769cc46742b2f91d35052f7f5ebb258
+	md5sums = c6e82ddb7d1639ce57e0556790c5e294
+	md5sums = a0b10f6f274b9e1d55b99cb63f265168
+
+pkgname = madanalysis5
+

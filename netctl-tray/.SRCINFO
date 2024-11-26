@@ -1,0 +1,17 @@
+pkgbase = netctl-tray
+pkgdesc = A lightweight netctl tray app with notifications
+pkgver = 0.3.0
+pkgrel = 1
+url = https://github.com/DanielcoderX/netctl-tray
+install = .install
+arch = x86_64
+license = MIT
+makedepends = rustup
+makedepends = cmake
+depends = qt5-base
+depends = polkit
+conflicts = netctl-tray-auto
+source = netctl-tray-v0.3.0.tar.gz::https://github.com/DanielcoderX/netctl-tray/archive/v0.3.0.tar.gz
+md5sums = c9f341daa27b7fa9096a187d02fed2e8
+
+pkgname = netctl-tray

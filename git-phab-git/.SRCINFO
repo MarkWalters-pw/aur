@@ -1,0 +1,20 @@
+pkgbase = git-phab-git
+	pkgdesc = Git subcommand to integrate with phabricator
+	pkgver = r187.6877964
+	pkgrel = 1
+	url = https://pypi.org/project/git-phab/
+	arch = any
+	license = GPL2
+	makedepends = git
+	makedepends = asciidoc
+	depends = python-gitpython
+	depends = python-phabricator
+	depends = python-argcomplete
+	depends = python-appdirs
+	provides = git-phab
+	conflicts = git-phab
+	source = git-phab::git://anongit.freedesktop.org/git/git-phab
+	md5sums = SKIP
+
+pkgname = git-phab-git
+

@@ -1,0 +1,20 @@
+pkgbase = python-pytorch-complex-git
+	pkgdesc = Python class for PyTorch-ComplexTensor (workaround for missing Pytorch Class)
+	pkgver = 0.4.3
+	pkgrel = 1
+	url = https://github.com/kamo-naoyuki/pytorch_complex
+	arch = any
+	license = unknown
+	makedepends = git
+	makedepends = python-setuptools
+	makedepends = python-pytorch
+	makedepends = python-pytest
+	makedepends = python-pip
+	depends = python>=3.7
+	depends = python-pytorch
+	provides = python-pytorch-complex
+	conflicts = python-pytorch-complex
+	source = python-pytorch-complex-git::git+https://github.com/kamo-naoyuki/pytorch_complex
+	md5sums = SKIP
+
+pkgname = python-pytorch-complex-git

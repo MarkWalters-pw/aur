@@ -1,0 +1,18 @@
+pkgbase = psp-opengl
+	pkgdesc = OpenGL libraries for PSP
+	pkgver = r12.30ffef7
+	pkgrel = 1
+	url = https://github.com/pspdev/pspgl
+	arch = any
+	groups = psp
+	license = BSD
+	makedepends = psp-gcc
+	makedepends = git
+	depends = psp-sdk
+	options = !buildflags
+	options = !strip
+	options = staticlibs
+	source = git+https://github.com/pspdev/pspgl.git#commit=30ffef7bb75ba70eccede93288d7bb429a2e4709
+	md5sums = SKIP
+
+pkgname = psp-opengl

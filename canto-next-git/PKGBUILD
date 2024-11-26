@@ -1,0 +1,33 @@
+# Maintainer: Lex Black <autumn-wind at web dot de>
+
+_pkgname=canto-next
+pkgname=canto-next-git
+pkgver=0.9.8.r1.ge300077
+pkgrel=2
+pkgdesc="News aggregator for Atom/RSS/RDF. Git version"
+url="http://codezen.org/canto-ng/"
+license=('GPL')
+arch=('any')
+depends=('python-feedparser')
+makedepends=('git' 'python-setuptools')
+optdepends=('python-requests: Needed by inoreader plugin')
+conflicts=('canto-daemon')
+provides=("canto-daemon=0.9.7")
+source=('git+https://github.com/themoken/canto-next#branch=master')
+md5sums=('SKIP')
+
+
+pkgver() {
+  cd ${_pkgname}
+  git describe --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g;s/v//'
+}
+
+build() {
+  cd ${_pkgname}
+  python setup.py build
+}
+
+package() {
+  cd ${_pkgname}
+  python setup.py install --prefix=/usr --root=${pkgdir} --optimize=1 --skip-build
+}

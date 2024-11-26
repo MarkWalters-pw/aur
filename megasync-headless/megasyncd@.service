@@ -1,0 +1,19 @@
+[Unit]
+Description=Mega sync client
+After=local-fs.target network.target
+
+[Service]
+Type=simple
+User=%I
+EnvironmentFile=/etc/conf.d/megasync.conf
+WorkingDirectory=/tmp/
+ExecStartPre=-/usr/bin/mkdir -p $MEGA_LOCAL_DIR
+ExecStartPre=/bin/sleep $MEGA_PRE_START_SLEEP
+ExecStart=/usr/bin/megasimplesync $MEGA_LOCAL_DIR $MEGA_REMOTE_DIR
+ExecReload=/bin/kill -HUP $MAINPID
+KillMode=process
+Restart=on-failure
+RestartSec=30s
+
+[Install]
+WantedBy=multi-user.target

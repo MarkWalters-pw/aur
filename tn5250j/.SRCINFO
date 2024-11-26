@@ -1,0 +1,25 @@
+pkgbase = tn5250j
+	pkgdesc = 5250 terminal emulator for iSeries and AS/400 written in Java
+	pkgver = 0.7.6
+	pkgrel = 3
+	url = http://tn5250j.org/
+	arch = any
+	license = GPL2
+	makedepends = ant
+	depends = bash
+	depends = java-runtime
+	depends = hicolor-icon-theme
+	optdepends = tn5250j-plugin-itext: to convert the spool texts in PDF
+	optdepends = tn5250j-plugin-jtopen: to export spool and data files
+	optdepends = tn5250j-plugin-jython: to execute Python scripts inside tn5250j
+	optdepends = tn5250j-plugin-kunststoff: to apply the Kunststoff look and feel
+	optdepends = tn5250j-plugin-log4j: to enable a more detailed logging
+	optdepends = tn5250j-plugin-mail: to send email messages for exported data or screenshots
+	source = tn5250j-0.7.6.tar.gz::https://github.com/tn5250j/tn5250j/archive/refs/tags/0.7.6.tar.gz
+	source = tn5250j
+	source = tn5250j.desktop
+	sha256sums = 45c009695cde613d9b419970277ecb010604705ae2deb52a2e45bc4c105053ba
+	sha256sums = 02ae481923b7f94b4852a5f706b97086245d2fa37aed4c5934dd77d38cf0d5de
+	sha256sums = ba0fc30eab33ead695cffdba329dbadf8d05f67adac9a34fa905827a60421fcd
+
+pkgname = tn5250j

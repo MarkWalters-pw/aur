@@ -1,0 +1,19 @@
+pkgbase = python-flask-git
+	pkgdesc = Micro webdevelopment framework for Python
+	pkgver = 2.0.1.r19.g6f5870a7
+	pkgrel = 1
+	url = http://flask.pocoo.org/
+	arch = any
+	license = custom:BSD
+	makedepends = git
+	depends = python-werkzeug
+	depends = python-jinja
+	depends = python-itsdangerous
+	depends = python-click
+	provides = python-flask
+	conflicts = python-flask
+	source = git://github.com/pallets/flask.git
+	md5sums = SKIP
+
+pkgname = python-flask-git
+

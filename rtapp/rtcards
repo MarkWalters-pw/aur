@@ -1,0 +1,71 @@
+#!/bin/bash
+
+# Copyright Piero Olmeda - AudioLinux  <audiolinux AT fastmail DOT fm>
+# https://www.audio-linux.com
+
+# License: custom - All rights reserved
+ 
+echo "
+AUDIO CARDS
+"
+cards_path=$(echo $(find /proc/asound -type d -name "card*") | awk  '{print $NF}' | tail -c 2)
+fw_devices=$(find /sys/devices/ -maxdepth 4 -type d -name "fw*" | wc -l)
+
+card_status() {
+if [[ $(find "/proc/asound/card"$1 -type f -name "hw_params" -exec cat {} \;) ]]; then
+echo -e -n "card$1\t\t"$(find "/proc/asound/card"$1 -type f -name "hw_params" -exec cat {} \; | awk 'FNR <= 1')
+    else
+echo -e -n "card$1\tunavailable"
+fi              
+}
+
+echo -e "CARD\tTYPE\t\t\tADDRESS\t\t\tSTATUS\t\tNAME"
+echo ""
+
+for (( i=0; i<=$cards_path; i++ )); do
+    if [[ -d  "/proc/asound/card"$i"" ]]; then
+    echo -n "card$i"
+    usbid=$(find "/proc/asound/card"$i -type f -name "usbid" -exec cat {} \; )
+        if [[ -z $usbid ]]; then
+                    cardid=$(find "/proc/asound/card"$i -type f -name "codec#0" -exec cat {} \; | grep "Vendor Id" | sed 's/Vendor Id\:\ //g')
+                    echo -e -n "\tInternal Audio card"
+                    echo -e -n "\t$cardid"
+                    card_status $i
+                    echo -e -n "\t\t$(find "/proc/asound/card"$i -type f -name "info" -exec cat {} \; | grep "name" | head -1 | sed 's/name\:\ //g' | sed 's/^ *//g')"
+            else
+                echo -e -n "\tUSB Audio card"
+                #echo -e -n "\t\tusb"$(cat "/proc/asound/card"$i"/usbbus" | rev | cut -b5)
+                echo -e -n "\t\t$usbid"
+                card_status $i
+                echo -e -n "\t\t$(find "/proc/asound/card"$i -type f -name "usbmixer" -exec cat {} \; | grep "Card" | head -1 | sed 's/Card\://g' | sed 's/^ *//g')"
+            fi
+echo ""
+fi
+done
+
+echo "
+USB INTERRUPTS AND DEVICES 
+"                
+usb_devices=$(echo $(find /sys/devices -name "usb*" -not -path "*usb*/*" ) | wc -w)
+    
+for (( j=1; j<=$usb_devices; j++ )); do
+        usb_path=$(find /sys/devices -type d -name "usb$j" -not -path "*usb*/*" )
+        echo -n "USB$j"
+        echo -n " IRQ="$(cat "$(dirname "$usb_path")/irq")
+        echo -n " "$(find $usb_path -maxdepth 7 -type f \( -name "product" -o -name "name" -o -name "vendor_name" \) -exec cat {} \;)
+        echo ""
+done
+
+echo "
+INTERNAL SOUND CARD AND INTERRUPTS
+" 
+sound_sys_path=$(find /sys/devices/ -type d -name "card*" -not -path "*usb*/*" -not -path "*fw*/*" -not -path "*virtual*/*" -not -path "*drm*/*")
+
+for i in $sound_sys_path; do
+    if [[ -a $(dirname $(dirname "$i"))"/irq" ]]; then
+    echo -n $i | tail -c 5
+    echo -n " IRQ="$(cat $(dirname $(dirname "$i"))"/irq")
+    echo -n " "$(find $i -maxdepth 7 -type f \( -name "product" -o -name "name" \) -exec cat {} \;)
+    echo ""
+    fi
+done

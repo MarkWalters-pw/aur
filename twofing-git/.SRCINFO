@@ -1,0 +1,18 @@
+pkgbase = twofing-git
+	pkgdesc = Touchscreen two-finger gestures daemon
+	pkgver = r33.3e1a2ed
+	pkgrel = 1
+	url = http://plippo.de/p/twofing
+	install = twofing-git.install
+	arch = x86_64
+	arch = armv6h
+	arch = armv7h
+	license = MIT
+	makedepends = git
+	depends = libxrandr
+	depends = libxtst
+	source = twofing::git+https://github.com/Plippo/twofing.git#branch=master
+	md5sums = SKIP
+
+pkgname = twofing-git
+

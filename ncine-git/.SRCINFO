@@ -1,0 +1,25 @@
+pkgbase = ncine-git
+	pkgdesc = A cross-platform 2D game engine
+	pkgver = r388.0dc4a59
+	pkgrel = 1
+	url = http://ncine.github.io
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = cmake
+	depends = glfw
+	depends = openal
+	depends = libvorbis
+	depends = libwebp
+	depends = lua
+	depends = hicolor-icon-theme
+	provides = ncine
+	conflicts = ncine
+	options = !strip
+	source = git+https://github.com/nCine/nCine
+	source = git+https://github.com/nCine/nCine-data
+	md5sums = SKIP
+	md5sums = SKIP
+
+pkgname = ncine-git

@@ -1,0 +1,15 @@
+pkgbase = bootimgtool-git
+	pkgdesc = Android boot.img extractor/assembler handling multiple variants
+	pkgver = 20150607.g9ccd962
+	pkgrel = 2
+	url = https://github.com/vianney/bootimgtool
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = cmake
+	depends = openssl
+	source = git+https://github.com/vianney/bootimgtool.git
+	md5sums = SKIP
+
+pkgname = bootimgtool-git

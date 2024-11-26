@@ -1,0 +1,22 @@
+pkgbase = zombietrackergps-bin
+	pkgdesc = GPS track manager for Qt using KDE Marble maps. Currently supports GPX and TCX format import.
+	pkgver = 1.15
+	pkgrel = 1
+	url = https://www.zombietrackergps.net/ztgps
+	arch = x86_64
+	arch = i386
+	license = GPL3
+	depends = marble-qt
+	depends = qt5-base
+	depends = qt5-charts
+	depends = qt5-svg
+	depends = qt5-webkit
+	provides = zombietrackergps
+	conflicts = zombietrackergps-git
+	options = !strip
+	source_x86_64 = https://www.zombietrackergps.net/ztgps/Downloads/1.15/zombietrackergps_1.15_amd64.deb
+	sha256sums_x86_64 = 05b2909a79c15396736a6e0715cb159316df8f14b0180d2d3e17594ab7e8ed80
+	source_i386 = https://www.zombietrackergps.net/ztgps/Downloads/1.15/zombietrackergps_1.15_i386.deb
+	sha256sums_i386 = 54556b27a4e57c53d1603a38c62c282dd081427a10f22e2828c4c880c867701e
+
+pkgname = zombietrackergps-bin

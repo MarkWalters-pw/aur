@@ -1,0 +1,44 @@
+diff -rupN wiimms-iso-tools.orig/project/Makefile wiimms-iso-tools/project/Makefile
+--- wiimms-iso-tools.orig/project/Makefile	2020-08-14 16:44:53.248171741 +0200
++++ wiimms-iso-tools/project/Makefile	2020-08-14 16:54:48.841047552 +0200
+@@ -171,7 +171,7 @@ endif
+ TOPT_wit	:= $(OPT_STATIC)
+ TOPT_wwt	:= $(OPT_STATIC)
+ TOPT_wdf	:= $(OPT_STATIC)
+-TOPT_wfuse	:= -lfuse -lpthread -ldl
++TOPT_wfuse	:= -lfuse -lpthread
+ 
+ #TOPT_ALL	:= $(TOPT_wit) $(TOPT_wwt) $(TOPT_wdf) $(TOPT_wfuse)
+ 
+@@ -206,8 +206,8 @@ else
+ endif
+ 
+ # lib summary
+-LIB_LIST	+= libbz2 lzma
+-LIB_OBJECTS	+= $(LIBBZ2_OBJ) $(LZMA_OBJ)
++LIB_LIST	+= lzma
++LIB_OBJECTS	+= $(LZMA_OBJ)
+ RM_FILES	+= $(foreach l,$(LIB_LIST),src/$(l)/*.{d,o})
+ 
+ 
+@@ -297,10 +297,8 @@ DEFINES1	+= -D_7ZIP_ST=1		# disable 7zip
+ DEFINES1	+= -D_LZMA_PROB32=1	# LZMA option
+ DEFINES		=  $(strip $(DEFINES1) $(MODE) $(XDEF))
+ 
+-CFLAGS		+= -std=gnu99 -fomit-frame-pointer -fno-strict-aliasing -funroll-loops
+ CFLAGS		+= -Wall -Wno-parentheses -Wno-unused-function
+-#CFLAGS		+= -O3 -Isrc/libwbfs -Isrc/lzma -Isrc -I$(UI) -I. -Iwork
+-CFLAGS		+= -O3 -Isrc/libwbfs -Isrc -I$(UI) -I. -Iwork
++CFLAGS		+= -Isrc/libwbfs -Isrc -I$(UI) -I. -Iwork
+ 
+ ifeq ($(SYSTEM_LINUX),1)
+   LIBS		+= -ltinfo
+@@ -327,7 +325,7 @@ LDFLAGS		:= $(strip $(LDFLAGS))
+ ifeq ($(HAVE_ZLIB),1)
+  LIBS		+= -lz
+ endif
+-LIBS		+= -lm -lncurses $(XLIBS)
++LIBS		+= -lm $(shell pkg-config --libs ncurses) -lbz2 $(XLIBS)
+ 
+ DISTRIB_RM	= ./wit-v$(VERSION)-r
+ DISTRIB_BASE	= wit-v$(VERSION)-r$(REVISION_NEXT)

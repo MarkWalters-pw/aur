@@ -1,0 +1,18 @@
+pkgbase = c-mnalib
+	pkgdesc = C library for easy access and configuration of cellular network modems
+	pkgver = 1.0.0
+	pkgrel = 1
+	url = https://github.com/falkenber9/c-mnalib
+	arch = x86_64
+	arch = arm
+	license = MIT
+	makedepends = cmake
+	depends = curl
+	depends = glib2
+	depends = systemd-libs
+	options = staticlibs
+	source = c-mnalib-1.0.0.tar.gz::https://github.com/falkenber9/c-mnalib/archive/v1.0.0.tar.gz
+	sha512sums = dbccefda3e1a2c8dab970a092b6cf91fbf8ead275a958c1e732769fb1220ccc18248ec4677de10d4e2cf33e9966806861b5f898d4e64d28959948725170aafba
+
+pkgname = c-mnalib
+

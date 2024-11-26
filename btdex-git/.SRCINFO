@@ -1,0 +1,20 @@
+pkgbase = btdex-git
+	pkgdesc = Decentralized exchange system running on the Burst blockchain
+	pkgver = v0.1.21.r101.g1ef37cd
+	pkgrel = 1
+	url = https://github.com/btdex/btdex
+	install = btdex.install
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = java-environment
+	depends = java-environment
+	depends = xdg-utils
+	provides = btdex
+	conflicts = btdex
+	options = !strip
+	source = git+https://github.com/btdex/btdex.git
+	sha256sums = SKIP
+
+pkgname = btdex-git
+

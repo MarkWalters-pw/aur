@@ -1,0 +1,25 @@
+pkgbase = ros-noetic-self-test
+	pkgdesc = ROS - self_test.
+	pkgver = 1.11.0
+	pkgrel = 1
+	url = https://wiki.ros.org/self_test
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-rostest
+	makedepends = ros-noetic-diagnostic-msgs
+	makedepends = ros-noetic-catkin
+	makedepends = ros-noetic-roscpp
+	makedepends = ros-noetic-diagnostic-updater
+	depends = ros-noetic-diagnostic-updater
+	depends = ros-noetic-roscpp
+	depends = ros-noetic-diagnostic-msgs
+	source = ros-noetic-self-test-1.11.0.tar.gz::https://github.com/ros/diagnostics/archive/1.11.0.tar.gz
+	sha256sums = 4810e44ba04deb6d7350349d106a5a1264fd53f156b2d45c10d468f32d5396b4
+
+pkgname = ros-noetic-self-test

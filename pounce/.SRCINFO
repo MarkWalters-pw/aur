@@ -1,0 +1,14 @@
+pkgbase = pounce
+	pkgdesc = A multi-client, TLS-only IRC bouncer
+	pkgver = 3.1
+	pkgrel = 1
+	url = https://git.causal.agency/pounce
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	depends = libretls
+	depends = libxcrypt
+	source = git+https://git.causal.agency/pounce.git#commit=d312bbc4a659c4231d6731216aa9f34ad1d77dda
+	b2sums = SKIP
+
+pkgname = pounce

@@ -1,0 +1,16 @@
+pkgbase = simpfand-git
+	pkgdesc = A simple fan control daemon for ThinkPads
+	pkgver = v4.2.10.gdd100b5
+	pkgrel = 1
+	url = http://github.com/hspak/simpfand
+	install = simpfand-git.install
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	provides = simpfand
+	conflicts = simpfand
+	source = git+https://github.com/hspak/simpfand
+	md5sums = SKIP
+
+pkgname = simpfand-git

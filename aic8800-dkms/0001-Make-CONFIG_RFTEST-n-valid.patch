@@ -1,0 +1,71 @@
+From 557819ffedc3421792c1f41343aad9e617d7237d Mon Sep 17 00:00:00 2001
+From: Franck Duriez <franck.lucien.duriez@gmail.com>
+Date: Sun, 28 Apr 2024 18:45:58 +0200
+Subject: [PATCH 1/3] Make CONFIG_RFTEST=n valid
+
+---
+ aic_load_fw/aic_compat_8800d80.c | 3 +++
+ aic_load_fw/aicwf_usb.c          | 5 ++++-
+ aic_load_fw/aicwf_usb.h          | 2 ++
+ 3 files changed, 9 insertions(+), 1 deletion(-)
+
+diff --git a/aic_load_fw/aic_compat_8800d80.c b/aic_load_fw/aic_compat_8800d80.c
+index b185937..9c66937 100644
+--- a/aic_load_fw/aic_compat_8800d80.c
++++ b/aic_load_fw/aic_compat_8800d80.c
+@@ -305,6 +305,7 @@ int aicfw_download_fw_8800d80(struct aic_usb_dev *usb_dev)
+ 
+     printk("addr_adid 0x%x, addr_patch 0x%x\n", patch_info.addr_adid, patch_info.addr_patch);
+ 
++#ifdef CONFIG_RFTEST
+     if(testmode == FW_NORMAL_MODE){
+ 
+         if (chip_id != CHIP_REV_U01){
+@@ -502,6 +503,8 @@ int aicfw_download_fw_8800d80(struct aic_usb_dev *usb_dev)
+ 
+             return -1;
+         }
++#endif // CONFIG_RFTEST
++
+     return 0;
+ }
+ 
+diff --git a/aic_load_fw/aicwf_usb.c b/aic_load_fw/aicwf_usb.c
+index 1e7a30b..9eb8381 100644
+--- a/aic_load_fw/aicwf_usb.c
++++ b/aic_load_fw/aicwf_usb.c
+@@ -1346,6 +1346,7 @@ static int aicfw_download_fw_8800(struct aic_usb_dev *usb_dev){
+ 	int i = 0;
+     const u32 fw_addr = RAM_FW_ADDR;
+     
++#ifdef CONFIG_RFTEST
+ #ifdef CONFIG_M2D_OTA_AUTO_SUPPORT
+         if(testmode == FW_M2D_OTA_MODE){
+             rwnx_plat_m2d_flash_ota_android(usb_dev,FW_M2D_OTA_NAME);
+@@ -1504,7 +1505,9 @@ static int aicfw_download_fw_8800(struct aic_usb_dev *usb_dev){
+             kfree(wakeup_param);
+ 
+             return -1;
+-        }else {
++        }else
++#endif // CONFIG_RFTEST
++        {
+             if (rwnx_plat_bin_fw_upload_android(usb_dev, RAM_FW_ADDR, FW_BASE_NAME)) {
+                 return -1;;
+             }
+diff --git a/aic_load_fw/aicwf_usb.h b/aic_load_fw/aicwf_usb.h
+index 65ff4f0..e1e9410 100644
+--- a/aic_load_fw/aicwf_usb.h
++++ b/aic_load_fw/aicwf_usb.h
+@@ -69,6 +69,8 @@ enum AICWF_IC{
+ #define FW_PATCH_BASE_NAME              "fw_patch.bin"
+ #define FW_ADID_BASE_NAME               "fw_adid.bin"
+ #define FW_BASE_NAME                    "fmacfw.bin"
++#define FW_PATCH_BASE_NAME_U03          "fw_patch_u03.bin"
++#define FW_ADID_BASE_NAME_U03           "fw_adid_u03.bin"
+ #endif
+ 
+ #define FW_PATCH_TABLE_NAME             "fw_patch_table.bin"
+-- 
+2.44.0
+

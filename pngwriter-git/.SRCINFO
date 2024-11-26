@@ -1,0 +1,16 @@
+pkgbase = pngwriter-git
+	pkgdesc = A C++ library for creating PNG images
+	pkgver = 0.7.0.r0.g79bb3ef
+	pkgrel = 1
+	url = http://pngwriter.sourceforge.net/
+	install = pngwriter-git.install
+	arch = x86_64
+	license = GPL-2.0-or-later
+	makedepends = git
+	makedepends = cmake
+	depends = libpng
+	depends = freetype2
+	source = pngwriter-git::git+https://github.com/pngwriter/pngwriter.git
+	sha256sums = SKIP
+
+pkgname = pngwriter-git

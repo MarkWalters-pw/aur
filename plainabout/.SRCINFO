@@ -1,0 +1,24 @@
+pkgbase = plainabout
+	pkgdesc = plainDE about screen
+	pkgver = 0.6.3
+	pkgrel = 1
+	url = https://plainde.github.io
+	arch = x86_64
+	arch = i686
+	arch = pentium4
+	arch = arm
+	arch = armv6h
+	arch = armv7h
+	arch = aarch64
+	license = GPL3
+	depends = qt5-base
+	depends = noto-fonts-emoji
+	depends = polkit
+	depends = ttf-opensans
+	depends = make
+	depends = plainbase
+	conflicts = plainabout-git
+	source = plainabout-0.6.3.tar.gz::https://github.com/plainDE/plainAbout/archive/refs/tags/0.6.3.tar.gz
+	sha256sums = 20d1e20da16fa2d9c4071a1a6488bc8a165c69f0ae769d776b74e221051fb6d2
+
+pkgname = plainabout

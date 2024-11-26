@@ -1,0 +1,17 @@
+pkgbase = mingw-w64-yaml-cpp
+	pkgdesc = YAML parser and emitter in C++, written around the YAML 1.2 spec (mingw-w64)
+	pkgver = 0.8.0
+	pkgrel = 1
+	url = https://github.com/jbeder/yaml-cpp
+	arch = any
+	license = MIT
+	makedepends = mingw-w64-cmake
+	makedepends = mingw-w64-gcc
+	depends = mingw-w64-crt
+	options = staticlibs
+	options = !strip
+	options = !buildflags
+	source = yaml-cpp-0.8.0.tar.gz::https://github.com/jbeder/yaml-cpp/archive/0.8.0.tar.gz
+	sha384sums = 586ebc665c33e073be78670fd1810016a9e7ca8ae0ae8290328fc0c2f1e8f7acaa5e415eea5fb8a57efd772a011b1304
+
+pkgname = mingw-w64-yaml-cpp

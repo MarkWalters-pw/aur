@@ -1,0 +1,22 @@
+pkgbase = arx-fatalis-data-demo
+	pkgdesc = Arx Fatalis game data from official freeware demo (for use with arx-libertatis)
+	pkgver = 5122
+	pkgrel = 1
+	url = https://arx-libertatis.org/
+	arch = any
+	license = custom:freeware
+	makedepends = cabextract
+	makedepends = libarchive
+	optdepends = arx-libertatis: native Linux game executable
+	provides = arxfatalis-data
+	conflicts = arxfatalis-data-gog
+	conflicts = arxfatalis-data-copy
+	conflicts = arx-fatalis-data-gog
+	conflicts = arx-fatalis-data-copy
+	replaces = arx-fatalis-data-demo
+	source = https://downloads.ag.ru/demos/5122/arx_demo_english.zip
+	source = https://raw.githubusercontent.com/arx/ArxLibertatis/master/scripts/arx-install-data
+	sha1sums = 16a78e498475eefb46c0db28efc4f211f198cf79
+	sha1sums = 0474a514b9c650ea1b09c2dc7e424988d9a2c188
+
+pkgname = arx-fatalis-data-demo

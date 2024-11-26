@@ -1,0 +1,19 @@
+pkgbase = spotrec
+	pkgdesc = Spotify desktop client recorder for PulseAudio
+	pkgver = 0.15.1
+	pkgrel = 1
+	url = https://github.com/Bleuzen/SpotRec
+	arch = any
+	license = mit
+	depends = python
+	depends = python-dbus
+	depends = ffmpeg
+	depends = gawk
+	depends = bash
+	optdepends = spotify
+	source = spotrec::https://github.com/Bleuzen/SpotRec/releases/download/v0.15.1/spotrec.py
+	source = https://raw.githubusercontent.com/Bleuzen/SpotRec/master/LICENSE
+	md5sums = 3c1c157712fd1f9eecab411a32f743ec
+	md5sums = SKIP
+
+pkgname = spotrec

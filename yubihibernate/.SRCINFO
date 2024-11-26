@@ -1,0 +1,13 @@
+pkgbase = yubihibernate
+	pkgdesc = Hibernate (or whatever) your computer as soon as your Yubikey is unplugged.
+	pkgver = 0.1.4
+	pkgrel = 1
+	url = https://gitlab.com/TheOneWithTheBraid/yubihibernate/
+	arch = any
+	license = EUPL-1.2
+	depends = usbutils
+	backup = etc/yubihibernate/device.conf
+	source = https://gitlab.com/TheOneWithTheBraid/yubihibernate/-/archive/0.1.4/yubihibernate-0.1.4.tar.gz
+	sha256sums = d48d9883d5beec8124a3deb6a899a5843b3f2c057f2a859aadaae21f63b19153
+
+pkgname = yubihibernate

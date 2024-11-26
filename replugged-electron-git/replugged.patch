@@ -1,0 +1,13 @@
+diff --git a/src/main/index.ts b/src/main/index.ts
+index f8f225ec..6a18ed4c 100644
+--- a/src/main/index.ts
++++ b/src/main/index.ts
+@@ -5,7 +5,7 @@ import type { RepluggedWebContents } from "../types";
+ import { CONFIG_PATHS } from "src/util";
+ 
+ const electronPath = require.resolve("electron");
+-const discordPath = join(dirname(require.main!.filename), "..", "app.orig.asar");
++const discordPath = join("/", "usr", "lib", "@DISCORD@", "app.asar");
+ // require.main!.filename = discordMain;
+ 
+ Object.defineProperty(global, "appSettings", {

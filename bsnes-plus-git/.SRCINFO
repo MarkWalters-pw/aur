@@ -1,0 +1,26 @@
+pkgbase = bsnes-plus-git
+	pkgdesc = debug-oriented fork of bsnes v073
+	pkgver = 0.73r595.e4edc7a
+	pkgrel = 1
+	url = https://github.com/devinacker/bsnes-plus
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = mesa
+	makedepends = git
+	depends = libao
+	depends = libpulse
+	depends = openal
+	depends = qt5-base
+	depends = sdl
+	depends = zenity
+	provides = bsnes-plus
+	conflicts = bsnes-plus
+	conflicts = bsnes-classic
+	source = git+https://github.com/devinacker/bsnes-plus.git
+	source = bsnes
+	sha1sums = SKIP
+	sha1sums = e230b1393b9b24791ecdab14a92e26c5486fc14f
+
+pkgname = bsnes-plus-git
+

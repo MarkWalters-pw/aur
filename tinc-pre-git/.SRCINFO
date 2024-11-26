@@ -1,0 +1,22 @@
+pkgbase = tinc-pre-git
+	pkgdesc = VPN (Virtual Private Network) daemon (Latest commit on the pre-release branch)
+	pkgver = 1.1pre18.217.g84b24109
+	pkgrel = 3
+	url = http://www.tinc-vpn.org/
+	arch = any
+	license = GPL
+	makedepends = git
+	makedepends = meson>=0.51
+	depends = lzo
+	depends = openssl
+	optdepends = python2
+	optdepends = wxpython: gui support
+	optdepends = miniupnpc
+	provides = tinc-pre
+	conflicts = tinc
+	conflicts = tinc-pre
+	conflicts = tinc-pre-systemd
+	source = git+https://github.com/gsliepen/tinc#branch=1.1
+	md5sums = SKIP
+
+pkgname = tinc-pre-git

@@ -1,0 +1,22 @@
+pkgbase = timew-git
+	pkgdesc = A command-line time tracker (also known as timewarrior)
+	pkgver = r3124.814956b9
+	pkgrel = 1
+	url = https://github.com/GothenburgBitFactory/timewarrior
+	install = timew-git.install
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = cmake
+	makedepends = git
+	depends = gcc-libs
+	optdepends = task: Taskwarrior integration
+	optdepends = asciidoctor: Man page generation during compilation
+	provides = timew
+	conflicts = timew
+	source = git+https://github.com/GothenburgBitFactory/timewarrior
+	source = git+https://github.com/GothenburgBitFactory/libshared.git
+	md5sums = SKIP
+	md5sums = SKIP
+
+pkgname = timew-git

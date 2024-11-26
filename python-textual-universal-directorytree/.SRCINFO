@@ -1,0 +1,20 @@
+pkgbase = python-textual-universal-directorytree
+	pkgdesc = A Textual Directory Tree for all File Systems
+	pkgver = 1.5.0
+	pkgrel = 1
+	url = https://github.com/juftin/textual-universal-directorytree
+	arch = any
+	license = MIT
+	checkdepends = python-pytest
+	checkdepends = python-requests
+	checkdepends = python-s3fs
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-hatchling
+	makedepends = python-wheel
+	depends = python-textual
+	depends = python-universal_pathlib
+	source = python-textual-universal-directorytree-1.5.0.tar.gz::https://github.com/juftin/textual-universal-directorytree/archive/v1.5.0.tar.gz
+	sha512sums = 1e35d757c484c37478e02252a08c58b6e148b88deeb91837ca355d5e8b6916c927f25b045a5379f1dd687fbae335b1641cb5c6d7d0c0b216e14b362277d84593
+
+pkgname = python-textual-universal-directorytree

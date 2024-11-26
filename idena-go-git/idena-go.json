@@ -1,0 +1,19 @@
+{
+  "DataDir": "/var/idena-go",
+  "P2P": {
+    "ListenAddr": ":50505",
+    "NoDiscovery": false
+  },
+  "RPC": {
+    "HTTPHost": "localhost",
+    "HTTPPort": 9009
+  },
+  "IpfsConf": {
+    "DataDir": "/var/idena-go/ipfs",
+    "IpfsPort": 50506,
+    "Profile": "server"
+  },
+  "Sync": {
+    "FastSync": true
+  }
+}

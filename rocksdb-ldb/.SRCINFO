@@ -1,0 +1,23 @@
+pkgbase = rocksdb-ldb
+	pkgdesc = The ldb from the RocksDB storage
+	pkgver = 7.8.3
+	pkgrel = 1
+	url = http://rocksdb.org
+	arch = i686
+	arch = x86_64
+	license = Apache
+	license = leveldb
+	makedepends = gcc
+	makedepends = make
+	makedepends = diffutils
+	depends = bzip2
+	depends = gcc-libs
+	depends = lz4
+	depends = snappy
+	depends = zlib
+	depends = gflags
+	provides = rocksdb-ldb
+	source = https://github.com/facebook/rocksdb/archive/refs/tags/v7.8.3.tar.gz
+	sha256sums = b85408a374770897332bf15e51620a5f35720dd416a4749e3899057f9cfaf84d
+
+pkgname = rocksdb-ldb

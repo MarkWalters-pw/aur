@@ -1,0 +1,48 @@
+pkgbase = linux-amd-git
+	pkgdesc = Linux kernel with bleeding-edge AMDGPU drivers
+	pkgver = 6.7.r1233502.699d392903c3
+	pkgrel = 1
+	url = https://gitlab.freedesktop.org/agd5f/linux
+	arch = x86_64
+	license = GPL2
+	makedepends = bc
+	makedepends = cpio
+	makedepends = gettext
+	makedepends = git
+	makedepends = libelf
+	makedepends = pahole
+	makedepends = perl
+	makedepends = python
+	makedepends = tar
+	makedepends = xz
+	makedepends = graphviz
+	makedepends = imagemagick
+	makedepends = python-sphinx
+	makedepends = texlive-latexextra
+	options = !strip
+	source = linux-amd-git::git+https://gitlab.freedesktop.org/agd5f/linux.git#branch=drm-next
+	source = config
+	sha256sums = SKIP
+	sha256sums = f77aab33af83c635e0445c6e424922cdc054efe2430c8c831f8bead23e08ba88
+	b2sums = SKIP
+	b2sums = eee80b262d447770f89bb16e4c84a5faedd8e2a46d57a5b6ad6371f5a9a8e11194f82c9160d78486fc1a889ad9dea6f0b2d90b8a21235aefc30bf7fe3ef355f6
+
+pkgname = linux-amd-git
+	pkgdesc = The Linux kernel with bleeding-edge AMDGPU drivers kernel and modules
+	depends = coreutils
+	depends = initramfs
+	depends = kmod
+	optdepends = wireless-regdb: to set the correct wireless channels of your country
+	optdepends = linux-firmware: firmware images needed for some devices
+	provides = KSMBD-MODULE
+	provides = VIRTUALBOX-GUEST-MODULES
+	provides = WIREGUARD-MODULE
+	replaces = virtualbox-guest-modules-arch
+	replaces = wireguard-arch
+
+pkgname = linux-amd-headers-git
+	pkgdesc = Headers and scripts for building modules for the Linux kernel with bleeding-edge AMDGPU drivers kernel
+	depends = pahole
+
+pkgname = linux-amd-docs-git
+	pkgdesc = Documentation for the Linux kernel with bleeding-edge AMDGPU drivers kernel

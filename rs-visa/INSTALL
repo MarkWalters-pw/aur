@@ -1,0 +1,19 @@
+post_install() {
+    cat << EOF
+
+
+----------------------------------------------------------------------------------
+Usage of this package implies acceptance of the TOC of the R&S Royalty Free Software license. A copy of the license is provided with this package at /usr/share/licenses/rs-visa/LICENSE.
+----------------------------------------------------------------------------------
+
+EOF
+    udevadm control --reload-rules;
+}
+
+post_upgrade() {
+    true;
+}
+
+post_remove() {
+    udevadm control --reload-rules;
+}

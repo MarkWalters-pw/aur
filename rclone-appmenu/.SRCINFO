@@ -1,0 +1,16 @@
+pkgbase = rclone-appmenu
+	pkgdesc = Adds Rclone Web UI to applications menu
+	pkgver = 1.0
+	pkgrel = 2
+	url = https://rclone.org/gui/
+	arch = any
+	license = GPL
+	depends = bash
+	depends = rclone
+	depends = xdg-utils
+	source = rclone.desktop
+	source = rclone.svg
+	sha256sums = 152106dfade98291bfd2dba32994ace35f7df55f0c61ebcd449449aeb9b94e08
+	sha256sums = 47d748b825bd9c03ddb9a7f22283a5a552af1874a45ab0484c8be36c9eabd26e
+
+pkgname = rclone-appmenu

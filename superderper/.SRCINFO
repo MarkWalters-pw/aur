@@ -1,0 +1,18 @@
+pkgbase = superderper
+	pkgdesc = superderper allows derper to admit clients from multiple tailnets.
+	pkgver = 0.1.2
+	pkgrel = 1
+	url = https://github.com/takase1121/superderper
+	arch = x86_64
+	arch = aarch64
+	license = MIT
+	makedepends = go
+	makedepends = git
+	depends = glibc
+	options = !lto
+	backup = etc/default/tailscaled-derper
+	backup = etc/default/superderper
+	source = superderper-0.1.2.tar.gz::https://github.com/takase1121/superderper/archive/v0.1.2.tar.gz
+	sha256sums = edb8a65846f7584d4c5e394ca531fe08bd8524526ebe19cdb64572e1ed391f29
+
+pkgname = superderper

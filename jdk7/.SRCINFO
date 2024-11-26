@@ -1,0 +1,67 @@
+pkgbase = jdk7
+	pkgdesc = Oracle Java 7 Development Kit (public release - end of support)
+	pkgver = 7u80
+	pkgrel = 1
+	url = https://www.oracle.com/technetwork/java/archive-139210.html
+	install = jdk7.install
+	arch = x86_64
+	license = custom:Oracle
+	makedepends = awk
+	depends = ca-certificates-java
+	depends = hicolor-icon-theme
+	depends = java-runtime-common
+	depends = nss
+	depends = xdg-utils
+	depends = java-environment-common
+	optdepends = alsa-lib: for basic sound support
+	optdepends = eclipse-java: to use "Oracle Java Mission Control" plugins in Eclipse
+	optdepends = gtk2: for Gtk+ look and feel (desktop)
+	provides = java-runtime=7
+	provides = java-runtime-headless=7
+	provides = java-web-start=7
+	provides = java-runtime-jre=7
+	provides = java-runtime-headless-jre=7
+	provides = java-web-start-jre=7
+	provides = java-openjfx=7
+	provides = java-environment-jdk=7
+	provides = java-environment=7
+	options = !strip
+	backup = etc/java-jdk7/amd64/jvm.cfg
+	backup = etc/java-jdk7/images/cursors/cursors.properties
+	backup = etc/java-jdk7/management/jmxremote.access
+	backup = etc/java-jdk7/management/management.properties
+	backup = etc/java-jdk7/security/java.policy
+	backup = etc/java-jdk7/security/java.security
+	backup = etc/java-jdk7/security/javaws.policy
+	backup = etc/java-jdk7/content-types.properties
+	backup = etc/java-jdk7/flavormap.properties
+	backup = etc/java-jdk7/fontconfig.properties.src
+	backup = etc/java-jdk7/logging.properties
+	backup = etc/java-jdk7/net.properties
+	backup = etc/java-jdk7/psfont.properties.ja
+	backup = etc/java-jdk7/psfontj2d.properties
+	backup = etc/java-jdk7/sound.properties
+	source = manual://jdk-7u80-linux-x64.tar.gz
+	source = jconsole-jdk7.desktop
+	source = jmc-jdk7.desktop
+	source = jvisualvm-jdk7.desktop
+	source = policytool-jdk7.desktop
+	source = readme.sh
+	source = https://download.oracle.com/otn-pub/java/jce/7/UnlimitedJCEPolicyJDK7.zip
+	md5sums = 6152f8a7561acf795ca4701daa10a965
+	md5sums = c72336327d7cefadf4ffd74c014c7c2e
+	md5sums = ac3f149795f62cdf5bdfdd6061fb8184
+	md5sums = 1b692eac219a0b34fd7ec13f09cea078
+	md5sums = daf7f23efea899b8c575145d1eb73aab
+	md5sums = 51c8839211cc53f09c9b11a8e28ed1ef
+	md5sums = 5504e2d9029ee2c41730a228758c50e1
+	sha256sums = bad9a731639655118740bee119139c1ed019737ec802a630dd7ad7aab4309623
+	sha256sums = d7a0a1eb18c0ba53b2e3b82e9e0f8b92b13cea87fe760d6152d375ed6dbac872
+	sha256sums = 6af8c0099bb66443adfe7ababe110abec0c3ed1fa06b1d9704e92c5d3b7b5a4c
+	sha256sums = 52fc7afe1bfb5fc899153fe105bf61b42be7d187a1703b8ef18979441450a6c3
+	sha256sums = 1a0d1c832612c9f52f703f8cf69ce117ea900d2b1f28ed9324e08e73482c8262
+	sha256sums = f1081b08cfbb467277e95b3794191c9963398579733fa8832425b308b5917711
+	sha256sums = 6774aa9adc740b417868de4f36967275ad15e153645d8ee875fee318caabd6f7
+
+pkgname = jdk7
+

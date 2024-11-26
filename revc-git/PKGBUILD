@@ -1,0 +1,37 @@
+pkgname=revc-git
+pkgver=1.0.r872.g37e9ec0
+pkgrel=1
+pkgdesc="Grand Theft Auto: Vice City reverse engineered"
+arch=(x86_64 aarch64)
+url=https://github.com/halpz/re3/tree/miami
+license=(custom:none)
+depends=(glibc gcc-libs librw-git openal mpg123 glfw)
+makedepends=(git cmake)
+install=revc.install
+source=(
+	git+https://github.com/halpz/re3.git#branch=miami
+	reVC.desktop)
+md5sums=(
+	SKIP
+	a7cd29fced93db056a84486f166f1ecc)
+pkgver(){
+	cd re3
+	git tag --force 1.0 e604be65d9b7845ee7ca975545fc9277c662bc11
+	git describe --tags --abbrev=7 | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
+}
+prepare(){
+	cd re3
+	sed -i 's/glfwGetX11Display/glfwGetX11DisplayglfwGetX11Display/' src/CMakeLists.txt
+}
+build(){
+	cd re3
+	cmake -DREVC_VENDORED_LIBRW= .
+	make
+}
+package(){
+	cd re3
+	install src/reVC -Dt "$pkgdir"/usr/bin
+	install -D {res/images/logo,"$pkgdir"/usr/share/pixmaps/reVC}.svg
+	install ../reVC.desktop -Dt "$pkgdir"/usr/share/applications
+	cp -r gamefiles "$pkgdir"/usr/share/reVC
+}

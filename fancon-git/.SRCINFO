@@ -1,0 +1,22 @@
+pkgbase = fancon-git
+	pkgdesc = A Linux fan control daemon
+	pkgver = 0.23.7.r1.5a773a8
+	pkgrel = 1
+	url = https://github.com/hbriese/fancon
+	arch = x86_64
+	license = Apache
+	makedepends = clang>=9.0
+	makedepends = cmake>=3.13
+	makedepends = boost
+	makedepends = protobuf
+	makedepends = libx11
+	makedepends = pstreams
+	makedepends = libxnvctrl
+	depends = lm_sensors
+	depends = grpc
+	depends = boost-libs
+	provides = fancon
+	source = fancon::git+https://github.com/hbriese/fancon.git
+	sha512sums = SKIP
+
+pkgname = fancon-git

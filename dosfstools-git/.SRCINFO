@@ -1,0 +1,16 @@
+pkgbase = dosfstools-git
+	pkgdesc = DOS filesystem utilities
+	pkgver = 4.2.r42.g58212c5
+	pkgrel = 1
+	url = https://github.com/dosfstools/dosfstools
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	depends = glibc
+	provides = dosfstools=4.2.r42.g58212c5
+	conflicts = dosfstools
+	source = git+https://github.com/dosfstools/dosfstools.git
+	sha256sums = SKIP
+
+pkgname = dosfstools-git

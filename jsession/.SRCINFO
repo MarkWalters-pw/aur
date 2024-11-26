@@ -1,0 +1,18 @@
+pkgbase = jsession
+	pkgdesc = Simple X session manager
+	pkgver = 0.3.1
+	pkgrel = 1
+	url = http://ikn.org.uk/tool/jsession
+	arch = any
+	license = BSD
+	depends = bash
+	depends = grep
+	depends = dbus
+	depends = run-parts
+	backup = etc/jsession/conf
+	backup = etc/jsession/init
+	source = http://ikn.org.uk/download/tool/jsession/jsession-0.3.1.tar.gz
+	sha1sums = ebb4e26e1ac7146b2c5c2f313427155debb2bd33
+
+pkgname = jsession
+

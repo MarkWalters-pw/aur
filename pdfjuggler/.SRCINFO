@@ -1,0 +1,17 @@
+pkgbase = pdfjuggler
+	pkgdesc = A desktop tool to mix, reorder and select PDF pages
+	pkgver = 1.1
+	pkgrel = 1
+	url = https://www.bernardi.cloud/pdfjuggler
+	arch = any
+	license = GPL3
+	makedepends = gendesk
+	depends = java-runtime>=8
+	depends = bash
+	source = pdfjuggler-1.1.jar::https://github.com/bernarpa/pdfjuggler/releases/download/v1.1/pdfjuggler-1.1.jar
+	source = pdfjuggler.png::https://github.com/bernarpa/pdfjuggler/raw/main/graphics/icon-256.png
+	sha256sums = a3c4aaed75ba58f659a4d714fe9c8cce8c61cbc987aa1c940d7d5cbee311ade2
+	sha256sums = a4a8891791ec582e27bdcf8149a01340494c0613e9728f37d285fb56dc1a73b1
+
+pkgname = pdfjuggler
+

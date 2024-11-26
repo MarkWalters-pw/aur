@@ -1,0 +1,16 @@
+pkgbase = rasterview-git
+	pkgdesc = A CUPS, PWG, and Apple raster file viewer
+	pkgver = 1.8.r14.g6e4e24c
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/michaelrsweet/rasterview
+	arch = x86_64
+	license = APACHE
+	makedepends = git
+	depends = fltk>=1.3
+	provides = rasterview
+	conflicts = rasterview
+	source = rasterview::git+https://github.com/michaelrsweet/rasterview
+	md5sums = SKIP
+
+pkgname = rasterview-git

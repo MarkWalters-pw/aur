@@ -1,0 +1,18 @@
+pkgbase = madx-dev
+	pkgdesc = Accelerator Optics simulation code, shared object, development files
+	pkgver = 5.09.03
+	pkgrel = 1
+	url = http://cern.ch/mad
+	arch = x86_64
+	license = custom
+	makedepends = cmake
+	makedepends = gcc-fortran
+	depends = gcc-libs
+	depends = libx11
+	depends = lapack
+	provides = madx
+	conflicts = madx-git
+	source = https://github.com/MethodicalAcceleratorDesign/MAD-X/archive/5.09.03.tar.gz
+	sha256sums = cd57f9451e3541a820814ad9ef72b6e01d09c6f3be56802fa2e95b1742db7797
+
+pkgname = madx-dev

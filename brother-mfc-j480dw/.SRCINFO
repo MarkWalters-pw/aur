@@ -1,0 +1,25 @@
+pkgbase = brother-mfc-j480dw
+	pkgdesc = CUPS and LPR drivers for the Brother MFC-J480DW printer
+	pkgver = 1.0.0
+	pkgrel = 0
+	url = https://support.brother.com/g/b/downloadlist.aspx?c=us&lang=en&prod=mfcj480dw_us_eu_as&os=127
+	install = brother-mfc-j480dw.install
+	arch = i686
+	arch = x86_64
+	license = custom:brother commercial license
+	depends = cups
+	depends = ghostscript
+	depends = a2ps
+	depends = lib32-glibc
+	optdepends = brscan4: Scanner support
+	source = http://download.brother.com/welcome/dlf102092/mfcj480dwcupswrapper-1.0.0-0.i386.rpm
+	source = http://download.brother.com/welcome/dlf102091/mfcj480dwlpr-1.0.0-0.i386.rpm
+	source = cupswrapper-license.txt
+	source = lpr-license.txt
+	sha256sums = 2a18c4943adc92a2e97f674a638dbdfb87656137a97073577f716ace6a196854
+	sha256sums = 2a1e03b59d6af9dc8d67a9799f06ab439e67565410373081f2f8be65eb697a64
+	sha256sums = 2c6aa6a641332e5c87e971ac2a8beae13b059747bdba331bbd515914770d72d9
+	sha256sums = 9d85a8aafdaac8fac80e04234ad2acf5642bbf0b91ee582d2a89519a55f6dd67
+
+pkgname = brother-mfc-j480dw
+

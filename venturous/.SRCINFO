@@ -1,0 +1,19 @@
+pkgbase = venturous
+	pkgdesc = Random playback manager for Audacious
+	pkgver = 1.4
+	pkgrel = 1
+	url = https://github.com/vedgy/venturous
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = cmake
+	depends = qt5-base
+	depends = libxkbcommon-x11
+	depends = audacious
+	optdepends = libnotify: desktop notifications
+	optdepends = libcue: Audacious CUE playlist format support
+	optdepends = xdg-utils: for some default custom actions
+
+pkgname = venturous
+

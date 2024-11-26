@@ -1,0 +1,22 @@
+pkgbase = cloudforest-git
+	pkgdesc = Fast, flexible, multi-threaded ensembles of decision trees for machine learning in pure Go
+	pkgver = r430.d014dc3
+	pkgrel = 1
+	url = https://github.com/ryanbressler/CloudForest
+	arch = x86_64
+	license = custom
+	makedepends = git
+	makedepends = go
+	depends = glibc
+	provides = leafcount
+	provides = growforest
+	provides = applyforest
+	provides = nfold
+	provides = toafm
+	conflicts = cloudforest
+	conflicts = cloudforest-bin
+	source = cloudforest::git+https://github.com/ryanbressler/CloudForest
+	sha256sums = SKIP
+
+pkgname = cloudforest-git
+

@@ -1,0 +1,18 @@
+pkgbase = libutp-git
+	pkgdesc = uTorrent Transport Protocol library
+	pkgver = r99.fda9f4b
+	pkgrel = 2
+	epoch = 3
+	url = https://github.com/bittorrent/libutp
+	arch = i686
+	arch = x86_64
+	license = custom:Public Domain
+	makedepends = cmake
+	makedepends = git
+	depends = glibc
+	provides = libutp
+	source = git+https://github.com/transmission/libutp.git#branch=post-3.3-transmission
+	sha256sums = SKIP
+
+pkgname = libutp-git
+

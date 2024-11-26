@@ -1,0 +1,94 @@
+diff -rNc lxdui-2.1.1-orig/app/api/core.py lxdui-2.1.1/app/api/core.py
+*** lxdui-2.1.1-orig/app/api/core.py	2018-06-18 22:36:37.000000000 +0300
+--- lxdui-2.1.1/app/api/core.py	2018-07-02 15:35:41.889414434 +0300
+***************
+*** 14,20 ****
+  Log(__name__)
+  app = Flask(__name__)
+  HAS_UI = False
+! PID = os.path.join(tempfile.gettempdir(), '{}.pid'.format(meta.APP_NAME).lower())
+  
+  # Authentication section
+  initAuth(app)
+--- 14,20 ----
+  Log(__name__)
+  app = Flask(__name__)
+  HAS_UI = False
+! PID = '/run/{}/{}.pid'.format(meta.APP_NAME, meta.APP_NAME).lower()
+  
+  # Authentication section
+  initAuth(app)
+diff -rNc lxdui-2.1.1-orig/app/__metadata__.py lxdui-2.1.1/app/__metadata__.py
+*** lxdui-2.1.1-orig/app/__metadata__.py	2018-06-18 22:36:37.000000000 +0300
+--- lxdui-2.1.1/app/__metadata__.py	2018-07-02 15:35:41.889414434 +0300
+***************
+*** 26,37 ****
+  lxdui.jwt.secret.key = AC8d83&21Almnis710sds
+  lxdui.jwt.auth.url.rule = /api/user/login
+  lxdui.admin.user = admin
+! lxdui.conf.dir = {{app_root}}/conf
+  lxdui.conf.file = ${lxdui.conf.dir}/lxdui.conf
+  lxdui.auth.conf = ${lxdui.conf.dir}/auth.conf
+  lxdui.ssl.cert = ${lxdui.conf.dir}/client.crt
+  lxdui.ssl.key = ${lxdui.conf.dir}/client.key
+! lxdui.log.dir =  {{app_root}}/logs
+  lxdui.log.file = ${lxdui.log.dir}/lxdui.log
+  lxdui.log.conf = ${lxdui.conf.dir}/log.conf
+  #lxdui.log.rotate = true
+--- 26,37 ----
+  lxdui.jwt.secret.key = AC8d83&21Almnis710sds
+  lxdui.jwt.auth.url.rule = /api/user/login
+  lxdui.admin.user = admin
+! lxdui.conf.dir = /etc/lxdui
+  lxdui.conf.file = ${lxdui.conf.dir}/lxdui.conf
+  lxdui.auth.conf = ${lxdui.conf.dir}/auth.conf
+  lxdui.ssl.cert = ${lxdui.conf.dir}/client.crt
+  lxdui.ssl.key = ${lxdui.conf.dir}/client.key
+! lxdui.log.dir =  /var/log/lxdui
+  lxdui.log.file = ${lxdui.log.dir}/lxdui.log
+  lxdui.log.conf = ${lxdui.conf.dir}/log.conf
+  #lxdui.log.rotate = true
+diff -rNc lxdui-2.1.1-orig/conf/log.conf lxdui-2.1.1/conf/log.conf
+*** lxdui-2.1.1-orig/conf/log.conf	2018-06-18 22:36:37.000000000 +0300
+--- lxdui-2.1.1/conf/log.conf	2018-07-02 15:36:02.086508796 +0300
+***************
+*** 22,34 ****
+        "class": "logging.FileHandler",
+        "level": "DEBUG",
+        "formatter": "default",
+!       "filename": "logs/lxdui.log"
+      },
+      "file": {
+        "class": "logging.FileHandler",
+        "level": "DEBUG",
+        "formatter": "default",
+!       "filename": "logs/lxdui.log",
+        "mode": "w",
+        "encoding": "utf-8"
+      }
+--- 22,34 ----
+        "class": "logging.FileHandler",
+        "level": "DEBUG",
+        "formatter": "default",
+!       "filename": "/var/log/lxdui/lxdui.log"
+      },
+      "file": {
+        "class": "logging.FileHandler",
+        "level": "DEBUG",
+        "formatter": "default",
+!       "filename": "/var/log/lxdui/lxdui.log",
+        "mode": "w",
+        "encoding": "utf-8"
+      }
+***************
+*** 46,49 ****
+    "requests.packages.urllib3.connectionpool":{
+      "level":"ERROR"
+    }
+! }
+\ No newline at end of file
+--- 46,49 ----
+    "requests.packages.urllib3.connectionpool":{
+      "level":"ERROR"
+    }
+! }

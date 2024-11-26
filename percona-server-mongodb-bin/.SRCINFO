@@ -1,0 +1,34 @@
+pkgbase = percona-server-mongodb-bin
+	pkgdesc = A free, open source drop-in replacement for MongoDB Community Edition but with enterprise-grade functionality.
+	pkgver = 4.4.9_10
+	pkgrel = 1
+	url = https://www.percona.com/software/mongodb/percona-server-for-mongodb/
+	arch = x86_64
+	license = SSPLv1
+	provides = mongodb=4.4.9_10
+	provides = mongodb-tools=4.4.9_10
+	conflicts = mongodb
+	conflicts = mongodb-bin
+	conflicts = mongodb-tools
+	conflicts = mongodb-tools-bin
+	backup = etc/mongodb.conf
+	source_x86_64 = percona-server-mongodb-shell_4.4.9-10.focal_amd64.deb::https://downloads.percona.com/downloads/percona-server-mongodb-LATEST/percona-server-mongodb-4.4.9-10/binary/debian/focal/x86_64/percona-server-mongodb-shell_4.4.9-10.focal_amd64.deb
+	source_x86_64 = percona-server-mongodb-tools_4.4.9-10.focal_amd64.deb::https://downloads.percona.com/downloads/percona-server-mongodb-LATEST/percona-server-mongodb-4.4.9-10/binary/debian/focal/x86_64/percona-server-mongodb-tools_4.4.9-10.focal_amd64.deb
+	source_x86_64 = percona-server-mongodb-server_4.4.9-10.focal_amd64.deb::https://downloads.percona.com/downloads/percona-server-mongodb-LATEST/percona-server-mongodb-4.4.9-10/binary/debian/focal/x86_64/percona-server-mongodb-server_4.4.9-10.focal_amd64.deb
+	source_x86_64 = percona-server-mongodb-mongos_4.4.9-10.focal_amd64.deb::https://downloads.percona.com/downloads/percona-server-mongodb-LATEST/percona-server-mongodb-4.4.9-10/binary/debian/focal/x86_64/percona-server-mongodb-mongos_4.4.9-10.focal_amd64.deb
+	source_x86_64 = mongodb_x86_64.service
+	source_x86_64 = mongodb.conf
+	source_x86_64 = mongodb.sysusers
+	source_x86_64 = mongodb.tmpfiles
+	source_x86_64 = LICENSE
+	sha256sums_x86_64 = 592f7f4ad6807ae0559d5c832d6c71df8df75854be2ee2b074043222a92acee5
+	sha256sums_x86_64 = 807854a8ba59eca555639f0be52eaae1e272b0685bb394009b104fd56375a627
+	sha256sums_x86_64 = 4eba1714b5d66388238001addd2ee5614ded2d01b237af54890bf6ba46bbc0d5
+	sha256sums_x86_64 = 5f95d96d3cfccdc552c6af81db34cd5ed0903b33f141439c10794c47b8828071
+	sha256sums_x86_64 = 19f55ab28652b3817e98fc3f15cc2f6f3255a5e1dfd7b0d5a27c9ba22fd2703e
+	sha256sums_x86_64 = f2a79c7fcd75253ab1cb888541a0c0678bf3bb78700c79996e24a678f1e42850
+	sha256sums_x86_64 = 47b884569102f7c79017ee78ef2e98204a25aa834c0ee7d5d62c270ab05d4e2b
+	sha256sums_x86_64 = 51ee1e1f71598aad919db79a195778e6cb6cfce48267565e88a401ebc64497ac
+	sha256sums_x86_64 = 09d99ca61eb07873d5334077acba22c33e7f7d0a9fa08c92734e0ac8430d6e27
+
+pkgname = percona-server-mongodb-bin

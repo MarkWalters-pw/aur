@@ -1,0 +1,17 @@
+pkgbase = yadm-git
+	pkgdesc = Yet Another Dotfiles Manager
+	pkgver = 3.0.2.r0.ga5b1067
+	pkgrel = 1
+	url = https://github.com/TheLocehiliosan/yadm
+	arch = any
+	license = GPL3
+	makedepends = git
+	optdepends = gnupg: encrypt/decrypt sensitive files
+	optdepends = python-envtpl-git: use templates with variables
+	provides = yadm
+	conflicts = yadm
+	source = yadm-git::git+https://github.com/TheLocehiliosan/yadm#branch=master
+	md5sums = SKIP
+
+pkgname = yadm-git
+

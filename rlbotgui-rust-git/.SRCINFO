@@ -1,0 +1,16 @@
+pkgbase = rlbotgui-rust-git
+	pkgdesc = A Rust GUI for the RLBot framework
+	pkgver = 1.0.8.2f61792
+	pkgrel = 1
+	url = https://github.com/VirxEC/rlbot_gui_rust
+	arch = x86_64
+	license = custom
+	makedepends = cargo
+	makedepends = git
+	makedepends = sed
+	depends = python
+	replaces = rlbot-gui-rust-git
+	source = git+https://github.com/VirxEC/rlbot_gui_rust
+	sha512sums = SKIP
+
+pkgname = rlbotgui-rust-git

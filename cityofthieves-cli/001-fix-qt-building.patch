@@ -1,0 +1,16 @@
+diff --unified --recursive --text --color CityOfThieves-1.8.orig/Makefile CityOfThieves-1.8.new/Makefile
+--- CityOfThieves-1.8.orig/Makefile	2020-06-20 15:15:17.000000000 +0200
++++ CityOfThieves-1.8.new/Makefile	2020-10-25 12:57:36.248013197 +0100
+@@ -28,10 +28,10 @@
+ 
+ 
+ Console/CityOfThievesConsole: Console/CityOfThievesConsole.pro
+-	cd Console && qmake -qt=qt5 CityOfThievesConsole.pro && $(MAKE) release
++	cd Console && qmake CityOfThievesConsole.pro && $(MAKE) release
+ 
+ Console/CityOfThievesConsoleTest: Console/CityOfThievesConsoleTest.pro
+-	cd Console && qmake -qt=qt5 CityOfThievesConsoleTest.pro && $(MAKE) debug
++	cd Console && qmake CityOfThievesConsoleTest.pro && $(MAKE) debug
+ 
+ Desktop/CityOfThievesDesktop: Desktop/CityOfThievesDesktop.pro
+ 	cd Desktop && qmake -qt=qt5 CityOfThievesDesktop.pro && $(MAKE) release

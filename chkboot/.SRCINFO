@@ -1,0 +1,18 @@
+pkgbase = chkboot
+	pkgdesc = Create hashes of all files under /boot and warns the user if they are modified
+	pkgver = 1.3
+	pkgrel = 1
+	url = https://github.com/grazzolini/chkboot
+	install = chkboot.install
+	arch = any
+	license = GPL
+	depends = bash
+	depends = util-linux
+	optdepends = zenity: Graphical notifications
+	optdepends = xorg-xmessage: Graphical notifications
+	backup = etc/default/chkboot.conf
+	source = chkboot-1.3.tar.gz::https://github.com/grazzolini/chkboot/archive/v1.3.tar.gz
+	sha512sums = fde68a14ef4d8b30c2212e2676d317ffa4b6fe96933d16ba87c1632728cff0b975cd06120bf117fa6928ac1dcf21a35f8b1144f93d22e2ba7abacd08ff527d7a
+
+pkgname = chkboot
+

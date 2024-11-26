@@ -1,0 +1,17 @@
+pkgbase = vapoursynth-plugin-beziercurve-git
+	pkgdesc = Plugin for Vapoursynth: beziercurve (GIT version)
+	pkgver = 3.0.g866d68e
+	pkgrel = 1
+	url = https://github.com/kewenyu/VapourSynth-BezierCurve
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = meson
+	depends = vapoursynth
+	provides = vapoursynth-plugin-beziercurve
+	conflicts = vapoursynth-plugin-beziercurve
+	options = debug
+	source = beziercurve::git+https://github.com/kewenyu/VapourSynth-BezierCurve.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-beziercurve-git

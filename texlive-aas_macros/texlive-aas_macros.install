@@ -1,0 +1,16 @@
+update_db() {
+  echo "Upgrading package database..."
+  mktexlsr
+}
+
+post_install() {
+    update_db
+}
+
+post_upgrade() {
+    update_db
+}
+
+post_remove() {
+    update_db
+}

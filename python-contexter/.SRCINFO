@@ -1,0 +1,20 @@
+pkgbase = python-contexter
+	pkgdesc = Full replacement of the contextlib standard library module
+	pkgver = 0.1.4
+	pkgrel = 3
+	url = https://bitbucket.org/defnull/contexter
+	arch = any
+	license = MIT
+	makedepends = python-setuptools
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = python
+	source = python-contexter-0.1.4.tar.gz::https://files.pythonhosted.org/packages/source/c/contexter/contexter-0.1.4.tar.gz
+	source = 001-setup.py.patch
+	source = LICENSE
+	sha256sums = c730890b1a915051414a6350d8ea1cddca7d01d8f756badedb30b9bf305ea0a8
+	sha256sums = dab8e575ca79aedfe49afe7e6d78f92c6d21c7321ae408db1ae2c63ba8154827
+	sha256sums = de6c16a58caef8f4cf4c3473c9308d1ddb2d029b8a31f73cb5a944f486f05343
+
+pkgname = python-contexter

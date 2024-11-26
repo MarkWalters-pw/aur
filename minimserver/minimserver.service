@@ -1,0 +1,12 @@
+[Unit]
+Description=MinimServer UPnP music server
+Requires=sound.target
+After=sound.target
+
+[Service]
+RemainAfterExit=true
+ExecStart=/opt/minimserver/bin/startd
+ExecStop=/opt/minimserver/bin/stopall
+
+[Install]
+WantedBy=default.target

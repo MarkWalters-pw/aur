@@ -1,0 +1,22 @@
+pkgbase = icu50
+	pkgdesc = International Components for Unicode library
+	pkgver = 50.2.0
+	pkgrel = 1
+	url = http://site.icu-project.org/
+	arch = i686
+	arch = x86_64
+	license = custom:icu
+	makedepends = clang
+	makedepends = make
+	makedepends = patch
+	depends = gcc-libs>=4.7.1-5
+	depends = sh
+	source = icu-50.2.0.tar.gz::https://github.com/unicode-org/icu/archive/release-50-2.tar.gz
+	source = icu.8198.revert.icu5431.patch
+	source = icu-positionNULLcheck.patch
+	md5sums = 671a083d9e56e953e36f10c556531637
+	md5sums = ebd5470fc969c75e52baf4af94a9ee82
+	md5sums = c2ead5292460c386818d75b2b6a69a5f
+
+pkgname = icu50
+

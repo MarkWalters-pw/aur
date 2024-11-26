@@ -1,0 +1,14 @@
+pkgbase = trice-git
+	pkgdesc = Super fast and tiny embedded device C printf-like trace code and real-time PC logging
+	pkgver = v0.48.0.r3.ga024079b
+	pkgrel = 2
+	url = https://rokath.github.io/trice/
+	arch = x86_64
+	license = MIT
+	makedepends = go
+	provides = trice
+	conflicts = trice
+	source = trice-git::git+https://github.com/rokath/trice.git
+	sha256sums = SKIP
+
+pkgname = trice-git

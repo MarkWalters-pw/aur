@@ -1,0 +1,20 @@
+pkgbase = chdkptp-svn
+	pkgdesc = chdkptp is a client application for the CHDK
+	pkgver = r978
+	pkgrel = 2
+	url = https://www.assembla.com/spaces/chdkptp
+	arch = x86_64
+	license = GPL
+	license = MIT
+	makedepends = subversion
+	makedepends = lua53-lgi
+	depends = lua53
+	depends = libusb-compat
+	depends = lua53-lgi
+	provides = chdkptp
+	conflicts = chdkptp
+	source = svn+https://subversion.assembla.com/svn/chdkptp/trunk
+	sha512sums = SKIP
+
+pkgname = chdkptp-svn
+

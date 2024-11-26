@@ -1,0 +1,22 @@
+pkgbase = hackgregator-git
+	pkgdesc = This application is a comfortable reader application for news.ycombinator.com
+	pkgver = 0.4.0.r0.ge78c2ac
+	pkgrel = 2
+	url = https://gitlab.com/gunibert/hackgregator
+	arch = x86_64
+	arch = aarch64
+	license = GPL3
+	checkdepends = appstream-glib
+	makedepends = git
+	makedepends = meson
+	makedepends = cargo
+	depends = libadwaita
+	depends = libsoup3
+	depends = json-glib
+	depends = webkit2gtk-5.0
+	provides = hackgregator
+	conflicts = hackgregator
+	source = git+https://gitlab.com/gunibert/hackgregator.git
+	b2sums = SKIP
+
+pkgname = hackgregator-git

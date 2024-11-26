@@ -1,0 +1,23 @@
+pkgbase = go-tools-git
+	pkgdesc = Developer tools for the Go programming language
+	pkgver = v0.0.0_20200107181558_a222fb47e2f1
+	pkgrel = 1
+	url = https://godoc.org/golang.org/x/tools/
+	arch = x86_64
+	license = BSD
+	makedepends = git
+	makedepends = go>=1.11
+	depends = glibc
+	provides = go-tools
+	conflicts = go-tools
+	conflicts = go-tools-complete-git
+	conflicts = go-imports-git
+	source = go-tools-git::git+https://go.googlesource.com/tools
+	source = gopls.service
+	source = godoc.service
+	sha256sums = SKIP
+	sha256sums = fea23332ef69ba647cde588071bce7d424b400181bd97428f8fdb9c48a82089d
+	sha256sums = 0afd3dcbf1758b33f6810cc81fc7eb37095db48bc8055ddd6b714c46184a490e
+
+pkgname = go-tools-git
+

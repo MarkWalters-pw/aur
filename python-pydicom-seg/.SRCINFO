@@ -1,0 +1,19 @@
+pkgbase = python-pydicom-seg
+	pkgdesc = Python package for DICOM-SEG medical segmentation file reading and writing
+	pkgver = 0.4.1
+	pkgrel = 1
+	url = https://github.com/razorx89/pydicom-seg
+	arch = any
+	license = MIT
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-poetry
+	depends = python-attrs
+	depends = python-jsonschema
+	depends = python-numpy
+	depends = python-pydicom
+	depends = python-simpleitk
+	source = python-pydicom-seg-0.4.1.tar.gz::https://github.com/razorx89/pydicom-seg/archive/refs/tags/v0.4.1.tar.gz
+	sha512sums = 0a2a839357625235f8aad1f326499f0ba213494e764cd67dfefacdeae13b49cd53c1e915837b02478b8fa545ab4d236a92afb68096011bf655f3fce3fdc9353d
+
+pkgname = python-pydicom-seg

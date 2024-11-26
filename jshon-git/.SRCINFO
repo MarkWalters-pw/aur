@@ -1,0 +1,16 @@
+pkgbase = jshon-git
+	pkgdesc = A json parser for the shell.
+	pkgver = 20131105.r22.gd919aea
+	pkgrel = 1
+	url = http://kmkeen.com/jshon/
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	depends = jansson
+	provides = jshon
+	conflicts = jshon
+	source = jshon-git::git+https://github.com/keenerd/jshon
+	md5sums = SKIP
+
+pkgname = jshon-git

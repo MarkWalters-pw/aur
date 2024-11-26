@@ -1,0 +1,9 @@
+post_install() {
+  echo "The ecbd.service must be running for Epson Printer Utility to work."
+  echo "Execute 'sudo systemctl enable --now ecbd.service' in a terminal."
+}
+
+post_upgrade() {
+  post_install
+}
+

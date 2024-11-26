@@ -1,0 +1,40 @@
+pkgbase = python-decord
+	pkgdesc = An efficient video loader for deep learning with smart shuffling that's super easy to digest
+	pkgver = 0.6.0
+	pkgrel = 8
+	url = https://github.com/dmlc/decord
+	arch = x86_64
+	license = Apache-2.0
+	makedepends = chrpath
+	makedepends = cmake
+	makedepends = cuda
+	makedepends = cython
+	makedepends = git
+	makedepends = nvidia-utils
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	makedepends = chrpath
+	depends = ffmpeg
+	depends = glibc
+	depends = gcc-libs
+	depends = python-numpy
+	source = decord-0.6.0::git+https://github.com/dmlc/decord.git#tag=v0.6.0
+	source = 0002-fix-building-with-ffmpeg.patch
+	sha512sums = f91944e7931f18576cdedd69edc9f651189db2dbc63e7f211cb894cea71bc9df0f4f83ef27f2449da4c9cf13517c310ed0ef6bdd01d01f48258e0f7bf3efa027
+	sha512sums = b5d01e3666ce961276100eeea779333ab440a169f0de23c4382e88436a362a1c732eb5e99137701f689cbbde13a14fec9118195e22a58253c3a8bc595aab54af
+
+pkgname = python-decord
+
+pkgname = python-decord-cuda
+	pkgdesc = An efficient video loader for deep learning with smart shuffling that's super easy to digest (with CUDA)
+	depends = ffmpeg
+	depends = glibc
+	depends = gcc-libs
+	depends = python-numpy
+	depends = cuda
+	depends = libcudart.so
+	depends = nvidia-utils
+	provides = python-decord=0.6.0
+	conflicts = python-decord

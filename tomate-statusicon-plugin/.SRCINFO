@@ -1,0 +1,20 @@
+pkgbase = tomate-statusicon-plugin
+	pkgdesc = Tomate plugin that displays the progress of the session in the system tray
+	pkgver = 0.8.1
+	pkgrel = 3
+	url = https://github.com/eliostvs/tomate-statusicon-plugin
+	install = tomate-statusicon-plugin.install
+	arch = any
+	license = GPL
+	makedepends = python-setuptools
+	depends = gtk-update-icon-cache
+	depends = gtk3
+	depends = hicolor-icon-theme
+	depends = python
+	depends = tomate-gtk
+	conflicts = tomate-indicator-plugin
+	options = !emptydirs
+	source = https://github.com/eliostvs/tomate-statusicon-plugin/archive/0.8.1.tar.gz
+	md5sums = b07494861f528ab6d321981a58556526
+
+pkgname = tomate-statusicon-plugin

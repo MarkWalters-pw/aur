@@ -1,0 +1,21 @@
+pkgbase = wava-git
+	pkgdesc = Weird Audio Visualizer for ALSA
+	pkgver = r47.330a795
+	pkgrel = 1
+	url = https://github.com/fusionhuh/wava
+	install = wava.install
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = fftw
+	depends = alsa-lib
+	depends = pulseaudio
+	depends = libconfig
+	provides = wava
+	conflicts = wava
+	source = git+https://github.com/fusionhuh/wava.git
+	source = git+https://github.com/fusionhuh/libwava.git
+	md5sums = SKIP
+	md5sums = SKIP
+
+pkgname = wava-git

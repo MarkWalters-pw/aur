@@ -1,0 +1,9 @@
+#!/usr/bin/openrc-run
+command=/usr/bin/dictd
+pidfile="/run/dictd.pid"
+command_args="--pid-file ${pidfile}"
+name="Dictd"
+
+depend() {
+	use net
+}

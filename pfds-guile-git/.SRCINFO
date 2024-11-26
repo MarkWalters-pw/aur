@@ -1,0 +1,15 @@
+pkgbase = pfds-guile-git
+	pkgdesc = Purely Functional Data Structures in Scheme. Installs the files for use with Guile.
+	pkgver = 20140711
+	pkgrel = 1
+	url = https://github.com/ijp/pfds
+	arch = any
+	license = custom
+	makedepends = git
+	depends = guile>=2
+	provides = pfds-guile
+	conflicts = pfds-guile
+	source = git+https://github.com/ijp/pfds
+	md5sums = SKIP
+
+pkgname = pfds-guile-git

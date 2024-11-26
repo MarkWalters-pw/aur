@@ -1,0 +1,111 @@
+# Maintainer: Severin Glöckner <severin.gloeckner@stud.htwk-leipzig.de>
+
+# This doesn't compile with gcc 4.5, 4.9 or the current versions of gcc or clang
+# It does compile with gcc 4.3.
+
+pkgname=wesnoth-1.4
+pkgver=1.4.7+dev
+pkgrel=3
+pkgdesc="Turn-based strategy game on a fantasy world (for old replays)"
+arch=('i486' 'i686' 'pentium4' 'x86_64' 'armv6h' 'armv7h' 'aarch64')
+url="https://www.wesnoth.org"
+license=('GPL')
+depends=('sdl' 'sdl_image' 'sdl_mixer' 'sdl_net' 'boost-libs' 'zlib' 'freetype2')
+makedepends=('boost' 'gcc44' 'git')
+options=('!emptydirs')
+install=wesnoth-1.4.install
+source=("wesnoth-1.4-git::git+https://github.com/wesnoth/wesnoth.git#branch=1.4"
+        "wesnoth-1.4.desktop"
+        "wesnothd-1.4.tmpfiles.conf"
+        "wesnothd-1.4.service"
+        "wesnoth-1.4.appdata.xml")
+# Not finding the files? https://aur.archlinux.org/packages/wesnoth-1.4
+# Rest assured, they are optional. Things like a launcher for your convenience…
+
+# If one wants to download wesnoth manually:
+# git clone https://github.com/wesnoth/wesnoth.git -b 1.4 --shallow-exclude=1.4.7 wesnoth-1.4-git
+
+md5sums=('SKIP'
+         'b4052583dce2f360af5686f6320247a7'
+         'e5e9941ae3fd5fce9af88a27c4e6795c'
+         '25f4efba01d06b6261827b81c2348b7f'
+         '5dfa63b303f48842ee54bc65ed89f7a2')
+
+
+prepare() {
+  # clean up previous builds, in case different flags or library versions were
+  # used before. (|| true avoids failure if the makefile is not yet generated.)
+  cd "$srcdir/wesnoth-1.4-git"
+  make distclean || true
+}
+
+
+build() {
+  cd "$srcdir/wesnoth-1.4-git"
+  # As this is an older version and not worked on anymore, it will someday break
+  # If you happen to find a fix, please fill a Pull Request for the 1.4 branch
+  # at bugs.wesnoth.org
+
+  # There is a bug in the buildscripts:
+  # CFLAG & CXXFLAGS Environment variables whose values contain a space are
+  # problematic, which means in particular that one can only set one additional
+  # compiler flag! (one can add the values directly in configure.ac though)
+  unset CFLAGS CXXFLAGS
+
+  export CC=gcc-4.4
+  export CXX=g++-4.4
+
+  # It's a convention to use /usr/local when installing by hand, it allows you
+  # to keep easier track of what was installed.
+  # Feel free to replace ALL occurences of /usr with /usr/local in the commands
+  # below, and edit the start command in the file wesnothd-1.4.service.
+
+  ./autogen.sh --with-freetype-prefix=/usr/lib --prefix=/usr --with-preferences-dir=.local/share/wesnoth/1.4 --program-suffix=-1.4 --with-datadir-name=wesnoth-1.4 --docdir=/usr/share/doc/wesnoth-1.4 --disable-desktop-entry --enable-editor --enable-server --with-fifodir=/run/wesnothd-1.4 CXXFLAGS=-w
+
+  make
+}
+
+
+# These commands have to be run with root privileges.
+# E.g. by prefixing them with "sudo ".
+package() {
+  cd "$srcdir/wesnoth-1.4-git"
+
+  # On Debian / Ubuntu / Mint / Fedora / Suse, just "make install"
+  make DESTDIR="$pkgdir" install
+
+  # The manpages have no suffix by default, so they have the same name like
+  # the manpages of other wesnoth installations. To avoid conflicts, rename
+  # (or delete) them.
+  # Note that you can do this only the installation step shown above, as the
+  # command will fail if it doesn't find these files.
+  for filename in "$pkgdir"/usr/share/man/{,*/}man6/wesnoth{,d}.6
+    do
+      mv $filename $(dirname $filename)/$(basename $filename .6)-1.4.6
+  done
+
+  # no need for a subdirectory for the manual
+  mv "$pkgdir"/usr/share/doc/wesnoth-1.4/manual/* "$pkgdir"/usr/share/doc/wesnoth-1.4/
+  rmdir "$pkgdir/usr/share/doc/wesnoth-1.4/manual/"
+
+  # better use the patched tools from a recent version of wesnoth
+  rm -r "$pkgdir/usr/share/wesnoth-1.4/data/tools"
+
+  # remove unneeded files
+  rm -r "$pkgdir/usr/share/wesnoth-1.4/icons"
+  find "$pkgdir/usr/share" -name .gitignore -delete
+
+  # placing launcher, icons and (not required) appdata and systemd files
+  install -D -m644 "$srcdir/wesnoth-1.4.desktop" "$pkgdir/usr/share/applications/wesnoth-1.4.desktop"
+  install -D -m644 "$srcdir/wesnoth-1.4-git/icons/wesnoth-icon.png" "$pkgdir/usr/share/icons/hicolor/64x64/apps/wesnoth-1.4-icon.png"
+  install -D -m644 "$srcdir/wesnoth-1.4-git/icons/wesnoth-icon-Mac.png" "$pkgdir/usr/share/icons/hicolor/128x128/apps/wesnoth-1.4-icon.png"
+
+  install -D -m644 "$srcdir/wesnoth-1.4.appdata.xml" "$pkgdir/usr/share/metainfo/wesnoth-1.4.appdata.xml"
+
+  # On other Linux systems, the two files go into /etc instead of /usr/lib
+  install -D -m644 "$srcdir/wesnothd-1.4.tmpfiles.conf" "$pkgdir/usr/lib/tmpfiles.d/wesnothd-1.4.conf"
+  install -D -m644 "$srcdir/wesnothd-1.4.service" "$pkgdir/usr/lib/systemd/system/wesnothd-1.4.service"
+
+  # All done, but it doesn't show up? Try that:
+  # sudo update-desktop-database
+}

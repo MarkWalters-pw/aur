@@ -1,0 +1,17 @@
+pkgbase = fgsl-git
+	pkgdesc = A Fortran interface to the GNU Scientific Library
+	pkgver = 1.5
+	pkgrel = 1
+	url = https://github.com/reinh-bader/fgsl/
+	arch = i686
+	arch = x86_64
+	license = GPL
+	depends = gsl>=2.6
+	depends = gcc-fortran
+	depends = automake
+	depends = autoconf
+	depends = libtool
+	source = fgsl-git::git+https://github.com/reinh-bader/fgsl.git
+	sha256sums = SKIP
+
+pkgname = fgsl-git

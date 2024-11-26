@@ -1,0 +1,11 @@
+[Unit]
+Description=Stackdriver collectd agent
+After=syslog.target network.target
+
+[Service]
+Type=simple
+ExecStart=/opt/collectd/sbin/collectd -f
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

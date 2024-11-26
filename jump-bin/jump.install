@@ -1,0 +1,12 @@
+post_install() {
+	echo ''; echo ''; echo ''
+	echo '--------------------------------------------'
+	echo 'Jump needs to be integrated with the shell'
+	echo 'For bash and zsh, add the line below in ~/.bashrc, ~/bash_profile or ~/.zshrc:'
+	echo '    eval "$(jump shell)"'
+	echo 'For fish shell, add the line below in ~/.config/fish/config.fish:'
+	echo '    jump shell fish | source'
+	echo 'Once integrated, jump will automatically monitor directory changes and start building an internal database'
+	echo '--------------------------------------------'
+	echo ''; echo ''; echo ''
+}

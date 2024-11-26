@@ -1,0 +1,15 @@
+pkgbase = pass-ssh
+	pkgdesc = A pass extension that creates ssh keys with an automatically generated passphrases stored in pass and outputs the public key using fzf or rofi
+	pkgver = 0.2
+	pkgrel = 1
+	url = https://github.com/ibizaman/pass-ssh
+	arch = any
+	license = GPL3
+	depends = pass
+	optdepends = rofi: Use rofi to present choices.
+	optdepends = fzf: Use fzf to present choices.
+	source = https://github.com/ibizaman/pass-ssh/archive/v0.2.tar.gz
+	sha512sums = 78bd7ba96002e47515a577e3ca66a3722021ada0e83c4ccdcc1ef6a037f19515d34260bb9d3c32e343c3f262b3230339018fc8bb44492dc5b8531d3b879c0f46
+
+pkgname = pass-ssh
+

@@ -1,0 +1,21 @@
+pkgbase = czmq
+	pkgdesc = High-level C Binding for ZeroMQ
+	pkgver = 4.2.1
+	pkgrel = 3
+	url = http://czmq.zeromq.org
+	arch = i686
+	arch = x86_64
+	license = MPL2
+	makedepends = pkg-config
+	makedepends = cmake
+	depends = zeromq
+	depends = curl
+	depends = lz4
+	depends = systemd-libs
+	depends = util-linux-libs
+	provides = czmq
+	provides = libczmq.so
+	source = https://github.com/zeromq/czmq/archive/v4.2.1.tar.gz
+	sha256sums = 83457cd32a2c2615b8d7ebcf91b198cb0d8df383a2072b96835ab250164d8a83
+
+pkgname = czmq

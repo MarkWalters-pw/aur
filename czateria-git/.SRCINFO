@@ -1,0 +1,15 @@
+pkgbase = czateria-git
+	pkgdesc = Qt client for Czateria, a Polish chatroom network
+	pkgver = r134.459c301
+	pkgrel = 3
+	url = https://github.com/xavery/czateria
+	arch = x86_64
+	license = BSD
+	makedepends = git
+	makedepends = gendesk
+	depends = qt6-websockets
+	provides = czateria
+	source = git+https://github.com/xavery/czateria.git
+	md5sums = SKIP
+
+pkgname = czateria-git

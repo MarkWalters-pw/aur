@@ -1,0 +1,16 @@
+pkgbase = python-pytelegrambotapi-git
+	pkgdesc = Python Telegram bot api - git
+	pkgver = r2434.e10517e
+	pkgrel = 1
+	url = https://github.com/eternnoir/pyTelegramBotAPI
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = python
+	depends = python-requests
+	provides = python-pytelegrambotapi
+	conflicts = python-pytelegrambotapi
+	source = pyTelegramBotAPI::git+https://github.com/eternnoir/pyTelegramBotAPI
+	sha256sums = SKIP
+
+pkgname = python-pytelegrambotapi-git

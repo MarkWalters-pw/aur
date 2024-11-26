@@ -1,0 +1,17 @@
+pkgbase = ipts-uapi-dkms-git
+	pkgdesc = The kernelspace part of IPTS (Intel Precise Touch & Stylus) for Linux.
+	pkgver = r138.e66f2fe
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/linux-surface/intel-precise-touch
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	depends = dkms
+	optdepends = iptsd: Userspace support
+	provides = ipts-uapi-dkms
+	provides = ipts-uapi
+	source = git+https://github.com/linux-surface/intel-precise-touch.git
+	md5sums = SKIP
+
+pkgname = ipts-uapi-dkms-git

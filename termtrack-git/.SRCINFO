@@ -1,0 +1,21 @@
+pkgbase = termtrack-git
+	pkgdesc = Track satellites in your terminal
+	pkgver = 0.7.3.r0.gaf5c4ed
+	pkgrel = 2
+	url = https://github.com/trehn/termtrack
+	arch = any
+	license = GPL3
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python-click
+	depends = python-pillow
+	depends = python-pyephem
+	depends = python-pyshp
+	depends = python-requests
+	provides = termtrack
+	conflicts = termtrack
+	source = termtrack::git+https://github.com/trehn/termtrack.git
+	sha256sums = SKIP
+
+pkgname = termtrack-git
+

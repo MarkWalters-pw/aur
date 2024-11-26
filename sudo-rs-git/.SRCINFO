@@ -1,0 +1,18 @@
+pkgbase = sudo-rs-git
+	pkgdesc = A memory safe implementation of sudo and su.
+	pkgver = r1148.d4abd98
+	pkgrel = 1
+	url = https://github.com/memorysafety/sudo-rs
+	install = warning.install
+	arch = any
+	license = Apache 2.0,
+	license = MIT
+	makedepends = rust
+	makedepends = cargo
+	makedepends = clang
+	makedepends = git
+	provides = sudo-rs
+	source = git+https://github.com/memorysafety/sudo-rs
+	sha256sums = SKIP
+
+pkgname = sudo-rs-git

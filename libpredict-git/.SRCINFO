@@ -1,0 +1,17 @@
+pkgbase = libpredict-git
+	pkgdesc = A satellite orbit prediction library
+	pkgver = r334.47569d4
+	pkgrel = 1
+	url = https://github.com/la1k/libpredict
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = cmake
+	optdepends = flyby
+	provides = libpredict
+	conflicts = libpredict
+	source = libpredict-git::git+https://github.com/la1k/libpredict
+	md5sums = SKIP
+
+pkgname = libpredict-git

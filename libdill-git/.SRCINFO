@@ -1,0 +1,17 @@
+pkgbase = libdill-git
+	pkgdesc = Structured concurrency in C
+	pkgver = 2.14.r19.g32d0e8b
+	pkgrel = 1
+	url = http://libdill.org/
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = gcc
+	depends = pkgconfig
+	provides = libdill
+	conflicts = libdill
+	options = !buildflags
+	source = libdill-git::git+https://github.com/sustrik/libdill.git
+	sha256sums = SKIP
+
+pkgname = libdill-git

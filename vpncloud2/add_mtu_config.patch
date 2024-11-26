@@ -1,0 +1,95 @@
+diff --git a/src/config.rs b/src/config.rs
+index 995d4b1..0bb2789 100644
+--- a/src/config.rs
++++ b/src/config.rs
+@@ -23,6 +23,7 @@ pub struct Config {
+     pub device_type: Type,
+     pub device_name: String,
+     pub device_path: Option<String>,
++    pub device_mtu: Option<usize>,
+     pub fix_rp_filter: bool,
+ 
+     pub ip: Option<String>,
+@@ -61,6 +62,7 @@ impl Default for Config {
+             device_type: Type::Tun,
+             device_name: "vpncloud%d".to_string(),
+             device_path: None,
++            device_mtu: None,
+             fix_rp_filter: false,
+             ip: None,
+             ifup: None,
+@@ -105,6 +107,9 @@ impl Config {
+             if let Some(val) = device.path {
+                 self.device_path = Some(val);
+             }
++            if let Some(val) = device.mtu {
++                self.device_mtu = Some(val);
++            }
+             if let Some(val) = device.fix_rp_filter {
+                 self.fix_rp_filter = val;
+             }
+@@ -210,6 +215,9 @@ impl Config {
+         if let Some(val) = args.device_path {
+             self.device_path = Some(val);
+         }
++        if let Some(val) = args.device_mtu {
++            self.device_mtu = Some(val);
++        }
+         if args.fix_rp_filter {
+             self.fix_rp_filter = true;
+         }
+@@ -349,6 +357,10 @@ pub struct Args {
+     #[structopt(long)]
+     pub device_path: Option<String>,
+ 
++    /// Set the interface mtu
++    #[structopt(long)]
++    pub device_mtu: Option<usize>,
++
+     /// Fix the rp_filter settings on the host
+     #[structopt(long)]
+     pub fix_rp_filter: bool,
+@@ -536,6 +548,7 @@ pub struct ConfigFileDevice {
+     pub name: Option<String>,
+     pub path: Option<String>,
+     pub fix_rp_filter: Option<bool>,
++    pub mtu: Option<usize>
+ }
+ 
+ #[derive(Serialize, Deserialize, Debug, PartialEq, Default)]
+diff --git a/src/main.rs b/src/main.rs
+index 6d59069..94579dd 100644
+--- a/src/main.rs
++++ b/src/main.rs
+@@ -141,7 +141,7 @@ fn setup_device(config: &Config) -> TunTapDevice {
+     );
+     info!("Opened device {}", device.ifname());
+     config.call_hook("device_setup", vec![("IFNAME", device.ifname())], true);
+-    if let Err(err) = device.set_mtu(None) {
++    if let Err(err) = device.set_mtu(config.device_mtu) {
+         error!("Error setting optimal MTU on {}: {}", device.ifname(), err);
+     }
+     if let Some(ip) = &config.ip {
+diff --git a/src/oldconfig.rs b/src/oldconfig.rs
+index 330336f..61a4d92 100644
+--- a/src/oldconfig.rs
++++ b/src/oldconfig.rs
+@@ -20,6 +20,8 @@ pub struct OldConfigFile {
+     pub device_name: Option<String>,
+     #[serde(alias = "device-path")]
+     pub device_path: Option<String>,
++    #[serde(alias = "device-mtu")]
++    pub device_mtu: Option<usize>,
+     pub ifup: Option<String>,
+     pub ifdown: Option<String>,
+     pub crypto: Option<OldCryptoMethod>,
+@@ -99,7 +101,8 @@ impl OldConfigFile {
+                 fix_rp_filter: None,
+                 name: self.device_name,
+                 path: self.device_path,
+-                type_: self.device_type
++                type_: self.device_type,
++                mtu: self.device_mtu
+             }),
+             group: self.group,
+             ifdown: self.ifdown,

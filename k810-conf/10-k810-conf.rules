@@ -1,0 +1,1 @@
+ACTION=="add", SUBSYSTEM=="hidraw", ATTRS{address}=="FIXME", RUN+="/usr/bin/k810-conf -d $devnode -f on"

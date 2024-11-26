@@ -1,0 +1,13 @@
+post_install() {
+    depmod $(uname -r)
+    echo "In order to use akari module append \"init=/usr/bin/ccs-init\""
+    echo "to the kernel boot options and reboot the system to activate"
+}
+
+post_upgrade() {
+    post_install
+}
+
+post_remove() {
+    post_install
+}

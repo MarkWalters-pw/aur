@@ -1,0 +1,26 @@
+pkgbase = autochown
+	pkgdesc = Monitor multiple directories using glob patterns and automatically adjust file ownership and permissions.
+	pkgver = 2022.7
+	pkgrel = 3
+	url = https://xyne.dev/projects/autochown
+	arch = i686
+	arch = x86_64
+	arch = armv6h
+	arch = armv6l
+	arch = armv7h
+	arch = armv7l
+	arch = armv8h
+	arch = armv8l
+	license = GPL
+	makedepends = cmake
+	makedepends = rabbit_tree
+	backup = etc/autochownd.conf
+	source = https://xyne.dev/projects/autochown/src/autochown-2022.7.tar.xz
+	source = https://xyne.dev/projects/autochown/src/autochown-2022.7.tar.xz.sig
+	validpgpkeys = D89FAAEB4CECAFD199A2F5E612C6F735F7A9A519
+	md5sums = f82556fb057096762dd96584ba831d86
+	md5sums = 314fa5586a7fe2db7bcf852fc2221c6a
+	sha512sums = 7e4aa477657727fb0bc86f02bcfb6dffc7e3522d6bae037fa9483468f059fd98d6475d203dfcc06dd107afa78b2978fac3adfc9998a670f6f39bf3fdfc13f532
+	sha512sums = 1bbb5800277096f794188abf13b1d6bb1136d11e95dafb927b25c1ada1553123652ce6d5aa1202f42e4aab5dbcc4357e4a169695e3a349f768c0a8457ec868d0
+
+pkgname = autochown

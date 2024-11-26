@@ -1,0 +1,13 @@
+pkgbase = tailscale-runit
+	pkgdesc = runit service scripts for tailscale
+	pkgver = r2
+	pkgrel = 1
+	url = https://gitea.artixlinux.org/packagesT/tailscale
+	arch = any
+	license = BSD
+	depends = runit
+	depends = tailscale
+	source = tailscaled.run
+	sha256sums = 23f76dff9c581431cec4879ab3cb7ec9b4ff784960c569b74df368da6d660842
+
+pkgname = tailscale-runit

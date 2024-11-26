@@ -1,0 +1,8 @@
+#!/bin/bash
+
+SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+patch --forward --strip=1 --directory=/opt/whatsapp-nativefier/resources/app/lib --input="$SCRIPT_DIR/whatsapp-nativefier-nomaximize.patch"
+if [ $? -gt 0 ] 
+then
+    rm -f /opt/whatsapp-nativefier/resources/app/lib/main.js.rej
+fi

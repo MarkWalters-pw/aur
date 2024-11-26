@@ -1,0 +1,67 @@
+pkgbase = ifcopenshell-git
+	pkgdesc = Open source IFC library and geometry engine. Provides static libraries, python3 wrapper and blender addon. GIT version.
+	pkgver = 230922.r19.gbe2c7a62f
+	pkgrel = 1
+	url = http://ifcopenshell.org/
+	arch = x86_64
+	arch = i686
+	license = LGPL3
+	makedepends = cmake
+	makedepends = boost>=1.58.0
+	makedepends = swig
+	makedepends = python-babel
+	depends = boost-libs>=1.58.0
+	depends = opencascade
+	depends = icu
+	depends = opencollada
+	depends = python
+	depends = nlohmann-json
+	depends = libxml2
+	depends = hdf5
+	depends = libaec
+	depends = sz
+	depends = cgal
+	depends = gmp
+	depends = mpfr
+	optdepends = python-svgwrite: blender bim addon svg support
+	optdepends = python-occ-core: blender bim addon cut ifc support
+	optdepends = python-pystache: blender bim addon
+	optdepends = python-numpy: blender bim addon cut ifc support
+	optdepends = python-xmlschema: blender bim addon, bcf support
+	optdepends = hpp-fcl: ifcclash
+	optdepends = python-deepdiff: ifcdiff
+	optdepends = python-pyparsing: ifcexpressparser support
+	optdepends = python-requests: blender bim addon covetool support
+	optdepends = python-lark-parser: util, ifccsv, ifcclash support
+	optdepends = python-odfpy: blender bim addon and ifccobie support
+	optdepends = python-behave: python-bimtester
+	optdepends = python-isodate: blender bim addon
+	optdepends = python-olca-ipc: blender bim addon life cycle analysis support
+	optdepends = python-toposort: ifcpatch
+	optdepends = python-xsdata: blender bim addon
+	optdepends = python-brickschema: brickschema support
+	optdepends = python-shapely>=2.0.1: blender bim addon space generation support
+	provides = ifcopenshell
+	provides = blender-plugin-bim
+	provides = IfcConvert
+	provides = IfcGeomServer
+	provides = python-ifcpatch
+	provides = python-ifcdiff
+	provides = python-bcf
+	provides = python-bimtester
+	provides = python-ifccsv
+	provides = python-bsdd
+	source = git+https://github.com/IfcOpenShell/IfcOpenShell.git
+	source = git+https://github.com/IfcOpenShell/svgfill.git
+	source = git+https://github.com/svgpp/svgpp.git
+	source = https://github.com/BrickSchema/Brick/releases/download/nightly/Brick.ttl
+	source = git+https://github.com/prochitecture/bpypolyskel.git
+	md5sums = SKIP
+	md5sums = SKIP
+	md5sums = SKIP
+	md5sums = SKIP
+	md5sums = SKIP
+
+pkgname = ifcopenshell-git
+
+pkgname = blender-plugin-bim-git

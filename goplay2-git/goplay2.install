@@ -1,0 +1,11 @@
+post_install() {
+  setcap 'cap_net_bind_service=+ep' /usr/bin/goplay2
+  echo "Please configure the network interface you want goplay2 to listen on; defaults to eth0"
+  echo "eg: echo interface=enp5s0 > ~/.config/goplay2-network-interface"
+}
+
+post_upgrade() {
+  post_install "$1"
+}
+
+# vim:set ts=2 sw=2 et:

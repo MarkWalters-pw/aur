@@ -1,0 +1,17 @@
+pkgbase = otf-inconsolata-powerline-git
+	pkgdesc = Inconsolata for Powerline
+	pkgver = r202.e80e3eb
+	pkgrel = 1
+	url = https://github.com/powerline/fonts
+	arch = any
+	license = OFL
+	makedepends = git
+	provides = otf-inconsolata-powerline
+	conflicts = otf-inconsolata-powerline
+	conflicts = powerline-fonts
+	conflicts = powerline-fonts-git
+	source = otf-inconsolata-powerline-git::git+https://github.com/powerline/fonts.git
+	sha256sums = SKIP
+
+pkgname = otf-inconsolata-powerline-git
+

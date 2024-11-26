@@ -1,0 +1,17 @@
+pkgbase = cargo-debstatus
+	pkgdesc = cargo-tree for debian packaging
+	pkgver = 0.5.1
+	pkgrel = 1
+	url = https://github.com/kpcyrd/cargo-debstatus
+	arch = i686
+	arch = x86_64
+	arch = armv6h
+	arch = aarch64
+	license = GPL3
+	makedepends = cargo
+	depends = openssl
+	depends = curl
+	source = cargo-debstatus-0.5.1.tar.gz::https://github.com/kpcyrd/cargo-debstatus/archive/v0.5.1.tar.gz
+	sha512sums = 990b6e203abd683fa38f3ea8ef4a6d288969700d579124b45102c8cb784f4db76b8111a641700357aef4a8729850824d44b14852b45781f8dee4c91d2645bb0b
+
+pkgname = cargo-debstatus

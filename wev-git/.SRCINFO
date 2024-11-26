@@ -1,0 +1,23 @@
+pkgbase = wev-git
+	pkgdesc = Print wayland events, like xev(1)
+	pkgver = 1.0.0.r2.g54de46d
+	pkgrel = 1
+	url = https://git.sr.ht/~sircmpwn/wev
+	arch = i686
+	arch = x86_64
+	arch = armv6h
+	arch = armv7h
+	license = MIT
+	makedepends = git
+	makedepends = scdoc
+	makedepends = wayland-protocols
+	depends = wayland
+	depends = libxkbcommon
+	provides = wev
+	source = wev::git+https://git.sr.ht/~sircmpwn/wev
+	source = wev-git.patch
+	sha256sums = SKIP
+	sha256sums = d93b7cfbee98559178b1e650ae1bbdd7bb2fe07376c76a0312cb17c7529472f9
+
+pkgname = wev-git
+

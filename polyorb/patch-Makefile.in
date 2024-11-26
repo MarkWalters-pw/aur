@@ -1,0 +1,49 @@
+--- PolyORB-master-old/Makefile.in
++++ PolyORB-master/Makefile.in
+@@ -626,16 +626,16 @@
+ target=@target@
+ 
+ ifeq (${target}, ${host})
+-  target_prefix=${prefix}
+-  host_exe_dir=${prefix}/bin
++  target_prefix=${DESTDIR}${prefix}
++  host_exe_dir=${DESTDIR}${prefix}/bin
+   host_cmdprefix=
+-  target_exe_dir=${prefix}/bin
++  target_exe_dir=${DESTDIR}${prefix}/bin
+ 
+ else
+-  target_prefix=${prefix}/${target}
+-  host_exe_dir=${prefix}/bin
+-  host_cmdprefix=${target}-
+-  target_exe_dir=${target_prefix}/bin
++  target_prefix=${DESTDIR}${prefix}/${target}
++  host_exe_dir=${DESTDIR}${prefix}/bin
++  host_cmdprefix=${DESTDIR}${target}-
++  target_exe_dir=${DESTDIR}${target_prefix}/bin
+ endif
+ projects_subdir=lib/gnat/polyorb
+ 
+@@ -646,7 +646,7 @@
+ 	@echo "Install prefix: ${prefix}"
+ 	@echo "          Host: ${host}"
+ 	@echo "        Target: ${target}"
+-	${PINSTALL} -d ${prefix}/bin ${target_prefix}/bin
++	${PINSTALL} -d ${DESTDIR}${prefix}/bin ${target_prefix}/bin
+ 	${RM} -fr "${target_prefix}/${projects_subdir}"
+ 	${PINSTALL} -d ${target_prefix}/${projects_subdir}
+ 	${PINSTALL} -d ${target_prefix}/lib/polyorb
+@@ -689,10 +689,10 @@
+ 	# check for existence of sphinx-build.
+ 	if [ -r doc/_build ]; \
+ 	then \
+-	  (cd doc && ${MAKE} install prefix="${prefix}" SPHINXBUILD=true); \
++	  (cd doc && ${MAKE} install prefix="${DESTDIR}${prefix}" SPHINXBUILD=true); \
+ 	elif [ -r $(top_srcdir)/doc/_build ]; \
+ 	then \
+-	  (cd doc && ${MAKE} install prefix="${prefix}" doc_build_dir="$(top_srcdir)/doc/" SPHINXBUILD=true); \
++	  (cd doc && ${MAKE} install prefix="${DESTDIR}${prefix}" doc_build_dir="$(top_srcdir)/doc/" SPHINXBUILD=true); \
+ 	fi
+ 
+ # polyorb-dsa_p-partitions.ali is a special case above.
+

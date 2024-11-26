@@ -1,0 +1,20 @@
+pkgbase = netvfy-agent-git
+	pkgdesc = Netvfy - Connect to your secure virtual network.
+	pkgver = 1.0.1
+	pkgrel = 1
+	url = http://netvfy.com
+	arch = i686
+	arch = x86_64
+	license = Unknown Free
+	makedepends = git
+	makedepends = scons
+	makedepends = cmake
+	depends = jansson
+	depends = curl
+	depends = libevent
+	depends = openssl
+	source = netvfy-agent-git::git+https://github.com/netvfy/netvfy-agent.git
+	md5sums = SKIP
+
+pkgname = netvfy-agent-git
+

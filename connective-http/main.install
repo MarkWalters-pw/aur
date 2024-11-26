@@ -1,0 +1,30 @@
+post_install() {
+    useradd -r connective &>/dev/null
+    groupadd connective &>/dev/null
+    
+    chown connective:connective /etc/connective-http -R
+    chmod 775 /etc/connective-http/ -R
+    chmod 770 /etc/connective-http/credentials -R
+    
+    if [ ! -f "/etc/authbind/byport/80)" ]; then
+        touch /etc/authbind/byport/80
+        chown connective /etc/authbind/byport/80
+        chmod 550 /etc/authbind/byport/80
+    fi    
+    if [ ! -f "/etc/authbind/byport/443)" ]; then
+        touch /etc/authbind/byport/443
+        chown connective /etc/authbind/byport/443
+        chmod 550 /etc/authbind/byport/443
+    fi
+}
+
+post_remove() {
+    if [ -f "/etc/authbind/byport/443" ]; then
+        rm "/etc/authbind/byport/443"
+    fi
+    if [ -f "/etc/authbind/byport/80" ]; then
+        rm "/etc/authbind/byport/80"
+    fi
+    userdel connective
+    groupdel connective
+}

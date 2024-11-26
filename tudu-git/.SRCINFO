@@ -1,0 +1,18 @@
+pkgbase = tudu-git
+	pkgdesc = ncurses-based hierarchical todo list manager with vim-like keybindings
+	pkgver = r273.700cd21
+	pkgrel = 1
+	url = https://gitlab.com/tudu/tudu.git
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = gcc
+	depends = ncurses
+	provides = tudu
+	conflicts = tudu
+	source = git+https://gitlab.com/tudu/tudu.git
+	md5sums = SKIP
+
+pkgname = tudu-git
+

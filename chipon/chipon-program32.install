@@ -1,0 +1,34 @@
+# chipon-program32.install
+
+chipon_program32 () {
+    echo "User read and write authorization"
+    echo "用户读写授权"
+    echo "Add users to uucp group: sudo gpasswd -a \`whoami\` uucp"
+    echo "Add users to lock group: sudo gpasswd -a \`whoami\` lock"
+    echo "添加用户到 uucp 组: sudo gpasswd -a \`whoami\` uucp"
+    echo "添加用户到 lock 组: sudo gpasswd -a \`whoami\` lock"
+    echo "Delete users to uucp group: sudo gpasswd -d \`whoami\` uucp"
+    echo "Delete users to lock group: sudo gpasswd -d \`whoami\` lock"
+    echo "Note: configure uucp and lock under CentOS, configure uucp under Ubuntu"
+    echo "注：CentOS 下配置 uucp 与 lock，ubuntu 下配置 uucp。 Arch Linux 下配置 uucp 组，lock 组已弃用。"
+}
+
+post_install() {
+    chipon_program32
+}
+
+# pre_upgrade() {
+#
+# }
+
+post_upgrade() {
+    chipon_program32
+}
+
+# pre_remove() {
+#
+# }
+
+post_remove() {
+    chipon_program32
+}

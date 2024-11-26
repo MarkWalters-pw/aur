@@ -1,0 +1,24 @@
+pkgbase = python-astroslam
+	pkgdesc = A forward model using SVR to estimate stellar parameters from spectra
+	pkgver = 1.2022.1228.1
+	pkgrel = 1
+	url = https://github.com/hypergravity/astroslam
+	arch = any
+	license = MIT
+	checkdepends = python-nose
+	makedepends = python-setuptools
+	depends = python-matplotlib
+	depends = python-scikit-learn
+	depends = python-pandas
+	depends = python-emcee
+	depends = python-astropy
+	depends = python-laspec
+	depends = python-lmfit
+	depends = python-ipyparallel
+	depends = python-joblib
+	source = https://files.pythonhosted.org/packages/source/a/astroslam/astroslam-1.2022.1228.1.tar.gz
+	source = fix-for-py3.10.patch
+	md5sums = c6bf949451893e3b65907d672948b45d
+	md5sums = 608081da9f7168903bae4e63de7be4bc
+
+pkgname = python-astroslam

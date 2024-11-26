@@ -1,0 +1,20 @@
+pkgbase = newsup-git
+	pkgdesc = NewsUP - A usenet binary uploader
+	pkgver = r493.297f220
+	pkgrel = 1
+	url = https://github.com/demanuel/NewsUP
+	install = newsup.install
+	arch = any
+	license = GPLv3
+	makedepends = git
+	depends = perl>=5.026
+	depends = perl-io-socket-ssl>=2.020
+	depends = perl-inline-c>=0.76
+	depends = perl-config-tiny>=2.22
+	depends = perl-file-copy-recursive>=0.44
+	provides = newsup
+	source = newsup-git::git+https://github.com/demanuel/NewsUP.git
+	md5sums = SKIP
+
+pkgname = newsup-git
+

@@ -1,0 +1,22 @@
+pkgbase = firefox-extension-netvyne-git
+	pkgdesc = Firefox extension to leave and read comments on any URL
+	pkgver = 1.0.9.r37.3d66124
+	pkgrel = 1
+	url = https://github.com/netvyne/firefoxext
+	arch = any
+	groups = firefox-addons
+	license = MIT
+	makedepends = git
+	makedepends = jq
+	makedepends = moreutils
+	makedepends = nodejs
+	makedepends = npm
+	makedepends = python
+	makedepends = yarn
+	makedepends = zip
+	depends = firefox
+	options = !strip
+	source = firefox-extension-netvyne-git::git+https://github.com/netvyne/firefoxext.git
+	sha512sums = SKIP
+
+pkgname = firefox-extension-netvyne-git

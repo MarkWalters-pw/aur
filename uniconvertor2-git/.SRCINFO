@@ -1,0 +1,25 @@
+pkgbase = uniconvertor2-git
+	pkgdesc = A universal vector graphics translator
+	pkgver = r523.973d5b6
+	pkgrel = 1
+	epoch = 1
+	url = https://sk1project.net/
+	arch = i686
+	arch = x86_64
+	license = AGPL3
+	makedepends = git
+	makedepends = python2
+	depends = lcms2
+	depends = cairo
+	depends = libmagick
+	depends = pango
+	depends = python2-cairo
+	depends = python2-pillow
+	depends = python2-reportlab
+	depends = python2-pycups
+	provides = uniconvertor
+	conflicts = uniconvertor
+	source = uniconvertor2::git+https://github.com/sk1project/uniconvertor.git
+	md5sums = SKIP
+
+pkgname = uniconvertor2-git

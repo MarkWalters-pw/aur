@@ -1,0 +1,20 @@
+pkgbase = python-tensorflow-metadata
+	pkgdesc = Library and standards for schema and statistics.
+	pkgver = 1.15.0
+	pkgrel = 1
+	url = https://github.com/tensorflow/metadata
+	arch = any
+	license = Apache-2.0
+	makedepends = bazel
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python
+	depends = absl-py
+	depends = python-googleapis-common-protos
+	depends = python-protobuf
+	source = https://github.com/tensorflow/metadata/archive/v1.15.0.tar.gz
+	b2sums = 4feef4127335e7c3a2d8359f7366f044f11435ad1349653b5a215aa3d846ae72b67fe07ce22d0379b85848ba1db0ae9c7ec8fd09799023ff50fe2c81853b4b16
+
+pkgname = python-tensorflow-metadata

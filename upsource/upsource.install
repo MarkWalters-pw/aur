@@ -1,0 +1,38 @@
+post_install() {
+    echo "Creating user and group upsource..."
+    getent group upsource &>/dev/null || groupadd -r upsource >/dev/null
+    getent passwd upsource &>/dev/null || useradd -r -g upsource -d '/var/lib/upsource' -s /bin/bash -G upsource upsource >/dev/null
+    chown -R upsource.upsource '/opt/upsource'
+    chown -R upsource.upsource '/var/lib/upsource'
+    echo "Make sure /usr/lib/jvm/default-java symlinks to your prefered Java environment."
+    echo "If you want to use a different Java, set it in /etc/conf.d/upsource"
+    echo ""
+    echo "To start your instance:"
+    echo "  # systemctl start upsource"
+    echo 
+    echo "After that you can access Upsource by opening http://localhost:8080/"
+}
+
+pre_upgrade() {
+    if ! find /opt/upsource/backups/ -mindepth 1 -type d -mtime 0 | egrep -q '.*' ; then 
+	echo "WARNING: No recent backup found in /opt/upsource/backups/"
+    fi
+
+    echo "Shutting down Upsource for upgrade..."
+    systemctl stop upsource
+}
+
+post_upgrade() {
+    echo "Please have a look at /opt/upsource and copy"
+    echo "the old backup to the new location as mentioned in"
+    echo "https://www.jetbrains.com/upsource/help/2.5/upgrade.html"
+    echo
+    echo "After that, start Upsource with"
+    echo "  # systemctl start upsource"
+}
+
+post_remove() {
+    echo "Removing upsource user and group..."
+    getent passwd upsource &>/dev/null && userdel upsource >/dev/null
+    echo "Please check for remaining files in /var/lib/upsource and /opt/upsource"
+}

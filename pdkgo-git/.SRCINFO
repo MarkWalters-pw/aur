@@ -1,0 +1,16 @@
+pkgbase = pdkgo-git
+	pkgdesc = Produce content for any Puppet Product
+	pkgver = 0.2.0.r19.b774328
+	pkgrel = 1
+	url = https://github.com/puppetlabs/pdkgo
+	arch = x86_64
+	license = Apache
+	makedepends = git
+	makedepends = go-pie
+	depends = glibc
+	provides = pdkgo
+	conflicts = pdkgo
+	source = pdkgo::git+https://github.com/puppetlabs/pdkgo
+	sha512sums = SKIP
+
+pkgname = pdkgo-git

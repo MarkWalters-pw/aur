@@ -1,0 +1,16 @@
+pkgbase = nodemcu-uploader-git
+	pkgdesc = tool for uploading files to the filesystem of an ESP8266 running NodeMCU.
+	pkgver = v1.0.0.r0.g6893b41
+	pkgrel = 1
+	url = https://github.com/kmpm/nodemcu-uploader
+	arch = any
+	license = MIT
+	makedepends = git
+	depends = python-pyserial
+	provides = nodemcu-uploader
+	conflicts = nodemcu-uploader
+	source = git+https://github.com/kmpm/nodemcu-uploader
+	sha256sums = SKIP
+
+pkgname = nodemcu-uploader-git
+

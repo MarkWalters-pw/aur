@@ -1,0 +1,22 @@
+pkgbase = hg-git-hg
+	pkgdesc = the Hg-Git mercurial plugin
+	pkgver = 1951.e799e4fad448
+	pkgrel = 1
+	url = http://hg-git.github.io/
+	arch = any
+	license = GPL2
+	makedepends = mercurial
+	makedepends = python-setuptools-scm
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = mercurial
+	depends = python-dulwich
+	provides = hg-git
+	conflicts = hg-git
+	source = hg+https://foss.heptapod.net/mercurial/hg-git
+	source = hggit.rc
+	md5sums = SKIP
+	md5sums = 592a454e09f498074c57a5b7e383e808
+
+pkgname = hg-git-hg

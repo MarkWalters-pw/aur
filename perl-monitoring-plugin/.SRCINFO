@@ -1,0 +1,20 @@
+pkgbase = perl-monitoring-plugin
+	pkgdesc = The Perl Monitoring::Plugin modules which is used to streamline writing Naemon, Nagios, Icinga or Shinken (and compatible) plugins.
+	pkgver = 0.40
+	pkgrel = 2
+	url = https://metacpan.org/release/Monitoring-Plugin
+	arch = any
+	license = GPL
+	license = PerlArtistic
+	depends = perl>=5.10.0
+	depends = perl-params-validate
+	depends = perl-class-accessor
+	depends = perl-config-tiny
+	depends = perl-math-calc-units
+	options = !emptydirs
+	options = purge
+	source = https://cpan.metacpan.org/authors/id/N/NI/NIERLEIN/Monitoring-Plugin-0.40.tar.gz
+	md5sums = 894135697e46f771b37756ffc7cb9ff9
+
+pkgname = perl-monitoring-plugin
+

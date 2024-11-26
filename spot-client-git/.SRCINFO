@@ -1,0 +1,36 @@
+pkgbase = spot-client-git
+	pkgdesc = Gtk/Rust native Spotify client - git version
+	pkgver = r838.cbd3140
+	pkgrel = 2
+	url = https://github.com/xou816/spot
+	arch = x86_64
+	arch = i686
+	arch = arm
+	arch = armv6h
+	arch = armv7h
+	arch = aarch64
+	license = MIT
+	checkdepends = appstream-glib
+	makedepends = cargo
+	makedepends = git
+	makedepends = meson>=0.50.0
+	makedepends = blueprint-compiler
+	depends = alsa-lib
+	depends = cairo
+	depends = glib2
+	depends = glibc
+	depends = graphene
+	depends = gtk4
+	depends = libadwaita
+	depends = libpulse
+	depends = openssl
+	depends = pango
+	depends = clang
+	optdepends = org.freedesktop.secrets
+	provides = spot-client
+	conflicts = spot-client
+	options = !lto
+	source = spot-client-git::git+https://github.com/xou816/spot
+	sha512sums = SKIP
+
+pkgname = spot-client-git

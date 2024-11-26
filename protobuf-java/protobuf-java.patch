@@ -1,0 +1,13 @@
+diff --git a/java/pom.xml b/java/pom.xml
+index 881473f..e56bd94 100644
+--- a/java/pom.xml
++++ b/java/pom.xml
+@@ -29,7 +29,7 @@
+     <!-- These are relative to the submodules -->
+     <protobuf.basedir>${project.basedir}/../..</protobuf.basedir>
+     <protobuf.source.dir>${protobuf.basedir}/src</protobuf.source.dir>
+-    <protoc>${protobuf.source.dir}/protoc</protoc>
++    <protoc>protoc</protoc>
+     <test.proto.dir>src/test/proto</test.proto.dir>
+     <generated.sources.dir>${project.build.directory}/generated-sources</generated.sources.dir>
+     <generated.testsources.dir>${project.build.directory}/generated-test-sources</generated.testsources.dir>

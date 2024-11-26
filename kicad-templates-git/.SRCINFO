@@ -1,0 +1,16 @@
+pkgbase = kicad-templates-git
+	pkgdesc = KiCad project templates (and worksheets)
+	pkgver = 5.1.6.r10.gf99cc6d
+	pkgrel = 1
+	url = https://gitlab.com/kicad/libraries/kicad-templates
+	arch = any
+	license = CC-BY-SA 4.0
+	makedepends = cmake
+	makedepends = ninja
+	makedepends = git
+	options = !strip
+	source = git+https://gitlab.com/kicad/libraries/kicad-templates.git
+	sha256sums = SKIP
+
+pkgname = kicad-templates-git
+

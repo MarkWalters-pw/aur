@@ -1,0 +1,22 @@
+pkgbase = hipsycl-cuda
+	pkgdesc = Multi-backend implementation of SYCL for CPUs and GPUs
+	pkgver = 0.9.4
+	pkgrel = 1
+	url = https://github.com/OpenSYCL/OpenSYCL
+	arch = x86_64
+	license = BSD
+	makedepends = cmake
+	depends = llvm
+	depends = clang
+	depends = python
+	depends = boost
+	depends = hipcpu
+	depends = openmp
+	depends = hip-runtime-nvidia
+	depends = cuda
+	provides = hipsycl
+	provides = sycl
+	source = hipsycl-cuda-0.9.4::https://github.com/OpenSYCL/OpenSYCL/archive/v0.9.4.tar.gz
+	sha256sums = 6262533191c812966e2f8b67e6ae510ae5ad2cf7e0caecc9957e8a69423e51c4
+
+pkgname = hipsycl-cuda

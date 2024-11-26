@@ -1,0 +1,13 @@
+pkgbase = powercap
+	pkgdesc = C bindings to the Linux Power Capping Framework in sysfs
+	pkgver = 0.6.0
+	pkgrel = 3
+	url = https://github.com/powercap/powercap
+	arch = x86_64
+	license = custom:BSD
+	makedepends = cmake
+	makedepends = git
+	source = powercap::git+https://github.com/powercap/powercap#tag=v0.6.0
+	sha256sums = SKIP
+
+pkgname = powercap

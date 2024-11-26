@@ -1,0 +1,16 @@
+pkgbase = waon
+	pkgdesc = Wave-to-Notes transcriber (WAVE-MIDI converter)
+	pkgver = 0.11
+	pkgrel = 2
+	url = http://waon.sourceforge.net/
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	depends = fftw
+	depends = libsamplerate
+	depends = libao
+	depends = gtk2
+	source = waon-0.11.tar.gz::https://github.com/kichiki/WaoN/archive/refs/tags/v0.11.tar.gz
+	sha512sums = 20778981b1af9214152e0714f519bbddd8eb49231e6e27790d8aa6c05227142aac560e2a4722c2e0cb3b1c0718889b3c2ad361f400697341bfbe435a4faab585
+
+pkgname = waon

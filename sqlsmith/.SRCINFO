@@ -1,0 +1,17 @@
+pkgbase = sqlsmith
+	pkgdesc = SQLsmith: A random SQL query generator
+	pkgver = 1.3
+	pkgrel = 1
+	url = https://github.com/anse1/sqlsmith
+	arch = x86_64
+	license = GPL3
+	makedepends = cmake
+	makedepends = ninja
+	makedepends = autoconf-archive
+	depends = libpqxx
+	depends = boost-libs
+	depends = sqlite
+	source = https://github.com/anse1/sqlsmith/releases/download/v1.3/sqlsmith-1.3.tar.gz
+	sha256sums = 11840c1edb523bdb192073abf8af8a83025538f417426aac69ee52035c7f7578
+
+pkgname = sqlsmith

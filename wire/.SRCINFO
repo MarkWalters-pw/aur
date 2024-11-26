@@ -1,0 +1,16 @@
+pkgbase = wire
+	pkgdesc = UNIX server for the Wired 2.0 protocol
+	pkgver = 2.5.2
+	pkgrel = 1
+	url = https://github.com/nark/wired
+	arch = any
+	license = custom:BSD-2-clause
+	makedepends = git
+	depends = openssl
+	depends = readline
+	depends = ncurses
+	depends = libxml2
+	source = git+https://github.com/nark/wired.git?#tag=2.5.2
+	sha512sums = SKIP
+
+pkgname = wire

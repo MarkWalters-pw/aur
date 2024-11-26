@@ -1,0 +1,21 @@
+pkgbase = markmywords
+	pkgdesc = Minimal Markdown editor
+	pkgver = 0.1.3
+	pkgrel = 2
+	url = https://github.com/voldyman/MarkMyWords
+	arch = x86_64
+	license = custom:MIT
+	makedepends = cmake
+	makedepends = vala
+	depends = discount
+	depends = gtksourceview3
+	depends = webkit2gtk
+	source = https://github.com/voldyman/MarkMyWords/archive/v0.1.3/MarkMyWords-0.1.3.tar.gz
+	source = discount.patch
+	source = appdata.patch
+	sha256sums = d7c0c09ef9dce842721a3e957336b77bd1ac157ef5866c56cc81ddc759fba4f0
+	sha256sums = b62642e8034962ee726a44ad224e08b05b15f3790561c6fe6c21e96e447b096c
+	sha256sums = 3d1507a0f2c461eafbeff4750d4d95cf4d91e5bda12a95785a3fa156e9e7dbc0
+
+pkgname = markmywords
+

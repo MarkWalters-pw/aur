@@ -1,0 +1,12 @@
+[build-system]
+requires = ["poetry-core>=1.9.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "hancho"
+version = "{{ pkgver }}"
+description = "A simple pleasant build system in Python."
+authors = ["aappleby"]
+
+[tool.poetry.scripts]
+hancho = "hancho:app.main"

@@ -1,0 +1,18 @@
+pkgbase = mi-air-wmi-dkms-git
+	pkgdesc = Kernel module enables additional hotkeys on Xiaomi Mi Air laptops
+	pkgver = 1.0.0
+	pkgrel = 2
+	url = https://github.com/MikalaiR/mi-air-wmi-driver
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	depends = dkms
+	depends = linux-headers
+	source = mi-air-wmi::git+https://github.com/MikalaiR/mi-air-wmi-driver.git
+	source = dkms.conf
+	sha256sums = SKIP
+	sha256sums = b22e7bd50a2d72ce4c0f6164c2dafa88862077327cdfba57d108a4de124e2cea
+
+pkgname = mi-air-wmi-dkms-git
+

@@ -1,0 +1,17 @@
+pkgbase = argon2-git
+	pkgdesc = The password hash Argon2, winner of PHC
+	pkgver = 20171227.r0.g670229c
+	pkgrel = 1
+	url = https://github.com/P-H-C/phc-winner-argon2
+	arch = i686
+	arch = x86_64
+	license = CC-0
+	makedepends = git
+	depends = glibc
+	provides = argon2
+	conflicts = argon2
+	source = git://github.com/P-H-C/phc-winner-argon2.git
+	sha256sums = SKIP
+
+pkgname = argon2-git
+

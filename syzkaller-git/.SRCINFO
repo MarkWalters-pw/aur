@@ -1,0 +1,14 @@
+pkgbase = syzkaller-git
+	pkgdesc = a distributed, unsupervised, coverage-guided Linux syscall fuzzer
+	pkgver = r5884.79264ae39
+	pkgrel = 1
+	url = https://github.com/google/syzkaller
+	arch = x86_64
+	arch = i686
+	license = apache
+	makedepends = git
+	depends = go
+	source = git+https://github.com/google/syzkaller
+	sha256sums = SKIP
+
+pkgname = syzkaller-git

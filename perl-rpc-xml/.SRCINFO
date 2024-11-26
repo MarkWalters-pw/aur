@@ -1,0 +1,18 @@
+pkgbase = perl-rpc-xml
+	pkgdesc = A set of classes for core data, message and XML handling
+	pkgver = 0.82
+	pkgrel = 1
+	url = https://metacpan.org/dist/RPC-XML
+	arch = any
+	license = PerlArtistic
+	license = LGPL
+	depends = perl>=5.8.8
+	depends = perl-xml-parser>=2.31
+	optdepends = perl-xml-libxml: XML::LibXML support
+	optdepends = perl-datetime-format-iso8601: DateTime::Format::ISO8601 support
+	optdepends = perl-net-server: Net::Server support
+	options = !emptydirs
+	source = https://cpan.metacpan.org/authors/id/R/RJ/RJRAY/RPC-XML-0.82.tar.gz
+	sha256sums = 5279eb0d136c533ff897f6934c3aad6f20504b997fb2606e52c5dbbd92758e73
+
+pkgname = perl-rpc-xml

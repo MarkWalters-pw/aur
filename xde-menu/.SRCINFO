@@ -1,0 +1,20 @@
+pkgbase = xde-menu
+	pkgdesc = XDG compliant menu generator
+	pkgver = 0.14
+	pkgrel = 1
+	url = https://github.com/bbidulock/xde-menu
+	arch = i686
+	arch = x86_64
+	groups = xde
+	license = GPL
+	makedepends = gdk-pixbuf-xlib
+	depends = libwnck
+	depends = libsm
+	depends = gnome-menus
+	optdepends = libwnck+: for enhanced functionality
+	optdepends = xdg-launch: for LW WM launch notification
+	optdepends = xde-theme: for LW WM style and theme change support
+	source = https://github.com/bbidulock/xde-menu/releases/download/0.14/xde-menu-0.14.tar.lz
+	sha256sums = 8a37e95c5c21f903d0a818dad6e9e2477610c28bb94d53278043a4f97c6096c5
+
+pkgname = xde-menu

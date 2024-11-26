@@ -1,0 +1,11 @@
+post_install() {
+  echo "Don't forget to enable and start the service:"
+  echo "  systemctl enable disable-c6.service"
+  echo "  systemctl start disable-c6.service"
+}
+
+pre_remove() {
+  systemctl stop disable-c6.service
+  systemctl disable disable-c6.service
+}
+

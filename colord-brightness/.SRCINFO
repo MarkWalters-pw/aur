@@ -1,0 +1,16 @@
+pkgbase = colord-brightness
+	pkgdesc = Adjust Display brightness with icc-profiles using the colord-daemon
+	pkgver = 1.0.2
+	pkgrel = 1
+	url = https://github.com/Nikl174/colord-brightness
+	arch = any
+	license = GPL
+	makedepends = cmake
+	makedepends = easyloggingpp
+	makedepends = pkgconf
+	depends = colord
+	depends = lcms2
+	source = https://github.com/Nikl174/colord-brightness/archive/refs/tags/1.0.2.tar.gz
+	sha256sums = a3eb63999843eb9eeb17c64bb1173193205d4dc241e96cae90402c2ed256bc82
+
+pkgname = colord-brightness

@@ -1,0 +1,22 @@
+pkgbase = zedpro
+	pkgdesc = Zed! Encrypted containers manager
+	pkgver = 2024.2.b2
+	pkgrel = 1
+	url = http://www.primx.eu
+	install = zedpro.install
+	arch = x86_64
+	license = Prim'X
+	makedepends = unzip
+	depends = libxslt
+	depends = qt5-base
+	depends = hicolor-icon-theme
+	depends = libldap-2.5
+	conflicts = zedfree
+	options = !strip
+	options = !emptydirs
+	source = ZEDPRO-2024.2.b2.Ubuntu.amd64.zip::https://www.zedencrypt.com/file/get/-/item_key/13802-25-299e76f8
+	source = AdminPack.Ubuntu.2023.5.tar.gz::https://www.zedencrypt.com/file/get/-/item_key/13802-52-8bb9a063
+	sha512sums = 74c702b85fb99314b281c6dc7798f57025c39f86b7c85a8028c6c6cd6f804f6a0ee51750346edeee2907a4280d0ef282e84c26ebf8b5d663bf768d923ea63938
+	sha512sums = c995b2312446918f80b4d89e25fcce58c7425919f603733063494ad497c2867b75ae888e40a06778a37e141499624facf5b628632c58aad7a2a1f3d66ab02ed0
+
+pkgname = zedpro

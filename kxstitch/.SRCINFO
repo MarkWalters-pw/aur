@@ -1,0 +1,22 @@
+pkgbase = kxstitch
+	pkgdesc = The program that lets you create cross stitch patterns and charts.
+	pkgver = 2.2.0
+	pkgrel = 1
+	url = https://userbase.kde.org/KXStitch
+	install = kxstitch.install
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = cmake
+	makedepends = doxygen
+	makedepends = extra-cmake-modules
+	makedepends = kdoctools
+	depends = plasma-workspace
+	depends = libmagick
+	source = https://download.kde.org/stable/kxstitch/2.2.0/kxstitch-2.2.0.tar.xz
+	source = kxstitch.install
+	sha1sums = d0bb8ea0bfaf9dd3bd4b89fcc8dd238f7bfe5100
+	sha1sums = 8e58ce0776eff7ef29394a2f7a089191a4af0b1d
+
+pkgname = kxstitch
+

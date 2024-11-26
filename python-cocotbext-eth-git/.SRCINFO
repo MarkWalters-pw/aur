@@ -1,0 +1,17 @@
+pkgbase = python-cocotbext-eth-git
+	pkgdesc = Ethernet interface modules for cocotb
+	pkgver = 0.1.22.r0.g3b75a9a
+	pkgrel = 1
+	url = https://github.com/alexforencich/cocotbext-eth
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python-cocotb
+	depends = python-cocotbext-axi
+	provides = python-cocotbext-eth
+	conflicts = python-cocotbext-eth
+	source = cocotbext-eth::git+https://github.com/alexforencich/cocotbext-eth.git
+	md5sums = SKIP
+
+pkgname = python-cocotbext-eth-git

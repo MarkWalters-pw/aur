@@ -1,0 +1,22 @@
+pkgbase = rr-multilib
+	pkgdesc = Record and Replay framework: lightweight recording and deterministic debugging
+	pkgver = 5.6.0
+	pkgrel = 1
+	url = http://rr-project.org/
+	arch = i686
+	arch = x86_64
+	license = custom
+	makedepends = git
+	makedepends = cmake
+	makedepends = gdb
+	makedepends = ninja
+	depends = gdb
+	depends = capnproto
+	depends = lib32-gcc-libs
+	provides = rr
+	conflicts = rr
+	options = !strip
+	source = rr-5.6.0.tar.gz::https://github.com/rr-debugger/rr/archive/5.6.0.tar.gz
+	sha1sums = 9a047cbd1c47ef1585293ba090c5cd2d56519fa6
+
+pkgname = rr-multilib

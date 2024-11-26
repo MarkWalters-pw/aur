@@ -1,0 +1,21 @@
+pkgbase = pavucontrol-qt-git
+	pkgdesc = Qt port of pavucontrol
+	pkgver = 2.0.0
+	pkgrel = 1
+	url = https://github.com/lxqt/pavucontrol-qt
+	arch = i686
+	arch = x86_64
+	license = GPL-2.0-only
+	makedepends = git
+	makedepends = cmake
+	makedepends = qt6-tools
+	makedepends = lxqt-build-tools-git
+	depends = libpulse
+	depends = qt6-base
+	optdepends = pulseaudio
+	provides = pavucontrol-qt
+	conflicts = pavucontrol-qt
+	source = git+https://github.com/lxqt/pavucontrol-qt.git
+	sha256sums = SKIP
+
+pkgname = pavucontrol-qt-git

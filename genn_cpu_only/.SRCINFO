@@ -1,0 +1,25 @@
+pkgbase = genn_cpu_only
+	pkgdesc = GeNN: GPU-enhanced neural networks (without CUDA backend)
+	pkgver = 4.9.0
+	pkgrel = 1
+	epoch = 2
+	url = https://github.com/genn-team/genn
+	arch = x86_64
+	license = GPL
+	makedepends = doxygen
+	makedepends = doxypypy
+	makedepends = python
+	makedepends = python-setuptools
+	makedepends = python-numpy
+	makedepends = swig
+	optdepends = python: for pygenn
+	optdepends = python-numpy: for pygenn
+	optdepends = spinecreator: for spineml2genn
+	provides = genn
+	conflicts = genn
+	options = staticlibs
+	options = !emptydirs
+	source = https://github.com/genn-team/genn/archive/4.9.0.tar.gz
+	sha256sums = 51bb5be2fe0dd6b2e4cc3bb5f540da1a5fef499bd558718e75ecbb6b4d7d163a
+
+pkgname = genn_cpu_only

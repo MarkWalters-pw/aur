@@ -1,0 +1,24 @@
+pkgbase = terracoin-qt
+	pkgdesc = P2P decentralized digital currency with fast confirmation and no central issuer (QT)
+	pkgver = 0.12.2.5
+	pkgrel = 1
+	url = https://www.terracoin.io
+	install = terracoin-qt.install
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = boost
+	makedepends = automoc4
+	makedepends = qrencode
+	makedepends = miniupnpc
+	depends = boost-libs
+	depends = qt5-base
+	depends = miniupnpc
+	depends = qrencode
+	source = https://github.com/terracoin/terracoin/archive/v0.12.2.5.tar.gz
+	source = terracoin-qt.desktop
+	sha256sums = 94fc2db45a43d56fb3ebb383eff641b550808e80c24be79811ee44e59c8a83b3
+	sha256sums = 71f94ea8725bf59e3758b8d246762f7f5b61373c15370e13d54f7d174785456b
+
+pkgname = terracoin-qt
+

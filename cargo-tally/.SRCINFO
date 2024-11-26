@@ -1,0 +1,20 @@
+pkgbase = cargo-tally
+	pkgdesc = Graph the number of crates that depend on your crate over time
+	pkgver = 1.0.21
+	pkgrel = 1
+	url = https://github.com/dtolnay/cargo-tally
+	arch = i686
+	arch = x86_64
+	arch = armv6h
+	arch = armv7h
+	arch = aarch64
+	license = MIT
+	license = APACHE
+	depends = cargo
+	depends = curl
+	depends = http-parser
+	optdepends = gnuplot: display graphs
+	source = cargo-tally-1.0.21.tar.gz::https://github.com/dtolnay/cargo-tally/archive/1.0.21.tar.gz
+	sha512sums = a23151b13d39f1073ee34eb5caddab921f309ccd4f2a52bbc7962c097c826992a2e1331bd6a74d2d30577da1086bafa762785aadf095d5f0ef65eece0dea316c
+
+pkgname = cargo-tally

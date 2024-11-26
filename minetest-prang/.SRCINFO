@@ -1,0 +1,15 @@
+pkgbase = minetest-prang
+	pkgdesc = An unofficial port of PRANG!, a 2D arcade-style game.
+	pkgver = 2023.12.30
+	pkgrel = 1
+	url = https://content.minetest.net/packages/luk3yx/prang/
+	arch = any
+	license = MIT
+	makedepends = unzip
+	depends = minetest-common
+	noextract = prang-2023.12.30.zip
+	options = !strip
+	source = prang-2023.12.30.zip::https://content.minetest.net/packages/luk3yx/prang/releases/22658/download/
+	sha256sums = e29f1908e876df4476341d5bb830fcf99f75e151fa2c836b537e98a645f43abd
+
+pkgname = minetest-prang

@@ -1,0 +1,27 @@
+pkgbase = vc4cl-git
+	pkgdesc = VC4CL is an implementation of the OpenCL 1.2 standard for the VideoCore IV GPU.
+	pkgver = r175.76edc68
+	pkgrel = 3
+	url = https://github.com/doe300/VC4CL
+	arch = any
+	license = MIT
+	makedepends = make
+	makedepends = git
+	makedepends = gcc
+	makedepends = cmake
+	makedepends = llvm
+	makedepends = opencl-headers
+	makedepends = pkg-config
+	depends = vc4c-git
+	provides = opencl-pi
+	provides = opencl-vc4
+	provides = opencl-driver
+	provides = vc4-opencl
+	provides = vc4cl
+	source = VC4CL::git+https://github.com/doe300/VC4CL
+	source = VC4CL.icd
+	md5sums = SKIP
+	md5sums = SKIP
+
+pkgname = vc4cl-git
+

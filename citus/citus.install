@@ -1,0 +1,11 @@
+post_install() {
+  cat << EOF
+
+To add Citus to your PostgreSQL database, add the following to postgresql.conf:
+
+  shared_preload_libraries = 'citus'
+
+Then restart PostgreSQL and setup Citus.
+
+EOF
+}

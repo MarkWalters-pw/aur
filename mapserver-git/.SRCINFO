@@ -1,0 +1,35 @@
+pkgbase = mapserver-git
+	pkgdesc = Platform for publishing spatial data and interactive mapping applications to the web
+	pkgver = 20220819_b2f0fd240
+	pkgrel = 1
+	url = http://www.mapserver.org
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = cfitsio
+	depends = libpng
+	depends = freetype2
+	depends = zlib
+	depends = gdal
+	depends = proj
+	depends = libjpeg-turbo
+	depends = libxml2
+	depends = libpqxx
+	depends = pdflib-lite
+	depends = geos
+	depends = agg
+	depends = apache
+	depends = protobuf-c
+	depends = fcgi
+	depends = mod_fcgid
+	depends = python
+	depends = libsvg-cairo
+	depends = fribidi
+	depends = pixman
+	depends = exempi
+	provides = mapserver=20220819_b2f0fd240
+	conflicts = mapserver
+	source = mapserver::git+https://github.com/mapserver/mapserver.git
+	md5sums = SKIP
+
+pkgname = mapserver-git

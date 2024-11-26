@@ -1,0 +1,21 @@
+pkgbase = sysrepo
+	pkgdesc = YANG-based configuration and operational state data store for Unix/Linux applications
+	pkgver = 2.2.170
+	pkgrel = 1
+	url = http://www.sysrepo.org/
+	arch = x86_64
+	arch = i686
+	license = BSD-3-Clause
+	makedepends = gcc
+	makedepends = make
+	makedepends = cmake
+	makedepends = pkgconf
+	makedepends = doxygen
+	depends = libyang
+	depends = protobuf-c
+	depends = libev
+	depends = libssh
+	source = sysrepo-2.2.170.tar.gz::https://github.com/sysrepo/sysrepo/archive/v2.2.170.tar.gz
+	sha256sums = 02ffd961e0128ee9d22076c42a0a6ae47ae69ed4f2f552d4f1372fa963c006d1
+
+pkgname = sysrepo

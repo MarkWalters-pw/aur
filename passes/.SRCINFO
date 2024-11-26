@@ -1,0 +1,17 @@
+pkgbase = passes
+	pkgdesc = A digital pass manager
+	pkgver = 0.9
+	pkgrel = 1
+	url = https://github.com/pablo-s/passes
+	arch = any
+	license = GPL3
+	checkdepends = appstream-glib
+	makedepends = meson
+	makedepends = blueprint-compiler
+	depends = libadwaita
+	depends = python-gobject
+	depends = zint
+	source = https://github.com/pablo-s/passes/archive/v0.9.tar.gz
+	b2sums = 1e99594ff7ca5b312d8645d69beefdf60959b7502ea233a42905f191f93ccb60d3ca2b43eef38ce7bb4e844a132328335500b79a43c53deb85b13d6425ba6a33
+
+pkgname = passes

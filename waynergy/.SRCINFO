@@ -1,0 +1,19 @@
+pkgbase = waynergy
+	pkgdesc = Synergy client for wayland compositors
+	pkgver = 0.0.17
+	pkgrel = 1
+	url = https://github.com/r-c-f/waynergy
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = meson
+	makedepends = ninja
+	depends = wayland
+	depends = libxkbcommon
+	depends = libretls
+	optdepends = wl-clipboard: Clipboard synchronization support
+	optdepends = gnome-session: Idle inhibition for GNOME
+	source = waynergy-0.0.17.tar.gz::https://github.com/r-c-f/waynergy/archive/refs/tags/v0.0.17.tar.gz
+	md5sums = e94305fa9de56881d911d0f27d3b210d
+
+pkgname = waynergy

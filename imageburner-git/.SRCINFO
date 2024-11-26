@@ -1,0 +1,20 @@
+pkgbase = imageburner-git
+	pkgdesc = Image burner for Pantheon, developed by Artem Anufrij
+	pkgver = 1.0.2.r12.g84f44e0
+	pkgrel = 1
+	url = https://artemanufrij.github.io/
+	arch = x86_64
+	license = GPL3
+	makedepends = vala
+	makedepends = meson
+	makedepends = ninja
+	makedepends = git
+	depends = libgranite.so
+	depends = gtk3
+	provides = imageburner
+	conflicts = imageburner
+	source = imageburner-git::git+https://github.com/artemanufrij/imageburner.git
+	sha256sums = SKIP
+
+pkgname = imageburner-git
+

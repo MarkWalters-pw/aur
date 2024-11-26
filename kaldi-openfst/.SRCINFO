@@ -1,0 +1,19 @@
+pkgbase = kaldi-openfst
+	pkgdesc = Speech recognition research toolkit
+	pkgver = 1.7.2
+	pkgrel = 1
+	url = https://github.com/kaldi-asr/kaldi
+	arch = x86_64
+	license = APACHE
+	makedepends = gcc-fortran
+	makedepends = git
+	makedepends = python
+	makedepends = python2
+	makedepends = sox
+	makedepends = subversion
+	makedepends = unzip
+	makedepends = wget
+	depends = gcc-libs
+	options = !lto
+
+pkgname = kaldi-openfst

@@ -1,0 +1,25 @@
+pkgbase = criu-git
+	pkgdesc = Utilities to checkpoint and restore processes in userspace, git version
+	pkgver = r10915.5b2e5855c
+	pkgrel = 1
+	url = https://github.com/checkpoint-restore/criu
+	arch = x86_64
+	license = GPL2
+	makedepends = xmlto
+	makedepends = asciidoc
+	makedepends = git
+	depends = libbsd
+	depends = libnet
+	depends = libnl
+	depends = protobuf-c
+	depends = python-protobuf
+	depends = gnutls
+	depends = nftables
+	provides = criu
+	conflicts = criu
+	options = !buildflags
+	options = !lto
+	source = git+https://github.com/checkpoint-restore/criu
+	sha256sums = SKIP
+
+pkgname = criu-git

@@ -1,0 +1,309 @@
+#!/bin/bash
+# throttlectl, a user-discrection power management utility
+
+[[ -z "$@" ]] && throttle_help
+
+throttle_help() {
+  [[ ! "${1}" == "help" ]] && \
+    printf "Invalid input: ${@}\n"
+  echo -e "\nSystem-wide power management:\n"\
+          "${0} {{cut,full}} - system-wide runtime powersaving\n"\
+          "${0} {check} - inspect runtime powersaving\n"\
+          "\nPer-component power management:\n" \
+          "${0} sys {cut,full} - System devices\n"\
+          "${0} turbo {on,off} - {Intel P-State Turbo, CPUFreq Boost}\n"\
+          "${0} ht {on,off} - Hyperthreads\n"\
+          "${0} gov {cut,full} - CPU Governor\n"\
+          "${0} gpu {cut,full} - GPU runtime powersaving (only Nvidia ATM)\n"\
+          "${0} backlight {cut,full} - Backlight brightness (laptops only?)\n" \
+          "\nAll options are stackable and take {{cut,powersave,start},{full,performace,stop},{check,status}}\n"
+  exit
+}
+
+config_help() {
+  echo -e "\nConfiguration files not found:\n"\
+          "Performance profile: /etc/throttle.d/performance\n"\
+          "Powersave profile: /etc/throttle.d/powersave\n"\
+          "See example profiles provided with the throttlectl pkgbuild:\n"\
+          "https://github.com/quequotion/pantheon-qq/tree/master/EXTRAS/throttlectl"
+  exit
+}
+
+throttle_system() {
+  # PCIe Active State Power Managment
+  [[-f /sys/module/pcie_aspm/parameters/policy ]] && \
+    printf "${PCIEASPMPOL}" > /sys/module/pcie_aspm/parameters/policy &
+
+  # ENERGY_PERF_BIAS
+  [[ -n "$(ls /sys/devices/system/cpu/cpu*/power/energy_perf_bias 2> /dev/null)" ]] && \
+    printf "${ENERGYPERF}" | tee /sys/devices/system/cpu/cpu*/power/energy_perf_bias > /dev/null 2>&1 &
+
+  # Virtual Memory (Swap)
+  [[ "$(sysctl -n vm.laptop_mode)" == "${LAPTOP}" ]] || \
+    printf "${LAPTOP}" > /proc/sys/vm/laptop_mode &
+  [[ "$(sysctl -n vm.dirty_writeback_centisecs)" == "${DIRTYWBC}" ]] || \
+    printf "${DIRTYWBC}" > /proc/sys/vm/dirty_writeback_centisecs &
+  [[ "$(sysctl -n vm.dirty_expire_centisecs)" == "${DIRTYWBC}" ]] || \
+    printf "${DIRTYWBC}" > /proc/sys/vm/dirty_expire_centisecs &
+
+  # NMI watchdog
+  [[ -f /proc/sys/kernel/watchdog ]] && \
+    printf "${NMIDOG}" > /proc/sys/kernel/watchdog &
+
+  # SATA link power management
+  [[ -n "$(ls /sys/class/scsi_host/host*/link_power_management_policy 2> /dev/null)" ]] && \
+    printf "${POLICY}" | tee /sys/class/scsi_host/host*/link_power_management_policy > /dev/null 2>&1 &
+
+  # Hard drives
+  [[ -n "$(command -v hdparm)" ]] && \
+    hdparm -qB "${APM}" -qM "${AAM}" /dev/[hs]d[a-z] > /dev/null 2>&1 &
+
+  # Block device autosuspend
+  [[ -n "$(ls /sys/block/*/device/power/autosuspend_delay_ms 2> /dev/null)" ]] && \
+    printf -- "${DISKAUTOSUSPEND}" | tee /sys/block/*/device/power/autosuspend_delay_ms > /dev/null 2>&1 &
+
+  # Runtime power management for devices (with exceptions for devices by VID:PID)
+  for i in /sys/{class/*,bus/*/devices}/*/power/control; do \
+    [[ "${CONTROL}" == "auto" ]] && \
+      [[ -n "$(ls $(printf ${i} | sed 's|power.*||g')/*/ | grep 046D\:C52B)" ]] && \
+        continue ;  CONTROLS+="${i} "; done
+  [[ -n "${CONTROLS}" ]] && printf "${CONTROL}" | tee ${CONTROLS} > /dev/null 2>&1 &
+
+  # USB Autosuspend (with exceptions for devices by VID:PID)
+  for i in /sys/bus/usb/devices/*/power/autosuspend{,_delay_ms}; do \
+    [[ "${AUTOSUSPEND}" == "1" ]] && \
+      [[ -n "$(ls $(printf ${i} | sed 's|power.*||g')/*/ | grep 046D\:C52B)" ]] && \
+        continue ;  AUTOSUSPENDS+="${i} "; done
+  [[ -n "${AUTOSUSPENDS}" ]] && printf -- "${AUTOSUSPEND}" | tee ${AUTOSUSPENDS} > /dev/null 2>&1 &
+
+  # Powersaving for modules
+  [[ -n "$(ls /sys/module/*/parameters/power_save 2> /dev/null)" ]] && \
+    printf "${POWERSAVE}" | tee /sys/module/*/parameters/power_save > /dev/null 2>&1 &
+  [[ -n "$(ls /sys/module/*/parameters/power_save_controller 2> /dev/null)" ]] && \
+    printf "${CONTROLLER}" | tee /sys/module/*/parameters/power_save_controller > /dev/null 2>&1 &
+
+  # Network powersaving
+  for i in /sys/class/net/wl*; do \
+    [[ -n "$(command -v iw)" ]] && \
+      iw dev "$(printf ${i} | sed 's/^.*wl/wl/')" set power_save "${WLPOWERSAVE}" > /dev/null 2>&1 & done &
+  for i in /sys/class/net/e*; do \
+    [[ -n "$(command -v ethtool)" ]] && \
+      ethtool -s "$(printf ${i} | sed 's/^.*e/e/')" wol "${WOLA}" > /dev/null 2>&1 & done &
+  [[ -n "$(ls /sys/class/net/*/device/power/wakeup 2> /dev/null)" ]] && \
+    printf "${WOLB}" | tee /sys/class/net/*/device/power/wakeup > /dev/null 2>&1 &
+
+  # LEDs
+  [[ -n "$(ls /sys/class/leds/*/brightness 2> /dev/null)" ]] && \
+    printf "${LEDBRIGHT}" | tee /sys/class/leds/*/brightness > /dev/null 2>&1 &
+
+  # Save state for frontend
+  printf "${SYSTEM}" > /etc/throttle.d/systemstate &
+}
+
+check_system() {
+  [[ -f /sys/module/pcie_aspm/parameters/policy ]] && \
+    echo -e "\nPCIe Active State Power Management\n"\
+            "/sys/module/pcie_aspm/parameters/policy\t$(cat /sys/module/pcie_aspm/parameters/policy)"
+
+    printf "\nEnergy Perf Bias\n" && \
+  for i in /sys/devices/system/cpu/cpu*/power/energy_perf_bias; do \
+    printf " ${i}\n$(cat ${i})\n"; done | sed 's|/sys/devices/system/cpu/||g; s|/.*||g; N;s|\n|\t|'
+
+  echo -e "\nVirtual Memory (Swap)\n/proc/sys/vm/\n"\
+          "laptop_mode\t\t\t$(cat /proc/sys/vm/laptop_mode)\n"\
+          "dirty_writeback_centisecs\t$(cat /proc/sys/vm/dirty_writeback_centisecs)\n"\
+          "dirty_expire_centisecs\t\t$(cat /proc/sys/vm/dirty_expire_centisecs)"
+
+  [[ -f /proc/sys/kernel/watchdog ]] && \
+    echo -e "\nNMI watchdog\n"\
+            "/proc/sys/kernel/watchdog\t$(cat /proc/sys/kernel/watchdog)"
+
+  printf "\nSATA link power management\n/sys/class/scsi_host/host*/link_power_management_policy\n"
+  for i in /sys/class/scsi_host/host*/link_power_management_policy; do \
+    printf " ${i}\n$(cat ${i})\n"; done | sed 's|/sys/class/scsi_host/||g; s|/.*||g; N;s|\n|\t|'
+
+  [[ -n "$(command -v hdparm)" ]] && \
+    printf "\nHard drives\n/dev/[hs]d[a-z]\n" && \
+    hdparm -B -M /dev/[hs]d[a-z] 2> /dev/null | sed 'N;s|\n||g; s|/dev/||g; s|\t| |g;' #SUID
+
+  printf "\nBlock device autosuspend\n/sys/block/*/device/power/autosuspend_delay_ms\n"
+  for i in /sys/block/*/device/power/autosuspend_delay_ms; do \
+    printf " ${i}\n$(cat ${i})\n"; done | sed 's|/sys/block/||g; s|/device/.*||g; s|/.*||g; N;s|\n|\t|'
+
+  printf "\nRuntime power management\n/sys/{class/*,bus/*/devices}/*/power/control\n"
+  for i in /sys/{class/*,bus/*/devices}/*/power/control; do \
+    printf " ${i}\n$(cat ${i})\n"; done | sed 's|/sys/class/||g; s|/sys/bus/||g; s|/devices||g; s|/power/control||g; N;s|\n|\t|'
+
+  printf "\nUSB Autosuspend\n/sys/bus/usb/devices/*/power/autosuspend{,_delay_ms}\n"
+  for i in /sys/bus/usb/devices/*/power/autosuspend{,_delay_ms}; do \
+    printf " ${i}\n$(cat ${i})\n"; done | sed 's|/sys/bus/usb/devices/||g; s|/.*||g; N;s|\n|\t|'
+
+  printf "\nPower saving for modules\n/sys/module/*/parameters/power_save{,_controller}\n"
+  for i in /sys/module/*/parameters/power_save{,_controller}; do \
+    printf " ${i}\n$(cat ${i})\n"; done | sed 's|/sys/module/||g; s|/parameters/.*||g; s|/.*||g; N;s|\n|\t|'
+
+  printf "\nNetwork device powersaving\n";
+  [[ -n "$(command -v iw)" ]] && \
+    for i in /sys/class/net/wl*; do \
+      printf " ${i}\n$(iw dev $(printf ${i} | sed 's/^.*wl/wl/') get power_save)\n"; done | sed 's|^\t|  |g;s|/sys/class/net/||g; s|/.*||g'
+
+  printf "\nWake on {W,}LAN\n/sys/class/net/{wl*,e*,*/device/power/wakeup}\n";
+  [[ -n "$(command -v ethtool)" ]] && \
+    for i in /sys/class/net/e*; do \
+      printf " ${i}\n$(ethtool $(printf ${i} | sed 's/^.*e/e/') | grep Wake-on)\n"; done | sed 's|^\t|  |g;s|/sys/class/net/||g; s|/.*||g'
+  for i in /sys/class/net/*/device/power/wakeup; do \
+    printf " ${i}\n$(cat ${i})\n"; done | sed 's|/sys/class/net/||g; s|/device/power/wakeup||g; s|/.*||g; N;s|\n|\t|'
+
+  printf "\nLEDs\n/sys/class/leds/*/brightness\n"
+  for i in /sys/class/leds/*/brightness; do \
+    printf " ${i}\n$(cat ${i})\n"; done | sed 's|/sys/class/leds/||g; s|/brightness||g; s|/.*||g; N;s|\n|\t|'
+}
+
+throttle_ht() {
+  [[ -f /sys/devices/system/cpu/smt/control ]] && \
+    printf "${HYPERTHREADS}" > /sys/devices/system/cpu/smt/control &
+}
+
+check_ht() {
+  [[ -f /sys/devices/system/cpu/smt/control ]] && \
+    echo -e "\nHyperthreads\n/sys/devices/system/cpu/smt/\n"\
+            "control\t$(cat /sys/devices/system/cpu/smt/control)"
+}
+
+throttle_turbo() {
+  [[ -f /sys/devices/system/cpu/intel_pstate/no_turbo ]] && \
+    printf "${XPSTURBO}" > /sys/devices/system/cpu/intel_pstate/no_turbo &
+  [[ -f /sys/devices/system/cpu/cpufreq/boost ]] && \
+    printf "$((XPSTURBO ^= 1))" > /sys/devices/system/cpu/cpufreq/boost &
+}
+
+check_turbo() {
+  [[ -f /sys/devices/system/cpu/intel_pstate/no_turbo ]] && \
+    echo -e "\nDisable Intel P-State Turbo\n/sys/devices/system/cpu/intel_pstate/\n"\
+            "no_turbo\t$(cat /sys/devices/system/cpu/intel_pstate/no_turbo)"
+  [[ -f /sys/devices/system/cpu/cpufreq/boost ]] && \
+    echo -e "\nDisable CPUFreq Boost\n/sys/devices/system/cpu/cpufreq/\n"\
+            "no_turbo\t$(cat /sys/devices/system/cpu/cpufreq/boost)"
+
+}
+
+throttle_gov() {
+  [[ -n "$(ls /sys/bus/cpu/drivers/processor/cpu*/cpufreq/scaling_governor 2> /dev/null)" ]] && \
+    printf "${GOVERNOR}" | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor > /dev/null 2>&1 &
+}
+
+check_gov() {
+  [[ -n "$(ls /sys/bus/cpu/drivers/processor/cpu*/cpufreq/scaling_governor 2> /dev/null)" ]] && \
+    printf "\nCPU Governor\n/sys/bus/cpu/drivers/processor/cpu*/cpufreq/scaling_governor\n" && \
+    for i in /sys/bus/cpu/drivers/processor/cpu*/cpufreq/scaling_governor; do \
+      printf " ${i}\n$(cat ${i})\n"; done | sed 's|/sys/bus/cpu/drivers/processor/||g; s|/.*||g; N;s|\n|\t|'
+}
+
+throttle_nvpm() {
+  [[ -z "$(command -v nvidia-settings)" ]] && \
+    printf "nvidia-settings not found; only nvidia currently supported" || \
+    DISPLAY=":0.0" nvidia-settings -a [gpu:0]/GPUPowerMizerMode="${NVPM}" > /dev/null 2>&1 && \
+    check_nvpm | tail -c 2 | tr -d '\n' > /etc/throttle.d/powermizer &
+}
+
+check_nvpm() {
+  [[ -n "$(command -v nvidia-settings)" ]] && \
+    printf "\nNvidia PowerMizer\n " && \
+      DISPLAY=":0.0" nvidia-settings -q [gpu:0]/GPUPowerMizerMode 2>/dev/null | grep "Attribute" | sed 's|.*\[||g;s|\]):||g;s| |\t|g;s|\.$||g'
+}
+
+throttle_backlight() {
+  if [[ -n "$(ls /sys/class/backlight/*/brightness 2> /dev/null)" ]]; then
+    [[ "$BACKLIGHT" == "0" ]] && printf "${BACKLIGHT}" | tee /sys/class/backlight/*/brightness > /dev/null 2>&1 || \
+      for i in /sys/class/backlight/*/brightness; do \
+        cat "${i/%brightness/max_brightness}" > "${i}" & done &
+  fi
+}
+
+check_backlight() {
+  [[ -n "$(ls -d /sys/class/backlight/* 2> /dev/null)" ]] && \
+    printf "\nBacklight\n/sys/class/backlight/\n" && \
+      for i in /sys/class/backlight/*/brightness; do \
+        printf " ${i}\n$(cat ${i})\n"; done | sed 's|/sys/class/backlight/||g; s|/.*||g; N;s|\n|\t|'
+}
+
+while (( "$#" )); do
+  case "$1" in
+    sys)
+      case "${2}" in \
+        cut|off|powersave|start) \
+          [[ -f /etc/throttle.d/powersave ]] && . /etc/throttle.d/powersave || config_help; SYSTEM="0" ;; \
+        full|on|performance|stop) \
+          [[ -f /etc/throttle.d/performance ]] && . /etc/throttle.d/performance || config_help; SYSTEM="1" ;; \
+        check|status) check_system ;; esac
+      [[ -n "$SYSTEM" ]] && throttle_system; shift "2"
+      unset ENERGYPERF LAPTOP DIRTYWBC NMIDOG POLICY APM AAM CONTROL AUTOSUSPEND POWERSAVE CONTROLLER \
+            WLPOWERSAVE WOLA WOLB LEDBRIGHT SYSTEM PCIEASPMPOL
+    ;;
+    turbo)
+      [[ -z "${XPSTURBO}" ]] && \
+        case "${2}" in \
+          cut|off|powersave|start) XPSTURBO="1" ;; \
+          full|on|performance|stop) XPSTURBO="0" ;; \
+          check|status) check_turbo ;; esac
+      [[ -n "${XPSTURBO}" ]] && throttle_turbo; shift "2"
+      unset XPSTURBO
+    ;;
+    ht)
+      [[ -z "${HYPERTHREADS}" ]] && \
+        case "${2}" in \
+          cut|off|powersave|start) HYPERTHREADS="off" ;; \
+          full|on|performance|stop) HYPERTHREADS="on" ;; \
+          check|status) check_ht ;; esac
+      [[ -n "${HYPERTHREADS}" ]] && throttle_ht; shift "2"
+      unset HYPERTHREADS
+    ;;
+    gov|cpu)
+      [[ -z "${GOVERNOR}" ]] && \
+        case "${2}" in \
+          cut|off|powersave|start) GOVERNOR="powersave" ;; \
+          full|on|performance|stop) GOVERNOR="performance" ;; \
+          check|status) check_gov ;; esac
+      [[ -n "${GOVERNOR}" ]] && throttle_gov; shift "2"
+      unset GOVERNOR
+    ;;
+    gpu)
+      [[ -z "${NVPM}" ]] && \
+        case "${2}" in \
+          cut|off|powersave|start) NVPM="0" ;; \
+          full|on|performance|stop) NVPM="1" ;; \
+          check|status) check_nvpm ;; esac
+      [[ -n "${NVPM}" ]] && throttle_nvpm; shift "2"
+      unset NVPM
+    ;;
+    backlight)
+      [[ -z "${BACKLIGHT}" ]] && \
+        case "${2}" in \
+          cut|off|powersave|start) BACKLIGHT="0" ;; \
+          full|on|performance|stop) BACKLIGHT="1" ;; \
+          check|status) check_backlight ;; esac
+      [[ -n "${BACKLIGHT}" ]] && throttle_backlight; shift "2"
+      unset BACKLIGHT
+    ;;
+    full|on|performance|start|cut|off|powersave|stop)
+      case "${1}" in \
+        cut|off|powersave|start) \
+          [[ -f /etc/throttle.d/powersave ]] && . /etc/throttle.d/powersave || config_help; SYSTEM="0" ;; \
+        full|on|performance|stop) \
+          [[ -f /etc/throttle.d/performance ]] && . /etc/throttle.d/performance || config_help; SYSTEM="1" ;; esac
+      throttle_system; throttle_turbo; throttle_ht; throttle_gov; throttle_nvpm; throttle_backlight; shift
+      unset GOVERNOR XPSTURBO HYPERTHREADS ENERGYPERF BACKLIGHT LAPTOP DIRTYWBC NMIDOG \
+            POLICY APM AAM CONTROL{,S} AUTOSUSPEND{,S} POWERSAVE CONTROLLER \
+            WLPOWERSAVE WOLA WOLB LEDBRIGHT NVPM SYSTEM PCIEASPMPOL
+    ;;
+    check|status)
+      check_system; check_turbo; check_ht; check_gov; check_nvpm; check_backlight; shift
+    ;;
+    help|*)
+      throttle_help
+    ;;
+  esac
+
+  [[ -z "${1}" ]] || wait # Hey, let's stop! :) *stops* ... YAY! =D
+
+done

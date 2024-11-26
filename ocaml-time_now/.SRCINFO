@@ -1,0 +1,20 @@
+pkgbase = ocaml-time_now
+	pkgdesc = Reports the current time
+	pkgver = 0.17.0
+	pkgrel = 2
+	url = https://github.com/janestreet/time_now
+	arch = x86_64
+	arch = aarch64
+	license = MIT
+	makedepends = dune>=3.11.0
+	depends = ocaml>=5.1.0
+	depends = ocaml-base>=0.17.0
+	depends = ocaml-jane-street-headers>=0.17.0
+	depends = ocaml-jst-config>=0.17.0
+	depends = ocaml-ppx_base>=0.17.0
+	depends = ocaml-ppx_optcomp>=0.17.0
+	options = !strip
+	source = ocaml-time_now-0.17.0.tar.gz::https://github.com/janestreet/time_now/archive/v0.17.0.tar.gz
+	b2sums = 49f9af322194582c37961ac4f386a757e317563461e0a04c141bcb1abcc3b4f5d4a7f49f5d5aec0580db19c38d980de9e5ad8d3b1e4d573e12a7476e99bbb260
+
+pkgname = ocaml-time_now

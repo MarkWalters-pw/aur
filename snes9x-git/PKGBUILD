@@ -1,0 +1,90 @@
+# Maintainer: Joey Dumont <joey.dumont@gmail.com>
+# Contributor: LIN Ruohshoei <lin dot ruohshoei+arch at gmail dot com>
+# Contributor: Michael DeGuzis <mdeguzis@gmail.com>
+
+pkgbase=snes9x-git
+_pkgbase=snes9x
+pkgname=(snes9x-git snes9x-gtk-git)
+pkgver=1.62.3.r149.g97291767
+pkgrel=1
+pkgdesc="Port of the Snes9x emulator (git version)"
+arch=('x86_64')
+url="http://www.snes9x.com/"
+license=('custom')
+makedepends=(alsa-lib cairo gdk-pixbuf2 git glib2
+  gtk3 intltool libepoxy libpng libpulse libx11 libxext libxml2
+  libxrandr libxv meson minizip nasm portaudio sdl2 zlib gtkmm3
+  cmake
+)
+source=(
+  git+https://github.com/snes9xgit/snes9x.git
+)
+sha256sums=('SKIP')
+
+pkgver() {
+  cd "${_pkgbase}"
+  git describe --long --tags | sed -E 's/([^-]*-g)/r\1/;s/-/./g'
+
+}
+prepare() {
+  cd ${_pkgbase}
+  git submodule update --init --recursive
+
+  cd unix
+  autoreconf -fiv
+}
+
+build() {
+  cd "${_pkgbase}/unix"
+
+  ./configure \
+    --prefix='/usr' \
+    --enable-netplay
+  make
+
+
+  export CFLAGS="$CFLAGS -Wno-error=format-security"
+  export CXXFLAGS="$CXXFLAGS -Wno-error=format=security"
+  cd "${srcdir}" && mkdir -p build
+  cd "${srcdir}"/build
+  cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_C_FLAGS="-Wno-error=format-security" -DCMAKE_CXX_FLAGS="-Wno-error=format-security" ../snes9x/gtk
+  cmake --build .
+}
+
+package_snes9x-git() {
+
+  pkgdesc="portable Emulator for the Super Nintendo Entertainment System"
+  depends=(libpng libxinerama libxv minizip)
+
+  conflicts=('snes9x')
+  provides=('snesx')
+
+  cd "${_pkgbase}"
+  install -D -m755 unix/snes9x -t "${pkgdir}"/usr/bin/
+  install -d "${pkgdir}/usr/share/doc/${pkgname}"
+  install -D -m644  {unix/snes9x.conf.default,docs/{control-inputs,controls,snapshots}.txt} \
+    "${pkgdir}/usr/share/doc/${pkgname}/"
+  install -vDm644  LICENSE -t \
+    "${pkgdir}"/usr/share/licenses/"${pkgname}"
+}
+
+package_snes9x-gtk-git() {
+
+  pkgdesc="Portable Emulator for the Super Nintendo Entertainment System - GTK version"
+  depends=(alsa-lib cairo gdk-pixbuf2 glib2 gtk3 hicolor-icon-theme libepoxy libpng libpulse libxext libxml2 libxrandr libxv minizip portaudio sdl2 gtkmm3)
+
+  conflicts=('snes9x-gtk')
+  provides=('snes9x-gtk')
+
+  cd "${srcdir}"/build
+  DESTDIR="${pkgdir}" cmake --install .  --prefix=/usr
+
+  cd "${srcdir}/${_pkgbase}"
+
+  install -d "${pkgdir}/usr/share/doc/${pkgname}"
+  install -Dm644 {unix/snes9x.conf.default,docs/{control-inputs,controls,snapshots}.txt} \
+    "${pkgdir}/usr/share/doc/${pkgname}/"
+  install -vDm644 LICENSE -t "${pkgdir}/usr/share/licenses/${pkgname}"
+  #mv "${pkgdir}/usr/locale" "${pkgdir}/usr/share/locale"
+
+}

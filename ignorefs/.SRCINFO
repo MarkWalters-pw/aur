@@ -1,0 +1,14 @@
+pkgbase = ignorefs
+	pkgdesc = FUSE filesystem that hides/ignores files and directories based on an ignore file.
+	pkgver = 1.0.3
+	pkgrel = 1
+	url = https://github.com/ryanpetris/ignorefs
+	arch = x86_64
+	license = LGPL
+	makedepends = python-setuptools
+	depends = python-fuse
+	depends = python-pathspec
+	source = ignorefs-1.0.3.tar.gz::https://github.com/ryanpetris/ignorefs/archive/v1.0.3.tar.gz
+	sha512sums = 1cb7d73b1ca62fd0b45028dcb5ce5b57a02a3026cacf179a240117379af5d2c082d47a0b3e2adf85b050f05381ace155c8cce492c448050f711429c09314e8f6
+
+pkgname = ignorefs

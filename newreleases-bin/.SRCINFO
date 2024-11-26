@@ -1,0 +1,24 @@
+pkgbase = newreleases-bin
+	pkgdesc = NewReleases.io CLI
+	pkgver = 0.1.16
+	pkgrel = 1
+	url = https://newreleases.io
+	arch = i686
+	arch = x86_64
+	arch = armv6h
+	arch = aarch64
+	license = BSD
+	provides = newreleases
+	conflicts = newreleases
+	source = https://raw.githubusercontent.com/newreleasesio/cli-go/v0.1.16/LICENSE
+	sha256sums = 05c2be2edf06d243f734ff74f2d2bda6a2f9ec06cb68f95171ae9820a90fa4e0
+	source_i686 = newreleases-i686-0.1.16::https://github.com/newreleasesio/cli-go/releases/download/v0.1.16/newreleases-linux-386
+	sha256sums_i686 = e852d8490bf59ad7f9ca973e1e001a97230154eac3aa928cbdda1613d425aabf
+	source_x86_64 = newreleases-x86_64-0.1.16::https://github.com/newreleasesio/cli-go/releases/download/v0.1.16/newreleases-linux-amd64
+	sha256sums_x86_64 = f991736625c15993c0c0895414a92efc391c15ccd3b0f7a79f0198a85b8943bb
+	source_armv6h = newreleases-armv6h-0.1.16::https://github.com/newreleasesio/cli-go/releases/download/v0.1.16/newreleases-linux-armv6
+	sha256sums_armv6h = 1239877c16a6b11cd2a6d30ddeedb434b4dfd26d5c003bddaf9ff40c8fe42476
+	source_aarch64 = newreleases-aarch64-0.1.16::https://github.com/newreleasesio/cli-go/releases/download/v0.1.16/newreleases-linux-arm64
+	sha256sums_aarch64 = 6352214fc29b3a37192402181db1a4a8e6935c9ac4b13c1e4c31ab5f779cf92e
+
+pkgname = newreleases-bin

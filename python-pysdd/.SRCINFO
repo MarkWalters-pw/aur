@@ -1,0 +1,18 @@
+pkgbase = python-pysdd
+	pkgdesc = Python package for Sentential Decision Diagrams (SDD).
+	pkgver = 0.2.10
+	pkgrel = 2
+	url = https://github.com/wannesm/PySDD/
+	arch = any
+	license = Apache 2.0
+	depends = python
+	depends = cython
+	optdepends = python-cysignals
+	optdepends = python-numpy
+	provides = python-pysdd
+	conflicts = python-pysdd-git
+	source = git+https://github.com/RenatoGeh/PySDD
+	sha256sums = SKIP
+
+pkgname = python-pysdd
+

@@ -1,0 +1,32 @@
+pkgbase = ros-noetic-amcl
+	pkgdesc = ROS - amcl is a probabilistic localization system for a robot moving in 2D.
+	pkgver = 1.17.1
+	pkgrel = 2
+	url = https://wiki.ros.org/amcl
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = LGPL
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-catkin
+	makedepends = ros-noetic-message-filters
+	makedepends = ros-noetic-tf2-geometry-msgs
+	depends = ros-noetic-diagnostic-updater
+	depends = ros-noetic-dynamic-reconfigure
+	depends = ros-noetic-geometry-msgs
+	depends = ros-noetic-nav-msgs
+	depends = ros-noetic-rosbag
+	depends = ros-noetic-roscpp
+	depends = ros-noetic-sensor-msgs
+	depends = ros-noetic-std-srvs
+	depends = ros-noetic-tf2
+	depends = ros-noetic-tf2-msgs
+	depends = ros-noetic-tf2-ros
+	source = ros-noetic-amcl-1.17.1.tar.gz::https://github.com/ros-planning/navigation/archive/1.17.1.tar.gz
+	sha256sums = 50e1fb4a0beb190202e9730180464b76b3a481cae2665e0f1944eb908929148e
+
+pkgname = ros-noetic-amcl
+

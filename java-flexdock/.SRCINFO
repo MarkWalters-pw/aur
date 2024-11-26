@@ -1,0 +1,17 @@
+pkgbase = java-flexdock
+	pkgdesc = Docking framework for Swing
+	pkgver = 1.2.4
+	pkgrel = 4
+	url = https://gitlab.com/scilab/forge/flexdock
+	arch = any
+	license = MIT
+	makedepends = ant
+	depends = java-runtime
+	provides = flexdock
+	conflicts = flexdock
+	source = java-flexdock-1.2.4.tar.gz::https://gitlab.com/scilab/forge/flexdock/-/archive/f12705f1934ea347b59f5f2befee156d29b0ea44/flexdock-f12705f1934ea347b59f5f2befee156d29b0ea44.tar.gz
+	source = build.xml.patch
+	sha512sums = 95d190fc14cba8a2dd59acdf564de28c86c46e7a815f90ceb2a84229cf0961bde811aa1b0526a7ed2d62a52123457de3ac208f046ce3c5e05208eb23c9376a4e
+	sha512sums = db755d502a66075ef149d5b762033214419e19b92e5aad8399f2157024bec5945505c404cd682add4288bc3a3a2de61534a455577d632196fb1a9464ccae7c45
+
+pkgname = java-flexdock

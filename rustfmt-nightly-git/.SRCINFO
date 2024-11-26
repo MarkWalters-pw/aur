@@ -1,0 +1,20 @@
+pkgbase = rustfmt-nightly-git
+	pkgdesc = Format Rust code
+	pkgver = 0.99.6.4082
+	pkgrel = 1
+	url = https://github.com/rust-lang-nursery/rustfmt
+	arch = i686
+	arch = x86_64
+	license = Apache
+	license = MIT
+	makedepends = rust
+	makedepends = cargo
+	depends = rust
+	depends = cargo
+	provides = rustfmt
+	conflicts = rustfmt
+	source = rustfmt-nightly::git+https://github.com/rust-lang-nursery/rustfmt
+	sha256sums = SKIP
+
+pkgname = rustfmt-nightly-git
+

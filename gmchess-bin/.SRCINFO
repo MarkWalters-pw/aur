@@ -1,0 +1,20 @@
+pkgbase = gmchess-bin
+	pkgdesc = Play Chinese chess (Xiangqi) against a human opponent or the computer
+	pkgver = 0.29.6
+	pkgrel = 3
+	url = http://www.xqbase.com/
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = libarchive
+	depends = gtkmm
+	depends = eleeye-bin
+	depends = convert-pgn-bin
+	conflicts = gmchess
+	source_i686 = http://security.ubuntu.com/ubuntu/pool/universe/g/gmchess/gmchess_0.29.6.3-1_i386.deb
+	sha1sums_i686 = f3e44e07e3b7e6ddfec49148dc4b5f3f75923001
+	source_x86_64 = http://security.ubuntu.com/ubuntu/pool/universe/g/gmchess/gmchess_0.29.6.3-1_amd64.deb
+	sha1sums_x86_64 = 6800e87c006d142b21908f0f8445f74909469c64
+
+pkgname = gmchess-bin
+

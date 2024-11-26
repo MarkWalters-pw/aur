@@ -1,0 +1,26 @@
+pkgbase = mingw-w64-tk
+	pkgdesc = A windowing toolkit for use with tcl (mingw-w64)
+	pkgver = 8.6.11.1
+	pkgrel = 1
+	url = http://tcl.sourceforge.io
+	arch = any
+	license = custom
+	makedepends = mingw-w64-configure
+	depends = mingw-w64-crt
+	depends = mingw-w64-zlib
+	depends = mingw-w64-tcl
+	options = staticlibs
+	options = !strip
+	options = !buildflags
+	source = http://downloads.sourceforge.net/sourceforge/tcl/tk8.6.11.1-src.tar.gz
+	source = tk-prevent-tclStubsPtr-segfault.patch
+	source = tk-install-man.patch
+	source = tk-fix-forbidden-colon-in-paths.patch
+	source = tk-dont-link-shared-with-static-libgcc.patch
+	sha256sums = 006cab171beeca6a968b6d617588538176f27be232a2b334a0e96173e89909be
+	sha256sums = 0029fde6782ce7635e9957412d3e36a7e76d304399d57d64a42818f93e705621
+	sha256sums = 8516749dd73c084ece7b9df6d1ba5708e652e8ba39cad59120c7f909f61747f0
+	sha256sums = 5347487af0e736dbb51425b22ed308840faf75b44c070623baa55f78dac3d053
+	sha256sums = a16406e8519ab681bba0915e35b23a7f91cf978934b0a4ebdc7e949e87f0c877
+
+pkgname = mingw-w64-tk

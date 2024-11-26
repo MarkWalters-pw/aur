@@ -1,0 +1,17 @@
+pkgbase = qrae-git
+	pkgdesc = Un cliente del diccionario castellano de la RAE.
+	pkgver = 135.26694a8
+	pkgrel = 1
+	url = https://github.com/javierllorente/qrae
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = make
+	depends = qt5-webkit
+	provides = qrae
+	conflicts = qrae
+	source = git+https://github.com/javierllorente/qrae.git#branch=master
+	md5sums = SKIP
+
+pkgname = qrae-git

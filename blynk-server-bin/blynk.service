@@ -1,0 +1,12 @@
+[Unit]
+Description=Starts and stops the Blynk server daemon
+
+[Service]
+User=blynk
+Group=blynk
+Restart=on-failure
+RestartSec=10
+ExecStart=/usr/bin/blynk-start.sh
+
+[Install]
+WantedBy=multi-user.target

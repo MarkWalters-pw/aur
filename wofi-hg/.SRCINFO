@@ -1,0 +1,18 @@
+pkgbase = wofi-hg
+	pkgdesc = Rofi-like wlroots launcher
+	pkgver = r197.8498c7d48271
+	pkgrel = 1
+	url = https://hg.sr.ht/~scoopta/wofi
+	arch = x86_64
+	license = GPL3
+	makedepends = mercurial
+	makedepends = meson
+	depends = wayland
+	depends = gtk3
+	provides = wofi
+	conflicts = wofi
+	source = wofi-hg::hg+https://hg.sr.ht/~scoopta/wofi
+	sha256sums = SKIP
+
+pkgname = wofi-hg
+

@@ -1,0 +1,21 @@
+pkgbase = mainsail-git
+	pkgdesc = Klipper web frontend
+	pkgver = r2110.1a7aca66
+	pkgrel = 1
+	url = https://docs.mainsail.xyz/
+	arch = any
+	license = GPL3
+	makedepends = git
+	makedepends = npm
+	optdepends = nginx: serve via HTTP
+	optdepends = ustreamer: webcam streaming support
+	provides = mainsail
+	conflicts = mainsail
+	source = git+https://github.com/mainsail-crew/mainsail.git#branch=develop
+	source = mainsail-klipper.cfg
+	source = mainsail-nginx.conf
+	sha256sums = SKIP
+	sha256sums = 3eca6e0cb002cb7def79ed41d81c734f12c5f365dee43f1fad38b0a7ae7a30dc
+	sha256sums = 7c86d687ac7b1fb84fc04d1ffcd468a05767a9c9d880ad6d666b2527523495ec
+
+pkgname = mainsail-git

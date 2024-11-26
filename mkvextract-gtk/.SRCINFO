@@ -1,0 +1,19 @@
+pkgbase = mkvextract-gtk
+	pkgdesc = Extract tracks from matroska (mkv) files
+	pkgver = 0.9.6
+	pkgrel = 1
+	url = https://github.com/Joseph-DiGiovanni/mkvextract-gtk/
+	arch = x86_64
+	license = GPL2
+	makedepends = gcc
+	makedepends = pkgconf
+	makedepends = make
+	makedepends = cmake
+	makedepends = boost
+	makedepends = gtkmm3
+	depends = mkvtoolnix-cli
+	depends = gtkmm3
+	source = https://github.com/Joseph-DiGiovanni/mkvextract-gtk/archive/refs/tags/0.9.6.tar.gz
+	sha1sums = e0f8b39ed1ae9d13ad16dd9f87f979bce81f7e9b
+
+pkgname = mkvextract-gtk

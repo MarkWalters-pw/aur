@@ -1,0 +1,26 @@
+pkgbase = apcctrl
+	pkgdesc = Power mangement and controlling for Brazil APC's nobreaks
+	pkgver = 0.8.21
+	pkgrel = 1
+	url = http://www.apcctrl.com.br
+	arch = x86_64
+	license = GPL
+	makedepends = pkgconfig
+	makedepends = gd
+	makedepends = gconf
+	makedepends = gtk2
+	depends = gcc-libs
+	depends = systemd-sysvcompat
+	depends = libusb-compat
+	backup = etc/apcctrl/apcctrl.conf
+	backup = etc/apcctrl/changeme
+	backup = etc/apcctrl/commfailure
+	backup = etc/apcctrl/commok
+	backup = etc/apcctrl/offbattery
+	backup = etc/apcctrl/onbattery
+	backup = etc/apcctrl/apccontrol
+	source = https://ufpr.dl.sourceforge.net/project/apcctrl/apcctrl-0.8.21.tar.gz
+	sha256sums = ad3bc43de922f25e98db6e97390034600d094b257458b25ee8677b1c63b0f1bf
+
+pkgname = apcctrl
+

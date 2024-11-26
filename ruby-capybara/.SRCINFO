@@ -1,0 +1,21 @@
+pkgbase = ruby-capybara
+	pkgdesc = An integration testing tool for rack based web applications. It simulates how a user would interact with a website
+	pkgver = 3.40.0
+	pkgrel = 1
+	url = https://github.com/teamcapybara/capybara
+	arch = any
+	license = MIT
+	makedepends = ruby-rake
+	makedepends = ruby-rspec
+	depends = ruby-addressable
+	depends = ruby-mini_mime
+	depends = ruby-nokogiri
+	depends = ruby-rack
+	depends = ruby-rack-test
+	depends = ruby-regexp_parser
+	depends = ruby-xpath
+	options = !emptydirs
+	source = https://github.com/teamcapybara/capybara/archive/3.40.0/ruby-capybara-3.40.0.tar.gz
+	sha512sums = d4762a01b234a73c5bc1a36b91c4bc3b86c47656cac151bbf1fd86ed1febcfae52934e2270583f52d08af18c6468cf007a423bbd8c8b18c81a49f9c15d41507f
+
+pkgname = ruby-capybara

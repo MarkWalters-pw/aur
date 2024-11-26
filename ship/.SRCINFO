@@ -1,0 +1,29 @@
+pkgbase = ship
+	pkgdesc = Simple, handy network addressing multitool with plenty of utilities
+	pkgver = 2.6
+	pkgrel = 3
+	url = https://github.com/xtonousou/ship.git
+	arch = any
+	license = GPL3
+	makedepends = binutils
+	makedepends = coreutils
+	makedepends = git
+	depends = bash>=3.2
+	depends = coreutils
+	depends = gawk
+	depends = grep
+	depends = iproute2
+	depends = iputils
+	depends = mtr
+	depends = sed
+	depends = traceroute
+	depends = wget
+	provides = ship
+	conflicts = ship
+	replaces = ship
+	source = https://raw.githubusercontent.com/xtonousou/ship/master/ship
+	md5sums = SKIP
+	sha256sums = SKIP
+
+pkgname = ship
+

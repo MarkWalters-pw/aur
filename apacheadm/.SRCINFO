@@ -1,0 +1,27 @@
+pkgbase = apacheadm
+	pkgdesc = Tool to enable and disable apache modules and virtual hosts
+	pkgver = 1.2
+	pkgrel = 1
+	url = https://github.com/marcstraube/apacheadm
+	arch = any
+	license = GPL3
+	depends = apache
+	backup = etc/httpd/conf/mods-available/alias.conf
+	backup = etc/httpd/conf/mods-available/cgid.conf
+	backup = etc/httpd/conf/mods-available/dir.conf
+	backup = etc/httpd/conf/mods-available/headers.conf
+	backup = etc/httpd/conf/mods-available/log_config.conf
+	backup = etc/httpd/conf/mods-available/mime.conf
+	backup = etc/httpd/conf/mods-available/mpm_event.conf
+	backup = etc/httpd/conf/mods-available/mpm_prefork.conf
+	backup = etc/httpd/conf/mods-available/mpm_worker.conf
+	backup = etc/httpd/conf/mods-available/php7.conf
+	backup = etc/httpd/conf/mods-available/proxy_html.conf
+	backup = etc/httpd/conf/mods-available/reqtimeout.conf
+	backup = etc/httpd/conf/mods-available/ssl.conf
+	backup = etc/httpd/conf/mods-available/unixd.conf
+	source = https://github.com/marcstraube/apacheadm/archive/1.2.tar.gz
+	sha512sums = bcdfc3ba487f54bc5a08e66c6a6d3625ca587c704c14db5fe825bcaee583f48e766d9874cbf8a6a532c5acc6af3f13bc20d621ae88394446ef2fc8bfdc3df1d6
+
+pkgname = apacheadm
+

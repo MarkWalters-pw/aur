@@ -1,0 +1,10 @@
+[Trigger]
+Operation = Remove
+Type = File
+Target = usr/share/applications/*
+
+[Action]
+Description = Updating xlunch icons.conf...
+Exec = bin/bash -c 'while read -r f; do grep -v "$(genentries -p /usr/share/xlunch/svgicons -f '$f')" /etc/xlunch/entries.dsv > /etc/xlunch/entries-new.dsv; if [ -n "$(cat /etc/xlunch/entries-new.dsv)" ]; then mv /etc/xlunch/entries-new.dsv /etc/xlunch/entries.dsv; fi; done'
+When = PreTransaction
+NeedsTargets

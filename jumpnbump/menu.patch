@@ -1,0 +1,11 @@
+--- jumpnbump_menu.py.pre.orig	2019-09-02 13:30:08.000000000 +0200
++++ jumpnbump_menu.py.pre	2020-03-05 19:47:09.743913822 +0100
+@@ -236,6 +236,8 @@
+     withmusic = gui.get_object('withmusic')
+     image = gui.get_object('image')
+     about_dialog = gui.get_object('about')
++    mainwindow = gui.get_object('main')
++    mainwindow.set_icon_from_file('/usr/share/icons/jumpnbump.png')
+     
+     gui.connect_signals({'standalone_mode': standalone_mode,
+                          'client_mode': client_mode,

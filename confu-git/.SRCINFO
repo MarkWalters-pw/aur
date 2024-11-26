@@ -1,0 +1,22 @@
+pkgbase = confu-git
+	pkgdesc = Ninja-based configuration system (git version)
+	pkgver = r44.4f3d0e7
+	pkgrel = 2
+	url = https://github.com/Maratyszcza/confu/
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python
+	depends = python-pygit2
+	depends = python-six
+	depends = python-yaml
+	depends = python-ninja-syntax
+	optdepends = python-peachpy
+	source = git+https://github.com/Maratyszcza/confu.git
+	sha256sums = SKIP
+
+pkgname = confu-git

@@ -1,0 +1,20 @@
+pkgbase = raysession-git
+	pkgdesc = Session manager for audio programs using the Non Session Manager (NSM) API
+	pkgver = r1762.b4fd778
+	pkgrel = 1
+	url = https://github.com/Houston4444/RaySession
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = qt5-tools
+	depends = python-pyqt5
+	depends = python-pyliblo
+	depends = python-pyxdg
+	provides = raysession
+	provides = raysession-git
+	conflicts = raysession
+	conflicts = raysession-git
+	source = git+https://github.com/Houston4444/RaySession
+	md5sums = SKIP
+
+pkgname = raysession-git

@@ -1,0 +1,19 @@
+pkgbase = rlpcli
+	pkgdesc = Tiny LessPass API server client CLI to get passwords and site settings
+	pkgver = 1.2.0
+	pkgrel = 1
+	url = https://gitlab.com/ogarcia/rlpcli
+	arch = arm
+	arch = armv6h
+	arch = armv7h
+	arch = aarch64
+	arch = i686
+	arch = x86_64
+	license = GPL-3.0-or-later
+	makedepends = rust
+	depends = gcc-libs
+	options = !lto
+	source = https://gitlab.com/ogarcia/rlpcli/-/archive/1.2.0/rlpcli-1.2.0.tar.bz2
+	b2sums = 4e34642833469745b4b45ad93c3f728cc4cf9f02fe932b2f702ff107f081a7bdf724bf822857611d4a0f59a34c3c0784b439c2119b58065f6b4d68275c74490a
+
+pkgname = rlpcli

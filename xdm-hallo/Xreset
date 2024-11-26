@@ -1,0 +1,7 @@
+#!/bin/sh
+source /etc/xdm-hallo/xdm-hallo.rc
+
+chmod 622 /dev/console
+chown root /dev/console
+
+/usr/bin/sessreg -d -w /var/log/wtmp -u /var/run/utmp 	-x /etc/X11/xdm/Xservers -l $DISPLAY -h "" $USER

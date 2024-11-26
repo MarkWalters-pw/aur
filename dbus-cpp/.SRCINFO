@@ -1,0 +1,18 @@
+pkgbase = dbus-cpp
+	pkgdesc = A header-only dbus-binding leveraging C++-11
+	pkgver = 5.0.3
+	pkgrel = 1
+	url = https://gitlab.com/ubports/core/lib-cpp/dbus-cpp
+	arch = x86_64
+	arch = i686
+	groups = lib-cpp
+	license = LGPL3
+	makedepends = cmake
+	makedepends = boost
+	depends = dbus
+	depends = libxml2
+	depends = process-cpp
+	source = https://gitlab.com/ubports/core/lib-cpp/dbus-cpp/-/archive/5.0.3/dbus-cpp-5.0.3.tar.gz
+	sha256sums = 465ca23024c8f245d13a0afd454da17e6344d0c78941d99b7c9323a17f6e82ba
+
+pkgname = dbus-cpp

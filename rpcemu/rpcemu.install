@@ -1,0 +1,19 @@
+post_install() {
+  cat << _EOF
+
+  RPCEmu needs RISC OS ROM files placed in /usr/share/rpcemu/roms
+  For useage information and how to acquire ROM images please visit
+  http://www.marutan.net/rpcemu
+
+  The configuration file is /usr/share/rpcemu/rpc.cfg
+
+_EOF
+}
+
+post_remove() {
+  cat << _EOF
+
+  Manually remove any leftover files in /usr/share/rpcemu
+
+_EOF
+}

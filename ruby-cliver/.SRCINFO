@@ -1,0 +1,20 @@
+pkgbase = ruby-cliver
+	pkgdesc = Tools for detecting and verifying command line dependencies
+	pkgver = 0.3.2
+	pkgrel = 3
+	url = https://github.com/yaauie/cliver
+	arch = any
+	license = MIT
+	checkdepends = ruby-bundler
+	checkdepends = ruby-rake
+	checkdepends = ruby-rspec
+	checkdepends = ruby-rspec-its
+	makedepends = git
+	makedepends = rubygems
+	makedepends = ruby-rdoc
+	depends = ruby
+	options = !emptydirs
+	source = git+https://github.com/yaauie/cliver.git?tag=v0.3.2
+	sha256sums = SKIP
+
+pkgname = ruby-cliver

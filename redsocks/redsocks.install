@@ -1,0 +1,9 @@
+post_install() {
+  echo 'To launch redsocks:'
+  echo ''
+  echo '1. Start an ssh tunnel on port 4711'
+  echo '2. Start the redsocks and iptables daemons:'
+  echo '3. Load the redsocks iptables rules:'
+  echo ''
+  echo '    iptables-restore /etc/iptables/redsocks.rules'
+}

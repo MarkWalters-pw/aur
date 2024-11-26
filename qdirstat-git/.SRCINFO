@@ -1,0 +1,17 @@
+pkgbase = qdirstat-git
+	pkgdesc = GUI disk usage utility (successor to kdirstat)
+	pkgver = 1.8.1.r42.g8174478
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/shundhammer/qdirstat
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	depends = qt5-base
+	provides = qdirstat
+	conflicts = qdirstat
+	source = git+https://github.com/shundhammer/qdirstat.git
+	md5sums = SKIP
+
+pkgname = qdirstat-git

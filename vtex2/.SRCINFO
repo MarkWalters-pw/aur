@@ -1,0 +1,22 @@
+pkgbase = vtex2
+	pkgdesc = A VTF converter and editor
+	pkgver = 0.3.0
+	pkgrel = 2
+	url = https://github.com/StrataSource/vtex2
+	arch = x86_64
+	license = MIT
+	makedepends = cmake
+	makedepends = git
+	makedepends = qt6-svg
+	depends = gcc-libs
+	depends = glibc
+	depends = qt6-base
+	depends = hicolor-icon-theme
+	source = git+https://github.com/StrataSource/vtex2.git#tag=v0.3.0
+	source = vtflib::git+https://github.com/StrataSource/VTFLib.git
+	source = fmtlib::git+https://github.com/fmtlib/fmt.git
+	sha256sums = ce8d40d1175ba4aeabd60d4efd7c675d3621031fccd698c27cdee913c78718dc
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = vtex2

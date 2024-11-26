@@ -1,0 +1,19 @@
+pkgbase = qcopy
+	pkgdesc = Easily save important snippets such as passwords for quick access copying at any point
+	pkgver = 2.0.0
+	pkgrel = 1
+	url = https://gitlab.com/a4to/qcopy
+	install = qcopy.install
+	arch = any
+	license = MIT
+	depends = fzf
+	depends = dialog
+	depends = xsel
+	depends = bat
+	depends = xdotool
+	source = https://concise.cc/pkg/qcopy-2.0.0-1-any.pkg.tar.xz
+	validpgpkeys = 81BACEEBC3EA26E127166E4A819BB92A9A48160E
+	md5sums = 9d279e2db31df2e6b72ffebaa3a0a69f
+	sha512sums = 1609ab96821abab32bb82c46d1dc30dac14f80f7b08654ba67895cc4bca72b563fdb2a08fe2d7e4494339766983202daefc994c410d58687d0df3b7cd31869c0
+
+pkgname = qcopy

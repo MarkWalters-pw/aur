@@ -1,0 +1,17 @@
+pkgbase = wander
+	pkgdesc = An efficient terminal application/TUI for your HashiCorp Nomad cluster.
+	pkgver = 1.1.0
+	pkgrel = 1
+	url = https://github.com/robinovitch61/wander
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	license = MIT
+	makedepends = git
+	makedepends = go
+	depends = glibc
+	provides = wander
+	source = wander::git+https://github.com/robinovitch61/wander.git#tag=v1.1.0
+	sha256sums = 9d9b308e07f1d4ea9aa11ba22eaf0d489ff5d85e4f77993ac8457daf0a043f47
+
+pkgname = wander

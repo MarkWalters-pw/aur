@@ -1,0 +1,34 @@
+pkgbase = ustreamer
+	pkgdesc = Lightweight and fast MJPEG-HTTP streamer
+	pkgver = 6.11
+	pkgrel = 1
+	url = https://github.com/pikvm/ustreamer
+	arch = i686
+	arch = x86_64
+	arch = armv6h
+	arch = armv7h
+	arch = aarch64
+	license = GPL
+	makedepends = gcc
+	makedepends = make
+	makedepends = systemd
+	makedepends = python-setuptools
+	makedepends = python-pip
+	makedepends = python-build
+	makedepends = python-wheel
+	makedepends = janus-gateway
+	makedepends = alsa-lib
+	makedepends = opus
+	depends = libjpeg
+	depends = libevent
+	depends = libbsd
+	depends = libgpiod
+	depends = systemd
+	depends = python
+	depends = janus-gateway
+	depends = alsa-lib
+	depends = opus
+	source = ustreamer::git+https://github.com/pikvm/ustreamer#commit=v6.11
+	md5sums = SKIP
+
+pkgname = ustreamer

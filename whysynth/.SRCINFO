@@ -1,0 +1,20 @@
+pkgbase = whysynth
+	pkgdesc = A versatile softsynth plugin for the DSSI Soft Synth Interface
+	pkgver = 20170701
+	pkgrel = 2
+	url = http://www.smbolton.com/whysynth.html
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = dssi
+	makedepends = ladspa
+	depends = alsa-lib
+	depends = liblo
+	depends = gtk2
+	depends = fftw
+	conflicts = whysynth-git
+	source = http://www.smbolton.com/whysynth/whysynth-20170701.tar.bz2
+	md5sums = 217bfeea23545c12cd0a1bc93de6ed0f
+
+pkgname = whysynth
+

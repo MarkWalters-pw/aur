@@ -1,0 +1,15 @@
+pkgbase = gobal-player-tui
+	pkgdesc = Unofficial TUI app for Global Player radio.
+	pkgver = 0.1.20
+	pkgrel = 1
+	url = https://github.com/jj-style/gobal-player
+	arch = x86_64
+	license = GPL-3.0-or-later
+	makedepends = go>=1.22,
+	makedepends = git
+	depends = vlc
+	depends = glibc
+	source = gobal-player-0.1.20.tar.gz::https://github.com/jj-style/gobal-player/archive/v0.1.20.tar.gz
+	sha256sums = 9e6c64f0a45bcbd71e716aecf5416d8305a6bb3c35e15494f135531c592f2d2c
+
+pkgname = gobal-player-tui

@@ -1,0 +1,18 @@
+pkgbase = xdg-launch
+	pkgdesc = A command line XDG compliant launcher
+	pkgver = 1.12
+	pkgrel = 1
+	url = http://github.com/bbidulock/xdg-launch
+	arch = i686
+	arch = x86_64
+	groups = xde
+	license = GPL
+	makedepends = pkgconfig
+	depends = glib2
+	depends = libxrandr
+	depends = libxinerama
+	optdepends = dmenu: to use dmenu_launch script
+	source = https://github.com/bbidulock/xdg-launch/releases/download/1.12/xdg-launch-1.12.tar.lz
+	sha256sums = de4b84f46a3480b56236c40ac09f8dfa226fbd3b5e7d13e92b6af9fb26ddbf9d
+
+pkgname = xdg-launch

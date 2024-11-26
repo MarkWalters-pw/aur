@@ -1,0 +1,22 @@
+pkgbase = libretro-bluemsx-git
+	pkgdesc = BlueMSX libretro core (Microsoft MSX).
+	pkgver = r223.634f34a
+	pkgrel = 1
+	url = https://github.com/libretro/blueMSX-libretro
+	arch = i686
+	arch = x86_64
+	arch = arm
+	arch = armv6h
+	arch = armv7h
+	groups = libretro
+	license = BSD
+	makedepends = git
+	depends = zlib
+	depends = libretro-core-info
+	provides = libretro-bluemsx
+	conflicts = libretro-bluemsx
+	source = git+https://github.com/libretro/blueMSX-libretro.git
+	md5sums = SKIP
+
+pkgname = libretro-bluemsx-git
+

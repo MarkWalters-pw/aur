@@ -1,0 +1,17 @@
+pkgbase = mpv-webm-git
+	pkgdesc = Simple WebM maker for mpv
+	pkgver = r84.9b5da33
+	pkgrel = 1
+	url = https://github.com/ekisu/mpv-webm
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = moonscript
+	depends = mpv
+	provides = mpv-webm
+	conflicts = mpv-webm
+	source = git+https://github.com/ekisu/mpv-webm.git
+	md5sums = SKIP
+
+pkgname = mpv-webm-git
+

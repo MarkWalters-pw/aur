@@ -1,0 +1,18 @@
+pkgbase = pyautosplit-git
+	pkgdesc = Autosplitter for Linux (for the LiveSplit Server)
+	pkgver = r40.f5749b2
+	pkgrel = 1
+	url = https://github.com/christofsteel/pyautosplit
+	arch = any
+	license = Apache
+	makedepends = python-setuptools
+	makedepends = git
+	depends = python-simpleeval
+	depends = python-ptrace
+	depends = python-eventlet
+	provides = pyautosplit
+	conflicts = pyautosplit
+	source = pyautosplit-git::git+https://github.com/christofsteel/pyautosplit.git
+	sha256sums = SKIP
+
+pkgname = pyautosplit-git

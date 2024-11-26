@@ -1,0 +1,16 @@
+pkgbase = tunneltanks-git
+	pkgdesc = SDL remake of the early 90's tank game Tunneler
+	pkgver = r74.44cf228
+	pkgrel = 4
+	url = https://github.com/raydog/tunneltanks
+	arch = x86_64
+	arch = i686
+	license = GPL
+	makedepends = git
+	makedepends = gendesk
+	depends = sdl
+	conflicts = tunneltanks
+	source = tunneltanks-git::git+https://github.com/raydog/tunneltanks.git
+	md5sums = SKIP
+
+pkgname = tunneltanks-git

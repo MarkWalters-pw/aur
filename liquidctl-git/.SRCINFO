@@ -1,0 +1,30 @@
+pkgbase = liquidctl-git
+	pkgdesc = Cross-platform tool and drivers for liquid coolers and other devices
+	pkgver = 1.13.0.r61.85b32a7
+	pkgrel = 1
+	url = https://github.com/liquidctl/liquidctl
+	arch = any
+	license = GPL3
+	checkdepends = python-pytest
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools-scm
+	makedepends = python-wheel
+	depends = i2c-tools
+	depends = python
+	depends = python-colorlog
+	depends = python-crcmod
+	depends = python-docopt
+	depends = python-hidapi
+	depends = python-pillow
+	depends = python-pyusb
+	depends = python-setuptools
+	optdepends = python-psutil: use system/hwmon sensors in yoda
+	optdepends = python-prometheus_client: export data to Prometheus
+	provides = liquidctl
+	conflicts = liquidctl
+	source = liquidctl-git::git+https://github.com/liquidctl/liquidctl.git#branch=main
+	sha256sums = SKIP
+
+pkgname = liquidctl-git

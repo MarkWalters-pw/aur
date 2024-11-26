@@ -1,0 +1,30 @@
+diff --git a/qltui.py b/qiling/tui.py
+similarity index 100%
+rename from qltui.py
+rename to qiling/tui.py
+diff --git a/qltool b/qltool
+index be6a52d3..b454a932 100755
+--- a/qltool
++++ b/qltool
+@@ -229,7 +229,7 @@ if __name__ == '__main__':
+         handle_examples(parser)
+ 
+     if options.subcommand == 'qltui':
+-        import qltui
++        from qiling import tui as qltui
+         options = qltui.get_data()
+         qltui_enabled = True
+ 
+diff --git a/setup.py b/setup.py
+index 85580758..5987a807 100644
+--- a/setup.py
++++ b/setup.py
+@@ -90,7 +90,7 @@ setup(
+     keywords='qiling binary emulator framework malware analysis UEFI IoT',
+ 
+     packages=find_packages(),
+-    scripts=['qltool', 'qltui.py'],
++    scripts=['qltool'],
+     package_data={
+         'qiling': ['profiles/*.ql'],
+         'qiling.debugger.gdb': ['xml/*/*'],

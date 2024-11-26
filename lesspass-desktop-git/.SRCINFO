@@ -1,0 +1,22 @@
+pkgbase = lesspass-desktop-git
+	pkgdesc = LessPass - desktop version (deprecated)
+	pkgver = r1815.495e8b3
+	pkgrel = 1
+	url = https://github.com/lesspass/lesspass.git
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = npm
+	depends = hicolor-icon-theme
+	provides = lesspass-desktop
+	conflicts = lesspass-desktop
+	options = !emptydirs
+	source = git://github.com/lesspass/lesspass.git#commit=495e8b3323cb3a7f24dce03e4d01158affa8ccf7
+	source = lesspass-desktop.desktop
+	source = lesspass.sh
+	sha256sums = SKIP
+	sha256sums = 5b7fe2b9640d2b623cb58bfcf97d1f8566d7297238234b1b02a3353bd43f8fa8
+	sha256sums = 83b2ea4e48956b4f04984442161e236feb9e3e2f1801061dcbaeef9c9c06d445
+
+pkgname = lesspass-desktop-git
+

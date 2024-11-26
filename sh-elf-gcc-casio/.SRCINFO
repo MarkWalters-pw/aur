@@ -1,0 +1,25 @@
+pkgbase = sh-elf-gcc-casio
+	pkgdesc = The GNU Compiler Collection for the Casio calculators SuperH processors.
+	pkgver = 11.2.0
+	pkgrel = 1
+	url = http://gcc.gnu.org
+	arch = i686
+	arch = x86_64
+	license = GPL
+	license = LGPL
+	depends = sh-elf-binutils-casio
+	depends = libmpc
+	depends = elfutils
+	depends = gmp
+	depends = mpfr
+	optdepends = isl: integer set library
+	options = !buildflags
+	options = !libtool
+	options = !emptydirs
+	options = zipman
+	options = docs
+	options = !strip
+	source = https://gcc.gnu.org/pub/gcc/releases/gcc-11.2.0/gcc-11.2.0.tar.xz
+	sha256sums = d08edc536b54c372a1010ff6619dd274c0f1603aa49212ba20f7aa2cda36fa8b
+
+pkgname = sh-elf-gcc-casio

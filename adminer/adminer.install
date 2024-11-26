@@ -1,0 +1,19 @@
+read -r -d '' MESSAGE << EOM
+If you use apache and want to enable the adminer interface just run the
+following command as root:
+
+echo "Include conf/extra/httpd-adminer.conf" >> /etc/httpd/conf/httpd.conf
+
+Restart apache (systemctl restart httpd) and then you can access adminer on
+http://localhost/adminer.
+EOM
+
+post_install() {
+  echo -e "$MESSAGE";
+}
+
+post_upgrade() {
+  echo -e "$MESSAGE";
+}
+
+# vim: set ts=2 sw=2 et:

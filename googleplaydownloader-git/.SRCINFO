@@ -1,0 +1,19 @@
+pkgbase = googleplaydownloader-git
+	pkgdesc = A graphical software to download APKs from the Google Play store.
+	pkgver = 2.3.r16.3d16974
+	pkgrel = 1
+	url = https://framagit.org/tuxicoman/googleplaydownloader
+	arch = any
+	license = AGPL
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python
+	depends = python-requests
+	depends = python-pyasn1
+	depends = python-wxpython
+	depends = python-androguard
+	source = googleplaydownloader::git+https://framagit.org/tuxicoman/googleplaydownloader
+	sha256sums = SKIP
+
+pkgname = googleplaydownloader-git
+

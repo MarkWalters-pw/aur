@@ -1,0 +1,18 @@
+pkgbase = python-catkin-tools-git
+	pkgdesc = Command line tools for working with catkin
+	pkgver = r820.69964db
+	pkgrel = 1
+	url = https://github.com/catkin/catkin_tools
+	arch = any
+	license = Apache
+	makedepends = git
+	depends = python
+	depends = python-catkin_pkg
+	depends = python-yaml
+	depends = python-setuptools
+	depends = python-osrf_pycommon
+	conflicts = python-catkin-tools
+	source = catkin_tools::git+https://github.com/catkin/catkin_tools.git#branch=main
+	sha256sums = SKIP
+
+pkgname = python-catkin-tools-git

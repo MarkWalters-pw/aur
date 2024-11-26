@@ -1,0 +1,16 @@
+pkgbase = exe-appimage
+	pkgdesc = A Elearning XHTML/HTML5 editor
+	pkgver = 2.8.1
+	pkgrel = 1
+	url = http://exelearning.net/
+	arch = x86_64
+	license = GPL3
+	depends = zlib
+	depends = hicolor-icon-theme
+	depends = glibc
+	conflicts = exe
+	options = !strip
+	source = exe-2.8.1.AppImage::https://github.com/exelearning/iteexe/releases/download/2.8.1/eXeLearning-2.8.1.glibc2.28-x86_64.AppImage
+	sha256sums = 7acb906e5b39fcfef03145f83914f70901563ec2bf500429097b8adce6865fe8
+
+pkgname = exe-appimage

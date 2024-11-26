@@ -1,0 +1,15 @@
+pkgbase = nextgen-git
+	pkgdesc = An interactive Bash script that lets you easily set up a new extension project for GNOME Files (Nautilus)
+	pkgver = r16.589d0ed
+	pkgrel = 1
+	url = https://github.com/madmurphy/nextgen
+	arch = any
+	license = GPL
+	depends = bash
+	depends = libnautilus-extension
+	provides = nextgen
+	conflicts = nextgen
+	source = git+https://github.com/madmurphy/nextgen.git
+	sha256sums = SKIP
+
+pkgname = nextgen-git

@@ -1,0 +1,27 @@
+pkgbase = python-textual-git
+	pkgdesc = Modern Text User Interface framework
+	pkgver = 0.33.0.r23.g900c372f1
+	pkgrel = 1
+	url = https://github.com/Textualize/textual
+	arch = any
+	license = MIT
+	checkdepends = python-pytest-aiohttp
+	checkdepends = python-pytest-asyncio
+	checkdepends = python-click
+	checkdepends = python-time-machine
+	checkdepends = python-linkify-it-py
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-poetry-core
+	makedepends = git
+	depends = python-rich
+	depends = python-importlib-metadata
+	depends = python-typing_extensions
+	optdepends = python-aiohttp: for HTTP server
+	optdepends = python-click: for click event as mouse button
+	provides = python-textual
+	conflicts = python-textual
+	source = git+https://github.com/Textualize/textual.git#branch=main
+	sha512sums = SKIP
+
+pkgname = python-textual-git

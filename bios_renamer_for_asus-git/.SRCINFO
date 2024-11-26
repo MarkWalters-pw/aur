@@ -1,0 +1,15 @@
+pkgbase = bios_renamer_for_asus-git
+	pkgdesc = Cross-platform Rust implementation of Asus' BIOS renamer utility.
+	pkgver = r36.04c12c2
+	pkgrel = 1
+	url = https://github.com/iAmSomeone2/bios_renamer_for_asus
+	arch = x86_64
+	license = MIT
+	makedepends = cargo
+	makedepends = git
+	provides = bios_renamer_for_asus
+	conflicts = bios_renamer_for_asus
+	source = bios_renamer_for_asus-git::git+https://github.com/iAmSomeone2/bios_renamer_for_asus.git#branch=main
+	sha256sums = SKIP
+
+pkgname = bios_renamer_for_asus-git

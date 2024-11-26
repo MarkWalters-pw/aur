@@ -1,0 +1,15 @@
+--- Makefile
++++ Makefile
+@@ -52,8 +52,10 @@
+ install: install_$(OS)
+ 
+ install_LINUX: $(LIBNAME)
+-	sudo cp Linux/reader.conf /etc/reader.conf.d/$(DRIVERNAME).conf
+-	sudo cp $(LIBNAME) /usr/lib/pcsc/drivers/serial/
++	mkdir -p $(PREFIX)/etc/reader.conf.d/
++	cp Linux/reader.conf $(PREFIX)/etc/reader.conf.d/$(DRIVERNAME).conf
++	mkdir -p $(PREFIX)/usr/lib/pcsc/drivers/serial/
++	cp $(LIBNAME) $(PREFIX)/usr/lib/pcsc/drivers/serial/
+ 
+ install_OSX: $(LIBNAME)
+ 	sudo cp MacOSX/reader.conf /etc/reader.conf

@@ -1,0 +1,3 @@
+#!/bin/sh
+export LD_PRELOAD="/usr/lib/spotify-adkiller-dns-block/dns-block.so libcurl.so.3"
+/usr/share/spotify/spotify "$@"

@@ -1,0 +1,21 @@
+pkgbase = relcs-git
+	pkgdesc = Grand Theft Auto: LCS reverse engineered
+	pkgver = 1.0_r5619.33abd1b4
+	pkgrel = 1
+	url = https://github.com/halpz/re3
+	install = relcs.install
+	arch = x86_64
+	arch = aarch64
+	license = custom:none
+	makedepends = cmake
+	depends = librw-git
+	depends = openal
+	depends = mpg123
+	source = git+https://github.com/halpz/re3.git#branch=lcs
+	source = reLCS.desktop
+	source = reLCS.svg
+	md5sums = SKIP
+	md5sums = SKIP
+	md5sums = SKIP
+
+pkgname = relcs-git

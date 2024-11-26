@@ -1,0 +1,18 @@
+pkgbase = tty-clock-git
+	pkgdesc = Analog clock in ncurses
+	pkgver = 2.3.r40.f2f847c
+	pkgrel = 2
+	epoch = 1
+	url = https://github.com/xorg62/tty-clock
+	arch = i686
+	arch = x86_64
+	license = BSD
+	makedepends = git
+	depends = glibc
+	depends = ncurses
+	provides = tty-clock
+	conflicts = tty-clock
+	source = git+https://github.com/xorg62/tty-clock.git
+	b2sums = SKIP
+
+pkgname = tty-clock-git

@@ -1,0 +1,17 @@
+pkgbase = hdf-eos-common
+	pkgdesc = Common headers files for HDF-EOS2 and HDF-EOS5
+	pkgver = 1.16
+	pkgrel = 2
+	url = http://www.hdfeos.org/software/library.php
+	arch = i686
+	arch = x86_64
+	license = GPL
+	depends = libaec
+	depends = hdf5
+	depends = hdf4
+	depends = gdal
+	depends = proj
+	source = https://git.earthdata.nasa.gov/rest/git-lfs/storage/DAS/hdfeos5/7054de24b90b6d9533329ef8dc89912c5227c83fb447792103279364e13dd452?response-content-disposition=attachment%3B%20filename%3D%22HDF-EOS5.1.16.tar.Z%22%3B%20filename*%3Dutf-8%27%27HDF-EOS5.1.16.tar.Z
+	sha256sums = 7054de24b90b6d9533329ef8dc89912c5227c83fb447792103279364e13dd452
+
+pkgname = hdf-eos-common

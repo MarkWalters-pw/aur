@@ -1,0 +1,23 @@
+pkgbase = scrnsvr
+	pkgdesc = Yet Another X Screensaver/locker
+	pkgver = 1.19
+	pkgrel = 3
+	url = https://github.com/koraynilay/scrnsvr
+	install = scrnsvr.install
+	arch = x86_64
+	license = WTFPL
+	makedepends = git
+	makedepends = gcc
+	depends = libxss
+	depends = pcre
+	depends = libdbus
+	depends = python
+	optdepends = dunst: dunstify for notifications
+	optdepends = libnotify: for notifications
+	optdepends = libxinerama: for multi-monitor with xinerama fullscreen check support
+	optdepends = libxrandr: for multi-monitor with xrandr fullscreen check support
+	conflicts = scrnsvr-bin
+	source = scrnsvr-1.19::git+https://github.com/koraynilay/scrnsvr
+	md5sums = SKIP
+
+pkgname = scrnsvr

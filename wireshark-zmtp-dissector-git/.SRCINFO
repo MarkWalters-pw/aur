@@ -1,0 +1,14 @@
+pkgbase = wireshark-zmtp-dissector-git
+	pkgdesc = A Wireshark dissector for the ZeroMQ transfer protocol
+	pkgver = 29.bcc9d3d
+	pkgrel = 2
+	url = https://github.com/whitequark/zmtp-wireshark
+	arch = any
+	license = MIT
+	makedepends = git
+	depends = wireshark-cli
+	source = zmtp-wireshark::git+https://github.com/whitequark/zmtp-wireshark.git#branch=master
+	md5sums = SKIP
+
+pkgname = wireshark-zmtp-dissector-git
+

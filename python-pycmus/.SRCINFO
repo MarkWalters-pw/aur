@@ -1,0 +1,22 @@
+pkgbase = python-pycmus
+	pkgdesc = A python library cmus remote library
+	pkgver = 0.1.1
+	pkgrel = 1
+	url = https://pypi.python.org/pypi/pycmus
+	arch = any
+	license = GPL3
+	makedepends = python2-setuptools
+	makedepends = python-setuptools
+	source = https://files.pythonhosted.org/packages/source/p/pycmus/pycmus-0.1.1.tar.gz
+	sha256sums = 5a4f49fd78ca641d77a3c426741c9558770075f34e89cc0b687d92878a89708c
+
+pkgname = python-pycmus
+	depends = python
+	depends = python-six
+	depends = python-pbr
+
+pkgname = python2-pycmus
+	depends = python2
+	depends = python2-six
+	depends = python2-pbr
+

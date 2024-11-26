@@ -1,0 +1,20 @@
+pkgbase = craft-git
+	pkgdesc = A simple Minecraft clone written in C using modern OpenGL (shaders).
+	pkgver = 1.0
+	pkgrel = 1
+	url = https://github.com/fogleman/Craft
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = cmake
+	depends = glew
+	depends = xorg-server
+	depends = curl
+	depends = glfw
+	source = craft-git::git+https://github.com/fogleman/Craft#branch=master
+	source = launcher.sh
+	sha512sums = SKIP
+	sha512sums = dab424a2e7dadcbdbfac316288cab4777c17b31ca31ea639ff69799321b288046bf34d5b8d0383f6f3870beec62780cb69e08e40f5646371a624ec9e62c8f6c8
+
+pkgname = craft-git
+

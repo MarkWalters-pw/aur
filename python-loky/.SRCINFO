@@ -1,0 +1,20 @@
+pkgbase = python-loky
+	pkgdesc = Robust and reusable Executor for joblib
+	pkgver = 3.4.1
+	pkgrel = 1
+	url = https://github.com/joblib/loky
+	arch = x86_64
+	license = custom:BSD-3-clause
+	checkdepends = python-pytest
+	checkdepends = python-psutil
+	checkdepends = python-numpy
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python-cloudpickle
+	optdepends = python-psutil: allow early memory leak detections
+	source = https://pypi.org/packages/source/l/loky/loky-3.4.1.tar.gz
+	sha512sums = 237f65421bd80904378f0b73f023b240b72144a2272cfbef4845bd48f573c447ad82025e0cd6018fd7313fc0b633fd70fb4e88679c8101e2e32fe559a3651832
+
+pkgname = python-loky

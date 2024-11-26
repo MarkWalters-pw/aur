@@ -1,0 +1,13 @@
+diff -ura package.orig/gulden.desktop package.new/gulden.desktop
+--- package.orig/gulden.desktop	2021-01-21 14:14:45.598516946 +0800
++++ package.new/gulden.desktop	2021-01-21 14:16:20.634523032 +0800
+@@ -2,7 +2,8 @@
+ Type=Application
+ Name=Gulden
+ Icon=gulden
+-Exec=Gulden
++Exec="/opt/appimages/Gulden-2.3.0.4-x86_64.AppImage" Gulden
++TryExec=/opt/appimages/Gulden-2.3.0.4-x86_64.AppImage
+ Categories=Office;Utility;Network;Finance;P2P;Economy;Qt;
+ Comment=The payment system of the future today
+ X-AppImage-Version=.glibc2.11

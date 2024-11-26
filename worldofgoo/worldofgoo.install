@@ -1,0 +1,11 @@
+post_install()
+{
+    cat <<-EOI
+
+  Several settings, like screen resolution, can be changed in the configuration
+  file at ~/.WorldOfGoo/config.ini
+
+	EOI
+}
+
+# vim:et:sw=4:sts=4

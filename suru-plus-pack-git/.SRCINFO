@@ -1,0 +1,24 @@
+pkgbase = suru-plus-pack-git
+	pkgdesc = The complete collection of Suru++ icons themes, based on Sam Hewitt's Suru Icons
+	pkgver = 25
+	pkgrel = 4
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = gtk-update-icon-cache
+	depends = hicolor-icon-theme
+	provides = suru-plus-pack
+	conflicts = suru-plus-pack
+	conflicts = suru-plus
+	conflicts = suru-plus-dark
+	conflicts = suru-plus-telinkrin
+	options = !strip
+	source = git+https://github.com/gusbemacbe/suru-plus
+	source = git+https://github.com/gusbemacbe/suru-plus-dark
+	source = git+https://github.com/gusbemacbe/suru-plus-telinkrin
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = suru-plus-pack-git
+

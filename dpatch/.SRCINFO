@@ -1,0 +1,20 @@
+pkgbase = dpatch
+	pkgdesc = A easy to use patch system for Debian packages, somewhat similar to the dbs package, but much simpler to use.
+	pkgver = 2.0.41
+	pkgrel = 2
+	url = https://packages.debian.org/stable/dpatch
+	arch = any
+	license = GPL2
+	depends = debhelper
+	depends = dpkg
+	depends = make
+	depends = perl
+	optdepends = fakeroot
+	optdepends = patchutils
+	optdepends = curl
+	noextract = dpatch_2.0.41_all.deb
+	options = emptydirs
+	source = dpatch_2.0.41_all.deb::http://http.debian.net/debian/pool/main/d/dpatch/dpatch_2.0.41_all.deb
+	sha256sums = 267461f5998ad7472aeb50f7d66708518d51923ca79bb16a3726e24e5ab3a8b2
+
+pkgname = dpatch

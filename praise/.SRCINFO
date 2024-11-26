@@ -1,0 +1,18 @@
+pkgbase = praise
+	pkgdesc = A nicer git blame
+	pkgver = 1.4.0
+	pkgrel = 1
+	url = https://github.com/sigvef/git-praise
+	arch = any
+	license = MIT
+	depends = python
+	depends = python-gitpython
+	depends = python-pygments
+	depends = python-click
+	depends = python-termcolor
+	depends = flake8
+	provides = praise=1.4.0
+	source = https://github.com/sigvef/git-praise/archive/v1.4.0.tar.gz
+	sha256sums = aec630b9ce7013efde65160e44a836789efce2fcf849d7a487cbeebc2b5825ad
+
+pkgname = praise

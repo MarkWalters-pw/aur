@@ -1,0 +1,20 @@
+pkgbase = hxtools
+	pkgdesc = A collection of tools and scripts that have accumulated over the years, and each of which seems to be too small to warrants its own project.
+	pkgver = 20201116
+	pkgrel = 1
+	url = http://inai.de/projects/hxtools/
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	depends = libhx>=3.19
+	depends = perl
+	depends = util-linux
+	depends = pciutils
+	depends = libxcb
+	source = http://inai.de/files/hxtools/hxtools-20201116.tar.xz
+	source = Rename_rot13_to_trrot13.patch
+	sha256sums = c4bf0de4b39892eacb74a148d2587f0611f0abd2a2c4919a0e8e6639a74b7c69
+	sha256sums = 89f65c581179582f178c1d60dbe9a702d7efb5b07f35442f03c9463af0c5b04d
+
+pkgname = hxtools
+

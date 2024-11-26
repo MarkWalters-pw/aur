@@ -1,0 +1,20 @@
+pkgbase = jcli
+	pkgdesc = Small cli to list, run, and check jenkins jobs
+	pkgver = 0.3.8
+	pkgrel = 1
+	url = https://github.com/brokenpip3/jcli
+	arch = any
+	license = MIT
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-poetry-core
+	depends = python
+	depends = python-click
+	depends = python-rich
+	depends = python-pyaml
+	depends = python-api4jenkins
+	depends = python-appdirs
+	source = https://files.pythonhosted.org/packages/source/j/jenkins-job-cli/jenkins_job_cli-0.3.8.tar.gz
+	sha256sums = a111635ed51f75c6de5b66345cab2b5719770a6e448f3477c11c93a531166974
+
+pkgname = jcli

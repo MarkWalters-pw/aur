@@ -1,0 +1,23 @@
+pkgbase = librespot-alsa-git
+	pkgdesc = Open Source Spotify client library, alsa backend
+	pkgver = 1420.bbd575e
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/librespot-org/librespot
+	arch = i686
+	arch = x86_64
+	arch = armv6h
+	arch = armv7h
+	arch = aarch64
+	license = MIT
+	makedepends = git
+	makedepends = rust
+	depends = libvorbis
+	depends = alsa-lib
+	provides = librespot
+	conflicts = librespot
+	conflicts = librespot-git
+	source = git+https://github.com/librespot-org/librespot
+	sha256sums = SKIP
+
+pkgname = librespot-alsa-git

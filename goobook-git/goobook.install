@@ -1,0 +1,12 @@
+## arg 1:  the new package version
+post_install() {
+cat <<End-of-message
+
+      *IMPORTANT* Check the Arch Wiki article for authentication instructions:
+
+      https://wiki.archlinux.org/index.php/Mutt#Goobook
+
+      See https://gitlab.com/goobook/goobook#tab-readme for more information and configuration
+
+End-of-message
+}

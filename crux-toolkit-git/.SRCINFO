@@ -1,0 +1,19 @@
+pkgbase = crux-toolkit-git
+	pkgdesc = The Crux mass spectrometry analysis toolkit
+	pkgver = r3376.6da2a981
+	pkgrel = 1
+	url = http://crux.ms/
+	arch = x86_64
+	license = Apache
+	makedepends = git
+	makedepends = subversion
+	makedepends = cmake
+	makedepends = sed
+	depends = gcc-libs
+	provides = crux-toolkit
+	conflicts = crux-toolkit-bin
+	source = git+https://github.com/crux-toolkit/crux-toolkit
+	md5sums = SKIP
+
+pkgname = crux-toolkit-git
+

@@ -1,0 +1,20 @@
+pkgbase = ruler-git
+	pkgdesc = Program used to create window rules.
+	pkgver = 0.1.0.r0.gaaf9d5c
+	pkgrel = 1
+	url = https://github.com/tudurom/ruler
+	arch = i686
+	arch = x86_64
+	arch = armv7h
+	arch = aarch64
+	license = ISC
+	makedepends = git
+	depends = libxcb
+	depends = xcb-util-wm
+	optdepends = wmutils-git
+	conflicts = ruler
+	source = ruler-git::git+https://github.com/tudurom/ruler.git
+	md5sums = SKIP
+
+pkgname = ruler-git
+

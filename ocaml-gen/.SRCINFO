@@ -1,0 +1,19 @@
+pkgbase = ocaml-gen
+	pkgdesc = Simple, efficient iterators for OCaml
+	pkgver = 1.1
+	pkgrel = 5
+	url = https://github.com/c-cube/gen
+	arch = x86_64
+	arch = aarch64
+	license = MIT
+	makedepends = git
+	makedepends = dune>=1.1.0
+	depends = ocaml>=4.07.0
+	options = !strip
+	source = ocaml-gen-1.1::git+https://github.com/c-cube/gen#commit=30802b92145e0c9cd235d3d2ba4d2210fda5612a?signed
+	source = remove-seq-dep.diff
+	validpgpkeys = 1370978BC81E9735DFE727E1EBFFF6F283F3A2B4
+	b2sums = e090791078b4eb89bfcea3dc87c175065a93a1431024a320369e69414c8d655734e04847d3c8ae24ae1c740cd34af58aad67f88b16bc9cf8ae00142dbdf95991
+	b2sums = aeb7b304fcc2e5ccc0a40b82483d7c49dc0f21cd3302b1732c039f7d42317f4fabaf3a602554c6b9c6d86807730e53b4d8473f28adb9509c3f943c8d0fa3c1bc
+
+pkgname = ocaml-gen

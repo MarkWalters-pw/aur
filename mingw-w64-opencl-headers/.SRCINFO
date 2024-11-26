@@ -1,0 +1,16 @@
+pkgbase = mingw-w64-opencl-headers
+	pkgdesc = OpenCL (Open Computing Language) header files (mingw-w64)
+	pkgver = 2022.01.04
+	pkgrel = 1
+	url = https://github.com/KhronosGroup/OpenCL-Headers
+	arch = any
+	groups = mingw-w64-vulkan-devel
+	license = APACHE
+	makedepends = mingw-w64-cmake
+	options = !buildflags
+	options = staticlibs
+	options = !strip
+	source = https://github.com/KhronosGroup/OpenCL-Headers/archive/v2022.01.04.tar.gz
+	sha256sums = 6e716e2b13fc8d363b40a165ca75021b102f9328e2b38f8054d7db5884de29c9
+
+pkgname = mingw-w64-opencl-headers

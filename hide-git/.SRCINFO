@@ -1,0 +1,25 @@
+pkgbase = hide-git
+	pkgdesc = an extensible editor for Heaps game engine
+	pkgver = 0.1.0.d893148
+	pkgrel = 2
+	url = https://github.com/HeapsIO/hide
+	arch = i686
+	arch = x86_64
+	license = BSD
+	makedepends = haxe
+	makedepends = git
+	makedepends = rsync
+	depends = nwjs
+	provides = hide
+	conflicts = hide
+	source = hide-git::git+https://github.com/HeapsIO/hide.git
+	source = icon.svg
+	source = io.heaps.hide.desktop
+	source = hide
+	sha256sums = SKIP
+	sha256sums = 1255733ff1ad84f207a3850082f000d40023df5ec1415a3fa49ec3c6fcb50f12
+	sha256sums = 77965d8ea53498683700f448a0f9fed0aa08093ad8d09167682f29ab0e944e73
+	sha256sums = 3a275819cef41f15e9e54b8793985ee979d2c6973fa65193de05cb9e9970e957
+
+pkgname = hide-git
+

@@ -1,0 +1,26 @@
+pkgbase = virtuoso
+	pkgdesc = Virtuoso is a scalable cross-platform server that combines Relational,\ Graph, and Document Data Management with Web Application Server and Web \ Services Platform functionality.
+	pkgver = 7.2.4.2
+	pkgrel = 3
+	url = http://virtuoso.openlinksw.com/wiki/main/Main/
+	install = virtuoso.install
+	arch = x86_64
+	license = GPL
+	makedepends = bison
+	makedepends = flex
+	makedepends = gperf
+	makedepends = net-tools
+	makedepends = optipng
+	depends = libldap
+	depends = imagemagick
+	depends = java-environment
+	depends = openssl-1.0
+	provides = virtuoso-base
+	replaces = virtuoso-base
+	source = http://downloads.sourceforge.net/virtuoso/virtuoso-opensource-7.2.4.2.tar.gz
+	source = virtuoso.service
+	md5sums = 11b081934ab4698f0f341e1b410fc4fe
+	md5sums = 4dc007d22588c5933650984a7863d4d0
+
+pkgname = virtuoso
+

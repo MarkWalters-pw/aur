@@ -1,0 +1,17 @@
+pkgbase = plasma5-themes-apus-git
+	pkgdesc = A dark lilac theme for KDE Plasma desktop
+	pkgver = r31.0b3b23a
+	pkgrel = 1
+	url = https://gitlab.com/jomada/apus
+	arch = any
+	license = GPL3
+	makedepends = git
+	options = !strip
+	source = git+https://gitlab.com/jomada/apus.git
+	sha256sums = SKIP
+
+pkgname = plasma5-themes-apus-git
+	optdepends = latte-dock: Custom Plasma dock
+	optdepends = kate: KDE text editor
+	optdepends = konsole: KDE terminal emulator
+	provides = plasma5-themes-apus

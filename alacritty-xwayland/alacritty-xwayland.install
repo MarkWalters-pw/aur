@@ -1,0 +1,8 @@
+post_install() {
+	/usr/share/libalpm/scripts/alacritty-xwayland-patch
+}
+
+pre_remove() {
+	/usr/share/libalpm/scripts/alacritty-xwayland-patch remove
+}
+

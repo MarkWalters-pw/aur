@@ -1,0 +1,21 @@
+pkgbase = kodi-platform-git
+	pkgdesc = Kodi platform support library
+	pkgver = r61.809c5e9
+	pkgrel = 1
+	url = https://github.com/xbmc/kodi-platform
+	arch = armv7h
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = cmake
+	makedepends = git
+	makedepends = kodi-dev
+	depends = kodi
+	depends = p8-platform
+	provides = kodi-platform
+	conflicts = kodi-platform
+	source = kodi-platform-git::git+https://github.com/xbmc/kodi-platform.git
+	md5sums = SKIP
+
+pkgname = kodi-platform-git
+

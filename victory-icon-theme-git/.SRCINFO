@@ -1,0 +1,15 @@
+pkgbase = victory-icon-theme-git
+	pkgdesc = Victory Icon Theme, A GTK Icon Theme for Linux
+	pkgver = 1.4.62b5344
+	pkgrel = 1
+	url = https://gitlab.com/newhoa/victory-icon-theme
+	arch = any
+	license = GPL3
+	makedepends = git
+	provides = victory-icon-theme
+	conflicts = victory-icon-theme
+	source = victory-icon-theme::git+https://gitlab.com/newhoa/victory-icon-theme.git
+	sha256sums = SKIP
+
+pkgname = victory-icon-theme-git
+

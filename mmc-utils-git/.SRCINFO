@@ -1,0 +1,19 @@
+pkgbase = mmc-utils-git
+	pkgdesc = Userspace tools for MMC/SD devices
+	pkgver = r128.f757f41
+	pkgrel = 1
+	epoch = 1
+	url = https://git.kernel.org/pub/scm/utils/mmc/mmc-utils.git
+	arch = x86_64
+	arch = i686
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = GPL
+	makedepends = git
+	provides = mmc-utils
+	conflicts = mmc-utils
+	source = git+https://git.kernel.org/pub/scm/utils/mmc/mmc-utils.git
+	sha256sums = SKIP
+
+pkgname = mmc-utils-git

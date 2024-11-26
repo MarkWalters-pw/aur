@@ -1,0 +1,19 @@
+pkgbase = medigo
+	pkgdesc = Command line client for Medium
+	pkgver = 0.2
+	pkgrel = 1
+	url = https://github.com/syui/medigo
+	arch = x86_64
+	arch = i686
+	license = MIT
+	noextract = https://github.com/syui/medigo/releases/download/0.2/linux_386_medigo
+	noextract = https://github.com/syui/medigo/releases/download/0.2/linux_amd64_medigo
+	options = !strip
+	options = !emptydirs
+	source = https://github.com/syui/medigo/releases/download/0.2/linux_386_medigo
+	source = https://github.com/syui/medigo/releases/download/0.2/linux_amd64_medigo
+	sha1sums = 3b13d7aa856c184125aaeb8b3f8b89b1b5738600
+	sha1sums = 447ac509ad0c6d37d0313b84d4ab167d1ec1a2aa
+
+pkgname = medigo
+

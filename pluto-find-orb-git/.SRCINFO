@@ -1,0 +1,16 @@
+pkgbase = pluto-find-orb-git
+	pkgdesc = Orbit determination from observations
+	pkgver = r2399.b2cebb1
+	pkgrel = 2
+	url = https://www.projectpluto.com/find_orb.htm
+	install = find-orb.install
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	makedepends = pluto-lunar
+	makedepends = pluto-sat-code
+	makedepends = pluto-jpl-eph
+	source = git+https://github.com/Bill-Gray/find_orb.git
+	sha512sums = SKIP
+
+pkgname = pluto-find-orb-git

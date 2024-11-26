@@ -1,0 +1,37 @@
+pkgbase = linux-ruisu
+	pkgver = 4.4.0_47
+	pkgrel = 1
+	url = http://www.kernel.org/
+	arch = x86_64
+	license = GPL2
+	makedepends = tar
+	noextract = linux-image-4.4.0-47-generic_4.4.0-47.68_amd64.deb
+	noextract = linux-image-extra-4.4.0-47-generic_4.4.0-47.68_amd64.deb
+	noextract = linux-headers-4.4.0-47-generic_4.4.0-47.68_amd64.deb
+	noextract = linux-ruisu.preset
+	noextract = blacklist.conf
+	options = !strip
+	source = https://mirrors.kernel.org/ubuntu/pool/main/l/linux/linux-image-4.4.0-47-generic_4.4.0-47.68_amd64.deb
+	source = https://mirrors.kernel.org/ubuntu/pool/main/l/linux/linux-image-extra-4.4.0-47-generic_4.4.0-47.68_amd64.deb
+	source = https://mirrors.kernel.org/ubuntu/pool/main/l/linux/linux-headers-4.4.0-47-generic_4.4.0-47.68_amd64.deb
+	source = linux-ruisu.preset
+	source = blacklist.conf
+	md5sums = 15ccfe224802de420913f7fb3f8075b4
+	md5sums = 7da88764623fb9eef0e47a17abc378dc
+	md5sums = 26c713f3d9666475ff49ada48984a8c6
+	md5sums = 81318c55b71ee7be180066742688febd
+	md5sums = bc6754fa320733c6d239a4bb0148ffd7
+
+pkgname = linux-ruisu
+	pkgdesc = Linux kernel image for installing ServerSpeeder (a.k.a ruisu, using ZetaTCP technology)
+	install = linux-ruisu.install
+	depends = coreutils
+	depends = linux-firmware
+	depends = kmod
+	depends = mkinitcpio>=0.7
+	optdepends = crda: to set the correct wireless channels of your country
+
+pkgname = linux-ruisu-headers
+	pkgdesc = Header files and scripts for building modules for Linux-ruisu kernel
+	provides = linux-ubuntu-headers
+

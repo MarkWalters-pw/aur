@@ -1,0 +1,16 @@
+post_install() {
+  useradd -U -G audio,video -k /etc/default/sskype -m -s /sbin/nologin _skype
+  echo "Special setup required for Pulse Audio:"
+  echo "add 'load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1'"
+  echo "to ~/.config/pulse/default.pa"
+  echo ""
+  echo "For security reasons, only users in the group wheel does not need to enter a password,"
+  echo "please see https://wiki.archlinux.org/index.php/Users_and_groups#Group_list"
+
+}
+
+post_remove() {
+  killall -u _skype
+  sleep 3
+  userdel -r _skype
+}

@@ -1,0 +1,29 @@
+pkgbase = homebridge-git
+	pkgdesc = HomeKit support for the impatient
+	pkgver = 0.4.46.r222.g721ff2c
+	pkgrel = 3
+	url = https://github.com/nfarina/homebridge
+	install = homebridge.install
+	arch = any
+	license = apache
+	makedepends = git
+	makedepends = npm
+	makedepends = python
+	depends = nodejs>=10.17.0
+	depends = avahi
+	provides = homebridge
+	conflicts = homebridge
+	options = !emptydirs
+	source = git+https://github.com/nfarina/homebridge.git
+	source = homebridge-system.service
+	source = homebridge-user.service
+	source = homebridge.sysusers
+	source = homebridge.install
+	sha512sums = SKIP
+	sha512sums = 16f923855946b1ff7fd6b70da035a304634c7dd42bd2e86c5877718fd5e3a22a7177fd8d850e7ffa4826cdd2fc2b30f727bd182809ddb9faade626f87ed792bc
+	sha512sums = 2fc28db38b231caf8021bd6109e1c4cee65dd68e2128e9f2bfe712fd61867328dd6b6be642a6431b2c92657a5e7f23991be8dcf1ea0c23e3cfa120341ee090bc
+	sha512sums = 18277a981c2e6f68ed6433d9afc89fb59019b763c253dd135bb3662baba2185245a7eb476b3eed36f5458386447ed766b89dd0e307c5c1ab277900a01c625c7d
+	sha512sums = 20e373e99d814ea23b5fa0c966cafdc7e8bf116443c475d08870bffc36027ae512fa2e0c6996802f04e9703a9df52bacf2e25ecadb04b137c798524e50e6817d
+
+pkgname = homebridge-git
+

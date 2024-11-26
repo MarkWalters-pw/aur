@@ -1,0 +1,18 @@
+pkgbase = awslogs
+	pkgdesc = AWS CloudWatch logs for Humans™
+	pkgver = 0.15.0
+	pkgrel = 1
+	url = https://github.com/jorgebastida/awslogs
+	arch = any
+	license = Apache
+	makedepends = python-wheel
+	makedepends = python-setuptools
+	depends = python>=3
+	depends = python-boto3
+	depends = python-jmespath
+	depends = python-termcolor
+	depends = python-dateutil
+	source = awslogs-0.15.0.tar.gz::https://github.com/jorgebastida/awslogs/archive/0.15.0.tar.gz
+	sha512sums = ece569396190695ac655626a8421f47eda0f1afce8c982bb14a3ccdfe1f82dd1427837721d567ce3e15cdaed700de844d589cae52a45fd717155cbf0ab2ce70e
+
+pkgname = awslogs

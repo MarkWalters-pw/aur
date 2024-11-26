@@ -1,0 +1,21 @@
+pkgbase = zathura-cb-git
+	pkgdesc = Adds comic book support to zathura
+	pkgver = 0.1.11.r1.g8071728
+	pkgrel = 1
+	url = https://pwmt.org/projects/zathura-cb/
+	arch = i686
+	arch = x86_64
+	license = Zlib
+	makedepends = git
+	makedepends = meson
+	makedepends = ninja
+	makedepends = appstream-glib
+	depends = zathura
+	depends = libarchive
+	depends = desktop-file-utils
+	provides = zathura-cb
+	conflicts = zathura-cb
+	source = zathura-cb::git+https://github.com/pwmt/zathura-cb.git#branch=develop
+	md5sums = SKIP
+
+pkgname = zathura-cb-git

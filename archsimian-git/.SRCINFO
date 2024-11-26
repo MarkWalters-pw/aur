@@ -1,0 +1,23 @@
+pkgbase = archsimian-git
+	pkgdesc = Advanced playlist creator that uses your MediaMonkey library data
+	pkgver = r506.43a9949
+	pkgrel = 1
+	url = https://github.com/Harpo3/archsimian
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	depends = qt5-base
+	depends = sqlite3
+	depends = taglib
+	depends = id3v2
+	optdepends = kdeconnect: sync support
+	optdepends = dolphin: sync support
+	optdepends = syncthing: sync support
+	optdepends = audacious: sync support
+	provides = archsimian
+	conflicts = archsimian
+	source = git+https://github.com/Harpo3/archsimian
+	md5sums = SKIP
+
+pkgname = archsimian-git
+

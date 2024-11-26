@@ -1,0 +1,19 @@
+pkgbase = stu-git
+	pkgdesc = A build automation tool with support for parametrized rules and dynamic dependencies
+	pkgver = 2.5.80
+	pkgrel = 1
+	url = https://github.com/kunegis/stu
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = gcc
+	makedepends = make
+	depends = glibc
+	depends = gcc-libs
+	provides = stu
+	source = git+https://github.com/kunegis/stu
+	sha256sums = SKIP
+
+pkgname = stu-git
+

@@ -1,0 +1,26 @@
+pkgbase = libarcus-git
+	pkgdesc = A library designed to facilitate the communication between Cura and its backend and similar code.
+	pkgver = r402.6cc4cec
+	pkgrel = 1
+	url = https://github.com/Ultimaker/libArcus
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = cmake
+	makedepends = conan
+	makedepends = cura
+	makedepends = git
+	makedepends = ninja
+	makedepends = python-virtualenv
+	depends = protobuf
+	depends = python
+	provides = arcus
+	provides = libarcus
+	conflicts = arcus
+	conflicts = libarcus
+	source = git+https://github.com/Ultimaker/libArcus.git
+	source = git+https://github.com/ultimaker/conan-config.git
+	b2sums = SKIP
+	b2sums = SKIP
+
+pkgname = libarcus-git

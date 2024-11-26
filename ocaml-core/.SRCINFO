@@ -1,0 +1,38 @@
+pkgbase = ocaml-core
+	pkgdesc = Industrial strength alternative to OCaml's standard library
+	pkgver = 0.17.1
+	pkgrel = 2
+	epoch = 1
+	url = https://github.com/janestreet/core
+	arch = x86_64
+	arch = aarch64
+	license = MIT
+	makedepends = dune>=3.11.0
+	depends = ocaml>=5.1.0
+	depends = ocaml-base>=0.17.0
+	depends = ocaml-base_bigstring>=0.17.0
+	depends = ocaml-base_quickcheck>=0.17.0
+	depends = ocaml-bin_prot>=0.17.0
+	depends = ocaml-fieldslib>=0.17.0
+	depends = ocaml-jane-street-headers>=0.17.0
+	depends = ocaml-jst-config>=0.17.0
+	depends = ocaml-ppx_assert>=0.17.0
+	depends = ocaml-ppx_base>=0.17.0
+	depends = ocaml-ppx_diff>=0.17.0
+	depends = ocaml-ppx_hash>=0.17.0
+	depends = ocaml-ppx_inline_test>=0.17.0
+	depends = ocaml-ppx_jane>=0.17.0
+	depends = ocaml-ppx_optcomp>=0.17.0
+	depends = ocaml-ppx_sexp_conv>=0.17.0
+	depends = ocaml-ppx_sexp_message>=0.17.0
+	depends = ocaml-sexplib>=0.17.0
+	depends = ocaml-splittable_random>=0.17.0
+	depends = ocaml-stdio>=0.17.0
+	depends = ocaml-time_now>=0.17.0
+	depends = ocaml-typerep>=0.17.0
+	depends = ocaml-variantslib>=0.17.0
+	options = !strip
+	source = ocaml-core-0.17.1.tar.gz::https://github.com/janestreet/core/archive/v0.17.1.tar.gz
+	b2sums = 88a1c7b4c1ce5e8ca9713a1e92e4ea141aab1b5926427e78855f403449e3104052afca6f66a19d8b4a9b6d5dbac510d0844ace7e74ee7a7a5d6b89528412c94f
+
+pkgname = ocaml-core

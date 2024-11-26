@@ -1,0 +1,19 @@
+pkgbase = ufsd-module-dkms
+	pkgdesc = Paragon NTFS & HFS for Linux driver. - ACLs removed. DKMS version
+	pkgver = 9.6.7
+	pkgrel = 1
+	url = http://paragon-software.com/
+	install = ufsd-module-dkms.install
+	arch = i686
+	arch = x86_64
+	license = custom
+	makedepends = linux-lts-headers
+	depends = dkms
+	depends = linux-lts
+	source = https://dl.paragon-software.com/free/Paragon-715-FRE_NTFS_Linux_9.6.7_Express.tar.gz
+	source = dkms.conf
+	sha256sums = bb2bd93f12b08f1e003960c45057fa9d6b2302bb40abb15b1af6767c1479a776
+	sha256sums = ccbfd0311238835fe3eff647f0196046a1557187da75f81c3ef9935c39229e13
+
+pkgname = ufsd-module-dkms
+

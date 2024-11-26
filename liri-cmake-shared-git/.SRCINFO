@@ -1,0 +1,17 @@
+pkgbase = liri-cmake-shared-git
+	pkgdesc = Additional macros and functions for CMake
+	pkgver = v1.1.0.r91.ge633ba7
+	pkgrel = 1
+	url = https://github.com/lirios/cmake-shared
+	arch = any
+	groups = liri-git
+	license = GPL-3.0-only
+	makedepends = git
+	depends = extra-cmake-modules
+	provides = liri-cmake-shared
+	conflicts = liri-cmake-shared
+	replaces = liri-cmake-shared
+	source = cmake-shared::git+https://github.com/lirios/cmake-shared.git#branch=develop
+	md5sums = SKIP
+
+pkgname = liri-cmake-shared-git

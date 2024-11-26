@@ -1,0 +1,17 @@
+pkgbase = findfileconflicts-git
+	pkgdesc = Detect and solve possible file conflicts
+	pkgver = 1.1.3.r7.gd78810e
+	pkgrel = 1
+	url = https://github.com/artemanufrij/findfileconflicts
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = meson
+	makedepends = vala
+	depends = granite
+	provides = findfileconflicts
+	source = git+https://github.com/artemanufrij/findfileconflicts.git
+	sha256sums = SKIP
+
+pkgname = findfileconflicts-git
+

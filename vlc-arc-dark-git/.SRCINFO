@@ -1,0 +1,17 @@
+pkgbase = vlc-arc-dark-git
+	pkgdesc = Arc Dark skin for VLC
+	pkgver = r8.89fe85c
+	pkgrel = 1
+	url = https://github.com/varlesh/VLC-Arc-Dark
+	arch = any
+	license = GPL
+	makedepends = git
+	depends = vlc
+	provides = vlc-arc-dark
+	conflicts = vlc-arc-dark
+	options = !strip
+	source = vlc-arc-dark-git::git+https://github.com/varlesh/VLC-Arc-Dark.git
+	sha512sums = SKIP
+
+pkgname = vlc-arc-dark-git
+

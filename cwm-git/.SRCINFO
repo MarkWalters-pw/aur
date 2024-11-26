@@ -1,0 +1,20 @@
+pkgbase = cwm-git
+	pkgdesc = Fork of calmwm, a clean and lightweight window manager (git version)
+	pkgver = 20220430
+	pkgrel = 1
+	url = https://github.com/leahneukirchen/cwm
+	arch = x86_64
+	license = custom
+	makedepends = git
+	makedepends = pkg-config
+	depends = libxft
+	depends = libxrandr
+	depends = libxinerama
+	provides = cwm
+	conflicts = cwm
+	source = cwm-git::git+https://github.com/leahneukirchen/cwm.git#branch=linux
+	source = cwm.desktop
+	sha256sums = SKIP
+	sha256sums = 083d54f4e80b4a96c1f749379a9277696de0c65e030c284eeb14e9671f9aa7f3
+
+pkgname = cwm-git

@@ -1,0 +1,14 @@
+pkgbase = python3-sensors-git
+	pkgdesc = Python bindings to libsensors
+	pkgver = r54.f36489e
+	pkgrel = 1
+	url = http://pypi.python.org/pypi/PySensors/
+	arch = any
+	license = GPL
+	makedepends = git
+	depends = python3
+	depends = lm_sensors
+	source = git+https://github.com/bastienleonard/pysensors.git
+	sha256sums = SKIP
+
+pkgname = python3-sensors-git

@@ -1,0 +1,18 @@
+pkgbase = spotlight
+	pkgdesc = Displays a new background image daily
+	pkgver = 52.e6d845c
+	pkgrel = 1
+	url = https://github.com/mariusknaust/spotlight
+	install = spotlight.install
+	arch = any
+	license = GPL
+	depends = wget
+	depends = jq
+	depends = perl
+	depends = gnome-settings-daemon
+	depends = libsystemd
+	source = git+https://github.com/mariusknaust/spotlight.git
+	md5sums = SKIP
+
+pkgname = spotlight
+

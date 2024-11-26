@@ -1,0 +1,16 @@
+pkgbase = sarge
+	pkgdesc = A laptop battery-status notification daemon written in Rust.
+	pkgver = r36.d267056
+	pkgrel = 2
+	url = https://github.com/RedDocMD/Sarge
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = cargo
+	makedepends = dbus
+	provides = sarge
+	conflicts = sarge
+	source = sarge::git+https://github.com/RedDocMD/Sarge.git
+	md5sums = SKIP
+
+pkgname = sarge

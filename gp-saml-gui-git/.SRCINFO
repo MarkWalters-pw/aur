@@ -1,0 +1,20 @@
+pkgbase = gp-saml-gui-git
+	pkgdesc = Interactively authenticate to GlobalProtect VPNs that require SAML
+	pkgver = r57.17b2ca6
+	pkgrel = 1
+	url = https://github.com/dlenski/gp-saml-gui
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = python
+	depends = python-requests
+	depends = webkit2gtk
+	depends = python-gobject
+	provides = gp-saml-gui
+	conflicts = gp-saml-gui
+	source = gp-saml-gui::git+https://github.com/dlenski/gp-saml-gui
+	source = gp-saml-gui.sh
+	b2sums = SKIP
+	b2sums = 5015928286f6a71327568ecaf92d2fc60360ca6eb3499a99ebc4613fc2655004ff9109b67174d3e63fc7adbf9e5f1a2d884edefc7b0fbe87689653f79f6ce6e5
+
+pkgname = gp-saml-gui-git

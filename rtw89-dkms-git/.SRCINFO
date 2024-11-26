@@ -1,0 +1,14 @@
+pkgbase = rtw89-dkms-git
+	pkgdesc = Driver for Realtek 802.11ax wireless chips
+	pkgver = r1094.67a66dd
+	pkgrel = 1
+	url = https://github.com/lwfinger/rtw89
+	arch = any
+	license = GPL2
+	makedepends = git
+	makedepends = linux-firmware
+	depends = dkms
+	source = git+https://github.com/a5a5aa555oo/rtw89.git
+	sha256sums = SKIP
+
+pkgname = rtw89-dkms-git

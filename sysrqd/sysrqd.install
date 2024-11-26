@@ -1,0 +1,16 @@
+post_install() {
+cat <<EOF
+
+- Create a password file:
+  echo "mypassword" > /etc/sysrqd.secret
+  chmod 0600 /etc/sysrqd.secret
+
+- Optionnaly, create a bind file to bind to a specific IP
+  echo 192.168.2.13 > /etc/sysrqd.bind
+
+EOF
+}
+
+pre_remove() {
+    /bin/rm -f /etc/sysrqd.{secret,bind}
+}

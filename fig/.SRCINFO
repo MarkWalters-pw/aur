@@ -1,0 +1,18 @@
+pkgbase = fig
+	pkgdesc = Adds IDE-style autocomplete to your existing terminal.
+	pkgver = 2.19.0
+	pkgrel = 1
+	url = https://fig.io
+	arch = x86_64
+	license = custom
+	makedepends = jq
+	makedepends = xz
+	depends = gtk3
+	depends = webkit2gtk-4.1
+	depends = libappindicator-gtk3
+	depends = ibus
+	depends = xdg-utils
+	source = fig-2.19.0.tar.xz::https://repo.fig.io/generic/stable/asset/2.19.0/x86_64/fig.tar.xz
+	sha256sums = 56b18ca9c6f2949f98eeb959bb70c096955a662297dfabc99f36cbce7be84074
+
+pkgname = fig

@@ -1,0 +1,16 @@
+pkgbase = tsukae-git
+	pkgdesc = Show off your most used shell commands
+	pkgver = 20210419.r21.8111ddd
+	pkgrel = 1
+	url = https://github.com/irevenko/tsukae
+	arch = x86_64
+	license = MIT
+	makedepends = go
+	makedepends = git
+	depends = glibc
+	provides = tsukae
+	conflicts = tsukae
+	source = tsukae-git::git+https://github.com/irevenko/tsukae
+	sha256sums = SKIP
+
+pkgname = tsukae-git

@@ -1,0 +1,20 @@
+pkgbase = android-armv7a-eabi-openjpeg2
+	pkgdesc = An open source JPEG 2000 codec (Android armv7a-eabi)
+	pkgver = 2.5.2
+	pkgrel = 2
+	url = https://www.openjpeg.org
+	arch = any
+	license = BSD
+	makedepends = android-cmake
+	depends = android-ndk
+	depends = android-armv7a-eabi-libpng
+	depends = android-armv7a-eabi-lcms2
+	depends = openjpeg2
+	options = !strip
+	options = !buildflags
+	options = staticlibs
+	options = !emptydirs
+	source = https://github.com/uclouvain/openjpeg/archive/v2.5.2.tar.gz
+	md5sums = f9ee64845881a15109ed0aa73a12202f
+
+pkgname = android-armv7a-eabi-openjpeg2

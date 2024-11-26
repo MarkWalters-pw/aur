@@ -1,0 +1,9 @@
+post_install() {
+    test -f /usr/bin/update-desktop-database && /usr/bin/update-desktop-database -q /usr/share/applications > /dev/null
+    test -f /usr/bin/update-mime-database && /usr/bin/update-mime-database -n /usr/share/mime > /dev/null
+}
+
+post_remove() {
+    test -f /usr/bin/update-desktop-database && /usr/bin/update-desktop-database -q /usr/share/applications > /dev/null
+    test -f /usr/bin/update-mime-database && /usr/bin/update-mime-database -n /usr/share/mime > /dev/null
+}

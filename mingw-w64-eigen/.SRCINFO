@@ -1,0 +1,16 @@
+pkgbase = mingw-w64-eigen
+	pkgdesc = Lightweight C++ template library for vector and matrix math, a.k.a. linear algebra. (mingw-w64)
+	pkgver = 3.4.0
+	pkgrel = 1
+	url = http://eigen.tuxfamily.org
+	arch = any
+	license = MPL2
+	makedepends = mingw-w64-cmake
+	depends = mingw-w64-crt
+	options = !strip
+	options = !buildflags
+	options = staticlibs
+	source = https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.tar.bz2
+	sha256sums = b4c198460eba6f28d34894e3a5710998818515104d6e74e5cc331ce31e46e626
+
+pkgname = mingw-w64-eigen

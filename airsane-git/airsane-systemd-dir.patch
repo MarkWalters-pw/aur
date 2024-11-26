@@ -1,0 +1,13 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index d745832..924ac65 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -168,7 +168,7 @@ install(TARGETS ${PROJECT_NAME}
+ )
+ configure_file(systemd/airsaned.service.in ${CMAKE_BINARY_DIR}/airsaned.service @ONLY)
+ install(FILES ${CMAKE_BINARY_DIR}/airsaned.service
+-    DESTINATION /lib/systemd/system
++    DESTINATION /usr/lib/systemd/system
+ )
+ install(FILES systemd/airsaned.default
+     DESTINATION /etc/default

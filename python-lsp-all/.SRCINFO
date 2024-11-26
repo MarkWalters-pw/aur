@@ -1,0 +1,18 @@
+pkgbase = python-lsp-all
+	pkgver = 1
+	pkgrel = 6
+	arch = any
+	depends = python-lsp-server
+	depends = python-lsp-black
+	depends = python-pyls-isort
+	depends = python-pylsp-mypy
+	depends = python-rope
+	depends = python-pyflakes
+	depends = python-mccabe
+	depends = python-pycodestyle
+	depends = python-pydocstyle
+	depends = python-pylsp-rope
+	optdepends = flake8: error checking
+	optdepends = python-pylint: linting
+
+pkgname = python-lsp-all

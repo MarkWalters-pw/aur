@@ -1,0 +1,17 @@
+pkgbase = fdkaac-git
+	pkgdesc = Command line encoder frontend for libfdk-aac
+	pkgver = 1.0.5.r6.gf95566e
+	pkgrel = 1
+	url = https://github.com/nu774/fdkaac
+	arch = i686
+	arch = x86_64
+	license = custom
+	makedepends = git
+	depends = glibc
+	depends = libfdk-aac
+	provides = fdkaac=1.0.5.r6.gf95566e
+	conflicts = fdkaac
+	source = git+https://github.com/nu774/fdkaac.git
+	sha256sums = SKIP
+
+pkgname = fdkaac-git

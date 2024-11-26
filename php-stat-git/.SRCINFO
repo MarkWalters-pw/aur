@@ -1,0 +1,15 @@
+pkgbase = php-stat-git
+	pkgdesc = A super modern high performance profiler for production
+	pkgver = r102.eff23e7
+	pkgrel = 1
+	url = https://github.com/krakjoe/stat
+	arch = i686
+	arch = x86_64
+	license = PHP
+	makedepends = git
+	depends = php
+	backup = etc/php/conf.d/stat.ini
+	source = git+https://github.com/krakjoe/stat.git
+	md5sums = SKIP
+
+pkgname = php-stat-git

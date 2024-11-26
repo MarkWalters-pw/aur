@@ -1,0 +1,22 @@
+pkgbase = pocket-casts-linux
+	pkgdesc = Electron wrapper around the Pocket Casts web app with support for MPRIS (media controls)
+	pkgver = 1.4.0
+	pkgrel = 1
+	url = https://github.com/fuadsaud/pocket-casts-linux
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = nodejs
+	makedepends = yarn
+	makedepends = python
+	depends = electron
+	depends = sh
+	provides = pocket-casts
+	source = pocket-casts-linux::git+https://github.com/fuadsaud/pocket-casts-linux.git#commit=3445a77e537ddc82e2f87ebaee037acb30812a79
+	source = pocket-casts-linux.sh
+	source = pocket-casts-linux.desktop
+	md5sums = SKIP
+	md5sums = 303f5119008d56097134fa314c6af06c
+	md5sums = 7afa28814823fc89323c6f417dc62070
+
+pkgname = pocket-casts-linux

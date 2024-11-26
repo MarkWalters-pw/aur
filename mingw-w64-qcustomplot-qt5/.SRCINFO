@@ -1,0 +1,19 @@
+pkgbase = mingw-w64-qcustomplot-qt5
+	pkgdesc = Plotting library for Qt5 (mingw-w64)
+	pkgver = 2.1.0
+	pkgrel = 1
+	url = http://www.qcustomplot.com
+	arch = any
+	license = GPL
+	makedepends = mingw-w64-gcc
+	depends = mingw-w64-crt
+	depends = mingw-w64-qt5-base
+	options = !strip
+	options = !buildflags
+	options = staticlibs
+	source = https://www.qcustomplot.com/release/2.1.0fixed/QCustomPlot-sharedlib.tar.gz
+	source = https://www.qcustomplot.com/release/2.1.0fixed/QCustomPlot-source.tar.gz
+	md5sums = 5a401eb55eab6417f129529bff4d6a62
+	md5sums = ecb2d59b440a52c38c5c3425eb7afa05
+
+pkgname = mingw-w64-qcustomplot-qt5

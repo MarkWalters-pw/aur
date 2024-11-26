@@ -1,0 +1,22 @@
+pkgbase = vim-srcery-git
+	pkgdesc = Dark colorscheme with contrasting colors and a slightly earthy tone
+	pkgver = 1.0.0.r10.g9a34db8
+	pkgrel = 1
+	url = https://github.com/srcery-colors/srcery-vim
+	arch = any
+	groups = vim-plugins
+	license = MIT
+	makedepends = git
+	depends = vim-plugin-runtime
+	provides = vim-srcery
+	provides = vim-airline-srcery
+	provides = vim-lightline-srcery
+	provides = vim-clap-srcery
+	conflicts = vim-srcery
+	replaces = vim-airline-srcery-git
+	replaces = vim-lightline-srcery-git
+	replaces = vim-clap-srcery-git
+	source = vim-srcery-git::git+https://github.com/srcery-colors/srcery-vim
+	sha256sums = SKIP
+
+pkgname = vim-srcery-git

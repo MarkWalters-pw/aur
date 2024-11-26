@@ -1,0 +1,21 @@
+pkgbase = python-skymapper-git
+	pkgdesc = A collection of python / matplotlib scripts to map astronomical survey data from the celestial sphere onto 2D
+	pkgver = r202.b0f1119
+	pkgrel = 1
+	url = https://github.com/pmelchior/skymapper.git
+	arch = any
+	license = GPL
+	makedepends = git
+	makedepends = python
+	makedepends = python2
+	makedepends = cython
+	makedepends = cython2
+	makedepends = python-numpy
+	makedepends = python2-numpy
+	source = python-skymapper-git::git+https://github.com/pmelchior/skymapper.git
+	md5sums = SKIP
+
+pkgname = python-skymapper-git
+
+pkgname = python2-skymapper-git
+

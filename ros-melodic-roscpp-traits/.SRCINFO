@@ -1,0 +1,21 @@
+pkgbase = ros-melodic-roscpp-traits
+	pkgdesc = ROS - roscpp_traits contains the message traits code as described in MessagesTraits.
+	pkgver = 0.6.14
+	pkgrel = 2
+	url = https://wiki.ros.org/roscpp_traits
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-melodic-catkin
+	depends = ros-melodic-rostime
+	depends = ros-melodic-cpp-common
+	source = ros-melodic-roscpp-traits-0.6.14.tar.gz::https://github.com/ros/roscpp_core/archive/0.6.14.tar.gz
+	sha256sums = d5a0ad09fa878d9f3d6d7f3e8c7854f0f160aeeea9c4d332e3dc87552087ca68
+
+pkgname = ros-melodic-roscpp-traits
+

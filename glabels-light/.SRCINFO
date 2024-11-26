@@ -1,0 +1,26 @@
+pkgbase = glabels-light
+	pkgdesc = Creating labels and business cards the very easy way - minimal dependencies
+	pkgver = 3.4.1
+	pkgrel = 1
+	url = http://glabels.org/
+	install = glabels.install
+	arch = i686
+	arch = x86_64
+	license = GPL
+	license = LGPL
+	makedepends = intltool
+	makedepends = itstool
+	depends = librsvg
+	depends = dconf
+	depends = desktop-file-utils
+	depends = xdg-utils
+	optdepends = evolution-data-server: import Evolution contacts
+	optdepends = qrencode: use QR codes
+	optdepends = iec16022: use barcodes
+	provides = glabels
+	conflicts = glabels
+	source = http://ftp.gnome.org/pub/GNOME/sources/glabels/3.4/glabels-3.4.1.tar.xz
+	sha256sums = 18e457298abb1c617187361109eeae769317686303fc07726af31e11519c5938
+
+pkgname = glabels-light
+

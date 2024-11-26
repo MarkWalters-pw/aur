@@ -1,0 +1,17 @@
+pkgbase = siji-ng
+	pkgdesc = A fixed and maintained Siji.
+	pkgver = 1.2
+	pkgrel = 1
+	url = https://github.com/begss/siji-ng
+	arch = any
+	license = GPL2
+	makedepends = xorg-bdftopcf
+	makedepends = python3
+	provides = siji
+	conflicts = siji
+	conflicts = siji-git
+	conflicts = neosiji
+	source = siji-ng-1.2.tar.gz::https://github.com/begss/siji-ng/archive/refs/tags/v1.2.tar.gz
+	sha512sums = 01c12d033b9cca98ff9292951149949ecee85c9d14cd859ad260e050a40230ecc00c683a905459d0254115d578265a5ea67a81ea4b11e442f41078c45eb192dc
+
+pkgname = siji-ng

@@ -1,0 +1,22 @@
+pkgbase = pacdiffviewer
+	pkgdesc = Pacfiles manager
+	pkgver = 0.3.1
+	pkgrel = 2
+	url = https://github.com/Morganamilo/pacdiffviewer
+	arch = i686
+	arch = x86_64
+	arch = armv7h
+	arch = armv6h
+	arch = aarch64
+	license = GPL3
+	makedepends = cargo
+	depends = pacman
+	depends = glibc
+	optdepends = vim: view via 'vim -f'
+	optdepends = git: view via 'git diff'
+	optdepends = sudo: view via 'sudo -e'
+	conflicts = yaourt
+	source = pacdiffviewer-0.3.1.tar.gz::https://github.com/Morganamilo/pacdiffviewer/archive/v0.3.1.tar.gz
+	sha512sums = 3db100b3b63fc1627f3aa918a0d22dd9fe4ea3edabd41893a20a9ba5f79415d97c5fce07d2c126015674fc9e45a760db1c704637bc095e958800cfb35067c42f
+
+pkgname = pacdiffviewer

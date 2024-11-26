@@ -1,0 +1,22 @@
+pkgbase = volctl
+	pkgdesc = Per-application volume control and OSD for Linux desktops.
+	pkgver = 0.9.4
+	pkgrel = 2
+	url = https://buzz.github.io/volctl/
+	arch = any
+	license = GPL
+	makedepends = git
+	depends = python
+	depends = python-gobject
+	depends = python-setuptools
+	depends = python-cairo
+	depends = pulse-native-provider
+	depends = desktop-file-utils
+	depends = python-pulsectl
+	optdepends = pavucontrol: mixer support,
+	optdepends = statusnotifier-introspection-dbus-menu: SNI support
+	options = !emptydirs
+	source = git+https://github.com/buzz/volctl.git#tag=v0.9.4
+	md5sums = SKIP
+
+pkgname = volctl

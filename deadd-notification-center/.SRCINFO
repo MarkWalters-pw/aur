@@ -1,0 +1,20 @@
+pkgbase = deadd-notification-center
+	pkgdesc = Customizable notification-daemon with notification center
+	pkgver = 2.1.1
+	pkgrel = 0
+	url = https://github.com/phuhl/linux_notification_center
+	arch = x86_64
+	license = BSD
+	makedepends = stack
+	makedepends = cairo
+	makedepends = pango
+	makedepends = gobject-introspection
+	depends = gobject-introspection-runtime
+	depends = gtk3
+	provides = deadd-notification-center
+	conflicts = deadd-notification-center-bin
+	conflicts = deadd-notification-center-git
+	source = deadd-notification-center-2.1.1.tar.gz::https://codeload.github.com/phuhl/linux_notification_center/tar.gz/refs/tags/2.1.1
+	sha256sums = e83cae52aff076da8f199d64580e921eeab029aca6214937ab38a6c43145862b
+
+pkgname = deadd-notification-center

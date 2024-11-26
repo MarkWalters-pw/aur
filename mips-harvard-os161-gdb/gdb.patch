@@ -1,0 +1,142 @@
+diff --color -rup gdb-7.8+os161-2.1/gdb/python/python.c gdb-7.8+os161-2.1-new/gdb/python/python.c
+--- gdb-7.8+os161-2.1/gdb/python/python.c	2014-09-30 23:00:34.000000000 -0300
++++ gdb-7.8+os161-2.1-new/gdb/python/python.c	2023-03-19 02:50:07.564662354 -0300
+@@ -108,7 +108,7 @@ int gdb_python_initialized;
+ static PyMethodDef GdbMethods[];
+ 
+ #ifdef IS_PY3K
+-static struct PyModuleDef GdbModuleDef;
++extern struct PyModuleDef GdbModuleDef;
+ #endif
+ 
+ PyObject *gdb_module;
+@@ -272,8 +272,16 @@ ensure_python_env (struct gdbarch *gdbar
+ static void
+ gdbpy_clear_quit_flag (const struct extension_language_defn *extlang)
+ {
++  if(!gdb_python_initialized)
++    return;
++
++  PyGILState_STATE m_state;
++  m_state = PyGILState_Ensure();
++
+   /* This clears the flag as a side effect.  */
+   PyOS_InterruptOccurred ();
++  PyGILState_Release(m_state);
++  return;
+ }
+ 
+ /* Set the quit flag.  */
+@@ -289,7 +297,14 @@ gdbpy_set_quit_flag (const struct extens
+ static int
+ gdbpy_check_quit_flag (const struct extension_language_defn *extlang)
+ {
+-  return PyOS_InterruptOccurred ();
++  if (!gdb_python_initialized)
++    return 0;
++
++  PyGILState_STATE m_state;
++  m_state = PyGILState_Ensure();
++  int res = PyOS_InterruptOccurred ();
++  PyGILState_Release(m_state);
++  return res;
+ }
+ 
+ /* Evaluate a Python command like PyRun_SimpleString, but uses
+@@ -1552,10 +1567,22 @@ finalize_python (void *ignore)
+ 
+   Py_Finalize ();
+ 
++  gdb_python_initialized = 0;
+   restore_active_ext_lang (previous_active);
+ }
+ #endif
+ 
++#ifdef IS_PY3K
++/* This is called via the PyImport_AppendInittab mechanism called
++   during initialization, to make the built-in _gdb module known to
++   Python.  */
++PyMODINIT_FUNC
++init__gdb_module (void)
++{
++  return PyModule_Create (&GdbModuleDef);
++}
++#endif
++
+ /* Provide a prototype to silence -Wmissing-prototypes.  */
+ extern initialize_file_ftype _initialize_python;
+ 
+@@ -1677,6 +1704,9 @@ message == an error message without a st
+      remain alive for the duration of the program's execution, so
+      it is not freed after this call.  */
+   Py_SetProgramName (progname_copy);
++
++  /* Define _gdb as a built-in module.  */
++  PyImport_AppendInittab ("_gdb", init__gdb_module);
+ #else
+   Py_SetProgramName (progname);
+ #endif
+@@ -1686,9 +1716,7 @@ message == an error message without a st
+   PyEval_InitThreads ();
+ 
+ #ifdef IS_PY3K
+-  gdb_module = PyModule_Create (&GdbModuleDef);
+-  /* Add _gdb module to the list of known built-in modules.  */
+-  _PyImport_FixupBuiltin (gdb_module, "_gdb");
++  gdb_module = PyImport_ImportModule ("_gdb");
+ #else
+   gdb_module = Py_InitModule ("_gdb", GdbMethods);
+ #endif
+@@ -1782,8 +1810,7 @@ message == an error message without a st
+     goto fail;
+ 
+   /* Release the GIL while gdb runs.  */
+-  PyThreadState_Swap (NULL);
+-  PyEval_ReleaseLock ();
++  PyEval_SaveThread();
+ 
+   make_final_cleanup (finalize_python, NULL);
+ 
+@@ -2005,7 +2032,7 @@ Return a tuple containing all inferiors.
+ };
+ 
+ #ifdef IS_PY3K
+-static struct PyModuleDef GdbModuleDef =
++extern struct PyModuleDef GdbModuleDef =
+ {
+   PyModuleDef_HEAD_INIT,
+   "_gdb",
+diff --color -rup gdb-7.8+os161-2.1/sim/common/sim-arange.c gdb-7.8+os161-2.1-new/sim/common/sim-arange.c
+--- gdb-7.8+os161-2.1/sim/common/sim-arange.c	2014-09-30 23:01:49.000000000 -0300
++++ gdb-7.8+os161-2.1-new/sim/common/sim-arange.c	2023-03-19 02:50:07.841329026 -0300
+@@ -280,11 +280,7 @@ sim_addr_range_delete (ADDR_RANGE *ar, a
+   build_search_tree (ar);
+ }
+ 
+-#endif /* DEFINE_NON_INLINE_P */
+-
+-#if DEFINE_INLINE_P
+-
+-SIM_ARANGE_INLINE int
++int
+ sim_addr_range_hit_p (ADDR_RANGE *ar, address_word addr)
+ {
+   ADDR_RANGE_TREE *t = ar->range_tree;
+@@ -301,4 +297,4 @@ sim_addr_range_hit_p (ADDR_RANGE *ar, ad
+   return 0;
+ }
+ 
+-#endif /* DEFINE_INLINE_P */
++#endif /* DEFINE_NON_INLINE_P */
+diff --color -rup gdb-7.8+os161-2.1/sim/common/sim-arange.h gdb-7.8+os161-2.1-new/sim/common/sim-arange.h
+--- gdb-7.8+os161-2.1/sim/common/sim-arange.h	2014-09-30 23:01:49.000000000 -0300
++++ gdb-7.8+os161-2.1-new/sim/common/sim-arange.h	2023-03-19 02:50:07.841329026 -0300
+@@ -62,7 +62,7 @@ extern void sim_addr_range_delete (ADDR_
+ 
+ /* Return non-zero if ADDR is in range AR, traversing the entire tree.
+    If no range is specified, that is defined to mean "everything".  */
+-extern INLINE int
++extern int
+ sim_addr_range_hit_p (ADDR_RANGE * /*ar*/, address_word /*addr*/);
+ #define ADDR_RANGE_HIT_P(ar, addr) \
+   ((ar)->range_tree == NULL || sim_addr_range_hit_p ((ar), (addr)))

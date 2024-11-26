@@ -1,0 +1,18 @@
+pkgbase = ghostess
+	pkgdesc = a simple GTK host for DSSI plugins
+	pkgver = 20210101
+	pkgrel = 1
+	url = http://www.smbolton.com/linux.html
+	arch = x86_64
+	license = GPL
+	makedepends = dssi
+	makedepends = ladspa
+	depends = gtk2
+	depends = liblo
+	depends = jack
+	depends = alsa-lib
+	source = http://www.smbolton.com/linux/ghostess-20210101.tar.bz2
+	md5sums = c084d46422a56f128b572523c89caf7d
+
+pkgname = ghostess
+

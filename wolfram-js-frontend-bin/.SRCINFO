@@ -1,0 +1,19 @@
+pkgbase = wolfram-js-frontend-bin
+	pkgdesc = Open-source Wolfram Frontend & Interpreter & Fullstack Framework written in Javascript
+	pkgver = 2.5.0
+	pkgrel = 1
+	url = https://jerryi.github.io/wljs-docs/
+	arch = x86_64
+	license = GPL3
+	depends = wolframengine
+	depends = nodejs
+	depends = glibc
+	depends = bash
+	depends = libuv
+	depends = java-runtime
+	provides = wolfram-js-frontend
+	conflicts = wolfram-js-frontend
+	source = https://github.com/JerryI/wolfram-js-frontend/releases/download/2.5.0/wljs-notebook_2.5.0_amd64.deb
+	sha256sums = 520eb0861165f634c4aadadf940da48244e8a4a2b23837655d7ea832940706b5
+
+pkgname = wolfram-js-frontend-bin

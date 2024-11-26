@@ -1,0 +1,23 @@
+pkgbase = yash-git
+	pkgdesc = Yet Another SHell is a POSIX-compliant command line shell
+	pkgver = r3767.3f6f0396
+	pkgrel = 1
+	url = https://magicant.github.io/yash/
+	install = yash.install
+	arch = i686
+	arch = x86_64
+	arch = armv7h
+	arch = aarch64
+	license = GPL-2.0-only
+	makedepends = asciidoc
+	makedepends = ed
+	depends = ncurses
+	provides = yash
+	conflicts = yash
+	options = lto
+	source = git+https://github.com/magicant/yash
+	source = yash.install
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = yash-git

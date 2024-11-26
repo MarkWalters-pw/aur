@@ -1,0 +1,19 @@
+#!/bin/sh
+
+pre_upgrade() {
+	if (( $(vercmp $2 1.0.0) < 0 )); then
+		echo "> hornet$ You are going to upgrade HORNET to the new"
+		echo "> hornet$ Chrysalis version. This is a breaking change."
+		echo "> hornet$ 1. Your Hornet configuration may get invalid."
+		echo "> hornet$    A new template configuration can be found in"
+		echo "> hornet$    - /etc/default/hornet.pacnew and"
+		echo "> hornet$    - /var/lib/hornet/config.json.pacnew"
+		echo "> hornet$ 2. The old database files are incompatible."
+		echo "> hornet$    Restart Hornet with an empty database folder."
+	else
+		echo "> hornet$ Before restarting the node first check the release notes"
+		echo "> hornet$ to see if the configuration needs to be updated."
+		echo "> hornet$ Template configuration: /var/lib/hornet/config.json.pacnew"
+		echo "> hornet$ Release notes: https://github.com/iotaledger/hornet/releases/tag/v1.2.8"
+	fi
+}

@@ -1,0 +1,16 @@
+pkgbase = gmail-desktop
+	pkgdesc = Nifty Gmail desktop app
+	pkgver = 3.0.0_alpha.37
+	pkgrel = 1
+	url = https://github.com/timche/gmail-desktop/tree/develop
+	arch = x86_64
+	license = MIT
+	makedepends = gendesk
+	makedepends = npm
+	depends = electron21
+	optdepends = libnotify: Desktop notifications
+	optdepends = libappindicator-gtk3: Tray icon
+	source = gmail-desktop-3.0.0-alpha.37.tar.gz::https://github.com/timche/gmail-desktop/archive/refs/tags/v3.0.0-alpha.37.tar.gz
+	sha256sums = f6edd6bc221ca57a98bb5a551266f040b3158b1a6aac4ab17111c78edcf2a24c
+
+pkgname = gmail-desktop

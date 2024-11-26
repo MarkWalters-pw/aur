@@ -1,0 +1,19 @@
+pkgbase = dwayland-reborn
+	pkgdesc = Qt-style Client and Server library wrapper for the Wayland libraries
+	pkgver = 5.24.3
+	pkgrel = 2
+	arch = x86_64
+	license = LGPL
+	makedepends = extra-cmake-modules
+	makedepends = doxygen
+	makedepends = qt5-tools
+	makedepends = qt5-doc
+	makedepends = wayland-protocols
+	makedepends = deepin-wayland-protocols-reborn
+	makedepends = ninja
+	depends = qt5-wayland
+	options = debug
+	source = https://github.com/justforlxz/dwayland/archive/refs/tags/5.24.3-deepin.1.4.tar.gz
+	sha256sums = 1216e62e57fcf0d3634fbad34d56e188626947f667e327e3c9165a9cec449eae
+
+pkgname = dwayland-reborn

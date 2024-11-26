@@ -1,0 +1,20 @@
+pkgbase = gf_backup_tool-git
+	pkgdesc = Backup Terminal tool based on rsync & systemd
+	pkgver = 1.0.6.5bb5432
+	pkgrel = 1
+	url = https://github.com/Gregory-F/gf_backup_tool
+	install = gf_backup_tool.install
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	depends = systemd
+	depends = dateutils
+	depends = rsync
+	depends = bash
+	backup = etc/gf_backup_tool/config
+	backup = etc/gf_backup_tool/exclude_file
+	source = git+https://github.com/Gregory-F/gf_backup_tool
+	md5sums = SKIP
+
+pkgname = gf_backup_tool-git
+

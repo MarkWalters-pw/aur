@@ -1,0 +1,21 @@
+pkgbase = libs3-git
+	pkgdesc = C Library and Tools for Amazon S3 Access
+	pkgver = 278.287e4be
+	pkgrel = 1
+	url = https://github.com/bji/libs3
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = make
+	makedepends = libxml2
+	makedepends = openssl
+	makedepends = curl
+	depends = libxml2
+	depends = openssl
+	depends = curl
+	source = git+https://github.com/bji/libs3.git#commit=287e4bee6fd430ffb52604049de80a27a77ff6b4
+	source = added_s3_versioning_support.patch
+	sha256sums = SKIP
+	sha256sums = 0549154da30ef026b334a83cb69e168f7bb243a17569f54bbc57f0840d76f8c2
+
+pkgname = libs3-git

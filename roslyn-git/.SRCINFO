@@ -1,0 +1,18 @@
+pkgbase = roslyn-git
+	pkgdesc = Microsoft's C# compiler and compiler libraries (Git version)
+	pkgver = VSCode.CSharp.2.26.13.r2.g859d33a
+	pkgrel = 1
+	url = https://github.com/dotnet/roslyn
+	install = roslyn.install
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	depends = dotnet-sdk-preview-bin
+	depends = zlib
+	provides = roslyn
+	conflicts = roslyn
+	options = staticlibs
+	source = git+https://github.com/dotnet/roslyn.git
+	md5sums = SKIP
+
+pkgname = roslyn-git

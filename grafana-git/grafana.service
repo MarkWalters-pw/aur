@@ -1,0 +1,14 @@
+[Unit]
+Description=Grafana service
+After=network.target                                     
+
+[Service]
+User=grafana
+Group=grafana
+ExecStart=/usr/bin/grafana-server --config=/etc/grafana/grafana.ini --homepath=/usr/share/grafana
+LimitNOFILE=10000
+TimeoutStopSec=20
+SuccessExitStatus=0 2
+
+[Install]
+WantedBy=multi-user.target

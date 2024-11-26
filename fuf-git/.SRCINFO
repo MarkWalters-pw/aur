@@ -1,0 +1,18 @@
+pkgbase = fuf-git
+	pkgdesc = Fairly Usable cli Filebrowser. dev/git version
+	pkgver = latest.build.r0.gac1498f
+	pkgrel = 1
+	url = https://github.com/ckath/fuf
+	install = fuf.install
+	arch = any
+	license = MIT
+	makedepends = git
+	depends = ncurses
+	depends = libx11
+	optdepends = w3m: image previews
+	provides = fuf
+	conflicts = fuf
+	source = fuf-git::git+https://github.com/ckath/fuf.git
+	md5sums = SKIP
+
+pkgname = fuf-git

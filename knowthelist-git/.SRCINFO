@@ -1,0 +1,21 @@
+pkgbase = knowthelist-git
+	pkgdesc = Knowthelist the awesome party music player.
+	pkgver = 2.3.1.r3.g32ec9a3
+	pkgrel = 1
+	url = https://github.com/knowthelist/knowthelist
+	arch = any
+	license = GPL v2
+	makedepends = git
+	makedepends = qt5-tools
+	depends = qt5-base
+	depends = taglib
+	depends = gstreamer
+	depends = gst-plugins-base
+	depends = boost
+	depends = alsa-lib
+	provides = knowthelist
+	conflicts = knowthelist
+	source = knowthelist-git::git+https://github.com/knowthelist/knowthelist
+	sha256sums = SKIP
+
+pkgname = knowthelist-git

@@ -1,0 +1,30 @@
+pkgbase = python-dearpygui
+	pkgdesc = A fast and powerful Graphical User Interface Toolkit for Python with minimal dependencies
+	pkgver = 1.11.0
+	pkgrel = 5
+	url = https://github.com/hoffstadt/DearPyGui
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = cmake
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = glibc
+	depends = gcc-libs
+	depends = libglvnd
+	depends = libx11
+	depends = libxcursor
+	depends = libxi
+	depends = libxinerama
+	depends = libxrandr
+	depends = python
+	source = git+https://github.com/hoffstadt/DearPyGui#tag=v1.11.0
+	source = git+https://github.com/ocornut/imgui
+	source = git+https://github.com/glfw/glfw
+	b2sums = SKIP
+	b2sums = SKIP
+	b2sums = SKIP
+
+pkgname = python-dearpygui

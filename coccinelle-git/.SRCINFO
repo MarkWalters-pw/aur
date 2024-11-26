@@ -1,0 +1,25 @@
+pkgbase = coccinelle-git
+	pkgdesc = Provides spatch program used to apply semantic patches
+	pkgver = 1.0.8.r209.0e1f2b1f
+	pkgrel = 1
+	url = http://coccinelle.lip6.fr/
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	makedepends = ocaml
+	makedepends = ocaml-findlib
+	makedepends = ocaml-num
+	depends = pcre
+	depends = python
+	optdepends = ocaml: OCaml scripting feature
+	optdepends = ocaml-findlib: OCaml scripting feature
+	provides = coccinelle
+	conflicts = coccinelle
+	options = !strip
+	options = !makeflags
+	source = git+https://github.com/coccinelle/coccinelle.git
+	sha256sums = SKIP
+
+pkgname = coccinelle-git
+

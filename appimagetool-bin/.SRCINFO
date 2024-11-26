@@ -1,0 +1,27 @@
+pkgbase = appimagetool-bin
+	pkgdesc = Package desktop applications as AppImages
+	pkgver = 13
+	pkgrel = 0
+	url = https://github.com/AppImage/AppImageKit
+	arch = x86_64
+	arch = armv7h
+	arch = aarch64
+	license = MIT
+	depends = libappimage
+	provides = appimagetool
+	conflicts = appimagetool
+	noextract = appimagetool-13-x86_64.appimage
+	noextract = appimagetool-13-armv7.appimage
+	noextract = appimagetool-13-aarch64.appimage
+	source = appimagetool-13-README.md::https://github.com/AppImage/AppImageKit/raw/13/README.md
+	source = appimagetool-13-LICENSE::https://github.com/AppImage/AppImageKit/raw/13/LICENSE
+	sha256sums = bf014bb030e26169da2129cb51e75ecc0c1a94cb2c970ee99050c65eaad16a09
+	sha256sums = 9cb22a08334c3a108ec4da96c1d6aea7a17a732fa9f5ca3413a9b4ce651397d8
+	source_x86_64 = appimagetool-13-x86_64.appimage::https://github.com/AppImage/AppImageKit/releases/download/13/appimagetool-x86_64.AppImage
+	sha256sums_x86_64 = df3baf5ca5facbecfc2f3fa6713c29ab9cefa8fd8c1eac5d283b79cab33e4acb
+	source_armv7h = appimagetool-13-armv7.appimage::https://github.com/AppImage/AppImageKit/releases/download/13/appimagetool-armhf.AppImage
+	sha256sums_armv7h = 36bb718f32002357375d77b082c264baba2a2dcf44ed1a27d51dbb528fbb60f6
+	source_aarch64 = appimagetool-13-aarch64.appimage::https://github.com/AppImage/AppImageKit/releases/download/13/appimagetool-aarch64.AppImage
+	sha256sums_aarch64 = 334e77beb67fc1e71856c29d5f3f324ca77b0fde7a840fdd14bd3b88c25c341f
+
+pkgname = appimagetool-bin

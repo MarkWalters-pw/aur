@@ -1,0 +1,27 @@
+pkgbase = bashstyle-git
+	pkgdesc = A PyGTK client for managing bash, readline, vim, and nano settings (git version)
+	pkgver = 0.10.7.2.r4.g79693f4
+	pkgrel = 1
+	url = https://github.com/Nanolx/bashstyle-ng
+	arch = any
+	groups = system
+	license = GPL3
+	makedepends = git
+	depends = python
+	depends = dmidecode
+	depends = gawk
+	depends = sed
+	depends = bc
+	depends = gettext
+	depends = less
+	depends = libnewt
+	depends = python-configobj
+	depends = python-gobject
+	optdepends = acpi: showbatteryload support
+	optdepends = tree: fs support
+	provides = bashstyle
+	conflicts = bashstyle
+	source = git+https://github.com/Nanolx/bashstyle-ng.git
+	md5sums = SKIP
+
+pkgname = bashstyle-git

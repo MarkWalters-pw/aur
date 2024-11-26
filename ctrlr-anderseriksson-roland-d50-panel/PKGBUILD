@@ -1,0 +1,37 @@
+# Maintainer: Nil Geisweiller <ngeiswei at the giant g>
+
+pkgname=ctrlr-anderseriksson-roland-d50-panel
+pkgver=1.2
+pkgrel=4
+epoch=
+pkgdesc="Ctrlr panel from Anders Eriksson (meastempo) for the Roland D-50, installed under /usr/share/ctrlr/panel/AndersEriksson."
+arch=('any')
+url="https://ctrlr.org/roland-d50-editor/"
+license=()
+groups=('pro-audio')
+depends=('ctrlr')
+makedepends=()
+checkdepends=()
+optdepends=()
+provides=('ctrlr-anderseriksson-roland-d50-panel')
+conflicts=('ctrlr-anderseriksson-roland-d50-panel')
+replaces=('ctrlr-anders-roland-d50-panel')
+backup=()
+options=()
+install=
+changelog=
+source=("D50-editor-${pkgver}.bpanelz"::"https://ctrlr.org/wp-content/uploads/delightful-downloads/2017/02/D50-editor-${pkgver}.bpanelz")
+noextract=()
+sha256sums=('SKIP')
+validpgpkeys=()
+
+package() {
+	PREFIX="${pkgdir}/usr"
+	SHAREPATH="${PREFIX}/share"
+	PANELSPATH="${SHAREPATH}/ctrlr/panels"
+	AUTHORPATH="${PANELSPATH}/AndersEriksson"
+
+	# Create local folders and copy panels
+	mkdir -p "${AUTHORPATH}"
+	cp "D50-editor-${pkgver}.bpanelz" "${AUTHORPATH}"
+}

@@ -1,0 +1,21 @@
+pkgbase = spectrumyzer
+	pkgdesc = Spectrum analyzer rendered on a desktop
+	pkgver = 1.1.1
+	pkgrel = 1
+	url = https://github.com/HaCk3Dq/spectrumyzer
+	arch = x86_64
+	arch = i686
+	license = GPL
+	makedepends = git
+	depends = python
+	depends = cairo
+	depends = python-cairo
+	depends = python-gobject
+	depends = fftw
+	depends = libpulse
+	provides = spectrumyzer
+	source = git+https://github.com/HaCk3Dq/spectrumyzer
+	md5sums = SKIP
+
+pkgname = spectrumyzer
+

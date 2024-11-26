@@ -1,0 +1,25 @@
+pkgbase = reform-tools
+	pkgdesc = MNT Reform laptop tools
+	pkgver = 1.7
+	pkgrel = 2
+	url = https://mntre.com/reform2/handbook/index.html
+	arch = x86_64
+	arch = aarch64
+	license = GPL3
+	depends = python
+	depends = python-psutil
+	depends = rsync
+	depends = alsa-utils
+	depends = systemd
+	depends = procps-ng
+	depends = busybox
+	optdepends = ircii
+	optdepends = pavucontrol
+	source = reform-tools-1.7.tar.gz::https://source.mnt.re/reform/reform-tools/-/archive/2e0cff9b45d45237822a1d27e40dfd74af9476d0/reform-tools-2e0cff9b45d45237822a1d27e40dfd74af9476d0.tar.gz
+	source = motd-full
+	source = motd-rescue
+	sha256sums = edfb6e261a4174b983bb27a1dab370e96800a6b545b1225c5715bef960305a05
+	sha256sums = 569b5310fa33ca99cfe08afb06e4cf7906233cca74acda70a6bdaa5ba01f6643
+	sha256sums = f7986b5dce945a9dcc923bbc66db11f6f5cba1e78576873b644fadff4dc5ad8d
+
+pkgname = reform-tools

@@ -1,0 +1,22 @@
+pkgbase = mauiman-git
+	pkgdesc = Maui Manager Library. Server and public library API.
+	pkgver = 4.0.0.alpha.20240502
+	pkgrel = 1
+	url = https://invent.kde.org/maui/mauiman
+	arch = x86_64
+	arch = i686
+	arch = arm
+	arch = armv6h
+	arch = armv7h
+	arch = aarch64
+	groups = maui
+	license = LGPL3
+	makedepends = git
+	makedepends = extra-cmake-modules
+	depends = qt6-base
+	provides = mauiman
+	conflicts = mauiman
+	source = git+https://invent.kde.org/maui/mauiman.git
+	sha256sums = SKIP
+
+pkgname = mauiman-git

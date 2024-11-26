@@ -1,0 +1,20 @@
+pkgbase = python-labxpipe
+	pkgdesc = Genomics pipelines
+	pkgver = 0.7.1
+	pkgrel = 1
+	url = https://sr.ht/~vejnar/LabxPipe
+	arch = any
+	license = MPLv2
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-setuptools-scm
+	makedepends = python-wheel
+	depends = python
+	depends = python-labxdb-tools
+	depends = python-pyfnutils
+	depends = python-xlsxwriter
+	source = python-labxpipe-0.7.1.tar.gz::https://git.sr.ht/~vejnar/LabxPipe/archive/v0.7.1.tar.gz
+	sha256sums = 8cc76a0e08ed40314c04b0604dc060ffb376c2e66095acb77ca0d8dcbadfa4fa
+
+pkgname = python-labxpipe

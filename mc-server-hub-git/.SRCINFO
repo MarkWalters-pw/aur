@@ -1,0 +1,25 @@
+pkgbase = mc-server-hub-git
+	pkgdesc = A web-interface for managing Minecraft Servers
+	pkgver = 0.1
+	pkgrel = 3
+	url = https://github.com/comroid-git/mc-server-hub
+	arch = any
+	license = GPL-3.0
+	makedepends = java-environment>=17
+	makedepends = gradle>=7
+	depends = java-runtime>=17
+	depends = screen
+	depends = tar
+	depends = grep
+	depends = sed
+	depends = curl
+	depends = jq
+	depends = coreutils
+	depends = findutils
+	options = !strip
+	source = git+https://github.com/comroid-git/mc-server-hub.git
+	source = git+https://github.com/comroid-git/mc-server-hub-git.git
+	md5sums = SKIP
+	md5sums = SKIP
+
+pkgname = mc-server-hub-git

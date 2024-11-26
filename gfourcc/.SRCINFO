@@ -1,0 +1,17 @@
+pkgbase = gfourcc
+	pkgdesc = GUI Tool for changing the FOURCC code and description of AVI files
+	pkgver = 0.1.4.r2.g9817643
+	pkgrel = 7
+	url = https://github.com/gamegard68/gfourcc
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = gnome-common
+	makedepends = pkg-config
+	depends = gtkmm3
+	provides = gfourcc
+	conflicts = gfourcc
+	source = git+https://github.com/gamegard68/gfourcc.git
+	sha256sums = SKIP
+
+pkgname = gfourcc

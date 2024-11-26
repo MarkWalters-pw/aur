@@ -1,0 +1,27 @@
+pkgbase = styli.sh-git
+	pkgdesc = wallpaper switching made easy
+	pkgver = r114.9535177
+	pkgrel = 1
+	url = https://github.com/thevinter/styli.sh
+	arch = any
+	license = GPL
+	makedepends = git
+	depends = wget
+	depends = curl
+	depends = coreutils
+	depends = gawk
+	depends = sed
+	depends = jq
+	optdepends = feh: for displaying wallpaper
+	optdepends = nitrogen: for setting wallpaper
+	optdepends = python-pywal: something with colorschemes
+	provides = styli.sh
+	conflicts = styli.sh
+	source = styli.sh::git+https://github.com/thevinter/styli.sh
+	source = styli.sh.service
+	source = styli.sh.timer
+	sha256sums = SKIP
+	sha256sums = 609cb72db3888cceb6472b06783bffbb9e3d18ab23cb75ca0ee93371b88d067d
+	sha256sums = d8576d3b5d4dab9e29586eaedd6e32aeaa08472ba283e6f4aa9dffd85d102abd
+
+pkgname = styli.sh-git

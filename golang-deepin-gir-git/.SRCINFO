@@ -1,0 +1,20 @@
+pkgbase = golang-deepin-gir-git
+	pkgdesc = Generate static golang bindings for GObject
+	pkgver = 2.2.0.r4.g1a60448
+	pkgrel = 1
+	url = https://github.com/linuxdeepin/go-gir-generator
+	arch = any
+	groups = deepin-git
+	license = GPL3
+	checkdepends = golang-gopkg-check.v1
+	makedepends = git
+	makedepends = go
+	makedepends = gobject-introspection
+	depends = gtk3
+	depends = libgudev
+	provides = golang-deepin-gir
+	conflicts = golang-deepin-gir
+	source = golang-deepin-gir-git::git+https://github.com/linuxdeepin/go-gir-generator
+	sha512sums = SKIP
+
+pkgname = golang-deepin-gir-git

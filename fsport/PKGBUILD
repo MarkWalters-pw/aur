@@ -1,0 +1,57 @@
+# Maintainer: Lin Ruoshui <lin.ruohshoei@gmail.com>
+# Contributor: Mike Swanson <mikeonthecomputer@gmail.com>
+
+pkgname=fsport
+pkgver=3.5
+pkgrel=3
+pkgdesc="The original FreeSpace campaigns ported to FreeSpace 2"
+arch=('any')
+url="http://fsport.hard-light.net/website/"
+license=('custom:noncommercial')
+makedepends=('p7zip')
+depends=('fs2_open')
+optdepends=('fs2_open-mediavps: Hi-res FS2 resources'
+            'fsport-mediavps: Hi-res FS1 resources'
+            'fsport-tangovps: Hi-res Command Brief animations')
+source=(fsport.sh fsport.desktop LICENSE
+        'https://porphyrion.feralhosting.com/datacorder/fsport_files/releases/fsport3_5.7z'
+        'https://porphyrion.feralhosting.com/datacorder/fsport_files/releases/fsport-missions.7z'
+        'https://porphyrion.feralhosting.com/datacorder/fsport_files/releases/odeon_fs1.zip'
+        'https://porphyrion.feralhosting.com/datacorder/fsport_files/releases/sparky_hi_fs1.7z'
+        'https://porphyrion.feralhosting.com/datacorder/fsport_files/releases/stu_fs1.7z')
+sha256sums=('e443c079fe7c2bc6ed85028aa16cfe83d4b159511e83f0ae2448bb8f845e8b2f'
+            'c7c64510205f78eabc4ff52fa134da7a0877e1a768253cd2e8de9c67af994f3e'
+            '79462ffe82b8cf371f37a3444a8e17165d293e797a865b9c4312f86d00ddf4ec'
+            '6af05e1ac58aeecb6e61cb3f9dd5e72499f59b1c577e78a78c537928a6f8319b'
+            'a0ed2b9996e67c2617c9866439622114746960bec6b880c10c34835e3296f3c3'
+            'e3ea303b0686abe3ec5f4f5f0f3da119e5fabc2e98ec41888dd3ee0a653e6ddf'
+            '3dee99f1ccdfc11bf308c130ec7c26c30351d578e3509efcc38cb2879228de48'
+            'f657ef8ba47056d26d69ae0a68b1f9e2b37c32ca4af7b053c799c3b1286939ce')
+noextract=(fsport3_5.7z fsport-missions.7z odeon_fs1.zip {sparky_hi,stu}_fs1.7z)
+
+# Prevent compression
+PKGEXT=".pkg.tar"
+
+prepare() {
+  cd "$srcdir"
+  mkdir "$pkgname" && cd "$pkgname" || return 1
+  for sz in ../*.7z; do
+    bsdtar -xf $sz
+  done
+  bsdtar -xf ../*.zip
+
+  rm -f *.bat
+}
+
+package() {
+  cd "$srcdir"
+
+  install -D -m 644 LICENSE "$pkgdir"/usr/share/licenses/"$pkgname"/LICENSE
+  install -D -m 755 fsport.sh "$pkgdir"/usr/bin/fsport
+  install -D -m 644 fsport.desktop "$pkgdir"/usr/share/applications/fsport.desktop
+
+  mkdir -p "$pkgdir"/opt/fs2_open || return 1
+
+  # Not really proper to use mv, but saves space and time
+  mv "$pkgname" "$pkgdir"/opt/fs2_open
+}

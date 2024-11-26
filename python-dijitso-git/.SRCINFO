@@ -1,0 +1,17 @@
+pkgbase = python-dijitso-git
+	pkgdesc = A Python module for distributed just-in-time shared library building
+	pkgver = 2019.1.0.1.gc92dcb0
+	pkgrel = 1
+	url = https://bitbucket.org/fenics-project/dijitso
+	arch = any
+	groups = fenics-git
+	license = GPL3
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python-numpy
+	optdepends = python-mpi4py: for running tests with MPI
+	options = !emptydirs
+	source = dijitso::git+https://bitbucket.org/fenics-project/dijitso.git
+	md5sums = SKIP
+
+pkgname = python-dijitso-git

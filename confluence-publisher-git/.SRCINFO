@@ -1,0 +1,17 @@
+pkgbase = confluence-publisher-git
+	pkgdesc = Tool for publishing Sphinx generated documents to Confluence
+	pkgver = v1.2.1.24.gebca4c2
+	pkgrel = 2
+	url = https://github.com/Arello-Mobile/confluence-publisher
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python-yaml
+	depends = python-requests
+	provides = confluence-publisher
+	conflicts = confluence-publisher
+	source = confluence-publisher::git+https://github.com/Arello-Mobile/confluence-publisher.git
+	md5sums = SKIP
+
+pkgname = confluence-publisher-git

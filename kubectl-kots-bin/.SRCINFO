@@ -1,0 +1,14 @@
+pkgbase = kubectl-kots-bin
+	pkgdesc = Kubectl plugin and admin console to help manage Kubernetes Off-The-Shelf (KOTS) software
+	pkgver = 1.90.0
+	pkgrel = 1
+	url = https://kots.io
+	arch = x86_64
+	license = Apache
+	depends = kubectl
+	provides = kubectl-kots
+	conflicts = kubectl-kots
+	source = kots_1.90.0_linux_amd64.tar.gz::https://github.com/replicatedhq/kots/releases/download/v1.90.0/kots_linux_amd64.tar.gz
+	b2sums = 931654f17051609a3f0d059b1b4f6d9b1bf0af07a082c251f21b56da1aaeddc1b817e91f3c995f104a2b85d0c70d2ee1a255ab4acfae80b67b44cce41138c3a8
+
+pkgname = kubectl-kots-bin

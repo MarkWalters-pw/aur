@@ -1,0 +1,16 @@
+pkgbase = globalprotect-bin
+	pkgdesc = GlobalProtect VPN client Agent
+	pkgver = 6.0.1.1
+	pkgrel = 6
+	url = https://docs.paloaltonetworks.com/globalprotect/5-2/globalprotect-app-user-guide/globalprotect-app-for-linux/download-and-install-the-globalprotect-app-for-linux
+	install = globalprotect.install
+	arch = x86_64
+	license = custom
+	depends = qt5-webkit
+	depends = wmctrl
+	source = local://GlobalProtect_tar-6.0.1.1-6.tgz
+	source = local://GlobalProtect_UI_tar-6.0.1.1-6.tgz
+	sha256sums = e761c7925b222bb6f7260ab143e50b1a741472d866ba0e75641cfb2124a75e01
+	sha256sums = 1202c7aee105d44772915a00fe8693f4f49c994f32ccd6f08447545c2a0521be
+
+pkgname = globalprotect-bin

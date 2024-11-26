@@ -1,0 +1,21 @@
+pkgbase = lxqt-admin-git
+	pkgdesc = LXQt system administration
+	pkgver = 2.0.0
+	pkgrel = 1
+	url = https://lxqt.github.io
+	arch = i686
+	arch = x86_64
+	arch = armv6h
+	license = LGPL-2.1-only
+	makedepends = git
+	makedepends = cmake
+	makedepends = qt6-tools
+	makedepends = lxqt-build-tools-git
+	depends = liblxqt-git
+	optdepends = lxqt-policykit-git: polkit authentication agent provided by LXQt
+	provides = lxqt-admin=2.0.0
+	conflicts = lxqt-admin
+	source = git+https://github.com/lxqt/lxqt-admin.git
+	sha256sums = SKIP
+
+pkgname = lxqt-admin-git

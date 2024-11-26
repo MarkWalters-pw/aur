@@ -1,0 +1,24 @@
+pkgbase = ros-melodic-tf2-sensor-msgs
+	pkgdesc = ROS - Small lib to transform sensor_msgs with tf. Most notably, PointCloud2
+	pkgver = 0.6.6
+	pkgrel = 2
+	url = https://wiki.ros.org/tf2_sensor_msgs
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = eigen
+	makedepends = ros-melodic-catkin
+	makedepends = ros-melodic-cmake-modules
+	makedepends = boost1.69
+	depends = ros-melodic-sensor-msgs
+	depends = ros-melodic-tf2
+	depends = ros-melodic-tf2-ros
+	depends = ros-melodic-python-orocos-kdl
+	depends = ros-melodic-rospy
+	depends = boost1.69
+	source = ros-melodic-tf2-sensor-msgs-0.6.6.tar.gz::https://github.com/ros/geometry2/archive/0.6.6.tar.gz
+	sha256sums = 4955f3ca30d194b0e0842f59b97a72d0e933908c20c56c8c374c152ab02568d1
+
+pkgname = ros-melodic-tf2-sensor-msgs
+

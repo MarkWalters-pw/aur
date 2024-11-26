@@ -1,0 +1,17 @@
+pkgbase = when-changed-git
+	pkgdesc = Execute a command when a file is changed.
+	pkgver = 0.3.0.r37.g85d7acc
+	pkgrel = 1
+	url = https://github.com/joh/when-changed
+	arch = any
+	license = BSD
+	makedepends = git
+	depends = python
+	depends = python-watchdog
+	depends = python-setuptools
+	provides = when-changed
+	conflicts = when-changed
+	source = git+https://github.com/joh/when-changed.git
+	sha256sums = SKIP
+
+pkgname = when-changed-git

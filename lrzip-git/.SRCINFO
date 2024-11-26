@@ -1,0 +1,20 @@
+pkgbase = lrzip-git
+	pkgdesc = Multi-threaded compression with rzip/lzma, lzo, and zpaq
+	pkgver = 0.651.r12.g15f5621
+	pkgrel = 1
+	url = https://github.com/ckolivas/lrzip
+	arch = x86_64
+	license = GPL-2.0-or-later
+	makedepends = git
+	makedepends = perl
+	depends = bash
+	depends = bzip2
+	depends = lz4
+	depends = lzo
+	depends = zlib
+	provides = lrzip
+	conflicts = lrzip
+	source = git+https://github.com/ckolivas/lrzip.git
+	sha512sums = SKIP
+
+pkgname = lrzip-git

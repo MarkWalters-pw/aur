@@ -1,0 +1,25 @@
+pkgbase = arm-frc-linux-gnueabi-eglibc
+	pkgdesc = Embedded GNU C Library (arm-frc-linux-gnueabi)
+	pkgver = 2.23
+	pkgrel = 1
+	url = http://www.eglibc.org
+	arch = any
+	groups = frc-toolchain
+	license = GPL
+	depends = arm-frc-linux-gnueabi-linux-api-headers
+	options = !strip
+	options = staticlibs
+	options = !emptydirs
+	source = http://download.ni.com/ni-linux-rt/feeds/2017/arm/ipk/cortexa9-vfpv3/libc6_2.23-r0.47_cortexa9-vfpv3.ipk
+	source = http://download.ni.com/ni-linux-rt/feeds/2017/arm/ipk/cortexa9-vfpv3/libc6-dev_2.23-r0.47_cortexa9-vfpv3.ipk
+	source = http://download.ni.com/ni-linux-rt/feeds/2017/arm/ipk/cortexa9-vfpv3/libcidn1_2.23-r0.47_cortexa9-vfpv3.ipk
+	source = http://download.ni.com/ni-linux-rt/feeds/2017/arm/ipk/cortexa9-vfpv3/libc6-thread-db_2.23-r0.47_cortexa9-vfpv3.ipk
+	source = http://download.ni.com/ni-linux-rt/feeds/2017/arm/ipk/cortexa9-vfpv3/libc6-extra-nss_2.23-r0.47_cortexa9-vfpv3.ipk
+	md5sums = 3b99022865f148ed4a846ee0d7693160
+	md5sums = ba4d47fc0090395805f79e7e2d79b769
+	md5sums = 7886688bd23948702c0956216228d51c
+	md5sums = 9461c536f1eb2cc3ea3f47fdacc8c0cc
+	md5sums = 806ccabe20694def89af3e44fdf6fd03
+
+pkgname = arm-frc-linux-gnueabi-eglibc
+

@@ -1,0 +1,27 @@
+pkgbase = ticker-bin
+	pkgdesc = Terminal stock ticker with live updates and position tracking
+	pkgver = 4.7.1
+	pkgrel = 1
+	url = https://github.com/achannarasappa/ticker
+	arch = i686
+	arch = x86_64
+	arch = armv6h
+	arch = armv7h
+	arch = aarch64
+	license = GPL3
+	depends = glibc
+	provides = ticker
+	conflicts = ticker
+	options = !strip
+	source_i686 = ticker-bin-4.7.1-i686.tar.gz::https://github.com/achannarasappa/ticker/releases/download/v4.7.1/ticker-4.7.1-linux-386.tar.gz
+	sha256sums_i686 = 76843ace1dfdd85b65afa3571f3269497bda38c2a3d098d89a66df2363ae1f64
+	source_x86_64 = ticker-bin-4.7.1-x86_64.tar.gz::https://github.com/achannarasappa/ticker/releases/download/v4.7.1/ticker-4.7.1-linux-amd64.tar.gz
+	sha256sums_x86_64 = 367da2e60e0cffdad25765dee9ccb1d80aaa3e43822a0f2ce33c206ed9577188
+	source_armv6h = ticker-bin-4.7.1-armv6h.tar.gz::https://github.com/achannarasappa/ticker/releases/download/v4.7.1/ticker-4.7.1-linux-armv6.tar.gz
+	sha256sums_armv6h = 030969bd87efbbe84d9e1d192dbc840d6c9cef20878611b3cb0c2f10c6788a12
+	source_armv7h = ticker-bin-4.7.1-armv7h.tar.gz::https://github.com/achannarasappa/ticker/releases/download/v4.7.1/ticker-4.7.1-linux-armv6.tar.gz
+	sha256sums_armv7h = 030969bd87efbbe84d9e1d192dbc840d6c9cef20878611b3cb0c2f10c6788a12
+	source_aarch64 = ticker-bin-4.7.1-aarch64.tar.gz::https://github.com/achannarasappa/ticker/releases/download/v4.7.1/ticker-4.7.1-linux-arm64.tar.gz
+	sha256sums_aarch64 = d18a43dc7915c88622dc475110a02669d4b502674f34aaf3c1964efe8a1bfcb2
+
+pkgname = ticker-bin

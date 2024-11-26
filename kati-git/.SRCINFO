@@ -1,0 +1,17 @@
+pkgbase = kati-git
+	pkgdesc = An experimental GNU make clone
+	pkgver = 20190122.c959cc1
+	pkgrel = 1
+	url = https://github.com/google/kati
+	arch = i686
+	arch = x86_64
+	license = Apache
+	makedepends = git
+	depends = ninja
+	depends = bash
+	conflicts = kati
+	source = git+https://github.com/google/kati.git
+	sha256sums = SKIP
+
+pkgname = kati-git
+

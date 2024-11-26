@@ -1,0 +1,19 @@
+[Unit]
+Description=Systemd service file for Cribl Stream.
+After=network.target
+
+[Service]
+Type=forking
+User=cribl
+Restart=always
+RestartSec=5
+LimitNOFILE=65536
+WorkingDirectory=/opt/cribl
+PIDFile=/opt/cribl/pid/cribl.pid
+ExecStart=/opt/cribl/bin/cribl start
+ExecStop=/opt/cribl/bin/cribl stop
+ExecReload=/opt/cribl/bin/cribl reload
+TimeoutSec=60
+
+[Install]
+WantedBy=multi-user.target

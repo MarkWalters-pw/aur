@@ -1,0 +1,23 @@
+pkgbase = diffimg
+	pkgdesc = Simple image comparison tool
+	pkgver = 2.2.0
+	pkgrel = 3
+	url = http://sourceforge.net/projects/diffimg/
+	install = diffimg.install
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = cmake
+	depends = qt4
+	depends = qwt-qt4
+	depends = opencv
+	optdepends = freeimage
+	source = http://sourceforge.net/projects/diffimg/files/2.2.0/Diffimg-2.2.0-src.zip
+	source = diffimg.desktop
+	source = fix-opencv-headers.patch
+	md5sums = e97610c4a265524297bc20268870556a
+	md5sums = 98d6aae50942ef908313515bdd9b02f4
+	md5sums = 383406fdf35e39750a7cf14d0a275770
+
+pkgname = diffimg
+

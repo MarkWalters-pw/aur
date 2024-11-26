@@ -1,0 +1,46 @@
+pkgbase = wlroots0.17-hidpi-xprop
+	pkgdesc = Modular Wayland compositor library (stable, with patches)
+	pkgver = 0.17.4
+	pkgrel = 2
+	url = https://gitlab.freedesktop.org/wlroots/wlroots
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = meson
+	makedepends = vulkan-headers
+	makedepends = wayland-protocols
+	makedepends = xorgproto
+	depends = glslang
+	depends = libinput
+	depends = libdisplay-info
+	depends = libxcb
+	depends = opengl-driver
+	depends = xcb-util-errors
+	depends = xcb-util-renderutil
+	depends = xcb-util-wm
+	depends = libpixman-1.so
+	depends = libseat.so
+	depends = libudev.so
+	depends = libvulkan.so
+	depends = libwayland-client.so
+	depends = libwayland-server.so
+	depends = libxkbcommon.so
+	depends = xorg-xwayland
+	optdepends = xorg-xwayland-hidpi-xprop: HiDPI support, see https://gitlab.freedesktop.org/xorg/xserver/-/merge_requests/733
+	provides = libwlroots.so=12-64
+	provides = wlroots=0.17.4
+	provides = wlroots-hidpi-xprop=0.17.4
+	provides = wlroots0.17
+	conflicts = libwlroots.so=12-64
+	conflicts = wlroots0.17
+	options = debug
+	source = wlroots0.17-hidpi-xprop::git+https://gitlab.freedesktop.org/wlroots/wlroots#tag=0.17.4
+	source = 0001-xwayland-support-HiDPI-scale.patch
+	source = 0002-Fix-configure_notify-event.patch
+	source = 0003-Fix-size-hints-under-Xwayland-scaling.patch
+	sha512sums = 7f5edba4a7df01850b105aec911e9f2327b69a132242a3e5cff8787490de4ae223df4171e4ea6db51c991a2daf096b716adfb894fdc56d328dfd471ea6cca936
+	sha512sums = ca05b46c8222e6982c848944ff2afe7765a2e76bb90e29c9d5b5dde9b51a0038bce8b0d52d01c390c970319ef10614ab1454a66940bf3a5b6193fc7f189afe6b
+	sha512sums = 484c8a6848b1409a16403bf0c3e366bf5203716824c24e16efcdcdb71ff34c42b5da6e3da338fafea70ad80fcdd3d6e9f070fb809093d8b0b08ee0b2c95a4de4
+	sha512sums = 8e3e77f6df204b6e5aa770be61fc8a6525e295cc8acdb0084ce66463e78f11702cf066640b20d7ff9560bdcdf7fa626db2e90651dcd42670250f45ac0f636854
+
+pkgname = wlroots0.17-hidpi-xprop

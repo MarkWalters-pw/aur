@@ -1,0 +1,26 @@
+pkgbase = mingw-w64-kxmlgui
+	pkgdesc = User configurable main windows (mingw-w64)
+	pkgver = 5.76.0
+	pkgrel = 1
+	url = https://community.kde.org/Frameworks
+	arch = any
+	groups = mingw-w64-kf5
+	license = LGPL
+	makedepends = mingw-w64-extra-cmake-modules
+	makedepends = mingw-w64-qt5-tools
+	depends = mingw-w64-kglobalaccel
+	depends = mingw-w64-ktextwidgets
+	depends = mingw-w64-attica
+	options = staticlibs
+	options = !strip
+	options = !buildflags
+	source = http://download.kde.org/stable/frameworks/5.76/kxmlgui-5.76.0.tar.xz
+	source = http://download.kde.org/stable/frameworks/5.76/kxmlgui-5.76.0.tar.xz.sig
+	source = 0001-private-qtbase-includes.patch
+	validpgpkeys = 53E6B47B45CEA3E0D5B7457758D0EE648A48B3BB
+	sha256sums = 73ae838fb79f97243bea36d438e9bc45315183bbb6b08ab5173c822cfcb4dd82
+	sha256sums = SKIP
+	sha256sums = ce13e11911cd1e8a8c2e3c2916a8f42dd9e1666d23cbd44a0b812d00d2519db9
+
+pkgname = mingw-w64-kxmlgui
+

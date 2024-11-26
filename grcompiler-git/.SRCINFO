@@ -1,0 +1,21 @@
+pkgbase = grcompiler-git
+	pkgdesc = The SIL Graphite compiler
+	pkgver = 5.2
+	pkgrel = 1
+	url = https://github.com/silnrsi/grcompiler
+	arch = x86_64
+	arch = i686
+	license = CPL
+	license = LGPL
+	makedepends = cmake
+	makedepends = docbook-utils
+	makedepends = git
+	makedepends = perl-sgmls
+	depends = icu
+	provides = grcompiler
+	conflicts = grcompiler
+	source = grcompiler-git::git+https://github.com/silnrsi/grcompiler.git
+	sha256sums = SKIP
+
+pkgname = grcompiler-git
+

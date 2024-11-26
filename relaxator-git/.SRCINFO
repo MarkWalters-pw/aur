@@ -1,0 +1,18 @@
+pkgbase = relaxator-git
+	pkgdesc = Relax to soothing sounds
+	pkgver = 1.0.10.ac95f0a
+	pkgrel = 1
+	url = https://github.com/alexkdeveloper/relaxator
+	arch = x86_64
+	license = GPL-3.0
+	makedepends = meson
+	makedepends = ninja
+	makedepends = git
+	depends = gtk4
+	depends = libadwaita
+	depends = vala
+	provides = relaxator
+	source = git+https://github.com/alexkdeveloper/relaxator
+	md5sums = SKIP
+
+pkgname = relaxator-git

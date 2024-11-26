@@ -1,0 +1,30 @@
+pkgbase = python-wandb-git
+	pkgdesc = Weights and Biases - organize and analyze machine learning experiments
+	pkgver = 0.15.6.dev1
+	pkgrel = 1
+	url = https://github.com/wandb/client
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python>=3.7
+	depends = python-gitpython
+	depends = python-requests
+	depends = python-click
+	depends = python-promise
+	depends = python-shortuuid
+	depends = python-six
+	depends = python-watchdog
+	depends = python-psutil
+	depends = python-sentry_sdk
+	depends = python-protobuf
+	depends = python-pyaml
+	depends = python-docker-pycreds
+	depends = python-yaspin
+	depends = python-setproctitle
+	provides = python-wandb
+	conflicts = python-wandb-git
+	source = python-wandb-git::git+https://github.com/wandb/client
+	md5sums = SKIP
+
+pkgname = python-wandb-git

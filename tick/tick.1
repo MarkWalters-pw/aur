@@ -1,0 +1,116 @@
+.TH TICK "1" "October 2018" "Tick 3.2.0" "User Commands"
+
+.SH NAME
+Tick - Command line stock and cryptocurrency portfolio tracker.
+
+.SH SYNOPSIS
+tick COMMAND [ARGUMENTS]
+
+.SH DESCRIPTION
+Create your portfolio by adding your current holdings. Then, use the command "check" to see information about your
+holdings. You may also see information about securities that you may not own with commands "info" and "graph".
+
+.SS
+Portfolio:
+
+.TP
+[add/rm/set] [symbol/crypto_id/USD$] [quantity of shares] [USD spent/SharePriceEA]
+Either adds, removes, or sets the amount of the given stock with respect to the given values. The parameter "add" will add
+your input to the current portfolio, "rm" will subtract from your current portfolio, and "set" will set your portfolio to
+the input, discarding any existing data about that security. Trading fees should be factored into "USD SPENT". As an exception,
+cryptocurrencies must be specified by their name (e.g. "ripple", instead of "xrp"), due to duplicate tickers in both the
+US stock market and the cryptocurrency market. You may also input as "usd$" for US Dollars. This is helpful for keeping
+track of how much money is unallocated in your brokerage account. Typically, your initial amount of USD can be added as
+"tick add USD$ [amount] [amount]", where [amount] is the same number. When you are paid dividends or capital gains that
+are not reinvested into a specific security, you should update your portfolio with "tick add USD$ [dividend/capital gain amount] 0".
+You may also specify the share price instead of the total amount you spent by appending "ea" to the end of the share price.
+
+.TP
+[check]
+Prints information about all of your current holdings and a grand total in an NCurses window. By default, your holdings
+will be sorted alphabetically. You may press the left and right arrow keys to change the sort category. The up and
+down arrow keys may be used to scroll up and down the list and highlight securities. Press "q" to exit the window.
+
+.TP
+[check] [symbol/crypto_id/USD$]
+Prints information about a specific security in your portfolio.
+
+.TP
+[encrypt/decrypt]
+Encrypts or decrypts your portfolio using the RC4 algorithm. Password must be 32 characters or less.
+
+.SS
+Security Information:
+
+.TP
+[info] [symbol/crypto_id]
+Prints information on the given security in an NCurses window. This includes an interactive graph, company information,
+and news.
+
+.TP
+[graph] [symbol]
+Prints a graph of the historic price of the given security. Cryptocurrencies aren't supported yet, due to API constraints.
+You may press the UP arrow key to zoom in, the DOWN arrow key to zoom out, the LEFT arrow to pan left, the RIGHT arrow
+to pan right, or the letter "q" to quit.
+
+.TP
+[cmp] [symbol] [symbol]
+Same functionality to "graph", but is intended for comparing two securities. The command takes two symbols as
+arguments. Both graphs will be displayed.
+
+.TP
+[news] [symbol] [number of articles (optional)]
+Prints information on three articles relating to the given symbol today. The number of articles can be specified, but
+will default to three. You may request a maximum of 50 articles.
+
+.SH EXAMPLES
+To add 3 shares of Tesla bought for $918.12 total, run
+.RS
+$ tick add tsla 3 918.12
+
+.RE
+You can also specify the price per share instead of total spent:
+.RS
+$ tick add tsla 3 306.04ea
+
+.RE
+To get info about your current holdings in a Tesla, run
+.RS
+$ tick check tsla
+
+.RE
+Or to get info about all your holdings, run
+.RS
+$ tick check
+
+.RE
+To get the three articles about Tesla today, run
+.RS
+$ tick news tsla
+
+.RE
+To get information on Tesla, run
+.RS
+$ tick info tesla
+
+.SH FILES
+.I ~/.tick_portfolio.json
+.RS
+Portfolio file.
+
+.SH GITHUB
+Please report any bugs using the GitHub issue tracker:
+
+https://github.com/aokellermann/tick/issues
+
+.SH AUTHORS
+Antony Kellermann -- https://github.com/aokellermann
+
+.SH LICENSE
+MIT License
+
+Stock information is taken from IEX's free API. Mutual fund and over-the-counter
+information is taken from Morningstar and AlphaVantage's free API. Cryptocurrency information
+is taken from Coinmarketcap's free API. Please do
+not abuse the APIs by repeatedly requesting information. Read the provided
+license for more information.

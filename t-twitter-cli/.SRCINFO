@@ -1,0 +1,21 @@
+pkgbase = t-twitter-cli
+	pkgdesc = A command-line power tool for Twitter
+	pkgver = 4.0.0.git20230513
+	pkgrel = 1
+	url = https://github.com/sferik/t
+	arch = x86_64
+	license = custom
+	makedepends = git
+	depends = ruby
+	depends = ruby-bundler
+	options = !emptydirs
+	source = t::git+https://github.com/sferik/t.git#commit=50f67a663385f9fe49ce2419f2531925ed90392c
+	source = Gemfile.lock
+	source = https://rubygems.org/downloads/ffi-compiler-1.0.1.gem
+	source = multipart-post.cert::https://raw.githubusercontent.com/socketry/multipart-post/v2.3.0/release.cert
+	sha256sums = SKIP
+	sha256sums = f0613f7d070689e97bee1ef28c81ab0c4910b41628a8deeff706b09fa5a041e0
+	sha256sums = 019f389b078a2fec9de7f4f65771095f80a447e34436b4588bcb629e2a564c30
+	sha256sums = ae573a274f46958b348670e8b97678fbfe7e99693c69f22b30f4d8e581e15eee
+
+pkgname = t-twitter-cli

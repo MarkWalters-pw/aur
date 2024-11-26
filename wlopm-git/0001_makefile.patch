@@ -1,0 +1,11 @@
+--- a/wlopm/Makefile
++++ b/wlopm/Makefile
+@@ -26,6 +26,7 @@
+ 	install wlopm $(DESTDIR)$(BINDIR)
+ 	install -d $(DESTDIR)$(MANDIR)/man1
+ 	install -m 644 wlopm.1 $(DESTDIR)$(MANDIR)/man1
++	install -d $(DESTDIR)$(BASHCOMPDIR)
+ 	install bash-completion $(DESTDIR)$(BASHCOMPDIR)/wlopm
+ 
+ uninstall:
+

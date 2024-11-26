@@ -1,0 +1,31 @@
+post_install() {
+    for dir in /home/*
+    do
+        if test -d $dir
+        then
+            if [ ! -d "$dir/.config/BaiduPY.user" ]; then
+                mkdir $dir/.config/BaiduPY.user
+            fi
+            if [ -d "$dir/.config/BaiduPY.user/data" ]; then
+                rm -rf $dir/.config/BaiduPY.user/data
+            fi
+            ln -s  /opt/fcitx-baidupinyin/data $dir/.config/BaiduPY.user/
+        fi
+    done
+}
+
+post_upgrade() {
+    post_install
+}
+
+post_remove() {
+    for dir in /home/*
+    do
+        if test -d $dir
+        then
+            if [ -d "$dir/.config/BaiduPY.user/" ]; then
+                rm -rf $dir/.config/BaiduPY.user/data
+            fi
+        fi
+    done
+}

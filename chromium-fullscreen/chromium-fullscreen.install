@@ -1,0 +1,37 @@
+pre_install() {
+  # Create Home folder
+  mkdir -p /home/chromium
+
+  # Create a first sample of Autostart Url
+  echo -e "https://www.archlinux.org/\n" > /home/chromium/chromium-autostart-url.txt
+
+  # Create the extensions folders
+  mkdir -p /home/chromium/.extensions/disable-x-frame-option
+  mkdir -p /home/chromium/.extensions/aw-snap-reloader
+}
+
+post_install() {
+  # Update systemd sysusers
+  systemd-sysusers
+
+  # Fix permissions
+  chown -R chromium:chromium /home/chromium
+
+  # Enable the xlogin service
+  systemctl enable xlogin@chromium
+
+  # Print additional useful informations
+  echo -e "==> [INFO] For comodity, the file '/home/chromium/chromium-autostart-url.txt' has been created for you. That file although can be located also on:"
+  echo -e "==> [INFO] - '/boot/chromium-autostart-url.txt'"
+  echo -e "==> [INFO] - '/home/chromium/chromium-autostart-url.txt'"
+  echo -e "==> [INFO] Order is mandatory! The first that matches, is the first that wins."
+  echo -e "==> [INFO] Please restart in order to start Chromium Fullscreen."
+}
+
+post_upgrade() {
+  # Update systemd sysusers
+  systemd-sysusers
+
+  # Fix permissions
+  chown -R chromium:chromium /home/chromium
+}

@@ -1,0 +1,18 @@
+pkgbase = aml-git
+	pkgdesc = Another/Andri's Main Loop
+	pkgver = 0.2.0
+	pkgrel = 1
+	url = https://github.com/any1/aml
+	arch = x86_64
+	license = custom:ISC
+	makedepends = meson
+	makedepends = ninja
+	makedepends = git
+	depends = glibc
+	provides = aml
+	conflicts = aml
+	source = aml-git::git+https://github.com/any1/aml
+	sha256sums = SKIP
+
+pkgname = aml-git
+

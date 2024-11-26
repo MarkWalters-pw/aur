@@ -1,0 +1,17 @@
+pkgbase = scarab-bin
+	pkgdesc = Mod installer for Hollow Knight 1.5
+	pkgver = 2.5.0.0
+	pkgrel = 2
+	url = https://github.com/fifty-six/Scarab
+	arch = x86_64
+	license = GPL-3.0-only
+	depends = gcc-libs
+	depends = zlib
+	depends = fontconfig
+	provides = scarab
+	conflicts = scarab
+	options = !strip
+	source = scarab-bin-2.5.0.0.zip::https://github.com/fifty-six/Scarab/releases/download/v2.5.0.0/linux.zip
+	sha256sums = 28ab30fbfa7234eff79e38f8875031bbe1de2469d41c90a7963a77d182a7616a
+
+pkgname = scarab-bin

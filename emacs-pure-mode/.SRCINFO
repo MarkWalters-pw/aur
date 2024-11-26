@@ -1,0 +1,21 @@
+pkgbase = emacs-pure-mode
+	pkgdesc = An Emacs major mode for the Pure programming language
+	pkgver = 0.68
+	pkgrel = 1
+	url = http://purelang.bitbucket.org/
+	arch = i686
+	arch = x86_64
+	groups = pure-complete
+	groups = pure-base
+	license = LGPL3
+	makedepends = llvm35
+	depends = emacs
+	depends = flycheck
+	depends = pure
+	source = https://github.com/agraef/pure-lang/releases/download/pure-0.68/pure-0.68.tar.gz
+	source = pure-mode.patch
+	md5sums = 082d522d05e58e55dc8094ba4c3d3eda
+	md5sums = 8495eceda7b0238dd493b3a6cd54d606
+
+pkgname = emacs-pure-mode
+

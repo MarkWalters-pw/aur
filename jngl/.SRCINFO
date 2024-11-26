@@ -1,0 +1,22 @@
+pkgbase = jngl
+	pkgdesc = One of the easiest 2D game libraries for C++ and Python
+	pkgver = 1.5.0
+	pkgrel = 1
+	url = https://bixense.com/jngl/
+	arch = i686
+	arch = x86_64
+	license = ZLIB
+	makedepends = meson
+	makedepends = ninja
+	depends = sdl2
+	depends = fontconfig
+	depends = libepoxy
+	depends = libwebp
+	depends = openal
+	depends = libvorbis
+	depends = boost
+	source = https://github.com/jhasse/jngl/archive/v1.5.0.tar.gz
+	md5sums = 16072572c932a280bf36a3b4217f87c0
+
+pkgname = jngl
+

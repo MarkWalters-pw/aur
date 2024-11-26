@@ -1,0 +1,15 @@
+pkgbase = cleanpy
+	pkgdesc = CLI tool to remove caches and temporary files related to Python
+	pkgver = 0.3.1
+	pkgrel = 1
+	url = https://github.com/thombashi/cleanpy
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python
+	source = cleanpy::git+https://github.com/thombashi/cleanpy#tag=v0.3.1?signed
+	validpgpkeys = BCF9203E5E80B5607EAE6FDD98CDA9A5F0BFC367
+	sha256sums = SKIP
+
+pkgname = cleanpy

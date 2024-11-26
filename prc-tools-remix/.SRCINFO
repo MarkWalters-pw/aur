@@ -1,0 +1,22 @@
+pkgbase = prc-tools-remix
+	pkgdesc = C/C++ toolchain for Palm OS
+	pkgver = 2.3.5
+	pkgrel = 1
+	url = https://github.com/jichu4n/prc-tools-remix
+	arch = i686
+	arch = pentium4
+	arch = x86_64
+	license = GPL
+	makedepends = texinfo
+	makedepends = gperf
+	depends = ncurses
+	optdepends = palm-os-sdk-git: Palm OS SDK files
+	optdepends = pilrc: Palm OS resource compiler
+	options = !makeflags
+	options = !buildflags
+	options = !strip
+	source = https://github.com/jichu4n/prc-tools-remix/archive/v2.3.5.tar.gz
+	sha256sums = d8c29e81c197ba7801d8331eddcb94990f780c96b3ccea83b60b08d8349c96a8
+
+pkgname = prc-tools-remix
+

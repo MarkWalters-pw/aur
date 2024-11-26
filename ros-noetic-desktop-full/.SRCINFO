@@ -1,0 +1,19 @@
+pkgbase = ros-noetic-desktop-full
+	pkgdesc = ROS - A metapackage to aggregate several packages.
+	pkgver = 1.5.0
+	pkgrel = 1
+	url = https://github.com/ros/metapackages
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-catkin
+	depends = ros-noetic-desktop
+	depends = ros-noetic-simulators
+	depends = ros-noetic-perception
+	depends = ros-noetic-urdf-sim-tutorial
+	source = ros-noetic-desktop-full-1.5.0.tar.gz::https://github.com/ros/metapackages/archive/1.5.0.tar.gz
+	sha256sums = 5e055b7528d088cf62035d88c78cfd5aefcac2a96d0ce2ac62242f6d6f76d3b0
+
+pkgname = ros-noetic-desktop-full
+

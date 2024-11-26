@@ -1,0 +1,17 @@
+pkgbase = mautrix-wsproxy-git
+	pkgdesc = A websocket proxy for Matrix appservices - latest git commit
+	pkgver = 0
+	pkgrel = 6
+	url = https://github.com/mautrix/wsproxy
+	install = mautrix-wsproxy.install
+	arch = x86_64
+	license = AGPL
+	makedepends = go
+	makedepends = git
+	replaces = mautrix-wsproxy
+	source = mautrix-wsproxy::git+https://github.com/mautrix/wsproxy.git
+	source = mautrix-wsproxy.service
+	sha256sums = SKIP
+	sha256sums = 72fd829b7ec5ceea3f8b7b20139c71bec00081c4a34fc1a16c0ca86e269d19aa
+
+pkgname = mautrix-wsproxy-git

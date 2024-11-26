@@ -1,0 +1,18 @@
+pkgbase = psi3-bin
+	pkgdesc = An open-source program for computing molecular properties using high-accuracy, ab initio, quantum mechanical models. (Debian binary build)
+	pkgver = 3.4.0.6
+	pkgrel = 3
+	url = https://sourceforge.net/projects/psicode/
+	arch = x86_64
+	license = GPL2
+	depends = gcc-libs
+	depends = lapack
+	provides = psi3
+	conflicts = psi3
+	options = !strip
+	options = libtool
+	options = staticlibs
+	source = http://ftp.us.debian.org/debian/pool/main/p/psicode/psi3_3.4.0-6+b3_amd64.deb
+	sha256sums = 5e519e7e715817f6666250c1b24365a7441d9b43041a566f8b4ef1a942a5b92a
+
+pkgname = psi3-bin

@@ -1,0 +1,20 @@
+pkgbase = kube-prompt
+	pkgdesc = An interactive kubernetes client featuring auto-complete using go-prompt
+	pkgver = 1.0.10
+	pkgrel = 1
+	url = https://github.com/c-bata/kube-prompt
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = arm7h
+	license = MIT
+	makedepends = git
+	makedepends = go
+	depends = kubectl
+	provides = kube-prompt
+	conflicts = kube-prompt-git
+	source = kube-prompt::https://github.com/c-bata/kube-prompt/archive/v1.0.10.tar.gz
+	sha512sums = ae904714536e17bbd1fc971b544811a925e286ededd4b5a5491dc6d836773ed9b23ca85bbb9c54e1d606018dabcf5e6f7079af9a2a9bf8c87bc7c34872ef0b24
+
+pkgname = kube-prompt
+

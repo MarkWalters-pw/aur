@@ -1,0 +1,16 @@
+pkgbase = tumbler-folder-thumbnailer
+	pkgdesc = Custom folder thumbnails for Tumbler
+	pkgver = 1
+	pkgrel = 2
+	url = https://docs.xfce.org/xfce/tumbler/available_plugins
+	arch = any
+	license = BSD
+	depends = tumbler
+	depends = imagemagick
+	optdepends = inkscape: for SVG support
+	source = folder.thumbnailer
+	source = folder-thumbnailer.sh
+	sha256sums = 4079476266971a1d6e48360fa3e1ee038ed9e91eb85bc089569ea0dbde3d24d4
+	sha256sums = bb9fcf291fe811b9e97f73ba2f6fda4ff9f6216a40a150ddcd725d2c563deac8
+
+pkgname = tumbler-folder-thumbnailer

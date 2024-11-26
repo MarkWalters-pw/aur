@@ -1,0 +1,18 @@
+[Unit]
+Description=OpenNebula Flow Service
+After=syslog.target network.target remote-fs.target opennebula.service
+BindsTo=opennebula.service
+
+[Service]
+User=oneadmin
+Group=cloud
+Type=simple
+
+ExecStartPre=-/usr/bin/bash -c 'for i in {1..20}; do test -f /var/lib/one/.one/oneflow_auth && break; sleep 1; done'
+ExecStart=/usr/bin/oneflow-server start
+ExecStop=/usr/bin/oneflow-server stop
+PIDFile=/run/one/oneflow.pid
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

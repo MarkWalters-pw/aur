@@ -1,0 +1,18 @@
+pkgbase = lime-tools-git
+	pkgdesc = A collection of useful tools for use with the LimeSDR family of boards
+	pkgver = r11.1ff87a6
+	pkgrel = 1
+	url = https://github.com/myriadrf/lime-tools
+	arch = any
+	license = Apache
+	makedepends = cmake
+	depends = limesuite
+	depends = gnuplot
+	depends = fftw>=3
+	provides = lime-tools
+	conflicts = lime-tools
+	source = git+https://github.com/myriadrf/lime-tools
+	sha256sums = SKIP
+
+pkgname = lime-tools-git
+

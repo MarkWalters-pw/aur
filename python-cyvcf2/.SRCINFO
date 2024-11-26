@@ -1,0 +1,17 @@
+pkgbase = python-cyvcf2
+	pkgdesc = fast vcf parsing with cython + htslib
+	pkgver = 0.30.14
+	pkgrel = 1
+	url = https://pypi.python.org/pypi/cyvcf2
+	arch = any
+	license = MIT
+	makedepends = cython
+	makedepends = python-setuptools
+	depends = python-numpy
+	depends = python-coloredlogs
+	depends = python-click
+	depends = htslib
+	source = https://pypi.org/packages/source/c/cyvcf2/cyvcf2-0.30.14.tar.gz
+	sha512sums = 588d7bed6e29780f1ff10e09276172613e5bf478647eb0cd2566c62c8e0eca586648dfc5e88917ae07e8b2a2c32ba262f9dcf4f38e43fe50a7414cc0336501e4
+
+pkgname = python-cyvcf2

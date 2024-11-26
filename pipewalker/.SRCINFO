@@ -1,0 +1,18 @@
+pkgbase = pipewalker
+	pkgdesc = Pieces of a computer network are to be turned, to make all computers connected to the same network
+	pkgver = 1.1
+	pkgrel = 1
+	url = https://github.com/artemsen/pipewalker
+	install = pipewalker.install
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = meson
+	makedepends = ninja
+	depends = mesa
+	depends = sdl2
+	depends = sdl2_image
+	source = https://github.com/artemsen/pipewalker/archive/refs/tags/v1.1.tar.gz
+	sha256sums = 59c4746a1b3c703fb498792e9b54d3295b73b24bbbcc39565d41b14e1daf6b18
+
+pkgname = pipewalker

@@ -1,0 +1,19 @@
+pkgbase = music-git
+	pkgdesc = A syncable music player to download and listen to music
+	pkgver = 0.0.1
+	pkgrel = 2
+	url = https://github.com/Lutetium-Vanadium/Music-Vue
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = python
+	makedepends = nodejs
+	makedepends = yarn
+	depends = ffmpeg
+	source = git+https://github.com/lutetium-vanadium/music-vue.git
+	source = music.desktop
+	md5sums = SKIP
+	md5sums = 6cb912bed64be522369371fee7087411
+
+pkgname = music-git
+

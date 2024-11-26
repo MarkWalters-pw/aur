@@ -1,0 +1,14 @@
+[Unit]
+Description=CrashPlanPRO Backup Engine
+After=network.target
+
+[Service]
+Type=forking
+EnvironmentFile=/opt/crashplan/bin/run.conf
+WorkingDirectory=/opt/crashplan
+ExecStart=/opt/crashplan/bin/service.sh start
+ExecStop=/opt/crashplan/bin/service.sh stop
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

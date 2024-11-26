@@ -1,0 +1,27 @@
+pkgbase = labrador-git
+	pkgdesc = Qt5 GUI for EspoTek all-in-one USB oscilloscope/ signal generator/ PSU/ logic analyzer/ multimeter
+	pkgver = r583.2cc0678b
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/espotek/labrador
+	install = labrador-git.install
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	depends = qt5-base>=5.15.7
+	depends = hicolor-icon-theme
+	depends = fftw
+	optdepends = dfu-programmer: USB programmer for Atmel chips
+	optdepends = dfu-util: USB firmware down/uploader
+	conflicts = labrador
+	conflicts = libdfuprog
+	source = labrador-git::git+https://github.com/espotek/labrador#branch=master
+	source = libdfuprog::git+https://github.com/EspoTek/libdfuprog
+	source = labrador-git.install
+	source = labrador-git.patch
+	md5sums = SKIP
+	md5sums = SKIP
+	md5sums = cbfdce82698b92281f31c314373c4b6b
+	md5sums = e7ddb103fed89acd20408a959a5ad9ba
+
+pkgname = labrador-git

@@ -1,0 +1,54 @@
+VAR_DIR="/var/lib/pydio"
+BIN_DIR="/usr/share/webapps/pydio"
+
+clean_cache() {
+    echo "Cleaning plugin i18n cache" >&2
+    rm -f /var/lib/pydio/data/cache/i18n/*.ser
+    echo "Cleaning plugin cache" >&2
+    rm -f /var/lib/pydio/data/cache/plugins_*.ser
+    rm -f /var/lib/pydio/data/cache/plugins_bootstrap.php
+    rm -f /var/lib/pydio/data/cache/plugins_repositories.php
+}
+
+post_install() {
+    cat << EOM
+Apply the following configuration options for pydio to work correctly.
+See https://pydio.com/en/docs/kb/system/installing-debiannginx,
+    https://pydio.com/en/docs/kb/system/installing-archlinux#content
+
+[/etc/php/php.ini]
+
+# enable extensions
+extension=gd.so
+extension=iconv.so
+extension=intl.so
+extension=mcrypt.so
+
+# allow larger uploads
+file_uploads = On
+# Max file size you want to upload (can be expressed in Gigabytes)
+post_max_size = 1024M
+upload_max_filesize = 1024M
+
+# improve performance
+output_buffering = Off
+
+# explicitly set the session path
+session.save_path = "/tmp"
+
+# allow background tasks to run
+open_basedir = [...]:/var/lib/pydio/
+
+Example configurations for Apache and Nginx servers can be found in:
+/usr/share/doc/pydio
+EOM
+}
+
+post_upgrade() {
+    clean_cache
+
+    cat << EOM
+If you have issues after an update, please refer to the official forum:
+https://pydio.com/forum/f/forum/troubleshooting/core-install
+EOM
+}

@@ -1,0 +1,64 @@
+pkgbase = jack2-git
+	pkgdesc = The JACK low-latency audio server
+	pkgver = 1.9.22.r3.gb93a1d82
+	pkgrel = 1
+	epoch = 2
+	url = http://jackaudio.org/
+	arch = x86_64
+	groups = pro-audio
+	license = GPL2
+	license = LGPL2.1
+	makedepends = alsa-lib
+	makedepends = dbus
+	makedepends = doxygen
+	makedepends = expat
+	makedepends = git
+	makedepends = libffado
+	makedepends = libsamplerate
+	makedepends = opus
+	makedepends = systemd
+	makedepends = waf
+	options = !lto
+	source = jack2-git::git+https://github.com/jackaudio/jack2#branch=develop
+	md5sums = SKIP
+
+pkgname = jack2-git
+	depends = db
+	depends = gcc-libs
+	depends = glibc
+	depends = opus
+	depends = libasound.so
+	depends = libdbus-1.so
+	depends = libsamplerate.so
+	depends = libsystemd.so
+	optdepends = a2jmidid: for ALSA MIDI to JACK MIDI bridging
+	optdepends = libffado: for firewire support using FFADO
+	optdepends = jack-example-tools: for official JACK example-clients and tools
+	optdepends = jack2-dbus: for dbus integration
+	optdepends = jack2-docs: for developer documentation
+	optdepends = realtime-privileges: for realtime privileges
+	provides = jack
+	provides = jack2
+	provides = libjack.so
+	provides = libjacknet.so
+	provides = libjackserver.so
+	provides = jack2=1.9.22
+	conflicts = jack
+	conflicts = jack2
+
+pkgname = jack2-dbus-git
+	pkgdesc = The JACK low-latency audio server (dbus integration)
+	depends = dbus-python
+	depends = gcc-libs
+	depends = glibc
+	depends = jack2-git
+	depends = libdbus-1.so
+	depends = libexpat.so
+	depends = libjackserver.so
+	provides = jack2-dbus
+	conflicts = jack2-dbus
+
+pkgname = jack2-docs-git
+	pkgdesc = The JACK low-latency audio server (documentation)
+	provides = jack2-docs
+	conflicts = jack2-docs

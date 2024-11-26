@@ -1,0 +1,23 @@
+pkgbase = snappy-git
+	pkgdesc = A fast compressor/decompressor library
+	pkgver = 1.1.10_r345.g27f34a5
+	pkgrel = 1
+	url = https://github.com/google/snappy
+	arch = x86_64
+	license = BSD
+	checkdepends = zlib
+	makedepends = git
+	makedepends = cmake
+	makedepends = clang
+	makedepends = gtest
+	makedepends = benchmark
+	provides = snappy
+	conflicts = snappy
+	source = git+https://github.com/google/snappy.git
+	source = snappy.pc.in
+	source = cmake_add_pkgconfig.patch
+	sha256sums = SKIP
+	sha256sums = 134f06ca0584a1026538d0fb972fc141c008390ecae1806184b721eca1abbc75
+	sha256sums = 2a204d7d35509ffc290d80c641fcb7e8488c67ca550aa1695493cff12c53156b
+
+pkgname = snappy-git

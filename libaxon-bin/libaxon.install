@@ -1,0 +1,31 @@
+post_install(){
+	echo "=========================="
+	echo "Run 'systemd daemon-reload' first"
+	echo ""
+	echo "Systemd service can be enabled via command:"
+	echo ""
+	echo "systemctl enable libaxon@USERNAME.service"
+	echo ""
+	echo "Systemd service can be start via command:"
+	echo ""
+	echo "systemctl start libaxon@USERNAME.service"
+	echo ""
+}
+
+post_upgrade(){
+	echo "=========================="
+	echo "Restate service via commmand:"
+	echo ""
+	echo "systemctl daemon-reload && systemctl restart libaxon.service"
+
+}
+
+pre_remove(){
+	echo "Stop systemd service..."
+	systemctl stop libaxon@${whoami}.serivce
+}
+
+post_remove(){
+	echo "==> Restate systemd service via command: "
+	echo "==> systemctl daemon-reload"
+}

@@ -1,0 +1,30 @@
+pkgbase = compiz-fusion-plugins-main-git
+	pkgdesc = Compiz Fusion Main plugins
+	pkgver = 0.8.18.r27.g5b6ecb5
+	pkgrel = 1
+	url = https://gitlab.com/compiz/compiz-plugins-main
+	arch = i686
+	arch = x86_64
+	groups = compiz-fusion
+	groups = compiz-fusion-kde
+	groups = compiz-fusion-gtk
+	license = GPL
+	makedepends = intltool
+	makedepends = pkgconfig
+	makedepends = gettext
+	depends = compiz-core-git
+	depends = libjpeg-turbo
+	depends = librsvg
+	depends = compiz-bcop-git
+	depends = libxdamage
+	depends = libxcomposite
+	depends = libxinerama
+	depends = startup-notification
+	provides = compiz-fusion-plugins-main
+	conflicts = compiz-fusion-plugins-main
+	options = !libtool
+	source = git+https://gitlab.com/compiz/compiz-plugins-main.git
+	sha1sums = SKIP
+
+pkgname = compiz-fusion-plugins-main-git
+

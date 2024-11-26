@@ -1,0 +1,25 @@
+pkgbase = weimail-bin
+	pkgdesc = Native Xinchuang email client, free email client software that supports multiple Xinchuang platforms.Just used in China.
+	pkgver = 2.3.6.5
+	pkgrel = 3
+	url = https://ankexinchuang.cn/
+	arch = aarch64
+	arch = x86_64
+	license = LicenseRef-custom
+	depends = java-runtime
+	depends = gtk3
+	depends = nspr
+	depends = gtk2
+	depends = nss
+	depends = dbus-glib
+	depends = libxt
+	provides = weimail=2.3.6.5
+	conflicts = weimail
+	source = weimail.sh
+	sha256sums = 44e7ecffdbcc64a6daeefd96717e113b6bfc298d214ff8d88c97e2b36b7f29a6
+	source_aarch64 = weimail-2.3.6.5-aarch64.deb::https://ota.ankexinchuang.cn/new/client/uos/weimail/ankexinchuang.cn/latest/weimail-latest-arm64.deb
+	sha256sums_aarch64 = 0ebd90d2c166b3f1679383b4ee10a9cda1755171279b6e9b5fabd3730cfca02e
+	source_x86_64 = weimail-2.3.6.5-x86_64.deb::https://ota.ankexinchuang.cn/new/client/uos/weimail/ankexinchuang.cn/latest/weimail-latest-amd64.deb
+	sha256sums_x86_64 = ca223885989a6bb568448a0dd5d204c26d33751c25f42c249be57ddc023825b6
+
+pkgname = weimail-bin

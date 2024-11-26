@@ -1,0 +1,20 @@
+pkgbase = fahcontrol-git
+	pkgdesc = Folding@home Client Advanced Control GUI (git)
+	pkgver = r89.7016206
+	pkgrel = 1
+	url = https://foldingathome.org
+	arch = any
+	license = GPL
+	makedepends = git
+	makedepends = python2-setuptools
+	depends = python2
+	depends = pygtk
+	optdepends = fahviewer: 3D simulation viewer
+	provides = fahcontrol
+	conflicts = fahcontrol
+	source = git+https://github.com/FoldingAtHome/fah-control.git
+	source = FAHControl.desktop
+	md5sums = SKIP
+	md5sums = 81c1953f5c7cfb981ba1b7bf6a046f88
+
+pkgname = fahcontrol-git

@@ -1,0 +1,24 @@
+pkgbase = snap4arduino
+	pkgdesc = A modification of the Snap! visual programming language that lets you seamlessly interact with almost all versions of the Arduino board.
+	pkgver = 6.2
+	pkgrel = 1
+	url = http://snap4arduino.rocks/
+	arch = i686
+	arch = x86_64
+	license = AGPL3
+	license = MIT
+	depends = nss
+	depends = libxtst
+	depends = alsa-lib
+	depends = libxss
+	depends = gtk3
+	depends = gconf
+	depends = freetype2
+	options = !strip
+	source_i686 = Snap4Arduino_desktop-gnu-32_6.2.tar.gz::https://github.com/bromagosa/Snap4Arduino/releases/download/6.2/Snap4Arduino_desktop-gnu-32_6.2.tar.gz
+	sha256sums_i686 = 72bdf9138e26d29ba2c965eecd017c7235904414352e235323fa24374419d4b2
+	source_x86_64 = Snap4Arduino_desktop-gnu-64_6.2.tar.gz::https://github.com/bromagosa/Snap4Arduino/releases/download/6.2/Snap4Arduino_desktop-gnu-64_6.2.tar.gz
+	sha256sums_x86_64 = 312fd6a8aabfbe8d44a3f2795a0f93c2ed3da481b688150f3f54b78fdd9ecc3a
+
+pkgname = snap4arduino
+

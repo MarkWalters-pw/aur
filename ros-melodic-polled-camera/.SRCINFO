@@ -1,0 +1,29 @@
+pkgbase = ros-melodic-polled-camera
+	pkgdesc = ROS - polled_camera contains a service and C++ helper classes for implementing a polled camera driver node and requesting images from it.
+	pkgver = 1.11.13
+	pkgrel = 4
+	url = https://wiki.ros.org/polled_camera
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-melodic-catkin
+	makedepends = ros-melodic-message-generation
+	makedepends = ros-melodic-std-msgs
+	makedepends = ros-melodic-roscpp
+	makedepends = ros-melodic-sensor-msgs
+	makedepends = ros-melodic-image-transport
+	depends = ros-melodic-std-msgs
+	depends = ros-melodic-roscpp
+	depends = ros-melodic-message-runtime
+	depends = ros-melodic-sensor-msgs
+	depends = ros-melodic-image-transport
+	source = ros-melodic-polled-camera-1.11.13.tar.gz::https://github.com/ros-perception/image_common/archive/1.11.13.tar.gz
+	sha256sums = 32a2e07724dec6eaaace21eae006274436d70d40bfe205249438570275c43cac
+
+pkgname = ros-melodic-polled-camera
+

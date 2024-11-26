@@ -1,0 +1,12 @@
+diff --git a/main.c b/main.c
+index 1b43032..42d94f4 100644
+--- a/main.c
++++ b/main.c
+@@ -1215,6 +1215,7 @@ static int try_add_builder(GtkBuilder *builder)
+ 	const char * sysdir_list[] = {
+ 		"/usr/local/share",
+ 		"/usr/share",
++		"/usr/share/dwarview",
+ 	};
+ 	const char filename[] = "dwarview.glade";
+ 	size_t sz = sizeof(buf);

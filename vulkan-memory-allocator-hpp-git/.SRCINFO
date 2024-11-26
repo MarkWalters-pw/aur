@@ -1,0 +1,15 @@
+pkgbase = vulkan-memory-allocator-hpp-git
+	pkgdesc = C++ bindings for VulkanMemoryAllocator
+	pkgver = 3.1.0
+	pkgrel = 1
+	url = https://github.com/YaaZ/VulkanMemoryAllocator-Hpp
+	arch = any
+	license = CC0
+	makedepends = cmake
+	makedepends = doxygen
+	makedepends = git
+	depends = vulkan-memory-allocator-git
+	source = vulkan-memory-allocator-hpp-git::git+https://github.com/YaaZ/VulkanMemoryAllocator-Hpp#tag=v3.1.0
+	sha1sums = SKIP
+
+pkgname = vulkan-memory-allocator-hpp-git

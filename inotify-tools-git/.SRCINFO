@@ -1,0 +1,17 @@
+pkgbase = inotify-tools-git
+	pkgdesc = C library and a set of command-line programs for Linux providing a simple interface to inotify
+	pkgver = 3.22.6.0.r6.g8367bdd
+	pkgrel = 1
+	url = https://github.com/rvoicilas/inotify-tools/wiki
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	depends = glibc
+	provides = inotify-tools=3.22.6.0.r6.g8367bdd
+	conflicts = inotify-tools
+	options = staticlibs
+	source = git+https://github.com/rvoicilas/inotify-tools.git
+	sha256sums = SKIP
+
+pkgname = inotify-tools-git

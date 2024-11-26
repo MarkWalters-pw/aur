@@ -1,0 +1,18 @@
+pkgbase = spectre-cli-git
+	pkgdesc = The command-line interface brings the Spectre algorithm to POSIX platforms, including Linux, *NIX, macOS and Windows.
+	pkgver = 2.6_cli_5_116_g26c01a5
+	pkgrel = 1
+	url = https://spectre.app/
+	arch = any
+	license = GPL3
+	checkdepends = jq
+	makedepends = git
+	depends = ncurses
+	depends = json-c
+	depends = libsodium
+	provides = spectre
+	conflicts = spectre
+	source = spectre-cli-git::git+https://gitlab.com/spectre.app/cli.git
+	md5sums = SKIP
+
+pkgname = spectre-cli-git

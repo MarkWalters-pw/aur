@@ -1,0 +1,16 @@
+pkgbase = ttf-oradano-mincho
+	pkgdesc = Japanese Serif font from letterpress printing glyph
+	pkgver = 0.2018.0101
+	pkgrel = 1
+	url = http://www.asahi-net.or.jp/~sd5a-ucd/freefonts/Oradano-Mincho/
+	install = ttf.install
+	arch = any
+	license = CUSTOM
+	makedepends = unzip
+	depends = fontconfig
+	depends = xorg-font-utils
+	source = ttf-oradano-mincho.zip::http://www.asahi-net.or.jp/~sd5a-ucd/freefonts/Oradano-Mincho/OradanoGSRR2018.zip
+	md5sums = ab6b38c4b5c0c223030e4bfe9db05ec0
+
+pkgname = ttf-oradano-mincho
+

@@ -1,0 +1,18 @@
+pkgbase = libxtrxll-git
+	pkgdesc = Low level XTRX hardware abstraction library
+	pkgver = r42.1b6eddfbedc7
+	pkgrel = 2
+	url = https://github.com/xtrx-sdr/libxtrxll
+	arch = armv7h
+	arch = i686
+	arch = x86_64
+	license = LGPL
+	makedepends = git
+	makedepends = cmake
+	depends = libusb3380
+	provides = libxtrxll
+	conflicts = libxtrxll
+	source = git+https://github.com/xtrx-sdr/libxtrxll
+	md5sums = SKIP
+
+pkgname = libxtrxll-git

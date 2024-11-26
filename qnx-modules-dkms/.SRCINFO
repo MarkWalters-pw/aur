@@ -1,0 +1,16 @@
+pkgbase = qnx-modules-dkms
+	pkgdesc = QNX4 and QNX6 FileSystem Types as Kernel Modules (dkms). BlackBerry qnxfs compatible.
+	pkgver = r9.11df204
+	pkgrel = 1
+	url = https://github.com/sickcodes/qnx-modules
+	arch = x86_64
+	arch = aarch64
+	arch = i386
+	license = GPL3
+	makedepends = git
+	depends = dkms
+	provides = qnx-modules
+	source = git+https://github.com/sickcodes/qnx-modules.git#commit=1b6659cef9b285d9393ed95b6a6bf6acc67f0460
+	sha256sums = SKIP
+
+pkgname = qnx-modules-dkms

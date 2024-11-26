@@ -1,0 +1,21 @@
+_installdir=/opt/ankama/wakfu
+
+post_install() {
+  echo " ==> Setting permissions to allow auto-update"
+  chgrp -R games "$_installdir"
+  chmod -R g+w "$_installdir"
+  echo " ==> Note: The first auto-update will download all game"
+  echo " ==>       content and may take a long time (~470MB)."
+}
+
+post_upgrade() {
+  post_install
+}
+
+post_remove() {
+  echo " ==> Note: To completely remove Wakfu from your disk,"
+  echo " ==>       delete the folder $_installdir and its subfolders."
+  echo " ==>       This is due to the auto-updater's temp files."
+}
+
+# vim:set ts=2 sw=2 et:

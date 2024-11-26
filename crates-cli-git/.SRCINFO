@@ -1,0 +1,13 @@
+pkgbase = crates-cli-git
+	pkgdesc = Rust writed CLI for search crates in terminal
+	pkgver = 1.0.3
+	pkgrel = 1
+	url = https://dnrops.gitee.io
+	arch = x86_64
+	license = MIT
+	provides = crates-cli
+	conflicts = crates-cli
+	source = crates-cli-git::git+https://gitcode.net/dnrops/crates-cli-git.git
+	sha256sums = SKIP
+
+pkgname = crates-cli-git

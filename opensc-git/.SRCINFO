@@ -1,0 +1,22 @@
+pkgbase = opensc-git
+	pkgdesc = Tools and libraries for smart cards
+	pkgver = 0.21.0+196+g991bb8a14
+	pkgrel = 1
+	url = https://github.com/OpenSC/OpenSC/wiki
+	arch = x86_64
+	license = LGPL
+	makedepends = docbook-xsl
+	makedepends = git
+	makedepends = bash-completion
+	depends = pcsclite
+	depends = libltdl
+	depends = glib2
+	provides = opensc
+	conflicts = opensc
+	options = !emptydirs
+	backup = etc/opensc.conf
+	source = git+https://github.com/OpenSC/OpenSC.git#branch=master
+	sha256sums = SKIP
+
+pkgname = opensc-git
+

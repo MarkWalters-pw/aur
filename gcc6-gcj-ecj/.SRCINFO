@@ -1,0 +1,17 @@
+pkgbase = gcc6-gcj-ecj
+	pkgdesc = A fork of the Eclipse Java bytecode compiler for GCJ
+	pkgver = 4.9
+	pkgrel = 1
+	url = http://gcc.gnu.org/java/
+	arch = any
+	license = EPL
+	provides = eclipse-ecj
+	provides = gcc-gcj-ecj
+	conflicts = eclipse-ecj
+	conflicts = gcc-gcj-ecj
+	noextract = ecj-4.9.jar
+	source = http://mirrors.kernel.org/sources.redhat.com/java/ecj-4.9.jar
+	md5sums = 7339f199ba11c941890031fd9981d7be
+
+pkgname = gcc6-gcj-ecj
+

@@ -1,0 +1,18 @@
+pkgbase = brother-mfc-l8690cdw
+	pkgdesc = LPR and CUPS driver for the Brother MFC-L8690CDW
+	pkgver = 1.5.0
+	pkgrel = 1
+	url = http://solutions.brother.com/linux
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	license = custom:Brother EULA
+	source = http://download.brother.com/welcome/dlf103215/mfcl8690cdwlpr-1.5.0-0.i386.rpm
+	source = http://download.brother.com/welcome/dlf103224/mfcl8690cdwcupswrapper-1.5.0-0.i386.rpm
+	source = setupPrintcapij.patch
+	sha256sums = 45d9ccecff24dda6263cc43b692d92c1211d19a50bb3b4fd54466f789f904337
+	sha256sums = 8e8a84d6a8afc00ab9592480d87d546b3d22cd6388d2ca0cf28ad44883c468a5
+	sha256sums = 98050f2292b1444e9bfe82943b736900f2cd5eef59ba49ecd4f08397a76fcfd6
+	depends_x86_64 = lib32-glibc
+
+pkgname = brother-mfc-l8690cdw

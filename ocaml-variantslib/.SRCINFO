@@ -1,0 +1,17 @@
+pkgbase = ocaml-variantslib
+	pkgdesc = OCaml variants as first class values
+	pkgver = 0.17.0
+	pkgrel = 2
+	epoch = 1
+	url = https://github.com/janestreet/variantslib
+	arch = x86_64
+	arch = aarch64
+	license = MIT
+	makedepends = dune>=3.11.0
+	depends = ocaml>=5.1.0
+	depends = ocaml-base>=0.17.0
+	options = !strip
+	source = ocaml-variantslib-0.17.0.tar.gz::https://github.com/janestreet/variantslib/archive/v0.17.0.tar.gz
+	b2sums = 33bd75495e23aa0d1f07a35e4a5de37e9485c3ceb00196e3884d7e93baca1588198f8f886ee5407632ccafda1aaa1ed1def05422a58cb6e66e7a31b0518a164d
+
+pkgname = ocaml-variantslib

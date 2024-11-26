@@ -1,0 +1,5 @@
+post_install() {
+  echo "Enable service by:"
+  echo "# su -s /bin/bash -c 'exec airdcppd -c=/var/lib/airdcpp --configure' airdcpp"
+  echo "# systemctl enable airdcpp"
+}

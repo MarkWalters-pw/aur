@@ -1,0 +1,17 @@
+pkgbase = nodejs-json
+	pkgdesc = A "json" command for massaging JSON on your Unix command line.
+	pkgver = 11.0.0
+	pkgrel = 1
+	url = http://github.com/trentm/json
+	arch = any
+	license = MIT
+	makedepends = npm
+	depends = nodejs
+	provides = nodejs-jsontool
+	conflicts = nodejs-jsontool
+	replaces = nodejs-jsontool
+	noextract = json-11.0.0.tgz
+	source = http://registry.npmjs.org/json/-/json-11.0.0.tgz
+	sha256sums = cf9adea69034d7b05bf7a76604eed743d98579d4ccb368184c2594588d85cdc0
+
+pkgname = nodejs-json

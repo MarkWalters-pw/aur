@@ -1,0 +1,24 @@
+pkgbase = bluefish-svn
+	pkgdesc = SVN version of the programmer's HTML editor written using GTK
+	pkgver = r8904
+	pkgrel = 1
+	url = http://bluefish.openoffice.nl/
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = intltool
+	makedepends = perl-xml-libxml
+	makedepends = pkgconfig
+	makedepends = subversion
+	makedepends = automake
+	makedepends = autoconf
+	makedepends = libtool
+	depends = gtk3
+	depends = enchant
+	optdepends = python: for self written extensions
+	provides = bluefish
+	conflicts = bluefish
+	source = svn+svn://svn.code.sf.net/p/bluefish/code/trunk/bluefish
+	md5sums = SKIP
+
+pkgname = bluefish-svn

@@ -1,0 +1,18 @@
+pkgbase = rtspeccy-git
+	pkgdesc = Real time spectrum analyzer (audio)
+	pkgver = 23.07
+	pkgrel = 1
+	url = https://uninformativ.de/git/rtspeccy
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	depends = glut
+	depends = fftw
+	depends = mesa
+	provides = rtspeccy
+	conflicts = rtspeccy
+	source = git+https://uninformativ.de/git/rtspeccy.git
+	md5sums = SKIP
+
+pkgname = rtspeccy-git

@@ -1,0 +1,16 @@
+pkgbase = godot-headless-export-templates-bin
+	pkgdesc = A headless version of the latest official release of the Godot engine and all export templates.
+	pkgver = 3.5
+	pkgrel = 1
+	url = http://www.godotengine.org
+	arch = x86_64
+	license = MIT
+	provides = godot
+	conflicts = godot
+	conflicts = godot-git
+	source = https://downloads.tuxfamily.org/godotengine/3.5/Godot_v3.5-stable_linux_headless.64.zip
+	source = https://downloads.tuxfamily.org/godotengine/3.5/Godot_v3.5-stable_export_templates.tpz
+	sha256sums = 36a6952c031e84feed8d5fede25ba46bb8f83fb192d755b136a3729089ef98e1
+	sha256sums = 7c7eefa74d3ec13c85a0f2f0fa191691e8ca4b5c91aa7d0dbeb84d950d92b637
+
+pkgname = godot-headless-export-templates-bin

@@ -1,0 +1,17 @@
+pkgbase = apertium-fr-es
+	pkgdesc = Apertium translation pair for French and Spanish
+	pkgver = 0.9.3
+	pkgrel = 1
+	url = https://github.com/apertium/apertium-fr-es
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = pkgconf
+	makedepends = autoconf
+	depends = apertium>=3.4.2
+	depends = apertium-lex-tools
+	source = apertium-fr-es-0.9.3.tar.gz::https://github.com/apertium/apertium-fr-es/archive/refs/tags/v0.9.3.tar.gz
+	sha256sums = 5d335181b39b3def92ed559d443a4ce1c7996da31d2206a5bfe83e88d53dddc7
+
+pkgname = apertium-fr-es
+

@@ -1,0 +1,34 @@
+pkgbase = jitsi-videobridge-git
+	pkgdesc = Jitsi Meet Videobridge git build
+	pkgver = 2.2+81+g99b20c621
+	pkgrel = 1
+	url = https://jitsi.org/jitsi-meet/
+	install = install
+	arch = any
+	license = Apache
+	makedepends = git
+	makedepends = java-environment-openjdk=11
+	makedepends = unzip
+	makedepends = maven
+	depends = java-runtime-openjdk=11
+	depends = bash
+	optdepends = prosody
+	options = !strip
+	backup = etc/jitsi-videobridge-git/config
+	backup = etc/jitsi-videobridge-git/logging.properties
+	backup = etc/jitsi-videobridge-git/sip-communicator.properties
+	backup = etc/jitsi-videobridge-git/jvb.conf
+	source = jitsi-videobridge-git::git+https://github.com/jitsi/jitsi-videobridge
+	source = config
+	source = sip-communicator.properties
+	source = service
+	source = sysusers.conf
+	source = tmpfiles.conf
+	sha256sums = SKIP
+	sha256sums = ce0b5f8bbbdf8a8eca1ba2e918447e13974ca26dc96558a6856df157417d67d2
+	sha256sums = cc9fbf77497bce3c9673b2d144928f11cdd0c0823940c2b60c8369a2f086b9b7
+	sha256sums = e5c2a0eaa67dc7cf0a97ba51c62d616d6b0acdb266218e9d53f9b877c335fe35
+	sha256sums = 998cbc64def56ab98080ff7150dd0913a5e10325cd2b038cf3db14baf8cb19fc
+	sha256sums = 54318c8c90b4b519b05f80a3241f0bae3da8a4478f68e47ba268355ff6ddf383
+
+pkgname = jitsi-videobridge-git

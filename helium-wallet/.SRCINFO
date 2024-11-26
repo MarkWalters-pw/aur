@@ -1,0 +1,16 @@
+pkgbase = helium-wallet
+	pkgdesc = Helium Wallet
+	pkgver = 1.7.12
+	pkgrel = 1
+	url = https://github.com/helium/helium-wallet-rs
+	arch = x86_64
+	license = Apache
+	makedepends = cmake
+	makedepends = clang
+	depends = rust
+	depends = cargo
+	depends = openssl
+	source = https://github.com/helium/helium-wallet-rs/archive/refs/tags/v1.7.12.tar.gz
+	sha512sums = e18c302ff99e13bcab0abcfcb436d19d3d993528798a64135efb1f70929ca72bee386c7377333368c607da7b42ce42cd15944f05083837d93bb178c0b7a50d1b
+
+pkgname = helium-wallet

@@ -1,0 +1,23 @@
+pkgbase = idos-timetable-additionalinfo-chaps-bus-latest
+	pkgdesc = Floor plans of some Czech bus stations/ stops, to be used with the timetable search engines by CHAPS.
+	pkgver = 2019_07_23
+	pkgrel = 3
+	epoch = 0
+	url = https://chaps.cz/eng/download/idos/zip#kotvainf
+	arch = any
+	groups = idos-timetable
+	license = custom
+	makedepends = wget
+	depends = idos-timetable-data-bus-cz
+	provides = idos-timetable-additionalinfo-chaps-bus=2019_07_23
+	provides = idos-timetable-additionalinfo-bus=2019_07_23
+	provides = idos-timetable-additionalinfo-bus-cz=2019_07_23
+	conflicts = idos-timetable-additionalinfo-chaps-bus
+	source = c2-2019_07_23.zip::https://ttakt.chaps.cz/TTAktual/Win/Zip/C2.ZIP
+	source = IDOS-Licence.pdf::https://chaps.cz/files/idos/IDOS-Licence.pdf
+	source = license-dummy.txt
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = c6bb216055d3670d3100b7a74e04ce0644030f365f4349a09e630ef60fbcb9a4
+
+pkgname = idos-timetable-additionalinfo-chaps-bus-latest

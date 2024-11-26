@@ -1,0 +1,15 @@
+pkgbase = scdoc-git
+	pkgdesc = Tool for generating roff manual pages
+	pkgver = 1.11.2.r10.ca7aad3
+	pkgrel = 2
+	url = https://git.sr.ht/~sircmpwn/scdoc/
+	arch = x86_64
+	license = MIT
+	makedepends = make
+	makedepends = clang
+	provides = scdoc
+	conflicts = scdoc
+	source = git+https://git.sr.ht/~sircmpwn/scdoc
+	sha256sums = SKIP
+
+pkgname = scdoc-git

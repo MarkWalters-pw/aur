@@ -1,0 +1,22 @@
+pkgbase = rust-rage-git
+	pkgdesc = Rust implementation of the age encryption tool - git version
+	pkgver = 0.9.2.r0.g267f383
+	pkgrel = 1
+	url = https://github.com/str4d/rage
+	arch = x86_64
+	arch = i686
+	arch = pentium4
+	arch = armv7h
+	arch = aarch64
+	license = Apache
+	license = MIT
+	makedepends = cargo
+	makedepends = git
+	depends = bzip2
+	depends = fuse3
+	provides = rust-rage
+	conflicts = rust-rage
+	source = rust-rage-git::git+https://github.com/str4d/rage
+	sha512sums = SKIP
+
+pkgname = rust-rage-git

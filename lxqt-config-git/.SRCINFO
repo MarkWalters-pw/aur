@@ -1,0 +1,25 @@
+pkgbase = lxqt-config-git
+	pkgdesc = LXQt system configuration.
+	pkgver = 2.0.0
+	pkgrel = 1
+	url = https://lxqt-project.org
+	arch = i686
+	arch = x86_64
+	license = LGPL-2.1-only
+	makedepends = git
+	makedepends = xf86-input-libinput
+	makedepends = cmake
+	makedepends = qt6-tools
+	makedepends = lxqt-build-tools-git
+	depends = libxi
+	depends = libxcursor
+	depends = libkscreen
+	depends = liblxqt-git
+	depends = lxqt-menu-data-git
+	depends = hicolor-icon-theme
+	provides = lxqt-config=2.0.0
+	conflicts = lxqt-config
+	source = git+https://github.com/lxqt/lxqt-config.git
+	sha256sums = SKIP
+
+pkgname = lxqt-config-git

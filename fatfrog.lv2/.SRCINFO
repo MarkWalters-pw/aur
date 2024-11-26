@@ -1,0 +1,22 @@
+pkgbase = fatfrog.lv2
+	pkgdesc = A high gain valve amplifier simulation LV2 plugin
+	pkgver = 1.0
+	pkgrel = 3
+	url = https://github.com/brummer10/FatFrog.lv2
+	arch = aarch64
+	arch = x86_64
+	groups = lv2-plugins
+	groups = pro-audio
+	license = custom:0BSD
+	checkdepends = lv2lint
+	makedepends = lv2
+	depends = cairo
+	depends = gcc-libs
+	depends = libx11
+	optdepends = lv2-host: for loading the LV2 plugin
+	source = https://github.com/brummer10/FatFrog.lv2/releases/download/v1.0/FatFrog_1.0.tar.gz
+	source = fatfrog-fix-ttl.diff::https://github.com/brummer10/FatFrog.lv2/commit/cb4c537171dc30f88cda0311d8c7944971d2ea4c.diff
+	sha256sums = 29e2ae9588d403af4e05b27fc84fae77fa80aeb69d10ac725e0ee48b76009b46
+	sha256sums = ebb21cc909227472fe63c6f466d380a65f550a2b032ec36ddc0fcafcbb80c501
+
+pkgname = fatfrog.lv2

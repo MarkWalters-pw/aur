@@ -1,0 +1,20 @@
+pkgbase = joxi
+	pkgdesc = Free tool for screen capture
+	pkgver = 3.0.15
+	pkgrel = 2
+	url = http://joxi.net
+	arch = x86_64
+	license = custom
+	depends = qt5-svg
+	depends = qt5-multimedia
+	depends = qt5-x11extras
+	depends = qt5-wayland
+	depends = openssl-1.0
+	depends = qt5-location
+	depends = rtmpdump
+	options = !strip
+	source = joxi-3.0.15.run::http://dl.joxi.ru/linux/joxi.run
+	sha512sums = 2f6a18b84ca862f6612ecd612cf81ba934b11680ae0fcfd8184cfb8f0d61a11420ec69073e8b39ab06d2971e489e1f4c0c2b6e0720cc2a181021ed99a6770a06
+
+pkgname = joxi
+

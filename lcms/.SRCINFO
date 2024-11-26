@@ -1,0 +1,17 @@
+pkgbase = lcms
+	pkgdesc = Lightweight color management library (legacy version 1)
+	pkgver = 1.19
+	pkgrel = 9
+	url = https://www.littlecms.com
+	arch = x86_64
+	arch = i686
+	license = MIT
+	depends = glibc
+	depends = libjpeg
+	depends = libtiff
+	source = https://downloads.sourceforge.net/sourceforge/lcms/lcms-1.19.tar.gz
+	source = cve-2013-4276.patch
+	b2sums = b8850f47652270082e11729119c35dfb90e112a40a80c531298b9585d89b3fba6e3ff1e0abd284ec2c6654a64fd44870f79d0a437917b8414e94d38afb66be93
+	b2sums = 35d54f9e23612cd9117a7db4adb2fa111036257582fc46ab0d6e687561783bcbbf415ae0ebc1c83ebe07e3ba42340ba56a2d42deb123473f79d7832775a07469
+
+pkgname = lcms

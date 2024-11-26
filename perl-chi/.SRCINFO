@@ -1,0 +1,34 @@
+pkgbase = perl-chi
+	pkgdesc = Unified cache handling interface
+	pkgver = 0.61
+	pkgrel = 1
+	url = https://metacpan.org/release/CHI
+	arch = any
+	license = PerlArtistic
+	license = GPL
+	checkdepends = perl-test-class
+	checkdepends = perl-test-deep
+	checkdepends = perl-test-exception
+	checkdepends = perl-test-warn
+	depends = perl-carp-assert>=0.20
+	depends = perl-class-load
+	depends = perl-data-uuid
+	depends = perl-digest-jhash
+	depends = perl-hash-moreutils
+	depends = perl-json-maybexs>=1.003003
+	depends = perl-list-moreutils>=0.13
+	depends = perl-log-any>=0.08
+	depends = perl-moo>=1.003
+	depends = perl-moox-types-mooselike>=0.23
+	depends = perl-moox-types-mooselike-numeric
+	depends = perl-string-rewriteprefix
+	depends = perl-task-weaken
+	depends = perl-time-duration>=1.06
+	depends = perl-time-duration-parse>=0.03
+	depends = perl-timedate
+	depends = perl-try-tiny>=0.05
+	options = !emptydirs
+	source = https://cpan.metacpan.org/authors/id/A/AS/ASB/CHI-0.61.tar.gz
+	md5sums = 053ea5759487ac045185f1ca313ce6e6
+
+pkgname = perl-chi

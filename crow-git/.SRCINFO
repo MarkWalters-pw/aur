@@ -1,0 +1,20 @@
+pkgbase = crow-git
+	pkgdesc = A Fast and Easy to use microframework for the web
+	pkgver = r1360.5f77b2bd
+	pkgrel = 1
+	url = https://github.com/CrowCpp/Crow
+	arch = any
+	license = BSD
+	makedepends = git
+	makedepends = cmake
+	makedepends = make
+	makedepends = python
+	depends = asio
+	optdepends = openssl
+	optdepends = zlib
+	provides = crow
+	conflicts = crow
+	source = crow-git::git+https://github.com/CrowCpp/Crow.git
+	md5sums = SKIP
+
+pkgname = crow-git

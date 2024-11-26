@@ -1,0 +1,39 @@
+MCS_USER='mcs'
+
+user_exists() {
+	if getent passwd "$MCS_USER" > /dev/null; then
+		return $(true)
+	else
+		return $(false)
+	fi
+}
+
+group_exists() {
+	if getent group "$MCS_USER" > /dev/null; then
+		return $(true)
+	else
+		return $(false)
+	fi
+}
+
+post_install() {
+	if ! group_exists; then
+		echo "Adding group \"$MCS_USER\"..."
+		groupadd "$MCS_USER"
+	fi
+
+	if ! user_exists; then
+		echo "Adding user \"$MCS_USER\"..."
+		useradd --gid "$MCS_USER" --comment 'Minecraft user' --shell /usr/bin/nologin --create-home "$MCS_USER" &> /dev/null
+		passwd --lock "$MCS_USER" > /dev/null
+	fi
+}
+
+post_remove() {
+	if user_exists; then
+		echo "Stopping processes controlled by \"$MCS_USER\"..."
+		killall --wait --user "$MCS_USER"
+		echo "Removing user \"$MCS_USER\"..."
+		userdel --force "$MCS_USER" &> /dev/null
+	fi
+}

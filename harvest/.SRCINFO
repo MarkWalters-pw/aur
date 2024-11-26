@@ -1,0 +1,16 @@
+pkgbase = harvest
+	pkgdesc = Tool to sort large collections of files according to common typologies
+	pkgver = 0.8
+	pkgrel = 1
+	url = https://github.com/dyne/harvest
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = lua-inspect
+	makedepends = luajit
+	makedepends = luastatic
+	makedepends = pkg-config
+	source = git+https://github.com/dyne/harvest.git#tag=1ef58c952d54924a8afc11afe1a2b8d126be5a62
+	sha512sums = SKIP
+
+pkgname = harvest

@@ -1,0 +1,15 @@
+pkgbase = mango
+	pkgdesc = A tool for making backups of Arch packages and their dependencies
+	pkgver = 2.0.1
+	pkgrel = 1
+	url = https://gitlab.com/Taro94/mango
+	arch = any
+	license = GPL
+	makedepends = dotnet-sdk>=6
+	depends = tar
+	depends = pacman
+	options = !strip
+	source = https://gitlab.com/Taro94/mango/-/archive/2.0.1/mango-2.0.1.tar.gz
+	md5sums = f95a3fc5d28b886ae449ffc06cd21e01
+
+pkgname = mango

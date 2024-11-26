@@ -1,0 +1,24 @@
+pkgbase = tableau-sdk
+	pkgdesc = C/C++/Java SDK for creating and publishing extracts to a Tableau Server
+	pkgver = 10_3_14
+	pkgrel = 1
+	url = http://tableau.com/
+	arch = i686
+	arch = x86_64
+	license = custom
+	depends = curl
+	depends = qt5-base
+	depends = java-environment
+	depends = gcc-libs-multilib
+	depends = expat
+	depends = boost-libs
+	depends = icu
+	depends = pcre
+	depends = intel-tbb
+	source_i686 = http://downloads.tableau.com/tssoftware/Tableau-SDK-Linux-32Bit-10-3-14.tar.gz
+	md5sums_i686 = d418d74f958cd60efac3b72965f2e4f1
+	source_x86_64 = http://downloads.tableau.com/tssoftware/Tableau-SDK-Linux-64Bit-10-3-14.tar.gz
+	md5sums_x86_64 = 950debcd6308673327cd0d75c4dc5619
+
+pkgname = tableau-sdk
+

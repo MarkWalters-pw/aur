@@ -1,0 +1,21 @@
+pkgbase = python-mbed-host-tests
+	pkgdesc = ARM mbed flash, reset and supervise tool
+	pkgver = 1.4.1
+	pkgrel = 1
+	url = https://developer.mbed.org
+	arch = any
+	license = Apache
+	makedepends = python2-setuptools
+	depends = python2
+	depends = python2-pyserial
+	depends = python2-prettytable
+	depends = python-mbed-ls
+	depends = python2-requests
+	depends = python2-intelhex
+	depends = pyocd
+	options = !emptydirs
+	source = https://github.com/ARMmbed/htrun/archive/release-version-1.4.1.tar.gz
+	sha256sums = bd83ac73c7e1b196be233bf8830e66b89a8c6a78bc7047f07de92830d350e288
+
+pkgname = python-mbed-host-tests
+

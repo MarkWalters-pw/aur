@@ -1,0 +1,25 @@
+pkgbase = linode-cli-git
+	pkgdesc = The Linode Command Line Interface (development version)
+	pkgver = 5.48.2.r24.gfeecb3a
+	pkgrel = 1
+	url = https://github.com/linode/linode-cli
+	arch = any
+	license = BSD
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = python-rich
+	depends = python-requests
+	depends = python-yaml
+	depends = python-setuptools
+	depends = python-openapi3
+	optdepends = python-boto: for obj plugin
+	provides = linode-cli
+	conflicts = linode-cli
+	source = linode-cli::git+https://github.com/linode/linode-cli.git
+	source = linode-cli-5.48.2.r24.gfeecb3a-openapi.yaml::https://www.linode.com/docs/api/openapi.yaml
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = linode-cli-git

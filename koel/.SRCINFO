@@ -1,0 +1,21 @@
+pkgbase = koel
+	pkgdesc = A personal music streaming server that works.
+	pkgver = 5.1.14
+	pkgrel = 1
+	url = https://koel.dev/
+	install = koel.install
+	arch = any
+	license = MIT
+	makedepends = composer
+	makedepends = nodejs
+	makedepends = yarn
+	depends = php
+	depends = php-sqlite
+	depends = python3
+	depends = mysql
+	depends = openssl
+	backup = usr/share/webapps/koel/.env
+	source = koel-5.1.14.tar.gz::https://github.com/koel/koel/archive/refs/tags/v5.1.14.tar.gz
+	sha512sums = a9a3be4ad9aa4641577f46d341d2363d7b420a3d9a7f8a962ea8cd8c4313f32bbe1adf87c35778550535714f39d599482ff1cb60cc363adef12b0cfac159350c
+
+pkgname = koel

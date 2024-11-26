@@ -1,0 +1,37 @@
+pkgbase = xorg-xdm-xlogin
+	pkgdesc = X Display Manager
+	pkgver = 1.1.12
+	pkgrel = 3
+	url = https://github.com/bbidulock/xdm
+	arch = i686
+	arch = x86_64
+	license = custom
+	makedepends = pkgconfig
+	makedepends = xorg-util-macros
+	makedepends = xtrans
+	depends = libbsd
+	depends = pam
+	depends = libxaw
+	depends = libxinerama
+	depends = xorg-xrdb
+	depends = xorg-sessreg
+	depends = libxft
+	depends = systemd
+	depends = libxcrypt
+	optdepends = slim-xdm: for separate greeter
+	provides = xorg-xdm=1.1.12
+	conflicts = xorg-xdm
+	backup = etc/X11/xdm/Xaccess
+	backup = etc/X11/xdm/Xresources
+	backup = etc/X11/xdm/Xservers
+	backup = etc/X11/xdm/xdm-config
+	backup = etc/pam.d/xdm
+	backup = etc/pam.d/greeter
+	backup = etc/X11/xdm/Xsetup_0
+	backup = etc/X11/xdm/Xsession
+	source = xdm.zip::https://github.com/bbidulock/xdm/archive/027536f4cdefe292adec15303198897d8ee4f1c8.zip
+	source = xdm.pam
+	sha256sums = 9c3d08e459667037898a73826b1e6622c359d71b3f10b2e7d8b7aff3545d1718
+	sha256sums = e8c4c5fd3b801a390d201166fd1fb9730e78a5c62928768103b870b6bd980ea0
+
+pkgname = xorg-xdm-xlogin

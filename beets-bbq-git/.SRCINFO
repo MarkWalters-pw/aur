@@ -1,0 +1,17 @@
+pkgbase = beets-bbq-git
+	pkgdesc = Blackbird-style search query plugin for beets
+	pkgver = r7.b784da6
+	pkgrel = 3
+	url = https://github.com/lepisma/beets-bbq
+	arch = any
+	license = GPL
+	makedepends = python-setuptools
+	makedepends = git
+	depends = python
+	depends = beets
+	provides = beets-bbq
+	conflicts = beets-bbq
+	source = beets-bbq-git::git+https://github.com/lepisma/beets-bbq
+	sha256sums = SKIP
+
+pkgname = beets-bbq-git

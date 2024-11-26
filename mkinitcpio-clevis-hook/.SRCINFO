@@ -1,0 +1,18 @@
+pkgbase = mkinitcpio-clevis-hook
+	pkgdesc = A simple hook to unlock LUKS devices on boot with clevis and TPM on Arch Linux and its derivatives, including the non-systemd versions
+	pkgver = 1.0
+	pkgrel = 6
+	url = https://github.com/kishorv06/arch-mkinitcpio-clevis-hook
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = clevis
+	depends = tpm2-tools
+	depends = luksmeta
+	depends = libpwquality
+	depends = mkinitcpio
+	depends = tpm2-abrmd
+	source = git+https://github.com/kishorv06/arch-mkinitcpio-clevis-hook.git/
+	md5sums = SKIP
+
+pkgname = mkinitcpio-clevis-hook

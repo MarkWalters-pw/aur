@@ -1,0 +1,18 @@
+pkgbase = sprunge
+	pkgdesc = Upload data to sprunge.us via stdin
+	pkgver = 0.7.0
+	pkgrel = 1
+	url = https://github.com/kevr/sprunge
+	arch = i686
+	arch = x86_64
+	arch = armv6h
+	license = GPL2
+	depends = python
+	depends = python-requests
+	optdepends = xclip: default Xorg clipboard functionality
+	optdepends = wl-clipboard: default Wayland clipboard functionality
+	conflicts = sprunge-git
+	source = https://github.com/kevr/sprunge/archive/refs/tags/0.7.tar.gz
+	sha256sums = 3c2186a63824e19bdf04fc4d9cc8790eb316d79278b909e7ae947f8c79a37c9d
+
+pkgname = sprunge

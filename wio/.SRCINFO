@@ -1,0 +1,34 @@
+pkgbase = wio
+	pkgdesc = An IoT Development Environment
+	pkgver = 0.9.0
+	pkgrel = 1
+	url = https://github.com/wio/wio
+	arch = x86_64
+	arch = i686
+	arch = arm
+	arch = armv6h
+	arch = armv7h
+	arch = aarch64 
+	license = MIT
+	depends = make
+	depends = cmake
+	optdepends = avr-gcc: compiler for AVR
+	optdepends = avr-libc: libc for AVR
+	optdepends = avrdude: for uploading to Arduino based boards
+	optdepends = gcc: for compiling natively
+	options = !strip
+	source = wio-0.9.0.tar.gz::https://github.com/wio/wio/releases/download/v0.9.0/wio_0.9.0_linux_64bit.tar.gz
+	source = wio-0.9.0.tar.gz::https://github.com/wio/wio/releases/download/v0.9.0/wio_0.9.0_linux_32bit.tar.gz
+	source = wio-0.9.0.tar.gz::https://github.com/wio/wio/releases/download/v0.9.0/wio_0.9.0_linux_arm.tar.gz
+	source = wio-0.9.0.tar.gz::https://github.com/wio/wio/releases/download/v0.9.0/wio_0.9.0_linux_arm.tar.gz
+	source = wio-0.9.0.tar.gz::https://github.com/wio/wio/releases/download/v0.9.0/wio_0.9.0_linux_arm.tar.gz
+	source = wio-0.9.0.tar.gz::https://github.com/wio/wio/releases/download/v0.9.0/wio_0.9.0_linux_arm64.tar.gz
+	sha256sums = f52fe2c53868cd7d481abefd136728887165c84826f429bd275830817764aba2 
+	sha256sums = 1e49a2efd1edf3bfd34534ccde7d0d6d50fcf72fa624925e7694f2216c172898
+	sha256sums = 71183e21e09a089db87cd1839f414d252b0cb1b0ab889a1fc6b4708e7cb475cd
+	sha256sums = 71183e21e09a089db87cd1839f414d252b0cb1b0ab889a1fc6b4708e7cb475cd
+	sha256sums = 71183e21e09a089db87cd1839f414d252b0cb1b0ab889a1fc6b4708e7cb475cd
+	sha256sums = b3aadb75a7289fbf1ac6b2fc12fb62565c64e1298944b1f9446717bd91907a53
+
+pkgname = wio
+

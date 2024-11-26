@@ -1,0 +1,21 @@
+pkgbase = freshfetch
+	pkgdesc = A fresh take on Neofetch
+	pkgver = 0.2.0
+	pkgrel = 2
+	url = https://github.com/K4rakara/freshfetch
+	arch = any
+	license = MIT
+	makedepends = cargo
+	makedepends = luajit
+	makedepends = git
+	optdepends = xorg-xrandr
+	optdepends = xorg-xwininfo
+	provides = freshfetch
+	conflicts = freshfetch-git
+	conflicts = freshfetch-bin
+	source = git+https://github.com/K4rakara/freshfetch.git
+	source = https://raw.githubusercontent.com/K4rakara/freshfetch/master/LICENSE.md
+	md5sums = SKIP
+	md5sums = a4c191c500e67564935777e1abaebbab
+
+pkgname = freshfetch

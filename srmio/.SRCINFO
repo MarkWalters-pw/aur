@@ -1,0 +1,19 @@
+pkgbase = srmio
+	pkgdesc = library + command line tools to access a "Schoberer Rad Messtechnik" PowerControl V, VI and 7 + read/write their files
+	pkgver = 0.1.1git1.r6.gb444b87
+	pkgrel = 1
+	url = http://www.zuto.de/project/srmio/
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = gcc
+	makedepends = make
+	makedepends = git
+	makedepends = autoconf
+	options = !strip
+	options = !buildflags
+	options = staticlibs
+	source = git+https://github.com/rclasen/srmio.git
+	sha256sums = SKIP
+
+pkgname = srmio

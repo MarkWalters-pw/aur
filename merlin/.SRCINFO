@@ -1,0 +1,18 @@
+pkgbase = merlin
+	pkgdesc = Context sensitive completion for OCaml in Vim and Emacs
+	pkgver = 4.8
+	pkgrel = 1
+	url = https://github.com/ocaml/merlin
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = dune
+	depends = ocaml
+	depends = ocaml-yojson
+	depends = ocaml-csexp
+	conflicts = vim-ocaml-merlin-git
+	options = !strip
+	source = https://github.com/ocaml/merlin/releases/download/v4.8-500/merlin-4.8-500.tbz
+	sha256sums = 9f93472aea34fe56667deed6b24aa75b7c66d52d0f9972924bddc10caae98c22
+
+pkgname = merlin

@@ -1,0 +1,21 @@
+pkgbase = v2ray-rust-git
+	pkgdesc = An Opinionated Lightweight Implementation of V2Ray, in Rust Programming Language
+	pkgver = r62.22ae05d
+	pkgrel = 2
+	url = https://github.com/Qv2ray/v2ray-rust
+	arch = x86_64
+	license = AGPL3
+	makedepends = git
+	makedepends = cargo
+	makedepends = clang
+	makedepends = cmake
+	provides = v2ray-rust
+	conflicts = v2ray-rust
+	source = git+https://github.com/Qv2ray/v2ray-rust.git
+	source = v2ray-rust.service
+	source = v2ray-rust@.service
+	b2sums = SKIP
+	b2sums = 1c5e31a6e2ca1b29d269b1b3fc6e8d8b3054b40676be767e6d57460faefa7335d3c1f4cf74255ab341c34322d033107ab16308957fa4c107225e5126698db793
+	b2sums = f4f4ac0bd58b66865d09ca85034341aa93c0f8d86714f6befd7b35a637d76bff0b240191225c605f2363097487b2958b2fb8262900d40ffc2931a61e3feb45ca
+
+pkgname = v2ray-rust-git

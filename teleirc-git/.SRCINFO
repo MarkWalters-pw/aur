@@ -1,0 +1,14 @@
+pkgbase = teleirc-git
+	pkgdesc = Go implementation of a Telegram <=> IRC bridge for use with any IRC channel and Telegram group.
+	pkgver = v2.2.0.r14.g8dac678
+	pkgrel = 1
+	url = https://github.com/RITlug/teleirc
+	arch = any
+	license = GPL3
+	makedepends = go
+	provides = teleirc
+	conflicts = teleirc
+	source = git+https://github.com/ritlug/teleirc.git
+	sha256sums = SKIP
+
+pkgname = teleirc-git

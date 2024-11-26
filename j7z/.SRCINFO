@@ -1,0 +1,24 @@
+pkgbase = j7z
+	pkgdesc = An alternative 7-Zip GUI
+	pkgver = 1.4.2
+	pkgrel = 1
+	url = https://sites.google.com/site/xavionsj7z/
+	install = J7Z.install
+	arch = any
+	license = LGPL3
+	depends = java-runtime>=8
+	depends = p7zip
+	optdepends = oxygen-gtk2: Native 'Oxygen' style
+	optdepends = gtk-kde4: KDE 4 style support
+	optdepends = tar: Supports POSIX attributes
+	optdepends = gzip: Supports GZip archives
+	optdepends = bzip2: Supports BZip2 archives
+	optdepends = xz: Supports XZ archives
+	conflicts = q7z
+	conflicts = k7z
+	replaces = q7z
+	replaces = k7z
+	source = https://prdownloads.sourceforge.net/k7z/J7Z-1.4.2-bin.tar.bz2
+	sha1sums = e8380fd38f449da3dea5da1643475ae300bc3d22
+
+pkgname = j7z

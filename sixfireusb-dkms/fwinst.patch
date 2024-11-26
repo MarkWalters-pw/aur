@@ -1,0 +1,20 @@
+--- fwinst.sh	2018-08-29 21:19:46.814128288 +0200
++++ fwinst.sh	2018-08-29 21:19:19.714059624 +0200
+@@ -19,7 +19,7 @@
+ # (at your option) any later version.
+ #
+ 
+-export FW_PATH=/lib/firmware
++export FW_PATH=$1/usr/lib/firmware
+ export FW_6FIRE_PATH=$FW_PATH/6fire
+ cleanup() {
+   rm -Rf /tmp/dmx
+@@ -106,7 +106,7 @@
+ fi
+ 
+ step_begin "Installing firmware files"
+-if ! mkdir -p $FW_6FIRE_PATH >/dev/null 2>&1 ; then
++if ! install -dm755 $FW_6FIRE_PATH >/dev/null 2>&1 ; then
+   step_error "Creation of firmware path failed. Are you root?"
+ fi
+ 

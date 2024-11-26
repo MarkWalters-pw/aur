@@ -1,0 +1,18 @@
+pkgbase = idokremote-git
+	pkgdesc = Remote for Kodi
+	pkgver = r131.dd279f5
+	pkgrel = 1
+	url = https://gitlab.com/The3DmaN/idokremote
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = qt5-svg
+	depends = qt5-base
+	depends = qt5-wayland
+	depends = qt5-quickcontrols2
+	provides = idokremote
+	conflicts = idokremote
+	source = git+https://gitlab.com/The3DmaN/idokremote.git
+	md5sums = SKIP
+
+pkgname = idokremote-git

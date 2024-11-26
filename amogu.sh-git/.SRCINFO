@@ -1,0 +1,16 @@
+pkgbase = amogu.sh-git
+	pkgdesc = A posix shell image viewer utilizing fzf, with Überzug for previews. Copies your selection to the clipboard.
+	pkgver = r3.fad5425
+	pkgrel = 1
+	url = https://codeberg.org/thepogsupreme/amogu.sh
+	arch = x86_64
+	license = EUPL 1.2
+	makedepends = git
+	depends = fzf
+	depends = ueberzug
+	optdepends = xclip: Clipboard support
+	optdepends = dragon-drag-and-drop: Drag and drop support
+	source = amogu.sh::git+https://codeberg.org/thepogsupreme/amogu.sh.git
+	md5sums = SKIP
+
+pkgname = amogu.sh-git

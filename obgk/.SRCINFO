@@ -1,0 +1,17 @@
+pkgbase = obgk
+	pkgdesc = osu!stable video and background deleter
+	pkgver = latest
+	pkgrel = 1
+	url = https://github.com/shoplifterhd/obgk
+	arch = x86_64
+	license = Unlicense
+	makedepends = git
+	depends = bash
+	depends = fd
+	depends = findutils
+	depends = wget
+	optdepends = zenity: nice gui to select your songs folder
+	source = git+https://github.com/shoplifterhd/obgk.git
+	md5sums = SKIP
+
+pkgname = obgk

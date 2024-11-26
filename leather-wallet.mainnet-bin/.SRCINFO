@@ -1,0 +1,23 @@
+pkgbase = leather-wallet.mainnet-bin
+	pkgdesc = Leather Wallet is everything you need to manage your tokens and collectibles and will protect your tokens when you use apps.
+	pkgver = 4.14.3
+	pkgrel = 4
+	url = https://github.com/leather-wallet/desktop
+	install = leather-wallet.mainnet-bin.install
+	arch = x86_64
+	license = MIT
+	depends = gtk3
+	depends = libappindicator-gtk3
+	depends = libsecret
+	depends = nss
+	depends = nodejs
+	conflicts = stacks-wallet.mainnet-bin
+	replaces = stacks-wallet.mainnet-bin
+	source = https://github.com/leather-wallet/desktop/releases/download/v4.14.3/leather-wallet.mainnet.v4.14.3.deb
+	source = file://leather-wallet.desktop
+	source = file://leather-192x192.png
+	md5sums = ce09f61a0550cadaa20c115f4d2c7a9c
+	md5sums = 21908631b19a511f720f502b75985a4d
+	md5sums = cf9746b967c79915938547c77f280a38
+
+pkgname = leather-wallet.mainnet-bin

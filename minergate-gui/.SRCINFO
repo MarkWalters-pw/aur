@@ -1,0 +1,16 @@
+pkgbase = minergate-gui
+	pkgdesc = Minergate xFast GUI Miner
+	pkgver = 1.7
+	pkgrel = 3
+	url = http://www.minergate.com/
+	arch = x86_64
+	license = custom
+	depends = ocl-icd
+	depends = qt5-websockets
+	depends = icu
+	provides = minergate-gui
+	options = !strip
+	source = https://vin.ovh/MinerGate-xFast-gui-1.7-ubuntu.deb
+	sha256sums = 1b24f3785a68043092366a9195524becbe8c589257b365628a0cb271d75e465f
+
+pkgname = minergate-gui

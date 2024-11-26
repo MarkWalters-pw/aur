@@ -1,0 +1,19 @@
+pkgbase = mingw-w64-leveldb
+	pkgdesc = A fast and lightweight key/value database library (mingw-w64)
+	pkgver = 1.22
+	pkgrel = 1
+	url = https://github.com/google/leveldb
+	arch = any
+	license = BSD
+	makedepends = mingw-w64-gcc
+	makedepends = mingw-w64-cmake
+	makedepends = make
+	depends = mingw-w64-snappy
+	options = !strip
+	options = !buildflags
+	options = staticlibs
+	source = leveldb-1.22.tar.gz::https://github.com/google/leveldb/archive/1.22.tar.gz
+	sha1sums = 8d310af5cfb53dc836bfb412ff4b3c8aea578627
+
+pkgname = mingw-w64-leveldb
+

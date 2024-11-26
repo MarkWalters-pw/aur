@@ -1,0 +1,18 @@
+pkgbase = ocaml-soundtouch
+	pkgdesc = OCaml bindings for the soundtouch audio library
+	pkgver = 0.1.9
+	pkgrel = 1
+	url = https://github.com/savonet/ocaml-soundtouch
+	arch = i686
+	arch = x86_64
+	license = LGPL2.1
+	makedepends = ocaml-findlib
+	makedepends = dune
+	depends = ocaml
+	depends = soundtouch
+	options = !strip
+	source = https://github.com/savonet/ocaml-soundtouch/archive/v0.1.9.tar.gz
+	sha256sums = 53fff10a6a509bc0d08e240117d03594217403f7cc45ebfd4077ade551980485
+
+pkgname = ocaml-soundtouch
+

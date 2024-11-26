@@ -1,0 +1,35 @@
+pkgbase = hpmyroom
+	pkgdesc = HPE MyRoom a collaborative conferencing meetings software
+	pkgver = 12.13.0.0749
+	pkgrel = 1
+	url = https://www.myroom.hpe.com
+	arch = x86_64
+	license = unknown
+	depends = alsa-lib>=1.0.16
+	depends = fontconfig>=2.11.94
+	depends = freetype2>=2.6
+	depends = glib2>=2.31.8
+	depends = glibc>=2.17
+	depends = gst-plugins-base-libs>=1.0.0
+	depends = gstreamer>=1.4.0
+	depends = libcups>=1.4.0
+	depends = libdrm>=2.4.30
+	depends = libgl
+	depends = libglvnd
+	depends = libpulse>=0.99.1
+	depends = util-linux-libs
+	depends = libvdpau
+	depends = libx11
+	depends = libxcb>=1.8
+	depends = libxfixes
+	depends = libxi>=1.5.99.2
+	depends = libxrender
+	depends = libxss
+	depends = libxtst
+	depends = systemd-libs>=183
+	depends = zlib>=1.2.3.4
+	depends = libtiff5
+	source = https://www.myroom.hpe.com/downloadfiles/hpmyroom_12.13.0.0749_amd64.deb
+	sha256sums = SKIP
+
+pkgname = hpmyroom

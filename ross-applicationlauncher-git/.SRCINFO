@@ -1,0 +1,17 @@
+pkgbase = ross-applicationlauncher-git
+	pkgdesc = Application Launcher for the ROSS Shell
+	pkgver = r51.8ed4191
+	pkgrel = 1
+	url = https://github.com/rosssoftware/Shell/tree/master/ApplicationLauncher
+	arch = x86_64
+	license = GPL3
+	makedepends = cmake
+	makedepends = qt5-tools
+	makedepends = git
+	depends = libqtxdg
+	provides = ross-applicationlauncher
+	conflicts = ross-applicationlauncher
+	source = ross-applicationlauncher::git+https://github.com/rosssoftware/Shell.git
+	sha256sums = SKIP
+
+pkgname = ross-applicationlauncher-git

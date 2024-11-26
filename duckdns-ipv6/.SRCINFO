@@ -1,0 +1,26 @@
+pkgbase = duckdns-ipv6
+	pkgdesc = Automatically update DuckDNS domains, with IPv6 support
+	pkgver = 1.1
+	pkgrel = 2
+	url = https://duckdns.org
+	install = duckdns.install
+	arch = any
+	license = GPL3
+	depends = curl
+	depends = jq
+	depends = sh
+	depends = util-linux
+	provides = duckdns
+	conflicts = duckdns
+	backup = etc/duckdns.d/default
+	source = duckdns.conf
+	source = duckdns.sh
+	source = duckdns.service
+	source = duckdns.timer
+	sha512sums = 85424f976426286b4f91b997db0163108f84527663024c05c70f895dcb85a3aa507849e3c3701985957254d88c98b6e9af54dbbc318db677141cf6bb05a2a51c
+	sha512sums = 03469909987fb15bea36208317edac83e675d9452e02222b7cab00dd4f67e7c4b0fdf1027c5d1dbae430de7453bf1d8f033f64942011266b14efc68085e5b652
+	sha512sums = 10783060db994bee4faf03920374840bc57b105304a7aa9b1ebc9161f9a765b985c2ef83906fb6f2c0dbb7b118cde95820e786fd39f78b443af5927e9bb71391
+	sha512sums = 55fa343bd4be6157b9b909721559a8fe163ad0968d2dcfcb5d9bca2fe268d70b1369dde225adc8d3a31815356d43afc76a43d8cf39d92209a1965d0e1e40f618
+
+pkgname = duckdns-ipv6
+

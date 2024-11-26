@@ -1,0 +1,13 @@
+post_install() {
+  sudo systemctl daemon-reload
+  sudo systemctl enable -f --now mousemapper.service
+}
+
+pre_upgrade() {
+  sudo systemctl disable -f --now mousemapper.service 2>/dev/null || true
+}
+
+pre_remove() {
+  sudo systemctl daemon-reload
+  sudo systemctl disable -f --now mousemapper.service 2>/dev/null || true
+}

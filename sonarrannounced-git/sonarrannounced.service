@@ -1,0 +1,14 @@
+[Unit]
+Description=sonarrAnnounced Service
+
+[Service]
+WorkingDirectory=/usr/lib/sonarrannounced
+ExecStart=/usr/bin/python /usr/lib/sonarrannounced/bot.py
+Restart=always
+GuessMainPID=no
+Type=simple
+User=sonarrannounced
+Group=sonarrannounced
+
+[Install]
+WantedBy=multi-user.target

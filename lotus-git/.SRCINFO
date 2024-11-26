@@ -1,0 +1,22 @@
+pkgbase = lotus-git
+	pkgdesc = Filecoin client in Go
+	pkgver = 1.1.2.r193.gd421274dc
+	pkgrel = 1
+	url = https://github.com/filecoin-project/lotus
+	arch = x86_64
+	license = MIT
+	license = APACHE
+	makedepends = go
+	makedepends = gcc
+	makedepends = git
+	makedepends = jq
+	makedepends = pkgconf
+	depends = ocl-icd
+	depends = gcc-libs
+	depends = hwloc
+	options = !strip
+	source = git+https://github.com/filecoin-project/lotus.git
+	b2sums = SKIP
+
+pkgname = lotus-git
+

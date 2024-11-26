@@ -1,0 +1,18 @@
+pkgbase = lazpaint-bin
+	pkgdesc = Image editor, like PaintBrush or Paint.Net, written in Lazarus (Free Pascal). Binary release (GTK2)
+	pkgver = 7.2.2
+	pkgrel = 1
+	url = https://lazpaint.github.io/
+	arch = x86_64
+	arch = i686
+	license = GPL3
+	depends = gtk2
+	depends = desktop-file-utils
+	provides = lazpaint
+	conflicts = lazpaint
+	source_x86_64 = https://github.com/bgrabitmap/lazpaint/releases/download/v7.2.2/lazpaint7.2.2_linux64.deb
+	sha256sums_x86_64 = 53bc39c7f463de0f85ebdc7499a0ca971892a84c576a13582d9377240c256b18
+	source_i686 = https://github.com/bgrabitmap/lazpaint/releases/download/v7.2.2/lazpaint7.2.2_linux32.deb
+	sha256sums_i686 = a07ff0b7d12f1183b974ede47d0a1cf46255dc58646f8465ccf6370f3a0e4197
+
+pkgname = lazpaint-bin

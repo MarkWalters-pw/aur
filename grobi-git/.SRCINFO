@@ -1,0 +1,19 @@
+pkgbase = grobi-git
+	pkgdesc = grobi automates applying xrandr profiles when outputs change
+	pkgver = r123.fd80d7f
+	pkgrel = 1
+	url = https://github.com/fd0/grobi
+	arch = i686
+	arch = x86_64
+	license = BSD
+	makedepends = git
+	makedepends = go>=1.4
+	depends = glibc
+	provides = grobi
+	conflicts = grobi
+	options = !strip
+	source = grobi-git::git+https://github.com/fd0/grobi
+	md5sums = SKIP
+
+pkgname = grobi-git
+

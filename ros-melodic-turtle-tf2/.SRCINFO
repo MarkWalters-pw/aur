@@ -1,0 +1,33 @@
+pkgbase = ros-melodic-turtle-tf2
+	pkgdesc = ROS - turtle_tf2 demonstrates how to write a tf2 broadcaster and listener with the turtlesim.
+	pkgver = 0.2.2
+	pkgrel = 4
+	url = https://wiki.ros.org/turtle_tf2
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-melodic-turtlesim
+	makedepends = ros-melodic-catkin
+	makedepends = ros-melodic-std-msgs
+	makedepends = ros-melodic-tf2-ros
+	makedepends = ros-melodic-roscpp
+	makedepends = ros-melodic-tf2
+	makedepends = ros-melodic-rospy
+	makedepends = ros-melodic-geometry-msgs
+	depends = ros-melodic-turtlesim
+	depends = ros-melodic-std-msgs
+	depends = ros-melodic-tf2-ros
+	depends = ros-melodic-roscpp
+	depends = ros-melodic-tf2
+	depends = ros-melodic-rospy
+	depends = ros-melodic-geometry-msgs
+	source = ros-melodic-turtle-tf2-0.2.2.tar.gz::https://github.com/ros/geometry_tutorials/archive/0.2.2.tar.gz
+	sha256sums = 4b3fdc98bf4cb97ba2f1c40666901fa7d08eb3dfed0d3323de4841de2e3a22cc
+
+pkgname = ros-melodic-turtle-tf2
+

@@ -1,0 +1,16 @@
+pkgbase = python-imaplib2-git
+	pkgdesc = Threaded Python IMAP4 client
+	pkgver = r182.11dbeb0
+	pkgrel = 1
+	url = https://github.com/jazzband/imaplib2
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python
+	provides = python-imaplib2
+	conflicts = python-imaplib2
+	source = python-imaplib2-git::git+https://github.com/jazzband/imaplib2.git
+	md5sums = SKIP
+
+pkgname = python-imaplib2-git

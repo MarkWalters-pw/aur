@@ -1,0 +1,24 @@
+From fced44682cd09a83f4590253f8426eded3582458 Mon Sep 17 00:00:00 2001
+From: f43nd1r <account+github@faendir.com>
+Date: Sat, 6 Mar 2021 14:25:11 +0100
+Subject: [PATCH 1/1] patch
+
+---
+ megamek/src/megamek/common/MechSummaryCache.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/megamek/src/megamek/common/MechSummaryCache.java b/megamek/src/megamek/common/MechSummaryCache.java
+index 5332ce17e5..ee559fb3a0 100644
+--- a/megamek/src/megamek/common/MechSummaryCache.java
++++ b/megamek/src/megamek/common/MechSummaryCache.java
+@@ -112,7 +112,7 @@ public class MechSummaryCache {
+      * @return The path to the directory containing the unit cache.
+      */
+     public static File getUnitCacheDir() {
+-        return Configuration.unitsDir();
++        return new File(System.getProperty("user.home") + "/.cache/unit_cache");
+     }
+ 
+     public boolean isInitialized() {
+-- 
+2.30.1

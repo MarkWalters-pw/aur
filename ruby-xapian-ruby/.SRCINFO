@@ -1,0 +1,18 @@
+pkgbase = ruby-xapian-ruby
+	pkgdesc = Xapian libraries and Ruby bindings
+	pkgver = 1.4.18
+	pkgrel = 1
+	url = https://rubygems.org/gems/xapian-ruby
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = ruby-rake
+	makedepends = ruby-rdoc
+	depends = ruby
+	depends = xapian-core>=1:1.4.18
+	noextract = xapian-ruby-1.4.18.gem
+	options = !emptydirs
+	source = https://rubygems.org/downloads/xapian-ruby-1.4.18.gem
+	sha256sums = f776cfb494e09f18b93d5b5310d4096d5dbe2a8c5ad898f637925ad0a6cc0afd
+
+pkgname = ruby-xapian-ruby

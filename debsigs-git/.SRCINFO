@@ -1,0 +1,17 @@
+pkgbase = debsigs-git
+	pkgdesc = toolset for cryptographically signing Debian packages
+	pkgver = r96.05c081a
+	pkgrel = 1
+	url = https://gitlab.com/debsigs/debsigs
+	arch = any
+	license = GPL
+	makedepends = git
+	makedepends = perl
+	depends = perl
+	provides = debsigs
+	conflicts = debsigs
+	source = debsigs::git+https://gitlab.com/debsigs/debsigs.git
+	md5sums = SKIP
+
+pkgname = debsigs-git
+

@@ -1,0 +1,20 @@
+pkgbase = ibus-hangul-3beol
+	pkgdesc = ibus-hangul from createsc/3beol PPA
+	pkgver = 1.5.1_1.0~bionic0801~3beol
+	pkgrel = 1
+	url = https://launchpad.net/~createsc/3beol
+	arch = x86_64
+	license = unknown
+	makedepends = intltool
+	makedepends = automake
+	makedepends = autoconf
+	makedepends = libhangul
+	makedepends = gnome-common
+	depends = libhangul
+	provides = ibus-hangul
+	conflicts = ibus-hangul
+	source = http://ppa.launchpad.net/createsc/3beol/ubuntu/pool/main/i/ibus-hangul/ibus-hangul_1.5.1-1.0~bionic0801~3beol.tar.xz
+	sha256sums = 2453d2dbfbfc14b5d06fa1b71a820b4f877bfcab85f19f1c721eba947ba39aad
+
+pkgname = ibus-hangul-3beol
+

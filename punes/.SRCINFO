@@ -1,0 +1,28 @@
+pkgbase = punes
+	pkgdesc = Nintendo Entertaiment System emulator
+	pkgver = 0.111
+	pkgrel = 1
+	url = https://github.com/punesemu/puNES
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	license = GPL-2.0-or-later
+	makedepends = cmake>=3.15
+	makedepends = glu
+	makedepends = qt6-tools
+	depends = alsa-lib
+	depends = ffmpeg
+	depends = hicolor-icon-theme
+	depends = nvidia-cg-toolkit
+	depends = libxrandr
+	depends = qt6-base
+	depends = qt6-svg
+	depends = gcc-libs
+	depends = glibc
+	depends = libglvnd
+	depends = libx11
+	depends = libudev.so
+	source = puNES-0.111.tar.gz::https://github.com/punesemu/puNES/archive/v0.111.tar.gz
+	sha512sums = 6388cdf2b303e217adfe43b1b3b1ef66a75b6adfdb0363b213c47fc129b5815f3e96814ee25a3637147dc184203cef0438930c280f0c6249085ecac1220b435c
+
+pkgname = punes

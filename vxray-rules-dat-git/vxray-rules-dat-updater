@@ -1,0 +1,38 @@
+#!/bin/bash
+
+set -e
+
+FastGit="https://hub.fastgit.org/Loyalsoldier/v2ray-rules-dat/releases/latest/"
+GitHub="https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download"
+JsDelivr="https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/"
+GHProxy="https://ghproxy.com/https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download"
+
+download_files() {
+  echo "Fetching geoip.dat"
+  curl -LO "${1}/geoip.dat"
+  curl -LO "${1}/geoip.dat.sha256sum"
+  sha256sum --check "geoip.dat.sha256sum"
+
+  echo "Fetching geosite.dat"
+  curl -LO "${1}/geosite.dat"
+  curl -LO "${1}/geosite.dat.sha256sum"
+  sha256sum --check "geosite.dat.sha256sum"
+
+  rm -v "geosite.dat.sha256sum" "geoip.dat.sha256sum"
+  cp -f /var/lib/vxray-rules-dat/geoip.dat /usr/share/xray/geoip.dat && cp -f /var/lib/vxray-rules-dat/geoip.dat /usr/share/v2ray/geoip.dat && cp -f /var/lib/vxray-rules-dat/geosite.dat /usr/share/xray/geosite.dat && cp -f /var/lib/vxray-rules-dat/geosite.dat /usr/share/v2ray/geosite.dat
+}
+
+case "${1}" in
+"fastgit" | "fg")
+  download_files $FastGit
+  ;;
+"jsdelivr" | "js")
+  download_files $JsDelivr
+  ;;
+"ghproxy" | "gh")
+  download_files $GHProxy
+  ;;
+*)
+  download_files $GitHub
+  ;;
+esac

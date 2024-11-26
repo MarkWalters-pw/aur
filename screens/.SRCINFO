@@ -1,0 +1,22 @@
+pkgbase = screens
+	pkgdesc = A utility for taking and managing screenshots.
+	pkgver = 121718
+	pkgrel = 7
+	url = https://www.gitlab.com/DavidBittner/screens
+	arch = x86_64
+	license = GPL3
+	makedepends = unzip
+	depends = gtk3
+	depends = gtkmm3
+	depends = libpng
+	depends = libx11
+	depends = curl
+	depends = gstreamermm
+	depends = glibmm
+	provides = screens
+	conflicts = screens
+	source = https://gitlab.com/davidbittner/Screens/-/jobs/135832236/artifacts/download.zip
+	sha512sums = 5005594f5e3939568a9c8b83a9269707a05c7cc630e9f895e4a1ae2a621fb31e3a8f446b125ac42b6b9cff727a2745b282a969de2ea6e4bdf541fd2ccd2a55e2
+
+pkgname = screens
+

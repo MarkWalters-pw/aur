@@ -1,0 +1,17 @@
+pkgbase = plasma5-wallpapers-xml
+	pkgdesc = An image/slideshow wallpaper plugin for KDE Plasma that supports GNOME XML wallpaper format.
+	pkgver = 1.3.0
+	pkgrel = 1
+	url = https://github.com/easyteacher/plasma-wallpapers-xml
+	arch = x86_64
+	license = GPL
+	makedepends = cmake
+	makedepends = extra-cmake-modules
+	depends = plasma-framework
+	depends = knewstuff
+	depends = qt5-base
+	depends = qt5-declarative
+	source = plasma5-wallpapers-xml-1.3.0.tar.gz::https://github.com/easyteacher/plasma-wallpapers-xml/archive/refs/tags/v1.3.0.tar.gz
+	sha256sums = ce61c74658bfbe7fa6062ae9bc8b751e5c849cedfcda692a6df25aee29d56479
+
+pkgname = plasma5-wallpapers-xml

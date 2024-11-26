@@ -1,0 +1,21 @@
+post_install() {
+  echo
+  echo "Adding tryton user and group... "
+  useradd -r -c "Tryton Server Daemon" -U -s /bin/false tryton
+
+  echo
+  echo "Note:"
+  echo "- Tryton modules can be installed using pip, e.g. 'pip install trytond-party'."
+  echo "- Configure Tryton using the config file /etc/tryton/trytond.conf."
+  echo "- See the Tryton documentation at http://doc.tryton.org for more information."
+  echo
+}
+
+post_remove() {
+  echo "Removing tryton user... "
+  userdel tryton
+}
+
+op=$1
+shift
+[ "$(type -t "$op")" = "function" ] && $op "$@"

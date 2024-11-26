@@ -1,0 +1,26 @@
+pkgbase = dune-grid
+	pkgdesc = Grid Interface and Implementations
+	pkgver = 2.10.0
+	pkgrel = 1
+	url = https://dune-project.org/modules/dune-grid
+	arch = x86_64
+	license = LicenseRef-GPL-2.0-only-with-DUNE-exception
+	makedepends = doxygen
+	makedepends = graphviz
+	makedepends = python-scikit-build
+	depends = dune-geometry>=2.10.0
+	depends = dune-uggrid>=2.10.0
+	depends = alberta
+	optdepends = imagemagick: image viewing/manipulation program
+	optdepends = doxygen: Generate the class documentation from C++ sources
+	optdepends = graphviz: Graph visualization software
+	optdepends = gnuplot: for provides gnuplot output for 1D and 2D Grids
+	optdepends = parmetis: Parallel Graph Partitioning and Fill-reducing Matrix Ordering
+	options = !emptydirs
+	source = https://dune-project.org/download/2.10.0/dune-grid-2.10.0.tar.gz
+	source = https://dune-project.org/download/2.10.0/dune-grid-2.10.0.tar.gz.asc
+	validpgpkeys = 703607A1FD9AF4205E735522B95BE0EFB19724A1
+	sha512sums = 15eafca279fd9e1f11ae4c61effae74b3b1eedc976762cb0b5970cf1105d6c3c71039bb85b1cd00e846f8730133a2a9d0868e8961fc95c9f7c7ac2860e7fd46f
+	sha512sums = SKIP
+
+pkgname = dune-grid

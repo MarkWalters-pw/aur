@@ -1,0 +1,18 @@
+pkgbase = stm32flash
+	pkgdesc = Open source flash program for the STM32 ARM processors using the ST serial bootloader over UART or I2C
+	pkgver = 0.7
+	pkgrel = 2
+	url = https://sourceforge.net/projects/stm32flash/
+	arch = i686
+	arch = x86_64
+	arch = arm
+	arch = armv6h
+	arch = armv7h
+	arch = aarch64
+	license = GPL2
+	provides = stm32flash
+	conflicts = stm32flash-git
+	source = http://downloads.sourceforge.net/project/stm32flash/stm32flash-0.7.tar.gz
+	sha512sums = 328254dd043dc707cf8c3edf8ddd4a9441c85d9cb2ca1682bcb3f5301d526b04ed6fb335e72a94e3d26341f18bef45968bf321f0ffeb80eaa0c3add6701349ff
+
+pkgname = stm32flash

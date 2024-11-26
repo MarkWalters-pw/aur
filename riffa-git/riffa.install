@@ -1,0 +1,18 @@
+
+# Note : pacman autoimatically performs the following tasks after package install/update/remove:
+# Update libraries with ldconfig
+# Update kernel module dependencies with depmod (provided the module is installed at aappropariate path)
+
+post_install() {
+  echo '==> The RIFFA driver must be enabled to be used : # modprobe riffa'
+}
+
+post_upgrade() {
+  echo '==> To use the new RIFFA driver without rebooting : # rmmod riffa ; modprobe riffa'
+}
+
+post_remove() {
+  echo '==> Removing the Riffa kernel module'
+  rmmod riffa
+}
+

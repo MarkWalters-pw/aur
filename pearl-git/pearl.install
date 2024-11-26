@@ -1,0 +1,17 @@
+_post(){
+    echo
+    echo "Remember to init Pearl configurations by running:"
+    echo "    /usr/bin/pearl init"
+    echo
+}
+
+# arg 1:  the new package version
+post_install() {
+    _post
+}
+
+# arg 1:  the new package version
+# arg 2:  the old package version
+post_upgrade() {
+    _post
+}

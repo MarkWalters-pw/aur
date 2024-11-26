@@ -1,0 +1,17 @@
+pkgbase = spice-protocol-git
+	pkgdesc = Headers defining SPICE protocols
+	pkgver = 0.14.3.4.g969baca
+	pkgrel = 1
+	url = https://www.spice-space.org
+	arch = any
+	license = BSD
+	makedepends = git
+	makedepends = meson
+	makedepends = python-six
+	makedepends = python-pyparsing
+	provides = spice-protocol
+	conflicts = spice-protocol
+	source = git+https://gitlab.freedesktop.org/spice/spice-protocol.git
+	sha256sums = SKIP
+
+pkgname = spice-protocol-git

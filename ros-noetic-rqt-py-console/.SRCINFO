@@ -1,0 +1,22 @@
+pkgbase = ros-noetic-rqt-py-console
+	pkgdesc = ROS - rqt_py_console is a Python GUI plugin providing an interactive Python console.
+	pkgver = 0.4.10
+	pkgrel = 1
+	url = https://wiki.ros.org/rqt_py_console
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-catkin
+	depends = ros-noetic-rqt-gui-py
+	depends = ros-noetic-qt-gui-py-common
+	depends = ros-noetic-qt-gui
+	depends = ros-noetic-python-qt-binding
+	depends = ros-noetic-rqt-gui
+	depends = ros-noetic-rospy
+	depends = python-rospkg
+	source = ros-noetic-rqt-py-console-0.4.10.tar.gz::https://github.com/ros-visualization/rqt_py_console/archive/0.4.10.tar.gz
+	sha256sums = 2478c0255758c5e45f0b4daf24fa447716d94dacfe05598fcc1a2192df518b95
+
+pkgname = ros-noetic-rqt-py-console
+

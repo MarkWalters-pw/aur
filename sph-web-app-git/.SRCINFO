@@ -1,0 +1,17 @@
+pkgbase = sph-web-app-git
+	pkgdesc = guile scheme framework for dynamic websites
+	pkgver = 145
+	pkgrel = 1
+	url = http://sph.mn
+	arch = any
+	license = gpl3+
+	makedepends = git
+	depends = guile
+	depends = sph-lib
+	provides = sph-web-app
+	conflicts = sph-web-app
+	source = git://git.sph.mn/sph-web-app
+	md5sums = SKIP
+
+pkgname = sph-web-app-git
+

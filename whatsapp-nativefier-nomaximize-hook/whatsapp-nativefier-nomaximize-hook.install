@@ -1,0 +1,19 @@
+post_install() {
+	echo "Disabling minimize on close in the current whatsapp-nativefier install"
+	patch --forward --strip=1 --directory=/opt/whatsapp-nativefier/resources/app/lib --input=/usr/share/libalpm/scripts/whatsapp-nativefier-nomaximize.patch
+	if [ $? -gt 0 ] 
+	then
+		rm -f /opt/whatsapp-nativefier/resources/app/lib/main.js.rej
+	fi
+}
+
+
+
+pre_remove() {
+	echo "Enabling minimize on close in the current whatsapp-nativefier install"
+	patch --reverse --strip=1 --directory=/opt/whatsapp-nativefier/resources/app/lib --input=/usr/share/libalpm/scripts/whatsapp-nativefier-nomaximize.patch
+	if [ $? -gt 0 ] 
+	then
+		rm -f /opt/whatsapp-nativefier/resources/app/lib/main.js.rej
+	fi
+}

@@ -1,0 +1,23 @@
+pkgbase = apk-tools-git
+	pkgdesc = Alpine package manager
+	pkgver = 2.12.10.r250.gc21f61d
+	pkgrel = 1
+	url = https://gitlab.alpinelinux.org/alpine/apk-tools
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	makedepends = lua53
+	makedepends = lua53-zlib
+	makedepends = meson
+	makedepends = scdoc
+	depends = glibc
+	depends = openssl
+	depends = zlib
+	provides = apk-tools=2.12.10.r250.gc21f61d
+	conflicts = apk-tools
+	options = staticlibs
+	source = git+https://gitlab.alpinelinux.org/alpine/apk-tools.git
+	sha256sums = SKIP
+
+pkgname = apk-tools-git

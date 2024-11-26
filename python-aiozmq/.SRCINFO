@@ -1,0 +1,16 @@
+pkgbase = python-aiozmq
+	pkgdesc = asyncio support for ZeroMQ
+	pkgver = 0.9.0
+	pkgrel = 1
+	url = https://github.com/aio-libs/aiozmq
+	install = aiozmq.install
+	changelog = CHANGES.txt
+	arch = any
+	license = BSD
+	makedepends = python-setuptools
+	depends = python-pyzmq
+	depends = python-msgpack
+	source = python-aiozmq-0.9.0.tar.gz::https://files.pythonhosted.org/packages/source/a/aiozmq/aiozmq-0.9.0.tar.gz
+	sha256sums = 9d7315bb77e2655fc3a5051ea22e79527d62c42e51b2420c4f6f3dcebae65230
+
+pkgname = python-aiozmq

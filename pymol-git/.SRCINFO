@@ -1,0 +1,32 @@
+pkgbase = pymol-git
+	pkgdesc = Molecular visualization system on an Open Source foundation
+	pkgver = r5647.071998658
+	pkgrel = 1
+	url = https://pymol.org
+	arch = x86_64
+	license = custom
+	makedepends = desktop-file-utils
+	makedepends = gendesk
+	makedepends = mmtf-cpp
+	makedepends = msgpack-c
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = python-setuptools
+	depends = freetype2
+	depends = glew
+	depends = glm
+	depends = glut
+	depends = netcdf
+	depends = netcdf-cxx
+	depends = python-numpy
+	depends = tcsh
+	optdepends = python-pyqt5: Qt5 based UI
+	provides = pymol=r5647.071998658
+	conflicts = pymol
+	source = pymol::git+https://github.com/schrodinger/pymol-open-source.git
+	source = pymol.png::https://c.fsdn.com/allura/p/pymol/icon
+	md5sums = SKIP
+	md5sums = a6b62ae41658a772f75b3b123a8e5c0b
+
+pkgname = pymol-git

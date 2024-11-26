@@ -1,0 +1,17 @@
+pkgbase = kpeoplevcard-git
+	pkgdesc = Expose VCard contacts to KPeople
+	pkgver = 0.1.r164.g6d9178d
+	pkgrel = 1
+	url = https://kde.org
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = extra-cmake-modules
+	depends = kpeople5
+	depends = kcontacts5
+	provides = kpeoplevcard
+	conflicts = kpeoplevcard
+	source = git+https://invent.kde.org/pim/kpeoplevcard.git
+	md5sums = SKIP
+
+pkgname = kpeoplevcard-git

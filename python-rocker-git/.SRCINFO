@@ -1,0 +1,22 @@
+pkgbase = python-rocker-git
+	pkgdesc = A tool to run Docker containers with customized extras
+	pkgver = 0.2.10.r14.g434d9df
+	pkgrel = 1
+	url = https://github.com/osrf/rocker
+	arch = any
+	license = Apache
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = python-docker
+	depends = python-empy
+	depends = python-packaging
+	depends = python-pexpect
+	depends = python-setuptools
+	provides = python-rocker=0.2.10
+	conflicts = python-rocker
+	source = python-rocker-git::git+https://github.com/osrf/rocker
+	sha256sums = SKIP
+
+pkgname = python-rocker-git

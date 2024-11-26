@@ -1,0 +1,17 @@
+pkgbase = unnethack-git
+	pkgdesc = Variant of NetHack. It features more randomness, more levels, more challenges and more fun than vanilla NetHack.
+	pkgver = 5.1.0.20131208.r326.g62f5a0e7
+	pkgrel = 1
+	url = https://unnethack.wordpress.com/
+	arch = i686
+	arch = x86_64
+	license = custom
+	makedepends = git
+	depends = bash
+	provides = unnethack
+	conflicts = unnethack
+	source = unnethack-git::git+https://github.com/UnNetHack/UnNetHack.git
+	md5sums = SKIP
+
+pkgname = unnethack-git
+

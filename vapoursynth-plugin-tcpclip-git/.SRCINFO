@@ -1,0 +1,15 @@
+pkgbase = vapoursynth-plugin-tcpclip-git
+	pkgdesc = Plugin for Vapoursynth: tcpclip (GIT version)
+	pkgver = 2.4.0.1.gd7b3c1a
+	pkgrel = 1
+	url = https://github.com/Beatrice-Raws/VapourSynth-TCPClip
+	arch = any
+	license = MIT
+	makedepends = git
+	depends = python-numpy
+	provides = vapoursynth-plugin-tcpclip
+	conflicts = vapoursynth-plugin-tcpclip
+	source = tcpclip::git+https://github.com/Beatrice-Raws/VapourSynth-TCPClip.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-tcpclip-git

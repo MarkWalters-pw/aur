@@ -1,0 +1,51 @@
+pkgbase = mounriver-studio-toolchain-bin
+	pkgver = 1.92
+	pkgrel = 2
+	url = http://www.mounriver.com/
+	arch = x86_64
+	license = GPL2
+	license = GPL3
+	license = custom
+	makedepends = tar
+	optdepends = ch34x-dkms-git: CH341SER driver with fixed bug
+	optdepends = i2c-ch341-dkms: CH341 USB-I2C adapter driver
+	optdepends = spi-ch341-usb-dkms: SPI/GPIO driver for CH341
+	optdepends = ch341eepromtool: An i2c serial EEPROM programming tool for the WCH CH341A
+	optdepends = ch341prog-git: A simple command line tool (programmer) interfacing with ch341a
+	optdepends = ch341eeprom-git: A libusb based programming tool for 24xx I²C EEPROMs using the WCH CH341A
+	optdepends = ch343ser-dkms: USB serial driver for ch342/ch343/ch344/ch347/ch347f/ch9101/ch9102/ch9103/ch9104, etc (dkms).
+	optdepends = wchisp: WCH ISP Tool in Rust
+	provides = MRS-Toolchain
+	noextract = mounriver-studio-toolchain-bin-1.92.tar.xz
+	options = !strip
+	source = mounriver-studio-toolchain-bin-1.92.tar.xz::http://file-oss.mounriver.com/tools/MRS_Toolchain_Linux_x64_V1.92.tar.xz
+	sha256sums = 33e0dd7581a2eea25bc5d1aa2c31f5c8b316e543b954d84f9e1ffc5999e93fea
+
+pkgname = mounriver-studio-toolchain-bin
+	pkgdesc = This MRS Toolchain includes the tool chain for RISC-V kernel chip under Linux x64 and the debug download tool OpenOCD.
+	depends = mounriver-studio-toolchain-openocd-bin
+	depends = mounriver-studio-toolchain-riscv-gcc-bin
+	depends = mounriver-studio-toolchain-riscv-gcc12-bin
+
+pkgname = mounriver-studio-toolchain-openocd-bin
+	pkgdesc = MRS Toolchain OpenOCD supports erasure, programming, verification and debugging of the chip.
+	depends = bash
+	depends = glibc
+	depends = libftdi-compat
+	depends = libusb
+	depends = hidapi
+	depends = libusb-compat
+	depends = libudev.so
+	depends = libjaylink.so
+
+pkgname = mounriver-studio-toolchain-riscv-gcc-bin
+	pkgdesc = MRS Toolchain Support for RISC-V assembly and GNU C compilation, link operation.
+	depends = bash
+	depends = glibc
+	depends = python
+
+pkgname = mounriver-studio-toolchain-riscv-gcc12-bin
+	pkgdesc = MRS Toolchain Support for RISC-V assembly and GNU C compilation, link operation.
+	depends = bash
+	depends = glibc
+	depends = python

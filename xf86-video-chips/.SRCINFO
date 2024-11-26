@@ -1,0 +1,22 @@
+pkgbase = xf86-video-chips
+	pkgdesc = X.org Chips and Technologies video driver
+	pkgver = 1.4.0
+	pkgrel = 1
+	url = https://xorg.freedesktop.org/
+	arch = i686
+	arch = x86_64
+	license = custom
+	makedepends = xorg-server-devel
+	makedepends = X-ABI-VIDEODRV_VERSION=24.0
+	depends = glibc
+	conflicts = xorg-server<1.20
+	conflicts = X-ABI-VIDEODRV_VERSION<24
+	conflicts = X-ABI-VIDEODRV_VERSION>=25
+	source = https://xorg.freedesktop.org//releases/individual/driver/xf86-video-chips-1.4.0.tar.bz2
+	source = https://xorg.freedesktop.org//releases/individual/driver/xf86-video-chips-1.4.0.tar.bz2.sig
+	validpgpkeys = 3BB639E56F861FA2E86505690FDD682D974CA72A
+	sha256sums = 07f3e41e8f7e6ac24e62cfa94a1aa85f20f03ab375ad89e1a944a09df0f11fbf
+	sha256sums = SKIP
+
+pkgname = xf86-video-chips
+

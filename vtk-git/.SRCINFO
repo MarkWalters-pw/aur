@@ -1,0 +1,32 @@
+pkgbase = vtk-git
+	pkgdesc = A software system for 3D computer graphics, image processing, and visualization
+	pkgver = 8.2.0.3046.g5345571164
+	pkgrel = 1
+	url = http://www.vtk.org
+	arch = i686
+	arch = x86_64
+	license = BSD
+	makedepends = git
+	makedepends = cmake
+	makedepends = doxygen
+	makedepends = boost
+	makedepends = java-environment
+	makedepends = utf8cpp
+	makedepends = eigen
+	makedepends = pegtl
+	depends = jsoncpp
+	depends = libxt
+	depends = double-conversion
+	depends = glew
+	depends = hdf5
+	depends = python
+	depends = proj
+	depends = pugixml
+	depends = gl2ps
+	provides = vtk
+	conflicts = vtk
+	source = git+https://gitlab.kitware.com/vtk/vtk.git
+	sha256sums = SKIP
+
+pkgname = vtk-git
+

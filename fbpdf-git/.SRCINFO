@@ -1,0 +1,19 @@
+pkgbase = fbpdf-git
+	pkgdesc = A small framebuffer pdf viewer, based on MuPDF.
+	pkgver = r102.6276360
+	pkgrel = 3
+	url = https://github.com/aligrudi/fbpdf
+	arch = i686
+	arch = x86_64
+	license = ISC
+	makedepends = git
+	depends = libmupdf
+	depends = djvulibre
+	provides = fbpdf
+	conflicts = fbpdf
+	source = fbpdf-git::git+git://repo.or.cz/fbpdf.git
+	source = build.patch
+	sha256sums = SKIP
+	sha256sums = c1994cb64bd67112640e2d895caf5bbd52bbc4581f8fcc6691f57df5405b2374
+
+pkgname = fbpdf-git

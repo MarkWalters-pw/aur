@@ -1,0 +1,18 @@
+pkgbase = nccm-git
+	pkgdesc = NCurses ssh Connection Manager
+	pkgver = r99.96af400
+	pkgrel = 2
+	url = https://github.com/flyingrhinonz/nccm
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = python-pyaml
+	depends = yamllint
+	provides = nccm
+	conflicts = nccm
+	backup = etc/nccm.yml
+	source = git+https://github.com/flyingrhinonz/nccm
+	sha256sums = SKIP
+
+pkgname = nccm-git
+

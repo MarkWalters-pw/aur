@@ -1,0 +1,18 @@
+pkgbase = wayland-idle-inhibitor-git
+	pkgdesc = An inhibitor that prevents wayland from idleing and locking the screen
+	pkgver = r2.46a5077
+	pkgrel = 2
+	url = https://github.com/stwa/wayland-idle-inhibitor
+	install = install
+	arch = any
+	license = custom:WTFPL
+	makedepends = git
+	depends = python-pywayland
+	provides = wayland-idle-inhibitor
+	conflicts = wayland-idle-inhibitor
+	source = wayland-idle-inhibitor::git+https://github.com/stwa/wayland-idle-inhibitor
+	source = wayland-idle-inhibitor.service
+	b2sums = SKIP
+	b2sums = 775a6a39bc6e50b06ea3ad0754b0bd9614ec4ba37fea0cea5000b191ba718e3916511b3b4d31cc2b3b3b2f52563ac6441c882c0bbf3faaad1a68dccd8fba7cdf
+
+pkgname = wayland-idle-inhibitor-git

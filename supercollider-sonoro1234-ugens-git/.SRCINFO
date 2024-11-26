@@ -1,0 +1,17 @@
+pkgbase = supercollider-sonoro1234-ugens-git
+	pkgdesc = sonoro1234's SuperCollider UGens
+	pkgver = r55.33f352e
+	pkgrel = 1
+	url = https://github.com/sonoro1234/MyUGens
+	arch = any
+	groups = pro-audio
+	groups = supercollider-plugins
+	license = GPL
+	makedepends = git
+	makedepends = cmake
+	makedepends = supercollider-headers-git
+	depends = supercollider
+	source = supercollider-sonoro1234-ugens-git::git+https://github.com/sonoro1234/MyUGens.git
+	md5sums = SKIP
+
+pkgname = supercollider-sonoro1234-ugens-git

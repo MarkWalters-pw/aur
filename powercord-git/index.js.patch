@@ -1,0 +1,15 @@
+--- ./powercord/src/Powercord/index.js	2022-05-29 00:03:57.291394709 +0200
++++ ./index.js.patched	2022-05-29 00:11:14.281641878 +0200
+@@ -53,9 +53,9 @@
+ 
+     this.api = {};
+     this.gitInfos = {
+-      upstream: '???',
+-      branch: '???',
+-      revision: '???'
++      upstream: 'powercord-org/powercord',
++      branch: 'v2',
++      revision: 'REVISION_NUMBER'
+     };
+     this.initialized = false;
+     this.styleManager = new StyleManager();

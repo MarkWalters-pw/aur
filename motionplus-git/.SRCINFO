@@ -1,0 +1,21 @@
+pkgbase = motionplus-git
+	pkgdesc = Monitor and record video signals from many types of cameras
+	pkgver = 0.1.0.r44.gc001cff
+	pkgrel = 1
+	url = https://github.com/Motion-Project/motionplus
+	arch = x86_64
+	license = GPL
+	depends = sqlite
+	depends = ffmpeg
+	depends = libmicrohttpd
+	depends = libwebp
+	depends = postgresql-libs
+	depends = mariadb-libs
+	optdepends = gettext: native language support
+	backup = etc/motionplus/motionplus.conf
+	source = git+https://github.com/Motion-Project/motionplus
+	source = motionplus.service
+	b2sums = SKIP
+	b2sums = baf8c1cd1b742b834e3faa45315d7187e89d2e439751ee8a99fbde117fd504830d5990540be96c9672ec03efdc9c8fd2b87bd507ab74fe73a30cf16826a3f4f6
+
+pkgname = motionplus-git

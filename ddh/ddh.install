@@ -1,0 +1,15 @@
+post_install() {
+    chmod +x /usr/local/bin/install-ddh.sh
+    /usr/local/bin/install-ddh.sh
+    rm /usr/local/bin/install-ddh.sh
+
+    systemctl daemon-reload
+    systemctl enable ddh
+    systemctl start ddh
+}
+
+post_remove() {
+    systemctl stop ddh
+    systemctl disable ddh
+    rm -f /etc/systemd/system/ddh.service
+}

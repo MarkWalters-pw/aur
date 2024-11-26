@@ -1,0 +1,31 @@
+pkgbase = buildstream-git
+	pkgdesc = Framework for modelling build pipelines in a declarative YAML format
+	pkgver = 1.93.6.r47.gc388631bb
+	pkgrel = 1
+	url = https://buildstream.build
+	arch = x86_64
+	license = LGPL
+	makedepends = python-setuptools
+	makedepends = cython
+	makedepends = git
+	depends = bubblewrap
+	depends = buildbox-casd
+	depends = python-click
+	depends = python-dateutil
+	depends = python-grpcio
+	depends = python-jinja
+	depends = python-pluginbase
+	depends = python-protobuf
+	depends = python-psutil
+	depends = python-pyroaring
+	depends = python-ruamel-yaml
+	depends = python-ujson
+	depends = git
+	depends = lzip
+	provides = buildstream
+	conflicts = buildstream
+	source = git+https://github.com/apache/buildstream.git
+	md5sums = SKIP
+
+pkgname = buildstream-git
+

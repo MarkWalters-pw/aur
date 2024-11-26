@@ -1,0 +1,28 @@
+pkgbase = roccat-tools-full
+	pkgdesc = Userland applications to configure and make extended use of ROCCAT devices
+	pkgver = 5.7.0
+	pkgrel = 1
+	url = http://roccat.sourceforge.net
+	install = roccat-tools.install
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = cmake
+	depends = libgaminggear>=0.15
+	depends = libcanberra
+	depends = gtk2
+	depends = libnotify>=0.7.0
+	depends = dbus-glib
+	depends = udev
+	depends = hicolor-icon-theme
+	depends = libgudev
+	depends = lua>=5.3
+	optdepends = kmod-roccat: Adds support for the old kone device.
+	optdepends = roccat-dkms: Adds support for the old kone device with dynamic rebuild.
+	conflicts = roccat-tools-common
+	replaces = roccat-tools-common
+	source = http://downloads.sourceforge.net/project/roccat/roccat-tools/roccat-tools-5.7.0.tar.bz2
+	sha1sums = e0614b9c3b9c8ec28346c4c95f5aaa18d96eb273
+
+pkgname = roccat-tools-full
+

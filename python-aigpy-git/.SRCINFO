@@ -1,0 +1,18 @@
+pkgbase = python-aigpy-git
+	pkgdesc = Python-universal-library.
+	pkgver = r66.2d65c80
+	pkgrel = 1
+	url = https://github.com/AIGMix/AIGPY
+	arch = any
+	license = MIT
+	makedepends = python-setuptools
+	depends = ffmpeg
+	depends = python-requests
+	depends = python-colorama
+	depends = python-mutagen
+	provides = python-aigpy
+	conflicts = python-aigpy
+	source = git+https://github.com/AIGMix/AIGPY.git
+	sha256sums = SKIP
+
+pkgname = python-aigpy-git

@@ -1,0 +1,16 @@
+pkgbase = freedom-studio-bin
+	pkgdesc = SiFive Freedom Studio RISC-V IDE for Embedded Development
+	pkgver = 2021.04
+	pkgrel = 2
+	url = https://github.com/sifive/freedom-studio
+	arch = x86_64
+	groups = bash
+	license = GPL
+	license = GPL2
+	license = GPL3
+	noextract = freedom-studio-bin-2021.04.tar.gz
+	options = !strip
+	source = freedom-studio-bin-2021.04.tar.gz::https://static.dev.sifive.com/dev-tools/FreedomStudio/2021.04/FreedomStudio-4.18.0.2021-04-1-x86_64-linux-ubuntu14.tar.gz
+	sha256sums = 1836380db2d9a863ef87235ca34ce2c279740ebf02a893313738763aef893a05
+
+pkgname = freedom-studio-bin

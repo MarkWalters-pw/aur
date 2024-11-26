@@ -1,0 +1,17 @@
+pkgbase = fblog-git
+	pkgdesc = Small command-line JSON log viewer (git)
+	pkgver = 4.10.0.r0.g2510306
+	pkgrel = 1
+	url = https://github.com/brocode/fblog
+	arch = x86_64
+	license = custom:WTFPL
+	makedepends = cargo
+	makedepends = git
+	depends = gcc-libs
+	provides = fblog
+	conflicts = fblog
+	options = !lto
+	source = git+https://github.com/brocode/fblog
+	sha512sums = SKIP
+
+pkgname = fblog-git

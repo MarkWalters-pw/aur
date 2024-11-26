@@ -1,0 +1,22 @@
+pkgbase = xde-ctools
+	pkgdesc = X Desktop Environment C-language tools
+	pkgver = 1.15
+	pkgrel = 1
+	url = https://github.com/bbidulock/xde-ctools
+	arch = i686
+	arch = x86_64
+	groups = xde
+	license = GPL
+	makedepends = dbus-glib
+	makedepends = libunique
+	makedepends = xorgproto
+	makedepends = libnotify
+	makedepends = gdk-pixbuf-xlib
+	depends = libxss
+	depends = libwnck+
+	depends = libcanberra
+	optdepends = xdg-launch: launch with recent update and launch notification
+	source = https://github.com/bbidulock/xde-ctools/releases/download/1.15/xde-ctools-1.15.tar.lz
+	sha256sums = 103484ed27ab8924f4d525bc8b453e6976c3fec324863aff5f413fcb730f6291
+
+pkgname = xde-ctools

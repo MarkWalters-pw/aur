@@ -1,0 +1,13 @@
+diff --git a/config/__init__.py b/config/__init__.py
+index 3f2d1b2..4446f71 100644
+--- a/config/__init__.py
++++ b/config/__init__.py
+@@ -16,7 +16,7 @@ import ruamel.yaml
+ 
+ yaml = ruamel.yaml.YAML()
+ bundled = getattr(sys, 'frozen', False) and hasattr(sys, '_MEIPASS')
+-use_state_separation = None
++use_state_separation = True
+ if bundled:
+     root = sys._MEIPASS
+     # FIXME: macOS app bundle outside /Applications

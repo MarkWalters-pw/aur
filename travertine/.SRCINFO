@@ -1,0 +1,37 @@
+pkgbase = travertine
+	pkgdesc = A fork of Waterfall to add 1.7, and other, protocol support.
+	pkgver = 175
+	pkgrel = 2
+	url = https://papermc.io/
+	install = travertine.install
+	arch = any
+	license = custom
+	depends = java-runtime-headless>=8
+	depends = screen
+	depends = sudo
+	depends = bash
+	depends = awk
+	depends = sed
+	optdepends = tar: needed in order to create world backups
+	optdepends = nmap-netcat: required in order to suspend an idle server
+	noextract = travertine.175.jar
+	backup = etc/conf.d/travertine
+	source = travertine.175.jar::https://papermc.io/api/v2/projects/travertine/versions/1.16/builds/175/downloads/travertine-1.16-175.jar
+	source = travertine-backup@.service
+	source = travertine-backup.timer
+	source = travertine@.service
+	source = travertine.conf
+	source = travertine.sh
+	source = proxy.conf
+	source = LICENSE::https://raw.githubusercontent.com/PaperMC/Travertine/master/LICENSE.txt
+	md5sums = SKIP
+	md5sums = 75c5371cd975a49f9dc615699bafaf1d
+	md5sums = 5adb94aa0f9386f4fa4864762d955df1
+	md5sums = 46dfbd02f7b07d4a07af07d94374ef3b
+	md5sums = f9724d01ebddfa4c1c29cf148e931eb5
+	md5sums = 692a4d273801300fec3bf1f1c11f4481
+	md5sums = e527a1cc406188d4d803e4f249bf7a71
+	md5sums = SKIP
+
+pkgname = travertine
+

@@ -1,0 +1,18 @@
+pkgbase = kimg
+	pkgdesc = Image converter for the KnightOS image format (kimg)
+	pkgver = 0.2.1
+	pkgrel = 2
+	url = http://github.com/KnightOS/kimg
+	arch = i686
+	arch = x86_64
+	groups = knightos
+	license = MIT
+	makedepends = asciidoc
+	makedepends = cmake
+	makedepends = git
+	depends = imagemagick
+	source = git+https://github.com/KnightOS/kimg#tag=0.2.1
+	sha256sums = SKIP
+
+pkgname = kimg
+

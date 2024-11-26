@@ -1,0 +1,23 @@
+pkgbase = xac
+	pkgdesc = A markdown- and Pandoc-based content management system (CMS).
+	pkgver = 2021
+	pkgrel = 15
+	url = https://xyne.dev/projects/xac
+	arch = any
+	license = GPL
+	makedepends = python-setuptools
+	depends = pandoc
+	depends = python3
+	optdepends = graphviz: plugin support
+	optdepends = openbabel: plugin support
+	optdepends = source-highlight: plugin support
+	optdepends = tex2png: plugin support
+	source = https://xyne.dev/projects/xac/src/xac-2021.tar.xz
+	source = https://xyne.dev/projects/xac/src/xac-2021.tar.xz.sig
+	validpgpkeys = D89FAAEB4CECAFD199A2F5E612C6F735F7A9A519
+	md5sums = 53d1c1380c1b264eaadb7916b5864374
+	md5sums = 1746607ffe5ccc158d773e8fd7ce2ecd
+	sha512sums = 34130a8a6af68ed20750c5cf161b88cd2b9389c1a258166f02c321b6c332c4a7e97609c8e0bae54e7bc18e6a75d0be84451259a63eed7e3a3e5dce83be272cd3
+	sha512sums = 14db062d744d2c8cc2e090310cdf69ee34ebca3d33e51b704b3a7560a23572f9292f79ff47fa8ee3fe0efc00413b6eaeb0e7c5978425d7f2b372590b2ba105f2
+
+pkgname = xac

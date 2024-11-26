@@ -1,0 +1,22 @@
+# Maintainer: Travis Glenn Hansen <travisghansen@yahoo.com>
+
+pkgname=ttf-selawik
+pkgver=1
+pkgrel=5
+_commit="11fb35582ac3b9f750738da93c44293ffaaa0294"
+pkgdesc="Selawik font as a fallback to Segoe UI"
+arch=('any')
+url="https://github.com/winjs/bootstrap-winjs/tree/master/src/fonts"
+license=('custom')
+
+source=(https://github.com/winjs/bootstrap-winjs/archive/${_commit}.zip)
+md5sums=('03eea616523d7a315dd87e6d625a6f7f')
+
+package() {
+    cd $srcdir/winstrap-${_commit}/src/fonts
+    install -Dm 644 LICENSE.txt $pkgdir/usr/share/licenses/${pkgname}/COPYING
+    mkdir -p $pkgdir/usr/share/fonts/TTF/
+    for FILE in *.ttf glyphs/*.ttf; do
+        install -Dm 644 "${FILE}" $pkgdir/usr/share/fonts/TTF/
+    done
+}

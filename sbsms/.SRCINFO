@@ -1,0 +1,16 @@
+pkgbase = sbsms
+	pkgdesc = A command line time-stretching / pitch-shifting tool
+	pkgver = 0.0.0
+	pkgrel = 1
+	epoch = 1
+	url = https://sourceforge.net/projects/sbsms/files/sbsms-app/
+	arch = x86_64
+	license = GPL2
+	depends = libsbsms
+	depends = libsndfile
+	depends = libmad
+	options = !staticlibs
+	source = https://sourceforge.net/projects/sbsms/files/sbsms-app/sbsms-app-0.0.0.tar.gz
+	sha512sums = f7da91d4d750906bb26afdb72419c71a09c20ba3121678686abe3ad85f4ae57bd36c9fa490fb07d6fbb893ec271ea23337d5c41b54c26e52025e4a4ce4bc5693
+
+pkgname = sbsms

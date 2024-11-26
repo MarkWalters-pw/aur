@@ -1,0 +1,22 @@
+pkgbase = kleber-git
+	pkgdesc = Kleber command line client for file uploads
+	pkgver = 2.0.1.02643da
+	pkgrel = 1
+	url = https://kleber.io
+	arch = any
+	license = BSD-3-Clause
+	makedepends = git
+	depends = python
+	depends = python-setuptools
+	depends = python-progressbar
+	depends = python-pyperclip
+	depends = python-requests-toolbelt
+	depends = python-requests
+	optdepends = perl-image-exiftool
+	provides = kleber
+	conflicts = kleber
+	source = kleber::git+https://github.com/kleber-io/kleber-cli.git
+	sha512sums = SKIP
+
+pkgname = kleber-git
+

@@ -1,0 +1,10 @@
+--- a/src/xitk/lirc.c
++++ b/src/xitk/lirc.c
+@@ -33,6 +33,7 @@
+ #include <fcntl.h>
+ 
+ #ifdef HAVE_LIRC
++#include <fcntl.h>
+ #include <lirc/lirc_client.h>
+ #endif
+ 

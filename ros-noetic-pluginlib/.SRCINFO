@@ -1,0 +1,30 @@
+pkgbase = ros-noetic-pluginlib
+	pkgdesc = ROS - The pluginlib package provides tools for writing and dynamically loading plugins using the ROS build infrastructure.
+	pkgver = 1.13.0
+	pkgrel = 1
+	url = http://www.ros.org/wiki/pluginlib
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-class-loader
+	makedepends = ros-noetic-cmake-modules
+	makedepends = ros-noetic-catkin
+	makedepends = ros-noetic-rosconsole
+	makedepends = ros-noetic-roslib
+	makedepends = boost
+	makedepends = tinyxml2
+	depends = ros-noetic-class-loader
+	depends = ros-noetic-rosconsole
+	depends = ros-noetic-roslib
+	depends = boost
+	depends = tinyxml2
+	source = ros-noetic-pluginlib-1.13.0.tar.gz::https://github.com/ros/pluginlib/archive/1.13.0.tar.gz
+	sha256sums = 879e434d09fdcca238868b4ba92eaca77234e4291947c41d25bc5b14bb54fa0e
+
+pkgname = ros-noetic-pluginlib
+

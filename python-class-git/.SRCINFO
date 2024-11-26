@@ -1,0 +1,15 @@
+pkgbase = python-class-git
+	pkgdesc = CLASS: Cosmic Linear Anisotropy Solving System
+	pkgver = r2004.aa92943e
+	pkgrel = 1
+	url = https://github.com/lesgourg/class_public
+	arch = any
+	makedepends = git
+	makedepends = python-setuptools
+	depends = cython
+	provides = python-class
+	conflicts = python-class
+	source = python-class::git+https://github.com/lesgourg/class_public.git
+	md5sums = SKIP
+
+pkgname = python-class-git

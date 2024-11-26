@@ -1,0 +1,15 @@
+pkgbase = lib32-libieee1284
+	pkgdesc = A library to query devices connected in parallel port
+	pkgver = 0.2.11
+	pkgrel = 6
+	url = https://github.com/twaugh/libieee1284
+	arch = x86_64
+	license = GPL2
+	makedepends = gcc-multilib
+	depends = lib32-glibc
+	depends = libieee1284=0.2.11
+	source = libieee1284-0.2.11.zip::https://github.com/twaugh/libieee1284/archive/V0_2_11.zip
+	sha1sums = 5e24fb4e69652e2460e24af0b7ef6ca960c78965
+
+pkgname = lib32-libieee1284
+

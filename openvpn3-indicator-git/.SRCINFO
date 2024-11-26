@@ -1,0 +1,17 @@
+pkgbase = openvpn3-indicator-git
+	pkgdesc = Simple GTK indicator GUI for OpenVPN 3 Linux
+	pkgver = r53.a00ecaa
+	pkgrel = 1
+	url = https://github.com/OpenVPN/openvpn3-indicator
+	arch = any
+	license = AGPL
+	makedepends = git
+	makedepends = zip
+	depends = openvpn3
+	depends = libayatana-appindicator
+	depends = python-secretstorage
+	depends = python-setproctitle
+	source = openvpn3-indicator::git+https://github.com/OpenVPN/openvpn3-indicator.git
+	sha256sums = SKIP
+
+pkgname = openvpn3-indicator-git

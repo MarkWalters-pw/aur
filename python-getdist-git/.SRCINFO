@@ -1,0 +1,20 @@
+pkgbase = python-getdist-git
+	pkgdesc = MCMC sample analysis, kernel densities, plotting, and GUI
+	pkgver = r318.9949a14
+	pkgrel = 1
+	url = https://github.com/cmbant/getdist
+	arch = any
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python-numpy
+	depends = python-matplotlib
+	depends = python-six
+	depends = python-scipy
+	depends = pyside6
+	depends = python-pandas
+	provides = python-getdist
+	conflicts = python-getdist
+	source = python-getdist::git+https://github.com/cmbant/getdist.git
+	md5sums = SKIP
+
+pkgname = python-getdist-git

@@ -1,0 +1,26 @@
+pkgbase = cling-git
+	pkgdesc = Interactive C++ interpreter built on the top of LLVM and Clang libraries.
+	pkgver = r5123.45318c5a
+	pkgrel = 1
+	url = https://root.cern.ch/cling
+	arch = i686
+	arch = x86_64
+	license = custom:Cling Release License
+	makedepends = cmake
+	makedepends = libffi
+	makedepends = git
+	makedepends = python
+	makedepends = jupyter-notebook
+	makedepends = ninja
+	options = !lto
+	source = cling-llvm::git+https://github.com/root-project/llvm-project.git#branch=cling-llvm13
+	source = cling::git+https://github.com/root-project/cling.git#branch=master
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = cling-git
+	depends = libffi
+
+pkgname = cling-jupyter-git
+	depends = cling-git
+	depends = jupyter-notebook

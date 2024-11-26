@@ -1,0 +1,19 @@
+pkgbase = python-libtimed
+	pkgdesc = Python API for timed
+	pkgver = 0.6.5
+	pkgrel = 1
+	url = https://github.com/adfinis/libtimed.git
+	arch = any
+	license = AGPL3
+	makedepends = python-poetry
+	makedepends = python-installer
+	makedepends = git
+	depends = python>=3.10
+	depends = python-inflection>=0.5.1
+	depends = python-requests-cache>=1.1.0
+	provides = libtimed
+	conflicts = libtimed
+	source = git+https://github.com/adfinis/libtimed.git
+	sha256sums = SKIP
+
+pkgname = python-libtimed

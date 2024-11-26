@@ -1,0 +1,22 @@
+pkgbase = mini-ndn-git
+	pkgdesc = Lightweight networking emulation tool that enables testing, experimentation, and research on the NDN platform based on Mininet
+	pkgver = v0.5.0.r2.gea2d5d6
+	pkgrel = 1
+	url = https://github.com/named-data/mini-ndn
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	depends = ndn-nfd
+	depends = ndn-tools
+	depends = ndn-infoedit
+	depends = wireshark-cli
+	depends = python-setuptools
+	optdepends = ndn-nlsr: Support for NLSR
+	provides = mini-ndn
+	conflicts = mini-ndn
+	source = git+https://github.com/named-data/mini-ndn.git
+	sha256sums = SKIP
+
+pkgname = mini-ndn-git
+

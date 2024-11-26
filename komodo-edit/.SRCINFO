@@ -1,0 +1,28 @@
+pkgbase = komodo-edit
+	pkgdesc = Free & Open-Source counterpart of ActiveState Komodo IDE - XUL based
+	pkgver = 12.0.1_18441
+	pkgrel = 2
+	url = http://www.activestate.com/komodo-edit
+	arch = i686
+	arch = x86_64
+	license = MPL
+	depends = dbus-glib
+	depends = glibc>=2.4
+	depends = libjpeg-turbo
+	depends = gcc-libs
+	depends = gtk2
+	optdepends = xterm: can be used by komodo-toolbox
+	conflicts = komodoedit
+	conflicts = komodo-ide
+	conflicts = komodo-ide-nightly
+	source = _install.py.patch
+	source = activestate.py.patch
+	sha256sums = 98177ee92e13036baa0a4f61ef398c0e23ab5d250cf7aa1b1c5a557efaaec3a8
+	sha256sums = c68d7e94955e0f7b32cf3863136891d6441d9dd3a6346481b911d2c250cf32e9
+	source_i686 = http://downloads.activestate.com/Komodo/releases/12.0.1/Komodo-Edit-12.0.1-18441-linux-x86.tar.gz
+	sha256sums_i686 = d00eaaec20eed86a6d7592bc47aba69934bedb1481a590fb72d20944b50e1c5d
+	source_x86_64 = http://downloads.activestate.com/Komodo/releases/12.0.1/Komodo-Edit-12.0.1-18441-linux-x86_64.tar.gz
+	sha256sums_x86_64 = b51783eb1cb8ce60b26e506ee00cd54ff31b61830622c5e5a8c77405e9c54e48
+
+pkgname = komodo-edit
+

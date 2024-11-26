@@ -1,0 +1,102 @@
+From 9463feb1f8b14650bf748863d2bcee3567c59cfb Mon Sep 17 00:00:00 2001
+From: f43nd1r <account+github@faendir.com>
+Date: Sat, 6 Mar 2021 14:37:36 +0100
+Subject: [PATCH 1/1] patch
+
+---
+ build.gradle                             |  4 ++--
+ mmconf/log4j.xml                         |  4 ++--
+ src/megameklab/com/MegaMekLab.java       |  6 +++---
+ src/megameklab/com/util/CConfig.java     | 11 +++++++----
+ gradle/wrapper/gradle-wrapper.properties | 2 +-
+ 5 files changed, 15 insertions(+), 12 deletions(-)
+
+diff --git a/build.gradle b/build.gradle
+index 769c4cfd..f3f99a03 100644
+--- a/build.gradle
++++ b/build.gradle
+@@ -31,7 +31,7 @@ ext {
+     mmlBranchTag = mmlBranch.equals('master')? '' : '-' + mmlBranch
+     
+     // Allows setting a dependency on a different MM branch.
+-    mmBranch = 'master'
+-    mmBranchTag = mmBranch.equals('master')? '' : '-' + mmBranch
++    mmBranch = 'stable'
++    mmBranchTag = mmBranch.equals('stable')? '' : '-' + mmBranch
+     
+     mmDir = '../megamek'
+ }
+diff --git a/mmconf/log4j.xml b/mmconf/log4j.xml
+index 3e7b221b..d4a45eaf 100644
+--- a/mmconf/log4j.xml
++++ b/mmconf/log4j.xml
+@@ -5,7 +5,7 @@
+ 
+     <!-- log to a file and roll over if the file size reaches 10 megabytes. -->
+     <appender name="FILE" class="org.apache.log4j.RollingFileAppender">
+-        <param name="File" value="logs/megameklablog.txt"/>
++        <param name="File" value="/var/log/megameklab/megameklab.log"/>
+         <param name="Append" value="true"/>
+         <param name="MaxFileSize" value="10MB"/>
+         <param name="MaxBackupIndex" value="5"/>
+diff --git a/src/megameklab/com/MegaMekLab.java b/src/megameklab/com/MegaMekLab.java
+index 36caa504..69728a1d 100644
+--- a/src/megameklab/com/MegaMekLab.java
++++ b/src/megameklab/com/MegaMekLab.java
+@@ -70,11 +70,11 @@ public class MegaMekLab {
+     private static void redirectOutput() {
+         try {
+             System.out.println("Redirecting output to megameklablog.txt"); //$NON-NLS-1$
+-            File logDir = new File("logs");
++            File logDir = new File("/var/log/megameklab/");
+             if (!logDir.exists()) {
+                 logDir.mkdir();
+             }
+-            final String logFilename = "logs" + File.separator + "megameklablog.txt";
++            final String logFilename = "/var/log/megameklab/megameklab.log";
+             MegaMek.resetLogFile(logFilename);
+             PrintStream ps = new PrintStream(
+                     new BufferedOutputStream(
+diff --git a/src/megameklab/com/util/CConfig.java b/src/megameklab/com/util/CConfig.java
+index d0d7a20f..27b6744e 100644
+--- a/src/megameklab/com/util/CConfig.java
++++ b/src/megameklab/com/util/CConfig.java
+@@ -61,9 +61,10 @@ public class CConfig {
+     }
+ 
+     // VARIABLES
+-    public static final String CONFIG_DIR = "./mmconf";
+-    public static final String CONFIG_FILE = "./mmconf/megameklab.properties";
+-    public static final String CONFIG_BACKUP_FILE = "./mmconf/megameklab.properties.bak";
++    public static final String USER_DIR = System.getProperty("user.home");
++    public static final String CONFIG_DIR = USER_DIR + "/.config/megameklab";
++    public static final String CONFIG_FILE = USER_DIR + "/.config/megameklab/megameklab.properties";
++    public static final String CONFIG_BACKUP_FILE = USER_DIR + "/.config/megameklab/megameklab.properties.bak";
+ 
+     public static final String CONFIG_WEAPONS = "Weapons";
+     public static final String CONFIG_AMMO = "Ammo";
+@@ -122,7 +123,9 @@ public class CConfig {
+     public CConfig() {
+         
+         if(!new File(CONFIG_DIR).exists()) {
+-            new File(CONFIG_DIR).mkdir();
++            if(!new File(CONFIG_DIR).mkdirs()) {
++                throw new RuntimeException("Failed to create directory "+ CONFIG_DIR);
++            }
+         }
+         
+         config = setDefaults();
+diff --git a/gradle/wrapper/gradle-wrapper.properties b/gradle/wrapper/gradle-wrapper.properties
+index ef9a9e05..442d9132 100644
+--- a/gradle/wrapper/gradle-wrapper.properties
++++ b/gradle/wrapper/gradle-wrapper.properties
+@@ -1,5 +1,5 @@
+ distributionBase=GRADLE_USER_HOME
+ distributionPath=wrapper/dists
+-distributionUrl=https\://services.gradle.org/distributions/gradle-5.6-bin.zip
++distributionUrl=https\://services.gradle.org/distributions/gradle-6.8.3-bin.zip
+ zipStoreBase=GRADLE_USER_HOME
+ zipStorePath=wrapper/dists
+-- 
+2.30.1
+

@@ -1,0 +1,26 @@
+pkgbase = softethervpn-git
+	pkgdesc = Multi-protocol VPN Program from University of Tsukuba (Developer Edition / git version)
+	pkgver = 5.02.5180.r310.g82ce34f
+	pkgrel = 1
+	url = https://www.softether.org/
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	license = Apache
+	makedepends = git
+	makedepends = cmake
+	depends = bash
+	depends = openssl
+	depends = zlib
+	depends = ncurses
+	depends = libsodium
+	depends = readline
+	depends = glibc
+	provides = softethervpn
+	conflicts = softethervpn
+	conflicts = softethervpn-beta
+	source = softethervpn::git+https://github.com/SoftEtherVPN/SoftEtherVPN.git
+	sha256sums = SKIP
+
+pkgname = softethervpn-git

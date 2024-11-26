@@ -1,0 +1,17 @@
+pkgbase = vapoursynth-plugin-tdeintmod-git
+	pkgdesc = Plugin for Vapoursynth: tdeintmod (GIT version)
+	pkgver = 10.1.1.g044e057
+	pkgrel = 1
+	url = http://forum.doom9.org/showthread.php?t=171295
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = meson
+	depends = vapoursynth
+	provides = vapoursynth-plugin-tdeintmod
+	conflicts = vapoursynth-plugin-tdeintmod
+	options = debug
+	source = tdeintmod::git+https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TDeintMod.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-tdeintmod-git

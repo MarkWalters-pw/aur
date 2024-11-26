@@ -1,0 +1,20 @@
+pkgbase = kpatch-git
+	pkgdesc = Live kernel patching (git)
+	pkgver = 0.9.9.r18.gb363972
+	pkgrel = 1
+	url = https://github.com/dynup/kpatch
+	arch = i686
+	arch = x86_64
+	license = GPL-2.0-only
+	checkdepends = shellcheck
+	makedepends = git
+	depends = bash
+	depends = libelf
+	provides = kpatch
+	conflicts = kpatch
+	source = kpatch-git::git+https://github.com/dynup/kpatch.git
+	source = objs::git+https://github.com/dynup/kpatch-unit-test-objs.git
+	sha512sums = SKIP
+	sha512sums = SKIP
+
+pkgname = kpatch-git

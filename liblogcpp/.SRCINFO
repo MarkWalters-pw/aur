@@ -1,0 +1,19 @@
+pkgbase = liblogcpp
+	pkgdesc = An intuitive and highly customizable LGPL library for logging with C++.
+	pkgver = 1.9.4
+	pkgrel = 1
+	url = https://git.0ptr.de/nullptr_t/liblogcpp.git
+	arch = x86_64
+	arch = i686
+	arch = armv6h
+	arch = armv7h
+	license = LGPL3
+	makedepends = cmake
+	provides = liblogcpp
+	conflicts = liglogcpp-git
+	replaces = liblogcpp-qt
+	source = liblogcpp-v1.9.4.tar.gz::https://git.0ptr.de/nullptr_t/liblogcpp/-/archive/v1.9.4/liblogcpp-v1.9.4.tar.gz
+	sha256sums = 74152f35813444e3abd4d244f4bcdd10e432690a6d010ba01679d2c75734fa06
+
+pkgname = liblogcpp
+

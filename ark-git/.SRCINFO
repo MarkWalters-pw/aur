@@ -1,0 +1,32 @@
+pkgbase = ark-git
+	pkgdesc = Archiving Tool
+	pkgver = 24.02.1.r99.g531f976
+	pkgrel = 1
+	url = https://invent.kde.org/utilities/ark
+	arch = x86_64
+	license = GPL-2.0-or-later
+	makedepends = extra-cmake-modules
+	makedepends = git
+	makedepends = kdoctools
+	makedepends = ninja
+	depends = kconfig
+	depends = kcrash
+	depends = kdbusaddons
+	depends = kfilemetadata
+	depends = ki18n
+	depends = kio
+	depends = kparts
+	depends = kpty
+	depends = libarchive
+	optdepends = arj: ARJ format support
+	optdepends = lrzip: LRZ format support
+	optdepends = lzop: LZO format support
+	optdepends = p7zip: 7Z format support
+	optdepends = unarchiver: RAR format support
+	optdepends = unrar: RAR decompression support
+	provides = ark=24.02.1
+	conflicts = ark
+	source = ark::git+https://invent.kde.org/utilities/ark.git
+	sha256sums = SKIP
+
+pkgname = ark-git

@@ -1,0 +1,24 @@
+pkgbase = rlite-git
+	pkgdesc = Recursive InterNetwork Architecture (RINA) user/kernel prototype written in C/C++
+	pkgver = r3736.d74553e7
+	pkgrel = 1
+	install = rlite.install
+	arch = x86_64
+	arch = i686
+	arch = arm
+	license = GPL
+	license = LGPL
+	makedepends = git
+	makedepends = linux-headers
+	makedepends = fakeroot
+	makedepends = cmake
+	depends = linux
+	depends = protobuf
+	depends = python
+	source = rlite.install
+	source = git+https://github.com/vmaffione/rlite.git
+	md5sums = 047aa5adec4c52ddbf86d12dbf300f71
+	md5sums = SKIP
+
+pkgname = rlite-git
+

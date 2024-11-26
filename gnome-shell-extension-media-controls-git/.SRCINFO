@@ -1,0 +1,18 @@
+pkgbase = gnome-shell-extension-media-controls-git
+	pkgdesc = A media indicator for the GNOME shell.
+	pkgver = 17.b26532f
+	pkgrel = 1
+	url = https://github.com/cliffniff/media-controls
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = zip
+	makedepends = unzip
+	depends = gnome-shell
+	provides = gnome-shell-extension-media-controls-git
+	options = !strip
+	options = !emptydirs
+	source = gnome-shell-extension-media-controls-git::git+https://github.com/cliffniff/media-controls
+	sha256sums = SKIP
+
+pkgname = gnome-shell-extension-media-controls-git

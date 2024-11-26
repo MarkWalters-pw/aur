@@ -1,0 +1,26 @@
+pkgbase = ros-noetic-moveit-commander
+	pkgdesc = ROS - Python interfaces to MoveIt.
+	pkgver = 1.1.13
+	pkgrel = 1
+	url = https://moveit.ros.org
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-catkin
+	makedepends = ros-noetic-moveit-resources
+	makedepends = python
+	makedepends = python-catkin-pkg
+	depends = ros-noetic-moveit-msgs
+	depends = ros-noetic-tf
+	depends = ros-noetic-geometry-msgs
+	depends = ros-noetic-rospy
+	depends = ros-noetic-moveit-ros-planning-interface
+	depends = ros-noetic-sensor-msgs
+	depends = ros-noetic-shape-msgs
+	depends = python
+	depends = python-pyassimp
+	source = ros-noetic-moveit-commander-1.1.13.tar.gz::https://github.com/ros-planning/moveit/archive/1.1.13.tar.gz
+	sha256sums = 91735df0ec1a7bdbcdad9028352a0d78d44fad2076584319120e2e10ecb5882c
+
+pkgname = ros-noetic-moveit-commander

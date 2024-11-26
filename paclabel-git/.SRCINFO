@@ -1,0 +1,16 @@
+pkgbase = paclabel-git
+	pkgdesc = A tiny pacman wrapper that makes possible to attach labels to packages.
+	pkgver = r47.e36e2ff
+	pkgrel = 1
+	url = http://github.com/Kharacternyk/paclabel
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = ncurses
+	optdepends = ripgrep
+	conflicts = paclabel
+	source = paclabel::git+https://github.com/Kharacternyk/paclabel.git#branch=master
+	sha256sums = SKIP
+
+pkgname = paclabel-git
+

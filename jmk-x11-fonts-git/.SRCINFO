@@ -1,0 +1,17 @@
+pkgbase = jmk-x11-fonts-git
+	pkgdesc = Jim's Fonts for X
+	pkgver = r5.29ae539
+	pkgrel = 3
+	url = http://nikolas.us.to/jmkfonts/
+	arch = any
+	license = GPL
+	makedepends = imake
+	makedepends = xorg-mkfontdir
+	makedepends = xorg-bdftopcf
+	makedepends = git
+	provides = jmk-x11-fonts
+	conflicts = jmk-x11-fonts
+	source = jmk-x11-fonts-git::git+https://github.com/nikolas/jmk-x11-fonts.git
+	sha512sums = SKIP
+
+pkgname = jmk-x11-fonts-git

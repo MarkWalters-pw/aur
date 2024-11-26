@@ -1,0 +1,29 @@
+pkgbase = libselinux-python2
+	pkgdesc = SELinux library and simple utilities (python 2.x bindings)
+	pkgver = 3.4
+	pkgrel = 1
+	url = http://userspace.selinuxproject.org
+	arch = x86_64
+	arch = i686
+	arch = pentium4
+	arch = armv6h
+	arch = armv7h
+	arch = aarch64
+	groups = selinux
+	license = custom
+	makedepends = python
+	makedepends = python2
+	makedepends = ruby
+	makedepends = xz
+	makedepends = swig
+	depends = libsepol>=3.0
+	depends = pcre
+	optdepends = python: python bindings
+	optdepends = python2: python 2.X bindings
+	optdepends = ruby: ruby bindings
+	source = https://github.com/SELinuxProject/selinux/releases/download/3.4/libselinux-3.4.tar.gz
+	source = libselinux.tmpfiles.d
+	sha256sums = 77c294a927e6795c2e98f74b5c3adde9c8839690e9255b767c5fca6acff9b779
+	sha256sums = afe23890fb2e12e6756e5d81bad3c3da33f38a95d072731c0422fbeb0b1fa1fc
+
+pkgname = libselinux-python2

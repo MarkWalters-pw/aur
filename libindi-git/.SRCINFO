@@ -1,0 +1,25 @@
+pkgbase = libindi-git
+	pkgdesc = A distributed control protocol designed to operate astronomical instrumentation
+	pkgver = v2.0.8.12.g0905b87df
+	pkgrel = 1
+	url = https://www.indilib.org/index.php?title=Main_Page
+	arch = x86_64
+	arch = aarch64
+	license = GPL2
+	makedepends = cmake
+	makedepends = qt5-base
+	depends = libnova
+	depends = cfitsio
+	depends = libjpeg
+	depends = gsl
+	depends = libtheora
+	depends = fftw
+	depends = libev
+	depends = rtl-sdr
+	provides = libindi
+	conflicts = libindi
+	options = staticlibs
+	source = git+https://github.com/indilib/indi
+	sha512sums = SKIP
+
+pkgname = libindi-git

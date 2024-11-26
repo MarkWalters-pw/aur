@@ -1,0 +1,18 @@
+pkgbase = bsd-mailx-git
+	pkgdesc = bsd-mailx from Debian
+	pkgver = 174.g1dc80bd
+	pkgrel = 1
+	url = https://salsa.debian.org/debian/bsd-mailx
+	arch = x86_64
+	arch = i686
+	license = GPL
+	makedepends = git
+	depends = libbsd
+	depends = liblockfile
+	provides = bsd-mailx
+	conflicts = bsd-mailx
+	backup = etc/bsd-mailx.rc
+	source = bsd-mailx-git::git+https://salsa.debian.org/debian/bsd-mailx.git
+	sha256sums = SKIP
+
+pkgname = bsd-mailx-git

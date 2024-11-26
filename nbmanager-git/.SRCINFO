@@ -1,0 +1,23 @@
+pkgbase = nbmanager-git
+	pkgdesc = A GUI to view and manager running Jupyter notebook servers
+	pkgver = 43.c90aac4
+	pkgrel = 2
+	url = https://github.com/jupyter/nbmanager
+	arch = any
+	license = BSD
+	makedepends = git
+	depends = python
+	depends = python-pyqt5
+	depends = jupyter
+	depends = python-qtico
+	provides = nbmanager
+	provides = ipython-nbmanager
+	provides = jupyter-nbmanager
+	conflicts = nbmanager
+	conflicts = ipython-nbmanager
+	conflicts = jupyter-nbmanager
+	source = git://github.com/jupyter/nbmanager.git
+	md5sums = SKIP
+
+pkgname = nbmanager-git
+

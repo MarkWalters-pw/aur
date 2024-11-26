@@ -1,0 +1,22 @@
+pkgbase = lcd-image-converter-git
+	pkgdesc = Tool to create bitmaps and fonts for embedded applications. Tracking develop branch.
+	pkgver = r1776.4d43872
+	pkgrel = 1
+	url = http://www.riuson.com/lcd-image-converter
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = qt5-tools
+	makedepends = desktop-file-utils
+	makedepends = git
+	depends = qt5-declarative
+	depends = hicolor-icon-theme
+	depends = qt5-xmlpatterns
+	depends = qt5-svg
+	provides = lcd-image-converter
+	source = lcd-image-converter::git+https://github.com/riuson/lcd-image-converter.git#branch=develop
+	source = lcd-image-converter.desktop
+	sha1sums = SKIP
+	sha1sums = d64776983303a5defd3ee667d87a53c6b2995bbb
+
+pkgname = lcd-image-converter-git

@@ -1,0 +1,25 @@
+pkgbase = openconnect-git
+	pkgdesc = Open client for Cisco AnyConnect VPN
+	pkgver = 8.10.r753.gb0e53bfa
+	pkgrel = 1
+	url = http://www.infradead.org/openconnect.html
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = intltool
+	makedepends = python
+	makedepends = git
+	depends = libproxy
+	depends = vpnc
+	depends = pcsclite
+	depends = trousers
+	depends = stoken
+	depends = oath-toolkit
+	provides = openconnect
+	provides = libopenconnect.so
+	conflicts = openconnect
+	options = !emptydirs
+	source = openconnect-git::git+https://gitlab.com/openconnect/openconnect.git/
+	md5sums = SKIP
+
+pkgname = openconnect-git

@@ -1,0 +1,22 @@
+pkgbase = python-pipenv-git
+	pkgdesc = Python Development Workflow for Humans.
+	pkgver = 2023.12.1.r37.g3ac18c34
+	pkgrel = 1
+	url = https://pipenv.pypa.io
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = python
+	depends = python-pip
+	depends = python-virtualenv
+	depends = python-setuptools
+	depends = python-certifi
+	provides = python-pipenv
+	conflicts = python-pipenv
+	source = python-pipenv-git::git+https://github.com/pypa/pipenv.git
+	sha256sums = SKIP
+
+pkgname = python-pipenv-git

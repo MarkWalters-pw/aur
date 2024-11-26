@@ -1,0 +1,20 @@
+pkgbase = dpaste
+	pkgdesc = A simple pastebin for light values (max 64KB) using OpenDHT distributed hash table.
+	pkgver = 0.4.0
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/sim590/dpaste
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = nlohmann-json
+	makedepends = msgpack-cxx
+	depends = gnutls
+	depends = libb64
+	depends = libcurlpp>=0.8.1
+	depends = opendht
+	depends = glibmm
+	source = git+https://github.com/sim590/dpaste#tag=0.4.0
+	sha256sums = SKIP
+
+pkgname = dpaste

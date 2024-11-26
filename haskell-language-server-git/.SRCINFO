@@ -1,0 +1,16 @@
+pkgbase = haskell-language-server-git
+	pkgdesc = Integration point for ghcide and haskell-ide-engine.
+	pkgver = r77.80bc2e8
+	pkgrel = 1
+	url = https://github.com/haskell/haskell-language-server
+	arch = x86_64
+	arch = aarch64
+	license = Apache
+	makedepends = stack
+	makedepends = git
+	provides = haskell-language-server
+	source = haskell-language-server-git::git+https://github.com/haskell/haskell-language-server.git
+	md5sums = SKIP
+
+pkgname = haskell-language-server-git
+

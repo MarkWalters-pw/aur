@@ -1,0 +1,16 @@
+pkgbase = gmonitor-git
+	pkgdesc = NVIDIA GPU real-time monitoring program (core, VRAM, PCI-E & memory bus usage and temperature of GPUs)
+	pkgver = v1.2.r5.geace4da
+	pkgrel = 1
+	url = https://github.com/mountassir/gmonitor
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	depends = nvidia-utils
+	conflicts = gmonitor
+	source = gmonitor::git+https://github.com/mountassir/gmonitor.git#branch=master
+	sha256sums = SKIP
+
+pkgname = gmonitor-git
+

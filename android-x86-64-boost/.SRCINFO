@@ -1,0 +1,26 @@
+pkgbase = android-x86-64-boost
+	pkgdesc = Free peer-reviewed portable C++ source libraries (Android, x86-64)
+	pkgver = 1.76.0
+	pkgrel = 1
+	url = https://www.boost.org/
+	arch = any
+	license = custom
+	makedepends = bzip2
+	makedepends = zlib
+	makedepends = android-ndk
+	makedepends = android-sdk
+	depends = android-x86-64-libiconv
+	conflicts = android-boost-x86_64
+	replaces = android-boost-x86_64
+	options = !buildflags
+	options = staticlibs
+	options = !strip
+	options = !emptydirs
+	source = https://boostorg.jfrog.io/artifactory/main/release/1.76.0/source/boost_1_76_0.tar.gz
+	source = boost-ublas-c++20-iterator.patch::https://github.com/boostorg/ublas/commit/a31e5cffa85f.patch
+	source = no-versioned-shlibs.patch
+	sha256sums = 7bd7ddceec1a1dfdcbdb3e609b60d01739c38390a5f956385a12f3122049f0ca
+	sha256sums = aa38addb40d5f44b4a8472029b475e7e6aef1c460509eb7d8edf03491dc1b5ee
+	sha256sums = d82d0f15064812dcabb3456a7bcb1db0e0f6145980e4728e638372e0fd35af23
+
+pkgname = android-x86-64-boost

@@ -1,0 +1,23 @@
+pkgbase = budgie-screensaver-git
+	pkgdesc = Budgie's fork of GNOME's legacy screensaver - latest git
+	pkgver = 5.0.2.r1.g57dfb33
+	pkgrel = 1
+	url = https://github.com/BuddiesOfBudgie/budgie-screensaver
+	arch = x86_64
+	license = GPL
+	makedepends = meson
+	makedepends = git
+	makedepends = intltool
+	makedepends = gnome-common
+	depends = budgie-desktop
+	depends = dbus-glib
+	depends = libgnomekbd
+	optdepends = gnome-backgrounds: default background
+	provides = gnome-screensaver
+	provides = budgie-screensaver
+	conflicts = gnome-screensaver
+	conflicts = budgie-screensaver
+	source = budgie-screensaver-git::git+https://github.com/BuddiesOfBudgie/budgie-screensaver.git
+	md5sums = SKIP
+
+pkgname = budgie-screensaver-git

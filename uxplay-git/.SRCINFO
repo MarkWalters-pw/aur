@@ -1,0 +1,25 @@
+pkgbase = uxplay-git
+	pkgdesc = AirPlay Unix mirroring server
+	pkgver = r590.51807d9
+	pkgrel = 1
+	url = https://github.com/FDH2/UxPlay
+	arch = any
+	license = GPL3
+	makedepends = cmake
+	makedepends = git
+	depends = openssl
+	depends = libplist
+	depends = avahi
+	depends = gst-plugins-base
+	depends = gst-plugins-good
+	depends = gst-plugins-bad
+	depends = gst-libav
+	optdepends = gstreamer-vaapi: GStreamer plugin required for certain GPUs
+	provides = uxplay
+	conflicts = uxplay
+	source = git+https://github.com/FDH2/UxPlay.git
+	source = uxplay.desktop
+	sha256sums = SKIP
+	sha256sums = 6b43385942508d8c360e8360be52719cbf3899868f3560b245731d866fb245a3
+
+pkgname = uxplay-git

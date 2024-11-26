@@ -1,0 +1,40 @@
+
+post_install() {
+    getent passwd flickmagnet &>/dev/null || {
+        echo -n ">>> Adding user... "
+        useradd --user-group --home /srv/flickmagnet -u 420 -s /bin/false flickmagnet
+        echo "done"
+    }
+    chown flickmagnet:flickmagnet /srv/flickmagnet
+
+    cat <<EOF
+
+>>> Start the daemon with 'systemctl start flickmagnet'
+    It starts as the "flickmagnet" user, with files stored in /srv/flickmagnet
+
+>>> Then open in your browser:
+
+    http://localhost:42000/
+
+EOF
+}
+
+pre_remove() {
+    systemctl stop flickmagnet
+}
+
+post_remove() {
+    getent passwd flickmagnet &>/dev/null && {
+        echo -n ">>> Deleting user... "
+        userdel flickmagnet -fr
+        echo "done"
+    }
+}
+
+post_upgrade() {
+    echo ">>> Flick Magnet doesn't have graceful upgrades yet, delete user files to reinitialize:"
+    echo "    rm -r ~/.config/flickmagnet/ ~/.cache/flickmagnet/ ~/.local/share/flickmagnet/"
+
+    systemctl daemon-reload
+}
+

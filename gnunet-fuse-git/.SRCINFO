@@ -1,0 +1,18 @@
+pkgbase = gnunet-fuse-git
+	pkgdesc = Read-only mounting of GNUnet directories as file systems using FUSE
+	pkgver = 0.15.0.r138.2c710f5
+	pkgrel = 1
+	url = https://gnunet.org/
+	arch = any
+	license = GPL
+	makedepends = autoconf
+	depends = gnunet
+	depends = fuse2
+	depends = libextractor
+	provides = gnunet-fuse
+	conflicts = gnunet-fuse
+	conflicts = gnunet-fuse-bin
+	source = git+https://git.gnunet.org/gnunet-fuse.git
+	md5sums = SKIP
+
+pkgname = gnunet-fuse-git

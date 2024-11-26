@@ -1,0 +1,16 @@
+pkgbase = etwas
+	pkgdesc = It is the complete opposite of nix aka. a simple to use package per shell manager
+	pkgver = 1.0.0
+	pkgrel = 1
+	url = https://github.com/AdrisGithub/etwas
+	arch = any
+	license = MIT
+	makedepends = git
+	depends = bash
+	depends = yay
+	provides = etwas
+	conflicts = etwas
+	source = etwas::git+https://github.com/AdrisGithub/etwas.git
+	md5sums = SKIP
+
+pkgname = etwas

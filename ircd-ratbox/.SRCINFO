@@ -1,0 +1,24 @@
+pkgbase = ircd-ratbox
+	pkgdesc = An advanced, stable and fast ircd
+	pkgver = 3.0.10
+	pkgrel = 3
+	url = http://www.ratbox.org
+	install = ircd-ratbox.install
+	arch = i686
+	arch = x86_64
+	arch = arm
+	arch = armv6h
+	arch = armv7h
+	license = GPL
+	depends = openssl
+	depends = sqlite
+	depends = libtool
+	backup = etc/ircd-ratbox/ircd.motd
+	source = http://www.ratbox.org/download/ircd-ratbox-3.0.10.tar.bz2
+	source = ircd-ratbox.service
+	source = ircd-ratbox.conf
+	sha512sums = c9a3980f0d5c0bf7ff3f3da90bfeba21b4436f5e026b4d6d3875b8e1f42e0ba40418908a39f43f1cfba7f563c4aa3853d965678a8afb61aa1b56298e3d85f710
+	sha512sums = 80f5f9f524b991779b0195640ce90c95f4b984d32242e68edf5313875932e21e221cf0e716fd2a69181786fa720155cd7a1e419b7a20f12125a1a787240bb557
+	sha512sums = 31e3719eb994e269c6ff3f3cc437674b72c8f621004feb8557c7d62bfad7d1d6def5ae56413c3eda4f7f51ed50a4c54910c5c64fd7da96b091733ecd3db0bde8
+
+pkgname = ircd-ratbox

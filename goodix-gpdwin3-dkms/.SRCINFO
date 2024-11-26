@@ -1,0 +1,21 @@
+pkgbase = goodix-gpdwin3-dkms
+	pkgdesc = Patched Goodix touchscreen driver for GPD WIN3
+	pkgver = 6.2.1
+	pkgrel = 1
+	arch = any
+	license = GPL2
+	depends = dkms
+	source = goodix.c
+	source = goodix.h
+	source = goodix_fwupload.c
+	source = dkms.conf
+	source = Makefile
+	source = goodixgpdw3.conf
+	md5sums = c0e99fdd6b2778ad43cf7a03a6063cb6
+	md5sums = aec7f644a9a305c4102665137c7f248b
+	md5sums = 190deba40c822b9d4f89672bc4e610e9
+	md5sums = f514c2a1d6de0f50ea5ebc112447ff7d
+	md5sums = aa21936d9b3341c25761f7c4a827f39d
+	md5sums = 1505740dffca34d8119f3798a0624ebc
+
+pkgname = goodix-gpdwin3-dkms

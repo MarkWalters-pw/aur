@@ -1,0 +1,25 @@
+pkgbase = autodl-irssi-community
+	pkgdesc = Community fork plugin for irssi to monitor IRC channels and filter for torrents.
+	pkgver = 2.6.2
+	pkgrel = 1
+	url = https://github.com/autodl-community/autodl-irssi
+	install = autodl-irssi-community.install
+	arch = any
+	license = MPL
+	depends = irssi
+	depends = perl-archive-zip
+	depends = perl-net-ssleay
+	depends = perl-html-parser
+	depends = perl-xml-libxml
+	depends = perl-digest-sha1
+	depends = perl-json
+	depends = perl-json-xs
+	depends = perl-xml-libxslt
+	provides = autodl-irssi
+	conflicts = autodl-irssi-svn
+	replaces = autodl-irssi-svn
+	source = https://github.com/autodl-community/autodl-irssi/archive/2.6.2.tar.gz
+	md5sums = 42ca26db1de04f59aa91869033e441ef
+
+pkgname = autodl-irssi-community
+

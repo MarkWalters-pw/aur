@@ -1,0 +1,39 @@
+pkgbase = rvgl-bin
+	pkgdesc = Rewrite of Re-Volt, popular R/C car racing game from 1999.
+	pkgver = 23.1030a1
+	pkgrel = 1
+	url = https://rvgl.org
+	arch = i686
+	arch = x86_64
+	arch = armv7h
+	arch = aarch64
+	groups = rvgl-basic
+	groups = rvgl-original
+	groups = rvgl-online
+	license = custom
+	makedepends = git
+	makedepends = patchelf
+	depends = sdl2
+	depends = sdl2_image
+	depends = openal
+	depends = enet
+	depends = libunistring
+	optdepends = rvgl-dcpack: dreamcast content pack
+	optdepends = rvgl-soundtrack: game soundtrack
+	optdepends = libsndfile: for uncompressed audio support
+	optdepends = libvorbis: for OGG Vorbis support
+	optdepends = flac: for FLAC support
+	optdepends = mpg123: for MPEG support
+	optdepends = fluidsynth: for SoundFont 2 support
+	source = rvgl_game_files::git+https://gitlab.com/re-volt/game_files.git#tag=22.0909
+	source = rvgl_assets::git+https://gitlab.com/re-volt/rvgl-assets.git#tag=23.1030a1
+	source = rvgl_platform::git+https://gitlab.com/re-volt/rvgl-platform.git#tag=23.1030a1
+	source = rvgl
+	source = RVGL.desktop
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = a2a1a3f72fab4e1820b4a8fbdd3ac8fde6699588496c99013d031925e78b1e8d
+	sha256sums = ba1ed3ac45b2a823f51146f3379e81ec491e79cc3063b142f583b07191a600aa
+
+pkgname = rvgl-bin

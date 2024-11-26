@@ -1,0 +1,15 @@
+pkgbase = tmux-mem-cpu-load-git
+	pkgdesc = CPU, RAM memory, and load monitor for use with tmux
+	pkgver = 3.7.0.r29.gdf71d21
+	pkgrel = 1
+	url = https://github.com/thewtex/tmux-mem-cpu-load
+	arch = x86_64
+	license = Apache-2.0
+	makedepends = cmake
+	makedepends = git
+	provides = tmux-mem-cpu-load
+	conflicts = tmux-mem-cpu-load
+	source = tmux-mem-cpu-load-git::git+https://github.com/thewtex/tmux-mem-cpu-load.git
+	sha256sums = SKIP
+
+pkgname = tmux-mem-cpu-load-git

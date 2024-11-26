@@ -1,0 +1,19 @@
+pkgbase = sysusage
+	pkgdesc = Monitor your system, generate periodical graph reports, serve through a web interface
+	pkgver = 5.7.1
+	pkgrel = 1
+	url = http://sysusage.darold.net/
+	install = sysusage.install
+	arch = any
+	license = GPL3
+	depends = inetutils
+	depends = rrdtool
+	depends = sysstat
+	depends = perl
+	depends = perl-proc-queue
+	depends = procps-ng
+	backup = etc/sysusage.cfg
+	source = sysusage-5.7.1.tar.gz::https://github.com/darold/sysusage/archive/refs/tags/v5.7.1.tar.gz
+	b2sums = 2854c16a1d09dbb262407cf426a09554dbf03f1aa15c4ae9e40ce5314db03718f24cf9b0ed44b52428a5d703e0e95f0fb680ac73472e092327650e764ecc84c4
+
+pkgname = sysusage

@@ -1,0 +1,26 @@
+pkgbase = freeciv-git
+	pkgdesc = A multiuser clone of the famous Microprose game of Civilization
+	pkgver = r30957.e43360ff51
+	pkgrel = 1
+	url = http://www.freeciv.org/
+	arch = x86_64
+	license = GPL-2.0-or-later
+	makedepends = git
+	makedepends = meson
+	makedepends = intltool
+	depends = curl
+	depends = gtk4
+	depends = lua
+	depends = qt6-base
+	depends = sdl2_gfx
+	depends = sdl2_image
+	depends = sdl2_mixer
+	depends = sdl2_ttf
+	depends = sqlite
+	provides = freeciv
+	conflicts = freeciv
+	conflicts = freeciv-sdl2
+	source = git+https://github.com/freeciv/freeciv.git
+	sha256sums = SKIP
+
+pkgname = freeciv-git

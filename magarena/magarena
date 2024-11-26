@@ -1,0 +1,6 @@
+#!/bin/sh
+if [ ! -d $HOME/.magarena/Magarena ] ; then
+    mkdir -p $HOME/.magarena
+    tar -xvzf /usr/share/magarena/default-userdata.tar.gz -C $HOME/.magarena/
+fi
+/usr/share/magarena/Magarena.sh /usr/share/magarena/Magarena.jar $HOME/.magarena

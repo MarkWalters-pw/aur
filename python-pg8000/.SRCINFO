@@ -1,0 +1,25 @@
+pkgbase = python-pg8000
+	pkgdesc = Pure-Python PostgreSQL database driver, DB-API compatible
+	pkgver = 1.31.2
+	pkgrel = 1
+	url = https://github.com/tlocke/pg8000
+	arch = any
+	license = BSD-3-Clause
+	checkdepends = python-pytest
+	checkdepends = python-pytest-mock
+	checkdepends = python-pytest-benchmark
+	checkdepends = python-pytz
+	checkdepends = postgresql
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-hatchling
+	makedepends = python-versioningit
+	depends = python
+	depends = python-scramp
+	depends = python-dateutil
+	source = git+https://github.com/tlocke/pg8000.git?signed#commit=9945228f2cec51727f83058229f59fa7397b4d64
+	validpgpkeys = D5681B7EC7292511C4CC1450892B00AB699851E8
+	sha256sums = bec9c96595f6f3330e5441782c9687bf0a0c0fcd56eecfa2baef08fa0c1d9cca
+
+pkgname = python-pg8000

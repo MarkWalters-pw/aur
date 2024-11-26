@@ -1,0 +1,24 @@
+pkgbase = tintin-beta
+	pkgdesc = A console-based MUD client beta version
+	pkgver = 2021.01.10
+	pkgrel = 1
+	epoch = 1
+	url = http://tintin.sourceforge.net/
+	arch = aarch64
+	arch = armv7h
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	depends = zlib
+	depends = pcre
+	depends = gnutls
+	provides = tt++
+	provides = tintin
+	conflicts = tt++
+	conflicts = tintin
+	options = strip
+	source = http://tintin.sourceforge.net/download/tintin-beta.tar.gz
+	md5sums = SKIP
+
+pkgname = tintin-beta
+

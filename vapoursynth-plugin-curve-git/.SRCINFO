@@ -1,0 +1,17 @@
+pkgbase = vapoursynth-plugin-curve-git
+	pkgdesc = Plugin for Vapoursynth: curve (GIT Version)
+	pkgver = 3.0.g5edf283
+	pkgrel = 1
+	url = https://forum.doom9.org/showthread.php?t=175988
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = meson
+	depends = vapoursynth
+	provides = vapoursynth-plugin-curve
+	conflicts = vapoursynth-plugin-curve
+	options = debug
+	source = curve::git+https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Curve.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-curve-git

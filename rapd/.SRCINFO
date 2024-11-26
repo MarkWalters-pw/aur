@@ -1,0 +1,16 @@
+pkgbase = rapd
+	pkgdesc = Rust Audio Player Daemon
+	pkgver = 0.1.2
+	pkgrel = 1
+	url = https://www.interfiber.dev/rapd
+	arch = any
+	license = GPL-3.0
+	makedepends = rust
+	makedepends = cmake
+	optdepends = pulseaudio: Pulse audio playback
+	optdepends = alsa-lib: Alsa audio playback
+	optdepends = nodejs: Support for the MPRIS plugin
+	source = rapd-0.1.2.tar.gz
+	sha256sums = fcdce0280b79579bcf8d7ea515972591b3816620911869ed24636c647a5cd1b3
+
+pkgname = rapd

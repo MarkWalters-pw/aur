@@ -1,0 +1,23 @@
+pkgbase = libunique
+	pkgdesc = Library for writing single instance applications
+	pkgver = 1.1.6
+	pkgrel = 11
+	url = https://wiki.gnome.org/Attic/LibUnique
+	arch = i686
+	arch = x86_64
+	license = LGPL
+	makedepends = gtk-doc
+	makedepends = glib2
+	makedepends = glib2-devel
+	makedepends = gobject-introspection
+	depends = gtk2
+	source = https://download.gnome.org/sources/libunique/1.1/libunique-1.1.6.tar.bz2
+	source = 00git_g_const_return.patch
+	source = 01_format-security.patch
+	source = 99_ltmain_as-needed.patch
+	sha256sums = e5c8041cef8e33c55732f06a292381cb345db946cf792a4ae18aa5c66cdd4fbb
+	sha256sums = b70b603c4a40d07d40caf23de63f88bb8c7cc90b88c62c84dcc45d1db4b0b921
+	sha256sums = eda843d01ef27c56eb6d0753a70d658412e0acb8324b0e8c59a60594387c912d
+	sha256sums = 01829263fae69782d7558c6e50a4b1c9885b9309c5198844eafa9005fc470631
+
+pkgname = libunique

@@ -1,0 +1,15 @@
+[Unit]
+Description=Sound Service
+
+Requires=pulseaudio.service
+ConditionUser=!root
+
+[Service]
+EnvironmentFile=/etc/goplay2-default-network-interface
+EnvironmentFile=-%h/.config/goplay2-network-interface
+ExecStart=/usr/bin/goplay2 -i ${interface}
+Restart=on-failure
+
+[Install]
+Also=pulseaudio.service
+WantedBy=default.target

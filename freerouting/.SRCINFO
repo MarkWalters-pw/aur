@@ -1,0 +1,18 @@
+pkgbase = freerouting
+	pkgdesc = Advanced PCB autorouter
+	pkgver = 2.0.0
+	pkgrel = 1
+	url = https://github.com/freerouting/freerouting
+	arch = any
+	license = GPL-3.0-only
+	makedepends = java-environment-openjdk=21
+	depends = java-runtime=21
+	optdepends = kicad: for use with PCB editor
+	source = freerouting-2.0.0.tar.gz::https://github.com/freerouting/freerouting/archive/refs/tags/v2.0.0.tar.gz
+	source = freerouting.sh
+	source = freerouting.desktop
+	sha512sums = 8d24cf824cff7dbb68854d1829a170b351d32f3f481ebec815508bb173f7cae6d12e88f1945182b1305d68f7b97ca888e681ca3a088249981144c9617a680b19
+	sha512sums = 994102e3f526fe364920602dfa8f2160eeeeb512194172bdc82f1fb45c261c2da79b8baf58008da9ab56f33d1b047dfe1ccb2f7d4113215cdfc376319b4f9320
+	sha512sums = 1eeacc544cd6081a9cef03424e505177972c65dc13d1379989889c0ed7419ed1b76013d48d160d0b74932aec1170ca1535b103f4266024b7f35e9656a11281f5
+
+pkgname = freerouting

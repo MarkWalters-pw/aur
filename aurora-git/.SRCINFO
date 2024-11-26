@@ -1,0 +1,13 @@
+pkgbase = aurora-git
+	pkgdesc = A minimal AUR helper written in Rust
+	pkgver = r6.0e6df8b
+	pkgrel = 1
+	url = https://gitlab.com/hunterbrodie/aurora
+	arch = x86_64
+	license = GPL
+	makedepends = cargo
+	depends = pacman
+	source = aurora-git::git+https://gitlab.com/hunterbrodie/aurora.git
+	md5sums = SKIP
+
+pkgname = aurora-git

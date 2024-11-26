@@ -1,0 +1,17 @@
+pkgbase = rpi_ws281x-git
+	pkgdesc = Userspace Raspberry Pi PWM library for WS281X LEDs
+	pkgver = 182.14aacad
+	pkgrel = 1
+	url = https://github.com/jgarff/rpi_ws281x
+	arch = armv6h
+	arch = armv7h
+	arch = aarch64
+	license = BSD
+	makedepends = scons
+	makedepends = git
+	provides = rpi_ws281x
+	conflicts = rpi_ws281x
+	source = rpi_ws281x::git+https://github.com/jgarff/rpi_ws281x.git
+	sha256sums = SKIP
+
+pkgname = rpi_ws281x-git

@@ -1,0 +1,17 @@
+pkgbase = nng-git
+	pkgdesc = Rewrite of the SP protocol library known as libnanomsg
+	pkgver = 1.9.0.r187.gcbe9a27
+	pkgrel = 1
+	url = https://github.com/nanomsg/nng
+	arch = x86_64
+	license = MIT
+	makedepends = cmake
+	makedepends = git
+	makedepends = ninja
+	depends = mbedtls
+	provides = nng
+	conflicts = nng
+	source = nng::git+https://github.com/nanomsg/nng.git
+	sha256sums = SKIP
+
+pkgname = nng-git

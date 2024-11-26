@@ -1,0 +1,22 @@
+pkgbase = process-cpp
+	pkgdesc = A simple convenience library for handling processes in C++11
+	pkgver = 3.0.1
+	pkgrel = 2
+	url = https://gitlab.com/ubports/core/lib-cpp/process-cpp/
+	arch = x86_64
+	arch = i686
+	groups = lib-cpp
+	license = LGPL3
+	makedepends = cmake
+	makedepends = boost
+	makedepends = doxygen
+	makedepends = graphviz
+	depends = boost-libs
+	depends = gcc-libs
+	depends = properties-cpp
+	source = https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/process-cpp/3.0.1-9/process-cpp_3.0.1.orig.tar.gz
+	source = https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/process-cpp/3.0.1-9/process-cpp_3.0.1-9.debian.tar.xz
+	sha256sums = 33d13d384e99d3f57691c9c572c0c38fe4b67c056f19c8d99f18230f62b94a6b
+	sha256sums = 5357427f51704c2cb3768cd81bf1fb254ada7ff355ef656d14c253b322cf37fe
+
+pkgname = process-cpp

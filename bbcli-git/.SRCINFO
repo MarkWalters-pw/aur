@@ -1,0 +1,19 @@
+pkgbase = bbcli-git
+	pkgdesc = inoffical Bitbucket.org command line tool
+	pkgver = r143.e36682e
+	pkgrel = 1
+	url = https://github.com/craftamap/bb
+	arch = x86_64
+	arch = i686
+	arch = armv6h
+	arch = armv7h
+	arch = aarch64
+	license = MIT
+	makedepends = go
+	makedepends = git
+	provides = bbcli
+	conflicts = bbcli
+	source = bbcli-git::git+https://github.com/craftamap/bb.git
+	sha256sums = SKIP
+
+pkgname = bbcli-git

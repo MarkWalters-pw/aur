@@ -1,0 +1,15 @@
+pkgbase = vapoursynth-plugin-temporalsoften-git
+	pkgdesc = Plugin for Vapoursynth: temporalsoften (GIT version)
+	pkgver = 1.0.0.g36a94c0
+	pkgrel = 1
+	url = https://github.com/dubhater/vapoursynth-temporalsoften
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	depends = vapoursynth
+	provides = vapoursynth-plugin-temporalsoften
+	conflicts = vapoursynth-plugin-temporalsoften
+	source = temporalsoften::git+https://github.com/dubhater/vapoursynth-temporalsoften.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-temporalsoften-git

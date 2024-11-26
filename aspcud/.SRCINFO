@@ -1,0 +1,17 @@
+pkgbase = aspcud
+	pkgdesc = Solver for package dependencies
+	pkgver = 1.9.6
+	pkgrel = 1
+	url = https://potassco.org/aspcud
+	arch = x86_64
+	license = GPL3
+	makedepends = boost
+	makedepends = cmake
+	makedepends = git
+	makedepends = ninja
+	makedepends = re2c
+	depends = clingo
+	source = https://github.com/potassco/aspcud/archive/refs/tags/v1.9.6.tar.gz
+	sha256sums = 4dddfd4a74e4324887a1ddd7f8ff36231774fc1aa78b383256546e83acdf516c
+
+pkgname = aspcud

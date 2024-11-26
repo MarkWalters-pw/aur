@@ -1,0 +1,19 @@
+pkgbase = avisynth-plugin-bwdif-git
+	pkgdesc = Plugin for Avisynth: bwdif (GIT version)
+	pkgver = 1.2.4.0.g2c06441
+	pkgrel = 1
+	url = https://github.com/Asd-g/AviSynth-BWDIF
+	arch = x86_64
+	license = GPL
+	license = Apache
+	makedepends = git
+	makedepends = cmake
+	makedepends = avisynthplus
+	depends = libavisynth.so
+	provides = avisynth-plugin-bwdif
+	conflicts = avisynth-plugin-bwdif
+	options = debug
+	source = bwdif::git+https://github.com/Asd-g/AviSynth-BWDIF.git
+	sha256sums = SKIP
+
+pkgname = avisynth-plugin-bwdif-git

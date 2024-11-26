@@ -1,0 +1,19 @@
+pkgbase = 2048term-git
+	pkgdesc = Console version of the game "2048"
+	pkgver = r99.bf22f86
+	pkgrel = 1
+	url = https://github.com/alewmoose/2048-in-terminal.git
+	arch = i686
+	arch = x86_64
+	arch = armv7h
+	license = MIT
+	makedepends = git
+	depends = ncurses
+	provides = 2048term
+	conflicts = 2048term
+	source = 2048term::git+https://github.com/alewmoose/2048-in-terminal.git
+	source = 0001-Makefile-tweak-usage-of-implicit-variables.patch
+	sha256sums = SKIP
+	sha256sums = 76a5244ecb82f4a6928a2cdbc5fae7db1e1f94fb6c270f98cd7cd1a3129b89b2
+
+pkgname = 2048term-git

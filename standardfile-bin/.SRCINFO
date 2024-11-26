@@ -1,0 +1,26 @@
+pkgbase = standardfile-bin
+	pkgdesc = Standard File Server, Go Implementation
+	pkgver = 0.12.1
+	pkgrel = 1
+	url = https://github.com/mdouchement/standardfile
+	arch = x86_64
+	arch = aarch64
+	license = MIT
+	depends = glibc
+	backup = etc/standardfile.yaml
+	source = standardfile.service
+	source = standardfile.sysusers
+	source = standardfile.tmpfiles
+	source = standardfile.example.yaml
+	source = standardfile.yaml
+	sha256sums = 6ec3ff769f3c9775443009d76da5fca010ee94f1e71f474af6be5a33b9a8e70c
+	sha256sums = a5e8669b915dc6553f0af9137840adfabb020f391846d9f3ab3dbe3175d320fa
+	sha256sums = 2014138283a50581136b85a4d4964ee70821cb0ed965fa5acc1c3d7611855288
+	sha256sums = 1010525aa4b320cb0ccf7b5411ca5879892c34711f1505f26be3f16214ead07c
+	sha256sums = 1010525aa4b320cb0ccf7b5411ca5879892c34711f1505f26be3f16214ead07c
+	source_x86_64 = https://github.com/mdouchement/standardfile/releases/download/v0.11.0/standardfile-linux-amd64
+	sha256sums_x86_64 = b005f9562cb6bca86548788eb1195eaa4ccadec89ad6912446c4c39892837644
+	source_aarch64 = https://github.com/tectiv3/standardfile/releases/download/v0.11.0/standardfile-linux-arm64
+	sha256sums_aarch64 = 7ce24dfb2af9c63e43c0fb202d5b085cabb8132696bd3423a1877ef53b27242a
+
+pkgname = standardfile-bin

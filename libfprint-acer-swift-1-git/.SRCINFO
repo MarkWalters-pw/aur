@@ -1,0 +1,30 @@
+pkgbase = libfprint-acer-swift-1-git
+	pkgdesc = Library for fingerprint readers (patch for Acer Swift 1)
+	pkgver = 1.94.0
+	pkgrel = 1
+	url = https://fprint.freedesktop.org/
+	arch = x86_64
+	groups = fprint
+	license = LGPL
+	checkdepends = python
+	checkdepends = python-cairo
+	checkdepends = python-gobject
+	checkdepends = umockdev>=0.13.2
+	makedepends = git
+	makedepends = meson
+	makedepends = gtk-doc
+	makedepends = gobject-introspection
+	makedepends = systemd
+	depends = libgusb
+	depends = pixman
+	depends = nss
+	depends = systemd-libs
+	provides = libfprint
+	provides = libfprint-2.so
+	conflicts = libfprint
+	source = git+https://gitlab.freedesktop.org/libfprint/libfprint.git
+	source = egis0570.patch
+	sha256sums = SKIP
+	sha256sums = 259a24e09f865340640be25bc7ea002504ca004c1aff2e3fc9cd51208e2cb378
+
+pkgname = libfprint-acer-swift-1-git

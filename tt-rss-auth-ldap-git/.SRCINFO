@@ -1,0 +1,16 @@
+pkgbase = tt-rss-auth-ldap-git
+	pkgdesc = Tiny Tiny RSS plugin for LDAP authentication
+	pkgver = r60.582ade4
+	pkgrel = 1
+	url = https://github.com/hydrian/TTRSS-Auth-LDAP
+	arch = any
+	license = Apache
+	makedepends = git
+	depends = tt-rss
+	depends = php-ldap
+	provides = tt-rss-auth-ldap
+	conflicts = tt-rss-auth-ldap
+	source = git+https://github.com/hydrian/TTRSS-Auth-LDAP.git
+	md5sums = SKIP
+
+pkgname = tt-rss-auth-ldap-git

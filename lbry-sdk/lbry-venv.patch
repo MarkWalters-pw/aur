@@ -1,0 +1,89 @@
+diff --unified --recursive --text --color lbry-venv_orig/lib/python3.10/site-packages/aiohttp/helpers.py lbry-venv/lib/python3.10/site-packages/aiohttp/helpers.py
+--- lbry-venv_orig/lib/python3.10/site-packages/aiohttp/helpers.py	2023-01-01 19:07:33.509999949 +0000
++++ lbry-venv/lib/python3.10/site-packages/aiohttp/helpers.py	2023-01-01 19:13:48.179999948 +0000
+@@ -275,9 +275,9 @@
+     loop: Optional[asyncio.AbstractEventLoop] = None,
+ ) -> "Optional[asyncio.Task[Any]]":
+     if sys.version_info >= (3, 7):
+-        return asyncio.current_task(loop=loop)
++        return asyncio.current_task()
+     else:
+-        return asyncio.Task.current_task(loop=loop)
++        return asyncio.Task.current_task()
+ 
+ 
+ def get_running_loop(
+diff --unified --recursive --text --color lbry-venv_orig/lib/python3.10/site-packages/aioupnp/gateway.py lbry-venv/lib/python3.10/site-packages/aioupnp/gateway.py
+--- lbry-venv_orig/lib/python3.10/site-packages/aioupnp/gateway.py	2023-01-01 19:07:33.489999949 +0000
++++ lbry-venv/lib/python3.10/site-packages/aioupnp/gateway.py	2023-01-01 19:24:15.403333287 +0000
+@@ -224,7 +224,7 @@
+         try:
+             return await asyncio.wait_for(loop.create_task(
+                 cls._discover_gateway(lan_address, gateway_address, timeout, loop)
+-            ), timeout, loop=loop)
++            ), timeout)
+         except asyncio.TimeoutError:
+             raise UPnPError(f"M-SEARCH for {gateway_address}:1900 timed out")
+ 
+diff --unified --recursive --text --color lbry-venv_orig/lib/python3.10/site-packages/aioupnp/protocols/scpd.py lbry-venv/lib/python3.10/site-packages/aioupnp/protocols/scpd.py
+--- lbry-venv_orig/lib/python3.10/site-packages/aioupnp/protocols/scpd.py	2023-01-01 19:07:33.489999949 +0000
++++ lbry-venv/lib/python3.10/site-packages/aioupnp/protocols/scpd.py	2023-01-01 19:23:18.466666620 +0000
+@@ -141,7 +141,7 @@
+     assert isinstance(protocol, SCPDHTTPClientProtocol)
+ 
+     error = None
+-    wait_task: typing.Awaitable[typing.Tuple[bytes, bytes, int, bytes]] = asyncio.wait_for(protocol.finished, 1.0, loop=loop)
++    wait_task: typing.Awaitable[typing.Tuple[bytes, bytes, int, bytes]] = asyncio.wait_for(protocol.finished, 1.0)
+     body = b''
+     raw_response = b''
+     try:
+@@ -182,7 +182,7 @@
+     assert isinstance(protocol, SCPDHTTPClientProtocol)
+ 
+     try:
+-        wait_task: typing.Awaitable[typing.Tuple[bytes, bytes, int, bytes]] = asyncio.wait_for(finished, 1.0, loop=loop)
++        wait_task: typing.Awaitable[typing.Tuple[bytes, bytes, int, bytes]] = asyncio.wait_for(finished, 1.0)
+         raw_response, body, response_code, response_msg = await wait_task
+     except asyncio.TimeoutError:
+         return {}, b'', UPnPError("Timeout")
+diff --unified --recursive --text --color lbry-venv_orig/lib/python3.10/site-packages/aioupnp/protocols/ssdp.py lbry-venv/lib/python3.10/site-packages/aioupnp/protocols/ssdp.py
+--- lbry-venv_orig/lib/python3.10/site-packages/aioupnp/protocols/ssdp.py	2023-01-01 19:07:33.489999949 +0000
++++ lbry-venv/lib/python3.10/site-packages/aioupnp/protocols/ssdp.py	2023-01-01 19:22:35.083333286 +0000
+@@ -31,8 +31,8 @@
+         self.transport: Optional[DatagramTransport] = None
+         self._pending_searches: List[PendingSearch] = []
+         self.notifications: List[SSDPDatagram] = []
+-        self.connected = asyncio.Event(loop=self.loop)
+-        self.devices: 'asyncio.Queue[SSDPDatagram]' = asyncio.Queue(loop=self.loop)
++        self.connected = asyncio.Event()
++        self.devices: 'asyncio.Queue[SSDPDatagram]' = asyncio.Queue()
+ 
+     def connection_made(self, transport: asyncio.DatagramTransport) -> None:  # type: ignore
+         super().connection_made(transport)
+@@ -98,7 +98,7 @@
+     async def m_search(self, address: str, timeout: float,
+                        datagrams: List[Dict[str, typing.Union[str, int]]]) -> SSDPDatagram:
+         fut = self.send_m_searches(address, datagrams)
+-        return await asyncio.wait_for(fut, timeout, loop=self.loop)
++        return await asyncio.wait_for(fut, timeout)
+ 
+     def datagram_received(self, data: bytes, addr: Tuple[str, int]) -> None:  # type: ignore
+         if addr[0] == self.bind_address:
+diff --unified --recursive --text --color lbry-venv_orig/lib/python3.10/site-packages/async_timeout/__init__.py lbry-venv/lib/python3.10/site-packages/async_timeout/__init__.py
+--- lbry-venv_orig/lib/python3.10/site-packages/async_timeout/__init__.py	2023-01-01 19:07:33.483333282 +0000
++++ lbry-venv/lib/python3.10/site-packages/async_timeout/__init__.py	2023-01-01 19:09:49.423333274 +0000
+@@ -225,12 +225,12 @@
+ if sys.version_info >= (3, 7):
+ 
+     def _current_task(loop: asyncio.AbstractEventLoop) -> "Optional[asyncio.Task[Any]]":
+-        return asyncio.current_task(loop=loop)
++        return asyncio.current_task()
+ 
+ else:
+ 
+     def _current_task(loop: asyncio.AbstractEventLoop) -> "Optional[asyncio.Task[Any]]":
+-        return asyncio.Task.current_task(loop=loop)
++        return asyncio.Task.current_task()
+ 
+ 
+ if sys.version_info >= (3, 7):

@@ -1,0 +1,24 @@
+pkgbase = joinmarket-qt-git
+	pkgdesc = Coinjoin software, includes a QT wallet and requires Bitcoin Core as backend
+	pkgver = 0.7.0.r3.gc90432e
+	pkgrel = 1
+	url = https://github.com/JoinMarket-Org/joinmarket-clientserver
+	arch = any
+	license = GPL3
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python-pyqt5
+	depends = pyside2
+	depends = python-qt5reactor
+	depends = python-jmbase-git
+	depends = python-jmclient-git
+	depends = python-jmbitcoin-git
+	depends = python-jmdaemon-git
+	options = !strip
+	source = joinmarket-qt-git::git+https://github.com/JoinMarket-Org/joinmarket-clientserver.git
+	source = joinmarket-qt
+	sha256sums = SKIP
+	sha256sums = 5a4b5f36706f6de0b7c360871e2bbdc5ecf33505b8565365363fdecf1c10e051
+
+pkgname = joinmarket-qt-git
+

@@ -1,0 +1,18 @@
+pkgbase = mshr-git
+	pkgdesc = Mesh generation component of FEniCS (git version)
+	pkgver = 20200924
+	pkgrel = 1
+	url = https://bitbucket.org/fenics-project/mshr
+	arch = x86_64
+	license = GPL3
+	makedepends = cmake
+	makedepends = git
+	depends = dolfin
+	depends = mpfr
+	depends = tetgen
+	provides = mshr=20200924
+	conflicts = mshr
+	source = git+https://bitbucket.org/fenics-project/mshr.git#branch=master
+	sha512sums = SKIP
+
+pkgname = mshr-git

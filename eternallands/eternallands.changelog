@@ -1,0 +1,109 @@
+2021-12-24 Angelo "Encelo" Theodorou  <encelo@users.sourceforge.net>
+
+	* PKGBUILD:
+	Added openssl to the depends array
+
+2021-07-27 Angelo "Encelo" Theodorou  <encelo@users.sourceforge.net>
+
+	* PKGBUILD:
+	Using CMake to build the game
+	Removed pkgconf from the makedepends array
+	Added cmake to the makedepends array
+	Renamed "version" custom variable to "_version"
+
+2021-04-14 Angelo "Encelo" Theodorou  <encelo@users.sourceforge.net>
+
+	* PKGBUILD:
+	Updated to client and data 1.9.5.9-1
+	Using GitHub release archive for sources
+	Added sdl2_ttf to the depends array
+	Removed git from the makedepends array
+	Updated the list of installed data files
+
+2020-09-19 Angelo "Encelo" Theodorou  <encelo@users.sourceforge.net>
+
+	* PKGBUILD:
+	Migrated the legacy explicit git clone to a VCS source line
+	Removed gzip from the makedepends array as it is alreayd part of the base-devel group
+
+2020-08-30 Angelo "Encelo" Theodorou  <encelo@users.sourceforge.net>
+
+	* PKGBUILD :
+	Updated to client 1.9.5 build 8
+	Updated data to 1.9.5 build 7
+	Added pkgconf to the makedepends array
+
+2020-01-15 Angelo "Encelo" Theodorou  <encelo@users.sourceforge.net>
+
+	* PKGBUILD :
+	Updated to client 1.9.5 build 6
+	Updated data to 1.9.5 build 4
+	Updated dependency arrays
+
+2018-12-17 Angelo "Encelo" Theodorou  <encelo@users.sourceforge.net>
+
+	* PKGBUILD :
+	Updated to client 1.9.5 build 3
+
+2018-08-05 Paul Broadhead <pjbroad@twinmoons.org.uk>
+
+	* PKGBUILD
+	Updated to client 1.9.5 build 2
+	Modified to use data package included with GitHub release
+
+2015-08-23 Angelo "Encelo" Theodorou  <encelo@users.sourceforge.net>
+
+	* PKGBUILD :
+	Updated all dependency arrays
+	Install launch script, man pages and icons from source
+
+2012-02-14 Angelo "Encelo" Theodorou  <encelo@users.sourceforge.net>
+
+	* PKGBUILD :
+	Added the changelog directive
+	Changed GIT repository from BerliOS to GitHub
+	LDFLAGS modified to link against X11 and stdc++
+
+2011-06-23 Angelo "encelo" Theodorou <encelo@users.sourceforge.net
+
+	* PKGBUILD :
+	Added a package function
+	Building via the GIT repository
+
+2010-04-05 Angelo "encelo" Theodorou <encelo@users.sourceforge.net
+
+	* PKGBUILD :
+	There are no more 'custom' and 'tiles' data directories
+
+2009-01-11 Angelo "encelo" Theodorou <encelo@users.sourceforge.net
+
+	* PKGBUILD :
+	Description changed
+	Using the !emptydirs option
+
+2008-07-19 Angelo "encelo" Theodorou <encelo@users.sourceforge.net
+
+	* PKGBUILD :
+	Compressing textures and maps
+
+2008-07-17 Angelo "encelo" Theodorou <encelo@users.sourceforge.net>
+
+	* PKGBUILD :
+	cvs added as a make dependency
+
+2008-03-30 Angelo "encelo" Theodorou <encelo@users.sourceforge.net>
+
+	* PKGBUILD :
+	Using $srcdir and $pkgdir
+	ChangeLog format adapted to official prototype
+	Icon installed from the CVS repository
+
+2008-01-18 Angelo "encelo" Theodorou <encelo@users.sourceforge.net>
+
+	* PKGBUILD:
+	Binary compiled from tagged CVS repository
+	Dependencies array corrected
+	Changed permissions for some installed files
+	Icon installed from inside the game archive
+	Description and URL changed
+	This ChangeLog added ;-)

@@ -1,0 +1,18 @@
+pkgbase = ydiff
+	pkgdesc = Colored, incremental, side-by-side diff viewer
+	pkgver = 1.3
+	pkgrel = 2
+	url = http://pypi.python.org/pypi/ydiff/
+	arch = any
+	license = BSD-3-Clause
+	makedepends = python-setuptools
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = python
+	optdepends = patchutils: uses filterdiff for context diffs
+	conflicts = cdiff
+	source = ydiff-1.3.tar.gz::https://github.com/ymattw/ydiff/archive/refs/tags/1.3.tar.gz
+	md5sums = 96bf288a051fe266ff3d3e4f87d90286
+
+pkgname = ydiff

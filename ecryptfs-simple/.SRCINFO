@@ -1,0 +1,20 @@
+pkgbase = ecryptfs-simple
+	pkgdesc = A very simple utility for working with eCryptfs.
+	pkgver = 2017
+	pkgrel = 5
+	url = https://xyne.dev/projects/ecryptfs-simple
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = cmake
+	depends = ecryptfs-utils
+	depends = util-linux
+	source = https://xyne.dev/projects/ecryptfs-simple/src/ecryptfs-simple-2017.tar.xz
+	source = https://xyne.dev/projects/ecryptfs-simple/src/ecryptfs-simple-2017.tar.xz.sig
+	validpgpkeys = D89FAAEB4CECAFD199A2F5E612C6F735F7A9A519
+	md5sums = e8b398ddedbc78bc275c584a9eba6d84
+	md5sums = 8452526d4f2a4b15952424512a15b55a
+	sha512sums = 2144a09227c28e1dc66eafb747f73c85f22a9da8a45bf6bf92af0b670ae8148387f4ef0fc25b9bdd385fd47ffb76169adb69556cec967b84cc37c1e092495ef2
+	sha512sums = c298a8203dce31505cb9eda20e2dbf48e15bfc38f3d75bcf237eb25affa28dca201829eec23f2c78b6ffd218302ec17cbc155087e2dd89f6d9a82facf39bc275
+
+pkgname = ecryptfs-simple

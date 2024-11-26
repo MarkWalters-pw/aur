@@ -1,0 +1,35 @@
+## arg 1:  the new package version
+pre_install() {
+    echo '>>> Please install mapserver package with CMake option -DWITH_PERL=ON.'
+}
+
+## arg 1:  the new package version
+post_install() {
+    groupadd tirex
+    useradd -g tirex -d /dev/null -s /bin/false tirex
+    chown -R tirex:tirex /var/lib/tirex
+
+    echo '>>> Run `systemctl start tirex.target` to start daemon.'
+}
+
+## arg 1:  the new package version
+## arg 2:  the old package version
+pre_upgrade() {
+    :
+}
+
+## arg 1:  the new package version
+## arg 2:  the old package version
+post_upgrade() {
+    :
+}
+
+## arg 1:  the old package version
+pre_remove() {
+    :
+}
+
+## arg 1:  the old package version
+post_remove() {
+    userdel tirex
+}

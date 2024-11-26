@@ -1,0 +1,15 @@
+[Unit]
+Description=Gaia Hub decentralized high-performance storage system
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=gaia
+Group=gaia
+WorkingDirectory=/usr/lib/node_modules/gaia-hub
+Environment=NODE_ENV="production"
+ExecStart=/usr/bin/gaia-hub
+
+[Install]
+WantedBy=multi-user.target

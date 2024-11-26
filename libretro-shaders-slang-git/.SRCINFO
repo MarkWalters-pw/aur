@@ -1,0 +1,26 @@
+pkgbase = libretro-shaders-slang-git
+	pkgdesc = Collection of shaders for libretro
+	pkgver = r1257.755b4bb
+	pkgrel = 1
+	url = https://github.com/libretro/slang-shaders
+	arch = any
+	groups = libretro
+	license = BSD
+	license = CCPL
+	license = GPL2
+	license = GPL3
+	license = LGPL2.1
+	license = LGPL3
+	license = MIT
+	license = MPL2
+	license = Unlicense
+	makedepends = git
+	optdepends = retroarch
+	provides = libretro-shaders-slang=1257.755b4bb
+	provides = libretro-shaders
+	conflicts = libretro-shaders-slang
+	options = !strip
+	source = libretro-shaders-slang::git+https://github.com/libretro/slang-shaders.git
+	b2sums = SKIP
+
+pkgname = libretro-shaders-slang-git

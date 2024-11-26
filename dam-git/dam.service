@@ -1,0 +1,11 @@
+[Unit]
+Description=Dam
+Requires=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/usr/lib/dam
+ExecStart=/usr/bin/bash -c 'bundle exec rackup -o 0.0.0.0 -p 9669'
+
+[Install]
+WantedBy=multi-user.target

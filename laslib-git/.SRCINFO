@@ -1,0 +1,16 @@
+pkgbase = laslib-git
+	pkgdesc = C++ programming API for reading / writing LIDAR data stored in standard LAS format
+	pkgver = 2.0.3.r95.g11ae4c9
+	pkgrel = 1
+	url = https://lastools.org/
+	arch = x86_64
+	license = LGPL
+	makedepends = cmake
+	makedepends = git
+	depends = gcc-libs
+	provides = laslib
+	conflicts = laslib
+	source = git+https://github.com/LAStools/LAStools.git
+	sha256sums = SKIP
+
+pkgname = laslib-git

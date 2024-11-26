@@ -1,0 +1,16 @@
+pkgbase = emacs-j-mode-git
+	pkgdesc = Emacs-mode for the J language
+	pkgver = 1.1.1.10.ge8725ac
+	pkgrel = 1
+	url = https://github.com/zellio/j-mode
+	install = emacs-j-mode-git.install
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = emacs
+	provides = emacs-j-mode
+	conflicts = emacs-j-mode
+	source = git+https://github.com/zellio/j-mode
+	sha512sums = SKIP
+
+pkgname = emacs-j-mode-git

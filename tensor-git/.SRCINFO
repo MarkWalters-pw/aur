@@ -1,0 +1,19 @@
+pkgbase = tensor-git
+	pkgdesc = Cross-platform Qt5/QML-based Matrix client. Use tensor-quiark-git for newer fork.
+	pkgver = r296.f3f3056
+	pkgrel = 1
+	url = https://github.com/davidar/tensor
+	arch = x86_64
+	arch = i686
+	license = GPL3
+	makedepends = git
+	depends = qt5-quickcontrols
+	source = git+https://github.com/davidar/tensor.git
+	source = git+https://github.com/Fxrh/libqmatrixclient.git
+	source = tensor.desktop
+	sha1sums = SKIP
+	sha1sums = SKIP
+	sha1sums = 4f03c6d93dce615c02360f3b2ab42e6aee883147
+
+pkgname = tensor-git
+

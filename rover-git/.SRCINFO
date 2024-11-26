@@ -1,0 +1,18 @@
+pkgbase = rover-git
+	pkgdesc = Interactive Terraform visualization. State and configuration explorer.
+	pkgver = 0.3.3
+	pkgrel = 2
+	url = https://github.com/im2nguyen/rover
+	arch = x86_64
+	license = MIT
+	makedepends = go>=1.17
+	makedepends = git
+	makedepends = gzip
+	makedepends = tar
+	makedepends = gcc
+	provides = rover
+	conflicts = rover-bin
+	source = rover-0.3.3.tar.gz::https://github.com/im2nguyen/rover/archive/v0.3.3.tar.gz
+	sha256sums = 491709df11c70c9756e55f4cd203321bf1c6b92793b8db91073012a1f13b42e5
+
+pkgname = rover-git

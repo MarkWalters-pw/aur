@@ -1,0 +1,24 @@
+pkgbase = yt-dlg
+	pkgdesc = A cross platform front-end GUI of the popular yt-dlp written in wxPython (maintained fork of youtube-dl-gui)
+	pkgver = 1.8.5
+	pkgrel = 1
+	url = https://github.com/oleksis/youtube-dl-gui
+	arch = any
+	license = custom:UNLICENSE
+	makedepends = python-polib
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = python-setuptools
+	depends = python-pypubsub
+	depends = python-wxpython
+	depends = xdg-utils
+	optdepends = ffmpeg: convert video files to audio-only files
+	optdepends = youtube-dl: alternative to the youtube-dl program downloaded by yt-dlg
+	provides = yt-dlg
+	conflicts = yt-dlg
+	conflicts = youtube-dl-gui
+	source = https://github.com/oleksis/youtube-dl-gui/archive/refs/tags/v1.8.5.tar.gz
+	sha512sums = 0377663acafc2554d37a93ca0c89cfb6ecd2020f29124267f8fb5cf675da5b7bb7892b4bd0f9bbb526d6035cbc0fcf68dffa846b9bb9e01a4d7c59fb5d132a50
+
+pkgname = yt-dlg

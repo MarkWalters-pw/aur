@@ -1,0 +1,20 @@
+pkgbase = poezio-omemo
+	pkgdesc = OMEMO plugin for the Poezio XMPP console client
+	pkgver = v0.7.0
+	pkgrel = 1
+	url = https://code.bouah.net/pep/poezio-omemo
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	depends = python
+	depends = python-setuptools
+	depends = poezio-git
+	depends = python-slixmpp-omemo
+	depends = python-omemo-backend-signal
+	provides = poezio-omemo
+	conflicts = poezio-omemo
+	source = poezio-omemo::git+https://code.bouah.net/pep/poezio-omemo#tag=v0.7.0
+	sha256sums = SKIP
+
+pkgname = poezio-omemo

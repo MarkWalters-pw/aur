@@ -1,0 +1,28 @@
+post_upgrade() {
+  set -e
+  cd /usr/share/beef-xss
+  rm -f Gemfile.lock
+  /usr/bin/bundle config build.nokogiri --use-system-libraries
+  /usr/bin/bundle config set --local path 'vendor/bundle'
+  bundle install
+  /usr/bin/bundle update
+  rm -f Gemfile.lock
+}
+
+post_install() {
+  post_upgrade
+    cat << EOF
+Certainly, here are the simplified steps:
+
+1. Open the Beef-XSS Framework configuration file with a text editor using sudo and edit the username and password in the `config.yaml` file.
+
+    ~$ sudo nano /usr/share/beef-xss/config.yaml
+
+2. Start Beef-XSS with sudo:
+
+    ~$ sudo beef 
+  Or
+    ~$ sudo beef-xss 
+
+EOF
+}

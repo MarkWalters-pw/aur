@@ -1,0 +1,11 @@
+[Unit]
+Description=Virtual console mouse server (for QEMU/VirtualBox)
+Requires=systemd-udevd.service
+After=systemd-udevd.service
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/gpm-vm
+
+[Install]
+WantedBy=multi-user.target

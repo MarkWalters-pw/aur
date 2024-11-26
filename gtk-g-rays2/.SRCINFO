@@ -1,0 +1,24 @@
+pkgbase = gtk-g-rays2
+	pkgdesc = Access the configuration data (and visualise NMEA data) from the WBT-201 GPS
+	pkgver = 2.1.0
+	pkgrel = 1
+	url = https://github.com/stronnag/gtk-g-rays2.git
+	arch = i686
+	arch = x86_64
+	arch = arm
+	arch = aarch64
+	arch = armv7h
+	arch = pentium4
+	license = GPL
+	makedepends = git
+	makedepends = meson
+	depends = gtk3
+	depends = bluez-libs
+	depends = libgudev
+	optdepends = gpsbabel: download log files
+	provides = gtk-g-rays2
+	conflicts = gtk-g-rays2
+	source = gtk-g-rays2::git+https://github.com/stronnag/gtk-g-rays2.git
+	sha512sums = SKIP
+
+pkgname = gtk-g-rays2

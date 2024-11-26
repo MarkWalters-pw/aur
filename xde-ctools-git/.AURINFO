@@ -1,0 +1,18 @@
+pkgbase = xde-ctools-git
+	pkgdesc = X Desktop Environment C-language tools
+	pkgver = 0.1.55.ga0d9eab
+	pkgrel = 1
+	url = https://github.com/bbidulock/xde-ctools
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	depends = libsm
+	depends = libwnck+
+	depends = gtk2
+	provides = xde-ctools
+	conflicts = xde-ctools
+	source = xde-ctools-git::git+https://github.com/bbidulock/xde-ctools.git
+
+pkgname = xde-ctools-git
+

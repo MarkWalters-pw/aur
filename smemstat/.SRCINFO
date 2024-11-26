@@ -1,0 +1,16 @@
+pkgbase = smemstat
+	pkgdesc = Smemstat reports the physical memory usage taking into consideration shared memory.
+	pkgver = 0.02.13
+	pkgrel = 2
+	url = https://github.com/ColinIanKing/smemstat
+	arch = any
+	license = GPL-2.0-or-later
+	makedepends = gcc
+	makedepends = make
+	depends = ncurses
+	provides = smemstat
+	conflicts = smemstat
+	source = https://github.com/ColinIanKing/smemstat/archive/V0.02.13.tar.gz
+	b2sums = fddebcf5cc602d8542cf27284797d9addd92b92e99671cecbf1f78f55eff7d679bc17e2602c816c92a25e6310365a985579629242fc46d2fad195930fd4aab99
+
+pkgname = smemstat

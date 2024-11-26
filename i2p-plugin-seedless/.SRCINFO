@@ -1,0 +1,19 @@
+pkgbase = i2p-plugin-seedless
+	pkgdesc = Distributed Services Directory Lookup for I2P
+	pkgver = 0.1.7_0.1.12
+	pkgrel = 3
+	url = http://sponge.i2p/files/seedless/doc/how-it-works.txt
+	install = seedless.install
+	arch = any
+	groups = i2p-plugins
+	license = WTFPL
+	makedepends = unzip
+	depends = i2p
+	depends = i2p-neodatis
+	provides = i2p-seedless
+	noextract = file://02_seedless.xpi2p
+	source = file://02_seedless.xpi2p
+	sha256sums = 26df04b135a9b0a4fcd37e8f911972c157529b84c51a7569695da2e6ce366989
+
+pkgname = i2p-plugin-seedless
+

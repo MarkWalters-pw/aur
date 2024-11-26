@@ -1,0 +1,19 @@
+pkgbase = sic-image-cli-git
+	pkgdesc = Accessible image processing and conversion from the terminal (git)
+	pkgver = 0.22.4.r1.gf11754c
+	pkgrel = 1
+	url = https://github.com/foresterre/sic
+	arch = x86_64
+	license = MIT
+	makedepends = cargo
+	makedepends = git
+	makedepends = nasm
+	depends = gcc-libs
+	provides = sic-image-cli
+	conflicts = sic
+	conflicts = sic-image-cli
+	options = !lto
+	source = git+https://github.com/foresterre/sic
+	sha512sums = SKIP
+
+pkgname = sic-image-cli-git

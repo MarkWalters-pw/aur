@@ -1,0 +1,33 @@
+pkgbase = ros-melodic-rtabmap
+	pkgdesc = ROS - RTAB-Maps standalone library.
+	pkgver = 0.20.9
+	pkgrel = 2
+	url = http://introlab.github.io/rtabmap
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-melodic-octomap
+	makedepends = ros-melodic-qt-gui-cpp
+	makedepends = ros-melodic-cv-bridge
+	makedepends = sqlite
+	makedepends = vtk
+	makedepends = qt5-x11extras
+	makedepends = zlib
+	makedepends = proj
+	makedepends = pcl
+	makedepends = gtk3
+	depends = ros-melodic-octomap
+	depends = ros-melodic-qt-gui-cpp
+	depends = ros-melodic-cv-bridge
+	depends = sqlite
+	depends = vtk
+	depends = qt5-x11extras
+	depends = zlib
+	depends = pcl
+	depends = gtk3
+	source = ros-melodic-rtabmap-0.20.9.tar.gz::https://github.com/introlab/rtabmap/archive/0.20.9-melodic.tar.gz
+	sha256sums = 5719445a8d94ae3d378db6cb77081ca9e3a60fbda77a5092a7cb8bc09bf0e4a3
+
+pkgname = ros-melodic-rtabmap
+

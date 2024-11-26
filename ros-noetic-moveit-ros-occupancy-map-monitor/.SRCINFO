@@ -1,0 +1,21 @@
+pkgbase = ros-noetic-moveit-ros-occupancy-map-monitor
+	pkgdesc = ROS - Components of MoveIt! connecting to occupancy map
+	pkgver = 1.1.13
+	pkgrel = 1
+	url = https://wiki.ros.org/moveit_ros
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-catkin
+	makedepends = eigen
+	depends = ros-noetic-moveit-core
+	depends = ros-noetic-moveit-msgs
+	depends = ros-noetic-pluginlib
+	depends = ros-noetic-tf2-ros
+	depends = ros-noetic-geometric-shapes
+	depends = octomap
+	source = ros-noetic-moveit-ros-occupancy-map-monitor-1.1.13.tar.gz::https://github.com/ros-planning/moveit/archive/1.1.13.tar.gz
+	sha256sums = 91735df0ec1a7bdbcdad9028352a0d78d44fad2076584319120e2e10ecb5882c
+
+pkgname = ros-noetic-moveit-ros-occupancy-map-monitor

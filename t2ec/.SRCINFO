@@ -1,0 +1,20 @@
+pkgbase = t2ec
+	pkgdesc = Scripts to display info icons and controls in Tint2 or other panels
+	pkgver = 1.4
+	pkgrel = 3
+	url = https://github.com/nwg-piotr/tint2-executors
+	arch = x86_64
+	license = GPL3
+	depends = python
+	depends = acpi
+	depends = xorg-xbacklight
+	depends = alsa-utils
+	depends = wireless_tools
+	depends = wget
+	optdepends = light: for machines not handling xbacklight
+	optdepends = rof-git: for running mouse events commands as single instances
+	optdepends = zenity: for volume and brightness slider box
+	source = https://github.com/nwg-piotr/t2ec/archive/v1.4.tar.gz
+	md5sums = 5d3c99306d30da29998c39c6dea741eb
+
+pkgname = t2ec

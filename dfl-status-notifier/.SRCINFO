@@ -1,0 +1,20 @@
+pkgbase = dfl-status-notifier
+	pkgdesc = Implementation of the XDG Status Notification Specifications
+	pkgver = 0.2.0
+	pkgrel = 1
+	url = https://gitlab.com/desktop-frameworks/status-notifier
+	arch = x86_64
+	arch = aarch64
+	license = GPL3
+	makedepends = meson
+	makedepends = ninja
+	makedepends = qt5-base
+	makedepends = qt6-base
+	source = https://gitlab.com/desktop-frameworks/status-notifier/-/archive/v0.2.0/status-notifier-v0.2.0.tar.gz
+	md5sums = bc1aabfe36ded1b3abc6744d5b994cfe
+
+pkgname = dfl-status-notifier
+	depends = qt5-base
+
+pkgname = dfl-status-notifier-qt6
+	depends = qt6-base

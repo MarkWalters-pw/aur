@@ -1,0 +1,9 @@
+[Unit]
+Description=libinput-xrandr-autorotate
+
+[Service]
+ExecStart=/usr/bin/libinput-xrandr-autorotate
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

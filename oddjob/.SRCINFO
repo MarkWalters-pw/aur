@@ -1,0 +1,27 @@
+pkgbase = oddjob
+	pkgdesc = A D-Bus service which runs odd jobs on behalf of client applications
+	pkgver = 0.34.7
+	pkgrel = 1
+	url = https://releases.pagure.org/oddjob/
+	install = oddjob.install
+	arch = i686
+	arch = x86_64
+	license = BSD
+	makedepends = libselinux
+	depends = cyrus-sasl
+	depends = dbus
+	depends = krb5
+	depends = libxml2
+	depends = openldap
+	depends = pam
+	depends = python
+	depends = systemd
+	options = !libtool
+	backup = etc/oddjobd.conf.d/oddjobd-introspection.conf
+	backup = etc/oddjobd.conf.d/oddjobd-mkhomedir.conf
+	backup = etc/oddjobd.conf
+	backup = 0001_Remove_SELinux_support.patch
+	source = https://pagure.io/oddjob/archive/oddjob-0.34.7/oddjob-oddjob-0.34.7.tar.gz
+	sha512sums = f7a29058bee063d88ae69e1256dd8a8db152fb6a79790780ea661fd4cd4f82385470dc9015419aa47a7bccd4f5673e68c07471cbc3c00586e5a3d1b175a09b99
+
+pkgname = oddjob

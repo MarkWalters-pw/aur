@@ -1,0 +1,7 @@
+#
+# copy this file to /etc/udev/rules.d and uncomment the links that follow to start
+# addrwatch on ethernet interfaces
+#
+#ACTION=="remove", GOTO="addrwatch_end"
+#SUBSYSTEM=="net", KERNEL=="eth*|usb*|en*|wlan*", TAG+="systemd", ENV{SYSTEMD_ALIAS}+="/sys/subsystem/net/devices/$name", ENV{SYSTEMD_WANTS}+="addrwatch@%k.service"
+#LABEL="addrwatch_end"

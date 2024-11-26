@@ -1,0 +1,24 @@
+pkgbase = mlapack
+	pkgdesc = Multiple precision linear algebra package (fork of MPLAPACK)
+	pkgver = 0.8.1
+	pkgrel = 4
+	arch = x86_64
+	arch = i686
+	groups = mlapack
+	license = Custom
+	checkdepends = check
+	makedepends = qd
+	makedepends = gmp
+	makedepends = mpfr
+	makedepends = libmpc
+	makedepends = libtool
+	source = https://github.com/RaumZeit/mlapack/releases/download/v0.8.1/mlapack-0.8.1.tar.gz
+	sha256sums = a0810b16b85f442f90933f04a5e4a4e8fb3ec234d755e1ed5ef72dcf04d4709a
+
+pkgname = mlapack
+	depends = qd
+	depends = gmp
+	depends = mpfr
+	depends = libmpc
+	provides = mlapack=0.8.1
+

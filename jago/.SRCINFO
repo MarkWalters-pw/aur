@@ -1,0 +1,22 @@
+pkgbase = jago
+	pkgdesc = a SGF viewer + an IGS client + GMP client
+	pkgver = 6.2
+	pkgrel = 2
+	url = http://jagoclient.sourceforge.net/
+	install = jago.install
+	arch = any
+	license = GPL2
+	depends = java-environment
+	depends = desktop-file-utils
+	noextract = jago.jar
+	options = !strip
+	source = http://jagoclient.sourceforge.net/jago.jar
+	source = jago.sh::http://ix.io/1UeH
+	source = jago.png
+	source = jago.desktop
+	sha256sums = 6200ffa1ba04b323046c7fb87d293c6f686c10795d3a02f733213cf10c99d4c7
+	sha256sums = 75187d608f84582d65becbe35579c0655d918d2660fe424b972acfed8ed12572
+	sha256sums = d62858c2397d84d4d76baf751b45940d845a619a67b3798b07b9149a8a106329
+	sha256sums = 0ea0635e53a3b86177889719db1257ee34f44ea946a8bc013973afe6bc51491f
+
+pkgname = jago

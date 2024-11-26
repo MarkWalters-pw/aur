@@ -1,0 +1,16 @@
+pkgbase = xerox-workcentre-6505
+	pkgdesc = CUPS driver for the Xerox WorkCentre 6505
+	pkgver = 1.0
+	pkgrel = 1
+	url = https://www.support.xerox.com/support/workcentre-6505/downloads/enus.html?operatingSystem=linux
+	arch = any
+	license = custom
+	makedepends = rpmextract
+	depends = cups
+	source = xerox-workcentre-6505.rpm::http://download.support.xerox.com/pub/drivers/WC6505/drivers/linux/en_GB/Xerox-WorkCentre-6505-Linux.rpm
+	source = LICENSE
+	sha256sums = c833ba8e00a73d1e633ad7a47bd7f08b516f17a6783e90550ff616f09fd16489
+	sha256sums = c13727c7e2e002709fca9a32d69b99c95e70122fadd860bccd5f0a963ea01273
+
+pkgname = xerox-workcentre-6505
+

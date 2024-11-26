@@ -1,0 +1,27 @@
+pkgbase = fossil-fossil
+	pkgdesc = A simple, high-reliability, distributed software configuration management system
+	pkgver = r17890.383f6d4
+	pkgrel = 1
+	url = https://fossil-scm.org/home/doc/trunk/www/index.wiki
+	arch = i686
+	arch = x86_64
+	license = BSD
+	makedepends = fossil
+	makedepends = tcl
+	depends = glibc
+	depends = openssl
+	depends = zlib
+	optdepends = tcl
+	provides = fossil=r17890.383f6d4
+	conflicts = fossil
+	backup = etc/xinetd.d/fossil
+	source = fossil.fossil::fossil+https://fossil-scm.org/home
+	source = fossil-xinetd::https://gitlab.archlinux.org/archlinux/packaging/packages/fossil/-/raw/main/fossil-xinetd
+	source = fossil@.service::https://gitlab.archlinux.org/archlinux/packaging/packages/fossil/-/raw/main/fossil.service
+	source = fossil.socket::https://gitlab.archlinux.org/archlinux/packaging/packages/fossil/-/raw/main/fossil.socket
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = fossil-fossil

@@ -1,0 +1,16 @@
+pkgbase = wintoggle-git
+	pkgdesc = A simple window focus toggler
+	pkgver = 3.0.3
+	pkgrel = 2
+	url = https://github.com/v--/wintoggle
+	arch = x86_64
+	arch = i386
+	license = Unlicense
+	makedepends = make
+	depends = libx11
+	provides = wintoggle
+	conflicts = wintoggle
+	source = git+https://github.com/v--/wintoggle.git
+	sha256sums = SKIP
+
+pkgname = wintoggle-git

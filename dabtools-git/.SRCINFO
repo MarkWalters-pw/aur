@@ -1,0 +1,18 @@
+pkgbase = dabtools-git
+	pkgdesc = DAB/DAB+ software for RTL-SDR dongles and the Psion Wavefinder including ETI stream recording.
+	pkgver = 0.01.f8003df
+	pkgrel = 1
+	url = https://github.com/Opendigitalradio/dabtools
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = cmake
+	depends = rtl-sdr
+	depends = fftw
+	provides = dabtools
+	provides = dabtools-git
+	conflicts = dabtools
+	source = dabtools::git+https://github.com/Opendigitalradio/dabtools.git
+	sha512sums = SKIP
+
+pkgname = dabtools-git

@@ -1,0 +1,24 @@
+pkgbase = libretro-prboom-git
+	pkgdesc = PrBoom (Doom/Doom II/Final Doom) core
+	pkgver = r666.2ab3b4a
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/libretro/libretro-prboom
+	install = libretro-prboom.install
+	arch = aarch64
+	arch = armv7h
+	arch = i486
+	arch = i686
+	arch = pentium4
+	arch = x86_64
+	groups = libretro
+	license = GPL2
+	makedepends = git
+	depends = glibc
+	depends = libretro-core-info
+	provides = libretro-prboom
+	conflicts = libretro-prboom
+	source = libretro-prboom::git+https://github.com/libretro/libretro-prboom.git
+	b2sums = SKIP
+
+pkgname = libretro-prboom-git

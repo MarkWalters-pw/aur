@@ -1,0 +1,20 @@
+pkgbase = xf86-video-siliconmotion
+	pkgdesc = X.org siliconmotion video driver
+	pkgver = 1.7.9
+	pkgrel = 1
+	url = https://xorg.freedesktop.org/
+	arch = i686
+	arch = x86_64
+	groups = xorg-drivers
+	license = custom
+	makedepends = xorg-server-devel
+	makedepends = X-ABI-VIDEODRV_VERSION=24.0
+	depends = glibc
+	source = https://xorg.freedesktop.org//releases/individual/driver/xf86-video-siliconmotion-1.7.9.tar.bz2
+	source = https://xorg.freedesktop.org//releases/individual/driver/xf86-video-siliconmotion-1.7.9.tar.bz2.sig
+	validpgpkeys = 7B27A3F1A6E18CD9588B4AE8310180050905E40C
+	sha256sums = d0f3c691e71108d27a061beb62bf78b36ec35bd755905692734dd68cfb3359bc
+	sha256sums = SKIP
+
+pkgname = xf86-video-siliconmotion
+

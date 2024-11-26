@@ -1,0 +1,19 @@
+pkgbase = libretro-tyrquake-git
+	pkgdesc = Tyrquake libretro core (Quake).
+	pkgver = r1676.a4f5e1c
+	pkgrel = 1
+	url = http://disenchant.net/tyrquake/
+	arch = i686
+	arch = x86_64
+	groups = libretro
+	license = GPL2
+	makedepends = git
+	depends = sdl2
+	depends = libretro-core-info
+	provides = libretro-tyrquake
+	conflicts = libretro-tyrquake
+	source = git+https://github.com/libretro/tyrquake.git
+	sha256sums = SKIP
+
+pkgname = libretro-tyrquake-git
+

@@ -1,0 +1,15 @@
+pkgbase = jabbrv-git
+	pkgdesc = Automatic Journal Title Abbreviation Package for LaTeX
+	pkgver = r49.d922ed6
+	pkgrel = 1
+	url = https://github.com/compholio/jabbrv
+	arch = x86_64
+	license = LPPL
+	makedepends = git
+	depends = texlive-core
+	provides = jabbrv
+	conflicts = jabbrv
+	source = jabbrv::git+https://github.com/compholio/jabbrv.git
+	md5sums = SKIP
+
+pkgname = jabbrv-git

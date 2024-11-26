@@ -1,0 +1,26 @@
+pkgbase = mozjpeg-git
+	pkgdesc = Improved JPEG encoder
+	pkgver = 4.0.3.r198.g5552483d
+	pkgrel = 1
+	url = https://github.com/mozilla/mozjpeg
+	arch = x86_64
+	license = BSD
+	makedepends = git
+	makedepends = cmake
+	makedepends = nasm
+	makedepends = java-environment>11
+	depends = glibc
+	depends = libpng
+	optdepends = java-runtime>11: for TurboJPEG Java wrapper
+	provides = libjpeg
+	provides = libjpeg.so
+	provides = libturbojpeg.so
+	provides = libjpeg-turbo
+	provides = mozjpeg
+	conflicts = libjpeg
+	conflicts = mozjpeg
+	conflicts = libjpeg-turbo
+	source = git+https://github.com/mozilla/mozjpeg
+	sha512sums = SKIP
+
+pkgname = mozjpeg-git

@@ -1,0 +1,15 @@
+pkgbase = visicut-git
+	pkgdesc = A user-friendy, platform-independent tool for preparing, saving and sending jobs to laser cutters.
+	pkgver = 2.0.r7.g4054819
+	pkgrel = 1
+	url = https://visicut.org/
+	arch = any
+	license = LGPL-3.0-or-later
+	makedepends = maven
+	makedepends = git
+	depends = java-runtime=11
+	provides = visicut
+	source = visicut-git::git+https://github.com/t-oster/VisiCut.git
+	md5sums = SKIP
+
+pkgname = visicut-git

@@ -1,0 +1,16 @@
+pkgbase = octave-parallel
+	pkgdesc = Parallel execution package. See also package mpi, maintained by Carlo de Falco.
+	pkgver = 4.0.1
+	pkgrel = 1
+	url = https://gnu-octave.github.io/packages/parallel/
+	install = octave-parallel.install
+	arch = any
+	groups = octave-forge
+	license = GPL3
+	depends = octave>=4.0.0
+	depends = octave-struct>=1.0.12
+	noextract = parallel-4.0.1.tar.gz
+	source = https://downloads.sourceforge.net/octave/parallel-4.0.1.tar.gz
+	sha256sums = ea86535e167351f3214feea4d0524626d07e211d1e84d94cbf230d41b2e01bc1
+
+pkgname = octave-parallel

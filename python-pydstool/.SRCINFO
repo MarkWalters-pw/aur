@@ -1,0 +1,20 @@
+pkgbase = python-pydstool
+	pkgdesc = Simulation and analysis environment for dynamical systems
+	pkgver = 0.91.0
+	pkgrel = 3
+	url = https://github.com/robclewley/pydstool
+	arch = any
+	license = BSD
+	checkdepends = python-pytest-mock
+	checkdepends = python-pytest-xdist
+	makedepends = dos2unix
+	makedepends = python-setuptools
+	depends = python<3.10
+	depends = python-numpy
+	depends = python-scipy
+	replaces = python2-pydstool
+	options = !emptydirs
+	source = PyDSTool-0.91.0.tar.gz::https://github.com/robclewley/pydstool/archive/v0.91.0.tar.gz
+	sha256sums = 828730549872851ff78746e17421ad66ce0dfd74026539bc72247f405f5768f7
+
+pkgname = python-pydstool

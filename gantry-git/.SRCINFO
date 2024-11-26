@@ -1,0 +1,18 @@
+pkgbase = gantry-git
+	pkgdesc = Pipeline management tool using containers as its building blocks
+	pkgver = v0.5.0.r0.g06c0e5c
+	pkgrel = 1
+	url = https://github.com/ad-freiburg/gantry
+	arch = x86_64
+	license = APACHE
+	makedepends = go-pie
+	makedepends = git
+	depends = docker
+	optdepends = wharfer: wrapper around docker
+	provides = gantry
+	conflicts = gantry
+	source = gantry-git::git+https://github.com/ad-freiburg/gantry
+	md5sums = SKIP
+
+pkgname = gantry-git
+

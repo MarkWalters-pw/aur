@@ -1,0 +1,20 @@
+pkgbase = porter-bin
+	pkgdesc = A utility to help make your application + etc (env/tool) as a versioned bundle that you can distribute, and then install with a single command
+	pkgver = 0.29.1
+	pkgrel = 3
+	epoch = 1
+	url = https://github.com/deislabs/porter
+	arch = x86_64
+	license = MIT
+	optdepends = kubernetes-bin
+	optdepends = helm
+	optdepends = terraform
+	optdepends = azure-cli: Command-line tools for Azure
+	optdepends = aws-cli: cli for Amazon Web Services
+	optdepends = google-cloud-sdk: gcloud - command-line tools for the Google Cloud Platform
+	provides = porter
+	source = porter-bin-0.29.1::https://cdn.porter.sh/v0.29.1/porter-linux-amd64
+	sha512sums = d8c73629cbe3a2021b44c405956aa14d4b6ec5b6132676e1cc3dacb0874697ceae5621356bf5f69e6cbee86cc7814b570e262a2bac2e0ef956316304b0d37ae2
+
+pkgname = porter-bin
+

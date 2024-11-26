@@ -1,0 +1,21 @@
+pkgbase = btag-git
+	pkgdesc = A command line based audio file tagger
+	pkgver = 1.4.1
+	pkgrel = 4
+	url = https://github.com/fernandotcl/btag
+	arch = i686
+	arch = x86_64
+	license = BSD
+	makedepends = git
+	makedepends = cmake
+	makedepends = pkg-config
+	makedepends = boost
+	depends = libcue
+	depends = taglib
+	depends = libedit
+	provides = btag
+	source = btag::git+https://github.com/fernandotcl/btag
+	sha256sums = SKIP
+
+pkgname = btag-git
+

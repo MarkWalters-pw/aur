@@ -1,0 +1,30 @@
+pkgbase = cppcms
+	pkgdesc = CppCMS is the web development framework written in C++, that is aimed on development of high performance web application.
+	pkgver = 1.2.1
+	pkgrel = 2
+	url = http://cppcms.sourceforge.net/
+	arch = i486
+	arch = i686
+	arch = pentium4
+	arch = x86_64
+	license = LGPL
+	makedepends = cmake
+	makedepends = python2
+	depends = pcre
+	depends = zlib
+	optdepends = sqlite: Sqlite3 session storage.
+	optdepends = db: Berkeley DB session storage.
+	optdepends = cppdb: CppDB session storage.
+	optdepends = openssl
+	optdepends = gnutls
+	provides = cppcms
+	provides = libcppcms
+	provides = libbooster
+	conflicts = cppcms
+	conflicts = libcppcms
+	conflicts = libbooster
+	source = cppcms-1.2.1.tar.bz2::http://sourceforge.net/projects/cppcms/files/cppcms/1.2.1/cppcms-1.2.1.tar.bz2/download
+	sha256sums = 10fec7710409c949a229b9019ea065e25ff5687103037551b6f05716bf6cac52
+
+pkgname = cppcms
+

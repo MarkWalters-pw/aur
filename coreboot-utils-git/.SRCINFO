@@ -1,0 +1,51 @@
+pkgbase = coreboot-utils-git
+	pkgdesc = Tools and utilities to work with coreboot firmware
+	pkgver = 4.19.r781.g6b6b8f86df3
+	pkgrel = 1
+	url = https://www.coreboot.org/
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = go
+	depends = pciutils
+	optdepends = python: me_cleaner support
+	source = git+https://review.coreboot.org/coreboot.git
+	source = git+https://review.coreboot.org/blobs.git
+	source = git+https://review.coreboot.org/nvidia-cbootimage.git
+	source = git+https://review.coreboot.org/vboot.git#branch=main
+	source = git+https://review.coreboot.org/arm-trusted-firmware.git
+	source = git+https://review.coreboot.org/chrome-ec.git
+	source = git+https://review.coreboot.org/libhwbase.git
+	source = git+https://review.coreboot.org/libgfxinit.git
+	source = git+https://review.coreboot.org/fsp.git
+	source = git+https://review.coreboot.org/opensbi.git
+	source = git+https://review.coreboot.org/intel-microcode.git#branch=main
+	source = git+https://review.coreboot.org/ffs.git
+	source = git+https://review.coreboot.org/amd_blobs
+	source = git+https://review.coreboot.org/cmocka.git#branch=stable-1.1
+	source = git+https://review.coreboot.org/qc_blobs.git
+	source = git+https://review.coreboot.org/9esec-security-tooling.git
+	source = git+https://review.coreboot.org/STM#branch=stmpe
+	source = git+https://review.coreboot.org/goswid#branch=trunk
+	source = autoport-tool-paths.patch
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = 5136f8ae6c690501b483243a33b91dc978971cf23bcf48c27bdca845db53bdb1
+
+pkgname = coreboot-utils-git

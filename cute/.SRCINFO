@@ -1,0 +1,15 @@
+pkgbase = cute
+	pkgdesc = TUI HTTP client with API/auth key management and request history/storage
+	pkgver = 0.1.1
+	pkgrel = 1
+	url = https://github.com/PThorpe92/CuTE
+	arch = x86_64
+	license = GPL3
+	makedepends = cargo
+	depends = gcc-libs
+	depends = curl
+	options = !lto
+	source = cute-0.1.1.tar.gz::https://github.com/PThorpe92/CuTE/archive/v0.1.1.tar.gz
+	sha512sums = 25a0e9c843d29912b4fe1f8c0a1904b10c0870d84c07752f6efd3977263e2e239dbb7c968ab5d4644bdbdf77582d9ef6e24b0b771b284fbe46f17fb84adc046c
+
+pkgname = cute

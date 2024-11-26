@@ -1,0 +1,41 @@
+post_install() {
+    pkgname=reducemp4video
+
+    # Fixing membership
+    chown http: /var/log/$pkgname
+    chown -R http: /etc/$pkgname
+
+    # Reload systemctl
+    systemctl daemon-reload
+
+    echo "Adding reducemp4video in systemctl:"
+    echo "  systemctl enable reducemp4video"
+    echo "  systemctl start reducemp4video"
+
+    true
+}
+
+post_upgrade() {
+	chown http: /var/log/$pkgname
+  chown -R http: /etc/$pkgname
+
+  # Reload systemctl
+  systemctl daemon-reload
+
+  echo "You should restart reducemp4video:"
+  echo "  systemctl restart reducemp4video"
+
+	true
+}
+
+pre_remove() {
+  pkgname=reducemp4video
+  # Remove symlink in systemd
+  systemctl disable $pkgname
+  # Stop server
+  systemctl stop $pkgname
+  # Reload systemctl
+  # systemctl daemon-reload
+
+	true
+}

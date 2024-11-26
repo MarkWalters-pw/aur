@@ -1,0 +1,24 @@
+pkgbase = streamlink-twitch-gui-git
+	pkgdesc = A multi platform Twitch.tv browser for Streamlink
+	pkgver = 2660.1bb64e38
+	pkgrel = 1
+	url = https://github.com/streamlink/streamlink-twitch-gui
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = nodejs
+	makedepends = yarn
+	makedepends = xorg-server-xvfb
+	depends = alsa-lib
+	depends = gtk3
+	depends = libxss
+	depends = nss
+	depends = streamlink
+	provides = streamlink-twitch-gui
+	conflicts = streamlink-twitch-gui
+	options = !strip
+	source = streamlink-twitch-gui::git+https://github.com/streamlink/streamlink-twitch-gui.git
+	sha256sums = SKIP
+
+pkgname = streamlink-twitch-gui-git

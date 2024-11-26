@@ -1,0 +1,23 @@
+pkgbase = beanstalkd-git
+	pkgdesc = Fast, simple message queue server, git version
+	pkgver = dev1.12.r11.g4c275d5
+	pkgrel = 1
+	url = https://beanstalkd.github.io/
+	arch = i686
+	arch = x86_64
+	license = GPL
+	provides = beanstalkd
+	conflicts = beanstalkd
+	backup = etc/conf.d/beanstalkd
+	source = git+http://github.com/kr/beanstalkd.git
+	source = beanstalkd@.service
+	source = beanstalkd.service
+	source = beanstalkd.conf
+	source = wno-error.patch
+	sha1sums = SKIP
+	sha1sums = 8ef8fe89b7da43ed92ae7b2428f1126a5a0d060a
+	sha1sums = 3ba17f1786aeabcba7e11c5a42415a7882c67c1b
+	sha1sums = 96f94770b132a0c26acddeab224c64bb5bed359a
+	sha1sums = 4098dfbbc0639c4c772b0e53a17fb175bc7f4086
+
+pkgname = beanstalkd-git

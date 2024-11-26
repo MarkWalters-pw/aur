@@ -1,0 +1,25 @@
+--- openhab2.orig/runtime/bin/oh2_dir_layout	2018-12-17 02:24:37.000000000 +0100
++++ openhab2.new/runtime/bin/oh2_dir_layout	2018-12-19 12:23:27.777134293 +0100
+@@ -6,7 +6,7 @@
+ export OPENHAB_HOME=`cd "$DIRNAME/../.."; pwd`
+ 
+ if [ -z ${OPENHAB_CONF} ]; then
+-    export OPENHAB_CONF="${OPENHAB_HOME}/conf"
++    export OPENHAB_CONF="/etc/openhab2"
+ fi
+ 
+ if [ -z ${OPENHAB_RUNTIME} ]; then
+@@ -14,11 +14,11 @@
+ fi
+ 
+ if [ -z ${OPENHAB_USERDATA} ]; then
+-    export OPENHAB_USERDATA="${OPENHAB_HOME}/userdata"
++    export OPENHAB_USERDATA="/var/lib/openhab2"
+ fi
+ 
+ if [ -z ${OPENHAB_LOGDIR} ]; then
+-    export OPENHAB_LOGDIR="${OPENHAB_USERDATA}/logs"
++    export OPENHAB_LOGDIR="/var/log/openhab2"
+ fi
+ 
+ if [ -z ${OPENHAB_BACKUPS} ]; then

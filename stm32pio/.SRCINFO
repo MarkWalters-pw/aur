@@ -1,0 +1,27 @@
+pkgbase = stm32pio
+	pkgdesc = Automate managing of STM32CubeMX + PlatformIO projects
+	pkgver = 2.1.0
+	pkgrel = 1
+	url = https://github.com/ussserrr/stm32pio
+	arch = x86_64
+	license = MIT
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	makedepends = python-setuptools-scm
+	depends = python
+	depends = pyside2
+	depends = qt5-3d
+	depends = qt5-base
+	depends = qt5-datavis3d
+	depends = qt5-declarative
+	depends = qt5-graphicaleffects
+	depends = qt5-imageformats
+	depends = qt5-quickcontrols
+	depends = qt5-quickcontrols2
+	optdepends = code: for text editing
+	optdepends = platformio: A cross-platform code builder and library manager
+	source = git+http://github.com/ussserrr/stm32pio.git
+	md5sums = SKIP
+
+pkgname = stm32pio
+

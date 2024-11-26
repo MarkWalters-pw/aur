@@ -1,0 +1,35 @@
+[Unit]
+Description=Simple socks5 server and relay
+After=network.target
+
+[Service]
+Type=simple
+DynamicUser=true
+
+EnvironmentFile=/etc/default/socks-relay
+ExecStart=/usr/bin/socks-relay $SOCKS_RELAY_HOST:$SOCKS_RELAY_PORT
+
+Restart=always
+RestartSec=10s
+
+ProtectHome=true
+PrivateDevices=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+
+RestrictNamespaces=true
+
+SystemCallArchitectures=native
+SystemCallFilter=@system-service
+RestrictAddressFamilies=AF_INET AF_INET6
+
+LockPersonality=true
+RestrictRealtime=true
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,17 @@
+pkgbase = parcimonie-sh-git
+	pkgdesc = Bash reimplementation of parcimonie
+	pkgver = 78.529e2fa
+	pkgrel = 1
+	url = https://github.com/EtiennePerot/parcimonie.sh
+	arch = any
+	license = custom:WTFPL
+	makedepends = git
+	depends = bash
+	depends = torsocks
+	depends = tor
+	depends = gnupg
+	source = git+https://github.com/EtiennePerot/parcimonie.sh?signed
+	validpgpkeys = 5039F36EE75CCD6EC444A0075CFC3B88974EE250
+	b2sums = SKIP
+
+pkgname = parcimonie-sh-git

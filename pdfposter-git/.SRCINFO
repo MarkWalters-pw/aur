@@ -1,0 +1,14 @@
+pkgbase = pdfposter-git
+	pkgdesc = Print large posters on multiple sheets
+	pkgver = 0.8.1.r27.g2d0ed65
+	pkgrel = 1
+	url = https://pdfposter.readthedocs.io
+	arch = any
+	license = GPL3
+	makedepends = python-distribute
+	depends = python-pypdf2
+	options = !emptydirs
+	source = git+https://gitlab.com/pdftools/pdfposter.git
+	sha256sums = SKIP
+
+pkgname = pdfposter-git

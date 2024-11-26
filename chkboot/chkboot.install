@@ -1,0 +1,23 @@
+#!/bin/bash
+
+post_install() {
+    cat<<INSTALLEOF
+    This package replaces the old chkboot package and the chkboot-git package.
+    Check your configuration files and make all the adjustments necessary.
+INSTALLEOF
+}
+
+post_remove() {
+    cat<<REMOVEEOF
+    Remove the "chkboot" from the "HOOKS" section in "/etc/mkinitcpio.conf"
+    and rebuild the initramfs.
+REMOVEEOF
+}
+
+post_upgrade() {
+    cat<<INSTALLEOF
+    This release introduces a desktop alert script, in /usr/bin/chkboot-desktopalert.
+    Include this script in your desktop environment or window manager initialization
+    scripts to get a graphical warning of when your boot files are modified.
+INSTALLEOF
+}

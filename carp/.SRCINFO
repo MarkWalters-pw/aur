@@ -1,0 +1,18 @@
+pkgbase = carp
+	pkgdesc = EncFS gui and cli front-end
+	pkgver = 0.8.2
+	pkgrel = 5
+	url = https://git.umaneti.net/carp/about/
+	arch = any
+	license = WTFPL
+	makedepends = python-setuptools
+	makedepends = emacs
+	depends = encfs
+	depends = python-gobject
+	depends = python-inotify>=0.2.9
+	depends = python-pyxdg
+	optdepends = rsync: sync support
+	source = https://git.umaneti.net/carp/snapshot/carp-0.8.2.tar.gz
+	sha256sums = 0a1cd4e0b8fa799644b116379fecf83f7304cf487ba198e511e52f372e5b1a77
+
+pkgname = carp

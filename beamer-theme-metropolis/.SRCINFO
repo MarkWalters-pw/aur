@@ -1,0 +1,15 @@
+pkgbase = beamer-theme-metropolis
+	pkgdesc = A modern LaTeX Beamer theme
+	pkgver = 1.2
+	pkgrel = 1
+	url = https://github.com/matze/mtheme
+	install = beamer-theme-metropolis.install
+	arch = any
+	license = custom:cc-by-sa-4.0
+	depends = texlive-core
+	depends = texlive-pictures
+	depends = ttf-fira-sans
+	source = beamer-theme-metropolis::git+https://github.com/matze/mtheme.git
+	sha512sums = SKIP
+
+pkgname = beamer-theme-metropolis

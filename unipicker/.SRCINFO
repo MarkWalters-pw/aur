@@ -1,0 +1,15 @@
+pkgbase = unipicker
+	pkgdesc = CLI utility for searching unicode characters by description and copy them to the clipboard
+	pkgver = 2.0.1
+	pkgrel = 1
+	url = https://github.com/jeremija/unipicker
+	arch = any
+	license = MIT
+	makedepends = python
+	depends = bash
+	optdepends = fzf: selector command
+	optdepends = xclip: for copying to clipboard
+	source = unipicker-2.0.1.tar.gz::https://github.com/jeremija/unipicker/archive/v2.0.1.tar.gz
+	sha512sums = 6b35e1b79a7a75ae3f1431eec702843efe68cd99b6c6069466b1c6489f6acb93e1b42ce4dc036d52bb68e915399754a8a69a73c409e4a0db40a2249da06940a2
+
+pkgname = unipicker

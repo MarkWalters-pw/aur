@@ -1,0 +1,16 @@
+pkgbase = kaitai-struct-compiler-git
+	pkgdesc = Compiler for the Kaitai declarative binary format parsing language.
+	pkgver = 0.10.r56.g0acd030
+	pkgrel = 1
+	url = https://kaitai.io
+	arch = any
+	license = GPL3
+	makedepends = git
+	makedepends = sbt
+	depends = java-runtime
+	provides = kaitai-struct-compiler
+	conflicts = kaitai-struct-compiler
+	source = kaitai-struct-compiler::git+https://github.com/kaitai-io/kaitai_struct_compiler.git
+	sha256sums = SKIP
+
+pkgname = kaitai-struct-compiler-git

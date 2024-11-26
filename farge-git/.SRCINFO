@@ -1,0 +1,23 @@
+pkgbase = farge-git
+	pkgdesc = Click on a pixel on your screen and show its color value
+	pkgver = r56.eadb483
+	pkgrel = 2
+	url = https://github.com/sdushantha/farge
+	arch = any
+	license = MIT
+	makedepends = git
+	depends = bash
+	depends = imagemagick
+	depends = feh
+	optdepends = mpv: alternative image viewer
+	optdepends = sxiv: alternate image viewer
+	optdepends = colorpicker-ym1234-git: for X11 support
+	optdepends = wl-clipboard: for wayland support
+	optdepends = grim: for wayland support
+	optdepends = slurp: for wayland support
+	provides = farge
+	conflicts = farge
+	source = farge::git+https://github.com/sdushantha/farge.git
+	sha256sums = SKIP
+
+pkgname = farge-git

@@ -1,0 +1,47 @@
+diff -ruNp vfu-5.02.orig/rx/rx_auto vfu-5.02/rx/rx_auto
+--- vfu-5.02.orig/rx/rx_auto	2023-02-11 01:09:01.000000000 +0200
++++ vfu-5.02/rx/rx_auto	2023-02-12 21:27:31.819143617 +0200
+@@ -27,7 +27,7 @@ for( glob "/tmp/*.rx.cache" )
+ 
+ my $rx = choose( $file ) or die "$0: this file type is not known to me, sorry\n";
+ 
+-exec_if_exists( "/usr/libexec/vfu/$rx", @ARGV );
++exec_if_exists( "/usr/lib/vfu/$rx", @ARGV );
+ exec_if_exists( "$ENV{HOME}/bin/$rx", @ARGV );
+ die "$0: cannot find and/or execute [$rx]\n";
+ 
+diff -ruNp vfu-5.02.orig/rx/rx_deb vfu-5.02/rx/rx_deb
+--- vfu-5.02.orig/rx/rx_deb	2021-11-19 03:04:19.000000000 +0200
++++ vfu-5.02/rx/rx_deb	2023-02-12 21:27:18.379144106 +0200
+@@ -51,7 +51,7 @@ if( $cmd eq "l" || $cmd eq "v" || $cmd e
+         }  
+       }
+     }
+-  system( "/usr/libexec/vfu/rx_tar", $cmd, "/tmp/$cache", @ARGV );
++  system( "/usr/lib/vfu/rx_tar", $cmd, "/tmp/$cache", @ARGV );
+   }
+ else
+   {
+diff -ruNp vfu-5.02.orig/vfu/vfuarc.cpp vfu-5.02/vfu/vfuarc.cpp
+--- vfu-5.02.orig/vfu/vfuarc.cpp	2023-02-12 18:00:15.000000000 +0200
++++ vfu-5.02/vfu/vfuarc.cpp	2023-02-12 21:28:37.639141223 +0200
+@@ -20,7 +20,6 @@
+ 
+ VString find_rx_auto()
+ {
+-  if( file_exist( "/usr/libexec/vfu/rx_auto" ) ) return VString( "/usr/libexec/vfu/rx_auto" );
+   if( file_exist( "/usr/lib/vfu/rx_auto"     ) ) return VString( "/usr/lib/vfu/rx_auto"     );
+   return VString( "rx_auto" );
+ }
+diff -ruNp vfu-5.02.orig/vfu/vfusetup.h vfu-5.02/vfu/vfusetup.h
+--- vfu-5.02.orig/vfu/vfusetup.h	2023-02-11 00:51:33.000000000 +0200
++++ vfu-5.02/vfu/vfusetup.h	2023-02-12 21:28:02.539142500 +0200
+@@ -45,7 +45,7 @@
+ #endif
+ 
+ #ifndef FILENAME_CONF_GLOBAL2
+-#define FILENAME_CONF_GLOBAL2 "/usr/libexec/vfu/" FILENAME_CONF
++#define FILENAME_CONF_GLOBAL2 "/usr/lib/vfu/" FILENAME_CONF
+ #endif
+ 
+ #define RX_TEMP_LIST "RX_TEMP_LIST"

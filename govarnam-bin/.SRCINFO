@@ -1,0 +1,16 @@
+pkgbase = govarnam-bin
+	pkgdesc = Transliteration and reverse transliteration for Indian languages - Go port of libvarnam
+	pkgver = 1.9.1
+	pkgrel = 1
+	url = https://www.varnamproject.com
+	arch = x86_64
+	license = AGPL3
+	makedepends = unzip
+	depends = go
+	optdepends = govarnam-ibus: Ibus engine support
+	optdepends = govarnam-schemes: Language schemes support
+	provides = govarnam
+	source = https://github.com/varnamproject/govarnam/releases/download/v1.9.1/govarnam-1.9.1-x86_64.zip
+	sha256sums = ce7cd06e03d2435313624ad31c2130f7b8b6779c626281ef11318e4045289aaa
+
+pkgname = govarnam-bin

@@ -1,0 +1,18 @@
+pkgbase = python-proteus
+	pkgdesc = Library to access Tryton server as a client
+	pkgver = 7.4.0
+	pkgrel = 1
+	url = https://www.tryton.org
+	arch = any
+	license = LGPL-3.0-or-later
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python-defusedxml
+	depends = python-dateutil
+	optdepends = python-trytond: Trytond server
+	source = https://pypi.org/packages/source/p/proteus/proteus-7.4.0.tar.gz
+	sha512sums = b6b6e345b97c8d21cb120eaf261f4bb02f6dab6acd1487798dc560ae198dcff2ebfe2d00f7a9e4e8246846a65fab031f9c645c95dc34b6a54fe9f8bf83133e4e
+
+pkgname = python-proteus

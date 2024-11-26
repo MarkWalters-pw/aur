@@ -1,0 +1,8 @@
+[Unit]
+Description=Correlator of events received by Prelude
+
+[Service]
+ExecStart=/usr/sbin/prelude-correlator
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,17 @@
+pkgbase = aprx
+	pkgdesc = An APRS Digipeater and/or Internet Gateway
+	pkgver = 2.9.1
+	pkgrel = 1
+	url = http://thelifeofkenneth.com/aprx/
+	arch = any
+	license = custom
+	depends = glibc
+	backup = etc/aprx.conf
+	source = aprx-2.9.1.tar.gz::http://thelifeofkenneth.com/aprx/release/aprx-2.9.1.tar.gz
+	source = aprx.service
+	sha256sums = a28bafbb882f36e154eed19c8ed44a13dd1aac34432d2497e61479af369b61ed
+	sha256sums = ef586aa9c5f7dfc70e6631e60648764738923ccb1374732f7ae356d4789e69c5
+	sha512sums = 469e007e06af9979ec1423c089ef7a9d3ec6c88202d298fd616abd3b18c62d43e43b585cb7dfd5bc056b727eb98d37187de97a9e0066e09e5370fa4dfd88b6da
+	sha512sums = e9a6d4ce894c692e2a959ae5a7644b1a18c7d2df550d44a3cba3bff484400262bc9da5f12b06b406ccc64094b242d6783a887eacd633a59b68d8519a299e0b6b
+
+pkgname = aprx

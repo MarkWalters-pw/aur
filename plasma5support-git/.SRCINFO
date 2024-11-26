@@ -1,0 +1,24 @@
+pkgbase = plasma5support-git
+	pkgdesc = Support components for porting from KF5/Qt5 to KF6/Qt6
+	pkgver = 6.0.80_r227.gc1047c6
+	pkgrel = 1
+	url = https://kde.org/plasma-desktop/
+	arch = x86_64
+	license = LGPL-2.0-or-later
+	makedepends = git
+	makedepends = doxygen
+	makedepends = extra-cmake-modules-git
+	makedepends = qt6-tools
+	depends = gcc-libs
+	depends = glibc
+	depends = kconfig-git
+	depends = kcoreaddons-git
+	depends = ki18n-git
+	depends = qt6-base
+	depends = qt6-declarative
+	provides = plasma5support
+	conflicts = plasma5support
+	source = git+https://github.com/KDE/plasma5support.git
+	sha256sums = SKIP
+
+pkgname = plasma5support-git

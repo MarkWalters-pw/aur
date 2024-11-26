@@ -1,0 +1,24 @@
+pkgbase = flacsync-git
+	pkgdesc = Recursively mirror a directory tree of FLAC audio files to AAC/OGG
+	pkgver = 0.3.2.r4.gfe95e74
+	pkgrel = 3
+	url = https://github.com/cmcginty/flacsync
+	arch = any
+	license = GPL
+	makedepends = git
+	depends = python2
+	depends = python2-setuptools
+	depends = python2-pillow
+	depends = python2-mutagen
+	depends = flac
+	optdepends = neroaacenc: AAC encoding
+	optdepends = neroaactag: AAC tagging
+	optdepends = vorbis-tools: OGG Vorbis encoding and tagging
+	optdepends = lame: MP3 encoding
+	provides = flacsync
+	conflicts = flacsync
+	source = flacsync-git::git+https://github.com/cmcginty/flacsync.git
+	md5sums = SKIP
+
+pkgname = flacsync-git
+

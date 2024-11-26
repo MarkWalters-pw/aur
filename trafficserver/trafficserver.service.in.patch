@@ -1,0 +1,11 @@
+--- rc/trafficserver.service.in.orig	2020-05-07 05:59:25.663463182 -0700
++++ rc/trafficserver.service.in	2020-05-07 06:05:16.772825562 -0700
+@@ -21,7 +21,7 @@
+ 
+ [Service]
+ Type=simple
+-EnvironmentFile=-/etc/sysconfig/trafficserver
++EnvironmentFile=-/etc/conf.d/trafficserver
+ ExecStart=@exp_bindir@/traffic_manager $TM_DAEMON_ARGS
+ Restart=on-failure
+ RestartSec=5s

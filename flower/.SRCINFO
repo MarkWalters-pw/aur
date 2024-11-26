@@ -1,0 +1,19 @@
+pkgbase = flower
+	pkgdesc = label-based networking daemon
+	pkgver = 0.11
+	pkgrel = 1
+	url = https://github.com/NuxiNL/flower
+	arch = x86_64
+	arch = aarch64
+	license = BSD
+	makedepends = cmake
+	makedepends = python-pypeg2
+	makedepends = python-toposort
+	depends = arpc
+	depends = argdata
+	depends = jsoncpp
+	source = flower-0.11.tar.gz::https://github.com/NuxiNL/flower/archive/v0.11.tar.gz
+	sha512sums = 764ed8606181227ff6443393a63840832705454dd32e8dbdd6920da7a72c5d8419bd1ffe0ea84185502df330940e3e96b105f0c4a9f880275fe9190e38cea6cb
+
+pkgname = flower
+

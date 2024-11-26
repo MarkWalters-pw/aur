@@ -1,0 +1,19 @@
+pkgbase = mmm-git
+	pkgdesc = Shared memory protocol for virtualising access to framebuffer graphics, audio output and input event.
+	pkgver = 0.1.0.r22.a5b2321
+	pkgrel = 1
+	url = https://github.com/hodefoting/mmm
+	arch = i686
+	arch = x86_64
+	license = custom
+	makedepends = git
+	makedepends = meson
+	depends = alsa-lib
+	depends = sdl2
+	provides = mmm
+	conflicts = mmm
+	source = git+https://github.com/hodefoting/mmm.git
+	md5sums = SKIP
+
+pkgname = mmm-git
+

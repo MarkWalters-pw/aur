@@ -1,0 +1,17 @@
+pkgbase = esplorer
+	pkgdesc = Integrated Development Environment (IDE) for ESP8266 developers
+	pkgver = 0.2.0_rc6
+	pkgrel = 2
+	url = https://esp8266.ru/esplorer
+	arch = any
+	license = GPL2
+	makedepends = gendesk
+	makedepends = git
+	makedepends = maven
+	depends = bash
+	depends = java-runtime
+	source = esplorer::git+https://github.com/4refr0nt/ESPlorer#commit=eb6654ce133376680d9a9444798f38282546c9b1
+	sha256sums = SKIP
+
+pkgname = esplorer
+

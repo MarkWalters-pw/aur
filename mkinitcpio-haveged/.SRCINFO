@@ -1,0 +1,16 @@
+pkgbase = mkinitcpio-haveged
+	pkgdesc = mkinitcpio hook to run haveged for entropy generation
+	pkgver = 0.2
+	pkgrel = 1
+	url = https://aur.archlinux.org/packages/mkinitcpio-haveged/
+	arch = any
+	license = GPL
+	depends = mkinitcpio
+	depends = haveged
+	source = haveged.hook
+	source = haveged.install
+	sha256sums = 68678f6c4c5ba850031ca90452f4f2c5e496bc0a58f4224314750e37064b93d6
+	sha256sums = 9b93942026e5e9d17e3f43274a39df78310a326ff02a3655e87678c9c4d8631f
+
+pkgname = mkinitcpio-haveged
+

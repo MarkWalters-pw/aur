@@ -1,0 +1,18 @@
+pkgbase = ocaml-lwt_domain
+	pkgdesc = Parallelism in Lwt using domainslib
+	pkgver = 0.3.0
+	pkgrel = 2
+	url = https://github.com/ocsigen/lwt_domain
+	arch = x86_64
+	arch = aarch64
+	license = MIT
+	depends = dune>=1.8.0
+	depends = ocaml>=5.0.0
+	depends = ocaml-domainslib>=0.5.0
+	depends = ocaml-lwt>=5.6.0
+	depends = libev
+	options = !strip
+	source = ocaml-lwt_domain-0.3.0.tar.gz::https://github.com/ocsigen/lwt_domain/archive/0.3.0.tar.gz
+	b2sums = 453ac890badf36bcb7b5bf56e27f810ec492cc32d2bdff7817b4d9bcf20c9369851c473281bdad7c60b16091fd6d33dbf834d2faf1d55d547fa4c297ede13f30
+
+pkgname = ocaml-lwt_domain

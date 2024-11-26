@@ -1,0 +1,14 @@
+pkgbase = keepass-plugin-onedrivesync
+	pkgdesc = KeePass plugin to allows syncing of KeePass databases stored on OneDrive Personal, OneDrive for Business or SharePoint.
+	pkgver = 2.1.2.2
+	pkgrel = 1
+	url = https://github.com/KoenZomers/KeePassOneDriveSync
+	arch = any
+	license = EPL
+	depends = keepass
+	provides = keepassonedrivesync
+	conflicts = keepassonedrivesync
+	source = https://github.com/KoenZomers/KeePassOneDriveSync/releases/download/2.1.2.2/KeeOneDriveSync.plgx
+	sha256sums = 1e5e88020a9786873d20fdb0b3de4f560cad8d28760527a93d266ead54889f4d
+
+pkgname = keepass-plugin-onedrivesync

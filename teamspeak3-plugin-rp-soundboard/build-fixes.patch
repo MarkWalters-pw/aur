@@ -1,0 +1,31 @@
+--- a/CMakeLists.txt	2021-05-02 21:38:58.266305435 +0200
++++ b/CMakeLists.txt	2021-05-02 21:40:19.485151388 +0200
+@@ -5,7 +5,7 @@
+ include(files.cmake)
+ 
+ # Get prebuilt ffmpeg folders for windows builds
+-set(ffmpegIncHint "ffmpeg/include")
++set(ffmpegIncHint "/usr/include")
+ 
+ # figure out platform defaults for certain things
+ if (WIN32)
+@@ -34,7 +34,7 @@
+ endif()
+ 
+ 
+-set(ffmpegLibHint "${CMAKE_CURRENT_SOURCE_DIR}/${defFFmpegLibHint}" CACHE PATH "directory with static ffmpeg libs")
++set(ffmpegLibHint "/usr/lib" CACHE PATH "directory with static ffmpeg libs")
+ set(libSuffix ${defLibSuffix} CACHE STRING "output library suffix")
+ set(pluginDir ${defPluginDir} CACHE PATH "TS3 plugin directory (for file copy)")
+ 
+--- a/src/inputfileffmpeg.cpp	2021-05-02 21:46:10.856210178 +0200
++++ b/src/inputfileffmpeg.cpp	2021-05-02 21:46:26.274256126 +0200
+@@ -416,7 +416,7 @@
+ 
+ 	if(properFrames == 0)
+ 	{
+-		if(m_codecCtx->codec->capabilities & CODEC_CAP_DELAY && m_convertedSamples < m_decodedSamplesTargetSR)
++		if(m_codecCtx->codec->capabilities & AV_CODEC_CAP_DELAY && m_convertedSamples < m_decodedSamplesTargetSR)
+ 		{
+ 			// Some codecs will cause frames to be buffered up in the decoding process. If the CODEC_CAP_DELAY flag
+ 			// is set, there can be buffered up frames that need to be flushed, so we'll do that

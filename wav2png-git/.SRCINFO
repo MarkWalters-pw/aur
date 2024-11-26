@@ -1,0 +1,22 @@
+pkgbase = wav2png-git
+	pkgdesc = Creates waveform pngs out of audio files.
+	pkgver = 0.4.r0.g80e277e
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/beschulz/wav2png
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	makedepends = png++
+	makedepends = boost
+	depends = libsndfile
+	depends = libpng
+	depends = boost-libs
+	optdepends = sox
+	provides = wav2png
+	source = git+https://github.com/beschulz/wav2png.git
+	md5sums = SKIP
+
+pkgname = wav2png-git
+

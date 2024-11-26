@@ -1,0 +1,17 @@
+pkgbase = wofi-calc
+	pkgdesc = A simple calculator for wofi, inspired in rofi-calc.
+	pkgver = 1.1
+	pkgrel = 3
+	url = https://github.com/Zeioth/wofi-calc.git
+	arch = any
+	license = MIT
+	makedepends = wofi
+	makedepends = libqalculate
+	depends = wofi
+	depends = libqalculate
+	provides = wofi-calc
+	conflicts = wofi-calc-git
+	source = git+https://github.com/Zeioth/wofi-calc.git#commit=47e36b6fb5c1056878bad73451da067a2416f41e
+	sha256sums = SKIP
+
+pkgname = wofi-calc

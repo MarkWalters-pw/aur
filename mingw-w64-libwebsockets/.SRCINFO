@@ -1,0 +1,19 @@
+pkgbase = mingw-w64-libwebsockets
+	pkgdesc = Lightweight pure C library built to use minimal CPU and memory resources, and provide fast throughput in both directions. (mingw-w64)
+	pkgver = 4.2.2
+	pkgrel = 1
+	url = http://libwebsockets.org/
+	arch = any
+	license = LGPL2 + static linking exception
+	makedepends = mingw-w64-cmake
+	makedepends = mingw-w64-gcc
+	makedepends = mingw-w64-zlib
+	depends = mingw-w64-crt
+	depends = mingw-w64-openssl
+	options = staticlibs
+	options = !strip
+	options = !buildflags
+	source = libwebsockets-4.2.2.tar.gz::https://github.com/warmcat/libwebsockets/archive/refs/tags/v4.2.2.tar.gz
+	sha256sums = c2ae635485b8ef8d383dee0aee29ad6272d4462e527d29d9af014ab4a2465cbd
+
+pkgname = mingw-w64-libwebsockets

@@ -1,0 +1,18 @@
+pkgbase = dune-spgrid
+	pkgdesc = An efficient structured, parallel implementation of the DUNE grid interface
+	pkgver = 2.10.0
+	pkgrel = 1
+	url = https://dune-project.org/modules/dune-spgrid
+	arch = x86_64
+	license = GPL-2.0-or-later
+	makedepends = doxygen
+	makedepends = graphviz
+	makedepends = python-scikit-build
+	depends = dune-grid>=2.10.0
+	optdepends = doxygen: Generate the class documentation from C++ sources
+	optdepends = graphviz: Graph visualization software
+	options = !emptydirs
+	source = https://gitlab.dune-project.org/extensions/dune-spgrid/-/archive/v2.10.0/dune-spgrid-v2.10.0.tar.gz
+	sha512sums = 8c73512c71972d1d0483c005b0d1570ae171b887a5deac2675a18887315b31f7469cb6f6df55a7370a78ba508714e74a6810412f5bf85b670b369a8b2cb80267
+
+pkgname = dune-spgrid

@@ -1,0 +1,18 @@
+pkgbase = libsonic-git
+	pkgdesc = Simple library to speed up or slow down speech
+	pkgver = 0.2.0_53+r182.20180706.71c5119
+	pkgrel = 1
+	url = https://github.com/waywardgeek/sonic
+	arch = aarch64
+	arch = armv7h
+	arch = x86_64
+	license = Apache
+	makedepends = git
+	makedepends = fftw
+	depends = gcc
+	provides = libsonic=0.2.0_53+r182.20180706.71c5119
+	conflicts = libsonic
+	source = git+https://github.com/waywardgeek/sonic.git
+	md5sums = SKIP
+
+pkgname = libsonic-git

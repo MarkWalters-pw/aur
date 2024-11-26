@@ -1,0 +1,14 @@
+pkgbase = bankstown
+	pkgdesc = Bankstown LV2 Plugin
+	pkgver = 1.1.0
+	pkgrel = 2
+	url = https://github.com/chadmed/bankstown
+	arch = x86_64
+	license = MIT
+	makedepends = cargo
+	depends = lv2
+	depends = git
+	source = bankstown-1.1.0::git+https://github.com/chadmed/bankstown.git#tag=1.1.0
+	sha256sums = SKIP
+
+pkgname = bankstown

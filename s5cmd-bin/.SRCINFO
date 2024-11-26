@@ -1,0 +1,22 @@
+pkgbase = s5cmd-bin
+	pkgdesc = Parallel S3 and local filesystem execution tool
+	pkgver = 2.2.2
+	pkgrel = 1
+	url = https://github.com/peak/s5cmd
+	arch = aarch64
+	arch = armv7h
+	arch = i686
+	arch = x86_64
+	license = MIT
+	provides = s5cmd=2.2.2
+	conflicts = s5cmd
+	source_aarch64 = s5cmd-2.2.2-aarch64.tar.gz::https://github.com/peak/s5cmd/releases/download/v2.2.2/s5cmd_2.2.2_Linux-arm64.tar.gz
+	sha256sums_aarch64 = eabf18082398c332d33c692d383a889be204b1e7716f820e014bf11474ad345b
+	source_armv7h = s5cmd-2.2.2-armv7h.tar.gz::https://github.com/peak/s5cmd/releases/download/v2.2.2/s5cmd_2.2.2_Linux-arm64.tar.gz
+	sha256sums_armv7h = eabf18082398c332d33c692d383a889be204b1e7716f820e014bf11474ad345b
+	source_i686 = s5cmd-2.2.2-i686.tar.gz::https://github.com/peak/s5cmd/releases/download/v2.2.2/s5cmd_2.2.2_Linux-32bit.tar.gz
+	sha256sums_i686 = dc9ebe570fb5abcf5781511901d93425879022d56e73ab44dd32c45b2bfbc04b
+	source_x86_64 = s5cmd-2.2.2-x86_64.tar.gz::https://github.com/peak/s5cmd/releases/download/v2.2.2/s5cmd_2.2.2_Linux-64bit.tar.gz
+	sha256sums_x86_64 = a15f83d2a6dc091e43b2a120f29f8f6c86d146c381766c0197ec75d7985af2b6
+
+pkgname = s5cmd-bin

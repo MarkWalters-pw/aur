@@ -1,0 +1,34 @@
+pkgbase = ros-noetic-kinect2-calibration
+	pkgdesc = Calibration tool for Kinect One (Kinect v2) in ROS.
+	pkgver = 0.0.1
+	pkgrel = 2
+	url = https://github.com/code-iai/iai_kinect2
+	arch = any
+	license = apache
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-roscpp
+	makedepends = ros-noetic-rostime
+	makedepends = ros-noetic-std-msgs
+	makedepends = ros-noetic-sensor-msgs
+	makedepends = ros-noetic-message-filters
+	makedepends = ros-noetic-image-transport
+	makedepends = ros-noetic-compressed-depth-image-transport
+	makedepends = ros-noetic-compressed-image-transport
+	makedepends = ros-noetic-kinect2-bridge
+	depends = ros-noetic-message-runtime
+	depends = ros-noetic-roscpp
+	depends = ros-noetic-rostime
+	depends = ros-noetic-std-msgs
+	depends = ros-noetic-sensor-msgs
+	depends = ros-noetic-message-filters
+	depends = ros-noetic-image-transport
+	depends = ros-noetic-compressed-depth-image-transport
+	depends = ros-noetic-compressed-image-transport
+	depends = ros-noetic-kinect2-bridge
+	source = ros-noetic-kinect2-calibration::git+https://github.com/code-iai/iai_kinect2.git
+	source = fix_cv3_to_4.patch
+	sha256sums = SKIP
+
+pkgname = ros-noetic-kinect2-calibration
+

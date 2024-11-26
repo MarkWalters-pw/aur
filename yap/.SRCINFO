@@ -1,0 +1,27 @@
+pkgbase = yap
+	pkgdesc = A high-performance Prolog compiler
+	pkgver = 7.6.0
+	pkgrel = 1
+	url = http://www.dcc.fc.up.pt/~vsc/yap/
+	arch = i686
+	arch = x86_64
+	license = LGPL-3.0-only
+	makedepends = texi2html
+	makedepends = texinfo
+	makedepends = jdk7-openjdk
+	makedepends = doxygen
+	makedepends = ninja
+	depends = gmp
+	depends = unixodbc
+	depends = libmariadbclient
+	optdepends = python3: For using Python from YAP
+	optdepends = gecode: For contstraints solving
+	optdepends = cudd: For Problog
+	optdepends = java-runtime-headless: Java Interface Library JPL
+	optdepends = r: For R bindings
+	optdepends = openmpi
+	optdepends = swig
+	source = git+https://github.com/vscosta/yap.git#commit=d60153e2727ccfd21eaad1cdc10d1788b003b927
+	sha256sums = SKIP
+
+pkgname = yap

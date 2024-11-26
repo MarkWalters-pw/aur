@@ -1,0 +1,12 @@
+[Unit]
+Description=Update Tor relays
+Wants=network-online.target
+After=network-online.target
+Before=tor.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/tor-relay-scanner -g 20 --timeout 3 --torrc -o /etc/tor/relays
+
+[Install]
+WantedBy=multi-user.target

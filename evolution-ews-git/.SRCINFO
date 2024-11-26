@@ -1,0 +1,21 @@
+pkgbase = evolution-ews-git
+	pkgdesc = MS Exchange integration through Exchange Web Services
+	pkgver = 3.50.0.r002.g098b2265
+	pkgrel = 1
+	url = https://wiki.gnome.org/Apps/Evolution/EWS
+	arch = i686
+	arch = x86_64
+	license = LGPL2.1
+	makedepends = intltool
+	depends = libmspack
+	depends = evolution-git
+	provides = evolution-ews
+	conflicts = evolution-ews
+	replaces = evolution-ews
+	options = !emptydirs
+	options = strip
+	options = debug
+	source = evolution-ews::git+https://gitlab.gnome.org/GNOME/evolution-ews.git
+	sha256sums = SKIP
+
+pkgname = evolution-ews-git

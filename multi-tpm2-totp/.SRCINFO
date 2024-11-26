@@ -1,0 +1,14 @@
+pkgbase = multi-tpm2-totp
+	pkgdesc = Attest the trustworthiness of a device against a human using multiple time-based one-time passwords.
+	pkgver = 0.2.2
+	pkgrel = 1
+	url = https://github.com/brandsimon/multi-tpm2-totp
+	arch = any
+	license = MIT
+	checkdepends = shellcheck
+	depends = tpm2-totp
+	source = multi-tpm2-totp-0.2.2.tar.gz::https://github.com/brandsimon/multi-tpm2-totp/archive/refs/tags/v0.2.2.tar.gz
+	sha512sums = a1d9bf4d83fbe19c8518ff5065aef4b23043db81c1e0e7ba8235f736376c4f75d6d88e96ab8b07a473e4f202c16da78699373a775c3c55953bd3d4ff26b8b7b7
+	b2sums = 5da77b8ccf0b70bbce8e2ed3cfbe611fdf08b28bac4f824811b8532cace0770d0ef0eea5bd5abf51caf8abb7cb08f7af0903a93d87a33d5c952bd4c610c26954
+
+pkgname = multi-tpm2-totp

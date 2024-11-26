@@ -1,0 +1,36 @@
+pkgbase = ros-noetic-rviz-visual-tools
+	pkgdesc = ROS - Utility functions for displaying and debugging data in Rviz via published markers.
+	pkgver = 3.9.1
+	pkgrel = 1
+	url = https://wiki.ros.org/rviz_visual_tools
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-catkin
+	depends = ros-noetic-rviz
+	depends = ros-noetic-sensor-msgs
+	depends = ros-noetic-tf2-eigen
+	depends = ros-noetic-tf2-ros
+	depends = ros-noetic-tf2-geometry-msgs
+	depends = ros-noetic-geometry-msgs
+	depends = ros-noetic-shape-msgs
+	depends = ros-noetic-roscpp
+	depends = ros-noetic-visualization-msgs
+	depends = ros-noetic-graph-msgs
+	depends = ros-noetic-std-msgs
+	depends = ros-noetic-trajectory-msgs
+	depends = ros-noetic-roslint
+	depends = ros-noetic-eigen-stl-containers
+	depends = ros-noetic-interactive-markers
+	depends = ogre
+	depends = qt5-x11extras
+	source = ros-noetic-rviz-visual-tools-3.9.1.tar.gz::https://github.com/PickNikRobotics/rviz_visual_tools/archive/3.9.1.tar.gz
+	sha256sums = cabd0c665a464e5e0027cbdece555d933a1f6f963fbc5b088f0c1b39fe817486
+
+pkgname = ros-noetic-rviz-visual-tools
+

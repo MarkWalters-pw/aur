@@ -1,0 +1,18 @@
+pkgbase = getit
+	pkgdesc = Application to send HTTP requests to test your API endpoints.
+	pkgver = 4.0.10
+	pkgrel = 2
+	url = https://github.com/bartkessels/GetIt
+	arch = any
+	license = GPL
+	makedepends = git
+	makedepends = meson
+	depends = webkit2gtk
+	depends = gtksourceview3
+	provides = getit
+	conflicts = getit
+	source = getit::git+https://github.com/bartkessels/GetIt.git#tag=4.0.10
+	md5sums = SKIP
+
+pkgname = getit
+

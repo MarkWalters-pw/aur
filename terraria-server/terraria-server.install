@@ -1,0 +1,30 @@
+post_install() {
+    if ! getent group terraria &>/dev/null; then
+      groupadd -r -g 697 terraria >/dev/null
+    fi
+
+    if ! getent passwd terraria &>/dev/null; then
+        useradd -r -u 697 -g terraria -d /opt/terraria-server/ \
+            -s /bin/bash terraria >/dev/null
+    fi
+}
+
+post_upgrade() {
+    if getent passwd terraria &>/dev/null && [[ $(id -u terraria) == 197 ]]; then
+        userdel terraria
+    fi
+    if getent group terraria &>/dev/null && [[ $(id -g terraria) == 197 ]]; then
+        groupdel terraria
+    fi
+    post_install
+}
+
+post_remove() {
+    if getent passwd terraria &>/dev/null; then
+        userdel terraria >/dev/null
+    fi
+
+    if getent group terraria &>/dev/null; then
+      groupdel terraria >/dev/null
+    fi
+}

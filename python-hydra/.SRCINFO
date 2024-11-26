@@ -1,0 +1,21 @@
+pkgbase = python-hydra
+	pkgdesc = High performance bloom filter
+	pkgver = 2.5
+	pkgrel = 2
+	url = https://github.com/crankycoder/hydra
+	changelog = CHANGES.rst
+	arch = x86_64
+	license = MIT
+	checkdepends = python-nose
+	makedepends = cython
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python
+	source = python-hydra::git+https://github.com/crankycoder/hydra#tag=2.5?signed
+	validpgpkeys = B20AA292706B1BA7850F6FC2B0741CAE9BB2D357
+	sha256sums = SKIP
+
+pkgname = python-hydra

@@ -1,0 +1,18 @@
+pkgbase = arif-git
+	pkgdesc = ADV Realtime Image Filtering: quality filtering for lucky imaging.
+	pkgver = 20220418
+	pkgrel = 1
+	url = https://github.com/AD-Vega/arif
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = cmake
+	makedepends = boost
+	makedepends = tclap
+	depends = qarv
+	depends = boost-libs
+	provides = arif
+	conflicts = arif
+
+pkgname = arif-git

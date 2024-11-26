@@ -1,0 +1,33 @@
+pkgbase = bitlbee-libpurple-git
+	pkgdesc = Brings instant messaging (XMPP, MSN, Yahoo!, AIM, ICQ, Twitter) to IRC
+	pkgver = 3.5.1.r80.gc3599e03
+	pkgrel = 1
+	url = http://www.bitlbee.org/
+	install = bitlbee.install
+	arch = i686
+	arch = x86_64
+	arch = armv7h
+	arch = aarch64
+	license = GPL
+	makedepends = git
+	makedepends = python
+	depends = gnutls
+	depends = glib2
+	depends = libpurple
+	depends = libotr
+	optdepends = skype4py: to use skyped
+	optdepends = libotr: for OTR encryption support
+	provides = bitlbee
+	conflicts = bitlbee
+	conflicts = bitlbee-bzr
+	conflicts = bitlbee-libpurple
+	conflicts = bitlbee-git
+	backup = etc/bitlbee/bitlbee.conf
+	backup = etc/bitlbee/motd.txt
+	source = bitlbee::git+https://github.com/bitlbee/bitlbee
+	source = bitlbee.tmpfiles
+	sha512sums = SKIP
+	sha512sums = fe5ab700dfe77eab8366f2f1157bd3015898ede62ca41cc8f463c363a4ab1004023865ea38db6ac8e34b63da28aaeec929645bb11ebf5feffa4e5e088bdf7eca
+
+pkgname = bitlbee-libpurple-git
+

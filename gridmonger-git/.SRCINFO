@@ -1,0 +1,32 @@
+pkgbase = gridmonger-git
+	pkgdesc = Your trusty old-school cRPG mapping companion
+	pkgver = 1.1.0.r147.e677627
+	pkgrel = 3
+	epoch = 1
+	url = https://gridmonger.johnnovak.net/
+	install = gridmonger.install
+	arch = x86_64
+	license = custom:WTFPL
+	makedepends = git
+	makedepends = nim
+	makedepends = dart-sass
+	makedepends = python-sphinx
+	makedepends = gendesk
+	depends = zenity
+	depends = libxxf86vm
+	depends = libglvnd
+	depends = libxi
+	depends = libxrandr
+	depends = libx11
+	depends = libxinerama
+	depends = libxcursor
+	provides = gridmonger
+	conflicts = gridmonger
+	source = git+https://github.com/johnnovak/gridmonger#commit=e6776279a1952232cffb59f893a5d06e30e55630
+	source = git+https://github.com/johnnovak/koi#commit=aee85e888bb953e6ab2ba0a260cb91c2bf18511a
+	source = git+https://github.com/johnnovak/nim-glfw#branch=gridmonger
+	md5sums = SKIP
+	md5sums = SKIP
+	md5sums = SKIP
+
+pkgname = gridmonger-git

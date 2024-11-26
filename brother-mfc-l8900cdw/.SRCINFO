@@ -1,0 +1,19 @@
+pkgbase = brother-mfc-l8900cdw
+	pkgdesc = LPR and CUPS driver for the Brother MFC-L8900CDW
+	pkgver = 1.5.0
+	pkgrel = 2
+	epoch = 2
+	url = http://welcome.solutions.brother.com/bsc/public_s/id/linux/en/index.html
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	license = custom:Brother EULA
+	depends = cups
+	source = https://download.brother.com/welcome/dlf103216/mfcl8900cdwlpr-1.5.0-0.i386.rpm
+	source = https://download.brother.com/welcome/dlf103225/mfcl8900cdwcupswrapper-1.5.0-0.i386.rpm
+	sha256sums = SKIP
+	sha256sums = SKIP
+	depends_x86_64 = lib32-glibc
+
+pkgname = brother-mfc-l8900cdw
+

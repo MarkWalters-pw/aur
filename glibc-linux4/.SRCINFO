@@ -1,0 +1,52 @@
+pkgbase = glibc-linux4
+	pkgver = 2.38
+	pkgrel = 1
+	url = https://www.gnu.org/software/libc/
+	arch = x86_64
+	license = GPL
+	license = LGPL
+	makedepends = git
+	makedepends = gd
+	makedepends = lib32-gcc-libs
+	makedepends = python
+	options = staticlibs
+	options = !lto
+	source = git+https://sourceware.org/git/glibc.git#commit=1aed90c9c8f8be9f68b58e96b6e4cd0fc08eb2b1
+	source = glibc-linux4.patch
+	source = locale.gen.txt
+	source = locale-gen
+	source = lib32-glibc.conf
+	source = sdt.h
+	source = sdt-config.h
+	validpgpkeys = 7273542B39962DF7B299931416792B4EA25340F8
+	validpgpkeys = BC7C7372637EC10C57D7AA6579C43DFBF1CF2187
+	sha256sums = SKIP
+	sha256sums = e105e7788b068f364178eaaa6cd2e150047fec7a79138fda32a5410cbdf1c1b4
+	sha256sums = 2a7dd6c906b6c54a68f48a21898664a32fdb136cbd9ff7bfd48f01d1aaa649ae
+	sha256sums = 7503947e23cecc8307e8f7ce2a792eecb6f72f22d6838b34417c2489a259fde9
+	sha256sums = c27424154a6096ae32c0824b785e05de6acef33d9224fd6147d1936be9b4962b
+	sha256sums = 774061aff612a377714a509918a9e0e0aafce708b87d2d7e06b1bd1f6542fe70
+	sha256sums = cdc234959c6fdb43f000d3bb7d1080b0103f4080f5e67bcfe8ae1aaf477812f0
+
+pkgname = glibc-linux4
+	pkgdesc = GNU C Library (linux 4.x compat)
+	install = glibc.install
+	depends = linux-api-headers>=4.10
+	depends = tzdata
+	depends = filesystem
+	optdepends = gd: for memusagestat
+	optdepends = perl: for mtrace
+	provides = glibc=2.38
+	conflicts = glibc
+	backup = etc/gai.conf
+	backup = etc/locale.gen
+	backup = etc/nscd.conf
+
+pkgname = lib32-glibc-linux4
+	pkgdesc = GNU C Library (linux 4.x compat, 32-bit)
+	depends = glibc=2.38
+	provides = lib32-glibc=2.38
+	conflicts = lib32-glibc
+	options = staticlibs
+	options = !lto
+	options = !emptydirs

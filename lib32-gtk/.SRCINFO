@@ -1,0 +1,18 @@
+pkgbase = lib32-gtk
+	pkgdesc = A multi-platform toolkit (v1) (32-bit)
+	pkgver = 1.2.10
+	pkgrel = 3
+	url = http://www.gtk.org/
+	arch = x86_64
+	license = LGPL
+	makedepends = lib32-libxt
+	makedepends = gcc-multilib
+	makedepends = glib
+	depends = lib32-libxi
+	depends = lib32-glib
+	source = https://download.gnome.org/sources/gtk+/1.2/gtk+-1.2.10.tar.gz
+	source = aclocal-fixes.patch
+	sha1sums = a5adcb909257da01ae4d4761e1d41081d06e4d7c
+	sha1sums = b034e33efb85d27f3f3fb082c404e3b6ea79259f
+
+pkgname = lib32-gtk

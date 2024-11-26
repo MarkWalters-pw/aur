@@ -1,0 +1,14 @@
+pkgbase = xssproxy
+	pkgdesc = Forward freedesktop.org idle inhibition service calls to Xss.
+	pkgver = 1.1.0
+	pkgrel = 1
+	url = https://github.com/vincentbernat/xssproxy
+	arch = x86_64
+	license = GPL3
+	depends = libxss
+	depends = glib2
+	depends = dbus
+	source = xssproxy-1.1.0.tar.gz::https://github.com/vincentbernat/xssproxy/archive/v1.1.0.tar.gz
+	sha512sums = 4c195d161ce5d16e62e3482dbd7b78cfa9505aaee09f5532916ba8f32aef9be83ce5a3b454362ef04288f2c2237eb74e3f3106225227584c706230b2e3022397
+
+pkgname = xssproxy

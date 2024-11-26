@@ -1,0 +1,16 @@
+pkgbase = mpv-sponsorblock-minimal-git
+	pkgdesc = A minimal script to skip sponsored segments of YouTube videos
+	pkgver = r39.ca2844b
+	pkgrel = 1
+	url = https://codeberg.org/jouni/mpv_sponsorblock_minimal
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = mpv
+	depends = curl
+	provides = mpv-sponsorblock
+	conflicts = mpv-sponsorblock
+	source = mpv-sponsorblock-minimal::git+https://codeberg.org/jouni/mpv_sponsorblock_minimal
+	sha256sums = SKIP
+
+pkgname = mpv-sponsorblock-minimal-git

@@ -1,0 +1,17 @@
+pkgbase = coinkiller
+	pkgdesc = NSMB2 level editor!
+	pkgver = v0.14.r1.g6d8abe4
+	pkgrel = 1
+	url = https://github.com/Arisotura/CoinKiller
+	arch = x86_64
+	license = GPL3
+	makedepends = gendesk
+	makedepends = git
+	depends = qt5-base
+	conflicts = coinkiller-bin
+	conflicts = coinkiller
+	source = CoinKiller::git+https://github.com/Arisotura/CoinKiller
+	md5sums = SKIP
+
+pkgname = coinkiller
+

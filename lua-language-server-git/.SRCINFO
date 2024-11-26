@@ -1,0 +1,21 @@
+pkgbase = lua-language-server-git
+	pkgdesc = Lua Language Server coded by Lua
+	pkgver = 2.5.5.r0.g4f74c75c
+	pkgrel = 1
+	url = https://github.com/sumneko/lua-language-server
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = ninja
+	depends = bash
+	depends = gcc-libs
+	provides = lua-language-server
+	conflicts = lua-language-server
+	source = lua-language-server-git::git+https://github.com/sumneko/lua-language-server.git
+	source = wrapper
+	sha256sums = SKIP
+	sha256sums = 117a7926e0d4a8cc55b6c5c4d621bbcbbfeb872f9eec0bb87707b9bbbb68fbae
+	b2sums = SKIP
+	b2sums = ec365fac615949e55c0a7cae3764f8b73172cd99f09f2ab31278b78c8d6b926ea41988ae066a55e33792bdd5e69101862abe96f69bd615dc07f78588b05f590e
+
+pkgname = lua-language-server-git

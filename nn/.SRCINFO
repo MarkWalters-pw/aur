@@ -1,0 +1,20 @@
+pkgbase = nn
+	pkgdesc = Heavy-duty USENET news reader (curses-based client, with Debian patches)
+	pkgver = 6.7.3
+	pkgrel = 4
+	url = http://packages.debian.org/en/sid/news/nn
+	install = nn.install
+	arch = i686
+	arch = x86_64
+	license = custom
+	makedepends = gawk
+	depends = sh
+	depends = ncurses
+	source = http://deb.debian.org/debian/pool/main/n/nn/nn_6.7.3.orig.tar.gz
+	source = https://deb.debian.org/debian/pool/main/n/nn/nn_6.7.3-15.debian.tar.xz
+	source = config.h
+	sha256sums = f696e9e2115ea4019398fc06aadcf07c43822559210cd05daf20801ea733f3ba
+	sha256sums = f19bf0821d96decba2e3a632ad8762ea12010fe7850ca9140f0ef888cdd61314
+	sha256sums = SKIP
+
+pkgname = nn

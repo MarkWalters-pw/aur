@@ -1,0 +1,23 @@
+pkgbase = megabasterd-git
+	pkgdesc = MEGA.nz downloader/uploader/streaming suite
+	pkgver = 8.21.r0.fc03de1d3
+	pkgrel = 1
+	url = https://github.com/tonikelope/megabasterd
+	arch = any
+	license = GPL3
+	makedepends = maven
+	makedepends = git
+	makedepends = java-environment
+	depends = java-runtime
+	depends = bash
+	provides = megabasterd
+	conflicts = megabasterd
+	conflicts = megabasterd-bin
+	source = megabasterd-git::git+https://github.com/tonikelope/megabasterd.git
+	source = megabasterd.sh
+	source = megabasterd.desktop
+	sha256sums = SKIP
+	sha256sums = 67711d7ef6fb46d6da0ad6e770dcd3dc778380f37f9b356af3cddc0a075fc3f0
+	sha256sums = a85b49dab7f58ab3c3b3e609a1c3c8e0fab2bedf5597a179aae82773681e7753
+
+pkgname = megabasterd-git

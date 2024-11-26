@@ -1,0 +1,28 @@
+pkgbase = freeipmi-git
+	pkgdesc = Provides in-band and out-of-band IPMI software
+	pkgver = 1.6.10.r262.g900ddc1cb
+	pkgrel = 1
+	url = https://www.gnu.org/software/freeipmi/
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	depends = glibc
+	depends = libgcrypt
+	optdepends = perl: for contrib scripts
+	provides = freeipmi=1.6.10.r262.g900ddc1cb
+	conflicts = freeipmi
+	options = staticlibs
+	backup = etc/freeipmi/freeipmi.conf
+	backup = etc/freeipmi/freeipmi_interpret_sel.conf
+	backup = etc/freeipmi/freeipmi_interpret_sensor.conf
+	backup = etc/freeipmi/ipmidetect.conf
+	backup = etc/freeipmi/ipmidetectd.conf
+	backup = etc/freeipmi/ipmiseld.conf
+	backup = etc/freeipmi/libipmiconsole.conf
+	source = git+https://git.savannah.gnu.org/git/freeipmi.git
+	source = tmpfiles.conf::https://gitlab.archlinux.org/archlinux/packaging/packages/freeipmi/-/raw/main/tmpfiles.conf
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = freeipmi-git

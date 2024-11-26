@@ -1,0 +1,20 @@
+pkgbase = opensta-git
+	pkgdesc = A gate level static timing verifier.
+	pkgver = r926.bb50746
+	pkgrel = 1
+	url = https://github.com/The-OpenROAD-Project/OpenSTA
+	arch = x86_64
+	license = GPL
+	makedepends = tcl
+	makedepends = swig
+	makedepends = bison
+	makedepends = flex
+	makedepends = git
+	makedepends = cmake
+	optdepends = libzip: read Verilog, SDF, SPF, and SPEF files compressed with gzip
+	optdepends = cudd: a binary decision diageram package for improving conditional timing arc handling
+	provides = opensta
+	source = git+https://github.com/The-OpenROAD-Project/OpenSTA.git
+	md5sums = SKIP
+
+pkgname = opensta-git

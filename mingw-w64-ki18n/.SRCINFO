@@ -1,0 +1,20 @@
+pkgbase = mingw-w64-ki18n
+	pkgdesc = Advanced internationalization framework (mingw-w64)
+	pkgver = 5.76.0
+	pkgrel = 1
+	url = https://cgit.kde.org/ki18n.git
+	arch = any
+	license = LGPL
+	makedepends = mingw-w64-extra-cmake-modules
+	makedepends = python
+	depends = mingw-w64-qt5-script
+	depends = mingw-w64-qt5-declarative
+	optdepends = python: To compile Transcript property maps from text to binary format.
+	options = !buildflags
+	options = staticlibs
+	options = !strip
+	source = http://download.kde.org/stable/frameworks/5.76/ki18n-5.76.0.tar.xz
+	sha256sums = 0e87bc1136e21f7860f15daa39e8d16e5a773995fce2b87b0cef0043c4ce0e7a
+
+pkgname = mingw-w64-ki18n
+

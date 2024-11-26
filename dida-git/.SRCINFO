@@ -1,0 +1,23 @@
+pkgbase = dida-git
+	pkgdesc = 使用electron包装的滴答客户端
+	pkgver = 1.0.4.r5.gbcb26e5
+	pkgrel = 1
+	url = https://github.com/jialeens/dida
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = npm
+	makedepends = sed
+	makedepends = gcc
+	depends = electron
+	provides = dida
+	conflicts = dida
+	source = dida-git::git+https://github.com/jialeens/dida.git
+	source = dida.desktop
+	source = dida.sh
+	sha256sums = SKIP
+	sha256sums = 2900c26c1209f94033b94c38ad754aa2941f2acbf681f8c30a04f83b128d3f13
+	sha256sums = 4b5aaa36e4834e14b931d71492426d0300b45c5dbb9bc654be939c74cc466096
+
+pkgname = dida-git
+

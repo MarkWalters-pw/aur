@@ -1,0 +1,18 @@
+pkgbase = drupalconsole-git
+	pkgdesc = The Drupal Console is a suite of tools that you run on a command line interface (CLI) to generate boilerplate code and interact with a Drupal 8 installation.
+	pkgver = 1.0.0.alpha2.r42.g35370d5
+	pkgrel = 1
+	url = http://drupalconsole.com/
+	install = drupalconsole.install
+	arch = any
+	license = GPL
+	makedepends = php-box
+	makedepends = composer
+	makedepends = git
+	depends = php
+	provides = drupalconsole=1.0.0.alpha2.r42.g35370d5
+	conflicts = drupalconsole
+	source = drupalconsole::git+https://github.com/hechoendrupal/DrupalConsole.git
+	sha512sums = SKIP
+
+pkgname = drupalconsole-git

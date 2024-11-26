@@ -1,0 +1,19 @@
+--- kg.c	2020-04-03 17:52:21.000000000 +0200
++++ kg.c.patched	2022-03-06 16:50:38.994444543 +0100
+@@ -6441,12 +6441,15 @@
+  */
+ 
+ static void emit(cell p) {
++	cell New;
++
+ 	save(p);
+ 	if (NIL == P) {
+ 		P = Prog = cons(p, NIL);
+ 	}
+ 	else {
+-		cdr(P) = cons(p, NIL);
++		New = cons(p, NIL);
++		cdr(P) = New;
+ 		P = cdr(P);
+ 	}
+ 	unsave(1);

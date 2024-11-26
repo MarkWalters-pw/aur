@@ -1,0 +1,20 @@
+pkgbase = lightdm-enso-os-greeter-git
+	pkgdesc = A fork of Pantheon greeter.
+	pkgver = r195.bf0d53c
+	pkgrel = 2
+	url = https://github.com/nick92/Enso-OS
+	arch = x86_64
+	license = GPL
+	makedepends = meson
+	makedepends = git
+	makedepends = vala
+	depends = clutter-gtk
+	depends = libgee
+	depends = libgl
+	depends = lightdm
+	conflicts = lightdm-pantheon-greeter
+	source = git+https://github.com/nick92/Enso-OS
+	sha256sums = SKIP
+
+pkgname = lightdm-enso-os-greeter-git
+

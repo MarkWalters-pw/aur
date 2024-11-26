@@ -1,0 +1,33 @@
+pkgbase = vim-youcompleteme-git
+	pkgdesc = A code-completion engine for Vim
+	pkgver = r3216.0d855962
+	pkgrel = 1
+	url = https://ycm-core.github.io/YouCompleteMe/
+	arch = x86_64
+	groups = vim-plugins
+	license = GPL3
+	makedepends = git
+	makedepends = cmake
+	makedepends = pybind11
+	depends = vim
+	depends = python>=3.6
+	depends = python-watchdog
+	depends = python-bottle
+	depends = clang
+	optdepends = gopls: Go semantic completion
+	optdepends = nodejs-tern: JavaScript semantic completion
+	optdepends = rust-analyzer: Rust semantic completion
+	optdepends = typescript: Typescript semantic completion
+	optdepends = python-jedi: Python semantic completion
+	optdepends = python-numpydoc: Python semantic completion
+	optdepends = python-regex: Better Unicode support
+	optdepends = omnisharp-roslyn: C# semantic completion
+	optdepends = java-environment>=11: Java semantic completion
+	optdepends = jdtls: Java semantic completion
+	optdepends = abseil-cpp: if setting _use_system_abseil ON
+	source = git+https://github.com/ycm-core/YouCompleteMe.git
+	source = git+https://github.com/ycm-core/ycmd.git
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = vim-youcompleteme-git

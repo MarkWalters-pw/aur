@@ -1,0 +1,17 @@
+pkgbase = monoburg-git
+	pkgdesc = MonoBURG is a tree-rewriting system originating from Mono.
+	pkgver = 1.0.7
+	pkgrel = 1
+	url = https://www.lrde.epita.fr/wiki/MonoBURG
+	arch = x86_64
+	arch = i686
+	license = GPL3
+	makedepends = git
+	depends = glib2
+	provides = monoburg
+	conflicts = monoburg
+	source = git+https://gitlab.lrde.epita.fr/tiger/monoburg.git
+	md5sums = SKIP
+
+pkgname = monoburg-git
+

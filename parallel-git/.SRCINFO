@@ -1,0 +1,19 @@
+pkgbase = parallel-git
+	pkgdesc = A shell tool for executing jobs in parallel
+	pkgver = 20220322.r0.58d14374
+	pkgrel = 1
+	url = https://www.gnu.org/software/parallel/
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	depends = perl
+	depends = texinfo
+	provides = parallel
+	conflicts = parallel
+	source = parallel::git+https://git.savannah.gnu.org/git/parallel.git
+	source = parallel-skip-rst-pdf-generation.patch
+	sha256sums = SKIP
+	sha256sums = 8bdee3bd4ef7de26cc63424b1276ace7c8c9e1a936937d4d752d5a827ed85f1e
+
+pkgname = parallel-git

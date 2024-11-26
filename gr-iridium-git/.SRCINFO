@@ -1,0 +1,19 @@
+pkgbase = gr-iridium-git
+	pkgdesc = Gnuradio blocks and tools for receiving Iridium transmissions
+	pkgver = r362.0c9defb
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/muccc/gr-iridium
+	arch = any
+	license = GPL3
+	makedepends = git
+	makedepends = cmake
+	makedepends = boost
+	depends = gnuradio
+	depends = gnuradio-osmosdr
+	depends = python
+	provides = gr-iridium
+	source = git+https://github.com/muccc/gr-iridium
+	sha1sums = SKIP
+
+pkgname = gr-iridium-git

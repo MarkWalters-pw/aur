@@ -1,0 +1,4 @@
+post_install() {
+    echo "Don't forget to set the superuser password:"
+    echo "    murmurd -ini /etc/murmur.ini -supw <your-password>"
+}

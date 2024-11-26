@@ -1,0 +1,26 @@
+pkgbase = magics++
+	pkgdesc = Magics is the latest generation of the ECMWF's Meteorological plotting software MAGICS.
+	pkgver = 4.15.4
+	pkgrel = 1
+	url = https://confluence.ecmwf.int/display/MAGP
+	arch = i686
+	arch = x86_64
+	license = Apache
+	makedepends = cmake
+	makedepends = gcc-fortran
+	makedepends = python-jinja
+	makedepends = swig
+	depends = eccodes>=2.19.0
+	depends = libgeotiff
+	depends = qt6-base
+	depends = pango
+	depends = python
+	optdepends = ksh
+	optdepends = libaec
+	optdepends = odb_api
+	source = http://confluence.ecmwf.int/download/attachments/3473464/Magics-4.15.4-Source.tar.gz
+	source = minizip.patch
+	sha256sums = a38033aa8bd5845c55ad10f9bf5aaee932177e3aa88cf8f174814d825d354285
+	sha256sums = f09ee5f328edd326d94e0bf5a751351956455de1816ce7ff93368eae6b6835d4
+
+pkgname = magics++

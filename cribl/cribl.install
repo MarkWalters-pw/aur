@@ -1,0 +1,55 @@
+CRIBL_HOME="/opt/cribl"
+
+pre_upgrade() {
+	echo "Attempting to stop the Cribl service..."
+	systemctl stop cribl
+}
+
+pre_remove() {
+	echo "Attempting to stop the Cribl service..."
+	systemctl stop cribl
+}
+
+post_install() {
+	# Build the post-install message in steps:
+	touch "$CRIBL_HOME/ftr"
+	echo "-------------------------------------------------------------------------" > "$CRIBL_HOME/ftr"
+	echo "Cribl has been installed in:" >> "$CRIBL_HOME/ftr"
+	echo "	$CRIBL_HOME" >> "$CRIBL_HOME/ftr"
+	echo "" >> "$CRIBL_HOME/ftr"
+	echo "To start Cribl, run the command:" >> "$CRIBL_HOME/ftr"
+	echo "	$CRIBL_HOME/bin/criblstart" >> "$CRIBL_HOME/ftr"
+	echo "" >> "$CRIBL_HOME/ftr"
+	echo "" >> "$CRIBL_HOME/ftr"
+	echo "To use the Cribl web interface, point your browser to:" >> "$CRIBL_HOME/ftr"
+	echo "	http://$HOSTNAME:9000" >> "$CRIBL_HOME/ftr"
+	echo "" >> "$CRIBL_HOME/ftr"
+	echo "" >> "$CRIBL_HOME/ftr"
+	echo "Complete documentation is at https://docs.cribl.io" >> "$CRIBL_HOME/ftr"
+	echo "-------------------------------------------------------------------------" >> "$CRIBL_HOME/ftr"
+
+	echo "Cribl has been installed to $CRIBL_HOME"
+	echo "You can start Cribl by running 'systemctl start cribl'"
+}
+
+post_upgrade() {
+	# Build the post-upgrade message in steps:
+	touch "$CRIBL_HOME/ftr"
+	echo "-------------------------------------------------------------------------" > "$CRIBL_HOME/ftr"
+	echo "Cribl has been updated in:" >> "$CRIBL_HOME/ftr"
+	echo "	$CRIBL_HOME" >> "$CRIBL_HOME/ftr"
+	echo "" >> "$CRIBL_HOME/ftr"
+	echo "To start Cribl, run the command:" >> "$CRIBL_HOME/ftr"
+	echo "	$CRIBL_HOME/bin/cribl start" >> "$CRIBL_HOME/ftr"
+	echo "" >> "$CRIBL_HOME/ftr"
+	echo "" >> "$CRIBL_HOME/ftr"
+	echo "To use the Cribl web interface, point your browser to:" >> "$CRIBL_HOME/ftr"
+	echo "	http://$HOSTNAME:9000" >> "$CRIBL_HOME/ftr"
+	echo "" >> "$CRIBL_HOME/ftr"
+	echo "" >> "$CRIBL_HOME/ftr"
+	echo "Complete documentation is at https://docs.cribl.io" >> "$CRIBL_HOME/ftr"
+	echo "-------------------------------------------------------------------------" >> "$CRIBL_HOME/ftr"
+
+	echo "Cribl has been upgraded in $CRIBL_HOME"
+	echo "Run 'systemctl start cribl' to complete the upgrade."
+}

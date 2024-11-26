@@ -1,0 +1,34 @@
+# Remove all program files, including files created or modified by SickChill
+_cleanup_app_files() {
+  rm -rf /opt/sickchill/app
+}
+
+post_install() {
+  post_upgrade
+  echo "==> Start and enable sickchill.service. Then visit http://localhost:8081/"
+}
+
+pre_upgrade() {
+  _cleanup_app_files
+}
+
+post_upgrade() {
+  systemd-sysusers sickchill.conf
+  chown -R sickchill:sickchill /opt/sickchill/app
+}
+
+pre_remove() {
+  echo "==> Stopping sickchill.service..."
+  systemctl stop sickchill.service
+}
+
+post_remove() {
+  _cleanup_app_files
+
+  echo "==> To delete the configuration files, run as root: rm -rf /opt/sickchill/data"
+
+  # Do not delete the 'sickchill' user automatically. It may still own files.
+  # If 'sickchill' is the only user in group 'sickchill', then userdel will also delete the group.
+  echo "==> To delete the \"sickchill\" user, run as root: userdel --force sickchill"
+}
+

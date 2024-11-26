@@ -1,0 +1,26 @@
+diff -urN CVXcanon-0.1.2-orig/setup.py CVXcanon-0.1.2/setup.py
+--- CVXcanon-0.1.2-orig/setup.py	2020-09-18 14:25:26.000000000 -0400
++++ CVXcanon-0.1.2/setup.py	2021-08-30 03:50:55.922117288 -0400
+@@ -12,7 +12,7 @@
+ canon = Extension(
+     '_CVXcanon',
+     sources=['src/CVXcanon.cpp', 'src/LinOpOperations.cpp', 'src/python/CVXcanon_wrap.cpp'],
+-    include_dirs=['src/', 'src/python/', 'include/Eigen', get_numpy_include()]
++    include_dirs=['src/', 'src/python/', '/usr/include/eigen3', get_numpy_include()]
+ )
+ 
+ 
+diff -urN CVXcanon-0.1.2-orig/src/Utils.hpp CVXcanon-0.1.2/src/Utils.hpp
+--- CVXcanon-0.1.2-orig/src/Utils.hpp	2020-09-18 14:25:26.000000000 -0400
++++ CVXcanon-0.1.2/src/Utils.hpp	2021-08-30 03:51:31.438834630 -0400
+@@ -14,8 +14,8 @@
+ 
+ // Some useful defines for Matricies/etc.
+ 
+-#include "../include/Eigen/Sparse"
+-#include "../include/Eigen/Core"
++#include "Eigen/Sparse"
++#include "Eigen/Core"
+ 
+ #define NULL_MATRIX Eigen::SparseMatrix<double>(0,0)
+ 

@@ -1,0 +1,20 @@
+pkgbase = libxfce4util-git
+	pkgdesc = Basic utility non-GUI functions for Xfce
+	pkgver = 4.17.2.r22.ge2f2a6e
+	pkgrel = 1
+	url = http://gitlab.xfce.org/xfce/libxfce4util/
+	arch = i686
+	arch = x86_64
+	groups = xfce4-git
+	license = GPL2
+	makedepends = git
+	makedepends = xfce4-dev-tools
+	makedepends = gobject-introspection
+	makedepends = vala
+	depends = glib2
+	provides = libxfce4util=4.17.2.r22.ge2f2a6e
+	conflicts = libxfce4util
+	source = git+https://gitlab.xfce.org/xfce/libxfce4util
+	sha256sums = SKIP
+
+pkgname = libxfce4util-git

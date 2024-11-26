@@ -1,0 +1,17 @@
+pkgbase = list-all-systemd-timers-git
+	pkgdesc = Prints all systemd timers to stdout
+	pkgver = r7.1aaccb5
+	pkgrel = 1
+	url = https://github.com/dmp1ce/list-all-systemd-timers
+	arch = i686
+	arch = x86_64
+	license = custom:Unlicense
+	makedepends = git
+	makedepends = stack
+	depends = gmp
+	options = strip
+	source = list-all-systemd-timers-git::git+https://github.com/dmp1ce/list-all-systemd-timers.git
+	sha256sums = SKIP
+
+pkgname = list-all-systemd-timers-git
+

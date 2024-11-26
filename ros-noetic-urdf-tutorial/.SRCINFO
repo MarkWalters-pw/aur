@@ -1,0 +1,20 @@
+pkgbase = ros-noetic-urdf-tutorial
+	pkgdesc = ROS - This package contains a number of URDF tutorials.
+	pkgver = 0.5.0
+	pkgrel = 1
+	url = https://wiki.ros.org/urdf_tutorial
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-catkin
+	makedepends = ros-noetic-roslaunch
+	depends = ros-noetic-xacro
+	depends = ros-noetic-joint-state-publisher
+	depends = ros-noetic-rviz
+	depends = ros-noetic-robot-state-publisher
+	source = ros-noetic-urdf-tutorial-0.5.0.tar.gz::https://github.com/ros/urdf_tutorial/archive/0.5.0.tar.gz
+	sha256sums = a1670250e4cd22b09e6b33dfaa3ec43c51b4650d1914a28a3325e5a563fc6d5f
+
+pkgname = ros-noetic-urdf-tutorial
+

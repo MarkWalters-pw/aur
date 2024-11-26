@@ -1,0 +1,17 @@
+pkgbase = mingw-w64-unifdef
+	pkgdesc = Remove #ifdef'ed lines (mingw-w64)
+	pkgver = 2.12
+	pkgrel = 1
+	url = http://dotat.at/prog/unifdef/
+	arch = any
+	license = BSD
+	makedepends = mingw-w64-gcc
+	depends = mingw-w64-crt
+	options = !strip
+	options = !buildflags
+	options = staticlibs
+	source = https://dotat.at/prog/unifdef/unifdef-2.12.tar.gz
+	sha256sums = fba564a24db7b97ebe9329713ac970627b902e5e9e8b14e19e024eb6e278d10b
+
+pkgname = mingw-w64-unifdef
+

@@ -1,0 +1,21 @@
+pkgbase = python-cipheycore
+	pkgdesc = Some cryptanalysis tidbits written in a proper language
+	pkgver = 0.3.2
+	pkgrel = 2
+	url = https://github.com/Ciphey/CipheyCore
+	arch = any
+	license = MIT
+	makedepends = gcc
+	makedepends = boost
+	makedepends = cmake
+	makedepends = make
+	makedepends = swig
+	makedepends = patch
+	makedepends = python-poetry
+	makedepends = python-installer
+	source = python-cipheycore-0.3.2.tar.gz::https://github.com/Ciphey/CipheyCore/archive/refs/tags/v0.3.2.tar.gz
+	source = xor_single.cpp.patch
+	sha256sums = d05b4c15077b56121e96c1b934ae2d49f14004834a9b8fbc1bdc76782cd66253
+	sha256sums = c6c944b824571589ed6fde61943ebc22dc5eb4de0b028ac5920e3a286230701e
+
+pkgname = python-cipheycore

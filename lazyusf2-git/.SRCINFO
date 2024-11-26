@@ -1,0 +1,22 @@
+pkgbase = lazyusf2-git
+	pkgdesc = Library for decoding Nintendo 64 Sound Format files using Mupen64plus
+	pkgver = r102.909406c
+	pkgrel = 1
+	url = https://bitbucket.org/losnoco/lazyusf2
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	license = custom:CC0
+	makedepends = git
+	makedepends = grep
+	depends = zlib
+	provides = lazyusf2
+	conflicts = lazyusf2
+	source = lazyusf2-git::git+https://bitbucket.org/losnoco/lazyusf2.git
+	source = makefile.patch
+	source = LICENSE.CC0
+	sha256sums = SKIP
+	sha256sums = 25ab13f0f3ed10b12fa378d07219e71c533fd38e0875d8bb046b6637ce2bcfe1
+	sha256sums = a90051e82202a5dc51162127c6834f8434fb2ece57795317951420fe6a8f4562
+
+pkgname = lazyusf2-git

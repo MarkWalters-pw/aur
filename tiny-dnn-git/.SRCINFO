@@ -1,0 +1,17 @@
+pkgbase = tiny-dnn-git
+	pkgdesc = A C++11 implementation of deep learning for limited computational resource, embedded systems and IoT devices (git version)
+	pkgver = 1.0.0a3.r246.gc0f576f5
+	pkgrel = 1
+	url = https://github.com/tiny-dnn/tiny-dnn/
+	arch = any
+	license = BSD
+	makedepends = git
+	makedepends = cmake
+	optdepends = cereal: for serialization support
+	provides = tiny-dnn
+	conflicts = tiny-dnn
+	source = git+https://github.com/tiny-dnn/tiny-dnn.git
+	sha256sums = SKIP
+
+pkgname = tiny-dnn-git
+

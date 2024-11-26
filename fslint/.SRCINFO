@@ -1,0 +1,16 @@
+pkgbase = fslint
+	pkgdesc = Finds and clean various forms of lint on a filesystem
+	pkgver = 2.46
+	pkgrel = 2
+	url = http://www.pixelbeat.org/fslint/
+	arch = any
+	license = GPL
+	source = fslint-2.46.tar.gz::https://github.com/pixelb/fslint/archive/2.46.tar.gz
+	sha256sums = 5b7403bde841cbca2cb4906ff56482a0476c5860b3486d88c675f4d6a26be0b1
+
+pkgname = fslint
+	depends = python2
+
+pkgname = fslint-gui
+	depends = python2
+	depends = pygtk

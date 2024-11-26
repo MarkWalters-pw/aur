@@ -1,0 +1,17 @@
+pkgbase = suppaftp
+	pkgdesc = A super FTP/FTPS command-line interface
+	pkgver = 5.2.0
+	pkgrel = 1
+	url = https://github.com/veeso/suppaftp
+	arch = x86_64
+	license = Apache
+	license = MIT
+	makedepends = git
+	makedepends = rust
+	depends = gcc-libs
+	depends = openssl
+	options = !lto
+	source = suppaftp::git+https://github.com/veeso/suppaftp.git#commit=5bf40b4bc68658180bdfe7c54cae5d9869c64ae6
+	b2sums = SKIP
+
+pkgname = suppaftp

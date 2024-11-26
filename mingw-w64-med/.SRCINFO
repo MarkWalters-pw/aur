@@ -1,0 +1,16 @@
+pkgbase = mingw-w64-med
+	pkgdesc = Modelisation et Echanges de Donnees, i.e. Data Modelization and Exchanges - code-aster exchange module linked to hdf5
+	pkgver = 4.1.1
+	pkgrel = 1
+	url = https://www.salome-platform.org/downloads
+	arch = any
+	license = LGPL
+	makedepends = mingw-w64-cmake
+	depends = mingw-w64-hdf5
+	options = !buildflags
+	options = !strip
+	options = staticlibs
+	source = https://files.salome-platform.org/Salome/other/med-4.1.1.tar.gz
+	sha256sums = dc2b5d54ebf0666e3ff2e974041d2ab0da906061323537023ab165d573389dd0
+
+pkgname = mingw-w64-med

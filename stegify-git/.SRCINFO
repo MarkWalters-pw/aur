@@ -1,0 +1,14 @@
+pkgbase = stegify-git
+	pkgdesc = Tool for LSB steganography written in Go (git)
+	pkgver = 1.2.r2.g62518ca
+	pkgrel = 3
+	url = https://github.com/DimitarPetrov/stegify
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = go
+	conflicts = stegify
+	source = git+https://github.com/DimitarPetrov/stegify
+	sha512sums = SKIP
+
+pkgname = stegify-git

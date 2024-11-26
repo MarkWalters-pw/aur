@@ -1,0 +1,27 @@
+pkgbase = ros-noetic-pid
+	pkgdesc = ROS - Launch a PID control node.
+	pkgver = 0.0.24
+	pkgrel = 2
+	url = https://wiki.ros.org/pid
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-catkin
+	makedepends = ros-noetic-message-generation
+	makedepends = ros-noetic-roscpp
+	makedepends = ros-noetic-dynamic-reconfigure
+	makedepends = ros-noetic-std-msgs
+	depends = ros-noetic-message-runtime
+	depends = ros-noetic-roscpp
+	depends = ros-noetic-dynamic-reconfigure
+	depends = ros-noetic-std-msgs
+	source = ros-noetic-pid-0.0.24-0.tar.gz::https://github.com/AndyZe/pid-release/archive/release/noetic/pid/0.0.24-0.tar.gz
+	sha256sums = 4baac5e9ab0d98621a2820dcb7b76af518507666b7fc23ba7e117a8194366894
+
+pkgname = ros-noetic-pid
+

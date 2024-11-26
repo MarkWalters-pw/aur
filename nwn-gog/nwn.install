@@ -1,0 +1,31 @@
+post_install() {
+  if [ -x usr/bin/xdg-icon-resource ]; then
+    usr/bin/xdg-icon-resource forceupdate --theme hicolor 2> /dev/null
+  fi
+
+  echo "The first few times nwn is run will configure the various linux modules"
+  echo "Keep running the game until you see the Atari logo."
+  echo ""
+  echo "Game state and any saved games are stored in ~/.nwn. This is also where"
+  echo "you should store any mods that you download."
+  echo ""
+  echo "Please note that the gamespy master server for online multiplayer is down."
+  echo "To bypass the master server timeout when opening the multiplayer menu, edit your hosts file like so:"
+  echo "    echo '199.193.152.27    nwmaster.bioware.com    # SkywingL\'s substitute listing server' >> /etc/hosts"
+  echo "    echo '198.23.165.35     nwn.master.gamespy.com  # Visavent\'s gamespy replacement' >> /etc/hosts"
+  echo "Visit http://www.neverwinternights.info/builders_hosts.htm and http://www.nwnlist.com for details."
+}
+
+post_upgrade() {
+    post_install
+}
+
+post_remove() {
+    rm -rf /opt/nwn
+    if [ -x usr/bin/xdg-icon-resource ]; then
+        usr/bin/xdg-icon-resource forceupdate --theme hicolor 2> /dev/null
+    fi
+
+    echo "When nwn is run many files are stored in ~/.nwn including any save games."
+    echo "That folder can be removed manually."
+}

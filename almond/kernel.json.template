@@ -1,0 +1,13 @@
+{
+  "language" : "scala",
+  "display_name" : "Scala ${SCALA_VERSION} (almond ${ALMOND_VERSION})",
+  "argv" : [
+    "java",
+    "-jar",
+    "/usr/share/jupyter/kernels/scala/launcher.jar",
+    "--jupyter-path",
+    "/usr/share/jupyter/kernels/",
+    "--connection-file",
+    "{connection_file}"
+  ]
+}

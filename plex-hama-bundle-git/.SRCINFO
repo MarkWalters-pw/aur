@@ -1,0 +1,17 @@
+pkgbase = plex-hama-bundle-git
+	pkgdesc = Plex HTTP Anidb Metadata Agent (HAMA)
+	pkgver = r883.6ab37e2
+	pkgrel = 1
+	url = https://github.com/ZeroQI/Hama.bundle
+	arch = x86_64
+	arch = i686
+	license = GPL3
+	makedepends = git
+	depends = plex-media-server
+	source = plex-hama-bundle-git::git+https://github.com/ZeroQI/Hama.bundle
+	source = https://raw.githubusercontent.com/ZeroQI/Absolute-Series-Scanner/master/Scanners/Series/Absolute%20Series%20Scanner.py
+	sha512sums = SKIP
+	sha512sums = SKIP
+
+pkgname = plex-hama-bundle-git
+

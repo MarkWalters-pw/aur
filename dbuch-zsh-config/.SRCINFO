@@ -1,0 +1,20 @@
+pkgbase = dbuch-zsh-config
+	pkgdesc = dbuch zsh configuration
+	pkgver = 0.1.5
+	pkgrel = 1
+	url = https://github.com/dbuch/
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	depends = zsh>=5.3
+	depends = ripgrep
+	depends = bat
+	depends = skim
+	depends = ttf-ionicons
+	depends = inetutils
+	conflicts = grml-zsh-config
+	source = git+https://github.com/dbuch/dbuch-zsh-config.git#commit=48aca545a5e6c643a2bb4ffd7716ef819b9a26a6
+	sha256sums = SKIP
+
+pkgname = dbuch-zsh-config
+

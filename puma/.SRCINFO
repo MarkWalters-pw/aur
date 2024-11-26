@@ -1,0 +1,21 @@
+pkgbase = puma
+	pkgdesc = Simple password manager
+	pkgver = 0.8
+	pkgrel = 1
+	url = https://github.com/clawoflight/puma
+	arch = any
+	license = GPL3
+	makedepends = pandoc
+	depends = gnupg
+	depends = xdotool
+	optdepends = zenity: for puma-add
+	optdepends = diceware: for random password generation in puma-add
+	optdepends = dmenu: for puma-menu
+	source = https://github.com/clawoflight/puma/releases/download/v0.8/puma-v0.8.tar.gz
+	source = https://github.com/clawoflight/puma/releases/download/v0.8/puma-v0.8.tar.gz.asc
+	validpgpkeys = 871F10477DB3DDED5FC447B226C7E577EF967808
+	sha512sums = d1d61a0beae15b21ffe8894d0a1ba07ba6977da4aa4ffc399d09b5db226f2776133b751690e0ab327499e0030cbe736a3229c3d16896d3564a0d66b017063214
+	sha512sums = SKIP
+
+pkgname = puma
+

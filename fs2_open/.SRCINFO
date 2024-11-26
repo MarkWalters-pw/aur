@@ -1,0 +1,37 @@
+pkgbase = fs2_open
+	pkgdesc = An enhancement of the FreeSpace 2 engine, need game data
+	pkgver = 23_2_0_RC1
+	pkgrel = 1
+	url = https://scp.indiegames.us/
+	install = fs2_open.install
+	arch = i686
+	arch = x86_64
+	license = custom:fs2_open
+	makedepends = git
+	makedepends = cmake
+	makedepends = doxygen
+	depends = libjpeg
+	depends = libpng
+	depends = freetype2
+	depends = ffmpeg
+	depends = sdl2
+	depends = lua51
+	depends = openal
+	depends = jansson
+	optdepends = fs2_open-mediavps: extensive audiovisual enhancements
+	optdepends = fs2_open-data: extensive retail data
+	optdepends = wxlauncher: cross-platform fs2 launcher
+	source = fs2open::git+https://github.com/scp-fs2open/fs2open.github.com.git#tag=release_23_2_0_RC1
+	source = asarium-cmake-modules::git+https://github.com/asarium/cmake-modules.git
+	source = git+https://github.com/asarium/libRocket.git
+	source = fs2_open.sh
+	source = fs2_open.desktop
+	source = options
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = b79e907883949e7fe3a9b10ca3053d87b3e7f393deb41ecd905a823ef60d77e1
+	sha256sums = cac8914fb96eb4f09d8dec0005ccb3626499ab9f3f4c5f64c11bd8d2e913e372
+	sha256sums = c593dacd19705f1aaf23170d7b65b4621945200d3a496e256f77e3f1f0279741
+
+pkgname = fs2_open

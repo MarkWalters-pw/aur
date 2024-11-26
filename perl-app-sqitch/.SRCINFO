@@ -1,0 +1,58 @@
+pkgbase = perl-app-sqitch
+	pkgdesc = Sane database change management
+	pkgver = 1.1.0
+	pkgrel = 4
+	url = https://sqitch.org/
+	arch = any
+	license = MIT
+	checkdepends = perl-config-gitlike
+	checkdepends = perl-test-warn
+	checkdepends = perl-test-mockobject
+	checkdepends = perl-capture-tiny
+	checkdepends = perl-test-deep
+	checkdepends = perl-test-file
+	checkdepends = perl-test-mockmodule
+	checkdepends = perl-test-nowarnings
+	checkdepends = perl-test-dir
+	checkdepends = perl-test-file-contents
+	checkdepends = perl-test-exception
+	checkdepends = perl-pod-parser
+	depends = perl-clone
+	depends = perl-datetime
+	depends = perl-datetime-timezone
+	depends = perl-dbi
+	depends = perl-devel-stacktrace
+	depends = perl-encode-locale
+	depends = perl-file-homedir
+	depends = perl-hash-merge
+	depends = perl-libintl-perl
+	depends = perl-io-pager
+	depends = perl-ipc-run3
+	depends = perl-ipc-system-simple
+	depends = perl-list-moreutils
+	depends = perl-moo>=1.002000
+	depends = perl-namespace-autoclean>=0.16
+	depends = perl-path-class>=0.33
+	depends = perl-perlio-utf8-strict
+	depends = perl-string-formatter
+	depends = perl-string-shellquote
+	depends = perl-sub-exporter
+	depends = perl-template-tiny
+	depends = perl-throwable>=0.200009
+	depends = perl-try-tiny
+	depends = perl-type-tiny
+	depends = perl-type-tiny-xs
+	depends = perl-uri-db
+	depends = perl-uri
+	depends = perl>=5.11.0
+	depends = perl-module-install
+	optdepends = perl-dbd-pg: PostgreSQL support
+	optdepends = perl-dbd-sqlite: SQLite support
+	optdepends = perl-dbd-mysql: MySQL support
+	options = !emptydirs
+	options = purge
+	source = https://search.cpan.org/CPAN/authors/id/D/DW/DWHEELER/App-Sqitch-v1.1.0.tar.gz
+	sha512sums = bb2d179c473d2c659fa0e6b23a5c312449299975a2e487f84812d9d891ecc139278da1661e1a4eb922487b0cafb8014de019b498c069799f39fd2e31392cf3aa
+
+pkgname = perl-app-sqitch
+

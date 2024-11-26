@@ -1,0 +1,20 @@
+pkgbase = backblaze-b2-git
+	pkgdesc = Backblaze B2 Command Line Client
+	pkgver = r1710.1ddcc6e
+	pkgrel = 1
+	url = https://www.backblaze.com/b2/cloud-storage.html
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python
+	depends = python-b2sdk
+	depends = python-tqdm
+	depends = python-class-registry
+	provides = backblaze-b2
+	conflicts = backblaze-b2
+	source = git+https://github.com/Backblaze/B2_Command_Line_Tool.git
+	md5sums = SKIP
+
+pkgname = backblaze-b2-git
+

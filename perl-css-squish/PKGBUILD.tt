@@ -1,0 +1,35 @@
+# CPAN Name  : CSS::Squish
+# Contributor: [% packager %]
+# Generator  : CPANPLUS::Dist::Arch [% version %]
+
+pkgname=[% pkgname %]
+pkgver=[% pkgver %]
+pkgrel=[% pkgrel %]
+pkgdesc='Perl package to compact many CSS files into one big file'
+arch=('any')
+url='[% url %]'
+license=('PerlArtistic' 'GPL')
+depends=("perl" "perl-uri")
+checkdepends=("perl-test-longstring")
+	# 'perl' provides 'perl-test-simple'
+	# optionally 'perl-test-pod', 'perl-test-pod-coverage'
+source=([% source %])
+options=(!emptydirs)
+md5sums=('[% md5sums %]')
+
+build() {
+	cd [% distdir %]
+	PERL_MM_USE_DEFAULT=1 perl Makefile.PL INSTALLDIRS=vendor
+	make
+}
+
+check() {
+	cd [% distdir %]
+	make test
+}
+
+package() {
+	cd [% distdir %]
+	make install DESTDIR="$pkgdir"
+	find "$pkgdir" \( -name .packlist -o -name perllocal.pod \) -delete
+}

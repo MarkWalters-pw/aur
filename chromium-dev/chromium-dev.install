@@ -1,0 +1,44 @@
+all_off="$(tput sgr0)"
+bold="${all_off}$(tput bold)"
+yellow="${bold}$(tput setaf 3)"
+blue="${bold}$(tput setaf 4)"
+green="${bold}$(tput setaf 2)"
+
+_instructions() {
+  printf "${yellow}==>${all_off} ${bold}ATENTION:${all_off}
+${green}==>${all_off} ${bold}This Chromium package no longer supports custom flags passed via the
+   '/etc/chromium-dev/default' file (or any other files under '/etc/chromium-dev/').
+  ${blue}->${all_off} Use the ${bold}--oauth2-client-id=${all_off} and ${bold}--oauth2-client-secret=${all_off} switches for
+     setting ${bold}GOOGLE_DEFAULT_CLIENT_ID${all_off} and ${bold}GOOGLE_DEFAULT_CLIENT_SECRET${all_off} at
+     runtime into '${bold}chromium-dev-flags.conf${all_off}' file
+     under '${bold}\x24HOME/.config/${all_off}' (or ${bold}\x24XDG_CONFIG_HOME${all_off}).
+     This allows signing into Chromium without baked-in values
+  ${blue}->${all_off} If you need to pass extra command-line arguments to Chromium, you
+     can put them in the '${bold}chromium-dev-flags.conf${all_off}' file under '${bold}\x24HOME/.config/'${all_off}
+     (or ${bold}\x24XDG_CONFIG_HOME${all_off}). Arguments are split on whitespace and shell
+     quoting rules apply but no further parsing is performed.
+${green}==>${all_off} ${bold}If you use Kwallet5 from Plasma/Kf5:${all_off}
+  ${blue}->${all_off} You needs add '${bold}\"--password-store=kwallet5\"${all_off}' into '${bold}chromium-dev-flags.conf${all_off}' file
+     under '${bold}\x24HOME/.config/${all_off}' (or ${bold}\x24XDG_CONFIG_HOME${all_off}).
+${green}==>${all_off} ${bold}Chromium-dev Policy path:${all_off}
+  ${blue}->${all_off} Is stored into '${bold}/etc/chromium-dev/policies${all_off}'.
+${green}==>${all_off} ${bold}Chromium-dev Native Messaging Hosts path:${all_off}
+  ${blue}->${all_off} Is stored into '${bold}/etc/chromium-dev/native-messaging-hosts${all_off}'.
+${green}==>${all_off} ${bold}Chromium-dev external extensions path:${all_off}
+  ${blue}->${all_off} Is stored into '${bold}/usr/share/chromium-dev/extensions${all_off}'.
+${green}==>${all_off} ${bold}Chromium detects Qt5 or Qt6 based on your desktop environment (if you builded with Qt5/6 support enabled):${all_off}
+  ${blue}->${all_off} To override you needs add '${bold}--qt-version=5${all_off}' or '${bold}--qt-version=6${all_off}'
+     into '${bold}chromium-dev-flags.conf${all_off}' file under '${bold}\x24HOME/.config/${all_off}' (or ${bold}\x24XDG_CONFIG_HOME${all_off}).
+${green}==>${all_off} ${bold}Screencast is disabled by default at runtime:${all_off}
+  ${blue}->${all_off} Either enable it by navigating to '${bold}chrome://flags/#enable-webrtc-pipewire-capturer${all_off}' inside Chromium
+     or add '${bold}--enable-features=WebRTCPipeWireCapturer${all_off}' into '${bold}chromium-dev-flags.conf${all_off}' file
+     under '${bold}\x24HOME/.config/${all_off}' (or ${bold}\x24XDG_CONFIG_HOME${all_off}).\n"
+}
+
+post_install() {
+  _instructions
+}
+
+post_upgrade() {
+  _instructions
+}

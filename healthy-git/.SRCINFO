@@ -1,0 +1,15 @@
+pkgbase = healthy-git
+	pkgdesc = A tiny Linux process monitor
+	pkgver = r54.d17ae92
+	pkgrel = 1
+	url = https://github.com/heyLu/healthy
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = python-gobject
+	depends = gtk3
+	depends = python-cairo
+	source = healthy-git::git+https://github.com/heyLu/healthy
+	md5sums = SKIP
+
+pkgname = healthy-git

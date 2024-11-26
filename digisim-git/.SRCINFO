@@ -1,0 +1,15 @@
+pkgbase = digisim-git
+	pkgdesc = A digital logic simulator programmed in lua
+	pkgver = 1
+	pkgrel = 5
+	arch = x86_64
+	license = unknown
+	makedepends = git
+	makedepends = zig
+	depends = luajit
+	provides = digisim
+	conflicts = digisim
+	source = digisim::git+https://github.com/VrIgHtEr/digisim.git
+	md5sums = SKIP
+
+pkgname = digisim-git

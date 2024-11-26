@@ -1,0 +1,15 @@
+pkgbase = kubeval-bin
+	pkgdesc = Tool for validating Kubernetes YAML or JSON configuration files
+	pkgver = 0.16.1
+	pkgrel = 1
+	url = https://github.com/garethr/kubeval
+	arch = x86_64
+	license = apache
+	provides = kubeval
+	conflicts = kubeval
+	conflicts = kubeval-git
+	source = https://github.com/garethr/kubeval/releases/download/v0.16.1/kubeval-linux-amd64.tar.gz
+	sha256sums = 2d6f9bda1423b93787fa05d9e8dfce2fc1190fefbcd9d0936b9635f3f78ba790
+
+pkgname = kubeval-bin
+

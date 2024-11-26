@@ -1,0 +1,27 @@
+pkgbase = python-parquet-tools
+	pkgdesc = Easy install parquet-tools
+	pkgver = 0.2.14
+	pkgrel = 1
+	url = https://github.com/ktrueda/parquet-tools
+	arch = any
+	license = MIT
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-poetry
+	depends = python>=3.8
+	depends = python-halo>=0.0.29
+	depends = python-halo<0.1.0
+	depends = python-pyarrow
+	depends = python-pandas>=1
+	depends = python-tabulate>=0.8.7
+	depends = python-tabulate<1.0.0
+	depends = python-boto3>=1.13
+	depends = python-boto3<2.0
+	depends = python-thrift>=0.13.0
+	depends = python-thrift<1
+	depends = python-colorama>=0.4.3
+	depends = python-colorama<0.5.0
+	source = https://files.pythonhosted.org/packages/source/p/parquet_tools/parquet_tools-0.2.14.tar.gz
+	sha256sums = bde8c882ab407752459dd4a7bf9677e79528c12b91783b3621ce210676972a9c
+
+pkgname = python-parquet-tools

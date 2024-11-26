@@ -1,0 +1,16 @@
+pkgbase = deadbeef-mpris2-plugin
+	pkgdesc = MPRISv2 plugin for the DeaDBeeF music player
+	pkgver = 1.16
+	pkgrel = 1
+	url = https://github.com/DeaDBeeF-Player/deadbeef-mpris2-plugin
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	depends = glib2
+	depends = deadbeef
+	conflicts = deadbeef-mpris-plugin
+	options = !libtool
+	source = deadbeef-mpris2-plugin-1.16.tar.gz::https://github.com/DeaDBeeF-Player/deadbeef-mpris2-plugin/archive/refs/tags/v1.16.tar.gz
+	md5sums = c7943dcb8e723d01edb621b74a37ba14
+
+pkgname = deadbeef-mpris2-plugin

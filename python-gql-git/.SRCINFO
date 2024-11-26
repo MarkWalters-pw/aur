@@ -1,0 +1,21 @@
+pkgbase = python-gql-git
+	pkgdesc = Python GraphQL client
+	pkgver = 3.0.0a1.r1.g8fc378d
+	pkgrel = 1
+	url = https://github.com/graphql-python/gql
+	arch = any
+	license = MIT
+	makedepends = python-setuptools
+	makedepends = git
+	depends = python-aiohttp
+	depends = python-graphql-core
+	depends = python-requests
+	depends = python-websockets
+	depends = python-yarl
+	provides = python-gql
+	conflicts = python-gql
+	source = python-gql-git::git+https://github.com/graphql-python/gql.git
+	sha256sums = SKIP
+
+pkgname = python-gql-git
+

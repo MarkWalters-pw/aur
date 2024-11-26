@@ -1,0 +1,25 @@
+pkgbase = popura
+	pkgdesc = Popura ポプラ: alternative Yggdrasil network client
+	pkgver = 0.4.6
+	pkgrel = 1
+	url = https://github.com/popura-network/Popura
+	arch = i686
+	arch = x86_64
+	arch = armv7h
+	arch = armv6h
+	arch = aarch64
+	license = LGPLv3
+	makedepends = git
+	makedepends = go
+	depends = glibc
+	conflicts = popura
+	conflicts = yggdrasil
+	conflicts = yggdrasil-git
+	conflicts = yggdrasil
+	conflicts = yggdrasil-openrc
+	source = popura::git+https://github.com/popura-network/Popura.git#commit=e6ee65440d6835523d8f05a5baa174a0056f160f
+	source = popura.sysusers
+	sha512sums = SKIP
+	sha512sums = b78d1f5efeeba184588ba7bdb2249d976aec160daa59742e032983da1aedad062d15c7c97cba3eba69412a0f7904ee123d98b58f859892d71188c25624295c32
+
+pkgname = popura

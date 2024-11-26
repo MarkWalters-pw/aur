@@ -1,0 +1,18 @@
+pkgbase = errbot
+	pkgdesc = a chatbot. It allows you to start scripts interactively from your chatrooms for any reason: random humour, chatops, starting a build, monitoring commits, triggering alerts...
+	pkgver = 6.1.7
+	pkgrel = 1
+	url = https://github.com/errbotio/errbot
+	arch = any
+	license = GPL
+	makedepends = python-pip
+	depends = python
+	options = emptydirs
+	backup = etc/errbot/config.py
+	source = errbot.config.py
+	source = errbot.service
+	sha256sums = 23ba61c4fb3ec173cd62452662c667ed0fab10cfe8ee576ce82598664f147896
+	sha256sums = e7e4b811c55183580ee821b5dfab99f39917f3c0d284fa7cad9ac086ab4808ec
+
+pkgname = errbot
+

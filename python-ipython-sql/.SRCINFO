@@ -1,0 +1,20 @@
+pkgbase = python-ipython-sql
+	pkgdesc = RDBMS access via IPython
+	pkgver = 0.5.0
+	pkgrel = 1
+	url = https://pypi.python.org/pypi/ipython-sql
+	arch = any
+	license = MIT
+	makedepends = python-setuptools
+	depends = ipython
+	depends = python-sqlalchemy
+	depends = python-prettytable
+	depends = python-sqlparse
+	depends = python-six
+	optdepends = python-pandas: DataFrame support
+	optdepends = python-pymysql: connect to MySQL database
+	optdepends = python-psycopg2: connect to PostgreSQL database
+	source = https://files.pythonhosted.org/packages/source/i/ipython-sql/ipython-sql-0.5.0.tar.gz
+	sha256sums = 3db3ce7f9a95dfaf43876fa80b16bdbb9a04de0ba12042cab13e9f596fcffdbe
+
+pkgname = python-ipython-sql

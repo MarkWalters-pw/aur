@@ -1,0 +1,17 @@
+pkgbase = polkadot-git
+	pkgdesc = Polkadot Node Implementation built from current git master
+	pkgver = 0.7.34.814
+	pkgrel = 1
+	url = https://github.com/paritytech/polkadot
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = rustup
+	makedepends = clang
+	provides = polkadot
+	conflicts = polkadot
+	source = polkadot::git+https://github.com/paritytech/polkadot.git
+	sha256sums = SKIP
+
+pkgname = polkadot-git
+

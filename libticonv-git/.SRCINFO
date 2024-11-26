@@ -1,0 +1,19 @@
+pkgbase = libticonv-git
+	pkgdesc = TI character set conversion library
+	pkgver = 1.18.r119.g7c4858d8
+	pkgrel = 1
+	url = http://lpg.ticalc.org/prj_tilp/
+	arch = i686
+	arch = x86_64
+	license = GPL-2.0-only
+	makedepends = git
+	depends = glibc
+	depends = glib2
+	depends = gcc-libs
+	provides = libticonv
+	conflicts = libticonv
+	options = !libtool
+	source = tilibs::git+https://github.com/debrouxl/tilibs.git
+	md5sums = SKIP
+
+pkgname = libticonv-git

@@ -1,0 +1,27 @@
+pkgbase = python-dmt
+	pkgdesc = Manage domains like packages.
+	pkgver = r68.0a3dd19
+	pkgrel = 1
+	url = https://gitlab.com/waser-technologies/technologies/dmt
+	arch = any
+	license = GNU GPL v3
+	makedepends = git
+	depends = python
+	depends = python-halo
+	depends = python-prompt_toolkit
+	depends = python-yaml
+	depends = python-requests
+	depends = python-tqdm
+	depends = python-transformers
+	depends = git-lfs
+	depends = rasa
+	provides = dmt
+	conflicts = dmt
+	source = PKGBUILD_EXTRAS
+	source = git+https://gitlab.com/waser-technologies/technologies/dmt.git
+	source = LICENSE
+	md5sums = SKIP
+	md5sums = SKIP
+	md5sums = 3e2b0075ebc1ee7ed096ed7fb9175a37
+
+pkgname = python-dmt

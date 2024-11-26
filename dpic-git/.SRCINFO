@@ -1,0 +1,14 @@
+pkgbase = dpic-git
+	pkgdesc = An implementation of the pic "little language," with support for LaTeX, PDF, SVG, Postscript, and xfig 3.2 output.
+	pkgver = r48.1e982f5
+	pkgrel = 1
+	url = https://ece.uwaterloo.ca/~aplevich/dpic/
+	arch = i686
+	arch = x86_64
+	license = custom: BSD
+	makedepends = git
+	conflicts = dpic
+	source = dpic-git::git+https://gitlab.com/aplevich/dpic.git
+	md5sums = SKIP
+
+pkgname = dpic-git

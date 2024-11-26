@@ -1,0 +1,18 @@
+pkgbase = avisynth-plugin-dotkill-git
+	pkgdesc = Plugin for Avisynth: dotkill (GIT version)
+	pkgver = 1.0.0.2.gfdd71b5
+	pkgrel = 1
+	url = https://github.com/Asd-g/AviSynth-DotKill
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = cmake
+	makedepends = avisynthplus
+	depends = libavisynth.so
+	provides = avisynth-plugin-dotkill
+	conflicts = avisynth-plugin-dotkill
+	options = debug
+	source = dotkill::git+https://github.com/Asd-g/AviSynth-DotKill.git
+	sha256sums = SKIP
+
+pkgname = avisynth-plugin-dotkill-git

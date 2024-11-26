@@ -1,0 +1,23 @@
+pkgbase = sikulixide-bin
+	pkgdesc = Automates anything you see on the screen of your desktop computer
+	pkgver = 2.0.5
+	pkgrel = 1
+	url = http://sikulix.com
+	arch = any
+	license = MIT
+	makedepends = unzip
+	makedepends = gendesk
+	depends = java-environment>=8
+	depends = opencv
+	depends = tesseract
+	depends = jython
+	depends = jruby
+	provides = sikulixide
+	provides = sikulix
+	noextract = sikulixide-bin-2.0.5.jar
+	source = sikulixide-bin-2.0.5.jar::https://launchpad.net/sikuli/sikulix/2.0.5/+download/sikulixide-2.0.5.jar
+	source = LICENSE::https://github.com/RaiMan/SikuliX1/raw/master/LICENSE
+	sha256sums = f4b0b50c8e413094e78cd1d8fed02ae65f62f8c53ed00da0562fdedf4acff729
+	sha256sums = cea4b6292d59625e14968ec666faa7ae6e237b510d846a96875bd6a282677f3a
+
+pkgname = sikulixide-bin

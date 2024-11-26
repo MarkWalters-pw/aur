@@ -1,0 +1,19 @@
+pkgbase = xbindjoy-git
+	pkgdesc = Tool for making your joysticks and gamepads more useful
+	pkgver = r95.5ffef01
+	pkgrel = 1
+	url = https://github.com/saulrh/XBindJoy
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	depends = libev
+	depends = libxtst
+	depends = guile
+	provides = xbindjoy-git
+	conflicts = xbindjoy-git
+	source = git+https://github.com/saulrh/XBindJoy.git
+	source = arch-package.patch
+	sha256sums = SKIP
+	sha256sums = 5cadaa5e7f38015f62ebfbc73d594915ed7d8289ffa2a74b09b84ad9fff44f81
+
+pkgname = xbindjoy-git

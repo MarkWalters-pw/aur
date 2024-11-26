@@ -1,0 +1,22 @@
+pkgbase = efibootmgr-git
+	pkgdesc = Linux user-space application to modify the EFI Boot Manager
+	pkgver = 17
+	pkgrel = 1
+	url = https://github.com/rhboot/efibootmgr
+	arch = x86_64
+	license = GPL2
+	makedepends = efivar
+	makedepends = git
+	depends = glibc
+	depends = popt
+	provides = efibootmgr
+	conflicts = efibootmgr
+	source = git+https://github.com/rhboot/efibootmgr
+	sha512sums = SKIP
+
+pkgname = efibootmgr-git
+	depends = glibc
+	depends = popt
+	depends = libefiboot.so
+	depends = libefivar.so
+

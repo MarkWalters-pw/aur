@@ -1,0 +1,21 @@
+pkgbase = python-icefall-git
+	pkgdesc = Official recipes associated with k2 and lhotse
+	pkgver = 1.2.1
+	pkgrel = 1
+	url = https://github.com/danpovey/lilcom
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python>=3.7
+	depends = python-kaldialign
+	depends = python-kaldilm
+	depends = python-sentencepiece
+	depends = tensorboard
+	optdepends = python-lhotse: Datasets
+	provides = python-icefall
+	conflicts = python-icefall
+	source = python-icefall-git::git+https://github.com/danpovey/lilcom
+	md5sums = SKIP
+
+pkgname = python-icefall-git

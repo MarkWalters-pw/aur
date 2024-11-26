@@ -1,0 +1,15 @@
+pkgbase = nrf5-sdk
+	pkgdesc = Software development kit for the nRF52 Series and nRF51 Series SoCs
+	pkgver = 17.1.0
+	pkgrel = 2
+	url = https://github.com/nobodywasishere/nrf5-sdk
+	install = nrf.install
+	arch = x86_64
+	license = custom
+	depends = perl
+	depends = bash
+	depends = python
+	source = nrf5-sdk-17.1.0.tar.gz::https://github.com/nobodywasishere/nrf5-sdk/archive/v17.1.0-ddde560.tar.gz
+	sha256sums = c4bd1b39120bc4b5dd0397a6ea1643d3c7d7ae7f0d2bdeb17f836ebfe0476cce
+
+pkgname = nrf5-sdk

@@ -1,0 +1,119 @@
+diff --git a/Ghidra/Framework/Docking/build.gradle b/Ghidra/Framework/Docking/build.gradle
+index 139ec36c1..740d82356 100644
+--- a/Ghidra/Framework/Docking/build.gradle
++++ b/Ghidra/Framework/Docking/build.gradle
+@@ -37,6 +37,7 @@ dependencies {
+ // We export them to all "unnamed" modules, which are modules that don't define themselves
+ // as a new Java 9 style module.  Ghidra is currently using unnamed modules everywhere.
+ ext.addExports([
++	'java.desktop/sun.swing=ALL-UNNAMED',
+ 	'java.desktop/sun.awt=ALL-UNNAMED',
+ 	'java.desktop/sun.awt.image=ALL-UNNAMED'
+ ])
+diff --git a/Ghidra/Framework/Docking/src/main/java/docking/widgets/AbstractGCellRenderer.java b/Ghidra/Framework/Docking/src/main/java/docking/widgets/AbstractGCellRenderer.java
+index 48c057437..a7b4fc347 100644
+--- a/Ghidra/Framework/Docking/src/main/java/docking/widgets/AbstractGCellRenderer.java
++++ b/Ghidra/Framework/Docking/src/main/java/docking/widgets/AbstractGCellRenderer.java
+@@ -32,7 +32,8 @@ import docking.widgets.label.GDHtmlLabel;
+  */
+ public abstract class AbstractGCellRenderer extends GDHtmlLabel {
+ 
+-	private static final Color ALTERNATE_BACKGROUND_COLOR = new Color(237, 243, 254);
++	private static final Color ALTERNATE_BACKGROUND_COLOR = new Color(0x32, 0x32, 0x32);
++	private static final Color REGULAR_BACKGROUND_COLOR = new Color(0x2b, 0x2b, 0x2b);
+ 
+ 	/** Allows the user to disable alternating row colors on JLists and JTables */
+ 	private static final String DISABLE_ALTERNATING_ROW_COLORS_PROPERTY =
+@@ -156,7 +157,7 @@ public abstract class AbstractGCellRenderer extends GDHtmlLabel {
+ 	}
+ 
+ 	protected Color getDefaultBackgroundColor() {
+-		return Color.WHITE;
++		return REGULAR_BACKGROUND_COLOR;
+ 	}
+ 
+ 	protected Color getBackgroundColorForRow(int row) {
+diff --git a/Ghidra/Framework/Docking/src/main/java/docking/widgets/filter/FilterTextField.java b/Ghidra/Framework/Docking/src/main/java/docking/widgets/filter/FilterTextField.java
+index e6ad4df80..57e5625f2 100644
+--- a/Ghidra/Framework/Docking/src/main/java/docking/widgets/filter/FilterTextField.java
++++ b/Ghidra/Framework/Docking/src/main/java/docking/widgets/filter/FilterTextField.java
+@@ -43,7 +43,7 @@ public class FilterTextField extends JPanel {
+ 	private static final int FLASH_FREQUENCY_MS = 250;
+ 
+ 	private static Color FLASH_BACKGROUND_COLOR = Color.WHITE;
+-	private static Color FILTERED_BACKGROUND_COLOR = Color.YELLOW;
++	private static Color FILTERED_BACKGROUND_COLOR = new Color(0x11,0x11,0x11);
+ 	/*package*/ static Color UNEDITABLE_BACKGROUND_COLOR = Color.LIGHT_GRAY;
+ 
+ 	private Color noFlashColor;
+diff --git a/Ghidra/Framework/Docking/src/main/java/docking/widgets/table/GTableHeaderRenderer.java b/Ghidra/Framework/Docking/src/main/java/docking/widgets/table/GTableHeaderRenderer.java
+index 778efa242..eea383b15 100644
+--- a/Ghidra/Framework/Docking/src/main/java/docking/widgets/table/GTableHeaderRenderer.java
++++ b/Ghidra/Framework/Docking/src/main/java/docking/widgets/table/GTableHeaderRenderer.java
+@@ -38,10 +38,10 @@ import resources.icons.TranslateIcon;
+ public class GTableHeaderRenderer extends JPanel implements TableCellRenderer {
+ 	private static final int PADDING_FOR_COLUMN_NUMBER = 10;
+ 
+-	private static final Color PRIMARY_SORT_GRADIENT_START = new Color(205, 227, 244);
+-	private static final Color PRIMARY_SORT_GRADIENT_END = new Color(126, 186, 233);
+-	private static final Color DEFAULT_GRADIENT_START = Color.WHITE;
+-	private static final Color DEFAULT_GRADIENT_END = new Color(215, 215, 215);
++	private static final Color PRIMARY_SORT_GRADIENT_START = new Color(0x5B, 0x67, 0x74);
++	private static final Color PRIMARY_SORT_GRADIENT_END = new Color(0x52, 0x52, 0x52);
++	private static final Color DEFAULT_GRADIENT_START = new Color(0x3B, 0x47, 0x54);
++	private static final Color DEFAULT_GRADIENT_END = new Color(0x32, 0x32, 0x32);
+ 
+ 	private static final Icon UP_ICON =
+ 		ResourceManager.getScaledIcon(Icons.SORT_ASCENDING_ICON, 14, 14);
+diff --git a/Ghidra/Framework/Docking/src/main/java/ghidra/docking/util/DockingWindowsLookAndFeelUtils.java b/Ghidra/Framework/Docking/src/main/java/ghidra/docking/util/DockingWindowsLookAndFeelUtils.java
+index 9b1e6199e..642f00686 100644
+--- a/Ghidra/Framework/Docking/src/main/java/ghidra/docking/util/DockingWindowsLookAndFeelUtils.java
++++ b/Ghidra/Framework/Docking/src/main/java/ghidra/docking/util/DockingWindowsLookAndFeelUtils.java
+@@ -30,6 +30,9 @@ import ghidra.framework.Platform;
+ import ghidra.framework.preferences.Preferences;
+ import ghidra.util.*;
+ 
++import com.bulenkov.darcula.DarculaLaf;
++import javax.swing.plaf.basic.BasicLookAndFeel;
++
+ /**
+  * A utility class to manage LookAndFeel (LaF) settings.
+  */
+@@ -162,9 +165,8 @@ public class DockingWindowsLookAndFeelUtils {
+ 			throws ClassNotFoundException, InstantiationException, IllegalAccessException,
+ 			UnsupportedLookAndFeelException {
+ 
+-		String lookAndFeelClassName = findLookAndFeelClassName(lookAndFeelName);
+-		UIManager.setLookAndFeel(lookAndFeelClassName);
+-		fixupLookAndFeelIssues();
++		BasicLookAndFeel darcula = new DarculaLaf();
++		UIManager.setLookAndFeel(darcula);
+ 	}
+ 
+ 	private static String findLookAndFeelClassName(String lookAndFeelName) {
+diff --git a/Ghidra/RuntimeScripts/Common/support/launch.properties b/Ghidra/RuntimeScripts/Common/support/launch.properties
+index b0565ab80..d50fa4d6b 100644
+--- a/Ghidra/RuntimeScripts/Common/support/launch.properties
++++ b/Ghidra/RuntimeScripts/Common/support/launch.properties
+@@ -71,6 +71,7 @@ VMARGS=-Xshare:off
+ 
+ # Permit "illegal reflective accesses" to enable JDK compatibility with Ghidra and 3rd party jars.
+ VMARGS=--add-opens=java.desktop/sun.awt.image=ALL-UNNAMED
++VMARGS=--add-opens=java.desktop/sun.swing=ALL-UNNAMED
+ 
+ # Persistent cache directory used by the application.  This directory will be used to store 
+ # persistent application caches for all users.  The default location for Mac/Linux is the same as 
+diff --git a/gradle/root/distribution.gradle b/gradle/root/distribution.gradle
+index f44c8267b..b5a6d1688 100644
+--- a/gradle/root/distribution.gradle
++++ b/gradle/root/distribution.gradle
+@@ -137,7 +137,8 @@ task createJavadocs(type: Javadoc, description: 'Generate javadocs for all proje
+ 	
+ 	// Some internal packages are not public and need to be exported.
+     options.addMultilineStringsOption("-add-exports").setValue(["java.desktop/sun.awt.image=ALL-UNNAMED", 
+-    															"java.desktop/sun.awt=ALL-UNNAMED"])
++    															"java.desktop/sun.awt=ALL-UNNAMED", 
++    															"java.desktop/sun.swing=ALL-UNNAMED"])
+ }
+ 
+ 

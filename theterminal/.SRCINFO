@@ -1,0 +1,18 @@
+pkgbase = theterminal
+	pkgdesc = Simple Terminal Emulator
+	pkgver = 4.0
+	pkgrel = 1
+	url = https://github.com/theCheeseboard/theterminal
+	arch = x86_64
+	arch = aarch64
+	license = GPL3
+	makedepends = git
+	makedepends = qt6-tools
+	makedepends = cmake
+	makedepends = clang
+	depends = xdg-utils
+	depends = tttermwidget
+	source = theterminal::https://github.com/theCheeseboard/theterminal/archive/v4.0.tar.gz
+	sha256sums = 985e820fbc3ff2d70807474813cb0efbc38ef4616400e57055b2f18bcf266323
+
+pkgname = theterminal

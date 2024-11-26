@@ -1,0 +1,23 @@
+pkgbase = lib32-glib
+	pkgdesc = Common C routines used by Gtk+ and other libs (32-bit)
+	pkgver = 1.2.10
+	pkgrel = 5
+	url = http://www.gtk.org/
+	arch = x86_64
+	license = LGPL
+	makedepends = gcc-multilib
+	depends = lib32-glibc
+	depends = sh
+	options = !makeflags
+	source = https://download.gnome.org/sources/glib/1.2/glib-1.2.10.tar.gz
+	source = glib-1.2.10-gcc9.patch
+	source = gcc340.patch
+	source = aclocal-fixes.patch
+	source = glib1-autotools.patch
+	sha1sums = e5a9361c594608d152d5d9650154c2e3260b87fa
+	sha1sums = 9e675101003cd97da0b42bf04fc6489197a822c7
+	sha1sums = a2cc224a66aeffdcac16ebd9e8af18143cf54918
+	sha1sums = ae4438cf56c0c9264ee36f6973fb445f9a820be0
+	sha1sums = 8a25fde3c79567262b3024f4e74c9ca4ee8a6279
+
+pkgname = lib32-glib

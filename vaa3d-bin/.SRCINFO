@@ -1,0 +1,23 @@
+pkgbase = vaa3d-bin
+	pkgdesc = 3D Visualization-Assisted Analysis
+	pkgver = v3.601
+	pkgrel = 4
+	url = https://www.vaa3d.org
+	arch = any
+	license = custom
+	depends = libpng12
+	depends = libtiff5
+	provides = vaa3d
+	conflicts = vaa3d
+	source = LICENSE::https://github.com/Vaa3D/Vaa3D_Wiki/wiki/LicenseAndAgreement.wiki
+	source = vaa3d-v3.601.tar.gz::https://github.com/Vaa3D/release/releases/download/v3.601/Vaa3D_CentOS_64bit_v3.601.tar.gz
+	source = vaa3d.desktop
+	source = vaa3d.png
+	source = vaa3d
+	sha256sums = SKIP
+	sha256sums = d6f102c502a7be367ea7854bf561e492997ce0c19b4a0ad926fe1b308eead4f0
+	sha256sums = fb3875215bc639cef05e0d67d58a57ebffaf404b9bbbc2e247c8813c533b3265
+	sha256sums = f21e57d1823dc89dba830b85078b942b113145b4e75cb3bc5a1db96fe9e5e00b
+	sha256sums = 7648b51b9c220a7f7448ac55e98b56d96d291fcea83244292a6c852414e8f2ac
+
+pkgname = vaa3d-bin

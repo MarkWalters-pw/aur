@@ -1,0 +1,41 @@
+pkgbase = perl-bioperl
+	pkgdesc = Perl modules for biology
+	pkgver = 1.7.8
+	pkgrel = 1
+	url = https://metacpan.org/release/BioPerl
+	arch = any
+	license = PerlArtistic
+	license = GPL
+	checkdepends = perl-test-memory-cycle>=0
+	checkdepends = perl-test-most>=0
+	checkdepends = perl-test-requiresinternet>=0
+	checkdepends = perl-test-weaken>=0
+	depends = perl-data-stag>=0
+	depends = perl-error>=0
+	depends = perl-graph>=0
+	depends = perl-http-message>=0
+	depends = perl-io-string>=0
+	depends = perl-io-stringy>=0
+	depends = perl-ipc-run>=0
+	depends = perl-list-moreutils>=0
+	depends = perl-module-build>=0
+	depends = perl-set-scalar>=0
+	depends = perl-uri>=0
+	depends = perl-xml-dom>=0
+	depends = perl-xml-libxml>=0
+	depends = perl-xml-sax>=0
+	depends = perl-xml-sax-base>=0
+	depends = perl-xml-sax-writer>=0
+	depends = perl-xml-twig>=0
+	depends = perl-xml-writer>=0
+	depends = perl-yaml>=0
+	depends = perl-libwww>=0
+	depends = libxml-perl>=0
+	depends = perl>=5.006
+	options = !emptydirs
+	source = https://cpan.metacpan.org/authors/id/C/CJ/CJFIELDS/BioPerl-1.7.8.tar.gz
+	md5sums = 8164ac52f37bc6355ec1b69633ac795f
+	sha512sums = 0fa4ca0691409dd2d0ad431f47be41544c3a627098d17a09b6796b3a4cb0d7d1502bed5118b6e2139d299e72780f60e5d97570e945d03d63f38e8326f49e3ba9
+
+pkgname = perl-bioperl
+

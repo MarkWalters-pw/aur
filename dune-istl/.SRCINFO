@@ -1,0 +1,30 @@
+pkgbase = dune-istl
+	pkgdesc = Iterative Solver Template Library
+	pkgver = 2.10.0
+	pkgrel = 1
+	url = https://dune-project.org/modules/dune-istl
+	arch = x86_64
+	license = LicenseRef-GPL-2.0-only-with-DUNE-exception
+	makedepends = texlive-latexextra
+	makedepends = biber
+	makedepends = doxygen
+	makedepends = graphviz
+	makedepends = python-scikit-build
+	depends = dune-common>=2.10.0
+	depends = arpack
+	optdepends = vc: C++ Vectorization library
+	optdepends = doxygen: Generate the class documentation from C++ sources
+	optdepends = graphviz: Graph visualization software
+	optdepends = parmetis: Parallel Graph Partitioning and Fill-reducing Matrix Ordering
+	optdepends = scotch: Software package and libraries for graph, mesh and hypergraph partitioning, static mapping, and sparse matrix block ordering
+	optdepends = superlu: Set of subroutines to solve a sparse linear system
+	optdepends = arpackpp: C++ interface to ARPACK
+	optdepends = suitesparse: A collection of sparse matrix libraries
+	options = !emptydirs
+	source = https://dune-project.org/download/2.10.0/dune-istl-2.10.0.tar.gz
+	source = https://dune-project.org/download/2.10.0/dune-istl-2.10.0.tar.gz.asc
+	validpgpkeys = 703607A1FD9AF4205E735522B95BE0EFB19724A1
+	sha512sums = 067fc9a35704a63b7b1c81ca20893b3e47af69633db409d7faa1501a1a0f920bcf5b76c005ee29c65c2ebf0d05bced242313cefe93641cd262317c4e4cf9e5a3
+	sha512sums = SKIP
+
+pkgname = dune-istl

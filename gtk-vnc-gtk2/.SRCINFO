@@ -1,0 +1,24 @@
+pkgbase = gtk-vnc-gtk2
+	pkgdesc = A VNC viewer widget for GTK built for GTK2 only
+	pkgver = 0.9.0
+	pkgrel = 1
+	url = https://wiki.gnome.org/Projects/gtk-vnc
+	arch = i686
+	arch = x86_64
+	license = LGPL
+	makedepends = intltool
+	makedepends = pygtk
+	makedepends = pygobject-devel
+	makedepends = gtk-doc
+	makedepends = gtk2
+	makedepends = vala
+	makedepends = gobject-introspection
+	depends = libgcrypt
+	depends = gtk2
+	depends = libpulse
+	provides = gtk-vnc=0.9.0
+	conflicts = gtk-vnc
+	source = http://ftp.gnome.org/pub/gnome/sources/gtk-vnc/0.9/gtk-vnc-0.9.0.tar.xz
+	sha256sums = 3a9a88426809a5df2c14353cd9839b8c8163438cb708b31d8048c79d180fcab7
+
+pkgname = gtk-vnc-gtk2

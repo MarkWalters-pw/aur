@@ -1,0 +1,26 @@
+pkgbase = macreg-git
+	pkgdesc = Micro web service to allow local users to register MAC addresses
+	pkgver = r137.b5d400d
+	pkgrel = 1
+	url = https://github.com/coNQP/macreg
+	arch = any
+	license = GPLv3
+	makedepends = git
+	makedepends = python
+	depends = python
+	depends = python-peewee
+	depends = python-peeweeplus
+	depends = python-flask
+	depends = python-httpam
+	depends = python-pymysql
+	depends = uwsgi-plugin-python
+	provides = python-macreg
+	provides = macreg
+	conflicts = python-macreg
+	conflicts = macreg
+	backup = etc/macreg.conf
+	source = macreg::git+https://github.com/coNQP/macreg.git
+	md5sums = SKIP
+
+pkgname = macreg-git
+

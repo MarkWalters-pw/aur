@@ -1,0 +1,17 @@
+pkgbase = nodejs-airfile-git
+	pkgdesc = Transfer files from android to your local machine
+	pkgver = 2019.10.23
+	pkgrel = 1
+	url = https://github.com/noffle/airfile
+	arch = any
+	license = ISC
+	makedepends = npm
+	makedepends = git
+	depends = nodejs
+	provides = nodejs-airfile
+	conflicts = nodejs-airfile
+	source = airfile::git+https://github.com/noffle/airfile
+	sha256sums = SKIP
+
+pkgname = nodejs-airfile-git
+

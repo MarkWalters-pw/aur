@@ -1,0 +1,19 @@
+pkgbase = poplog
+	pkgdesc = poplog development system
+	pkgver = 0.2.1
+	pkgrel = 1
+	url = https://getpoplog.github.io/
+	arch = x86_64
+	license = custom:poplog
+	depends = tcsh
+	depends = libxext
+	depends = libxt
+	depends = openmotif
+	depends = libxp
+	depends = ncurses5-compat-libs
+	optdepends = espeak: for run-speaking-eliza demo
+	conflicts = poplog-git
+	source = https://github.com/GetPoplog/Seed/releases/download/v0.2.1/poplog-0.2.1.tar.gz
+	md5sums = 3623cf0ce5f6e9f4b3e60bca3ff8d621
+
+pkgname = poplog

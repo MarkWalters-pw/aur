@@ -1,0 +1,25 @@
+pkgbase = ros-noetic-geometry2
+	pkgdesc = ROS - A metapackage to bring in the default packages second generation Transform Library in ros, tf2.
+	pkgver = 0.7.5
+	pkgrel = 1
+	url = https://wiki.ros.org/geometry2
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-catkin
+	depends = ros-noetic-tf2-sensor-msgs
+	depends = ros-noetic-tf2
+	depends = ros-noetic-tf2-eigen
+	depends = ros-noetic-tf2-py
+	depends = ros-noetic-tf2-tools
+	depends = ros-noetic-tf2-msgs
+	depends = ros-noetic-tf2-bullet
+	depends = ros-noetic-tf2-ros
+	depends = ros-noetic-tf2-kdl
+	depends = ros-noetic-tf2-geometry-msgs
+	source = ros-noetic-geometry2-0.7.5.tar.gz::https://github.com/ros/geometry2/archive/0.7.5.tar.gz
+	sha256sums = 0b5d461c71d6dc1dbdb99a2ba39e1515194cd451c2e53d53caadb3ecea13367a
+
+pkgname = ros-noetic-geometry2
+

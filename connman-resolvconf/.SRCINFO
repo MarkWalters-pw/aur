@@ -1,0 +1,16 @@
+pkgbase = connman-resolvconf
+	pkgdesc = ConnMan integration with resolvconf(8)
+	pkgver = 0.2.0
+	pkgrel = 1
+	url = https://github.com/jirutka/connman-resolvconf
+	arch = x86_64
+	license = MIT
+	makedepends = cargo
+	depends = connman
+	depends = dbus
+	depends = gcc-libs
+	depends = openresolv
+	source = https://github.com/jirutka/connman-resolvconf/archive/v0.2.0/connman-resolvconf-0.2.0.tar.gz
+	sha512sums = 66addbf52084ca2c46a13e57d10d9acd2a10e39e166bc910d8910cc44ddaf734aff2f8cbf393eb7e4e26c9733364ced1199384b69a69b79e3491e72f4f327ccc
+
+pkgname = connman-resolvconf

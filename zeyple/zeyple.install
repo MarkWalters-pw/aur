@@ -1,0 +1,4 @@
+post_install() {
+    touch /var/log/zeyple.log
+    chown 726:726 /var/log/zeyple.log
+}

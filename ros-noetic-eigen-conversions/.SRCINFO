@@ -1,0 +1,23 @@
+pkgbase = ros-noetic-eigen-conversions
+	pkgdesc = ROS - Conversion functions between: - Eigen and KDL - Eigen and geometry_msgs.
+	pkgver = 1.13.2
+	pkgrel = 1
+	url = https://wiki.ros.org/eigen_conversions
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-std-msgs
+	makedepends = ros-noetic-catkin
+	makedepends = ros-noetic-geometry-msgs
+	makedepends = eigen
+	makedepends = orocos-kdl
+	depends = ros-noetic-std-msgs
+	depends = ros-noetic-geometry-msgs
+	depends = eigen
+	depends = orocos-kdl
+	source = ros-noetic-eigen-conversions-1.13.2.tar.gz::https://github.com/ros/geometry/archive/1.13.2.tar.gz
+	sha256sums = 6b653d4e10503d3da56bc4000e39ce58d6a85547a37837da576edccecc0c6ae2
+
+pkgname = ros-noetic-eigen-conversions
+

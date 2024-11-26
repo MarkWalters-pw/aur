@@ -1,0 +1,17 @@
+pkgbase = libstropt-git
+	pkgdesc = Parse options from a string (supports quotation, option arguments, no malloc needed for parsing)
+	pkgver = r18.40f7b58
+	pkgrel = 1
+	url = https://github.com/rd235/libstropt
+	arch = any
+	license = LGPL
+	makedepends = git
+	makedepends = cmake
+	depends = glibc
+	provides = libstropt
+	conflicts = libstropt
+	source = git+https://github.com/rd235/libstropt.git
+	md5sums = SKIP
+
+pkgname = libstropt-git
+

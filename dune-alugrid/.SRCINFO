@@ -1,0 +1,19 @@
+pkgbase = dune-alugrid
+	pkgdesc = An adaptive, loadbalancing, unstructured implementation of the DUNE grid interface supporting either simplices or cubes
+	pkgver = 2.10.0
+	pkgrel = 1
+	url = https://dune-project.org/modules/dune-alugrid
+	arch = x86_64
+	license = GPL-2.0-or-later
+	makedepends = doxygen
+	makedepends = graphviz
+	makedepends = python-scikit-build
+	depends = dune-grid>=2.10.0
+	depends = zoltan
+	optdepends = doxygen: Generate the class documentation from C++ sources
+	optdepends = graphviz: Graph visualization software
+	options = !emptydirs
+	source = https://gitlab.dune-project.org/extensions/dune-alugrid/-/archive/v2.10.0/dune-alugrid-v2.10.0.tar.gz
+	sha512sums = eb8cc82c4275eee3abc1a38b6c76266100c3c89fb5c6b9a912783bb60823f4930efc3e182b5daa641a9d8e8ef7fc97e72efd38efa8a26dfd884351a651c231e1
+
+pkgname = dune-alugrid

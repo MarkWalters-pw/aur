@@ -1,0 +1,20 @@
+pkgbase = rigetti-quilc-git
+	pkgdesc = The @rigetti optimizing Quil compiler.
+	pkgver = r494.b729f62
+	pkgrel = 1
+	url = https://github.com/rigetti/quilc
+	arch = x86_64
+	arch = i686
+	license = Apache
+	makedepends = git
+	depends = sbcl
+	depends = quicklisp
+	depends = zeromq
+	provides = quilc
+	conflicts = quilc
+	options = !strip
+	source = git+https://github.com/rigetti/quilc.git
+	sha256sums = SKIP
+
+pkgname = rigetti-quilc-git
+

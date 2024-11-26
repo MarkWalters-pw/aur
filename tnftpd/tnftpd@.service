@@ -1,0 +1,12 @@
+[Unit]
+Description=NetBSD FTPd running as a socket initiated daemon.
+Documentation=man:tnftpd(8)
+Documentation=man:ftpd.conf(5)
+Documentation=man:ftpusers(5)
+After=network-online.target
+
+[Service]
+ExecStart=/usr/bin/tnftpd -r
+StandardInput=socket
+StandardError=syslog
+KillMode=process

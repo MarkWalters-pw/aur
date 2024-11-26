@@ -1,0 +1,20 @@
+pkgbase = ros-noetic-xmlrpcpp
+	pkgdesc = ROS - XmlRpc++ is a C++ implementation of the XML-RPC protocol.
+	pkgver = 1.16.0
+	pkgrel = 1
+	url = https://wiki.ros.org/xmlrpcpp
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = LGPL-2.1
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-catkin
+	depends = ros-noetic-cpp-common
+	depends = ros-noetic-rostime
+	source = ros-noetic-xmlrpcpp-1.16.0.tar.gz::https://github.com/ros/ros_comm/archive/1.16.0.tar.gz
+	sha256sums = 0a51857a50cf646db4af85469cb0e4877b1484f7aa0c00ec65a8be7ff574a886
+
+pkgname = ros-noetic-xmlrpcpp

@@ -1,0 +1,21 @@
+pkgbase = facette-bin
+	pkgdesc = Time series data visualization and graphing software
+	pkgver = 0.5.1
+	pkgrel = 1
+	url = https://facette.io/
+	install = facette.install
+	arch = x86_64
+	license = BSD
+	depends = rrdtool
+	depends = nodejs
+	source = https://github.com/facette/facette/releases/download/0.5.1/facette_0.5.1_linux_amd64.tar.gz
+	source = facette.tmpfiles.d
+	source = facette.install
+	source = facette.service
+	md5sums = e1fc291a5287a26437250eb9428294c6
+	md5sums = fcb93f8e46194b925ed42fb801b47345
+	md5sums = 79a4f9fb81dcf037d95373608b80d0a5
+	md5sums = f0bce7668dab66dc1ae3189c0b1b23db
+
+pkgname = facette-bin
+

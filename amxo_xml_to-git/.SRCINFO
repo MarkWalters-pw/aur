@@ -1,0 +1,24 @@
+pkgbase = amxo_xml_to-git
+	pkgdesc = Ambiorix XML converter
+	pkgver = 0.2.4.r0.g5bbb6ba
+	pkgrel = 1
+	url = https://gitlab.com/soft.at.home/ambiorix/applications/amxo-xml-to.git
+	arch = x86_64
+	arch = i686
+	arch = i486
+	arch = pentium4
+	arch = arm
+	arch = armv6h
+	arch = armv7h
+	arch = aarch64
+	license = BSD
+	makedepends = git
+	depends = lib_amxc
+	depends = lib_amxj
+	depends = libxslt
+	provides = amxo_xml_to
+	conflicts = amxo_xml_to
+	source = amxo_xml_to-git::git+https://gitlab.com/soft.at.home/ambiorix/applications/amxo-xml-to.git#branch=main
+	md5sums = SKIP
+
+pkgname = amxo_xml_to-git

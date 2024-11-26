@@ -1,0 +1,16 @@
+pkgbase = qmaster
+	pkgdesc = Modbus RTU master device emulator for PC
+	pkgver = 0.2.3
+	pkgrel = 2
+	url = https://github.com/maisvendoo/qmaster
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = gendesk
+	depends = qt5-base
+	depends = qt5-serialbus
+	source = git+https://github.com/maisvendoo/qmaster.git
+	sha256sums = SKIP
+
+pkgname = qmaster
+

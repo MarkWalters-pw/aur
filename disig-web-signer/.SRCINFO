@@ -1,0 +1,21 @@
+pkgbase = disig-web-signer
+	pkgdesc = Slovak eID Web Signer by Disig
+	pkgver = 2.1.1
+	pkgrel = 1
+	url = https://qesportal.sk/
+	arch = i686
+	arch = x86_64
+	license = custom
+	options = !strip
+	source_i686 = https://download.disigcdn.sk/cdn/products/websigner2/disig-web-signer_2.1.1-1.ubuntu_i386.deb
+	sha256sums_i686 = 3f6ae031ce3035626e9d8b91f8865f895f4ef1d1b28ad2e1a670ed2c19179846
+	source_x86_64 = https://download.disigcdn.sk/cdn/products/websigner2/disig-web-signer_2.1.1-1.ubuntu_amd64.deb
+	sha256sums_x86_64 = 2eebf5eae8d536e6b258245f0581f05d49473b89222215b8e6013341c66b6444
+
+pkgname = disig-web-signer
+	depends = glibc
+	depends = gcc-libs
+	depends = mesa
+	depends = qt5-base
+	depends = qt5-websockets
+	depends = openssl-1.1

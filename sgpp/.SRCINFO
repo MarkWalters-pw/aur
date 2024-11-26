@@ -1,0 +1,19 @@
+pkgbase = sgpp
+	pkgdesc = A numerical library for adaptive Sparse Grids
+	pkgver = 3.4.0
+	pkgrel = 1
+	url = http://sgpp.sparsegrids.org
+	arch = x86_64
+	license = BSD
+	makedepends = scons
+	makedepends = swig
+	makedepends = eigen
+	depends = armadillo
+	depends = python
+	depends = gsl
+	depends = gmm
+	depends = suitesparse
+	source = https://github.com/SGpp/SGpp/archive/v3.4.0.tar.gz
+	sha256sums = 450d4002850b0a48c561abe221b634261ca44eee111ca605c3e80797182f40b3
+
+pkgname = sgpp

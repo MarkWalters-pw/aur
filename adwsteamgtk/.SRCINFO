@@ -1,0 +1,19 @@
+pkgbase = adwsteamgtk
+	pkgdesc = A simple Gtk wrapper for Adwaita-for-Steam
+	pkgver = 0.6.11
+	pkgrel = 1
+	url = https://github.com/Foldex/AdwSteamGtk
+	arch = any
+	license = GPL-3.0-or-later
+	checkdepends = appstream-glib
+	makedepends = blueprint-compiler
+	makedepends = meson
+	depends = libadwaita
+	depends = libportal-gtk4
+	depends = python-gobject
+	depends = python-packaging
+	conflicts = adwaita-for-steam
+	source = adwsteamgtk-0.6.11.tar.gz::https://github.com/Foldex/AdwSteamGtk/archive/refs/tags/v0.6.11.tar.gz
+	sha256sums = 34d31e9c13c5afd496e72fb07bdf6a7cd1538658896067c95cc4f611ebe901e6
+
+pkgname = adwsteamgtk

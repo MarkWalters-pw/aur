@@ -1,0 +1,19 @@
+pkgbase = ever-surf-bin
+	pkgdesc = Everscale Browser
+	pkgver = 9.5.0
+	pkgrel = 1
+	url = https://ever.surf/download/
+	arch = x86_64
+	license = custom
+	depends = gtk3
+	depends = nss
+	depends = alsa-lib
+	provides = ever-surf
+	conflicts = ever-surf
+	options = !strip
+	source = ever-surf-9.5.0.deb::https://distribution.services.ever.surf/download/flavor/default/9.5.0-release/linux_64/ever-surf_9.5.0_amd64.deb
+	source = surf-decentralization-policy.8f8dd506.md::https://ever.surf/static/media/surf-decentralization-policy.8f8dd506.md
+	sha512sums = 4bc9263e14f8dbdac9055425825a24d68e80e26006acc9222a0aa33f4d1926fb8e94dfbf52c91195bef03cbe437f1754af2b8ed51c0ad848281a93310db25153
+	sha512sums = d128dd052d4d2b9059d1f1849cf4cce5818ea1effcd60f9c2a26cea0e7f2d46416007ed1429adc726ed2d2ce9675e6390e196aadbe1718cb6abf34d808e2b2c4
+
+pkgname = ever-surf-bin

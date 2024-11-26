@@ -1,0 +1,18 @@
+pkgbase = paho-mqtt-cpp-git
+	pkgdesc = A C++ wrapper around paho-mqtt-c
+	pkgver = 1.2.0.r58.ge9db86f
+	pkgrel = 1
+	url = https://github.com/eclipse/paho.mqtt.cpp
+	arch = x86_64
+	license = EPL
+	makedepends = git
+	makedepends = cmake
+	depends = paho-mqtt-c
+	depends = gcc-libs
+	depends = openssl
+	provides = paho-mqtt-cpp
+	conflicts = paho-mqtt-cpp
+	source = paho-mqtt-cpp::git+https://github.com/eclipse/paho.mqtt.cpp.git
+	md5sums = SKIP
+
+pkgname = paho-mqtt-cpp-git

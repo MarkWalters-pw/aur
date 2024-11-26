@@ -1,0 +1,18 @@
+pkgbase = brother-dcpj132w
+	pkgdesc = Driver for the Brother DCP-j132w wifi multifuncional printer
+	pkgver = 3.0.0
+	pkgrel = 6
+	url = http://solutions.brother.com/linux/en_us/index.html
+	install = brother-dcpj132w.install
+	arch = i686
+	arch = x86_64
+	license = custom:brother
+	depends = a2ps
+	depends = cups
+	source = http://www.brother.com/pub/bsc/linux/dlf/dcpj132wcupswrapper-3.0.0-1.i386.rpm
+	source = http://www.brother.com/pub/bsc/linux/dlf/dcpj132wlpr-3.0.0-1.i386.rpm
+	md5sums = ca8f119dc59267f4a3ecb78276112057
+	md5sums = f297c41bdb7e1e6a98e8729564e58a01
+
+pkgname = brother-dcpj132w
+

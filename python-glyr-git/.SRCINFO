@@ -1,0 +1,17 @@
+pkgbase = python-glyr-git
+	pkgdesc = Python bindings to libglyr
+	pkgver = 2014.06.22.g890e877
+	pkgrel = 2
+	url = https://github.com/sahib/python-glyr
+	arch = any
+	license = GPL3
+	makedepends = git
+	makedepends = cython
+	depends = python
+	depends = glyr-git
+	provides = python-glyr
+	conflicts = python-glyr
+	source = git+https://github.com/sahib/python-glyr.git
+	md5sums = SKIP
+
+pkgname = python-glyr-git

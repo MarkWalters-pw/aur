@@ -1,0 +1,36 @@
+pkgbase = audiotube-git
+	pkgdesc = Client for YouTube Music
+	pkgver = 24.05.0.r26.gd9b1902
+	pkgrel = 1
+	url = https://invent.kde.org/multimedia/audiotube
+	arch = x86_64
+	arch = aarch64
+	license = GPL-2.0-or-later
+	license = LGPL-2.0-or-later
+	makedepends = extra-cmake-modules
+	makedepends = pybind11
+	makedepends = qcoro-qt6
+	makedepends = ninja
+	makedepends = git
+	depends = futuresql
+	depends = kcoreaddons
+	depends = kcrash
+	depends = ki18n
+	depends = kirigami-addons
+	depends = kwindowsystem
+	depends = purpose
+	depends = python
+	depends = python-ytmusicapi
+	depends = qt6-base
+	depends = qt6-declarative
+	depends = qt6-imageformats
+	depends = qt6-multimedia
+	depends = qt6-multimedia-gstreamer
+	depends = qt6-svg
+	depends = yt-dlp
+	provides = audiotube=24.05.0
+	conflicts = audiotube
+	source = audiotube::git+https://invent.kde.org/multimedia/audiotube.git
+	sha256sums = SKIP
+
+pkgname = audiotube-git

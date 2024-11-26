@@ -1,0 +1,23 @@
+pkgbase = sshprint
+	pkgdesc = A Perl script to print local files on remote printers using SSH
+	pkgver = 2.07
+	pkgrel = 2
+	url = https://github.com/hv15/sshprint
+	install = sshprint.install
+	changelog = CHANGELOG.md
+	arch = any
+	license = MIT
+	makedepends = perl-module-build
+	depends = perl>=5.22.0
+	depends = openssh
+	depends = perl-log-log4perl
+	depends = perl-config-simple
+	depends = perl-net-openssh
+	depends = perl-file-basedir
+	conflicts = sshprint<=1.6.3
+	options = !emptydirs
+	source = https://github.com/hv15/sshprint/archive/2.07.tar.gz
+	md5sums = 89c65d8b416e24bf383de6f88063a16c
+
+pkgname = sshprint
+

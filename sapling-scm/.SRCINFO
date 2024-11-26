@@ -1,0 +1,21 @@
+pkgbase = sapling-scm
+	pkgdesc = A Scalable, User-Friendly Source Control System
+	pkgver = 0.2.20230426.145232+7ea1f245
+	pkgrel = 1
+	epoch = 1
+	url = https://sapling-scm.com
+	arch = x86_64
+	license = GPL2
+	makedepends = cargo
+	makedepends = cmake
+	makedepends = rust
+	makedepends = yarn
+	depends = curl
+	depends = nodejs
+	depends = python
+	optdepends = github-cli: for integration with GitHub
+	provides = sapling-scm
+	source = https://github.com/facebook/sapling/archive/refs/tags/0.2.20230426-145232+7ea1f245.tar.gz
+	sha256sums = 5295cfbc7428f4cd88c722108fa75737b73e01a1cdbf79df236c0513b5c374cd
+
+pkgname = sapling-scm

@@ -1,0 +1,15 @@
+pkgbase = kp-diff-bin
+	pkgdesc = CLI utility to diff KeePass databases
+	pkgver = 0.6.0
+	pkgrel = 2
+	url = https://github.com/aivanovski/kp-diff
+	arch = x86_64
+	license = Apache
+	depends = gcc-libs
+	depends = zlib
+	provides = kp-diff
+	conflicts = kp-diff
+	source = kp-diff-bin-0.6.0-linux-amd63.tar.gz::https://github.com/aivanovski/kp-diff/releases/download/0.6.0/kp-diff-linux-amd64.tar.gz
+	sha256sums = 59e83014cf25bac7f38a78bf75126c04bafe23cb9d773ac813f3f668091408f2
+
+pkgname = kp-diff-bin

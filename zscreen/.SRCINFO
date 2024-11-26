@@ -1,0 +1,18 @@
+pkgbase = zscreen
+	pkgdesc = Scrot and imgur/s3 upload zenity gui
+	pkgver = 20160510
+	pkgrel = 1
+	url = https://github.com/ChrisZeta/Scrot-and-imgur-zenity-GUI
+	arch = any
+	makedepends = git
+	depends = bash
+	depends = curl
+	depends = scrot
+	depends = s3cmd
+	provides = zscreen
+	provides = zimgur
+	provides = zs3upload
+	source = zscreen::git+https://github.com/ChrisZeta/Scrot-and-imgur-zenity-GUI#commit=e9d15e606a0d358f002d0ec45324069c5cff3c68
+	md5sums = SKIP
+
+pkgname = zscreen

@@ -1,0 +1,15 @@
+pkgbase = fs2es-indexer
+	pkgdesc = File system indexer for Elasticsearch
+	pkgver = 0.6.0
+	pkgrel = 2
+	url = https://github.com/Ellerhold/fs2es-indexer
+	arch = any
+	makedepends = python-setuptools
+	makedepends = git
+	depends = python-elasticsearch
+	depends = python-yaml
+	backup = etc/fs2es-indexer/config.yml
+	source = fs2es-indexer-0.6.0.tar.gz::https://github.com/Ellerhold/fs2es-indexer/archive/refs/tags/0.6.0.tar.gz
+	sha512sums = cc55d6b79647671148fc5cdaf88cfdc2e132cb7572f7b5467ac48831045890296a6902b0f4c3341d44d5826fd89c02b717cbe5316953c0e25726927190db7ecd
+
+pkgname = fs2es-indexer

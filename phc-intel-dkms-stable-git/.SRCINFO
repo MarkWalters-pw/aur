@@ -1,0 +1,25 @@
+pkgbase = phc-intel-dkms-stable-git
+	pkgdesc = Frequency driver for Intel CPUs with undervolting feature. DKMS-based kernel module, stable branch, latest git checkout.
+	pkgver = 0.3.2.rev47.r55.20231030.984446e
+	pkgrel = 1
+	url = https://gitlab.com/linux-phc/phc-intel
+	arch = any
+	groups = linux-phc
+	groups = phc-intel
+	license = GPL2
+	makedepends = git
+	depends = dkms
+	optdepends = phc-intel-scripts: To control the driver.
+	provides = linux-phc
+	provides = phc-intel-dkms-stable=0.3.2.rev47.r55.20231030.984446e
+	provides = phc-intel-dkms=0.3.2.rev47.r55.20231030.984446e
+	provides = phc-intel-patch=0.3.2.rev47.r55.20231030.984446e
+	provides = PHC-INTEL-MODULE
+	conflicts = phc-intel-dkms-stable
+	conflicts = phc-intel-dkms
+	source = phc-intel-dkms-stable::git+https://gitlab.com/linux-phc/phc-intel.git
+	source = dkms.conf.in
+	sha256sums = SKIP
+	sha256sums = 9162c25d0df436a00d8b45d9e97c24a1f2999f5b8a4f78f2995df15d2d31baa7
+
+pkgname = phc-intel-dkms-stable-git

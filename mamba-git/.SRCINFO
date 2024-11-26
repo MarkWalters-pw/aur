@@ -1,0 +1,37 @@
+pkgbase = mamba-git
+	pkgdesc = A virtual MIDI keyboard and file player/recorder for ALSA/JACK (git version)
+	pkgver = 2.3.r7.g1ea2494
+	pkgrel = 1
+	url = https://github.com/brummer10/Mamba
+	arch = i686
+	arch = x86_64
+	groups = pro-audio
+	license = 0BSD
+	makedepends = alsa-lib
+	makedepends = fluidsynth
+	makedepends = git
+	makedepends = jack
+	makedepends = liblo
+	makedepends = libsigc++
+	makedepends = libsmf
+	makedepends = xxd
+	depends = cairo
+	optdepends = new-session-manager: for NSM support
+	provides = mamba
+	provides = mamba=2.3
+	provides = mamba
+	conflicts = mamba
+	conflicts = mamba
+	source = mamba::git+https://github.com/brummer10/Mamba.git
+	source = libxputty::git+https://github.com/brummer10/libxputty.git
+	md5sums = SKIP
+	md5sums = SKIP
+
+pkgname = mamba-git
+	depends = cairo
+	depends = libasound.so
+	depends = libfluidsynth.so
+	depends = libjack.so
+	depends = liblo.so
+	depends = libsigc++
+	depends = libsmf.so

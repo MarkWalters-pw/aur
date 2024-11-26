@@ -1,0 +1,22 @@
+pkgbase = hypopg-git
+	pkgdesc = Hypothetical indexes for PostgreSQL... ask the optimizer if this hypothetical index would help
+	pkgver = 1.1.4.r10.g1196869
+	pkgrel = 1
+	url = https://github.com/HypoPG/hypopg
+	install = hypopg-git.install
+	arch = i686
+	arch = x86_64
+	arch = armv7h
+	arch = aarch64
+	license = BSD
+	makedepends = git
+	depends = postgresql
+	provides = hypopg
+	conflicts = hypopg
+	options = !emptydirs
+	options = !libtool
+	source = git+https://github.com/HypoPG/hypopg.git
+	md5sums = SKIP
+
+pkgname = hypopg-git
+

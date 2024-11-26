@@ -1,0 +1,17 @@
+pkgbase = smartdns-git
+	pkgdesc = Local DNS server that accepts DNS query requests from local clients, obtains DNS query results from multiple upstream DNS servers, and returns the fastest access results to clients.
+	pkgver = r319.3ad7cd7
+	pkgrel = 1
+	url = https://github.com/pymumu/smartdns
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	depends = openssl-1.0
+	provides = smartdns
+	conflicts = smartdns
+	backup = etc/smartdns/smartdns.conf
+	source = smartdns::git+https://github.com/pymumu/smartdns.git
+	md5sums = SKIP
+
+pkgname = smartdns-git
+

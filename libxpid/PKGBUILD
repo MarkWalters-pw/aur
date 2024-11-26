@@ -1,0 +1,33 @@
+# Maintainer: Kris Nóva <kris@nivenly.com>
+
+pkgbase=libxpid
+pkgname=(libxpid)
+pkgver=v1.3.2
+pkgrel=1
+pkgdesc="Linux Process Scanning. (C Library). Find eBPF programs, containers, hidden pids. Like nmap for pids in the kernel."
+arch=(x86_64)
+url="https://github.com/kris-nova/xpid"
+license=(MIT)
+makedepends=(make clang cmake)
+checkdepends=()
+optdepends=()
+backup=()
+options=()
+source=("git+https://github.com/kris-nova/xpid.git#tag=$pkgver")
+sha256sums=('SKIP')
+
+build() {
+	cd xpid
+	make DESTDIR="$pkgdir" purge
+	cd libxpid
+	./configure
+	cd build
+	make
+}
+
+package() {
+    depends=(libxpid)
+	cd xpid
+	cd libxpid/build
+	make DESTDIR="$pkgdir" install
+}

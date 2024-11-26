@@ -1,0 +1,30 @@
+pkgbase = fairseq
+	pkgdesc = Sequence modeling toolkit
+	pkgver = 0.12.2
+	pkgrel = 1
+	url = https://github.com/facebookresearch/fairseq
+	arch = x86_64
+	license = MIT
+	makedepends = cython
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python>=3.6
+	depends = python-bitarray
+	depends = python-cffi
+	depends = python-hydra-core
+	depends = python-numpy
+	depends = python-omegaconf
+	depends = python-pytorch
+	depends = python-regex
+	depends = python-sacrebleu
+	depends = python-tqdm
+	depends = python-torchaudio
+	optdepends = cuda: Model training
+	optdepends = nccl: Model training
+	optdepends = python-apex: Faster training
+	source = fairseq-0.12.2.tar.gz::https://github.com/facebookresearch/fairseq/archive/v0.12.2.tar.gz
+	sha256sums = b5bb076f8b0d5b06a897b11627da278816752b2202650c34becd8f4240f86961
+
+pkgname = fairseq

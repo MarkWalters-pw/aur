@@ -1,0 +1,19 @@
+pkgbase = mtg-git
+	pkgdesc = Bullshit-free MTProto proxy for Telegram
+	pkgver = 0.15.1.r175.gad7acee
+	pkgrel = 1
+	url = https://github.com/9seconds/mtg
+	arch = x86_64
+	license = MIT
+	makedepends = go
+	depends = glibc
+	backup = etc/conf.d/mtg
+	source = git+https://github.com/9seconds/mtg
+	source = mtg.service
+	source = mtg.sysconfig
+	sha256sums = SKIP
+	sha256sums = 49bc96acf5c3d69800315eb9a06510ba71f7cf9024d3fa8f204937f2fad4bbf7
+	sha256sums = 74b77ac1dcf44c52d38f58d339d2317930207fff95dfce75ebfc82a3683d5e75
+
+pkgname = mtg-git
+

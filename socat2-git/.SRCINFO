@@ -1,0 +1,19 @@
+pkgbase = socat2-git
+	pkgdesc = Multipurpose relay (development version)
+	pkgver = 2.0.0.b9.0.g7beb9b3
+	pkgrel = 3
+	url = http://www.dest-unreach.org/socat/socat-version2.html
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = yodl
+	makedepends = git
+	depends = readline
+	depends = openssl-1.0
+	source = socat2::git+http://repo.or.cz/socat.git#branch=socat2
+	source = sslv3.patch
+	sha256sums = SKIP
+	sha256sums = 3744575806f489ad0d3673e6a397badd4b61ecbd6e474ece67b347e13c5076b5
+
+pkgname = socat2-git
+

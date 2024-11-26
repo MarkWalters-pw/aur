@@ -1,0 +1,22 @@
+pkgbase = logrotate-git
+	pkgdesc = Rotates system logs automatically
+	pkgver = 3.21.0.r26.g7029565
+	pkgrel = 1
+	url = https://github.com/logrotate/logrotate
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	depends = glibc
+	depends = acl
+	depends = gzip
+	depends = popt
+	provides = logrotate=3.21.0.r26.g7029565
+	conflicts = logrotate
+	backup = etc/logrotate.conf
+	source = git+https://github.com/logrotate/logrotate.git
+	source = logrotate.conf::https://gitlab.archlinux.org/archlinux/packaging/packages/logrotate/-/raw/main/logrotate.conf
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = logrotate-git

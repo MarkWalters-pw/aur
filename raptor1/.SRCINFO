@@ -1,0 +1,21 @@
+pkgbase = raptor1
+	pkgdesc = C library that parses RDF/XML/N-Triples into RDF triples - old V1 api for compatibility
+	pkgver = 1.4.21
+	pkgrel = 6
+	url = https://librdf.org/raptor
+	arch = x86_64
+	license = LGPL
+	depends = libcurl.so
+	depends = libxslt.so
+	provides = libraptor.so=1-64
+	provides = raptor=1.4.21
+	options = !docs
+	source = raptor1-1.4.21.tar.gz::https://librdf.org/dist/source/raptor-1.4.21.tar.gz
+	source = raptor1-1.4.21.tar.gz.asc::https://librdf.org/dist/source/raptor-1.4.21.tar.gz.asc
+	source = curl.patch
+	validpgpkeys = F879F0DEDA780198DD08DC6443EC92504F71955A
+	sha256sums = db3172d6f3c432623ed87d7d609161973d2f7098e3d2233d0702fbcc22cfd8ca
+	sha256sums = SKIP
+	sha256sums = b241d4ef063ba24dc69369eb36f1b16c38dd7710c88ccd10bbcb4f2a3eff1245
+
+pkgname = raptor1

@@ -1,0 +1,25 @@
+pkgbase = linux-user-repository-bin
+	pkgdesc = Linux User REpository
+	pkgver = 0.1.3
+	pkgrel = 1
+	url = https://lure.sh
+	license = GPLv3
+	optdepends = aria2: for downloading torrent sources
+	depends = sudo
+	depends = pacman
+	conflicts = linux-user-repository
+	provides = linux-user-repository
+	arch = aarch64
+	source_aarch64 = https://gitea.elara.ws/lure/lure/releases/download/v0.1.3/lure-0.1.3-linux-aarch64.tar.gz
+	sha256sums_aarch64 = aa65f0e86391395a00e3c4effb70587db422e3bce3958fadb575aa8d85833760
+	arch = armv6h
+	source_armv6h = https://gitea.elara.ws/lure/lure/releases/download/v0.1.3/lure-0.1.3-linux-arm.tar.gz
+	sha256sums_armv6h = 53aacbcd1e46528fb35b4bfd35c9f9669e151cd7beabed7494334a666c967a99
+	arch = i686
+	source_i686 = https://gitea.elara.ws/lure/lure/releases/download/v0.1.3/lure-0.1.3-linux-i386.tar.gz
+	sha256sums_i686 = a228f557cae2b352129fd8edfa05e6459bb3adfaf4cacd6a7f9fb1ad6f1ebddf
+	arch = x86_64
+	source_x86_64 = https://gitea.elara.ws/lure/lure/releases/download/v0.1.3/lure-0.1.3-linux-x86_64.tar.gz
+	sha256sums_x86_64 = 9e4af18629f951c78e16b1cc7abb49d6a42a920ebb7abf23240c765eedb945f2
+	
+pkgname = linux-user-repository-bin

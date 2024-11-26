@@ -1,0 +1,22 @@
+pkgbase = python-viscm
+	pkgdesc = A colormap tool
+	pkgver = 0.10
+	pkgrel = 1
+	url = https://github.com/matplotlib/viscm
+	arch = any
+	license = MIT
+	checkdepends = python-pytest
+	checkdepends = pyside6
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools-scm
+	makedepends = python-wheel
+	depends = python-matplotlib
+	depends = python-colorspacious
+	depends = python-scipy
+	optdepends = pyside6: for Qt Python bindings
+	optdepends = python-pyqt6: for Qt Python bindings
+	source = viscm-0.10.tar.gz::https://github.com/matplotlib/viscm/archive/v0.10.tar.gz
+	sha512sums = 92896eb98fecbf29e919bbdfab7fb6fce29fc21ef0e41d01f72742f5a01a0d8d0493195395c9596f1822f4b33dbf89753d79c9a57a4135c4b18fc20c59ce3c9c
+
+pkgname = python-viscm

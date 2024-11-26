@@ -1,0 +1,19 @@
+pkgbase = gtk-theme-numix-solarized-git
+	pkgdesc = Solarized versions of Numix GTK2 and GTK3 theme, compatible with GTK 3.20
+	pkgver = 20230305.2c5a85b
+	pkgrel = 1
+	url = https://github.com/Ferdi265/numix-solarized-gtk-theme
+	arch = any
+	license = GPL3
+	makedepends = git
+	makedepends = make
+	makedepends = sassc
+	makedepends = glib2
+	makedepends = inkscape
+	makedepends = optipng
+	depends = gtk-engine-murrine
+	conflicts = gtk-theme-numix-solarized
+	source = git+https://github.com/Ferdi265/numix-solarized-gtk-theme.git
+	md5sums = SKIP
+
+pkgname = gtk-theme-numix-solarized-git

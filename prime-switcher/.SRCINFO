@@ -1,0 +1,20 @@
+pkgbase = prime-switcher
+	pkgdesc = Tool (GUI + CLI) to select used GPU for Optimus Laptop
+	pkgver = 1.0.2
+	pkgrel = 1
+	url = https://gitlab.com/tuxnvape/prime-switcher
+	install = prime-switcher.install
+	arch = any
+	license = GPLv3
+	depends = python-gobject
+	depends = libappindicator-gtk3
+	depends = gtk3
+	depends = libnotify
+	depends = mesa-demos
+	depends = gettext
+	optdepends = bbswitch: For power saving with NVIDIA discrete GPU
+	source = https://gitlab.com/tuxnvape/prime-switcher/-/archive/v1.0.2/prime-switcher-v1.0.2.tar.gz
+	sha256sums = bd9bc595e026ed1a9445cf6b4a3696724ffcf7a1e390fc743332a9261a578135
+
+pkgname = prime-switcher
+

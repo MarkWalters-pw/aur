@@ -1,0 +1,18 @@
+pkgbase = gnome-search-provider-emoji-shortcodes
+	pkgdesc = GNOME Search Provider for Emoji Shortcodes
+	pkgver = 0.1.1
+	pkgrel = 1
+	url = https://codeberg.org/mkhl/gnome-search-provider-emoji-shortcodes
+	arch = i686
+	arch = x86_64
+	arch = armv6h
+	arch = armv7h
+	license = custom:0BSD
+	makedepends = cargo
+	makedepends = sed
+	depends = dbus
+	depends = gnome-desktop
+	source = gnome-search-provider-emoji-shortcodes-0.1.1.tar.gz::https://codeberg.org/mkhl/gnome-search-provider-emoji-shortcodes/archive/v0.1.1.tar.gz
+	sha512sums = f8495b5ceb18b44dd4c54abf13e05485dacaef0aaba5ca077a1a181ccd56bda6dd54ecb1ab15094ad4dd32eed1c6f415e3e2de8a542947d85ef1779f5666f54d
+
+pkgname = gnome-search-provider-emoji-shortcodes

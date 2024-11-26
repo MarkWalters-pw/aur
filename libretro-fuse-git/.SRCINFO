@@ -1,0 +1,21 @@
+pkgbase = libretro-fuse-git
+	pkgdesc = A port of the Fuse Unix Spectrum Emulator to libretro (WIP)
+	pkgver = 238.6164ae2
+	pkgrel = 1
+	url = https://github.com/libretro/fuse-libretro.git
+	arch = i686
+	arch = x86_64
+	arch = arm
+	arch = armv6h
+	arch = armv7h
+	groups = libretro
+	license = GPL3
+	makedepends = git
+	depends = zlib
+	depends = glibc
+	depends = libretro-core-info
+	source = git+https://github.com/libretro/fuse-libretro.git
+	sha256sums = SKIP
+
+pkgname = libretro-fuse-git
+

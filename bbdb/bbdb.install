@@ -1,0 +1,7 @@
+post_install() {
+  echo "Initialization should be:"
+  echo ">> (require 'bbdb-loaddefs)"
+  echo ">> (require 'bbdb)"
+  echo ">> (bbdb-initialize 'gnus 'message)"
+  echo ">> (bbdb-mua-auto-update-init 'gnus 'message)"
+}

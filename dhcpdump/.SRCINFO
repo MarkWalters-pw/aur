@@ -1,0 +1,15 @@
+pkgbase = dhcpdump
+	pkgdesc = Capture and visualization of DHCP packets
+	pkgver = 1.9
+	pkgrel = 1
+	url = https://github.com/bbonev/dhcpdump
+	arch = x86_64
+	license = BSD
+	depends = libpcap.so
+	source = https://github.com/bbonev/dhcpdump/releases/download/v1.9/dhcpdump-1.9.tar.xz
+	source = https://github.com/bbonev/dhcpdump/releases/download/v1.9/dhcpdump-1.9.tar.xz.asc
+	validpgpkeys = BA60BC20F37E59444D6D25001365720913D2F22D
+	sha256sums = 3658ac21cc33e79e72bed070454e49c543017991cb6c37f4253c85e9176869d1
+	sha256sums = SKIP
+
+pkgname = dhcpdump

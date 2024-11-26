@@ -1,0 +1,14 @@
+diff --git a/YUViewApp/YUViewApp.pro b/YUViewApp/YUViewApp.pro
+index 4e5c0d34..09afecd2 100644
+--- a/YUViewApp/YUViewApp.pro
++++ b/YUViewApp/YUViewApp.pro
+@@ -19,7 +19,7 @@ win32 {
+ 
+ unix:!mac {
+     isEmpty(PREFIX) {
+-        PREFIX = /usr/local
++        PREFIX = /usr
+     }
+     isEmpty(BINDIR) {
+         BINDIR = bin
+ 

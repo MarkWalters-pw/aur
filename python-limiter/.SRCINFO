@@ -1,0 +1,15 @@
+pkgbase = python-limiter
+	pkgdesc = Rate-limiting thread-safe, async decorators/context-managers implementing token-bucket
+	pkgver = 0.3.1
+	pkgrel = 1
+	url = https://pypi.org/projects/limiter
+	arch = any
+	license = AGPL
+	makedepends = python-setuptools
+	depends = python
+	depends = python-token-bucket
+	depends = python-strenum
+	source = limiter-0.3.1.tgz::https://github.com/alexdelorenzo/limiter/archive/refs/tags/v0.3.1.tar.gz
+	sha256sums = 0c999b2342a7d6d4bf27283d2a6e9fb39881b77be55e8da3ccbe2d7088a2432e
+
+pkgname = python-limiter

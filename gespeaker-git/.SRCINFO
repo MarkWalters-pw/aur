@@ -1,0 +1,24 @@
+pkgbase = gespeaker-git
+	pkgdesc = A GTK+ frontend for espeak and mbrola to speech the read text.
+	pkgver = 0.8.6.153.g4f68ada
+	pkgrel = 1
+	url = http://www.muflone.com/gespeaker/
+	arch = any
+	license = GPL
+	makedepends = git
+	depends = espeak
+	depends = python-gobject
+	depends = gtk3
+	depends = python-xdg
+	depends = python-psutil
+	depends = python-gtts
+	depends = libpulse
+	optdepends = mbrola: for enhanced mbrola voices support
+	optdepends = mbrola-voices: at least one mbrola voice
+	provides = gespeaker
+	conflicts = gespeaker
+	source = git+https://github.com/muflone/gespeaker.git
+	md5sums = SKIP
+
+pkgname = gespeaker-git
+

@@ -1,0 +1,19 @@
+pkgbase = ndn-traffic-generator-git
+	pkgdesc = This tool is designed to generate Interest and Data traffic in an NDN network
+	pkgver = r50.7393cb4
+	pkgrel = 4
+	url = https://github.com/named-data/ndn-traffic-generator
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = python
+	depends = ndn-cxx
+	depends = boost
+	provides = ndn-traffic-generator
+	conflicts = ndn-traffic-generator
+	source = git+https://github.com/named-data/ndn-traffic-generator.git
+	sha256sums = SKIP
+
+pkgname = ndn-traffic-generator-git
+

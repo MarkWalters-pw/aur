@@ -1,0 +1,15 @@
+pkgbase = loggedfs-git
+	pkgdesc = Filesystem monitoring with Fuse
+	pkgver = 0.9.r7.g24b0afb
+	pkgrel = 1
+	url = https://rflament.github.io/loggedfs/
+	arch = i686
+	arch = x86_64
+	license = Apache
+	depends = fuse3
+	provides = loggedfs
+	conflicts = loggedfs
+	source = loggedfs::git+https://github.com/rflament/loggedfs.git
+	sha256sums = SKIP
+
+pkgname = loggedfs-git

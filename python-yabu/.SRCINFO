@@ -1,0 +1,18 @@
+pkgbase = python-yabu
+	pkgdesc = An utility that exploiting rsync allows to automatize backup tasks, also for remote servers.
+	pkgver = 0.1.3.3
+	pkgrel = 1
+	url = https://github.com/RobertoBochet/yabu
+	arch = any
+	license = GPL3
+	makedepends = python
+	makedepends = python-setuptools
+	depends = rsync
+	depends = python
+	depends = python3-yamale
+	backup = etc/yabu/config.yaml
+	source = https://files.pythonhosted.org/packages/source/y/yabu/yabu-0.1.3.3.tar.gz
+	sha256sums = 0e1c9a51c935e211ce5b76f3e5c9a472bf3c1bacc88450c4fd9a04c19e7a5202
+
+pkgname = python-yabu
+

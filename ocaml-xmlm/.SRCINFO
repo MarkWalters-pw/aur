@@ -1,0 +1,18 @@
+pkgbase = ocaml-xmlm
+	pkgdesc = An OCaml streaming codec to decode and encode the XML data format
+	pkgver = 1.4.0
+	pkgrel = 4
+	url = https://erratique.ch/software/xmlm
+	arch = x86_64
+	arch = aarch64
+	license = ISC
+	makedepends = ocamlbuild
+	makedepends = ocaml-findlib
+	makedepends = ocaml-topkg>=1.0.3
+	makedepends = opam
+	depends = ocaml>=4.05.0
+	options = !strip
+	source = ocaml-xmlm-1.4.0.tar.gz::https://github.com/dbuenzli/xmlm/archive/v1.4.0.tar.gz
+	b2sums = 07684694cdfc9e2d9eaa7c17980fb6e5b7251e6d83c2bf4c1c11ddeac945e91af5ddb139b5b64b6d0aa99bd41ff8a40384f1eafaaca3f445b81d38fde449ec6a
+
+pkgname = ocaml-xmlm

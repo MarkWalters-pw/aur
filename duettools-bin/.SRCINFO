@@ -1,0 +1,26 @@
+pkgbase = duettools-bin
+	pkgdesc = Optional tools (code examples)
+	pkgver = 3.2.2
+	pkgrel = 1
+	url = https://github.com/Duet3D/DuetSoftwareFramework.git
+	arch = armv7h
+	arch = aarch64
+	license = GPL3
+	depends = duetcontrolserver>=3.2.2
+	provides = duettools=3.2.2
+	conflicts = duettools
+	options = !strip
+	options = staticlibs
+	source_armv7h = https://pkg.duet3d.com/dists/stable/armv7/binary-armhf/duettools_3.2.2_armhf.deb
+	md5sums_armv7h = ae0a8dc8e248f3f51c71b9a9a6a18d7b
+	sha1sums_armv7h = 5443a00b853e0464b14e81cfe43c426ac4a193da
+	sha256sums_armv7h = d6a920bb1b207412bb8b222a1a1f4dfb5fdbe311d5c3b7994e10c74d5df9ce29
+	sha512sums_armv7h = d5dd534c2dae5815ae8d57dec1ddf10a8472e72136dff10fda7eab8fc10d6a541cde5278e3f95bca1dccc2e721a5910569fe0c47fdb5a3b2e040523c0a45b91e
+	source_aarch64 = https://pkg.duet3d.com/dists/stable/armv7/binary-arm64/duettools_3.2.2_arm64.deb
+	md5sums_aarch64 = 72971861a4d10fda3fe970fc7621fda8
+	sha1sums_aarch64 = 9a3e1876e2aa79ef867883b88cf2c2121623a1eb
+	sha256sums_aarch64 = ef173dc2d4c4a2282ec7e55ec8611c340623d002ddf790c40e73773f2876c0a9
+	sha512sums_aarch64 = 085cfcb819b05712f4037a635e2327550178854d4572ee9f449e714fbacde9ee98653f2408111f96555a41c94fbddcabb56e09f5fcad98c750152e73f8ec7172
+
+pkgname = duettools-bin
+

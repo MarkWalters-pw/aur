@@ -1,0 +1,22 @@
+pkgbase = gcsf
+	pkgdesc = a FUSE file system based on Google Drive (Written by Rust)
+	pkgver = 0.1.28
+	pkgrel = 2
+	url = https://github.com/harababurel/gcsf
+	install = gcsf.install
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = rust
+	depends = fuse2
+	depends = openssl
+	optdepends = ranger: A simple, vim-like file manager
+	provides = gcsf
+	conflicts = gcsf
+	source = gcsf-0.1.28.tar.gz::https://github.com/harababurel/gcsf/archive/0.1.28.tar.gz
+	source = gcsf.install
+	sha256sums = 8bc7f94630eefda55ac8851a4071d7782385b711ea8f6313e2e64be05f686592
+	sha256sums = 379c996c9cf50bfffdd381d1f9f99695b1af5bab17b0ccd14006999d6e0351c1
+
+pkgname = gcsf
+

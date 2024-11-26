@@ -1,0 +1,21 @@
+post_install() {
+
+	GR='\033[0;32m'
+	BG='\033[1;32m'
+	BL='\033[0;34m'
+	CY='\033[0;36m'
+	NC='\033[0m'
+
+	# Warn about licensing
+	echo ""
+	echo -e "  The ${BG}jrebel${NC} package is licensed software. You MUST read and agree to the"
+	echo -e "  license stored in ${CY}/usr/share/licenses/jrebel/License.txt${NC} before using"
+	echo "  the program."
+	echo ""
+
+	# Warn about environment variables
+	echo -e "  Depending on your current shell, you should ${GR}source${NC} either"
+	echo -e "  ${CY}/etc/profile.d/jrebel.sh${NC} or ${CY}/etc/profile.d/jrebel.csh${NC} to set ${BL}\$REBEL_HOME${NC}. The"
+	echo -e "  easiest way to do this may be to log out, then log back in."
+	echo ""
+}

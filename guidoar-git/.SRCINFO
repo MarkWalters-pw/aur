@@ -1,0 +1,17 @@
+pkgbase = guidoar-git
+	pkgdesc = a library to browse, transform and manipulate Guido scores (git version)
+	pkgver = 387.0327569
+	pkgrel = 1
+	url = http://guidolib.sourceforge.net/
+	arch = x86_64
+	arch = i686
+	license = MPL
+	makedepends = cmake
+	depends = midisharelight-git
+	provides = guidoar
+	conflicts = guidoar
+	source = guidoar-git::git+https://github.com/grame-cncm/guidoar.git#branch=dev
+	md5sums = SKIP
+
+pkgname = guidoar-git
+

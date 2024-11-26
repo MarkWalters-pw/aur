@@ -1,0 +1,27 @@
+pre_install() {
+    systemctl stop svmgrsvc
+    systemctl stop svmonitor
+}
+
+
+post_install() {
+    systemctl start svmgrsvc
+    systemctl enable svmgrsvc
+    systemctl start svmonitor
+    systemctl enable svmonitor
+}
+
+pre_upgrade() {
+}
+
+post_upgrade() {
+}
+
+pre_remove() {
+    systemctl stop svmgrsvc
+    systemctl disable svmgrsvc
+    systemctl stop svmonitor
+    systemctl disable svmonitor
+}
+post_remove() {
+}

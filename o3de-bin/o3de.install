@@ -1,0 +1,36 @@
+_engver=23.10.3
+
+o3de_python_install() {
+    # Try to get local user
+    _user=$(logname)
+    if [ -z $_user ] || [ $_user = "root" ]; then
+        # logname may not work for certain package helpers such as pamac
+        _user=$(who -q | head -1 | awk -e '{print $1;}')
+    fi
+    if [ -z $_user ] || [ $_user = "root" ]; then
+        echo Failed to automatically run python installation as user. Please chown /opt/O3DE/${_engvar} as your user then run /opt/O3DE/${_engver}/python/get_python.sh before launching O3DE.
+        return 1
+    fi
+    
+    _group=$(id -g -n ${_user})
+
+    # Change ownership to user
+    chown -R ${_user}:${_group} /opt/O3DE/${_engver}
+
+    # Run O3DE provided python install script as user
+    runuser -l ${_user} -c "/opt/O3DE/${_engver}/python/get_python.sh"
+}
+
+post_install() {
+    o3de_python_install
+
+    tput bold
+    echo NOTE: You may need to increase the maximum file descriptor limit according to the needs of your O3DE Project
+    echo See https://wiki.archlinux.org/title/Limits.conf#nofile
+    tput sgr0
+}
+
+post_upgrade() {
+    o3de_python_install
+}
+

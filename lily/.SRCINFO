@@ -1,0 +1,17 @@
+pkgbase = lily
+	pkgdesc = An interpreted language with a focus on expressiveness and type safety
+	pkgver = 2.0
+	pkgrel = 1
+	url = http://lily-lang.org/
+	changelog = lily.changelog
+	arch = x86_64
+	arch = i686
+	arch = aarch64
+	arch = armv7h
+	license = MIT
+	makedepends = cmake>=3.0.0
+	depends = glibc
+	source = lily-2.0.tar.gz::https://gitlab.com/FascinatedBox/lily/-/archive/v2.0/lily-v2.0.tar.gz
+	sha256sums = 4ee91ed5e49a3c1e870d732bc5f5a7f65850ba399176e1cf8acc890e64b8e408
+
+pkgname = lily

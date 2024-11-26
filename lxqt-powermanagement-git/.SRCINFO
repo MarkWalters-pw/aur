@@ -1,0 +1,25 @@
+pkgbase = lxqt-powermanagement-git
+	pkgdesc = LXQt power management daemon
+	pkgver = 2.0.0
+	pkgrel = 1
+	url = https://lxqt-project.org
+	arch = i686
+	arch = x86_64
+	license = LGPL-2.1-only
+	makedepends = cmake
+	makedepends = git
+	makedepends = qt6-tools
+	makedepends = lxqt-build-tools-git
+	depends = upower
+	depends = kidletime
+	depends = solid
+	depends = qt6-svg
+	depends = liblxqt-git
+	depends = lxqt-globalkeys-git
+	depends = hicolor-icon-theme
+	provides = lxqt-powermanagement=2.0.0
+	conflicts = lxqt-powermanagement
+	source = git+https://github.com/lxqt/lxqt-powermanagement.git
+	sha256sums = SKIP
+
+pkgname = lxqt-powermanagement-git

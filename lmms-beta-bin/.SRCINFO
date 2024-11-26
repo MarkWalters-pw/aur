@@ -1,0 +1,36 @@
+pkgbase = lmms-beta-bin
+	pkgdesc = Beta version of the Linux MultiMedia Studio.
+	pkgver = 1.2.2
+	pkgrel = 1
+	url = https://lmms.io/
+	arch = x86_64
+	license = GPL
+	depends = fuse2
+	depends = sdl
+	depends = glib2
+	depends = fluidsynth
+	depends = libpng
+	depends = libvorbis
+	depends = libxft
+	depends = libxinerama
+	depends = qt5-base
+	depends = qt5-x11extras
+	depends = sdl_sound
+	depends = libsamplerate
+	depends = shared-mime-info
+	depends = fltk
+	optdepends = wine: VST support (experimental)
+	optdepends = fftw: SpectrumAnalyzer plugin
+	optdepends = stk: STK instruments plugins
+	optdepends = pulseaudio: PulseAudio output
+	optdepends = libgig: needed for decoding .gig files
+	options = !strip
+	source = lmms.AppImage::https://github.com/LMMS/lmms/releases/download/v1.2.2/lmms-1.2.2-linux-x86_64.AppImage
+	source = lmms-beta
+	source = lmms-beta.desktop
+	sha256sums = 6cdc45a0699b8cd85295c49bcac03fcce6f3d8ffd7da23d646d0cb4258869b76
+	sha256sums = 784119511992d86354edd1b1a39e32adb5168dd63af0eb44838e9aa579270bed
+	sha256sums = 804266e15b21d4c5d003897a29f75e03927898bf17255ff4da6c0468cd56adc4
+
+pkgname = lmms-beta-bin
+

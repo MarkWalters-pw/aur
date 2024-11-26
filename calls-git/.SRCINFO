@@ -1,0 +1,26 @@
+pkgbase = calls-git
+	pkgdesc = Phone dialer and call handler
+	pkgver = 43.alpha.0.r1.ga2b08b6
+	pkgrel = 1
+	url = https://gitlab.gnome.org/GNOME/calls
+	arch = x86_64
+	arch = aarch64
+	license = GPL3
+	makedepends = git
+	makedepends = gobject-introspection
+	makedepends = meson
+	makedepends = vala
+	depends = callaudiod
+	depends = feedbackd
+	depends = folks
+	depends = gom
+	depends = libhandy
+	depends = libpeas
+	depends = modemmanager
+	depends = sofia-sip
+	provides = calls
+	conflicts = calls
+	source = git+https://gitlab.gnome.org/GNOME/calls.git
+	b2sums = SKIP
+
+pkgname = calls-git

@@ -1,0 +1,37 @@
+pkgbase = gnupg1-extended
+	pkgdesc = GNU Privacy Guard - a complete and free implementation of the OpenPGP standard. Extended build from original source code with enabled large secmem.
+	pkgver = 1.4.23
+	pkgrel = 1
+	url = http://www.gnupg.org/
+	install = gnupg.install
+	arch = i686
+	arch = x86_64
+	arch = armv6h
+	arch = armv6l
+	arch = armv7h
+	arch = armv7l
+	arch = armv8h
+	arch = armv8l
+	license = GPL3
+	depends = zlib
+	depends = bzip2
+	depends = libldap>=2.4.18
+	depends = libusb-compat
+	depends = curl>=7.16.2
+	depends = readline>=6.0.00
+	depends = pinentry
+	provides = gnupg1=1.4.23
+	conflicts = gnupg1
+	conflicts = gnupg1-extended
+	replaces = gnupg1
+	replaces = gnupg1-extended
+	source = https://gnupg.org/ftp/gcrypt/gnupg/gnupg-1.4.23.tar.bz2
+	source = https://gnupg.org/ftp/gcrypt/gnupg/gnupg-1.4.23.tar.bz2.sig
+	validpgpkeys = D8692123C4065DEA5E0F3AB5249B39D24F25E3B6
+	validpgpkeys = 46CC730865BB5C78EBABADCF04376F3EE0856959
+	validpgpkeys = 031EC2536E580D8EA286A9F22071B08A33BD3F06
+	validpgpkeys = D238EA65D64C67ED4C3073F28A861B1C7EFD60D9
+	sha1sums = 13747486ed5ff707f796f34f50f4c3085c3a6875
+	sha1sums = SKIP
+
+pkgname = gnupg1-extended

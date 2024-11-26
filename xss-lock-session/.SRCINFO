@@ -1,0 +1,21 @@
+pkgbase = xss-lock-session
+	pkgdesc = Forked version of xss lock that allows specifying a session
+	pkgver = 0.3.0.r6.gcd0b89d
+	pkgrel = 1
+	url = https://github.com/xdbob/xss-lock
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = cmake
+	makedepends = python-docutils
+	makedepends = git
+	depends = xcb-util
+	depends = systemd
+	optdepends = bash-completion: for bash completion
+	provides = xss-lock
+	conflicts = xss-lock
+	source = xss-lock-session::git+https://github.com/xdbob/xss-lock.git
+	md5sums = SKIP
+
+pkgname = xss-lock-session
+

@@ -1,0 +1,15 @@
+pkgbase = gentoo-mirrorselect
+	pkgdesc = Tool to help select distfiles mirrors for Gentoo
+	pkgver = 2.2.6
+	pkgrel = 2
+	url = https://wiki.gentoo.org/wiki/Mirrorselect
+	arch = any
+	license = GPL2
+	depends = python
+	depends = netselect
+	depends = dialog
+	depends = ssl-fetch>=0.3
+	source = https://dev.gentoo.org/~zmedico/dist/mirrorselect-2.2.6.tar.gz
+	b2sums = 8875bf61e26ac474338d81a602297fa4fdf3fab3dbd478b02129dbe71f2d09445efa9b82792e3e654725c5e87a4ca00d37a3d924f8bd6f2decdf74148d1069c8
+
+pkgname = gentoo-mirrorselect

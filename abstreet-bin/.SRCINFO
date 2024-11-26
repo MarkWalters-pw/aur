@@ -1,0 +1,16 @@
+pkgbase = abstreet-bin
+	pkgdesc = Transportation planning and traffic simulation software for creating cities friendlier to walking, biking, and public transit
+	pkgver = 0.3.49
+	pkgrel = 1
+	url = https://a-b-street.github.io/docs/
+	arch = x86_64
+	license = Apache-2.0
+	makedepends = gendesk
+	depends = gtk3
+	depends = alsa-lib
+	provides = abstreet=0.3.49
+	conflicts = abstreet
+	source = abstreet-0.3.49.zip::https://github.com/a-b-street/abstreet/releases/download/v0.3.49/abstreet_linux_v0_3_49.zip
+	sha256sums = 0596acf7ec134b4fef7507947b3188381953e0869788a2e6b81040bbb4d6f6bc
+
+pkgname = abstreet-bin

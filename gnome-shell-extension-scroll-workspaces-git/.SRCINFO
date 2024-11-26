@@ -1,0 +1,16 @@
+pkgbase = gnome-shell-extension-scroll-workspaces-git
+	pkgdesc = Change workspaces by scrolling while over the top panel in Gnome Shell
+	pkgver = r73.3b97321
+	pkgrel = 1
+	url = https://github.com/timbertson/gnome-shell-scroll-workspaces
+	arch = any
+	license = unknown
+	makedepends = git
+	makedepends = python
+	makedepends = jq
+	provides = gnome-shell-extension-scroll-workspaces
+	conflicts = gnome-shell-extension-scroll-workspaces
+	source = git+https://github.com/timbertson/gnome-shell-scroll-workspaces.git
+	md5sums = SKIP
+
+pkgname = gnome-shell-extension-scroll-workspaces-git

@@ -1,0 +1,18 @@
+pkgbase = r-simd
+	pkgdesc = Statistical Inferences with MeDIP-seq Data (SIMD) to infer the methylation level for each CpG site
+	pkgver = 1.22.0
+	pkgrel = 1
+	url = https://bioconductor.org/packages/SIMD
+	arch = x86_64
+	license = GPL
+	depends = r
+	depends = r-edger
+	depends = r-methylmnm
+	depends = r-statmod
+	optdepends = r-biocstyle
+	optdepends = r-knitr
+	optdepends = r-rmarkdown
+	source = https://bioconductor.org/packages/release/bioc/src/contrib/SIMD_1.22.0.tar.gz
+	sha256sums = fd024aabb940092d2fa4206869bdfafa1804bebd973958d3267cab6c09af87eb
+
+pkgname = r-simd

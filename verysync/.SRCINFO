@@ -1,0 +1,22 @@
+pkgbase = verysync
+	pkgdesc = A P2P sync tool simliar to Resilio Sync that can be used in China, syncing files via secure, distributed technology.
+	pkgver = 2.17.0
+	pkgrel = 1
+	url = https://www.verysync.com/download.html
+	arch = i386
+	arch = x86_64
+	arch = arm
+	arch = aarch64
+	license = custom
+	source = verysync.service
+	sha256sums = 041750a8ed0877a6520991a1c222c015d586889ad46ddea992358590b0ce44f9
+	source_i386 = verysync_i386-2.17.0.tar.gz::https://www.verysync.com/download.php?platform=linux-386
+	sha256sums_i386 = 1c5b3d8bb79dcda9f2688f4b431a5e2a2aa3898ad399a09f6901a68dc545c104
+	source_x86_64 = verysync_amd64-2.17.0.tar.gz::https://www.verysync.com/download.php?platform=linux-amd64
+	sha256sums_x86_64 = ccd1c64e6f3bb96a71870b6881b391dc4b02f929180f2874856dfe588da21f14
+	source_arm = verysync_arm-2.17.0.tar.gz::https://www.verysync.com/download.php?platform=linux-arm
+	sha256sums_arm = c3b7225594f09023c03ad8ded788c49c5ef0757cc4aaf50677a9c335da4f1512
+	source_aarch64 = verysync_arm64-2.17.0.tar.gz::https://www.verysync.com/download.php?platform=linux-arm64
+	sha256sums_aarch64 = f4461b26fd4bd56043b1bbb8c3156265bad41a1c53ab3853eb18b241657c5532
+
+pkgname = verysync

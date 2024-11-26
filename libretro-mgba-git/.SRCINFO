@@ -1,0 +1,19 @@
+pkgbase = libretro-mgba-git
+	pkgdesc = A Nintendo Gameboy Advance Emulator - Libretro Core
+	pkgver = 0.10.0.r7169.b5e94b0ab
+	pkgrel = 1
+	url = https://mgba.io/
+	arch = x86_64
+	groups = libretro-unstable
+	license = custom:MPL2
+	makedepends = git
+	makedepends = cmake
+	makedepends = mesa
+	makedepends = ninja
+	depends = libretro-core-info
+	provides = libretro-mgba
+	conflicts = libretro-mgba
+	source = git+https://github.com/mgba-emu/mgba.git
+	sha1sums = SKIP
+
+pkgname = libretro-mgba-git

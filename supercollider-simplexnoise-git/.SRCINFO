@@ -1,0 +1,17 @@
+pkgbase = supercollider-simplexnoise-git
+	pkgdesc = SuperCollider implementation of Simplex noise
+	pkgver = r6.6fb3235
+	pkgrel = 2
+	url = https://github.com/esluyter/simplexsynth
+	arch = any
+	groups = pro-audio
+	groups = supercollider-plugins
+	license = GPL
+	makedepends = git
+	makedepends = cmake
+	makedepends = supercollider-headers-git
+	depends = supercollider
+	source = supercollider-simplexnoise-git::git+https://github.com/esluyter/simplexsynth.git
+	md5sums = SKIP
+
+pkgname = supercollider-simplexnoise-git

@@ -1,0 +1,9 @@
+[Unit]
+ConditionEnvironment=SSH_AUTH_SOCK
+
+[Socket]
+ListenStream=%t/sd-ssh-agent.sock
+Backlog=128
+
+[Install]
+WantedBy=sockets.target

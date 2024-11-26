@@ -1,0 +1,14 @@
+pkgbase = maya-usd
+	pkgdesc = Autodesk Maya Universal Scene Discription Plugin
+	pkgver = 0.23.1
+	pkgrel = 1
+	url = https://github.com/Autodesk/maya-usd
+	arch = x86_64
+	license = custom
+	depends = maya>=2024.0
+	depends = maya<2025.0
+	options = !strip
+	source = manual://MayaUSD2024-202304181210-131a6c1-0.23.1-1.x86_64.rpm
+	sha256sums = 0e7445f18e25b58da2f55a1b4b8870f105025598156743b88dba565104cccd60
+
+pkgname = maya-usd

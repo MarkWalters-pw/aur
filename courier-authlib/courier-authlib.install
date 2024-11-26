@@ -1,0 +1,23 @@
+# arg 1:  the new package version
+post_install() {
+   if ! (grep -q '^courier:.*:72:72:' /etc/passwd); then echo courier user has incorrect uid:gid - please fix!; fi;
+  # set correct ownership & permissions on /run/authdaemon
+  systemd-tmpfiles --create /usr/lib/tmpfiles.d/courier-authlib.conf
+  # make sure the system can see authlib libraries
+  echo /usr/lib/courier-authlib > /etc/ld.so.conf.d/courier-authlib.conf
+  ldconfig
+}
+
+# arg 1:  the new package version
+# arg 2:  the old package version
+post_upgrade() {
+    post_install $1
+}
+
+# arg 1:  the old package version
+pre_remove() {
+  systemd-tmpfiles --remove /usr/lib/tmpfiles.d/courier-authlib.conf
+  rm -f /etc/ld.so.conf.d/courier-authlib.conf
+  ldconfig
+} >/dev/null 2>&1
+

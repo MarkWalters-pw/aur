@@ -1,0 +1,23 @@
+pkgbase = dominions-server
+	pkgdesc = Configure and run Dominions 5 as a headless server
+	pkgver = 5
+	pkgrel = 1
+	url = http://www.illwinter.com/dom5/
+	install = dominions-server.install
+	arch = x86_64
+	license = MIT
+	replaces = dom4-server
+	source = dominions-server
+	source = dominions-server.service
+	source = dominions-sysusers.conf
+	source = dominions-tmpfile.conf
+	source = dominions
+	md5sums = 1c50c7bf2b0bd067f1749c9153bd4c36
+	md5sums = 8194de8c40005e24334d6c402fcc97e1
+	md5sums = b1db7bda72a917fed819d1251361b1ca
+	md5sums = 0c20183b083e3927a5a49771cd530004
+	md5sums = 5ecfb39e75cb603afaeaae8a32921288
+	depends_x86_64 = steamcmd
+
+pkgname = dominions-server
+

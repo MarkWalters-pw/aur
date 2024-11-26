@@ -1,0 +1,19 @@
+pkgbase = virtualpg-devel
+	pkgdesc = VirtualPG is a loadable dynamic extension to both SQLite and SpatiaLite.
+	pkgver = r15.5e528ed
+	pkgrel = 1
+	url = https://www.gaia-gis.it/fossil/virtualpg/index
+	arch = x86_64
+	arch = i686
+	license = GPLv3
+	makedepends = fossil
+	depends = libspatialite
+	depends = sqlite
+	depends = postgresql-libs
+	depends = postgis
+	provides = virtualpg
+	conflicts = virtualpg
+	replaces = virtualpg
+
+pkgname = virtualpg-devel
+

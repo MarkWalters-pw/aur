@@ -1,0 +1,15 @@
+pkgbase = xfreq-git
+	pkgdesc = Processor Monitoring w/ Turbo Boost, Temps, C-States, Features, Tasks scheduling
+	pkgver = 2.1.66
+	pkgrel = 2
+	url = http://github.com/cyring/xfreq/
+	install = readme.install
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	depends = libx11
+	conflicts = xfreq-2.0-git
+	source = git+https://github.com/cyring/xfreq.git
+	md5sums = SKIP
+
+pkgname = xfreq-git

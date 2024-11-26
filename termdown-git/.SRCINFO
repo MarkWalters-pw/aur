@@ -1,0 +1,20 @@
+pkgbase = termdown-git
+	pkgdesc = Countdown timer and stopwatch in your terminal
+	pkgver = 1.18.0.r0.g66eb1b0
+	pkgrel = 3
+	url = https://github.com/trehn/termdown
+	arch = any
+	license = GPL3
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python
+	depends = python-click
+	depends = python-pyfiglet
+	depends = python-dateutil
+	optdepends = espeak: voice support for spoken countdowns
+	provides = termdown
+	conflicts = termdown
+	source = git+https://github.com/trehn/termdown
+	md5sums = SKIP
+
+pkgname = termdown-git

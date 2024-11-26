@@ -1,0 +1,24 @@
+pkgbase = python-asyncclick
+	pkgdesc = Composable command line interface toolkit, async version
+	pkgver = 8.1.7.2
+	pkgrel = 2
+	url = https://github.com/python-trio/asyncclick
+	arch = any
+	license = BSD
+	checkdepends = python-pytest
+	checkdepends = python-trio
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-setuptools-scm
+	makedepends = python-wheel
+	depends = python
+	depends = python-anyio
+	optdepends = python-trio: Alternative async event loop
+	optdepends = python-curio: Alternative async event loop
+	options = !strip
+	source = asyncclick-8.1.7.2.tar.gz::https://github.com/python-trio/asyncclick/archive/refs/tags/8.1.7.2.tar.gz
+	sha256sums = f5b84b541ec562d20850ea6e4711dbb44dcea1bcffbfa21da55c4460eced02d6
+
+pkgname = python-asyncclick

@@ -1,0 +1,19 @@
+pkgbase = gnome-screenshot-git
+	pkgdesc = Take pictures of your screen
+	pkgver = 3.34.0+14+g67ac52e
+	pkgrel = 1
+	url = https://gitlab.gnome.org/GNOME/gnome-screenshot
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	makedepends = meson
+	makedepends = appstream-glib
+	depends = gtk3
+	depends = libcanberra
+	provides = gnome-screenshot
+	conflicts = gnome-screenshot
+	source = git+https://gitlab.gnome.org/GNOME/gnome-screenshot.git
+	sha512sums = SKIP
+
+pkgname = gnome-screenshot-git
+

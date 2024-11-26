@@ -1,0 +1,18 @@
+pkgbase = pcaper
+	pkgdesc = Read pcap and assemble HTTP requests
+	pkgver = 1.0.11
+	pkgrel = 3
+	url = https://github.com/gaainf/pcaper
+	arch = any
+	license = BSD
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = python
+	depends = python-dpkt>=1.9.1
+	depends = python-six>=1.11.0
+	depends = python-dateutil>=2.8.0
+	source = https://files.pythonhosted.org/packages/source/p/pcaper/pcaper-1.0.11.tar.gz
+	sha256sums = 65f9aea7ec97f42fbdf10ae8a6695226fe773499ef2eb477c724f998d7972075
+
+pkgname = pcaper

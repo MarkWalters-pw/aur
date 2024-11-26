@@ -1,0 +1,16 @@
+pkgbase = base16-vtrgb
+	pkgdesc = base16 color schemes available for the linux console (vt, tty)
+	pkgver = 2022_12_29
+	pkgrel = 2
+	url = https://github.com/coderonline/base16-vtrgb
+	install = base16-vtrgb.install
+	arch = any
+	license = MIT
+	depends = systemd
+	depends = kbd
+	depends = mkinitcpio
+	backup = etc/vtrgb
+	source = base16-vtrgb-2022_12_29.tar.gz::https://github.com/coderonline/base16-vtrgb/archive/refs/tags/2022-12-29.tar.gz
+	sha256sums = cd4b023b5b6d3ce302101393d198e5edf6c063c24f8e8c7efd05f91ce828cdc9
+
+pkgname = base16-vtrgb

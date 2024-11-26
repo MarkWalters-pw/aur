@@ -1,0 +1,21 @@
+pkgbase = sox-noise-git
+	pkgdesc = Noise generator GUI powered by Sound eXchange (SoX).
+	pkgver = 0.0.3.post2+g94f7ca4
+	pkgrel = 1
+	url = https://github.com/Thann/sox-noise
+	arch = any
+	license = Unlicense
+	makedepends = git
+	makedepends = python-setuptools
+	makedepends = python-pip
+	makedepends = python-wheel
+	depends = python
+	depends = python-gobject
+	depends = sox
+	provides = sox-noise
+	conflicts = sox-noise
+	source = sox-noise-git::git+https://github.com/Thann/sox-noise.git
+	md5sums = SKIP
+
+pkgname = sox-noise-git
+

@@ -1,0 +1,17 @@
+pkgbase = cavapify-git
+	pkgdesc = Automatically change the color of the cava visualizer bars according to the color of the current album art of any media player that implements the MPRIS.
+	pkgver = r15.a2d3160
+	pkgrel = 5
+	url = https://github.com/kb-elmo/cavapify
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = cava-git
+	depends = imagemagick
+	depends = playerctl
+	depends = wget
+	provides = cavapify
+	source = cavapify::git+https://github.com/kb-elmo/cavapify.git
+	md5sums = SKIP
+
+pkgname = cavapify-git

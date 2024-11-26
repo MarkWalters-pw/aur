@@ -1,0 +1,25 @@
+pkgbase = python-digikey-api-git
+	pkgdesc = Python client for Digikey API
+	pkgver = r61.10b91ac
+	pkgrel = 1
+	url = https://github.com/peeter123/digikey-api
+	arch = any
+	license = GPL3
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = python-setuptools
+	depends = python
+	depends = python-requests
+	depends = python-retrying
+	depends = python-fake-useragent
+	depends = python-schematics
+	depends = python-inflection
+	depends = python-certauth
+	depends = python-urllib3
+	provides = python-digikey-api=r61.10b91ac
+	conflicts = python-digikey-api
+	source = python-digikey-api-git::git+https://github.com/hvraven/digikey-api.git#commit=10b91ac61458e42f7757fd6c060766b5b9515314
+	sha256sums = SKIP
+
+pkgname = python-digikey-api-git

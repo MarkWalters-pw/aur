@@ -1,0 +1,19 @@
+*** main.rs.orig	2020-08-22 16:02:54.378029812 +0200
+--- main.rs	2020-08-22 11:17:30.636744775 +0200
+***************
+*** 50,56 ****
+      if let Some(env_adb) = std::env::var_os("GNIREHTET_APK") {
+          env_adb.into_string().expect("invalid GNIREHTET_APK value")
+      } else {
+!         "gnirehtet.apk".to_string()
+      }
+  }
+  
+--- 50,56 ----
+      if let Some(env_adb) = std::env::var_os("GNIREHTET_APK") {
+          env_adb.into_string().expect("invalid GNIREHTET_APK value")
+      } else {
+!         "/usr/share/gnirehtet/gnirehtet.apk".to_string()
+      }
+  }
+  

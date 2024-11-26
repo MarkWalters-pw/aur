@@ -1,0 +1,18 @@
+pkgbase = libvdestack-git
+	pkgdesc = Internet of Threads through Network Namespaces
+	pkgver = r18.373dccd
+	pkgrel = 1
+	url = https://github.com/rd235/libvdestack
+	arch = any
+	license = LGPL
+	makedepends = git
+	makedepends = cmake
+	depends = s2argv-execs-git
+	depends = vdeplug4-git
+	provides = libvdestack
+	conflicts = libvdestack
+	source = git+https://github.com/rd235/libvdestack.git
+	md5sums = SKIP
+
+pkgname = libvdestack-git
+

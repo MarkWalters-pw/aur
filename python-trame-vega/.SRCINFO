@@ -1,0 +1,19 @@
+pkgbase = python-trame-vega
+	pkgdesc = Vega widget for trame
+	pkgver = 2.1.1
+	pkgrel = 1
+	url = https://github.com/Kitware/trame-vega
+	arch = any
+	license = BSD-3-Clause
+	checkdepends = python-pytest
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	makedepends = nodejs
+	makedepends = npm
+	depends = python-trame-client
+	source = trame-vega-2.1.1.tar.gz::https://github.com/Kitware/trame-vega/archive/v2.1.1.tar.gz
+	sha512sums = 6df086f792e07d4d17cc9ecc476345071d7bf08c40df9c2ecc8882471efeda74e97beae5913901b80aa430760b4fc72bbb253ea344a6147291abc19bd6cdf160
+
+pkgname = python-trame-vega

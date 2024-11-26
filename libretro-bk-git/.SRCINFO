@@ -1,0 +1,22 @@
+pkgbase = libretro-bk-git
+	pkgdesc = BK-0010/0011/Terak 8510a core
+	pkgver = r117.70f4a2d
+	pkgrel = 2
+	url = https://github.com/libretro/bk-emulator
+	install = libretro-bk-git.install
+	arch = i686
+	arch = x86_64
+	arch = arm
+	arch = armv6h
+	arch = armv7h
+	groups = libretro
+	license = custom
+	makedepends = git
+	depends = glibc
+	depends = libretro-core-info
+	provides = libretro-bk
+	conflicts = libretro-bk
+	source = libretro-bk::git+https://github.com/libretro/bk-emulator.git
+	sha512sums = SKIP
+
+pkgname = libretro-bk-git

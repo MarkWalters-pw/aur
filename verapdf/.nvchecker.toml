@@ -1,0 +1,7 @@
+[verapdf]
+source = "github"
+github = "veraPDF/veraPDF-apps"
+prefix = "v"
+use_max_tag = true
+# Upstream convention: versions with an odd minor component are development versions
+exclude_regex = ".*-RC.*|v\\d+\\.\\d*[13579]\\..*"

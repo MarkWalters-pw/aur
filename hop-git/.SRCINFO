@@ -1,0 +1,26 @@
+pkgbase = hop-git
+	pkgdesc = Software Development Kit for the Web
+	pkgver = 3.2.0.r5367
+	pkgrel = 4
+	epoch = 2
+	url = http://hop.inria.fr
+	install = hop.install
+	arch = i686
+	arch = x86_64
+	license = GPL
+	license = LGPL
+	makedepends = git
+	depends = bigloo=4.3h
+	depends = gmp
+	depends = libunistring
+	depends = libuv
+	depends = avahi
+	depends = sqlite
+	provides = hop
+	conflicts = hop
+	options = !makeflags
+	source = git+https://github.com/manuel-serrano/hop.git#branch=3.2.x
+	md5sums = SKIP
+
+pkgname = hop-git
+

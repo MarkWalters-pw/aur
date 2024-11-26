@@ -1,0 +1,18 @@
+pkgbase = android-platform-25
+	pkgdesc = Android SDK Platform, API-25
+	pkgver = 7.1.1_r03
+	pkgrel = 2
+	url = http://developer.android.com/sdk/index.html
+	arch = any
+	license = custom
+	depends = android-sdk
+	depends = android-sdk-platform-tools
+	conflicts = android-platform-25
+	options = !strip
+	source = https://dl.google.com/android/repository/platform-25_r03.zip
+	source = android-sdk-license.txt
+	sha1sums = 00c2c5765e8988504be10a1eb66ed71fcdbd7fe8
+	sha1sums = a35b1b807afb8c2fb35daf3d0ca5f8dbd5fb81dc
+
+pkgname = android-platform-25
+

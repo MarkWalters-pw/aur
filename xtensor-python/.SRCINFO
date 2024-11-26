@@ -1,0 +1,16 @@
+pkgbase = xtensor-python
+	pkgdesc = Bindings for xtensor and python-numpy
+	pkgver = 0.26.1
+	pkgrel = 1
+	url = https://github.com/xtensor-stack/xtensor-python
+	arch = x86_64
+	license = BSD-3-Clause
+	makedepends = cmake
+	depends = xtensor>=0.24.0
+	depends = xtl
+	depends = pybind11
+	depends = python-numpy
+	source = xtensor-python-0.26.1.tar.gz::https://github.com/xtensor-stack/xtensor-python/archive/0.26.1.tar.gz
+	sha512sums = 62ac0a22db77b302c33b75b9153596642474f326c7efe02f3b89fcaf61b89977bb999fd5055788db6cd51181157e2bfef25af25853fc767f0192e1d347c97265
+
+pkgname = xtensor-python

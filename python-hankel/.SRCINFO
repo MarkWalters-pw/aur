@@ -1,0 +1,17 @@
+pkgbase = python-hankel
+	pkgdesc = Hankel Transformations using method of Ogata 2005
+	pkgver = 1.2.1
+	pkgrel = 1
+	url = https://github.com/steven-murray/hankel
+	arch = any
+	license = MIT
+	makedepends = python-build
+	makedepends = python-installer
+	depends = python
+	source = https://files.pythonhosted.org/packages/source/h/hankel/hankel-1.2.1.tar.gz
+	source = setupfix.patch
+	sha256sums = b74f8b776967976c1a9902d4780d33e4907509cfcdd17feec75b4416fba84039
+	sha256sums = 86f480e200f0e587495384fd21e887ce474b95f98f87888e317347a26bc009d8
+
+pkgname = python-hankel
+	depends = python

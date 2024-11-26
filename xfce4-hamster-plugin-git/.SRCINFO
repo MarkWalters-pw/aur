@@ -1,0 +1,20 @@
+pkgbase = xfce4-hamster-plugin-git
+	pkgdesc = recreation of the gnome-shell hamster extension as a xfce4 panel plugin
+	pkgver = 1.14.r0.ga923422
+	pkgrel = 1
+	url = https://github.com/projecthamster/xfce4-hamster-plugin
+	arch = x86_64
+	arch = i686
+	license = GPL
+	makedepends = pkgconfig
+	makedepends = intltool
+	makedepends = git
+	depends = xfce4-panel
+	depends = hamster-time-tracker
+	provides = xfce4-hamster-plugin
+	conflicts = xfce4-hamster-plugin
+	source = xfce4-hamster-plugin-git::git+https://github.com/projecthamster/xfce4-hamster-plugin
+	sha256sums = SKIP
+
+pkgname = xfce4-hamster-plugin-git
+

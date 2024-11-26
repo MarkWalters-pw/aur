@@ -1,0 +1,22 @@
+pkgbase = springerdownload-git
+	pkgdesc = Downloader for link.springer.com
+	pkgver = 20201106.93.2c5b977
+	pkgrel = 1
+	url = http://tovotu.de/dev/518-Neuer-SpringerLink-Downloader/
+	arch = any
+	license = GPL2
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python
+	depends = python-cssselect
+	depends = python-pypdf2
+	depends = python-lxml
+	optdepends = python-gobject: for the GUI
+	optdepends = gtk3: for the GUI
+	conflicts = springer_download
+	replaces = springer_download
+	source = springerdownload-git::git://github.com/tuxor1337/springerdownload.git
+	md5sums = SKIP
+
+pkgname = springerdownload-git
+

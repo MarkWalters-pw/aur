@@ -1,0 +1,24 @@
+pkgbase = openzwave-git
+	pkgdesc = Opensource Z-Wave control
+	pkgver = 7528.4887754f.97f47476b8675683144a4278a4c93271
+	pkgrel = 1
+	url = http://www.openzwave.com
+	install = openzwave-git.install
+	arch = i686
+	arch = x86_64
+	arch = arm
+	arch = armv6h
+	arch = armv7h
+	license = LGPL
+	makedepends = doxygen
+	makedepends = git
+	depends = libsystemd
+	provides = openzwave
+	conflicts = openzwave
+	conflicts = openzwave-svn
+	source = openzwave::git+https://github.com/OpenZWave/open-zwave.git
+	source = null-check.patch
+	sha256sums = SKIP
+	sha256sums = a7d4f12eb5ff3cb29f12a896bf7e0da5c36ea4c5c0d5a77f9bff481b48fc7774
+
+pkgname = openzwave-git

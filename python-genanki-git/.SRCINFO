@@ -1,0 +1,24 @@
+pkgbase = python-genanki-git
+	pkgdesc = Python 3 library for programatically generating Anki decks
+	pkgver = 0.13.0.r7.g0fa4f74
+	pkgrel = 1
+	url = https://github.com/kerrickstaley/genanki
+	arch = x86_64
+	arch = i686
+	license = MIT
+	makedepends = git
+	makedepends = python-setuptools
+	makedepends = python-pytest-runner
+	depends = python
+	depends = python-cached-property
+	depends = python-frozendict
+	depends = python-chevron
+	depends = python-yaml
+	provides = genanki
+	provides = python-genanki
+	conflicts = genanki
+	conflicts = python-genanki
+	source = git+https://github.com/kerrickstaley/genanki.git
+	b2sums = SKIP
+
+pkgname = python-genanki-git

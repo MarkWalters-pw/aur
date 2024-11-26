@@ -1,0 +1,31 @@
+pkgbase = ros-noetic-ps3joy
+	pkgdesc = ROS - Playstation 3 SIXAXIS or DUAL SHOCK 3 joystick driver.
+	pkgver = 1.13.0
+	pkgrel = 1
+	url = http://www.ros.org/wiki/ps3joy
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-diagnostic-msgs
+	makedepends = ros-noetic-rosgraph
+	makedepends = ros-noetic-catkin
+	makedepends = ros-noetic-sensor-msgs
+	makedepends = ros-noetic-rospy
+	makedepends = linuxconsole
+	makedepends = bluez
+	makedepends = python-pybluez
+	makedepends = libusb-compat
+	depends = ros-noetic-diagnostic-msgs
+	depends = ros-noetic-rosgraph
+	depends = ros-noetic-sensor-msgs
+	depends = ros-noetic-rospy
+	depends = linuxconsole
+	depends = bluez
+	depends = python-pybluez
+	depends = libusb-compat
+	source = ros-noetic-ps3joy-1.13.0.tar.gz::https://github.com/ros-drivers/joystick_drivers/archive/1.13.0.tar.gz
+	sha256sums = bfe0633623f4dc917524198aaea10b1c4603881e736dafb7b652f1af60922ad7
+
+pkgname = ros-noetic-ps3joy
+

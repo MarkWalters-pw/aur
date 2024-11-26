@@ -1,0 +1,24 @@
+pkgbase = aniwrapper-git
+	pkgdesc = A rofi wrapper around a modified ani-cli: a cli to browse and watch anime
+	pkgver = r300.8327afc
+	pkgrel = 1
+	url = https://github.com/ksyasuda/aniwrapper
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = axel
+	depends = curl
+	depends = ffmpeg
+	depends = grep
+	depends = mpv
+	depends = openssl
+	depends = rofi
+	depends = sed
+	depends = sqlite3
+	optdepends = vlc: An alternative video player
+	provides = aniwrapper
+	provides = ani-cli
+	source = aniwrapper::git+https://github.com/ksyasuda/aniwrapper.git
+	md5sums = SKIP
+
+pkgname = aniwrapper-git

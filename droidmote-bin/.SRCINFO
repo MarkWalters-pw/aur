@@ -1,0 +1,19 @@
+pkgbase = droidmote-bin
+	pkgdesc = Server for DroidMote. Use your androd as remote mouse and keyboard.
+	pkgver = 3.0.6
+	pkgrel = 1
+	url = http://www.videomap.it/
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = arm7f
+	license = custom:unknown
+	makedepends = curl
+	depends = libx11
+	backup = etc/droidmote.conf
+	source = droidmote.conf
+	source = service
+	sha256sums = b6386dec0977b27dff244e04f4fdbf5becc4c12731a261678524c21ffb3e53a4
+	sha256sums = 0e88c9e0b189e0d8890ddbee8f00da13485973e028811e4e70a8b1c2b7595bbe
+
+pkgname = droidmote-bin

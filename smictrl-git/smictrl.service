@@ -1,0 +1,12 @@
+[Unit]
+Description=Modify SMI enable register
+After=multi-user.target
+ConditionPathExists=/etc/smictrl.conf
+
+[Service]
+Type=oneshot
+EnvironmentFile=/etc/smictrl.conf
+ExecStart=/bin/sh -c '[ -z "$$ARGS" ] || exec /usr/bin/smictrl $$ARGS'
+
+[Install]
+WantedBy=multi-user.target

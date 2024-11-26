@@ -1,0 +1,16 @@
+pkgbase = python-zxing-cpp
+	pkgdesc = Python bindings for zxing-cpp
+	pkgver = 2.2.1
+	pkgrel = 1
+	url = https://github.com/zxing-cpp/zxing-cpp
+	arch = x86_64
+	license = Apache-2.0
+	makedepends = cmake
+	makedepends = pybind11
+	makedepends = python-setuptools-scm
+	depends = python
+	depends = zxing-cpp
+	source = zxing-cpp-2.2.1.tar.gz::https://github.com/zxing-cpp/zxing-cpp/archive/refs/tags/v2.2.1.tar.gz
+	sha256sums = 02078ae15f19f9d423a441f205b1d1bee32349ddda7467e2c84e8f08876f8635
+
+pkgname = python-zxing-cpp

@@ -1,0 +1,22 @@
+pkgbase = metronomek
+	pkgdesc = Metronome that works and sounds similar to mechanical devices but with all goods of computer program.
+	pkgver = 0.6.0
+	pkgrel = 1
+	url = https://metronomek.sourceforge.io/
+	arch = x86_64
+	arch = i686
+	license = GPL3
+	makedepends = cmake
+	makedepends = qt5-base
+	makedepends = qt5-quickcontrols
+	makedepends = qt5-quickcontrols2
+	depends = qt5-base
+	depends = qt5-quickcontrols
+	depends = qt5-quickcontrols2
+	depends = shared-mime-info
+	optdepends = libpulse: for PulseAudio
+	optdepends = alsa-lib: for ALSA
+	source = https://sourceforge.net/projects/metronomek/files/Metronomek-0.6.0/metronomek-0.6.0-source.tar.bz2
+	sha256sums = ed0b0a2846aa2d6c4cfff294ac8e82148fce6d44a6363af7ca63d32557edfc98
+
+pkgname = metronomek

@@ -1,0 +1,22 @@
+pkgbase = package-query-git
+	pkgdesc = Query ALPM and AUR
+	pkgver = 1.12.r0.g840a000
+	pkgrel = 1
+	url = https://github.com/archlinuxfr/package-query
+	arch = i686
+	arch = x86_64
+	arch = mips64el
+	arch = armv6h
+	arch = armv7h
+	arch = arm
+	arch = aarch64
+	license = GPL
+	makedepends = git
+	depends = pacman>=6.0
+	depends = yajl>=2.0
+	provides = package-query=1.12
+	conflicts = package-query
+	source = git+https://github.com/archlinuxfr/package-query.git
+	md5sums = SKIP
+
+pkgname = package-query-git

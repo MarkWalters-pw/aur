@@ -1,0 +1,22 @@
+pkgbase = sanoid-git
+	pkgdesc = Sanoid is a policy-driven snapshot management tool for ZFS filesystems.
+	pkgver = r567.a90eec3
+	pkgrel = 1
+	url = https://github.com/jimsalterjrs/sanoid
+	arch = any
+	license = GPL
+	makedepends = git
+	depends = perl
+	depends = perl-capture-tiny
+	depends = perl-config-inifiles
+	optdepends = pv: progress bars
+	optdepends = lzop: compression
+	optdepends = mbuffer: stream buffering
+	provides = sanoid
+	conflicts = sanoid
+	backup = etc/sanoid/sanoid.conf
+	source = sanoid-git::git+https://github.com/jimsalterjrs/sanoid.git
+	sha256sums = SKIP
+
+pkgname = sanoid-git
+

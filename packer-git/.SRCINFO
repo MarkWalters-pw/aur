@@ -1,0 +1,17 @@
+pkgbase = packer-git
+	pkgdesc = Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
+	pkgver = v1.4.3_177_g39a57af3e
+	pkgrel = 1
+	url = https://www.packer.io/
+	arch = x86_64
+	license = MPL2
+	makedepends = go
+	makedepends = git
+	depends = glibc
+	provides = packer
+	conflicts = packer
+	source = git+https://github.com/hashicorp/packer.git
+	sha256sums = SKIP
+
+pkgname = packer-git
+

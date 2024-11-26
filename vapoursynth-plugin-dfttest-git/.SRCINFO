@@ -1,0 +1,18 @@
+pkgbase = vapoursynth-plugin-dfttest-git
+	pkgdesc = Plugin for Vapoursynth: dfttest (GIT version)
+	pkgver = 7.1.g89034df
+	pkgrel = 1
+	url = https://forum.doom9.org/showthread.php?t=171678
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = meson
+	depends = vapoursynth
+	depends = fftw
+	provides = vapoursynth-plugin-dfttest
+	conflicts = vapoursynth-plugin-dfttest
+	options = debug
+	source = dfttest::git+https://github.com/HomeOfVapourSynthEvolution/VapourSynth-DFTTest.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-dfttest-git

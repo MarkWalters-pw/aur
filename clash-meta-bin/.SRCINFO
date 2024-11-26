@@ -1,0 +1,26 @@
+pkgbase = clash-meta-bin
+	pkgdesc = Provide a soft link for mihomo, keeping compatibility with the obsolete Clash.Meta.
+	pkgver = 1.18.0
+	pkgrel = 1
+	url = https://github.com/MetaCubeX/Clash.Meta
+	install = clash-meta-bin.install
+	arch = i686
+	arch = x86_64
+	arch = arm
+	arch = armv6h
+	arch = armv7h
+	arch = aarch64
+	license = GPL3
+	depends = glibc
+	depends = mihomo-bin
+	provides = clash-meta
+	conflicts = clash-meta
+	backup = etc/clash-meta/config.yaml
+	source = clash-meta.service
+	source = clash-meta@.service
+	source = config.yaml
+	sha256sums = 9e8a28e22c159d7d70c258b65f47bc734543e54cb0cd3957ce19349aca145af8
+	sha256sums = 29c73ac66d6fe60bea4359ac1857e3452f26c2af792efd8dd16d558462472efb
+	sha256sums = c4af03523b8006d206440163406ee9b4de1a10bb5023fb3194490b8225a5e481
+
+pkgname = clash-meta-bin

@@ -1,0 +1,19 @@
+pkgbase = python-sewpy-git
+	pkgdesc = Python interface to SExtractor
+	pkgver = r87.67e36b7
+	pkgrel = 3
+	url = http://sewpy.readthedocs.io/en/latest
+	arch = any
+	license = GPL3
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	makedepends = git
+	depends = python
+	depends = python-astropy
+	depends = astromatic-sextractor
+	provides = python-sewpy
+	conflicts = python-sewpy
+	source = git+https://github.com/megalut/sewpy.git
+	sha256sums = SKIP
+
+pkgname = python-sewpy-git

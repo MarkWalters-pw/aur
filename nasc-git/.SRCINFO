@@ -1,0 +1,28 @@
+pkgbase = nasc-git
+	pkgdesc = Do maths like a normal person.
+	pkgver = 0.7.5.r13.ga95d1f8
+	pkgrel = 2
+	url = http://parnold-x.github.io/nasc/
+	install = nasc.install
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = vala
+	makedepends = git
+	makedepends = meson
+	depends = gtk3
+	depends = libqalculate
+	depends = granite
+	depends = glib2
+	depends = libgee
+	depends = gtksourceview3
+	depends = libsoup
+	depends = cln
+	provides = nasc
+	conflicts = nasc
+	conflicts = nasc-bzr
+	source = git+https://github.com/parnold-x/nasc
+	sha256sums = SKIP
+
+pkgname = nasc-git
+

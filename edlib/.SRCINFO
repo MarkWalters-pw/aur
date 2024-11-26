@@ -1,0 +1,23 @@
+pkgbase = edlib
+	pkgdesc = Lightweight, super fast C/C++ (& Python) library for sequence alignment using edit (Levenshtein) distance
+	pkgver = 1.2.7
+	pkgrel = 5
+	url = https://github.com/Martinsos/edlib
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = cmake
+	makedepends = meson
+	makedepends = cython
+	makedepends = python-setuptools
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = python-cogapp
+	source = edlib-1.2.7::git+https://github.com/Martinsos/edlib.git#commit=ce008ea6c2c3d8c40a7a85e668f8fb75127d454a
+	sha512sums = e319f73b1e3047509ac9b827e7aafa86a8a8ff63b219a5c737382355546752a16b1914ff7f4061d61c7eb5a4b8b00ff4e9f1d67515b9e7df492db51941ce0616
+
+pkgname = edlib
+
+pkgname = python-edlib
+	pkgdesc = Python bindings for edlib

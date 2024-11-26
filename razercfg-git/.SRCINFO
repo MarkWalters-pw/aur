@@ -1,0 +1,21 @@
+pkgbase = razercfg-git
+	pkgdesc = Configuration utility for Razer devices on Linux systems.
+	pkgver = 0.39.r16.gd17e48b
+	pkgrel = 1
+	url = http://bues.ch/cms/hacking/razercfg.html
+	install = razercfg-git.install
+	arch = x86_64
+	arch = i686
+	license = GPL
+	makedepends = git
+	makedepends = cmake
+	depends = libusb
+	depends = python
+	optdepends = python-pyqt5: for the graphical qrazercfg tool
+	provides = razercfg
+	conflicts = razercfg
+	source = razercfg::git+https://github.com/mbuesch/razer.git
+	md5sums = SKIP
+
+pkgname = razercfg-git
+

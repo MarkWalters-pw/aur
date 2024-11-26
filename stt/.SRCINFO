@@ -1,0 +1,27 @@
+pkgbase = stt
+	pkgdesc = Coqui-STT
+	pkgver = 1.3.0
+	pkgrel = 1
+	url = https://github.com/coqui-ai/STT
+	arch = x86_64
+	license = MPL2
+	makedepends = bazelisk
+	makedepends = python
+	makedepends = git
+	makedepends = sox
+	makedepends = wget
+	conflicts = python-stt-bin
+	conflicts = stt-bin
+	provides = stt
+	provides = python-stt
+	source = STT-1.3.0::git+https://github.com/coqui-ai/STT.git#tag=v1.3.0
+	sha256sums = SKIP
+
+pkgname = stt
+	depends = sox
+
+pkgname = python-stt
+	pkgdesc = STT Python bindings
+	depends = stt
+	depends = python
+

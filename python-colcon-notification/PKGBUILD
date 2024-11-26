@@ -1,0 +1,37 @@
+# Maintainer: Achmad Fathoni<fathoni.id(at)gmail.com>
+# Contributor: Tong Chunli<t.cunly at 163 dot com>
+pkgname=python-colcon-notification
+_name=${pkgname:7}
+pkgver=0.3.0
+pkgrel=1
+pkgdesc="An extension for colcon-core to provide status notifications."
+arch=(any)
+url="https://pypi.org/project/colcon-notification"
+license=('Apache')
+depends=('python-colcon-core')
+makedepends=('python-setuptools' 'flake8')
+source=(
+    https://github.com/colcon/colcon-notification/archive/refs/tags/${pkgver}.tar.gz
+    https://github.com/myint/scspell/archive/refs/tags/v2.2.tar.gz
+)
+sha256sums=(
+    'f82c6e3bcd558a9fbf4bf0b1cd0dab6a1f50c056b7b4db85c56878797d0489c2'
+    '04c6a795a9e0ef4571678eb9fc503bcf39106a975691336af778f31a01027082'
+)
+
+build() {
+    cd ${srcdir}/${_name}-${pkgver}
+    python -m build --wheel --no-isolation
+}
+
+check() {
+    cd ${srcdir}/${_name}-${pkgver}
+    export PYTHONPATH="${srcdir}/scspell-2.2:${srcdir}/${_name}-${pkgver}"
+    ls test*.py | xargs -I {} pytest {}
+}
+
+package() {
+    cd ${srcdir}/${_name}-${pkgver}
+    python -m installer --destdir="${pkgdir}" dist/*.whl
+    install -D -m644 README.rst -t "${pkgdir}/usr/share/doc/${pkgname}"
+}

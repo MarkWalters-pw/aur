@@ -1,0 +1,18 @@
+pkgbase = scrobby-git
+	pkgdesc = C++ last.fm Client for MPD
+	pkgver = 20131023
+	pkgrel = 1
+	url = https://github.com/wor/scrobby
+	install = scrobby.install
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	depends = curl
+	depends = openssl
+	options = !strip
+	source = scrobby::git+https://github.com/wor/scrobby.git
+	sha512sums = SKIP
+
+pkgname = scrobby-git
+

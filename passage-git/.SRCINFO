@@ -1,0 +1,20 @@
+pkgbase = passage-git
+	pkgdesc = A fork of password-store that uses age as backend.
+	pkgver = 1.7.4a0.r5.1262d30
+	pkgrel = 1
+	url = https://github.com/FiloSottile/passage
+	arch = any
+	license = GPL
+	makedepends = git
+	depends = bash
+	depends = age
+	depends = tree
+	optdepends = age-plugin-yubikey: for Yubikey support
+	optdepends = qrencode: for QR code support
+	optdepends = xclip: for clipboard support on X11
+	provides = passage
+	conflicts = passage
+	source = git+https://github.com/FiloSottile/passage.git
+	md5sums = SKIP
+
+pkgname = passage-git

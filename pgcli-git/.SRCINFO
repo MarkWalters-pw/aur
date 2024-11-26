@@ -1,0 +1,26 @@
+pkgbase = pgcli-git
+	pkgdesc = a command line interface for Postgres with auto-completion and syntax highlighting
+	pkgver = v3.4.0.r1.g25eb9f54
+	pkgrel = 1
+	url = http://pgcli.com/
+	arch = any
+	license = BSD
+	makedepends = python-distribute
+	depends = python
+	depends = python-sqlparse
+	depends = python-psycopg2
+	depends = python-click
+	depends = python-prompt_toolkit
+	depends = python-humanize
+	depends = python-configobj
+	depends = python-pgspecial>=1.9.0
+	depends = python-setproctitle
+	depends = python-cli_helpers
+	depends = python-pendulum
+	optdepends = python-keyring: using keyring for saving password
+	provides = pgcli
+	conflicts = pgcli
+	source = git+https://github.com/dbcli/pgcli.git
+	md5sums = SKIP
+
+pkgname = pgcli-git

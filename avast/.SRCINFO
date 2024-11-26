@@ -1,0 +1,35 @@
+pkgbase = avast
+	pkgdesc = Avast Antivirus for Linux
+	pkgver = 4.1.0
+	pkgrel = 7
+	url = https://www.avast.com/business/products/linux-antivirus
+	install = avast.install
+	arch = x86_64
+	license = custom
+	conflicts = avast-proxy
+	conflicts = eea
+	conflicts = esets
+	conflicts = eea-dkms
+	conflicts = eea7-dkms
+	noextract = avast_4.1.0-1~debian11_amd64.deb
+	options = !strip
+	source = https://repo.avcdn.net/linux-av/deb/pool/debian-bullseye/avast_4.1.0-1~debian11_amd64.deb
+	source = avast.install
+	validpgpkeys = 6AFE173577C4CBD621DF217FD093435AA3ED2C4A
+	sha256sums = 2e41c9b929c872308731f75e1a2ed268750898b7a589a1c3a73e0ab92e7dbce7
+	sha256sums = 9d8567e1ecf3b0f1020b277ed533da070e902f95313048bce126abaf71825d48
+
+pkgname = avast
+	pkgdesc = Avast antivirus scanner provides a scan command line tool and unix domain sockets which are used by other services.
+	install = avast.install
+	depends = tar
+	depends = file
+	depends = curl
+	depends = ca-certificates
+	depends = glibc>=2.34
+	depends = libcurl-gnutls>=7.16.2
+	depends = util-linux-libs>=2.16
+	depends = openssl>=1.1.0
+	backup = etc/avast/avast.conf
+	backup = etc/avast/vps.conf
+	backup = etc/avast/whitelist

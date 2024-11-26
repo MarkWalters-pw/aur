@@ -1,0 +1,20 @@
+pkgbase = frei0r-plugins-git
+	pkgdesc = A minimalistic plugin API for video effects (git version)
+	pkgver = 2.2.0.r1.g599b478
+	pkgrel = 1
+	url = https://www.dyne.org/software/frei0r/
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = cmake
+	makedepends = opencv
+	makedepends = doxygen
+	depends = cairo
+	depends = gavl
+	optdepends = opencv: for facebl0r and facedetect plugins
+	provides = frei0r-plugins
+	conflicts = frei0r-plugins
+	source = git+https://github.com/dyne/frei0r.git
+	sha256sums = SKIP
+
+pkgname = frei0r-plugins-git

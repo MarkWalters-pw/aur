@@ -1,0 +1,22 @@
+pkgbase = ocaml-ppxfind
+	pkgdesc = Tool combining ocamlfind and ppx
+	pkgver = 1.4
+	pkgrel = 7
+	url = https://github.com/diml/ppxfind
+	arch = x86_64
+	arch = i686
+	arch = arm
+	arch = armv6h
+	arch = armv7h
+	arch = aarch64
+	license = MIT
+	makedepends = dune>=2.0.0
+	makedepends = ocaml-findlib
+	depends = ocaml>=4.02.3
+	depends = ocaml-findlib
+	depends = ocaml-migrate-parsetree
+	options = !strip
+	source = ocaml-ppxfind-1.4-7.tar.gz::https://github.com/diml/ppxfind/archive/1.4.tar.gz
+	sha512sums = 44beb6a723708a797a13fbe7f159708b88a2abf59338d9416bcf86b8f5ce650d99246d3488bd44e845f13e99e8d1e738456fe5b538f5a37803901dd9941c33bf
+
+pkgname = ocaml-ppxfind

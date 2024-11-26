@@ -1,0 +1,28 @@
+pkgbase = git-wip-git
+	pkgdesc = Script for tracking work-in-progress git branches
+	pkgver = 0.1.r2.g1c095e9
+	pkgrel = 1
+	url = https://github.com/bartman/git-wip
+	arch = any
+	license = GPL
+	makedepends = git
+	provides = git-wip
+	conflicts = git-wip
+	source = git-wip::git+https://github.com/bartman/git-wip
+	sha256sums = SKIP
+
+pkgname = git-wip-git
+	depends = git
+	depends = bash
+
+pkgname = vim-git-wip-git
+	depends = vim-plugin-runtime
+	depends = git-wip
+	provides = vim-git-wip
+	conflicts = vim-git-wip
+
+pkgname = emacs-git-wip-git
+	depends = emacs
+	depends = git-wip
+	provides = emacs-git-wip
+	conflicts = emacs-git-wip

@@ -1,0 +1,23 @@
+pkgbase = vlmcsd-git
+	pkgdesc = KMS Emulator in C (for activating Microsoft products)
+	pkgver = r29.65228e5
+	pkgrel = 2
+	url = https://github.com/Wind4/vlmcsd
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	license = unknown
+	makedepends = git
+	provides = vlmcsd
+	conflicts = vlmcsd
+	source = git+https://github.com/Wind4/vlmcsd.git
+	source = vlmcsd.service
+	source = vlmcsd@.service
+	source = vlmcsd.socket
+	sha256sums = SKIP
+	sha256sums = 6fe8070a5d2d28f8a8179c9d02d5a905725e2e978af7e340a47024fa77809d02
+	sha256sums = 7ff86964df9796d30fe22c96b5ba843ef9f170d7a23c6e17565e312db59f20d7
+	sha256sums = e791484ed6d747f4e17f004894350ef610215c94fe444bfa623755ce17a29e6b
+
+pkgname = vlmcsd-git
+

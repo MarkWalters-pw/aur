@@ -1,0 +1,22 @@
+pkgbase = nbviewer-gui
+	pkgdesc = A Utility for previewing *.ipynb files in linux machines
+	pkgver = 1.0.4
+	pkgrel = 00
+	url = https://github.com/jithu7432/nb-viewer
+	arch = any
+	license = MIT
+	makedepends = python-pip
+	makedepends = python-wheel
+	makedepends = xdg-utils
+	depends = ipython
+	depends = jupyter-nbconvert
+	depends = jupyter-nbformat
+	depends = python-pyqt5-webengine
+	source = PKGBUILD_EXTRAS
+	source = https://files.pythonhosted.org/packages/ba/10/334ca62f0ba583d99843a512e0135bb35035e369ba5e08c7af5858337a0e/nbviewer_gui-1.0.4.tar.gz
+	source = LICENSE
+	md5sums = SKIP
+	md5sums = 8ec4a32c9879bd352304d49320b5f319
+	md5sums = c9f2d93db9b68e8b27f9f99080d177f5
+
+pkgname = nbviewer-gui

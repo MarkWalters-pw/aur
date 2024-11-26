@@ -1,0 +1,21 @@
+pkgbase = pterodactyl-wings-bin
+	pkgdesc = The server control plane for Pterodactyl Panel - binary package
+	pkgver = 1.11.11
+	pkgrel = 1
+	url = https://pterodactyl.io/
+	arch = x86_64
+	arch = aarch64
+	license = MIT
+	depends = docker
+	provides = pterodactyl-wings
+	conflicts = pterodactyl-wings
+	conflicts = pterodactyl-daemon
+	options = !strip
+	source = pterodactyl-wings.service
+	sha256sums = 62dfff25f9bdae4769f4201ed30e7c2bfca54611bee75512c5626e74c764f46e
+	source_x86_64 = pterodactyl-wings-x86_64::https://github.com/pterodactyl/wings/releases/download/v1.11.11/wings_linux_amd64
+	sha256sums_x86_64 = 320272339ca71c5254d1879f10c2a5d5df9c39cec73dd7385bd96fa93c874b0a
+	source_aarch64 = pterodactyl-wings-x86_64::https://github.com/pterodactyl/wings/releases/download/v1.11.11/wings_linux_arm64
+	sha256sums_aarch64 = 06f5b6eb36a1fbeea18a09ea266fe42f78a4f94eefd93dd18242d7474993196a
+
+pkgname = pterodactyl-wings-bin

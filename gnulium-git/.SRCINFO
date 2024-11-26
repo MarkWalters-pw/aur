@@ -1,0 +1,18 @@
+pkgbase = gnulium-git
+	pkgdesc = A Graphical Ui for managing scripts and ideas! (Github version)
+	pkgver = 2.0.0.r0.gf74f89d
+	pkgrel = 1
+	url = https://github.com/LinArcX/Gnulium
+	arch = any
+	license = GPL-3.0
+	makedepends = git
+	makedepends = qt5-base
+	depends = qt5-quickcontrols2
+	depends = qt5-quickcontrols
+	depends = qt5-charts
+	depends = jcal-git
+	source = gnulium-git::git+https://github.com/LinArcX/Gnulium.git
+	sha256sums = SKIP
+
+pkgname = gnulium-git
+

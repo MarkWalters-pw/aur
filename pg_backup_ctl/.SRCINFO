@@ -1,0 +1,13 @@
+pkgbase = pg_backup_ctl
+	pkgdesc = A tool to manage PostgreSQL archiving and basebackups
+	pkgver = r159.5c5bd4e
+	pkgrel = 1
+	url = https://github.com/credativ/pg_backup_ctl
+	arch = any
+	license = BSD
+	makedepends = git
+	depends = bash
+	source = pg_backup_ctl::git+https://github.com/credativ/pg_backup_ctl.git
+	sha512sums = SKIP
+
+pkgname = pg_backup_ctl

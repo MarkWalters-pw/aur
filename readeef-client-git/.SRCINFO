@@ -1,0 +1,17 @@
+pkgbase = readeef-client-git
+	pkgdesc = An electron client for the readeef feed aggregator
+	pkgver = 5e31fc5
+	pkgrel = 1
+	url = https://sugr.org/en/products/readeef
+	arch = i686
+	arch = x86_64
+	license = LGPL3
+	makedepends = git npm findutils
+	depends = electron
+	provides = readeef-client=5e31fc5
+	conflicts = readeef-client
+	source = readeef-client-git::git+https://github.com/urandom/readeef-electron.git
+	sha256sums = SKIP
+
+pkgname = readeef-client-git
+

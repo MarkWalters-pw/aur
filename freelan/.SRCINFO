@@ -1,0 +1,23 @@
+pkgbase = freelan
+	pkgdesc = A peer-to-peer, secure, easy-to-setup, multi-platform, open-source, highly-configurable VPN software.
+	pkgver = 2.3.0
+	pkgrel = 2
+	url = https://freelan.org/
+	arch = any
+	license = GPL
+	makedepends = git
+	makedepends = scons
+	depends = boost
+	depends = curl
+	depends = miniupnpc
+	depends = openssl
+	conflicts = freelan-git
+	source = git+https://github.com/freelan-developers/freelan.git#commit=3f4078af1f581371863a1df497c8a67f419e5076
+	source = patch.diff
+	source = freelan.service
+	sha256sums = SKIP
+	sha256sums = 1258e88654dad23fc6defbe6e043e1ac77ef56d0f96f053e97ea775910ca664d
+	sha256sums = 8c1682c420b8e4291d486e073e339dd312af8033d59b7c5eaaada5c5e9bf4770
+
+pkgname = freelan
+

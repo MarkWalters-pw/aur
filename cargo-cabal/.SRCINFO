@@ -1,0 +1,18 @@
+pkgbase = cargo-cabal
+	pkgdesc = Turn in one command a Rust crate into a Haskell Cabal library
+	pkgver = 0.8.1
+	pkgrel = 1
+	url = https://github.com/yvan-sraka/cargo-cabal
+	arch = x86_64
+	arch = i686
+	arch = arm
+	arch = aarch64
+	license = Apache
+	license = MIT
+	makedepends = cargo
+	depends = gcc-libs
+	source = cargo-cabal-0.8.1.tar.gz::https://github.com/yvan-sraka/cargo-cabal/archive/refs/tags/v0.8.1.tar.gz
+	sha256sums = 32299953cc4d6c1131fe3cad6f5374673bf92ed83f42e52188f298954eced45b
+	b2sums = 01ed53f26fbda1fce9801698d1353e7c592b5836aef0f12852dcea787873ad7b6cfb10e292d185f8faf125c602e75085c70dc0a7b6768e8a12dd34468b6a7b1c
+
+pkgname = cargo-cabal

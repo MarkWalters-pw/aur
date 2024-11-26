@@ -1,0 +1,22 @@
+pkgbase = recap
+	pkgdesc = System status reporting
+	pkgver = 2.1.0
+	pkgrel = 1
+	url = https://github.com/rackerlabs/recap
+	arch = any
+	license = GPL2
+	depends = coreutils
+	depends = elinks
+	depends = gawk
+	depends = grep
+	depends = iotop
+	depends = procps-ng
+	depends = sysstat
+	depends = iproute2
+	provides = recap
+	conflicts = recap
+	source = https://github.com/rackerlabs/recap/archive/2.1.0.tar.gz
+	sha256sums = f8d473a4f383d8972c0f077c7b5c490f561b5afa10d0f20b0816cc067f038635
+
+pkgname = recap
+

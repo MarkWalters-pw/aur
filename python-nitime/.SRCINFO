@@ -1,0 +1,20 @@
+pkgbase = python-nitime
+	pkgdesc = A library for time-series analysis of neuroscience data.
+	pkgver = 0.7
+	pkgrel = 1
+	url = http://nipy.org/nitime/
+	arch = x86_64
+	license = BSD
+	makedepends = python-setuptools
+	makedepends = cython
+	depends = python
+	depends = python-numpy
+	depends = python-matplotlib
+	depends = python-scipy
+	optdepends = python-nibabel: for reading in data from fMRI data files
+	optdepends = python-networkx: for some visualization functions
+	source = python-nitime-0.7.tar.gz::https://github.com/nipy/nitime/archive/rel/0.7.tar.gz
+	md5sums = 6b5896db6b7d65660291640bf4027681
+
+pkgname = python-nitime
+

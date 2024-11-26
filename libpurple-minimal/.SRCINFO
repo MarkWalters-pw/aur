@@ -1,0 +1,21 @@
+pkgbase = libpurple-minimal
+	pkgdesc = Minimal GUI-less build of the Pidgin IM library without gstreamer/perl/X11/etc for bitlbee and such.
+	pkgver = 2.14.13
+	pkgrel = 1
+	url = http://developer.pidgin.im/wiki/WhatIsLibpurple
+	arch = x86_64
+	license = GPL
+	depends = glib2
+	depends = libsasl
+	depends = libxml2
+	depends = libidn
+	depends = nss
+	depends = ca-certificates
+	provides = libpurple=2.14.13
+	conflicts = pidgin
+	conflicts = libpurple
+	options = !libtool
+	source = http://downloads.sourceforge.net/pidgin/pidgin-2.14.13.tar.gz
+	b2sums = 41b6fa1c3513f4546dbf70b9427593afe949bd7a8ecf693950655a382bae07fffceca97d1f985786437c7df29c641bf84ad39b4e2cf3f30f629d03215fb679d6
+
+pkgname = libpurple-minimal

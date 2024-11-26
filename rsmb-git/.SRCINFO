@@ -1,0 +1,24 @@
+pkgbase = rsmb-git
+	pkgdesc = MQTT and MQTT-SN broker
+	pkgver = r58.889fe81
+	pkgrel = 1
+	url = https://github.com/MichalFoksa/rsmb
+	arch = x86_64
+	license = custom:edl-v10
+	license = custom:epl-v10
+	makedepends = git
+	makedepends = gcc
+	depends = sh
+	source = git+https://github.com/MichalFoksa/rsmb.git
+	source = broker.sh
+	source = broker_mqtts.sh
+	source = broker.ini
+	source = broker_mqtts.ini
+	md5sums = SKIP
+	md5sums = 0192bdbe34f3c41993e2a576264e2278
+	md5sums = 77a591b959078781ce5cadfd123905d5
+	md5sums = 36b72de48a91b74d500d4d53a31def29
+	md5sums = c8fdde013b1c22babd52baefd836de52
+
+pkgname = rsmb-git
+

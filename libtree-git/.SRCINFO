@@ -1,0 +1,15 @@
+pkgbase = libtree-git
+	pkgdesc = ldd as a tree with an option to bundle dependencies into a single folder
+	pkgver = 2.0.0.r161.g87ea31a
+	pkgrel = 1
+	url = https://github.com/haampie/libtree
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	depends = gcc-libs
+	provides = libtree
+	conflicts = libtree
+	source = git+https://github.com/haampie/libtree.git
+	md5sums = SKIP
+
+pkgname = libtree-git

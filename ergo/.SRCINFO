@@ -1,0 +1,16 @@
+pkgbase = ergo
+	pkgdesc = List of utilities for the daily developer workflow
+	pkgver = 0.7.1
+	pkgrel = 2
+	url = https://github.com/beatlabs/ergo
+	install = ergo.install
+	arch = x86_64
+	arch = i686
+	arch = aarch64
+	license = BSD
+	makedepends = go
+	depends = glibc
+	source = ergo-0.7.1.tar.gz::https://github.com/beatlabs/ergo/archive/v0.7.1.tar.gz
+	sha256sums = 2c1a880a715695bbfd1adf28949b83ec7b7533a5e3acb0a72be8072eea307712
+
+pkgname = ergo

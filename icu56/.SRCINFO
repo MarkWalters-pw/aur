@@ -1,0 +1,13 @@
+pkgbase = icu56
+	pkgdesc = International Components for Unicode library
+	pkgver = 56.2
+	pkgrel = 1
+	url = http://www.icu-project.org/
+	arch = i686
+	arch = x86_64
+	license = custom:"icu"
+	depends = gcc-libs>=4.7.1-5
+	source = https://github.com/unicode-org/icu/releases/download/release-56-2/icu4c-56_2-src.tgz
+	sha256sums = 187faf495133f4cffa22d626896e7288f43d342e6af5eb8b214a1bf37bad51a6
+
+pkgname = icu56

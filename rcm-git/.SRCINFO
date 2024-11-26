@@ -1,0 +1,16 @@
+pkgbase = rcm-git
+	pkgdesc = rc file (dotfiles) management
+	pkgver = v1.3.6.r0.gef34b0b
+	pkgrel = 1
+	url = https://github.com/thoughtbot/rcm
+	arch = any
+	license = BSD
+	makedepends = git
+	makedepends = python-pystache
+	provides = rcm
+	conflicts = rcm
+	options = !emptydirs
+	source = rcm-git::git+https://github.com/thoughtbot/rcm.git
+	sha256sums = SKIP
+
+pkgname = rcm-git

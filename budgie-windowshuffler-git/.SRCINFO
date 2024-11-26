@@ -1,0 +1,26 @@
+pkgbase = budgie-windowshuffler-git
+	pkgdesc = GUI and keyboard friendly window arranger for the Budgie and MATE desktop
+	pkgver = r22.01297f8
+	pkgrel = 2
+	url = https://github.com/UbuntuBudgie/window-shuffler
+	arch = any
+	license = GPL3
+	depends = wmctrl
+	depends = xdotool
+	depends = python-cairo
+	depends = python-gobject
+	optdepends = budgie-desktop: The Budgie desktop
+	optdepends = mate-desktop: The MATE desktop
+	optdepends = libwnck3: required on GNOME, may be required on other desktops
+	optdepends = xorg-xprop: required on GNOME, may be required on other desktops
+	provides = budgie-windowshuffler
+	conflicts = budgie-windowshuffler
+	source = git+https://github.com/UbuntuBudgie/window-shuffler.git
+	source = budgie-windowshuffler-toggle
+	source = budgie-windowshuffler-toggle.desktop
+	sha256sums = SKIP
+	sha256sums = c4ebc452c537d39cd6650bc6d1b5349ea82b1765c25de960ae908d1e528932aa
+	sha256sums = ef1b4bce706365115c7faefed88568bbf339dba9f2c67b18a4dbb49702b58e98
+
+pkgname = budgie-windowshuffler-git
+

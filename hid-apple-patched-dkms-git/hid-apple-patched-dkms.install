@@ -1,0 +1,22 @@
+post_install() {
+    do_install ${1}
+}
+
+post_upgrade() {
+    do_install ${1}
+}
+
+# -----------------------------------------------------------------------------------
+
+do_install() {
+    cat << EOF
+
+==> hid-apple-patched install/upgrade note:
+------------------------------------------------------------------------------
+Default configuration file is installed to /usr/lib/modprobe.d/hid_apple.conf.
+
+Wiki: https://wiki.archlinux.org/index.php/Apple_Keyboard#Use_a_patch_to_hid-apple
+
+EOF
+}
+

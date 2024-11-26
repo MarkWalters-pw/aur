@@ -1,0 +1,22 @@
+pkgbase = mementodb
+	pkgdesc = A complex, easy-to-use and customizable solution for database management
+	pkgver = 3.4.0
+	pkgrel = 1
+	url = https://mementodatabase.com
+	arch = x86_64
+	license = LicenseRef-MementoDBInc
+	depends = alsa-lib
+	depends = glibc
+	depends = java-runtime
+	depends = libx11
+	depends = libxext
+	depends = libxi
+	depends = libxrender
+	depends = libxtst
+	depends = zlib
+	options = !docs
+	options = !strip
+	source = https://mementodatabase.com/download/mementodb-3.4.0-linux.deb
+	sha256sums = 92e370532b473ec03b789bd6d7357f621f6ae6f44223c50ce8b997edffe18349
+
+pkgname = mementodb

@@ -1,0 +1,24 @@
+pkgbase = smfc
+	pkgdesc = Supermicro Fan Control
+	pkgver = 3.4.0
+	pkgrel = 1
+	url = https://github.com/petersulyok/smfc
+	install = smfc.install
+	arch = any
+	license = GPL3
+	checkdepends = flake8
+	checkdepends = python-coverage
+	checkdepends = python-pylint
+	checkdepends = python-pytest
+	checkdepends = python-pytest-cov
+	depends = python
+	depends = syslog-ng
+	depends = pacman-hook-reload-modules
+	backup = etc/default/smfc
+	backup = opt/smfc/smfc.conf
+	source = smfc-v3.4.0.tar.gz::https://github.com/petersulyok/smfc/archive/refs/tags/v3.4.0.tar.gz
+	source = modules-load.conf
+	sha256sums = 92412bc73e13e8fbb6e3d00835d9954698ad4d0b3cd98275778875d63bc8afcc
+	sha256sums = 695a1124cf2922feb6a7d2892e664a1b4fcb11329ff635734dc1b95df1f9dc51
+
+pkgname = smfc

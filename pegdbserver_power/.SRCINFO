@@ -1,0 +1,20 @@
+pkgbase = pegdbserver_power
+	pkgdesc = GDB server for Power devices using P&E JTAG hardware
+	pkgver = 2.0.2.202005132054
+	pkgrel = 1
+	url = http://www.pemicro.com
+	install = pegdbserver_power.install
+	arch = x86_64
+	license = custom
+	makedepends = wget
+	makedepends = unzip
+	makedepends = gzip
+	depends = libusb-compat
+	options = !strip
+	source = license_gdb.pdf
+	source = 55-pemicro.rules
+	sha256sums = 6b135ddd5388f6a0dd1d1d9d6c6d7321423f391914312c4a4aafd9d851d10dbc
+	sha256sums = 4b9812f801faedb8a39c7e95bd829efeeb2941b1f4fb3ca774cfbf1ef4fa4081
+
+pkgname = pegdbserver_power
+

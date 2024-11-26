@@ -1,0 +1,20 @@
+pkgbase = rimgo-git
+	pkgdesc = An alternative frontend for Imgur. Originally based on rimgu.
+	pkgver = r373.c366f95
+	pkgrel = 1
+	url = https://codeberg.org/rimgo/rimgo
+	arch = any
+	license = AGPL3
+	makedepends = go>=1.16
+	makedepends = tailwindcss
+	provides = rimgo
+	conflicts = rimgo
+	backup = etc/rimgo.conf
+	source = git+https://codeberg.org/rimgo/rimgo.git
+	source = rimgo.conf
+	source = rimgo.service
+	sha512sums = SKIP
+	sha512sums = 7f2e6958b5343505fb0146d1f4eeb8ef19c2a1ee19ea7cf3589074cd31224129d95652959e15519ba998adcca5f468bf5dcf4fa68ea29a705fdd886819f65755
+	sha512sums = b7f47c47ff808b75a329fb3e40b5bee711000dcd011647b59167043d1403de59d22011960d7f5f884fdeec8f7dcd7f5b8f4ff8e00eea151368f6b3002db68727
+
+pkgname = rimgo-git

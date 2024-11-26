@@ -1,0 +1,22 @@
+pkgbase = novel-cli
+	pkgdesc = tool for downloading novels from the web, manipulating text, and generating EPUBs
+	pkgver = 0.7.7
+	pkgrel = 1
+	url = https://github.com/novel-rs/cli
+	arch = x86_64
+	license = Apache-2.0
+	license = MIT
+	checkdepends = mdbook
+	checkdepends = pandoc
+	makedepends = clang
+	makedepends = cmake
+	makedepends = rust
+	makedepends = sqlite
+	depends = gcc-libs
+	depends = glibc
+	depends = opencc
+	options = !lto
+	source = https://github.com/novel-rs/cli/archive/0.7.7/cli-0.7.7.tar.gz
+	sha256sums = c8b192f3f330f219717034f95cef701e2841c81ea82b20c713149021262a5a62
+
+pkgname = novel-cli

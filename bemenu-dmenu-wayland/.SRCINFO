@@ -1,0 +1,12 @@
+pkgbase = bemenu-dmenu-wayland
+	pkgdesc = Symlink for using bemenu as a drop-in replacement to dmenu-wayland
+	pkgver = 1
+	pkgrel = 2
+	url = https://github.com/Cloudef/bemenu
+	arch = any
+	license = LGPL-3.0-or-later
+	depends = bemenu
+	provides = dmenu-wayland
+	conflicts = dmenu-wayland
+
+pkgname = bemenu-dmenu-wayland

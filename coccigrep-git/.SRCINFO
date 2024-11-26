@@ -1,0 +1,15 @@
+pkgbase = coccigrep-git
+	pkgdesc = Semantic grep for the C language based on coccinelle. Git version
+	pkgver = 1.20
+	pkgrel = 1
+	url = http://home.regit.org/software/coccigrep/
+	arch = any
+	license = GPL3
+	makedepends = git
+	makedepends = python-setuptools
+	depends = coccinelle
+	provides = coccigrep=1.20
+	source = git+https://github.com/regit/coccigrep
+	md5sums = SKIP
+
+pkgname = coccigrep-git

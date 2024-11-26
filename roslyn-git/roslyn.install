@@ -1,0 +1,4 @@
+post_install() {
+    echo "Use this in your dotnet build command to override the dotnet-cli's csc with the csc built by this package:"
+    echo "/p:CscToolPath=/usr/bin /p:CscToolExe=csc"
+}

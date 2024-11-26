@@ -1,0 +1,37 @@
+pkgbase = cog
+	pkgdesc = WPE launcher and webapp container
+	pkgver = 0.18.4
+	pkgrel = 1
+	url = https://github.com/Igalia/cog
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7l
+	arch = armv7h
+	groups = wpe
+	license = MIT
+	makedepends = meson
+	makedepends = wayland-protocols
+	makedepends = libxcb
+	makedepends = libxkbcommon-x11
+	makedepends = gtk4
+	makedepends = weston
+	depends = wpewebkit>=2.42.5-3
+	depends = wpebackend-fdo>=1.10.0
+	depends = libinput
+	depends = libmanette
+	optdepends = libxcb: x11 platform support
+	optdepends = libxkbcommon-x11: x11 platform support
+	optdepends = gtk4: gtk4 platform support
+	conflicts = cog-git
+	source = https://wpewebkit.org/releases/cog-0.18.4.tar.lz
+	source = https://wpewebkit.org/releases/cog-0.18.4.tar.lz.asc
+	validpgpkeys = 5AA3BC334FD7E3369E7C77B291C559DBE4C9123B
+	md5sums = fe5cc3b56a84dc67caa94cf0d3a9184e
+	md5sums = SKIP
+	sha1sums = 68de4829c2894c02c74e432173747c26ca8641ed
+	sha1sums = SKIP
+	sha256sums = 68c13e16d85ace8db2d67ec1d829fb74fe7f941510cc894cd08f4227cbba705d
+	sha256sums = SKIP
+
+pkgname = cog

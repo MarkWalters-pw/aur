@@ -1,0 +1,14 @@
+pkgbase = classifier-git
+	pkgdesc = Organize files in your directory instantly, by classifying them into different folders (git-version)
+	pkgver = r129.09e958b
+	pkgrel = 2
+	url = https://github.com/bhrigu123/classifier
+	arch = any
+	license = MIT
+	makedepends = git
+	depends = python
+	depends = python-arrow
+	source = classifier::git+https://github.com/bhrigu123/classifier.git#branch=master
+	sha256sums = SKIP
+
+pkgname = classifier-git

@@ -1,0 +1,17 @@
+pkgbase = elixir-git
+	pkgdesc = a functional meta-programming aware language built on top of the Erlang VM
+	pkgver = 1.9.0
+	pkgrel = 1
+	url = http://elixir-lang.org
+	arch = any
+	license = Apache
+	license = custom:EPL
+	checkdepends = git
+	depends = erlang-nox
+	source = elixir-git-1.9.0.tar.gz::https://github.com/elixir-lang/elixir/archive/v1.9.0.tar.gz
+	sha256sums = dbf4cb66634e22d60fe4aa162946c992257f700c7db123212e7e29d1c0b0c487
+
+pkgname = elixir-git
+	provides = elixir
+	conflicts = elixir
+

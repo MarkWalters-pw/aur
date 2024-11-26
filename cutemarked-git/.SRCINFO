@@ -1,0 +1,21 @@
+pkgbase = cutemarked-git
+	pkgdesc = Qt Markdown Editor
+	pkgver = 20210729.r935
+	pkgrel = 2
+	url = https://github.com/Waqar144/CuteMarkEd-NG
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	makedepends = qt5-tools
+	depends = qt5-webengine
+	provides = cutemarked
+	conflicts = cutemarked
+	source = git+https://github.com/Waqar144/CuteMarkEd-NG.git
+	source = git+https://github.com/hunspell/hunspell.git
+	source = git+https://github.com/mity/md4c
+	md5sums = SKIP
+	md5sums = SKIP
+	md5sums = SKIP
+
+pkgname = cutemarked-git

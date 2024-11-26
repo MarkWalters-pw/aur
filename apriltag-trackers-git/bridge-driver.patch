@@ -1,0 +1,22 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index dc5356f..5ac9d59 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -7,7 +7,7 @@ set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+ include("${SUPERPROJECT_SOURCE_DIR}/CMake/shared.cmake")
+ 
+ # Deps
+-set(OPENVR_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/deps/openvr/headers")
++set(OPENVR_INCLUDE_DIR "/usr/include/openvr/")
+ 
+ set(SIZEOF_VOIDP ${CMAKE_SIZEOF_VOID_P})
+ if(CMAKE_SIZEOF_VOID_P EQUAL 8)
+@@ -24,7 +24,7 @@ elseif(APPLE)
+     set(PLATFORM_NAME "osx")
+ endif()
+ 
+-find_library(OPENVR_LIB openvr_api HINTS "${CMAKE_CURRENT_SOURCE_DIR}/deps/openvr/lib/${PLATFORM_NAME}${PROCESSOR_ARCH}/" NO_DEFAULT_PATH )
++find_library(OPENVR_LIB openvr_api)
+ 
+ # Example is not updated for changes to IPC
+ # add_subdirectory("example")

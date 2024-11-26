@@ -1,0 +1,15 @@
+pkgbase = dank-bin
+	pkgdesc = Download memes from reddit in parallel so that you can more efficiently waste time.
+	pkgver = 2.2.2
+	pkgrel = 1
+	url = https://github.com/EricLemieux/dank
+	arch = x86_64
+	license = Apache
+	depends = gcc-libs
+	depends = openssl
+	provides = dank
+	conflicts = dank
+	source = https://github.com/EricLemieux/dank/releases/download/v2.2.2/dank-v2.2.2-x86_64-linux.tar.gz
+	sha256sums = 2cd9d0e19613bc7ab05c1d553800ee56d3b040a95ff8545d19e90128a875de00
+
+pkgname = dank-bin

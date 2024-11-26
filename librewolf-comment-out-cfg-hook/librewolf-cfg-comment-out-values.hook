@@ -1,0 +1,13 @@
+[Trigger]
+Type = Package
+Operation = Install
+Operation = Upgrade
+Target = librewolf-comment-out-cfg-hook
+Target = librewolf
+Target = librewolf-bin
+
+[Action]
+Description = Commenting out values from librewolf.cfg and policy.json...
+When = PostTransaction
+Exec = /usr/share/libalpm/scripts/librewolf-cfg-comment-out-values.sh
+Depends = librewolf

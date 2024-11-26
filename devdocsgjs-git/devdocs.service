@@ -1,0 +1,11 @@
+[Unit]
+Description=DevDocs GJS
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/devdocsgjs-server
+ExecReload=/bin/kill -HUP $MAINPID
+
+[Install]
+WantedBy=multi-user.target 
+

@@ -1,0 +1,31 @@
+pkgbase = ros-noetic-gazebo-msgs
+	pkgdesc = ROS - Message and service data structures for interacting with Gazebo from ROS.
+	pkgver = 2.9.2
+	pkgrel = 1
+	url = https://wiki.ros.org/gazebo_msgs
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-std-msgs
+	makedepends = ros-noetic-trajectory-msgs
+	makedepends = ros-noetic-catkin
+	makedepends = ros-noetic-std-srvs
+	makedepends = ros-noetic-geometry-msgs
+	makedepends = ros-noetic-message-generation
+	makedepends = ros-noetic-sensor-msgs
+	depends = ros-noetic-std-msgs
+	depends = ros-noetic-trajectory-msgs
+	depends = ros-noetic-sensor-msgs
+	depends = ros-noetic-std-srvs
+	depends = ros-noetic-geometry-msgs
+	depends = ros-noetic-message-runtime
+	source = ros-noetic-gazebo-msgs-2.9.2.tar.gz::https://github.com/ros-simulation/gazebo_ros_pkgs/archive/2.9.2.tar.gz
+	sha256sums = db937f15e5bf8f804de5d8dc0b67607f8b354aecde35785b6bff2d43387abff4
+
+pkgname = ros-noetic-gazebo-msgs
+

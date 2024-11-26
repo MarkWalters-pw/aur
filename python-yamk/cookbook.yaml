@@ -1,0 +1,12 @@
+---
+$globals:
+  version: "6.0"
+
+package:
+  alias: .SRCINFO
+
+.SRCINFO:
+  commands:
+    - makepkg --printsrcinfo > ${.target}
+  requires:
+    - PKGBUILD

@@ -1,0 +1,97 @@
+diff --git a/kunst b/kunst
+index 9d0a8f4..9b12827 100755
+--- a/kunst
++++ b/kunst
+@@ -12,6 +12,8 @@ COVER=/tmp/kunst.jpg
+ MUSIC_DIR="${KUNST_MUSIC_DIR:-~/Music}"
+ SIZE="${KUNST_SIZE:-250x250}"
+ POSITION="${KUNST_POSITION:-+0+0}"
++COVER_NAMES=${KUNST_COVER_NAMES:-"folder|cover|front"}
++COVER_EXT=${KUNST_COVER_EXT:-"jpg|png"}
+ ONLINE_ALBUM_ART=""
+ PROG_NAME=$(basename "$0")
+ 
+@@ -152,7 +154,23 @@ find_album_art(){
+ 
+     # Extract the album art from the mp3 file and dont show the messsy
+     # output of ffmpeg
+-    ffmpeg -i "$MUSIC_DIR$(mpc current -f %file%)" "$COVER" -y &> /dev/null
++    if [ "$(type -p exiftool &>/dev/null)" ]; then
++        SONG="$MUSIC_DIR/$(mpc --format "%file%" current)"
++        PICTURE_TAG="-Picture"
++
++        if [ "$SONG" = *".m4a" ]; then
++            PICTURE_TAG="-CoverArt"
++        fi
++        # Extract album cover using perl-image-exiftool
++        exiftool -b "$PICTURE_TAG" "$SONG"  > "$COVER"
++        # Check if image is valid
++        img_data=$(identify "$COVER" 2>&1)
++        if [ "$img_data" = *"insufficient"* ]; then
++            return 1
++        fi
++    else
++        ffmpeg -i "$MUSIC_DIR/$(mpc current -f %file%)" "$COVER" -y &> /dev/null
++    fi
+ 
+     # Get the status of the previous command
+     STATUS=$?
+@@ -162,19 +180,21 @@ find_album_art(){
+         log "extracted album art"
+         ARTLESS=false
+     else
+-        DIR="$MUSIC_DIR$(dirname "$(mpc current -f %file%)")"
++        DIR="$MUSIC_DIR/$(dirname "$(mpc current -f %file%)")"
++        # prevent iterating the entire $MUSIC_DIR if mpc experiences an error
++        [ "$DIR" == "$MUSIC_DIR"/. ] && ARTLESS=true && return 1
+         log "inspecting $DIR"
+ 
+         # Check if there is an album cover/art in the folder.
+-        # Look at issue #9 for more details
+-        for CANDIDATE in "$DIR/cover."{png,jpg}; do
++        # Look at issues #9 and #45 for more details
++        while IFS= read -r CANDIDATE; do
+             if [ -f "$CANDIDATE" ]; then
+                 STATUS=0
+                 ARTLESS=false
+                 convert "$CANDIDATE" $COVER &> /dev/null
+-                log "found cover.png"
++                log "found $(basename "$CANDIDATE")"
+             fi
+-        done
++        done < <(find "$DIR" -type f | grep -i -E -- "($COVER_NAMES).($COVER_EXT)")
+     fi
+ 
+     if [ "$STATUS" -ne 0 ];then
+@@ -220,12 +240,8 @@ main() {
+         update_cover
+ 
+         if [ "$ARTLESS" == true ];then
+-            # Dhange the path to COVER because the music note
+-            # image is a png not jpg
+-            COVER=/tmp/kunst.png
+-
+             # Decode the base64 encoded image and save it
+-            # to /tmp/kunst.png
++            # to /tmp/kunst.jpg
+             echo "$MUSIC_NOTE" | base64 --decode > "$COVER"
+         fi
+ 
+@@ -235,7 +251,9 @@ main() {
+             FIRST_RUN=false
+ 
+             # Display the album art using sxiv
+-            sxiv -g "$SIZE$POSITION" -b "$COVER" -N "Kunst" &
++            # If sxiv is closed, kill the script as well with the trap at the end of
++            # the script (see issue #48).
++            (sxiv -g "$SIZE$POSITION" -b "$COVER" -N "Kunst"; kill -USR1 0) &
+ 
+             # Save the process ID so that we can kill
+             # sxiv when the user exits the script
+@@ -257,4 +275,6 @@ main() {
+ trap "" SIGTSTP
+ 
+ trap pre_exit EXIT
++trap 'exit 1' TERM HUP INT
++trap 'exit 0' USR1
+ main

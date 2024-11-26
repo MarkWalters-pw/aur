@@ -1,0 +1,16 @@
+pkgbase = minetest-lott-git
+	pkgdesc = A Lord of the Rings-based game for the Minetest engine.
+	pkgver = 1.1.0.r79.ge41f502
+	pkgrel = 1
+	url = https://minetest-lotr.github.io/
+	arch = any
+	license = LGPL2
+	makedepends = git
+	depends = minetest
+	provides = minetest-lott
+	conflicts = minetest-lott
+	source = minetest-lott-git::git://github.com/minetest-LOTR/Lord-of-the-Test.git
+	md5sums = SKIP
+
+pkgname = minetest-lott-git
+

@@ -1,0 +1,14 @@
+pkgbase = matchbox-keyboard
+	pkgdesc = An on screen virtual keyboard
+	pkgver = 0.1.1
+	pkgrel = 1
+	url = https://www.yoctoproject.org/software-item/matchbox
+	arch = x86_64
+	license = LGPL2.1
+	depends = cairo
+	depends = libfakekey
+	depends = libxft
+	source = https://git.yoctoproject.org/matchbox-keyboard/snapshot/matchbox-keyboard-0.1.1.tar.gz
+	sha256sums = dd3e9494a9499a3bf3017c8c1e6572a4e91deb20e219717db17c0977750b8bcb
+
+pkgname = matchbox-keyboard

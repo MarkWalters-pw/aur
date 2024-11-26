@@ -1,0 +1,24 @@
+pkgbase = zget-git
+	pkgdesc = Zeroconf based peer to peer file transfer.
+	pkgver = 0.11.1+19.r136.20240613.89a4063
+	pkgrel = 1
+	url = https://github.com/nils-werner/zget
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = python-babel
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = python>=3
+	depends = python-netifaces
+	depends = python-progressbar
+	depends = python-requests
+	depends = python-six
+	depends = python-zeroconf
+	provides = zget=0.11.1+19.r136.20240613.89a4063
+	conflicts = zget
+	source = zget::git+https://github.com/nils-werner/zget.git
+	sha256sums = SKIP
+
+pkgname = zget-git

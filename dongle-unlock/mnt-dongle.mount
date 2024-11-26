@@ -1,0 +1,13 @@
+# selbst erstellt 20.01.18
+
+[Unit]
+After=dev-md1.device
+ConditionPathExists=/dev/disk/by-uuid/BA19-64EE
+Before=manolo.luksopenwithkey.service
+#BindsTo=manolo.luksopenwithkey.service
+
+[Mount]
+Where=/mnt/dongle
+What=/dev/disk/by-label/DONGLE04
+Type=vfat
+Options=defaults

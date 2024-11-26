@@ -1,0 +1,10 @@
+--- settings.py	2023-06-08 09:04:51.081561846 -0400
++++ settings.py.new	2023-06-08 09:13:53.774076650 -0400
+@@ -177,6 +177,7 @@
+     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
+     "compressor.finders.CompressorFinder",
+ )
++COMPRESS_ENABLED=True
+ COMPRESS_OFFLINE = True
+ COMPRESS_CSS_HASHING_METHOD = "content"
+ COMPRESS_STORAGE = "compressor.storage.GzipCompressorFileStorage"

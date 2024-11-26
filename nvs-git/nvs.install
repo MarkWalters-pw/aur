@@ -1,0 +1,25 @@
+# thanks nvm
+
+post_install() {
+	echo '
+You need to source nvm before you can use it. Do one of the following
+or similar depending on your shell (and then restart your shell)
+
+  echo "export NVS_HOME="$HOME/.nvs"\\nsource /opt/nvs/nvs.sh" >> ~/.bashrc
+  echo "export NVS_HOME="$HOME/.nvs"\\nsource /opt/nvs/nvs.sh" >> ~/.zshrc
+
+For more information about how to use nvs, please execute "nvs -h"
+'
+}
+
+post_remove() {
+	rm -rf /opt/nvs
+	echo '
+Don't forget to clean up any lines added to your shell's startup script!
+
+For example, from your .bashrc (or .zshrc etc.), delete the line:
+
+export NVS_HOME="$HOME/.nvs"
+source /opt/nvs/nvs.sh
+'
+}

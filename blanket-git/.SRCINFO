@@ -1,0 +1,22 @@
+pkgbase = blanket-git
+	pkgdesc = Improve focus and increase your productivity by listening to different sounds.
+	pkgver = 0.7.0.r0.ge707013
+	pkgrel = 1
+	url = https://apps.gnome.org/Blanket
+	arch = any
+	license = GPL-3.0-or-later
+	makedepends = blueprint-compiler
+	makedepends = git
+	makedepends = meson
+	depends = gst-plugins-bad-libs
+	depends = gst-plugins-base
+	depends = gst-plugins-good
+	depends = gst-python
+	depends = libadwaita
+	depends = python-gobject
+	provides = blanket
+	conflicts = blanket
+	source = git+https://github.com/rafaelmardojai/blanket.git
+	sha256sums = SKIP
+
+pkgname = blanket-git

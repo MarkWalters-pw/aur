@@ -1,0 +1,23 @@
+pkgbase = wayfarer
+	pkgdesc = Screen recorder for GNOME / Wayland or X11 / Pipewire / XDG Portal
+	pkgver = 1.2.4
+	pkgrel = 1
+	url = https://github.com/stronnag/wayfarer
+	arch = i686
+	arch = x86_64
+	arch = arm
+	arch = aarch64
+	arch = armv7h
+	arch = pentium4
+	license = GPL3
+	makedepends = git
+	makedepends = vala
+	makedepends = meson
+	makedepends = gobject-introspection
+	makedepends = blueprint-compiler
+	depends = gtk4
+	depends = libpulse
+	source = wayfarer-1.2.4.tar.gz::https://github.com/stronnag/wayfarer/archive/refs/tags/1.2.4.tar.gz
+	sha256sums = 3ce196192b0a7dd05771051c85e9aa78f2f36a21a0d905ebf9fd4b5cd6e11811
+
+pkgname = wayfarer

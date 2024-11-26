@@ -1,0 +1,22 @@
+pkgbase = cmake-language-server-git
+	pkgdesc = Python based cmake language server
+	pkgver = v0.1.7.r1.gcd7ba40
+	pkgrel = 1
+	url = https://github.com/regen100/cmake-language-server
+	arch = any
+	license = MIT
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = git
+	makedepends = python-pdm
+	makedepends = python-pdm-pep517
+	depends = python-pygls
+	depends = python-pyparsing
+	depends = cmake
+	depends = cmake-format
+	provides = cmake-language-server
+	conflicts = cmake-language-server
+	source = cmake-language-server-git::git+https://github.com/regen100/cmake-language-server.git
+	sha256sums = SKIP
+
+pkgname = cmake-language-server-git

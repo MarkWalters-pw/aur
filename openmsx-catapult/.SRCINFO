@@ -1,0 +1,22 @@
+pkgbase = openmsx-catapult
+	pkgdesc = Front-end for openMSX: the MSX emulator that aims for perfection.
+	pkgver = 19.0
+	pkgrel = 5
+	url = http://openmsx.org
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = python
+	depends = libxml2
+	depends = wxwidgets-gtk2
+	depends = zlib
+	depends = libjpeg
+	depends = libpng
+	depends = libtiff
+	depends = openmsx>=19.0
+	provides = openmsx-catapult
+	conflicts = openmsx-catapult-git
+	source = https://github.com/openMSX/wxcatapult/archive/RELEASE_19_0.tar.gz
+	md5sums = 4119442b37390a6b2ce7ea04d1c62498
+
+pkgname = openmsx-catapult

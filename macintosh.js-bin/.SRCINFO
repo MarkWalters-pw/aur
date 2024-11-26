@@ -1,0 +1,24 @@
+pkgbase = macintosh.js-bin
+	pkgdesc = A virtual Apple Macintosh with System 8, running in Electron
+	pkgver = 1.2.0
+	pkgrel = 1
+	url = https://github.com/felixrieseberg/macintosh.js
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	license = GPL-2.0-or-later
+	depends = gtk3
+	depends = nss
+	provides = macintosh.js
+	conflicts = macintosh.js
+	conflicts = macintosh-js-bin
+	source = https://github.com/felixrieseberg/macintosh.js/raw/v1.2.0/CREDITS.md
+	sha256sums = 6a221f623fa4f773ea6ba81c8a1731ff0d680cc7e8f20c68488c31b0f13e3dec
+	source_x86_64 = https://github.com/felixrieseberg/macintosh.js/releases/download/v1.2.0/macintosh.js_1.2.0_amd64.deb
+	sha256sums_x86_64 = 8d1bdfef04c884c3c25a782db329472a7be5a1262fd7b06c1c453d9a6b74c516
+	source_aarch64 = https://github.com/felixrieseberg/macintosh.js/releases/download/v1.2.0/macintosh.js_1.2.0_arm64.deb
+	sha256sums_aarch64 = 973c48c71e361b90d87af89192d46c5985405989dbe7b9b578b5ca183f5e472a
+	source_armv7h = https://github.com/felixrieseberg/macintosh.js/releases/download/v1.2.0/macintosh.js_1.2.0_armhf.deb
+	sha256sums_armv7h = bf408406c663ae7866ea5851f3ac7ca1fad1e2adfc857e9d76809f44d6dfc2e3
+
+pkgname = macintosh.js-bin

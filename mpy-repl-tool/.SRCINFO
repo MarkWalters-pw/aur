@@ -1,0 +1,15 @@
+pkgbase = mpy-repl-tool
+	pkgdesc = Communicate and transfer files from and to MicroyPython boards via REPL
+	pkgver = 0.14
+	pkgrel = 1
+	url = https://github.com/zsquareplusc/mpy-repl-tool
+	arch = any
+	license = custom
+	makedepends = python-setuptools
+	depends = python-pyserial
+	depends = python-colorama
+	optdepends = python-fusepy: for mounting the micropython filesystem
+	source = https://files.pythonhosted.org/packages/b4/26/b99dc586ef4e6fa598d0c71e3f3e9ca9e307423dc082a39a06149fe55585/mpy-repl-tool-0.14.tar.gz
+	sha256sums = 58c06ae6f1686dda1b3948c4564ac6df6228f74da7838303a03a5243cec8b909
+
+pkgname = mpy-repl-tool

@@ -1,0 +1,17 @@
+pkgbase = fanctl-git
+	pkgdesc = Replacement for fancontrol with more approachable and powerful config interface
+	pkgver = 0.5.1.r2.578f7d1
+	pkgrel = 3
+	url = https://gitlab.com/mcoffin/fanctl
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = cargo
+	provides = fanctl
+	conflicts = fanctl
+	source = fanctl::git+https://gitlab.com/mcoffin/fanctl.git#branch=master
+	source = fanctl.service
+	sha512sums = SKIP
+	sha512sums = 973eb426edc2b6cb452bb4b241d78b31573baf215a530fe936847a6910c82c5f38e19ffe521c95d6c56c55e25142e03d4617f7ed25b82165dd857fabc8dc9ae6
+
+pkgname = fanctl-git

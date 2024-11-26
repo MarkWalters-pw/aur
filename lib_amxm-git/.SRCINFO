@@ -1,0 +1,22 @@
+pkgbase = lib_amxm-git
+	pkgdesc = Generic C-implementation of modular support
+	pkgver = 0.0.41.r0.gaae2370
+	pkgrel = 1
+	url = https://gitlab.com/soft.at.home/ambiorix/libraries/libamxm
+	arch = x86_64
+	arch = i686
+	arch = i486
+	arch = pentium4
+	arch = arm
+	arch = armv6h
+	arch = armv7h
+	arch = aarch64
+	license = BSD
+	makedepends = git
+	depends = lib_amxc
+	provides = lib_amxm
+	conflicts = lib_amxm
+	source = lib_amxm-git::git+https://gitlab.com/soft.at.home/ambiorix/libraries/libamxm.git#branch=main
+	md5sums = SKIP
+
+pkgname = lib_amxm-git

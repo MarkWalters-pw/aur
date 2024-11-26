@@ -1,0 +1,19 @@
+pkgbase = simple-rt
+	pkgdesc = SimpleRT - Reverse Tethering utility for Android
+	pkgver = 20211207_e9760dd
+	pkgrel = 2
+	url = https://github.com/robinpaulson/SimpleRT
+	install = simple-rt.install
+	arch = x86
+	arch = x86_64
+	license = GPLv3
+	makedepends = git
+	makedepends = make
+	depends = libusb
+	depends = net-tools
+	source = simple-rt::git+https://github.com/robinpaulson/SimpleRT
+	source = simple-rt@.service
+	md5sums = SKIP
+	md5sums = abce660a402beaf33a2e964d140294d6
+
+pkgname = simple-rt

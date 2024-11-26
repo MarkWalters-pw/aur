@@ -1,0 +1,22 @@
+pkgbase = pop3-git
+	pkgdesc = A simple pop3 mail client.
+	pkgver = 0.r49.24617c2
+	pkgrel = 1
+	url = http://repo.or.cz/w/pop3.git
+	install = pop3-git.install
+	arch = i686
+	arch = x86_64
+	license = custom:BSD
+	makedepends = git
+	depends = openssl
+	conflicts = pop3
+	source = pop3-git::git://repo.or.cz/pop3.git
+	source = conf.h
+	md5sums = SKIP
+	md5sums = 8fb31130a77406cea9b4ac67dc2b640b
+	sha1sums = SKIP
+	sha1sums = afe7f13c75b5a555a10d23842f4b7a9e28c11e64
+	sha256sums = SKIP
+	sha256sums = 5afa840066dbda15f614f1c84d53620651c7357de3d66d5855a0b9176e9132e0
+
+pkgname = pop3-git

@@ -1,0 +1,25 @@
+pkgbase = xplayer-plparser-git
+	pkgdesc = Playlist parser for xplayer. X-Apps Project (git version).
+	pkgver = 1.0.3.r0.g088731a
+	pkgrel = 2
+	url = https://github.com/linuxmint/xplayer-plparser
+	arch = i686
+	arch = x86_64
+	arch = armv7h
+	license = GPL
+	makedepends = git
+	makedepends = meson
+	makedepends = gtk-doc
+	makedepends = gobject-introspection
+	makedepends = glib2-devel
+	depends = gmime3
+	depends = libsoup
+	depends = libarchive
+	depends = libquvi
+	provides = xplayer-plparser-git
+	provides = xplayer-plparser
+	conflicts = xplayer-plparser
+	source = xplayer-plparser-git::git+https://github.com/linuxmint/xplayer-plparser.git
+	md5sums = SKIP
+
+pkgname = xplayer-plparser-git

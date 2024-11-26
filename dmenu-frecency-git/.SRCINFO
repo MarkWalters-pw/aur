@@ -1,0 +1,17 @@
+pkgbase = dmenu-frecency-git
+	pkgdesc = dmenu-based desktop application launcher that uses a combination of frequency and recency. Launches XDG desktop files and executables from PATH.
+	pkgver = r52.ed3102d
+	pkgrel = 1
+	url = https://github.com/kspi/dmenu-frecency
+	arch = any
+	license = MIT
+	makedepends = git
+	depends = dmenu
+	depends = python-docopt
+	depends = python-xdg
+	provides = dmenu-frecency
+	conflicts = dmenu-frecency
+	source = dmenu-frecency-git::git+https://github.com/kspi/dmenu-frecency.git
+	sha256sums = SKIP
+
+pkgname = dmenu-frecency-git

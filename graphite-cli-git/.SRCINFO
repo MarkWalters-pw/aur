@@ -1,0 +1,18 @@
+pkgbase = graphite-cli-git
+	pkgdesc = CLI that makes creating stacked git changes fast & intuitive
+	pkgver = 0.20.19.r2.1b49e0f0
+	pkgrel = 1
+	url = https://graphite.dev/
+	arch = any
+	license = AGPL3
+	makedepends = npm
+	makedepends = yarn
+	makedepends = findutils
+	depends = nodejs
+	depends = git
+	provides = graphite-cli
+	conflicts = graphite-cli
+	source = git+https://github.com/withgraphite/graphite-cli
+	md5sums = SKIP
+
+pkgname = graphite-cli-git

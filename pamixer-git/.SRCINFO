@@ -1,0 +1,18 @@
+pkgbase = pamixer-git
+	pkgdesc = Pulseaudio command-line mixer like amixer
+	pkgver = 20211011
+	pkgrel = 1
+	url = https://github.com/cdemoulins/pamixer
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = boost
+	makedepends = meson
+	depends = libpulse
+	depends = boost-libs
+	conflicts = pamixer
+	source = git+https://github.com/cdemoulins/pamixer.git
+	md5sums = SKIP
+
+pkgname = pamixer-git

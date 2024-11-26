@@ -1,0 +1,21 @@
+pkgbase = buildnotify
+	pkgdesc = A system tray based build status notification app for cctray.xml feeds
+	pkgver = 2.1.0
+	pkgrel = 1
+	url = https://github.com/anaynayak/buildnotify
+	arch = any
+	license = GPL3
+	makedepends = python-setuptools
+	depends = python
+	depends = python-pytz
+	depends = python-pyqt5
+	depends = python-dateutil
+	depends = python-requests
+	optdepends = python-keyring: keyring support
+	conflicts = buildnotify-hg
+	replaces = buildnotify-hg
+	source = https://github.com/anaynayak/buildnotify/archive/2.1.0.zip
+	sha256sums = 682831bfe7c0f88103fe6033b7fcca7124744bd0156de7bb10bbcc15dcb2149f
+
+pkgname = buildnotify
+

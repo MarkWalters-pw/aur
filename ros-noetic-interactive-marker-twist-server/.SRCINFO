@@ -1,0 +1,27 @@
+pkgbase = ros-noetic-interactive-marker-twist-server
+	pkgdesc = ROS - Interactive control for generic Twist-based robots using interactive markers.
+	pkgver = 1.2.2
+	pkgrel = 1
+	url = https://wiki.ros.org/interactive_marker_twist_server
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-catkin
+	makedepends = ros-noetic-interactive-markers
+	makedepends = ros-noetic-roscpp
+	makedepends = ros-noetic-tf
+	makedepends = ros-noetic-visualization-msgs
+	makedepends = ros-noetic-roslint
+	depends = ros-noetic-interactive-markers
+	depends = ros-noetic-roscpp
+	depends = ros-noetic-tf
+	depends = ros-noetic-visualization-msgs
+	source = ros-noetic-interactive-marker-twist-server-1.2.2.tar.gz::https://github.com/ros-visualization/interactive_marker_twist_server/archive/1.2.2.tar.gz
+	sha256sums = 5c8a54aba2b4811a0da537e510301ac717031442147ddf2ef3d4bf92c5fed7fc
+
+pkgname = ros-noetic-interactive-marker-twist-server

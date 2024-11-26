@@ -1,0 +1,22 @@
+pkgbase = azulejo-git
+	pkgdesc = Window resizing and tiling utility
+	pkgver = r72.df4264a
+	pkgrel = 1
+	arch = any
+	license = custom
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python3
+	depends = gtk3
+	depends = libkeybinder3
+	depends = python-xlib
+	depends = python-notify2
+	depends = python-gobject
+	provides = azulejo
+	conflicts = azulejo
+	options = !emptydirs
+	source = git+https://github.com/gillesB/azulejo.git
+	md5sums = SKIP
+
+pkgname = azulejo-git
+

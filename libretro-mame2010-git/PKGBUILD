@@ -1,0 +1,41 @@
+# Maintainer:  Oliver Jaksch <arch-aur at com-in dot de>
+# Contributor:  TwoLeaves < ohneherren at gmail dot com >
+
+pkgname=libretro-mame2010-git
+pkgver=431.beb9e51
+pkgrel=1
+arch=('i686' 'x86_64' 'arm' 'armv6h' 'armv7h')
+pkgdesc="Late 2010 version of MAME (0.139) for libretro. Compatible with MAME 0.139 romsets. (Arcade)"
+url="https://github.com/libretro/mame2010-libretro"
+license=('custom:MAME License')
+groups=('libretro')
+depends=('zlib' 'glibc' 'libretro-core-info')
+makedepends=('git' 'python2')
+
+_libname=mame2010_libretro
+_gitname=mame2010-libretro
+source=("git+https://github.com/libretro/${_gitname}.git"
+        "https://raw.github.com/libretro/libretro-super/master/dist/info/${_libname}.info")
+sha256sums=('SKIP'
+	'SKIP')
+
+pkgver() {
+  cd "${_gitname}"
+  echo $(git rev-list --count HEAD).$(git rev-parse --short HEAD)
+}
+
+build() {
+  cd "${_gitname}"
+  case ${CARCH} in
+    i686) makeargs="VRENDER=soft FORCE_DRC_C_BACKEND=1" ;;
+    x86_64) makeargs="VRENDER=soft FORCE_DRC_C_BACKEND=1 PTR64=1" ;;
+    arm|armv6h|armv7h|aarch64) makeargs="ARM_ENABLED=1" ;;
+  esac
+  make -j4 buildtools ${makeargs}
+  make -j4  ${makeargs}
+}
+
+package() {
+  install -Dm644 "${_gitname}/${_libname}.so" "${pkgdir}/usr/lib/libretro/${_libname}.so"
+  install -Dm644 "${_gitname}/docs/license.txt" "${pkgdir}/usr/share/licenses/${pkgname}/license.txt"
+}

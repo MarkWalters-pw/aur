@@ -1,0 +1,16 @@
+pkgbase = thinkpad-p14s
+	pkgdesc = Utilities and dependencies for a Thinkpad P14s laptop
+	pkgver = 0.1.1
+	pkgrel = 1
+	url = https://github.com/rnestler/archpkg-thinkpad-p14s
+	arch = any
+	license = GPL
+	depends = bash
+	depends = amd-ucode
+	optdepends = acpi_call: Allow to configure battery charging behavior
+	source = fix-tp-mic-led.sh
+	source = fix-tp-mic-led.service
+	sha256sums = e333bd4961d2145959f1f84d04935ae29e42663d94024a280f083c24fa3cfede
+	sha256sums = 331feb49d38fa941eef58be53c351faf1e332282496b1f4907300b4ea46abdbf
+
+pkgname = thinkpad-p14s

@@ -1,0 +1,20 @@
+pkgbase = r-rnetcdf
+	pkgdesc = Interface to 'NetCDF' Datasets
+	pkgver = 2.9.2
+	pkgrel = 1
+	url = https://cran.r-project.org/package=RNetCDF
+	arch = x86_64
+	license = GPL-2.0-or-later
+	checkdepends = r-bit64
+	checkdepends = r-pbdmpi
+	checkdepends = r-rmpi
+	depends = netcdf-openmpi
+	depends = openmpi
+	depends = r
+	depends = udunits
+	optdepends = r-bit64
+	source = https://cran.r-project.org/src/contrib/RNetCDF_2.9-2.tar.gz
+	md5sums = 5c24b20a1ee55f5448ab06dd6a74a0d3
+	b2sums = f2c7da14f4faad39d59b806528f4d01217dbbf8a63e450689370106882ad8c1004c39f23e57d47f587ef276f9b90d70000ab11abbf8af5304780c3c06e2cd0d6
+
+pkgname = r-rnetcdf

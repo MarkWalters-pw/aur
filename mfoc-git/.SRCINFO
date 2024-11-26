@@ -1,0 +1,15 @@
+pkgbase = mfoc-git
+	pkgdesc = Mifare Classic Offline Cracker
+	pkgver = 0.10.7.r38.gba072f1
+	pkgrel = 1
+	url = https://github.com/nfc-tools/mfoc
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	depends = libnfc>=1.7.0
+	conflicts = mfoc
+	source = mfoc-git::git+https://github.com/nfc-tools/mfoc.git
+	sha256sums = SKIP
+
+pkgname = mfoc-git

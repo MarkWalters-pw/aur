@@ -1,0 +1,31 @@
+pkgbase = mlbstreamer-git
+	pkgdesc = Enables real-time and time-shifted viewing of MLB.tv streams
+	pkgver = v0.0.10.r40.gbb3caab
+	pkgrel = 1
+	url = https://github.com/tonycpsu/mlbstreamer
+	arch = any
+	license = GPL2
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python
+	depends = python-six
+	depends = python-requests
+	depends = python-lxml
+	depends = python-pytz
+	depends = python-tzlocal
+	depends = python-pymemoize
+	depends = python-orderedattrdict
+	depends = python-yaml
+	depends = python-dateutil
+	depends = streamlink
+	depends = python-prompt_toolkit
+	depends = python-urwid
+	depends = python-urwid_utils
+	depends = python-panwid
+	provides = mlbstreamer
+	conflicts = mlbstreamer
+	source = git+https://github.com/tonycpsu/mlbstreamer.git
+	sha256sums = SKIP
+
+pkgname = mlbstreamer-git
+

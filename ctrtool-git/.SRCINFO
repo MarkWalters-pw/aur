@@ -1,0 +1,16 @@
+pkgbase = ctrtool-git
+	pkgdesc = Tools for the Nintendo 3DS
+	pkgver = r369.92a4b5f
+	pkgrel = 1
+	url = https://github.com/3DSGuy/Project_CTR/
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	depends = gcc-libs
+	provides = ctrtool
+	conflicts = ctrtool
+	source = ctr::git+https://github.com/3DSGuy/Project_CTR/
+	sha1sums = SKIP
+
+pkgname = ctrtool-git

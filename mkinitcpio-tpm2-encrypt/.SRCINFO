@@ -1,0 +1,14 @@
+pkgbase = mkinitcpio-tpm2-encrypt
+	pkgdesc = mkinitcpio hook that decrypts a TPM2-sealed LUKS keyfile
+	pkgver = 1.6.1
+	pkgrel = 1
+	url = https://github.com/electrickite/mkinitcpio-tpm2-encrypt
+	arch = any
+	license = GPL3
+	depends = mkinitcpio
+	depends = tpm2-tools>=4.0
+	source = https://github.com/electrickite/mkinitcpio-tpm2-encrypt/archive/1.6.1.tar.gz
+	sha256sums = 1fd35b539ea68f09913471a6fe7f99cc2b6aa6bdabdb87c9625c0a192e90650a
+
+pkgname = mkinitcpio-tpm2-encrypt
+

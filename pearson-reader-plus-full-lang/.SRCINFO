@@ -1,0 +1,23 @@
+pkgbase = pearson-reader-plus-full-lang
+	pkgdesc = A simple Reader for Pearson digital books.
+	pkgver = 5.2
+	pkgrel = 1
+	url = https://www.pearson.com/
+	arch = x86_64
+	license = custom
+	depends = sdl2
+	depends = unzip
+	depends = tar
+	optdepends = chromium: a modern browser for the application to work
+	optdepends = firefox: a modern browser for the application to work
+	optdepends = google-chrome: a modern browser for the application to work
+	optdepends = evince: a pdf viewer
+	optdepends = epdfview: a pdf viewer
+	optdepends = qpdfview: a pdf viewer
+	optdepends = mupdf: a pdf viewer
+	options = !emptydirs
+	options = !strip
+	source = https://readerplus-download.s3.amazonaws.com/rplus4_desktop_prod_builds/5.2/ReaderPlus_5.2_Desktop_Linux.deb
+	sha256sums = 4203ab3a02b8fc3179b9528102caff0275fbbfe9f7e81b1eb6bd581e9b4431c8
+
+pkgname = pearson-reader-plus-full-lang

@@ -1,0 +1,18 @@
+pkgbase = yet-another-spotify-tray-git
+	pkgdesc = Tray icon for Spotify Linux client application
+	pkgver = 1.3.0.0233e2f
+	pkgrel = 1
+	url = https://github.com/macdems/yet-another-spotify-tray
+	arch = x86_64
+	license = MIT
+	makedepends = cmake
+	makedepends = qt5-tools
+	depends = qt5-base
+	depends = libx11
+	depends = dbus
+	provides = spotify-tray
+	conflicts = spotify-tray
+	source = git+https://github.com/macdems/yet-another-spotify-tray.git
+	sha256sums = SKIP
+
+pkgname = yet-another-spotify-tray-git

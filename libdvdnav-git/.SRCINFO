@@ -1,0 +1,16 @@
+pkgbase = libdvdnav-git
+	pkgdesc = Library to navigate DVD disks. (GIT version)
+	pkgver = 6.1.1.23.g9831fe0
+	pkgrel = 1
+	url = https://dvdnav.mplayerhq.hu
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	depends = libdvdread
+	provides = libdvdnav
+	conflicts = libdvdnav
+	source = git+https://code.videolan.org/videolan/libdvdnav.git
+	sha256sums = SKIP
+
+pkgname = libdvdnav-git
+	depends = libdvdread.so

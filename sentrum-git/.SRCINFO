@@ -1,0 +1,19 @@
+pkgbase = sentrum-git
+	pkgdesc = Daemon that monitors watch-only bitcoin wallets
+	pkgver = 0.1.7
+	pkgrel = 1
+	url = https://github.com/sommerfelddev/sentrum
+	arch = any
+	license = MIT
+	makedepends = cargo
+	makedepends = git
+	depends = gcc-libs
+	depends = glibc
+	depends = openssl
+	provides = sentrum
+	options = !lto
+	backup = etc/sentrum/sentrum.toml
+	source = git+https://github.com/sommerfelddev/sentrum
+	sha256sums = SKIP
+
+pkgname = sentrum-git

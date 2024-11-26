@@ -1,0 +1,17 @@
+pkgbase = python-keepassxc-browser-git
+	pkgdesc = Access the KeepassXC Browser API from python
+	pkgver = r53.14c6dae
+	pkgrel = 1
+	url = https://github.com/hrehfeld/python-keepassxc-browser
+	arch = any
+	license = AGPL3
+	makedepends = python-setuptools
+	makedepends = git
+	depends = python
+	depends = python-pysodium
+	provides = python-keepassxc-browser=r53.14c6dae
+	conflicts = python-keepassxc-browser
+	source = git+https://github.com/hrehfeld/python-keepassxc-browser.git
+	sha256sums = SKIP
+
+pkgname = python-keepassxc-browser-git

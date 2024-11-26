@@ -1,0 +1,18 @@
+pkgbase = dazzlie-git
+	pkgdesc = a command-line program that lets you convert between various retro tile graphics formats and PNG
+	pkgver = 36.4199ba0
+	pkgrel = 1
+	url = https://github.com/obskyr/dazzlie
+	arch = x86_64
+	license = MIT
+	makedepends = crystal
+	makedepends = shards
+	makedepends = git
+	depends = gc
+	depends = pcre
+	depends = libevent
+	source = git+ssh://git@github.com/obskyr/dazzlie.git
+	sha1sums = SKIP
+
+pkgname = dazzlie-git
+

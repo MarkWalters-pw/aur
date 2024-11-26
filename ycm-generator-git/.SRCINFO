@@ -1,0 +1,21 @@
+pkgbase = ycm-generator-git
+	pkgdesc = Generates config files for YouCompleteMe (https://github.com/Valloric/YouCompleteMe)
+	pkgver = r128.b501516
+	pkgrel = 1
+	url = https://github.com/PaulHaeger/YCM-Generator
+	install = ycm-generator.install
+	arch = any
+	license = GPL
+	makedepends = git
+	depends = make
+	depends = python
+	depends = clang
+	optdepends = cmake
+	optdepends = autoconf
+	optdepends = automake
+	provides = ycm-generator
+	conflicts = ycm-generator
+	source = git+https://github.com/PaulHaeger/YCM-Generator
+	md5sums = SKIP
+
+pkgname = ycm-generator-git

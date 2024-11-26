@@ -1,0 +1,29 @@
+pkgbase = aurorafw-git
+	pkgdesc = A Powerful General Purpose Framework
+	pkgver = 0.0.1.alpha.2.r27.914cf66
+	pkgrel = 1
+	url = https://gitlab.com/aurorafossorg/p/framework/core
+	arch = x86_64
+	arch = i686
+	license = LGPL3
+	makedepends = git
+	makedepends = doxygen
+	makedepends = meson
+	makedepends = ldc
+	depends = glfw
+	depends = opengl-driver
+	depends = libx11
+	depends = freeimage
+	depends = portaudio
+	depends = libsndfile
+	depends = glew
+	depends = gtk3
+	depends = vulkan-icd-loader
+	depends = vulkan-headers
+	provides = aurorafw
+	conflicts = aurorafw
+	source = aurorafw-git-core::git+https://gitlab.com/aurorafossorg/p/framework/core.git
+	sha512sums = SKIP
+
+pkgname = aurorafw-git
+

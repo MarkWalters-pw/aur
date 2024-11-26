@@ -1,0 +1,16 @@
+pkgbase = postgresql-semver
+	pkgdesc = Semantic version data-type for PostgreSQL
+	pkgver = 0.32.0
+	pkgrel = 1
+	url = https://github.com/theory/pg-semver
+	arch = x86_64
+	license = custom:PostgreSQL
+	makedepends = git
+	makedepends = postgresql-libs
+	makedepends = clang
+	makedepends = llvm
+	depends = postgresql
+	source = postgresql-semver::git+https://github.com/theory/pg-semver#commit=9c071c068480a55af897cd6e0c5dd80ffcdb84ab
+	b2sums = SKIP
+
+pkgname = postgresql-semver

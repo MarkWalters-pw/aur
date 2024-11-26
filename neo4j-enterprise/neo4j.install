@@ -1,0 +1,47 @@
+post_install() {
+  assert_user_and_group_exist
+  directory_permissions
+
+  /usr/bin/systemd-tmpfiles --create neo4j.conf
+}
+
+post_upgrade() {
+  assert_user_and_group_exist
+  directory_permissions
+  license_disclaimer
+}
+
+post_remove() {
+  if getent passwd neo4j >/dev/null; then
+    userdel neo4j
+  fi
+  if getent group neo4j >/dev/null; then
+    groupdel neo4j
+  fi
+}
+
+directory_permissions() {
+  chown -R neo4j:neo4j /var/lib/neo4j
+  chown -R neo4j:neo4j /var/log/neo4j
+  chown -R neo4j:neo4j /etc/neo4j
+}
+
+assert_user_and_group_exist() {
+  if ! getent group neo4j >/dev/null; then
+    groupadd --system neo4j
+  fi
+  if ! getent passwd neo4j >/dev/null; then
+    useradd --system -g neo4j -d /var/lib/neo4j -s /bin/false neo4j
+  fi
+}
+
+license_disclaimer() {
+  echo $(sed 's/ +/ /g' <<- EOF
+    By installing the neo4j-enterprise package you are accepting
+    the commercial license agreement from Neo4j Inc. Read the license
+    under the /usr/share/licenses/neo4j directory or at
+    https://neo4j.com/licensing/. Check and modify the licensing status
+    by the "neo4j-admin server license" command.
+EOF
+)
+}

@@ -1,0 +1,22 @@
+pkgbase = lib32-libtas-git
+	pkgdesc = Tool-assisted speedrunning utility for Linux-native binaries (32-bit support)
+	pkgver = 1.4.4.r0.8142563d
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/clementgallet/libTAS
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	depends = lib32-alsa-lib
+	depends = lib32-ffmpeg
+	depends = lib32-fontconfig
+	depends = lib32-freetype2
+	depends = lib32-libx11
+	depends = lib32-sdl2
+	depends = libtas-git
+	depends = lib32-zlib
+	conflicts = lib32-libtas
+	source = git+https://github.com/clementgallet/libTAS
+	b2sums = SKIP
+
+pkgname = lib32-libtas-git

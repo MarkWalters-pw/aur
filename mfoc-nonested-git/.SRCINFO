@@ -1,0 +1,20 @@
+pkgbase = mfoc-nonested-git
+	pkgdesc = Mifare Classic Offline Cracker (nested attack disabled in code)
+	pkgver = 115.fe8e065
+	pkgrel = 1
+	url = https://github.com/nfc-tools/mfoc
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	depends = libnfc>=1.7.0
+	provides = mfoc
+	conflicts = mfoc
+	conflicts = mfoc-git
+	source = mfoc-nonested-git::git://github.com/nfc-tools/mfoc.git
+	source = 0001-Never-try-nested-attack.patch
+	sha1sums = SKIP
+	sha1sums = a4de43b1641de38fe73f8a51e57268cefca3a6c5
+
+pkgname = mfoc-nonested-git
+

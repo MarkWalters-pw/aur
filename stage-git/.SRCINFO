@@ -1,0 +1,21 @@
+pkgbase = stage-git
+	pkgdesc = Stage is a robot simulator providing a virtual world populated by mobile robots and sensors, along with various objects for the robots to sense and manipulate.
+	pkgver = r2333.0c85412d
+	pkgrel = 1
+	url = http://rtv.github.io/Stage/
+	arch = i686
+	arch = x86_64
+	license = GPLv2
+	makedepends = git
+	makedepends = cmake
+	depends = fltk>=1.1
+	depends = libpng
+	depends = libjpeg
+	depends = glu
+	provides = stage
+	conflicts = stage
+	source = stage::git+https://github.com/rtv/Stage.git
+	sha256sums = SKIP
+
+pkgname = stage-git
+

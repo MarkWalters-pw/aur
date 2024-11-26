@@ -1,0 +1,24 @@
+pkgbase = ldmtool
+	pkgdesc = tool for managing Microsoft Windows dynamic disks
+	pkgver = 0.2.5
+	pkgrel = 1
+	url = https://github.com/mdbooth/libldm
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = gtk-doc
+	makedepends = json-glib
+	makedepends = device-mapper
+	provides = libldm
+	conflicts = libldm
+	source = https://github.com/mdbooth/libldm/archive/libldm-0.2.5.tar.gz
+	source = sysmacros.patch
+	md5sums = ab38c1a47275eebb9c9cbcaf16220636
+	md5sums = b4585e50359818c9d89e541c37d98cc3
+	sha256sums = 61bb2f2367b1df59f818cb96794d1770a0def956bd2c343dccf1425dae3021b5
+	sha256sums = 503052d3fb15869f5ed3b3425299dce64b20e40d1df58eeb9d863ec97d0e7ce9
+
+pkgname = ldmtool
+	depends = gtk-doc
+	depends = json-glib
+

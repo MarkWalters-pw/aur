@@ -1,0 +1,56 @@
+#!/bin/bash
+#
+# USAGE: addmag LINK
+# Opens magnet links with a remote transmission daemon.
+# The remote address is configured in either:
+#   /etc/addmagrc
+#   ${HOME}/.addmagrc
+# These files should contain nothing but the remote address.
+#
+# aetherised 2021 <aetherised@gmail.com>
+#
+
+RCNAME="addmagrc"
+SYSRC="/etc/${RCNAME}"
+USRRC="${HOME}/.${RCNAME}"
+ADDR=
+NOTIFY=
+
+notify() {
+  [[ -n "${NOTIFY}" ]] && notify-send "${@}"
+}
+
+while getopts 'n' arg; do
+  case "${arg}" in
+    n) NOTIFY="true" ;;
+    *) echo "invalid argument '${arg}'"; exit 1;;
+  esac
+done
+
+shift $((OPTIND - 1))
+
+LINK="${1}"
+
+if [[ -z "${LINK}" ]]; then
+  echo "ERROR: no magnet link or torrent file specified"
+  exit 1
+fi
+
+[[ -f "${SYSRC}" ]] && ADDR="$(cat "${SYSRC}")"
+[[ -f "${USRRC}" ]] && ADDR="$(cat "${USRRC}")"
+if [[ -z "${ADDR}" ]]; then
+  echo "ERROR: no remote address configured"
+  echo "       Place the address of the remote daemon in one of these locations:"
+  echo "         ${SYSRC}"
+  echo "         ${USRRC}"
+  exit 1
+fi
+
+if transmission-remote "${ADDR}" -a "${LINK}"; then
+  echo "added '${LINK}' to '${ADDR}'"
+  notify -u normal -t 5000 "TORRENT ADDED" "Added torrent to '${ADDR}'"
+else
+  echo "ERROR: failed to add '${LINK}' to '${ADDR}'"
+  notify -u critical -t 5000 "TORRENT ADD FAILED" "Failed to add torrent to '${ADDR}'"
+fi
+

@@ -1,0 +1,22 @@
+pkgbase = python-ipydatawidgets
+	pkgdesc = A set of widgets to help facilitate reuse of large datasets across widgets
+	pkgver = 4.3.5
+	pkgrel = 1
+	url = https://github.com/vidartf/ipydatawidgets
+	arch = x86_64
+	license = custom:BSD-3-clause
+	checkdepends = python-pytest
+	checkdepends = python-nbval
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-jupyter-packaging
+	makedepends = python-wheel
+	makedepends = npm
+	makedepends = yarn
+	makedepends = jupyterlab
+	depends = python-ipywidgets
+	depends = python-traittypes
+	source = ipydatawidgets-4.3.5.tar.gz::https://github.com/vidartf/ipydatawidgets/archive/4.3.5.tar.gz
+	sha512sums = 08df44124257ff484e8c14a451534b943cda8a181c06380aec8f3df254d14cbc1bfc719daafb2230485b9f782bf546d85b67091c2bd0a46ac23ab662be87308c
+
+pkgname = python-ipydatawidgets

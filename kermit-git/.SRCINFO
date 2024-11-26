@@ -1,0 +1,17 @@
+pkgbase = kermit-git
+	pkgdesc = A VTE-based, simple and froggy terminal emulator (git)
+	pkgver = 4.0.r0.g6057cfd
+	pkgrel = 1
+	url = https://github.com/orhun/kermit
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = cmake
+	depends = gtk3>=3.18.9
+	depends = vte3>=0.42.5
+	provides = kermit
+	conflicts = kermit
+	source = git+https://github.com/orhun/kermit
+	sha256sums = SKIP
+
+pkgname = kermit-git

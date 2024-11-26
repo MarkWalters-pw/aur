@@ -1,0 +1,17 @@
+pkgbase = vapoursynth-plugin-vine-git
+	pkgdesc = Plugin for Vapoursynth: vine (GIT version)
+	pkgver = r101.b8285e8
+	pkgrel = 1
+	url = http://forum.doom9.org/showthread.php?t=173703
+	arch = any
+	license = LGPL3.0
+	makedepends = git
+	depends = vapoursynth-plugin-knlmeanscl
+	depends = vapoursynth-plugin-tcanny-git
+	depends = vapoursynth-plugin-fmtconv-git
+	provides = vapoursynth-plugin-vine
+	conflicts = vapoursynth-plugin-vine
+	source = vine::git+https://github.com/IFeelBloated/Vine.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-vine-git

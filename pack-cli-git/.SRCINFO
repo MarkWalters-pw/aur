@@ -1,0 +1,15 @@
+pkgbase = pack-cli-git
+	pkgdesc = CLI for building apps using Cloud Native Buildpacks
+	pkgver = 0.28.0+r42.gd1024e95
+	pkgrel = 1
+	url = https://buildpacks.io/
+	arch = x86_64
+	license = Apache
+	makedepends = git
+	makedepends = go-pie
+	provides = pack-cli
+	conflicts = pack-cli
+	source = pack-cli-git::git+https://github.com/buildpacks/pack
+	sha512sums = SKIP
+
+pkgname = pack-cli-git

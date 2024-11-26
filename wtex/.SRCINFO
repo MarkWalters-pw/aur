@@ -1,0 +1,14 @@
+pkgbase = wtex
+	pkgdesc = Watch LaTeX files and recompile them when they are modified.
+	pkgver = 0.1.1
+	pkgrel = 1
+	url = https://github.com/qaniere/wtex
+	arch = any
+	license = beerware
+	depends = bash
+	depends = inotify-tools
+	provides = wtex
+	source = wtex-0.1.1.tar.gz::https://github.com/qaniere/wtex/archive/v0.1.1.tar.gz
+	sha256sums = 54ea1248f01363c16b283d27824799c4e0d2e52bbd06974bbf85bb531590dacb
+
+pkgname = wtex

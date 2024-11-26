@@ -1,0 +1,15 @@
+pkgbase = display-switch-tray
+	pkgdesc = A tray icon for enabling and disabling display-switch's systemd service
+	pkgver = 1.0.0
+	pkgrel = 1
+	url = https://github.com/leodag/display-switch-tray/
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = rust
+	makedepends = cargo
+	depends = libayatana-appindicator
+	source = display-switch-tray::git+https://github.com/leodag/display-switch-tray.git#tag=1.0.0
+	sha256sums = SKIP
+
+pkgname = display-switch-tray

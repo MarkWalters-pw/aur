@@ -1,0 +1,17 @@
+pkgbase = libusb3380-git
+	pkgdesc = USB3380 abstraction layer for libusb
+	pkgver = r15.c83d1e93eb3a
+	pkgrel = 2
+	url = https://github.com/xtrx-sdr/libusb3380
+	arch = armv7h
+	arch = i686
+	arch = x86_64
+	license = LGPL
+	makedepends = git
+	makedepends = cmake
+	depends = libusb
+	provides = libusb3380
+	source = git+https://github.com/xtrx-sdr/libusb3380
+	md5sums = SKIP
+
+pkgname = libusb3380-git

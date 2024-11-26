@@ -1,0 +1,94 @@
+#!/usr/bin/ash
+
+run_hook() {
+    # This file will be loaded by the emcrypt hook
+    ckeyfile="/crypto_keyfile.bin"
+
+    # Get TPM keyfile if specified
+    tpmkeyfile="/tpm_keyfile.enc"
+    if [ -n "$tpmkey" ]; then
+        IFS=: read tkdev tkarg1 tkarg2 <<EOF
+$tpmkey
+EOF
+
+        if [ "$tkdev" = "rootfs" ]; then
+            tpmkeyfile=$tkarg1
+        elif resolved=$(resolve_device "${tkdev}" ${rootdelay}); then
+            case ${tkarg1} in
+            *[!0-9]*)
+                # Use a file on the device
+                # tkarg1 is not numeric: tkarg1=filesystem, tkarg2=path
+                mkdir /tpmkey
+                mount -r -t "$tkarg1" "$resolved" /tpmkey
+                dd if="/tpmkey/$tkarg2" of="$tpmkeyfile" >/dev/null 2>&1
+                umount /tpmkey
+                rmdir /tpmkey
+                ;;
+            *)
+                # Read raw data from the block device
+                # tkarg1 is numeric: tkarg1=offset, tkarg2=length
+                dd if="$resolved" of="$tpmkeyfile" bs=1 skip="$tkarg1" count="$tkarg2" >/dev/null 2>&1
+                ;;
+            esac
+        fi
+        [ ! -f "$tpmkeyfile" ] && err "TPM keyfile could not be opened"
+    fi
+
+    # If we have a keyfile, decrypt it
+    if [ -f ${tpmkeyfile} ]; then
+        # initialize the TPM
+        msg ":: Initializing TPM..."
+        modprobe -q tpm_tis >/dev/null 2>&1
+        iplink set lo up
+        tcsd
+
+        tpm_unsealdata -z -i "$tpmkeyfile" -o "$ckeyfile" > /dev/null 2>&1
+        unseal=$?
+    if [ $unseal -eq 1 ]; then
+            tpm_unsealdata -i "$tpmkeyfile" -o "$ckeyfile" > /dev/null 2>&1
+            unseal=$?
+        fi
+
+        tpmok=0
+        case $unseal in
+        0)
+            tpmok=1
+            ;;
+        1)
+            err "Wrong SEK password"
+            ;;
+        17)
+            err "TPM communication error"
+            ;;
+        24)
+            echo
+            echo "!!! TPM WARNING: PCR HAS BEEN ALTERED !!!"
+            echo "This is an indication that the boot configuration has changed since the TPM"
+            echo "keyfile was generated. This is normal after kernel updates or firmware changes,"
+            echo "however this could also indicate a malicious change to your system."
+            echo
+            ;;
+        255)
+            err "Could not read TPM keyfile"
+            ;;
+        *)
+            err "Unknown TPM error $unseal"
+            ;;
+        esac
+
+        if [ $tpmok -gt 0 ]; then
+            msg ":: Keyfile successfully decrypted"
+        else
+            rm -f "/crypto_keyfile.bin"
+            echo "TPM Could not decrypt keyfile"
+        fi
+
+        killall -q tcsd
+    fi
+}
+
+run_cleanuphook() {
+    rm -f "/crypto_keyfile.bin"
+}
+
+# vim: set ft=sh ts=4 sw=4 et:

@@ -1,0 +1,10 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = File
+Target = usr/bin/xlunch
+
+[Action]
+Description = Generating new xlunch icons.conf
+Exec = bin/bash -c 'genentries -p "/usr/share/xlunch/svgicons" > /etc/xlunch/entries.dsv'
+When = PostTransaction

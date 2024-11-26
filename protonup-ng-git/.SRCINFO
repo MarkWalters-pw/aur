@@ -1,0 +1,18 @@
+pkgbase = protonup-ng-git
+	pkgdesc = Install and Update Proton-GE, a version for the new naming convention
+	pkgver = 0.1.4.r2.gf60ee76
+	pkgrel = 1
+	url = https://github.com/cloudishBenne/protonup-ng
+	arch = any
+	license = GPL3
+	makedepends = python-setuptools
+	makedepends = git
+	depends = python
+	depends = python-requests
+	provides = protonup
+	conflicts = protonup
+	options = !emptydirs
+	source = git+https://github.com/cloudishBenne/protonup-ng.git
+	sha256sums = SKIP
+
+pkgname = protonup-ng-git

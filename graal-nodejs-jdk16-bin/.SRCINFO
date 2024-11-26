@@ -1,0 +1,15 @@
+pkgbase = graal-nodejs-jdk16-bin
+	pkgdesc = GraalVM-based, ployglot-enabled implementation of Node.js, Java 16 version
+	pkgver = 21.2.0
+	pkgrel = 1
+	url = https://github.com/oracle/graaljs
+	arch = x86_64
+	arch = aarch64
+	license = custom
+	depends = jdk16-graalvm-bin
+	source_x86_64 = https://github.com/oracle/graaljs/releases/download/vm-21.2.0/nodejs-installable-java16-linux-amd64-21.2.0.jar
+	sha256sums_x86_64 = 793debfb5dd99e4ac0ca9741a105a7bf59d3eea7bb57be6eb2f8e4ac83526f7f
+	source_aarch64 = https://github.com/oracle/graaljs/releases/download/vm-21.2.0/nodejs-installable-java16-linux-aarch64-21.2.0.jar
+	sha256sums_aarch64 = d67337b8eba35a55e96bae286f131b4482179468b0d2d039be59f403c770ed21
+
+pkgname = graal-nodejs-jdk16-bin

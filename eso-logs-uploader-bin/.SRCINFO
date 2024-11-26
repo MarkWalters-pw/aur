@@ -1,0 +1,23 @@
+pkgbase = eso-logs-uploader-bin
+	pkgdesc = Official log uploader application for esologs.com
+	pkgver = 6.0.2
+	pkgrel = 1
+	url = https://github.com/RPGLogs/Uploaders-esologs
+	arch = any
+	license = custom:CC0
+	makedepends = asar
+	depends = electron
+	depends = hicolor-icon-theme
+	provides = eso-logs-uploader
+	conflicts = eso-logs-uploader
+	options = !strip
+	source = eso-logs-uploader-6.0.2.AppImage::https://github.com/RPGLogs/Uploaders-esologs/releases/download/v6.0.2/ESO-Logs-Uploader-6.0.2.AppImage
+	source = eso-logs-uploader.sh
+	source = no-devtools.patch
+	source = no-ads.patch
+	sha256sums = c7863585a50940c0ddae42b78e0135a389b58a80aca684dcbef4c38da85e5ec4
+	sha256sums = 6b260619df25c8f73b2ad252462480745130d3a2d51eb8be431e55f81e637239
+	sha256sums = 0d1ee7d16d8e226a78300e5f20d6bb743bd194aa68090adccd436952f0b0d287
+	sha256sums = 8f237793b9ee25cfe8d842f5ab77921ecaa2e701aa52af239691f5f8f80fbbf6
+
+pkgname = eso-logs-uploader-bin

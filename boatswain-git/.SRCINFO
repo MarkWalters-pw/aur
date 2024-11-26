@@ -1,0 +1,22 @@
+pkgbase = boatswain-git
+	pkgdesc = Control Elgato Stream Deck devices
+	pkgver = 0.3.0.r102.g591a163
+	pkgrel = 1
+	url = https://gitlab.gnome.org/World/boatswain
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = meson
+	makedepends = gobject-introspection
+	depends = hidapi
+	depends = libadwaita
+	depends = libgusb
+	depends = libpeas-2
+	depends = libportal-gtk4
+	depends = libsecret
+	provides = boatswain
+	conflicts = boatswain
+	source = git+https://gitlab.gnome.org/World/boatswain.git
+	sha1sums = SKIP
+
+pkgname = boatswain-git

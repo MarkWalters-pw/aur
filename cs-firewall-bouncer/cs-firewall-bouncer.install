@@ -1,0 +1,61 @@
+post_install() {
+	fwcount=`pacman -Qi iptables nftables 2>&1 | grep Name | wc -l`
+	if [ ${fwcount} -lt 1 ]; then
+		echo -e "\n\n\nWarning: IPTables and|or NFTables is missing"
+		echo "Warning: This means that only IPSET is available"
+		echo "         and might not provide any useful protection"
+		echo "         Installation might fail"
+		sleep 5
+	fi
+	echo "Running cs-firewall-bouncer installation script"
+	cd /usr/local/installers/cs-firewall-bouncer
+	source ./install.sh 
+	echo  -ne "\n"
+	echo "cs-firewall-bouncer installer files have been saved to /usr/local/installers"
+	echo "It's recommended to keep these in place for proper package removal"
+}
+
+post_upgrade() {
+	echo "Running cs-firewall-bouncer upgrade script"
+	cd /usr/local/installers/cs-firewall-bouncer
+	sh ./upgrade.sh 
+	
+	# Check if old AUR installer files still exist.
+        # I set this keep installers in same dir. the wizard.sh actually removes the /var/lib/crowdsec directory
+        # So they had to move.
+
+        [[ -d "/var/lib/crowdsec/installers/cs-firewall-bouncer/" ]] && rm -rf /var/lib/crowdsec/installers/cs-firewall-bouncer
+
+}
+pre_install(){
+	echo " Check for existing cs-firewall-bouncer installations"
+	#
+        # This is necessary in order to successfully install the bouncer.
+        # The install script will create multiple configurations and 
+	# that isn't needed. 	
+	#
+	INSTANCES="`sudo cscli bouncers list 2>&1  | grep cs-firewall-bouncer | wc -l`"
+	if [[ ${INSTANCES} != 0 ]]; then
+		echo "Error: cscli reports existing cs-firewall-bouncer"
+		echo "Please remove that before continuing package install"
+	       	exit 2
+	fi
+}
+
+pre_remove(){
+	echo "Removing cs-firewall-bouncer installation"
+	#
+        # This is necessary in order to successfully uninstall crowdsec. 
+	# If bouncers are not removed then crowdsec uninstall will fail
+	#
+	for i in `sudo cscli bouncers list | grep cs-firewall-bouncer | awk '{print $1}'`
+	do 
+	   sudo cscli bouncers delete $i
+	done
+	#
+        # Run the official uninstall script
+	#
+	cd /usr/local/installers/cs-firewall-bouncer
+	sh ./uninstall.sh
+}
+

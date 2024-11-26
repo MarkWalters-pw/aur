@@ -1,0 +1,17 @@
+post_install() {
+  cat <<EOM
+
+  In order to use automatic theme updates with automathemely the timer and autostart needs to be enabled
+  To enable the timer for your user run:
+
+    systemctl enable --user automathemely.timer
+
+  For autostart (globally) this command can be used:
+
+    sed 's/\(Exec=automathemely\)\ \-\-manage/\1/' \\
+      /usr/share/applications/automathemely.desktop >| \\
+      /etc/xdg/autostart/automathemely.desktop
+
+EOM
+}
+

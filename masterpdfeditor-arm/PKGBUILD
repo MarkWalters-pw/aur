@@ -1,0 +1,35 @@
+# Maintainer: m8D2 <omui at proton mail dot com>
+# Contributor: Patrick Goetz <pgoetz at mail dot utexas dot edu>
+# Contributor: Doug Newgard <scimmia at archlinux dot org>
+# Contributor: Jiachen Yang <farseerfc@gmail.com>
+# Contributor: Miguel Revilla <yo@miguelrevilla.com>
+# Contributor: Ferik <djferik at gmail dot com>
+
+pkgname=masterpdfeditor-arm
+pkgver=5.9.50
+pkgrel=1
+pkgdesc='A complete solution for viewing, creating and editing PDF files (for arm64)'
+url='https://code-industry.net/free-pdf-editor/'
+arch=(aarch64)
+conflicts=(masterpdfeditor-free masterpdfeditor)
+license=('custom')
+makedepends=(patchelf)
+source_aarch64=("https://code-industry.net/public/master-pdf-editor-${pkgver}-qt5.arm64.tar.gz"
+                masterpdfeditor5.desktop
+                license.txt)
+sha1sums_aarch64=('60ec3fb14d1b051d41e57df4be315acef211df8d'
+                  'b33e7148123565fd4cc15d41c493f6ab27d37ba4'
+                  '75ab655977f493aa46fd3aa6cb1cbfcf19b40d97')
+
+package() {
+  depends=('libgl' 'nspr' 'nss' 'qt5-base' 'qt5-svg' 'qt5-declarative' 'sane')
+
+  install -d "$pkgdir"{/opt/,/usr/bin/}
+  cp -a --no-preserve=ownership master-pdf-editor-${pkgver%%.*} "$pkgdir/opt/"
+
+  cd "$pkgdir/opt/master-pdf-editor-${pkgver%%.*}"
+  ln -sr masterpdfeditor${pkgver%%.*} -t "$pkgdir/usr/bin/"
+  install -Dm644 ${srcdir}/masterpdfeditor${pkgver%%.*}.desktop -t "$pkgdir/usr/share/applications/"
+  install -Dm644 ${srcdir}/license.txt -t "$pkgdir/usr/share/licenses/masterpdfeditor/"
+  patchelf --remove-rpath masterpdfeditor${pkgver%%.*}
+}

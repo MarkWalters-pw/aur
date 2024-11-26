@@ -1,0 +1,17 @@
+pkgbase = libsafec
+	pkgdesc = Implementtion of C11 Annex K + ISO TR24731 Bounds Checking Interface
+	pkgver = 3.7.1
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/rurban/safeclib
+	changelog = CHANGELOG
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = doxygen
+	depends = perl
+	provides = libsafec.so=3-64
+	source = libsafec-3.7.1.tar.xz::https://github.com/rurban/safeclib/releases/download/v3.7.1/safeclib-3.7.1.tar.xz
+	sha256sums = 71d3ec970f930bd980f2a41127228eeedfc53749e4c6b203329adc4ff7df32a7
+
+pkgname = libsafec

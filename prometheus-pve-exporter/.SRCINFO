@@ -1,0 +1,26 @@
+pkgbase = prometheus-pve-exporter
+	pkgdesc = Proxmox VE exporter for the Prometheus monitoring system
+	pkgver = 3.2.5
+	pkgrel = 1
+	url = https://github.com/prometheus-pve/prometheus-pve-exporter
+	arch = any
+	license = Apache-2.0
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python
+	depends = python-prometheus_client
+	depends = python-proxmoxer
+	depends = python-yaml
+	depends = python-werkzeug
+	depends = gunicorn
+	backup = etc/prometheus/pve.yml
+	source = prometheus-pve-exporter::git+https://github.com/prometheus-pve/prometheus-pve-exporter.git#tag=v3.2.5
+	source = prometheus-pve-exporter.service
+	source = prometheus-pve-exporter.sysusers
+	source = prometheus-pve-exporter.tmpfiles
+	sha256sums = d76941c855edd35ae0a894f89ccbd3c8c6c3cd836964a037d3a49ee9f8420d7e
+	sha256sums = 5d1227b6e2fdaa27d8ec4ceafebc95074e2f5a1c27df313c3f00f2f85ef3ee34
+	sha256sums = d230b99e6ec3663ba8785cc61b8b8983a04596eaf0271bfea0d64189eabbd97f
+	sha256sums = c9eb4acf94e5a7851e90e721e1baa9b77ae0a276975a2f21e74c569a159358a7
+
+pkgname = prometheus-pve-exporter

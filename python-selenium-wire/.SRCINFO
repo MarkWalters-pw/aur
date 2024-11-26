@@ -1,0 +1,26 @@
+pkgbase = python-selenium-wire
+	pkgdesc = Extends Selenium's Python bindings to give you the ability to inspect requests made by the browser
+	pkgver = 5.1.0
+	pkgrel = 1
+	url = https://github.com/wkeeling/selenium-wire
+	arch = any
+	license = MIT
+	makedepends = python-setuptools
+	depends = python
+	depends = python-blinker
+	depends = python-brotli
+	depends = python-certifi
+	depends = python-h2
+	depends = python-hyperframe
+	depends = python-kaitaistruct
+	depends = python-pyasn1
+	depends = python-pyopenssl
+	depends = python-pyparsing
+	depends = python-pysocks
+	depends = python-selenium
+	depends = python-wsproto
+	depends = python-zstandard
+	source = python-selenium-wire-5.1.0.tar.gz::https://github.com/wkeeling/selenium-wire/archive/refs/tags/5.1.0.tar.gz
+	sha256sums = a9de7ab7bf6cba6bf582caedce6fabb5aea95348635ba060e3296009130c66b4
+
+pkgname = python-selenium-wire

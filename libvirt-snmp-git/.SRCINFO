@@ -1,0 +1,23 @@
+pkgbase = libvirt-snmp-git
+	pkgdesc = net-snmp agent for libvirt virtualization management
+	pkgver = r30.1ad3cf3
+	pkgrel = 1
+	url = http://libvirt.org/
+	install = libvirt-snmp.install
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = perl
+	depends = libvirt
+	depends = net-snmp
+	provides = libvirt-snmp
+	conflicts = libvirt-snmp
+	source = libvirt-snmp-git::git+https://github.com/libvirt/libvirt-snmp.git
+	source = libvirt-snmp.service
+	source = libvirt-snmp.install
+	md5sums = SKIP
+	md5sums = f4b8b6345abe4fadab45e81290799029
+	md5sums = a101751363499dbb87492e040c6702ae
+
+pkgname = libvirt-snmp-git
+

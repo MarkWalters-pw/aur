@@ -1,0 +1,20 @@
+pkgbase = ncparticleeditor-git
+	pkgdesc = A particle editor made with the nCine
+	pkgver = r80.0cf203e
+	pkgrel = 1
+	url = http://ncine.github.io
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = cmake
+	depends = ncine
+	provides = ncparticleeditor
+	conflicts = ncparticleeditor
+	options = !strip
+	source = git+https://github.com/nCine/ncParticleEditor
+	source = git+https://github.com/nCine/ncParticleEditor-data
+	md5sums = SKIP
+	md5sums = SKIP
+
+pkgname = ncparticleeditor-git

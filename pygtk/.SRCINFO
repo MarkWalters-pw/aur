@@ -1,0 +1,23 @@
+pkgbase = pygtk
+	pkgdesc = Python bindings for the GTK widget set
+	pkgver = 2.24.0
+	pkgrel = 14
+	url = https://wiki.gnome.org/Projects/PyGTK
+	arch = x86_64
+	arch = aarch64
+	license = LGPL-2.1-or-later
+	depends = python2-cairo
+	depends = python2-gobject2
+	depends = gtk2
+	depends = python2-numpy
+	depends = libglade
+	source = pygtk-2.24.0.tar.bz2::https://download.gnome.org/sources/pygtk/2.24/pygtk-2.24.0.tar.bz2
+	source = drop-pangofont.patch
+	source = python27.patch
+	source = fix-leaks-of-pango-objects.patch
+	sha256sums = cd1c1ea265bd63ff669e92a2d3c2a88eb26bcd9e5363e0f82c896e649f206912
+	sha256sums = 3281964f25ae0a3e4b80057a3735bc2856d91b13208ffafb5b74dc307d848b02
+	sha256sums = af6306b9dfe90d507b2bcfff19ba87aff3575ca4e531e094a5620ff6781b3e72
+	sha256sums = 0ca9e910e9bb88897089dd19752a419aa78de15463df766cb19a1d0c2dd45bcb
+
+pkgname = pygtk

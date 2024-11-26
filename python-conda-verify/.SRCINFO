@@ -1,0 +1,19 @@
+pkgbase = python-conda-verify
+	pkgdesc = Verify conda recipes and packages
+	pkgver = 3.4.2
+	pkgrel = 2
+	url = https://github.com/conda/conda-verify
+	arch = any
+	license = BSD
+	depends = python
+	depends = python-conda
+	depends = python-click
+	depends = python-future
+	depends = python-jinja
+	depends = python-yaml
+	options = !emptydirs
+	source = https://github.com/conda/conda-verify/archive/3.4.2.tar.gz
+	sha512sums = 8bdbb4d45982d5bc31995016a4b180a4288753c7d811de26d3841a114c35404041b27f5a06288866716404a45134a2bc3ac0e8d0c8bf6a1e36363c2b3f326d65
+
+pkgname = python-conda-verify
+

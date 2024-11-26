@@ -1,0 +1,31 @@
+pkgbase = davical
+	pkgdesc = A server for calendar sharing
+	pkgver = 1.1.11
+	pkgrel = 1
+	url = https://gitlab.com/davical-project/davical
+	install = davical.install
+	arch = any
+	license = GPL
+	license = LGPL
+	makedepends = phpdocumentor2
+	makedepends = doxygen
+	depends = php>=5.1
+	depends = awl
+	depends = php-sqlite
+	depends = php-pgsql
+	depends = perl-dbd-pg
+	depends = perl-yaml
+	depends = perl-dbi
+	optdepends = postgresql: run postgresql locally
+	optdepends = apache: Web server to run davical
+	optdepends = nginx: Web server to run davical
+	optdepends = php-ldap: PHP module for ldap support
+	backup = etc/webapps/davical/localhost-conf.php
+	source = davical-1.1.11.tar.bz2::https://gitlab.com/davical-project/davical/-/archive/r1.1.11/davical-r1.1.11.tar.bz2
+	source = httpd-davical.conf
+	source = README.archlinux
+	sha512sums = e39333fdb3ded3baaeda6430325009d0c9237ce6e0b63adfba6754c1816d3b458ab6bb4ec8896f3de08e61ddbf4930e455297e365408bbb39c766efa688bc0f8
+	sha512sums = b4466049d9ba116cdbe3951a7a4cf004a423b59f197f78765151c656cf4f16f30a2bcc302bd643be0548818a67611654f95deb95113fa7f581394af78cb17109
+	sha512sums = d7ffe40a87e4752f1cd148bcc0a39285d81d9a717357207a114c1fc8384431ac07e673c84fd152865d47a1291b2c00dfd95237a973f3b6069a97ba5d0940ca84
+
+pkgname = davical

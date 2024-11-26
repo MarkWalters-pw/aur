@@ -1,0 +1,19 @@
+#!/usr/bin/ash
+
+run_hook ()
+{
+    msg "Starting haveged"
+
+    # start haveged running in the background
+    if [ "${quiet}" != "y" ] ; then
+        haveged
+    else
+        haveged > /dev/null 2>&1
+    fi
+}
+
+run_cleanuphook ()
+{
+    # kill haveged running in the background
+    killall haveged
+}

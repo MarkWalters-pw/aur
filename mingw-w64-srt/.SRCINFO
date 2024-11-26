@@ -1,0 +1,16 @@
+pkgbase = mingw-w64-srt
+	pkgdesc = Secure Reliable Transport library (mingw-w64)
+	pkgver = 1.5.3
+	pkgrel = 1
+	url = https://www.srtalliance.org/
+	arch = any
+	license = MPL2
+	makedepends = mingw-w64-cmake
+	depends = mingw-w64-openssl
+	options = !buildflags
+	options = !strip
+	options = staticlibs
+	source = https://github.com/Haivision/srt/archive/v1.5.3.tar.gz
+	sha256sums = befaeb16f628c46387b898df02bc6fba84868e86a6f6d8294755375b9932d777
+
+pkgname = mingw-w64-srt

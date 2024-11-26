@@ -1,0 +1,17 @@
+pkgbase = usbpicprog
+	pkgdesc = Software and firmware for the open hardware USB PIC Programmer
+	pkgver = 0.9.9_1.0.0_beta
+	pkgrel = 2
+	epoch = 1
+	url = http://usbpicprog.org/
+	arch = x86_64
+	license = GPL2
+	depends = libtool
+	depends = wxwidgets-gtk2
+	depends = libusb
+	depends = intltool
+	conflicts = usbpicprog<=140617
+	source = https://sourceforge.net/projects/usbpicprog/files/usbpicprog-software/usbpicprog-0.9.9-1.0.0-beta-software/usbpicprog-0.9.9-1.0.0-beta.tar.gz/download
+	md5sums = b0becbf499ca1df9102ca8b946631659
+
+pkgname = usbpicprog

@@ -1,0 +1,16 @@
+pkgbase = mtr-git
+	pkgdesc = Combines the functionality of traceroute and ping into one tool (CLI version, git)
+	pkgver = v0.93.r36.gb4d3983
+	pkgrel = 1
+	url = http://www.bitwizard.nl/mtr/
+	install = mtr.install
+	arch = any
+	license = GPL
+	makedepends = git
+	depends = ncurses
+	provides = mtr
+	conflicts = mtr
+	source = git+https://github.com/traviscross/mtr
+	sha256sums = SKIP
+
+pkgname = mtr-git

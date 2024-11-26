@@ -1,0 +1,17 @@
+pkgbase = spotitube-bin
+	pkgdesc = Synchronize your Spotify collections downloading from external providers
+	pkgver = 31
+	pkgrel = 1
+	url = https://github.com/streambinder/spotitube
+	arch = x86_64
+	license = GPL3
+	depends = youtube-dl
+	depends = ffmpeg
+	depends = xdg-utils
+	provides = spotitube
+	source = https://github.com/streambinder/spotitube/releases/download/v31/spotitube-v31.bin
+	source = https://raw.githubusercontent.com/streambinder/spotitube/master/LICENSE
+	sha256sums = be396e472e548de913f8e1de13d05b1d65e772657ddeb9fb752c628872ea3f2c
+	sha256sums = SKIP
+
+pkgname = spotitube-bin

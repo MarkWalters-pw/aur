@@ -1,0 +1,20 @@
+pkgbase = python-pylibtiff-git
+	pkgdesc = A python wrapper of the C libtiff library
+	pkgver = r218.51d6f2a
+	pkgrel = 1
+	url = https://github.com/pearu/pylibtiff
+	arch = i686
+	arch = x86_64
+	license = BSD
+	makedepends = python-setuptools
+	makedepends = git
+	depends = python-numpy
+	depends = libtiff
+	provides = python-libtiff
+	provides = python-pylibtiff
+	replaces = python-libtiff-svn
+	source = python-pylibtiff::git+https://github.com/pearu/pylibtiff.git
+	sha256sums = SKIP
+
+pkgname = python-pylibtiff-git
+

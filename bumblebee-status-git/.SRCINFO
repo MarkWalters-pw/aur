@@ -1,0 +1,33 @@
+pkgbase = bumblebee-status-git
+	pkgdesc = Modular, theme-able status line generator for the i3 window manager
+	pkgver = r2150.92ab1a3
+	pkgrel = 2
+	url = https://github.com/tobi-wan-kenobi/bumblebee-status
+	arch = any
+	license = MIT
+	makedepends = git
+	depends = python
+	depends = python-netifaces
+	depends = python-psutil
+	depends = python-requests
+	optdepends = xorg-xbacklight: to display a displays brightness
+	optdepends = xorg-xset: enable/disable automatic screen locking
+	optdepends = libnotify: enable/disable automatic screen locking
+	optdepends = dnf: display DNF package update information
+	optdepends = xorg-setxkbmap: display/change the current keyboard layout
+	optdepends = redshift: display the redshifts current color
+	optdepends = pulseaudio: control pulseaudio sink/sources
+	optdepends = xorg-xrandr: enable/disable screen outputs
+	optdepends = pacman: display current status of pacman
+	optdepends = iputils: display a ping
+	optdepends = python-i3ipc: display titlebar
+	optdepends = fakeroot: dependency of the pacman module
+	optdepends = python-pytz: timezone conversion for datetimetz module
+	optdepends = python-tzlocal: retrieve system timezone for datetimetz module
+	provides = bumblebee-status
+	conflicts = bumblebee-status
+	source = git+https://github.com/tobi-wan-kenobi/bumblebee-status
+	md5sums = SKIP
+
+pkgname = bumblebee-status-git
+

@@ -1,0 +1,26 @@
+pkgbase = python-camelot
+	pkgdesc = A Python library to extract tabular data from PDFs
+	pkgver = 0.11.0
+	pkgrel = 1
+	url = https://github.com/camelot-dev/camelot
+	arch = any
+	license = MIT
+	makedepends = python-setuptools
+	depends = ghostscript
+	depends = python-chardet
+	depends = python-click
+	depends = python-ghostscript
+	depends = python-matplotlib
+	depends = python-numpy
+	depends = python-opencv
+	depends = python-openpyxl
+	depends = python-pandas
+	depends = python-pdfminer
+	depends = python-pdftopng
+	depends = python-pypdf
+	depends = python-tabulate
+	depends = tk
+	source = camelot-0.11.0.tar.gz::https://github.com/camelot-dev/camelot/archive/v0.11.0.tar.gz
+	sha512sums = 5b34a915979a9b5661a5254e6d0be2198d35530b9bc012b880391f27c0b443e5a9ab68723c2583f66873ffb6ff36a78ac953dedb394d08f08765c72aa95c7054
+
+pkgname = python-camelot

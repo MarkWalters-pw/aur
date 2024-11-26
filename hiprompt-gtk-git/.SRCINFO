@@ -1,0 +1,18 @@
+pkgbase = hiprompt-gtk-git
+	pkgdesc = Legacy GTK3 prompter for Himitsu, do not use
+	pkgver = r2.705ec83
+	pkgrel = 1
+	url = https://sr.ht/~sircmpwn/himitsu
+	arch = x86_64
+	license = GPL-3.0
+	makedepends = meson
+	makedepends = make
+	makedepends = clang
+	makedepends = gtk-layer-shell
+	makedepends = gtk3
+	provides = hiprompt-gtk
+	conflicts = hiprompt-gtk-py-git
+	source = git+https://git.sr.ht/~sircmpwn/hiprompt-gtk
+	sha256sums = SKIP
+
+pkgname = hiprompt-gtk-git

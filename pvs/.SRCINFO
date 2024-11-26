@@ -1,0 +1,15 @@
+pkgbase = pvs
+	pkgdesc = Mechanized environment for formal specification and verification
+	pkgver = 7.1.0
+	pkgrel = 5
+	url = https://pvs.csl.sri.com
+	install = path.install
+	arch = x86_64
+	depends = emacs
+	provides = pvs
+	source = https://pvs.csl.sri.com/downloads/pvs7.1.0-ix86_64-Linux-allegro.tgz
+	source = install-sh.patch
+	sha256sums = 1056856ccd1702a957bb96e374f2f859f3fd41f384aa39db0c04a548121a26c1
+	sha256sums = 45b179ce70aee169bff71cd128eae006dc95ea82d68e85ac90c1f7d2eba5b1c6
+
+pkgname = pvs

@@ -1,0 +1,18 @@
+pkgbase = libconnman-qt-git
+	pkgdesc = Qt Quick wrappers for connman
+	pkgver = 20210114.f5b49d8
+	pkgrel = 1
+	url = https://github.com/sailfishos/libconnman-qt
+	arch = x86_64
+	license = GPL
+	makedepends = qt5-base
+	depends = qt5-tools
+	depends = qt5-base
+	depends = qt5-declarative
+	depends = connman
+	provides = libconnman-qt
+	conflicts = libconnman-qt
+	source = git+https://github.com/sailfishos/libconnman-qt.git
+	sha256sums = SKIP
+
+pkgname = libconnman-qt-git

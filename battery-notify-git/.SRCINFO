@@ -1,0 +1,15 @@
+pkgbase = battery-notify-git
+	pkgdesc = A simple battery notifier for Linux.
+	pkgver = master
+	pkgrel = 3
+	url = https://github.com/cdown/battery-notify
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = cargo
+	provides = battery-notify-git=master
+	conflicts = battery-notify
+	source = battery-notify-git::git+https://github.com/cdown/battery-notify
+	sha256sums = SKIP
+
+pkgname = battery-notify-git

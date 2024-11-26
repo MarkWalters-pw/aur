@@ -1,0 +1,16 @@
+pkgbase = keynav
+	pkgdesc = Ingenious and fast way to move the mouse pointer on the screen with keystrokes.
+	pkgver = 0.20180821.0
+	pkgrel = 2
+	url = https://www.semicomplete.com/projects/keynav/
+	arch = x86_64
+	license = BSD
+	makedepends = git
+	makedepends = perl
+	depends = cairo
+	depends = xdotool
+	depends = libxrandr
+	source = git+https://github.com/jordansissel/keynav#commit=78f9e076
+	md5sums = SKIP
+
+pkgname = keynav

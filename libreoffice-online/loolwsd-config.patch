@@ -1,0 +1,11 @@
+--- a/tools/Config.cpp	2020-10-12 11:40:10.879977858 +0200
++++ b/tools/Config.cpp	2020-10-12 21:02:47.990039366 +0200
+@@ -364,7 +364,7 @@
+     }
+     else if (args[0] == "update-system-template")
+     {
+-        const char command[] = "loolwsd-systemplate-setup /opt/lool/systemplate " LO_PATH " >/dev/null 2>&1";
++        const char command[] = "loolwsd-systemplate-setup /var/lib/lool/systemplate " LO_PATH " >/dev/null 2>&1";
+         std::cout << "Running the following command:" << std::endl
+                   << command << std::endl;
+

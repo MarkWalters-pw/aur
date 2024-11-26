@@ -1,0 +1,21 @@
+pkgbase = mpxmanager
+	pkgdesc = A MPX/Xi2 aware window manager
+	pkgver = 1.2.0
+	pkgrel = 1
+	url = github.com/TAAPArthur/MPXManager
+	arch = any
+	license = MIT
+	makedepends = help2man
+	depends = xorg-server
+	depends = libxi
+	depends = libx11
+	depends = libxcb
+	depends = xcb-util-wm
+	optdepends = xorg-server-xvfb: testing
+	options = staticlibs
+	options = !strip
+	source = mpxmanager-1.2.0.tar.gz::https://github.com/TAAPArthur/MPXManager/archive/1.2.0.tar.gz
+	md5sums = cb250cf3519f48f8b355a3b87dd94001
+
+pkgname = mpxmanager
+

@@ -1,0 +1,16 @@
+pkgbase = xar
+	pkgdesc = eXtensible ARchive format
+	pkgver = 1.6.1
+	pkgrel = 5
+	url = http://mackyle.github.io/xar/
+	arch = i686
+	arch = x86_64
+	license = custom:BSD
+	depends = libxml2
+	depends = openssl-1.0
+	depends = bzip2
+	options = !libtool
+	source = git+https://github.com/tpoechtrager/xar.git
+	md5sums = SKIP
+
+pkgname = xar

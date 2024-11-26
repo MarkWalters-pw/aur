@@ -1,0 +1,22 @@
+pkgbase = mangl-git
+	pkgdesc = graphical man page viewer
+	pkgver = 1.0.3.r0.g4123b26
+	pkgrel = 1
+	url = https://github.com/zigalenarcic/mangl
+	arch = x86_64
+	license = BSD 2-Clause
+	makedepends = git
+	depends = zlib
+	depends = freeglut
+	depends = libgl
+	depends = glu
+	optdepends = fontconfig: set custom font
+	provides = mangl
+	conflicts = mangl
+	source = mangl::git+https://github.com/zigalenarcic/mangl.git
+	source = mangl.desktop
+	sha256sums = SKIP
+	sha256sums = 370e454df24a2bf0bf185988d92083c0ec5bd72548a5fba9c44867e76a1d8d91
+
+pkgname = mangl-git
+

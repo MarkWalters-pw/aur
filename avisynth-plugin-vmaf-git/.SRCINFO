@@ -1,0 +1,19 @@
+pkgbase = avisynth-plugin-vmaf-git
+	pkgdesc = Plugin for Avisynth: vmaf (GIT version)
+	pkgver = 2.1.2.1.g8f9b597
+	pkgrel = 2
+	url = https://github.com/Asd-g/AviSynth-VMAF
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = cmake
+	makedepends = avisynthplus
+	depends = libavisynth.so
+	depends = vmaf
+	provides = avisynth-plugin-vmaf
+	conflicts = avisynth-plugin-vmaf
+	options = debug
+	source = vmaf::git+https://github.com/Asd-g/AviSynth-VMAF.git
+	sha256sums = SKIP
+
+pkgname = avisynth-plugin-vmaf-git

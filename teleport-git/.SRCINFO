@@ -1,0 +1,34 @@
+pkgbase = teleport-git
+	pkgdesc = Modern SSH server for teams managing distributed infrastructure
+	pkgver = r7049.38b24f680
+	pkgrel = 1
+	url = https://github.com/gravitational/teleport
+	install = teleport.install
+	arch = i386
+	arch = x86_64
+	arch = armv7h
+	arch = aarch64
+	license = Apache
+	makedepends = go>=1.16.0,
+	makedepends = git
+	makedepends = rust
+	depends = glibc
+	provides = tctl
+	provides = tsh
+	source = teleport-git::git+https://github.com/gravitational/teleport.git
+	source = teleport.service
+	source = teleport@.service
+	source = teleport.install
+	sha256sums = SKIP
+	sha256sums = 10ac25cea1b5c193d7f968ca28a1da0e54b847f29c2a0186b46fd853194be38a
+	sha256sums = 4bc17fdde981f91c5d9972ae0555ee5e8b63a6b67e007c28f83ada80823980fd
+	sha256sums = ce2dd61cae3c0c3684e7e629f98b77551e66ddedca2194250a34f0efbc674f3a
+
+pkgname = teleport-git
+	install = teleport.install
+	replaces = teleport-client
+	replaces = teleport-client-git
+
+pkgname = teleport-client-git
+	replaces = teleport
+	replaces = teleport-git

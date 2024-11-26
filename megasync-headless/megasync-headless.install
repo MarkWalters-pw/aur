@@ -1,0 +1,13 @@
+# This is a default template for a post-install scriptlet.
+# Uncomment only required functions and remove any functions
+# you don't need (and this header).
+
+# arg 1:  the new package version
+post_install() {
+usr/bin/echo "******************************************************************"
+usr/bin/echo "   SET YOUR CREDENTIALS IN /etc/conf.d/megasync.conf"
+usr/bin/echo " "
+usr/bin/echo "   If the user is non root, ensure that the selected user has"
+usr/bin/echo "   permissions on the working directory and the local directories."
+usr/bin/echo "******************************************************************"
+}

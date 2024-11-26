@@ -1,0 +1,19 @@
+pkgbase = rpmrebuild
+	pkgdesc = A tool to build an RPM file from an existing package that has already been installed.
+	pkgver = 2.15.1
+	pkgrel = 1
+	url = https://sourceforge.net/projects/rpmrebuild
+	changelog = changelog.html
+	arch = any
+	license = GPL
+	makedepends = tar
+	depends = rpm-tools
+	noextract = rpmrebuild-2.15.tar.gz
+	source = https://sourceforge.net/projects/rpmrebuild/files/rpmrebuild/2.15/rpmrebuild-2.15.tar.gz
+	source = https://sourceforge.net/projects/rpmrebuild/files/rpmrebuild/2.15/rpmrebuild-2.15.tar.gz.sig
+	validpgpkeys = 9BBDC9B929A31EE71E1EDD71F52C885AD6F7A56A
+	md5sums = b08f82163304676e19ea540d5aa415f9
+	md5sums = SKIP
+
+pkgname = rpmrebuild
+

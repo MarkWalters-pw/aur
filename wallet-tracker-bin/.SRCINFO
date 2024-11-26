@@ -1,0 +1,20 @@
+pkgbase = wallet-tracker-bin
+	pkgdesc = Detect real scammers from anywhere
+	pkgver = 2.0.4
+	pkgrel = 1
+	url = https://github.com/aydinnyunus/wallet-tracker
+	arch = x86_64
+	arch = aarch64
+	license = Apache-2.0
+	provides = wallet-tracker
+	conflicts = wallet-tracker
+	source = README-2.0.4.md::https://github.com/aydinnyunus/wallet-tracker/raw/v2.0.4/README.md
+	source = LICENSE-2.0.4::https://github.com/aydinnyunus/wallet-tracker/raw/v2.0.4/LICENSE
+	sha256sums = edfa5a00f3665f029a9146a736c43ddc06fae680db352878cd6b17ce9db9e78e
+	sha256sums = c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4
+	source_x86_64 = wallet-tracker-2.0.4-x86_64.tar.gz::https://github.com/aydinnyunus/wallet-tracker/releases/download/v2.0.4/wallet-tracker_2.0.4_linux_amd64.tar.gz
+	sha256sums_x86_64 = 2d79790e5eea9a1f7cc5c7de8032ab34a5d05cec1dfab02e384c12ce32cf1dfb
+	source_aarch64 = wallet-tracker-2.0.4-aarch64.tar.gz::https://github.com/aydinnyunus/wallet-tracker/releases/download/v2.0.4/wallet-tracker_2.0.4_linux_arm64.tar.gz
+	sha256sums_aarch64 = 0f964edd8431ef08a6c23303200721f075fd302929732db45f0b372b100eec3c
+
+pkgname = wallet-tracker-bin

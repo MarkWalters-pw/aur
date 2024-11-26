@@ -1,0 +1,23 @@
+pkgbase = usb2sniffer-qt-git
+	pkgdesc = LambdaConcept lcsniff software for USB2Sniffer hardware
+	pkgver = r160.cf74d49
+	pkgrel = 1
+	url = https://github.com/lambdaconcept/usb2sniffer-qt
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	depends = qt5-base
+	provides = usb2sniffer-qt
+	provides = lcsniff
+	provides = lcsniff-git
+	conflicts = usb2sniffer-qt
+	conflicts = lcsniff
+	source = git+https://github.com/lambdaconcept/usb2sniffer-qt
+	source = git+https://github.com/Simsys/qhexedit2
+	source = lcsniff.desktop
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = e5c124eb54c99e67cea9b8ffce278b40019f9b61de2e6a1081145680c1e7960e
+
+pkgname = usb2sniffer-qt-git
+

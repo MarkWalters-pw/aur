@@ -1,0 +1,18 @@
+pkgbase = aldumb
+	pkgdesc = Allegro 4 glue library for DUMB module player library
+	pkgver = 2.0.3
+	pkgrel = 1
+	url = https://github.com/kode54/dumb
+	arch = x86_64
+	arch = i686
+	license = custom: dumb
+	license = GPL
+	makedepends = cmake
+	makedepends = ninja
+	depends = dumb
+	depends = allegro4
+	source = aldumb-2.0.3.tar.gz::https://github.com/kode54/dumb/archive/2.0.3.tar.gz
+	sha256sums = 99bfac926aeb8d476562303312d9f47fd05b43803050cd889b44da34a9b2a4f9
+
+pkgname = aldumb
+

@@ -1,0 +1,16 @@
+pkgbase = vim-dart-plugin-git
+	pkgdesc = Syntax highlighting for Dart in Vim
+	pkgver = 0.1.0.r42.g940adde
+	pkgrel = 1
+	url = https://github.com/dart-lang/dart-vim-plugin
+	arch = any
+	license = BSD
+	makedepends = git
+	depends = vim-runtime
+	provides = vim-dart-plugin
+	conflicts = vim-dart-plugin
+	source = vim-dart-plugin-git::git+https://github.com/dart-lang/dart-vim-plugin.git
+	sha512sums = SKIP
+
+pkgname = vim-dart-plugin-git
+

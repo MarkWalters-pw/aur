@@ -1,0 +1,21 @@
+pkgbase = prismatik-psieg
+	pkgdesc = A controller for usb driven LED backlights (an unofficial fork)
+	pkgver = 5.11.2.31
+	pkgrel = 1
+	url = https://github.com/psieg/Lightpack
+	install = prismatik.install
+	arch = x86_64
+	license = GPL3
+	makedepends = qt5-tools
+	depends = qt5-serialport
+	depends = hicolor-icon-theme
+	depends = libpulse
+	depends = fftw
+	provides = lightpack
+	provides = prismatik
+	conflicts = lightpack
+	conflicts = prismatik
+	source = https://github.com/psieg/Lightpack/archive/5.11.2.31/prismatik-psieg-5.11.2.31.tar.gz
+	sha256sums = f5441bae1f088ae53bbff69f996d2f97307632d10d338b758eaa939d6b4710a9
+
+pkgname = prismatik-psieg

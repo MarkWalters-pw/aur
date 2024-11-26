@@ -1,0 +1,13 @@
+[Unit]
+Description=SickRage Daemon
+After=network.target
+
+[Service]
+Restart=on-success
+User=sickrage
+Group=sickrage
+ExecStart=/opt/sickrage/app/bin/python /opt/sickrage/app/SiCKRAGE.py --nolaunch --datadir /opt/sickrage/data
+
+[Install]
+WantedBy=multi-user.target
+

@@ -1,0 +1,23 @@
+pkgbase = ros-melodic-forward-command-controller
+	pkgdesc = ROS - forward_command_controller.
+	pkgver = 0.17.2
+	pkgrel = 2
+	url = https://github.com/ros-controls/ros_controllers/wiki
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-melodic-realtime-tools
+	makedepends = ros-melodic-catkin
+	makedepends = ros-melodic-hardware-interface
+	makedepends = ros-melodic-controller-interface
+	makedepends = ros-melodic-std-msgs
+	depends = ros-melodic-controller-interface
+	depends = ros-melodic-realtime-tools
+	depends = ros-melodic-std-msgs
+	depends = ros-melodic-hardware-interface
+	source = ros-melodic-forward-command-controller-0.17.2.tar.gz::https://github.com/ros-controls/ros_controllers/archive/0.17.2.tar.gz
+	sha256sums = fdd93a3aea7d140b1c04849790e81195f76fb421c7dfa51c86dcf22698f32b3e
+
+pkgname = ros-melodic-forward-command-controller
+

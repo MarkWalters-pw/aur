@@ -1,0 +1,29 @@
+pkgbase = pantheon-camera-git
+	pkgdesc = The Pantheon Camera Application
+	pkgver = 1.0.6.r91.gf856989
+	pkgrel = 1
+	url = https://github.com/elementary/camera
+	arch = x86_64
+	groups = pantheon-unstable
+	license = GPL3
+	makedepends = git
+	makedepends = granite
+	makedepends = intltool
+	makedepends = meson
+	makedepends = vala
+	makedepends = appstream
+	depends = clutter
+	depends = clutter-gst
+	depends = clutter-gtk
+	depends = gstreamer
+	depends = gtk3
+	depends = libcanberra
+	depends = libgranite.so
+	depends = libhandy
+	provides = pantheon-camera
+	conflicts = pantheon-camera
+	source = pantheon-camera::git+https://github.com/elementary/camera.git
+	sha256sums = SKIP
+
+pkgname = pantheon-camera-git
+

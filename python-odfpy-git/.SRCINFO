@@ -1,0 +1,19 @@
+pkgbase = python-odfpy-git
+	pkgdesc = Python API and tools to manipulate OpenDocument files
+	pkgver = 1.4.2.r1.g574f0fa
+	pkgrel = 1
+	url = https://github.com/eea/odfpy/
+	arch = any
+	license = GPL
+	license = Apache
+	checkdepends = python-pytest
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python-defusedxml
+	source = odfpy::git+https://github.com/eea/odfpy/
+	sha256sums = SKIP
+
+pkgname = python-odfpy-git

@@ -1,0 +1,23 @@
+--- cmocka-1.1.7/src/CMakeLists.txt	2023-02-23 15:05:42.000000000 +0100
++++ patched/src/CMakeLists.txt	2023-06-02 20:57:57.103331604 +0200
+@@ -78,7 +78,7 @@
+         NAMESPACE cmocka::
+         DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/cmocka)
+ 
+-if (UNIT_TESTING)
++#if (UNIT_TESTING)
+     # Internal library
+     add_library(cmocka-static STATIC ${cmocka_SRCS})
+ 
+@@ -103,4 +103,10 @@
+     target_link_libraries(cmocka-static PRIVATE ${CMOCKA_LINK_LIBRARIES})
+ 
+     add_library(cmocka::static ALIAS cmocka-static)
+-endif()
++#endif()
++
++install(TARGETS cmocka-static
++        ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
++        LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
++        RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
++        COMPONENT ${PROJECT_NAME})

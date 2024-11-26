@@ -1,0 +1,18 @@
+pkgbase = ruby-lint
+	pkgdesc = A linter and static code analysis tool for Ruby
+	pkgver = 2.3.1
+	pkgrel = 2
+	url = https://gitlab.com/yorickpeterse/ruby-lint
+	arch = any
+	license = MPL
+	makedepends = rubygems
+	makedepends = ruby-rdoc
+	depends = ruby
+	depends = ruby-parser
+	depends = ruby-slop
+	noextract = ruby-lint-2.3.1.gem
+	options = !emptydirs
+	source = https://rubygems.org/downloads/ruby-lint-2.3.1.gem
+	b2sums = 71f3e221c84a74ba072d427829dc50caf32baa5980385d1b6389d24efaa6d5cfc4c753f58bf19c671f24d33be4eb43fcead49bff14e86bedac324dcaa6078bce
+
+pkgname = ruby-lint

@@ -1,0 +1,28 @@
+pkgbase = kicad-library-git
+	pkgdesc = KiCad footprint, symbol and template libraries
+	pkgver = 5.1.6.r202.g2ba0d5cb6
+	pkgrel = 1
+	url = https://gitlab.com/kicad/libraries
+	arch = any
+	license = CC-BY-SA 4.0
+	makedepends = cmake
+	makedepends = ninja
+	makedepends = git
+	provides = kicad-library
+	conflicts = kicad-library
+	conflicts = kicad-templates
+	conflicts = kicad-templates-git
+	conflicts = kicad-symbols-git
+	conflicts = kicad-symbols
+	conflicts = kicad-footprints
+	conflicts = kicad-footprints-git
+	options = !strip
+	source = git+https://gitlab.com/kicad/libraries/kicad-templates.git
+	source = git+https://gitlab.com/kicad/libraries/kicad-footprints.git
+	source = git+https://gitlab.com/kicad/libraries/kicad-symbols.git
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = kicad-library-git
+

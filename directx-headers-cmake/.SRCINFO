@@ -1,0 +1,16 @@
+pkgbase = directx-headers-cmake
+	pkgdesc = DirectX headers for using D3D12 (Provides CMake config)
+	pkgver = 1.611.0
+	pkgrel = 1
+	url = https://github.com/microsoft/DirectX-Headers
+	arch = x86_64
+	license = MIT
+	makedepends = cmake
+	makedepends = meson
+	makedepends = ninja
+	provides = directx-headers
+	conflicts = directx-headers
+	source = directx-headers-1.611.0.tar.gz::https://github.com/microsoft/DirectX-Headers/archive/refs/tags/v1.611.0.tar.gz
+	sha256sums = edb8b52b1379f841df5d0d5e11dde08e0c3912508179fb3711f163382e88865c
+
+pkgname = directx-headers-cmake

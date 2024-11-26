@@ -1,0 +1,30 @@
+#!/bin/bash
+
+build() {
+    add_module "tpm_tis"
+    add_binary "/usr/bin/tpm_unsealdata" "/usr/bin/tpm_unsealdata"
+    add_binary "/usr/bin/tpm_version" "/usr/bin/tpm_version"
+    add_binary "/usr/sbin/tcsd" "/usr/bin/tcsd"
+
+    add_dir "/var/lib/tpm"
+    add_file "/var/lib/tpm/system.data"
+    add_file "/usr/lib/initcpio/tpm/hosts" "/etc/hosts"
+    add_file "/usr/lib/initcpio/tpm/passwd" "/etc/passwd"
+    add_file "/usr/lib/libnss_files.so.2"
+
+    add_runscript
+}
+
+help() {
+    cat <<HELPEOF
+This hook allows for an encrypted root device to use a key file sealed by the
+TPM. It should be placed immediately before the 'encrypt' hook.
+
+After generating a TPM-sealed keyfile, 'tpmkey=device:fstype:path' should be
+specified on the kernel cmdline, where 'device' represents the raw block device
+where the key exists, 'fstype' is the filesystem type of 'device' (or auto),
+and 'path' is the absolute path of the keyfile within the device.
+HELPEOF
+}
+
+# vim: set ft=sh ts=4 sw=4 et:

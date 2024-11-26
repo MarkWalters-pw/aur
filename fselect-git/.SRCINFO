@@ -1,0 +1,17 @@
+pkgbase = fselect-git
+	pkgdesc = Find files with SQL-like queries
+	pkgver = 0.7.6.r0.g5013085
+	pkgrel = 2
+	url = https://github.com/jhspetersson/fselect
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = rust
+	makedepends = git
+	depends = gcc-libs
+	provides = fselect
+	conflicts = fselect
+	source = fselect-git::git+https://github.com/jhspetersson/fselect.git
+	md5sums = SKIP
+
+pkgname = fselect-git

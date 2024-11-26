@@ -1,0 +1,18 @@
+pkgbase = q5go-git
+	pkgdesc = Everyday SGF editor for Go players
+	pkgver = 20220603.077f0c1
+	pkgrel = 1
+	url = https://github.com/bernds/q5go
+	arch = i686
+	arch = x86_64
+	arch = armv7h
+	license = GPL
+	makedepends = git
+	depends = qt5-multimedia
+	depends = qt5-svg
+	provides = q5go
+	conflicts = q5go
+	source = git+https://github.com/bernds/q5go.git
+	sha256sums = SKIP
+
+pkgname = q5go-git

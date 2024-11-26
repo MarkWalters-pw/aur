@@ -1,0 +1,9 @@
+post_install () {
+chown -R root:root /var/roon
+chown -R root:root /opt/RoonBridge
+}
+
+post_upgrade() {
+chown -R root:root /var/roon
+chown -R root:root /opt/RoonBridge
+}

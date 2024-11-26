@@ -1,0 +1,24 @@
+pkgbase = radicle-cli-git
+	pkgdesc = Radicle command line interface
+	pkgver = 20241105.f6aa46a2
+	pkgrel = 4
+	url = https://radicle.xyz
+	arch = x86_64
+	arch = aarch64
+	license = MIT
+	license = Apache-2.0
+	makedepends = cargo
+	makedepends = asciidoctor
+	depends = gcc-libs
+	depends = glibc
+	depends = zlib
+	depends = git>=2.34.0
+	depends = openssh
+	provides = radicle-cli
+	provides = radicle-node
+	conflicts = radicle-cli
+	conflicts = radicle-node
+	source = heartwood::git+https://seed.radicle.xyz/z3gqcJUoA1n9HaHKufZs5FCSGazv5.git
+	sha512sums = SKIP
+
+pkgname = radicle-cli-git

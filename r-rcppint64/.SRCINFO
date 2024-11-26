@@ -1,0 +1,19 @@
+pkgbase = r-rcppint64
+	pkgdesc = 'Rcpp'-Based Helper Functions to Pass 'Int64' and 'nanotime' Values Between 'R' and 'C++'
+	pkgver = 0.0.5
+	pkgrel = 1
+	url = https://cran.r-project.org/package=RcppInt64
+	arch = x86_64
+	license = GPL-2.0-or-later
+	checkdepends = r-bit64
+	checkdepends = r-nanotime
+	checkdepends = r-tinytest
+	depends = r-rcpp
+	optdepends = r-bit64
+	optdepends = r-nanotime
+	optdepends = r-tinytest
+	source = https://cran.r-project.org/src/contrib/RcppInt64_0.0.5.tar.gz
+	md5sums = bb09a98676afb93f4ccef916addb1f82
+	b2sums = e2b035c8581156952d8a28711041d43d1df02effc8ac49e4c2ba0cf295ddb4120dde021a8a58806bf2ed5d01fc74aecac55870c7bf5d427b27a8bed758d5fe81
+
+pkgname = r-rcppint64

@@ -1,0 +1,13 @@
+pkgbase = acme.sh-systemd
+	pkgdesc = A systemd units for renew certificates acquired via acme.sh
+	pkgver = 0.1.2
+	pkgrel = 2
+	url = https://github.com/unknowndevQwQ/acme.sh-systemd
+	arch = any
+	license = LGPL3
+	depends = systemd>=240
+	depends = acme.sh
+	source = acme.sh-systemd-0.1.2.tar.gz::https://github.com/unknowndevQwQ/acme.sh-systemd/archive/0.1.2.tar.gz
+	sha512sums = 086d3c4c2209912f314a3391c52811811a774cdcb079038299bba8e56d2a9236bdcc46705b1335e33a5524cff1bde7744b7ccabed6c3c9b57d2e69a43504e530
+
+pkgname = acme.sh-systemd

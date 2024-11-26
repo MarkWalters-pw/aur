@@ -1,0 +1,20 @@
+pkgbase = trojan-go-git
+	pkgver = 0.8.2.r0.gd051cf4
+	pkgrel = 1
+	url = https://github.com/p4gefau1t/trojan-go
+	arch = x86_64
+	license = GPL3
+	makedepends = go
+	makedepends = git
+	makedepends = hugo
+	source = trojan-go::git+https://github.com/p4gefau1t/trojan-go.git
+	sha512sums = SKIP
+
+pkgname = trojan-go-git
+	pkgdesc = A Trojan proxy written in Go (git version).
+	depends = glibc
+	depends = v2ray-geoip
+	depends = v2ray-domain-list-community
+	provides = trojan-go
+	conflicts = trojan-go
+

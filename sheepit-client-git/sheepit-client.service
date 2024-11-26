@@ -1,0 +1,22 @@
+[Unit]
+Description=Client for the free and distributed render farm SheepIt
+Documentation=https://www.sheepit-renderfarm.com/
+After=network.target
+
+[Service]
+User=sheepit-client
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateDevices=true
+ProtectKernelTunables=true
+ProtectControlGroups=true
+RestrictNamespaces=true
+CacheDirectory=sheepit-client/
+CacheDirectoryMode=700
+ExecStart=/usr/bin/sheepit-client -config /etc/conf.d/sheepit-client
+RestartSec=60
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

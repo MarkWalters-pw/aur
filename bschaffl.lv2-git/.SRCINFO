@@ -1,0 +1,26 @@
+pkgbase = bschaffl.lv2-git
+	pkgdesc = Pattern-controlled MIDI amp & time stretch plugin to produce shuffle / swing effects (git version)
+	pkgver = 1.4.10.r4.g128c646
+	pkgrel = 1
+	url = https://github.com/sjaehn/BSchaffl
+	arch = x86_64
+	groups = lv2-plugins
+	groups = pro-audio
+	license = GPL3
+	checkdepends = lv2lint
+	makedepends = git
+	makedepends = lv2
+	depends = cairo
+	depends = gcc-libs
+	depends = glibc
+	depends = libx11
+	provides = bschaffl
+	provides = bschaffl=1.4.10
+	provides = bschaffl.lv2
+	provides = bschaffl.lv2=1.4.10
+	conflicts = bschaffl
+	conflicts = bschaffl.lv2
+	source = bschaffl.lv2::git+https://github.com/sjaehn/BSchaffl
+	md5sums = SKIP
+
+pkgname = bschaffl.lv2-git

@@ -1,0 +1,18 @@
+pkgbase = gawk-git
+	pkgdesc = GNU version of awk
+	pkgver = 5.2.1.r271.gc71ae933
+	pkgrel = 1
+	url = https://www.gnu.org/software/gawk/
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	depends = glibc
+	depends = mpfr
+	provides = gawk=5.2.1.r271.gc71ae933
+	provides = awk
+	conflicts = gawk
+	source = git+https://git.savannah.gnu.org/git/gawk.git
+	sha256sums = SKIP
+
+pkgname = gawk-git

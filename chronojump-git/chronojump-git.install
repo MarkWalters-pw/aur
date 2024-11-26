@@ -1,0 +1,10 @@
+post_install() {
+    echo "NOTE: In order to run Chronojump with Chronopic as normal user"
+    echo "      make sure to add your user to the 'uucp' group"
+    echo ""
+}
+
+post_upgrade() {
+    post_install
+}
+

@@ -1,0 +1,25 @@
+pkgbase = rnote-git
+	pkgdesc = A simple drawing application to create handwritten notes
+	pkgver = 0.6.0.r4.g13a5c565
+	pkgrel = 1
+	url = https://github.com/flxzt/rnote
+	arch = x86_64
+	license = GPL3
+    depends = gtk4
+    depends = glib2
+    depends = libadwaita
+    depends = poppler-glib
+    depends = gstreamer
+    depends = alsa-lib
+    makedepends = meson
+    makedepends = cargo
+    makedepends = cmake
+    makedepends = clang
+    makedepends = git
+	provides = rnote
+	conflicts = rnote
+	options = !lto
+	source = rnote::git+https://github.com/flxzt/rnote.git
+	b2sums = SKIP
+
+pkgname = rnote-git

@@ -1,0 +1,29 @@
+--- /etc/grub.d/10_linux
++++ /etc/grub.d/10_linux
+@@ -206,6 +206,26 @@
+ 
+ reverse_sorted_list=$(echo $list | tr ' ' '\n' | sed -e 's/\.old$/ 1/; / 1$/! s/$/ 2/' | version_sort -r | sed -e 's/ 1$/.old/; s/ 2$//')
+ 
++default_kernel_present=false
++default_kernel_name="/boot/vmlinuz-linux"
++for linux in ${reverse_sorted_list}; do
++  if [ "x$linux" = "x$default_kernel_name" ]; then
++    default_kernel_present=true
++  fi
++done
++
++if [ "x$default_kernel_present" = xtrue ]; then
++  reverse_sorted_list=$(
++    echo "$default_kernel_name"
++    for linux in ${reverse_sorted_list}; do
++      if [ "x$linux" = "x$default_kernel_name" ];
++	then continue;
++      fi
++      echo "$linux"
++    done
++  )
++fi
++
+ is_top_level=true
+ for linux in ${reverse_sorted_list}; do
+   gettext_printf "Found linux image: %s\n" "$linux" >&2

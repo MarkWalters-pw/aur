@@ -1,0 +1,21 @@
+pkgbase = openfpgaloader-git
+	pkgdesc = Universal utility for programming FPGA
+	pkgver = nightly.r.0.gfab58d7
+	pkgrel = 1
+	url = https://github.com/trabucayre/openFPGALoader
+	arch = x86_64
+	license = APACHE
+	makedepends = cmake
+	makedepends = libusb
+	makedepends = systemd
+	makedepends = git
+	depends = libftdi
+	depends = libftdi-compat
+	depends = libhidapi-libusb.so
+	depends = libudev.so
+	provides = openfpgaloader
+	conflicts = openfpgaloader
+	source = openfpgaloader-git-nightly.r.0.gfab58d7::git+https://github.com/trabucayre/openFPGALoader
+	md5sums = SKIP
+
+pkgname = openfpgaloader-git

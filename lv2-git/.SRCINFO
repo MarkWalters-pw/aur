@@ -1,0 +1,37 @@
+pkgbase = lv2-git
+	pkgdesc = Plugin standard for audio systems (git version)
+	pkgver = 1.18.8.r1419.bd69ed7
+	pkgrel = 1
+	url = http://lv2plug.in/
+	arch = i686
+	arch = x86_64
+	license = ISC
+	makedepends = asciidoc
+	makedepends = codespell
+	makedepends = doxygen
+	makedepends = flake8
+	makedepends = git
+	makedepends = libsndfile
+	makedepends = meson
+	makedepends = pygmentize
+	makedepends = python-black
+	makedepends = python-lxml
+	makedepends = python-markdown
+	makedepends = python-pygments
+	makedepends = python-pylint
+	makedepends = python-rdflib
+	makedepends = serd
+	makedepends = sord
+	optdepends = sord: for lv2_validate
+	optdepends = libsndfile: for eg-sampler.lv2
+	optdepends = python-lxml: for lv2specgen.py
+	optdepends = python-markdown: for lv2specgen.py
+	optdepends = python-pygments: for lv2specgen.py
+	optdepends = python-rdflib: for lv2specgen.py
+	provides = lv2
+	provides = lv2=1.18.8
+	conflicts = lv2
+	source = lv2::git+https://gitlab.com/lv2/lv2.git
+	sha256sums = SKIP
+
+pkgname = lv2-git

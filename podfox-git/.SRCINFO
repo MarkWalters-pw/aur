@@ -1,0 +1,23 @@
+pkgbase = podfox-git
+	pkgdesc = Catch and manage podcasts from the terminal
+	pkgver = r92.0ec75cb
+	pkgrel = 1
+	url = https://github.com/brtmr/podfox
+	arch = any
+	license = GPL3
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = python-setuptools
+	depends = python-colorama
+	depends = python-docopt
+	depends = python-feedparser
+	depends = python-pycurl
+	depends = python-requests
+	provides = podfox
+	conflicts = podfox
+	source = podfox-git::git+https://github.com/brtmr/podfox.git
+	md5sums = SKIP
+
+pkgname = podfox-git

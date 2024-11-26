@@ -1,0 +1,16 @@
+pkgbase = snowman-git
+	pkgdesc = Native code to C/C++ decompiler (supporting x86, amd64 and arm)
+	pkgver = 0.1.3.r0.gd7dee56c
+	pkgrel = 1
+	url = http://derevenets.com/
+	arch = any
+	license = GPL3
+	makedepends = git
+	makedepends = cmake
+	makedepends = boost
+	depends = qt5-base
+	source = snowman-git::git://github.com/yegord/snowman.git
+	sha512sums = SKIP
+
+pkgname = snowman-git
+

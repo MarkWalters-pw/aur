@@ -1,0 +1,20 @@
+pkgbase = linux-usermode-nokmod
+	pkgdesc = User mode Linux kernel, without modules
+	pkgver = 5.19.12
+	pkgrel = 1
+	url = http://user-mode-linux.sourceforge.net/
+	arch = x86_64
+	license = GPL2
+	makedepends = bc
+	makedepends = inetutils
+	depends = coreutils
+	source = https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.19.12.tar.xz
+	source = https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.19.12.tar.sign
+	source = config
+	validpgpkeys = ABAF11C65A2970B130ABE3C479BE3E4300411886
+	validpgpkeys = 647F28654894E3BD457199BE38DBBDC86092693E
+	sha256sums = c436a548c7312ce6fc5a3472cbead895eef8f52841fbe7c71fd8e48bdfe2b0ba
+	sha256sums = SKIP
+	sha256sums = 83a1d38f1dd1fc5cf3887f8b316a72a8a2761b54c33d1993212d857363e31a10
+
+pkgname = linux-usermode-nokmod

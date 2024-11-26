@@ -1,0 +1,14 @@
+pkgbase = docker-machine-vultr
+	pkgdesc = Vultr driver for docker-machine
+	pkgver = 1.4.0
+	pkgrel = 3
+	url = https://github.com/janeczku/docker-machine-vultr/
+	arch = x86_64
+	license = MIT
+	depends = docker-machine
+	optdepends = docker: to manage the containers in the machine
+	source = docker-machine-driver-vultr::https://github.com/janeczku/docker-machine-vultr/releases/download/v1.4.0/docker-machine-driver-vultr-Linux-x86_64
+	sha256sums = 46bc306ed8dc4c301b06352db370605bd589da9957565a03dc81a44b5d4788c0
+
+pkgname = docker-machine-vultr
+

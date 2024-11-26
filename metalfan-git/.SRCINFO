@@ -1,0 +1,16 @@
+pkgbase = metalfan-git
+	pkgdesc = Fan control script
+	pkgver = r3.cf19af1
+	pkgrel = 1
+	url = https://github.com/Streetwalrus/metalfan
+	arch = any
+	license = MIT
+	depends = python
+	depends = python-attrs
+	depends = python-toml
+	backup = etc/metalfan.toml
+	source = git+https://github.com/Streetwalrus/metalfan.git
+	sha256sums = SKIP
+
+pkgname = metalfan-git
+

@@ -1,0 +1,16 @@
+pkgbase = gpxtools-git
+	pkgdesc = A collection of command line tools for using GPX files
+	pkgver = r58.3a3276e
+	pkgrel = 1
+	url = https://notabug.org/irdvo/gpxtools
+	arch = x86_64
+	license = GPL3
+	makedepends = cmake
+	makedepends = git
+	depends = exiv2
+	provides = gpxtools=r58.3a3276e
+	conflicts = gpxtools
+	source = gpxtools-master::git+https://notabug.org/irdvo/gpxtools.git#branch=master
+	sha256sums = SKIP
+
+pkgname = gpxtools-git

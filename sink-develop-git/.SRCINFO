@@ -1,0 +1,24 @@
+pkgbase = sink-develop-git
+	pkgdesc = An offline-caching, synchronization and indexing system for PIM data (development branch)
+	pkgver = r2484.0e08b053
+	pkgrel = 1
+	url = https://github.com/KDE/sink
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = extra-cmake-modules
+	makedepends = git
+	makedepends = clang
+	depends = qt5-base
+	depends = kimap2-git
+	depends = kasync-git
+	depends = kdav2
+	depends = kcontacts
+	depends = flatbuffers
+	provides = sink
+	conflicts = sink
+	source = git://anongit.kde.org/sink.git#branch=develop
+	sha256sums = SKIP
+
+pkgname = sink-develop-git
+

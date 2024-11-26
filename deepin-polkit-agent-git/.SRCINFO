@@ -1,0 +1,25 @@
+pkgbase = deepin-polkit-agent-git
+	pkgdesc = Deepin Polkit Agent
+	pkgver = 5.5.21.r7.g2f9964c
+	pkgrel = 1
+	url = https://github.com/linuxdeepin/dde-polkit-agent
+	arch = x86_64
+	arch = aarch64
+	groups = deepin-git
+	license = GPL3
+	makedepends = git
+	makedepends = polkit-qt5
+	makedepends = dtkcommon-git
+	makedepends = dtkwidget-git
+	makedepends = cmake
+	makedepends = ninja
+	depends = deepin-qt-dbus-factory-git
+	depends = startdde-git
+	depends = polkit-qt5
+	depends = dtkwidget-git
+	provides = deepin-polkit-agent
+	conflicts = deepin-polkit-agent
+	source = deepin-polkit-agent-git::git+https://github.com/linuxdeepin/dde-polkit-agent
+	sha512sums = SKIP
+
+pkgname = deepin-polkit-agent-git

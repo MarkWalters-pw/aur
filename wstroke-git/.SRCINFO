@@ -1,0 +1,25 @@
+pkgbase = wstroke-git
+	pkgdesc = a mouse gesture plug-in for wayfire. port of easystroke
+	pkgver = 20231112.de90ba4
+	pkgrel = 1
+	url = https://github.com/dkondor/wstroke
+	arch = x86_64
+	license = ISC
+	makedepends = git
+	makedepends = meson
+	makedepends = ninja
+	makedepends = vala
+	depends = wayfire>=0.8.0
+	depends = nlohmann-json
+	depends = glib2
+	depends = gtk3
+	depends = gtkmm3
+	depends = boost-libs
+	optdepends = wcm
+	optdepends = libinput>=1.70
+	provides = wstroke
+	conflicts = wstroke
+	source = git+https://github.com/dkondor/wstroke
+	sha256sums = SKIP
+
+pkgname = wstroke-git

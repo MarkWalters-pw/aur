@@ -1,0 +1,18 @@
+pkgbase = purple-facebook-git
+	pkgdesc = Facebook protocol plugin for libpurple
+	pkgver = 0.9.6.r8.g1a6711f
+	pkgrel = 1
+	url = https://github.com/dequis/purple-facebook/
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = mercurial
+	makedepends = git
+	depends = libpurple
+	depends = json-glib
+	provides = purple-facebook
+	conflicts = purple-facebook
+	source = purple-facebook::git+https://github.com/dequis/purple-facebook
+	sha512sums = SKIP
+
+pkgname = purple-facebook-git

@@ -1,0 +1,16 @@
+pkgbase = radicale-dovecot-auth
+	pkgdesc = Dovecot auth for radicale
+	pkgver = 0.4.1
+	pkgrel = 1
+	url = https://github.com/Arvedui/radicale-dovecot-auth
+	arch = any
+	license = GPL3
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python
+	depends = radicale
+	conflicts = radicale-dovecot-auth-git
+	source = radicale-dovecot-auth-0.4.1.tar.gz::https://github.com/Arvedui/radicale-dovecot-auth/archive/v0.4.1.tar.gz
+	sha256sums = 9aebb8ce78c9ecf86f84c7888cc74bbdf2b3ed6cd931c90f535e5a049ddafdc7
+
+pkgname = radicale-dovecot-auth

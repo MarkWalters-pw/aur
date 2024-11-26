@@ -1,0 +1,8 @@
+set timeout -1
+spawn ./madanalysis5/bin/ma5
+# Number of cores, use default (max)
+expect -ex "   Answer: "
+send -- "\n"
+# Exit
+expect -ex "ma5>"
+send -- "exit\n"

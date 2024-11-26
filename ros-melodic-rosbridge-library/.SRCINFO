@@ -1,0 +1,34 @@
+pkgbase = ros-melodic-rosbridge-library
+	pkgdesc = ROS - The core rosbridge package, repsonsible for interpreting JSON and performing the appropriate ROS action, like subscribe, publish, call service, and interact with params.
+	pkgver = 0.11.13
+	pkgrel = 2
+	url = https://wiki.ros.org/rosbridge_library
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-melodic-catkin
+	makedepends = ros-melodic-std-msgs
+	makedepends = ros-melodic-geometry-msgs
+	makedepends = ros-melodic-message-generation
+	makedepends = python-pillow
+	makedepends = python-pymongo
+	depends = ros-melodic-rospy
+	depends = ros-melodic-roscpp
+	depends = ros-melodic-rosgraph
+	depends = ros-melodic-rosservice
+	depends = ros-melodic-rostopic
+	depends = ros-melodic-std-msgs
+	depends = ros-melodic-geometry-msgs
+	depends = ros-melodic-message-runtime
+	depends = python-pillow
+	depends = python-pymongo
+	source = ros-melodic-rosbridge-library-0.11.13.tar.gz::https://github.com/RobotWebTools/rosbridge_suite/archive/0.11.13.tar.gz
+	sha256sums = e4989b48efce2f101aca6761102b0f9618ecc31a590039b641b35a08fc91d6db
+
+pkgname = ros-melodic-rosbridge-library
+

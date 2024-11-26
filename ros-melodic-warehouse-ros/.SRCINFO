@@ -1,0 +1,32 @@
+pkgbase = ros-melodic-warehouse-ros
+	pkgdesc = ROS - Persistent storage of ROS messages.
+	pkgver = 0.9.4
+	pkgrel = 4
+	url = https://wiki.ros.org/warehouse_ros
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-melodic-tf
+	makedepends = ros-melodic-std-msgs
+	makedepends = ros-melodic-roscpp
+	makedepends = ros-melodic-catkin
+	makedepends = ros-melodic-pluginlib
+	makedepends = ros-melodic-geometry-msgs
+	makedepends = ros-melodic-rostime
+	depends = ros-melodic-tf
+	depends = ros-melodic-std-msgs
+	depends = ros-melodic-roscpp
+	depends = ros-melodic-pluginlib
+	depends = ros-melodic-geometry-msgs
+	depends = ros-melodic-rostime
+	depends = boost1.69
+	source = ros-melodic-warehouse-ros-0.9.4.tar.gz::https://github.com/ros-planning/warehouse_ros/archive/0.9.4.tar.gz
+	sha256sums = 1f9bfebd8415f67d0fd0123385d8329cee29bc2f80e7b3f06c30c1a807eb2717
+
+pkgname = ros-melodic-warehouse-ros
+

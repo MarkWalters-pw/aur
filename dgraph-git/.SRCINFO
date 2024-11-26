@@ -1,0 +1,22 @@
+pkgbase = dgraph-git
+	pkgdesc = Fast, transactional, distributed graph database
+	pkgver = 20.11.0.rc1.r320.g3642fed5d
+	pkgrel = 1
+	url = https://github.com/dgraph-io/dgraph
+	arch = x86_64
+	license = APACHE
+	license = custom:DCL
+	makedepends = go
+	makedepends = git
+	provides = dgraph
+	conflicts = dgraph
+	conflicts = dgraph-bin
+	source = dgraph-git::git+https://github.com/dgraph-io/dgraph#branch=master
+	source = dgraph.service
+	source = dgraph-zero.service
+	sha256sums = SKIP
+	sha256sums = 4ef9bc0e7b2b6d1e6adaef343164f974685bbf2538c9c1ed26ea82d7dddb6974
+	sha256sums = 402c5a022615f47d26db47f375f242638d04abbed3bfd22f86067f8f19031f83
+
+pkgname = dgraph-git
+

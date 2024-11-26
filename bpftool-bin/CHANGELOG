@@ -1,0 +1,237 @@
+# Changes in version 7.4.0:
+
+### Breaking change
+
+- Kernel configuration options related to bpfilter (namely: CONFIG_BPFILTER and
+CONFIG_BPFILTER_UMH) are no longer checked with bpftool feature probe, following
+bpfilter's removal in recent kernels. (e725e62)
+
+### New features
+
+The information displayed for BPF links (bpftool link list) keeps getting enriched:
+
+- Display uprobe_multi links. (dd0b761)
+- Display cookie for perf event link probes. (25df69b)
+- Display cookie for kprobe_multi links. (4263cc0)
+
+Other features:
+
+- Generate shadow variables for struct_ops maps in program skeletons. Shadow types
+allow skeleton users to easily access the fields of struct_ops maps at runtime.
+An example program using shadow types is also added to the bpftool-gen manual
+page. (fc0ad76, 579d6b0)
+
+- Mark orphaned programs as such when listing programs. Orphaned programs are
+programs removed in IRQ context, on their way to be unloaded from kernel memory,
+but possibly passing through audit hooks. Such programs would only be listed on
+recent kernels. (5b0a3a4)
+
+- Recognize arena map types (a09e203) and global variables (73a2c7e), and support
+the addr_space_cast instruction in the disassembler for translated programs,
+used for working with arena maps (c305ebf).
+
+### Bug fixes
+
+- In the mirror repository, fix the detection of clang-bpf-co-re (for skeletons
+support) for some clang versions. (515739f)
+
+- Displaying PIDs for processes holding references to BPF links when listing
+links with bpftool link list on older kernels broke in v7.3.0, because the
+internal program pid_iter would fail to load. Fix the program to ensure that
+pid_iter loads and PIDs are displayed. (3214350)
+
+- When loading the internal pid_iter program for displaying PIDs of processes
+holding file descriptors to BPF programs, we would suppress the logs from
+libbpf. Display them when running bpftool in debug mode (--debug). (0cb4aaf)
+
+### Other internal changes
+
+- Silence build warning from calloc() appearing with recent versions of GCC
+(supporting -Wcalloc-transposed-args). (c4cc180)
+
+- Use POSIX's version of basename() for more portability. (6e0d7d0)
+
+- Improve bpftool's bootstrap build by skipping compilation for some unnecessary
+object files (3dc1ac6) and passing more relevant values in HOST_CFLAGS and
+HOST_LDFLAGS (c1adf4a). This also results in more accurate results when listing
+features with bpftool version for the boostrap bpftool binary.
+
+### Known bugs
+
+- Command bpftool cgroup tree may be broken when running with kernels under
+v6.1. (#41)
+
+- When loading multiple programs with bpftool prog loadall and passing a
+directory name for pinning them that is not located under an existing bpffs,
+bpftool attempts to mount a new bpffs on the parent of the directory rather than
+on the directory itself, possibly leading to a portion of the file arborescence
+to be unexpectedly hidden by the mount. (#100)
+
+
+# Changes in version 7.3.0:
+
+### Deprecation
+
+- Keyword dev for specifying an interface name to use for program and map offload
+  with bpftool prog load ... dev <ifname> and bpftool map create ... dev <ifname>
+  is deprecated. Use offload_dev instead. (3270b21)
+
+### New features
+
+The objective for the above deprecation is to avoid confusion with a new
+interface-related keyword:
+
+- Support passing an interface name with xdpmeta_dev <ifname> for resolving XDP
+  hints kfuncs when loading programs with bpftool prog load. (3270b21)
+
+The information displayed for BPF links (bpftool link list) has been enriched:
+
+- Show map IDs along with struct_ops links. (d89768b)
+- Show target_obj_id and target_btf_id along with tracing links information. (57fc1ef)
+- Show details for multi-kprobes links. (b65dc7b)
+- Show details for perf event links. (bd2f4d6, 7561b06)
+- Show details for netfilter links. (103f441)
+- Show details (interface, attach types) for tcx links. (b76b36e)
+- Show details (interface) for XDP links. (9f6d353)
+- Show details (interface, attach types) for netkit links. (0fcd8de)
+- Show the count of missed kprobes for multi-kprobes links and perf event links. (aa4f5fb, 58046e2)
+
+Several new networking program types also get their information displayed with bpftool net list:
+
+- Print information on netfilter programs. (103f441)
+- Print information on tcx programs. (4294230)
+- Print information on netkit programs. (d712a3e)
+
+Other features:
+
+- Support the new cgroup UNIX socket attach points for attaching programs with
+  bpftool prog attach. These attach points are: connect_unix, sendmsg_unix,
+  recvmsg_unix, getpeername_unix, getsockname_unix. (087d22a)
+- For struct_ops, support registering structs in the .struct_ops.link ELF
+  section (in addition to .struct_ops), and also create a link for structs in that
+  section. Accept an optional directory path when registering struct_ops (bpftool
+  struct_ops register OBJ [LINK_DIR]), to indicate where to pin such links.
+  (9d58b65, 6b24c3e)
+- Dump inner map IDs instead of raw values when dumping maps of maps with
+  bpftool map dump. (e552682)
+- Display kernel module name when relevant for symbols printed as part of a
+  program dump (bpftool prog dump xlated). (eb8a15a)
+- Support LLVM's v4 instructions in the disassembler. (ad25b69)
+
+### Bug fixes
+
+- Fix the long-standing bug (#17) what would prevent from building bpftool with
+  features requiring the use of “skeletons” (feature-clang-bpf-co-re compilation
+  option) with kernels older than 5.15 or without CONFIG_PERF_EVENTS set.
+  (1f5829e, 0773871, fc96090, b00d0c5)
+- On aarch64, when probing features (bpftool feature probe), fix the value of
+  the global memory limit for JIT compiler for unprivileged users, which was
+  previously reported as a negative value (expecting an int instead of a long).
+  (b2489e0)
+- When passing a directory to pin programs to bpftool prog loadall, avoid
+  re-mounting accidentally the bpffs to the parent of that directory. (fb96eed)
+- Fix a warning (-Wcast-qual) that might appear when compiling skeletons
+  generated with bpftool gen. (24f4661)
+- When generating skeletons, align on a 8-byte boundary the data retrieved from
+  ELF files to avoid potential alignment issues and errors from libbpf. (e8b7df5,
+  f12f538)
+- When printing pointers in JSON, for example as part of a struct_ops dump with
+  bpftool -j struct_ops dump, enquote the pointer address (or (nil) value) to
+  avoid breaking JSON. (5978b98)
+- Fix JSON for struct_ops dumps from an ID with bpftool -j struct_ops dump id
+  <id> by wrapping the information for the structs in an array. (b9530de)
+- Fix a subcommand name (prog instead of program) in bpftool.8 manual page.
+  (fa46ebb)
+- Fix the interactive help message for bpftool perf. (dc53c79)
+
+### Known bugs
+
+- Command bpftool cgroup tree may be broken when running with kernels under v6.1 (#41).
+
+
+# Changes in version 7.2.0:
+
+### Breaking change:
+
+- When trying to dump the control flow graph (CFG) for a BPF program (bpftool
+  prog dump xlated <program> visual), return an error if the user passed one of
+  the --json or --pretty options, instead of simply ignoring the option.
+
+### New features
+
+- Support printing the C source code (inline annotations), if available, in the
+  CFGs for programs. Also support line numbers and opcodes in the CFGs with the
+  linum and opcodes keywords, just like for regular program dumps.
+- In the Makefile's feature detection for the mirror repository, output the
+  name, results, and stderr when probing features with V=1.
+
+### Bug fixes
+
+- Fix linkage with statically built LLVM libraries for the disassembler for
+  JIT-compiled BPF programs. Some flags and libraries were missing.
+- With bpftool prog profile, profile online CPUs instead of “possible” CPUs,
+  given that some of the latter may not be online and hence not available for
+  profiling.
+- In BPF-related feature probing, avoid marking kernel config option as not set
+  if the kernel configuration file is not found.
+- In the Makefile, add missing quotes to libbpf bootstrap submake variables, to
+  fix use cases where $(HOSTCC) is set to /usr/bin/ccache /usr/bin/gcc, for
+  example.
+- Fix a bug in the JSON writer, which would produce an escaped line break
+  instead of escaped backslash for a \ character.
+- Fix another bug in the JSON writer, about an invalid JSON escape for \'.
+- Fix bug for long instructions (such as loading a 64-bit long immediate into a
+  register) not displayed properly in program CFG dumps.
+- Fix documentation about line information display for program dumps: the
+  document hinted that displaying the source line could be turn off, and that
+  the file name would be printed “on top of” the source line, but these
+  indications were not accurate.
+- Ignore $(CFLAGS), use $(EXTRA_CFLAGS) in the Makefile's feature detection
+  framework, thus mirroring the behavior of the kernel version. On top of that,
+  fix feature detection for static builds.
+- Fix the feature detection system to account for $(FEATURE_TESTS) defined in
+  the main Makefile.
+
+### Other internal changes
+
+- Add static build instructions for bpftool in the README.md of the mirror
+  repository.
+- Use bpf_{btf,link,map,prog}_get_info_by_fd() (wrappers around
+  bpf_obj_get_info_by_fd()), to improve type safety in the code, and to help
+  with the Memory Sanitizer.
+- Always disable stack protection for building BPF programs used by bpftool. If
+  present, as is the default on Gentoo for example, stack protection for the
+  clang toolchain would produce errors when trying to compile the relevant object
+  files, but stack protection is not relevant in the case of BPF programs and it
+  is safe to turn it off.
+
+### CI
+
+- Add a release workflow to build and ship static binaries for amd64 and arm64
+  (and SHA256 sums) on releases (the workflow creates a draft release when tags
+  are pushed, and attaches the assets). Also use this workflow to ship a tarball
+  containing all sources required to compile (bpftool, plus libbpf submodule).
+  Add a script to update GitHub labels for some of these release assets.
+- Add a workflow for static builds with both LLVM and libbfd disassemblers. The
+  early version for the LLVM disassembler would include compiling the LLVM
+  libraries and take around 80 minutes to complete, but later we switched to
+  downloading libraries compatible with static linking from LLVM's CI, cutting
+  down the duration for the workflow to about 2 minutes.
+- Remove deprecated Ubuntu 18.04 GitHub runner from the CI in the matrix for
+  the build workflow.
+- In workflow definitions, add concurrency groups to cancel outdated runs.
+- Add path filters to workflow definitions, to avoid running all workflows if
+  some are not relevant for a given Pull Request.
+- Add a CI workflow to make sure GitHub mirror commits have valid prefixes
+  (mirror: or sync: or ci: only, so we can easily distinguish them from the
+  commits coming from the kernel repository).
+- Switch to the Hadolint linter for checking the Dockerfile, and improve the
+  related workflow.
+
+### Known bugs
+
+- Some features requiring the use of “skeletons” (feature-clang-bpf-co-re
+  compilation option) require kernel 5.15 or more recent, with
+  CONFIG_PERF_EVENTS set, to compile bpftool (#17).
+- Command bpftool cgroup tree may be broken when running with kernels under
+  v6.1 (#41).

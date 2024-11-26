@@ -1,0 +1,16 @@
+pkgbase = python-i3-py
+	pkgdesc = tools for i3 users and developers
+	pkgver = 0.6.8
+	pkgrel = 10
+	url = https://github.com/ziberna/i3-py
+	arch = any
+	license = GPL3
+	makedepends = git
+	makedepends = python
+	depends = python
+	depends = i3-wm
+	optdepends = python2: legacy
+	source = python-i3-py::git+https://github.com/ziberna/i3-py#commit=27f88a616e9ecc340e7d041d3d00782f8a1964c1
+	md5sums = SKIP
+
+pkgname = python-i3-py

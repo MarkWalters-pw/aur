@@ -1,0 +1,15 @@
+pkgbase = ste-git
+	pkgdesc = Command Space-Time explorer
+	pkgver = r32.5baea9d
+	pkgrel = 1
+	url = https://github.com/fabiensanglard/st
+	install = ste.install
+	arch = x86_64
+	license = MIT
+	makedepends = clang
+	makedepends = git
+	depends = gcc-libs
+	source = git+https://github.com/fabiensanglard/st.git
+	sha256sums = SKIP
+
+pkgname = ste-git

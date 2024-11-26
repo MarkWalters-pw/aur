@@ -1,0 +1,47 @@
+pre_install() {
+    if ! grep "^gogios:" /etc/group &>/dev/null; then
+        groupadd -r gogios
+    fi
+    
+    if ! id gogios &>/dev/null; then
+        useradd -r -M gogios -s /bin/false -d /var/spool/gogios -g gogios
+    fi
+}
+
+post_install() {
+    DATABASE_DIR=/var/lib/gogios
+    LOG_DIR=/var/log/gogios
+    SCRIPT_DIR=/usr/lib/gogios/scripts
+
+    test -d $LOG_DIR || mkdir -p $LOG_DIR
+    chown -R -L gogios:gogios $LOG_DIR
+    chmod 755 $LOG_DIR
+
+    test -d $DATABASE_DIR || mkdir -p $DATABASE_DIR
+    chown -R -L gogios:gogios $DATABASE_DIR
+    chmod 755 $DATABASE_DIR
+
+    systemctl enable gogios || true
+    systemctl daemon-reload || true
+
+    # Add defaults file if it doesn't exist
+    if [[ ! -d /etc/default/gogios ]]; then
+        touch /etc/default/gogios
+    fi
+    
+    # If the user has no checks yet, give them the example file
+    if [ ! -f /etc/gogios/checks.json ]; then
+        echo "Making default check file"
+        cp /etc/gogios/example.json /etc/gogios/checks.json
+    fi
+}
+
+post_upgrade() {
+    post_install
+}
+
+post_remove() {
+    systemctl disable gogios
+    rm -f /usr/lib/systemd/system/gogios.service
+}
+

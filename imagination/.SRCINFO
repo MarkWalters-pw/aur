@@ -1,0 +1,19 @@
+pkgbase = imagination
+	pkgdesc = Imagination is a lightweight and simple DVD slideshow maker in GTK+3.
+	pkgver = 3.6
+	pkgrel = 1
+	url = http://imagination.sourceforge.net/
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = intltool
+	makedepends = docbook-xsl
+	makedepends = libxslt
+	depends = gtk3
+	depends = ffmpeg
+	depends = sox
+	source = imagination-3.6.tar.gz::http://downloads.sourceforge.net/imagination/imagination-3.6.tar.gz
+	sha256sums = 85dfa14acfe78a8a721c86c0056ce6bd1b517e9b7e6ab9fb3a5864b7d37a2d8d
+
+pkgname = imagination
+

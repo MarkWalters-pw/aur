@@ -1,0 +1,16 @@
+pkgbase = php-xmlrpc
+	pkgdesc = PHP extension to write XML-RPC servers and clients
+	pkgver = 1.0.0RC3
+	pkgrel = 1
+	url = https://pecl.php.net/package/xmlrpc
+	arch = i686
+	arch = x86_64
+	license = PHP
+	makedepends = php
+	depends = glibc
+	depends = libxml2
+	backup = etc/php/conf.d/xmlrpc.ini
+	source = http://pecl.php.net/get/xmlrpc-1.0.0RC3.tgz
+	sha256sums = 65ce03491782f9d9d5e9bc70bfe684255e5afa8486a2960c7a7cab033882a282
+
+pkgname = php-xmlrpc

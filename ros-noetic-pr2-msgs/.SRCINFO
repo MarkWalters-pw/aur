@@ -1,0 +1,22 @@
+pkgbase = ros-noetic-pr2-msgs
+	pkgdesc = ROS - Messages for representing PR2 state
+	pkgver = 1.12.4
+	pkgrel = 1
+	url = https://wiki.ros.org/pr2_msgs
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-catkin
+	makedepends = ros-noetic-message-generation
+	makedepends = ros-noetic-message-runtime
+	makedepends = ros-noetic-std-msgs
+	makedepends = ros-noetic-geometry-msgs
+	depends = ros-noetic-std-msgs
+	depends = ros-noetic-geometry-msgs
+	depends = ros-noetic-message-runtime
+	source = ros-noetic-pr2-msgs-1.12.4.tar.gz::https://github.com/pr2/pr2_common/archive/1.12.4.tar.gz
+	sha256sums = 135c6947f7511bcb3644fa6c0cf5972c309516895737e83f8eeed2b2d069f009
+
+pkgname = ros-noetic-pr2-msgs
+

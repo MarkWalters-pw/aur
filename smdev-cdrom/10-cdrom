@@ -1,0 +1,1 @@
+[ $(echo $DEVNAME | grep 'sr[0-9]') ] && ln -sf /dev/$DEVNAME /dev/cdrom

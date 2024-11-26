@@ -1,0 +1,16 @@
+pkgbase = i3-match-git
+	pkgdesc = Match and query i3/sway window properties and events
+	pkgver = 0.1.84.re0ec653
+	pkgrel = 2
+	url = https://gitlab.com/ferreum/i3-match
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = i3-wm
+	makedepends = git
+	depends = xcb-util
+	depends = json-c
+	source = git+https://gitlab.com/ferreum/i3-match.git
+	sha1sums = SKIP
+
+pkgname = i3-match-git

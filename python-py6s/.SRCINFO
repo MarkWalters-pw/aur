@@ -1,0 +1,21 @@
+pkgbase = python-py6s
+	pkgdesc = Python interface to the 6S Radiative Transfer Model
+	pkgver = 1.9.2
+	pkgrel = 1
+	url = https://py6s.readthedocs.io/
+	arch = any
+	license = LGPL
+	makedepends = python-setuptools
+	depends = 6sv11
+	depends = python-nose
+	depends = python-numpy
+	depends = python-scipy
+	depends = python-dateutil
+	optdepends = python-matplotlib: only used for plotting spectra
+	optdepends = python-pysolar: only required for setting the geometry from a location and time
+	optdepends = python-pandas: only required for importing AERONET data
+	options = !emptydirs
+	source = https://files.pythonhosted.org/packages/6e/47/d1931df56bb48f6982574f56b8589c0c43291ce06baa1118dbb979d1d57d/Py6S-1.9.2.tar.gz
+	sha256sums = 2378ef027bbd3ead67cec47e9a14cf799b3bd851bc7833fbd44e2440666c0ff3
+
+pkgname = python-py6s

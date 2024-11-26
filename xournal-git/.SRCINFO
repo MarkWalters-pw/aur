@@ -1,0 +1,26 @@
+pkgbase = xournal-git
+	pkgdesc = Notetaking and sketching application
+	pkgver = 0.4.8.2016.15.gc29e2a4
+	pkgrel = 1
+	url = https://sourceforge.net/projects/xournal/
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = gettext
+	depends = libgnomecanvas
+	depends = shared-mime-info
+	depends = poppler-glib
+	depends = hicolor-icon-theme
+	depends = desktop-file-utils
+	depends = gtk2
+	optdepends = ghostscript: import PS/PDF files as bitmap backgrounds
+	provides = xournal
+	conflicts = xournal
+	conflicts = xournal-image-patched
+	conflicts = xournalpp-svn
+	source = xournal::git+https://git.code.sf.net/p/xournal/code
+	sha1sums = SKIP
+
+pkgname = xournal-git
+

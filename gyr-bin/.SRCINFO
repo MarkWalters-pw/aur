@@ -1,0 +1,16 @@
+pkgbase = gyr-bin
+	pkgdesc = Blazing fast TUI launcher for GNU/Linux and *BSD (prebuilt binary version)
+	pkgver = 0.1.5
+	pkgrel = 0
+	url = https://sr.ht/~nkeor/gyr
+	arch = x86_64
+	arch = aarch64
+	license = BSD-2-Clause
+	provides = gyr
+	conflicts = gyr
+	source_x86_64 = https://git.sr.ht/~nkeor/gyr/refs/download/v0.1.5/gyr-v0.1.5-x86_64-unknown-linux-musl
+	sha256sums_x86_64 = 3c5405c2e44eae7945670b992bc658230ddab9740ec4f936d9d995903c65a64d
+	source_aarch64 = https://git.sr.ht/~nkeor/gyr/refs/download/v0.1.5/gyr-v0.1.5-aarch64-unknown-linux-musl
+	sha256sums_aarch64 = 87d4ca43738ddf60e5ef8b13dc96bf28f4dafee6f24e5c13dc512d4fb146b81b
+
+pkgname = gyr-bin

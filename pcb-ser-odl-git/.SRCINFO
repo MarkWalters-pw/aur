@@ -1,0 +1,27 @@
+pkgbase = pcb-ser-odl-git
+	pkgdesc = This library provides the code to serialize and deserialize the data model to and from an ODL file
+	pkgver = 0.1.0.r0.g34ef420
+	pkgrel = 2
+	url = https://gitlab.com/soft.at.home/pcb/pcb-ser-odl.git
+	arch = any
+	license = MIT
+	makedepends = sah_components_config
+	makedepends = m4
+	makedepends = gcc
+	makedepends = make
+	makedepends = bison
+	makedepends = flex
+	depends = libsahtrace
+	depends = libpcb
+	depends = libusermngt
+	provides = pcb-ser-odl
+	provides = pcb-ser-odl-git
+	conflicts = pcb-ser-odl
+	conflicts = pcb-ser-odl-git
+	source = pcb-ser-odl-git::git+https://gitlab.com/soft.at.home/pcb/pcb-ser-odl.git#branch=master
+	source = components.config
+	md5sums = SKIP
+	md5sums = SKIP
+
+pkgname = pcb-ser-odl-git
+

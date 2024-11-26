@@ -1,0 +1,29 @@
+pkgbase = ncursesfm-git
+	pkgdesc = A FileManager written in c and ncurses library.
+	pkgver = v3.1.r37.gd823532
+	pkgrel = 2
+	url = https://github.com/FedeDP/ncursesFM
+	install = ncursesFM.install
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = bash-completion
+	makedepends = cmake
+	depends = ncurses
+	depends = libconfig
+	depends = libarchive
+	depends = glibc
+	depends = libcups
+	depends = systemd
+	depends = libnotify
+	optdepends = xdg-utils: xdg-open support
+	optdepends = udisks2: mountable drives and ISO mount support
+	optdepends = packagekit: package installation support
+	optdepends = upower: AC (dis)connection events support
+	backup = etc/default/ncursesFM.conf
+	source = git://github.com/FedeDP/ncursesFM.git
+	sha256sums = SKIP
+
+pkgname = ncursesfm-git
+

@@ -1,0 +1,22 @@
+pkgbase = libretro-jumpnbump-git
+	pkgdesc = Jump 'n Bump core
+	pkgver = 0.1.r32.g5fd1a7c
+	pkgrel = 1
+	url = https://github.com/libretro/jumpnbump-libretro
+	arch = aarch64
+	arch = armv7h
+	arch = i486
+	arch = i686
+	arch = pentium4
+	arch = x86_64
+	groups = libretro
+	license = GPL2
+	makedepends = git
+	depends = glibc
+	depends = libretro-core-info
+	provides = libretro-jumpnbump
+	conflicts = libretro-jumpnbump
+	source = libretro-jumpnbump::git+https://github.com/libretro/jumpnbump-libretro.git
+	b2sums = SKIP
+
+pkgname = libretro-jumpnbump-git

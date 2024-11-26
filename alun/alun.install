@@ -1,0 +1,19 @@
+post_install() {
+    # enable cronie service if it's not enabled
+    systemctl is-enabled cronie > /dev/null || sudo systemctl enable cronie
+    # start cronie service if it's not started
+    systemctl is-active cronie > /dev/null || sudo systemctl start cronie
+    # Notify the user to create the crontab and change default terminal
+    tput setaf 196 # red color to bring your attention
+    echo "==> Don't forget to change default terminal inside /etc/alun/conf.py"
+    echo "==> Create a new crontab file using."
+    echo "$ crontab /etc/alun/crontab"
+    echo "==> Or"
+    echo "==> Append crontab file to old one using."
+    echo "$ cat /etc/alun/crontab >> /var/spool/cron/\$USER"
+    tput sgr0
+}
+
+post_upgrade() {
+    post_install
+}

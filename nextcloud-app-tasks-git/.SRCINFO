@@ -1,0 +1,19 @@
+pkgbase = nextcloud-app-tasks-git
+	pkgdesc = Enhanced task app for NextCloud
+	pkgver = 0.13.6.r612.g977efa0b
+	pkgrel = 1
+	url = https://github.com/nextcloud/tasks
+	arch = any
+	license = AGPL
+	makedepends = npm
+	makedepends = zip
+	makedepends = git
+	makedepends = rsync
+	depends = nextcloud
+	provides = nextcloud-app-tasks=0.13.6.r612.g977efa0b
+	conflicts = nextcloud-app-tasks
+	options = !strip
+	source = git+https://github.com/nextcloud/tasks.git
+	sha512sums = SKIP
+
+pkgname = nextcloud-app-tasks-git

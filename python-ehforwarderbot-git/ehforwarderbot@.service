@@ -1,0 +1,17 @@
+[Unit]
+Description=EH Forwarder Bot Service
+Documentation=https://ehforwarderbot.readthedocs.io/
+Wants=network-online.target systemd-networkd-wait-online.service
+After=network-online.target
+
+[Service]
+Type=simple
+User=%i
+Environment="TERM=xterm-256color"
+ExecStart=/usr/bin/ehforwarderbot
+Restart=on-failure
+KillSignal=SIGINT
+TimeoutStopSec=10s
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,19 @@
+pkgbase = tsubasa-git
+	pkgdesc = Script for sharing screenshots and/or status updates
+	pkgver = r37.396d5f0
+	pkgrel = 1
+	url = https://github.com/thebitstick/tsubasa
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = fish
+	depends = gnome-screenshot
+	depends = zenity
+	depends = toot
+	provides = tsubasa
+	conflicts = tsubasa
+	source = git+https://github.com/thebitstick/tsubasa
+	sha512sums = SKIP
+
+pkgname = tsubasa-git
+

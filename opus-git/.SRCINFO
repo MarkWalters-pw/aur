@@ -1,0 +1,21 @@
+pkgbase = opus-git
+	pkgdesc = codec designed for interactive speech and audio transmission over the Internet (git master)
+	pkgver = 0.0
+	pkgrel = 1
+	url = http://www.opus-codec.org/
+	arch = aarch64
+	arch = armv6h
+	arch = armv7h
+	arch = i686
+	arch = x86_64
+	license = BSD
+	makedepends = git
+	depends = glibc
+	provides = opus
+	conflicts = opus
+	options = !libtool
+	source = git+https://gitlab.xiph.org/xiph/opus.git
+	md5sums = SKIP
+
+pkgname = opus-git
+

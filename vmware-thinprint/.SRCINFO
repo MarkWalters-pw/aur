@@ -1,0 +1,19 @@
+pkgbase = vmware-thinprint
+	pkgdesc = Thinprint support on VMware guests
+	pkgver = 2.0.21
+	pkgrel = 2
+	url = https://www.vmware.com/products/workstation-for-linux.html
+	install = vmware-thinprint.install
+	arch = i686
+	arch = x86_64
+	license = custom
+	makedepends = p7zip
+	depends = cups
+	backup = etc/tpvmlp.conf
+	source = https://download3.vmware.com/software/player/file/VMware-Player-16.0.0-16894299.x86_64.bundle
+	source = vmware-thinprint.service
+	sha256sums = 3b1546928858cbf498d198dac96868b2f3f5f507550111630973b4ba91ce67ae
+	sha256sums = 02971c67bdbb289accd3faa6f0a8f1803e8145713235f4ba69671c16a9938dcc
+
+pkgname = vmware-thinprint
+

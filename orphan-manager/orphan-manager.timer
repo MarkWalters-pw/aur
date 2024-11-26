@@ -1,0 +1,9 @@
+[Unit]
+Description=Remove orphaned packages
+
+[Timer]
+OnBootSec=15min
+OnUnitActiveSec=1d
+
+[Install]
+WantedBy=timers.target

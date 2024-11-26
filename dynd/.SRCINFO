@@ -1,0 +1,14 @@
+pkgbase = dynd
+	pkgdesc = C++ dynamic ndarray library, with Python exposure
+	pkgver = 0.7.2
+	pkgrel = 4
+	url = http://libdynd.org
+	arch = x86_64
+	license = custom:BSD-2-clause
+	makedepends = cmake
+	depends = fftw
+	depends = llvm
+	source = https://github.com/libdynd/libdynd/archive/v0.7.2.tar.gz
+	sha512sums = 134195ba5839e05af07dd9ad0b8e749a83345511acd2a22a029a4d9a2c0fc77a8a1f36722bce20653d28189b7883afe7feb651c7d32ff921ef257a8a9aa4bd7f
+
+pkgname = dynd

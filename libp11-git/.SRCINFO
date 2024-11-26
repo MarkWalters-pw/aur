@@ -1,0 +1,17 @@
+pkgbase = libp11-git
+	pkgdesc = A library implementing a small layer on top of the PKCS11 API
+	pkgver = 0.4.11.r39.g5126132
+	pkgrel = 1
+	url = https://github.com/OpenSC/OpenSC/wiki
+	arch = i686
+	arch = x86_64
+	license = LGPL
+	makedepends = git
+	depends = openssl
+	provides = libp11=0.4.11-1
+	provides = engine_pkcs11
+	conflicts = libp11
+	source = libp11-git::git+https://github.com/OpenSC/libp11.git
+	md5sums = SKIP
+
+pkgname = libp11-git

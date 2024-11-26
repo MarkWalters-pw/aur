@@ -1,0 +1,21 @@
+pkgbase = fheroes2-git
+	pkgdesc = Free implementation of Heroes of the Might and Magic II engine
+	pkgver = r1763.92ad831d
+	pkgrel = 1
+	url = https://github.com/ihhub/fheroes2
+	install = fheroes2.install
+	arch = i686
+	arch = x86_64
+	arch = armv7h
+	license = GPL
+	makedepends = gettext
+	makedepends = git
+	makedepends = cmake
+	depends = sdl2
+	depends = sdl2_image
+	depends = sdl2_mixer
+	conflicts = fheroes2-svn
+	source = fheroes2::git+https://github.com/ihhub/fheroes2.git
+	md5sums = SKIP
+
+pkgname = fheroes2-git

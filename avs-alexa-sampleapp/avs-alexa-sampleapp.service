@@ -1,0 +1,11 @@
+[Unit]
+Description=AVS Alexa Sampleapp
+After=network.target
+
+[Service]
+User=alexa
+Type=simple
+ExecStart=/usr/bin/avs-alexa-sampleapp -C /var/lib/avs-alexa-sampleapp/AlexaClientSDKConfig.json -K /usr/share/snowboy/resources --headless
+
+[Install]
+WantedBy=multi-user.target

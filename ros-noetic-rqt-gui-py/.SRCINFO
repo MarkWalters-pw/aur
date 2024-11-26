@@ -1,0 +1,20 @@
+pkgbase = ros-noetic-rqt-gui-py
+	pkgdesc = ROS - rqt_gui_py enables GUI plugins to use the Python client library for ROS.
+	pkgver = 0.5.3
+	pkgrel = 1
+	url = https://wiki.ros.org/rqt_gui_py
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-qt-gui
+	makedepends = ros-noetic-rqt-gui
+	makedepends = ros-noetic-rospy
+	makedepends = ros-noetic-catkin
+	depends = ros-noetic-qt-gui
+	depends = ros-noetic-rqt-gui
+	depends = ros-noetic-rospy
+	source = ros-noetic-rqt-gui-py-0.5.3.tar.gz::https://github.com/ros-visualization/rqt/archive/0.5.3.tar.gz
+	sha256sums = 4b62c9238e72d474a216fcd8cebb88cf2bb463b9143a895050dffbfc9ec6f6b2
+
+pkgname = ros-noetic-rqt-gui-py

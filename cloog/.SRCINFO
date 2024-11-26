@@ -1,0 +1,19 @@
+pkgbase = cloog
+	pkgdesc = Library that generates loops for scanning polyhedra
+	pkgver = 0.21.1
+	pkgrel = 1
+	url = http://www.bastoul.net/cloog/
+	arch = i686
+	arch = x86_64
+	arch = armv7h
+	license = GPL
+	makedepends = texlive-core
+	makedepends = texlive-bin
+	makedepends = texlive-plaingeneric
+	depends = osl
+	depends = libisl
+	depends = gmp
+	source = https://github.com/periscop/cloog/releases/download/cloog-0.21.1/cloog-0.21.1.tar.gz
+	sha512sums = bfb76bc69941ba0ddd81f1d52d807c02cd24e5baf3d8b774148712494e256709531e4ceb0402309ed2596a2a3ee951dc6bcc4e21502199942e2bd9dab705c9f2
+
+pkgname = cloog

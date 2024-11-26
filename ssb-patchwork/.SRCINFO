@@ -1,0 +1,29 @@
+pkgbase = ssb-patchwork
+	pkgdesc = A decentralized messaging and sharing app built on top of Secure Scuttlebutt (SSB)
+	pkgver = 3.18.1
+	pkgrel = 1
+	url = https://github.com/ssbc/patchwork
+	arch = i686
+	arch = x86_64
+	license = AGPL3
+	makedepends = nodejs
+	makedepends = npm
+	depends = libxtst
+	depends = libxext
+	depends = libxkbfile
+	depends = libsodium
+	depends = libxss
+	depends = gtk2
+	depends = alsa-lib
+	depends = nss
+	depends = electron11
+	options = !strip
+	source = https://github.com/ssbc/patchwork/archive/v3.18.1.tar.gz
+	source = run.sh
+	source = ssb-patchwork.desktop
+	sha256sums = 8a6aeddcdf4d61ab61f014275561205e4fdaf5a65ab55adfc9cbf71b49145f0d
+	sha256sums = f485ed3ce7530ceda6575d5446e50b4c365bd01894139483c506e7f7a6559b77
+	sha256sums = b226436970db40030ad03e9cd847c103aa534d775cd81212308e86a23917d76a
+
+pkgname = ssb-patchwork
+

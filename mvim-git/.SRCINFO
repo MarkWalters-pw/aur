@@ -1,0 +1,14 @@
+pkgbase = mvim-git
+	pkgdesc = Rename, move or delete files by editing their names with vim.
+	pkgver = v0.2.0
+	pkgrel = 1
+	url = https://github.com/bouttier/mvim
+	arch = any
+	license = APACHE
+	makedepends = git
+	depends = python
+	options = !emptydirs
+	source = mvim-git::git+https://github.com/bouttier/mvim#branch=main
+	md5sums = SKIP
+
+pkgname = mvim-git

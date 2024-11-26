@@ -1,0 +1,20 @@
+pkgbase = ocaml-inotify
+	pkgdesc = OCaml bindings for inotify
+	pkgver = 2.5
+	pkgrel = 2
+	url = https://github.com/whitequark/ocaml-inotify
+	arch = x86_64
+	arch = aarch64
+	license = LGPL-2.1-only WITH OCaml-LGPL-linking-exception
+	checkdepends = ocaml-fileutils>=0.4.4
+	checkdepends = ocaml-ounit>=2.0.0
+	makedepends = git
+	makedepends = dune>=2.9.0
+	depends = ocaml>=4.03.0
+	depends = ocaml-lwt
+	options = !strip
+	source = ocaml-inotify-2.5::git+https://github.com/whitequark/ocaml-inotify#commit=5e5853680c2b2e41091c1ed030eef9ab008203bb?signed
+	validpgpkeys = 1370978BC81E9735DFE727E1EBFFF6F283F3A2B4
+	b2sums = ca3fcfae63b562ad36d206ce021da88103156fd89a92a4d8636c7162747127437564f09b8b5cfc0a79c7c2e70085e0101420a0d24743156e761f6ec9ec1dd5aa
+
+pkgname = ocaml-inotify

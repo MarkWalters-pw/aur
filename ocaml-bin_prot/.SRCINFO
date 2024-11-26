@@ -1,0 +1,25 @@
+pkgbase = ocaml-bin_prot
+	pkgdesc = A binary protocol generator
+	pkgver = 0.17.0
+	pkgrel = 2
+	epoch = 1
+	url = https://github.com/janestreet/bin_prot
+	arch = x86_64
+	arch = aarch64
+	license = MIT
+	license = BSD-3-Clause
+	makedepends = dune>=3.11.0
+	depends = ocaml>=5.1.0
+	depends = ocaml-base>=0.17.0
+	depends = ocaml-ppx_compare>=0.17.0
+	depends = ocaml-ppx_custom_printf>=0.17.0
+	depends = ocaml-ppx_fields_conv>=0.17.0
+	depends = ocaml-ppx_optcomp>=0.17.0
+	depends = ocaml-ppx_sexp_conv>=0.17.0
+	depends = ocaml-ppx_stable_witness>=0.17.0
+	depends = ocaml-ppx_variants_conv>=0.17.0
+	options = !strip
+	source = ocaml-bin_prot-0.17.0.tar.gz::https://github.com/janestreet/bin_prot/archive/v0.17.0.tar.gz
+	b2sums = bad3203bc42f6f95550a29392fe419d3159614743736ee3bf5855765330c2549575d7af8d42f3534be37fb346d43aa56667d71af328c7ea8ba6c4a64006f695a
+
+pkgname = ocaml-bin_prot

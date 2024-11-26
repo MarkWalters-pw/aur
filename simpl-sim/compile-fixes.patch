@@ -1,0 +1,26 @@
+@@ -73,6 +73,7 @@
+ #undef reg /* SunOS headers define this to be register */
+ #endif
+ 
++#include <stddef.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+@@ -818,12 +819,12 @@
+     
+     /* TODO: Evil casting... */
+     char* find(char c) const
+-     { return strchr(mArray.begin(), c); }
++     { return strchr(const_cast<char*>(mArray.begin()), c); }
+     char* findr(char c) const
+-     { return strrchr(mArray.begin(), c); }
+-    char* find(const char* s) const 
+-     { return strstr(mArray.begin(), s); }
+-    
++     { return strrchr(const_cast<char*>(mArray.begin()), c); }
++    char* find(const char* s) const
++     { return strstr(const_cast<char*>(mArray.begin()), s); }
++
+     String padLeft(char padChar, size_t len) const;
+     String padCenter(char padChar, size_t len) const;
+     String padRight(char padChar, size_t len) const;

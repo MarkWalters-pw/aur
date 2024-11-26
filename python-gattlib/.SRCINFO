@@ -1,0 +1,17 @@
+pkgbase = python-gattlib
+	pkgdesc = This is a Python library to use the GATT Protocol for Bluetooth LE devices. It is a wrapper around the implementation used by gatttool in bluez package. It does not call other binaries to do its job :)
+	pkgver = 0.20201113
+	pkgrel = 1
+	url = https://github.com/OscarAcena/pygattlib
+	arch = any
+	license = Apache
+	makedepends = python-setuptools
+	depends = python
+	depends = boost
+	depends = bluez-libs
+	depends = glib2
+	source = https://files.pythonhosted.org/packages/fe/8d/72d539dd6be2d9677864a1604b8db80696c2d5f018cf8093bf442311162f/gattlib-0.20201113.tar.gz
+	md5sums = 433581aba2b9d3b621094fb62d20dfd5
+
+pkgname = python-gattlib
+

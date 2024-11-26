@@ -1,0 +1,18 @@
+pkgbase = herwig
+	pkgdesc = Herwig is a multi-purpose particle physics event generator.
+	pkgver = 7.2.3
+	pkgrel = 1
+	url = http://herwig.hepforge.org
+	arch = x86_64
+	license = GPL2
+	makedepends = herwig_lhapdf_config
+	depends = gcc-fortran
+	depends = thepeg
+	depends = boost-libs
+	depends = fastjet
+	depends = gsl
+	depends = lhapdf
+	source = http://www.hepforge.org/archive/herwig/Herwig-7.2.3.tar.bz2
+	sha256sums = 5599899379b01b09e331a2426d78d39b7f6ec126db2543e9d340aefe6aa50f84
+
+pkgname = herwig

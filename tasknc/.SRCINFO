@@ -1,0 +1,19 @@
+pkgbase = tasknc
+	pkgdesc = A ncurses wrapper around taskwarrior
+	pkgver = 2020.02.05
+	pkgrel = 1
+	url = https://github.com/lharding/tasknc
+	arch = i686
+	arch = x86_64
+	arch = arm
+	arch = armv6h
+	arch = armv7h
+	license = GPL3
+	depends = task
+	depends = perl
+	conflicts = taskwarrior-tasknc-git
+	source = https://github.com/lharding/tasknc/archive/a182661fbcc097a933d5e8cce3922eb1734a563e.tar.gz
+	sha256sums = 5b56a580eb762dd98ec2cf157a85edfeec231c64322dd9f532b2a7e9099f91f0
+
+pkgname = tasknc
+

@@ -1,0 +1,37 @@
+pkgbase = filebot47
+	pkgdesc = [Newer but paid version exist] The ultimate tool to rename TV/anime shows, download subtitles, and validate checksums.
+	pkgver = 4.7.9
+	pkgrel = 4
+	url = http://filebot.sourceforge.net/
+	install = filebot47.install
+	arch = i686
+	arch = x86_64
+	arch = arm
+	arch = armv6h
+	arch = armv7h
+	license = GPL
+	makedepends = unzip
+	depends = java8-openjfx
+	depends = jre8-openjdk
+	depends = fontconfig
+	depends = chromaprint
+	optdepends = libzen: Support for additional subtitle search engines (Sublight)
+	optdepends = libmediainfo: Episode naming / Sublight usage
+	optdepends = java-p7zip-binding: Extract archives
+	optdepends = gvfs: gvfs backends
+	provides = filebot
+	conflicts = filebot
+	conflicts = filebot-git
+	source = https://f002.backblazeb2.com/file/AUR-Store/filebot47/FileBot_4.7.9-portable.tar.xz
+	source = https://github.com/java-native-access/jna/archive/4.3.0.tar.gz
+	source = filebot-arch.sh
+	source = filebot.svg
+	source = filebot.desktop
+	md5sums = 961dbdb7d6c62c133952df2f9f427d96
+	md5sums = 2de8ba99fc91809935e6c2ab02f49a82
+	md5sums = 8bc100f98f3dffba33f8e0a37245fcba
+	md5sums = 04f46be047049448dba3f0de29fe192d
+	md5sums = f37edd0bba7570904d28ab1681c7a7f3
+
+pkgname = filebot47
+

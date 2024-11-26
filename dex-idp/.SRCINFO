@@ -1,0 +1,19 @@
+pkgbase = dex-idp
+	pkgdesc = OpenID Connect Identity (OIDC) and OAuth 2.0 Provider with Pluggable Connectors
+	pkgver = 2.40.0
+	pkgrel = 1
+	url = https://github.com/dexidp/dex
+	arch = x86_64
+	license = Apache
+	makedepends = go
+	makedepends = git
+	depends = glibc
+	backup = etc/dex.yaml
+	source = git+https://github.com/dexidp/dex#tag=23efe9200ccd9e0a69242bf61cd221462370d1f4
+	source = dex.service
+	source = dex.sysusers
+	sha256sums = SKIP
+	sha256sums = d8383089d904ad2407101f71ae08fbfddc50d888fe61c6203a7a9fd7b45181ac
+	sha256sums = 610ae818f2ff08ac41f6beb227510bff5c55699041e94cbcfec44dfa5553e688
+
+pkgname = dex-idp

@@ -1,0 +1,20 @@
+pkgbase = xf86-video-i128
+	pkgdesc = X.org Number 9 I128 video driver
+	pkgver = 1.4.0
+	pkgrel = 1
+	url = https://xorg.freedesktop.org/
+	arch = i686
+	arch = x86_64
+	groups = xorg-drivers
+	license = custom
+	makedepends = xorg-server-devel
+	makedepends = X-ABI-VIDEODRV_VERSION=24.0
+	depends = glibc
+	source = https://xorg.freedesktop.org//releases/individual/driver/xf86-video-i128-1.4.0.tar.bz2
+	source = https://xorg.freedesktop.org//releases/individual/driver/xf86-video-i128-1.4.0.tar.bz2.sig
+	validpgpkeys = C922784178BFFDB0
+	sha256sums = 8f2c0a6bf5a169dad3fc07c6dd4537b492d0e44489e4a1297311e617c3bed0ea
+	sha256sums = SKIP
+
+pkgname = xf86-video-i128
+

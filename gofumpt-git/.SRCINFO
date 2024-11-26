@@ -1,0 +1,15 @@
+pkgbase = gofumpt-git
+	pkgdesc = A stricter gofmt
+	pkgver = r140.0c61c1e
+	pkgrel = 1
+	url = https://github.com/mvdan/gofumpt
+	arch = i686
+	arch = x86_64
+	license = custom
+	makedepends = git
+	makedepends = go
+	source = gofumpt-git::git+https://github.com/mvdan/gofumpt.git
+	sha512sums = SKIP
+
+pkgname = gofumpt-git
+

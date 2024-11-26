@@ -1,0 +1,19 @@
+pkgbase = python-blaze
+	pkgdesc = NumPy and Pandas interface to Big Data
+	pkgver = 0.11.3
+	pkgrel = 2
+	url = https://github.com/blaze/blaze
+	arch = any
+	license = custom
+	makedepends = python-setuptools
+	depends = python-flask-cors
+	depends = python-odo
+	depends = python-psutil
+	depends = python-sqlalchemy
+	depends = python-toolz
+	optdepends = python-pymongo: MongoDB support
+	optdepends = python-h5py: HDF5 support
+	source = blaze-0.11.3::https://github.com/blaze/blaze/archive/0.11.3.tar.gz
+	sha512sums = 030079e5d3f17355dac588154ffb7ba7993935dfd39bce141341b6e2b9a17f812982ce83776ac1e4224649a343b58615621347ba65e5aba2ca2e568d755f276f
+
+pkgname = python-blaze

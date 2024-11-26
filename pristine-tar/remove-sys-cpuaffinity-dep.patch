@@ -1,0 +1,24 @@
+--- a/pristine-xz
++++ b/pristine-xz
+@@ -80,7 +80,6 @@ use Pristine::Tar::Delta;
+ use Pristine::Tar::Formats;
+ use File::Basename qw/basename/;
+ use IO::Handle;
+-use Sys::CpuAffinity;
+ 
+ my @supported_xz_programs = qw(xz pixz);
+ 
+@@ -256,10 +255,9 @@ sub predict_xz_args {
+     # (even when --block-size or --block-list is specified)
+     if ($xz->{summary}->{size_in_blocks} eq 'yes') {
+       # All -T values >1 produce the same output.
+-      # Use as many threads as we have CPU affinities, with a minimum of 2.
+-      my @affinities = Sys::CpuAffinity::getAffinity($$);
+-      my $threads = @affinities > 2 ? @affinities : 2;
+-      push @$common, "-T$threads";
++      # This is patched for AUR to use always two threads, since there is no package
++      # perl-sys-cpuaffinity available.
++      push @$common, "-T2";
+     } else {
+       push @$common, "-T1";
+     }

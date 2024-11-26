@@ -1,0 +1,18 @@
+pkgbase = ti-cgt-msp430
+	pkgdesc = Texas Instruments Code Generation Tools (compiler) for MSP430
+	pkgver = 21.6.1.LTS
+	pkgrel = 1
+	url = https://www.ti.com/tool/MSP-CGT
+	arch = x86_64
+	license = custom
+	conflicts = ccstudio
+	options = !strip
+	options = libtool
+	options = staticlibs
+	options = emptydirs
+	options = !purge
+	options = !zipman
+	source = https://dr-download.ti.com/software-development/ide-configuration-compiler-or-debugger/MD-p4jWEYpR8n/21.6.1.LTS/ti_cgt_msp430_21.6.1.LTS_linux-x64_installer.bin
+	md5sums = b960da86bfe4d022c1b1c29968223904
+
+pkgname = ti-cgt-msp430

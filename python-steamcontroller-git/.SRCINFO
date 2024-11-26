@@ -1,0 +1,22 @@
+pkgbase = python-steamcontroller-git
+	pkgdesc = Standalone userland driver for the Steam controller
+	pkgver = 1.2.r13.g80928ce
+	pkgrel = 2
+	url = https://github.com/ynsta/steamcontroller
+	changelog = changelog.txt
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = python-distutils-extra
+	depends = python-libusb1
+	depends = python-psutil
+	optdepends = python-pyside: Required for sc-gyro-plot.py
+	optdepends = python-pyqtgraph: Required for sc-gyro-plot.py
+	optdepends = steam: udev rules for the controller
+	provides = steamcontroller
+	conflicts = steamcontroller
+	source = git+https://github.com/ynsta/steamcontroller.git
+	sha256sums = SKIP
+
+pkgname = python-steamcontroller-git
+

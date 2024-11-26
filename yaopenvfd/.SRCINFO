@@ -1,0 +1,16 @@
+pkgbase = yaopenvfd
+	pkgdesc = Yet Another openvfd Daemon
+	pkgver = 1.1
+	pkgrel = 1
+	url = https://github.com/7Ji/YAopenvfD
+	arch = x86_64
+	arch = aarch64
+	license = GPL3
+	makedepends = gcc
+	depends = glibc
+	conflicts = openvfd-service
+	backup = etc/conf.d/YAopenvfD
+	source = YAopenvfD-1.1.tar.gz::https://github.com/7Ji/YAopenvfD/archive/refs/tags/v1.1.tar.gz
+	sha256sums = 78dc0bc85ae4e501ab5ee192efeb2c762834f404061e926cebb6581ffb9077f1
+
+pkgname = yaopenvfd

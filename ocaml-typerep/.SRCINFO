@@ -1,0 +1,17 @@
+pkgbase = ocaml-typerep
+	pkgdesc = A library for runtime types
+	pkgver = 0.17.0
+	pkgrel = 2
+	epoch = 1
+	url = https://github.com/janestreet/typerep
+	arch = x86_64
+	arch = aarch64
+	license = MIT
+	makedepends = dune>=3.11.0
+	depends = ocaml>=5.1.0
+	depends = ocaml-base>=0.17.0
+	options = !strip
+	source = ocaml-typerep-0.17.0.tar.gz::https://github.com/janestreet/typerep/archive/v0.17.0.tar.gz
+	b2sums = 52548d976d9580acc3b31a39fd6ce1fdeb543a32ae6453537d5e5fbf4f31293ad15312c768a95c3d998eef54efa45bfab2a2bf36e2baef98588e34270efa370e
+
+pkgname = ocaml-typerep

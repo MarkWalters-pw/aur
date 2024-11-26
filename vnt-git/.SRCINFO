@@ -1,0 +1,21 @@
+pkgbase = vnt-git
+	pkgdesc = A virtual network tool (or VPN),简便高效的异地组网、内网穿透工具
+	pkgver = 1.2.10.2.r8.ge36e450
+	pkgrel = 1
+	url = https://github.com/lbl8603/vnt
+	arch = x86_64
+	arch = aarch64
+	arch = riscv64
+	license = Apache-2.0
+	makedepends = git
+	makedepends = cargo
+	depends = gcc-libs
+	depends = glibc
+	optdepends = iptables: Linux kernel packet control tool (using legacy interface)
+	provides = vnt
+	conflicts = vnt
+	options = !lto
+	source = vnt-git::git+https://github.com/lbl8603/vnt.git
+	sha256sums = SKIP
+
+pkgname = vnt-git

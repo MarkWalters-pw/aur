@@ -1,0 +1,30 @@
+pkgbase = limesuite-git
+	pkgdesc = Driver and GUI for LMS7002M-based SDR platforms (LimeSDR, Novena RF7, etc.)
+	pkgver = 18.06.0.r45.02cabfd
+	pkgrel = 1
+	url = https://github.com/myriadrf/LimeSuite
+	arch = x86_64
+	license = Apache
+	makedepends = git
+	makedepends = cmake
+	makedepends = doxygen
+	makedepends = octave
+	depends = sqlite3
+	depends = wxgtk2
+	depends = freeglut
+	depends = libusb>=1.0
+	depends = soapysdr
+	depends = wget
+	depends = gnuplot
+	depends = glew
+	depends = fltk
+	optdepends = octave: Octave plugin
+	provides = limesuite
+	provides = soapylms7
+	conflicts = limesuite
+	conflicts = soapylms7
+	source = git+https://github.com/myriadrf/LimeSuite.git
+	sha512sums = SKIP
+
+pkgname = limesuite-git
+

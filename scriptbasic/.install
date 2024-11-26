@@ -1,0 +1,7 @@
+pre_install() {
+	sudo rm -rf /var/cache/scriba/
+}
+
+pre_upgrade() {
+	sudo rm -rf /var/cache/scriba/
+}

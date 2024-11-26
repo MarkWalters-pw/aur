@@ -1,0 +1,25 @@
+pkgbase = simgrid
+	pkgdesc = Scientific instrument to study the behavior of large-scale distributed systems such as Grids, Clouds, HPC or P2P systems
+	pkgver = 3.36
+	pkgrel = 1
+	url = https://simgrid.org/
+	arch = x86_64
+	arch = i686
+	license = LGPL-2.1-only
+	makedepends = cmake
+	makedepends = boost
+	makedepends = eigen
+	makedepends = doxygen
+	makedepends = pybind11
+	makedepends = gcc-fortran
+	depends = graphviz
+	depends = python
+	depends = gcc-libs
+	depends = boost-libs
+	depends = perl
+	depends = libevent
+	depends = glibc
+	source = https://framagit.org/simgrid/simgrid/-/archive/v3.36/simgrid-v3.36.tar.gz
+	sha256sums = 7ba1be1501092803b489c1c056707bd21d08096262be752902d6dd4dfccc3fb4
+
+pkgname = simgrid

@@ -1,0 +1,13 @@
+diff -rupN --no-dereference libspatialite-5.0.1/configure.ac libspatialite-5.0.1-new/configure.ac
+--- libspatialite-5.0.1/configure.ac	2021-02-07 16:53:46.000000000 +0100
++++ libspatialite-5.0.1-new/configure.ac	2021-03-08 08:57:18.484858236 +0100
+@@ -489,7 +489,7 @@ AM_CONDITIONAL(MODULE_ONLY, [test x"$ena
+ #-----------------------------------------------------------------------
+ 
+ # Checking for MinGW
+-AM_CONDITIONAL([MINGW], [test "$target_alias" = "mingw32"])
++AM_CONDITIONAL([MINGW], [[[[ "$target_alias" = *"mingw32" ]]]])
+ # Checking for Mac OsX
+ AM_CONDITIONAL([MACOSX], [test "$target_alias" = "macosx"])
+ # Checking for Android
+ 

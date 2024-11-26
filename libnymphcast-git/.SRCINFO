@@ -1,0 +1,19 @@
+pkgbase = libnymphcast-git
+	pkgdesc = Core functionality for a NymphCast client
+	pkgver = 0.1.r2.gd5400e8
+	pkgrel = 2
+	url = https://github.com/MayaPosch/libnymphcast
+	arch = x86_64
+	arch = i686
+	arch = armv7h
+	arch = aarch64
+	license = BSD
+	makedepends = git
+	depends = nymphrpc
+	depends = poco
+	provides = libnymphcast
+	conflicts = libnymphcast
+	source = git+https://github.com/MayaPosch/libnymphcast
+	sha256sums = SKIP
+
+pkgname = libnymphcast-git

@@ -1,0 +1,21 @@
+pkgbase = tf2cdownloader-git
+	pkgdesc = Open Fortress's quick-n-easy downloading solution
+	pkgver = r162.84ebd28
+	pkgrel = 3
+	url = https://github.com/tf2classic/TF2CDownloader
+	install = tf2cdownloader-git.install
+	arch = x86_64
+	license = GPL-3.0-only
+	makedepends = pyinstaller
+	depends = python-pyzstd
+	depends = python-rich
+	depends = python-tqdm
+	depends = python-httpx
+	provides = tf2cdownloader
+	conflicts = tf2cdownloader
+	source = git+https://github.com/tf2classic/TF2CDownloader.git
+	source = tf2cdownloader
+	sha256sums = SKIP
+	sha256sums = 5ff5bb94aec1072b453807bac84721a0ec2258ee7a69fed09e0b017aadc10b84
+
+pkgname = tf2cdownloader-git

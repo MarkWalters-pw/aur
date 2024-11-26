@@ -1,0 +1,21 @@
+pkgbase = python-litepcie-git
+	pkgdesc = A small footprint and configurable PCIe core for LiteX
+	pkgver = 2020.08.r40.g5e88ab6
+	pkgrel = 1
+	url = https://github.com/enjoy-digital/litepcie
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python-yaml
+	depends = python
+	depends = python-migen
+	depends = python-litex
+	provides = python-litepcie=2020.08.r40.g5e88ab6
+	conflicts = python-litepcie
+	replaces = litepcie-git
+	source = git+https://github.com/enjoy-digital/litepcie
+	sha256sums = SKIP
+
+pkgname = python-litepcie-git
+

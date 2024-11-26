@@ -1,0 +1,21 @@
+pkgbase = python-keepkey
+	pkgdesc = Python library for communicating with KeepKey Hardware Wallet
+	pkgver = 7.2.1
+	pkgrel = 1
+	url = https://github.com/keepkey/python-keepkey
+	arch = any
+	license = LGPL3
+	makedepends = python-setuptools
+	depends = python
+	depends = python-ecdsa
+	depends = python-hidapi
+	depends = python-mnemonic
+	depends = python-libusb1
+	depends = python-protobuf
+	provides = keepkeyctl
+	provides = python-keepkey
+	conflicts = keepkeyctl
+	source = https://github.com/keepkey/python-keepkey/archive/refs/tags/v7.2.1.tar.gz
+	sha256sums = SKIP
+
+pkgname = python-keepkey

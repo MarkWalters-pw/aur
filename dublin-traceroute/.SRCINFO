@@ -1,0 +1,16 @@
+pkgbase = dublin-traceroute
+	pkgdesc = NAT-aware multipath tracerouting tool
+	pkgver = 0.4.2
+	pkgrel = 1
+	url = https://dublin-traceroute.net/
+	arch = i686
+	arch = x86_64
+	license = custom:BSD-2-clause
+	depends = jsoncpp
+	depends = libtins
+	optdepends = python2-pygraphviz
+	source = git+https://github.com/insomniacslk/dublin-traceroute#commit=dd39c0834ed949814e28cede4dd7c10408e0b91d
+	sha256sums = SKIP
+
+pkgname = dublin-traceroute
+

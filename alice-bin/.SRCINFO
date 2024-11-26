@@ -1,0 +1,21 @@
+pkgbase = alice-bin
+	pkgdesc = An educational software that teaches students computer programming in a 3D environment
+	pkgver = 3.7.0.0
+	pkgrel = 1
+	url = https://www.alice.org
+	arch = i686
+	arch = x86_64
+	license = custom
+	depends = java-runtime=17
+	depends = xdg-utils
+	depends = lib32-glu
+	depends = lib32-libxrandr
+	depends = lib32-libxcursor
+	depends = lib32-libxi
+	provides = alice3
+	noextract = alice-bin-3.7.0.0.sh
+	options = !strip
+	source = alice-bin-3.7.0.0.sh::https://github.com/TheAliceProject/alice3/releases/download/3.7.0.0/alice3_unix_installer_3_7_0_0+build_876.sh
+	sha512sums = e534a67ff98ab64dd6e425ea8704d613bf7a6aa7e5bc4f66906afdcaf1153c953fb9e1780a9872004bbe62e1a2db59db71015717b7709d7ee6c5a08c2f2f93fa
+
+pkgname = alice-bin

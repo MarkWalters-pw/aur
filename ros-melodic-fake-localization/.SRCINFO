@@ -1,0 +1,28 @@
+pkgbase = ros-melodic-fake-localization
+	pkgdesc = ROS - A ROS node that simply forwards odometry information.
+	pkgver = 1.16.7
+	pkgrel = 3
+	url = https://wiki.ros.org/fake_localization
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-melodic-catkin
+	makedepends = ros-melodic-angles
+	makedepends = ros-melodic-tf2-geometry-msgs
+	depends = ros-melodic-geometry-msgs
+	depends = ros-melodic-message-filters
+	depends = ros-melodic-nav-msgs
+	depends = ros-melodic-rosconsole
+	depends = ros-melodic-roscpp
+	depends = ros-melodic-rospy
+	depends = ros-melodic-tf2-ros
+	source = ros-melodic-fake-localization-1.16.7.tar.gz::https://github.com/ros-planning/navigation/archive/1.16.7.tar.gz
+	sha256sums = 3a4ee70949a07d4f5f84deddb2ee8a4314bc143d10fb2054b90683c7f92a2f33
+
+pkgname = ros-melodic-fake-localization
+

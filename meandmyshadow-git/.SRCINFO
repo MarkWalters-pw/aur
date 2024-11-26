@@ -1,0 +1,26 @@
+pkgbase = meandmyshadow-git
+	pkgdesc = Puzzle/platform game in which you try to reach the exit by solving puzzles. Forked by Jz Pan (acmepjz).
+	pkgver = v0.5.beta.r213.ga82cbf0
+	pkgrel = 1
+	url = https://github.com/acmepjz/meandmyshadow
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = make
+	makedepends = cmake
+	makedepends = git
+	depends = sdl2_gfx
+	depends = sdl2_image
+	depends = sdl2_ttf
+	depends = sdl2_mixer
+	depends = curl
+	depends = libarchive
+	depends = hicolor-icon-theme
+	depends = libgl
+	provides = meandmyshadow
+	conflicts = meandmyshadow
+	source = git+https://github.com/acmepjz/meandmyshadow.git
+	md5sums = SKIP
+
+pkgname = meandmyshadow-git
+

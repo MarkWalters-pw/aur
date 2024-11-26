@@ -1,0 +1,27 @@
+From 8580c5b57a4ec1aaf6ab969eeb7f51cb7d2926e9 Mon Sep 17 00:00:00 2001
+From: fftmp <none>
+Date: Thu, 20 Oct 2022 01:32:02 +0400
+Subject: [PATCH] apply patch
+
+---
+ Makefile.in | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/Makefile.in b/Makefile.in
+index 5f86b663d..a35021798 100644
+--- a/Makefile.in
++++ b/Makefile.in
+@@ -118,6 +118,10 @@ install: install-modules $(TARGETS)
+ 	done
+ 	$(INSTALL_DATA) build/apr_rules.out $(DESTDIR)$(installbuilddir)/apr_rules.mk
+ 	$(INSTALL) -m 755 apr-config.out $(DESTDIR)$(bindir)/$(APR_CONFIG)
++	for file in find_apr.m4 apr_common.m4 install.sh gen-build.py get-version.sh ; do \
++		$(LIBTOOL) --mode=install cp $(top_srcdir)/build/$$file \
++	    $(DESTDIR)$(installbuilddir)/$$file	; \
++	done
+ 	@if [ $(INSTALL_SUBDIRS) != "none" ]; then \
+             for i in $(INSTALL_SUBDIRS); do \
+ 	        ( cd $$i ; $(MAKE) DESTDIR=$(DESTDIR) install ); \
+-- 
+2.38.1
+

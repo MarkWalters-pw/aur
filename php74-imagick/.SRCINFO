@@ -1,0 +1,17 @@
+pkgbase = php74-imagick
+	pkgdesc = PHP 7.4 extension to create and modify images using the ImageMagick library
+	pkgver = 3.7.0
+	pkgrel = 4
+	url = https://pecl.php.net/package/imagick
+	arch = x86_64
+	license = PHP
+	checkdepends = librsvg
+	checkdepends = ttf-dejavu
+	depends = php74
+	depends = imagemagick
+	depends = ttf-font
+	backup = etc/php74/conf.d/30-imagick.ini
+	source = https://pecl.php.net/get/imagick-3.7.0.tgz
+	sha512sums = c84408e4e4a0c46d979240e06d58d264c6bb21f3b95e3d434c8a21cd808f6c495fd453ef9c07b5c44dac81c6f205b6697f8ecaf1a65a86ce4e9052328a389ebe
+
+pkgname = php74-imagick

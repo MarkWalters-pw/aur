@@ -1,0 +1,22 @@
+pkgbase = cpufreqd
+	pkgdesc = A small daemon to adjust cpu speed (and indeed voltage)
+	pkgver = 2.4.2
+	pkgrel = 11
+	url = http://kernel.org/pub/linux/utils/kernel/cpufreq/cpufrequtils.html
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = autoconf
+	depends = lm_sensors
+	depends = cpufrequtils
+	options = !libtool
+	backup = etc/cpufreqd.conf
+	source = http://deb.debian.org/debian/pool/main/c/cpufreqd/cpufreqd_2.4.2.orig.tar.bz2
+	source = cpufreqd.service
+	source = 619913.patch
+	md5sums = 038a3254044ead9944d9a04bcc94b5f4
+	md5sums = 4213dced234d7700dd012d3f63349cd1
+	md5sums = 4183ae46467f27f5815f151b136183f5
+
+pkgname = cpufreqd
+

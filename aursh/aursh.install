@@ -1,0 +1,9 @@
+# making sure XDG is set properly
+XDG_CACHE_HOME=${XDG_CACHE_HOME:-$HOME/.cache}
+XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-$HOME/.config}
+
+post-remove() {
+    [[ -d $XDG_CONFIG_HOME/aursh ]] && rm -rf "$XDG_CONFIG_HOME/aursh"
+    [[ -d $XDG_CACHE_HOME/aursh ]] && rm -rf "$XDG_CACHE_HOME/aursh"
+    [[ -d $HOME/.aursh ]] && rm -rf "$HOME/.aursh"
+}

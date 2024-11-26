@@ -1,0 +1,17 @@
+pkgbase = python-scrython-git
+	pkgdesc = Python wrapper for the Scryfall API
+	pkgver = 1.11.1.r1.gef858db
+	pkgrel = 1
+	url = https://github.com/NandaScott/Scrython
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python-aiohttp
+	source = python-scrython::git+https://github.com/NandaScott/Scrython
+	sha256sums = SKIP
+
+pkgname = python-scrython-git

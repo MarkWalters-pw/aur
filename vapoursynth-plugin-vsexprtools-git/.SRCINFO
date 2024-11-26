@@ -1,0 +1,20 @@
+pkgbase = vapoursynth-plugin-vsexprtools-git
+	pkgdesc = Plugin for Vapoursynth: vsexprtools (GIT version)
+	pkgver = 1.4.6.1.g8eeea60
+	pkgrel = 1
+	url = https://github.com/Irrational-Encoding-Wizardry/vs-exprtools.git
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-wheel
+	makedepends = python-installer
+	makedepends = python-setuptools
+	depends = vapoursynth
+	depends = vapoursynth-plugin-vstools-git
+	provides = vapoursynth-plugin-vsexprtools
+	conflicts = vapoursynth-plugin-vsexprtools
+	source = vsexprtools::git+https://github.com/Irrational-Encoding-Wizardry/vs-exprtools.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-vsexprtools-git

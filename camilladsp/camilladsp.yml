@@ -1,0 +1,61 @@
+---
+title: ~
+description: ~
+devices:
+  samplerate: 44100
+  chunksize: 2048
+  queuelimit: 4
+  silence_threshold: -60.0
+  silence_timeout: 3.0
+  capture:
+    type: Alsa
+    channels: 2
+    device: "hw:Loopback,0"
+    format: S32LE
+  playback:
+    type: Alsa
+    channels: 2
+    device: "hw:0,0"
+    format: S16LE
+  enable_rate_adjust: false
+  target_level: 2048
+  adjust_period: 10.0
+  resampler: ~
+  capture_samplerate: ~
+  stop_on_rate_change: false
+  rate_measure_interval: 3.0
+  volume_ramp_time: ~
+mixers: {}
+filters:
+  Bass:
+    type: Biquad
+    description: ~
+    parameters:
+      type: Lowshelf
+      freq: 85.0
+      q: 0.9
+      gain: 0.0
+  Treble:
+    type: Biquad
+    description: ~
+    parameters:
+      type: Highshelf
+      freq: 6500.0
+      q: 0.7
+      gain: 0.0
+processors: ~
+pipeline:
+  - type: Filter
+    channel: 0
+    names:
+      - Bass
+      - Treble
+    description: ~
+    bypassed: ~
+  - type: Filter
+    channel: 1
+    names:
+      - Bass
+      - Treble
+    description: ~
+    bypassed: ~

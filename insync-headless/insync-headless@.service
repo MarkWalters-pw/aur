@@ -1,0 +1,11 @@
+[Unit]
+Description=Insync Headless
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/insync-headless start --no-daemon
+ExecStop=/usr/bin/insync-headless quit
+User=%I
+
+[Install]
+WantedBy=multi-user.target

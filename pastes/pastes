@@ -1,0 +1,172 @@
+#!/usr/bin/env bash
+# Pastes - easily use pastes.dev from the command line
+# Copyright (C) 2023  Max Bossing <info@maxbossing.de>
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation, version 2.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+USED_EDITOR="${EDITOR}"
+USE_FILE=false
+FILE=""
+STDIN=false
+VIEW_PASTE=false
+SAVE_PASTE=false
+LANGUAGE="plain"
+VERSION="1.1.1"
+
+#Submit paste to pastes.dev using $EDTITOR
+submit_paste_editor() {
+    # get input from user through his standard editor
+    c="$(echo | vipe)"
+    
+    # If input is empty don't submit paste
+    if [ -z "$c" ];
+    then
+        exit 1
+    else
+        echo "$c" | curl -T - -H "Content-Type: text/$LANGUAGE" https://api.pastes.dev/post        
+        exit 0
+    fi
+}
+
+# submit contents of /dev/stdin to pastes.dev
+submit_paste_stdin() {
+    c="$(cat /dev/stdin)"
+    if [ -z "$c" ];
+    then
+        exit 1
+    else
+        echo "$c" | curl -T - -H "Content-Type: text/$LANGUAGE" https://api.pastes.dev/post
+        exit 0
+    fi
+}
+
+submit_paste_file() {
+    cat "$FILE" | curl -T - -H "Content-Type: text/$LANGUAGE" https://api.pastes.dev/post
+    exit 0
+}
+
+# fetch paste from pastes.dev and display it in $EDTITOR
+view_paste() {
+    echo "Fetching paste..."
+    curl "https://api.pastes.dev/$1" -s  | vipe > /dev/null
+    # delete paste file
+    exit 0
+}
+
+save_paste() {
+    echo "Fetching paste..."
+    curl "https://api.pastes.dev/$1" -s > $FILE
+    exit 0
+}
+
+# Show help screen and exit
+show_help() {
+    echo "pastes - CLI frontend for pastes.dev"
+    echo "Usage: pastes [FLAGS] [KEY]"
+    echo "example : pastes"
+    echo "arguments:"
+    echo "  -h --help                 display this screen and exit"
+    echo "  -v --version              display version and exit"
+    echo "  -f --file [PATH]          specify path to file to be pasted"
+    echo "  -e --editor [EDITOR]      specify editor to be used"
+    echo "  -l --language [language]  specify the language"
+    echo "  -s --save                 save the paste to the path defined by -f"
+    echo "  -                         paste STDIN"
+    exit 0
+}   
+
+display_version() {
+    echo "pastes v$VERSION"
+    exit 0
+}
+
+# Lightweight shell-only vipe(1) implementation
+# vipe - pipe in and out of $EDITOR
+# Source: https://github.com/juliangruber/vipe/blob/master/vipe.sh
+vipe(){
+    # temp file
+    t=/tmp/vipe.$$.txt
+    touch $t
+
+    # read from stdin
+    if [ ! -t 0 ];then
+        cat > $t
+    fi
+
+    # spawn editor with stdio connected
+    ${USED_EDITOR} $t < /dev/tty > /dev/tty || exit $?
+
+    # write to stdout
+    cat $t
+
+    # cleanup 
+    rm $t
+}
+
+# Parse the command line arguments
+get_file_next_time=false
+get_editor_next_time=false
+get_language_next_time=false
+i=1
+for arg in "$@"
+do
+    # Get file
+    if [[ "$get_file_next_time" == "true" ]];then
+        FILE="$arg"
+        get_file_next_time=false
+    # Get editor
+    elif [[ "$get_editor_next_time" == "true" ]];then
+        USED_EDITOR="$arg"
+        get_editor_next_time=false
+    # Get language
+    elif [[ "$get_language_next_time" == "true" ]];then
+        LANGUAGE="$arg"
+        get_language_next_time=false
+    # Show help screen
+    elif [[ "$arg" == "-h" || "$arg" == "--help" ]];then
+        show_help
+    # File to paste
+    elif [[ "$arg" == "-f" || "$arg" == "--file" ]];then
+        USE_FILE=true
+        get_file_next_time=true
+    # set editor
+    elif [[ "$arg" == "-e" || "$arg" == "--editor" ]];then
+        get_editor_next_time=true
+    elif [[ "$arg" == "-" ]];then
+        STDIN=true
+    elif [[ "$arg" == "-v" || "$arg" == "--version" ]];then
+        display_version
+    elif [[ "$arg" == "-s" || "$arg" == "--save" ]];then
+        SAVE_PASTE=true
+        VIEW_PASTE=false
+    elif [[ $arg == "-l" || "$arg" == "--language" ]];then
+        get_language_next_time=true
+    else
+        VIEW_PASTE=true 
+        PASTE=$arg
+    fi
+    i=$((i + 1))
+done
+
+if [[ $STDIN == "true" ]];then
+    submit_paste_stdin
+elif [[ "$SAVE_PASTE" == "true" ]];then
+    save_paste "$PASTE"
+elif [[ $USE_FILE == "true" ]];then
+    submit_paste_file
+elif [[ "$VIEW_PASTE" == "true" ]];then
+    view_paste "$PASTE"
+else
+    submit_paste_editor
+fi

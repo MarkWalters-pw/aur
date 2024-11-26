@@ -1,0 +1,24 @@
+pkgbase = cournal
+	pkgdesc = A collaborative note taking and journal application using a stylus.
+	pkgver = r207.23392b8
+	pkgrel = 2
+	url = https://github.com/flyser/cournal
+	arch = any
+	license = GPL3
+	makedepends = git
+	makedepends = mercurial
+	depends = python
+	depends = gtk3
+	depends = poppler-glib
+	depends = gobject-introspection
+	depends = python-gobject
+	depends = python-cairo
+	depends = python-zope-interface
+	depends = hicolor-icon-theme
+	depends = desktop-file-utils
+	depends = intltool
+	source = git+https://github.com/flyser/cournal.git
+	md5sums = SKIP
+
+pkgname = cournal
+

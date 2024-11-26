@@ -1,0 +1,12 @@
+[Unit]
+Description=Graphite-web daemon
+After=network.target
+
+[Service]
+Environment=PYTHONPATH=/opt/graphite/whisper
+ExecStart=/opt/graphite/bin/run-graphite-devel-server.py --libs=/opt/graphite/webapp/ /opt/graphite/
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
+

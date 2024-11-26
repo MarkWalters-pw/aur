@@ -1,0 +1,18 @@
+pkgbase = supercollider-maths-git
+	pkgdesc = SuperCollider emulation of the Maths eurorack module
+	pkgver = r19.639b619
+	pkgrel = 1
+	url = https://github.com/spluta/Maths
+	arch = any
+	groups = pro-audio
+	groups = supercollider-plugins
+	license = GPL
+	makedepends = git
+	makedepends = cmake
+	makedepends = faust
+	makedepends = ruby-rexml
+	depends = supercollider
+	source = supercollider-maths-git::git+https://github.com/spluta/Maths.git
+	md5sums = SKIP
+
+pkgname = supercollider-maths-git

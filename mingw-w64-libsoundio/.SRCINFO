@@ -1,0 +1,18 @@
+pkgbase = mingw-w64-libsoundio
+	pkgdesc = A C99 library providing cross-platform audio input and output (mingw-w64)
+	pkgver = 2.0.0
+	pkgrel = 2
+	url = http://www.github.com/andrewrk/libsoundio
+	arch = any
+	license = MIT
+	makedepends = mingw-w64-cmake
+	makedepends = mingw-w64-gcc
+	depends = mingw-w64-crt
+	options = !strip
+	options = staticlibs
+	options = !buildflags
+	source = https://github.com/andrewrk/libsoundio/archive/2.0.0.tar.gz
+	sha256sums = 67a8fc1c9bef2b3704381bfb3fb3ce99e3952bc4fea2817729a7180fddf4a71e
+
+pkgname = mingw-w64-libsoundio
+

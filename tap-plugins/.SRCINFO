@@ -1,0 +1,17 @@
+pkgbase = tap-plugins
+	pkgdesc = Tom's LADSPA Plugins
+	pkgver = 1.0.1
+	pkgrel = 3
+	url = http://tap-plugins.sourceforge.net/
+	arch = x86_64
+	groups = ladspa-plugins
+	groups = pro-audio
+	license = GPL2
+	makedepends = git
+	makedepends = ladspa
+	depends = glibc
+	source = tap-plugins::git+https://git.hq.sig7.se/tap-plugins.git
+	sha512sums = SKIP
+	b2sums = SKIP
+
+pkgname = tap-plugins

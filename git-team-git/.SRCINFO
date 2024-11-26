@@ -1,0 +1,16 @@
+pkgbase = git-team-git
+	pkgdesc = Command line interface for managing and enhancing git commit messages with co-authors.
+	pkgver = 1.7.0.r30.gb9cd427
+	pkgrel = 1
+	url = https://github.com/hekmekk/git-team.git
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	depends = go
+	provides = git-team
+	conflicts = git-team
+	source = git-team::git+https://github.com/hekmekk/git-team.git#branch=main
+	md5sums = SKIP
+
+pkgname = git-team-git
+

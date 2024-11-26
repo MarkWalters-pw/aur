@@ -1,0 +1,20 @@
+pkgbase = apk-preview
+	pkgdesc = A graphical user interface to see APK file details & icon (and install apk to phone)
+	pkgver = 1.3.2
+	pkgrel = 3
+	url = https://github.com/alireza6677/apk-preview
+	install = apk-preview.install
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	depends = python
+	depends = python-gobject
+	depends = unzip
+	depends = android-tools
+	depends = android-sdk-build-tools
+	provides = apk-preview
+	source = apk-preview::git+https://github.com/alireza6677/apk-preview.git
+	md5sums = SKIP
+
+pkgname = apk-preview
+

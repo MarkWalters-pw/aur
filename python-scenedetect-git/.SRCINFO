@@ -1,0 +1,27 @@
+pkgbase = python-scenedetect-git
+	pkgdesc = Cross-platform, OpenCV-based video scene detection program and Python library.
+	pkgver = 0.6.1.release.r0.gcd1d1b6
+	pkgrel = 1
+	url = https://github.com/Breakthrough/PySceneDetect
+	arch = any
+	license = BSD
+	checkdepends = python-pytest
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python-appdirs
+	depends = python-click
+	depends = python-opencv
+	depends = python-numpy
+	depends = python-tqdm
+	optdepends = mkvtoolnix-cli: Splitting in copy mode.
+	optdepends = ffmpeg: Splitting in precise mode.
+	optdepends = python-av
+	provides = python-scenedetect
+	conflicts = python-scenedetect
+	source = python-scenedetect::git+https://github.com/Breakthrough/PySceneDetect
+	sha256sums = SKIP
+
+pkgname = python-scenedetect-git

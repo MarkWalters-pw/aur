@@ -1,0 +1,21 @@
+pkgbase = datovka-git
+	pkgdesc = GUI application allowing access to a 'Databox' - an electronic communication interface endorsed by the Czech government
+	pkgver = v4.18.0.r60.g02f69683
+	pkgrel = 1
+	url = https://www.datovka.cz/
+	arch = i686
+	arch = x86_64
+	license = LGPL
+	makedepends = qt5-tools
+	makedepends = git
+	depends = qt5-base
+	depends = qt5-svg
+	depends = libdatovka
+	depends = openssl
+	depends = hicolor-icon-theme
+	provides = datovka
+	conflicts = datovka
+	source = git+https://gitlab.labs.nic.cz/datovka/datovka.git
+	md5sums = SKIP
+
+pkgname = datovka-git

@@ -1,0 +1,19 @@
+pkgbase = levant
+	pkgdesc = An open source templating and deployment tool for HashiCorp Nomad jobs
+	pkgver = 0.3.3
+	pkgrel = 1
+	url = https://github.com/hashicorp/levant
+	changelog = levant.changelog
+	arch = i686
+	arch = x86_64
+	arch = arm
+	arch = aarch64
+	license = MPL2
+	makedepends = go
+	depends = glibc
+	provides = levant
+	conflicts = levant
+	source = levant-0.3.3.tar.gz::https://github.com/hashicorp/levant/archive/refs/tags/v0.3.3.tar.gz
+	sha256sums = 0e87c27e2d4be7cd2a24cb0459d0a55f1bb7b5d65e6f7da4a2babd7d95d1bd92
+
+pkgname = levant

@@ -1,0 +1,18 @@
+pkgbase = primer-git
+	pkgdesc = PRIME GPU offload helper for Wayland systems
+	pkgver = 0.2.0
+	pkgrel = 1
+	url = https://github.com/zurrty/primer
+	arch = x86_64
+	license = GPL
+	makedepends = cargo
+	depends = git
+	depends = pacman
+	depends = systemd-libs
+	depends = zenity
+	provides = primer
+	conflicts = primer
+	source = git+https://github.com/zurrty/primer
+	sha256sums = SKIP
+
+pkgname = primer-git

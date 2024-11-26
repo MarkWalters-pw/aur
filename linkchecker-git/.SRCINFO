@@ -1,0 +1,22 @@
+pkgbase = linkchecker-git
+	pkgdesc = Check websites for broken links (development version)
+	pkgver = latest
+	pkgrel = 4
+	url = https://linkchecker.github.io/linkchecker
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	depends = python>=3.5
+	depends = python-beautifulsoup4
+	depends = python-requests>=2.4
+	depends = python-xdg
+	depends = python-dnspython
+	depends = python-future
+	optdepends = python-argcomplete
+	provides = linkchecker
+	conflicts = linkchecker
+	source = git+https://github.com/linkchecker/linkchecker.git
+	md5sums = SKIP
+
+pkgname = linkchecker-git

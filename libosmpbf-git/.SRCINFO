@@ -1,0 +1,17 @@
+pkgbase = libosmpbf-git
+	pkgdesc = A library to support OpenStreetMap's protocolbuffer binary format (OSM PBF)
+	pkgver = 1.4.0.r4.g8ab05ca
+	pkgrel = 2
+	url = https://github.com/scrosby/OSM-binary
+	arch = i686
+	arch = x86_64
+	license = LGPL3
+	makedepends = git
+	depends = protobuf
+	provides = libosmpbf
+	conflicts = libosmpbf
+	source = libosmpbf-git::git+https://github.com/scrosby/OSM-binary.git
+	md5sums = SKIP
+
+pkgname = libosmpbf-git
+

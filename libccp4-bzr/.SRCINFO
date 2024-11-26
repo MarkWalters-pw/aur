@@ -1,0 +1,18 @@
+pkgbase = libccp4-bzr
+	pkgdesc = Protein X-ray crystallography toolkit - Libraries
+	pkgver = r1896
+	pkgrel = 2
+	url = http://www.ccp4.ac.uk/
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = breezy
+	makedepends = gcc-fortran
+	makedepends = python-tzlocal
+	depends = mmdb2
+	provides = libccp4=7.0.0
+	conflicts = libccp4
+	source = libccp4-bzr::bzr+https://fg.oisin.rc-harwell.ac.uk/anonscm/bzr/libccp4/trunk
+	sha256sums = SKIP
+
+pkgname = libccp4-bzr

@@ -1,0 +1,19 @@
+pkgbase = mantissa
+	pkgdesc = A webkit-based browser made in D and with a fair share of love
+	pkgver = 1.4.0
+	pkgrel = 1
+	url = https://github.com/streaksu/mantissa
+	arch = i686
+	arch = x86_64
+	license = BSL
+	makedepends = dub
+	makedepends = ldc
+	makedepends = pkgconfig
+	depends = webkit2gtk>=2.30.4
+	depends = sqlite3>=3.34.0
+	optdepends = gst-libav: Support for some online video codecs
+	source = git+https://github.com/streaksu/mantissa.git#tag=v1.4.0
+	sha256sums = SKIP
+
+pkgname = mantissa
+

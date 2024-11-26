@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+
+if [[ $EUID -ne 0  ]]; then
+   echo "This script must be run as root"
+   exit 1
+fi
+
+python -m mautrix_googlechat -c /etc/mautrix-googlechat/config.yaml -r /etc/mautrix-googlechat/registration.yaml -g
+chown root:mautrix-googlechat /etc/mautrix-googlechat/config.yaml /etc/mautrix-googlechat/registration.yaml
+chmod 640 /etc/mautrix-googlechat/config.yaml /etc/mautrix-googlechat/registration.yaml

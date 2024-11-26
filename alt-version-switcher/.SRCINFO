@@ -1,0 +1,18 @@
+pkgbase = alt-version-switcher
+	pkgdesc = Tool for switching between different versions of commands
+	pkgver = 1.0.5
+	pkgrel = 1
+	url = https://github.com/dotboris/alt
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = rust
+	makedepends = cargo
+	makedepends = git
+	conflicts = alt
+	conflicts = alt-git
+	source = alt-1.0.5.tar.gz::https://github.com/dotboris/alt/archive/v1.0.5.tar.gz
+	sha512sums = 8b7cc468ccfd6fe131815bb205cac6fb5fe6ce2a23cb622284b25ae25b83feca3d8c91a8431fa53cdc69b89bd19feffb3b2730b418d27652e72880f203ed6889
+
+pkgname = alt-version-switcher
+

@@ -1,0 +1,23 @@
+pkgbase = python-srsly
+	pkgdesc = Modern high-performance serialization utilities for Python
+	pkgver = 2.4.8
+	pkgrel = 4
+	url = https://github.com/explosion/srsly
+	arch = x86_64
+	arch = aarch64
+	license = MIT
+	makedepends = python-setuptools
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = cython0
+	depends = python-catalogue
+	depends = python-pytest
+	depends = python-pytest-timeout
+	depends = python-pytz
+	depends = python-mock
+	depends = python-numpy
+	source = python-srsly-2.4.8.tar.gz::https://github.com/explosion/srsly/archive/refs/tags/v2.4.8.tar.gz
+	b2sums = f4f028118cc437fd84e4ed45e0c0279032c9be21b8fba9836df37c19f78572d23920bcaefed42e5d77ab68b38589bcb16c9a834d43b9cd5fbbe6702c32b5f6ff
+
+pkgname = python-srsly

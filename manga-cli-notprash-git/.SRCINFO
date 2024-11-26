@@ -1,0 +1,19 @@
+pkgbase = manga-cli-notprash-git
+	pkgdesc = Script to read manga from cli.
+	pkgver = r43.6f90d80
+	pkgrel = 1
+	url = https://github.com/notprash/manga-cli.git
+	arch = any
+	license = MIT
+	makedepends = git
+	depends = curl
+	depends = zathura
+	depends = zathura-cb
+	depends = pup
+	optdepends = zathura-pdf-poppler: view manga file as pdf
+	optdepends = imagemagick: converting files to pdf
+	provides = manga-cli-notprash-git
+	source = git+https://github.com/notprash/manga-cli.git
+	md5sums = SKIP
+
+pkgname = manga-cli-notprash-git

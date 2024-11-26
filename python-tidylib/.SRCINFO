@@ -1,0 +1,18 @@
+pkgbase = python-tidylib
+	pkgdesc = Python bindings for Tidy HTML parser/cleaner.
+	pkgver = 0.3.2
+	pkgrel = 1
+	url = https://github.com/countergram/pytidylib
+	arch = any
+	license = MIT
+	makedepends = python-setuptools
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = tidyhtml
+	depends = python
+	provides = python-pytidylib
+	source = python-tidylib-0.3.2.tar.gz::https://files.pythonhosted.org/packages/source/p/pytidylib/pytidylib-0.3.2.tar.gz
+	sha256sums = 22b1c8d75970d8064ff999c2369e98af1d0685417eda4c829a5c9f56764b0af3
+
+pkgname = python-tidylib

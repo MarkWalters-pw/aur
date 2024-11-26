@@ -1,0 +1,18 @@
+pkgbase = ros2-humble-rsl
+	pkgdesc = ROS Support Library
+	pkgver = 0.2.2
+	pkgrel = 5
+	url = https://index.ros.org/p/rsl/
+	arch = any
+	makedepends = range-v3
+	makedepends = cmake
+	makedepends = doxygen
+	depends = ros2-humble
+	depends = fmt
+	depends = ros2-humble-tl-expected
+	depends = eigen
+	depends = ros2-humble-tcb-span
+	source = https://github.com/PickNikRobotics/RSL/archive/refs/tags/0.2.2.tar.gz
+	sha256sums = 8c74f9e5a74d8ca46c952dcdc132bd8dceab9c104494cb03ade551ed49842d4b
+
+pkgname = ros2-humble-rsl

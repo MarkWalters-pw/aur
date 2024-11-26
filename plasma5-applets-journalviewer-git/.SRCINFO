@@ -1,0 +1,18 @@
+pkgbase = plasma5-applets-journalviewer-git
+	pkgdesc = simple journald log viewer plasmoid
+	pkgver = r12.07536d5
+	pkgrel = 1
+	url = https://gitlab.com/Aiwendil/JournalViewer
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = cmake
+	makedepends = extra-cmake-modules
+	makedepends = pkg-config
+	makedepends = git
+	depends = plasma-workspace
+	source = git+https://gitlab.com/Aiwendil/JournalViewer.git
+	sha256sums = SKIP
+
+pkgname = plasma5-applets-journalviewer-git
+

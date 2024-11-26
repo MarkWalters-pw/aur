@@ -1,0 +1,23 @@
+pkgbase = go-gitmoji-cli-bin
+	pkgdesc = CLI supporting gitmoji with conventional commits
+	pkgver = 0.6.1
+	pkgrel = 1
+	url = https://github.com/AndreasAugustin/go-gitmoji-cli
+	license = MIT
+	depends = git
+	conflicts = go-gitmoji-cli
+	provides = go-gitmoji-cli
+	arch = aarch64
+	source_aarch64 = https://github.com/AndreasAugustin/go-gitmoji-cli/releases/download/v0.6.1-alpha/go-gitmoji-cli_0.6.1-alpha_Linux_arm64.tar.gz
+	sha256sums_aarch64 = cfaae607cd807f2d89f1879c73fac795b25a7c109c36e8d9b9758958797decc2
+	arch = armv7h
+	source_armv7h = https://github.com/AndreasAugustin/go-gitmoji-cli/releases/download/v0.6.1-alpha/go-gitmoji-cli_0.6.1-alpha_Linux_arm.tar.gz
+	sha256sums_armv7h = 3dc649a0cd0bad638b9abff1f6a6bb93297848b01a13d765897d9fbaa94715a1
+	arch = i686
+	source_i686 = https://github.com/AndreasAugustin/go-gitmoji-cli/releases/download/v0.6.1-alpha/go-gitmoji-cli_0.6.1-alpha_Linux_i386.tar.gz
+	sha256sums_i686 = 55bd2048ae05588d623141f2aa870773750508f45112736ea3c3b59812bfed3d
+	arch = x86_64
+	source_x86_64 = https://github.com/AndreasAugustin/go-gitmoji-cli/releases/download/v0.6.1-alpha/go-gitmoji-cli_0.6.1-alpha_Linux_x86_64.tar.gz
+	sha256sums_x86_64 = dff5ad9b98563443e8a90a7dc16574b1bd87e98d5e15bf07d3566bae5a341948
+	
+pkgname = go-gitmoji-cli-bin

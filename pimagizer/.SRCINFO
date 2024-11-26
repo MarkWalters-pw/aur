@@ -1,0 +1,20 @@
+pkgbase = pimagizer
+	pkgdesc = A Python program with GTK ui created to resize images
+	pkgver = 0.4.5
+	pkgrel = 3
+	url = http://cambiadeso.es/proyectos/pimagizer
+	arch = any
+	license = GPL3
+	makedepends = python-setuptools
+	depends = python
+	depends = python-pillow
+	depends = desktop-file-utils
+	depends = pygobject-devel
+	depends = python-gobject
+	options = !emptydirs
+	source = https://github.com/vfrico/pimagizer/archive/v0.4.5.tar.gz
+	md5sums = 1cd841e648e767f3e7693550ba19586f
+	sha256sums = b5199dbae9a0490edcff580f00c3916532272dab7f278bbd37e429a163122578
+
+pkgname = pimagizer
+

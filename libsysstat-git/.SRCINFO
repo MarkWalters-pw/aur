@@ -1,0 +1,19 @@
+pkgbase = libsysstat-git
+	pkgdesc = Library to query system information like CPU and memory usage or network traffic
+	pkgver = 1.0.0
+	pkgrel = 1
+	url = https://github.com/lxqt/libsysstat
+	arch = i686
+	arch = x86_64
+	arch = armv6h
+	license = LGPL-2.1-only
+	makedepends = git
+	makedepends = cmake
+	makedepends = lxqt-build-tools-git
+	depends = qt6-base
+	provides = libsysstat=1.0.0
+	conflicts = libsysstat
+	source = git+https://github.com/lxqt/libsysstat.git
+	sha256sums = SKIP
+
+pkgname = libsysstat-git

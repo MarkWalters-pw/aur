@@ -1,0 +1,23 @@
+pkgbase = blockmap-git
+	pkgdesc = Minecraft map viewer/renderer
+	pkgver = 2.4.0.r0.d47e3d4
+	pkgrel = 1
+	url = https://github.com/Minecraft-Technik-Wiki/BlockMap
+	arch = any
+	license = MIT
+	makedepends = java-environment>=17
+	makedepends = git
+	depends = java-runtime>=17
+	depends = hicolor-icon-theme
+	depends = archlinux-java-run>=8
+	depends = sh
+	source = blockmap-git::git+https://github.com/Minecraft-Technik-Wiki/BlockMap
+	source = blockmap.sh
+	source = blockmap-gui.sh
+	source = BlockMap.desktop
+	sha512sums = SKIP
+	sha512sums = 4b311ac92be3984eca9457f72c0fd87327532b063d5d6bdf38fec683ed2f14fd3dd252f7441e3b15429dcfe7618715da2c2c88adb9ef5b7be85b56d2b7aab35b
+	sha512sums = 5915722b07aba215978ab13531e672f54fc26ebb27cc82fbd8c6103b2ba28c7a1829128dbad31e1682525e78812a8d472d92a66653a4f2d49d7fc5b2ac175bb5
+	sha512sums = 1dee9e62b7b957fc0eb241555cd6037b3e6e4866ff9a05840fcff8f4f59082a212bbe8a4ff35b4dbc1ae605ba64c58a87044e34df21a50bb564b707600ff3025
+
+pkgname = blockmap-git

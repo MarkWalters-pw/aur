@@ -1,0 +1,27 @@
+pkgbase = alpine-git
+	pkgdesc = Fork of the PINE mail client (git)
+	pkgver = 2.26.0.678.267cba3
+	pkgrel = 1
+	url = https://alpineapp.email/
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	license = APACHE
+	makedepends = git
+	depends = gettext
+	depends = krb5
+	depends = libldap
+	depends = pam
+	provides = alpine
+	provides = pine
+	provides = re-alpine
+	conflicts = alpine
+	conflicts = pine
+	conflicts = re-alpine
+	replaces = alpine
+	replaces = pine
+	replaces = re-alpine
+	source = git+http://repo.or.cz/alpine.git
+	sha512sums = SKIP
+
+pkgname = alpine-git

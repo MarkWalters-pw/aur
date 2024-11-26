@@ -1,0 +1,18 @@
+pkgbase = libkrunfw-git
+	pkgdesc = A dynamic library bundling the guest payload consumed by libkrun
+	pkgver = v4.0.0.r0.g8a71842
+	pkgrel = 1
+	url = https://github.com/containers/libkrunfw
+	arch = x86_64
+	license = GPL2
+	makedepends = cargo
+	makedepends = git
+	makedepends = gcc
+	makedepends = python-pyelftools
+	depends = bc
+	provides = libkrunfw
+	conflicts = libkrunfw
+	source = libkrunfw-git::git+https://github.com/containers/libkrunfw
+	md5sums = SKIP
+
+pkgname = libkrunfw-git

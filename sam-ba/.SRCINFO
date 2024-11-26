@@ -1,0 +1,23 @@
+pkgbase = sam-ba
+	pkgdesc = Atmel SAM Boot Assistant
+	pkgver = 3.3.1
+	pkgrel = 2
+	url = https://github.com/atmelcorp/sam-ba
+	arch = x86_64
+	license = GPL2
+	makedepends = qt5-tools
+	makedepends = clang
+	depends = qt5-base
+	depends = qt5-serialport
+	depends = qt5-declarative
+	source = sam-ba-3.3.1.tar.gz::https://github.com/atmelcorp/sam-ba/archive/v3.3.1.tar.gz
+	source = 0001-Dont-install-thirdparty-libs.patch
+	source = 0002-Dont-rely-on-applicationDirPath.patch
+	source = 0003-Use-newer-qt-version.patch
+	md5sums = e435ec4416dcfb013ab8a07f95ef0ba4
+	md5sums = 7115eaa32335e755fe4b17277a15ca7e
+	md5sums = 1fd871ae02809fcbc3095c169f59ce01
+	md5sums = f938ade40a4b559f6f70cf3929433bbb
+
+pkgname = sam-ba
+

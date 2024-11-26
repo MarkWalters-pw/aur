@@ -1,0 +1,28 @@
+pkgbase = yaehmop
+	pkgdesc = Yet Another extended Huckel Molecular Orbital Package (YAeHMOP)
+	pkgver = 3.1.0b2
+	pkgrel = 4
+	url = http://yaehmop.sourceforge.net/
+	arch = x86_64
+	arch = i686
+	license = GPL
+	depends = gcc-fortran
+	depends = readline
+	depends = libx11
+	depends = blas
+	depends = lapack
+	source = https://downloads.sourceforge.net/project/yaehmop/yaehmop-beta/3.1.0b2/bind.3.1.0b2.tgz
+	source = https://downloads.sourceforge.net/project/yaehmop/yaehmop-beta/3.1.0b2/viewkel.3.1.0b.tgz
+	source = https://downloads.sourceforge.net/project/yaehmop/yaehmop-beta/3.1.0b2/dense_eval.3.1.0b.tgz
+	source = yaehmop-fix-build.patch
+	source = yaehmop-fix-implicit-declarations.patch
+	source = yaehmop-fix-hard-coded-data-paths.patch
+	sha256sums = ce53fdc3adc117df83fcc418e30610d5c56d4af99d34c35757b1374b859b6ccd
+	sha256sums = 5bd5c4e6968bb2231d045ff8f5ef73e6ceb23a1e031b71bcbc7cbb1f9b9baaad
+	sha256sums = 2c3ffbb5775391078993c3ddc330c5bba2af1d737fbbca49822d989cb07fea35
+	sha256sums = 1558b5960a4af51e906a243806bbe8550d4ef7b868b55badb75581bfa744985e
+	sha256sums = 074eab380f4d2d16f24b3600d1a30292683eef8510a85a43f7187d9e153681e9
+	sha256sums = 7418e05a7dcc9355875323203bd8fd382cc5c64afe7e9017597398b21e1f432a
+
+pkgname = yaehmop
+

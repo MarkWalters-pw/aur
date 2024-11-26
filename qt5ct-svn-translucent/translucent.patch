@@ -1,0 +1,22 @@
+--- src/qt5ct-qtplugin/qt5ctplatformtheme.cpp	(original)
++++ src/qt5ct-qtplugin/qt5ctplatformtheme.cpp	(working copy)
+@@ -45,6 +45,7 @@
+ #endif
+ #include <QFile>
+ #include <QFileSystemWatcher>
++#include <QProcessEnvironment>
+ 
+ #include <qt5ct/qt5ct.h>
+ #include "qt5ctplatformtheme.h"
+@@ -78,6 +79,11 @@
+     }
+     qCDebug(lqt5ct) << "using qt5ct plugin";
+ #ifdef QT_WIDGETS_LIB
++    if (!QProcessEnvironment::systemEnvironment().contains("QT5CT_NO_TRANSLUCENT")) {
++        QSurfaceFormat f = QSurfaceFormat::defaultFormat();
++        f.setAlphaBufferSize(8);
++        QSurfaceFormat::setDefaultFormat(f);
++    }
+     if(!QStyleFactory::keys().contains("qt5ct-style"))
+         qCCritical(lqt5ct) << "unable to find qt5ct proxy style";
+ #endif

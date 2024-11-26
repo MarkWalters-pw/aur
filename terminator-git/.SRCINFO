@@ -1,0 +1,27 @@
+pkgbase = terminator-git
+	pkgdesc = multiple GNOME terminals in one window
+	pkgver = 2.1.1.136.gca335e45
+	pkgrel = 1
+	url = https://github.com/gnome-terminator/terminator.git
+	arch = any
+	license = GPL2
+	makedepends = git
+	makedepends = intltool
+	makedepends = python-setuptools
+	makedepends = python-pip
+	depends = gsettings-desktop-schemas
+	depends = libkeybinder3
+	depends = libnotify
+	depends = python-cairo
+	depends = python-configobj
+	depends = python-dbus
+	depends = python-gobject
+	depends = python-psutil
+	depends = vte3
+	depends = xdg-utils
+	conflicts = terminator
+	conflicts = terminator-gtk3-bzr
+	source = git+https://github.com/gnome-terminator/terminator.git
+	sha256sums = SKIP
+
+pkgname = terminator-git

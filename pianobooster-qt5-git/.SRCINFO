@@ -1,0 +1,21 @@
+pkgbase = pianobooster-qt5-git
+	pkgdesc = MIDI file player that teaches you how to play the piano (Qt5 port with fixes
+	pkgver = r1053.94c58b1
+	pkgrel = 1
+	url = https://github.com/captnfab/PianoBooster
+	arch = any
+	license = GPL3
+	makedepends = git
+	makedepends = cmake
+	depends = qt5-base
+	depends = alsa-lib
+	depends = ftgl
+	depends = hicolor-icon-theme
+	depends = desktop-file-utils
+	depends = ttf-dejavu
+	conflicts = pianobooster
+	source = pianobooster-qt5-git::git+https://github.com/captnfab/PianoBooster.git
+	md5sums = SKIP
+
+pkgname = pianobooster-qt5-git
+

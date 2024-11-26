@@ -1,0 +1,20 @@
+pkgbase = python-langid-git
+	pkgdesc = Stand-alone language identification system using python
+	pkgver = r242.4153583
+	pkgrel = 1
+	url = https://github.com/saffsd/langid.py
+	arch = any
+	license = BSD
+	makedepends = git
+	makedepends = python-setuptools
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = python
+	depends = python-numpy
+	source = git+https://github.com/saffsd/langid.py.git
+	source = 0001-langid-Use-2to3-tool.patch
+	sha512sums = SKIP
+	sha512sums = 3f1a17b7cd3bd6e01572c785c4759212e8e4ab4a305e1abc4fb7c27f66d7db430edea65025027ebc8dc9d26241bf5626574141a70ee34ad0ba97221ab0e64fc3
+
+pkgname = python-langid-git

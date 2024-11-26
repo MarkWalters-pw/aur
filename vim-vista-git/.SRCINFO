@@ -1,0 +1,20 @@
+pkgbase = vim-vista-git
+	pkgdesc = Viewer & Finder for LSP symbols and tags
+	pkgver = r249.de344a6
+	pkgrel = 1
+	url = https://github.com/liuchengxu/vista.vim
+	arch = any
+	license = MIT
+	makedepends = git
+	depends = vim
+	optdepends = ctags: ctags support
+	optdepends = vim-coc: lsp symbols support
+	optdepends = languageclient-neovim: lsp symbols support
+	optdepends = fzf: for searching symbols/tags
+	provides = vim-vista
+	conflicts = vim-vista
+	source = vista::git+https://github.com/liuchengxu/vista.vim.git
+	sha256sums = SKIP
+
+pkgname = vim-vista-git
+

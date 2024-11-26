@@ -1,0 +1,19 @@
+pkgbase = eggwm-qt5
+	pkgdesc = A simple and light Qt5 WM. 100% compatible with the EWMH and ICCCM standards.
+	pkgver = r10.79e245a
+	pkgrel = 1
+	url = https://notabug.org/tux_peng/eggwm
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = qt5-tools
+	depends = qt5-base
+	depends = qt5-x11extras
+	provides = eggwm
+	conflicts = eggwm
+	source = git+https://notabug.org/tux_peng/eggwm.git#commit=79e245a8c855df45cfd9356ca56628048ba46d0d
+	sha256sums = SKIP
+
+pkgname = eggwm-qt5
+

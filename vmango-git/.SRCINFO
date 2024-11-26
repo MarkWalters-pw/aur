@@ -1,0 +1,26 @@
+pkgbase = vmango-git
+	pkgdesc = Your own personal IaaS cloud
+	pkgver = v0.10.0.r0.g054da00
+	pkgrel = 1
+	url = https://github.com/subuk/vmango
+	arch = any
+	license = GPL3
+	makedepends = go-pie
+	makedepends = go-bindata
+	depends = libvirt
+	depends = qemu
+	depends = cdrtools
+	provides = vmango
+	conflicts = vmango
+	backup = etc/vmango.conf
+	source = vmango::git+https://github.com/subuk/vmango.git
+	source = service
+	source = sysusers
+	source = tmpfiles
+	sha512sums = SKIP
+	sha512sums = 958fa25dfb96394483ee5ed3d78bbfbf0d846b921be3fd0ce481f19918b40227e38debee8ec5de655f4d8e866997b44f97a316ad6eac791174444c052f18ec08
+	sha512sums = de9d454c87fadf9b2cea3ba2acd417a1201abae2d79a58187f0c96d0163ad921a96710b7c24ff9907bfd1d42242abeffbaec9a6cacb1b26c3b76ed219610ab12
+	sha512sums = 42b09bd69fb6562f6e44da0faa021f10e1bd30abe5e9215d882d5b08f37082a65a658594c9b81e04aaf9a6ed16f1b7947ed6804be015c4ec78656effde8a84d5
+
+pkgname = vmango-git
+

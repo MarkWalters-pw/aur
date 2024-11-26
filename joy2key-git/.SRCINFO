@@ -1,0 +1,14 @@
+pkgbase = joy2key-git
+	pkgdesc = Translate joystick movements into keystrokes
+	pkgver = 0+git.19
+	pkgrel = 1
+	url = https://github.com/joolswills/joy2key
+	arch = x86_64
+	arch = i686
+	license = GPL2
+	depends = libx11
+	depends = xorg-xwininfo
+	source = git+https://github.com/joolswills/joy2key.git
+	sha256sums = SKIP
+
+pkgname = joy2key-git

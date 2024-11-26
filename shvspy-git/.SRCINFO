@@ -1,0 +1,27 @@
+pkgbase = shvspy-git
+	pkgdesc = Qt GUI tool for shvbroker administration and browsing
+	pkgver = r508.21cc190
+	pkgrel = 1
+	url = https://github.com/silicon-heaven/shvspy
+	arch = i686
+	arch = x86_64
+	arch = armv7h
+	license = LGPL3
+	makedepends = git
+	makedepends = cmake
+	depends = necrolog
+	depends = libshv
+	depends = glibc
+	depends = gcc-libs
+	depends = qt6-base
+	depends = qt6-networkauth
+	depends = qt6-svg
+	provides = shvspy
+	conflicts = shvspy
+	conflicts = shvspy-git
+	source = git+https://github.com/silicon-heaven/shvspy.git
+	source = bash-completion-shvspy
+	md5sums = SKIP
+	md5sums = f681f0f02001b80f964ce640a41b5c27
+
+pkgname = shvspy-git

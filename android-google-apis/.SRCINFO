@@ -1,0 +1,17 @@
+pkgbase = android-google-apis
+	pkgdesc = Android Google APIs, latest API
+	pkgver = 25_r1
+	pkgrel = 1
+	url = https://developers.google.com/android
+	arch = any
+	license = custom
+	depends = android-platform
+	provides = android-google-apis-25
+	conflicts = android-google-apis-25
+	options = !strip
+	source = http://dl-ssl.google.com/android/repository/google_apis-25_r1.zip
+	source = source.properties
+	sha256sums = 351a5877d03821465fcd583e61ebe7c3315d234bf0af124a6359961d7858ed2e
+	sha256sums = c83a87d77c6b3b65ba63e62fac8194631895e92c32d555aaab069f78b8c310ee
+
+pkgname = android-google-apis

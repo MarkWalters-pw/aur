@@ -1,0 +1,21 @@
+pkgbase = pacback-git
+	pkgdesc = Advanced Version Control for Arch Linux
+	pkgver = r133.775373a
+	pkgrel = 1
+	url = https://github.com/JustinTimperio/pacback
+	install = pacback.install
+	arch = x86_64
+	license = MIT
+	makedepends = zstd
+	depends = python
+	depends = python-rich
+	depends = python-requests
+	depends = pacman-contrib
+	optdepends = pigz: Multithreaded de/compression of custom user files
+	provides = pacback
+	conflicts = pacback
+	backup = etc/pacback.conf
+	source = git+https://github.com/JustinTimperio/pacback.git
+	sha256sums = SKIP
+
+pkgname = pacback-git

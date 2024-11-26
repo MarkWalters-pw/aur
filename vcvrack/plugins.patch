@@ -1,0 +1,49 @@
+diff --git a/plugin.mk b/plugin.mk
+index 0a599244..cc2643d7 100644
+--- a/plugin.mk
++++ b/plugin.mk
+@@ -1,9 +1,13 @@
++ifndef ARCH_LIN
+ ifndef RACK_DIR
+ $(error RACK_DIR is not defined)
+ endif
++else
++RACK_DIR ?= /usr/share/vcvrack
++endif
+ 
+-SLUG := $(shell jq -r .slug plugin.json)
+-VERSION := $(shell jq -r .version plugin.json)
++SLUG ?= $(shell jq -r .slug plugin.json)
++VERSION ?= $(shell jq -r .version plugin.json)
+ 
+ ifndef SLUG
+ $(error SLUG could not be found in manifest)
+@@ -29,10 +33,10 @@ ifdef ARCH_LIN
+ 	TARGET := $(TARGET).so
+ 	# This prevents static variables in the DSO (dynamic shared object) from being preserved after dlclose().
+ 	FLAGS += -fno-gnu-unique
+-	# When Rack loads a plugin, it symlinks /tmp/Rack2 to its system dir, so the plugin can link to libRack.
+-	LDFLAGS += -Wl,-rpath=/tmp/Rack2
+-	# Since the plugin's compiler could be a different version than Rack's compiler, link libstdc++ and libgcc statically to avoid ABI issues.
+-	LDFLAGS += -static-libstdc++ -static-libgcc
++	# Installed includes
++	FLAGS += -I/usr/include/vcvrack -I/usr/include/vcvrack/dep
++	# Link shared libs
++	LDFLAGS += -ldl
+ 	XDG_DATA_HOME ?= $(HOME)/.local/share
+ 	RACK_USER_DIR ?= $(XDG_DATA_HOME)/Rack2
+ endif
+diff --git a/src/plugin.cpp b/src/plugin.cpp
+index f039dd07..f292e6a9 100644
+--- a/src/plugin.cpp
++++ b/src/plugin.cpp
+@@ -276,6 +276,9 @@ void init() {
+ 	if (settings::safeMode)
+ 		return;
+ 
++	// Load system-wide plugins
++	loadPlugins(asset::system("plugins"));
++
+ 	// Extract packages and load plugins
+ 	extractPackages(pluginsPath);
+ 	loadPlugins(pluginsPath);

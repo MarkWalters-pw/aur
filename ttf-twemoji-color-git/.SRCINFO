@@ -1,0 +1,30 @@
+pkgbase = ttf-twemoji-color-git
+	pkgdesc = Color and B&W SVGinOT builds of Twemoji
+	pkgver = 14.0.2.r2.g80a6926
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/13rac1/twemoji-color-font
+	arch = any
+	license = CC-BY-4.0
+	license = MIT
+	makedepends = fontforge
+	makedepends = git
+	makedepends = inkscape
+	makedepends = imagemagick
+	makedepends = nodejs
+	makedepends = potrace
+	makedepends = python-fonttools
+	makedepends = python-setuptools
+	makedepends = python-yaml
+	makedepends = svgo
+	provides = emoji-font
+	provides = ttf-twemoji-color
+	provides = twemoji-color-font
+	conflicts = ttf-twemoji-color
+	conflicts = twemoji-color-font
+	source = git+https://github.com/13rac1/twemoji-color-font.git#branch=main
+	source = git+https://github.com/13rac1/scfbuild.git#branch=master
+	b2sums = SKIP
+	b2sums = SKIP
+
+pkgname = ttf-twemoji-color-git

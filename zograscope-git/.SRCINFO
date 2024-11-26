@@ -1,0 +1,26 @@
+pkgbase = zograscope-git
+	pkgdesc = syntax-aware diff that also provides a number of additional tools (zs-diff, zs-find, zs-gdiff, zs-hi, zs-stats)
+	pkgver = r1089.aae6264
+	pkgrel = 1
+	url = https://github.com/xaizek/zograscope
+	arch = x86_64
+	license = AGPL
+	makedepends = git
+	makedepends = boost
+	makedepends = srcml
+	makedepends = bison
+	depends = qt5-base
+	depends = libgit2
+	depends = boost-libs
+	depends = ncurses
+	optdepends = srcml: srcML related diff features
+	provides = zograscope
+	conflicts = zograscope
+	source = zograscope::git+https://github.com/xaizek/zograscope.git
+	source = cursed::git+https://code.reversed.top/user/xaizek/libcursed
+	source = vle::git+https://code.reversed.top/user/xaizek/libvle
+	md5sums = SKIP
+	md5sums = SKIP
+	md5sums = SKIP
+
+pkgname = zograscope-git

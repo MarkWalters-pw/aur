@@ -1,0 +1,17 @@
+pkgbase = femto-emacs-git
+	pkgdesc = Tiny emacs clone with configuring in FemtoLisp
+	pkgver = 2019.12.16.abb1c38
+	pkgrel = 2
+	url = https://github.com/FemtoEmacs/Femto-Emacs/
+	arch = i686
+	arch = x86_64
+	license = custom
+	makedepends = git
+	depends = ncurses
+	depends = termcap
+	provides = femto-emacs
+	conflicts = femto-emacs
+	source = git+https://github.com/FemtoEmacs/Femto-Emacs.git
+	md5sums = SKIP
+
+pkgname = femto-emacs-git

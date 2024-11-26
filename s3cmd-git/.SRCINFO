@@ -1,0 +1,19 @@
+pkgbase = s3cmd-git
+	pkgdesc = A command line client for Amazon S3 (development version)
+	pkgver = 2.1.0.r88.g27d8fb0
+	pkgrel = 1
+	url = https://github.com/s3tools/s3cmd
+	arch = any
+	license = GPL2
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python
+	depends = python-dateutil
+	optdepends = gnupg: encrypted file storage
+	optdepends = python-magic: determine mimetype based on contents
+	provides = s3cmd
+	conflicts = s3cmd
+	source = s3cmd::git+https://github.com/s3tools/s3cmd.git
+	sha512sums = SKIP
+
+pkgname = s3cmd-git

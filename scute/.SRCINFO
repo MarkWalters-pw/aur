@@ -1,0 +1,23 @@
+pkgbase = scute
+	pkgdesc = GnuPG PKCS#11 module for using OpenPGP smartcards with X.509
+	pkgver = 1.7.0
+	pkgrel = 3
+	url = https://github.com/gpg/scute
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = imagemagick
+	makedepends = libgpg-error
+	makedepends = libassuan
+	makedepends = texinfo
+	depends = gnupg
+	depends = pinentry
+	source = https://gnupg.org/ftp/gcrypt/scute/scute-1.7.0.tar.bz2
+	source = https://gnupg.org/ftp/gcrypt/scute/scute-1.7.0.tar.bz2.sig
+	source = fix-build.patch
+	validpgpkeys = 6DAA6E64A76D2840571B4902528897B826403ADA
+	b2sums = 9a459fc07c53e44d6b194f0f7786644dae7c37402f69cc511ed7e6cc387236cfe01b13400779a90a123461a28e69629abc260f0fad9c302a9b630e23cb8b4293
+	b2sums = SKIP
+	b2sums = 0e49017e664aafc2095399c39a833347247b60952f1771c6359e0b06d483069ef09e39fb3d93e17f0d1df5f34ca13a8dd5e7bd18081dc2caf2a0b00c484e2a5f
+
+pkgname = scute

@@ -1,0 +1,17 @@
+pkgbase = svt-vp9-git
+	pkgdesc = Scalable Video Technology VP9 encoder (git version)
+	pkgver = 0.3.0.r22.g3ecdf8f
+	pkgrel = 1
+	url = https://github.com/OpenVisualCloud/SVT-VP9/
+	arch = x86_64
+	license = BSD-2-Clause-Patent
+	makedepends = git
+	makedepends = cmake
+	makedepends = nasm
+	depends = glibc
+	provides = svt-vp9
+	conflicts = svt-vp9
+	source = git+https://github.com/OpenVisualCloud/SVT-VP9.git
+	sha256sums = SKIP
+
+pkgname = svt-vp9-git

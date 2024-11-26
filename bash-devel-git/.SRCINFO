@@ -1,0 +1,35 @@
+pkgbase = bash-devel-git
+	pkgdesc = The GNU Bourne Again shell (development version)
+	pkgver = 5.2.r1171.ge44e3d50
+	pkgrel = 1
+	url = https://www.gnu.org/software/bash/bash.html
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	depends = glibc
+	depends = ncurses
+	depends = readline>=7.0
+	optdepends = bash-completion: for tab completion
+	provides = bash=5.2.r1171.ge44e3d50
+	provides = sh
+	conflicts = bash
+	backup = etc/bash.bashrc
+	backup = etc/bash.bash_logout
+	backup = etc/skel/.bashrc
+	backup = etc/skel/.bash_profile
+	backup = etc/skel/.bash_logout
+	source = git+https://git.savannah.gnu.org/git/bash.git#branch=devel
+	source = dot.bash_logout::https://gitlab.archlinux.org/archlinux/packaging/packages/bash/-/raw/main/dot.bash_logout
+	source = dot.bash_profile::https://gitlab.archlinux.org/archlinux/packaging/packages/bash/-/raw/main/dot.bash_profile
+	source = dot.bashrc::https://gitlab.archlinux.org/archlinux/packaging/packages/bash/-/raw/main/dot.bashrc
+	source = system.bash_logout::https://gitlab.archlinux.org/archlinux/packaging/packages/bash/-/raw/main/system.bash_logout
+	source = system.bashrc::https://gitlab.archlinux.org/archlinux/packaging/packages/bash/-/raw/main/system.bashrc
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = bash-devel-git

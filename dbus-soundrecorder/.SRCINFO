@@ -1,0 +1,21 @@
+pkgbase = dbus-soundrecorder
+	pkgdesc = Records sound from Pulse Audio using ffmpeg while watching D-Bus to determine tracks and meta data
+	pkgver = 1.2.3
+	pkgrel = 1
+	url = https://github.com/Martchus/dbus-soundrecorder
+	arch = i686
+	arch = x86_64
+	arch = armv6h
+	arch = armv7h
+	arch = aarch64
+	license = GPL
+	makedepends = cmake
+	makedepends = ninja
+	makedepends = qtutilities
+	depends = c++utilities
+	depends = qt5-base
+	source = dbus-soundrecorder-1.2.3.tar.gz::https://github.com/Martchus/dbus-soundrecorder/archive/v1.2.3.tar.gz
+	sha256sums = 1251ae77a6ffb17d30a43c63729e38db4b7d2c2428f889768677065111bd8320
+
+pkgname = dbus-soundrecorder
+

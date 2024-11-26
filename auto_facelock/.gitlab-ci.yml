@@ -1,0 +1,87 @@
+image: archlinux:base-devel
+
+variables:
+  PACKAGE_NAME: "auto_facelock"
+  AUR_REPO: "ssh://aur@aur.archlinux.org/${PACKAGE_NAME}.git"
+  COMMIT_HASH: "$CI_COMMIT_SHORT_SHA"
+  CURRENT_DIR: "$(pwd)"
+
+stages:
+  - lint
+  - build
+  - archive
+  - publish
+
+cache:
+  key: system-v1
+  paths:
+    - .pkg-cache
+    - .venv
+    - .pre-commit
+
+lint:
+  stage: lint
+  before_script:
+    - pacman -Sy --noconfirm --noprogressbar --cachedir .pkg-cache archlinux-keyring
+    - pacman -Syu --noconfirm --noprogressbar --cachedir .pkg-cache git python python-pre-commit
+  script:
+    - export XDG_CACHE_HOME=.pre-commit
+    - pre-commit run -a || (cat /builds/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME/.pre-commit/pre-commit.log && false)
+  after_script:
+    - git config --global user.email "matthew.d.weger@gmail.com"
+    - git config --global user.name "Matthew Weger"
+    - git add .
+    - git commit -m "Apply pre-commit fixes"
+    - git push
+
+build:
+  stage: build
+  script:
+    - |
+      pacman -Syu --noconfirm --needed --cachedir .pkg-cache git yay
+      makepkg --printsrcinfo > .SRCINFO
+      makepkg -si --noconfirm
+  artifacts:
+    paths:
+      - "*.pkg.tar.*"
+      - "*.src.tar.gz"
+    expire_in: 1 week
+
+archive:
+  stage: archive
+  script:
+    - mkdir -p artifacts
+    - mv *.pkg.tar.* "artifacts/${PACKAGE_NAME}-${COMMIT_HASH}.pkg.tar.xz"
+    - mv *.src.tar.gz "artifacts/${PACKAGE_NAME}-${COMMIT_HASH}.src.tar.gz"
+  dependencies:
+    - build
+  artifacts:
+    paths:
+      - artifacts/
+    expire_in: 1 week
+
+publish:
+  stage: publish
+  script:
+    - |
+      pacman -S --noconfirm --needed --cachedir .pkg-cache openssh
+      mkdir -p ~/.ssh
+      chmod 700 ~/.ssh
+      echo "$AUR_SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+      git clone $AUR_REPO aur_repo
+      cd aur_repo
+      cp ../artifacts/*.pkg.tar.xz .
+      cp ../artifacts/*.src.tar.gz .
+      cp ../PKGBUILD .
+      cp ../.SRCINFO .
+      git add PKGBUILD .SRCINFO
+      git commit -m "Update package to commit ${COMMIT_HASH}"
+      git push origin master
+  dependencies:
+    - archive
+  environment:
+    name: production
+  when: manual
+  rules:
+    - if: '$CI_COMMIT_REF_NAME == "main"'
+      when: manual

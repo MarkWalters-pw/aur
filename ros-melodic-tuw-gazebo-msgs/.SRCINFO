@@ -1,0 +1,35 @@
+pkgbase = ros-melodic-tuw-gazebo-msgs
+	pkgdesc = ROS - Message and service data structures.
+	pkgver = 0.0.13
+	pkgrel = 4
+	url = https://github.com/tuw-robotics/tuw_msgs
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-melodic-std-msgs
+	makedepends = ros-melodic-trajectory-msgs
+	makedepends = ros-melodic-roscpp
+	makedepends = ros-melodic-catkin
+	makedepends = ros-melodic-std-srvs
+	makedepends = ros-melodic-geometry-msgs
+	makedepends = ros-melodic-message-generation
+	makedepends = ros-melodic-sensor-msgs
+	makedepends = ros-melodic-rospy
+	depends = ros-melodic-std-msgs
+	depends = ros-melodic-trajectory-msgs
+	depends = ros-melodic-roscpp
+	depends = ros-melodic-std-srvs
+	depends = ros-melodic-geometry-msgs
+	depends = ros-melodic-message-runtime
+	depends = ros-melodic-sensor-msgs
+	depends = ros-melodic-rospy
+	source = ros-melodic-tuw-gazebo-msgs-0.0.13.tar.gz::https://github.com/tuw-robotics/tuw_msgs/archive/0.0.13.tar.gz
+	sha256sums = b22f12be8014a8855cd179d228ae5312102da4b3d176979f66f13e258cc418b6
+
+pkgname = ros-melodic-tuw-gazebo-msgs
+

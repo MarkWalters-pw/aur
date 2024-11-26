@@ -1,0 +1,19 @@
+pkgbase = ringo
+	pkgdesc = Multi-threaded JavaScript on the JVM
+	pkgver = 1.2.1
+	pkgrel = 2
+	url = https://ringojs.org/
+	arch = any
+	license = Apache
+	makedepends = ant
+	makedepends = ivy
+	makedepends = patch
+	depends = java-runtime-headless
+	depends = bash
+	source = git+https://github.com/ringo/ringojs.git#tag=v1.2.1
+	source = patch.diff
+	sha256sums = SKIP
+	sha256sums = 924efdfe4c4f71c36578759edc31bf26c52fcaed3917b813fe34b91f4137a308
+
+pkgname = ringo
+

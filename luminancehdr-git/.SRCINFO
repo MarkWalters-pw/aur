@@ -1,0 +1,37 @@
+pkgbase = luminancehdr-git
+	pkgdesc = Open source graphical user interface application that aims to provide a workflow for HDR imaging
+	pkgver = 2.5.1.r245.g7dc448a6
+	pkgrel = 1
+	url = http://qtpfsgui.sourceforge.net/
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = cmake
+	makedepends = boost
+	makedepends = eigen
+	makedepends = gtest
+	makedepends = qt5-tools
+	makedepends = patch
+	depends = exiv2
+	depends = fftw
+	depends = gsl
+	depends = lcms2
+	depends = libraw
+	depends = openexr
+	depends = qt5-webengine
+	depends = qt5-svg
+	depends = ccfits
+	depends = desktop-file-utils
+	depends = hicolor-icon-theme
+	depends = boost-libs
+	optdepends = hugin: align image stack functionality
+	provides = luminancehdr
+	conflicts = luminancehdr
+	options = !emptydirs
+	source = git+https://github.com/LuminanceHDR/LuminanceHDR.git
+	source = cmake-build-type.patch
+	b2sums = SKIP
+	b2sums = d4b4002428819601978c3ed9e765594a4cf0e08d7ddb1d3b4193bc7af72dceb5fb6a2af2bd19a2bd94ce6d44cdc37a0b31397fb36d679d85283ba616a8ffb799
+
+pkgname = luminancehdr-git
+

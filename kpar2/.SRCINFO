@@ -1,0 +1,25 @@
+pkgbase = kpar2
+	pkgdesc = PAR2 verification and repair program for KDE4
+	pkgver = 0.4.5
+	pkgrel = 10
+	url = http://code.google.com/p/kpar2kde4
+	arch = x86_64
+	license = GPL3
+	makedepends = cmake
+	makedepends = automoc4
+	depends = gcc-libs
+	depends = glibc
+	depends = qt4
+	depends = kde-cli-tools
+	depends = kdelibs
+	depends = libpar2
+	depends = libpar2.so
+	depends = libsigc++
+	depends = libsigc-2.0.so
+	depends = hicolor-icon-theme
+	source = https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/kpar2kde4/kpar2-0.4.5.tar.gz
+	source = kpar2.desktop.diff
+	sha256sums = 91c4d12600e9d9346e37ac2bec98cf6331e9491d510aeda1e12b0c15e3f1324e
+	sha256sums = 48d28e11b739b111f7a3731be8e4973774f561e346104cb28f595eb530dfd31d
+
+pkgname = kpar2

@@ -1,0 +1,19 @@
+pkgbase = pgpointcloud
+	pkgdesc = A PostgreSQL extension for storing point cloud (LIDAR) data
+	pkgver = 1.2.5
+	pkgrel = 1
+	url = https://github.com/pgpointcloud/pointcloud
+	changelog = pgpointcloud.changelog
+	arch = i686
+	arch = x86_64
+	license = custom: pgpointcloud
+	makedepends = cunit
+	makedepends = clang15
+	makedepends = llvm15
+	depends = libxml2
+	provides = pgpointcloud=1.2.5
+	conflicts = pgpointcloud-git
+	source = https://github.com/pgpointcloud/pointcloud/archive/v1.2.5.tar.gz
+	sha256sums = f3924f283345f2da46a971e65f0c6ce602640ecf88a2057293443ec2a7a56774
+
+pkgname = pgpointcloud

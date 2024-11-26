@@ -1,0 +1,23 @@
+pkgbase = fcitx5-gtk-git
+	pkgdesc = Gtk im module for fcitx5 and glib based dbus client library
+	pkgver = 5.0.1.r5.geeb9137
+	pkgrel = 2
+	url = https://github.com/fcitx/fcitx5-gtk
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = extra-cmake-modules
+	makedepends = gobject-introspection
+	makedepends = gtk2
+	makedepends = gtk3
+	makedepends = gtk4
+	makedepends = vulkan-headers
+	makedepends = git
+	depends = glib2
+	provides = fcitx5-gtk
+	conflicts = fcitx5-gtk
+	source = git+https://github.com/fcitx/fcitx5-gtk.git
+	sha512sums = SKIP
+
+pkgname = fcitx5-gtk-git
+

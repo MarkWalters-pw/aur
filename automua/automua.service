@@ -1,0 +1,13 @@
+[Unit]
+After=network.target
+Description=Auto MUA configuration service
+Documentation=https://hlfh.github.io/automua/
+
+[Service]
+Environment=FLASK_APP=automua.server:create_app
+Environment=FLASK_CONFIG=production
+ExecStart=/usr/bin/flask run --host=127.0.0.1 --port=4243
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

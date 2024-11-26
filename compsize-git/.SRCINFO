@@ -1,0 +1,15 @@
+pkgbase = compsize-git
+	pkgdesc = Btrfs: find compression type/ratio on a file or set of files
+	pkgver = v1.2.r0.g7b91a8be5d0b
+	pkgrel = 1
+	url = https://github.com/kilobyte/compsize
+	arch = any
+	license = GPL2
+	makedepends = gcc
+	makedepends = git
+	conflicts = compsize
+	source = compsize-git::git://github.com/kilobyte/compsize.git#branch=master
+	md5sums = SKIP
+
+pkgname = compsize-git
+

@@ -1,0 +1,23 @@
+pkgbase = geis
+	pkgdesc = Implementation of the GEIS (Gesture Engine Interface and Support) interface.
+	pkgver = 2.2.17
+	pkgrel = 2
+	url = https://launchpad.net/geis
+	arch = i686
+	arch = x86_64
+	license = GPL
+	license = LGPL
+	makedepends = xorg-server-devel
+	depends = grail
+	depends = dbus
+	depends = python-gobject
+	provides = utouch-geis
+	conflicts = utouch-geis
+	replaces = utouch-geis
+	options = !emptydirs
+	options = !libtool
+	source = http://launchpad.net/geis/trunk/2.2.17/+download/geis-2.2.17.tar.xz
+	md5sums = 2ff9d76a3ea5794516bb02c9d1924faf
+
+pkgname = geis
+

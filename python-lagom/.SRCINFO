@@ -1,0 +1,26 @@
+pkgbase = python-lagom
+	pkgdesc = Autowiring dependency injection container
+	pkgver = 2.0.0
+	pkgrel = 1
+	url = https://github.com/meadsteve/lagom
+	changelog = CHANGELOG.md
+	arch = x86_64
+	license = MIT
+	checkdepends = python-django
+	checkdepends = python-fastapi
+	checkdepends = python-flask
+	checkdepends = python-httpx
+	checkdepends = python-pydantic
+	checkdepends = python-pytest
+	checkdepends = python-starlette
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = mypy
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python
+	optdepends = python-pydantic
+	source = python-lagom-2.0.0.tar.gz::https://github.com/meadsteve/lagom/archive/2.0.0.tar.gz
+	sha256sums = ab7fc2b63ef65e3f8cbaec67d165d8992f8addc23d42f2bc395f1db5eef1a5aa
+
+pkgname = python-lagom

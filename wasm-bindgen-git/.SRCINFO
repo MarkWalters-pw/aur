@@ -1,0 +1,17 @@
+pkgbase = wasm-bindgen-git
+	pkgdesc = Interoperating JS and Rust code
+	pkgver = 0.2.78.3270
+	pkgrel = 1
+	url = https://github.com/rustwasm/wasm-bindgen
+	arch = i686
+	arch = x86_64
+	license = Apache
+	license = MIT
+	makedepends = rust
+	makedepends = cargo
+	provides = wasm-bindgen
+	conflicts = wasm-bindgen
+	source = wasm-bindgen::git+https://github.com/rustwasm/wasm-bindgen.git#branch=main
+	sha256sums = SKIP
+
+pkgname = wasm-bindgen-git

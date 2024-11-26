@@ -1,0 +1,14 @@
+pkgbase = myping
+	pkgdesc = ping many things at once and visualize the result
+	pkgver = 0.2
+	pkgrel = 2
+	url = https://github.com/9er/myping
+	install = myping.install
+	arch = x86_64
+	license = MIT
+	makedepends = go
+	depends = glibc
+	source = myping-0.2.tar.gz::https://github.com/9er/myping/archive/refs/tags/v0.2.tar.gz
+	sha256sums = SKIP
+
+pkgname = myping

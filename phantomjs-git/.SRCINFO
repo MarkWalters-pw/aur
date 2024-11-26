@@ -1,0 +1,19 @@
+pkgbase = phantomjs-git
+	pkgdesc = Headless WebKit with JavaScript API
+	pkgver = 3.0.0dev+23+cb1b04bb5
+	pkgrel = 1
+	epoch = 1
+	url = https://phantomjs.org/
+	arch = i686
+	arch = x86_64
+	license = BSD
+	makedepends = git
+	makedepends = cmake
+	depends = qt5-webkit
+	provides = phantomjs=3.0.0dev+23+cb1b04bb5
+	conflicts = phantomjs
+	source = git+https://github.com/ariya/phantomjs.git
+	sha512sums = SKIP
+
+pkgname = phantomjs-git
+

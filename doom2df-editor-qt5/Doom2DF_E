@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e
+
+# Set some env variables
+GAME='/usr/share/doom2df/data/game.wad'
+DATA='/usr/share/doom2df/data/editor.wad'
+LOCALES='/usr/share/doom2df/data/lang'
+WADS='/usr/share/doom2df/wads'
+
+exec editor --game-wad $GAME --editor-wad $DATA --lang-dir $LOCALES --wads-dir $WADS --config ~/.doom2df/Editor.cfg --log-file ~/.doom2df/Editor.log

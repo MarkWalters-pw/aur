@@ -1,0 +1,24 @@
+pkgbase = mygui-gl-git
+	pkgdesc = MyGUI - OpenGL backend
+	pkgver = 3.4.2.git
+	pkgrel = 1
+	url = http://mygui.info/
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	license = LGPL
+	makedepends = boost
+	makedepends = cmake
+	depends = boost-libs
+	depends = freetype2
+	depends = sdl2
+	depends = sdl2_image
+	depends = libgl
+	optdepends = mygui-docs: documentation
+	provides = mygui
+	conflicts = mygui
+	conflicts = mygui-git
+	source = git+https://github.com/MyGUI/mygui.git
+	md5sums = SKIP
+
+pkgname = mygui-gl-git

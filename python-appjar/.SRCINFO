@@ -1,0 +1,19 @@
+pkgbase = python-appjar
+	pkgdesc = Simple Tkinter GUIs in Python
+	pkgver = 0.94
+	pkgrel = 1
+	url = https://github.com/jarvisteach/appJar
+	arch = x86_64
+	license = Apache
+	makedepends = python-setuptools
+	makedepends = python2-setuptools
+	options = !strip
+	source = appJar-0.94.tar.gz::https://github.com/jarvisteach/appJar/archive/v0.94.tar.gz
+	sha256sums = 1bef9d6546ad32b2ab4ff7abc9039d3a0e648eab1a748fdaf58889a57b1fdd71
+
+pkgname = python-appjar
+	depends = python
+
+pkgname = python2-appjar
+	depends = python2
+

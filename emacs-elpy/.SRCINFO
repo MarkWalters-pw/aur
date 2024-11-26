@@ -1,0 +1,21 @@
+pkgbase = emacs-elpy
+	pkgdesc = Emacs Python Development Environment
+	pkgver = 1.35.0
+	pkgrel = 1
+	url = https://github.com/jorgenschaefer/elpy
+	install = emacs-elpy.install
+	arch = any
+	license = GPL3
+	depends = emacs
+	depends = emacs-company-mode
+	depends = emacs-find-file-in-project
+	depends = emacs-highlight-indentation
+	depends = emacs-pyvenv
+	depends = emacs-yasnippet
+	depends = emacs-s
+	depends = python-elpy
+	source = emacs-elpy-1.35.0.tar.gz::https://github.com/jorgenschaefer/elpy/archive/1.35.0.tar.gz
+	sha256sums = a0b1dfafbf58207b32c85a80c535772e4c19941432cc942c4b9b4cb0b9c10f50
+
+pkgname = emacs-elpy
+

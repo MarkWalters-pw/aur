@@ -1,0 +1,28 @@
+pkgbase = rum-git
+	pkgdesc = Game library management - master branch
+	pkgver = r327.d9da55f
+	pkgrel = 2
+	url = https://johncena141.eu.org:8141/johncena141/rum
+	arch = x86_64
+	license = GPL3
+	makedepends = cargo
+	makedepends = pnpm
+	makedepends = git
+	makedepends = squashfs-tools
+	makedepends = patchelf
+	depends = webkit2gtk
+	depends = curl
+	depends = wget
+	depends = openssl
+	depends = appmenu-gtk-module
+	depends = gtk3
+	depends = libappindicator-gtk3
+	depends = libvips
+	depends = udev
+	provides = rum
+	conflicts = rum
+	replaces = chad-launcher-git
+	source = git+https://johncena141.eu.org:8141/johncena141/rum.git#branch=master
+	md5sums = SKIP
+
+pkgname = rum-git

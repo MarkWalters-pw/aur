@@ -1,0 +1,23 @@
+pkgbase = webpatente
+	pkgdesc = Practise to obtain Italian driving license
+	pkgver = 4.4.13
+	pkgrel = 2
+	url = http://www.rmastri.it/
+	install = webpatente.install
+	arch = i686
+	arch = x86_64
+	arch = armhf
+	license = costum
+	depends = gtk2
+	depends = libxt
+	depends = dbus-glib
+	depends = alsa-lib
+	depends = desktop-file-utils
+	source = contrattodilicenzauf2014.pdf::https://www.rmastri.it/request.php?129
+	md5sums = 418af5c47148aee9597fdc426edf2395
+	source_i686 = webpatente-4.4.13-i686.deb::https://www.rmastri.it/request.php?131
+	md5sums_i686 = fddaabae0dacd0a207f2dbdb0a1c902c
+	source_x86_64 = webpatente-4.4.13-x86_64.deb::https://www.rmastri.it/request.php?139
+	md5sums_x86_64 = d5cb9deca7f12891bf28ecf560cfcd24
+pkgname = webpatente
+

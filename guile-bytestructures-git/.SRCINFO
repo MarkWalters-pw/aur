@@ -1,0 +1,16 @@
+pkgbase = guile-bytestructures-git
+	pkgdesc = Structured access library to bytevector contents for Guile.
+	pkgver = r306.a6d5d25
+	pkgrel = 1
+	url = https://github.com/TaylanUB/scheme-bytestructures
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	depends = guile
+	provides = guile-bytestructures
+	conflicts = guile-bytestructures
+	options = !strip
+	source = git+https://github.com/TaylanUB/scheme-bytestructures.git
+	md5sums = SKIP
+
+pkgname = guile-bytestructures-git

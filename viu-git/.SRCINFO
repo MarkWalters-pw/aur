@@ -1,0 +1,16 @@
+pkgbase = viu-git
+	pkgdesc = Simple terminal image viewer (git)
+	pkgver = 1.4.0.r21.gaf8f2ae
+	pkgrel = 1
+	url = https://github.com/atanunq/viu
+	arch = x86_64
+	license = MIT
+	makedepends = rust
+	makedepends = git
+	depends = gcc-libs
+	provides = viu
+	conflicts = viu
+	source = git+https://github.com/atanunq/viu
+	sha512sums = SKIP
+
+pkgname = viu-git

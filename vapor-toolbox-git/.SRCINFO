@@ -1,0 +1,15 @@
+pkgbase = vapor-toolbox-git
+	pkgdesc = Vapor Toolbox - A cmdline tool for the Vapor web framework
+	pkgver = r1191.3e9a23a
+	pkgrel = 1
+	url = https://github.com/vapor/toolbox
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	depends = swift-language
+	provides = vapor-toolbox
+	conflicts = vapor-toolbox
+	source = git+https://github.com/vapor/toolbox.git
+	sha256sums = SKIP
+
+pkgname = vapor-toolbox-git

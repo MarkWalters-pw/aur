@@ -1,0 +1,18 @@
+pkgbase = socnetv-git
+	pkgdesc = Social Networks Analysis and Visualisation (Development version)
+	pkgver = 2.5.r0.g83dc2237
+	pkgrel = 1
+	url = http://socnetv.sourceforge.net/
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = qt5-base
+	depends = qt5-charts
+	depends = qt5-svg
+	provides = socnetv-git
+	conflicts = socnetv
+	source = socnetv::git://github.com/socnetv/app.git
+	md5sums = SKIP
+
+pkgname = socnetv-git
+

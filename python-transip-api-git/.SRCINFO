@@ -1,0 +1,20 @@
+pkgbase = python-transip-api-git
+	pkgdesc = Python implementation of TransIP's API (unofficial)
+	pkgver = v2.0.0.r1.g20e58b9
+	pkgrel = 1
+	url = https://github.com/benkonrath/transip-api
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = python-setuptools
+	makedepends = python-sphinx
+	depends = python-cryptography
+	depends = python-requests
+	depends = python-suds
+	provides = python-transip-api
+	conflicts = python-transip-api
+	source = git+https://github.com/benkonrath/transip-api.git
+	sha512sums = SKIP
+
+pkgname = python-transip-api-git
+

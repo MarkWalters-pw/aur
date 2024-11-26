@@ -1,0 +1,20 @@
+pkgbase = simple-diary-gtk-git
+	pkgdesc = Simple and lightweight diary app
+	pkgver = r86.ecadcc5
+	pkgrel = 2
+	url = https://github.com/johan-bjareholt/simple-diary-gtk
+	arch = x86_64
+	license = GPL3
+	makedepends = appstream-glib
+	makedepends = meson
+	makedepends = git
+	depends = libhandy
+	depends = md4c
+	depends = webkit2gtk
+	depends = gtkmdview
+	provides = simple-diary-gtk
+	conflicts = simple-diary-gtk
+	source = git+https://github.com/johan-bjareholt/simple-diary-gtk.git
+	sha256sums = SKIP
+
+pkgname = simple-diary-gtk-git

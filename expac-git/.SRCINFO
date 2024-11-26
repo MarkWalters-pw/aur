@@ -1,0 +1,19 @@
+pkgbase = expac-git
+	pkgdesc = pacman database extraction utility
+	pkgver = 9.2.g6be7fe1
+	pkgrel = 1
+	url = http://github.com/falconindy/expac
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = meson
+	makedepends = perl
+	depends = pacman
+	provides = expac
+	conflicts = expac
+	source = git://github.com/falconindy/expac.git
+	md5sums = SKIP
+
+pkgname = expac-git
+

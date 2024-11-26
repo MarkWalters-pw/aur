@@ -1,0 +1,27 @@
+pkgbase = plasma5-applets-panon
+	pkgdesc = A Different Audio Spectrum Analyzer for KDE Plasma
+	pkgver = 0.4.6
+	pkgrel = 4
+	url = https://github.com/rbn42/panon
+	arch = any
+	license = GPL-3.0-or-later
+	license = WTFPL
+	makedepends = kpackage5
+	makedepends = cmake
+	depends = plasma-workspace
+	depends = python-docopt
+	depends = python-numpy
+	depends = python-pillow
+	depends = python-pyaudio
+	depends = python-soundcard>=0.4.2
+	depends = python-websockets
+	depends = qt5-websockets
+	depends = qt5-3d
+	source = panon-0.4.6::https://github.com/rbn42/panon/archive/v0.4.6.tar.gz
+	source = https://raw.githubusercontent.com/williammalo/hsluv-glsl/master/hsluv-glsl.fsh
+	source = hsluv-glsl_LICENSE.md::https://raw.githubusercontent.com/williammalo/hsluv-glsl/master/LICENCE.md
+	sha256sums = a45bb5371620b17f788d5204222b21733ac8086bb76d8b8db58b8a96cc21c34c
+	sha256sums = 1985bbfacfafcadf72582cfdb52103cceb853b0f9c818273ad179d6045c3f2cc
+	sha256sums = 5ad083fe6cafbf17ca8ecba924c124b7bc3f43f95732d1712104ac05f5373875
+
+pkgname = plasma5-applets-panon

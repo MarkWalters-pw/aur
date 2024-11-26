@@ -1,0 +1,16 @@
+pkgbase = acr-git
+	pkgdesc = A fully compatible autoconf replacement
+	pkgver = 20230709.224.497e353
+	pkgrel = 1
+	url = http://nopcode.org
+	arch = any
+	license = GPL
+	makedepends = git
+	depends = sh
+	provides = acr
+	conflicts = acr
+	conflicts = acr-hg
+	source = acr-git::git+https://github.com/radare/acr.git
+	md5sums = SKIP
+
+pkgname = acr-git

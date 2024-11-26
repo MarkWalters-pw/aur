@@ -1,0 +1,24 @@
+pkgbase = ros-noetic-message-runtime
+	pkgdesc = ROS - Package modeling the run-time dependencies for language bindings of messages.
+	pkgver = 0.4.13
+	pkgrel = 1
+	url = https://wiki.ros.org/message_runtime
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-catkin
+	depends = ros-noetic-roscpp-traits
+	depends = ros-noetic-genpy
+	depends = ros-noetic-cpp-common
+	depends = ros-noetic-roscpp-serialization
+	depends = ros-noetic-rostime
+	source = ros-noetic-message-runtime-0.4.13.tar.gz::https://github.com/ros/message_runtime/archive/0.4.13.tar.gz
+	sha256sums = c5f97145b5095389d2459c0e7d879c07f5878d0b7ec84b5c388abddfd52bf448
+
+pkgname = ros-noetic-message-runtime
+

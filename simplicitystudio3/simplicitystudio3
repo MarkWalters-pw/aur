@@ -1,0 +1,7 @@
+#!/bin/sh
+
+pkgname=simplicitystudio3 # set by PKGBUILD
+
+cd "/opt/$pkgname"
+exec ./studio "$@"
+

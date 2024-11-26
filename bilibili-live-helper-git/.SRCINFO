@@ -1,0 +1,27 @@
+pkgbase = bilibili-live-helper-git
+	pkgdesc = A Helper for Bilibili Live.
+	pkgver = r36.122df52
+	pkgrel = 1
+	url = https://github.com/pandaGao/bilibili-live-helper
+	install = bilibili-live-helper-git.install
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = npm
+	depends = libxtst
+	depends = gtk2
+	depends = libxss
+	depends = nss
+	depends = gconf
+	depends = alsa-lib
+	provides = bilibili-live-helper
+	conflicts = bilibili-live-helper
+	source = git+https://github.com/pandaGao/bilibili-live-helper
+	source = Bilibili Live Helper.desktop
+	source = bilibili-live-helper.ico
+	md5sums = SKIP
+	md5sums = SKIP
+	md5sums = SKIP
+
+pkgname = bilibili-live-helper-git
+

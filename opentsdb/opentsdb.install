@@ -1,0 +1,21 @@
+post_install() {
+  getent group 'opentsdb' >/dev/null || groupadd -r 'opentsdb'
+  getent passwd 'opentsdb' >/dev/null || useradd -r -g 'opentsdb' 'opentsdb'
+
+  declare -a dirs=(
+    "/etc/opentsdb"
+    "/usr/share/opentsdb/plugins"
+    "/var/log/opentsdb"
+  )
+  for fn in "${dirs[@]}"; do
+    if [[ ! -d "$fn" ]]; then
+      mkdir -p "$fn"
+    fi
+    chown -R opentsdb:opentsdb "$fn"
+  done
+}
+
+post_remove() {
+  getent passwd 'opentsdb' >/dev/null && userdel 'opentsdb'
+  getent group 'opentsdb' >/dev/null && groupdel 'opentsdb'
+}

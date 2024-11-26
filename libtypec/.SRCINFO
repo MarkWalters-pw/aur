@@ -1,0 +1,16 @@
+pkgbase = libtypec
+	pkgdesc = Know your USB-C Ports
+	pkgver = 0.5.2
+	pkgrel = 2
+	url = https://github.com/libtypec/libtypec
+	arch = x86_64
+	license = GPL
+	makedepends = cmake
+	makedepends = git
+	provides = libtypec
+	provides = lstypec
+	provides = typecstatus
+	source = libtypec::git+https://github.com/libtypec/libtypec.git#tag=libtypec-0.5.2
+	sha256sums = SKIP
+
+pkgname = libtypec

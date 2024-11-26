@@ -1,0 +1,19 @@
+pkgbase = kindd
+	pkgdesc = A Kindful dd GUI written in Qt Quick
+	pkgver = 2.1.0
+	pkgrel = 3
+	url = https://github.com/LinArcX/Kindd
+	arch = any
+	license = GPL3
+	makedepends = cmake
+	makedepends = qt5-base
+	depends = polkit
+	depends = qt5-quickcontrols
+	depends = qt5-quickcontrols2
+	depends = qt5-graphicaleffects
+	depends = qt5-svg
+	depends = hicolor-icon-theme
+	source = kindd-2.1.0.tar.gz::https://github.com/LinArcX/Kindd/archive/2.1.0.tar.gz
+	sha256sums = e596f1b1577ff3e83a779e6181252ae2f09731f513d17dd6b95cbc2cf204654f
+
+pkgname = kindd

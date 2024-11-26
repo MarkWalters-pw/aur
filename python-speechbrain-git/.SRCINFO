@@ -1,0 +1,26 @@
+pkgbase = python-speechbrain-git
+	pkgdesc = All-in-one speech toolkit in pure Python and Pytorch
+	pkgver = 0.5.14
+	pkgrel = 1
+	url = https://github.com/speechbrain/speechbrain
+	arch = any
+	license = Apache 2.0
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python>=3.7
+	depends = python-hyperpyyaml-git
+	depends = python-joblib
+	depends = python-numpy
+	depends = python-packaging
+	depends = python-scipy
+	depends = python-sentencepiece
+	depends = python-pytorch
+	depends = python-torchaudio
+	depends = python-tqdm
+	depends = python-huggingface-hub-git
+	provides = python-speechbrain-git
+	conflicts = python-speechbrain
+	source = python-speechbrain-git::git+https://github.com/speechbrain/speechbrain
+	md5sums = SKIP
+
+pkgname = python-speechbrain-git

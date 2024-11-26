@@ -1,0 +1,17 @@
+pkgbase = kpack-git
+	pkgdesc = Manipulates KnightOS software packages
+	pkgver = 1.1.0.r2.gec7620f
+	pkgrel = 2
+	url = https://github.com/KnightOS/kpack
+	arch = x86_64
+	groups = knightos
+	license = MIT
+	makedepends = cmake
+	makedepends = asciidoc
+	provides = kpack
+	conflicts = kpack
+	source = kpack-git::git+https://github.com/KnightOS/kpack.git
+	sha256sums = SKIP
+
+pkgname = kpack-git
+

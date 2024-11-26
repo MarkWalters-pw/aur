@@ -1,0 +1,40 @@
+pkgbase = meshlab
+	pkgdesc = System for processing and editing of unstructured 3D models arising in 3D scanning (qt5 version)
+	pkgver = 2023.12
+	pkgrel = 4
+	url = https://www.meshlab.net
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = boost
+	makedepends = cmake
+	makedepends = eigen
+	makedepends = ninja
+	makedepends = git
+	makedepends = muparser
+	makedepends = lib3ds
+	makedepends = openctm-tools
+	makedepends = patchelf
+	depends = bzip2
+	depends = cgal
+	depends = glew
+	depends = glu
+	depends = openssl
+	depends = qt5-base
+	depends = qt5-declarative
+	depends = qt5-script
+	depends = qt5-xmlpatterns
+	depends = xerces-c
+	depends = gmp
+	depends = mpfr
+	depends = mesa
+	depends = qhull
+	optdepends = lib3ds: for Autodesk`s 3D-Studio r3 and r4 .3DS file support
+	optdepends = muparser: for filer_func plugins
+	optdepends = openctm-tools: for compressed triangle mesh file format
+	source = meshlab::git+https://github.com/cnr-isti-vclab/meshlab.git#tag=MeshLab-2023.12
+	source = vcglib::git+https://github.com/cnr-isti-vclab/vcglib.git#tag=2023.12
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = meshlab

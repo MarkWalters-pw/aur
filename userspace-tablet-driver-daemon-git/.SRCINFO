@@ -1,0 +1,18 @@
+pkgbase = userspace-tablet-driver-daemon-git
+	pkgdesc = A userspace daemon for XP-Pen and Huion tablets.
+	pkgver = r190.56f3fb4
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/kurikaesu/userspace-tablet-driver-daemon.git
+	arch = x86_64
+	license = GPL-3.0-or-later
+	makedepends = git
+	makedepends = cmake
+	depends = libusb
+	depends = gcc-libs
+	provides = userspace-tablet-driver-daemon
+	conflicts = userpace-tablet-driver-daemon
+	source = git+https://github.com/kurikaesu/userspace-tablet-driver-daemon.git
+	sha256sums = SKIP
+
+pkgname = userspace-tablet-driver-daemon-git

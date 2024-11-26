@@ -1,0 +1,32 @@
+pkgbase = codeblocks-svn
+	pkgdesc = An open source and cross-platform C/C++ IDE
+	pkgver = 20.03.r13422
+	pkgrel = 1
+	url = http://www.codeblocks.org
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = boost
+	makedepends = subversion
+	makedepends = zip
+	depends = bash
+	depends = glibc
+	depends = glib2
+	depends = gtk3
+	depends = wxgtk3
+	depends = wxwidgets-common
+	depends = zlib
+	depends = bzip2
+	depends = gamin
+	depends = hicolor-icon-theme
+	depends = hunspell
+	depends = boost-libs
+	depends = valgrind
+	provides = codeblocks=20.03.r13422
+	conflicts = codeblocks
+	conflicts = codeblocks-svn-noplugins
+	options = !libtool
+	source = codeblocks-svn::svn://svn.code.sf.net/p/codeblocks/code/trunk
+	sha256sums = SKIP
+
+pkgname = codeblocks-svn

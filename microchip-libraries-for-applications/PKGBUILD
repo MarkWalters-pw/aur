@@ -1,0 +1,100 @@
+# Maintainer: Markus Heidelberg <markus dot heidelberg at web dot de>
+
+pkgname=microchip-libraries-for-applications
+pkgver=v2018_11_26
+pkgrel=1
+pkgdesc="Microchip Libraries for Applications (Current)"
+arch=('i686' 'x86_64')
+url="http://www.microchip.com/MLA"
+license=('custom')
+optdepends=('java-runtime: Graphics and TCP/IP utilities support')
+makedepends=('fakechroot')
+makedepends_x86_64=('lib32-fakechroot' 'lib32-fakeroot')
+depends_x86_64=('lib32-glibc')
+options=(!strip libtool staticlibs emptydirs !zipman)
+install=$pkgname.install
+_instdir=/opt/microchip/mla
+_installer=mla_${pkgver}_linux_installer.run
+source=(http://ww1.microchip.com/downloads/en/softwarelibrary/$_installer
+        LICENSE)
+
+md5sums=('03e25f57d341bc7cd1b843d416aab12c'
+         'a79e3095ffcc446517b27707c8a60d7b')
+
+package() {
+  cd "$srcdir"
+
+  mkdir -p "$pkgdir"/{bin,etc,usr/{bin,lib,local/lib},tmp}
+
+  ln -s /bin/bash "$pkgdir/bin/"
+
+  echo "root:x:0:0:root:/root:/bin/bash" > "$pkgdir/etc/passwd"
+  echo "root:x:0:root" > "$pkgdir/etc/group"
+
+  cp "$srcdir/$_installer" "$pkgdir/"
+  chmod 0755 "$pkgdir/$_installer"
+
+  # 10x enter: read license
+  # 1x y + enter: accept license [y/n]
+  # 1x enter: accept installation directory
+  # 10x enter: select components [Y/n]
+  # 1x enter: confirm selection [Y/n]
+  # 1x enter: start installation [Y/n]
+  # 1x enter: continue
+  # 1x n + enter: download JRE [Y/n]
+  # 1x n + enter: open ReadMe [Y/n]
+  echo -e "\n\n\n\n\n\n\n\n\n\ny\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nn\nn" > "$pkgdir/inst_input"
+
+  # do not use $pkgdir$_instdir as installation directory because of the fakechroot environment
+  echo "#!/bin/bash
+  ./$_installer --prefix "$_instdir" --mode text < inst_input &> /dev/null || true"> "$pkgdir/chroot_input.sh"
+  chmod 0755 "$pkgdir/chroot_input.sh"
+
+  echo -e "Creating the Package\n  Please wait..."
+
+  fakechroot chroot "$pkgdir" ./chroot_input.sh
+
+  rm "$pkgdir"/{chroot_input.sh,inst_input,$_installer,etc/{group,passwd}}
+  rm -r "$pkgdir"/{bin,tmp}
+
+  # remove unwanted files created by the installer, already available in package "microchip-mplabx-bin"
+  rm -r "$pkgdir"/{etc,usr/{bin,lib,local}}
+  rm "$pkgdir$_instdir"/uninstall*
+
+  # fix totally messed up file permissions
+  find "$pkgdir$_instdir" -type d -exec chmod 0755 '{}' \;
+  find "$pkgdir$_instdir" -type f -exec chmod 0644 '{}' \;
+
+  install -Dm644 "$srcdir/LICENSE" "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+
+  # executable files
+  install -d "$pkgdir/usr/bin"
+
+  # Graphics Resource Converter
+  cat << EOF > "$pkgdir/usr/bin/grc-current"
+#!/bin/sh
+java -jar "$_instdir/framework/gfx/utilities/grc/grc.jar" "\$@"
+EOF
+  chmod 755 "$pkgdir/usr/bin/grc-current"
+
+  # External Memory Programmer
+  cat << EOF > "$pkgdir/usr/bin/memory_programmer-current"
+#!/bin/sh
+java -jar "$_instdir/framework/gfx/utilities/memory_programmer/memory_programmer.jar" "\$@"
+EOF
+  chmod 755 "$pkgdir/usr/bin/memory_programmer-current"
+
+  # Microchip MPFS Generator
+  cat << EOF > "$pkgdir/usr/bin/mpfs2-current"
+#!/bin/sh
+java -jar "$_instdir/framework/tcpip/utilities/mpfs2/mpfs2.jar" "\$@"
+EOF
+  chmod 755 "$pkgdir/usr/bin/mpfs2-current"
+
+  # Microchip TCPIP Discoverer
+  cat << EOF > "$pkgdir/usr/bin/tcpip_discoverer-current"
+#!/bin/sh
+java -jar "$_instdir/framework/tcpip/utilities/tcpip_discoverer/tcpip_discoverer.jar"
+EOF
+  chmod 755 "$pkgdir/usr/bin/tcpip_discoverer-current"
+}

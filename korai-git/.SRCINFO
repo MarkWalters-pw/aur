@@ -1,0 +1,19 @@
+pkgbase = korai-git
+	pkgdesc = Fast, reliable and feature-packed manga and comics reader (fresh from the git master branch)
+	pkgver = 4391f0906854d764b558bf0716b252e6e7597aef
+	pkgrel = 1
+	url = https://github.com/DisableGraphics/Korai
+	arch = any
+	license = GPL
+	makedepends = git
+	makedepends = imagemagick
+	depends = libarchive
+	depends = gtkmm3
+	depends = webkit2gtk
+	depends = vte3
+	depends = mangodl
+	conflicts = korai
+	source = git+https://github.com/DisableGraphics/Korai
+	md5sums = SKIP
+
+pkgname = korai-git

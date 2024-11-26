@@ -1,0 +1,20 @@
+pkgbase = gitstatus
+	pkgdesc = Git status for Bash and Zsh prompt
+	pkgver = 1.5.5
+	pkgrel = 1
+	url = https://github.com/romkatv/gitstatus
+	install = gitstatus.install
+	arch = aarch64
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = cmake
+	makedepends = zsh
+	depends = glibc
+	source = gitstatus-1.5.5.tar.gz::https://github.com/romkatv/gitstatus/archive/v1.5.5.tar.gz
+	source = libgit2-tag-2ecf33948a4df9ef45a66c68b8ef24a5e60eaac6.tar.gz::https://github.com/romkatv/libgit2/archive/tag-2ecf33948a4df9ef45a66c68b8ef24a5e60eaac6.tar.gz
+	sha512sums = 8fa4fe941128427f5362d97620bbf5b2722682843197649b3acae4e9ccffcb694226510b2957c65b6b68c27e5518a3b6aa841b624cff160e48d8c8014e0f6757
+	sha512sums = f3d056eb181ec084ebe3d5bcd6edaddb781a22eeac747115cb4fb09015904ccae9b439145430bfe6fd544e39fe3f019e3512e1010549d53cc8338039ec339f9c
+
+pkgname = gitstatus

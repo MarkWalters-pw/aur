@@ -1,0 +1,14 @@
+[Unit]
+Description=MMORPG login daemon
+Wants=network.target mariadb.service
+After=mariadb.service
+
+[Service]
+Type=simple
+User=vmangos
+Group=vmangos
+Restart=always
+ExecStart=/usr/bin/realmd
+
+[Install]
+WantedBy=multi-user.target

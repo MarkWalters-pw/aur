@@ -1,0 +1,28 @@
+pkgbase = langkit-git
+	pkgdesc = Compiler for syntactic and semantic language analysis libraries
+	pkgver = r7153.b32ae90dc
+	pkgrel = 1
+	url = https://github.com/AdaCore/langkit/
+	arch = any
+	license = GPL
+	makedepends = git
+	depends = gcc-ada
+	depends = gprbuild
+	depends = gnatcoll-core
+	depends = gnatcoll-iconv
+	depends = autopep8
+	depends = python-psutil
+	depends = python-sphinx
+	depends = python-yaml
+	depends = python-docutils
+	depends = python-e3-core
+	depends = python-funcy
+	depends = python-mako
+	depends = yapf
+	provides = langkit
+	conflicts = langkit
+	source = git+https://github.com/AdaCore/langkit.git
+	sha1sums = SKIP
+
+pkgname = langkit-git
+

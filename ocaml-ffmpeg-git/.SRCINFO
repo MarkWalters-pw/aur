@@ -1,0 +1,19 @@
+pkgbase = ocaml-ffmpeg-git
+	pkgdesc = OCaml bindings to the FFmpeg library
+	pkgver = 0.4.1.r120.3b1b6c7
+	pkgrel = 1
+	url = https://github.com/savonet/ocaml-ffmpeg
+	arch = i686
+	arch = x86_64
+	license = LGPL2.1
+	makedepends = dune
+	makedepends = git
+	depends = ocaml
+	depends = ffmpeg
+	options = !strip
+	options = !makeflags
+	source = ocaml-ffmpeg-git::git+https://github.com/savonet/ocaml-ffmpeg
+	md5sums = SKIP
+
+pkgname = ocaml-ffmpeg-git
+

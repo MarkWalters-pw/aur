@@ -1,0 +1,22 @@
+pkgbase = ess-epics
+	pkgdesc = Experimental Physics and Industrial Control System -- ESS flavour
+	pkgver = 2.0.3
+	pkgrel = 1
+	url = http://www.aps.anl.gov/epics/
+	arch = any
+	license = GPL
+	makedepends = rpcsvc-proto
+	makedepends = tree
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = python-gitlab
+	depends = python-yaml
+	depends = python-gitpython
+	provides = epics
+	conflicts = epics
+	source = git+https://gitlab.esss.lu.se/e3/e3.git#tag=2.0.3
+	md5sums = SKIP
+
+pkgname = ess-epics

@@ -1,0 +1,36 @@
+pkgbase = archivy
+	pkgdesc = A self-hosted knowledge repository, to preserve useful content to your knowledge bank.
+	pkgver = 1.7.0
+	pkgrel = 1
+	url = https://github.com/archivy/archivy
+	arch = any
+	license = MIT
+	makedepends = python-setuptools
+	depends = python-flask
+	depends = python-flask-wtf
+	depends = python-wtforms
+	depends = python-werkzeug
+	depends = python-appdirs
+	depends = python-attrs
+	depends = python-beautifulsoup4
+	depends = python-elasticsearch
+	depends = python-dotenv
+	depends = python-frontmatter
+	depends = python-requests
+	depends = python-tinydb
+	depends = python-validators
+	depends = python-flask-login
+	depends = python-brotli
+	depends = python-click-plugins
+	depends = python-html2text
+	depends = python-flask-compress
+	depends = python-readability-lxml
+	optdepends = elasticsearch
+	source = git+https://github.com/archivy/archivy#tag=v1.7.0
+	source = 00-do-not-pin-requirements.patch
+	source = 286.patch
+	sha256sums = SKIP
+	sha256sums = 538f7d96138f421d70ed72a8f101c1095726d5ee53c19e6cd924b30ca6a7a3a4
+	sha256sums = 8748170782fb569eda458520fb6895dfe01744f3d7416c7428b5810fb032a3ee
+
+pkgname = archivy

@@ -1,0 +1,32 @@
+post_install() {
+	echo ""
+	echo "##########"
+	echo "#"
+	echo "#   Remember to configure the server via its configuration file at /etc/earthwalker/config.toml"
+	echo "#   After installing, start/enable the server via 'systemctl enable earthwalker.service --now'"
+	echo '#   earthwalker should then be reachable under http://$yourIPAdress:$PortSetInConfig.'
+	echo "#"
+	echo "##########"
+	echo ""
+
+}
+
+post_upgrade() {
+	echo "#   Remember to restart the earthwalker unit via 'systemctl restart earthwalker.service', if neccessary."
+}
+
+pre_remove() {
+	# Stop service
+	systemctl --quiet --no-reload disable --now earthwalker.service
+}
+
+post_remove() {
+	echo ""
+	echo "##########"
+	echo "#"
+	echo "#   Remember to remove the user/group earthwalker, if neccessary."
+	echo "#   All server data in /var/lib/earthwalker was NOT deleted!"
+	echo "#"
+	echo "##########"
+	echo ""
+}

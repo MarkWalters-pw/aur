@@ -1,0 +1,16 @@
+pkgbase = emacs-processing-mode-git
+	pkgdesc = Major mode for Processing 2.0.
+	pkgver = 20171023
+	pkgrel = 1
+	url = https://github.com/ptrv/processing2-emacs
+	install = emacs-processing-mode-git.install
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = emacs
+	provides = emacs-processing-mode
+	conflicts = emacs-processing-mode
+	source = git+https://github.com/ptrv/processing2-emacs.git
+	md5sums = SKIP
+
+pkgname = emacs-processing-mode-git

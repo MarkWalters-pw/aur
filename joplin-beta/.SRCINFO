@@ -1,0 +1,40 @@
+pkgbase = joplin-beta
+	pkgdesc = The latest pre-release - open source note taking and to-do application
+	pkgver = 3.0.2
+	pkgrel = 1
+	url = https://joplinapp.org
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = npm
+	makedepends = yarn
+	makedepends = python
+	makedepends = jq
+	makedepends = yq
+	makedepends = node-gyp>=8.4.1
+	depends = electron
+	depends = gtk3
+	depends = libexif
+	depends = libgsf
+	depends = libjpeg-turbo
+	depends = libwebp
+	depends = libxss
+	depends = nodejs>=17.3
+	depends = nss
+	depends = orc
+	depends = rsync
+	optdepends = libappindicator-gtk3: for tray icon
+	conflicts = joplin
+	conflicts = joplin-desktop
+	conflicts = joplin-appimage
+	conflicts = libvips
+	source = joplin-desktop.sh
+	source = joplin.sh
+	source = joplin.desktop
+	source = joplin-beta-3.0.2.tar.gz::https://github.com/laurent22/joplin/archive/refs/tags/v3.0.2.tar.gz
+	sha256sums = 18cca699f52f884980646359631bb59a77d190b9f91e9e3e71efa62166772557
+	sha256sums = b5c621c425cdf0b5bb07bf0353939f6991a18db81955294a47ec42d0c5593438
+	sha256sums = b46dd772eb1adf9327f6c07657acf3c627c6ea204f8de3a4481efa6db0071f5e
+	sha256sums = bfb7e326f21ebf9fd6da4d82a00fdeb74e3f4538f08ecc97fccd05e49010bbb9
+
+pkgname = joplin-beta

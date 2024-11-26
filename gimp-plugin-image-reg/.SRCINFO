@@ -1,0 +1,17 @@
+pkgbase = gimp-plugin-image-reg
+	pkgdesc = Image registration plugin for the GIMP
+	pkgver = 2.0.1
+	pkgrel = 1
+	url = https://gimp-image-reg.sourceforge.io/
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = intltool
+	makedepends = gettext
+	makedepends = cmake
+	depends = gimp
+	noextract = gimp-image-reg-2.0.1-source.zip
+	source = https://downloads.sourceforge.net/sourceforge/gimp-image-reg/version-2.0.1/gimp-image-reg-2.0.1-source.zip
+	md5sums = 64d1e579c12b45131bf8ebdc54ad19b4
+
+pkgname = gimp-plugin-image-reg

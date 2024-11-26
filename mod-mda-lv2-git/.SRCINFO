@@ -1,0 +1,27 @@
+pkgbase = mod-mda-lv2-git
+	pkgdesc = MOD fork of the LV2 port of the MDA plugins (git version)
+	pkgver = 1.1.0.r217.b2df88c
+	pkgrel = 4
+	url = https://github.com/moddevices/mda-lv2
+	arch = x86_64
+	groups = lv2-plugins
+	groups = pro-audio
+	license = GPL-3.0-or-later
+	checkdepends = lv2lint
+	checkdepends = mod-lv2-extensions
+	makedepends = git
+	makedepends = lv2
+	makedepends = python2
+	depends = gcc-libs
+	depends = glibc
+	optdepends = lv2-host: to load the LV2 plugins
+	provides = mod-mda-lv2
+	conflicts = mod-mda-lv2
+	source = mod-mda-lv2::git+https://github.com/moddevices/mda-lv2.git
+	source = ttl-fixes.patch::https://patch-diff.githubusercontent.com/raw/moddevices/mda-lv2/pull/9.patch
+	source = polyphony-param.patch
+	sha256sums = SKIP
+	sha256sums = d65b3202225da4bb57611ec0f53b038386ae3f58d91fdbc7502c1ab032e62e80
+	sha256sums = ca15c7b115f73e0ddca0c7835e3bcb874747130a465c1e994a7187f4efca4b24
+
+pkgname = mod-mda-lv2-git

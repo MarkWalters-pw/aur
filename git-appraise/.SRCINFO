@@ -1,0 +1,17 @@
+pkgbase = git-appraise
+	pkgdesc = Distributed code review system for Git repositories
+	pkgver = 0.7
+	pkgrel = 1
+	url = https://github.com/google/git-appraise
+	arch = i686
+	arch = x86_64
+	license = Apache
+	makedepends = go
+	makedepends = git
+	provides = git-appraise=0.7
+	options = !strip
+	options = !emptydirs
+	source = https://github.com/google/git-appraise/archive/v0.7.tar.gz
+	sha256sums = b57dd4ac4746486e253658b2c93422515fd8dc6fdca873b5450a6fb0f9487fb3
+
+pkgname = git-appraise

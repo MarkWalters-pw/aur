@@ -1,0 +1,17 @@
+pkgbase = hippo-canvas
+	pkgdesc = Canvas library with an element model (deprecated)
+	pkgver = 0.3.1
+	pkgrel = 1
+	url = https://wiki.gnome.org/Projects/HippoCanvas
+	arch = i686
+	arch = x86_64
+	license = LGPL
+	makedepends = gobject-introspection
+	makedepends = pygtk
+	depends = gtk2
+	optdepends = pygtk: python2 bindings
+	source = https://download.gnome.org/sources/hippo-canvas/0.3/hippo-canvas-0.3.1.tar.bz2
+	sha256sums = aaed1ad31f905750c57cacbfeb0e3af4d62e45b881ebeabeeedd864b56f9ed95
+
+pkgname = hippo-canvas
+

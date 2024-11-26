@@ -1,0 +1,22 @@
+pkgbase = medianumbers-git
+	pkgdesc = tools to manipulate video and audio time codes
+	pkgver = r0
+	pkgrel = 1
+	url = https://github.com/dffischer/medianumbers/
+	arch = any
+	license = GPL
+	makedepends = ruby-ronn
+	makedepends = git
+	depends = bash
+	optdepends = ffmpeg: for duration and stretch
+	optdepends = grep: for duration
+	optdepends = bc: for stretch
+	optdepends = sed: for sum-time
+	provides = medianumbers=r0
+	conflicts = medianumbers
+	source = medianumbers::git+file:///tmp/medianumbers
+	md5sums = SKIP
+	sha256sums = SKIP
+
+pkgname = medianumbers-git
+

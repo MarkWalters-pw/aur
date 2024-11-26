@@ -1,0 +1,25 @@
+pkgbase = ros-melodic-unique-id
+	pkgdesc = ROS - ROS Python and C++ interfaces for universally unique identifiers.
+	pkgver = 1.0.6
+	pkgrel = 6
+	url = https://wiki.ros.org/unique_id
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-melodic-roscpp
+	makedepends = ros-melodic-catkin
+	makedepends = ros-melodic-uuid-msgs
+	makedepends = ros-melodic-rospy
+	depends = ros-melodic-roscpp
+	depends = ros-melodic-uuid-msgs
+	depends = ros-melodic-rospy
+	source = ros-melodic-unique-id-1.0.6.tar.gz::https://github.com/ros-geographic-info/unique_identifier/archive/unique_identifier-1.0.6.tar.gz
+	sha256sums = e376df28058d69da4c3c5fce4ef5d3cc24518ed9b64a181055ff86a2fc11b832
+
+pkgname = ros-melodic-unique-id
+

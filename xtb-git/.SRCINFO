@@ -1,0 +1,21 @@
+pkgbase = xtb-git
+	pkgdesc = Semiempirical Extended Tight-Binding Program Package
+	pkgver = 6.4.1.r286.92252bb
+	pkgrel = 1
+	url = https://github.com/grimme-lab/xtb
+	arch = x86_64
+	license = LGPL3
+	makedepends = git
+	makedepends = meson
+	makedepends = ninja
+	makedepends = inetutils
+	makedepends = gcc-fortran
+	depends = openblas
+	depends = lapack
+	depends = gcc-libs
+	provides = xtb
+	conflicts = xtb
+	source = git+https://github.com/grimme-lab/xtb.git#branch=main
+	md5sums = SKIP
+
+pkgname = xtb-git

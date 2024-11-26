@@ -1,0 +1,18 @@
+pkgbase = kim-api
+	pkgdesc = Online framework for reliable, reproducible and portable molecular simulations
+	pkgver = 2.2.1
+	pkgrel = 1
+	url = https://openkim.org
+	install = kim-api.install
+	arch = i686
+	arch = x86_64
+	license = CDDL
+	makedepends = cmake
+	makedepends = gcc-fortran
+	depends = xxd
+	optdepends = doxygen: build OpenKIM documentation
+	source = https://s3.openkim.org/kim-api/kim-api-2.2.1.txz
+	sha512sums = b2625dc41474849f281f266a1fa8a2b1738d2433031d2181bde36ac5ec050fcdec3925cb588b287a46c80c01c730be04352ca88a9ba71fc3b37c2da1c84ae650
+
+pkgname = kim-api
+

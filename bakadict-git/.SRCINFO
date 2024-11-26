@@ -1,0 +1,18 @@
+pkgbase = bakadict-git
+	pkgdesc = 离线的命令行日语词典
+	pkgver = r21.3bb4f08
+	pkgrel = 1
+	url = https://github.com/flaribbit/bakadict
+	install = .install
+	arch = any
+	license = unknown
+	makedepends = git
+	makedepends = cargo
+	makedepends = rust
+	provides = dict
+	source = git+https://github.com/flaribbit/bakadict.git#branch=master
+	source = .install
+	md5sums = SKIP
+	md5sums = e6a7496670b5280d9bcd5bcf595849dd
+
+pkgname = bakadict-git

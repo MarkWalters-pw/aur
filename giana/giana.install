@@ -1,0 +1,19 @@
+
+post_install() {
+  # display some info
+  echo "For command line options see '/usr/share/doc/giana/options.txt'."
+}
+
+post_upgrade() {
+  post_install
+}
+
+post_remove() {
+  echo "You may safely delete the '~/.giana' directory containing the config/highscore"
+  echo "files, if you do not want to preserve them."
+
+  # leftover files from old behaviour
+  if [ -d opt/giana ]; then
+    echo "You may also safely delete /opt/giana and it's contents."
+  fi
+}

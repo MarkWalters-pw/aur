@@ -1,0 +1,37 @@
+pkgbase = ros-melodic-nodelet
+	pkgdesc = ROS - The nodelet package is designed to provide a way to run multiple algorithms in the same process with zero copy transport between algorithms.
+	pkgver = 1.9.16
+	pkgrel = 6
+	url = https://wiki.ros.org/nodelet
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-melodic-bondcpp
+	makedepends = ros-melodic-cmake-modules
+	makedepends = ros-melodic-catkin
+	makedepends = ros-melodic-message-generation
+	makedepends = ros-melodic-std-msgs
+	makedepends = ros-melodic-rosconsole
+	makedepends = ros-melodic-roscpp
+	makedepends = ros-melodic-pluginlib
+	makedepends = boost1.69
+	makedepends = util-linux
+	depends = ros-melodic-bondcpp
+	depends = ros-melodic-std-msgs
+	depends = ros-melodic-rosconsole
+	depends = ros-melodic-roscpp
+	depends = ros-melodic-message-runtime
+	depends = ros-melodic-rospy
+	depends = ros-melodic-pluginlib
+	depends = boost1.69
+	depends = util-linux
+	source = ros-melodic-nodelet-1.9.16.tar.gz::https://github.com/ros/nodelet_core/archive/1.9.16.tar.gz
+	sha256sums = 609a85323a47aff2e5e53531a465ddc62ba3290ba8b359a12dd07253bbaa9e26
+
+pkgname = ros-melodic-nodelet
+

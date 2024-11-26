@@ -1,0 +1,9 @@
+[ $(echo $DEVNAME | grep 'dm-[0-9]') ] && /bin/sh -c '
+	NAME=$(cat /sys$DEVPATH/dm/name)
+	GROUPNAME=$(echo $NAME | awk -F - '\''{print $1}'\'')
+	VOLUMENAME=$(echo $NAME | awk -F - '\''{print $2}'\'')
+	test -d /dev/mapper || mkdir -p /dev/mapper
+	ln -sf /dev/$DEVNAME /dev/mapper/$NAME
+	test -d /dev/$GROUPNAME || mkdir -p /dev/$GROUPNAME
+	ln -sf /dev/$DEVNAME /dev/$GROUPNAME/$VOLUMENAME
+'

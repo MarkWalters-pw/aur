@@ -1,0 +1,17 @@
+pkgbase = pulsar-client-cpp
+	pkgdesc = Apache Pulsar Client Libaries in C++
+	pkgver = 3.1.2
+	pkgrel = 1
+	url = https://github.com/apache/pulsar-client-cpp
+	arch = x86_64
+	license = Apache
+	makedepends = boost
+	makedepends = cmake
+	depends = protobuf
+	depends = openssl
+	depends = curl
+	depends = snappy
+	source = pulsar-client-cpp-3.1.2.tar.gz::https://github.com/apache/pulsar-client-cpp/archive/refs/tags/v3.1.2.tar.gz
+	sha256sums = 802792e8dd48f21dea0cb9cee7afe20f2598d333d2e484a362504763d1e3d49a
+
+pkgname = pulsar-client-cpp

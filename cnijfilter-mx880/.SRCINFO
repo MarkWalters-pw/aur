@@ -1,0 +1,23 @@
+pkgbase = cnijfilter-mx880
+	pkgdesc = Canon IJ Printer Driver for Pixma MX885
+	pkgver = 3.50_1
+	pkgrel = 2
+	url = https://software.canon-europe.com/software/0040869.asp
+	arch = i686
+	arch = x86_64
+	license = custom
+	depends = libglade
+	depends = cups
+	depends = ghostscript
+	depends = popt
+	source = https://files.canon-europe.com/files/soft40869/software/cnijfilter-source-3.50-1.tar.gz
+	source = cups.patch
+	source = id.po.patch
+	source = png.patch
+	sha256sums = e3b00bad3065fcbfc0e9bf340ab830ad9fda91cbde784753a45d239128438aa2
+	sha256sums = 5284075650c40bdef7cd519e6898c0369b99d42b96bc1d80cc1c8d538715f746
+	sha256sums = 26bfc31d455f8729c9f86951add6194037d49a8168d214943f68e46335ae5732
+	sha256sums = e0537dd99a7f0c74a376ea1e35deaf22033419a7b98d151051ed38f19814ba73
+
+pkgname = cnijfilter-mx880
+

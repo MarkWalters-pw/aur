@@ -1,0 +1,19 @@
+pkgbase = progit2-git
+	pkgdesc = The offline version of the entire Pro Git book, written by Scott Chacon and Ben Straub
+	pkgver = 2.1.51.r0.g4a3dec9
+	pkgrel = 2
+	url = https://github.com/progit/progit2
+	install = progit2-git.install
+	arch = any
+	license = CCPL:by-nc-sa
+	makedepends = git
+	makedepends = ruby-bundler
+	makedepends = ruby
+	makedepends = python2
+	provides = progit2
+	conflicts = progit2
+	source = git+https://github.com/progit/progit2
+	sha512sums = SKIP
+
+pkgname = progit2-git
+

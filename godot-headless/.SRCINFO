@@ -1,0 +1,21 @@
+pkgbase = godot-headless
+	pkgdesc = An advanced, feature packed, multi-platform 2D and 3D game engine
+	pkgver = 3.3.4
+	pkgrel = 1
+	url = http://www.godotengine.org
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = scons
+	makedepends = gcc
+	makedepends = yasm
+	depends = freetype2
+	depends = alsa-lib
+	depends = libglvnd
+	conflicts = godot
+	conflicts = godot-git
+	conflicts = godot-pulse
+	source = https://github.com/godotengine/godot/archive/3.3.4-stable.tar.gz
+	sha256sums = 4e3a4baa60b196db1d0109cfd6c32f0f1126d0ead466ae8bd1f16557ea6b9bf0
+
+pkgname = godot-headless

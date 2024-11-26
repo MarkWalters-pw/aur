@@ -1,0 +1,21 @@
+pkgbase = dwt-git
+	pkgdesc = Simple no-frills terminal emulator based on VTE - Git build
+	pkgver = 0.6.0.r12.g2185a27
+	pkgrel = 1
+	url = https://github.com/aperezdc/dwt
+	arch = i686
+	arch = x86_64
+	arch = arm
+	license = MIT
+	makedepends = meson
+	makedepends = ninja
+	depends = vte3
+	provides = dwt
+	conflicts = dwt
+	options = strip
+	options = zipman
+	source = dwt-git::git+https://github.com/aperezdc/dwt.git
+	sha1sums = SKIP
+
+pkgname = dwt-git
+

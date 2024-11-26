@@ -1,0 +1,18 @@
+pkgbase = gesture-manager-x-git
+	pkgdesc = Extended GUI for interacting with libinput-gestures
+	pkgver = r8.d61ed8a
+	pkgrel = 1
+	url = https://github.com/RitwickVerma/Gesture-Manager-X
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = libinput-gestures
+	depends = xf86-input-libinput
+	depends = gtk3
+	provides = gesture-manager-x
+	conflicts = gesture-manager-x
+	source = gesture-manager-x::git+https://github.com/RitwickVerma/Gesture-Manager-X.git
+	sha256sums = SKIP
+
+pkgname = gesture-manager-x-git
+

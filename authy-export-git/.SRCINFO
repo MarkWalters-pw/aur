@@ -1,0 +1,15 @@
+pkgbase = authy-export-git
+	pkgdesc = Export your TOTP secret tokens from Authy.
+	pkgver = 0.3.2.2.gc4f2
+	pkgrel = 1
+	url = https://github.com/alexzorin/authy
+	arch = x86_64
+	license = MIT
+	makedepends = go
+	optdepends = qrencode: Import tokens into a mobile app with authy-qrcode-helper.sh
+	source = git+https://github.com/alexzorin/authy.git
+	source = authy-qrcode-helper.sh
+	sha256sums = SKIP
+	sha256sums = 9a1209265ee938ca0931aae3c74fff17a6141c8a05f4170e3a4c294d8e635772
+
+pkgname = authy-export-git

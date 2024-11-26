@@ -1,0 +1,16 @@
+pkgbase = chuck-pulse
+	pkgdesc = Concurrent, on-the-fly audio programming language
+	pkgver = 1.5.2.0
+	pkgrel = 1
+	url = http://chuck.cs.princeton.edu/
+	arch = x86_64
+	arch = i686
+	license = GPL
+	depends = gcc-libs
+	depends = libsndfile
+	provides = chuck
+	conflicts = chuck
+	source = http://chuck.cs.princeton.edu/release/files/chuck-1.5.2.0.tgz
+	sha256sums = 04d846f776752ff0d4dfd3c2e208c90226559de2ae24960ed30a456e67264f27
+
+pkgname = chuck-pulse

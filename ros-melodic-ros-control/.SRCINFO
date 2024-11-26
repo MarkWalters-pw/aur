@@ -1,0 +1,22 @@
+pkgbase = ros-melodic-ros-control
+	pkgdesc = ROS - A set of packages that include controller interfaces, controller managers, transmissions and hardware_interfaces.
+	pkgver = 0.18.4
+	pkgrel = 1
+	url = https://github.com/ros-controls/ros_control/wiki
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-melodic-catkin
+	depends = ros-melodic-combined-robot-hw
+	depends = ros-melodic-realtime-tools
+	depends = ros-melodic-controller-manager-msgs
+	depends = ros-melodic-controller-interface
+	depends = ros-melodic-hardware-interface
+	depends = ros-melodic-transmission-interface
+	depends = ros-melodic-joint-limits-interface
+	depends = ros-melodic-controller-manager
+	source = ros-melodic-ros-control-0.18.4.tar.gz::https://github.com/ros-controls/ros_control/archive/0.18.4.tar.gz
+	sha256sums = c4e289e2bfafb418c22cf31f8fb656b697b1629a51631bdc12a3f3ed4e59af20
+
+pkgname = ros-melodic-ros-control

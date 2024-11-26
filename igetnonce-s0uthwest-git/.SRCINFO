@@ -1,0 +1,22 @@
+pkgbase = igetnonce-s0uthwest-git
+	pkgdesc = Tool for checking booted iOS device nonces - s0uthwest's fork - git version
+	pkgver = r10.6443eb5
+	pkgrel = 4
+	url = https://github.com/s0uthwest/igetnonce
+	arch = x86_64
+	license = unknown
+	makedepends = git
+	depends = libimobiledevice
+	depends = libirecovery
+	depends = libplist
+	provides = igetnonce
+	provides = igetnonce-s0uthwest
+	conflicts = igetnonce
+	source = git+https://github.com/s0uthwest/igetnonce.git
+	source = 0001-Fix-incorrect-language-standard.patch
+	source = 0002-Update-libirecovery-and-libusbmuxd-names-for-1.0.0-2.patch
+	sha256sums = SKIP
+	sha256sums = 4a6c57f0926c815652ed2fd15ef6f64a1e0dadd7dcbfcf01b246600d597d6fbd
+	sha256sums = 8c1bfb8f9ea691b834fcf987f8046f500048146d068c3f60520bf67b1f384050
+
+pkgname = igetnonce-s0uthwest-git

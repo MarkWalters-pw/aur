@@ -1,0 +1,21 @@
+pkgbase = libqaccessibilityclient-git
+	pkgdesc = Helper library to make writing accessibility tools easier git version
+	pkgver = v0.2.0.r35.caa0cb9
+	pkgrel = 1
+	url = https://www.kde.org
+	arch = armv7h
+	arch = x86_64
+	license = LGPL
+	makedepends = cmake
+	makedepends = extra-cmake-modules
+	makedepends = git
+	depends = qt5-base
+	provides = libkdeaccessibilityclient
+	provides = libqaccessibilityclient
+	conflicts = libkdeaccessibilityclient
+	conflicts = libqaccessibilityclient
+	source = git+https://github.com/KDE/libqaccessibilityclient.git
+	sha256sums = SKIP
+
+pkgname = libqaccessibilityclient-git
+

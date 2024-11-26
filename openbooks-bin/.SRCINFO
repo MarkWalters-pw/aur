@@ -1,0 +1,16 @@
+pkgbase = openbooks-bin
+	pkgdesc = Openbooks allows you to download ebooks from irc.irchighway.net quickly and easily.
+	pkgver = 4.5.0
+	pkgrel = 1
+	url = https://github.com/evan-buss/openbooks
+	arch = aarch64
+	arch = x86_64
+	provides = openbooks
+	source = https://raw.githubusercontent.com/evan-buss/openbooks/master/README.md
+	sha256sums = 325d0ea858b3506ade1c2303c86307136dc6c5b14f5a16b15b42cd27cf513fa9
+	source_aarch64 = openbooks::https://github.com/evan-buss/openbooks/releases/download/v4.5.0/openbooks_linux_arm
+	sha256sums_aarch64 = dc7c168f9c24141f991c337fc332e14d91268e7f7fdf49e04687833ff0d3b16d
+	source_x86_64 = openbooks::https://github.com/evan-buss/openbooks/releases/download/v4.5.0/openbooks_linux
+	sha256sums_x86_64 = efa4e2dec2fd40374bb222a233b0ba612c64495d760500a6881ed8a040065d4d
+
+pkgname = openbooks-bin

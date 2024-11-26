@@ -1,0 +1,23 @@
+pkgbase = python-desitarget
+	pkgdesc = Scripts and packages for selecting DESI targets from photometric catalogs
+	pkgver = 2.7.0
+	pkgrel = 1
+	url = https://github.com/desihub/desitarget
+	arch = any
+	license = custom
+	depends = python-setuptools
+	depends = python-requests
+	depends = python-pytz
+	depends = python-astropy
+	depends = python-healpy
+	depends = python-numba
+	depends = python-speclite
+	depends = python-sqlalchemy
+	depends = python-fitsio
+	depends = python-photutils
+	depends = python-specter
+	depends = python-desimodel
+	source = desitarget-2.7.0::https://github.com/desihub/desitarget/archive/refs/tags/2.7.0.tar.gz
+	sha256sums = 1a9812a7cdf04049a887aea949cb9fcfa3e97f8c4134db8f61c318c8eb885f1a
+
+pkgname = python-desitarget

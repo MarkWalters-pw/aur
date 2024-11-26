@@ -1,0 +1,22 @@
+pkgbase = deepin-wine-adrive
+	pkgdesc = Aliyun aDrive on Deepin Wine 8
+	pkgver = 4.9.15spark9
+	pkgrel = 1
+	url = https://www.aliyundrive.com
+	install = deepin-wine-adrive.install
+	arch = x86_64
+	license = LicenseRef-custom
+	makedepends = p7zip
+	depends = deepin-wine6-stable
+	depends = spark-dwine-helper
+	depends = xdg-utils
+	provides = adrive
+	conflicts = adrive
+	source = deepin-wine-adrive-4.9.15spark9.deb::https://mirrors.sdu.edu.cn/spark-store-repository/store//network/com.aliyundrive.spark/com.aliyundrive.spark_4.9.15spark9_all.deb
+	source = LICENSE.html::https://terms.alicdn.com/legal-agreement/terms/suit_bu1_alibaba_group/suit_bu1_alibaba_group202102022125_53871.html
+	source = deepin-wine-adrive.sh
+	sha256sums = 769e2265f50c5eb3d53299f86f3975ebf9ea783b132de9fd7d44002e15487966
+	sha256sums = 6805d4f66fba42ef107aa186c1aa57b157273dc75469bc5476134f4ce001e96a
+	sha256sums = 60092b36b388d8c5899ced088bf4fa2f26999ba5ea7470dedf196bdc6473b43b
+
+pkgname = deepin-wine-adrive

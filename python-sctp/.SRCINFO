@@ -1,0 +1,17 @@
+pkgbase = python-sctp
+	pkgdesc = Python module for the SCTP protocol stack and library
+	pkgver = 0.7.2
+	pkgrel = 1
+	url = https://github.com/P1sec/pysctp
+	arch = x86_64
+	license = LGPL
+	makedepends = python-setuptools
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = lksctp-tools
+	depends = python
+	source = python-sctp-0.7.2.tar.gz::https://files.pythonhosted.org/packages/source/p/pysctp/pysctp-0.7.2.tar.gz
+	sha256sums = dc39ce71988a264f54d9de114a9c7cc373300ade22d373a90c9f09c38c6a7f40
+
+pkgname = python-sctp

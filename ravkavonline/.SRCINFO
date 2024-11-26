@@ -1,0 +1,19 @@
+pkgbase = ravkavonline
+	pkgdesc = Ravkav Online client - unofficial package
+	pkgver = 2.5.2
+	pkgrel = 1
+	url = https://ravkavonline.co.il/
+	install = ravkavonline.install
+	arch = x86_64
+	license = custom
+	license = MIT
+	depends = pcsclite
+	depends = ccid
+	optdepends = scmccid: additional support for some card readers
+	source = https://ravkavonline.co.il/releases/linux/ravkavonline_2.5.2_amd64.deb
+	source = ravkavonline.install
+	sha256sums = 002704d194012e454a255db1646de6067775524f97edb07e88ef067fae97b70c
+	sha256sums = 91373cde0ef5a269db942aaabe53bb553748306e9d7ef5aedf05183bd42f8447
+
+pkgname = ravkavonline
+

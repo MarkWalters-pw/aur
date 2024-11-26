@@ -1,0 +1,19 @@
+pkgbase = xcb-imdkit-git
+	pkgdesc = Input method development support for xcb
+	pkgver = 1.0.0.r2.g8d762c3
+	pkgrel = 1
+	url = https://github.com/fcitx/xcb-imdkit
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = extra-cmake-modules
+	makedepends = git
+	depends = xcb-util
+	depends = xcb-util-keysyms
+	provides = xcb-imdkit
+	conflicts = xcb-imdkit
+	source = git+https://github.com/fcitx/xcb-imdkit.git
+	sha512sums = SKIP
+
+pkgname = xcb-imdkit-git
+

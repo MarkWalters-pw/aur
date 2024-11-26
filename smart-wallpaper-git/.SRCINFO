@@ -1,0 +1,20 @@
+pkgbase = smart-wallpaper-git
+	pkgdesc = Simple script to set a different wallpaper when its daytime/nightime.
+	pkgver = 0
+	pkgrel = 1
+	url = https://github.com/Baitinq/smart-wallpaper.git
+	arch = any
+	license = GPL
+	makedepends = git
+	depends = redshift
+	depends = feh-git
+	depends = xwinwrap
+	optdepends = gifsicle: support for animated backgrounds (.gif)
+	optdepends = mpv: support for videos
+	provides = smart-wallpaper
+	source = git://github.com/Baitinq/smart-wallpaper.git
+	md5sums = SKIP
+	sha1sums = SKIP
+	sha256sums = SKIP
+
+pkgname = smart-wallpaper-git

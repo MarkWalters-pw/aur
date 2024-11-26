@@ -1,0 +1,16 @@
+pkgbase = sge-git
+	pkgdesc = SDL Graphics Extension
+	pkgver = r6.d7f6e55
+	pkgrel = 2
+	url = https://github.com/flibitijibibo/libSGE
+	arch = i686
+	arch = x86_64
+	license = LGPL
+	makedepends = git
+	depends = sdl2_image
+	depends = freetype2
+	provides = sge
+	source = sge-git::git+https://github.com/flibitijibibo/libSGE.git
+	sha256sums = SKIP
+
+pkgname = sge-git

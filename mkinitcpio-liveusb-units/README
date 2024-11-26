@@ -1,0 +1,23 @@
+Live Units
+==========
+These are mkinitcpio hooks that are split up from the "block" hook, and designed
+for use for live, or other lightweight or specialty systems where this might
+improve performance. This is the way that Arch did things eons ago. Chances are
+you probably don't need this.
+
+This is done for a handful of reasons. In a LiveOS we can save loading time, by
+only loading drivers we absolutely need. We can also ensure that the internal
+hard disk is kept out of early user space by not including the drivers. We can
+fine tune what devices are in fact allowed in early user space
+
+hooks:
+
+live_usb - loads USB storage devices
+
+live_mmc - loads SD card. NOTE that most sd card readers, but not all enumerate
+	   as USB block devices. This was done early on for compatibility,
+	   and licensing.(/dev/mmcblk* devices need this, /dev/sd* does not)
+
+live_firewire - ieee1394 devices
+
+live_virtual - virtualmachines use this

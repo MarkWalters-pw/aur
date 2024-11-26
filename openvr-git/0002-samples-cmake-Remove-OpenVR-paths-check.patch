@@ -1,0 +1,33 @@
+From 9e1e1f6682d225a9028f4f902c0eb701cf7b9abb Mon Sep 17 00:00:00 2001
+From: Lubosz Sarnecki <lubosz.sarnecki@collabora.com>
+Date: Wed, 18 Sep 2019 10:42:59 +0200
+Subject: [PATCH 2/3] samples/cmake: Remove OpenVR paths check.
+
+Original patch by Christoph Haag.
+---
+ samples/CMakeLists.txt | 9 ---------
+ 1 file changed, 9 deletions(-)
+
+diff --git a/samples/CMakeLists.txt b/samples/CMakeLists.txt
+index a573f83..ae09188 100644
+--- a/samples/CMakeLists.txt
++++ b/samples/CMakeLists.txt
+@@ -48,15 +48,6 @@ endif()
+ set(THIRDPARTY_DIR ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty)
+ set(SHARED_SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/shared)
+ 
+-# Check that the steamVR SDK is installed 
+-# (needed to prevent a segfault in OpenVR).
+-if(CMAKE_HOST_UNIX)
+-  find_file(OPENVRPATHS openvrpaths.vrpath PATHS $ENV{HOME}/.config/openvr "$ENV{HOME}/Library/Application Support/OpenVR/.openvr")
+-  if(${OPENVRPATHS} MATCHES OPENVRPATHS-NOTFOUND)
+-    message(FATAL_ERROR "${OPENVRPATHS} Please install SteamVR SDK to continue..")
+-  endif()
+-endif()
+-
+ # Default output directory.
+ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin/${ARCH_TARGET})
+ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin/${ARCH_TARGET})
+-- 
+2.23.0
+

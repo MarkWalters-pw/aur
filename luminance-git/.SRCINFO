@@ -1,0 +1,24 @@
+pkgbase = luminance-git
+	pkgdesc = Luminance is a Philips Hue client for Linux written in Python and GTK+
+	pkgver = 0.1.0.r0.g33a274c
+	pkgrel = 1
+	url = https://github.com/craigcabrey/luminance
+	arch = any
+	license = GPL2
+	makedepends = git
+	makedepends = autoconf
+	makedepends = python
+	makedepends = python-requests
+	makedepends = gtk3
+	makedepends = pygobject-devel
+	depends = python
+	depends = dconf
+	depends = hicolor-icon-theme
+	depends = python-phue
+	provides = luminance=$pkgver
+	conflicts = luminance
+	source = git+https://github.com/craigcabrey/luminance.git
+	sha256sums = SKIP
+
+pkgname = luminance-git
+

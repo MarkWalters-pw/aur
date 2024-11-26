@@ -1,0 +1,36 @@
+pre_install() {
+	groupadd cloud
+	useradd -g cloud -c "OpenNebula administrator account" -s /usr/bin/bash oneadmin
+}
+
+post_install() {
+	# Append the oneadmin credentials to one_auth to avoid overwriting a file
+	# that may already exist
+	usermod -m -d /var/lib/one oneadmin
+	if [ ! -f /var/lib/one/.one/one_auth ]; then
+		mkdir -p /var/lib/one/.one/
+		echo 'oneadmin:0neadm1n' >> /var/lib/one/.one/one_auth
+		echo ">> You must edit the password in /var/lib/one/.one/one_auth"
+	fi
+	chown oneadmin:cloud -R /var/log/one /var/lib/one /run/one /run/lock/one
+	echo ">> To install required gems run as a local user:"
+	echo ">> bundler install --gemfile /usr/share/one/Gemfile"
+}
+
+post_upgrade(){
+  chown oneadmin:cloud -R /var/lib/one/sunstone
+	printf "NOTE: This is may be an major upgrade! If you are not installing from scratch, check the compatibility guide at:\n\n\thttp://docs.opennebula.org/5.10/intro_release_notes/release_notes/compatibility.html\n\thttp://docs.opennebula.org/5.10/intro_release_notes/upgrades/index.html\n"
+	echo ">> To install required gems run as a local user:"
+	echo ">> bundler install --gemfile /usr/share/one/Gemfile"
+}
+
+pre_remove() {
+	userdel oneadmin && echo ">> User 'oneadmin' has been removed."
+	groupdel cloud && echo ">> Group 'cloud' has been removed."
+}
+
+post_remove() {
+	echo ">> You can uninstall the Ruby gems if no other packages require them."
+	echo ">> For example, 'gem uninstall sequel' would uninstall the 'sequel' Ruby gem."
+	echo ">> If you installed the Ruby gems via pacman, then uninstall the gems via pacman."
+}

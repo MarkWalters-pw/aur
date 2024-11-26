@@ -1,0 +1,21 @@
+pkgbase = reglookup
+	pkgdesc = Command line utility for reading and querying Windows NT registries
+	pkgver = 1.0.1
+	pkgrel = 5
+	url = https://code.blindspotsecurity.com/trac/reglookup/
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = gcc
+	makedepends = scons
+	makedepends = docbook2x
+	depends = talloc
+	source = reglookup-src-1.0.1::svn+https://code.blindspotsecurity.com/dav/reglookup/releases/1.0.1
+	source = SConstruct.patch
+	source = pyregfi-distutils.py.patch
+	md5sums = SKIP
+	md5sums = a1d31fb09fbce3864abde8babf4c63eb
+	md5sums = d90fd7b3f43e5c3079c0eb152d9d2df6
+
+pkgname = reglookup
+

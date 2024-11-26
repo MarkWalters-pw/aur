@@ -1,0 +1,21 @@
+pkgbase = nrsc5-git
+	pkgdesc = NRSC-5 (HD Radio) receiver for rtl-sdr
+	pkgver = r233.6c64409
+	pkgrel = 2
+	url = https://github.com/theori-io/nrsc5
+	arch = i686
+	arch = x86_64
+	arch = armv7h
+	license = GPL
+	makedepends = git
+	makedepends = cmake
+	depends = rtl-sdr
+	depends = fftw
+	depends = libao
+	provides = nrsc5
+	conflicts = nrsc5
+	source = nrsc5::git+https://github.com/theori-io/nrsc5.git#branch=master
+	md5sums = SKIP
+
+pkgname = nrsc5-git
+

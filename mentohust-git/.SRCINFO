@@ -1,0 +1,17 @@
+pkgbase = mentohust-git
+	pkgdesc = A Ruijie V4 supplicant on Linux and MacOS
+	pkgver = 4.0.alpha2.r43.g857f5a1
+	pkgrel = 1
+	url = https://github.com/hyrathb/mentohust
+	install = mentohust-git.install
+	arch = any
+	license = GPL
+	makedepends = git
+	depends = libpcap
+	optdepends = libnotify
+	provides = mentohust
+	conflicts = mentohust
+	source = git+https://github.com/hyrathb/mentohust.git
+	sha256sums = SKIP
+
+pkgname = mentohust-git

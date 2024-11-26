@@ -1,0 +1,20 @@
+pkgbase = darknet-alexeyab-git
+	pkgdesc = YOLO: Real Time Object Detection Neural Network Library (AlexeyAB fork)
+	pkgver = r2214.eaee5060
+	pkgrel = 1
+	url = https://github.com/AlexeyAB/darknet
+	arch = i686
+	arch = x86_64
+	license = YOLO
+	makedepends = git
+	makedepends = cmake
+	makedepends = cuda
+	makedepends = cudnn
+	makedepends = opencv-cuda
+	provides = darknet
+	source = darknet::git+https://github.com/AlexeyAB/darknet.git
+	source = LICENSE
+	sha256sums = SKIP
+	sha256sums = 2021f0b8d6426fbf9a2f0126f1e8a7d3b1d7027c871b9979fa2543b9557000c4
+
+pkgname = darknet-alexeyab-git

@@ -1,0 +1,28 @@
+post_install() {
+	# lpr
+	sed -i 's/chown lp/chown root/g' /opt/brother/Printers/dcpj4120dw/inf/setupPrintcapij
+	/opt/brother/Printers/dcpj4120dw/inf/setupPrintcapij dcpj4120dw -i
+	
+	# cupswrapper
+	/opt/brother/Printers/dcpj4120dw/cupswrapper/cupswrapperdcpj4120dw
+	
+	systemctl restart org.cups.cupsd.service
+}
+
+post_upgrade() {
+	/bin/true
+}
+
+pre_remove() {
+	# lpr
+	/opt/brother/Printers/dcpj4120dw/inf/setupPrintcapij dcpj4120dw -e
+	
+	# cupswrapper
+	/opt/brother/Printers/dcpj4120dw/cupswrapper/cupswrapperdcpj4120dw -e
+}
+
+op=$1
+shift
+
+$op "$@"
+

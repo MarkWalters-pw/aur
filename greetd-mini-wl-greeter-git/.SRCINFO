@@ -1,0 +1,25 @@
+pkgbase = greetd-mini-wl-greeter-git
+	pkgdesc = Extremely minimal Wayland greeter for greetd.
+	pkgver = r30.c28c524
+	pkgrel = 1
+	url = https://github.com/philj56/greetd-mini-wl-greeter
+	arch = x86_64
+	license = MIT
+	makedepends = meson
+	makedepends = git
+	makedepends = scdoc
+	makedepends = wayland-protocols
+	depends = cairo
+	depends = glib2
+	depends = json-c
+	depends = libepoxy
+	depends = libpng
+	depends = libxkbcommon
+	depends = pango
+	depends = wayland
+	provides = greetd-mini-wl-greeter
+	conflicts = greetd-mini-wl-greeter
+	source = greetd-mini-wl-greeter-git::git+https://github.com/philj56/greetd-mini-wl-greeter
+	sha512sums = SKIP
+
+pkgname = greetd-mini-wl-greeter-git

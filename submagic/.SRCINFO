@@ -1,0 +1,16 @@
+pkgbase = submagic
+	pkgdesc = Writes stdin into a temp file and then prints the file name
+	pkgver = 0.1.1
+	pkgrel = 1
+	url = https://github.com/claui/submagic
+	arch = any
+	license = Apache-2.0
+	makedepends = python-myst-parser
+	makedepends = python-sphinx
+	depends = bash
+	options = !debug
+	options = !strip
+	source = submagic-0.1.1.tar.gz::https://github.com/claui/submagic/archive/v0.1.1.tar.gz
+	sha512sums = 53b3c1a09ec173420d79534a3c361e1cfcabcc5520646ed911515494c02c393cb78852a606135424083c4c08cf74624add9ca875350a796d64453c4de0cbfbb1
+
+pkgname = submagic

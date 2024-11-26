@@ -1,0 +1,12 @@
+[Unit]
+Description=Mautrix wsproxy
+
+[Service]
+ExecStart=/usr/bin/mautrix-wsproxy -config /etc/mautrix-wsproxy/wsproxy.yaml
+Restart=on-failure
+PrivateTmp=yes
+ProtectSystem=full
+ProtectHome=yes
+
+[Install]
+WantedBy=multi-user.target

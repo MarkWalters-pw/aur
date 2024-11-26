@@ -1,0 +1,14 @@
+pkgbase = qshutdown-git
+	pkgdesc = Shutdown your computer
+	pkgver = 1.8.0
+	pkgrel = 2
+	url = https://launchpad.net/~hakaishi/+archive/ubuntu/qshutdown
+	arch = x86_64
+	license = custom
+	depends = qt5-tools
+	depends = qt5-base
+	conflicts = qshutdown
+	source = git+https://github.com/hakaishi/shutdown-qapps.git
+	md5sums = SKIP
+
+pkgname = qshutdown-git

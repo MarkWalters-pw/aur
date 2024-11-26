@@ -1,0 +1,15 @@
+pkgbase = upnp-router-control
+	pkgdesc = A GTK application to access the parameters of the router exposed via UPnP-IGD.
+	pkgver = 0.3.4
+	pkgrel = 1
+	url = https://gitlab.gnome.org/DnaX/upnp-router-control
+	arch = x86_64
+	license = GPL3
+	checkdepends = appstream-glib
+	makedepends = meson
+	depends = gtk3
+	depends = gupnp
+	source = https://gitlab.gnome.org/DnaX/upnp-router-control/-/archive/0.3.4/upnp-router-control-0.3.4.tar.gz
+	sha256sums = e6b12a25bb736f0aceff0c8a5f2722184b36e3ae39159101da435d51972d2210
+
+pkgname = upnp-router-control

@@ -1,0 +1,19 @@
+pkgbase = plasma5-themes-mondrian-git
+	pkgdesc = Plasma themes based on Piet Mondrian's paintings.
+	pkgver = r32.2450232
+	pkgrel = 1
+	url = https://www.opencode.net/ju1464/Mondrian
+	arch = any
+	license = GPL3
+	makedepends = git
+	optdepends = plasma-desktop: for a plasma desktop theme
+	optdepends = mondrian-icon-theme-git: for icon theme
+	optdepends = mondrian-gtk-theme-git: for GTK theme
+	provides = mondrian-kde
+	conflicts = mondrian-kde
+	options = !strip
+	source = git+https://www.opencode.net/ju1464/Mondrian.git
+	sha256sums = SKIP
+
+pkgname = plasma5-themes-mondrian-git
+

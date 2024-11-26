@@ -1,0 +1,20 @@
+pkgbase = conky-manager2-git
+	pkgdesc = Fork of GUI for managing Conky widgets. Support added for latest conky config version - git
+	pkgver = 2.7
+	pkgrel = 3
+	url = https://github.com/zcot/conky-manager2
+	arch = x86_64
+	license = GPL3
+	makedepends = vala
+	depends = cairo
+	depends = conky
+	depends = desktop-file-utils
+	depends = gtk3
+	depends = imagemagick
+	depends = json-glib
+	depends = libgee
+	depends = p7zip
+	depends = rsync
+	provides = conky-manager2
+
+pkgname = conky-manager2-git

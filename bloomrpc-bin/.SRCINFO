@@ -1,0 +1,17 @@
+pkgbase = bloomrpc-bin
+	pkgdesc = GUI Client for gRPC Services
+	pkgver = 1.5.3
+	pkgrel = 1
+	url = https://github.com/uw-labs/bloomrpc
+	arch = x86_64
+	license = LGPL3
+	depends = gtk3
+	depends = libxss
+	depends = libxtst
+	conflicts = bloomrpc
+	source = https://github.com/uw-labs/bloomrpc/releases/download/1.5.3/bloomrpc_1.5.3_amd64.deb
+	source = bloomrpc.desktop.patch
+	sha512sums = 4d92cf397573b061e80686e9bfd3f01d16f7557678de4b1c0435e0187336fd7e5b7be7a4dcfdbadb0d33aab5c2dbe2d9a66a595194fd217436c32a2598b50465
+	sha512sums = ab9979e497202c97195ae59d782d2905cf5bfed49f3a7216eab33404db8e9b9de4c21b4e736378add3fdf66536af11dbde67a2b99a91d0276beb83091b62fad1
+
+pkgname = bloomrpc-bin

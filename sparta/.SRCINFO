@@ -1,0 +1,20 @@
+pkgbase = sparta
+	pkgdesc = Python GUI application which simplifies network infrastructure penetration testing.
+	pkgver = 2.0.0
+	pkgrel = 2
+	url = https://github.com/SECFORCE/sparta
+	arch = any
+	license = GPL2
+	makedepends = git
+	depends = python-pyqt5
+	depends = python-lxml
+	optdepends = cutycapt: take screenshots of websites
+	optdepends = nmap: Nmap support
+	optdepends = hydra: bruteforce
+	optdepends = nikto: information gathering
+	source = git+https://github.com/SECFORCE/sparta.git#commit=d95993d283d69eb76d30565cea6ad49976685b5f
+	source = sparta_launcher
+	sha512sums = SKIP
+	sha512sums = 4bfe0ead2ef1a718f7312d13c77d1aed62347f93fff83c0a4a1620821078f60fc9eb637db19d6086d6c1043f6b6a4953903f7cb503aed5ee0bd72d3245a5adb1
+
+pkgname = sparta

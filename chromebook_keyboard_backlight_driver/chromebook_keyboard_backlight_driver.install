@@ -1,0 +1,18 @@
+
+post_install() {
+    source /usr/share/makepkg/util/message.sh
+    colorize
+    msg2 "$(gettext "The 'backlight' variant was not installed (this is normal).")"
+    msg2 "$(gettext "If needed, grab it from ./src/chromebook_keyboard_backlight_driver/_output/*/")"
+    depmod -a
+    modprobe -r cros_kbd_led_backlight || :
+    modprobe chromebook_kb_backlight
+    modprobe chromeos_keyboard_leds
+    msg2 "$(gettext "You may need to restart for changes to take effect")"
+}
+
+post_upgrade() {
+    post_install
+}
+
+# vim:ft=sh

@@ -1,0 +1,35 @@
+pkgbase = pitivi-git
+	pkgdesc = Editor for audio/video projects using the GStreamer framework (git version)
+	pkgver = 2021.01.0.r68.gf0a99577
+	pkgrel = 1
+	url = http://www.pitivi.org/
+	arch = x86_64
+	license = LGPL
+	makedepends = git
+	makedepends = appstream-glib
+	makedepends = intltool
+	makedepends = itstool
+	makedepends = meson
+	depends = gsound
+	depends = gst-editing-services
+	depends = gst-plugin-gtk
+	depends = gst-plugins-bad
+	depends = gst-plugins-good
+	depends = gst-python
+	depends = gtk3
+	depends = libnotify
+	depends = libpeas
+	depends = python-cairo
+	depends = python-gobject
+	depends = python-matplotlib
+	depends = python-numpy
+	optdepends = frei0r-plugins: additional video effects, clip transformation feature
+	optdepends = gst-libav: additional multimedia codecs
+	optdepends = gst-plugins-ugly: additional multimedia codecs
+	provides = pitivi
+	conflicts = pitivi
+	source = git+https://gitlab.gnome.org/GNOME/pitivi.git
+	sha256sums = SKIP
+
+pkgname = pitivi-git
+

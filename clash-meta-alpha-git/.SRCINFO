@@ -1,0 +1,20 @@
+pkgbase = clash-meta-alpha-git
+	pkgdesc = Another Clash Kernel by MetaCubeX (git virsion)
+	pkgver = 2024032914.72d09482
+	pkgrel = 1
+	url = https://github.com/MetaCubeX/mihomo
+	arch = x86_64
+	license = GPL-3.0-or-later
+	makedepends = git
+	makedepends = go
+	depends = clash-geoip
+	depends = glibc
+	provides = clash-meta
+	provides = clash-meta-alpha
+	conflicts = clash-meta
+	conflicts = clash-meta-alpha
+	backup = etc/clash-meta/config.yaml
+	source = clash-meta::git+https://github.com/MetaCubeX/mihomo.git#branch=Alpha
+	sha256sums = SKIP
+
+pkgname = clash-meta-alpha-git

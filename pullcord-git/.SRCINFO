@@ -1,0 +1,16 @@
+pkgbase = pullcord-git
+	pkgdesc = Discord archiver
+	pkgver = r137.a4456d6
+	pkgrel = 3
+	url = https://github.com/tsudoko/pullcord
+	arch = x86_64
+	license = Unlicense
+	makedepends = git
+	makedepends = go
+	depends = glibc
+	provides = pullcord
+	conflicts = pullcord
+	source = pullcord-git::git+https://github.com/tsudoko/pullcord
+	sha256sums = SKIP
+
+pkgname = pullcord-git

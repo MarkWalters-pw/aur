@@ -1,0 +1,21 @@
+info() {
+    echo -e "\033[0;34m============================提示/INFO==============================="
+    echo -e "* 常见问题及解决(Troubleshoot):"
+    echo -e "  https://github.com/vufa/deepin-wine-wechat-arch"
+    echo -e "* 反馈问题(Report issue):"
+    echo -e "  https://github.com/vufa/deepin-wine-wechat-arch/issues"
+    echo -e "* 安装包下载(Installation package download):"
+    echo -e "  https://github.com/vufa/deepin-wine-wechat-arch/releases"
+    echo -e "====================================================================\033[0m"
+}
+post_install() {
+    info
+}
+post_upgrade() {
+    find /home -maxdepth 2 -name ".deepinwine" -exec rm -f \{\}/Deepin-WeChat/reinstalled \;
+    info
+}
+pre_remove() {
+    echo "deleting the WeChat bottle..."
+    find /home -maxdepth 2 -name ".deepinwine" -exec rm -rf \{\}/Deepin-WeChat/ \;
+}

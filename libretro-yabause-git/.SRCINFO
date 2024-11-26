@@ -1,0 +1,19 @@
+pkgbase = libretro-yabause-git
+	pkgdesc = Sega Saturn core
+	pkgver = r3321.12c869191
+	pkgrel = 1
+	url = https://github.com/libretro/yabause
+	arch = i686
+	arch = x86_64
+	groups = libretro-unstable
+	license = GPL2
+	makedepends = git
+	depends = glew
+	depends = glibc
+	depends = libretro-core-info
+	provides = libretro-yabause
+	conflicts = libretro-yabause
+	source = libretro-yabause::git+https://github.com/libretro/yabause.git
+	sha256sums = SKIP
+
+pkgname = libretro-yabause-git

@@ -1,0 +1,15 @@
+pkgbase = ubuntu-latex-fonts-git
+	pkgdesc = Enables you to use the original Ubuntu Font Familiy with LaTeX
+	pkgver = r71.1fe3a42
+	pkgrel = 2
+	epoch = 1
+	url = https://github.com/tzwenn/ubuntu-latex-fonts
+	arch = any
+	license = custom
+	makedepends = git
+	depends = texlive-core
+	conflicts = ubuntu-latex-fonts
+	source = ubuntu-latex-fonts-git::git+https://github.com/tzwenn/ubuntu-latex-fonts.git
+	md5sums = SKIP
+
+pkgname = ubuntu-latex-fonts-git

@@ -1,0 +1,16 @@
+pkgbase = ros-noetic-octovis
+	pkgdesc = ROS - octovis is visualization tool for the OctoMap library based on Qt and libQGLViewer.
+	pkgver = 1.9.7
+	pkgrel = 1
+	url = https://octomap.github.io
+	arch = any
+	license = GPLv2
+	makedepends = cmake
+	makedepends = ros-build-tools
+	depends = octomap
+	depends = libqglviewer
+	depends = qt5-base
+	source = ros-noetic-octovis-1.9.7.tar.gz::https://github.com/OctoMap/octomap/archive/v1.9.7.tar.gz
+	sha256sums = 3e9ac020686ceb4e17e161bffc5a0dafd9cccab33adeb9adee59a61c418ea1c1
+
+pkgname = ros-noetic-octovis

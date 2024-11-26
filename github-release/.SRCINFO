@@ -1,0 +1,19 @@
+pkgbase = github-release
+	pkgdesc = Command-line app to create and edit releases on GitHub (and upload artifacts)
+	pkgver = 0.10.0
+	pkgrel = 1
+	url = https://github.com/github-release/github-release
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = go
+	makedepends = golang-github-dustin-go-humanize
+	makedepends = golang-github-voxelbrain-goptions
+	depends = glibc
+	depends = git
+	conflicts = github-release-bin
+	source = github-release-0.10.0.tar.gz::https://github.com/github-release/github-release/archive/v0.10.0.tar.gz
+	sha512sums = ddd5dbbb9726e80ce821b53e12efe5013688c2f649e369c97f6b3a6ff2dd58cddddbc810e13604aeea7548793660208fcc112ef6622e73dc2368644b4de4c0cd
+
+pkgname = github-release
+

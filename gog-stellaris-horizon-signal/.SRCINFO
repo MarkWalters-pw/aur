@@ -1,0 +1,18 @@
+pkgbase = gog-stellaris-horizon-signal
+	pkgdesc = The free Horizon Signal DLC for the Stellaris game
+	pkgver = 3.5.3
+	pkgrel = 1
+	url = https://www.gog.com/game/stellaris_horizon_signal
+	arch = x86_64
+	groups = gog-stellaris-dlcs
+	groups = gog
+	groups = games
+	license = custom
+	makedepends = unzip
+	makedepends = findutils
+	makedepends = lgogdownloader
+	depends = gog-stellaris>=3.5.3
+	source = stellaris_horizon_signal_3_5_3.sh::gogdownloader://1490429179/en3installer0
+	sha512sums = a702721de90d3efc7f42f935fe83ce8d9eb58fd94d97be12761a276f2c644b45eb5d5cad68e6d5ccbc8a55cbdeda6b41ef721c0b27a41a79d12e528c6a4f294d
+
+pkgname = gog-stellaris-horizon-signal

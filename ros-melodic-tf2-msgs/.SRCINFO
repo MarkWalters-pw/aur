@@ -1,0 +1,21 @@
+pkgbase = ros-melodic-tf2-msgs
+	pkgdesc = ROS - tf2_msgs.
+	pkgver = 0.6.6
+	pkgrel = 2
+	url = https://www.wiki.ros.org/tf2_msgs
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-melodic-message-generation
+	makedepends = ros-melodic-actionlib-msgs
+	makedepends = ros-melodic-catkin
+	makedepends = ros-melodic-geometry-msgs
+	depends = ros-melodic-message-generation
+	depends = ros-melodic-actionlib-msgs
+	depends = ros-melodic-geometry-msgs
+	source = ros-melodic-tf2-msgs-0.6.6.tar.gz::https://github.com/ros/geometry2/archive/0.6.6.tar.gz
+	sha256sums = 4955f3ca30d194b0e0842f59b97a72d0e933908c20c56c8c374c152ab02568d1
+
+pkgname = ros-melodic-tf2-msgs
+

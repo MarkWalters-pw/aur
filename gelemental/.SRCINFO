@@ -1,0 +1,22 @@
+pkgbase = gelemental
+	pkgdesc = gElemental is a periodic table viewer that provides detailed information on the chemical elements
+	pkgver = 2.0.2
+	pkgrel = 1
+	url = https://github.com/ginggs/gelemental
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = gawk
+	makedepends = make
+	makedepends = gettext
+	makedepends = libtool
+	makedepends = pkgconf
+	makedepends = intltool
+	makedepends = perl>=5.8.1
+	makedepends = doxygen
+	depends = gtkmm
+	depends = gdk-pixbuf2
+	source = gelemental-2.0.2.tar.gz::https://github.com/ginggs/gelemental/archive/v2.0.2.tar.gz
+	md5sums = cbbc25d9648c76d8f17a96db3fa30314
+
+pkgname = gelemental

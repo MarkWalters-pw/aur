@@ -1,0 +1,27 @@
+pkgbase = ulauncher-git
+	pkgdesc = Application launcher for Linux
+	pkgver = DEV
+	pkgrel = 4
+	url = http://ulauncher.io
+	install = ulauncher.install
+	arch = any
+	license = GPL3
+	checkdepends = desktop-file-utils
+	makedepends = git
+	makedepends = yarn
+	makedepends = python-setuptools
+	depends = gtk3
+	depends = webkit2gtk-4.1
+	depends = python-cairo
+	depends = python-gobject
+	depends = python-xlib
+	depends = python-levenshtein
+	optdepends = gtk-layer-shell: wayland layer shell integration,
+	optdepends = xapp: tray icon with suport for single click,
+	optdepends = libappindicator-gtk3: tray icon
+	provides = ulauncher
+	conflicts = ulauncher
+	source = ulauncher::git+https://github.com/Ulauncher/Ulauncher.git
+	sha256sums = SKIP
+
+pkgname = ulauncher-git

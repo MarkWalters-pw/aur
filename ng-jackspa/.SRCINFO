@@ -1,0 +1,20 @@
+pkgbase = ng-jackspa
+	pkgdesc = A set of LADSPA plugin hosts for JACK with graphical and terminal user interfaces
+	pkgver = 1.0
+	pkgrel = 5
+	url = https://git.tuxfamily.org/legip/ng-jackspa.git/
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = gdb
+	makedepends = ladspa
+	depends = gtkmm
+	depends = jack
+	depends = qt4
+	source = ngjackspa-1.0.tar.gz::https://git.tuxfamily.org/legip/ng-jackspa.git/plain/ngjackspa-1.0.tar.gz?h=download
+	source = 0001-Makefile-do-not-disable-deprecated-glib-GTK-code.patch
+	sha256sums = 4ec971f4aab03c8d8a63439bbabc220e36ee16cd0f29e89772066291daf13102
+	sha256sums = 9997bae7bd58bafa9fcd3e2b1f47a92687364fa83414feed4071063861b41637
+
+pkgname = ng-jackspa
+

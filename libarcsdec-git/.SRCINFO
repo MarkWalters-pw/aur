@@ -1,0 +1,26 @@
+pkgbase = libarcsdec-git
+	pkgdesc = Audio decoder and TOC parser adapters for libarcstk
+	pkgver = 0.1.1alpha1+3.8aebeec
+	pkgrel = 1
+	url = https://codeberg.org/tristero/libarcsdec
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = cmake
+	makedepends = flex
+	makedepends = bison
+	depends = gcc-libs
+	depends = libarcstk
+	depends = libcue>=2.0.0
+	depends = flac>=1.3.1
+	depends = wavpack>=5.0.0
+	depends = ffmpeg>=3.1
+	optdepends = doxygen>=1.8.14: build documentation
+	optdepends = python-virtualenv: build HTML documentation with m.css
+	provides = libarcsdec
+	conflicts = libarcsdec
+	source = libarcsdec::git+https://codeberg.org/tristero/libarcsdec.git#branch=main
+	md5sums = SKIP
+
+pkgname = libarcsdec-git
+

@@ -1,0 +1,28 @@
+pkgbase = advancemame
+	pkgdesc = Unofficial MAME/MESS version with an advanced video support for use with TVs, Arcade monitors, PC monitors and LCD screens. Also includes AdvanceMENU frontend.
+	pkgver = 3.9
+	pkgrel = 2
+	url = http://www.advancemame.it
+	arch = i686
+	arch = x86_64
+	arch = armv7h
+	license = GPL
+	makedepends = imagemagick
+	depends = alsa-lib
+	depends = freetype2
+	depends = slang
+	provides = advancemenu
+	provides = advancemess
+	conflicts = advancemenu
+	conflicts = advancemess
+	source = https://github.com/amadvance/advancemame/releases/download/v3.9/advancemame-3.9.tar.gz
+	source = http://www.advancemame.it/favicon.ico
+	source = advancemame.desktop
+	sha256sums = 3e4628e1577e70a1dbe104f17b1b746745b8eda80837f53fbf7b091c88be8c2b
+	sha256sums = 42c33684c5c6e44269c7102dc404652721e4802bb19a495c264127bfee52a9d0
+	sha256sums = 6633a06a972f69142af5c3ee538b80e0705ef79eed9f5f4097811015be1cfb41
+	depends_i686 = sdl2
+	depends_x86_64 = sdl2
+
+pkgname = advancemame
+

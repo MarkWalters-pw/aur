@@ -1,0 +1,19 @@
+pkgbase = obs-motion-effect-git
+	pkgdesc = v4l2-output for obs-studio
+	pkgver = 1.2.1.r3.167596a+obs25.0.8
+	pkgrel = 2
+	url = https://github.com/CatxFish/motion-effect
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = cmake
+	depends = obs-studio
+	provides = obs-motion-effect
+	conflicts = obs-motion-effect
+	source = motion-effect::git+https://github.com/CatxFish/motion-effect.git
+	source = obs-studio::git+https://github.com/obsproject/obs-studio.git
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = obs-motion-effect-git
+

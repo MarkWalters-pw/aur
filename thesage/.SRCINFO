@@ -1,0 +1,23 @@
+pkgbase = thesage
+	pkgdesc = English Dictionary and Thesaurus. A twenty-first century lexical reference system.
+	pkgver = 0.40.3028
+	pkgrel = 1
+	url = https://www.sequencepublishing.com/1/burbridgebeta_linux.html
+	arch = x86_64
+	license = LicenseRef-thesage
+	makedepends = unzip
+	depends = bash
+	depends = gcc-libs
+	depends = glibc
+	depends = zlib
+	noextract = thesage-0.40.3028.zip
+	options = !strip
+	options = !debug
+	source = thesage-0.40.3028.zip::https://www.sequencepublishing.com/cgi-bin/download.cgi?burbridgelinux
+	source = thesage.desktop
+	source = thesage.png
+	sha256sums = a9948c03e3c6600a1522f8b899fd97cdb56d9927bf8f8cc25b55605fcb3294dd
+	sha256sums = f8a25d201a455c45455a3f9b8eeae5c00198752fa7dbbf247d9c17f0ea816925
+	sha256sums = 00d663f565810bee13d7bda68db577389e215c2424a59a828625eb05a4ecd099
+
+pkgname = thesage

@@ -1,0 +1,27 @@
+pkgbase = gradle4
+	pkgdesc = Powerful build system for the JVM
+	pkgver = 4.10.3
+	pkgrel = 3
+	url = https://gradle.org/
+	arch = any
+	license = Apache
+	depends = java-environment
+	depends = bash
+	source = https://services.gradle.org/distributions/gradle-4.10.3-all.zip
+	source = gradle.sh
+	sha512sums = a688267399a1632d86e8c3d28e34ea58992bba64968f4d01b6c3e4ea63081167c556806b1e2718e6858a8d402c941fcdcbe761f3622fa2f74bd53dedffa620ff
+	sha512sums = 4b9cdccfd32602eebf145f9002b67abd29d979bb17cf5cbb802843c73492791d195d8aa659917ac2cf6593fc5fd31a2c3b6347f6a4b8626d1e60260f848f4f18
+
+pkgname = gradle4
+	install = gradle4.install
+
+pkgname = gradle4-doc
+	pkgdesc = Powerful build system for the JVM (documentation and samples)
+	optdepends = gradle4
+	options = !strip
+
+pkgname = gradle4-src
+	pkgdesc = Powerful build system for the JVM (sources)
+	optdepends = gradle4
+	options = !strip
+

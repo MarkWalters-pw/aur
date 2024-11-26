@@ -1,0 +1,28 @@
+pkgbase = bazel-git
+	pkgdesc = Correct, reproducible, and fast builds for everyone
+	pkgver = r24502.9ec89b9194
+	pkgrel = 1
+	url = http://bazel.io/
+	arch = i686
+	arch = x86_64
+	arch = armv6h
+	arch = armv7h
+	arch = aarch64
+	license = Apache
+	makedepends = git
+	makedepends = protobuf
+	makedepends = python
+	makedepends = bazel-bootstrap
+	depends = java-environment=11
+	depends = libarchive
+	depends = zip
+	depends = unzip
+	provides = bazel
+	options = !distcc
+	options = !strip
+	options = !ccache
+	source = bazel-git::git+https://github.com/google/bazel.git
+	sha512sums = SKIP
+
+pkgname = bazel-git
+

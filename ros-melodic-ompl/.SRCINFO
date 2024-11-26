@@ -1,0 +1,24 @@
+pkgbase = ros-melodic-ompl
+	pkgdesc = ROS - OMPL is a free sampling-based motion planning library.
+	pkgver = 1.4.2
+	pkgrel = 3
+	url = https://ompl.kavrakilab.org
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = boost1.69
+	makedepends = eigen
+	depends = boost1.69
+	depends = eigen
+	source = ros-melodic-ompl-1.4.2.tar.gz::https://github.com/ompl/ompl/archive/1.4.2.tar.gz
+	source = boost-fix.patch
+	sha256sums = e782f723e1821f80ba6d6c61e65eed73eefd2b29c9c935f0e0b181d9395a0218
+	sha256sums = 41a66f47adc11165278f27c2c565e7e0b37d406c45794383ab8fe1ed6a13cadc
+
+pkgname = ros-melodic-ompl
+

@@ -1,0 +1,19 @@
+pkgbase = pidswallow
+	pkgdesc = A script to swallow your terminal automatically
+	pkgver = 2.0
+	pkgrel = 1
+	url = https://github.com/Liupold/pidswallow
+	arch = x86_64
+	license = APACHE
+	makedepends = git
+	depends = xdo
+	depends = xorg-xprop
+	depends = xorg-xev
+	depends = xorg-xwininfo
+	depends = sh
+	provides = pidswallow
+	source = pidswallow-2.0::https://github.com/Liupold/pidswallow/archive/2.0.tar.gz
+	sha256sums = 9f78d8b97772b3d137cf0c13a414191bc1d5c6c834581c3ae59115191067c15f
+
+pkgname = pidswallow
+

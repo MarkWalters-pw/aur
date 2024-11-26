@@ -1,0 +1,35 @@
+pkgbase = ntpsec-git
+	pkgdesc = Security-hardened Network Time Protocol implementation (Git HEAD)
+	pkgver = 1.2.1.r20.cb9d08ca5
+	pkgrel = 1
+	url = https://www.ntpsec.org/
+	arch = i686
+	arch = x86_64
+	arch = arm
+	arch = armv6h
+	arch = armv7h
+	arch = aarch64
+	license = custom
+	makedepends = asciidoc
+	makedepends = git
+	makedepends = pps-tools
+	makedepends = w3m
+	depends = avahi
+	depends = libbsd
+	depends = libseccomp
+	depends = python
+	optdepends = gnuplot: for ntpviz
+	optdepends = libevent: for ntpdig
+	optdepends = python-psutil: Optional for ntpviz, allows running with ionice
+	optdepends = ttf-liberation: Improves font quality in ntpviz renderings
+	provides = ntp
+	provides = ntpsec
+	conflicts = ntp
+	conflicts = ntpsec
+	backup = etc/ntp.d/default.conf
+	backup = etc/ntp.d/use-pool
+	source = git+https://gitlab.com/NTPsec/ntpsec.git
+	sha512sums = SKIP
+
+pkgname = ntpsec-git
+

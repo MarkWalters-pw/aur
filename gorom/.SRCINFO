@@ -1,0 +1,17 @@
+pkgbase = gorom
+	pkgdesc = Manage ROM sets and torrents for game emulators such as MAME.
+	pkgver = 0.1.2
+	pkgrel = 1
+	url = https://github.com/shumatech/gorom
+	arch = x86_64
+	license = GPL
+	makedepends = go
+	makedepends = upx
+	depends = libsciter-gtk
+	options = !strip
+	source = gorom-0.1.2.tar.gz::https://github.com/shumatech/gorom/archive/v0.1.2.tar.gz
+	source = gorom.desktop
+	sha256sums = 8b623b916914519822621361aea81c39c126a86126c4e02a68eae7406527232f
+	sha256sums = a04779995686f47e77b04ce5f131f7d530746c9a4d3c42f9011d70f1e381fbcb
+
+pkgname = gorom

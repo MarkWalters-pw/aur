@@ -1,0 +1,18 @@
+pkgbase = plasma-thunderbolt-git
+	pkgdesc = Plasma integration for controlling Thunderbolt devices
+	pkgver = 5.22.90.r18.d4afb3d
+	pkgrel = 1
+	url = https://kde.org/plasma-desktop/
+	arch = x86_64
+	groups = plasma
+	license = LGPL
+	makedepends = git
+	makedepends = extra-cmake-modules
+	depends = bolt
+	depends = systemsettings
+	provides = plasma-thunderbolt
+	conflicts = plasma-thunderbolt
+	source = plasma-thunderbolt::git+https://invent.kde.org/plasma/plasma-thunderbolt.git
+	sha256sums = SKIP
+
+pkgname = plasma-thunderbolt-git

@@ -1,0 +1,15 @@
+pkgbase = python-git-pylint-commit-hook
+	pkgdesc = Git pre-commit hook to check Python code quality with pylint. You can use this hook to prohibit Python code with a bad syntax to be checked in.
+	pkgver = 2.6.1
+	pkgrel = 1
+	url = https://github.com/sebdah/git-pylint-commit-hook
+	arch = any
+	license = Apaches
+	makedepends = python-setuptools
+	makedepends = python
+	depends = python-future
+	depends = python-pylint
+	source = https://github.com/sebdah/git-pylint-commit-hook/archive/refs/tags/2.6.1.tar.gz
+	sha256sums = 81a97310fa95f0d1ee22c10de9d22ac34797bfa57cb5b9a0df0c3452cc2c46b6
+
+pkgname = python-git-pylint-commit-hook

@@ -1,0 +1,25 @@
+pkgbase = python-yellowbrick
+	pkgdesc = A suite of visual analysis and diagnostic tools for machine learning
+	pkgver = 1.5
+	pkgrel = 1
+	url = https://github.com/DistrictDataLabs/yellowbrick
+	arch = any
+	license = Apache
+	checkdepends = python-pytest
+	checkdepends = python-pytest-cov
+	checkdepends = python-pytest-flakes
+	makedepends = python-setuptools
+	depends = python-numpy
+	depends = python-scipy
+	depends = python-matplotlib
+	depends = python-scikit-learn
+	depends = python-cycler
+	optdepends = nltk-data: Alternative to download the corpora/treebank for NLTK
+	optdepends = python-nltk: NLTK as the PosTagVisualizer/postag parser
+	optdepends = python-spacy: SpaCy as the PosTagVisualizer/postag parser
+	optdepends = python-pandas: Datasets as pandas.DataFrame instead of numpy arrays
+	optdepends = python-umap-learn: UMAP Corpus Visualization with UMAPVisualizer/umap
+	source = yellowbrick-1.5.tar.gz::https://github.com/DistrictDataLabs/yellowbrick/archive/refs/tags/v1.5.tar.gz
+	sha256sums = 9de4a4e460aac979b1dfda1f5a2925811e84853ad372b36f71363db554e45546
+
+pkgname = python-yellowbrick

@@ -1,0 +1,21 @@
+pkgbase = vkbasalt-git
+	pkgdesc = A Vulkan post-processing layer. Some of the effects are CAS, FXAA, SMAA, deband.
+	pkgver = 0.3.2.7.r0.ga705b44
+	pkgrel = 1
+	url = https://github.com/DadSchoorse/vkBasalt
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = meson
+	makedepends = ninja
+	makedepends = spirv-headers
+	makedepends = vulkan-headers
+	depends = glslang
+	depends = libx11
+	optdepends = reshade-shaders-git
+	provides = vkbasalt
+	conflicts = vkbasalt
+	source = git+https://github.com/DadSchoorse/vkBasalt
+	sha256sums = SKIP
+
+pkgname = vkbasalt-git

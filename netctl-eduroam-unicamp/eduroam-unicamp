@@ -1,0 +1,14 @@
+Description='Eduroam Unicamp'
+Interface=wlan0
+Connection=wireless
+Security=wpa-configsection
+IP=dhcp
+WPAConfigSection=(
+    'ssid="eduroam"'
+    'key_mgmt=WPA-EAP'
+    'eap=TTLS'
+    'ca_cert="/etc/ca-certificates/trust-source/anchors/eduroam-unicamp.crt"'
+    'phase2="auth=PAP"'
+    'identity="xxxxxxxx@unicamp.br"'
+    'password="xxxxxxxx"'
+)

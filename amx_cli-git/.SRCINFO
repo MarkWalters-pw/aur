@@ -1,0 +1,27 @@
+pkgbase = amx_cli-git
+	pkgdesc = Ambiorix Interactive Command Line Interface
+	pkgver = 0.2.22.r0.g18c40c6
+	pkgrel = 1
+	url = https://gitlab.com/soft.at.home/ambiorix/applications/amx-cli.git
+	arch = x86_64
+	arch = i686
+	arch = i486
+	arch = pentium4
+	arch = arm
+	arch = armv6h
+	arch = armv7h
+	arch = aarch64
+	license = BSD
+	makedepends = git
+	depends = lib_amxc
+	depends = lib_amxd
+	depends = lib_amxo
+	depends = lib_amxj
+	depends = lib_amxt
+	depends = lib_amxm
+	provides = amx_cli
+	conflicts = amx_cli
+	source = amx_cli-git::git+https://gitlab.com/soft.at.home/ambiorix/applications/amx-cli.git#branch=main
+	md5sums = SKIP
+
+pkgname = amx_cli-git

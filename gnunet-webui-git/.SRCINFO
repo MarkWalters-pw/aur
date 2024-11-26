@@ -1,0 +1,22 @@
+pkgbase = gnunet-webui-git
+	pkgdesc = Web user interface for GNUnet
+	pkgver = r14.da35c82
+	pkgrel = 1
+	url = https://gnunet.org
+	install = gnunet-webui.install
+	arch = any
+	license = GPL
+	makedepends = npm
+	depends = gnunet
+	depends = nodejs
+	provides = gnunet-webui
+	conflicts = gnunet-webui
+	options = !strip
+	source = git+https://git.gnunet.org/git/gnunet-webui.git
+	source = gnunet-webui.sh
+	source = gnunet-webui.service
+	md5sums = SKIP
+	md5sums = e936e4485fc403707a7f9a8ec003221c
+	md5sums = 7da568705f440c4a3022bf5e18d31349
+
+pkgname = gnunet-webui-git

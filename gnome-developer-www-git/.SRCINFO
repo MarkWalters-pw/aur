@@ -1,0 +1,23 @@
+pkgbase = gnome-developer-www-git
+	pkgdesc = GNOME development website
+	pkgver = r350.ea0ea9d
+	pkgrel = 3
+	url = https://developer.gnome.org
+	install = gnome-developer-www-git.install
+	arch = any
+	license = BSD
+	license = MIT
+	license = OFL
+	license = custom
+	makedepends = git
+	makedepends = python-sphinx
+	makedepends = python-sphinx-furo
+	makedepends = python-sphinx-tabs
+	optdepends = apache: Web server
+	optdepends = nginx: Web server
+	provides = gnome-developer-www
+	conflicts = gnome-developer-www
+	source = gnome-developer-www::git+https://gitlab.gnome.org/Teams/documentation/developer-www.git
+	md5sums = SKIP
+
+pkgname = gnome-developer-www-git

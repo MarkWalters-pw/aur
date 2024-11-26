@@ -1,0 +1,16 @@
+pkgbase = stringtie
+	pkgdesc = A fast and highly efficient assembler of RNA-Seq alignments into potential transcripts
+	pkgver = 2.2.3
+	pkgrel = 1
+	url = https://ccb.jhu.edu/software/stringtie/index.shtml
+	arch = x86_64
+	license = MIT
+	makedepends = gcc
+	makedepends = make
+	makedepends = git
+	depends = gcc-libs
+	depends = zlib
+	source = http://ccb.jhu.edu/software/stringtie/dl/stringtie-2.2.3.tar.gz
+	sha256sums = f372640b70a8fde763712d2f0565aff71f5facdc2300c8af829fea94a05ff208
+
+pkgname = stringtie

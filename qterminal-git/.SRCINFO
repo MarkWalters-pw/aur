@@ -1,0 +1,22 @@
+pkgbase = qterminal-git
+	pkgdesc = Lightweight Qt-based terminal emulator
+	pkgver = 1.4.0.17.g8c5ff85
+	pkgrel = 1
+	url = https://github.com/lxqt/qterminal
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = cmake
+	makedepends = git
+	makedepends = lxqt-build-tools-git
+	makedepends = qt6-tools
+	makedepends = qt6-5compat
+	depends = qtermwidget-git
+	depends = qt6-translations
+	depends = libcanberra
+	provides = qterminal=1.4.0.17.g8c5ff85
+	conflicts = qterminal
+	source = git+https://github.com/lxqt/qterminal.git
+	sha256sums = SKIP
+
+pkgname = qterminal-git

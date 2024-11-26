@@ -1,0 +1,10 @@
+[Trigger]
+Operation = Install
+Operation = Remove
+Type = Package
+Target = *
+
+[Action]
+Description = Updating package lists...
+When = PostTransaction
+Exec = /usr/share/libalpm/scripts/paclist

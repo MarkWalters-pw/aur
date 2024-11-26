@@ -1,0 +1,19 @@
+pkgbase = libtremor-git
+	pkgdesc = Integer-only, fully Ogg Vorbis compliant software decoder library
+	pkgver = r127.7c30a66
+	pkgrel = 1
+	epoch = 2
+	url = https://www.xiph.org/vorbis/
+	arch = x86_64
+	license = BSD
+	makedepends = git
+	depends = libogg
+	provides = libtremor
+	conflicts = libtremor
+	conflicts = libtremor-svn
+	options = !libtool
+	source = libtremor-git::git+https://gitlab.xiph.org/xiph/tremor.git
+	md5sums = SKIP
+
+pkgname = libtremor-git
+

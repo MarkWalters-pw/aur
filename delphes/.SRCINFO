@@ -1,0 +1,17 @@
+pkgbase = delphes
+	pkgdesc = A framework for fast simulation of a generic collider experiment
+	pkgver = 3.4.2
+	pkgrel = 1
+	url = http://cp3.irmp.ucl.ac.be/projects/delphes
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	depends = cmake
+	depends = root
+	provides = delphes
+	conflicts = delphes-git
+	source = https://github.com/delphes/delphes/archive/3.4.2.zip
+	sha256sums = e41ceec08e7a9299e613bcd321f1cd369e902ce7f7da74bb824a0f5261f93c39
+
+pkgname = delphes
+

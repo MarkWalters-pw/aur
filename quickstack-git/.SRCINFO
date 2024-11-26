@@ -1,0 +1,17 @@
+pkgbase = quickstack-git
+	pkgdesc = quickstack is a tool to take call stack traces with minimal overheads.
+	pkgver = 0.r17.844fd47
+	pkgrel = 2
+	url = https://github.com/yoshinorim/quickstack
+	arch = i686
+	arch = x86_64
+	license = BSD
+	makedepends = git
+	makedepends = cmake
+	depends = binutils
+	depends = libelf
+	source = quickstack-git::git+https://github.com/yoshinorim/quickstack
+	md5sums = SKIP
+
+pkgname = quickstack-git
+

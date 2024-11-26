@@ -1,0 +1,19 @@
+pkgbase = python-sklearn-bayes
+	pkgdesc = Python package for Bayesian Machine Learning with scikit-learn API
+	pkgver = r550.fc0687d
+	pkgrel = 1
+	url = https://github.com/AmazaspShumik/sklearn-bayes
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = cython
+	makedepends = python-setuptools
+	depends = python
+	depends = python-numpy
+	depends = python-scipy
+	depends = python-scikit-learn
+	source = sklearn-bayes::git+https://github.com/AmazaspShumik/sklearn-bayes.git
+	sha512sums = SKIP
+
+pkgname = python-sklearn-bayes

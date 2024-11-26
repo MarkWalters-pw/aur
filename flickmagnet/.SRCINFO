@@ -1,0 +1,21 @@
+pkgbase = flickmagnet
+	pkgdesc = HTTP server for streaming public domain videos from torrent files to your web browser.
+	pkgver = 0.0.8
+	pkgrel = 1
+	url = https://github.com/acerix/flickmagnet
+	install = flickmagnet.install
+	arch = any
+	license = MIT
+	depends = btfs
+	depends = python-xdg
+	depends = python-daemonocle
+	depends = python-toml
+	depends = python-cherrypy
+	depends = python-mako
+	source = https://github.com/acerix/flickmagnet/archive/0.0.8.tar.gz
+	source = flickmagnet.install
+	sha256sums = 129797abd36c39a9f55338cdb29e648b19e799667e9526b1e2b5287f4cf00c0f
+	sha256sums = 0a8d9d8e940c280c8038f4fdb35a036fd89e658ff26d3e1ce68d8787c1ce2970
+
+pkgname = flickmagnet
+

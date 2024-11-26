@@ -1,0 +1,18 @@
+pkgbase = nngpp-git
+	pkgdesc = C++ wrapper around the nanomsg NNG API
+	pkgver = 1.3.00cc5d264
+	pkgrel = 2
+	epoch = 1
+	url = https://github.com/cwzx/nngpp
+	arch = x86_64
+	license = MIT
+	makedepends = catch2
+	depends = nng
+	depends = mbedtls
+	provides = nngpp
+	conflicts = nngpp
+	source = nngpp::git+https://github.com/cwzx/nngpp.git
+	sha256sums = SKIP
+
+pkgname = nngpp-git
+

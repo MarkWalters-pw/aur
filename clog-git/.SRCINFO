@@ -1,0 +1,18 @@
+pkgbase = clog-git
+	pkgdesc = Generate beautiful changelogs from your Git commit history
+	pkgver = 199
+	pkgrel = 1
+	url = https://github.com/clog-tool/clog-cli
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = rust
+	makedepends = cargo
+	provides = clog
+	conflicts = clog-bin
+	source = git://github.com/thoughtram/clog.git
+	sha512sums = SKIP
+
+pkgname = clog-git
+

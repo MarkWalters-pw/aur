@@ -1,0 +1,14 @@
+pkgbase = python-aia
+	pkgdesc = AIA chasing through OpenSSL for TLS certificate chain building and verifying
+	pkgver = 0.2.0
+	pkgrel = 1
+	url = https://github.com/danilobellini/aia
+	arch = any
+	license = BSD
+	makedepends = python-setuptools
+	depends = openssl
+	options = !emptydirs
+	source = aia-v0.2.0.tar.gz::https://github.com/danilobellini/aia/archive/v0.2.0.tar.gz
+	sha256sums = 1545a94d3823319e07952e89cc8a9d8b92e2fa174dae48a1ce667ce60077969d
+
+pkgname = python-aia

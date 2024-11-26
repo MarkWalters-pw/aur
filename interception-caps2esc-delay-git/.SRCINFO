@@ -1,0 +1,18 @@
+pkgbase = interception-caps2esc-delay-git
+	pkgdesc = caps2esc: transforming the most useless key ever in the most useful one - with delay patches
+	pkgver = 0.1.3.r5.g3f9a39c
+	pkgrel = 1
+	url = https://gitlab.com/mar04/caps2esc/
+	install = interception-caps2esc-delay-git.install
+	arch = x86_64
+	license = MIT
+	depends = interception-tools
+	conflicts = caps2esc
+	conflicts = interception-caps2esc
+	replaces = interception-caps2esc
+	source = interception-caps2esc-delay-git::git+https://gitlab.com/mar04/caps2esc/
+	source = udevmon.yaml
+	md5sums = SKIP
+	md5sums = 44890a5f6c419c5eb6730636f3a6b535
+
+pkgname = interception-caps2esc-delay-git

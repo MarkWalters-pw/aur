@@ -1,0 +1,17 @@
+pkgbase = mingw-w64-box2d
+	pkgdesc = 2D rigid body simulation library for games (mingw-w64)
+	pkgver = 2.4.1
+	pkgrel = 1
+	url = http://www.box2d.org/
+	arch = any
+	license = zlib
+	makedepends = mingw-w64-cmake
+	depends = mingw-w64-crt
+	options = staticlibs
+	options = !strip
+	options = !buildflags
+	source = https://github.com/erincatto/Box2D/archive/v2.4.1.tar.gz
+	sha256sums = d6b4650ff897ee1ead27cf77a5933ea197cbeef6705638dd181adc2e816b23c2
+
+pkgname = mingw-w64-box2d
+

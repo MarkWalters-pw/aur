@@ -1,0 +1,16 @@
+pkgbase = mkinitcpio-sd-zfs-rename
+	pkgdesc = This module renames the zfs filesystem declared in (zpool get) bootfs, if the name ends with "_next_boot", by removing the "_next_boot" part from the filesystem name/path
+	pkgver = 0.1.0
+	pkgrel = 3
+	url = https://aur.archlinux.org/packages/mkinitcpio-sd-zfs-rename
+	arch = any
+	license = BSD0
+	depends = systemd
+	source = sd-zfs-rename
+	source = sd-zfs-rename.service
+	source = sd-zfs-rename.sh
+	sha256sums = 3c9084e898cf131e9863edaeb1c96c24c1157b6dcc3abf555816ce486b682657
+	sha256sums = 0140033eec7956cf95ea8c803fc5cef00b277206f0cf9a693951d965f42867d6
+	sha256sums = 82a51a18b24eead51db114fd23e740ab7e8038d6c513ae3c1df3896b46c1afa2
+
+pkgname = mkinitcpio-sd-zfs-rename

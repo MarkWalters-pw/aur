@@ -1,0 +1,17 @@
+[Unit]
+Description=Prefix WhoIs Milter Service
+Before=postfix.service
+
+[Service]
+Type=forking
+ExecStart=/usr/local/bin/pwhois_milter \
+	-i /run/pwhois_milter/pwhois_milter.pid \
+	-l /var/log/mail/mail.log \
+	-u postfix -g postfix \
+	-w global.pwhois.org
+Restart=always
+RestartSec=5
+TimeoutSec=10
+
+[Install]
+WantedBy=multi-user.target

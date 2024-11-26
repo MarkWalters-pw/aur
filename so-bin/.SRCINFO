@@ -1,0 +1,22 @@
+pkgbase = so-bin
+	pkgdesc = A terminal interface for StackOverflow
+	pkgver = 0.4.9
+	pkgrel = 1
+	url = https://github.com/samtay/so
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	license = MIT
+	provides = so
+	conflicts = so
+	conflicts = so-git
+	source = LICENSE::https://github.com/samtay/so/raw/v0.4.9/LICENSE
+	sha256sums = SKIP
+	source_x86_64 = archive-0.4.9.tar.gz::https://github.com/samtay/so/releases/download/v0.4.9/so-x86_64-unknown-linux-gnu.tar.gz
+	sha256sums_x86_64 = 45b9badb70ba65264748dd2a30fc95bd7bba10c0b8890a96974d0cb2704e5181
+	source_aarch64 = archive-0.4.9.tar.gz::https://github.com/samtay/so/releases/download/v0.4.9/so-aarch64-unknown-linux-gnu.tar.gz
+	sha256sums_aarch64 = 45b9badb70ba65264748dd2a30fc95bd7bba10c0b8890a96974d0cb2704e5181
+	source_armv7h = archive-0.4.9.tar.gz::https://github.com/samtay/so/releases/download/v0.4.9/so-armv7-unknown-linux-gnueabihf.tar.gz
+	sha256sums_armv7h = 45b9badb70ba65264748dd2a30fc95bd7bba10c0b8890a96974d0cb2704e5181
+
+pkgname = so-bin

@@ -1,0 +1,16 @@
+pkgbase = librewolf-extension-localcdn-bin
+	pkgdesc = A web browser extension that emulates CDNs to improve your online privacy (binary release)
+	pkgver = 2.6.59
+	pkgrel = 1
+	url = https://addons.mozilla.org/addon/localcdn-fork-of-decentraleyes
+	arch = any
+	groups = librewolf-addons
+	license = GPL3
+	depends = librewolf
+	provides = librewolf-extension-localcdn
+	conflicts = librewolf-extension-localcdn
+	noextract = localcdn_fork_of_decentraleyes-2.6.59.xpi
+	source = https://addons.mozilla.org/firefox/downloads/file/4197044/localcdn_fork_of_decentraleyes-2.6.59.xpi
+	sha256sums = 0aa14f964d0a851151dd8ac5ad87ae9085eea8e44d0d19e3b6b2849f92422721
+
+pkgname = librewolf-extension-localcdn-bin

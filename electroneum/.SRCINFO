@@ -1,0 +1,22 @@
+pkgbase = electroneum
+	pkgdesc = Secure, private, mobile based cryptocurrency
+	pkgver = 3.1.0.1
+	pkgrel = 1
+	url = https://electroneum.com
+	arch = any
+	license = custom
+	makedepends = cmake
+	depends = boost
+	depends = openssl
+	depends = unbound
+	optdepends = miniupnpc: NAT punching
+	optdepends = libunwind: stack traces
+	optdepends = ldns: SSL toolkit
+	optdepends = expat: XML parsing
+	optdepends = doxygen: documentation
+	optdepends = graphviz: documentation
+	source = https://github.com/electroneum/electroneum/archive/v3.1.0.1.tar.gz
+	sha512sums = 14d14a003c23552e30edbe66b3a3c116f35695bd03044f517abaa46ea627f17c882d83fbdf3e0dd9407ba8b8325d3105200270403a6ee4bafda56627bf28e8ba
+
+pkgname = electroneum
+

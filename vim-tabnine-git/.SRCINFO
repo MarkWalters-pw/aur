@@ -1,0 +1,37 @@
+pkgbase = vim-tabnine-git
+	pkgdesc = A code-completion engine for Vim with tabnine
+	pkgver = r2911.4a042af0
+	pkgrel = 1
+	url = https://www.tabnine.com/
+	arch = x86_64
+	groups = vim-plugins
+	license = GPL3
+	makedepends = git
+	makedepends = cmake
+	makedepends = pybind11
+	depends = vim
+	depends = python>=3.6
+	depends = python-watchdog
+	depends = python-bottle
+	depends = clang>=11.0
+	optdepends = gopls: Go semantic completion
+	optdepends = nodejs-tern: JavaScript semantic completion
+	optdepends = rust-analyzer: Rust semantic completion
+	optdepends = typescript: Typescript semantic completion
+	optdepends = python-jedi: Python semantic completion
+	optdepends = python-numpydoc: Python semantic completion
+	optdepends = python-regex: Better Unicode support
+	optdepends = omnisharp-roslyn: C# semantic completion
+	optdepends = java-environment>=11: Java semantic completion
+	optdepends = jdtls: Java semantic completion
+	optdepends = abseil-cpp: if setting _use_system_abseil ON
+	replaces = vim-youcompleteme-git
+	noextract = TabNine.zip
+	source = git+https://github.com/tabnine/YouCompleteMe.git
+	source = git+https://github.com/tabnine/ycmd.git
+	source = https://update.tabnine.com/bundles/4.0.85/x86_64-unknown-linux-musl/TabNine.zip
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = vim-tabnine-git

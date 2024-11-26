@@ -1,0 +1,22 @@
+diff --git a/Makefile.in b/Makefile.in
+index d8f5a62..0962b49 100644
+--- a/Makefile.in
++++ b/Makefile.in
+@@ -799,7 +799,7 @@ lemon$(BEXE):	$(TOP)/tool/lemon.c $(TOP)/tool/lempar.c
+ 
+ # Rules to build the program that generates the source-id
+ #
+-mksourceid$(BEXE):	$(TOP)/tool/mksourceid.c
++mksourceid:	$(TOP)/tool/mksourceid.c
+ 	$(BCC) -o $@ $(TOP)/tool/mksourceid.c
+ 
+ # Rules to build individual *.o files from generated *.c files. This
+@@ -1091,7 +1091,7 @@ parse.c:	$(TOP)/src/parse.y lemon$(BEXE)
+ 	cp $(TOP)/src/parse.y .
+ 	./lemon$(BEXE) $(OPT_FEATURE_FLAGS) $(OPTS) -S parse.y
+ 
+-sqlite3.h:	$(TOP)/src/sqlite.h.in $(TOP)/manifest mksourceid$(BEXE) $(TOP)/VERSION
++sqlite3.h:	$(TOP)/src/sqlite.h.in $(TOP)/manifest mksourceid $(TOP)/VERSION
+ 	$(TCLSH_CMD) $(TOP)/tool/mksqlite3h.tcl $(TOP) >sqlite3.h
+ 
+ keywordhash.h:	$(TOP)/tool/mkkeywordhash.c

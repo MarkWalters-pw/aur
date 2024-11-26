@@ -1,0 +1,16 @@
+pkgbase = nvidia-docker-compose
+	pkgdesc = GPU enabled docker-compose wrapper
+	pkgver = 0.1.6
+	pkgrel = 1
+	url = https://github.com/eywalker/nvidia-docker-compose
+	arch = any
+	makedepends = python-setuptools
+	depends = python
+	depends = docker-compose
+	depends = python-yaml
+	depends = python-jinja
+	source = https://github.com/eywalker/nvidia-docker-compose/archive/v0.1.6.tar.gz
+	md5sums = c282b388308e2d1966a0e17bcb3b5889
+
+pkgname = nvidia-docker-compose
+

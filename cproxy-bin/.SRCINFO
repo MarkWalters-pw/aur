@@ -1,0 +1,18 @@
+pkgbase = cproxy-bin
+	pkgdesc = Easy per application transparent proxy built on cgroup, forked version.
+	pkgver = 4.3.4
+	pkgrel = 0
+	url = https://github.com/light4/cproxy
+	arch = x86_64
+	arch = aarch64
+	license = AGPL
+	depends = iptables
+	depends = iproute2
+	provides = cproxy
+	conflicts = cproxy
+	source_x86_64 = https://github.com/light4/cproxy/releases/download/v4.3.4/cproxy-v4.3.4-x86_64-linux-gnu
+	sha256sums_x86_64 = bd8c92a129d96a20be6dc920c60f2b809f54ff11be1c610e6d745f53be9f41d5
+	source_aarch64 = https://github.com/light4/cproxy/releases/download/v4.3.4/cproxy-v4.3.4-aarch64-linux-gnu
+	sha256sums_aarch64 = b78732418cf55bff1d0bff3123607c202e63c80c2161abecd00b54520246a748
+
+pkgname = cproxy-bin

@@ -1,0 +1,16 @@
+pkgbase = pure-docs-git
+	pkgdesc = Pure Language and Library Documentation, latest snapshot
+	pkgver = r99.7393a3b
+	pkgrel = 1
+	url = https://agraef.github.io/pure-lang/
+	arch = any
+	license = FDL
+	makedepends = git
+	provides = pure-docs
+	conflicts = pure-docs
+	replaces = pure-docs-hg
+	source = pure-docs::git+https://github.com/agraef/pure-docs.git
+	md5sums = SKIP
+
+pkgname = pure-docs-git
+

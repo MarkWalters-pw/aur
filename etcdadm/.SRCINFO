@@ -1,0 +1,14 @@
+pkgbase = etcdadm
+	pkgdesc = Commandline tool for operating an etcd cluster
+	pkgver = 0.1.5
+	pkgrel = 1
+	url = https://github.com/kubernetes-sigs/etcdadm
+	arch = x86_64
+	license = Apache
+	makedepends = git
+	makedepends = go
+	depends = glibc
+	source = https://github.com/kubernetes-sigs/etcdadm/archive/v0.1.5/etcdadm-0.1.5.tar.gz
+	sha256sums = ad5a828d09e154b745fce0cd74d0257f61307ed4323a54272d3e2512d5a37eb9
+
+pkgname = etcdadm

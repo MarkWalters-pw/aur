@@ -1,0 +1,19 @@
+pkgbase = csfml-git
+	pkgdesc = C bindings for sfml
+	pkgver = 2.5.1.r4.g980a165
+	pkgrel = 1
+	url = https://www.sfml-dev.org/
+	arch = i686
+	arch = x86_64
+	license = custom:zlib
+	makedepends = git
+	makedepends = cmake
+	makedepends = doxygen
+	makedepends = ninja
+	depends = sfml-git
+	provides = csfml
+	conflicts = csfml
+	source = csfml-git::git+https://github.com/SFML/CSFML.git
+	md5sums = SKIP
+
+pkgname = csfml-git

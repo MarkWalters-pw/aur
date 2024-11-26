@@ -1,0 +1,35 @@
+diff --git a/zimfw.zsh b/zimfw.zsh
+index d0ecef6..42b6791 100644
+--- a/zimfw.zsh
++++ b/zimfw.zsh
+@@ -56,10 +56,6 @@ _zimfw_mv() {
+ 
+ _zimfw_build_init() {
+   local -r ztarget=${ZIM_HOME}/init.zsh
+-  # Force update of init.zsh if it's older than .zimrc
+-  if [[ ${ztarget} -ot ${_zconfig} ]]; then
+-    command mv -f ${ztarget}{,.old} || return 1
+-  fi
+   _zimfw_mv =(
+     print -R '# FILE AUTOMATICALLY GENERATED FROM '${_zconfig}
+     print '# EDIT THE SOURCE FILE AND THEN RUN zimfw build. DO NOT DIRECTLY EDIT THIS FILE!'
+@@ -99,17 +95,15 @@ _zimfw_build_init() {
+       fi
+     done
+   ) ${ztarget}
++  chmod -R u+rX,g+rX,o+rX "${ZIM_HOME}" &>/dev/null
+ }
+ 
+ _zimfw_build_login_init() {
+   local -r ztarget=${ZIM_HOME}/login_init.zsh
+-  # Force update of login_init.zsh if it's older than .zimrc
+-  if [[ ${ztarget} -ot ${_zconfig} ]]; then
+-    command mv -f ${ztarget}{,.old} || return 1
+-  fi
+   _zimfw_mv =(
+     print '# Do nothing. This file is deprecated.'
+   ) ${ztarget}
++  chmod -R u+rX,g+rX,o+rX "${ZIM_HOME}" &>/dev/null
+ }
+ 
+ _zimfw_build() {

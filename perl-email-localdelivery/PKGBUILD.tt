@@ -1,0 +1,41 @@
+# CPAN Name  : Email::LocalDelivery
+# Contributor: [% packager %]
+# Generator  : CPANPLUS::Dist::Arch [% version %]
+
+pkgname=[% pkgname %]
+pkgver=[% pkgver %]
+pkgrel=[% pkgrel %]
+pkgdesc='Perl module to deliver an email to a list of mailboxes'
+arch=('any')
+url='[% url %]'
+license=('PerlArtistic' 'GPL')
+depends=('perl>=5.8.8' 'perl-email-foldertype>=0.7' 'perl-email-simple>=1.998' 'perl-file-path-expand>=1.01')
+checkdepends=('perl>=5.13.4' 'perl-capture-tiny')
+source=([% source %])
+options=(!emptydirs)
+md5sums=('[% md5sums %]')
+
+sanitize() {
+	unset PERL5LIB PERL_MM_OPT PERL_MB_OPT PERL_LOCAL_LIB_ROOT
+	export PERL_MM_USE_DEFAULT=1 MODULEBUILDRC=/dev/null
+}
+
+build() {
+	cd [% distdir %]
+	sanitize
+	/usr/bin/perl Makefile.PL INSTALLDIRS=vendor
+	make
+}
+
+check() {
+	cd [% distdir %]
+	sanitize
+	make test
+}
+
+package() {
+	cd [% distdir %]
+	sanitize
+	make install DESTDIR="$pkgdir"
+	find "$pkgdir" \( -name .packlist -o -name perllocal.pod \) -delete
+}

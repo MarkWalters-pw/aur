@@ -1,0 +1,18 @@
+pkgbase = elementary-iridium
+	pkgdesc = Friendly IRC Client
+	pkgver = 1.9.0
+	pkgrel = 1
+	url = https://appcenter.elementary.io/com.github.avojak.iridium/
+	arch = x86_64
+	license = GPL3
+	makedepends = meson
+	makedepends = vala
+	depends = granite
+	depends = libhandy
+	depends = libsoup
+	provides = com.github.avojak.iridium
+	conflicts = com.github.avojak.iridium
+	source = iridium-1.9.0.tar.gz::https://github.com/avojak/iridium/archive/refs/tags/1.9.0.tar.gz
+	sha256sums = 12c151947c0d66277bcdc1d4790da213efc32f1060186d8a6195a5bfa8294038
+
+pkgname = elementary-iridium

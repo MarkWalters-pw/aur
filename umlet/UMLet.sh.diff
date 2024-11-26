@@ -1,0 +1,12 @@
+--- a/umlet.sh	2022-04-30 10:47:45.706328639 +0200
++++ a/umlet.sh	2022-04-30 10:48:48.419563220 +0200
+@@ -17,7 +17,8 @@
+ # If you want to put umlet.sh in your home bin directory ($HOME/bin/) to start it from anywhere with
+ #    $ umlet.sh myDiagram.uxf
+ # you must export the UMLET_HOME environment variable with the full qualified path of the UMLet installation directory.
+-# export UMLET_HOME=/path/to/umlet
++
++export UMLET_HOME=/usr/share/umlet
+ 
+ _UMLET_HOME="$(cd $(dirname $0);pwd)"
+

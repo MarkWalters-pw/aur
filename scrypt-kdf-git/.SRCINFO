@@ -1,0 +1,18 @@
+pkgbase = scrypt-kdf-git
+	pkgdesc = library and command-line utility for the scrypt key derivation function
+	pkgver = 89
+	pkgrel = 1
+	url = https://github.com/jkalbhenn/scrypt
+	arch = i686
+	arch = x86_64
+	license = bsd
+	license = gpl3+
+	makedepends = git
+	makedepends = gcc
+	provides = scrypt-kdf
+	conflicts = libscrypt
+	source = git://github.com/jkalbhenn/scrypt
+	md5sums = SKIP
+
+pkgname = scrypt-kdf-git
+

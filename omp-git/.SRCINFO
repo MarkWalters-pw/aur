@@ -1,0 +1,28 @@
+pkgbase = omp-git
+	pkgdesc = Open-Source Music Player
+	pkgver = 0.1.1
+	pkgrel = 10
+	url = https://openmusicplayer.com/
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	depends = gstreamer
+	depends = gst-libav
+	depends = gst-plugins-bad
+	depends = gst-plugins-base
+	depends = gst-plugins-base-libs
+	depends = gst-plugins-good
+	depends = gst-plugins-ugly
+	depends = gtkmm3
+	depends = libclastfm
+	depends = libconfig
+	depends = sqlite
+	depends = taglib
+	provides = omp-git
+	conflicts = omp
+	conflicts = omp-git
+	source = omp-git::git+https://github.com/TheWiseNoob/OpenMusicPlayer.git
+	sha256sums = SKIP
+
+pkgname = omp-git
+

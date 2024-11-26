@@ -1,0 +1,34 @@
+pkgbase = windows-gaming-git
+	pkgdesc = Windows gaming utils
+	pkgver = r200.ba1cfc4
+	pkgrel = 1
+	install = windows-gaming.install
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = rpmextract
+	makedepends = curl
+	makedepends = libarchive
+	makedepends = cargo
+	makedepends = mono
+	makedepends = cdrkit
+	depends = qemu-headless
+	depends = sudo
+	depends = libsystemd
+	depends = acl
+	depends = udev
+	depends = coreutils
+	depends = hwids
+	depends = libinput
+	depends = libxcb
+	optdepends = samba: shared folder
+	optdepends = qemu: windowed setup
+	provides = windows-gaming
+	conflicts = windows-gaming
+	source = git+https://github.com/Ediacarium/windows-gaming.git
+	source = https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/virtio-win-0.1.171-1/virtio-win_amd64.vfd
+	md5sums = SKIP
+	md5sums = 954ca57735102d16e87a7c4caa979f67
+
+pkgname = windows-gaming-git
+

@@ -1,0 +1,20 @@
+pkgbase = latex-make
+	pkgdesc = A collection of LaTeX packages, scipts and Makefile fragments that allows to easily compile LaTeX documents.
+	pkgver = 2.4.0
+	pkgrel = 1
+	url = https://gforge.inria.fr/projects/latex-utils/
+	install = latex-make.install
+	arch = any
+	license = GPL
+	depends = texlive-core
+	depends = texlive-latexextra
+	depends = python
+	optdepends = inkscape: use of figlatex
+	optdepends = fig2dev: use of figlatex
+	optdepends = ghostscript: use of figlatex
+	source = https://gforge.inria.fr/frs/download.php/latestfile/313/latex-make-2.4.0.tar.gz
+	md5sums = 69e9fdf922e91ee3992075863b4acc03
+	sha256sums = 0aafaf5d0cf99d205899084e65c998b52b13906ad8860cab6b9604e4d4f60cb3
+
+pkgname = latex-make
+

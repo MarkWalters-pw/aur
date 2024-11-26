@@ -1,0 +1,21 @@
+pkgbase = simple-http-server-git
+	pkgdesc = Simple http server in Rust
+	pkgver = 0.6.1.r6.g2712a92
+	pkgrel = 1
+	url = https://github.com/TheWaWaR/simple-http-server
+	install = simple-http-server-git.install
+	arch = i686
+	arch = x86_64
+	arch = armv7h
+	arch = aarch64
+	license = MIT
+	makedepends = cargo
+	depends = openssl-1.0
+	provides = simple-http-server
+	conflicts = simple-http-server
+	source = git+https://github.com/TheWaWaR/simple-http-server.git
+	source = simple-http-server@.service
+	sha384sums = SKIP
+	sha384sums = a92987285f702de7eb5c34261e1c7d187b63c151db91fe6428c94428f24f771f0d38139d30febc4dfbfc76a8a697312f
+
+pkgname = simple-http-server-git

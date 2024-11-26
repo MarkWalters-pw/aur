@@ -1,0 +1,17 @@
+pkgbase = zectl
+	pkgdesc = ZFS Boot Environment manager.
+	pkgver = 0.1.5
+	pkgrel = 1
+	url = http://github.com/johnramsden/zectl
+	arch = any
+	license = MIT
+	makedepends = make
+	makedepends = cmake
+	makedepends = scdoc
+	depends = zfs
+	provides = zectl
+	conflicts = zectl-git
+	source = zectl-0.1.5.tar.gz::https://github.com/johnramsden/zectl/archive/v0.1.5.tar.gz
+	sha256sums = 11e91b357baf3a62556a0ff264f25b2a6d5b798db72cef44bcf1a3063949cde9
+
+pkgname = zectl

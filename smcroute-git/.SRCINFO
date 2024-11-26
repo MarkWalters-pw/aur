@@ -1,0 +1,22 @@
+pkgbase = smcroute-git
+	pkgdesc = command line tool to manipulate kernel multicast routing
+	pkgver = 2.5.5.r5.gf5bf08e
+	pkgrel = 1
+	url = https://github.com/troglobit/smcroute
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	depends = libcap
+	depends = bash
+	depends = libsystemd.so
+	provides = smcroute=2.5.5-1
+	provides = mcsender
+	conflicts = smcroute
+	conflicts = mcsender
+	backup = etc/smcroute.conf
+	source = smcroute-git::git+https://github.com/troglobit/smcroute.git
+	md5sums = SKIP
+	sha256sums = SKIP
+
+pkgname = smcroute-git

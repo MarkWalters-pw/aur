@@ -1,0 +1,19 @@
+pkgbase = votca-csg
+	pkgdesc = Versatile Object-oriented Toolkit for Coarse-graining Applications (VOTCA) is a package intended to reduce the amount of routine work when doing systematic coarse-graining of various systems.
+	pkgver = 1.4.1
+	pkgrel = 1
+	url = http://www.votca.org/
+	arch = i686
+	arch = x86_64
+	license = Apache
+	makedepends = cmake
+	makedepends = doxygen
+	depends = python
+	depends = votca-tools
+	depends = txt2tags
+	optdepends = python2-espressopp
+	source = https://github.com/votca/csg/archive/v1.4.1.tar.gz
+	sha1sums = 034744bdf0f08163d9dd53208d601e4d5a0f316b
+
+pkgname = votca-csg
+

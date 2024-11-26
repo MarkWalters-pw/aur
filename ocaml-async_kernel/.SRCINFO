@@ -1,0 +1,18 @@
+pkgbase = ocaml-async_kernel
+	pkgdesc = Monadic concurrency library for OCaml (core data structures)
+	pkgver = 0.17.0
+	pkgrel = 2
+	url = https://github.com/janestreet/async_kernel
+	arch = x86_64
+	arch = aarch64
+	license = MIT
+	makedepends = dune>=3.11.0
+	depends = ocaml>=5.1.0
+	depends = ocaml-core>=0.17.0
+	depends = ocaml-core_kernel>=0.17.0
+	depends = ocaml-ppx_jane>=0.17.0
+	options = !strip
+	source = ocaml-async_kernel-0.17.0.tar.gz::https://github.com/janestreet/async_kernel/archive/v0.17.0.tar.gz
+	b2sums = c279604cd201ed77c3c00320e7f6bbb9272c581d13612bd878a72f6d8de51c4b7b7f6c73c962e77e55154a864f6b5a326e4e7d049b9c4a377a4cfe8ef30b717e
+
+pkgname = ocaml-async_kernel

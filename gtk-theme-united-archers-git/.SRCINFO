@@ -1,0 +1,31 @@
+pkgbase = gtk-theme-united-archers-git
+	pkgdesc = GTK2/3 + GNOME Shell theme based on a Ubuntu 18.04 design concept.
+	pkgver = v2.2.r13.geb55c4c
+	pkgrel = 1
+	url = https://github.com/godlyranchdressing/United-GNOME
+	arch = any
+	license = GPL3
+	depends = git
+	depends = gtk3>=3.20
+	depends = gnome-themes-standard
+	depends = gdk-pixbuf2
+	depends = gtk-engines
+	depends = gtk-engine-murrine
+	optdepends = gnome-shell>=3.22: The GNOME Shell
+	optdepends = gnome-tweak-tool: A graphical tool to tweak gnome settings
+	provides = United-GNOME=v2.2.r13.geb55c4c
+	source = United-Antergos-Compact.tar.gz::https://github.com/godlyranchdressing/United-GNOME/blob/master/United-Antergos-Compact.tar.gz?raw=true
+	source = United-Antergos.tar.gz::https://github.com/godlyranchdressing/United-GNOME/blob/master/United-Antergos.tar.gz?raw=true
+	source = United-Arch-Compact.tar.gz::https://github.com/godlyranchdressing/United-GNOME/blob/master/United-Arch-Compact.tar.gz?raw=true
+	source = United-Arch.tar.gz::https://github.com/godlyranchdressing/United-GNOME/blob/master/United-Arch.tar.gz?raw=true
+	source = United-Manjaro-Compact.tar.gz::https://github.com/godlyranchdressing/United-GNOME/blob/master/United-Manjaro-Compact.tar.gz?raw=true
+	source = United-Manjaro.tar.gz::https://github.com/godlyranchdressing/United-GNOME/blob/master/United-Manjaro.tar.gz?raw=true
+	sha256sums = d30719f5f67886309c8caa50de12da51dbcfe9cc12d93f589f254a4ba46fd612
+	sha256sums = 83ee4d6854ba82c3f44a15c0370616785d9447738763db755d26a33000dcaf7d
+	sha256sums = 7966ed595d2580d6624b2c15affe94f48263412addf1ba1781b712762c079252
+	sha256sums = 0b0e15b6f3fc45ad56ba84fcfd644404ee4866719de524ab964ca93deaf95695
+	sha256sums = fc2abac37bb9a87ffc6f73f92a7f832878a00d0347829fb5afb1f64871c2b57d
+	sha256sums = f8f8b71fac8b6dfeacfd236e629089322e2e8c7e6b52b0971e29796ee16171dc
+
+pkgname = gtk-theme-united-archers-git
+

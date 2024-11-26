@@ -1,0 +1,22 @@
+pkgbase = shadowsocks-rust-git
+	pkgdesc = A Rust port of shadowsocks
+	pkgver = 1.21.2.r38.g6900136
+	pkgrel = 2
+	url = https://github.com/shadowsocks/shadowsocks-rust
+	arch = x86_64
+	license = MIT
+	makedepends = cargo
+	makedepends = git
+	depends = gcc-libs
+	depends = glibc
+	provides = shadowsocks-rust=1.21.2
+	conflicts = shadowsocks-rust
+	options = !lto
+	source = shadowsocks-rust::git+https://github.com/shadowsocks/shadowsocks-rust.git
+	source = shadowsocks-rust@.service
+	source = shadowsocks-rust-server@.service
+	sha256sums = SKIP
+	sha256sums = 93cd4fffaaf326beefd2657ed4f3c239d85c207210c63882c71ef0d724304da2
+	sha256sums = cc1c7c30137e720500206cf0ba4e798ced439e8a01639d28064468e4a1205070
+
+pkgname = shadowsocks-rust-git

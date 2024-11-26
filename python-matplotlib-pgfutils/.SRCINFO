@@ -1,0 +1,16 @@
+pkgbase = python-matplotlib-pgfutils
+	pkgdesc = Utilities for generating PGF figures from Matplotlib
+	pkgver = 1.7.0
+	pkgrel = 1
+	url = https://matplotlib-pgfutils.readthedocs.io/
+	arch = any
+	license = BSD
+	checkdepends = python-pytest
+	checkdepends = python-pytest-cov
+	checkdepends = texlive-core
+	makedepends = python-setuptools
+	depends = python-matplotlib
+	source = matplotlib-pgfutils-1.7.0.tar.gz::https://github.com/bcbnz/matplotlib-pgfutils/archive/v1.7.0.tar.gz
+	sha256sums = 70f381e872225c2d08c8f8298ba27803de9ad2cf71c2558764b86394700c75f3
+
+pkgname = python-matplotlib-pgfutils

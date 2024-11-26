@@ -1,0 +1,17 @@
+pkgbase = webui-nossl
+	pkgdesc = Use any web browser as GUI, with your preferred language in the backend and HTML5 in the frontend, all in a lightweight portable lib.(without ssl support)
+	pkgver = 2.5.0+beta.2
+	pkgrel = 1
+	url = https://webui.me/
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = make
+	makedepends = gcc
+	depends = glibc
+	provides = webui
+	conflicts = webui
+	source = git+https://github.com/webui-dev/webui.git#commit=2e94629304402fdf4b9144397c85cf56e18a35ee
+	md5sums = SKIP
+
+pkgname = webui-nossl

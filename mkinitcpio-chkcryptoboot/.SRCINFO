@@ -1,0 +1,17 @@
+pkgbase = mkinitcpio-chkcryptoboot
+	pkgdesc = This hook checks for a modified bootloader code, in an encrypted boot setup, and warns the user to not enter his root device password
+	pkgver = 0.0.6
+	pkgrel = 1
+	url = https://github.com/grazzolini/mkinitcpio-chkcryptoboot
+	changelog = ChangeLog
+	arch = any
+	license = BSD
+	depends = bash
+	backup = etc/default/chkcryptoboot.conf
+	source = ChangeLog
+	source = mkinitcpio-chkcryptoboot-0.0.6.tar.gz::https://github.com/grazzolini/mkinitcpio-chkcryptoboot/archive/v0.0.6.tar.gz
+	sha512sums = da847e1ccd7ab71e1636285f9fa8dc6ed5e806842d4d098fbf44d250628621bce8e3925130b29860bf8d4b78e133edead26ae6e835450c572189d28e2d7d847b
+	sha512sums = f907bf7182270158432b30953e66c74887cedb7aa01166fa46c5f848082d182ecc989e0e65efa860adc818fb4289c83af0bb25718e2f41775bc3a577318834b7
+
+pkgname = mkinitcpio-chkcryptoboot
+

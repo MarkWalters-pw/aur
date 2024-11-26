@@ -1,0 +1,13 @@
+[Unit]
+Description=Aegir queue daemon
+Wants=mysqld.service php-fpm.service
+After=mysqld.service php-fpm.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/drush @hostmaster hosting-queued
+User=aegir
+SuccessExitStatus=1
+
+[Install]
+RequiredBy=aegir.target

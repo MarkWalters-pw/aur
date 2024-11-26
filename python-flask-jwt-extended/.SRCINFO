@@ -1,0 +1,20 @@
+pkgbase = python-flask-jwt-extended
+	pkgdesc = A Flask extension that provides JWT support (with batteries included)!
+	pkgver = 4.6.0
+	pkgrel = 1
+	url = https://github.com/vimalloc/flask-jwt-extended
+	arch = any
+	license = MIT
+	checkdepends = python-pytest
+	checkdepends = python-dateutil
+	checkdepends = python-cryptography
+	makedepends = python-setuptools
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = python-flask
+	depends = python-pyjwt
+	source = python-flask-jwt-extended-4.6.0.tar.gz::https://github.com/vimalloc/flask-jwt-extended/archive/refs/tags/4.6.0.tar.gz
+	sha256sums = d7415d24049c72a8ad340a653d3202ee31a2db9ceba73d77ab05fdd9cc2e34e4
+
+pkgname = python-flask-jwt-extended

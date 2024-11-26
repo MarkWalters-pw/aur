@@ -1,0 +1,23 @@
+pkgbase = wifiman-indicator
+	pkgdesc = LibIndicator support for WifiMan. Written in Vala
+	pkgver = 1.4.3
+	pkgrel = 2
+	url = https://github.com/BiteDasher/wifiman-indicator
+	arch = any
+	license = MIT
+	makedepends = vala
+	makedepends = gtk3
+	makedepends = binutils
+	makedepends = libappindicator-gtk3
+	depends = wifigui
+	depends = gtk3
+	depends = polkit
+	depends = xdg-user-dirs
+	optdepends = dhclient: DHCP client
+	source = wifiman-indicator-1.4.3.tar.gz::https://github.com/BiteDasher/wifiman-indicator/archive/1.4.3.tar.gz
+	source = git+https://github.com/platofff/vindicator.git
+	sha256sums = f47d9b6b3783ac7e40e3bea531fe78cae0078f75922a826b25fc4cf98bf40f49
+	sha256sums = SKIP
+
+pkgname = wifiman-indicator
+

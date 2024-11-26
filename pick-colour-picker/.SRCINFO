@@ -1,0 +1,16 @@
+pkgbase = pick-colour-picker
+	pkgdesc = Colour picker that remembers where you picked colours from
+	pkgver = 1.51
+	pkgrel = 1
+	url = https://www.kryogenix.org/code/pick/
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = python-setuptools
+	depends = gtk3
+	depends = python-cairo
+	depends = python-gobject
+	source = git+https://github.com/stuartlangridge/ColourPicker#commit=dec8f144918aa7964aaf86a346161beb7e997f09
+	sha256sums = SKIP
+
+pkgname = pick-colour-picker

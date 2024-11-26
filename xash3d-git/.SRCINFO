@@ -1,0 +1,26 @@
+pkgbase = xash3d-git
+	pkgdesc = A custom Gold Source engine rewritten from scratch
+	pkgver = r1979.9f914182
+	pkgrel = 1
+	url = http://xash.su/
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	depends = freetype2
+	depends = fontconfig
+	depends = libpulse
+	depends = sdl2
+	backup = etc/conf.d/xash3d
+	source = xash3d::git+https://github.com/FWGS/xash3d-fwgs
+	source = xash3d.sh
+	source = xash3d.conf
+	source = xash3d.desktop
+	source = https://github.com/FWGS/xash-extras/releases/download/v0.19.2/extras.pak
+	sha256sums = SKIP
+	sha256sums = 502b3d0b0bf7eec2d6910a71cfca4a1d43860de87d3824f5c5f1e8ee794e9ba5
+	sha256sums = 2e0aafe79dafa39c5341748e17b2a733bd7465b928cbf77797ad182a3004c242
+	sha256sums = 62298a5710fe8f9d33a4b4a43df14ffe973942682c99fbcab852155ae24fbccf
+	sha256sums = b3783f366f785fb1ac9bdacc6c677324b0507a4d98358a3ec94af3a088e363ce
+
+pkgname = xash3d-git

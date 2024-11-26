@@ -1,0 +1,24 @@
+pkgbase = jazz2-bin
+	pkgdesc = Jazz² Resurrection: Open-source Jazz Jackrabbit 2 reimplementation (release or nightly channel)
+	pkgver = autoupdates
+	pkgrel = 1
+	url = http://deat.tk/jazz2/
+	install = jazz2.install
+	arch = x86_64
+	arch = aarch64
+	license = GPL3
+	license = MIT/Expat
+	depends = libopenmpt
+	depends = openal
+	depends = sdl2
+	depends = zenity
+	source = https://archive.org/download/j2r_demo/Games.zip
+	source = https://github.com/deathkiller/jazz2-native/raw/master/Sources/Icons/32px.png
+	source = jazz2
+	source = jazz2.desktop
+	md5sums = b5095a5ba6d2d7d20b2c4ff2a99301c5
+	md5sums = 5adcc9de4dac2c9b5456494a5573ea94
+	md5sums = 66e2fcda066b90cc842bdf695b763964
+	md5sums = 665ca003a5ff9eb51ce0fc4e23dd2ae9
+
+pkgname = jazz2-bin

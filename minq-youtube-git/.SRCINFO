@@ -1,0 +1,20 @@
+pkgbase = minq-youtube-git
+	pkgdesc = Terminal port of youtube. Automatically caches all network requests so that youtube can be enjoyed during an ISP outage.
+	pkgver = r5.8efb00714b164c6580c2b92c39ac1c628d9a7d40
+	pkgrel = 1
+	url = https://github.com/kuche1/minq-youtube.git
+	arch = any
+	license = GPL
+	makedepends = git
+	depends = python
+	depends = python-pytube
+	depends = yt-dlp
+	depends = viu
+	depends = mpv
+	optdepends = wezterm: an example terminal that supports full image resolution
+	optdepends = kitty: an example terminal that supports full image resolution
+	provides = minq-youtube
+	source = git+https://github.com/kuche1/minq-youtube.git
+	md5sums = SKIP
+
+pkgname = minq-youtube-git

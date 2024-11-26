@@ -1,0 +1,30 @@
+pkgbase = authconfig
+	pkgdesc = Command line tool for setting up authentication from network services
+	pkgver = 7.0.1
+	pkgrel = 2
+	url = https://pagure.io/authconfig
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = intltool
+	makedepends = python
+	depends = libpwquality
+	depends = openssl
+	depends = pam>=0.99.10.0
+	depends = sssd>=1.13.0
+	conflicts = freeipa-client<2.2.0
+	conflicts = nss_ldap<254
+	conflicts = pam-krb5<1.49
+	conflicts = samba<3.0
+	replaces = authconfig-gtk
+	options = emptydirs
+	backup = etc/conf.d/authconfig
+	backup = etc/pam.d/system-auth-ac
+	backup = etc/pam.d/system-login-ac
+	source = https://releases.pagure.org/authconfig/authconfig-7.0.1.tar.bz2
+	source = 0001-Adapt-to-Arch-Linux.patch
+	sha256sums = 60a3f58b6c43d5875cdeeeb75dfd5fb1cfa74c2576119d19bed6d2d03ed24456
+	sha256sums = 0d7e49586a4cf449230234c192ca2b1846a69c7b4ffba2d46d91bd1128f30777
+
+pkgname = authconfig
+

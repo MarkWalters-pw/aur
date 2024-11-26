@@ -1,0 +1,23 @@
+pkgbase = r-biomvrcns
+	pkgdesc = Copy Number study and Segmentation for multivariate biological data
+	pkgver = 1.44.0
+	pkgrel = 1
+	url = https://bioconductor.org/packages/biomvRCNS
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	depends = r
+	depends = r-genomicranges
+	depends = r-gviz
+	depends = r-iranges
+	depends = r-mvtnorm
+	optdepends = r-cluster
+	optdepends = r-dynamictreecut
+	optdepends = r-genomicfeatures
+	optdepends = r-parallel
+	optdepends = r-rsamtools
+	optdepends = r-txdb.hsapiens.ucsc.hg19.knowngene
+	source = git+https://git.bioconductor.org/packages/biomvRCNS
+	sha256sums = SKIP
+
+pkgname = r-biomvrcns

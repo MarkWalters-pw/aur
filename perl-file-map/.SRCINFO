@@ -1,0 +1,21 @@
+pkgbase = perl-file-map
+	pkgdesc = Memory mapping made simple and safe.
+	pkgver = 0.71
+	pkgrel = 1
+	url = https://metacpan.org/release/File-Map
+	arch = i686
+	arch = x86_64
+	license = PerlArtistic
+	license = GPL
+	checkdepends = perl-test-fatal>=0
+	checkdepends = perl-test-warnings>=0.005
+	depends = perl-module-build>=0.4231
+	depends = perl-perlio-layers>=0.012
+	depends = perl-sub-exporter-progressive>=0.001013
+	depends = perl>=5.008
+	options = !emptydirs
+	source = http://search.cpan.org/CPAN/authors/id/L/LE/LEONT/File-Map-0.71.tar.gz
+	md5sums = af467d5449071f61ddcc03bc84ea6e55
+	sha512sums = 12c79d0209462b8db629225b565b8366ca14183010a13abe7a93e3c8a4489b29721962ca08fd5b7b8accf9f98506427e3d3dfd4a9da3bcd3127c6316509d4e6f
+
+pkgname = perl-file-map

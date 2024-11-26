@@ -1,0 +1,15 @@
+pkgbase = newton-dynamics-git
+	pkgdesc = A 3D physics library
+	pkgver = v3.14c.r777.g2ed113b84
+	pkgrel = 1
+	url = http://newtondynamics.com
+	arch = x86_64
+	license = custom:zlib
+	makedepends = cmake
+	makedepends = git
+	conflicts = newton-dynamics
+	source = git+https://github.com/MADEAPPS/newton-dynamics.git
+	md5sums = SKIP
+
+pkgname = newton-dynamics-git
+

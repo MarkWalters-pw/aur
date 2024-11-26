@@ -1,0 +1,33 @@
+pkgbase = icewm-git
+	pkgdesc = A window manager designed for speed, usability, and consistency
+	pkgver = 1.4.2.1048
+	pkgrel = 1
+	url = https://github.com/bbidulock/icewm
+	arch = i686
+	arch = x86_64
+	license = LGPL
+	makedepends = git
+	makedepends = xorg-mkfontdir
+	makedepends = asciidoctor
+	depends = libxft
+	depends = libxinerama
+	depends = libxpm
+	depends = libjpeg
+	depends = libxrandr
+	depends = libsndfile
+	depends = fribidi
+	optdepends = icewm-extra-themes: extra themes
+	provides = icewm
+	provides = icewm2
+	conflicts = icewm
+	conflicts = icewm2
+	conflicts = icwm-cvs
+	conflicts = icwm-ak
+	conflicts = icwm-init0
+	conflicts = icwm-testing
+	conflicts = icwm-zstegi
+	source = icewm-git::git+https://github.com/bbidulock/icewm.git
+	md5sums = SKIP
+
+pkgname = icewm-git
+

@@ -1,0 +1,19 @@
+pkgbase = blarb
+	pkgdesc = The Blarb programming language.
+	pkgver = 1.3.0
+	pkgrel = 3
+	url = https://github.com/elimirks/BlarbVM
+	arch = x86_64
+	license = ISC
+	makedepends = flex
+	makedepends = gcc
+	makedepends = git
+	makedepends = make
+	provides = blarb
+	conflicts = blarb
+	backup = etc/xdg/blarb/config
+	source = git://github.com/elimirks/BlarbVM.git
+	md5sums = SKIP
+
+pkgname = blarb
+

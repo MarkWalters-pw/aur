@@ -1,0 +1,21 @@
+pkgbase = python-pybedtools-git
+	pkgdesc = Wrapper around BEDTools for bioinformatics work
+	pkgver = 0.8.0.r138.gffe0d4b
+	pkgrel = 1
+	url = https://github.com/daler/pybedtools
+	arch = any
+	license = GPL2
+	makedepends = cython
+	makedepends = git
+	depends = bedtools
+	depends = python-pandas
+	depends = python-pysam
+	optdepends = htslib: for working with SAM/BAM/CRAM files
+	optdepends = python-matplotlib: for plotting genomic intervals
+	optdepends = ucsc-kent-genome-tools: for bedgraph to bigwig conversions
+	provides = python-pyvcf
+	conflicts = python-pyvcf
+	source = git+https://github.com/daler/pybedtools.git
+	sha256sums = SKIP
+
+pkgname = python-pybedtools-git

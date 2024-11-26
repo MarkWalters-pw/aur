@@ -1,0 +1,18 @@
+pkgbase = heekscnc-git
+	pkgdesc = CAM add-on for HeeksCAD
+	pkgver = 1155.bec9dfa
+	pkgrel = 1
+	url = http://heeks.net
+	arch = x86_64
+	license = custom:BSD3
+	makedepends = cmake
+	depends = heekscad-git
+	provides = heekscnc
+	conflicts = heekscnc
+	source = git://github.com/Heeks/heekscnc.git
+	source = grbl.py
+	md5sums = SKIP
+	md5sums = 05033d96056948b45059df301216a42d
+
+pkgname = heekscnc-git
+

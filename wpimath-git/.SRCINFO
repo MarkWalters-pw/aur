@@ -1,0 +1,20 @@
+pkgbase = wpimath-git
+	pkgdesc = WPILib's mathematics and controls library
+	pkgver = 2024.1.1.beta.4.r20.gd1793f077d
+	pkgrel = 1
+	url = https://github.com/wpilibsuite/allwpilib
+	arch = x86_64
+	license = BSD
+	license = MIT
+	makedepends = cmake
+	depends = fmt
+	depends = eigen
+	depends = protobuf
+	provides = wpimath
+	conflicts = wpimath
+	options = !strip
+	options = staticlibs
+	source = git+https://github.com/wpilibsuite/allwpilib
+	md5sums = SKIP
+
+pkgname = wpimath-git

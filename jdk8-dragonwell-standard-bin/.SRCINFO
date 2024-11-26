@@ -1,0 +1,26 @@
+pkgbase = jdk8-dragonwell-standard-bin
+	pkgdesc = an in-house OpenJDK implementation at Alibaba (Standard Edition)
+	pkgver = 8.16.17
+	pkgrel = 1
+	url = https://dragonwell-jdk.io/
+	arch = x86_64
+	arch = aarch64
+	license = GPL2
+	depends = ca-certificates-utils
+	depends = java-environment-common
+	depends = java-runtime-common
+	depends = nss
+	provides = java-environment=8
+	provides = java-environment-openjdk=8
+	provides = java-runtime=8
+	provides = java-runtime-openjdk=8
+	provides = java-runtime-headless=8
+	provides = java-runtime-headless-openjdk=8
+	source = LICENSE::https://github.com/dragonwell-project/dragonwell8/raw/master/LICENSE
+	sha256sums = 4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726
+	source_x86_64 = jdk8-dragonwell-standard-bin-8.16.17-x86_64.tar.gz::https://github.com/alibaba/dragonwell8/releases/download/dragonwell-standard-8.16.17_jdk8u382-ga/Alibaba_Dragonwell_Standard_8.16.17_x64_linux.tar.gz
+	sha256sums_x86_64 = 18d483c5cc1c16591fce9a84c605275570c5ea325c15a2ecb4e05e7a81956e72
+	source_aarch64 = jdk8-dragonwell-standard-bin-8.16.17-aarch64.tar.gz::https://github.com/alibaba/dragonwell8/releases/download/dragonwell-standard-8.16.17_jdk8u382-ga/Alibaba_Dragonwell_Standard_8.16.17_aarch64_linux.tar.gz
+	sha256sums_aarch64 = 18f4b12c983a38425de86d6f13b46de0526ee9a19dbdeba3431fad35cb6e7b15
+
+pkgname = jdk8-dragonwell-standard-bin

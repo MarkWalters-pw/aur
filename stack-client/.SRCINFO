@@ -1,0 +1,25 @@
+pkgbase = stack-client
+	pkgdesc = The STACK Client provides file sync to desktop clients.
+	pkgver = 3.2.0
+	pkgrel = 2
+	url = https://www.transip.nl/stack/
+	arch = x86_64
+	license = GPL2
+	makedepends = cmake
+	makedepends = qt5-tools
+	makedepends = extra-cmake-modules
+	makedepends = frameworkintegration5
+	depends = qtkeychain
+	depends = qt5-webengine
+	depends = hicolor-icon-theme
+	depends = xdg-utils
+	depends = libcloudproviders
+	optdepends = python-nautilus: integration with Nautilus
+	optdepends = nemo-python: integration with Nemo
+	conflicts = stack-client-bin
+	source = http://filehosting-client.transip.nl/packages/stack/v3.2.0-20230307/source/stack-v3.2.0-20230307.tar.gz
+	source = APPLICATION_NAME.patch
+	sha256sums = 868d0132394c03864f42d19db942d424c41e95b9f9b20c723d5169a27479f69b
+	sha256sums = 977dbb37deac79bbd65c822887c92a44fde66a5fb65d73d27b326099996309bd
+
+pkgname = stack-client

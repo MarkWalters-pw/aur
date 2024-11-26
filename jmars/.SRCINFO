@@ -1,0 +1,17 @@
+pkgbase = jmars
+	pkgdesc = Java Mission-planning and Analysis for Remote Sensing is a geospatial information system for Mars
+	pkgver = 5.3.14
+	pkgrel = 1
+	url = https://jmars.mars.asu.edu/
+	install = jmars.install
+	arch = i686
+	arch = x86_64
+	license = GPL
+	depends = java-runtime-common
+	depends = desktop-file-utils
+	source = http://jmars.mars.asu.edu/downloads/jmars_5/jmars_public/jmars_5_public.sh
+	source = jmars.desktop
+	sha256sums = a78ad4807b5dda59e11d38cf65cd4a49fd27776c39b42c5058a10fce893eccd6
+	sha256sums = 63b95d3840f500530750d7bbdf6f23f4c97b76857f93957992972a2b71a12fd1
+
+pkgname = jmars

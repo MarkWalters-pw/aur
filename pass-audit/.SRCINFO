@@ -1,0 +1,19 @@
+pkgbase = pass-audit
+	pkgdesc = A pass extension for auditing your password repository.
+	pkgver = 1.2
+	pkgrel = 3
+	url = https://github.com/roddhjav/pass-audit
+	arch = any
+	license = GPL3
+	makedepends = python-setuptools
+	depends = pass
+	depends = python
+	depends = python-requests
+	depends = python-zxcvbn
+	source = https://github.com/roddhjav/pass-audit/releases/download/v1.2/pass-audit-1.2.tar.gz
+	source = https://github.com/roddhjav/pass-audit/releases/download/v1.2/pass-audit-1.2.tar.gz.asc
+	validpgpkeys = 06A26D531D56C42D66805049C5469996F0DF68EC
+	sha512sums = 3036340b31612a52826c13ea558def3a3ca49164eb9b3c516f4923d99126cbe5e85150bca9f8ca26d70375bf92e1b06d606f39a3679de60770ab14f6f24a8267
+	sha512sums = SKIP
+
+pkgname = pass-audit

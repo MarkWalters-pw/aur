@@ -1,0 +1,21 @@
+diff --git a/keydb.conf b/keydb.conf
+index 465d56fc0..9c1bd1ed1 100644
+--- a/keydb.conf
++++ b/keydb.conf
+@@ -273,7 +273,7 @@ #   supervised auto    - detect upstart or systemd method based on
+ #                        UPSTART_JOB or NOTIFY_SOCKET environment variables
+ # Note: these supervision methods only signal "process is ready."
+ #       They do not enable continuous pings back to your supervisor.
+-supervised no
++supervised systemd
+ 
+ # If a pid file is specified, KeyDB writes it where specified at startup
+ # and removes it at exit.
+@@ -450,7 +450,7 @@
+ # The Append Only File will also be created inside this directory.
+ #
+ # Note that you must specify a directory here, not a file name.
+-dir ./
++dir /var/lib/keydb/
+ 
+ ################################# REPLICATION #################################

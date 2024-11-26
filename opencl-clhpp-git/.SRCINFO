@@ -1,0 +1,22 @@
+pkgbase = opencl-clhpp-git
+	pkgdesc = OpenCLTM API C++ bindings. (GIT Version)
+	pkgver = 2023.04.17.22.g0cc3a7d
+	pkgrel = 1
+	url = http://khronosgroup.github.io/OpenCL-CLHPP
+	arch = any
+	license = apache
+	makedepends = git
+	makedepends = python
+	makedepends = cmake
+	makedepends = ruby
+	makedepends = doxygen
+	provides = opencl-clhpp
+	conflicts = opencl-clhpp
+	source = git+https://github.com/KhronosGroup/OpenCL-CLHPP.git
+	source = git+https://github.com/ThrowTheSwitch/CMock.git
+	source = git+https://github.com/ThrowTheSwitch/Unity.git
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = opencl-clhpp-git

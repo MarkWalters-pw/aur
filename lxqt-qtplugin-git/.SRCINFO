@@ -1,0 +1,21 @@
+pkgbase = lxqt-qtplugin-git
+	pkgdesc = LXQt platform integration for Qt
+	pkgver = 2.0.0.r2.gdaa6331
+	pkgrel = 1
+	url = https://lxqt-project.org
+	arch = i686
+	arch = x86_64
+	license = LGPL-2.1-only
+	makedepends = git
+	makedepends = cmake
+	makedepends = qt6-tools
+	makedepends = lxqt-build-tools-git
+	depends = libqtxdg-git
+	depends = libdbusmenu-lxqt-git
+	depends = libfm-qt-git
+	provides = lxqt-qtplugin=2.0.0.r2.gdaa6331
+	conflicts = lxqt-qtplugin
+	source = git+https://github.com/lxqt/lxqt-qtplugin.git
+	sha256sums = SKIP
+
+pkgname = lxqt-qtplugin-git

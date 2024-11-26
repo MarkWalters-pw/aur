@@ -1,0 +1,20 @@
+_NAME=homebridge
+
+post_install() {
+	echo ""
+	echo "A sample configuration file is provided at /usr/lib/node_modules/homebridge/config-sample.json"
+	echo "Copy this to /var/lib/${_NAME}/config.json and edit accordingly"
+	echo "  cp /usr/lib/node_modules/homebridge/config-sample.json /var/lib/${_NAME}/config.json"
+	echo "  chown ${_NAME}:${_NAME} /var/lib/${_NAME}/config.json"
+	echo "  \$EDITOR /var/lib/${_NAME}/config.json"
+	echo ""
+	echo "You can then start the service as follows:"
+	echo "  systemctl start homebridge"
+	echo ""
+	echo "If you get a DNS related error on startup, make sure avahi-daemon is running (systemctl status -l avahi-daemon.service)"
+	echo ""
+}
+
+post_upgrade() {
+	post_install
+}

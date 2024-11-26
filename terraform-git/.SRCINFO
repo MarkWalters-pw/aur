@@ -1,0 +1,14 @@
+pkgbase = terraform-git
+	pkgdesc = Tool for building, changing, and versioning infrastructure safely and efficiently
+	pkgver = 1.1.0.alpha20210811
+	pkgrel = 1
+	url = http://www.terraform.io/
+	arch = x86_64
+	license = MPL2
+	makedepends = git
+	provides = terraform
+	conflicts = terraform
+	source = git+https://github.com/hashicorp/terraform.git#branch=main
+	sha256sums = SKIP
+
+pkgname = terraform-git

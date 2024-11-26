@@ -1,0 +1,7 @@
+pre_install() {
+    localedef pt_BR.ISO8859-1 -i pt_BR -f ISO-8859-1
+}
+
+pre_upgrade() {
+    pre_install
+}

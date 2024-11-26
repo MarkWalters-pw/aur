@@ -1,0 +1,23 @@
+pkgbase = stmm-games
+	pkgdesc = C++ 2D games library
+	pkgver = 0.32
+	pkgrel = 1
+	url = https://efanomars.com/libraries/stmm-games
+	arch = x86_64
+	arch = aarch64
+	license = LGPL3
+	makedepends = cmake
+	makedepends = doxygen
+	makedepends = graphviz
+	makedepends = python
+	depends = stmm-input-au>=0.9
+	depends = stmm-input>=0.17
+	depends = gtkmm3
+	depends = librsvg
+	depends = libxml++2.6
+	depends = fontconfig
+	source = https://efanomars.com/sources/stmm-games-0.32.tar.gz
+	sha256sums = 4cd73001339ca2148e4cb2a13a5a08da66f0c3dd6eb79654a16607ce93ab19db
+
+pkgname = stmm-games
+

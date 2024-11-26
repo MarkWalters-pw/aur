@@ -1,0 +1,22 @@
+pkgbase = nuspell-git
+	pkgdesc = Fast and safe spellchecking C++ library
+	pkgver = 5.1.2.r2.g1ae818e
+	pkgrel = 1
+	url = https://nuspell.github.io/
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	license = LGPL3
+	makedepends = git
+	makedepends = cmake
+	makedepends = boost
+	makedepends = ruby-ronn
+	depends = glibc
+	depends = boost-libs
+	depends = icu
+	provides = nuspell=5.1.2.r2.g1ae818e
+	conflicts = nuspell
+	source = git+https://github.com/nuspell/nuspell.git
+	sha256sums = SKIP
+
+pkgname = nuspell-git

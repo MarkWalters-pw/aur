@@ -1,0 +1,15 @@
+pre_upgrade() {
+	pre_install
+}
+
+pre_install() {
+	if [ -f /usr/lib/systemd/system/plexmediaplayer.service ]; then
+		if /usr/bin/systemctl is-active --quiet plexmediaplayer.service; then
+			# PMP is running via this service
+      echo "==> stopping running PMP service..."
+			/usr/bin/systemctl --quiet stop plexmediaplayer.service
+		fi
+	fi
+}
+
+# vim: ts=2 sw=2 et:

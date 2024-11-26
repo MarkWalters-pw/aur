@@ -1,0 +1,13 @@
+[Unit]
+Description=Denarius: Ancient money for a new world
+Wants=network.target
+After=network.target
+
+[Service]
+ProtectHome=true
+ProtectSystem=true
+SyslogIdentifier=denariusd
+ExecStart=/usr/bin/denariusd
+
+[Install]
+WantedBy=multi-user.target

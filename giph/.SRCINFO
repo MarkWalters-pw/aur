@@ -1,0 +1,21 @@
+pkgbase = giph
+	pkgdesc = video recorder that records the desktop, a window or a selection
+	pkgver = 1.1.1
+	pkgrel = 2
+	url = https://github.com/phisch/giph
+	arch = any
+	license = MIT
+	makedepends = git
+	depends = bash
+	depends = ffmpeg
+	depends = xdotool
+	optdepends = slop: for interactive selection
+	optdepends = libnotify: for error and success notifications
+	optdepends = procps-ng: for pgrep used in the --stop flag
+	provides = giph
+	conflicts = giph
+	source = https://github.com/phisch/giph/archive/1.1.1.tar.gz
+	sha256sums = 09fc964cc3cfcd942d5d2983667b65bf126fbfbba53cdcfb80fe3d87d1240667
+
+pkgname = giph
+

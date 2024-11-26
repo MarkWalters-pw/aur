@@ -1,0 +1,19 @@
+pkgbase = android-x86-64-system-image
+	pkgdesc = Android x86_64 Atom System Image, latest API
+	pkgver = 31_r05
+	pkgrel = 1
+	url = https://software.intel.com/en-us/android/tools
+	arch = any
+	license = custom
+	depends = android-platform
+	optdepends = qemu
+	optdepends = libvirt
+	provides = android-x86-64-system-image-31
+	conflicts = android-x86-64-system-image-31
+	options = !strip
+	source = android-x86-64-system-image-31_r05.zip::https://dl-ssl.google.com/android/repository/sys-img/android/x86_64-31_r05.zip
+	source = package.xml
+	sha256sums = f77492768c6449a20d101a2fc0f32865a0aca6067dae6de4e94073fbceda9bca
+	sha256sums = c98412b97f65e2e4c564d5bb2639196756faae90b610fcbfb6d983e89462c1a8
+
+pkgname = android-x86-64-system-image

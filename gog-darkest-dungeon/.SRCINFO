@@ -1,0 +1,16 @@
+pkgbase = gog-darkest-dungeon
+	pkgdesc = Darkest Dungeon is a challenging gothic roguelike turn-based RPG about the psychological stresses of adventuring.
+	pkgver = 24839
+	pkgrel = 1
+	url = https://www.gog.com/game/darkest-dungeon
+	arch = i686
+	arch = x86_64
+	groups = games
+	license = custom
+	makedepends = lgogdownloader>=2.25
+	noextract = gog_darkest_dungeon_24839.sh
+	source = gog_darkest_dungeon_24839.sh::gogdownloader://darkest_dungeon/en3installer0
+	md5sums = 2a04beb04b3129b4bd68b4dd9023e82d
+
+pkgname = gog-darkest-dungeon
+

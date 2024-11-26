@@ -1,0 +1,31 @@
+pkgbase = traktarr
+	pkgdesc = Use Trakt to add shows to Sonarr and movies to Radarr.
+	pkgver = 1.2.5
+	pkgrel = 2
+	url = https://github.com/l3uddz/traktarr
+	arch = any
+	license = GPL3
+	depends = python
+	depends = python-apprise
+	depends = python-backoff
+	depends = python-schedule
+	depends = python-click
+	depends = python-requests
+	depends = python-pyfiglet
+	depends = python-cashier
+	depends = python-attrdict
+	optdepends = sonarr: TV download automation for usenet and torrents.
+	optdepends = radarr: Movie download automation for usenet and torrents.
+	source = traktarr-1.2.5.tar.gz::https://github.com/l3uddz/traktarr/archive/1.2.5.tar.gz
+	source = traktarr.tmpfiles
+	source = traktarr.service
+	source = config.json
+	source = traktarr.sysusers
+	sha512sums = 26a593de6f4a5cd7a618db178a555429ccd75e805f4eb7985ae9e60f38af2bfcabb9f32ba683e7471bdd0afb042cf0ec94f7ddd3e3b0d5ec1229ce906d5488dd
+	sha512sums = eca779036f63676e8e8d621d9ec24d991ea7f240bde43d1b18f523d6d08ca9a1fc1ffdfff6796acbfaacfc484b3e6d64140973cabae67ed4638b48cb19a743f2
+	sha512sums = 39cc9feb5620578d4bc56e873fbbf524cdd579dc904a947b734517eafec1969fa9589ee42ee158a908066f1d284f5623161597a3404e1d6be2605a6da6c9bb18
+	sha512sums = cc5f858a8e903894b6ee992dc8946d6ffeffe0cb25293d0721c82f24d36905f36c33625c8d81afbd8825b928d2938674b14b14122055d861c948e1a3bd9a60e6
+	sha512sums = e5a11499ae6057531498a1b5b87f6812b74d3ba775292de46eaffbe2883493689b211b12b37c2b56fa1c9fa1893c303d6b0ae517ca83adbcd3513844df0607ee
+
+pkgname = traktarr
+

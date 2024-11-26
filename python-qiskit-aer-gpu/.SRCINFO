@@ -1,0 +1,18 @@
+pkgbase = python-qiskit-aer-gpu
+	pkgdesc = A high performance simulator for quantum circuits that includes noise models
+	pkgver = 0.9.1
+	pkgrel = 4
+	url = https://github.com/Qiskit/qiskit-aer
+	arch = x86_64
+	license = Apache
+	makedepends = python-setuptools
+	makedepends = cuda
+	makedepends = conan
+	makedepends = cmake
+	makedepends = python-scikit-build
+	provides = python-qiskit-aer
+	conflicts = python-qiskit-aer
+	source = https://files.pythonhosted.org/packages/ae/a0/a07d1b6390fa1aa6907c026fcc3a08cf93c106dec7864407301e5a40da13/qiskit_aer_gpu-0.9.1-cp39-cp39-manylinux_2_12_x86_64.manylinux2010_x86_64.whl
+	sha256sums = 1419ccf6f7db1a53a30dff04ecd77dabe2d87788d64f2011ed2425d347768b83
+
+pkgname = python-qiskit-aer-gpu

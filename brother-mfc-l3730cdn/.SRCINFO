@@ -1,0 +1,20 @@
+pkgbase = brother-mfc-l3730cdn
+	pkgdesc = LPR and CUPS drivers for the Brother MFC-L3730CDN
+	pkgver = 1.0.2+0
+	pkgrel = 1
+	url = https://www.brother.de/support/mfc-l3730cdn
+	install = brother-mfc-l3730cdn.install
+	arch = i686
+	arch = x86_64
+	license = LicenseRef-proprietary:brother
+	license = GPL-2.0-or-later
+	makedepends = libarchive
+	makedepends = perl
+	depends = bash
+	depends = cups
+	depends = lib32-glibc
+	depends = perl
+	source = https://download.brother.com/welcome/dlf103931/mfcl3730cdnpdrv-1.0.2-0.i386.deb
+	sha256sums = 55b6b737e32f5fee67cdebeafadce10b83062b885f9b126f4d4a112ea8f377ac
+
+pkgname = brother-mfc-l3730cdn

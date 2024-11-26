@@ -1,0 +1,19 @@
+pkgbase = zig-zvm
+	pkgdesc = Fast and simple zig version manager
+	pkgver = 0.4.5
+	pkgrel = 2
+	url = https://github.com/hendriknielaender/zvm
+	arch = x86_64
+	license = MIT
+	makedepends = zig
+	makedepends = git
+	provides = zvm
+	provides = zig-zvm
+	conflicts = zig-zvm-bin
+	conflicts = zvm
+	conflicts = zig-zvm-git
+	conflicts = zig
+	source = git+https://github.com/hendriknielaender/zvm.git#tag=v0.4.5
+	md5sums = SKIP
+
+pkgname = zig-zvm

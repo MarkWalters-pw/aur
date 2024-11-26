@@ -1,0 +1,22 @@
+pkgbase = perl-app-perlall
+	pkgdesc = App::perlall - Build, test and do with all perls
+	pkgver = 0.51
+	pkgrel = 1
+	url = http://search.cpan.org/dist/App-perlall/
+	arch = any
+	license = GPL
+	license = PerlArtistic
+	makedepends = perl-app-rad
+	makedepends = perl-devel-platform-info
+	makedepends = perl-devel-patchperl
+	makedepends = perl-io-stringy
+	depends = perl>=5.10.0
+	provides = perlall
+	provides = perl-devel-patchperl-plugin-asan
+	provides = perl-devel-patchperl-plugin-compiler
+	options = !emptydirs
+	source = http://search.cpan.org/CPAN/authors/id/R/RU/RURBAN/App-perlall-0.51.tar.gz
+	sha256sums = ea586ab7a818d2c4206449f2023faac5cbcca77239578201d9de05e408d2a27e
+
+pkgname = perl-app-perlall
+

@@ -1,0 +1,16 @@
+pkgbase = python-pyxelate
+	pkgdesc = Python class that generates pixel art from images
+	pkgver = 2.1.1
+	pkgrel = 1
+	url = https://github.com/sedthh/pyxelate
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python-numba
+	depends = python-scikit-image
+	depends = python-scikit-learn
+	source = git+https://github.com/sedthh/pyxelate#commit=59000d1c342cff5a1d70438a843dd7ea88013e72
+	sha256sums = SKIP
+
+pkgname = python-pyxelate

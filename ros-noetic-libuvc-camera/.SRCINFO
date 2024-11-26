@@ -1,0 +1,33 @@
+pkgbase = ros-noetic-libuvc-camera
+	pkgdesc = ROS - USB Video Class camera driver.
+	pkgver = 0.0.10
+	pkgrel = 3
+	url = https://wiki.ros.org/libuvc_camera
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-camera-info-manager
+	makedepends = ros-noetic-nodelet
+	makedepends = ros-noetic-roscpp
+	makedepends = ros-noetic-libuvc
+	makedepends = ros-noetic-dynamic-reconfigure
+	makedepends = ros-noetic-sensor-msgs
+	makedepends = ros-noetic-image-transport
+	makedepends = ros-noetic-catkin
+	depends = ros-noetic-camera-info-manager
+	depends = ros-noetic-nodelet
+	depends = ros-noetic-roscpp
+	depends = ros-noetic-libuvc
+	depends = ros-noetic-dynamic-reconfigure
+	depends = ros-noetic-sensor-msgs
+	depends = ros-noetic-image-transport
+	source = ros-noetic-libuvc-camera-0.0.10.tar.gz::https://github.com/ros-drivers/libuvc_ros/archive/0.0.10.tar.gz
+	sha256sums = 33c356df370f548be1dbc1d21a13bf2704b6ea0218f77d3d6f305392266629d3
+
+pkgname = ros-noetic-libuvc-camera
+

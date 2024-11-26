@@ -1,0 +1,19 @@
+pkgbase = somafm
+	pkgdesc = A simple radio with built-in stations from the website somafm.com
+	pkgver = 1.2.10
+	pkgrel = 1
+	url = https://github.com/alexkdeveloper/somafm
+	arch = x86_64
+	arch = aarch64
+	license = GPL-3.0-or-later
+	checkdepends = appstream-glib
+	makedepends = git
+	makedepends = meson
+	makedepends = vala
+	depends = gstreamer
+	depends = libadwaita
+	depends = libpulse
+	source = git+https://github.com/alexkdeveloper/somafm.git#commit=7352044605cbdc176b9dd1578ce005995181d65f
+	sha256sums = SKIP
+
+pkgname = somafm

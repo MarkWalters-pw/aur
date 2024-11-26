@@ -1,0 +1,18 @@
+pkgbase = ntfs-3g-system-compression-git
+	pkgdesc = NTFS-3G plugin for reading "system compressed" files
+	pkgver = 1.0.r14.f27f924
+	pkgrel = 1
+	url = https://github.com/ebiggers/ntfs-3g-system-compression
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	depends = ntfs-3g
+	provides = ntfs-3g-system-compression
+	conflicts = ntfs-3g-system-compression
+	replaces = ntfs-3g-system-compression
+	source = git+https://github.com/ebiggers/ntfs-3g-system-compression.git
+	sha256sums = SKIP
+
+pkgname = ntfs-3g-system-compression-git
+

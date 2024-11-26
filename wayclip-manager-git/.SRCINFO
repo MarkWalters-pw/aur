@@ -1,0 +1,15 @@
+pkgbase = wayclip-manager-git
+	pkgdesc = an opinionated Wayland package manager
+	pkgver = any
+	pkgrel = 2
+	arch = any
+	license = GPL
+	makedepends = git
+	makedepends = cargo-nightly
+	depends = bemenu
+	provides = wayclip-manager
+	conflicts = wayclip-manager
+	source = wayclip::git+https://github.com/JoeyEamigh/wayclip.git
+	md5sums = SKIP
+
+pkgname = wayclip-manager-git

@@ -1,0 +1,16 @@
+pkgbase = mingw-w64-libmodbus
+	pkgdesc = A Modbus library for Linux, Mac OS X, FreeBSD, QNX and Win32 (mingw-w64)
+	pkgver = 3.1.10
+	pkgrel = 1
+	url = https://libmodbus.org/
+	arch = any
+	license = LGPL
+	makedepends = mingw-w64-configure
+	depends = mingw-w64-crt
+	options = !strip
+	options = !buildflags
+	options = staticlibs
+	source = https://github.com/stephane/libmodbus/releases/download/v3.1.10/libmodbus-3.1.10.tar.gz
+	sha256sums = 899be4e25ab7fe5799d43f9567510d6f063d2e8f56136dd726b6fd976f9b2253
+
+pkgname = mingw-w64-libmodbus

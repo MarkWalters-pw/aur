@@ -1,0 +1,27 @@
+pkgbase = xfsprogs-git
+	pkgdesc = Utilities for managing the XFS filesystem
+	pkgver = 6.2.0.r0.ga61d6360
+	pkgrel = 1
+	url = https://xfs.org
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	license = LGPL
+	makedepends = git
+	depends = glibc
+	depends = device-mapper
+	depends = icu
+	depends = libinih
+	depends = liburcu
+	depends = libutil-linux
+	depends = readline
+	depends = sh
+	optdepends = python: for xfs_scrub_all script
+	optdepends = smtp-forwarder: for xfs_scrub_fail script
+	provides = xfsprogs=6.2.0.r0.ga61d6360
+	conflicts = xfsprogs
+	options = staticlibs
+	source = git+https://git.kernel.org/pub/scm/fs/xfs/xfsprogs-dev.git#branch=for-next
+	sha256sums = SKIP
+
+pkgname = xfsprogs-git

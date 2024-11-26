@@ -1,0 +1,16 @@
+pkgbase = blokator
+	pkgdesc = Simple system-wide adblocker
+	pkgver = 0.5.3
+	pkgrel = 1
+	url = https://codeberg.org/Tomkoid/blokator
+	arch = x86_64
+	license = GPL3
+	makedepends = cargo
+	makedepends = git
+	makedepends = pkg-config
+	makedepends = openssl
+	optdepends = android-tools: push hosts file to your Android device
+	source = git+https://codeberg.org/Tomkoid/blokator#tag=0.5.3
+	sha512sums = SKIP
+
+pkgname = blokator

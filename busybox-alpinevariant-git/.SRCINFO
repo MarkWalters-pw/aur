@@ -1,0 +1,23 @@
+pkgbase = busybox-alpinevariant-git
+	pkgdesc = This variant of busybox primary focus on ash shell and optimized for everyday use as an light alternative to bash.
+	pkgver = 1.35.0.r133.g8d67007a4
+	pkgrel = 1
+	url = https://www.busybox.net/
+	install = busybox-alpinevariant-git.install
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = ncurses
+	provides = busybox-alpinevariant-git
+	conflicts = busybox
+	conflicts = busybox-custom
+	conflicts = busybox-custom-git
+	conflicts = mindi-busybox
+	conflicts = busybox-norootreboot
+	conflicts = busybox-git
+	source = git+https://git.busybox.net/busybox
+	source = config::https://git.alpinelinux.org/aports/plain/main/busybox/busyboxconfig
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = busybox-alpinevariant-git

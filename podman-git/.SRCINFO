@@ -1,0 +1,57 @@
+pkgbase = podman-git
+	pkgdesc = Tool and library for running OCI-based containers in pods (git)
+	pkgver = .r21415.gd7bf1385d
+	pkgrel = 1
+	url = https://github.com/containers/podman.git
+	arch = x86_64
+	arch = aarch64
+	license = Apache
+	makedepends = go
+	makedepends = go-md2man
+	makedepends = git
+	makedepends = gcc
+	makedepends = glibc
+	makedepends = btrfs-progs
+	makedepends = catatonit>=0.1.7-2
+	makedepends = libapparmor.so
+	makedepends = libdevmapper.so
+	makedepends = libgpgme.so
+	makedepends = libseccomp.so
+	makedepends = libsystemd.so
+	makedepends = systemd
+	options = !lto
+	source = git+https://github.com/containers/podman.git
+	source = podman-4.6.0-defaultinitpath.patch
+	sha256sums = SKIP
+	sha256sums = eeacf654707b9b8d6a6c08453b5625d9cf31010d666f82f4851aa34433b97700
+
+pkgname = podman-git
+	depends = catatonit>=0.1.7-2
+	depends = conmon
+	depends = containers-common
+	depends = crun
+	depends = iptables
+	depends = libdevmapper.so
+	depends = libgpgme.so
+	depends = libseccomp.so
+	depends = libsystemd.so
+	depends = systemd
+	depends = slirp4netns
+	depends = netavark
+	depends = aardvark-dns
+	optdepends = libapparmor.so: support for apparmor
+	optdepends = libselinux: support for selinux
+	optdepends = btrfs-progs: support btrfs backend devices
+	optdepends = cni-plugins: for the old cni networking implementation
+	optdepends = podman-compose: for docker-compose compatibility
+	optdepends = podman-docker: for Docker-compatible CLI
+	provides = podman
+	provides = podman-remote
+	conflicts = podman
+	conflicts = podman-remote
+
+pkgname = podman-docker-git
+	pkgdesc = Emulate Docker CLI using podman
+	depends = podman
+	provides = docker
+	conflicts = docker

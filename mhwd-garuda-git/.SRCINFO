@@ -1,0 +1,32 @@
+pkgbase = mhwd-garuda-git
+	pkgdesc = mhwd-garuda(manjaro's mhwd backported to archlinux with additional features and limited to only dkms drivers)
+	pkgver = r20.dc8eff1
+	pkgrel = 2
+	url = https://gitlab.com/garuda-linux/applications/mhwd-garuda
+	arch = any
+	license = GPL
+	makedepends = git
+	makedepends = cmake
+	depends = gcc-libs
+	depends = hwinfo
+	source = git+https://gitlab.com/garuda-linux/applications/mhwd-garuda.git#branch=master
+	sha256sums = SKIP
+
+pkgname = mhwd-garuda-git
+	pkgdesc = mhwd-garuda(manjaro's mhwd backported to archlinux with additional features and limited to only dkms drivers)
+	install = mhwd.install
+	depends = hwinfo
+	depends = mesa
+	depends = mhwd-db-garuda-git
+	depends = pacman
+	depends = mesa-demos
+	depends = vulkan-tools
+	depends = libva-utils
+	depends = vdpauinfo
+	depends = vulkan-icd-loader
+	depends = opencl-icd-loader
+	provides = mhwd
+	provides = mhwd-garuda
+	conflicts = mhwd
+	conflicts = mhwd-garuda
+	replaces = mhwd-garuda

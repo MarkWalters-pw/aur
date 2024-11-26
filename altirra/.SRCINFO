@@ -1,0 +1,25 @@
+pkgbase = altirra
+	pkgdesc = An 8-bit Atari computer emulator, on Wine
+	pkgver = 4.21
+	pkgrel = 1
+	url = https://www.virtualdub.org/altirra.html
+	arch = any
+	license = GPL2
+	depends = wine
+	depends = wine-mono
+	optdepends = wine-gecko: HTML help pages support
+	provides = altirra
+	source = https://www.virtualdub.org/downloads/Altirra-4.21.zip
+	source = http://atari.vjetnam.cz/dow/emuROMs.zip
+	source = altirra
+	source = altirra.desktop
+	source = altirra.png
+	source = application-altirra.xml
+	sha256sums = c5965184cf5b43d6bd30af32ec64373363f4597b028de5c8fb30238865bf6427
+	sha256sums = f6bebc7d367d59dd1789fd17450c9a4eb329c27a5b5345f42d4854f412a45221
+	sha256sums = c6aab8083ed7e68c82ffc5b74497a87610f5f11a218ec42fe67fcf827d5a62c0
+	sha256sums = 713b375c8467da838f4c4c9f1eca2a947aecc6c429161bc67eeedecc7c81b620
+	sha256sums = 5319fd88751fa886683d955976ed74eb266e9ea462ae77431b6a6c457ce42dc1
+	sha256sums = cd3a40e290d999912767a70ffc8e4185019290251b350f887f4a2fa972b6c96b
+
+pkgname = altirra

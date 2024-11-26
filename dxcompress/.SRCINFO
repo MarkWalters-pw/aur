@@ -1,0 +1,17 @@
+pkgbase = dxcompress
+	pkgdesc = Compression and decompression utility
+	pkgver = 1.1
+	pkgrel = 1
+	url = https://github.com/dennis95/dxcompress
+	arch = x86_64
+	license = ISC
+	depends = xz
+	depends = zlib
+	provides = gzip
+	provides = ncompress
+	conflicts = gzip
+	conflicts = ncompress
+	source = https://github.com/dennis95/dxcompress/releases/download/dxcompress-1.1/dxcompress-1.1.tar.xz
+	sha256sums = 89c1331a860467a58e0c69e54238fb29c7bdeb436672009efd61964fb6840dc6
+
+pkgname = dxcompress

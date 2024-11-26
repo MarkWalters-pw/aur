@@ -1,0 +1,13 @@
+pkgbase = diffutils-git
+	pkgdesc = Utility programs used for creating patch files
+	pkgver = 3.10_r1239.gc2e38d4
+	pkgrel = 3
+	url = https://www.gnu.org/software/diffutils
+	arch = x86_64
+	license = GPL3
+	depends = glibc
+	depends = bash
+	source = git+https://git.savannah.gnu.org/git/diffutils.git
+	sha256sums = SKIP
+
+pkgname = diffutils-git

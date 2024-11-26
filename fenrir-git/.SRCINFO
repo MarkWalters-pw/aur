@@ -1,0 +1,35 @@
+pkgbase = fenrir-git
+	pkgdesc = A user space console screen reader written in python3
+	pkgver = r2983.a5b7694e
+	pkgrel = 2
+	epoch = 1
+	url = https://linux-a11y.org/index.php?page=fenrir-screenreader
+	arch = any
+	license = LGPL
+	makedepends = git
+	makedepends = python-setuptools
+	depends = espeak-ng
+	depends = python
+	depends = python-pyudev
+	depends = python-daemonize
+	depends = python-evdev
+	depends = python-dbus
+	depends = python-pyte
+	optdepends = brltty: For Braille support
+	optdepends = gstreamer: for soundicons via gstreamer
+	optdepends = socat: Control running Fenrir screenreader
+	optdepends = sox: The default sound driver
+	optdepends = python-espeak: TTS support
+	optdepends = python-pyttsx: TTS support
+	optdepends = python-pyenchant: for spell check functionality
+	optdepends = xclip: for copy to X session clipboard
+	optdepends = speech-dispatcher: TTS support
+	provides = fenrir
+	conflicts = fenrir
+	backup = etc/fenrirscreenreader/settings/settings.conf
+	source = git+https://github.com/chrys87/fenrir.git
+	source = fenrirscreenreader.service
+	md5sums = SKIP
+	md5sums = 0c2d1bd344b53d1fa5de6c49455b5a4f
+
+pkgname = fenrir-git

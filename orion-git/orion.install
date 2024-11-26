@@ -1,0 +1,17 @@
+display_message () {
+	cat <<-EOF
+
+	To enlarge the UI and font size, set QT_SCALE_FACTOR before running:
+
+	$ QT_SCALE_FACTOR=1.5 /usr/bin/orion
+
+	EOF
+}
+
+post_install() {
+	display_message
+}
+
+post_upgrade() {
+	display_message
+}

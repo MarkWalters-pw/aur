@@ -1,0 +1,17 @@
+pkgbase = jelly-git
+	pkgdesc = An esoratic programming language
+	pkgver = r319.70c9fd9
+	pkgrel = 1
+	url = http://github.com/DennisMitchell/jelly
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = python3
+	depends = python3
+	depends = python-sympy
+	depends = python-numpy
+	source = jelly-git::git+http://github.com/DennisMitchell/jelly
+	md5sums = SKIP
+
+pkgname = jelly-git
+

@@ -1,0 +1,20 @@
+pkgbase = gnome-activity-journal
+	pkgdesc = Activity Journal for the GNOME desktop environment
+	pkgver = 1.0.0
+	pkgrel = 1
+	url = https://gitlab.gnome.org/crvi/gnome-activity-journal
+	arch = any
+	license = GPL
+	makedepends = python-distutils-extra
+	depends = python-gobject
+	depends = dbus-python
+	depends = python-pyxdg
+	depends = zeitgeist
+	optdepends = python-pygments: get thumbnail of text files
+	source = https://gitlab.gnome.org/crvi/gnome-activity-journal/-/archive/1.0.0/gnome-activity-journal-1.0.0.tar.gz
+	source = gnome-activity-journal.appdata.xml
+	validpgpkeys = 7C0FF088052C082B442454171CFC22F3363DEAE3
+	sha256sums = 826bdb64eca9cf54abbe29feec2e55066244d3b6b0dd618c57f64c95a367d967
+	sha256sums = 2a8f952608851258c07c92d3bbececfa7572dc7e5609c4aa49298e098d102207
+
+pkgname = gnome-activity-journal

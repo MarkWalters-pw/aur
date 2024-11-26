@@ -1,0 +1,31 @@
+pkgbase = ufw-git
+	pkgdesc = Uncomplicated firewall
+	pkgver = 0.36.2.r105.g76adc7a
+	pkgrel = 1
+	url = https://launchpad.net/ufw
+	arch = any
+	license = GPL3
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = python
+	depends = iptables
+	provides = ufw=0.36.2.r105.g76adc7a
+	conflicts = ufw
+	backup = etc/default/ufw
+	backup = etc/ufw/after.rules
+	backup = etc/ufw/after6.rules
+	backup = etc/ufw/before.rules
+	backup = etc/ufw/before6.rules
+	backup = etc/ufw/sysctl.conf
+	backup = etc/ufw/ufw.conf
+	backup = etc/ufw/user.rules
+	backup = etc/ufw/user.rules
+	backup = etc/ufw/user6.rules
+	source = git+https://git.launchpad.net/ufw
+	source = ufw.service::https://gitlab.archlinux.org/archlinux/packaging/packages/ufw/-/raw/main/service
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = ufw-git

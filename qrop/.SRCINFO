@@ -1,0 +1,21 @@
+pkgbase = qrop
+	pkgdesc = Crop planning and recordkeeping software for and by market gardeners.
+	pkgver = 0.4.5
+	pkgrel = 1
+	url = https://qrop.frama.io/
+	arch = x86_64
+	license = GPL3
+	makedepends = make
+	makedepends = cmake
+	makedepends = sqlite
+	depends = qt5-base
+	depends = qt5-charts
+	depends = qt5-quickcontrols2
+	depends = qt5-tools
+	source = https://framagit.org/ah/qrop/-/archive/v0.4.5/qrop-v0.4.5.tar.gz
+	source = qrop.desktop::https://framagit.org/-/snippets/6043/raw/main/snippetfile1.txt
+	sha256sums = 7ac9faa9bc7f16e098fa452c51643ec8d3f3ecb2f23dde90e9b9507952cd6077
+	sha256sums = 0659fd27c86e86e62bce66525e0c738c2975f28c68faf18d696634a0e59c88fd
+
+pkgname = qrop
+

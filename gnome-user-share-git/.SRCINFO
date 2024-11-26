@@ -1,0 +1,25 @@
+pkgbase = gnome-user-share-git
+	pkgdesc = Easy to use user-level file sharing for GNOME
+	pkgver = 43.0+9+gab7aacf
+	pkgrel = 1
+	url = https://gitlab.gnome.org/GNOME/gnome-user-share
+	arch = x86_64
+	arch = i686
+	arch = pentium4
+	arch = aarch64
+	arch = armv7h
+	groups = gnome
+	groups = gnome-git
+	license = GPL
+	makedepends = git
+	makedepends = meson
+	depends = glib2
+	depends = dconf
+	depends = mod_dnssd
+	depends = systemd
+	provides = gnome-user-share
+	conflicts = gnome-user-share
+	source = git+https://gitlab.gnome.org/GNOME/gnome-user-share
+	sha256sums = SKIP
+
+pkgname = gnome-user-share-git

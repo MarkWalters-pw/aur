@@ -1,0 +1,17 @@
+pkgbase = vapoursynth-plugin-adjust-git
+	pkgdesc = Plugin for Vapoursynth: adjust (GIT version)
+	pkgver = 1.1.ga3af7cb
+	pkgrel = 1
+	url = http://forum.doom9.org/showthread.php?t=171956
+	arch = any
+	license = custom:WTFPL
+	makedepends = git
+	depends = vapoursynth
+	provides = vapoursynth-plugin-adjust
+	conflicts = vapoursynth-plugin-adjust
+	source = adjust::git+https://github.com/dubhater/vapoursynth-adjust.git
+	source = COPYING
+	sha256sums = SKIP
+	sha256sums = 7637386b5f81e8a719ca336233149005e5fa28b5e6054ea7b67de49355b0ad40
+
+pkgname = vapoursynth-plugin-adjust-git

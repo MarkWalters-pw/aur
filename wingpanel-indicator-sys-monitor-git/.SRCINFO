@@ -1,0 +1,23 @@
+pkgbase = wingpanel-indicator-sys-monitor-git
+	pkgdesc = System monitor indicator for Wingpanel designed for Pantheon Shell
+	pkgver = r64.7c2d247
+	pkgrel = 1
+	url = https://github.com/PlugaruT/wingpanel-indicator-sys-monitor
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = meson
+	makedepends = vala
+	depends = gtk3
+	depends = granite
+	depends = glib2
+	depends = libgtop
+	depends = wingpanel
+	provides = wingpanel-indicator-sys-monitor
+	conflicts = wingpanel-indicator-sys-monitor
+	source = git+https://github.com/PlugaruT/wingpanel-indicator-sys-monitor.git
+	md5sums = SKIP
+
+pkgname = wingpanel-indicator-sys-monitor-git
+

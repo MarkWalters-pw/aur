@@ -1,0 +1,24 @@
+pkgbase = ocaml-async
+	pkgdesc = Monadic concurrency library for OCaml
+	pkgver = 0.17.0
+	pkgrel = 2
+	url = https://github.com/janestreet/async
+	arch = x86_64
+	arch = aarch64
+	license = MIT
+	makedepends = dune>=3.11.0
+	depends = ocaml>=5.1.0
+	depends = ocaml-async_kernel>=0.17.0
+	depends = ocaml-async_log>=0.17.0
+	depends = ocaml-async_rpc_kernel>=0.17.0
+	depends = ocaml-async_unix>=0.17.0
+	depends = ocaml-core>=0.17.0
+	depends = ocaml-core_kernel>=0.17.0
+	depends = ocaml-core_unix>=0.17.0
+	depends = ocaml-ppx_jane>=0.17.0
+	depends = ocaml-textutils>=0.17.0
+	options = !strip
+	source = ocaml-async-0.17.0.tar.gz::https://github.com/janestreet/async/archive/v0.17.0.tar.gz
+	b2sums = fa8853a24d251bf5acaf6bff8a1dd115a7c80bf6650f886a70404bd9023495f381ab0cec723d50038e170ba6a0998e8c77066677e20a6047f18b5d44d73355ac
+
+pkgname = ocaml-async

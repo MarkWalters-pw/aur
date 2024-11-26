@@ -1,0 +1,22 @@
+pkgbase = backupninja-git
+	pkgdesc = A centralized way to configure and schedule many different backup utilities
+	pkgver = 1113.5cc8040
+	pkgrel = 1
+	url = https://0xacab.org/liberate/backupninja
+	arch = any
+	license = GPL
+	makedepends = git
+	depends = bash
+	depends = dialog
+	optdepends = rdiff-backup: rdiff backups
+	optdepends = gzip: compress backups
+	optdepends = hwinfo: geting hardware information
+	optdepends = mariadb-clients: mysql backups
+	optdepends = rsync: secure and reliable remote syncronisation tool
+	optdepends = duplicity: duplicity backups
+	backup = etc/backupninja.conf
+	source = backupninja::git+https://0xacab.org/liberate/backupninja.git
+	md5sums = SKIP
+
+pkgname = backupninja-git
+

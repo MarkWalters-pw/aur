@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if command -v rlwrap &> /dev/null; then
+	exec rlwrap /usr/lib/v8/d8 "$@"
+else
+	exec /usr/lib/v8/d8 "$@"
+fi

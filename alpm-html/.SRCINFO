@@ -1,0 +1,19 @@
+pkgbase = alpm-html
+	pkgdesc = Generate a static site for browsing an Arch repo, styled like the main website.
+	pkgver = 0.10.0
+	pkgrel = 1
+	url = https://code.aether.earth/archlinux/alpm-html
+	arch = any
+	license = GPL3
+	makedepends = asciidoc
+	depends = pyalpm
+	depends = python-jinja
+	depends = python-inflect
+	optdepends = python-daiquiri: For prettier verbose logs
+	optdepends = python-htmlmin: Support minifying the generated HTML
+	source = https://code.aether.earth/archlinux/alpm-html/-/archive/v0.10.0/alpm-html-v0.10.0.tar.gz
+	sha512sums = c33b09520f701fe5f139463c189d227749de7a95e9d531beea43093986f7d2db88011fc15200060db0d0c02f219d1392e3fe02d89abf686e5351ff719078c51c
+	b2sums = b78656aa58b13d1ae2f8904b4313379e89e2dc1b8a26d5dc75835e920dd3dab37bb30caeead10b05e1815671e95b357285a3ad0c95f270afc33f71d9e200d806
+
+pkgname = alpm-html
+

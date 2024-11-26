@@ -1,0 +1,27 @@
+pkgbase = unifi-video
+	pkgdesc = Centralized management system for Ubiquiti UniFi surveillance cameras.
+	pkgver = 3.10.13
+	pkgrel = 2
+	url = https://www.ubnt.com/
+	install = unifi-video.install
+	arch = x86_64
+	license = custom
+	makedepends = zip
+	depends = mongodb
+	depends = java-runtime>=8
+	depends = java-jsvc
+	depends = lsb-release
+	depends = which
+	conflicts = unifi-video-beta
+	source = unifi-video-3.10.13.deb::https://dl.ubnt.com/firmwares/ufv/v3.10.13/unifi-video.Ubuntu18.04_amd64.v3.10.13.deb
+	source = unifi-video.service
+	source = unifi-video.sysusers
+	source = unifi-video.tmpfiles
+	source = unifi-video.patch
+	sha256sums = 5838c616b0f83601563cd371a0c64eb0ccdaee6fc6b3237a95b94ac59c224745
+	sha256sums = 9df948b046347c25e7c83e4837284ef63d9f8d3f28daa20a6c36e203e3ebfdb3
+	sha256sums = 90fb2f826a70d3b7815cd6a2253c2af6754c17504be28ef92ee223bd02093730
+	sha256sums = 1ba38968cd5822b336bcffde0a150ea8c2358471abbcbde641de1ad9555bbff1
+	sha256sums = 9e04a0ffe891fbda0ae0f7a7f3edbcc59118dfc4bd4fea19c1b44954579a3952
+
+pkgname = unifi-video

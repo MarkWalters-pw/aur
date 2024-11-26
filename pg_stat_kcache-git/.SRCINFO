@@ -1,0 +1,20 @@
+pkgbase = pg_stat_kcache-git
+	pkgdesc = Get kernel statistics for sessions in PostgreSQL. Be able to measure the real hit ratio !
+	pkgver = 2.1.0.r1.g6bedab2
+	pkgrel = 1
+	url = https://github.com/powa-team/pg_stat_kcache
+	install = pg_stat_kcache-git.install
+	arch = i686
+	arch = x86_64
+	arch = armv7h
+	arch = aarch64
+	license = BSD
+	makedepends = git
+	depends = postgresql
+	options = !emptydirs
+	options = !libtool
+	source = git+https://github.com/powa-team/pg_stat_kcache.git
+	md5sums = SKIP
+
+pkgname = pg_stat_kcache-git
+

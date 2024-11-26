@@ -1,0 +1,22 @@
+pkgbase = i3lock-fancy-dualmonitors-git
+	pkgdesc = i3lock-color script: blurs background, adds lock icon and text with multihead support.
+	pkgver = r89.9539878
+	pkgrel = 2
+	url = https://github.com/meskarune/i3lock-fancy
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	depends = coreutils
+	depends = awk
+	depends = bash
+	depends = util-linux
+	depends = imagemagick
+	depends = i3lock
+	depends = scrot
+	provides = i3lock-fancy-dualmonitors
+	source = git+https://github.com/meskarune/i3lock-fancy.git#branch=dualmonitors
+	md5sums = SKIP
+
+pkgname = i3lock-fancy-dualmonitors-git
+

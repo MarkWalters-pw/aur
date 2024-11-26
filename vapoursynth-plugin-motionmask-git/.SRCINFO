@@ -1,0 +1,17 @@
+pkgbase = vapoursynth-plugin-motionmask-git
+	pkgdesc = Plugin for Vapoursynth: motionmask (GIT version)
+	pkgver = 2.1.ged86b06
+	pkgrel = 1
+	url = https://github.com/dubhater/vapoursynth-motionmask
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = meson
+	depends = vapoursynth
+	provides = vapoursynth-plugin-motionmask
+	conflicts = vapoursynth-plugin-motionmask
+	options = debug
+	source = motionmask::git+https://github.com/dubhater/vapoursynth-motionmask.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-motionmask-git

@@ -1,0 +1,24 @@
+pkgbase = bharvestr.lv2-git
+	pkgdesc = An experimental granular synthesizer LV2 plugin (git version)
+	pkgver = r171.8025b9b
+	pkgrel = 1
+	url = https://github.com/sjaehn/BHarvestr
+	arch = x86_64
+	groups = lv2-plugins
+	groups = pro-audio
+	license = GPL3
+	checkdepends = lv2lint
+	makedepends = git
+	makedepends = lv2
+	depends = cairo
+	depends = gcc-libs
+	depends = glibc
+	depends = libsndfile
+	depends = libx11
+	provides = bharvestr.lv2
+	conflicts = bharvestr.lv2
+	source = bharvestr.lv2::git+https://github.com/sjaehn/BHarvestr
+	md5sums = SKIP
+
+pkgname = bharvestr.lv2-git
+

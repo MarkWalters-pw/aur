@@ -1,0 +1,19 @@
+pkgbase = dupluxy-git
+	pkgdesc = Duplicacy based cloud backup tool based on lock-free deduplication with Linux/POSIX enhancement and hardlinks
+	pkgver = v0.1.0.r0.2d5338f
+	pkgrel = 1
+	url = https://www.dupluxy.com/
+	arch = x86_64
+	arch = i686
+	license = custom
+	makedepends = go
+	makedepends = git
+	depends = glibc
+	provides = dupluxy
+	provides = duplicacy
+	conflicts = duplicacy
+	conflicts = duplicacy-git
+	source = git+https://github.com/dupluxy/dupluxy
+	sha256sums = SKIP
+
+pkgname = dupluxy-git

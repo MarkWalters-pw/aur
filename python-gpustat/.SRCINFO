@@ -1,0 +1,22 @@
+pkgbase = python-gpustat
+	pkgdesc = A simple command-line utility for querying and monitoring GPU status
+	pkgver = 1.1.1
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/wookayin/gpustat
+	arch = any
+	license = MIT
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-setuptools-scm
+	makedepends = python-wheel
+	depends = nvidia-utils
+	depends = python-blessed
+	depends = python-nvidia-ml-py
+	depends = python-psutil
+	depends = python-six
+	source = gpustat-1.1.1.tar.gz::https://github.com/wookayin/gpustat/archive/v1.1.1.tar.gz
+	sha256sums = f168b6a0a873cfb19f379a07f48eca58d67a70e2cc037115b9a5580a62956b84
+
+pkgname = python-gpustat

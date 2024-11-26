@@ -1,0 +1,26 @@
+pkgbase = ros-noetic-moveit-ros-control-interface
+	pkgdesc = ROS - ros_control controller manager interface for MoveIt!.
+	pkgver = 1.1.13
+	pkgrel = 1
+	url = https://wiki.ros.org/moveit_ros_control_interface
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-moveit-core
+	makedepends = ros-noetic-trajectory-msgs
+	makedepends = ros-noetic-moveit-simple-controller-manager
+	makedepends = ros-noetic-controller-manager-msgs
+	makedepends = ros-noetic-pluginlib
+	makedepends = ros-noetic-actionlib
+	makedepends = ros-noetic-catkin
+	depends = ros-noetic-moveit-core
+	depends = ros-noetic-trajectory-msgs
+	depends = ros-noetic-moveit-simple-controller-manager
+	depends = ros-noetic-controller-manager-msgs
+	depends = ros-noetic-pluginlib
+	depends = ros-noetic-actionlib
+	source = ros-noetic-moveit-ros-control-interface-1.1.13.tar.gz::https://github.com/ros-planning/moveit/archive/1.1.13.tar.gz
+	sha256sums = 91735df0ec1a7bdbcdad9028352a0d78d44fad2076584319120e2e10ecb5882c
+
+pkgname = ros-noetic-moveit-ros-control-interface

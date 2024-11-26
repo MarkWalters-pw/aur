@@ -1,0 +1,26 @@
+pkgbase = virtualbricks-develop-git
+	pkgdesc = Qemu/KVM and VDE frontend (git development branch)
+	pkgver = r2176.e331a0b
+	pkgrel = 1
+	url = https://github.com/virtualsquare/virtualbricks
+	arch = any
+	license = GPL2
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python-gobject
+	depends = python-pillow
+	depends = python-pygraphviz
+	depends = python-twisted
+	depends = python-zope-interface
+	depends = vde2
+	depends = qemu-full
+	optdepends = vde-netemu-git: channel emulator support
+	provides = virtualbricks=r2176.e331a0b
+	conflicts = virtualbricks
+	source = virtualbricks::git+https://github.com/virtualsquare/virtualbricks.git#branch=develop
+	sha256sums = SKIP
+
+pkgname = virtualbricks-develop-git

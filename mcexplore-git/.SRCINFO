@@ -1,0 +1,17 @@
+pkgbase = mcexplore-git
+	pkgdesc = Use a minecraft server to generate a square of land.
+	pkgver = 2.109.g8c2207f+1
+	pkgrel = 1
+	url = https://github.com/DMBuce/mcexplore
+	arch = any
+	license = CCPL:by-sa
+	makedepends = git
+	makedepends = asciidoc
+	depends = python
+	depends = python-nbt
+	provides = mcexplore
+	conflicts = mcexplore
+	source = mcexplore-git::git+https://github.com/DMBuce/mcexplore.git
+	md5sums = SKIP
+
+pkgname = mcexplore-git

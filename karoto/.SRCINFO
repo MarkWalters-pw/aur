@@ -1,0 +1,19 @@
+pkgbase = karoto
+	pkgdesc = A shopping list app for Linux Mobile.
+	pkgver = 0.2
+	pkgrel = 1
+	url = https://codeberg.org/DrRac27/karoto
+	arch = any
+	license = MIT
+	checkdepends = python-pytest
+	checkdepends = python-pytest-qt
+	checkdepends = flake8
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-poetry-core
+	depends = python-pyqt6
+	source = git+https://codeberg.org/DrRac27/karoto.git#commit=19417c116fef4a6bb91ef7ed465781a5811cff07
+	sha512sums = SKIP
+
+pkgname = karoto

@@ -1,0 +1,40 @@
+pkgbase = xivlauncher
+	pkgdesc = Custom Launcher for Final Fantasy XIV Online (Crossplatform rewrite)
+	pkgver = 1.1.1
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/goatcorp/XIVLauncher.Core
+	arch = x86_64
+	license = GPL
+	makedepends = dotnet-sdk>=8
+	makedepends = git
+	depends = aria2
+	depends = sdl2
+	depends = libsecret
+	depends = attr
+	depends = fontconfig
+	depends = lcms2
+	depends = libxml2
+	depends = libxcursor
+	depends = libxrandr
+	depends = libxdamage
+	depends = libxi
+	depends = gettext
+	depends = freetype2
+	depends = glu
+	depends = libsm
+	depends = gcc-libs
+	depends = libpcap
+	depends = desktop-file-utils
+	depends = jxrlib
+	optdepends = steam
+	options = !strip
+	options = !debug
+	source = XIVLauncher.Core::git+https://github.com/goatcorp/XIVLauncher.Core.git#tag=1.1.1
+	source = XIVLauncher.desktop
+	source = xivlauncher-core
+	sha512sums = SKIP
+	sha512sums = d94f652f9571598799fcd9bf87cb7d2e54ca924bc100b73024e81efd0fe9fc12d494f7adc500ff34ed1e53c59f94e1d6f3c5ae29a1c33133cc30988197e46389
+	sha512sums = 1b4584216828fac294d9955924a89bba716bcb6f1ec582e50f3169e1501eb3d637cb89f921d887d8aba20eb4a4166915e9812aad634bcfd10ab97324164aaec5
+
+pkgname = xivlauncher

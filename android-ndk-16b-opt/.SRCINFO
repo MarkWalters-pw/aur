@@ -1,0 +1,18 @@
+pkgbase = android-ndk-16b-opt
+	pkgdesc = Android C/C++ developer kit. Don't override package `android-ndk`
+	pkgver = r16_b
+	pkgrel = 4
+	url = https://developer.android.com/ndk/
+	arch = x86_64
+	license = GPL
+	license = LGPL
+	license = custom
+	depends = ncurses5-compat-libs
+	provides = android-ndk
+	replaces = android-ndk64
+	options = !strip
+	options = staticlibs
+	source = http://dl.google.com/android/repository/android-ndk-r16b-linux-x86_64.zip
+	sha256sums = SKIP
+
+pkgname = android-ndk-16b-opt

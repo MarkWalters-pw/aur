@@ -1,0 +1,20 @@
+pkgbase = vim-embark-git
+	pkgdesc = A deep inky purple theme leveraging bright colors
+	pkgver = r60.03029f4
+	pkgrel = 1
+	url = https://github.com/embark-theme/vim
+	arch = any
+	groups = vim-plugins
+	license = MIT
+	makedepends = git
+	depends = vim-plugin-runtime
+	provides = vim-embark
+	provides = vim-airline-embark
+	provides = vim-lightline-embark
+	conflicts = vim-embark
+	conflicts = vim-airline-embark
+	conflicts = vim-lightline-embark
+	source = vim-embark-git::git+https://github.com/embark-theme/vim
+	md5sums = SKIP
+
+pkgname = vim-embark-git

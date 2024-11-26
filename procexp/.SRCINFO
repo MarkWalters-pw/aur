@@ -1,0 +1,20 @@
+pkgbase = procexp
+	pkgdesc = Graphical process explorer for Linux
+	pkgver = 20200715
+	pkgrel = 1
+	url = https://github.com/wolfc01/procexp
+	arch = any
+	license = GPL3
+	depends = ethtool
+	depends = polkit
+	depends = python-configobj
+	depends = python-pyqt-qwt
+	depends = python-pyqt5
+	depends = tcpdump
+	source = procexp-ebd5d47d4e457d3776754eda9068ced7e31fc3e8.tar.gz::https://github.com/wolfc01/procexp/archive/ebd5d47d4e457d3776754eda9068ced7e31fc3e8.tar.gz
+	source = procexp.patch
+	sha256sums = ac5541e5bdd6ba82e9fda11f78c98cbfbf6d0dc887c276cc5a10c80ce4972799
+	sha256sums = 19d93a5cd060a58f69df92e948cc67850c92d0f974594ff255c59216d03bd543
+
+pkgname = procexp
+

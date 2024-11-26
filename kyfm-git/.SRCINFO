@@ -1,0 +1,21 @@
+pkgbase = kyfm-git
+	pkgdesc = The fastest file manager.
+	pkgver = r5.gc765d6a
+	pkgrel = 1
+	url = https://gitlab.com/KisuYami/kyfm
+	arch = i686
+	arch = x86_64
+	groups = file-management
+	groups = suckless
+	license = GPLv2
+	makedepends = ncurses
+	makedepends = readline
+	makedepends = tar
+	depends = ncurses
+	depends = readline
+	provides = kyfm
+	source = https://gitlab.com/KisuYami/kyfm/-/archive/master/kyfm-master.tar.gz
+	md5sums = SKIP
+
+pkgname = kyfm-git
+

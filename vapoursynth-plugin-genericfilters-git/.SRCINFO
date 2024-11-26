@@ -1,0 +1,15 @@
+pkgbase = vapoursynth-plugin-genericfilters-git
+	pkgdesc = Plugin for Vapoursynth: genericfilters (GIT version)
+	pkgver = r132.209263f
+	pkgrel = 1
+	url = https://forum.doom9.org/showthread.php?p=1656901#post1656901
+	arch = x86_64
+	license = LGPL2.1
+	makedepends = git
+	depends = vapoursynth
+	provides = vapoursynth-plugin-genericfilters
+	conflicts = vapoursynth-plugin-genericfilters
+	source = genericfilters::git+https://github.com/sl1pkn07/GenericFilters.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-genericfilters-git

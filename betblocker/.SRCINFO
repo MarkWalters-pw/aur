@@ -1,0 +1,24 @@
+pkgbase = betblocker
+	pkgdesc = A free tool to help you control your gambling
+	pkgver = 2.1.2
+	pkgrel = 1
+	url = https://betblocker.org
+	arch = x86_64
+	license = custom:betblocker
+	makedepends = tar
+	depends = nodejs-js-yaml
+	depends = libnotify
+	depends = nss
+	depends = libxss
+	depends = xdg-utils
+	depends = uuid
+	depends = libappindicator-gtk3
+	depends = libsecret
+	options = !strip
+	source = betblocker-2.1.2.deb::https://betblocker.org/front/download/2
+	source = LICENSE
+	sha256sums = b4aa86e0d8cf8f96fc47adbf925fd90bd98368fcc06f0ec1062548346b6619c6
+	sha256sums = c1a90c883551985f77391e693c6615e5b0e4e408d21bbfb9f90d4f03f0654c73
+
+pkgname = betblocker
+

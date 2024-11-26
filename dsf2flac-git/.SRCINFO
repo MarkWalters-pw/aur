@@ -1,0 +1,26 @@
+pkgbase = dsf2flac-git
+	pkgdesc = Tool for converting DSF to FLAC files.
+	pkgver = r31.6b109cd
+	pkgrel = 2
+	url = https://github.com/hank/dsf2flac
+	arch = x86_64
+	arch = i686
+	arch = pentium4
+	arch = arm
+	arch = armv6h
+	arch = armv7h
+	arch = aarch64
+	license = GPL2
+	makedepends = git
+	makedepends = boost
+	makedepends = cmake
+	depends = glibc
+	depends = gcc-libs
+	depends = flac
+	depends = boost-libs
+	depends = taglib
+	depends = id3lib
+	source = git+https://github.com/hank/dsf2flac.git
+	sha256sums = SKIP
+
+pkgname = dsf2flac-git

@@ -1,0 +1,6 @@
+post_install() {
+	local eula=/usr/share/licenses/CEWE/EULA.txt
+	echo -e "${eula//?/=}\n$eula\n${eula//?/=}"
+	head -n 8 $eula
+	echo -e "${eula//?/=}\nDie Lizenzdatei ist hier abgelegt:\n$eula\n${eula//?/=}"
+}

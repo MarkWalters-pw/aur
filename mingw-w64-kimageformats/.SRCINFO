@@ -1,0 +1,25 @@
+pkgbase = mingw-w64-kimageformats
+	pkgdesc = Image format plugins for Qt5 (mingw-w64)
+	pkgver = 5.76.0
+	pkgrel = 1
+	url = https://community.kde.org/Frameworks
+	arch = any
+	groups = mingw-w64-kf5
+	license = LGPL
+	makedepends = mingw-w64-cmake
+	makedepends = mingw-w64-extra-cmake-modules
+	makedepends = mingw-w64-karchive
+	depends = mingw-w64-qt5-base
+	depends = mingw-w64-openexr
+	optdepends = mingw-w64-karchive: plugin for Krita and OpenRaster images
+	options = staticlibs
+	options = !strip
+	options = !buildflags
+	source = http://download.kde.org/stable/frameworks/5.76/kimageformats-5.76.0.tar.xz
+	source = http://download.kde.org/stable/frameworks/5.76/kimageformats-5.76.0.tar.xz.sig
+	validpgpkeys = 53E6B47B45CEA3E0D5B7457758D0EE648A48B3BB
+	sha256sums = 78ced2665f8918beb617b74962d188dcbb01a92a90ba49bfd173671bdb14e68d
+	sha256sums = SKIP
+
+pkgname = mingw-w64-kimageformats
+

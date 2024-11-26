@@ -1,0 +1,16 @@
+pkgbase = computecpp
+	pkgdesc = Accelerates Complex C++ Applications on Heterogeneous Compute Systems using Open Standards
+	pkgver = 2.11.0
+	pkgrel = 1
+	url = https://www.codeplay.com/products/computesuite/computecpp
+	arch = x86_64
+	license = EULA
+	depends = ncurses5-compat-libs
+	depends = opencl-driver
+	depends = ocl-icd
+	options = !strip
+	source = https://computecpp.codeplay.com/downloads/computecpp-ce/2.11.0/x86_64-linux-gnu.tar.gz
+	sha256sums = 5383b8939fd60c3df4c71c7b8d9321057a27894428ece1437c9d6ab3138ef9ef
+
+pkgname = computecpp
+

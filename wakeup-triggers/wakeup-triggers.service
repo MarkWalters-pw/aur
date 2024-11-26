@@ -1,0 +1,11 @@
+[Unit]
+Description=Wakeup Triggers
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/wakeup-triggers.sh start
+ExecStop=/usr/bin/wakeup-triggers.sh stop
+
+[Install]
+WantedBy=multi-user.target

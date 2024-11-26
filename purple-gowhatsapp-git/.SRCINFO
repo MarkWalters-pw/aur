@@ -1,0 +1,23 @@
+pkgbase = purple-gowhatsapp-git
+	pkgdesc = A libpurple/Pidgin plugin for WhatsApp, powered by whatsmeow
+	pkgver = 1.14.0
+	pkgrel = 1
+	url = https://github.com/hoehermann/purple-gowhatsapp
+	arch = x86_64
+	arch = i686
+	license = GPLv3
+	makedepends = git
+	makedepends = go
+	makedepends = cmake
+	makedepends = make
+	makedepends = pkg-config
+	depends = libpurple
+	depends = opusfile
+	depends = gdk-pixbuf2
+	depends = webp-pixbuf-loader
+	provides = purple-gowhatsapp
+	conflicts = purple-gowhatsapp
+	source = purple-gowhatsapp::git+https://github.com/hoehermann/purple-gowhatsapp.git#tag=latest
+	sha256sums = SKIP
+
+pkgname = purple-gowhatsapp-git

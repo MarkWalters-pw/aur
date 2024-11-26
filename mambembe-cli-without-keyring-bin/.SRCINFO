@@ -1,0 +1,15 @@
+pkgbase = mambembe-cli-without-keyring-bin
+	pkgdesc = Opensource Authy command line client (without keyring support)
+	pkgver = 0.1.1
+	pkgrel = 0
+	url = https://github.com/jaysonsantos/mambembe
+	arch = x86_64
+	license = MIT
+	depends = pacman>5
+	provides = mambembe-cli
+	conflicts = mambembe-cli
+	source = https://github.com/jaysonsantos/mambembe/releases/download/0.1.1/mambembe-cli-without-keyring-0.1.1-x86_64-unknown-linux-gnu.tar.gz
+	sha256sums = 05ff181d1eb3e5a40b54f0d2988facff7b4768bcb7da4e94fadf92332f3b42b5
+
+pkgname = mambembe-cli-without-keyring-bin
+

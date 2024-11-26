@@ -1,0 +1,11 @@
+[Unit]
+Description=Dominions Headless Server
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/dominions-server
+Type=simple
+User=dominions
+
+[Install]
+WantedBy=multi-user.target

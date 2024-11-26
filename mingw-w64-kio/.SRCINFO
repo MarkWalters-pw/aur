@@ -1,0 +1,30 @@
+pkgbase = mingw-w64-kio
+	pkgdesc = Resource and network access abstraction (mingw-w64)
+	pkgver = 5.76.0
+	pkgrel = 1
+	url = https://community.kde.org/Frameworks
+	arch = any
+	groups = mingw-w64-kf5
+	license = LGPL
+	makedepends = mingw-w64-extra-cmake-modules
+	makedepends = mingw-w64-qt5-tools
+	makedepends = mingw-w64-wine
+	depends = mingw-w64-solid
+	depends = mingw-w64-kjobwidgets
+	depends = mingw-w64-kbookmarks
+	depends = mingw-w64-libxslt
+	depends = mingw-w64-qt5-script
+	optdepends = mingw-w64-kio-extras: extra protocols support (sftp, fish and more)
+	optdepends = kdoctools: for the help kioslave
+	optdepends = mingw-w64-knetattach: to add new kio-remote entries
+	options = staticlibs
+	options = !strip
+	options = !buildflags
+	source = http://download.kde.org/stable/frameworks/5.76/kio-5.76.0.tar.xz
+	source = http://download.kde.org/stable/frameworks/5.76/kio-5.76.0.tar.xz.sig
+	validpgpkeys = 53E6B47B45CEA3E0D5B7457758D0EE648A48B3BB
+	sha256sums = 9351fc85c4020f2f77012e077f4f9d04d8f233e9b67f9b7619c9bc064714145b
+	sha256sums = SKIP
+
+pkgname = mingw-w64-kio
+

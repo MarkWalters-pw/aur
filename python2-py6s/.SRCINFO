@@ -1,0 +1,18 @@
+pkgbase = python2-py6s
+	pkgdesc = Python 2.7 interface to the 6S Radiative Transfer Model
+	pkgver = 1.7.2
+	pkgrel = 1
+	url = http://py6s.rtwilson.com
+	arch = any
+	license = LGPL
+	makedepends = python2-setuptools
+	depends = 6sv11
+	depends = python2-scipy
+	depends = python2-matplotlib
+	depends = python2-pysolar
+	optdepends = python2-pandas: AERONET data file support
+	options = !emptydirs
+	source = https://pypi.python.org/packages/source/P/Py6S/Py6S-1.7.2.tar.gz
+	sha256sums = 5c0d0b47607c4ecdf22a81242af8369fc3b99249da0e23e25e9e7ac554d9adcc
+
+pkgname = python2-py6s

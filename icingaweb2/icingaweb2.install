@@ -1,0 +1,18 @@
+post_install() {
+  /usr/bin/getent group icingaweb2 &> /dev/null || /usr/bin/groupadd -r icingaweb2 &> /dev/null
+  /usr/bin/getent group icingacmd &> /dev/null && /usr/bin/usermod -a -G icingacmd icingaweb2 &> /dev/null
+  /usr/bin/getent group icingaweb2 &> /dev/null && /usr/bin/usermod -a -G icingaweb2 http &> /dev/null
+
+  post_upgrade
+}
+
+post_upgrade() {
+  #/usr/bin/chown -R root:icingaweb2 /etc/webapps/icingaweb2
+  /usr/bin/chown -R root:icingaweb2 /etc/icingaweb2
+  /usr/bin/chown -R root:icingaweb2 /var/log/icingaweb2
+}
+
+post_remove() {
+  /usr/bin/getent group icingacmd &> /dev/null && /usr/bin/gpasswd -d icingacmd icingaweb2 &> /dev/null
+  /usr/bin/getent group icingaweb2 &> /dev/null && /usr/bin/groupdel icingaweb2 &> /dev/null
+}

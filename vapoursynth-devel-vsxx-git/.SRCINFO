@@ -1,0 +1,16 @@
+pkgbase = vapoursynth-devel-vsxx-git
+	pkgdesc = Development stack for Vapoursynth: vsxx (GIT version)
+	pkgver = r52.de38f0e
+	pkgrel = 1
+	url = https://github.com/sekrit-twc/vsxx
+	arch = any
+	license = LGPL2.1
+	makedepends = git
+	depends = vapoursynth
+	optdepends = bash: for build the exaple
+	provides = vapoursynth-devel-vsxx
+	conflicts = vapoursynth-devel-vsxx
+	source = vsxx::git+https://github.com/sekrit-twc/vsxx.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-devel-vsxx-git

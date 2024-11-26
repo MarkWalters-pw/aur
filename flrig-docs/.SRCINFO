@@ -1,0 +1,17 @@
+pkgbase = flrig-docs
+	pkgdesc = Documentation/help when using FLRIG w/out i-net access - Ham Radio
+	pkgver = 1.4.5
+	pkgrel = 1
+	url = http://www.w1hkj.com/flrig-help
+	arch = any
+	license = GPL
+	makedepends = git
+	makedepends = doxygen
+	makedepends = texlive-latexextra
+	optdepends = flrig
+	optdepends = epdfview
+	source = flrig::git://git.code.sf.net/p/fldigi/flrig#branch=master
+	md5sums = SKIP
+	sha256sums = SKIP
+
+pkgname = flrig-docs

@@ -1,0 +1,20 @@
+pkgbase = ros-noetic-variant
+	pkgdesc = ROS - Meta-package for the universal variant library.
+	pkgver = 0.1.24
+	pkgrel = 1
+	url = https://github.com/ANYbotics/variant
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = LGPL
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-catkin
+	depends = ros-noetic-variant-msgs
+	depends = ros-noetic-variant-topic-tools
+	source = ros-noetic-variant-0.1.24.tar.gz::https://github.com/ANYbotics/variant/archive/bd6d2b3b4b6cd6645fd7179b92054d81b238843d.tar.gz
+	sha256sums = 4c17bf4147fb25c97f71e87053111cc7c8c76b4c18216f53140634293365e154
+
+pkgname = ros-noetic-variant

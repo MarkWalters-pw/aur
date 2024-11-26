@@ -1,0 +1,20 @@
+pkgbase = python-flake8-formatter-junit-xml
+	pkgdesc = JUnit XML Formatter for flake8
+	pkgver = 0.0.6
+	pkgrel = 1
+	url = https://github.com/astj/flake8-formatter-junit-xml
+	arch = any
+	license = MIT
+	makedepends = python-setuptools
+	makedepends = python2-setuptools
+	makedepends = git
+	source = git+https://github.com/astj/flake8-formatter-junit-xml.git#tag=v0.0.6
+	md5sums = SKIP
+
+pkgname = python-flake8-formatter-junit-xml
+	depends = python-setuptools
+	depends = python-junit-xml
+
+pkgname = python2-flake8-formatter-junit-xml
+	depends = python2-setuptools
+	depends = python2-junit-xml

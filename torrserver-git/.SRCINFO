@@ -1,0 +1,26 @@
+pkgbase = torrserver-git
+	pkgdesc = Torrent stream server
+	pkgver = 132.2.r4.g65e08eb
+	pkgrel = 2
+	url = https://github.com/YouROK/TorrServer
+	install = torrserver.install
+	arch = x86_64
+	arch = armv7h
+	arch = aarch64
+	arch = i686
+	license = GPL3
+	makedepends = git
+	makedepends = go
+	makedepends = yarn
+	makedepends = npm
+	depends = glibc
+	depends = gcc-libs
+	provides = torrserver=132
+	conflicts = torrserver
+	options = !lto
+	source = torrserver-git::git+https://github.com/YouROK/TorrServer.git
+	source = torrserver.service
+	sha512sums = SKIP
+	sha512sums = f60b5d39214d0ef26598effcbdcda63cfa751a39ebc0fe63f615779a5d8990b9727f3c606e8bbf7718a798ba92b54ae3fa01b73feb427d243ef358c2e328b08a
+
+pkgname = torrserver-git

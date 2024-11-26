@@ -1,0 +1,19 @@
+pkgbase = passes-git
+	pkgdesc = A digital pass manager
+	pkgver = r115.c035c41
+	pkgrel = 1
+	url = https://github.com/pablo-s/passes
+	arch = any
+	license = GPL3
+	checkdepends = appstream-glib
+	makedepends = git
+	makedepends = meson
+	makedepends = blueprint-compiler
+	depends = libadwaita
+	depends = zint
+	provides = passes
+	conflicts = passes
+	source = git+https://github.com/pablo-s/passes.git
+	b2sums = SKIP
+
+pkgname = passes-git

@@ -1,0 +1,33 @@
+pkgbase = uenv
+	pkgdesc = Useful scripts, systemd timer/service units and their configuration
+	pkgver = 0.10.0
+	pkgrel = 1
+	url = https://sleepmap.de/software/uenv
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = bash
+	optdepends = arch-audit: updating MOTD with security info
+	optdepends = autossh: autotunnel - SSH tunnel
+	optdepends = compton: compton user service
+	optdepends = conky: conky user service
+	optdepends = cpupower: Realtime kernel specific cpupower config
+	optdepends = glances: monitoring user service
+	optdepends = htop: monitoring user service
+	optdepends = irssi: tmux integration
+	optdepends = linux-rt: Realtime kernel specific cpupower config
+	optdepends = mpd: mpd user service connecting to server profiles
+	optdepends = openssh: ssh-agent as systemd user service
+	optdepends = python-lolcat: For colorful output of MOTD
+	optdepends = rtorrent: rtorrent user and system service
+	optdepends = tmux: monitoring, rtorrent and tmux user services
+	optdepends = weechat: tmux integration
+	conflicts = uenv-git
+	backup = etc/conf.d/postpone-screensaver
+	backup = etc/default/cpupower-rt
+	backup = etc/default/rtorrent@.conf
+	source = https://git.sleepmap.de/software/uenv.git/snapshot/uenv-0.10.0.tar.gz
+	sha512sums = 2aad588f4b0a66fce1d37816a25ea295521a4a78909f3a40da1044c14939ff18baac92e424099d8bc87bad3231b83d3c18bcf4c526565bb123e0d48d70a5823b
+
+pkgname = uenv
+

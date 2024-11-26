@@ -1,0 +1,35 @@
+# Created according to recommendations written on
+# https://github.com/codimd/server/issues/46
+
+[Unit]
+Description=CodiMD real-time collaborative markdown editor
+Documentation=file:/usr/share/webapps/codimd/docs/
+After=network.target
+
+# Depending on the used database provider, one will probably want to add one of
+# the following as dependencies.  `systemctl --edit` is the recommended way.
+#After=postgresql.service
+#After=mariadb.service
+
+
+[Service]
+Type=exec
+
+Restart=always
+RestartSec=2s
+
+User=codimd
+Group=codimd
+WorkingDirectory=/usr/share/webapps/codimd
+ExecStart=/usr/bin/npm start --production
+
+StandardOutput=journal
+StandardError=inherit
+SyslogIdentifier=codimd
+
+PrivateTmp=true
+PrivateDevices=true
+
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,73 @@
+#!/bin/sh
+
+error () {
+	echo "$1" >&2
+	exit 1
+}
+
+process_tree () {
+	children=$(cat /proc/"$1"/task/*/children)
+	echo "$1"
+	for p in $children
+	do
+		process_tree "$p"
+	done
+}
+
+set_sysctl () {
+	pid="$1"
+	if test -z "$pid"
+	then
+		error "no pid given"
+	fi
+
+	key='kernel.yama.ptrace_scope'
+	old_value=$(sysctl -n "$key")
+
+	sysctl "$key=0" || error "unable to run 'sysctl $key=0'"
+	trap 'sysctl "$key=$old_value"' EXIT
+	trap 'exit' INT
+
+	while kill -s 0 "$pid" >/dev/null 2>&1
+	do
+		sleep 1
+	done
+}
+
+while test "$#" -gt 0
+do
+	case "$1" in
+	--set-sysctl)
+		set_sysctl "$2"
+		shift
+		exit 0
+		;;
+	*)
+		error "unknown option: $1"
+		;;
+	esac
+	shift
+done
+
+sudo -b "$0" --set-sysctl "$$" >/dev/null
+crewlink &
+
+cl_pid="$!"
+max_procs=0
+
+# This is a dirty, dirty hack. This is required because closing the window
+# doesn't result in the process tree dying. Some zygote processes are left
+# behind. Instead of letting crewlink clean up after itself, detect when some
+# processes have died and just kill off the rest.
+while true
+do
+	sleep 1
+	cur_procs=$(process_tree "$cl_pid" | wc -l)
+	if test "$(( max_procs - 1 > cur_procs ))" = 1
+	then
+		break
+	fi
+	max_procs="$cur_procs"
+done
+kill "$cl_pid"
+wait

@@ -1,0 +1,18 @@
+post_upgrade() {
+  echo "*****************************************************************"
+  echo "==> To migrate data from versions prior to 0.3.0:"
+  echo "    systemctl stop pymedusa"
+  echo "    rm -rf /var/lib/pymedusa/*"
+  echo "    cp -a --sparse=always /opt/pymedusa/data/* /var/lib/pymedusa/"
+  echo "    chown -R pymedusa:pymedusa /var/lib/pymedusa/"
+  echo "*****************************************************************"
+}
+
+pre_remove() {
+  systemctl stop pymedusa.service
+}
+
+post_remove() {
+  echo "==> To delete the configuration files, run as root: rm -rf /var/lib/pymedusa"
+}
+

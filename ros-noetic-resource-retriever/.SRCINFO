@@ -1,0 +1,27 @@
+pkgbase = ros-noetic-resource-retriever
+	pkgdesc = ROS - This package retrieves data from url-format files such as http://, ftp://, package:// file://, etc., and loads the data into memory.
+	pkgver = 1.12.7
+	pkgrel = 1
+	url = https://wiki.ros.org/resource_retriever
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-rosconsole
+	makedepends = ros-noetic-catkin
+	makedepends = ros-noetic-roslib
+	makedepends = boost
+	makedepends = curl
+	depends = ros-noetic-rosconsole
+	depends = ros-noetic-roslib
+	depends = boost
+	depends = python-rospkg
+	depends = curl
+	source = ros-noetic-resource-retriever-1.12.7.tar.gz::https://github.com/ros/resource_retriever/archive/1.12.7.tar.gz
+	sha256sums = 5e01da1e97915ef73b169955f4ec311ee292e3f01a3b465f6220bd8662f8e056
+
+pkgname = ros-noetic-resource-retriever

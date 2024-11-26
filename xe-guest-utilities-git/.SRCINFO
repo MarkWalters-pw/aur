@@ -1,0 +1,23 @@
+pkgbase = xe-guest-utilities-git
+	pkgdesc = Citrix XenServer Tools
+	pkgver = 20190927.2f5d2e4
+	pkgrel = 1
+	url = https://github.com/xenserver/xe-guest-utilities
+	arch = x86_64
+	license = BSD-2
+	makedepends = go-pie
+	makedepends = git
+	source = git+https://github.com/xenserver/xe-guest-utilities.git
+	sha1sums = SKIP
+
+pkgname = xe-guest-utilities-git
+	pkgdesc = Writes distribution version information and IP address to XenStore
+	depends = lsb-release
+	provides = xe-guest-utilities
+	conflicts = xe-guest-utilities
+
+pkgname = xenstore-git
+	pkgdesc = Utilities for interacting with XenStore from within a Xen virtual machine
+	provides = xenstore
+	conflicts = xenstore
+

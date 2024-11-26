@@ -1,0 +1,26 @@
+pkgbase = fxsdk
+	pkgdesc = Tools to program for the Casio fx9860 calculators
+	pkgver = 2.7.0
+	pkgrel = 1
+	url = https://gitea.planet-casio.com/Lephenixnoir/fxsdk
+	arch = i686
+	arch = x86_64
+	makedepends = cmake
+	makedepends = gcc
+	makedepends = libpng
+	depends = cmake
+	depends = libusb
+	depends = mkg3a
+	depends = python-pillow
+	depends = sh-elf-gcc-casio
+	optdepends = gint: alternative library and kernel for add-in development on fx-9860G and fx-CG50
+	optdepends = udisks2: disk management service, for auto-mount of calculator
+	provides = fxconv
+	provides = fxg1a
+	provides = fxlink
+	conflicts = fxsdk-git
+	options = !buildflags
+	source = fxsdk-2.7.0.tar.gz::https://gitea.planet-casio.com/Lephenixnoir/fxsdk/archive/2.7.0.tar.gz
+	sha256sums = 7bc4f6ffa81a31ccf4d82d3d59005b0693b153f17ac35710a882a3fc4e618559
+
+pkgname = fxsdk

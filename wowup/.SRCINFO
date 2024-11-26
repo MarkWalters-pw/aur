@@ -1,0 +1,28 @@
+pkgbase = wowup
+	pkgdesc = World of Warcraft addon updater
+	pkgver = 2.20.0
+	pkgrel = 1
+	url = https://github.com/WowUp/WowUp
+	arch = x86_64
+	license = GPL3
+	makedepends = nodejs-lts-iron
+	makedepends = npm
+	makedepends = imagemagick
+	source = WowUp-2.20.0.tar.gz::https://github.com/WowUp/WowUp/archive/v2.20.0.tar.gz
+	source = aur-disable-updater.patch
+	source = wago-fix.js
+	source = wowup.desktop
+	source = wowup-cf.desktop
+	source = run_wowup.sh
+	source = run_wowup-cf.sh
+	sha256sums = 217b44662b7136473071a9b8073ea7c2018ddec82e050e023bfdab70d0bae481
+	sha256sums = 6492656d15dc74254189767f92a3d6d73ee21d2de952ae8586a40330dc0b6ef3
+	sha256sums = 371d0e19917b031911ac5503e01e19170988230fb793f68e42eb15e4d1cfb97c
+	sha256sums = 5c18235b5c92c98a405335916efce577c8b9b5582b717abb1c49834884fbe1db
+	sha256sums = f2c63c2b44880db8d6601307bdb965e5b8275c2939ac7812b1043d9ff8bf418a
+	sha256sums = 9a21969b0e9393f25a37a924fcf7c99ff7d671e252db0f99d46072e42ab670b7
+	sha256sums = fa0140ecc4a05f2eca97de65426d3dc901e84712ddd190e147059f8d6f1acc09
+
+pkgname = wowup
+
+pkgname = wowup-cf

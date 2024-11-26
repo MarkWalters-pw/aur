@@ -1,0 +1,26 @@
+pkgbase = python-pagegen
+	pkgdesc = Python static site generator with reStructuredText markup
+	pkgver = 3.8.0
+	pkgrel = 1
+	url = https://github.com/oliverfields/pagegen
+	arch = any
+	license = GPL
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python-docutils
+	depends = python-docutils-graphviz
+	depends = python-htmlmin
+	depends = python-jsmin
+	depends = python-libsass
+	depends = python-lxml
+	depends = python-mako
+	depends = python-markdown
+	depends = python-markupsafe
+	depends = python-rcssmin
+	depends = python-six
+	source = python-pagegen-3.8.0.tar.gz::https://github.com/oliverfields/pagegen/archive/3.8.0.tar.gz
+	sha256sums = e37d421166503ef6e86878efb6bc95bbce30cd6729512e95340f7ec14eece4ec
+
+pkgname = python-pagegen

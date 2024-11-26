@@ -1,0 +1,22 @@
+pkgbase = kodi-addon-game-libretro-prboom
+	pkgdesc = This add-on provides a wrapper that allows Libretro cores to be loaded as game add-ons
+	pkgver = 2.5.0.48
+	pkgrel = 1
+	url = https://github.com/kodi-game/game.libretro.prboom
+	arch = aarch64
+	arch = armv7h
+	groups = kodi-addons
+	groups = kodi-addons-game
+	license = GPL2
+	makedepends = cmake
+	makedepends = kodi-dev
+	makedepends = kodi-addon-game-libretro
+	makedepends = libretro-prboom-git
+	options = !lto
+	options = debug
+	source = kodi-addon-game-libretro-prboom-2.5.0.48.tar.gz::https://github.com/kodi-game/game.libretro.prboom/archive/refs/tags/2.5.0.48-Nexus.tar.gz
+	sha512sums = 49042398c38b9f6c3f7f3229af1da5ea117843ddb06355ca8a55362437a62904cdc1f0dd1c4a88464dd9e7f5a1cfd01c0858eaf06bcd2fe67b094ee132cd6b52
+
+pkgname = kodi-addon-game-libretro-prboom
+	depends = kodi-addon-game-libretro
+	depends = libretro-prboom

@@ -1,0 +1,25 @@
+pkgbase = dreampower-cpu
+	pkgdesc = CLI application that allow to transform photos of people for private entertainment - No CUDA support
+	pkgver = 1.1.0
+	pkgrel = 1
+	url = https://github.com/private-dreamnet/dreampower
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = python
+	makedepends = python-virtualenv
+	makedepends = python-pip
+	makedepends = tk
+	makedepends = libsm
+	depends = dreampower-checkpoints
+	depends = libxrender
+	provides = dreampower
+	conflicts = dreampower
+	options = !strip
+	source = dreampower-cpu-1.1.0::git+https://github.com/private-dreamnet/dreampower.git#tag=v1.1.0
+	source = dreampower
+	md5sums = SKIP
+	md5sums = 3d4dd155d414eb1c8484731eb339e596
+
+pkgname = dreampower-cpu
+

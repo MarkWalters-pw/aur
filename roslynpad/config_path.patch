@@ -1,0 +1,18 @@
+diff -ur src.orig/RoslynPad.Common.UI/Services/IApplicationSettings.cs src/RoslynPad.Common.UI/Services/IApplicationSettings.cs
+--- src.orig/RoslynPad.Common.UI/Services/IApplicationSettings.cs	2020-07-18 23:44:15.000000000 +0200
++++ src/RoslynPad.Common.UI/Services/IApplicationSettings.cs	2020-07-28 17:55:06.445431776 +0200
+@@ -204,7 +204,13 @@
+             }
+             else // Unix or Mac
+             {
+-                documentsPath = Environment.GetEnvironmentVariable("HOME");
++                documentsPath = Environment.GetEnvironmentVariable("XDG_CONFIG_HOME");
++                if (documentsPath == null) {
++                    string? homePath = Environment.GetEnvironmentVariable("HOME");
++                    if (homePath != null) {
++                        documentsPath = Path.Combine(homePath, ".config");
++                    }
++                }
+             }
+ 
+             if (string.IsNullOrEmpty(documentsPath))

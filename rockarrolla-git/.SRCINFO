@@ -1,0 +1,19 @@
+pkgbase = rockarrolla-git
+	pkgdesc = A simple jukebox emulator
+	pkgver = 1.4.r0.g71f6041
+	pkgrel = 1
+	url = https://gitlab.com/softwareperonista/rockarrolla
+	arch = x86_64
+	license = GPL3
+	makedepends = meson
+	makedepends = vala
+	depends = libadwaita
+	depends = doctrina
+	depends = gst-plugins-good
+	depends = gxml
+	depends = qrencode
+	conflicts = rockarrolla
+	source = git+https://gitlab.com/softwareperonista/rockarrolla.git
+	sha256sums = SKIP
+
+pkgname = rockarrolla-git

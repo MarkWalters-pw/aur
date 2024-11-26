@@ -1,0 +1,17 @@
+pkgbase = make-fmv-patch-git
+	pkgdesc = Make FMV patch generator
+	pkgver = r21.831ace4
+	pkgrel = 2
+	url = https://github.com/clearlinux/make-fmv-patch
+	arch = any
+	license = MIT
+	makedepends = git
+	depends = perl
+	depends = ctags
+	provides = make-fmv-patch
+	conflicts = make-fmv-patch
+	source = git+https://github.com/clearlinux/make-fmv-patch.git
+	sha256sums = SKIP
+
+pkgname = make-fmv-patch-git
+

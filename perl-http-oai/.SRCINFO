@@ -1,0 +1,25 @@
+pkgbase = perl-http-oai
+	pkgdesc = Perl/CPAN Module HTTP::OAI: API for the OAI-PMH
+	pkgver = 4.12
+	pkgrel = 1
+	url = https://metacpan.org/release/HTTP-OAI
+	arch = any
+	license = PerlArtistic
+	license = GPL
+	checkdepends = perl-test-deep>=0.112
+	checkdepends = perl-test-lwp-useragent
+	checkdepends = perl-test-pod
+	depends = perl-http-message
+	depends = perl-module-build>=0.4229
+	depends = perl-uri
+	depends = perl-xml-libxml>=1.60
+	depends = perl-xml-namespacesupport
+	depends = perl-xml-sax
+	depends = perl-xml-sax-base>=1.04
+	depends = perl-libwww
+	options = !emptydirs
+	source = http://search.cpan.org/CPAN/authors/id/H/HO/HOCHSTEN/HTTP-OAI-4.12.tar.gz
+	md5sums = fd2b89ac40c0345133b95cab76c1ca9f
+	sha512sums = c9cfcabe88b0078f345e21b5aa8600ef2eeb3073ca4ccaeed24bc54d11027207f8d0dc9433ab68ace60a9c7d2b8804b4e21bcb63f719967a71d5761eb66571b9
+
+pkgname = perl-http-oai

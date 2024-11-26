@@ -1,0 +1,47 @@
+pkgbase = linux-ath-dfs
+	pkgdesc = Linux
+	pkgver = 6.8.2.arch2
+	pkgrel = 1
+	url = https://github.com/archlinux/linux/commits/v6.8.2-arch2
+	arch = x86_64
+	license = GPL2
+	makedepends = bc
+	makedepends = cpio
+	makedepends = gettext
+	makedepends = git
+	makedepends = libelf
+	makedepends = pahole
+	makedepends = perl
+	makedepends = python
+	makedepends = tar
+	makedepends = xz
+	options = !strip
+	source = archlinux-linux::git+https://github.com/archlinux/linux?signed#tag=v6.8.2-arch2
+	source = config
+	validpgpkeys = ABAF11C65A2970B130ABE3C479BE3E4300411886
+	validpgpkeys = 647F28654894E3BD457199BE38DBBDC86092693E
+	validpgpkeys = A2FF3A36AAA56654109064AB19802F8B0D70FC30
+	validpgpkeys = C7E7849466FE2358343588377258734B41C31549
+	validpgpkeys = 83BC8889351B5DEBBB68416EB8AC08600F108CDF
+	sha256sums = 57167aaf867b68abe538633586b73aa7939fab20bf6d957fd643f64c3187c880
+	sha256sums = d198b86ff93a98705dee1e589643b88818db14152b65f2e99cb5c4ba9a8948a9
+
+pkgname = linux-ath-dfs
+	pkgdesc = The Linux kernel and modules
+	depends = coreutils
+	depends = initramfs
+	depends = kmod
+	optdepends = wireless-regdb: to set the correct wireless channels of your country
+	optdepends = linux-firmware: firmware images needed for some devices
+	provides = KSMBD-MODULE
+	provides = VIRTUALBOX-GUEST-MODULES
+	provides = WIREGUARD-MODULE
+	replaces = virtualbox-guest-modules-arch
+	replaces = wireguard-arch
+
+pkgname = linux-ath-dfs-headers
+	pkgdesc = Headers and scripts for building modules for the Linux kernel
+	depends = pahole
+
+pkgname = linux-ath-dfs-docs
+	pkgdesc = Documentation for the Linux kernel

@@ -1,0 +1,16 @@
+pkgbase = ttf-agave
+	pkgdesc = A TrueType monospaced font designed for X environments
+	pkgver = 37
+	pkgrel = 1
+	url = https://alocy.be/page/agave
+	install = ttf-agave.install
+	arch = any
+	license = MIT
+	makedepends = fontconfig
+	makedepends = xorg-mkfontscale
+	provides = ttf-font
+	source = ttf-agave-37.ttf::https://github.com/agarick/agave/releases/download/v37/Agave-Regular.ttf
+	md5sums = 037aed0f8470eb82ab3c63ba04b2ba2a
+
+pkgname = ttf-agave
+

@@ -1,0 +1,26 @@
+pkgbase = uvesafb-dkms-git
+	pkgdesc = uvesafb DKMS driver.
+	pkgver = 1.0.4+r10.20210102.cada654
+	pkgrel = 4
+	url = https://github.com/jghodd/uvesafb-dkms
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	depends = dkms>=2.2.0
+	depends = v86d
+	optdepends = mkinitcpio-uvesafb: For mkinitcpio hook to load the 'uvesafb' module.
+	provides = uvesafb-dkms=1.0.4+r10.20210102.cada654
+	provides = UVESAFB-MODULE
+	conflicts = uvesafb-dkms
+	conflicts = UVESAFB-MODULE
+	options = !makeflags
+	backup = etc/modprobe.d/uvesafb.conf
+	source = uvesafb-dkms::git+https://github.com/jghodd/uvesafb-dkms.git
+	source = dkms.conf
+	source = modprobe_uvesafb.conf
+	sha256sums = SKIP
+	sha256sums = 3afc65ee7ec66978910aae2d5247d81b64c07a5f0770e89c4ce359e1aac9c6b7
+	sha256sums = 5b3805ccda2535b1737c838c17110cfa12b7537ed6ed5f33fba4751cdd7030bf
+
+pkgname = uvesafb-dkms-git

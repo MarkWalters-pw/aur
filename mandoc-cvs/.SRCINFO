@@ -1,0 +1,24 @@
+pkgbase = mandoc-cvs
+	pkgdesc = A suite of tools compiling mdoc from the OpenBSD project
+	pkgver = 20191111
+	pkgrel = 1
+	url = https://mandoc.bsd.lv
+	arch = i686
+	arch = x86_64
+	arch = armv6h
+	arch = armv7h
+	license = custom: ISC
+	makedepends = cvs
+	makedepends = openssh
+	depends = zlib
+	provides = man
+	conflicts = man
+	source = configure.local
+	source = mandoc.service
+	source = mandoc.timer
+	sha256sums = 8d1301ac6e52653fedda5b862428f0b21976664005c7b3da24bf4e411d7bb56d
+	sha256sums = 2091411d5f87a3c371a5ba74b4773d1e454046446fa2cb045485979e52419bb6
+	sha256sums = 74d6a02b97a17fffddcc0a3dc830e811348b1f6c6b84f867882c776d50f00ea4
+
+pkgname = mandoc-cvs
+

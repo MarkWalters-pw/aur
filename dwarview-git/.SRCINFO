@@ -1,0 +1,18 @@
+pkgbase = dwarview-git
+	pkgdesc = GUI program that displays DWARF debug info of a file
+	pkgver = r31.3019f3b
+	pkgrel = 1
+	url = https://github.com/namhyung/dwarview.git
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	depends = libelf
+	depends = gtk3
+	source = git+https://github.com/namhyung/dwarview.git
+	source = gladefile_path.patch
+	sha1sums = SKIP
+	sha1sums = 0cecc3d6baecea5b980870b9c27e0fc0bf1072dd
+
+pkgname = dwarview-git
+

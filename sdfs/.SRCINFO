@@ -1,0 +1,17 @@
+pkgbase = sdfs
+	pkgdesc = Deduplication file system from Opendedup
+	pkgver = 3.10.8.0
+	pkgrel = 3
+	url = http://opendedup.org
+	arch = x86_64
+	license = GPL2
+	makedepends = maven
+	depends = libxml2
+	depends = java-runtime
+	depends = fuse
+	source = https://github.com/opendedup/sdfs/archive/b914fcfbd10198552a1c892dede83b16774ffb03.zip
+	source = build-fix.patch
+	md5sums = 6d230c16d98e41e42753cf275f718936
+	md5sums = f5435f9f678e9858512527f9211d3fdd
+
+pkgname = sdfs

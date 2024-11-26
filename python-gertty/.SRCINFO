@@ -1,0 +1,28 @@
+pkgbase = python-gertty
+	pkgdesc = console-based interface to the Gerrit Code Review system
+	pkgver = 1.6.0
+	pkgrel = 1
+	url = https://pypi.python.org/pypi/gertty
+	arch = any
+	license = Apache2
+	makedepends = python
+	makedepends = python-setuptools
+	makedepends = python-sphinx
+	depends = python-gitpython
+	depends = python-sqlalchemy
+	depends = python-urwid
+	depends = python-dateutil
+	depends = python-requests
+	depends = python-alembic
+	depends = python-yaml
+	depends = python-ply
+	depends = python-voluptuous
+	depends = python-pbr
+	depends = python-six
+	conflicts = python2-gertty
+	conflicts = python2-gertty-git
+	source = https://pypi.io/packages/source/g/gertty/gertty-1.6.0.tar.gz
+	sha256sums = 1c3593d2e6ce53bd84b27d6ac92df4a86d8923afd18b4f4f8e2c979f8a6277df
+
+pkgname = python-gertty
+

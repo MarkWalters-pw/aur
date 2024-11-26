@@ -1,0 +1,17 @@
+pkgbase = napture
+	pkgdesc = Napture is a simple browser using a modified version of the http protocol called buss, it uses Lua instead of JavaScript and has support for most HTML and CSS tags, it uses a custom DNS found at api.buss.lol.
+	pkgver = 1.3.0
+	pkgrel = 1
+	url = https://github.com/face-hh/webx
+	arch = x86_64
+	license = Apache2
+	depends = glib2
+	depends = cargo
+	depends = gtk4
+	depends = libadwaita
+	depends = lua
+	depends = luajit
+	source = git+https://github.com/face-hh/webx.git#tag=v1.3.0
+	sha256sums = SKIP
+
+pkgname = napture

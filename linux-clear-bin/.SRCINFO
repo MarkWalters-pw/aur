@@ -1,0 +1,23 @@
+pkgbase = linux-clear-bin
+	pkgdesc = Clear Linux kernel and modules in binary
+	pkgver = 6.2.11.1297
+	pkgrel = 1
+	epoch = 0
+	url = https://github.com/clearlinux-pkgs/linux
+	arch = x86_64
+	license = GPL2
+	depends = coreutils
+	depends = linux-firmware
+	depends = kmod
+	optdepends = mkinitcpio>=0.7: to create custom init cpio
+	optdepends = intel-ucode-clear: intel cpu and i915 firmware
+	optdepends = linux-clear-headers-bin: header files for the kernel
+	optdepends = crda: to set the correct wireless channels of your country
+	provides = WIREGUARD-MODULE
+	options = !strip
+	source = Manifest.kernel-native.38810::https://cdn.download.clearlinux.org/update/38810/Manifest.kernel-native
+	source = pack-kernel-native-from-0.38810.tar::https://cdn.download.clearlinux.org/update/38810/pack-kernel-native-from-0.tar
+	b2sums = ca41f3af447b5538acd9263f9125d928d0d0c7a67c987d246b9bf6e60d99991b03e40042759698250a116b19d044f88106b4727909b2a2c0aef79e81c686fc87
+	b2sums = 3695945d79648ff801079b7840d70991b0258940fae0f77c8f70d1738a48c695082218d8408703e088c5632b3fb24768b56cbb6d3cba23e701f1797382236d41
+
+pkgname = linux-clear-bin

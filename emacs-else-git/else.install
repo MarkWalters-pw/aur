@@ -1,0 +1,11 @@
+post_install() {
+  echo "Please put the line"
+  echo "(require 'else-mode)"
+  echo "to your ~/.emacs" 
+}
+
+pre_remove() {
+  echo "Please remove the line containing"
+  echo "(require 'else)"
+  echo "from your ~/.emacs"
+}

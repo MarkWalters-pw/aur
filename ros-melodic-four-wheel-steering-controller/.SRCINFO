@@ -1,0 +1,29 @@
+pkgbase = ros-melodic-four-wheel-steering-controller
+	pkgdesc = ROS - Controller for a four wheel steering mobile base
+	pkgver = 0.17.2
+	pkgrel = 2
+	url = https://wiki.ros.org/four_wheel_steering_controller
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-melodic-catkin
+	makedepends = ros-melodic-controller-interface
+	makedepends = ros-melodic-controller-manager
+	makedepends = ros-melodic-nav-msgs
+	makedepends = ros-melodic-four-wheel-steering-msgs
+	makedepends = ros-melodic-realtime-tools
+	makedepends = ros-melodic-tf
+	makedepends = ros-melodic-urdf-geometry-parser
+	depends = ros-melodic-controller-interface
+	depends = ros-melodic-controller-manager
+	depends = ros-melodic-nav-msgs
+	depends = ros-melodic-four-wheel-steering-msgs
+	depends = ros-melodic-realtime-tools
+	depends = ros-melodic-tf
+	depends = ros-melodic-urdf-geometry-parser
+	source = ros-melodic-four-wheel-steering-controller-0.17.2.tar.gz::https://github.com/ros-controls/ros_controllers/archive/0.17.2.tar.gz
+	sha256sums = fdd93a3aea7d140b1c04849790e81195f76fb421c7dfa51c86dcf22698f32b3e
+
+pkgname = ros-melodic-four-wheel-steering-controller
+

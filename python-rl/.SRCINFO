@@ -1,0 +1,21 @@
+pkgbase = python-rl
+	pkgdesc = Alternative Python bindings for GNU Readline
+	pkgver = 3.1
+	pkgrel = 4
+	url = https://github.com/stefanholek/rl
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	license = GPL
+	license = PSFL
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python
+	depends = readline
+	options = !emptydirs
+	source = https://pypi.python.org/packages/source/r/rl/rl-3.1.tar.gz
+	sha256sums = 508924bec14771088b24e80d9db97744235c43bbd96c95bb7557bd11b20388b2
+
+pkgname = python-rl

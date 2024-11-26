@@ -1,0 +1,12 @@
+[Unit]
+Description=Matrix-Instagram DM puppeting bridge
+
+[Service]
+ExecStart=python -m mautrix_instagram -c /etc/mautrix-instagram/config.yaml -r /etc/mautrix-instagram/registration.yaml
+Restart=on-failure
+User=mautrix-instagram
+WorkingDirectory=~
+
+
+[Install]
+WantedBy=multi-user.target

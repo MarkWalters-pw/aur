@@ -1,0 +1,25 @@
+pkgbase = pinegrow
+	pkgdesc = A website development tool for building responsive websites
+	pkgver = 6.1.1
+	pkgrel = 1
+	url = https://pinegrow.com
+	install = pinegrow.install
+	arch = x86_64
+	license = custom:pinegrow
+	makedepends = gendesk
+	makedepends = unzip
+	options = !strip
+	source = http://download.pinegrow.com/PinegrowLinux64.6.1.1.zip
+	source = pinegrow.png
+	source = LICENSE
+	sha512sums = f0eb8974b926249caa81027028118117e3c3cc879607d83352e16c2359bd6e44a2171d028e85efc07aab723d0fc6c2a4c9c08091f29c73e42d7a527c9c03c212
+	sha512sums = e71d7bfa237604fdf183cf1dc61e674c3f0ee9a33609f5c2aa6adf3b0359acd12f6ff2c1deeec52128461327c0fde013f4e1cc6fc5170e21f09b7fb01a4f334e
+	sha512sums = 1f2dd46c34bac1d218176f977eec05811982f1f74ead24deadb64717bb64059122e056ee1c95de34e207dd9e90107ce2f7187a4d6781f024257a7c2d7d605967
+	depends_x86_64 = gtk2
+	depends_x86_64 = gconf-gtk2
+	depends_x86_64 = alsa-lib
+	depends_x86_64 = nss
+	depends_x86_64 = libxss
+	depends_x86_64 = libxtst
+
+pkgname = pinegrow

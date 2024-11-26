@@ -1,0 +1,20 @@
+pkgbase = jupyter-octave_kernel
+	pkgdesc = A Jupyter kernel for Octave
+	pkgver = 0.36.0
+	pkgrel = 1
+	url = https://github.com/Calysto/octave_kernel
+	arch = any
+	license = BSD-3-Clause
+	makedepends = python-build
+	makedepends = python-hatchling
+	makedepends = python-installer
+	depends = jupyter-metakernel
+	depends = octave
+	depends = python-ipykernel
+	depends = python-jupyter_client
+	optdepends = gnuplot: for making plots
+	optdepends = jupyterlab: JupyterLab computational environment
+	source = jupyter-octave_kernel-0.36.0.tar.gz::https://github.com/Calysto/octave_kernel/archive/v0.36.0.tar.gz
+	b2sums = be770836a40ad084b0ac80f9a00333916c071d653bfb628fd0de43c04abba695733081afed1b1545e465c67d9eca1303148300dc2091c5658337568aa00a0152
+
+pkgname = jupyter-octave_kernel

@@ -1,0 +1,20 @@
+pkgbase = glbinding-git
+	pkgdesc = A generated C++ binding for the OpenGL API, generated using the gl.xml specification
+	pkgver = 2.1.3.r105.gc9909596
+	pkgrel = 1
+	url = http://www.glbinding.org/
+	arch = i686
+	arch = x86_64
+	license = MIT
+	checkdepends = gmock
+	makedepends = cmake
+	makedepends = git
+	depends = glfw
+	depends = libgl
+	depends = mesa
+	conflicts = glbinding
+	source = glbinding-git::git+https://github.com/cginternals/glbinding.git
+	sha256sums = SKIP
+
+pkgname = glbinding-git
+

@@ -1,0 +1,10 @@
+[Unit]
+Description=Yet another DDNS client for Cloudflare
+After=network-online.target
+
+[Service]
+ExecStart=/usr/bin/cfddns -c /etc/cfddns/cfddns.yml /etc/cfddns/domains
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

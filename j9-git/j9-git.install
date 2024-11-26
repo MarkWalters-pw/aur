@@ -1,0 +1,12 @@
+## arg 1:  the new package version
+## arg 2:  the old package version
+
+post_install() {
+  mkdir -p usr/lib/j9/tools/regex
+  ln -s /usr/lib/libpcre2-posix.so usr/lib/j9/tools/regex/libjpcre2.so
+}
+
+pre_remove() {
+  rm usr/lib/j9/tools/regex/libjpcre2.so
+  rmdir usr/lib/j9/tools/regex usr/lib/j9/tools
+}

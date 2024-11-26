@@ -1,0 +1,9 @@
+post_install() {
+	setfacl -R -m g:seiscomp:rwx opt/seiscomp
+	setfacl -d -m g:seiscomp:rwX opt/seiscomp
+}
+
+post_upgrade() {
+	setfacl -R -m g:seiscomp:rwx opt/seiscomp
+	setfacl -d -m g:seiscomp:rwX opt/seiscomp
+}

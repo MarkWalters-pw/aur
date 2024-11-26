@@ -1,0 +1,19 @@
+pkgbase = gitoxide-git
+	pkgdesc = An idiomatic, lean, fast & safe pure Rust implementation of Git
+	pkgver = 0.61.1.r4.g9e9c653a8
+	pkgrel = 1
+	url = https://github.com/Byron/gitoxide
+	arch = x86_64
+	license = Apache-2.0
+	license = MIT
+	makedepends = cargo
+	makedepends = cmake
+	makedepends = git
+	provides = gitoxide
+	conflicts = gitoxide
+	conflicts = gitoxide-bin
+	options = !lto
+	source = git+https://github.com/Byron/gitoxide
+	sha256sums = SKIP
+
+pkgname = gitoxide-git

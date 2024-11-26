@@ -1,0 +1,20 @@
+pkgbase = c2ctl
+	pkgdesc = Intel Core and Core 2 frequency and voltage modification utility
+	pkgver = 090709
+	pkgrel = 4
+	url = http://sourceforge.net/projects/c2ctl/
+	install = c2ctl.install
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	backup = etc/conf.d/c2ctl
+	source = https://downloads.sourceforge.net/project/c2ctl/c2ctl/090709/c2ctl.tar.bz2
+	source = c2ctl.service
+	source = c2ctl.script
+	source = c2ctl.conf
+	md5sums = 11612ad23e3211c7bd4fc4d735c1c71a
+	md5sums = e0fba808fd976b464d76a2c006b8f031
+	md5sums = f19fb4a703519c5bf011014eb2b4c970
+	md5sums = 8415fdd35e4269953f525686f28f7e1e
+
+pkgname = c2ctl

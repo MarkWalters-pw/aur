@@ -1,0 +1,22 @@
+pkgbase = deadshot-bin
+	pkgdesc = terminal based trading bot
+	pkgver = 0.0.6
+	pkgrel = 1
+	url = https://jon4hz.io
+	license = MIT
+	conflicts = deadshot
+	provides = deadshot
+	arch = aarch64
+	source_aarch64 = https://github.com/jon4hz/deadshot/releases/download/v0.0.6/deadshot-v0.0.6-linux-arm64.tar.gz
+	sha256sums_aarch64 = 0a62b543d2c97c8a7637af7ea9ecff97a900d774794664c218469e44de8a73e0
+	arch = armv7h
+	source_armv7h = https://github.com/jon4hz/deadshot/releases/download/v0.0.6/deadshot-v0.0.6-linux-armv7.tar.gz
+	sha256sums_armv7h = f03144a3cf907ffaafedffa8172fdd1b4de3c00635e2326639441582d8388808
+	arch = i686
+	source_i686 = https://github.com/jon4hz/deadshot/releases/download/v0.0.6/deadshot-v0.0.6-linux-386.tar.gz
+	sha256sums_i686 = 8952b205df2a30ea64be0222a392cf1e5657a51877ee905facb4539b965e9722
+	arch = x86_64
+	source_x86_64 = https://github.com/jon4hz/deadshot/releases/download/v0.0.6/deadshot-v0.0.6-linux-amd64.tar.gz
+	sha256sums_x86_64 = 7380974f220e0bbfe79bdb956dc351b1d53d6b4dcffda35c6d14b9cca24feedb
+	
+pkgname = deadshot-bin

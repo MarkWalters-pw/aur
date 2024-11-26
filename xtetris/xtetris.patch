@@ -1,0 +1,131 @@
+diff -up src/xtetris-2.6/defs.h.orig src/xtetris-2.6/defs.h
+--- src/xtetris-2.6/defs.h.orig	1995-02-10 21:53:26.000000000 -0700
++++ src/xtetris-2.6/defs.h	2022-02-05 18:20:34.950000000 -0700
+@@ -1,4 +1,6 @@
++#include <stdlib.h>
+ #include <stdio.h>
++#include <unistd.h>
+ 
+ #include <X11/Xlib.h>
+ #include <X11/Intrinsic.h>
+diff -up src/xtetris-2.6/Imakefile.orig src/xtetris-2.6/Imakefile
+--- src/xtetris-2.6/Imakefile.orig	1992-10-19 12:06:07.000000000 -0600
++++ src/xtetris-2.6/Imakefile	2022-02-05 20:07:40.950000000 -0700
+@@ -1,15 +1,15 @@
+ /* Search for "COLOR" if you want xtetris to run on a color monitor by 
+    default */
+ 
+-#define ScoreDir $(LIBDIR)      /* Directory for the score file. */
++#define ScoreDir /var/lib/xtetris      /* Directory for the score file. */
+ #define ScoreFile xtetris-scores/* Filename for the score file. */
+-#define BitmapDir $(INCDIR)/bitmaps /* May need to change this to
++#define BitmapDir /usr/include/X11/bitmaps /* May need to change this to
+ 				       /usr/include/X11/bitmaps, if you get a
+ 				       message like "can't convert string
+ 				       'stripe4' to pixmap." */
+ 
+         BITMAPS = stripe4 
+-        DEFINES = -DHIGH_SCORE_TABLE=\"$(LIBDIR)/xtetris-scores\"
++        DEFINES = -DHIGH_SCORE_TABLE=\"/var/lib/xtetris/xtetris-scores\"
+         HEADERS = defs.h
+            SRCS = main.c init.c shape.c support.c notify.c window.c score.c\
+                   draw.c
+@@ -35,14 +35,14 @@ InstallAppDefaults(Xtetris)
+ InstallMultipleFlags($(BITMAPS),BitmapDir,-m 444)
+ InstallMultipleFlags(ScoreFile,ScoreDir,$(SCOREFLAGS))
+ Xtetris.c.ad: Xtetris.ad.all
+-	xrdb -n Xtetris.ad.all -DCOLOR > Xtetris.c.ad
++	cpp -P -DCOLOR Xtetris.ad.all > Xtetris.c.ad
+ Xtetris.bw.ad: Xtetris.ad.all
+-	xrdb -n Xtetris.ad.all -UCOLOR > Xtetris.bw.ad
++	cpp -P -UCOLOR Xtetris.ad.all > Xtetris.bw.ad
+ 
+ /*  IF YOU WANT COLOR TO BE THE DEFAULT, MODIFY THE LINE BELOW TO SAY 
+     "-DCOLOR". */
+ 
+ Xtetris.ad: Xtetris.ad.all
+-	xrdb -n Xtetris.ad.all -UCOLOR > Xtetris.ad
++	cpp -P -DCOLOR Xtetris.ad.all > Xtetris.ad
+ clean::
+ 	$(RM) Xtetris.c.ad Xtetris.bw.ad Xtetris.ad
+diff -up src/xtetris-2.6/score.c.orig src/xtetris-2.6/score.c
+--- src/xtetris-2.6/score.c.orig	1992-10-19 12:44:41.000000000 -0600
++++ src/xtetris-2.6/score.c	2022-02-05 18:20:34.960000000 -0700
+@@ -24,7 +24,7 @@ update_highscore_table()
+   strcpy( padname, "                    ");
+   strncpy( padname, name, strlen(name) );	/* get padded name. */
+ 
+-  if (!resources.usescorefile) return;
++  if (!resources.usescorefile) return 0;
+   
+   /*	re-read high-score table in case someone else on the network is
+    *	playing at the same time 
+@@ -42,7 +42,7 @@ update_highscore_table()
+      *	We have a previous best score. 
+      */
+     if (high_scores[i].score >= score)
+-      return;         /* Same/worse score - no update */
++      return 0;         /* Same/worse score - no update */
+     for (j = i; j > 0; j--) /* Remove previous best */
+       high_scores[j] = high_scores[j - 1];
+   }
+@@ -77,7 +77,7 @@ read_high_scores()
+   int     i;
+   char   buf[BUFSIZ];
+   
+-  if (!resources.usescorefile) return;
++  if (!resources.usescorefile) return 0;
+   
+   if ((fp = fopen(resources.scorefile, "r")) == NULL) {
+     write_high_scores();
+@@ -85,7 +85,7 @@ read_high_scores()
+       resources.usescorefile = False;
+       fprintf( stderr, "%s: No High score file.  Use '-noscore' to avoid this message.\n",
+ 	      programname );
+-      return;
++      return 0;
+     }
+   }
+   for (i = 0; i < HIGH_TABLE_SIZE; i++) {
+@@ -114,7 +114,7 @@ write_high_scores()
+   
+   if ((fp = fopen(resources.scorefile, "w")) == NULL) {
+     fprintf(stderr, "%s: Couldn't open high score file %s\n", programname, resources.scorefile );
+-    return;
++    return 0;
+   }
+   for (i = 0; i < HIGH_TABLE_SIZE; i++)
+     fprintf( fp, "%-20s,%7d,%5d,%4d,%-12s,%-24s\n",
+diff -up src/xtetris-2.6/support.c.orig src/xtetris-2.6/support.c
+--- src/xtetris-2.6/support.c.orig	1991-08-30 18:13:34.000000000 -0600
++++ src/xtetris-2.6/support.c	2022-02-05 18:20:34.970000000 -0700
+@@ -75,7 +75,7 @@ remove_full_lines(starty)
+       XFillRectangle( XtDisplay(canvas), XtWindow(canvas), erasegc,
+ 		 0, y*resources.boxsize, resources.boxsize*UWIDTH, resources.boxsize );
+   }
+-  if (!foundfull) return;
++  if (!foundfull) return 0;
+   
+   /* Wait a bit for the user to see it. */
+       
+diff -up src/xtetris-2.6/Xtetris.ad.all.orig src/xtetris-2.6/Xtetris.ad.all
+--- src/xtetris-2.6/Xtetris.ad.all.orig	1995-02-10 23:38:29.000000000 -0700
++++ src/xtetris-2.6/Xtetris.ad.all	2022-02-05 18:20:34.980000000 -0700
+@@ -2,7 +2,7 @@
+ ?.baseTranslations:		#override <Unmap>:Pause()
+ *Background:			black
+ *BorderColor:			white
+-*Font:				-*-helvetica-bold-r-*-*-*-120-*-*-*-*-*-*
++*Font:				-*-*-bold-r-*-*-*-120-*-*-*-*-*-*
+ *Frame*sensitive:		true
+ *Frame.Buttons*width:		80
+ *NewGame.fromVert:		Start
+@@ -86,7 +86,7 @@
+ *Status.right:			ChainRight
+ *Status.vertDistance:		175
+ *Status.width:			100
+-*TitleBar.Font:			-*-new century schoolbook-*-i-*-*-*-120-*-*-*-*-*-*
++*TitleBar.Font:			-*-*-*-i-*-*-*-120-*-*-*-*-*-*
+ *TitleBar.Label:		XTETRIS 2.6
+ *TitleBar.foreground:		white
+ *TitleBar.height:		20

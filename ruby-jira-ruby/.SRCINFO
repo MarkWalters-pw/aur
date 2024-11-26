@@ -1,0 +1,18 @@
+pkgbase = ruby-jira-ruby
+	pkgdesc = Ruby Gem for use with the Atlassian JIRA REST API
+	pkgver = 2.3.0
+	pkgrel = 1
+	url = http://www.sumoheavy.com
+	arch = any
+	license = MIT
+	depends = ruby
+	depends = ruby-activesupport
+	depends = ruby-atlassian-jwt
+	depends = ruby-multipart-post
+	depends = ruby-oauth
+	noextract = jira-ruby-2.3.0.gem
+	options = !emptydirs
+	source = https://rubygems.org/downloads/jira-ruby-2.3.0.gem
+	sha256sums = abf26e6bff4a8ea40bae06f7df6276a5776905c63fb2070934823ca54f62eb62
+
+pkgname = ruby-jira-ruby

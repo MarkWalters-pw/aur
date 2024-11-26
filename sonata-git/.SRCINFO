@@ -1,0 +1,23 @@
+pkgbase = sonata-git
+	pkgdesc = Elegant GTK+3 music client for MPD (Git Version)
+	pkgver = 1.7.0.r11.g48f7456
+	pkgrel = 2
+	url = https://github.com/multani/sonata
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python>=3.2
+	depends = python-gobject>=3.7.4
+	depends = gtk3>=3.4
+	depends = python-mpd2>=2.0
+	optdepends = python-tagpy: metadata editing support
+	optdepends = python-dbus: multimedia keys support
+	provides = sonata
+	conflicts = sonata
+	conflicts = sonata-svn
+	source = git+https://github.com/multani/sonata.git
+	md5sums = SKIP
+
+pkgname = sonata-git

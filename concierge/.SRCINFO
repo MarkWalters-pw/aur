@@ -1,0 +1,20 @@
+pkgbase = concierge
+	pkgdesc = Maintainable SSH configs
+	pkgver = 0.2.3
+	pkgrel = 1
+	url = https://github.com/9seconds/concierge
+	arch = any
+	license = MIT
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = python-inotify-simple
+	depends = python-setuptools
+	optdepends = concierge-jinja: jinja2 support in your templates
+	optdepends = concierge-mako: mako support in your templates
+	source = concierge-0.2.3.tar.gz::https://github.com/9seconds/concierge/archive/40b0de3.tar.gz
+	source = concierge.service
+	sha256sums = 4a31e2ca421286bf56c70343caae1e248cbf2b715fbe1d1d153bcf2e2bc868e6
+	sha256sums = 272b69e8a76943c1e6014374c87f64d659916e953cf93a62427cc408a09682fa
+
+pkgname = concierge

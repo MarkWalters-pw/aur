@@ -1,0 +1,17 @@
+pkgbase = python-timelib-git
+	pkgdesc = A library for handling time data
+	pkgver = r29.0c6da92
+	pkgrel = 2
+	url = https://gitlab.com/HOMEINFO/timelib
+	arch = any
+	license = GPLv3
+	makedepends = git
+	makedepends = python
+	depends = python
+	provides = python-timelib
+	conflicts = python-timelib
+	source = timelib::git+https://gitlab.com/HOMEINFO/timelib.git
+	md5sums = SKIP
+
+pkgname = python-timelib-git
+

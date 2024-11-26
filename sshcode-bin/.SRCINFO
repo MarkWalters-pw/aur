@@ -1,0 +1,15 @@
+pkgbase = sshcode-bin
+	pkgdesc = Run VS Code on any server over SSH
+	pkgver = 0.10.0
+	pkgrel = 1
+	url = https://github.com/cdr/sshcode
+	arch = x86_64
+	license = MIT
+	depends = rsync
+	optdepends = google-chrome: suggested supported browser
+	conflicts = sshcode-bin
+	source = sshcode-0.10.0.tar.gz::https://github.com/cdr/sshcode/releases/download/v0.10.0/sshcode-linux-amd64.tar.gz
+	sha256sums = 94933565b0a82f25f477dc2180167fcc1a869e67521b456cd36ded051eb2dd25
+
+pkgname = sshcode-bin
+

@@ -1,0 +1,8 @@
+post_install() {
+   echo "Check http://docs.agendav.org/en/stable/admin/installation/ for details."
+}
+
+post_update() {
+   echo "Check http://docs.agendav.org/en/stable/admin/upgrading/ for details."
+   echo "The agendavcli script is located in /usr/share/webapps/agendav/"
+}

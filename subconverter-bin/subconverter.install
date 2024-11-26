@@ -1,0 +1,14 @@
+post_install() {
+    CACHE_DIR="/opt/subconverter/cache"
+    # Create cache directory
+    if ! [[ -d "${CACHE_DIR}" ]]
+    then
+        mkdir "${CACHE_DIR}"
+    fi
+
+    setfacl -m u:subconverter:rwx "${CACHE_DIR}"
+}
+
+post_remove() {
+    rm -rf /opt/subconverter
+}

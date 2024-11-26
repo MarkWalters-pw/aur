@@ -1,0 +1,23 @@
+pkgbase = csprite
+	pkgdesc = a tiny pixel art editor
+	pkgver = 0.1.0
+	pkgrel = 1
+	url = https://github.com/pegvin/csprite
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = make
+	makedepends = scons
+	makedepends = pkg-config
+	makedepends = python-pillow
+	makedepends = python-numpy
+	depends = glfw
+	depends = gtk3
+	provides = csprite
+	conflicts = csprite
+	conflicts = csprite-git
+	conflicts = csprite-bin
+	source = csprite-0.1.0.tar.gz::https://github.com/pegvin/csprite/archive/refs/tags/v0.1.0.tar.gz
+	sha512sums = e58752686d830429ad35024a56bb68f45e6009b6a45044bda11a0f536f193e19f9b035b3908e3dc369faf90e5cfffe3b43206b6150be067f96c21bebd057e73e
+
+pkgname = csprite

@@ -1,0 +1,21 @@
+pkgbase = voltrayke-git
+	pkgdesc = Audio volume system tray widget
+	pkgver = r32.a9e7fdd
+	pkgrel = 1
+	url = https://github.com/qtilities/voltrayke
+	arch = x86_64
+	license = GPL2
+	makedepends = cmake
+	makedepends = git
+	makedepends = qt6-tools
+	makedepends = qtilitools
+	depends = alsa-lib
+	depends = libpulse
+	depends = libstatusnotifieritem-qt6
+	depends = qt6-base
+	provides = voltrayke
+	conflicts = voltrayke
+	source = git+https://github.com/qtilities/voltrayke.git
+	sha512sums = SKIP
+
+pkgname = voltrayke-git

@@ -1,0 +1,21 @@
+pkgbase = python-copulae
+	pkgdesc = Multivariate data modelling with Copulas in Python
+	pkgver = 0.7.9
+	pkgrel = 1
+	url = https://copulae.readthedocs.io
+	arch = x86_64
+	arch = aarch64
+	license = MIT
+	checkdepends = python-pytest
+	makedepends = python-setuptools
+	makedepends = cython
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = python-statsmodels
+	depends = python-scikit-learn
+	depends = python-wrapt
+	source = python-copulae-0.7.9.tar.gz::https://github.com/DanielBok/copulae/archive/refs/tags/0.7.9.tar.gz
+	sha256sums = 369ed506bfc2aa29b36a1db3c8d6b4f3d1f217be002977ef83148ea0998c44d9
+
+pkgname = python-copulae

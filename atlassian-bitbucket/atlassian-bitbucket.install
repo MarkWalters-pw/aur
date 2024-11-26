@@ -1,0 +1,21 @@
+post_install() {
+  #systemd-sysusers bitbucket.conf
+  #systemd-tmpfiles --create bitbucket.conf
+  chown -R bitbucket:bitbucket /opt/atlassian-bitbucket /etc/bitbucket /var/lib/bitbucket
+  chmod -R 750 /etc/bitbucket
+  echo "If you are running bitbucket in a VM and/or are experiencing trouble with the ssh-plugin, it might be necessary to enable haveged."
+}
+
+pre_upgrade() {
+    echo "Before upgrading bitbucket, you might want to take a look at https://confluence.atlassian.com/bitbucketserver/bitbucket-server-upgrade-guide-776640551.html"
+}
+
+post_upgrade() {
+  post_install
+  echo "Restart Bitbucket to complete upgrade."
+}
+
+pre_remove() {
+  getent passwd bitbucket &>/dev/null && userdel bitbucket &> /dev/null
+  getent group bitbucket &>/dev/null && groupdel bitbucket &> /dev/null
+}

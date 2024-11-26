@@ -1,0 +1,14 @@
+[Trigger]
+Operation = Upgrade
+Operation = Install
+Operation = Remove
+Type = Package
+Target = vmware
+Target = vmware*
+
+[Action]
+Description = Unpatching VMware...
+When = PreTransaction
+Depends = vmware-unlocker
+Depends = bash
+Exec = /usr/bin/bash -c 'env UNLOCK_QUIET=1 relock'

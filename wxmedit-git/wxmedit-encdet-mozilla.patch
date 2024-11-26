@@ -1,0 +1,12 @@
+diff -uprN wxmedit-git.git/src/wxmedit/src/xm/encoding/multibyte.cpp wxmedit-git/src/wxmedit/src/xm/encoding/multibyte.cpp
+--- a/src/xm/encoding/multibyte.cpp	2022-05-15 23:58:39.274350279 +0800
++++ b/src/xm/encoding/multibyte.cpp	2022-05-15 22:48:47.800707488 +0800
+@@ -33,7 +33,7 @@ ICUConverter::ICUConverter(const std::st
+ 
+ 	m_ucnv = ucnv_open(encname.c_str(), &err);
+ 
+-	ucnv_setFallback(m_ucnv, FALSE);
++	ucnv_setFallback(m_ucnv, false);
+ 	ucnv_setFromUCallBack(m_ucnv, error_callback, nullptr, nullptr, nullptr, &err);
+ }
+ 

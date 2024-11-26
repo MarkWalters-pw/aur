@@ -1,0 +1,18 @@
+pkgbase = httplab
+	pkgdesc = The interactive web server
+	pkgver = 0.4.0
+	pkgrel = 1
+	url = http://github.com/gchaincl/httplab
+	arch = x86_64
+	license = MIT
+	makedepends = wget
+	makedepends = tar
+	makedepends = gzip
+	provides = httplab
+	conflicts = httplab
+	replaces = httplab
+	source = httplab::https://github.com/gchaincl/httplab/releases/download/v0.4.0/httplab_0.4.0_linux_amd64.tar.gz
+	md5sums = 0b00487b6d52c67713170dc3fa868a08
+
+pkgname = httplab
+

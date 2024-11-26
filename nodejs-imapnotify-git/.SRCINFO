@@ -1,0 +1,17 @@
+pkgbase = nodejs-imapnotify-git
+	pkgdesc = Execute scripts on new messages using IDLE imap command
+	pkgver = r39.f886715
+	pkgrel = 1
+	url = https://github.com/titibandit/node-imapnotify
+	install = nodejs-imapnotify-git.install
+	arch = any
+	license = MIT
+	makedepends = npm
+	depends = nodejs
+	conflicts = nodejs-imapnotify
+	source = nodejs-imapnotify-git::git+https://github.com/titibandit/node-imapnotify
+	source = imapnotify@.service
+	sha256sums = SKIP
+	sha256sums = e101ef974e5c342f7a69177fb5ae1c341b4c39c911993eaa97a0917bddc5cc11
+
+pkgname = nodejs-imapnotify-git

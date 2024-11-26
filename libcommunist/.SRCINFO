@@ -1,0 +1,23 @@
+pkgbase = libcommunist
+	pkgdesc = Library for P2P communications
+	pkgver = 1.0.3
+	pkgrel = 1
+	url = https://github.com/ProfessorNavigator/libcommunist
+	arch = x86_64
+	license = GPL3
+	makedepends = meson
+	makedepends = ninja
+	makedepends = pkgconf
+	makedepends = libtorrent-rasterbar
+	makedepends = libgcrypt
+	makedepends = libzip
+	makedepends = boost
+	depends = libtorrent-rasterbar
+	depends = libgcrypt
+	depends = libzip
+	provides = libcommunist
+	options = strip
+	source = https://github.com/ProfessorNavigator/libcommunist/archive/refs/tags/v1.0.3.tar.gz
+	sha256sums = 5949dd37069a7f910a06eb11ed22bd3813d984564d71df444fe0b439e15a242f
+
+pkgname = libcommunist

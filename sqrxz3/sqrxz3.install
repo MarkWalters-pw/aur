@@ -1,0 +1,10 @@
+
+post_remove() {
+  echo "You may safely delete the '~/.sqrxz3' directory containing the config/highscore"
+  echo "files, if you do not want to preserve them."
+
+  # leftover files from old behaviour
+  if [ -d opt/sqrxz3 ]; then
+    echo "You may also safely delete /opt/sqrxz3 and it's contents."
+  fi
+}

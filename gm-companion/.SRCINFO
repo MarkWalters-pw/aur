@@ -1,0 +1,25 @@
+pkgbase = gm-companion
+	pkgdesc = A tool for rpg gamemasters.
+	pkgver = 1.2.1
+	pkgrel = 1
+	url = https://gm-companion.github.io/
+	arch = x86_64
+	arch = i686
+	license = GPL3
+	makedepends = cmake
+	depends = qt6-base>=6.5.0
+	depends = qt6-5compat>=6.5.0
+	depends = qt6-declarative>=6.5.0
+	depends = qt6-multimedia>=6.5.0
+	depends = qt6-tools>=6.5.0
+	depends = poppler-qt6
+	depends = qtkeychain-qt6
+	depends = quazip-qt6
+	depends = discount
+	depends = taglib
+	optdepends = librespot: Spotify support
+	conflicts = gm-companion-git
+	source = https://github.com/PhilInTheGaps/GM-Companion/releases/download/1.2.1/gm-companion_1.2.1.tar.gz
+	sha512sums = 65cd814b3b5dcaa77e2c09e84dab2397be50264f4580b42cded33b69c59138c5cd0a692f312f15af8d201074e5c487133746643b1d13cb725f04dc61754b9a29
+
+pkgname = gm-companion

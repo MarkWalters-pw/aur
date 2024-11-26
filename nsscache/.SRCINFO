@@ -1,0 +1,16 @@
+pkgbase = nsscache
+	pkgdesc = Asynchronously synchronise local NSS databases with remote directory services
+	pkgver = 0.43
+	pkgrel = 1
+	url = https://github.com/google/nsscache
+	arch = x86_64
+	license = GPL
+	depends = python
+	depends = python-bsddb
+	depends = python-pycurl
+	depends = python-ldap
+	optdepends = python-boto3: Fetch source data from S3
+	source = https://github.com/google/nsscache/archive/version/0.43.tar.gz
+	sha256sums = 89568f8fe29972ad3d8ffec06b2e5889e5e60ce2f9663002b961613195a22184
+
+pkgname = nsscache

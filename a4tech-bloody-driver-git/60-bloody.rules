@@ -1,0 +1,2 @@
+# Bloody mice get random PID assigned upon first connect to the proprietary software, so we cover the entire vendor range
+SUBSYSTEM=="usb", ATTRS{idVendor}=="09da", MODE="0666"

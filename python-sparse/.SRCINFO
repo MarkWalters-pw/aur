@@ -1,0 +1,22 @@
+pkgbase = python-sparse
+	pkgdesc = Sparse n-dimensional arrays for the PyData ecosystem
+	pkgver = 0.15.4
+	pkgrel = 1
+	url = https://sparse.pydata.org
+	arch = any
+	license = BSD-3-clause
+	checkdepends = python-dask
+	checkdepends = python-pytest
+	checkdepends = python-pytest-black
+	checkdepends = python-pytest-cov
+	checkdepends = python-pytest-flake8
+	checkdepends = python-toolz
+	makedepends = python-setuptools
+	depends = python>=3.8
+	depends = python-numpy>=1.17
+	depends = python-scipy>=0.19
+	depends = python-numba>=0.49
+	source = python-sparse-0.15.4.tar.gz::https://files.pythonhosted.org/packages/source/s/sparse/sparse-0.15.4.tar.gz
+	sha256sums = d4b1c57d24ff0f64f2fd5b5a95b49b7fb84ed207a26d7d58ce2764dcc5c72b84
+
+pkgname = python-sparse

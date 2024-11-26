@@ -1,0 +1,19 @@
+pkgbase = gogios
+	pkgdesc = Checks to see if required services are still running on important machines.
+	pkgver = 3.0.0.r0.g041f5a1
+	pkgrel = 2
+	url = https://github.com/bkasin/gogios
+	install = gogios.install
+	arch = x86_64
+	license = MIT
+	optdepends = nmap
+	optdepends = nginx
+	optdepends = sqlite
+	optdepends = gogios-plugins
+	provides = gogios
+	conflicts = gogios-bin
+	source = gogios::git+https://github.com/bkasin/gogios.git#branch=master
+	sha256sums = SKIP
+
+pkgname = gogios
+

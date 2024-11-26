@@ -1,0 +1,16 @@
+pkgbase = prime_server
+	pkgdesc = Non-blocking server API for distributed computing and SOA based on zeromq.
+	pkgver = 0.7.0
+	pkgrel = 2
+	url = https://github.com/kevinkreiser/prime_server
+	arch = x86_64
+	license = custom
+	makedepends = cmake
+	depends = curl
+	depends = zeromq
+	depends = czmq
+	source = https://github.com/kevinkreiser/prime_server/archive/0.7.0.tar.gz
+	sha256sums = 4c540c351cec29c19229b26fb0db1ba5dfba719dd0b4e029198da6a936950107
+
+pkgname = prime_server
+

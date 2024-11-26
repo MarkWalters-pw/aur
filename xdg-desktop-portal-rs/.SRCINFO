@@ -1,0 +1,15 @@
+pkgbase = xdg-desktop-portal-rs
+	pkgdesc = A rust backend for xdg-desktop-portal
+	pkgver = 0.2.2
+	pkgrel = 1
+	url = https://github.com/leakybits/xdg-desktop-portal-rs
+	arch = x86_64
+	license = MIT
+	makedepends = cargo
+	depends = xdg-desktop-portal
+	depends = gtk3
+	provides = xdg-desktop-portal-impl
+	source = xdg-desktop-portal-rs-0.2.2.tar.gz::https://github.com/leakybits/xdg-desktop-portal-rs/archive/0.2.2.tar.gz
+	sha512sums = 8229a626903db6424de37acb39a5fcb84e1ed144bad51c5ae2b8c2a08578957333fd53cce842f6bf0f5e88e33d78d0049a69c644e7333bf8e86afd87877c941d
+
+pkgname = xdg-desktop-portal-rs

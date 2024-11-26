@@ -1,0 +1,23 @@
+pkgbase = clash-tun
+	pkgdesc = Clash Tun Scripts for Linux
+	pkgver = 20210920.r717.48a4641
+	pkgrel = 1
+	url = https://github.com/h0cheung/kr328-clash-setup-scripts
+	arch = any
+	license = custom
+	makedepends = go
+	makedepends = git
+	depends = glibc
+	provides = clash
+	conflicts = clash-bin
+	conflicts = clash
+	conflicts = clash-dev-git
+	backup = etc/clash-tun/env
+	source = git+https://github.com/comzyh/clash#branch=add-water
+	source = git+https://github.com/h0cheung/clash-tun-scripts
+	source = https://raw.githubusercontent.com/comzyh/clash/master/LICENSE
+	md5sums = SKIP
+	md5sums = SKIP
+	md5sums = 7462fda797df0a48961ab34179d8793e
+
+pkgname = clash-tun

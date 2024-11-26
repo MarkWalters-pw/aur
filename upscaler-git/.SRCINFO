@@ -1,0 +1,22 @@
+pkgbase = upscaler-git
+	pkgdesc = Upscale and enhance images (latest commit)
+	pkgver = 1.2.2.r38.g8cba706
+	pkgrel = 1
+	url = https://gitlab.gnome.org/World/Upscaler
+	arch = x86_64
+	license = GPL3
+	checkdepends = appstream-glib
+	makedepends = blueprint-compiler
+	makedepends = git
+	makedepends = meson
+	depends = libadwaita
+	depends = python-cffi
+	depends = python-gobject
+	depends = python-vulkan
+	depends = realesrgan-ncnn-vulkan
+	provides = upscaler
+	conflicts = upscaler
+	source = git+https://gitlab.gnome.org/World/Upscaler.git
+	sha256sums = SKIP
+
+pkgname = upscaler-git

@@ -1,0 +1,30 @@
+pkgbase = edgegpt-git
+	pkgdesc = The reverse engineering the chat feature of the new version of Bing.
+	pkgver = 0.3.8+1.r325.20230512.f464c62
+	pkgrel = 1
+	url = https://github.com/acheong08/EdgeGPT
+	arch = any
+	license = custom: public domain
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = python>=3
+	depends = python-httpx
+	depends = python-prompt_toolkit
+	depends = python-regex
+	depends = python-requests
+	depends = python-rich
+	depends = python-tls-client
+	depends = python-websockets
+	provides = edgegpt=0.3.8+1.r325.20230512.f464c62
+	provides = python-edgegpt=0.3.8+1.r325.20230512.f464c62
+	provides = python-edgegpt-git=0.3.8+1.r325.20230512.f464c62
+	conflicts = edgegpt
+	conflicts = python-edgegpt
+	source = edgegpt::git+https://github.com/acheong08/EdgeGPT.git
+	source = edgegpt.sh
+	sha256sums = SKIP
+	sha256sums = ede2493e322666e51e97462c9ad5542f9f618fadb371672e4c2526f400e984b7
+
+pkgname = edgegpt-git

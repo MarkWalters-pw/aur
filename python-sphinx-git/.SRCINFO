@@ -1,0 +1,36 @@
+pkgbase = python-sphinx-git
+	pkgver = r14026.f6e7878ec
+	pkgrel = 1
+	url = http://sphinx.pocoo.org/
+	arch = any
+	license = BSD
+	checkdepends = python-pytest
+	checkdepends = imagemagick
+	checkdepends = texlive-latexextra
+	checkdepends = python-snowballstemmer
+	checkdepends = python-babel
+	checkdepends = python-sphinx-alabaster-theme
+	checkdepends = python-sphinx_rtd_theme
+	makedepends = git
+	makedepends = python-setuptools
+	makedepends = python-docutils
+	makedepends = python-jinja
+	makedepends = python-pygments
+	makedepends = python-six
+	source = git+https://github.com/sphinx-doc/sphinx.git
+	md5sums = SKIP
+
+pkgname = python-sphinx-git
+	pkgdesc = Python3 documentation generator
+	depends = python-jinja
+	depends = python-pygments
+	depends = python-docutils
+	depends = python-sphinx_rtd_theme
+	depends = python-sphinx-alabaster-theme
+	depends = python-babel
+	depends = python-snowballstemmer
+	depends = python-six
+	optdepends = texlive-latexextra: for generation of PDF documentation
+	provides = python-sphinx
+	conflicts = python-sphinx
+

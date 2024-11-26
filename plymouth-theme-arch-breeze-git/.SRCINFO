@@ -1,0 +1,19 @@
+pkgbase = plymouth-theme-arch-breeze-git
+	pkgdesc = Plymouth theme for Arch Linux inspired by KDE Breeze.
+	pkgver = r4.f7789af
+	pkgrel = 1
+	url = https://github.com/jtyr/plymouth-theme-arch-breeze/
+	install = plymouth-theme-arch-breeze-git.install
+	arch = x86_64
+	arch = i686
+	arch = arm
+	arch = armv6h
+	arch = armv7h
+	license = MIT
+	makedepends = git
+	depends = plymouth
+	source = git+https://github.com/jtyr/plymouth-theme-arch-breeze.git
+	sha256sums = SKIP
+
+pkgname = plymouth-theme-arch-breeze-git
+

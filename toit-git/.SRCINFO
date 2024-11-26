@@ -1,0 +1,20 @@
+pkgbase = toit-git
+	pkgdesc = Toit programming language SDK
+	pkgver = VERSION
+	pkgrel = 10
+	url = https://toitlang.org
+	arch = x86_64
+	license = LGPL
+	makedepends = git
+	makedepends = cmake
+	makedepends = ninja
+	makedepends = go
+	makedepends = vim
+	depends = gcc-libs
+	depends = esptool
+	provides = toit
+	conflicts = toit
+	source = git+https://github.com/toitlang/toit
+	md5sums = SKIP
+
+pkgname = toit-git

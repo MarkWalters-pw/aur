@@ -1,0 +1,21 @@
+pkgbase = zap-soundboard
+	pkgdesc = Play sounds from a soundboard
+	pkgver = 1.2.3
+	pkgrel = 1
+	url = https://gitlab.com/rmnvgr/zap
+	arch = x86_64
+	arch = aarch64
+	license = GPL3
+	checkdepends = appstream-glib
+	makedepends = meson
+	depends = libadwaita
+	depends = gjs
+	depends = gstreamer
+	depends = gst-plugins-base
+	depends = gst-plugins-bad
+	depends = gst-plugins-good
+	depends = tracker3
+	source = https://gitlab.com/rmnvgr/zap/-/archive/1.2.3/zap-1.2.3.tar.gz
+	b2sums = 88eead4454a5ce035b382b0e9958baf12fb71d9821b5bf463a0f627d6057f1d14d0b4433c0ace9e1c854570e3c795920714e88fead2ea6a5f2f26ed95eae189c
+
+pkgname = zap-soundboard

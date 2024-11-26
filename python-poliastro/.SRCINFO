@@ -1,0 +1,32 @@
+pkgbase = python-poliastro
+	pkgdesc = Astrodynamics and Orbital Mechanics computations
+	pkgver = 0.17.0
+	pkgrel = 1
+	url = http://docs.poliastro.space
+	arch = any
+	license = MIT
+	checkdepends = python-pytest-doctestplus
+	checkdepends = python-astroquery
+	checkdepends = python-scipy
+	checkdepends = python-plotly
+	checkdepends = python-czml3
+	checkdepends = python-numba>0.55.2
+	checkdepends = python-llvmlite>=0.39.0
+	makedepends = python-flit-core
+	makedepends = python-wheel
+	makedepends = python-build
+	makedepends = python-installer
+	source = https://files.pythonhosted.org/packages/source/p/poliastro/poliastro-0.17.0.tar.gz
+	md5sums = 2b65a26daf429e50ba9613999b592644
+
+pkgname = python-poliastro
+	depends = python-scipy>=1.4.0
+	depends = python-astroquery>=0.3.9"
+	depends = python-jplephem
+	depends = python-matplotlib>3.0.1
+	depends = python-plotly<6
+	depends = python-numba>0.55.1
+	depends = python-pyerfa
+	depends = python-pandas
+	optdepends = python-poliastro-doc: Documentation for poliastro
+	optdepends = python-pytest: For running the tests from the package

@@ -1,0 +1,37 @@
+pkgbase = vcvrack-git
+	pkgdesc = Open-source virtual Eurorack DAW
+	pkgver = 1.1.6.r18.ga5fc5891
+	pkgrel = 9
+	url = https://github.com/VCVRack/Rack
+	arch = i686
+	arch = x86_64
+	arch = armv7h
+	arch = armv8
+	arch = riscv32
+	arch = riscv64
+	license = BSD
+	makedepends = git
+	makedepends = unzip
+	makedepends = wget
+	makedepends = cmake
+	depends = glew
+	depends = glfw-x11
+	depends = jansson
+	depends = libsamplerate
+	depends = curl
+	depends = libzip
+	depends = rtmidi
+	depends = rtaudio
+	depends = gtk2
+	depends = gtk3
+	depends = jq
+	provides = vcvrack
+	conflicts = vcvrack
+	source = vcvrack::git+https://github.com/VCVRack/Rack.git#branch=v1
+	source = vcvrack.desktop
+	source = vcvrack.sh
+	sha256sums = SKIP
+	sha256sums = 6da49236dff903c6d84f74c4fe753125c5884b6119cadbc735b2bd652df39f07
+	sha256sums = 6299d2de5b6c71db5c9e736095bbf141e4f0bc6eb90b4791aa384b3accd59bbd
+
+pkgname = vcvrack-git

@@ -1,0 +1,24 @@
+pkgbase = aksusbd-bin
+	pkgdesc = Sentinel AKSUSB daemon supporting Sentinel HASP, HASP HL, HASP4 and Hardlock keys.
+	pkgver = 9.13
+	pkgrel = 1
+	url = https://supportportal.thalesgroup.com
+	install = package.install
+	arch = x86_64
+	license = custom
+	makedepends = libarchive
+	makedepends = python
+	makedepends = python-pip
+	makedepends = firefox
+	makedepends = geckodriver
+	makedepends = tar
+	makedepends = patch
+	conflicts = ehaspd
+	conflicts = aksusbd
+	options = !strip
+	source = 0001-patch.patch
+	source = download.py
+	sha256sums = 6fcb6c4fcba1d01c1b3e68258e95297c323b2cbe8ee75c0a14ac0e9006926312
+	sha256sums = b3984568b7b9a30601882cc8994c978fa408f380d29f00b802e6344610b4ea4e
+
+pkgname = aksusbd-bin

@@ -1,0 +1,16 @@
+pkgbase = z-git
+	pkgdesc = z keeps track of where you've been and provides a convenient way to jump to directory that you actually use (git version)
+	pkgver = 1.11.23.gb82ac78
+	pkgrel = 1
+	url = https://github.com/rupa/z
+	install = z-git.install
+	arch = any
+	license = WTFPL
+	makedepends = git
+	depends = sh
+	provides = z
+	conflicts = z
+	source = git+https://github.com/rupa/z
+	md5sums = SKIP
+
+pkgname = z-git

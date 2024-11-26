@@ -1,0 +1,24 @@
+pkgbase = asciiworld-git
+	pkgdesc = ASCII world map and tools
+	pkgver = 23.12.1.g8d021b1
+	pkgrel = 1
+	url = https://uninformativ.de/git/asciiworld
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	depends = gd
+	depends = shapelib
+	optdepends = curl: Retrieving various data
+	optdepends = python: Additional tools, e.g. satellite tracking
+	optdepends = python-geographiclib: Geographic calculations, used by tools
+	optdepends = python-pyephem: Calculating satellite positions
+	optdepends = python-maxminddb: Reading GeoIP databases
+	optdepends = geoip-database-extra: An actual GeoIP database
+	optdepends = ncurses: For tput
+	provides = asciiworld
+	conflicts = asciiworld
+	source = git+https://uninformativ.de/git/asciiworld.git
+	md5sums = SKIP
+
+pkgname = asciiworld-git

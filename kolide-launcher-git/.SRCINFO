@@ -1,0 +1,19 @@
+pkgbase = kolide-launcher-git
+	pkgdesc = osquery command and control
+	pkgver = v0.13.5.r38.g854c6846
+	pkgrel = 1
+	url = https://www.kolide.co/
+	arch = x86_64
+	arch = i686
+	license = MIT
+	makedepends = go
+	depends = osquery
+	backup = etc/kolide/launcher.conf
+	source = kolide-launcher-git::git+https://github.com/kolide/launcher.git
+	source = launcher.conf
+	source = kolide-launcher.service
+	sha256sums = SKIP
+	sha256sums = 424544443f3165e37622b8e1f3ca4280c39d85bf46c061477891ec75a38bc5e1
+	sha256sums = f8f6e60c417aff696c531ef000035feb982f76a5a0767aed5501819aa44255fb
+
+pkgname = kolide-launcher-git

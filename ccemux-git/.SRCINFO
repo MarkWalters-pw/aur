@@ -1,0 +1,23 @@
+pkgbase = ccemux-git
+	pkgdesc = Graphical ComputerCraft emulator
+	pkgver = 532a5f0
+	pkgrel = 1
+	url = https://emux.cc
+	arch = any
+	license = MIT
+	makedepends = java-environment>=8
+	makedepends = java-openjfx>=8
+	makedepends = bash
+	depends = java-runtime>=8
+	optdepends = java-openjfx>=8: javafx renderer support
+	source = git+https://github.com/CCEmuX/CCEmuX.git#branch=revival
+	source = ccemux.desktop
+	source = ccemux
+	source = icon.png
+	md5sums = SKIP
+	md5sums = 3f3b4e6c756b4161e7618eb0be7ce031
+	md5sums = 297fbda2e09c98bd37326a0ad59c612c
+	md5sums = 15875de144d2375766e3cfb2c769c66e
+
+pkgname = ccemux-git
+

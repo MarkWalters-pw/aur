@@ -1,0 +1,17 @@
+pkgbase = uniprint-git
+	pkgdesc = A shell script to print on the printers on IRB printers of the TU Dortmund
+	pkgver = a0a8eb9
+	pkgrel = 1
+	url = https://github.com/mrdrogdrog/uniprint
+	arch = any
+	license = MIT
+	makedepends = git
+	depends = bash
+	depends = openssh
+	provides = uniprint
+	conflicts = uniprint
+	source = uniprint-git::git+https://github.com/mrdrogdrog/uniprint.git
+	sha512sums = SKIP
+
+pkgname = uniprint-git
+

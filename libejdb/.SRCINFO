@@ -1,0 +1,18 @@
+pkgbase = libejdb
+	pkgdesc = Embedded JSON Database engine
+	pkgver = 2.73
+	pkgrel = 1
+	url = http://ejdb.org
+	arch = i686
+	arch = x86_64
+	license = LGPL
+	makedepends = cmake
+	depends = zlib
+	depends = bzip2
+	depends = xz
+	depends = lzo
+	provides = libtcejdb
+	source = libejdb-2.73.tar.gz::https://github.com/Softmotions/ejdb/archive/v2.73.tar.gz
+	sha256sums = 1381af7790ce67f8005c380de2c90a1811619250d9d62e7cdb64547f27878484
+
+pkgname = libejdb

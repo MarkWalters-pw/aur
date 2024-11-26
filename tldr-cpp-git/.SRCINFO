@@ -1,0 +1,18 @@
+pkgbase = tldr-cpp-git
+	pkgdesc = The all-in-one tldr client for users and contributors
+	pkgver = 1.7.2
+	pkgrel = 1
+	url = https://github.com/marchersimon/tldr-cpp.git
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = make
+	makedepends = gcc
+	makedepends = curl
+	makedepends = libzip
+	provides = tldr
+	conflicts = tldr
+	source = git+https://github.com/marchersimon/tldr-cpp.git
+	md5sums = SKIP
+
+pkgname = tldr-cpp-git

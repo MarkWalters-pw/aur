@@ -1,0 +1,10 @@
+post_install() {
+    groupadd upgraders
+    useradd -mG upgraders upgrade
+    systemctl enable --now upgrade.timer
+}
+
+post_remove() {
+    userdel upgrade
+    groupdel upgraders
+}

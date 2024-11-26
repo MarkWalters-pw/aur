@@ -1,0 +1,19 @@
+pkgbase = krita-plugin-pythonplugindevelopertools-git
+	pkgdesc = Python plugin for Krita that assists with making python plugins for Krita
+	pkgver = r61.aa16638
+	pkgrel = 1
+	url = https://github.com/KnowZero/Krita-PythonPluginDeveloperTools
+	install = .install
+	arch = any
+	license = unknow
+	makedepends = git
+	depends = krita
+	depends = python-pyqt5
+	provides = krita-plugin-pythonplugindevelopertools
+	provides = krita-plugin-pythonplugindevelopertools-bin
+	conflicts = krita-plugin-pythonplugindevelopertools
+	conflicts = krita-plugin-pythonplugindevelopertools-bin
+	source = git+https://github.com/KnowZero/Krita-PythonPluginDeveloperTools
+	md5sums = SKIP
+
+pkgname = krita-plugin-pythonplugindevelopertools-git

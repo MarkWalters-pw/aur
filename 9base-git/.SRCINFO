@@ -1,0 +1,24 @@
+pkgbase = 9base-git
+	pkgdesc = Port of various original Plan9 tools to unix
+	pkgver = 20190913.117
+	pkgrel = 1
+	url = https://tools.suckless.org/9base
+	arch = i686
+	arch = x86_64
+	license = custom
+	makedepends = git
+	depends = sh
+	provides = 9base
+	provides = plan9
+	conflicts = 9base
+	source = 9base-git::git+http://git.suckless.org/9base
+	source = 9
+	source = plan9.sh
+	md5sums = SKIP
+	md5sums = ae7108b9f26bed388e9055f35eef2986
+	md5sums = 0fa02cbcca0bc4584d7378f13ec1a1de
+	sha256sums = SKIP
+	sha256sums = 1da13555dc798787a73bfdfe44ded76bc007b8a0ab5fd5f8fea88cd4ae870b1e
+	sha256sums = e81ac6d0ebe2dd0237d570145a6f5a43d409b92a6b334107a4b97a68e00258df
+
+pkgname = 9base-git

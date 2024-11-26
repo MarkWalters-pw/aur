@@ -1,0 +1,14 @@
+pkgbase = lib32-sdl2_net
+	pkgdesc = A small sample cross-platform networking library (Version 2, 32 bit)
+	pkgver = 2.2.0
+	pkgrel = 1
+	url = http://www.libsdl.org/projects/SDL_net
+	arch = x86_64
+	license = MIT
+	makedepends = gcc-multilib
+	depends = sdl2_net>=2.2.0
+	depends = lib32-sdl2
+	source = http://www.libsdl.org/projects/SDL_net/release/SDL2_net-2.2.0.tar.gz
+	sha256sums = 4e4a891988316271974ff4e9585ed1ef729a123d22c08bd473129179dc857feb
+
+pkgname = lib32-sdl2_net

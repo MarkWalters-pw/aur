@@ -1,0 +1,29 @@
+pkgbase = python-gilt
+	pkgdesc = A GIT layering tool
+	pkgver = 1.2.2
+	pkgrel = 2
+	url = https://github.com/retr0h/gilt
+	arch = any
+	license = MIT
+	checkdepends = git
+	checkdepends = python-pytest
+	checkdepends = python-pytest-cov
+	checkdepends = python-pytest-helpers-namespace
+	checkdepends = python-pytest-mock
+	checkdepends = python-requests
+	checkdepends = yapf
+	makedepends = python-setuptools
+	depends = python-click
+	depends = python-colorama
+	depends = python-fasteners
+	depends = python-git-url-parse
+	depends = python-pbr
+	depends = python-yaml
+	depends = python-sh
+	source = https://files.pythonhosted.org/packages/source/p/python-gilt/python-gilt-1.2.2.tar.gz
+	source = python-gilt-1.2.1-ls_path.patch
+	sha512sums = 34ac5d5ef5a8bc052fa41ac464b7dd4efa15f323ea5c95a6c280ab39a99ac0335707ef98449436122715cc2b44682100989dd31253e96395a087d5d1db3a7c7b
+	sha512sums = 8b0090f7374499b603bf383ea48f313f5baa7a8215f504c87350432873da557af07204c7f948aab4c05033c11ce10f2137f1912be6db5d6887b3d8a7c3f0dcbb
+
+pkgname = python-gilt
+

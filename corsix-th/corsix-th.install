@@ -1,0 +1,12 @@
+
+post_install() {
+  echo "=> If you do not have a copy of Theme Hospital,"
+  echo "=> you can download the data files of the demo:"
+  echo "=> http://th.corsix.org/Demo.zip"
+}
+
+post_upgrade() {
+  if [[ $(vercmp "$2" "0.62") -ne 1 && $(vercmp "0.63" "$1") -ne 1 ]]; then
+    echo "Note: The executable name has been changed from 'CorsixTH' to 'corsix-th'."
+  fi
+}

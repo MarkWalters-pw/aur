@@ -1,0 +1,17 @@
+pkgbase = mpdmenu-git
+	pkgdesc = Simple dmenu frontend for MPD
+	pkgver = r18.c52189a
+	pkgrel = 3
+	url = https://github.com/arikai/mpdmenu
+	arch = any
+	license = MIT
+	makedepends = git
+	depends = dmenu
+	depends = python-mpd2
+	optdepends = mpd
+	provides = mpdmenu
+	conflicts = mpdmenu
+	source = git+https://github.com/arikai/mpdmenu.git
+	md5sums = SKIP
+
+pkgname = mpdmenu-git

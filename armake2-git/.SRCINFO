@@ -1,0 +1,17 @@
+pkgbase = armake2-git
+	pkgdesc = Rust implementation of Arma modding tools (PAA conversion, binarization/rapification, PBO packing)
+	pkgver = 87.2e66c92
+	pkgrel = 1
+	url = https://github.com/KoffeinFlummi/armake2
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = rust
+	makedepends = git
+	depends = openssl
+	provides = armake2
+	conflicts = armake2
+	source = armake2-git::git+https://github.com/KoffeinFlummi/armake2.git
+	md5sums = SKIP
+
+pkgname = armake2-git

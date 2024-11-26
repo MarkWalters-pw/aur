@@ -1,0 +1,16 @@
+pkgbase = bash-utils-git
+	pkgdesc = Miscellaneous small utils, mainly for the Bash shell.
+	pkgver = 0.1.r43.g75d877b
+	pkgrel = 1
+	url = https://github.com/jabbalaci/Bash-Utils
+	arch = any
+	license = unknown
+	makedepends = git
+	depends = python
+	optdepends = markdown: for markdown.py
+	optdepends = python-beautifulsoup4: for get_images.py, get_links.py, and prettify.py
+	source = bash-utils::git+https://github.com/jabbalaci/bash-utils.git
+	md5sums = SKIP
+
+pkgname = bash-utils-git
+

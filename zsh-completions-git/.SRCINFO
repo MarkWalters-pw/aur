@@ -1,0 +1,15 @@
+pkgbase = zsh-completions-git
+	pkgdesc = Additional completion definitions for Zsh
+	pkgver = 0.34.0.r110.g6a5b724
+	pkgrel = 1
+	url = https://github.com/zsh-users/zsh-completions
+	arch = any
+	license = GPL
+	makedepends = git
+	depends = zsh
+	provides = zsh-completions
+	conflicts = zsh-completions
+	source = git+https://github.com/zsh-users/zsh-completions.git
+	md5sums = SKIP
+
+pkgname = zsh-completions-git

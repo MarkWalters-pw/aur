@@ -1,0 +1,19 @@
+pkgbase = ds4drv
+	pkgdesc = Sony DualShock 4 Userspace Driver
+	pkgver = 0.5.1
+	pkgrel = 5
+	url = https://github.com/chrippa/ds4drv
+	install = ds4drv.install
+	arch = any
+	license = MIT
+	makedepends = git
+	depends = python-setuptools
+	depends = bluez-utils
+	depends = bluez-deprecated-tools
+	depends = python-evdev
+	depends = python-pyudev
+	conflicts = ds4drv-git
+	source = https://github.com/chrippa/ds4drv/archive/v0.5.1.tar.gz
+	sha256sums = da6841c17af0fc019abfe9e65d3f2a6fab3ced40294dc7391dc3e954e04479f8
+
+pkgname = ds4drv

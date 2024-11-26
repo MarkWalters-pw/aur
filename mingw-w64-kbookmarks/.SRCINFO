@@ -1,0 +1,22 @@
+pkgbase = mingw-w64-kbookmarks
+	pkgdesc = Support for bookmarks and the XBEL format (mingw-w64)
+	pkgver = 5.76.0
+	pkgrel = 1
+	url = https://community.kde.org/Frameworks
+	arch = any
+	groups = mingw-w64-kf5
+	license = LGPL
+	makedepends = mingw-w64-extra-cmake-modules
+	makedepends = mingw-w64-qt5-tools
+	depends = mingw-w64-kxmlgui
+	options = staticlibs
+	options = !strip
+	options = !buildflags
+	source = http://download.kde.org/stable/frameworks/5.76/kbookmarks-5.76.0.tar.xz
+	source = http://download.kde.org/stable/frameworks/5.76/kbookmarks-5.76.0.tar.xz.sig
+	validpgpkeys = 53E6B47B45CEA3E0D5B7457758D0EE648A48B3BB
+	sha256sums = ac5416f1ac21cb9e9fdf72a95de855a9891cea0ed7e1436a93c019b6c45af2af
+	sha256sums = SKIP
+
+pkgname = mingw-w64-kbookmarks
+

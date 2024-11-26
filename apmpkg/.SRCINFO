@@ -1,0 +1,23 @@
+pkgbase = apmpkg
+	pkgdesc = Un administrador de paquetes universal para linux como modelo: PKGBUILD
+	pkgver = 1.5.1
+	pkgrel = 2
+	url = https://github.com/Kedap/apmpkg
+	arch = any
+	license = Apache
+	makedepends = cargo
+	depends = git
+	depends = python-pip
+	depends = wget
+	depends = fakeroot
+	depends = ruby-bundler
+	depends = npm
+	optdepends = flatpak: for install dependencies
+	optdepends = snapd: for install dependencies
+	optdepends = yarn: alternative for npm
+	conflicts = apmpkg-git-dev
+	conflicts = apmpkg-dev
+	source = https://github.com/Kedap/apmpkg/archive/refs/tags/1.5.1.tar.gz
+	sha256sums = 60d9462105fe3ee382c9bbd3ce9055eed7b2958c7337ed1584d07fb9a439e2f7
+
+pkgname = apmpkg

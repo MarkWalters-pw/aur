@@ -1,0 +1,18 @@
+pkgbase = chowbyod-bin
+	pkgdesc = Build-your-own guitar distortion!
+	pkgver = 1.3.0
+	pkgrel = 1
+	url = https://chowdsp.com/
+	arch = x86_64
+	groups = vst3-plugins
+	groups = lv2-plugins
+	groups = clap-plugins
+	groups = pro-audio
+	license = GPL3
+	depends = libglvnd
+	depends = freetype2
+	depends = alsa-lib
+	source = https://github.com/Chowdhury-DSP/BYOD/releases/download/v1.3.0/BYOD-Linux-x64-1.3.0.deb
+	sha256sums = c1803ae57b717bab04ef2072c10284bcb7d44fbe352d42645075b0c6875c9aeb
+
+pkgname = chowbyod-bin

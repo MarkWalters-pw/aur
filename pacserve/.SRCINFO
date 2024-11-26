@@ -1,0 +1,25 @@
+pkgbase = pacserve
+	pkgdesc = Easily share Pacman packages between computers. A replacement for PkgD.
+	pkgver = 2021
+	pkgrel = 4
+	url = https://xyne.dev/projects/pacserve
+	install = pacserve.install
+	arch = any
+	license = GPL
+	depends = pyalpm
+	depends = python3-threaded_servers
+	optdepends = avahi: Avahi support
+	optdepends = python-dbus: Avahi support
+	optdepends = python-gobject: Avahi support
+	conflicts = pacredir
+	backup = etc/pacserve/pacserve-ports.conf
+	backup = etc/pacserve/pacserve.service.conf
+	source = https://xyne.dev/projects/pacserve/src/pacserve-2021.tar.xz
+	source = https://xyne.dev/projects/pacserve/src/pacserve-2021.tar.xz.sig
+	validpgpkeys = D89FAAEB4CECAFD199A2F5E612C6F735F7A9A519
+	md5sums = faf5f7be007f714901811e45278e3f8c
+	md5sums = 9833a36ac3f4c79897608308c9e514de
+	sha512sums = 4bf731c362602dde700caff4db85999ca5a50a46c7a7271e9732c197f3318f0baa6239b349b0d2ace0b0fd91b3c09dc29700f31cd23a1bff51458b9aaad8d1d8
+	sha512sums = 216853a379e0c605b0db3caca920bcfdf5663740267779e851dcb6caf0c23813d5bf3c3b56059a3ec9c07445126880139a289021c34b8be34ba3f9f3c0506f54
+
+pkgname = pacserve

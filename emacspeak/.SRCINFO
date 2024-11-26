@@ -1,0 +1,26 @@
+pkgbase = emacspeak
+	pkgdesc = Emacs extension that provides spoken output
+	pkgver = 55.0
+	pkgrel = 1
+	url = http://emacspeak.sf.net/
+	arch = x86_64
+	arch = aarch64
+	license = GPL
+	license = LGPL
+	license = APACHE
+	depends = emacs
+	depends = tcl
+	depends = tclx
+	depends = espeak-ng
+	optdepends = python: for Stream The World
+	optdepends = perl
+	source = https://github.com/tvraman/emacspeak/releases/download/55.0/emacspeak-55.0.tar.bz2
+	source = emacspeak-54.0-directorys.patch
+	source = emacspeak-54.0-flags.patch
+	source = emacspeak.sh
+	sha512sums = 2b9424b9d85da8d18803d45403a6e26262e2ed6a51e8868aed2c906c9bd50b9aad797cab8575dba229c3d8f953979d4cf3ed5a0ee16ea8da3e0593e7b040a84f
+	sha512sums = 870aeac1b91e76ac141983bedd6ed328475a8bcd268d5ec5f48a04b5c285ff29ac6d00681a00350212aa07bba54127a0aa91524d2197e785f12dea059e93ca52
+	sha512sums = b287dbe2cc07c29c6d14b79d2984106d5dfc6bebc7636ed0bb937a9c02db926c6ed1cb0b1aa3026ca6b7700514ae5f94c2c39907b42e0594eff82c4ad20ac02f
+	sha512sums = 3624a1205e70cceb43953d39925e1c9a351635a909100a050b036640df65cc104546939eb3be017b116dbc4f910a018b6a5e2eb39c66c9e01e9c91dde6fdf5d9
+
+pkgname = emacspeak

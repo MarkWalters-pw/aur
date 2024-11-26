@@ -1,0 +1,20 @@
+pkgbase = phallus-fonts-git
+	pkgdesc = Lemon and Uushi fonts by phallus
+	pkgver = 199.99faf2a
+	pkgrel = 1
+	url = https://github.com/phallus/fonts
+	install = phallus-fonts.install
+	arch = any
+	license = custom:WTFPL
+	makedepends = git
+	makedepends = fontconfig
+	makedepends = xorg-font-util
+	makedepends = xorg-bdftopcf
+	provides = phallus-fonts
+	conflicts = phallus-fonts
+	source = phallus-fonts::git+https://github.com/phallus/fonts
+	md5sums = SKIP
+	sha256sums = SKIP
+
+pkgname = phallus-fonts-git
+

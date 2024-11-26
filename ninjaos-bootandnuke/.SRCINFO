@@ -1,0 +1,24 @@
+pkgbase = ninjaos-bootandnuke
+	pkgdesc = Ninja Boot'n'Nuke. Boot'n'Nuke implemented as an initcpio image.
+	pkgver = 2.0
+	pkgrel = 1
+	url = https://ninjaos.org/pages/sub-projects/#nban
+	install = ninjaos-bootandnuke.install
+	arch = any
+	groups = ninjaos
+	license = GPL3
+	depends = mkinitcpio
+	depends = syslinux
+	depends = parted
+	depends = dosfstools
+	provides = mkinitcpio-nban
+	conflicts = mkinitcpio-nban
+	replaces = mkinitcpio-nban
+	source = https://cdn.projects.ninjaos.org/ninjaos-bootandnuke-2.0.tar.gz
+	source = https://cdn.projects.ninjaos.org/ninjaos-bootandnuke-2.0.tar.gz.sig
+	validpgpkeys = C65B1F383A46C38A3D3CFDF9C61EC681A148AF51
+	sha256sums = 210f02867da2abc510c3b6605885493abed7cefd4e985da730d971ea2db6b794
+	sha256sums = SKIP
+
+pkgname = ninjaos-bootandnuke
+

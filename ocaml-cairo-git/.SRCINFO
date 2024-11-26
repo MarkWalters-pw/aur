@@ -1,0 +1,18 @@
+pkgbase = ocaml-cairo-git
+	pkgdesc = OCaml binding to Cairo, a 2D Vector Graphics Library
+	pkgver = 20201125
+	pkgrel = 1
+	url = https://github.com/Chris00/ocaml-cairo
+	arch = x86_64
+	license = LGPL3
+	makedepends = ocaml-findlib
+	makedepends = dune
+	depends = ocaml>=4.11.1
+	depends = cairo
+	depends = lablgtk2
+	provides = ocaml-cairo
+	source = git://github.com/Chris00/ocaml-cairo.git
+	md5sums = SKIP
+
+pkgname = ocaml-cairo-git
+

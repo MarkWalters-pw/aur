@@ -1,0 +1,17 @@
+pkgbase = ros-noetic-geneus
+	pkgdesc = ROS - EusLisp ROS message and service generators.
+	pkgver = 3.0.0
+	pkgrel = 1
+	url = https://wiki.ros.org/geneus
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-genmsg
+	makedepends = ros-noetic-catkin
+	depends = ros-noetic-genmsg
+	source = ros-noetic-geneus-3.0.0.tar.gz::https://github.com/jsk-ros-pkg/geneus/archive/3.0.0.tar.gz
+	sha256sums = 1a5b418d217c35c67db7f779642863f81637f9d6a396f491fee24b8074555f89
+
+pkgname = ros-noetic-geneus
+

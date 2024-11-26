@@ -1,0 +1,18 @@
+pkgbase = opendoas-git
+	pkgdesc = Run commands as super user or another user
+	pkgver = 6.0.r56.g8b2a776
+	pkgrel = 1
+	url = https://github.com/Duncaen/OpenDoas
+	install = opendoas.install
+	arch = x86_64
+	arch = i686
+	license = custom:ISC
+	makedepends = git
+	depends = pam
+	provides = opendoas
+	conflicts = opendoas
+	source = opendoas::git+https://github.com/Duncaen/OpenDoas.git
+	sha256sums = SKIP
+
+pkgname = opendoas-git
+

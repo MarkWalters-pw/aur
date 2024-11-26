@@ -1,0 +1,4 @@
+#!/bin/bash
+trap '[ -n "$(jobs -pr)" ] && kill $(jobs -pr)' SIGINT SIGQUIT SIGTERM EXIT
+play -q /opt/benny-hill/benny-hill.mp3 repeat - &
+"$@"

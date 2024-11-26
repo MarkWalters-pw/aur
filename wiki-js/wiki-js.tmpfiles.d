@@ -1,0 +1,1 @@
+d /var/lib/wiki-js 0755 wiki-js wiki-js  -

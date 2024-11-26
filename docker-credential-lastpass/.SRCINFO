@@ -1,0 +1,14 @@
+pkgbase = docker-credential-lastpass
+	pkgdesc = Docker helper to store credentials in LastPass
+	pkgver = 1.1
+	pkgrel = 1
+	url = https://gitlab.com/1ace/docker-credential-lastpass
+	install = docker-credential-lastpass.install
+	arch = any
+	license = MIT
+	depends = lastpass-cli
+	source = https://gitlab.com/1ace/docker-credential-lastpass/-/archive/v1.1/docker-credential-lastpass-v1.1.tar.gz
+	sha256sums = 1095da47e5379b80a2a9785c15bb5c252378f5a9fe882bdc5610b08e50db11c2
+
+pkgname = docker-credential-lastpass
+

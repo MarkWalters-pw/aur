@@ -1,0 +1,19 @@
+[Unit]
+Description=Bilibili daily task helper
+After=network.target
+
+[Service]
+Type=oneshot
+User=bilibilitoolpro
+Group=bilibilitoolpro
+DynamicUser=yes
+WorkingDirectory=/var/lib/bilibilitoolpro
+ExecStart=/usr/bin/bilibilitoolpro
+User=bilibilitoolpro
+DynamicUser=yes
+StandardOutput=null
+StandardError=journal
+
+
+[Install]
+WantedBy=multi-user.target

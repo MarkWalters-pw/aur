@@ -1,0 +1,15 @@
+post_install() {
+    echo "Before running Neverwinter Nights, you must edit /opt/nwn/nwncdkey.ini"
+    echo "  and enter the 3 CD keys that came with your NWN Diamond DVD"
+    echo ""
+
+    echo "Some of the additional linux modules create .ini files the first time"
+    echo "  they start. You may have to run 'nwn' a few times for the game"
+    echo "  load successfully. Run 'nwn' from a terminal initially so you can"
+    echo "  inspect the output."
+    echo ""
+
+    echo "If you use software mixing on your sound card, uncomment the"
+    echo "  first export statement in /usr/bin/nwn"
+}
+

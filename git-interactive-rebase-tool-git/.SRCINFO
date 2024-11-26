@@ -1,0 +1,20 @@
+pkgbase = git-interactive-rebase-tool-git
+	pkgdesc = An improved sequence editor for interactive git-rebase
+	pkgver = 2.1.0.r583.a179df6
+	pkgrel = 1
+	url = https://gitrebasetool.mitmaro.ca
+	install = git-interactive-rebase-tool.install
+	changelog = CHANGELOG.md
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = rust
+	depends = libgit2
+	provides = git-interactive-rebase-tool
+	conflicts = git-interactive-rebase-tool
+	options = zipman
+	source = git+https://github.com/MitMaro/git-interactive-rebase-tool.git
+	sha256sums = SKIP
+
+pkgname = git-interactive-rebase-tool-git
+

@@ -1,0 +1,27 @@
+pkgbase = oblogout-blurlock
+	pkgdesc = Systemd/OpenRC-compatible logout script for Openbox, Fluxbox and others. Including blurlock and additional new button themes by UgoYak
+	pkgver = 20190226
+	pkgrel = 1
+	url = https://github.com/oberon-manjaro/oblogout-blurlock
+	install = oblogout-blurlock.install
+	arch = any
+	license = GPL2
+	makedepends = git
+	depends = i3lock
+	depends = imagemagick
+	depends = pygtk
+	depends = python2-pillow
+	depends = python2-distutils-extra
+	depends = python2-dbus
+	optdepends = lightdm: for switch-user function
+	conflicts = fluxlogout
+	conflicts = oblogout
+	conflicts = openboxlogout-gnome
+	conflicts = oblogout-manjaro
+	replaces = fluxlogout
+	backup = etc/oblogout.conf
+	source = oblogout-blurlock-20190226.tar.gz::https://github.com/oberon-manjaro/oblogout-blurlock/archive/c1b8fd7c5884d60fa47afca7b3d656993fcf9d42.tar.gz
+	md5sums = c463cac76d3b767d2babf5f5f9555989
+
+pkgname = oblogout-blurlock
+

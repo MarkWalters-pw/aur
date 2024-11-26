@@ -1,0 +1,28 @@
+pkgbase = peppercarrot-fonts
+	pkgdesc = Fonts required to correctly view and edit Pepper&Carrot SVGs
+	pkgver = 5.2
+	pkgrel = 1
+	url = https://framagit.org/peppercarrot/webcomics/tree/master/fonts
+	arch = any
+	license = GPL3
+	license = Apache
+	license = Custom:OFL10
+	license = Custom:OFL11
+	license = Custom:MITX11
+	license = Custom:MplusFont
+	license = Custom:CCBY3
+	depends = fontconfig
+	depends = xorg-font-utils
+	depends = otf-pecita
+	depends = otf-yanone-kaffeesatz
+	depends = noto-fonts
+	depends = ttf-droid-nonlatin-ib
+	depends = ttf-impallari-lobster-font
+	depends = lohit-fonts
+	provides = peppercarrot-fonts-git
+	conflicts = peppercarrot-fonts-git
+	source = https://www.peppercarrot.com/0_sources/0ther/tools/zip/peppercarrot-fonts-5.2.zip
+	sha256sums = 7c745ba80e9402159a275ff8a58104e8d53f9c09aed154dc180303f82ee4e484
+
+pkgname = peppercarrot-fonts
+

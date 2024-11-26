@@ -1,0 +1,22 @@
+pkgbase = adminer-git
+	pkgdesc = a web based SQL management tool supporting MySQL, PostgreSQL, SQLite, MS SQL, Oracle, Firebird, SimpleDB, Elasticsearch and MongoDB. Formerly phpMinAdmin.
+	pkgver = 4.8.1.r0.g1f173e18
+	pkgrel = 1
+	url = https://www.adminer.org
+	install = adminer.install
+	arch = any
+	license = Apache
+	makedepends = git
+	depends = php
+	optdepends = mariadb
+	optdepends = apache
+	optdepends = adminer-skins: various CSS skins for adminer
+	optdepends = postgresql
+	optdepends = sqlite: for sqlite3
+	optdepends = sqlite2
+	provides = adminer=4.8.1
+	conflicts = adminer
+	source = adminer-git::git://adminer.git.sourceforge.net/gitroot/adminer/adminer
+	sha256sums = SKIP
+
+pkgname = adminer-git

@@ -1,0 +1,31 @@
+#!/bin/sh
+
+pre_install() {
+	if ! id -u goshimmer > /dev/null 2>&1; then
+		useradd --no-create-home --system goshimmer > /dev/null
+	fi
+	mkdir -p /var/lib/goshimmer /etc/goshimmer
+}
+
+post_install() {
+	chown -R goshimmer:goshimmer /var/lib/goshimmer /etc/goshimmer
+}
+
+post_upgrade() {
+	chown -R goshimmer:goshimmer /var/lib/goshimmer /etc/goshimmer
+
+	printf  "#############################################################################################\
+		\n# Please diff your config in /etc/goshimmer/config.json with the new one provided by the    #\
+		\n# package in /etc/goshimmer/config.json.pacnew for any changes made upstream as the upgrade #\
+		\n# process doesn't touch your existing configuration.                                        #\
+		\n#############################################################################################\n"
+}
+
+pre_remove() {
+	systemctl stop goshimmer.service
+}
+
+post_remove() {
+	userdel goshimmer > /dev/null
+}
+

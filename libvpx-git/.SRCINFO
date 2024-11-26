@@ -1,0 +1,17 @@
+pkgbase = libvpx-git
+	pkgdesc = VP8 and VP9 video codecs (git version)
+	pkgver = 1.11.0.r198.ge8579cc3d4
+	pkgrel = 1
+	url = https://www.webmproject.org/
+	arch = x86_64
+	license = BSD
+	makedepends = git
+	makedepends = nasm
+	depends = gcc-libs
+	provides = libvpx
+	provides = libvpx.so
+	conflicts = libvpx
+	source = git+https://chromium.googlesource.com/webm/libvpx
+	sha256sums = SKIP
+
+pkgname = libvpx-git

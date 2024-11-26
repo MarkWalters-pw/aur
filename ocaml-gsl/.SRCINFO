@@ -1,0 +1,21 @@
+pkgbase = ocaml-gsl
+	pkgdesc = Objective Caml libs for gsl
+	pkgver = 1.24.3
+	pkgrel = 1
+	url = https://mmottl.github.io/gsl-ocaml
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = ocaml-findlib
+	makedepends = dune
+	depends = ocaml
+	depends = ocaml-base
+	depends = ocaml-stdio
+	depends = gsl
+	options = !strip
+	source = https://github.com/mmottl/gsl-ocaml/archive/1.24.3.tar.gz
+	md5sums = 67ee4a9e0a60c48f9aad346afb30e014
+	sha1sums = ba322865d99d92fd00fda45fc610534e2d2ae3ab
+	sha256sums = 0699c601fe8b60a96ee57daac9f0c252564c170898878ca13b0eaf45b40b083d
+
+pkgname = ocaml-gsl

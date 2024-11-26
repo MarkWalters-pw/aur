@@ -1,0 +1,25 @@
+pkgbase = kupfer-git
+	pkgdesc = An interface for quick and convenient access to applications and their documents.
+	pkgver = v321.r9.g35759097
+	pkgrel = 1
+	url = https://kupferlauncher.github.io/
+	arch = any
+	license = GPL3
+	makedepends = intltool
+	makedepends = itstool
+	makedepends = python-docutils
+	makedepends = git
+	depends = libkeybinder3
+	depends = python-dbus
+	depends = python-cairo
+	depends = libwnck3
+	depends = python-pyxdg
+	depends = python-gobject
+	optdepends = xautomation: Send Keys plugin
+	optdepends = gvfs: Trash plugin
+	provides = kupfer
+	conflicts = kupfer
+	source = git+https://github.com/kupferlauncher/kupfer.git
+	md5sums = SKIP
+
+pkgname = kupfer-git

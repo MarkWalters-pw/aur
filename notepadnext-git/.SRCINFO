@@ -1,0 +1,27 @@
+pkgbase = notepadnext-git
+	pkgdesc = A cross-platform, reimplementation of Notepad++
+	pkgver = 0.6.3.r19.g4e774b7
+	pkgrel = 2
+	url = https://github.com/dail8859/NotepadNext
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = qt6-tools
+	depends = qt6-5compat
+	depends = hicolor-icon-theme
+	provides = notepadnext
+	conflicts = notepadnext
+	source = git+https://github.com/dail8859/NotepadNext.git
+	source = git+https://github.com/alex-spataru/QSimpleUpdater.git
+	source = git+https://github.com/githubuser0xFFFF/Qt-Advanced-Docking-System.git
+	source = git+https://github.com/editorconfig/editorconfig-core-qt.git
+	source = git+https://github.com/itay-grudev/SingleApplication.git
+	source = git+https://gitlab.freedesktop.org/uchardet/uchardet.git
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = notepadnext-git

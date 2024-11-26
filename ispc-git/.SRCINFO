@@ -1,0 +1,22 @@
+pkgbase = ispc-git
+	pkgdesc = Intel SPMD program compiler
+	pkgver = 1.19.0.r23.gd43e322c
+	pkgrel = 1
+	url = https://ispc.github.io/
+	arch = i686
+	arch = x86_64
+	license = BSD
+	makedepends = git
+	makedepends = cmake
+	makedepends = lib32-glibc
+	makedepends = llvm
+	makedepends = python
+	depends = clang
+	depends = llvm-libs
+	depends = zlib
+	provides = ispc=1.19.0.r23.gd43e322c
+	conflicts = ispc
+	source = git+https://github.com/ispc/ispc.git
+	sha256sums = SKIP
+
+pkgname = ispc-git

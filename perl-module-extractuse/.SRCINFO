@@ -1,0 +1,20 @@
+pkgbase = perl-module-extractuse
+	pkgdesc = Find out what modules are used
+	pkgver = 0.345
+	pkgrel = 1
+	url = https://metacpan.org/release/Module-ExtractUse
+	arch = any
+	license = PerlArtistic
+	license = GPL
+	checkdepends = perl-test-deep>=0
+	checkdepends = perl-test-nowarnings>=0
+	depends = perl-module-build>=0.28
+	depends = perl-parse-recdescent>=1.967009
+	depends = perl-pod-strip>=0
+	depends = perl>=5.008
+	options = !emptydirs
+	source = http://search.cpan.org/CPAN/authors/id/D/DO/DOMM/Module-ExtractUse-0.345.tar.gz
+	md5sums = 5b78f7a628ea979f26172eacc28d7b2b
+	sha512sums = c821a9c3fb0b22d77aef07e3990c457d1979a243533e67eb924d50145baff96d8beefcd6d103fd6ddcb451559cb8002ab60e2889e74703b6ff15434d089f7f9b
+
+pkgname = perl-module-extractuse

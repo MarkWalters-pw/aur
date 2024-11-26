@@ -1,0 +1,31 @@
+pkgbase = ros-melodic-gmapping
+	pkgdesc = ROS - This package contains a ROS wrapper for OpenSlam's Gmapping.
+	pkgver = 1.4.1
+	pkgrel = 5
+	url = https://wiki.ros.org/gmapping
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = BSD
+	license = Apache 2.0
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-melodic-catkin
+	makedepends = ros-melodic-nav-msgs
+	makedepends = ros-melodic-openslam-gmapping
+	makedepends = ros-melodic-roscpp
+	makedepends = ros-melodic-rostest
+	makedepends = ros-melodic-tf
+	makedepends = ros-melodic-nodelet
+	depends = ros-melodic-nav-msgs
+	depends = ros-melodic-openslam-gmapping
+	depends = ros-melodic-roscpp
+	depends = ros-melodic-tf
+	depends = ros-melodic-nodelet
+	source = ros-melodic-gmapping-1.4.1.tar.gz::https://github.com/ros-perception/slam_gmapping/archive/1.4.1.tar.gz
+	sha256sums = 28429cf962b5ec2c49556aee73b7f87859c0421bc8c8056e3667e3a2b20591e2
+
+pkgname = ros-melodic-gmapping
+

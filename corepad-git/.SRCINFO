@@ -1,0 +1,17 @@
+pkgbase = corepad-git
+	pkgdesc = A document editor from the CoreApps family.
+	pkgver = 2.8.0.r9.71d8b83
+	pkgrel = 1
+	url = https://gitlab.com/cubocore
+	arch = any
+	groups = coreapps-git
+	license = GPL3
+	makedepends = git
+	depends = libcprime-git
+	provides = corepad
+	conflicts = corepad
+	source = git+https://gitlab.com/cubocore/corepad.git
+	md5sums = SKIP
+
+pkgname = corepad-git
+

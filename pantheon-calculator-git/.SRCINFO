@@ -1,0 +1,24 @@
+pkgbase = pantheon-calculator-git
+	pkgdesc = The Pantheon Calculator
+	pkgver = 8.0.0.r7.g160859b
+	pkgrel = 1
+	url = https://github.com/elementary/calculator
+	arch = i686
+	arch = x86_64
+	groups = pantheon-unstable
+	license = GPL-3.0-or-later
+	makedepends = git
+	makedepends = granite7
+	makedepends = intltool
+	makedepends = meson
+	makedepends = vala
+	depends = glib2
+	depends = glibc
+	depends = gtk4
+	depends = libgranite-7.so
+	provides = pantheon-calculator
+	conflicts = pantheon-calculator
+	source = pantheon-calculator::git+https://github.com/elementary/calculator.git
+	sha256sums = SKIP
+
+pkgname = pantheon-calculator-git

@@ -1,0 +1,19 @@
+pkgbase = neocities-cli
+	pkgdesc = (Official) neocities.org CLI and API client
+	pkgver = 0.0.18
+	pkgrel = 2
+	url = https://neocities.org/cli
+	arch = any
+	license = MIT
+	depends = ruby
+	depends = ruby-rake-12
+	depends = ruby-httpclient-fixcerts
+	depends = ruby-pastel-0.7.2
+	depends = ruby-tty-table-0.10
+	depends = ruby-tty-prompt-0.12
+	noextract = neocities-0.0.18.gem
+	options = !emptydirs
+	source = https://rubygems.org/downloads/neocities-0.0.18.gem
+	sha256sums = 7c7dc5415b23026b2674320b912bbcb5c48f9dd032af26e89bfde7c31ef1dbc1
+
+pkgname = neocities-cli

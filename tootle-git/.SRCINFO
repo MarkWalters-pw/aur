@@ -1,0 +1,25 @@
+pkgbase = tootle-git
+	pkgdesc = GTK4 client for Mastodon (git)
+	pkgver = r438.b4046da
+	pkgrel = 1
+	url = https://gitlab.gnome.org/World/tootle.git
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	license = GPL3
+	makedepends = git
+	makedepends = meson
+	makedepends = ninja
+	makedepends = vala
+	makedepends = gobject-introspection
+	depends = granite
+	depends = libhandy
+	depends = gtk4
+	depends = libadwaita
+	depends = libsoup
+	provides = tootle
+	conflicts = tootle
+	source = git+https://gitlab.gnome.org/World/tootle.git
+	sha512sums = SKIP
+
+pkgname = tootle-git

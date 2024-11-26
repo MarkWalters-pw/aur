@@ -1,0 +1,34 @@
+pkgbase = afdko-git
+	pkgdesc = Adobe Font Development Kit for OpenType
+	pkgver = 3.6.0a0.r0.g1e6c3c5
+	pkgrel = 1
+	url = https://github.com/adobe-type-tools/afdko
+	arch = x86_64
+	license = custom
+	checkdepends = python-pytest
+	makedepends = git
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python
+	depends = psautohint>=2.2.0
+	depends = python-booleanoperations
+	depends = python-brotli
+	depends = python-cu2qu
+	depends = python-fontmath
+	depends = python-fontparts
+	depends = python-fontpens
+	depends = python-fonttools>=4.8.1
+	depends = python-fs
+	depends = python-lxml
+	depends = python-mutatormath>=3.0.1
+	depends = python-ufonormalizer>=0.4.1
+	depends = python-ufoprocessor
+	depends = python-unicodedata2
+	depends = python-zopfli
+	provides = afdko
+	conflicts = afdko
+	source = git+https://github.com/adobe-type-tools/afdko.git
+	sha256sums = SKIP
+
+pkgname = afdko-git
+

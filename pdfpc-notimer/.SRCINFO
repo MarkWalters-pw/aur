@@ -1,0 +1,24 @@
+pkgbase = pdfpc-notimer
+	pkgdesc = PDFPC with a patch to not show the timer in the presentations.
+	pkgver = 4.2.1
+	pkgrel = 2
+	url = https://pdfpc.github.io/
+	arch = x86_64
+	license = GPL
+	makedepends = cmake
+	makedepends = vala
+	depends = gtk3
+	depends = poppler-glib
+	depends = libgee
+	depends = gstreamer
+	depends = gst-plugins-base
+	optdepends = gst-plugins-good: more codecs for video playback support
+	optdepends = gst-libav: more codecs for video playback support
+	conflicts = pdfpc
+	source = pdfpc-4.2.1.tar.gz::https://github.com/pdfpc/pdfpc/archive/v4.2.1.tar.gz
+	source = notimer.patch
+	sha256sums = f67eedf092a9bc275dde312f3166063a2e88569f030839efc211127245be6df8
+	sha256sums = 79d728ca0d88c6d2007643d6b528d5a5aa4c144008143f3bd00d7b419256860b
+
+pkgname = pdfpc-notimer
+

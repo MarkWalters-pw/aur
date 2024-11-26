@@ -1,0 +1,16 @@
+pkgbase = gitstats-git
+	pkgdesc = Statistics generator for git repositories.
+	pkgver = r294.55c5c28
+	pkgrel = 2
+	url = https://github.com/hoxu/gitstats
+	arch = any
+	license = GPL
+	license = GPL3
+	makedepends = git
+	depends = git
+	depends = python
+	depends = gnuplot
+	source = gitstats::git+https://github.com/hoxu/gitstats
+	md5sums = SKIP
+
+pkgname = gitstats-git

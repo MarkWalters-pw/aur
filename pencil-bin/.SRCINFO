@@ -1,0 +1,17 @@
+pkgbase = pencil-bin
+	pkgdesc = Sketching and GUI prototyping/wireframing tool
+	pkgver = 3.1.1
+	pkgrel = 1
+	url = http://pencil.evolus.vn/
+	arch = x86_64
+	license = GPL2
+	depends = alsa-lib
+	depends = gtk3
+	depends = nss
+	provides = pencil
+	conflicts = pencil
+	replaces = evolus-pencil-bin
+	source = https://pencil.evolus.vn/dl/V3.1.1.ga/Pencil_3.1.1.ga_amd64.deb
+	sha256sums = b05492667f78d3aa5f548618d35f52c3385d4e8844a8e4d885f69d2d85040c02
+
+pkgname = pencil-bin

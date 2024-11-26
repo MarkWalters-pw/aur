@@ -1,0 +1,41 @@
+diff -aur qcl-0.6.7-old/Makefile qcl-0.6.7/Makefile
+--- qcl-0.6.7-old/Makefile	2022-12-22 02:54:06.000000000 +0200
++++ qcl-0.6.7/Makefile	2023-07-04 23:58:41.310442493 +0300
+@@ -12,13 +12,15 @@
+ 
+ VERSION=0.6.7
+ 
++PREFIX=/usr
++
+ # Directory for Standard .qcl files
+ 
+-QCLDIR = /usr/local/lib/qcl
++QCLDIR = $(DESTDIR)$(PREFIX)/lib/qcl
+ 
+ # Path for qcl binaries
+ 
+-QCLBIN = /usr/local/bin
++QCLBIN = $(DESTDIR)$(PREFIX)/bin
+ 
+ ARCH = `g++ -dumpmachine || echo bin`
+ 
+@@ -48,8 +50,8 @@
+ # explicit linking against libtermcap or libncurses may be required
+ 
+ RLOPT = -DQCL_USE_READLINE
+-#RLLIB = -lreadline
+-RLLIB = -lreadline -lncurses
++RLLIB = -lreadline
++#RLLIB = -lreadline -lncurses
+ 
+ # Interrupt support
+ #
+@@ -87,7 +89,7 @@
+ #CXX = g++
+ #CPP = $(CC) -E
+ CXXFLAGS = -c $(ARCHOPT) $(DEBUG) $(PLOPT) $(RLOPT) $(IRQOPT) $(ENCOPT) -I$(QCDIR) -DDEF_INCLUDE_PATH="\"$(QCLDIR)\""
+-LDFLAGS = $(ARCHOPT) -L$(QCDIR) $(DEBUG) $(PLLIB) -lm $(LEXLIB) -lqc $(RLLIB) 
++LDFLAGS = $(ARCHOPT) -L$(QCDIR) $(DEBUG) $(PLLIB) -lm -L/usr/lib/libfl.a -lqc $(RLLIB)
+ 
+ FILESCC = $(wildcard *.cc)
+ FILESH = $(wildcard *.h)

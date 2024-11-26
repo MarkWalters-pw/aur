@@ -1,0 +1,8 @@
+post_install() {
+	echo ">> Copy https://github.com/libretro/libretro-prboom/raw/master/prboom.wad"
+	echo ">> into your frontend's (e.g. RetroArch) system directory"
+}
+
+post_upgrade() {
+	post_install
+}

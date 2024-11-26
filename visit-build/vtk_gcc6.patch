@@ -1,0 +1,60 @@
+--- build_visit2_12_0	2016-11-14 11:33:10.689430637 +0100
++++ build_visit2_12_0.new	2016-11-14 11:35:32.026790825 +0100
+@@ -19335,6 +19335,49 @@
+ # *************************************************************************** #
+ #                            Function 6, build_vtk                            #
+ # *************************************************************************** #
++function apply_vtk_gcc6_patch
++{
++   patch -p1 << \EOF
++--- a/CMake/vtkCompilerExtras.cmake	2014-01-22 16:55:41.000000000 +0100
+++++ b/CMake/vtkCompilerExtras.cmake.new	2016-07-11 21:28:48.107362104 +0200
++@@ -27,10 +27,10 @@
++     OUTPUT_VARIABLE _gcc_version_info
++     ERROR_VARIABLE _gcc_version_info)
++ 
++-  string (REGEX MATCH "[345]\\.[0-9]\\.[0-9]"
+++  string (REGEX MATCH "[0-9]\\.[0-9]\\.[0-9]"
++     _gcc_version "${_gcc_version_info}")
++   if(NOT _gcc_version)
++-    string (REGEX REPLACE ".*\\(GCC\\).* ([34]\\.[0-9]) .*" "\\1.0"
+++    string (REGEX REPLACE ".*\\(GCC\\).* ([0-9]\\.[0-9]) .*" "\\1.0"
++       _gcc_version "${_gcc_version_info}")
++   endif()
++ 
++--- a/CMake/GenerateExportHeader.cmake	2014-01-22 16:55:41.000000000 +0100
+++++ b/CMake/GenerateExportHeader.cmake.new	2016-07-11 21:28:47.977361853 +0200
++@@ -166,12 +166,12 @@
++     execute_process(COMMAND ${CMAKE_C_COMPILER} --version
++       OUTPUT_VARIABLE _gcc_version_info
++       ERROR_VARIABLE _gcc_version_info)
++-    string(REGEX MATCH "[345]\\.[0-9]\\.[0-9]"
+++    string(REGEX MATCH "[0-9]\\.[0-9]\\.[0-9]"
++       _gcc_version "${_gcc_version_info}")
++     # gcc on mac just reports: "gcc (GCC) 3.3 20030304 ..." without the
++     # patch level, handle this here:
++     if(NOT _gcc_version)
++-      string(REGEX REPLACE ".*\\(GCC\\).* ([34]\\.[0-9]) .*" "\\1.0"
+++      string(REGEX REPLACE ".*\\(GCC\\).* ([0-9]\\.[0-9]) .*" "\\1.0"
++         _gcc_version "${_gcc_version_info}")
++     endif()
++
++EOF
++    if [[ $? != 0 ]] ; then
++      warn "vtk_gcc6 patch failed."
++      return 1
++    fi
++
++    return 0;
++}
+ 
+ function apply_vtk_600_patch
+ {
+@@ -19733,6 +19776,7 @@
+     # also apply objc flag patch to 6.1.0
+     
+     if [[ ${VTK_VERSION} == 6.1.0 ]] ; then
++        apply_vtk_gcc6_patch
+         apply_vtk_600_patch
+         apply_vtk_610_patch_2
+         apply_vtk_610_patch_3

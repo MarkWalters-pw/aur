@@ -1,0 +1,17 @@
+pkgbase = vapoursynth-plugin-temporalmedian-git
+	pkgdesc = Plugin for Vapoursynth: temporalmedian (GIT version)
+	pkgver = 1.0.g10e2be3
+	pkgrel = 1
+	url = https://github.com/dubhater/vapoursynth-temporalmedian
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = meson
+	depends = vapoursynth
+	provides = vapoursynth-plugin-temporalmedian
+	conflicts = vapoursynth-plugin-temporalmedian
+	options = debug
+	source = temporalmedian::git+https://github.com/dubhater/vapoursynth-temporalmedian.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-temporalmedian-git

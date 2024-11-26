@@ -1,0 +1,20 @@
+pkgbase = wolfssl-liboqs
+	pkgdesc = Lightweight, portable, C-language-based SSL/TLS library (with post-quantum cryptography)
+	pkgver = 5.7.2
+	pkgrel = 1
+	url = https://www.wolfssl.com/
+	arch = x86_64
+	license = GPL-2.0-or-later
+	makedepends = cmake
+	makedepends = git
+	depends = glibc
+	depends = liboqs
+	provides = libwolfssl.so
+	conflicts = wolfssl
+	source = wolfssl-5.7.2-stable.tar.gz::https://github.com/wolfssl/wolfssl/archive/refs/tags/v5.7.2-stable.tar.gz
+	source = https://github.com/wolfssl/wolfssl/releases/download/v5.7.2-stable/wolfssl-5.7.2-stable.tar.gz.asc
+	validpgpkeys = A2A48E7BCB96C5BECB987314EBC80E415CA29677
+	b2sums = 52bbabfd91fb5fdb1ef78dfafa7de86afaae821da14b9336bdf52b057444ac63f7afb4cc99d80ec8040adadbd4e8e07eb186499c12398b625aee4824e2dc503c
+	b2sums = SKIP
+
+pkgname = wolfssl-liboqs

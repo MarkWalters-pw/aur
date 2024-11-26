@@ -1,0 +1,18 @@
+Unit]
+Description=QuakeJS game server
+After=network.target
+
+[Service]
+User=quakejs
+Type=simple
+ExecStart=/usr/bin/node bin/web.js --config /etc/webapps/quakejs/web.json
+WorkingDirectory=/usr/share/webapps/quakejs
+LimitNOFILE=1048576
+LimitNPROC=64
+PrivateTmp=true
+PrivateDevices=true
+ProtectHome=true
+ProtectSystem=strict
+
+[Install]
+WantedBy=multi-user.target

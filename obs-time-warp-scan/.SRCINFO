@@ -1,0 +1,15 @@
+pkgbase = obs-time-warp-scan
+	pkgdesc = Time Warp Scan filter for OBS Studio
+	pkgver = 0.1.7
+	pkgrel = 1
+	url = https://obsproject.com/forum/resources/time-warp-scan.1167/
+	arch = x86_64
+	arch = aarch64
+	license = GPL2
+	makedepends = cmake
+	makedepends = git
+	depends = obs-studio>=28
+	source = obs-time-warp-scan::git+https://github.com/exeldro/obs-time-warp-scan#commit=f955f8e3baa362efa88ee9a49e30a80bbd5baa6f
+	sha256sums = SKIP
+
+pkgname = obs-time-warp-scan

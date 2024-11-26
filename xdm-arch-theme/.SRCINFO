@@ -1,0 +1,28 @@
+pkgbase = xdm-arch-theme
+	pkgdesc = An Arch Linux theme for xdm.
+	pkgver = 2.3.2
+	pkgrel = 2
+	url = https://gitlab.com/the_isz/xdm-arch-theme
+	install = xdm-arch-theme.install
+	arch = any
+	license = GPL
+	makedepends = tar
+	makedepends = gzip
+	depends = xorg-xdm
+	depends = xorg-xrandr
+	depends = xorg-xclock
+	depends = xorg-xwininfo
+	depends = xorg-xsetroot
+	depends = xorg-xkill
+	depends = librsvg
+	optdepends = xorg-xmessage: for reboot/halt buttons
+	optdepends = imagemagick: one option for setting the background image
+	optdepends = feh: another option for setting the background image
+	optdepends = xv: another option for setting the background image
+	source = https://gitlab.com/the_isz/xdm-arch-theme/-/archive/2.3.2/xdm-arch-theme-2.3.2.tar.gz
+	source = https://upload.wikimedia.org/wikipedia/commons/a/ac/Archlinux-official-fullcolour.svg
+	md5sums = 560c2d85401df5a961d05c144724f98c
+	md5sums = abc1cc75e716e05a7405071d79dfdf8c
+
+pkgname = xdm-arch-theme
+

@@ -1,0 +1,17 @@
+pkgbase = vapoursynth-plugin-ctmf-git
+	pkgdesc = Plugin for Vapoursynth: ctmf (GIT version)
+	pkgver = 5.0.g073eccd
+	pkgrel = 1
+	url = https://forum.doom9.org/showthread.php?t=171213
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = meson
+	depends = vapoursynth
+	provides = vapoursynth-plugin-ctmf
+	conflicts = vapoursynth-plugin-ctmf
+	options = debug
+	source = ctmf::git+https://github.com/HomeOfVapourSynthEvolution/VapourSynth-CTMF.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-ctmf-git

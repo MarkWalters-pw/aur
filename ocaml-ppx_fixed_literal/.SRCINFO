@@ -1,0 +1,18 @@
+pkgbase = ocaml-ppx_fixed_literal
+	pkgdesc = Simpler notation for fixed point literals
+	pkgver = 0.17.0
+	pkgrel = 2
+	url = https://github.com/janestreet/ppx_fixed_literal
+	arch = x86_64
+	arch = aarch64
+	license = MIT
+	makedepends = dune>=3.11.0
+	depends = ocaml>=5.1.0
+	depends = ocaml-base>=0.17.0
+	depends = ocaml-ppxlib>=0.28.0
+	depends = zstd
+	options = !strip
+	source = ocaml-ppx_fixed_literal-0.17.0.tar.gz::https://github.com/janestreet/ppx_fixed_literal/archive/v0.17.0.tar.gz
+	b2sums = c0530e93e396d79a4220d9a727876c02b5168c20cf1627751e1ed3fb588074f0344b9900b9d5376b15bc607c162b17ea7511a22b8974a0ae58262fb220f313f0
+
+pkgname = ocaml-ppx_fixed_literal

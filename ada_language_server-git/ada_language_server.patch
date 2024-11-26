@@ -1,0 +1,37 @@
+Index: ada_language_server/gnat/tester.gpr
+===================================================================
+--- ada_language_server.orig/gnat/tester.gpr
++++ ada_language_server/gnat/tester.gpr
+@@ -17,6 +17,7 @@
+ 
+ with "lsp_client";
+ with "gnatcoll";
++with "gtkada";
+ 
+ project Tester is
+ 
+Index: ada_language_server/Makefile
+===================================================================
+--- ada_language_server.orig/Makefile
++++ ada_language_server/Makefile
+@@ -74,7 +74,7 @@ endif
+ 
+ all: coverage-instrument
+ 	$(GPRBUILD) -P gnat/tester.gpr -p $(BUILD_FLAGS)
+-	$(GPRBUILD) -d -ws -c -u -P gnat/lsp_server.gpr -p $(BUILD_FLAGS) s-memory.adb
++	$(GPRBUILD) -d -ws -c -u -P gnat/lsp_server.gpr -aP /usr/share/gpr -p $(BUILD_FLAGS) s-memory.adb
+ 	$(GPRBUILD) -P gnat/lsp_server.gpr -p $(COVERAGE_BUILD_FLAGS) \
+ 		-XVERSION=$(TRAVIS_TAG)
+ 	$(GPRBUILD) -P gnat/codec_test.gpr -p $(COVERAGE_BUILD_FLAGS)
+Index: ada_language_server/gnat/lsp_server.gpr
+===================================================================
+--- ada_language_server.orig/gnat/lsp_server.gpr
++++ ada_language_server/gnat/lsp_server.gpr
+@@ -15,7 +15,6 @@
+ -- of the license.                                                          --
+ ------------------------------------------------------------------------------
+ 
+-with "gpr2.gpr";
+ with "libadalang";
+ with "lal_tools.gpr";
+ with "ada_libfswatch.gpr";

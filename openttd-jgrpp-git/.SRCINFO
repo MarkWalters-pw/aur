@@ -1,0 +1,28 @@
+pkgbase = openttd-jgrpp-git
+	pkgdesc = OpenTTD with JGR's patch pack
+	pkgver = 14.0+20240224+gddb3914074+528aae3f3b
+	pkgrel = 1
+	url = http://www.tt-forums.net/viewtopic.php?f=33&t=73469
+	install = openttd-jgrpp.install
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = go-yq
+	makedepends = ninja
+	depends = libpng
+	depends = sdl
+	depends = icu
+	depends = fontconfig
+	depends = lzo
+	depends = hicolor-icon-theme
+	depends = desktop-file-utils
+	depends = xz
+	optdepends = openttd-opengfx: free graphics
+	optdepends = openttd-opensfx: free soundset
+	conflicts = openttd
+	source = git+https://github.com/JGRennison/OpenTTD-patches.git
+	source = http://cdn.openttd.org/latest.yaml
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = openttd-jgrpp-git

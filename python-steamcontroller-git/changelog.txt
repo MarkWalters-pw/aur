@@ -1,0 +1,59 @@
+Git commits 60499dc->80928ce
+	* Trackpad improvements
+	* src/events.py: Added math, sin/cos and deadzone handling
+
+Git commits 02f27c4->60499dc
+	* emulated XBox version changed (0x110)
+	* uinput device version now a parameter
+	* Long press (>2s) on steam button closes and deletes uinput device
+	* Systemd service examples
+	* xbox/desktop mixed script (use steam button to switch)
+	* Verify if steam client is running
+
+Git commits 722f9bf->02f27c4
+	* Fix div by zero exception
+
+Git commits 71cb09c->722f9bf
+	* Fix some problems with wired steam controller
+	* Fix some issues with sc-gyro-plot.py
+
+Git commits dc9f278->71cb09c
+	* Dependencies added to setup.py (enum34 apparently)
+
+Git commits ab60329->dc9f278
+	* Fix typo (LPAD -> RPAD)
+
+Git commits a8c0b8a->ab60329
+	* Callback work for trigger axis event
+
+Git commits db7b12a->a8c0b8a
+	* Simple example script (sc-callbacks.py)
+	* Default mouse scale slightly reduced
+	* Callback modes (not user visible, for the most part)
+
+Git commit 054e35d
+	* Correct wrongly mapped right pad
+
+Git commit d3af617
+	* Add support for wired mode (usb connected only)
+
+Git commit 074ccf2
+	* Updates to README.
+
+Git commit f8a6316
+	* NEW: Haptics have been added
+	* Removed: udev rule -- appears to work without it when STEAM is
+	  installed.
+Git commit f70b7ea
+	* NEW: sc-desktop.py gives desktop keyboard/mouse
+	* Removed: optional dependencies (kodi, evtest) as it is no longer
+	needed.
+
+Initial code v2
+	* Added programs that can be used for testing (Kodi, evtest)
+
+Initial code
+	* Not really working
+	* Try "echo 8f07005e 015e01f4 01000000 | sc-test-cmsg.py" to check
+	* sc-xbox.py start *should* start emulating the 360 controller.Initial
+	  code

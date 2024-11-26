@@ -1,0 +1,20 @@
+pkgbase = dune-uggrid
+	pkgdesc = UG grid manager
+	pkgver = 2.10.0
+	pkgrel = 1
+	url = https://dune-project.org/modules/dune-uggrid
+	arch = x86_64
+	license = LGPL-2.1-or-later
+	makedepends = doxygen
+	makedepends = graphviz
+	depends = dune-common>=2.10.0
+	optdepends = doxygen: Generate the class documentation from C++ sources
+	optdepends = graphviz: Graph visualization software
+	options = !emptydirs
+	source = https://dune-project.org/download/2.10.0/dune-uggrid-2.10.0.tar.gz
+	source = https://dune-project.org/download/2.10.0/dune-uggrid-2.10.0.tar.gz.asc
+	validpgpkeys = 703607A1FD9AF4205E735522B95BE0EFB19724A1
+	sha512sums = e28cb28bf73a20fa765eb1e76643a1f38fba30fffca8865fcf33fa950f1b43f577eeadfa19eea6fc5773233500e280e839fc8cc140715159add359ab4cddcf23
+	sha512sums = SKIP
+
+pkgname = dune-uggrid

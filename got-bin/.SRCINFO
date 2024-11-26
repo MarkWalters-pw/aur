@@ -1,0 +1,22 @@
+pkgbase = got-bin
+	pkgdesc = CLI tool to download large files faster than cURL and Wget
+	pkgver = 0.7.0
+	pkgrel = 1
+	url = https://github.com/melbahja/got
+	arch = x86_64
+	arch = armv6h
+	arch = aarch64
+	arch = i686
+	license = MIT
+	provides = got
+	conflicts = got
+	source_x86_64 = got-0.7.0_x86_64.tar.gz::https://github.com/melbahja/got/releases/download/v0.7.0/got_0.7.0_Linux_amd64.tar.gz
+	sha256sums_x86_64 = b8a31b3e7de91f150cb87ed1e22bd2313bba06653add3b0342108cb4fcac9549
+	source_armv6h = got-0.7.0-armv6h.tar.gz::https://github.com/melbahja/got/releases/download/v0.7.0/got_0.7.0_Linux_armv6.tar.gz
+	sha256sums_armv6h = 37d99890495c9fd04458115167cbdc6ab7ed70413762220b824cc9f5984b2c52
+	source_aarch64 = got-0.7.0-aarch64.tar.gz::https://github.com/melbahja/got/releases/download/v0.7.0/got_0.7.0_Linux_arm64.tar.gz
+	sha256sums_aarch64 = c14a0686c47e9f9eb68aa8c40fc45bcfefbec1ca1b5b22db607166148236c83a
+	source_i686 = got-0.7.0-i686.tar.gz::https://github.com/melbahja/got/releases/download/v0.7.0/got_0.7.0_Linux_32bit.tar.gz
+	sha256sums_i686 = da57a36dc8fb193eb558528832f399c0f1b0d022aa110556b3853b34873dd0ca
+
+pkgname = got-bin

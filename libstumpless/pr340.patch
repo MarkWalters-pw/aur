@@ -1,0 +1,45 @@
+From da8e2907db1f0822e151f90ff754eec489c8c822 Mon Sep 17 00:00:00 2001
+From: Ewout van Mansom <ewout@vanmansom.name>
+Date: Mon, 24 Apr 2023 14:12:28 +0200
+Subject: [PATCH] add pkg-config file (#339)
+
+---
+ CMakeLists.txt                   |  7 +++++++
+ tools/pkg-config/stumpless.pc.in | 10 ++++++++++
+ 2 files changed, 17 insertions(+)
+ create mode 100644 tools/pkg-config/stumpless.pc.in
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index c9946ce6..e51023c1 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -1000,6 +1000,13 @@ install(FILES
+ 
+ include(tools/cmake/cpack.cmake)
+ 
++include(FindPkgConfig QUIET)
++if(PKG_CONFIG_FOUND)
++  configure_file("${PROJECT_SOURCE_DIR}/tools/pkg-config/stumpless.pc.in" "${PROJECT_BINARY_DIR}/tools/pkg-config/stumpless.pc" @ONLY)
++  install(FILES "${PROJECT_BINARY_DIR}/tools/pkg-config/stumpless.pc"
++    DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig")
++endif()
++
+ 
+ # functionality tests
+ add_function_test(buffer
+diff --git a/tools/pkg-config/stumpless.pc.in b/tools/pkg-config/stumpless.pc.in
+new file mode 100644
+index 00000000..b8c573bc
+--- /dev/null
++++ b/tools/pkg-config/stumpless.pc.in
+@@ -0,0 +1,10 @@
++prefix=@CMAKE_INSTALL_PREFIX@
++exec_prefix=${prefix}
++libdir=${exec_prefix}/lib
++includedir=${prefix}/include
++
++Name: @CMAKE_PROJECT_NAME@
++Description: C logging library built for high performance and a rich feature set
++Version: @PROJECT_VERSION@
++Libs: -L${libdir} -lstumpless
++Cflags: -I${includedir}

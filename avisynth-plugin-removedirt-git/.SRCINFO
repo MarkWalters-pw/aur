@@ -1,0 +1,18 @@
+pkgbase = avisynth-plugin-removedirt-git
+	pkgdesc = Plugin for Avisynth: removedirt (GIT version)
+	pkgver = 0.9.3.0.g46007dc
+	pkgrel = 1
+	url = https://github.com/pinterf/RemoveDirt
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = cmake
+	makedepends = avisynthplus
+	depends = libavisynth.so
+	provides = avisynth-plugin-removedirt
+	conflicts = avisynth-plugin-removedirt
+	options = debug
+	source = removedirt::git+https://github.com/pinterf/RemoveDirt.git
+	sha256sums = SKIP
+
+pkgname = avisynth-plugin-removedirt-git

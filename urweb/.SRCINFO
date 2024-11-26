@@ -1,0 +1,22 @@
+pkgbase = urweb
+	pkgdesc = Ur/Web: purely functional language/framework for web programming
+	pkgver = 20200209
+	pkgrel = 1
+	url = http://www.impredicative.com/ur/
+	arch = i686
+	arch = x86_64
+	license = BSD
+	makedepends = curl
+	makedepends = mlton
+	depends = libmariadbclient
+	depends = postgresql-client
+	depends = sqlite3
+	depends = openssl
+	depends = uthash
+	source = https://github.com/urweb/urweb/releases/download/20200209/urweb-20200209.tar.gz
+	source = use-system-uthash.patch
+	sha512sums = a8b196cb8132d4f32069b7400ebc19569a34637daabc06139f1ad3cd808550f31ff09b670981fe7829c2b185497fcba9ffe202a30537cab179e26e84d58b40b6
+	sha512sums = df7089e75d91c14568bcc01d0a0cf9d57e073c5e2c278508305176a8b7f2775f27a26b66d82e1566f00d473e89099480273a7b6f5f11d927802de959da3678ac
+
+pkgname = urweb
+

@@ -1,0 +1,18 @@
+pkgbase = highs-git
+	pkgdesc = Linear optimization software (Git version)
+	pkgver = r8589.624bc58d3
+	pkgrel = 1
+	url = https://github.com/ERGO-Code/HiGHS
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = cmake
+	makedepends = git
+	depends = gcc-libs
+	depends = zlib
+	provides = highs
+	conflicts = highs
+	source = git+https://github.com/ERGO-Code/HiGHS.git
+	sha1sums = SKIP
+
+pkgname = highs-git

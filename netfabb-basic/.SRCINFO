@@ -1,0 +1,20 @@
+pkgbase = netfabb-basic
+	pkgdesc = view and repair STL files
+	pkgver = 7.4.0
+	pkgrel = 1
+	url = https://github.com/3DprintFIT/netfabb-basic-download/releases
+	install = netfabb-basic.install
+	arch = x86_64
+	license = custom:freeware
+	depends = gtk2
+	depends = desktop-file-utils
+	depends = hicolor-icon-theme
+	source = netfabb-free_7.4.0_linux64.tar.gz::https://github.com/3DprintFIT/netfabb-basic-download/releases/download/v7.4.0/
+	source = icons.tar.gz
+	source = netfabb-basic.desktop
+	sha256sums = 1c1254997b418dd588de6ea3105981e0b86001dea29f322502b2df5ffb3feaa5
+	sha256sums = ae44b987b08bfaf2a16e250693bef705beddb3fc8612204220efba86fa4fa8ca
+	sha256sums = bf3891906b73724200839a651c74d53b175f810d52779ba925988c1d5236be9f
+
+pkgname = netfabb-basic
+

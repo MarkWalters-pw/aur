@@ -1,0 +1,22 @@
+pkgbase = ros-melodic-rosdoc-lite
+	pkgdesc = ROS - This ROS package wraps documentation tools like doxygen, sphinx, and epydoc, making it convenient to generate ROS package documentation.
+	pkgver = 0.2.10
+	pkgrel = 1
+	url = http://wiki.ros.org/rosdoc_lite
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-melodic-catkin
+	depends = ros-melodic-genmsg
+	depends = epydoc
+	depends = python-rospkg
+	depends = python-yaml
+	depends = doxygen
+	depends = python-sphinx
+	depends = python-kitchen
+	depends = python-catkin_pkg
+	source = ros-melodic-rosdoc-lite-0.2.10.tar.gz::https://github.com/ros-infrastructure/rosdoc_lite/archive/refs/tags/0.2.10.tar.gz
+	sha256sums = 91f81eb47dd835fe5e69e5584a5adf2bc0b7d85831bb5c777ef72fd85e07adfa
+
+pkgname = ros-melodic-rosdoc-lite

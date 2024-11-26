@@ -1,0 +1,17 @@
+pkgbase = cgdb-git
+	pkgdesc = Curses-based interface to the GNU Debugger
+	pkgver = 0.7.1
+	pkgrel = 3
+	url = http://cgdb.github.io/
+	arch = x86_64
+	license = GPL
+	makedepends = help2man
+	depends = readline>=5.1
+	depends = ncurses
+	depends = gdb
+	conflicts = cgdb
+	source = git+https://github.com/cgdb/cgdb
+	sha512sums = SKIP
+
+pkgname = cgdb-git
+

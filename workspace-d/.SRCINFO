@@ -1,0 +1,22 @@
+pkgbase = workspace-d
+	pkgdesc = Wraps dcd, dfmt and dscanner to one unified environment managed by dub
+	pkgver = 3.5.0
+	pkgrel = 1
+	url = https://github.com/Pure-D/workspace-d
+	arch = i686
+	arch = x86_64
+	groups = dlang
+	license = MIT
+	makedepends = dmd
+	makedepends = git
+	makedepends = dub
+	depends = libphobos
+	depends = dub
+	depends = dcd
+	depends = dfmt
+	depends = dscanner
+	source = git+https://github.com/Pure-D/workspace-d#tag=v3.5.0
+	sha256sums = SKIP
+
+pkgname = workspace-d
+

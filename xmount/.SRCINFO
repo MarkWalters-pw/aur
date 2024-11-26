@@ -1,0 +1,18 @@
+pkgbase = xmount
+	pkgdesc = Tool to crossmount between multiple input and output harddisk image files
+	pkgver = 0.7.6
+	pkgrel = 1
+	url = https://www.pinguin.lu
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = cmake
+	depends = fuse
+	depends = libewf
+	depends = afflib
+	options = !makeflags
+	source = http://files.pinguin.lu/xmount-0.7.6.tar.gz
+	sha256sums = 76e544cd55edc2dae32c42a38a04e11336f4985e1d59cec9dd41e9f9af9b0008
+
+pkgname = xmount
+

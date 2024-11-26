@@ -1,0 +1,20 @@
+pkgbase = libbitcoin
+	pkgdesc = Asynchronous C++ library for Bitcoin - meta package
+	pkgver = 3.2.0
+	pkgrel = 1
+	url = https://github.com/libbitcoin/
+	arch = i686
+	arch = x86_64
+	license = AGPL
+	depends = libbitcoin-system
+	depends = libbitcoin-network
+	depends = libbitcoin-protocol
+	depends = libbitcoin-database
+	depends = libbitcoin-blockchain
+	depends = libbitcoin-node
+	depends = libbitcoin-server
+	depends = libbitcoin-client
+	depends = libbitcoin-explorer
+
+pkgname = libbitcoin
+

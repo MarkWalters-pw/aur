@@ -1,0 +1,26 @@
+pkgbase = photon-rss-git
+	pkgdesc = RSS reader as light as a photon with terminal + sixel
+	pkgver = r67.0047864
+	pkgrel = 1
+	url = https://git.sr.ht/~ghost08/photon
+	arch = i686
+	arch = pentium4
+	arch = x86_64
+	arch = arm
+	arch = armv6h
+	arch = armv7h
+	arch = aarch64
+	license = GPL3
+	makedepends = git
+	makedepends = go
+	makedepends = scdoc
+	optdepends = yt-dlp: A youtube-dl fork with additional features and fixes
+	optdepends = mpv: a free, open source, and cross-platform media player
+	optdepends = imv: Image viewer for Wayland and X11,
+	optdepends = w3m: Text-based Web browser as well as pager
+	provides = photon-rss
+	conflicts = photon-rss
+	source = photon-rss-git::git+https://git.sr.ht/~ghost08/photon
+	sha256sums = SKIP
+
+pkgname = photon-rss-git

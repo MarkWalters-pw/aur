@@ -1,0 +1,28 @@
+pkgbase = templight-git
+	pkgdesc = Template Instantiation Profiler and Debugger
+	pkgver = r144.7d69c5e
+	pkgrel = 1
+	url = https://github.com/mikael-s-persson/templight
+	arch = x86_64
+	license = custom:University of Illinois/NCSA Open Source License
+	makedepends = git
+	makedepends = subversion
+	makedepends = llvm
+	makedepends = cmake
+	depends = llvm-libs
+	depends = gcc
+	depends = clang
+	depends = compiler-rt
+	optdepends = templight-tools: Additional facilities to process the profiling data.
+	provides = templight
+	conflicts = templight
+	conflicts = clang-trunk
+	source = llvm::svn+http://llvm.org/svn/llvm-project/llvm/trunk
+	source = cfe::svn+http://llvm.org/svn/llvm-project/cfe/trunk
+	source = git://github.com/mikael-s-persson/templight.git
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = templight-git
+

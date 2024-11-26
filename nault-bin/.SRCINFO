@@ -1,0 +1,16 @@
+pkgbase = nault-bin
+	pkgdesc = Official Nault AppImage client
+	pkgver = 1.18.2
+	pkgrel = 1
+	url = https://github.com/Nault/Nault
+	arch = x86_64
+	license = MIT
+	depends = fuse2
+	provides = nault-bin
+	conflicts = nault-bin
+	noextract = nault.AppImage
+	options = !strip
+	source = https://github.com/Nault/Nault/releases/download/v1.18.2/Nault-1.18.2-Linux.AppImage
+	sha512sums = cd2a1db407b872affb3fd4e29ffb930fa694e1d6a5a2d8edcc3ba416eae3609df87326496d4f9a7cd37e7ba45683a35f83a75f332c143ec6a584f112e67914bd
+
+pkgname = nault-bin

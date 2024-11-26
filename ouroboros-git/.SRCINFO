@@ -1,0 +1,23 @@
+pkgbase = ouroboros-git
+	pkgdesc = A completely decentralized packet network
+	pkgver = 0.17.5.r0.gd68bb3b
+	pkgrel = 1
+	url = https://ouroboros.rocks
+	arch = x86_64
+	arch = i686
+	arch = arm
+	license = GPL2
+	license = LGPL2.1
+	license = BSD
+	makedepends = git
+	makedepends = fakeroot
+	makedepends = cmake
+	depends = protobuf-c
+	optdepends = libgcrypt
+	optdepends = openssl
+	optdepends = fuse
+	optdepends = dnsutils
+	source = git+https://ouroboros.rocks/git/ouroboros
+	md5sums = SKIP
+
+pkgname = ouroboros-git

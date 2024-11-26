@@ -1,0 +1,26 @@
+pkgbase = rambox-bin
+	pkgdesc = Free and Open Source messaging and emailing app that combines common web applications into one.
+	pkgver = 0.8.0
+	pkgrel = 1
+	url = http://rambox.pro/
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	depends = desktop-file-utils
+	depends = gtk3
+	depends = libappindicator-gtk3
+	depends = libnotify
+	depends = libxtst
+	depends = libxss
+	depends = libxkbcommon
+	depends = libsecret
+	depends = nss
+	depends = libutil-linux
+	provides = rambox
+	conflicts = rambox
+	source_i686 = https://github.com/ramboxapp/community-edition/releases/download/0.8.0/Rambox-0.8.0-linux-i386.deb
+	sha256sums_i686 = 3529e194add9d1994c9cec09208609405d161e49e9a783e2eec9ad50ae54047f
+	source_x86_64 = https://github.com/ramboxapp/community-edition/releases/download/0.8.0/Rambox-0.8.0-linux-amd64.deb
+	sha256sums_x86_64 = 87fecf3985fed9b3cbc09aa544c738cbaae2cfab9bd49bdc5c613bace404055f
+
+pkgname = rambox-bin

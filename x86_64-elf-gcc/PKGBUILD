@@ -1,0 +1,81 @@
+# Maintainer: Michael Shaw <michaelsshaw44@gmail.com>
+# Maintainer: Peter Jung <admin@ptr1337.dev>
+# Maintainer: Diego Roux <diegoroux04 at protonmail dot com>
+# Contributor: grant0417 <grant0417@protonmail.com>
+# Contributor: Araragi Hokuto <kanseihonbucho@protonmail.com>
+# Contributor: Marc Boocha <marcboocha@gmail.com>
+
+_target=x86_64-elf
+pkgname=$_target-gcc
+pkgver=14.2.0
+pkgrel=1
+pkgdesc='The GNU Compiler Collection - cross compiler for x86_64-elf target'
+arch=(x86_64)
+url='http://gcc.gnu.org/'
+license=(GPL-3.0-with-GCC-exception GFDL-1.3-or-later)
+depends=("$_target-binutils" 'zlib' 'libmpc')
+makedepends=('gmp' 'mpfr')
+options=(!emptydirs)
+source=("https://mirrors.kernel.org/gnu/gcc/gcc-$pkgver/gcc-$pkgver.tar.xz"
+        "https://mirrors.kernel.org/gnu/gcc/gcc-$pkgver/gcc-$pkgver.tar.xz.sig")
+
+sha256sums=('a7b39bc69cbf9e25826c5a60ab26477001f7c08d85cec04bc0e29cabed6f3cc9'
+            'SKIP')
+
+_basedir=gcc-$pkgver
+
+validpgpkeys=(
+    '13975A70E63C361C73AE69EF6EEB81F8981C74C7' # Richard Guenther <richard.guenther@gmail.com>
+    'D3A93CAD751C2AF4F8C7AD516C35B99309B5FA62' # Jakub Jelinek <jakub@redhat.com>
+)
+
+prepare() {
+    cd $_basedir
+    sed -i "/ac_cpp=/s/\$CPPFLAGS/\$CPPFLAGS -O2/" libiberty/configure
+    mkdir -p $srcdir/build
+}
+
+build() {
+    cd build
+
+    # GCC build fails with format-security.
+    CFLAGS=${CFLAGS/-Werror=format-security/}
+    CXXFLAGS=${CXXFLAGS/-Werror=format-security/}
+
+    $srcdir/$_basedir/configure \
+        --prefix=/usr \
+        --disable-nls \
+        --disable-plugin \
+        --target=$_target \
+        --libexecdir=/usr/lib \
+        --enable-languages=c,c++ \
+        --without-headers \
+        --with-bugurl=https://aur.archlinux.org/packages/x86_64-elf-gcc/
+
+    make all-gcc
+    make all-target-libgcc
+
+}
+
+check() {
+    cd build
+
+    # Increase stack size to prevent test failures.
+    # http://gcc.gnu.org/bugzilla/show_bug.cgi?id=31827
+    ulimit -s 32768
+
+    # Don't abort on error as some are "expected".
+    make -k check || true
+    $srcdir/$_basedir/contrib/test_summary
+}
+
+package() {
+    cd build
+
+    make DESTDIR="$pkgdir" install-gcc
+    make DESTDIR="$pkgdir" install-target-libgcc
+
+    # Remove info and make since it expected already present by host compiler
+    rm -vr "$pkgdir"/usr/share/{info,man}
+
+}

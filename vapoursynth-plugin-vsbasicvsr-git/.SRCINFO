@@ -1,0 +1,19 @@
+pkgbase = vapoursynth-plugin-vsbasicvsr-git
+	pkgdesc = Plugin for Vapoursynth: vsbasicvsr (GIT version)
+	pkgver = 1.2.0.0.gab1a0f5
+	pkgrel = 2
+	url = https://github.com/HolyWu/vs-basicvsr
+	arch = any
+	license = Apache
+	makedepends = git
+	makedepends = python-pip
+	depends = vapoursynth
+	depends = python-numpy
+	optdepends = python-pytorch: CPU with AVX2 optimizations
+	optdepends = python-pytorch-cuda: CUDA with CPU with AVX2 optimizations
+	provides = vapoursynth-plugin-vsbasicvsr
+	conflicts = vapoursynth-plugin-vsbasicvsr
+	source = vsbasicvsr::git+https://github.com/HolyWu/vs-basicvsr.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-vsbasicvsr-git

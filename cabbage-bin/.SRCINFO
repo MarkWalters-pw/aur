@@ -1,0 +1,19 @@
+pkgbase = cabbage-bin
+	pkgdesc = Framework for developing audio plugins with the Csound programming language
+	pkgver = 2.9.0
+	pkgrel = 2
+	url = https://cabbageaudio.com/
+	arch = x86_64
+	license = GPL-2.0-or-later
+	makedepends = patchelf
+	optdepends = vst-host: for loading the VST2 format plugins
+	optdepends = vst3-host: for loading the VST3 format plugins
+	provides = cabbage=2.9.0
+	conflicts = cabbage
+	source = https://github.com/rorywalsh/cabbage/releases/download/v2.9.0/CabbageLinux-2.9.0.zip
+	sha256sums = 9fd60f04a475989d2ac713c06e93732c65bbd1593d672d880dd22702e8e85a4a
+
+pkgname = cabbage-bin
+	depends = csound
+	depends = freetype2
+	depends = libglvnd

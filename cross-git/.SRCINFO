@@ -1,0 +1,24 @@
+pkgbase = cross-git
+	pkgdesc = 'Zero setup' cross compilation and 'cross testing' of Rust crates
+	pkgver = 0.2.1.644
+	pkgrel = 1
+	url = https://github.com/rust-embedded/cross
+	arch = i686
+	arch = x86_64
+	license = Apache
+	license = MIT
+	makedepends = rust
+	makedepends = cargo
+	makedepends = git
+	depends = rustup
+	depends = cargo
+	optdepends = rust-src: rust std source code
+	optdepends = docker: provide container
+	optdepends = podman: provide container
+	provides = cross
+	conflicts = cross
+	source = cross::git+https://github.com/rust-embedded/cross
+	sha256sums = SKIP
+
+pkgname = cross-git
+

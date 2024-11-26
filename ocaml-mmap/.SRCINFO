@@ -1,0 +1,20 @@
+pkgbase = ocaml-mmap
+	pkgdesc = Provides a Mmap.map_file function for mapping files in memory
+	pkgver = 1.2.0
+	pkgrel = 1
+	url = https://github.com/mirage/mmap
+	arch = x86_64
+	arch = i686
+	arch = arm
+	arch = armv6h
+	arch = armv7h
+	arch = aarch64
+	license = custom:LGPL2.1 with linking exception
+	makedepends = dune>=1.6.0
+	depends = ocaml>=4.02.3
+	depends = ocaml-bigarray-compat
+	options = !strip
+	source = ocaml-mmap-1.2.0-1.tar.gz::https://github.com/mirage/mmap/archive/v1.2.0.tar.gz
+	sha512sums = cef6c37953d62f2f7472147a03707d60401d92aaf4ddb2dbaa697ee4eee252f70d8068e8fe5c6a36e005d4cc738f61d2c5bea12d844f1e3a696fef2f6546d59c
+
+pkgname = ocaml-mmap

@@ -1,0 +1,17 @@
+pkgbase = screencfg-git
+	pkgdesc = Automatically configure your screen setup
+	pkgver = 0.1.r2.gd33f9b3
+	pkgrel = 1
+	url = https://github.com/hakoerber/screencfg
+	arch = x86_64
+	license = GPL-3.0-only
+	makedepends = cargo
+	makedepends = git
+	depends = glibc
+	depends = gcc-libs
+	provides = screencfg
+	conflicts = screencfg
+	source = screencfg-git::git+https://github.com/hakoerber/screencfg#branch=develop
+	sha256sums = SKIP
+
+pkgname = screencfg-git

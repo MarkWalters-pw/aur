@@ -1,0 +1,16 @@
+pkgbase = vapoursynth-plugin-gradcurve-git
+	pkgdesc = Plugin for Vapoursynth: gradcurve (GIT version)
+	pkgver = r38.aa2c4e9
+	pkgrel = 1
+	url = https://forum.doom9.org/showthread.php?t=174096
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	depends = vapoursynth
+	provides = vapoursynth-plugin-gradcurve
+	conflicts = vapoursynth-plugin-gradcurve
+	options = debug
+	source = gradcurve::git+https://github.com/xekon/GradCurve.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-gradcurve-git

@@ -1,0 +1,22 @@
+pkgbase = baloo-git
+	pkgdesc = A framework for searching and managing metadata
+	pkgver = 5.240.0_r3149.gf6974075
+	pkgrel = 1
+	url = https://community.kde.org/Frameworks
+	arch = x86_64
+	groups = kf6
+	license = LGPL
+	makedepends = extra-cmake-modules-git
+	makedepends = kdoctools-git
+	makedepends = git
+	makedepends = python
+	depends = lmdb
+	depends = kfilemetadata-git
+	depends = kidletime-git
+	depends = kio-git
+	provides = baloo
+	conflicts = baloo
+	source = git+https://github.com/KDE/baloo.git
+	md5sums = SKIP
+
+pkgname = baloo-git

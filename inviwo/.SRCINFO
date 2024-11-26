@@ -1,0 +1,35 @@
+pkgbase = inviwo
+	pkgdesc = Software framework for rapid visualization prototyping
+	pkgver = 0.9.11
+	pkgrel = 1
+	url = http://www.inviwo.org/
+	arch = x86_64
+	license = BSD
+	makedepends = git
+	makedepends = cmake
+	depends = libjpeg
+	depends = libpng
+	depends = libtiff
+	depends = libtirpc
+	depends = python
+	depends = qt5-base
+	depends = zlib
+	source = git+https://github.com/inviwo/inviwo.git#tag=v0.9.11
+	source = inviwo.desktop
+	source = inviwo.sh
+	source = icon_24.png::https://avatars1.githubusercontent.com/u/10848351?s=24
+	source = icon_32.png::https://avatars1.githubusercontent.com/u/10848351?s=32
+	source = icon_48.png::https://avatars1.githubusercontent.com/u/10848351?s=48
+	source = icon_72.png::https://avatars1.githubusercontent.com/u/10848351?s=72
+	source = icon_256.png::https://avatars1.githubusercontent.com/u/10848351?s=256
+	sha256sums = SKIP
+	sha256sums = a39bce23e91e85d333c540c4b1461a3b80c4890d96fcd400657f9788aedc72a1
+	sha256sums = e3d9cb272f6ad90f530c7c3f557409fae4130b5f6221c10dc7321287005f8d3d
+	sha256sums = 6f8bd81ba66de5739fccca7ba24fd8b96bc1ca0d13dc69fb00f046a4676aeb33
+	sha256sums = abe1c9af7c61e1426a477a8ab45cdd9bde68cce0330c21df12c38f5ac41f5c80
+	sha256sums = 7490e3beffc315ad3c37f18879668659d572ff06069ec094d5212e467c533da4
+	sha256sums = 92469cc044cfef24013d04a2e0098052f82d2479eedfef75e83b2cdc8fdebd01
+	sha256sums = 625eb81ec86636c28f02d373d3622a87512fc3791b3b61168d69694893ff2868
+
+pkgname = inviwo
+

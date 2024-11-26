@@ -1,0 +1,20 @@
+pkgbase = wolf3d
+	pkgdesc = Wolfenstein3D game powered by the wolf4sdl.
+	pkgver = 1.0.0
+	pkgrel = 2
+	url = https://gitlab.com/linuxbombay/wolfenstein3d
+	arch = pentium4
+	arch = i386
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	license = GPL
+	makedepends = unzip
+	depends = wolf4sdl-bin
+	depends = wget
+	depends = unzip
+	depends = yad
+	source = https://gitlab.com/linuxbombay/wolfenstein3d/-/archive/1.0.0-2/wolfenstein3d-1.0.0-2.tar.bz2
+	sha256sums = SKIP
+
+pkgname = wolf3d

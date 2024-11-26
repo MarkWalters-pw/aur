@@ -1,0 +1,20 @@
+pkgbase = libbass_fx
+	pkgdesc = BASS audio library - Effects Add-On
+	pkgver = 2.4.12.6
+	pkgrel = 4
+	url = http://www.un4seen.com/
+	arch = i686
+	arch = x86_64
+	arch = armv6h
+	arch = armv7h
+	arch = aarch64
+	license = custom
+	depends = alsa-lib
+	depends = unzip
+	depends = libbass
+	source = https://www.un4seen.com/files/z/0/bass_fx24-linux.zip
+	source = LICENSE
+	sha256sums = 1ee97610bc2768357c4c344c0d7a058ac95edf51804c391fdcf7644762bd413b
+	sha256sums = f7bc36320110c8fd2f87c6d2bb5df6d2231ca9ab31a299b1565de63f7681cc83
+
+pkgname = libbass_fx

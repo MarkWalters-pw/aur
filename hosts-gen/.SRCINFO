@@ -1,0 +1,18 @@
+pkgbase = hosts-gen
+	pkgdesc = A little framework to generate /etc/hosts from /etc/hosts.d
+	pkgver = 0.9.20191123.2
+	pkgrel = 2
+	url = http://r-36.net/scm/hosts-gen/
+	install = hosts-gen.install
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = coreutils
+	source = hosts-gen::git://r-36.net/hosts-gen#commit=562b4af551efc7249cb68f6d4b8909daf2ce7ce6
+	source = hosts-gen.path
+	source = hosts-gen.service
+	md5sums = SKIP
+	md5sums = 470be01a8490fc054fb0a04d3a74eed1
+	md5sums = 12ed5fdea9f047bb03e61e8f846c641a
+
+pkgname = hosts-gen

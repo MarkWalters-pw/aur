@@ -1,0 +1,17 @@
+pkgbase = php-geos-git
+	pkgdesc = PHP bindings for GEOS
+	pkgver = 1.0.1.r4.ge4f9578
+	pkgrel = 1
+	url = http://geos.osgeo.org/
+	arch = i686
+	arch = x86_64
+	license = LGPL2
+	license = MIT
+	makedepends = git
+	depends = geos
+	depends = php
+	source = php-geos::git+https://github.com/ModelTech/php-geos.git
+	sha256sums = SKIP
+
+pkgname = php-geos-git
+

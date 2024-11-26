@@ -1,0 +1,19 @@
+pkgbase = kame-editor-git
+	pkgdesc = A 3DS theme editor made with Qt6
+	pkgver = 1.4.1
+	pkgrel = 1
+	url = https://gitlab.com/beelzy/kame-editor
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	license = GPL3
+	makedepends = git
+	depends = qt6-base
+	depends = portaudio
+	depends = kame-tools-git
+	depends = rstmcpp-git
+	depends = vgmstream-git
+	source = kame-editor::git+https://gitlab.com/beelzy/kame-editor.git
+	sha256sums = SKIP
+
+pkgname = kame-editor-git

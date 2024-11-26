@@ -1,0 +1,23 @@
+diff --git a/hack/build.sh b/hack/build.sh
+index 47052e81..17c39b80 100755
+--- a/hack/build.sh
++++ b/hack/build.sh
+@@ -61,9 +61,9 @@ if [[ ${DEBUG:-} = "1" ]]; then
+     GCFLAGS="all=-N -l"
+ fi
+
+-export CGO_ENABLED=0
++export CGO_ENABLED=1
+
+-LDFLAGS="-X ${PKG}/pkg/buildinfo.Version=${VERSION}"
++LDFLAGS="${GOLDFLAGS} -X ${PKG}/pkg/buildinfo.Version=${VERSION}"
+ LDFLAGS="${LDFLAGS} -X ${PKG}/pkg/buildinfo.ImageRegistry=${REGISTRY}"
+ LDFLAGS="${LDFLAGS} -X ${PKG}/pkg/buildinfo.GitSHA=${GIT_SHA}"
+ LDFLAGS="${LDFLAGS} -X ${PKG}/pkg/buildinfo.GitTreeState=${GIT_TREE_STATE}"
+@@ -79,6 +79,5 @@ fi
+ go build \
+     -o ${OUTPUT} \
+     -gcflags "${GCFLAGS}" \
+-    -installsuffix "static" \
+     -ldflags "${LDFLAGS}" \
+     ${PKG}/cmd/${BIN}

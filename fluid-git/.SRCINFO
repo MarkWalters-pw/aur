@@ -1,0 +1,30 @@
+pkgbase = fluid-git
+	pkgdesc = Components for Qt Quick applications with Material Design
+	pkgver = v1.2.0.r50.g27417d4
+	pkgrel = 1
+	url = https://liri.io
+	arch = i686
+	arch = x86_64
+	arch = armv6h
+	arch = armv7h
+	groups = liri-git
+	license = MPL2
+	makedepends = git
+	makedepends = liri-cmake-shared-git
+	makedepends = qt5-doc
+	makedepends = qt5-tools
+	makedepends = clang
+	depends = qt5-quickcontrols2
+	depends = qt5-graphicaleffects
+	depends = qt5-svg
+	depends = qt5-wayland
+	depends = ttf-roboto
+	provides = fluid
+	conflicts = fluid
+	replaces = fluid
+	options = debug
+	options = !strip
+	source = fluid::git+https://github.com/lirios/fluid.git#branch=develop
+	md5sums = SKIP
+
+pkgname = fluid-git

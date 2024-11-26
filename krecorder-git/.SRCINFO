@@ -1,0 +1,26 @@
+pkgbase = krecorder-git
+	pkgdesc = A convergent audio recording application for Plasma
+	pkgver = 22.06.r5.g3c85cd8
+	pkgrel = 1
+	url = https://invent.kde.org/plasma-mobile/krecorder
+	arch = x86_64
+	arch = i686
+	arch = arm
+	arch = armv6h
+	arch = armv7h
+	arch = aarch64
+	license = GPL3
+	makedepends = git
+	makedepends = qt5-svg
+	makedepends = qt5-tools
+	makedepends = extra-cmake-modules
+	depends = ki18n
+	depends = kconfig
+	depends = qt5-multimedia
+	depends = kirigami2
+	provides = krecorder
+	conflicts = krecorder
+	source = git+https://invent.kde.org/plasma-mobile/krecorder.git
+	sha256sums = SKIP
+
+pkgname = krecorder-git

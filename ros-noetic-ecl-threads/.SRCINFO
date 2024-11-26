@@ -1,0 +1,31 @@
+pkgbase = ros-noetic-ecl-threads
+	pkgdesc = ROS - This package provides the c++ extensions for a variety of threaded programming tools.
+	pkgver = 0.62.2
+	pkgrel = 1
+	url = https://wiki.ros.org/ecl_threads
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-ecl-license
+	makedepends = ros-noetic-ecl-errors
+	makedepends = ros-noetic-ecl-config
+	makedepends = ros-noetic-ecl-utilities
+	makedepends = ros-noetic-ecl-time
+	makedepends = ros-noetic-ecl-concepts
+	makedepends = ros-noetic-ecl-build
+	makedepends = ros-noetic-ecl-exceptions
+	makedepends = ros-noetic-catkin
+	depends = ros-noetic-ecl-license
+	depends = ros-noetic-ecl-errors
+	depends = ros-noetic-ecl-config
+	depends = ros-noetic-ecl-utilities
+	depends = ros-noetic-ecl-time
+	depends = ros-noetic-ecl-concepts
+	depends = ros-noetic-ecl-build
+	depends = ros-noetic-ecl-exceptions
+	source = ros-noetic-ecl-threads-0.62.2.tar.gz::https://github.com/stonier/ecl_core/archive/0.62.2.tar.gz
+	sha256sums = 69d503109878e3a2c4f5be611fc9609078714899cae15fbf7f58119fdbd61e37
+
+pkgname = ros-noetic-ecl-threads
+

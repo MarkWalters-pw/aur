@@ -1,0 +1,21 @@
+pkgbase = zoho-notebook
+	pkgdesc = Zoho Notebook for Linux: Take notes, add files, create checklists, sketches, record audio, and capture moments.
+	pkgver = 2.2.3
+	pkgrel = 1
+	url = https://www.zoho.com/notebook
+	install = notebook.install
+	arch = x86_64
+	license = custom
+	depends = gtk3
+	depends = libsecret
+	depends = dbus
+	depends = nss
+	depends = python
+	depends = alsa-lib
+	depends = make
+	options = !strip
+	options = !emptydirs
+	source = https://downloads.zohocdn.com/notebooklinux-desktop/Notebook-2.2.3.deb
+	sha256sums = c9f4faf14c722fd549cd1be7ebd0424728af7ad2ceda246faadd76d2b83abaa1
+
+pkgname = zoho-notebook

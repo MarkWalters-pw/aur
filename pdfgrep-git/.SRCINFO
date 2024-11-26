@@ -1,0 +1,18 @@
+pkgbase = pdfgrep-git
+	pkgdesc = A commandline utility to search text in PDF files.
+	pkgver = 2.1.2.r47.g8101228
+	pkgrel = 2
+	url = https://pdfgrep.org/
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = asciidoc
+	depends = poppler
+	depends = libgcrypt
+	depends = pcre
+	conflicts = pdfgrep
+	source = pdfgrep-git::git+https://gitlab.com/pdfgrep/pdfgrep.git
+	md5sums = SKIP
+
+pkgname = pdfgrep-git

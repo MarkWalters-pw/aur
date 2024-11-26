@@ -1,0 +1,126 @@
+diff --git a/python/mujoco/CMakeLists.txt b/python/mujoco/CMakeLists.txt
+index 21ad154..42f6599 100644
+--- a/python/mujoco/CMakeLists.txt
++++ b/python/mujoco/CMakeLists.txt
+@@ -132,7 +132,7 @@ endif()
+ set(MUJOCO_PYTHON_ABSL_TARGETS absl::core_headers absl::flat_hash_map absl::span)
+ findorfetch(
+   USE_SYSTEM_PACKAGE
+-  OFF
++  ON
+   PACKAGE_NAME
+   absl
+   LIBRARY_NAME
+@@ -165,7 +165,7 @@ endforeach()
+ add_compile_definitions(EIGEN_MPL2_ONLY)
+ findorfetch(
+   USE_SYSTEM_PACKAGE
+-  OFF
++  ON
+   PACKAGE_NAME
+   Eigen3
+   LIBRARY_NAME
+@@ -182,7 +182,7 @@ findorfetch(
+ # ==================== PYBIND11 ================================================
+ findorfetch(
+   USE_SYSTEM_PACKAGE
+-  OFF
++  ON
+   PACKAGE_NAME
+   pybind11
+   LIBRARY_NAME
+diff --git a/python/mujoco/__init__.py b/python/mujoco/__init__.py
+index d9e0e5c..9bf244e 100644
+--- a/python/mujoco/__init__.py
++++ b/python/mujoco/__init__.py
+@@ -47,8 +47,8 @@ from mujoco._structs import *
+ from mujoco.gl_context import *
+ from mujoco.renderer import Renderer
+ 
+-HEADERS_DIR = os.path.join(os.path.dirname(__file__), 'include/mujoco')
+-PLUGINS_DIR = os.path.join(os.path.dirname(__file__), 'plugin')
++HEADERS_DIR = '/usr/include/mujoco'
++PLUGINS_DIR = '/usr/lib/mujoco/plugins'
+ 
+ PLUGIN_HANDLES = []
+ 
+diff --git a/python/setup.py b/python/setup.py
+index bafabfc..e11aa17 100644
+--- a/python/setup.py
++++ b/python/setup.py
+@@ -153,15 +153,15 @@ class BuildCMakeExtension(build_ext.build_ext):
+     (self._mujoco_library_path,
+      self._mujoco_include_path,
+      self._mujoco_plugins_path,
+-     self._mujoco_framework_path) = self._find_mujoco()
++     self._mujoco_framework_path) = "/usr/lib","/usr/include/mujoco","/usr/lib/mujoco/plugins",None
+     self._configure_cmake()
+     for ext in self.extensions:
+       assert ext.name.startswith(EXT_PREFIX)
+       assert '.' not in ext.name[len(EXT_PREFIX):]
+       self.build_extension(ext)
+-    self._copy_external_libraries()
+-    self._copy_mujoco_headers()
+-    self._copy_plugin_libraries()
++    #self._copy_external_libraries()
++    #self._copy_mujoco_headers()
++    #self._copy_plugin_libraries()
+     if self._is_apple:
+       self._copy_mjpython()
+ 
+diff --git a/simulate/CMakeLists.txt b/simulate/CMakeLists.txt
+index 2358ef7..cae4aa4 100644
+--- a/simulate/CMakeLists.txt
++++ b/simulate/CMakeLists.txt
+@@ -80,6 +80,7 @@ if(MUJOCO_HARDEN)
+ endif()
+ 
+ # Fetch lodepng dependency.
++find_package(lodepng REQUIRED)
+ if(NOT TARGET lodepng)
+   FetchContent_Declare(
+     lodepng
+@@ -114,8 +115,13 @@ if(APPLE)
+ endif()
+ target_include_directories(
+   platform_ui_adapter PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}
+-                             $<TARGET_PROPERTY:glfw,INTERFACE_INCLUDE_DIRECTORIES>
+ )
++# Upstream MuJoCo is carefully not linking glfw here, and so it is just include its directories
++# to avoid dealing with two copies of glfw. In conda-forge (or in any C++/Python distribution)
++# pyglfw will depend on the same glfw copy linked here, so we can just link glfw normally
++# This avoids the tricky cmake bug https://gitlab.kitware.com/cmake/cmake/-/issues/19072
++# target_include_directories(platform_ui_adapter PUBLIC glfw)
++target_link_libraries(platform_ui_adapter PUBLIC glfw)
+ target_link_libraries(platform_ui_adapter PUBLIC mujoco::mujoco)
+ if(SIMULATE_GLFW_DYNAMIC_SYMBOLS)
+   target_compile_definitions(platform_ui_adapter PUBLIC mjGLFW_DYNAMIC_SYMBOLS)
+diff --git a/simulate/cmake/SimulateDependencies.cmake b/simulate/cmake/SimulateDependencies.cmake
+index fa539c2..eb0b95a 100644
+--- a/simulate/cmake/SimulateDependencies.cmake
++++ b/simulate/cmake/SimulateDependencies.cmake
+@@ -22,12 +22,12 @@ else()
+ endif()
+ 
+ option(MUJOCO_SIMULATE_USE_SYSTEM_MUJOCO "Use installed MuJoCo version."
+-       ${DEFAULT_USE_SYSTEM_MUJOCO}
++       ON
+ )
+ unset(DEFAULT_USE_SYSTEM_MUJOCO)
+ 
+-option(MUJOCO_SIMULATE_USE_SYSTEM_MUJOCO "Use installed MuJoCo version." OFF)
+-option(MUJOCO_SIMULATE_USE_SYSTEM_GLFW "Use installed GLFW version." OFF)
++option(MUJOCO_SIMULATE_USE_SYSTEM_MUJOCO "Use installed MuJoCo version." ON)
++option(MUJOCO_SIMULATE_USE_SYSTEM_GLFW "Use installed GLFW version." ON)
+ 
+ set(MUJOCO_DEP_VERSION_glfw3
+     7482de6071d21db77a7236155da44c172a7f6c9e # 3.3.8
+@@ -59,7 +59,7 @@ findorfetch(
+ )
+ 
+ option(MUJOCO_EXTRAS_STATIC_GLFW
+-       "Link MuJoCo sample apps and simulate libraries against GLFW statically." ON
++       "Link MuJoCo sample apps and simulate libraries against GLFW statically." OFF
+ )
+ if(MUJOCO_EXTRAS_STATIC_GLFW)
+   set(BUILD_SHARED_LIBS_OLD ${BUILD_SHARED_LIBS})

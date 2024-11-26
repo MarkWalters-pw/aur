@@ -1,0 +1,22 @@
+pkgbase = waybackpy-git
+	pkgdesc = CLI tool that interfaces with the Internet Archives Wayback Machine API
+	pkgver = 3.0.6.r6.g3b3e78d
+	pkgrel = 1
+	url = https://github.com/akamhy/waybackpy
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python-click
+	depends = python-requests
+	depends = python-urllib3
+	provides = python-waybackpy
+	provides = waybackpy
+	conflicts = waybackpy
+	source = waybackpy-git::git+https://github.com/akamhy/waybackpy
+	sha256sums = SKIP
+
+pkgname = waybackpy-git

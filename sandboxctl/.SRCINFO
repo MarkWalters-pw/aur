@@ -1,0 +1,17 @@
+pkgbase = sandboxctl
+	pkgdesc = Automates the creation and management of chroot-based sandboxes
+	pkgver = 1.1
+	pkgrel = 1
+	url = https://github.com/jmmv/sandboxctl
+	arch = any
+	license = BSD
+	makedepends = autoconf
+	makedepends = automake
+	makedepends = make
+	makedepends = pkg-config
+	depends = shtk
+	source = sandboxctl-1.1.tar.gz::https://github.com/jmmv/sandboxctl/releases/download/sandboxctl-1.1/sandboxctl-1.1.tar.gz
+	sha256sums = 60bfb575364a77f238e4a373fe11b78b70f87a15f084d53a87efa3d88fe8694a
+
+pkgname = sandboxctl
+

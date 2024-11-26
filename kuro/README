@@ -1,0 +1,20 @@
+Updating the package:
+
+* Upgrade version in PKGBUILD
+* Update checksums in PKGBUILD
+
+	updpkgsums
+
+* Update .SRCINFO
+
+	makepkg --printsrcinfo > .SRCINFO
+
+
+* Test
+
+  makepkg
+  sudo pacman -U ao-5.6.0-1-x86_64.pkg.tar.xz
+	
+* Git add
+* Git commit
+* Git push

@@ -1,0 +1,22 @@
+pkgbase = kolossus-launcher
+	pkgdesc = Kolossus Launcher, to download the latest version of the IFSCL.
+	pkgver = 170_2
+	pkgrel = 1
+	url = https://en.codelyoko.fr/ifscl/
+	install = kolossus-launcher.install
+	arch = x86_64
+	license = custom
+	makedepends = zip
+	makedepends = unzip
+	depends = bash
+	noextract = Kolossus_170_2_Linux.zip
+	source = https://ifscl.b-cdn.net/kolossus/Kolossus_170_2_Linux.zip
+	source = Kolossus-Launcher.desktop
+	source = install.sh
+	source = kolossus-launcher.install
+	md5sums = aba63d1b4f0a59ccd1a7328152ba7304
+	md5sums = 2452af4456694c3b2d27470516a1ccc8
+	md5sums = f1757af2f0c62598465fcc3a1ccaaa58
+	md5sums = 6cbd8a292f3700ffe4a1150d607542cc
+
+pkgname = kolossus-launcher

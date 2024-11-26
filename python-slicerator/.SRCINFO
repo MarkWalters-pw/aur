@@ -1,0 +1,20 @@
+pkgbase = python-slicerator
+	pkgdesc = A lazy-loading, fancy-sliceable iterable
+	pkgver = 1.1.0
+	pkgrel = 1
+	url = https://github.com/soft-matter/slicerator
+	arch = any
+	license = BSD
+	checkdepends = python-pytest
+	checkdepends = python-numpy
+	makedepends = git
+	makedepends = python-setuptools
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = python
+	source = python-slicerator::git+https://github.com/soft-matter/slicerator#tag=v1.1.0?signed
+	validpgpkeys = 96B7334D7610EE3E68AFFE589E027116943D6A8B
+	sha256sums = SKIP
+
+pkgname = python-slicerator

@@ -1,0 +1,25 @@
+pkgbase = yas-scanner
+	pkgdesc = fast Artifact scanner for a specific anime game
+	pkgver = 0.1.11.afcfa6a
+	pkgrel = 5
+	url = https://github.com/poly000/yas/tree/linux-x11-support
+	arch = i686
+	arch = pentium4
+	arch = x86_64
+	arch = arm
+	arch = armv7h
+	arch = armv6h
+	arch = aarch64
+	license = custom
+	makedepends = cargo
+	makedepends = git
+	makedepends = git-lfs
+	depends = xorg-xwininfo
+	depends = xdotool
+	depends = libx11
+	depends = libxrandr
+	depends = libxcb
+	depends = dbus
+	optdepends = xdg-desktop-portal: screenshot on wayland compositors other than GNOME
+
+pkgname = yas-scanner

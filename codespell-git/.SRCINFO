@@ -1,0 +1,21 @@
+pkgbase = codespell-git
+	pkgdesc = Tool for fixing common misspellings in text files
+	pkgver = 2.2.2.r160.g36c8c276
+	pkgrel = 1
+	url = https://github.com/codespell-project/codespell
+	arch = any
+	license = GPL2
+	checkdepends = python-pytest
+	makedepends = git
+	makedepends = help2man
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools-scm
+	makedepends = python-wheel
+	depends = python
+	provides = codespell=2.2.2.r160.g36c8c276
+	conflicts = codespell
+	source = git+https://github.com/codespell-project/codespell.git
+	sha256sums = SKIP
+
+pkgname = codespell-git

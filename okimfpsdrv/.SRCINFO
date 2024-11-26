@@ -1,0 +1,20 @@
+pkgbase = okimfpsdrv
+	pkgdesc = Scanner drivers OKI multifunctional printers
+	pkgver = 1.7.0
+	pkgrel = 1
+	url = http://www.oki.co.uk/support/printer/printer-drivers
+	arch = i686
+	arch = x86_64
+	license = custom
+	depends = libusb
+	depends = python2
+	optdepends = netpbm: support for additional output formats
+	backup = usr/lib/okimfpdrv/device.conf
+	source = okiscand.service
+	md5sums = 0164a329e93405806dcf20700b01008d
+	source_i686 = http://www.oki.com/uk/printing/download/okimfpsdrv-1.7-0.i386_231227.rpm
+	md5sums_i686 = cad710beccb7d08cc7c048896ffb94b7
+	source_x86_64 = http://www.oki.com/uk/printing/download/okimfpsdrv-1.7-0.x86_64_231228.rpm
+	md5sums_x86_64 = ff6c99bd9ca05dd6141d7dbd2ddcd1af
+
+pkgname = okimfpsdrv

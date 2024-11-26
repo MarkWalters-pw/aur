@@ -1,0 +1,20 @@
+pkgbase = kore-git
+	pkgdesc = An easy to use, scalable and secure web application framework for writing web APIs in C.
+	pkgver = 3.3.1.r1491
+	pkgrel = 1
+	url = https://kore.io/
+	arch = i686
+	arch = x86_64
+	license = ISC
+	makedepends = git
+	depends = openssl
+	depends = postgresql-libs
+	depends = curl
+	depends = yajl
+	provides = kore
+	conflicts = kore
+	source = git://github.com/jorisvink/kore
+	md5sums = SKIP
+
+pkgname = kore-git
+

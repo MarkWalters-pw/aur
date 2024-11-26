@@ -1,0 +1,22 @@
+pkgbase = fish-fzf-git
+	pkgdesc = fzf key-bindings into fish
+	pkgver = 6.2.r0.g20ec3e4
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/PatrickF1/fzf.fish
+	arch = any
+	groups = fish-plugins
+	license = MIT
+	makedepends = git
+	depends = fish>=3.2
+	depends = fzf
+	optdepends = fd: faster, friendlier alternative to find
+	optdepends = bat: smarter cat with syntax highlighting
+	optdepends = git
+	provides = fish-fzf
+	conflicts = fish-fzf
+	source = fish-fzf::git+https://github.com/PatrickF1/fzf.fish
+	sha256sums = SKIP
+
+pkgname = fish-fzf-git
+

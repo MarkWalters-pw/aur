@@ -1,0 +1,25 @@
+pkgbase = mediastreamer-git
+	pkgdesc = A modular sound and video processing and streaming library
+	pkgver = 5.3.0.alpha.r64.g62a23baa
+	pkgrel = 1
+	url = https://github.com/BelledonneCommunications/mediastreamer2
+	arch = x86_64
+	license = GPL
+	makedepends = cmake
+	makedepends = doxygen
+	makedepends = git
+	depends = bcg729-git
+	depends = bcmatroska2-git
+	depends = bzrtp>=4.4
+	depends = ffmpeg
+	depends = glew
+	depends = libsrtp
+	depends = mbedtls
+	depends = ortp>=4.4.0
+	depends = zxing-cpp
+	provides = mediastreamer=5.3.0.alpha.r64.g62a23baa
+	conflicts = mediastreamer
+	source = git+https://github.com/BelledonneCommunications/mediastreamer2.git
+	sha256sums = SKIP
+
+pkgname = mediastreamer-git

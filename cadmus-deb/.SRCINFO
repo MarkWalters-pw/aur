@@ -1,0 +1,18 @@
+pkgbase = cadmus-deb
+	pkgdesc = A GUI frontend for @werman's Pulse Audio real-time noise suppression plugin
+	pkgver = 0.0.3
+	pkgrel = 1
+	url = https://github.com/josh-richardson/cadmus/
+	arch = x86_64
+	license = GPL3
+	makedepends = tar
+	depends = hicolor-icon-theme
+	depends = zlib
+	provides = cadmus
+	conflicts = cadmus
+	conflicts = cadmus-appimage
+	source = https://github.com/josh-richardson/cadmus/releases/download/0.0.3/cadmus.deb
+	sha256sums = 300b9e66e58e23400e59d36c2dc93647508d5c4685ce156c81ecb88140457f50
+
+pkgname = cadmus-deb
+

@@ -1,0 +1,18 @@
+pkgbase = ros-noetic-rosbridge-msgs
+	pkgdesc = ROS - Package containing message files
+	pkgver = 0.11.13
+	pkgrel = 1
+	url = https://wiki.ros.org/rosbridge_suite
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-catkin
+	makedepends = ros-noetic-message-generation
+	makedepends = ros-noetic-message-runtime
+	depends = ros-noetic-message-runtime
+	depends = ros-noetic-std-msgs
+	source = ros-noetic-rosbridge-msgs-0.11.13.tar.gz::https://github.com/RobotWebTools/rosbridge_suite/archive/0.11.13.tar.gz
+	sha256sums = e4989b48efce2f101aca6761102b0f9618ecc31a590039b641b35a08fc91d6db
+
+pkgname = ros-noetic-rosbridge-msgs

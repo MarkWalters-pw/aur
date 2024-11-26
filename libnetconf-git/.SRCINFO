@@ -1,0 +1,21 @@
+pkgbase = libnetconf-git
+	pkgdesc = a NETCONF library in C intended for building NETCONF clients and servers.
+	pkgver = r2232.159e155f
+	pkgrel = 1
+	url = https://github.com/CESNET/libnetconf
+	arch = i686
+	arch = x86_64
+	license = BSD
+	makedepends = git
+	makedepends = doxygen
+	depends = curl
+	depends = libssh
+	depends = libxslt
+	provides = libnetconf
+	conflicts = libnetconf
+	options = !emptydirs
+	source = libnetconf-git::git+https://github.com/CESNET/libnetconf
+	md5sums = SKIP
+
+pkgname = libnetconf-git
+

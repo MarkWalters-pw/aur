@@ -1,0 +1,16 @@
+pkgbase = easyeda-router
+	pkgdesc = LCEDA/EasyEDA local auto router server for Linux.
+	pkgver = 0.8.11
+	pkgrel = 4
+	url = https://docs.easyeda.com/en/PCB/Route/index.html#Local-Auto-Router
+	arch = x86_64
+	license = unknown
+	depends = jre8-openjdk-headless
+	source = easyeda-router-0.8.11.zip::https://image.easyeda.com/files/easyeda-router-linux-x64-v0.8.11.zip
+	source = easyeda-router.sh
+	source = easyeda-router.service
+	sha256sums = 188c71abddc29abda5caab6e7ebb158c1baa45dfcec6e0e18f150a253cde1383
+	sha256sums = 0b08eca8fc84a2b5ec3fc34c0cbcd37fd22cd9d2687214e298c82486bd7b9c0a
+	sha256sums = 35e5e4a2b5b6ba80ce9d8f807e3ddcabe1020fe77600a4de6b72f74f8a4c0a53
+
+pkgname = easyeda-router

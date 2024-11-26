@@ -1,0 +1,22 @@
+pkgbase = laditools-git
+	pkgdesc = Utilities to improve integration and workflow with JACK and LASH.
+	pkgver = 1.1.r6.g61f59ae
+	pkgrel = 1
+	url = https://gitea.ladish.org/LADI/laditools
+	arch = any
+	license = GPL3
+	makedepends = git
+	makedepends = glade
+	makedepends = python-distutils-extra
+	depends = gtk3
+	depends = ladish
+	depends = python
+	depends = python-gobject
+	depends = python-pyxdg
+	depends = python-yaml
+	provides = laditools
+	conflicts = laditools
+	source = laditools::git+https://gitea.ladish.org/LADI/laditools.git
+	sha256sums = SKIP
+
+pkgname = laditools-git

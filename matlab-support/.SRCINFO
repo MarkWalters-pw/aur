@@ -1,0 +1,35 @@
+pkgbase = matlab-support
+	pkgdesc = Provides dependencies desktop file and common fixes for MATLAB.
+	pkgver = 9.14.0
+	pkgrel = 1
+	url = http://www.mathworks.com
+	arch = x86_64
+	license = custom
+	makedepends = gendesk
+	depends = gst-plugins-base-libs
+	depends = gtk3
+	depends = libsndfile
+	depends = libxcrypt-compat
+	depends = libxt
+	depends = lsb-release
+	depends = make
+	depends = net-tools
+	depends = nss
+	depends = procps
+	depends = python
+	depends = sudo
+	depends = unixodbc
+	depends = unzip
+	depends = wget
+	optdepends = gcc6: For MEX support
+	optdepends = gcc7: For MEX support
+	optdepends = gcc8: For MEX support
+	optdepends = gcc9: For MEX support
+	optdepends = gcc: For MEX support
+	optdepends = libselinux: for Addon manager support
+	optdepends = python-pip: for setting up Python engine
+	optdepends = gconf: may be needed for Live Scripts
+	provides = matlab=$pkgver
+	conflicts = matlab
+
+pkgname = matlab-support

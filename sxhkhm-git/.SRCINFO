@@ -1,0 +1,24 @@
+pkgbase = sxhkhm-git
+	pkgdesc = Parse and fuzzy-find keybinds from sxhkd-configuration - built from latest sources at github
+	pkgver = r102.281d0cd
+	pkgrel = 1
+	url = https://github.com/fiskhest/aur-sxhkhm-git
+	install = sxhkhm-git.install
+	arch = any
+	license = BSD
+	makedepends = git
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	makedepends = python-pip
+	depends = sxhkd
+	depends = python
+	depends = bash
+	depends = rofi
+	depends = grep
+	depends = fzf
+	provides = sxhkhm
+	conflicts = sxhkhm
+	source = git+https://github.com/fiskhest/sxhkd-helper-menu.git
+	md5sums = SKIP
+
+pkgname = sxhkhm-git

@@ -1,0 +1,19 @@
+pkgbase = typewriter-git
+	pkgdesc = Minimal writer with autosave
+	pkgver = r56.eacdb73
+	pkgrel = 1
+	url = https://github.com/manexim/typewriter
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = meson
+	makedepends = vala
+	depends = granite
+	depends = gtksourceview3
+	provides = typewriter
+	conflicts = typewriter
+	source = git+https://github.com/manexim/typewriter.git
+	sha256sums = SKIP
+
+pkgname = typewriter-git
+

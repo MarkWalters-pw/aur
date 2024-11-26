@@ -1,0 +1,18 @@
+pkgbase = nfstrace
+	pkgdesc = NFS and CIFS tracing/monitoring/capturing/analyzing tool
+	pkgver = 0.4.3.2
+	pkgrel = 2
+	url = https://github.com/epam/nfstrace/
+	arch = x86_64
+	arch = i686
+	license = GPL2
+	makedepends = cmake
+	makedepends = libpcap
+	makedepends = json-c
+	makedepends = ncurses
+	depends = libtirpc
+	source = nfstrace-0.4.3.2_b220d04.zip::https://github.com/epam/nfstrace/archive/b220d04cfcaf537cecd68a70b5a44551a535465b.zip
+	sha256sums = 55e49244c36cb3f3af55b3aa7c88cc9b54f53e1769ce4213444b466f939c1c6b
+
+pkgname = nfstrace
+

@@ -1,0 +1,15 @@
+pkgbase = dfm
+	pkgdesc = Utility for managing dotfiles
+	pkgver = 0.3.1
+	pkgrel = 1
+	url = https://github.com/rosengrenen/dfm
+	arch = x86_64
+	license = GPL3
+	depends = gcc-libs
+	depends = difftastic
+	provides = dfm
+	conflicts = dfm
+	source_x86_64 = https://github.com/rosengrenen/dfm/releases/download/0.3.1/dfm-0.3.1-x86_64.tar.gz
+	sha256sums_x86_64 = da21cbb90df7b2426c1b42be1e8cbfce8a469e7219e4badccc1da005a38dd8f3
+
+pkgname = dfm

@@ -1,0 +1,14 @@
+--- vue.config.js
++++ vue.config.js
+@@ -84,6 +84,11 @@
+       chainWebpackMainProcess: config => {
+         config.resolve.alias.set('@', resolve(__dirname, 'src'))
+       },
++      builderOptions: {
++        linux: {
++          target: 'dir'
++        }
++      }
+     },
+   },
+ }

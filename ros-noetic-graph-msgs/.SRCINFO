@@ -1,0 +1,25 @@
+pkgbase = ros-noetic-graph-msgs
+	pkgdesc = ROS - ROS messages for publishing graphs of different data types.
+	pkgver = 0.1.0
+	pkgrel = 1
+	url = https://wiki.ros.org/graph_msgs
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-catkin
+	makedepends = ros-noetic-message-generation
+	makedepends = ros-noetic-std-msgs
+	makedepends = ros-noetic-geometry-msgs
+	depends = ros-noetic-std-msgs
+	depends = ros-noetic-geometry-msgs
+	depends = ros-noetic-message-runtime
+	source = ros-noetic-graph-msgs-0.1.0.tar.gz::https://github.com/PickNikRobotics/graph_msgs/archive/0.1.0.tar.gz
+	sha256sums = 41fb66143d8c5f2929b8d13cad786fc890e7b6e16b97ac21acbe102212fd4eee
+
+pkgname = ros-noetic-graph-msgs
+

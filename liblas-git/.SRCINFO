@@ -1,0 +1,23 @@
+pkgbase = liblas-git
+	pkgdesc = A C/C++ library for reading and writing the very common LAS LiDAR format. Development master
+	pkgver = 1.8.1.r59.ga847cf2b
+	pkgrel = 1
+	url = http://www.liblas.org/
+	arch = i686
+	arch = x86_64
+	license = custom
+	makedepends = git
+	makedepends = cmake
+	makedepends = txt2tags
+	depends = boost-libs>=1.38.0
+	depends = gdal>=1.7.0
+	depends = libgeotiff>=1.3.0
+	depends = laszip
+	optdepends = oci: Oracle Instant Client, see http://www.liblas.org/compilation.html
+	provides = liblas
+	conflicts = liblas
+	source = liblas::git://github.com/libLAS/libLAS.git
+	md5sums = SKIP
+
+pkgname = liblas-git
+

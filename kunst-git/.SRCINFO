@@ -1,0 +1,23 @@
+pkgbase = kunst-git
+	pkgdesc = kunst is a daemon that extracts the album art from the songs playing in mpd.
+	pkgver = 20221018
+	pkgrel = 1
+	url = https://github.com/sdushantha/kunst
+	arch = any
+	license = MIT
+	makedepends = git
+	depends = sxiv
+	depends = imagemagick
+	depends = bash
+	depends = ffmpeg
+	depends = mpd
+	depends = mpc
+	depends = jq
+	optdepends = perl-image-exiftool: for accurate extraction of cover images
+	provides = kunst
+	source = git+https://github.com/sdushantha/kunst.git
+	source = exiftool.patch
+	sha512sums = SKIP
+	sha512sums = d703f6cf4e51e24ae9dcfd5b1cbf9421581a45bfa8f3579b9a1a1695ed7405fec935b2e02b81206ca05157bb24b4323abf97b43adad49c86a9476ed9e2ef03ed
+
+pkgname = kunst-git

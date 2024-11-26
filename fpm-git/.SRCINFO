@@ -1,0 +1,28 @@
+pkgbase = fpm-git
+	pkgdesc = Build packages for multiple platforms with great ease and sanity
+	pkgver = 1.15.1.r3.b085edc4
+	pkgrel = 1
+	url = https://github.com/jordansissel/fpm
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = ruby-rspec
+	makedepends = ruby-insist
+	makedepends = ruby-pry
+	makedepends = ruby-rake
+	depends = python-simplejson
+	depends = python-setuptools
+	depends = ruby-cabin
+	depends = ruby-backports
+	depends = ruby-arr-pm
+	depends = ruby-clamp
+	depends = ruby-pleaserun
+	depends = ruby-stud
+	depends = ruby-rexml
+	provides = fpm=1.15.1
+	conflicts = fpm
+	options = !emptydirs
+	source = git+https://github.com/jordansissel/fpm.git
+	b2sums = SKIP
+
+pkgname = fpm-git

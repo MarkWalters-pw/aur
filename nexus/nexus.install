@@ -1,0 +1,80 @@
+has_old_layout()
+{
+	test -d /opt/sonatype-work/nexus/conf && ! test -d /var/lib/nexus/conf
+}
+
+post_install()
+{
+	systemd-sysusers nexus.conf
+	systemd-tmpfiles --create nexus.conf
+
+	cat <<EOF
+
+The default URL for this installation is
+
+	http://127.0.0.1:8081/
+
+To change these settings edit the file
+
+	/usr/lib/nexus/conf/nexus.properties
+
+All logs can be found at
+
+	/var/log/nexus
+
+Sonatype strongly suggests using the latest Java 8 release version of Java
+available from Oracle. Support for Java 9 has not been verified - DO NOT USE IT.
+
+See https://help.sonatype.com/repomanager2/system-requirements
+
+EOF
+}
+
+pre_upgrade()
+{
+	if has_old_layout; then
+	   	systemctl disable --now nexus
+	fi
+}
+
+post_upgrade()
+{
+	systemctl daemon-reload
+
+	cat <<EOF
+
+See Release Notes at
+	https://help.sonatype.com/repomanager2/release-notes/2020-release-notes
+
+EOF
+
+	if has_old_layout; then
+		echo ">>>"
+		echo ">>>"
+		echo ">>> Found old Nexus package layout."
+		echo ">>>"
+		echo ">>> You need to move all the content of /opt/sonatype-work/nexus"
+		echo ">>> to /var/log/nexus and /var/lib/nexus, e.g."
+		echo ">>>"
+	    echo ">>>      mv /opt/sonatype-work/nexus/logs/* /var/log/nexus"
+		echo ">>>      rm -rf /opt/sonatype-work/nexus/logs"
+	    echo ">>>      mv /opt/sonatype-work/nexus/* /var/lib/nexus"
+		echo ">>>"
+		echo ">>> Re-enable nexus.service if needed"
+		echo ">>>"
+		echo ">>>      systemctl enable --now nexus.service"
+		echo ">>>"
+		echo ">>>"
+	fi
+}
+
+pre_remove()
+{
+	systemctl disable --now nexus
+}
+
+post_remove()
+{
+	systemctl daemon-reload
+}
+

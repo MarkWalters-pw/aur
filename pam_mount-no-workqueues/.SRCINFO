@@ -1,0 +1,22 @@
+pkgbase = pam_mount-no-workqueues
+	pkgdesc = A PAM module that can mount volumes for a user session
+	pkgver = 2.18
+	pkgrel = 1
+	url = http://pam-mount.sourceforge.net/
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	depends = pcre
+	depends = util-linux
+	depends = libhx
+	depends = libxml2
+	depends = openssl
+	depends = cryptsetup
+	provides = pam_mount
+	conflicts = pam_mount
+	options = !emptydirs
+	backup = etc/security/pam_mount.conf.xml
+	source = pam_mount-no-workqueues::git+git://git.code.sf.net/u/thesameml/pam-mount
+	md5sums = SKIP
+
+pkgname = pam_mount-no-workqueues

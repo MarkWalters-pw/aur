@@ -1,0 +1,18 @@
+pkgbase = trimdown-git
+	pkgdesc = Simple, feature rich, writing app for writing Novels, Short stories, Scripts and Articles
+	pkgver = r67.81b3a3b
+	pkgrel = 1
+	url = https://github.com/artemanufrij/trimdown
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = meson
+	makedepends = vala
+	depends = granite
+	depends = gtksourceview3
+	provides = trimdown
+	source = git+https://github.com/artemanufrij/trimdown.git
+	sha256sums = SKIP
+
+pkgname = trimdown-git
+

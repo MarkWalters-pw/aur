@@ -1,0 +1,14 @@
+pkgbase = platformsh-cli
+	pkgdesc = Platform.sh CLI
+	pkgver = 3.68.0
+	pkgrel = 1
+	url = https://github.com/platformsh/platformsh-cli
+	arch = any
+	license = MIT
+	depends = php>=5.5.9
+	provides = platformsh-cli
+	noextract = $pkgname-$pkgver.phar
+	source = platformsh-cli-3.68.0.phar::https://github.com/platformsh/platformsh-cli/releases/download/v3.68.0/platform.phar
+	sha256sums = 29d45156c95ef8e531d6e8dbbb86cd4a3ac7b47b7e1d6282448319dcfa62d43b
+
+pkgname = platformsh-cli

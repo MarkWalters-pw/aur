@@ -1,0 +1,17 @@
+pkgbase = musnify-mpd
+	pkgdesc = Provides notification support for Music Player Daemon using libnotify
+	pkgver = 1.2
+	pkgrel = 1
+	url = https://github.com/felipemarinho97/musnify-mpd
+	install = musnify-mpd.install
+	arch = any
+	license = GPL
+	depends = python
+	depends = python-requests
+	depends = python-mpd2
+	depends = python-gobject
+	depends = libnotify
+	source = musnify-mpd-1.2.tar.gz::https://github.com/felipemarinho97/musnify-mpd/archive/1.2.tar.gz
+	md5sums = 849d3cbdf388f78bc73c60925283437f
+
+pkgname = musnify-mpd

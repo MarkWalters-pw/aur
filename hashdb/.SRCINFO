@@ -1,0 +1,19 @@
+pkgbase = hashdb
+	pkgdesc = Tool for finding previously identified blocks of data in media such as disk images
+	pkgver = 3.1.0
+	pkgrel = 2
+	url = https://github.com/NPS-DEEP/hashdb/wiki
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = automake-1.15
+	depends = openssl
+	depends = bzip2
+	depends = libewf
+	source = http://digitalcorpora.org/downloads/hashdb/hashdb-3.1.0.tar.gz
+	source = configure.patch
+	sha256sums = b524018f52248058c11a1efffcca6ab61c60a100102d3dd78cb4081ee793b60c
+	sha256sums = 56fc95bc5e2b318fdc4f92cd4e09c13d0ecdf99b044119aa43a1992df3487ebc
+
+pkgname = hashdb
+

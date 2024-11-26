@@ -1,0 +1,16 @@
+pkgbase = docker-forward
+	pkgdesc = A docker CLI plugin to forward local port to a container port
+	pkgver = 1
+	pkgrel = 1
+	url = https://github.com/pschichtel/docker-forward
+	arch = any
+	license = GPL3
+	depends = bash
+	depends = socat
+	depends = docker
+	source = https://raw.githubusercontent.com/pschichtel/docker-forward/v1/docker-forward.sh
+	source = https://raw.githubusercontent.com/pschichtel/docker-forward/v1/LICENSE
+	sha256sums = e9e990d3b31d1c16bc6f8e86ae12e475ae09a13e2f13476414ab2cd118245811
+	sha256sums = 3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986
+
+pkgname = docker-forward

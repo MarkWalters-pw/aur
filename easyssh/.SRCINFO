@@ -1,0 +1,17 @@
+pkgbase = easyssh
+	pkgdesc = SSH connection manager for Pantheon
+	pkgver = 1.7.9
+	pkgrel = 1
+	url = https://github.com/muriloventuroso/easyssh
+	arch = x86_64
+	license = GPL3
+	makedepends = vala
+	makedepends = meson
+	makedepends = ninja
+	depends = libgranite.so
+	depends = gtk3
+	depends = vte3
+	source = easyssh-1.7.9.tar.gz::https://github.com/muriloventuroso/easyssh/archive/1.7.9.tar.gz
+	sha256sums = bf3145c141362997c643a9f9a22168292cee7a0a329ed018e826a65e1e8d087c
+
+pkgname = easyssh

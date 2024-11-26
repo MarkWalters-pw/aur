@@ -1,0 +1,17 @@
+pkgbase = lua51-lualdap-git
+	pkgdesc = lua binding to openldap
+	pkgver = master
+	pkgrel = 2
+	url = https://github.com/lualdap/lualdap
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	depends = openldap>=2.1
+	depends = lua51
+	provides = lua51-lualdap
+	source = git+https://github.com/lualdap/lualdap.git
+	sha1sums = SKIP
+
+pkgname = lua51-lualdap-git
+

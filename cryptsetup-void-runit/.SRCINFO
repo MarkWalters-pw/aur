@@ -1,0 +1,21 @@
+pkgbase = cryptsetup-void-runit
+	pkgdesc = runit stage1 script for cryptsetup, ripped straight from Void Linux
+	pkgver = 1.0.r355.42ca737
+	pkgrel = 1
+	url = https://voidlinux.org
+	arch = any
+	license = BSD
+	makedepends = git
+	depends = sh
+	depends = awk
+	depends = runit
+	depends = cryptsetup
+	provides = cryptsetup-runit
+	conflicts = cryptsetup-runit
+	source = git+https://github.com/void-linux/void-runit
+	source = cryptsetup
+	sha256sums = SKIP
+	sha256sums = b23600d4218e91546f65d284f6bbbbd8ea966516ea9813180ab4cafa2a0bdf7a
+
+pkgname = cryptsetup-void-runit
+

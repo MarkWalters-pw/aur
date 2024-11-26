@@ -1,0 +1,21 @@
+pkgbase = snippet
+	pkgdesc = A terminal based interface to create a new GitLab snippet
+	pkgver = 0.4.0
+	pkgrel = 0
+	url = https://gitlab.com/zj/snippet
+	arch = x86_64
+	arch = i686
+	arch = arm
+	arch = armv6h
+	arch = armv7h
+	arch = aarch64
+	license = MIT
+	makedepends = go
+	makedepends = git
+	provides = snippet
+	conflicts = snippet
+	source = snippet-0.4.0.tar.gz::https://gitlab.com/zj/snippet/-/archive/0.4.0/snippet-0.4.0.tar.gz
+	sha256sums = 58b1067ab6382240cb7bc34fdef494b6f1e6f75e98bc42905ae86acc6a2201d4
+
+pkgname = snippet
+

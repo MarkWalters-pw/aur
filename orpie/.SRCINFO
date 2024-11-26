@@ -1,0 +1,24 @@
+pkgbase = orpie
+	pkgdesc = Curses-based RPN calculator
+	pkgver = 1.6.1
+	pkgrel = 1
+	url = https://github.com/pelzlpj/orpie
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = ocaml
+	makedepends = ocaml-gsl
+	makedepends = camlp5
+	makedepends = dune
+	makedepends = ocaml-curses
+	makedepends = ocaml-num
+	depends = ncurses
+	depends = gsl
+	options = !emptydirs
+	source = https://github.com/pelzlpj/orpie/archive/release-1.6.1.tar.gz
+	source = install-prefix.patch
+	sha256sums = 1ae5a99fbbf492869664e4bd81e6bf5cf65bdaf5027908c1e9313843bb5d5749
+	sha256sums = 27607076408ad164f91a142eebbefa845eecec6ff9b0783b336deaaed0ed9d12
+
+pkgname = orpie
+

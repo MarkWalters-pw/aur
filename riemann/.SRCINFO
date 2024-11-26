@@ -1,0 +1,28 @@
+pkgbase = riemann
+	pkgdesc = Monitors distributed systems
+	pkgver = 0.3.6
+	pkgrel = 2
+	url = http://riemann.io/
+	install = riemann.install
+	arch = any
+	license = EPL
+	makedepends = leiningen
+	depends = java-runtime-headless>=8
+	depends = bash
+	depends = inetutils
+	provides = riemann
+	conflicts = riemann-bin
+	backup = etc/riemann/riemann.config
+	source = https://github.com/riemann/riemann/archive/0.3.6.tar.gz
+	source = logging.patch
+	source = riemann.install
+	source = riemann.sysusers
+	source = riemann.service
+	sha256sums = f6f3fbe0770bdda9ad1e2bb74498802633ee7652e4c5b9c3c6c5b0c55ab55d02
+	sha256sums = 30c09cf2432f5cc49cbd77576c6fc3251495b2862e51d81af2ab71109c2706f8
+	sha256sums = c62dfdd9c723e0717d5da33dc85def9a9a8f623f671aafa9505df3790bb4d2ae
+	sha256sums = 18e21c05c351a8bcbd55b3a454bceb67b7dcfe1385e7cca6936fe63640c44303
+	sha256sums = 94181e635ae9774a76bf4169064f253b626fb09806694d34774ed06d54df35b8
+
+pkgname = riemann
+

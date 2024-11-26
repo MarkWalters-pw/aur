@@ -1,0 +1,9 @@
+[Unit]
+Description=Prelude bus communicator
+Documentation=man:prelude-manager(1)
+
+[Service]
+ExecStart=/usr/sbin/prelude-manager
+
+[Install]
+WantedBy=multi-user.target

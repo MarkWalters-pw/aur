@@ -1,0 +1,15 @@
+pkgbase = subspace-git
+	pkgdesc = A Wireguard management interface
+	pkgver = r223.7d12b87
+	pkgrel = 2
+	url = https://github.com/subspacecommunity/subspace
+	arch = x86_64
+	license = GPL
+	makedepends = go-bindata
+	makedepends = go
+	makedepends = git
+	provides = subspace-git=r223.7d12b87
+	source = subspace-git::git+https://github.com/subspacecommunity/subspace
+	sha256sums = SKIP
+
+pkgname = subspace-git

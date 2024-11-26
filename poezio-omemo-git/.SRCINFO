@@ -1,0 +1,20 @@
+pkgbase = poezio-omemo-git
+	pkgdesc = OMEMO plugin for the Poezio XMPP console client
+	pkgver = r25.29cb0cd
+	pkgrel = 1
+	url = https://codeberg.org/poezio/poezio-omemo
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python
+	depends = poezio-git
+	depends = python-slixmpp-omemo-git
+	depends = python-omemo-backend-signal-git
+	provides = poezio-omemo
+	conflicts = poezio-omemo
+	source = poezio-omemo::git+https://codeberg.org/poezio/poezio-omemo.git
+	sha256sums = SKIP
+
+pkgname = poezio-omemo-git

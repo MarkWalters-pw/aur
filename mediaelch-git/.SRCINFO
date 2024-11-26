@@ -1,0 +1,23 @@
+pkgbase = mediaelch-git
+	pkgdesc = MediaElch is a MediaManager for Kodi
+	pkgver = 2.10.0.r59.g39c83fa0
+	pkgrel = 2
+	url = https://github.com/Komet/MediaElch
+	arch = x86_64
+	license = LGPL-3.0-or-later
+	makedepends = cmake
+	makedepends = ninja
+	makedepends = qt6-tools
+	depends = glibc
+	depends = gcc-libs
+	depends = libmediainfo
+	depends = qt6-declarative
+	depends = qt6-multimedia
+	depends = qt6-svg
+	depends = quazip-qt6
+	provides = mediaelch
+	conflicts = mediaelch
+	source = mediaelch::git+https://github.com/Komet/MediaElch.git
+	sha256sums = SKIP
+
+pkgname = mediaelch-git

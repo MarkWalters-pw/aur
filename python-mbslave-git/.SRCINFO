@@ -1,0 +1,22 @@
+pkgbase = python-mbslave-git
+	pkgdesc = MusicBrainz database mirror
+	pkgver = r334.d32e188
+	pkgrel = 2
+	url = https://github.com/acoustid/mbslave
+	arch = any
+	license = MIT
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = python-poetry-core
+	makedepends = git
+	depends = python>=3.7
+	depends = python-six>=1.16.0
+	depends = python-psycopg2>=2.9.2
+	provides = python-mbslave
+	conflicts = python-mbslave
+	conflicts = python-mbdata<=27.1.0
+	source = git+https://github.com/acoustid/mbslave.git#branch=main
+	sha256sums = SKIP
+
+pkgname = python-mbslave-git

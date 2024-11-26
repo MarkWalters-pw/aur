@@ -1,0 +1,17 @@
+pkgbase = spring-roo
+	pkgdesc = Spring Roo is an easy-to-use productivity tool for rapidly building enterprise applications in the Java programming language.
+	pkgver = 2.0.0.RELEASE
+	pkgrel = 1
+	url = http://projects.spring.io/spring-roo/
+	arch = any
+	license = APACHE
+	depends = java-environment
+	depends = maven
+	backup = opt/spring-roo/conf/config.properties
+	source = http://spring-roo-repository.springsource.org.s3.amazonaws.com/release/ROO/spring-roo-2.0.0.RELEASE.zip
+	source = cache.patch
+	md5sums = 54f3e0900d64f6b064c8a4ba78c262eb
+	md5sums = cd33399b3b7946dbe1b76ece8b541996
+
+pkgname = spring-roo
+

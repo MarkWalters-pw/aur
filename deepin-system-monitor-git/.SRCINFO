@@ -1,0 +1,22 @@
+pkgbase = deepin-system-monitor-git
+	pkgdesc = A more user-friendly system monitor
+	pkgver = 5.6.12.r1.g91f17ae
+	pkgrel = 1
+	url = https://github.com/linuxdeepin/deepin-system-monitor
+	install = deepin-system-monitor.install
+	arch = x86_64
+	groups = deepin
+	license = GPL3
+	makedepends = cmake
+	makedepends = deepin-gettext-tools
+	makedepends = ninja
+	makedepends = qt5-tools
+	depends = deepin-qt5integration
+	depends = dtkwm
+	depends = procps-ng
+	depends = libcap
+	source = git+https://github.com/linuxdeepin/deepin-system-monitor
+	sha512sums = SKIP
+
+pkgname = deepin-system-monitor-git
+

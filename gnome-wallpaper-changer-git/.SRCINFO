@@ -1,0 +1,19 @@
+pkgbase = gnome-wallpaper-changer-git
+	pkgdesc = Set Gnome Desktop wallpaper to an image from a provided directory.
+	pkgver = r10.046d103
+	pkgrel = 1
+	url = https://gitlab.com/Kibouo/gnome-wallpaper-changer
+	install = gnome-wallpaper-changer.install
+	arch = any
+	license = MIT
+	makedepends = git
+	depends = bash
+	provides = gnome-wallpaper-changer-git
+	conflicts = gnome-wallpaper-changer-git
+	source = gnome-wallpaper-changer-git::git+https://gitlab.com/Kibouo/gnome-wallpaper-changer.git
+	source = gnome-wallpaper-changer.install
+	md5sums = SKIP
+	md5sums = 948ea0e1975c20700f7af001515b173c
+
+pkgname = gnome-wallpaper-changer-git
+

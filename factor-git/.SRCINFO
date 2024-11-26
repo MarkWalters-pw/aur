@@ -1,0 +1,27 @@
+pkgbase = factor-git
+	pkgdesc = A general purpose, dynamically typed, stack-based programming language
+	pkgver = 0.99.r34513.27b6f73cfb
+	pkgrel = 1
+	url = http://factorcode.org
+	arch = i686
+	arch = x86_64
+	license = BSD
+	makedepends = git
+	makedepends = gcc
+	depends = pango
+	depends = cairo
+	depends = glib2
+	depends = freetype2
+	depends = mesa
+	depends = libgl
+	depends = gtkglext
+	optdepends = udis86
+	provides = factor
+	conflicts = factor
+	options = !strip
+	source = factor::git+https://github.com/factor/factor.git
+	source = factor.desktop
+	md5sums = SKIP
+	md5sums = 59242ddb19a9be927915e489e2bfca27
+
+pkgname = factor-git

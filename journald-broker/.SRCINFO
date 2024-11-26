@@ -1,0 +1,16 @@
+pkgbase = journald-broker
+	pkgdesc = A log-based event dispatcher daemon for systemd's journal
+	pkgver = 0.7.0
+	pkgrel = 2
+	url = https://github.com/bpetlert/journald-broker
+	arch = x86_64
+	license = GPL-3.0-or-later
+	makedepends = cargo
+	depends = systemd-libs
+	options = !lto
+	backup = etc/journald-broker.d/00-global-settings.conf
+	backup = etc/journald-broker.d/00-template.conf
+	source = journald-broker-0.7.0.tar.gz::https://github.com/bpetlert/journald-broker/archive/0.7.0.tar.gz
+	b2sums = 359269447dcb3a5c10a45b3bad710b16388b8185b2ce41878bc60ec1b965a69405bcfefe390e52744635293effa0275382b7be4f84d0cb29a24f25aadee74143
+
+pkgname = journald-broker

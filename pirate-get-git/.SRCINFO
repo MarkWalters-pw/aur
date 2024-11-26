@@ -1,0 +1,19 @@
+pkgbase = pirate-get-git
+	pkgdesc = Command line interface for The Pirate Bay
+	pkgver = 0.4.0.r5.g608cb0a
+	pkgrel = 1
+	url = https://github.com/vikstrous/pirate-get
+	arch = any
+	license = AGPL3
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python-pyperclip
+	depends = python-colorama
+	depends = python-veryprettytable
+	depends = python-termcolor
+	provides = pirate-get
+	conflicts = pirate-get
+	source = pirate-get-git::git+https://github.com/vikstrous/pirate-get
+	md5sums = SKIP
+
+pkgname = pirate-get-git

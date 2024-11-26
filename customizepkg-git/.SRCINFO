@@ -1,0 +1,21 @@
+pkgbase = customizepkg-git
+	pkgdesc = A tool to modify automatically PKGBUILD
+	pkgver = 51.6cf63cb
+	pkgrel = 1
+	url = https://github.com/ava1ar/customizepkg
+	arch = any
+	license = GPL
+	makedepends = git
+	depends = bash
+	depends = diffutils
+	optdepends = vim: for vimdiff
+	optdepends = colordiff: for colored diff output
+	provides = customizepkg
+	conflicts = customizepkg
+	conflicts = customizepkg-ald
+	conflicts = customizepkg-patching
+	conflicts = customizepkg-scripting
+	source = git+https://github.com/ava1ar/customizepkg.git
+	sha1sums = SKIP
+
+pkgname = customizepkg-git

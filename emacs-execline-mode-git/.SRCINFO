@@ -1,0 +1,15 @@
+pkgbase = emacs-execline-mode-git
+	pkgdesc = GNU/Emacs major mode for editing execline scripts
+	pkgver = 0.2.0
+	pkgrel = 1
+	url = http://github.com/elebihan/execline-mode
+	install = emacs-execline-mode-git.install
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = emacs
+	provides = emacs-execline-mode
+	source = git+https://github.com/elebihan/execline-mode.git
+	md5sums = SKIP
+
+pkgname = emacs-execline-mode-git

@@ -1,0 +1,27 @@
+pkgbase = systems-nominal
+	pkgdesc = An experimental game by Nerd^3
+	pkgver = 1.0
+	pkgrel = 3
+	url = http://www.nerdcubed.co.uk/games/
+	arch = i686
+	arch = x86_64
+	license = custom: commercial
+	depends = libgl
+	depends = gconf
+	depends = cairo
+	depends = fontconfig
+	depends = gtk2
+	depends = nss
+	depends = libxtst
+	depends = gcc-libs
+	depends = alsa-lib
+	depends = libudev0-shim
+	source = http://assets.nerdcubed.co.uk/systems_nominal_1.0_linux.7z
+	source = systems-nominal.desktop
+	source = systems-nominal.png
+	md5sums = 688f9172036bb86ee372bd7fbfd254f5
+	md5sums = ab6dfe6c1ce9f311aace15c5a6855c75
+	md5sums = 1662b26049165ed241ec2f4d756749fc
+
+pkgname = systems-nominal
+

@@ -1,0 +1,18 @@
+pkgbase = qtfm-git
+	pkgdesc = A lightweight file manager (git version)
+	pkgver = 2022.11.01
+	pkgrel = 1
+	url = https://github.com/rodlie/qtfm/releases
+	arch = i686
+	arch = x86_64
+	license = GPL
+	depends = qt5-base
+	depends = desktop-file-utils
+	depends = hicolor-icon-theme
+	depends = imagemagick
+	provides = qtfm
+	conflicts = qtfm
+	source = qtfm::git+https://github.com/rodlie/qtfm.git#branch=master
+	sha256sums = SKIP
+
+pkgname = qtfm-git

@@ -1,0 +1,20 @@
+pkgbase = shuriken-git
+	pkgdesc = An open source beat slicer
+	pkgver = 0.5.2.r5.gd09afc7
+	pkgrel = 1
+	url = https://rock-hopper.github.io/shuriken
+	arch = x86_64
+	arch = i686
+	license = GPL
+	makedepends = jack
+	depends = qt5-base
+	depends = liblo
+	depends = aubio
+	depends = rubberband
+	optdepends = jack: A low-latency audio server
+	provides = shuriken
+	conflicts = shuriken
+	source = shuriken::git+https://github.com/rock-hopper/shuriken.git
+	sha256sums = SKIP
+
+pkgname = shuriken-git

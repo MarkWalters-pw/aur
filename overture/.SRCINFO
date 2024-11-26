@@ -1,0 +1,41 @@
+pkgbase = overture
+	pkgdesc = A DNS upstream switcher written in Go in order to purify DNS records
+	pkgver = 1.8
+	pkgrel = 1
+	url = https://github.com/shawn1m/overture
+	install = overture.install
+	arch = i686
+	arch = x86_64
+	arch = arm
+	arch = armv6h
+	arch = armv7h
+	arch = aarch64
+	license = MIT
+	makedepends = go>=1.12
+	optdepends = dnsmasq: advanced DNS configuration
+	optdepends = redis: dns caching
+	provides = overture
+	backup = etc/overture/config.json
+	backup = etc/overture/hosts
+	backup = etc/overture/china_ip_list.txt
+	backup = etc/overture/gfwlist.txt
+	source = git+https://github.com/shawn1m/overture.git#tag=v1.8
+	source = config.yml
+	source = hosts
+	source = domain_ttl
+	source = domain_primary
+	source = domain_alternative
+	source = ip_network_primary
+	source = ip_network_alternative
+	source = overture.service
+	sha256sums = SKIP
+	sha256sums = fbcfe2e13118045ca6608e833795ea1e3e8595d2bc608e468f002a6c5c9c4c17
+	sha256sums = e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+	sha256sums = e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+	sha256sums = 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b
+	sha256sums = 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b
+	sha256sums = 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b
+	sha256sums = 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b
+	sha256sums = 3ff281e0fe9407b414e6c4be573bdd0afc660c961d8eb6d93bfec2e160025590
+
+pkgname = overture

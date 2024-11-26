@@ -1,0 +1,30 @@
+#!/bin/sh
+
+if [ -e "/run/systemd/system" ]; then
+    case "$2" in
+        up | vpn-up)
+            systemctl start openntpd.service
+        ;;
+        down | vpn-down)
+            # Check if still online (e.g. because of another network connection)
+            if [ ! "$(nmcli networking connectivity)" = "full" ]; then
+                systemctl stop openntpd.service
+            fi
+        ;;
+    esac
+elif [ -e "/etc/rc.d/openntpd" ]; then
+    case "$2" in
+        up | vpn-up)
+            /etc/rc.d/openntpd start
+        ;;
+        down | vpn-down)
+            # Check if still online (e.g. because of another network connection)
+            if [ ! "$(nmcli networking connectivity)" = "full" ]; then
+                /etc/rc.d/openntpd stop
+            fi
+        ;;
+    esac
+else
+    echo "Init system not detected, doing nothing!"
+    exit 2
+fi

@@ -1,0 +1,26 @@
+pkgbase = jdk11-graalvm-bin
+	pkgdesc = Universal virtual machine for running applications written in a variety of languages (JVM-based, LLVM-based, or other), Java 11 version
+	pkgver = 22.3.2
+	pkgrel = 1
+	url = https://www.graalvm.org/
+	install = jdk11-graalvm-bin.install
+	arch = x86_64
+	arch = aarch64
+	license = custom
+	depends = java-runtime-common
+	depends = java-environment-common
+	optdepends = graal-nodejs-jdk11-bin: Node.js component (used to be bundled with this package before the 21.1.0 release)
+	optdepends = graaljs-jdk11-bin: JavaScript component (used to be bundled with this package before the 22.2.0 release)
+	optdepends = graal-llvm-jdk11-bin: LLVM component (used to be bundled with this package before the 22.2.0 release)
+	optdepends = graal-visualvm-jdk11-bin: VisualVM component (used to be bundled with this package before the 22.2.0 release)
+	provides = java-runtime=11
+	provides = java-environment=11
+	options = staticlibs
+	source = graalvm-rebuild-libpolyglot.hook
+	sha256sums = SKIP
+	source_x86_64 = https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-22.3.2/graalvm-ce-java11-linux-amd64-22.3.2.tar.gz
+	sha256sums_x86_64 = 0e638d2b7406fabc15a1079fc65431a4f33f6f754da77e4073de8433b40e7c4a
+	source_aarch64 = https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-22.3.2/graalvm-ce-java11-linux-aarch64-22.3.2.tar.gz
+	sha256sums_aarch64 = 506c99fef656653ccbc57facb9f200303bfcc21ea29679e7391046d0990493da
+
+pkgname = jdk11-graalvm-bin

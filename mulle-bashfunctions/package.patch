@@ -1,0 +1,84 @@
+diff '--color=auto' --unified --recursive --text src/mulle-bashfunctions-5.0.3/bin/installer src.mod/mulle-bashfunctions-5.0.3/bin/installer
+--- src/mulle-bashfunctions-5.0.3/bin/installer	2023-01-18 01:03:07.000000000 +0000
++++ src.mod/mulle-bashfunctions-5.0.3/bin/installer	2023-04-04 17:48:44.540576844 +0100
+@@ -184,7 +184,7 @@
+    prefix="${RVAL}"
+ 
+    bin="${prefix}/bin"
+-   libexec="${prefix}/libexec/mulle-bashfunctions/${PROJECT_VERSION}"
++   libexec="${prefix}/lib/mulle-bashfunctions/${PROJECT_VERSION}"
+    share="${prefix}/share/mulle-bashfunctions/${PROJECT_VERSION}"
+ 
+    mkdir -p "${bin}" || installer_fail "could not create ${bin}"
+diff '--color=auto' --unified --recursive --text src/mulle-bashfunctions-5.0.3/mulle-bash src.mod/mulle-bashfunctions-5.0.3/mulle-bash
+--- src/mulle-bashfunctions-5.0.3/mulle-bash	2023-01-18 01:03:07.000000000 +0000
++++ src.mod/mulle-bashfunctions-5.0.3/mulle-bash	2023-04-04 17:48:14.690665058 +0100
+@@ -674,7 +674,7 @@
+ 
+    local libexec_dir
+ 
+-   libexec_dir="${prefix}/libexec/mulle-bashfunctions"
++   libexec_dir="${prefix}/lib/mulle-bashfunctions"
+ 
+    if [ ! -z "${qualifier}" ]
+    then
+diff '--color=auto' --unified --recursive --text src/mulle-bashfunctions-5.0.3/src/mulle-bashfunctions-all.sh src.mod/mulle-bashfunctions-5.0.3/src/mulle-bashfunctions-all.sh
+--- src/mulle-bashfunctions-5.0.3/src/mulle-bashfunctions-all.sh	2023-01-18 01:03:07.000000000 +0000
++++ src.mod/mulle-bashfunctions-5.0.3/src/mulle-bashfunctions-all.sh	2023-04-04 17:50:15.460329901 +0100
+@@ -2210,7 +2210,7 @@
+    prefix="${RVAL}"
+ 
+ 
+-   RVAL="${prefix}/libexec/${subdir}"
++   RVAL="${prefix}/lib/${subdir}"
+    if [ ! -f "${RVAL}/${matchfile}" ]
+    then
+       RVAL="${exedirpath}/src"
+diff '--color=auto' --unified --recursive --text src/mulle-bashfunctions-5.0.3/src/mulle-bashfunctions-embed.sh src.mod/mulle-bashfunctions-5.0.3/src/mulle-bashfunctions-embed.sh
+--- src/mulle-bashfunctions-5.0.3/src/mulle-bashfunctions-embed.sh	2023-01-18 01:03:07.000000000 +0000
++++ src.mod/mulle-bashfunctions-5.0.3/src/mulle-bashfunctions-embed.sh	2023-04-04 17:49:44.427077392 +0100
+@@ -2025,7 +2025,7 @@
+    prefix="${RVAL}"
+ 
+ 
+-   RVAL="${prefix}/libexec/${subdir}"
++   RVAL="${prefix}/lib/${subdir}"
+    if [ ! -f "${RVAL}/${matchfile}" ]
+    then
+       RVAL="${exedirpath}/src"
+diff '--color=auto' --unified --recursive --text src/mulle-bashfunctions-5.0.3/src/mulle-bashfunctions-minimal.sh src.mod/mulle-bashfunctions-5.0.3/src/mulle-bashfunctions-minimal.sh
+--- src/mulle-bashfunctions-5.0.3/src/mulle-bashfunctions-minimal.sh	2023-01-18 01:03:07.000000000 +0000
++++ src.mod/mulle-bashfunctions-5.0.3/src/mulle-bashfunctions-minimal.sh	2023-04-04 17:50:41.263598596 +0100
+@@ -2210,7 +2210,7 @@
+    prefix="${RVAL}"
+ 
+ 
+-   RVAL="${prefix}/libexec/${subdir}"
++   RVAL="${prefix}/lib/${subdir}"
+    if [ ! -f "${RVAL}/${matchfile}" ]
+    then
+       RVAL="${exedirpath}/src"
+diff '--color=auto' --unified --recursive --text src/mulle-bashfunctions-5.0.3/src/mulle-bashfunctions.sh src.mod/mulle-bashfunctions-5.0.3/src/mulle-bashfunctions.sh
+--- src/mulle-bashfunctions-5.0.3/src/mulle-bashfunctions.sh	2023-01-18 01:03:07.000000000 +0000
++++ src.mod/mulle-bashfunctions-5.0.3/src/mulle-bashfunctions.sh	2023-04-04 17:50:59.760220253 +0100
+@@ -2210,7 +2210,7 @@
+    prefix="${RVAL}"
+ 
+ 
+-   RVAL="${prefix}/libexec/${subdir}"
++   RVAL="${prefix}/lib/${subdir}"
+    if [ ! -f "${RVAL}/${matchfile}" ]
+    then
+       RVAL="${exedirpath}/src"
+diff '--color=auto' --unified --recursive --text src/mulle-bashfunctions-5.0.3/src/mulle-init.sh src.mod/mulle-bashfunctions-5.0.3/src/mulle-init.sh
+--- src/mulle-bashfunctions-5.0.3/src/mulle-init.sh	2023-01-18 01:03:07.000000000 +0000
++++ src.mod/mulle-bashfunctions-5.0.3/src/mulle-init.sh	2023-04-04 17:49:07.930510298 +0100
+@@ -178,7 +178,7 @@
+ 
+    # now setup the global variable
+ 
+-   RVAL="${prefix}/libexec/${subdir}"
++   RVAL="${prefix}/lib/${subdir}"
+    if [ ! -f "${RVAL}/${matchfile}" ]
+    then
+       RVAL="${exedirpath}/src"

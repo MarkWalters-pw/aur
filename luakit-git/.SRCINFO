@@ -1,0 +1,26 @@
+pkgbase = luakit-git
+	pkgdesc = Luakit: now updated for WebKit 2
+	pkgver = 2.2.r75.g68e4ffc7
+	pkgrel = 1
+	epoch = 1
+	url = https://luakit.github.io
+	arch = x86_64
+	arch = i686
+	arch = armv7h
+	license = GPL3
+	checkdepends = xorg-server-xvfb
+	checkdepends = lua51-luacheck
+	checkdepends = lua51-luassert
+	checkdepends = lua51-filesystem
+	makedepends = git
+	makedepends = pkg-config
+	depends = webkit2gtk
+	depends = luajit
+	provides = luakit
+	conflicts = luakit
+	backup = etc/xdg/luakit/rc.lua
+	backup = etc/xdg/luakit/theme.lua
+	source = git+https://github.com/luakit/luakit.git#branch=develop
+	md5sums = SKIP
+
+pkgname = luakit-git

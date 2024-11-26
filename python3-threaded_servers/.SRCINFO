@@ -1,0 +1,22 @@
+pkgbase = python3-threaded_servers
+	pkgdesc = Threaded server modules (ThreadedHTTPSServer, ThreadedMulticastServer, Quickserve, Pacserve).
+	pkgver = 2022.9
+	pkgrel = 7
+	url = https://xyne.dev/projects/python3-threaded_servers
+	arch = any
+	license = GPL
+	makedepends = python-setuptools
+	depends = python3
+	optdepends = avahi: Avahi support
+	optdepends = pyalpm: required for the Pacserve module
+	optdepends = python-dbus: Avahi support
+	optdepends = python-gobject: Avahi support
+	source = https://xyne.dev/projects/python3-threaded_servers/src/python3-threaded_servers-2022.9.tar.xz
+	source = https://xyne.dev/projects/python3-threaded_servers/src/python3-threaded_servers-2022.9.tar.xz.sig
+	validpgpkeys = D89FAAEB4CECAFD199A2F5E612C6F735F7A9A519
+	md5sums = ce7d57eaee6801eeebe335994e69ede3
+	md5sums = 5f0c7ae87eb55ff50a2933666fb2a519
+	sha512sums = a9556dca91aad8234767cc8dd09620f2b6cd462cc1141a8eac70ca04bdd8b69387393867586eee1c241272b8474eba21f1ecf5701375682c3795bdc4dcc9dbad
+	sha512sums = 64e3df568cde80405fba7b55050574602781371a6c8fb5618fb1d4e2aa53aa5793474c26d79e4af3e4dec381973389fc9c32a7e65c05db41d553c917c8a2c7b0
+
+pkgname = python3-threaded_servers

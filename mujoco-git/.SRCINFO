@@ -1,0 +1,26 @@
+pkgbase = mujoco-git
+	pkgdesc = Multi-Joint dynamics with Contact. A general purpose physics simulator.
+	pkgver = 2.2.2.r81.g3aaf94f
+	pkgrel = 1
+	url = https://www.mujoco.org
+	arch = x86_64
+	license = Apache
+	makedepends = abseil-cpp
+	makedepends = gtest
+	makedepends = benchmark
+	makedepends = cmake
+	makedepends = git
+	depends = libccd
+	depends = libgl
+	depends = glfw
+	depends = tinyxml2
+	depends = tinyobjloader
+	depends = qhull
+	provides = mujoco
+	conflicts = mujoco
+	source = git+https://github.com/deepmind/mujoco.git
+	source = mujoco.patch
+	sha256sums = SKIP
+	sha256sums = 3654132f7685e6c1d4b0f9cddc266e5d2bfe63f440dad53606d8aac4af046642
+
+pkgname = mujoco-git

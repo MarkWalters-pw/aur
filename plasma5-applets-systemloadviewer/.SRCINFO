@@ -1,0 +1,20 @@
+pkgbase = plasma5-applets-systemloadviewer
+	pkgdesc = Deprecated Plasma 5 plasmoid for monitoring system load. I preserved it as I prefer to use this plasmoid.
+	pkgver = 5.20.80
+	pkgrel = 1
+	arch = x86_64
+	license = GPL3
+	makedepends = extra-cmake-modules
+	makedepends = kdoctools
+	makedepends = kross
+	depends = plasma-workspace
+	depends = libcanberra-pulse
+	depends = pulseaudio
+	depends = perl
+	source = git+https://invent.kde.org/plasma/kdeplasma-addons#commit=62730341432d3abf203ea5d2f5583cd5a0b64123
+	source = limit-to-only-target.patch
+	md5sums = SKIP
+	md5sums = SKIP
+
+pkgname = plasma5-applets-systemloadviewer
+

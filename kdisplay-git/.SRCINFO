@@ -1,0 +1,23 @@
+pkgbase = kdisplay-git
+	pkgdesc = App and daemon for display managing by the KWinFT project (kscreen fork)
+	pkgver = 6.0.0_r1602.ga606d52
+	pkgrel = 2
+	url = https://github.com/winft/kdisplay
+	arch = x86_64
+	license = LGPL
+	makedepends = git
+	makedepends = disman-git
+	makedepends = extra-cmake-modules-git
+	makedepends = kcmutils-git
+	depends = kcmutils-git
+	depends = kdeclarative-git
+	depends = kirigami-git
+	depends = ki18n-git
+	depends = libplasma-git
+	depends = qt6-sensors
+	provides = kdisplay
+	conflicts = kdisplay
+	source = git+https://github.com/winft/kdisplay.git
+	sha512sums = SKIP
+
+pkgname = kdisplay-git

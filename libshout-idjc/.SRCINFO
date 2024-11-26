@@ -1,0 +1,17 @@
+pkgbase = libshout-idjc
+	pkgdesc = Library for accessing a shoutcast/icecast server (with IDJC customizations)
+	pkgver = 2.4.6.r1
+	pkgrel = 1
+	url = http://idjc.sourceforge.net/
+	arch = i686
+	arch = x86_64
+	license = LGPL
+	depends = libvorbis
+	depends = libtheora
+	depends = speex
+	depends = openssl
+	options = !emptydirs
+	source = https://downloads.sourceforge.net/project/libshoutidjc.idjc.p/libshout-idjc-2.4.6-r1.tar.gz
+	sha256sums = 7594ffc5e1d435014125d7dffb15a3450bba15d480a413c49aeaa5605050e1a1
+
+pkgname = libshout-idjc

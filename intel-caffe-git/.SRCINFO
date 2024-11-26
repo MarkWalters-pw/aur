@@ -1,0 +1,30 @@
+pkgbase = intel-caffe-git
+	pkgdesc = Intel® Distribution of Caffe
+	pkgver = 1.1.6
+	pkgrel = 36
+	url = https://github.com/intel/caffe
+	arch = x86_64
+	license = BSD
+	makedepends = cmake
+	depends = boost-libs
+	depends = protobuf
+	depends = google-glog
+	depends = gflags
+	depends = hdf5
+	depends = boost
+	depends = openexr
+	depends = opencv>=4.0.0
+	depends = gtk3
+	depends = openmp
+	optdepends = openblas: Use OpenBLAS for backend linear algebra ops,
+	optdepends = intel-mkl: Use Intel MKL for backend linear algebra ops
+	provides = caffe
+	conflicts = caffe
+	options = !strip
+	options = !emptydirs
+	options = staticlibs
+	source = intel-caffe::git+https://github.com/intel/caffe.git
+	sha256sums = SKIP
+
+pkgname = intel-caffe-git
+

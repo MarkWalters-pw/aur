@@ -1,0 +1,20 @@
+pkgbase = amidst-git
+	pkgdesc = Advanced Minecraft Interface and Data/Structure Tracking
+	pkgver = 4.3.beta5.r18.g15953d62
+	pkgrel = 2
+	url = https://github.com/toolbox4minecraft/amidst
+	arch = any
+	license = GPL3
+	makedepends = git
+	makedepends = maven
+	depends = java-runtime>=8
+	optdepends = minecraft: the game itself
+	provides = amidst
+	conflicts = amidst
+	source = amidst-git::git+https://github.com/toolbox4minecraft/amidst
+	source = icon.png
+	sha256sums = SKIP
+	sha256sums = 30622fc7576475efe3c63675f2b33d29177091040d29fb7db031ec229e79be39
+
+pkgname = amidst-git
+

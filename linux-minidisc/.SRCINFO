@@ -1,0 +1,23 @@
+pkgbase = linux-minidisc
+	pkgdesc = Free software for accessing MiniDisc devices
+	pkgver = 0.9.16
+	pkgrel = 2
+	url = https://wiki.physik.fu-berlin.de/linux-minidisc/doku.php
+	arch = i686
+	arch = x86_64
+	arch = armv7h
+	license = GPL
+	makedepends = qt5-tools
+	depends = qt5-base
+	depends = glib2
+	depends = libgcrypt
+	depends = libmad
+	depends = sox
+	depends = libid3tag
+	depends = libusb
+	depends = taglib
+	source = linux-minidisc-0.9.16.tar.gz::https://github.com/glaubitz/linux-minidisc/archive/0.9.16.tar.gz
+	md5sums = e4a2a35494220e4f5df6bba28b0b1aaa
+
+pkgname = linux-minidisc
+

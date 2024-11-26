@@ -1,0 +1,17 @@
+pkgbase = provok-git
+	pkgdesc = A text renderer written in Rust
+	pkgver = 0.1.0.r41.gdc46e19
+	pkgrel = 1
+	url = https://github.com/o2sh/provok
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = cargo
+	depends = freetype2
+	depends = harfbuzz
+	provides = provok
+	conflicts = provok
+	source = provok-git::git+https://github.com/o2sh/provok
+	md5sums = SKIP
+
+pkgname = provok-git

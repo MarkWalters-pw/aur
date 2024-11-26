@@ -1,0 +1,17 @@
+pkgbase = graaljs-jdk17-bin
+	pkgdesc = GraalVM-based, polyglot-enabled implementation of JavaScript, Java 17 version
+	pkgver = 23.0.1
+	pkgrel = 1
+	url = https://github.com/oracle/graaljs
+	arch = x86_64
+	arch = aarch64
+	license = custom
+	depends = jdk17-graalvm-bin
+	depends = graal-icu4j-jdk17-bin
+	depends = graal-regex-jdk17-bin
+	source_x86_64 = https://github.com/oracle/graaljs/releases/download/graal-23.0.1/js-installable-svm-java17-linux-amd64-23.0.1.jar
+	sha256sums_x86_64 = 2d97b131192063a1071bb82c8181722b970a874671814a3e3c70d7bc2df1fcee
+	source_aarch64 = https://github.com/oracle/graaljs/releases/download/graal-23.0.1/js-installable-svm-java17-linux-aarch64-23.0.1.jar
+	sha256sums_aarch64 = 6a5bd10b0e98099d6884191e24e7be40292278dd178151ebc3b77d1be7f65d75
+
+pkgname = graaljs-jdk17-bin

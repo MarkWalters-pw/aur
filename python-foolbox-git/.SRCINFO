@@ -1,0 +1,22 @@
+pkgbase = python-foolbox-git
+	pkgdesc = Toolbox to create adversarial examples that fool neural networks in PyTorch, TensorFlow, Keras,
+	pkgver = 3.1.1.r0.gef30f7f
+	pkgrel = 1
+	url = https://github.com/bethgelab/foolbox
+	arch = any
+	license = MIT
+	makedepends = python-setuptools
+	makedepends = git
+	depends = python-numpy
+	depends = python-scipy
+	depends = python-gitpython
+	depends = python-requests
+	depends = python-eagerpy
+	provides = python-foolbox
+	conflicts = python-foolbox
+	options = !emptydirs
+	source = git+https://github.com/bethgelab/foolbox.git
+	sha256sums = SKIP
+
+pkgname = python-foolbox-git
+

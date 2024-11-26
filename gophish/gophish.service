@@ -1,0 +1,12 @@
+[Unit]
+Description=Gophish (Open-Source phishing framework)
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/usr/share/gophish
+ExecStart=/usr/bin/gophish
+SuccessExitStatus=2
+
+[Install]
+WantedBy=multi-user.target

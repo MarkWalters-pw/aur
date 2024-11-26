@@ -1,0 +1,21 @@
+pkgbase = seer-gdb-git
+	pkgdesc = Seer - a gui frontend to gdb
+	pkgver = r627.7f41e14
+	pkgrel = 1
+	url = https://github.com/epasveer/seer.git
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = gcc
+	makedepends = cmake
+	makedepends = qt5-base
+	makedepends = qt5-charts
+	depends = qt5-base
+	depends = gdb
+	depends = qt5-charts
+	provides = seer-gdb
+	conflicts = seer-gdb
+	source = seer::git+https://github.com/epasveer/seer.git
+	md5sums = SKIP
+
+pkgname = seer-gdb-git

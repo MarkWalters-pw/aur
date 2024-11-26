@@ -1,0 +1,15 @@
+pkgbase = zasm
+	pkgdesc = Z80/8080/Z180 assembler
+	pkgver = 4.4.13
+	pkgrel = 1
+	url = https://k1.spdns.de/Develop/Projects/zasm/Distributions/
+	arch = any
+	license = BSD
+	makedepends = git
+	depends = zlib
+	provides = zasm
+	conflicts = zasm-git
+	source = git+https://github.com/Megatokio/zasm#tag=4.4.13
+	sha256sums = SKIP
+
+pkgname = zasm

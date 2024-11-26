@@ -1,0 +1,20 @@
+pkgbase = katago-avx2
+	pkgdesc = Strong open-source self-play-trained Go engine
+	pkgver = 1.14.1
+	pkgrel = 1
+	url = https://github.com/lightvector/KataGo
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = cmake
+	makedepends = boost
+	makedepends = eigen
+	depends = libzip
+	depends = boost-libs
+	provides = katago
+	source = git+https://github.com/lightvector/KataGo.git#tag=v1.14.1
+	source = https://media.katagotraining.org/uploaded/networks/models/kata1/kata1-b18c384nbt-s9131461376-d4087399203.bin.gz
+	sha256sums = SKIP
+	sha256sums = d266f19b4497ed19a72285a422813d8ee97e91d8a0b56f27585d0c02e61c9d38
+
+pkgname = katago-avx2

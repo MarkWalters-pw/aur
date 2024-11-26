@@ -1,0 +1,17 @@
+pkgbase = python-spyder-kernels-git
+	pkgdesc = Jupyter Kernels for the Spyder console
+	pkgver = 1.8.1.r1.gb713289
+	pkgrel = 1
+	url = https://github.com/spyder-ide/spyder-kernels
+	arch = any
+	license = MIT
+	makedepends = git
+	depends = python-cloudpickle
+	depends = python-ipykernel
+	provides = python-spyder-kernels
+	conflicts = python-spyder-kernels
+	source = python-spyder-kernels-git::git+https://github.com/spyder-ide/spyder-kernels.git
+	md5sums = SKIP
+
+pkgname = python-spyder-kernels-git
+

@@ -1,0 +1,21 @@
+pkgbase = remind-dav-helper-git
+	pkgdesc = Helper scripts to sync 'remind' files with Nextcloud via CalDAV
+	pkgver = r16.21caf2d
+	pkgrel = 1
+	url = https://gitlab.com/dkabus/remind-dav-helper
+	arch = any
+	license = GPL
+	makedepends = git
+	makedepends = make
+	depends = remind
+	depends = remind-agenda
+	depends = python-remind-caldav
+	depends = bash
+	depends = systemd
+	depends = fzf
+	provides = remind-dav-helper
+	conflicts = remind-dav-helper
+	source = remind-dav-helper-git::git+https://gitlab.com/dkabus/remind-dav-helper
+	md5sums = SKIP
+
+pkgname = remind-dav-helper-git

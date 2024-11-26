@@ -1,0 +1,16 @@
+pkgbase = linphone-plugin-msamr
+	pkgdesc = Mediastreamer2 plugin for AMR codec
+	pkgver = 1.1.4
+	pkgrel = 1
+	url = http://www.linphone.org/
+	arch = x86_64
+	license = GPL3
+	makedepends = cmake
+	makedepends = git
+	depends = mediastreamer
+	depends = opencore-amr
+	depends = ortp
+	source = git+https://gitlab.linphone.org/BC/public/msamr.git#commit=cd61e46066c8c6004801158269adb8be326f7fde
+	sha256sums = SKIP
+
+pkgname = linphone-plugin-msamr

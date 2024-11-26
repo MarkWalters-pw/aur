@@ -1,0 +1,4 @@
+#!/bin/bash
+export LD_LIBRARY_PATH=/opt/scitools/bin/linux64
+unset QT_PLUGIN_PATH
+LD_PRELOAD=/usr/lib/libfreetype.so.6 /opt/scitools/bin/linux64/understand "$@"

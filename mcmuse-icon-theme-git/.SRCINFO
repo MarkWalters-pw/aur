@@ -1,0 +1,16 @@
+pkgbase = mcmuse-icon-theme-git
+	pkgdesc = A colorful design icon theme for linux desktops
+	pkgver = r38.acc6d168
+	pkgrel = 1
+	url = https://github.com/yeyushengfan258/McMuse-icon-theme
+	arch = any
+	license = GPL3
+	makedepends = git
+	makedepends = gtk-update-icon-cache
+	options = !strip
+	source = git+https://github.com/yeyushengfan258/McMuse-icon-theme
+	sha256sums = SKIP
+
+pkgname = mcmuse-icon-theme-git
+	provides = mcmuse-icon-theme
+

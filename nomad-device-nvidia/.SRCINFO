@@ -1,0 +1,19 @@
+pkgbase = nomad-device-nvidia
+	pkgdesc = Nomad device driver for Nvidia GPU
+	pkgver = 1.0.0
+	pkgrel = 1
+	url = https://github.com/hashicorp/nomad-device-nvidia
+	changelog = nomad-device-nvidia.changelog
+	arch = i686
+	arch = x86_64
+	arch = arm
+	arch = aarch64
+	license = MPL2
+	makedepends = git
+	makedepends = go
+	provides = nomad-device-nvidia
+	options = !strip
+	source = git+https://github.com/hashicorp/nomad-device-nvidia.git#tag=v1.0.0
+	sha256sums = SKIP
+
+pkgname = nomad-device-nvidia

@@ -1,0 +1,30 @@
+pkgbase = lib32-pipewire-git
+	pkgdesc = Low-latency audio/video router and processor (git) (32 bit client libraries)
+	pkgver = 0.3.28.r108.g2a8d511b
+	pkgrel = 1
+	url = https://pipewire.org
+	arch = x86_64
+	license = LGPL2.1
+	makedepends = git
+	makedepends = meson
+	makedepends = lib32-alsa-lib
+	makedepends = lib32-systemd
+	makedepends = lib32-dbus
+	source = git+https://gitlab.freedesktop.org/pipewire/pipewire.git
+	sha256sums = SKIP
+
+pkgname = lib32-pipewire-git
+	depends = pipewire
+	depends = lib32-systemd
+	depends = libdbus-1.so
+	depends = libasound.so
+	optdepends = lib32-pipewire-jack: JACK support
+	provides = libpipewire-0.3.so
+
+pkgname = lib32-pipewire-jack-git
+	pkgdesc = Low-latency audio/video router and processor (git) (32 bit client libraries) - JACK support
+	license = LGPL2.1
+	license = GPL2
+	depends = pipewire-jack
+	depends = lib32-pipewire
+	depends = libpipewire-0.3.so

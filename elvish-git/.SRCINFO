@@ -1,0 +1,18 @@
+pkgbase = elvish-git
+	pkgdesc = A friendly and expressive Unix shell
+	pkgver = 0.21.0.dev.r161.g06979ef
+	pkgrel = 1
+	url = https://elv.sh
+	install = elvish.install
+	arch = x86_64
+	license = BSD
+	makedepends = git
+	makedepends = go
+	depends = glibc
+	provides = elvish
+	conflicts = elvish
+	options = !lto
+	source = elvish::git+https://github.com/elves/elvish.git
+	b2sums = SKIP
+
+pkgname = elvish-git

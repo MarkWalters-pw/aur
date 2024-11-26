@@ -1,0 +1,17 @@
+pkgbase = bootchart2
+	pkgdesc = Boot Process Performance Visualization
+	pkgver = 0.14.9
+	pkgrel = 1
+	url = https://github.com/xrmx/bootchart
+	arch = i686
+	arch = x86_64
+	license = GPL
+	depends = python
+	depends = busybox
+	conflicts = bootchart
+	backup = etc/bootchartd2.conf
+	source = https://github.com/xrmx/bootchart/archive/0.14.9.tar.gz
+	sha512sums = 7ee1220b0add027fc39f710cc01119d7aaa22fe11736497b089c26955216cef10552216ed29ca55bf08aa848f92bb11d74deeb3aa69769dfecf3a55aa988e58b
+
+pkgname = bootchart2
+

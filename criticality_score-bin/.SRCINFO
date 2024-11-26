@@ -1,0 +1,19 @@
+pkgbase = criticality_score-bin
+	pkgdesc = Gives criticality score for an open source project
+	pkgver = 2.0.4
+	pkgrel = 1
+	url = https://github.com/ossf/criticality_score
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	license = Apache-2.0
+	provides = criticality_score=2.0.4
+	conflicts = criticality_score
+	source_i686 = https://github.com/ossf/criticality_score/releases/download/v2.0.4/criticality_score_2.0.4_linux_386.tar.gz
+	sha256sums_i686 = bb5579d5d2afb11f96b96310c6b8a72c468d6437a8ca53fe337a9579b5a3f483
+	source_x86_64 = https://github.com/ossf/criticality_score/releases/download/v2.0.4/criticality_score_2.0.4_linux_amd64.tar.gz
+	sha256sums_x86_64 = 37adf74be2fdb39cf9da7a419dd53e649dfa7e6b41142bc632a688c18716fdb6
+	source_aarch64 = https://github.com/ossf/criticality_score/releases/download/v2.0.4/criticality_score_2.0.4_linux_arm64.tar.gz
+	sha256sums_aarch64 = d8a290676929fd8e72025d500457aa1622657651f4dee0e2e9b1854cd3e8e667
+
+pkgname = criticality_score-bin

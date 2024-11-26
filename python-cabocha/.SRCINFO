@@ -1,0 +1,19 @@
+pkgbase = python-cabocha
+	pkgdesc = Yet Another Japanese Dependency Structure Analyzer (Python interface)
+	pkgver = 0.69
+	pkgrel = 3
+	url = https://taku910.github.io/cabocha/
+	arch = any
+	license = LGPL2.1
+	license = BSD
+	makedepends = python-setuptools
+	makedepends = git
+	depends = crfpp
+	depends = mecab
+	depends = cabocha
+	depends = python
+	source = git+https://github.com/taku910/cabocha.git
+	sha256sums = SKIP
+
+pkgname = python-cabocha
+

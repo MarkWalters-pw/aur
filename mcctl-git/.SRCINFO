@@ -1,0 +1,27 @@
+pkgbase = mcctl-git
+	pkgdesc = A powerful script which can automatically operate Minecraft servers to run, update and more
+	pkgver = r126.8e7e645
+	pkgrel = 1
+	url = https://github.com/Kimiblock/mcctl/
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = bash
+	depends = wget
+	depends = java-environment
+	depends = screen
+	optdepends = git: Version control
+	optdepends = python-pip: Download plugins from spigot site
+	optdepends = python: Download plugins from spigot site
+	optdepends = chromium: Download plugins from spigot site
+	optdepends = systemd: Start Minecraft on startup
+	optdepends = xdg-utils: Open EULA page automatically
+	optdepends = polkit: Elevate permissions graphically
+	optdepends = ssmtp: Send report mails
+	provides = mcctl
+	conflicts = mcctl
+	replaces = mcctl
+	source = git+https://github.com/Kimiblock/mcctl
+	md5sums = SKIP
+
+pkgname = mcctl-git

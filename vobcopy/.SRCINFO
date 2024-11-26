@@ -1,0 +1,15 @@
+pkgbase = vobcopy
+	pkgdesc = Copies DVD .vob files to harddisk, decrypting them on the way
+	pkgver = 1.2.1
+	pkgrel = 1
+	url = https://github.com/barak/vobcopy
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	depends = libdvdread
+	depends = libdvdcss
+	options = !docs
+	source = vobcopy-1.2.1.tar.gz::https://github.com/barak/vobcopy/archive/refs/tags/1.2.1.tar.gz
+	md5sums = c088f6cb6fc8356c72ec6394d99cb867
+
+pkgname = vobcopy

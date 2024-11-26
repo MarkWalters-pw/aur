@@ -1,0 +1,26 @@
+pkgbase = gnome-contacts-git
+	pkgdesc = Contacts Manager for GNOME
+	pkgver = 46.0.r15.g4ec2661
+	pkgrel = 1
+	url = https://gitlab.gnome.org/GNOME/gnome-contacts
+	arch = x86_64
+	license = GPL-2.0-or-later
+	makedepends = appstream-glib
+	makedepends = git
+	makedepends = gobject-introspection
+	makedepends = meson
+	makedepends = vala
+	depends = evolution-data-server
+	depends = folks
+	depends = gnome-online-accounts
+	depends = gtk4
+	depends = libadwaita
+	depends = libgee
+	depends = libportal-gtk4
+	depends = qrencode
+	provides = gnome-contacts=46.0
+	conflicts = gnome-contacts
+	source = gnome-contacts::git+https://gitlab.gnome.org/GNOME/gnome-contacts
+	sha256sums = SKIP
+
+pkgname = gnome-contacts-git

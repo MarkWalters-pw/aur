@@ -1,0 +1,19 @@
+pkgbase = clipster
+	pkgdesc = Python clipboard manager
+	pkgver = 2.1.1
+	pkgrel = 1
+	url = https://github.com/mrichar1/clipster
+	arch = any
+	license = AGPL
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python
+	depends = python-gobject
+	depends = python-pip
+	depends = libwnck3
+	provides = clipster
+	conflicts = clipster-git
+	source = clipster-2.1.1::git+https://github.com/mrichar1/clipster.git#tag=2.1.1
+	sha256sums = SKIP
+
+pkgname = clipster

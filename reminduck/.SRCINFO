@@ -1,0 +1,18 @@
+pkgbase = reminduck
+	pkgdesc = A simple reminder app made for elementaryOS with Vala and GTK
+	pkgver = 1.6.2
+	pkgrel = 1
+	url = https://github.com/matfantinel/reminduck
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = ninja
+	makedepends = libgee
+	makedepends = granite
+	makedepends = meson
+	makedepends = vala
+	depends = granite
+	source = reminduck-1.6.2.tar.gz::https://github.com/matfantinel/reminduck/archive/v1.6.2.tar.gz
+	sha256sums = 14b6df32d56d4b1c6973b8380bbe1bd7de68752211c0f9d0ba6d877687e02130
+
+pkgname = reminduck

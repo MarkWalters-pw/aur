@@ -1,0 +1,15 @@
+pkgbase = php56-oci8
+	pkgdesc = PHP extension for OCI8
+	pkgver = 2.0.12
+	pkgrel = 1
+	url = http://pecl.php.net/package/oci8
+	arch = x86_64
+	license = PHP
+	depends = php56
+	depends = oracle-instantclient-sdk
+	backup = etc/php56/conf.d/oci8.ini
+	source = http://pecl.php.net/get/oci8-2.0.12.tgz
+	md5sums = 1f189ebda749b403bc53c0bd0ddaf2c1
+
+pkgname = php56-oci8
+

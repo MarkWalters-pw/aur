@@ -1,0 +1,21 @@
+pkgbase = homematic-manager-bin
+	pkgdesc = Homematic Device Configuration and Administration
+	pkgver = 2.7.0
+	pkgrel = 1
+	url = https://github.com/hobbyquaker/homematic-manager
+	arch = x86_64
+	license = GPL3
+	depends = gtk3
+	depends = libnotify
+	depends = nss
+	depends = xdg-utils
+	depends = libxss
+	depends = libsecret
+	provides = homematic-manager
+	conflicts = homematic-manager
+	options = !strip
+	source = https://github.com/hobbyquaker/homematic-manager/releases/download/2.7.0/homematic-manager_2.7.0_amd64.deb
+	sha256sums = 61697706efb06f496b2ed3f18fc791a5042961fac0f63430d865f404b901ff76
+
+pkgname = homematic-manager-bin
+

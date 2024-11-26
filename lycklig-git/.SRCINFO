@@ -1,0 +1,20 @@
+pkgbase = lycklig-git
+	pkgdesc = Image processing for lucky imaging.
+	pkgver = 20180813
+	pkgrel = 1
+	url = https://github.com/AD-Vega/lycklig.git
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = cmake
+	makedepends = boost
+	makedepends = tclap
+	depends = opencv
+	depends = python-pyqt5
+	depends = python-scipy
+	provides = lycklig
+	conflicts = lycklig
+
+pkgname = lycklig-git
+

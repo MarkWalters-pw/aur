@@ -1,0 +1,22 @@
+pkgbase = zenmap
+	pkgdesc = Graphical Nmap frontend and results viewer
+	pkgver = 7.95
+	pkgrel = 1
+	url = https://github.com/nmap/nmap
+	arch = any
+	license = LicenseRef-Nmap-Public-Source-License-Version-0.95
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = gtk3
+	depends = nmap
+	depends = python
+	depends = python-cairo
+	depends = python-gobject
+	optdepends = gksu: start zenmap as root
+	source = nmap-7.95.tar.bz2::https://nmap.org/dist/nmap-7.95.tar.bz2
+	sha256sums = SKIP
+
+pkgname = zenmap

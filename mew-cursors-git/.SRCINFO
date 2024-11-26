@@ -1,0 +1,14 @@
+pkgbase = mew-cursors-git
+	pkgdesc = Mew cursor theme for X11
+	pkgver = r11.6b5d3c7
+	pkgrel = 1
+	url = https://github.com/Perkelo/mew-cursors
+	arch = any
+	license = custom:FAL
+	makedepends = git
+	provides = mew-cursors
+	conflicts = mew-cursors
+	source = mew-cursors::git+https://github.com/Perkelo/mew-cursors.git
+	sha256sums = SKIP
+
+pkgname = mew-cursors-git

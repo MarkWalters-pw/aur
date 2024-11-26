@@ -1,0 +1,19 @@
+pkgbase = firefox-socket-control-git
+	pkgdesc = Control Firefox from a UNIX socket.
+	pkgver = 1.5.18d548e
+	pkgrel = 1
+	url = https://github.com/karabaja4/firefox-socket-control
+	install = firefox-socket-control-git.install
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = go
+	depends = firefox
+	depends = openbsd-netcat
+	noextract = socketcontrol-1.5-fx.xpi
+	source = https://addons.mozilla.org/firefox/downloads/file/3933677/socketcontrol-1.5-fx.xpi
+	source = git+https://github.com/karabaja4/firefox-socket-control.git
+	sha256sums = 37f8cbd5cf3b9250ba2eede0b44e5aef6312c0e54c6e2eb173c3939be4fffddd
+	sha256sums = SKIP
+
+pkgname = firefox-socket-control-git

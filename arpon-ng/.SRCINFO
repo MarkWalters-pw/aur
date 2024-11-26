@@ -1,0 +1,30 @@
+pkgbase = arpon-ng
+	pkgdesc = Prevents MITM attacks on the Address Resolution Protocol (ARP)
+	pkgver = 3.0
+	pkgrel = 4
+	url = http://arpon.sourceforge.net
+	install = arpon-ng.install
+	arch = i686
+	arch = x86_64
+	license = BSD
+	makedepends = cmake>=2.6
+	depends = libpcap>=1.0.0
+	depends = libnet>=1.1.2.1
+	depends = libdnet>=1.11
+	provides = arpon
+	conflicts = arpon
+	backup = etc/arpon.conf
+	backup = etc/conf.d/arpon
+	source = ArpON-3.0-ng.tar.gz::https://sourceforge.net/projects/arpon/files/arpon/ArpON-3.0-ng.tar.gz/download
+	source = arpon.service
+	source = arpon.service.conf
+	source = arpon-syslog.patch
+	source = arpon-gcc7.patch
+	md5sums = a89ef9bc18e6f0fc9aa8a89aa676a281
+	md5sums = SKIP
+	md5sums = SKIP
+	md5sums = SKIP
+	md5sums = SKIP
+
+pkgname = arpon-ng
+

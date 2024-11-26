@@ -1,0 +1,17 @@
+pkgbase = xiate-git
+	pkgdesc = xiate is a terminal emulator
+	pkgver = 20.07.32.gc9e4342
+	pkgrel = 1
+	url = https://uninformativ.de/git/xiate
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	depends = vte3
+	provides = xiate
+	conflicts = xiate
+	source = git+https://uninformativ.de/git/xiate.git
+	md5sums = SKIP
+
+pkgname = xiate-git
+

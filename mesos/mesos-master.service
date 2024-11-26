@@ -1,0 +1,14 @@
+[Unit]
+Description=Mesos Cluster Manager
+After=network.target
+Wants=network.target
+
+[Service]
+ExecStart=/usr/bin/mesos-daemon.sh  mesos-master
+Restart=always
+RestartSec=20
+LimitNOFILE=16384
+#ControlGroup=cpu:/mesos
+
+[Install]
+WantedBy=multi-user.target

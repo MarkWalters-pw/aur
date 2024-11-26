@@ -1,0 +1,26 @@
+diff --git a/src/xpiks-qt/Helpers/ziphelper.cpp b/src/xpiks-qt/Helpers/ziphelper.cpp
+index 1b46f221..2e35f79a 100644
+--- a/src/xpiks-qt/Helpers/ziphelper.cpp
++++ b/src/xpiks-qt/Helpers/ziphelper.cpp
+@@ -16,7 +16,7 @@
+ #include <QStringList>
+ #include <QtDebug>
+ 
+-#include <vendors/quazip/quazip/JlCompress.h>
++#include <quazip5/JlCompress.h>
+ 
+ #include "Common/logging.h"
+ #include "Helpers/filehelpers.h"
+diff --git a/src/xpiks-qt/xpiks-qt.pro b/src/xpiks-qt/xpiks-qt.pro
+index fcf9d02a..c5993843 100644
+--- a/src/xpiks-qt/xpiks-qt.pro
++++ b/src/xpiks-qt/xpiks-qt.pro
+@@ -720,7 +720,7 @@ LIBS += -lhunspell
+ LIBS += -lcurl
+ LIBS += -lface
+ LIBS += -lssdll
+-LIBS += -lquazip
++LIBS += -lquazip5
+ LIBS += -lz
+ LIBS += -lthmbnlr
+ LIBS += -lxpks

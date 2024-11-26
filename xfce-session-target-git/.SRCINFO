@@ -1,0 +1,15 @@
+pkgbase = xfce-session-target-git
+	pkgdesc = systemd Integration for xfce-session
+  pkgver = 1.3.2.r0.gb2163b1
+	pkgrel = 1
+	url = https://git.linux-help.org/infusix/xfce-session-target
+	arch = any
+	license = GPL
+	makedepends = coreutils
+	makedepends = git
+	depends = xfce4-session
+	depends = systemd
+	source = xfce-session-target::git+https://git.linux-help.org/infusix/xfce-session-target.git
+	sha256sums = SKIP
+
+pkgname = xfce-session-target-git

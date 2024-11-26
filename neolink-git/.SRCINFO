@@ -1,0 +1,22 @@
+pkgbase = neolink-git
+	pkgdesc = An RTSP bridge to Reolink IP cameras.
+	pkgver = 0.6.3.rc.1.r34.gd354b90
+	pkgrel = 3
+	url = https://github.com/QuantumEntangledAndy/neolink
+	arch = x86_64
+	license = AGPL3
+	makedepends = git
+	makedepends = rust
+	depends = gst-rtsp-server
+	depends = gst-plugins-bad
+	depends = gst-plugins-base
+	depends = gst-plugins-good
+	backup = etc/neolink.toml
+	source = git+https://github.com/QuantumEntangledAndy/neolink.git
+	source = neolink.sysusers
+	source = neolink.service
+	sha256sums = SKIP
+	sha256sums = 27d0ecc90731e703228efd1c922421cab01c6495943b6f07a97a8c20518c8a17
+	sha256sums = c44fab36cad34172c794eea36e9bdc403f987246d8450223361ae4ab2286f097
+
+pkgname = neolink-git

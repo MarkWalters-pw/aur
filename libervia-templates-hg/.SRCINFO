@@ -1,0 +1,18 @@
+pkgbase = libervia-templates-hg
+	pkgdesc = sat-templates is a collection of templates for Salut à Toi, the multi-frontends multi-purposes XMPP client (core). For now, it needs to be accessible in the PYTHONPATH
+	pkgver = 0.7.r338.a90baa4d3ed1
+	pkgrel = 1
+	url = https://salut-a-toi.org/
+	arch = any
+	license = AGPL3
+	makedepends = mercurial
+	depends = python
+	depends = python-jinja
+	provides = libervia-templates
+	conflicts = sat-templates
+	conflicts = sat-templates-hg
+	options = !strip
+	source = hg+https://repos.goffi.org/libervia-templates
+	md5sums = SKIP
+
+pkgname = libervia-templates-hg

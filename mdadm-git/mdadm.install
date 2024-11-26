@@ -1,0 +1,50 @@
+# arg 1:  the new package version
+# arg 2:  the old package version
+
+_picheck() {
+  if grep -qe '^\s*HOOKS=.*\<mdadm\>' '/etc/mkinitcpio.conf'; then
+    echo 'The old mkinitcpio hook "mdadm" is no longer supported'
+    echo 'In /etc/mkinitcpio.conf HOOKS= change "mdadm" to "mdadm_udev"'
+  fi
+}
+
+post_upgrade() {
+  if [ "$(vercmp "$2" '2.6.8-2')" -lt 0 -a "$(grep 'raid_partitions' '/etc/mkinitcpio.conf')" ]; then
+    echo "Attention mdadm update:"
+    echo "raid_partitions hook has been replaced by the more powerfull mdadm hook."
+    echo "Please update your /etc/mkinitcpio.conf accordingly."
+  fi
+  #if [ -s '/etc/mkinitcpio.conf' ] && grep -q '^\s*HOOKS=".*\smdadm\s.*$' '/etc/mkinitcpio.conf'; then
+  #  echo "Attention mdadm update:"
+  #  echo "mdadm is deprecated for mdadm_udev"
+  #  echo "See the ArchWiki and update your /etc/mkinitcpio.conf accordingly."
+  #fi
+  if ! mdadm -D --scan >/dev/null; then
+    cat '/proc/mdstat'
+    tput 'rev'
+    echo 'One or more arrays may be damaged. Please repair soon.'
+    tput 'sgr0'
+  fi
+  _picheck
+}
+
+post_install() {
+  post_upgrade
+  # Moving from mdadm to mdadm-git doesn't count as an upgrade so pacman renames the config to pacsave.
+  # We'll restore it so that changing from mdadm -> mdadm-git will be seamless without having to repair a broken boot.
+  # This also works for remove and reinstall so long as you don't damage your system too much while mdadm is away.
+  # Unfortunately moving from mdadm-git back to mdadm won't be seamless unless that installer is fixed.
+  # We try our best to pick the file that has the arrays in it.
+  if [ -s '/etc/mdadm.conf.pacsave' ] && grep -q '^\s*ARRAY\s' '/etc/mdadm.conf.pacsave'; then
+    if [ ! -s '/etc/mdadm.conf' ] || ! grep -q '^\s*ARRAY\s' '/etc/mdadm.conf'; then
+      mv '/etc/mdadm.conf.pacsave' '/etc/mdadm.conf' && echo '/etc/mdadm.conf restored from /etc/mdadm.conf.pacsave'
+    fi
+  fi
+  _picheck
+}
+
+pre_remove() {
+  if [ -e '/proc/mdstat' ]; then
+    echo 'You still have active arrays. mdadm should be reinstalled soon.'
+  fi
+}

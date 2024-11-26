@@ -1,0 +1,18 @@
+pkgbase = shellex-git
+	pkgdesc = zsh/urxvt based program launcher
+	pkgver = 0.1.r34.g3ca70d9
+	pkgrel = 3
+	url = https://github.com/Merovius/shellex
+	arch = i686
+	arch = x86_64
+	license = BSD
+	depends = zsh
+	depends = rxvt-unicode
+	depends = perl-x11-protocol
+	provides = shellex
+	conflicts = shellex
+	source = git+https://github.com/Merovius/shellex
+	sha512sums = SKIP
+
+pkgname = shellex-git
+

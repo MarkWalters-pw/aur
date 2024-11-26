@@ -1,0 +1,17 @@
+pkgbase = keys-pub
+	pkgdesc = keys.pub CLI client and service (keys, keysd)
+	pkgver = 0.2.4
+	pkgrel = 1
+	url = https://keys.pub/
+	arch = x86_64
+	arch = i686
+	license = MIT
+	makedepends = git
+	makedepends = go
+	depends = libfido2
+	optdepends = org.freedesktop.secrets: storing secrets
+	conflicts = keys-pub-git
+	source = https://github.com/keys-pub/keys-ext/archive/refs/tags/v0.2.4.tar.gz
+	sha256sums = fd0399f47746800442f278d634983df55c9264c1afc26b978b88435618700e40
+
+pkgname = keys-pub

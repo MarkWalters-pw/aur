@@ -1,0 +1,22 @@
+pkgbase = lpd8editor
+	pkgdesc = A Linux editor for the Akai LPD8 pad controller
+	pkgver = 0.0.16
+	pkgrel = 2
+	url = https://github.com/charlesfleche/lpd8editor
+	arch = x86_64
+	arch = aarch64
+	groups = pro-audio
+	license = MIT
+	makedepends = alsa-lib
+	makedepends = cmake
+	makedepends = qt5-svg
+	makedepends = qt5-tools
+	depends = graphite
+	depends = qt5-base
+	source = lpd8editor-0.0.16.tar.gz::https://github.com/charlesfleche/lpd8editor/archive/refs/tags/v0.0.16.tar.gz
+	sha256sums = 2b9709e014102b65711825488d9f081edb40e18c1b316c0ebd5b0248f6728201
+
+pkgname = lpd8editor
+	depends = graphite
+	depends = qt5-base
+	depends = libasound.so

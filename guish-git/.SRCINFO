@@ -1,0 +1,21 @@
+pkgbase = guish-git
+	pkgdesc = A language and army knife to make and modify GUIs (development version).
+	pkgver = 2.x
+	pkgrel = 1
+	url = https://codeberg.org/phranz/guish
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = libx11
+	makedepends = libxtst
+	makedepends = imlib2
+	depends = libx11
+	depends = libxtst
+	depends = imlib2
+	provides = guish
+	conflicts = guish
+	conflicts = guish-git
+	source = guish::git+https://codeberg.org/phranz/guish
+	sha512sums = SKIP
+
+pkgname = guish-git

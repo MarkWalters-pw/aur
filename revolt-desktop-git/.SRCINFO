@@ -1,0 +1,17 @@
+pkgbase = revolt-desktop-git
+	pkgdesc = User-first chat platform built with modern web technologies
+	pkgver = 1.0.8.r0.gd668949
+	pkgrel = 1
+	url = https://github.com/revoltchat/desktop
+	arch = any
+	license = AGPL-3.0-only
+	makedepends = git
+	makedepends = npm
+	makedepends = nodejs
+	depends = electron
+	provides = revolt-desktop
+	conflicts = revolt-desktop
+	source = revolt-desktop::git+https://github.com/revoltchat/desktop.git
+	sha256sums = SKIP
+
+pkgname = revolt-desktop-git

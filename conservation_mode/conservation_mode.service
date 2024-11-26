@@ -1,0 +1,12 @@
+[Unit]
+Description=Set conservation_mode on for lenovo laptop
+After=multi-user.target
+After=systemd-suspend.service
+After=systemd-hibernate.service
+
+
+[Service]
+ExecStart=/usr/bin/conservation_mode.sh
+
+[Install]
+WantedBy=multi-user.target

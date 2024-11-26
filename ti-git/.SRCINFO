@@ -1,0 +1,18 @@
+pkgbase = ti-git
+	pkgdesc = A silly simple time tracker
+	pkgver = r153.bfb0a95
+	pkgrel = 3
+	url = https://pypi.org/project/ti/
+	arch = any
+	license = MIT
+	makedepends = git
+	depends = python
+	depends = python-yaml
+	depends = python-colorama
+	provides = ti
+	conflicts = ti
+	source = ti-git::git+https://github.com/tbekolay/ti
+	md5sums = SKIP
+
+pkgname = ti-git
+

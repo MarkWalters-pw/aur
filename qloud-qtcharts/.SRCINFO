@@ -1,0 +1,18 @@
+pkgbase = qloud-qtcharts
+	pkgdesc = Tool to measure loudspeaker frequency response and distortions. QtCharts flavour.
+	pkgver = 1.4
+	pkgrel = 4
+	url = https://github.com/molke-productions/qloud
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	license = GPL
+	depends = fftw
+	depends = jack
+	depends = qt5-charts
+	conflicts = qloud
+	source = qloud-1.4.tar.gz::https://github.com/molke-productions/qloud/archive/v1.4.tar.gz
+	sha512sums = f7b6d854b410f637b6c0e9167f11f422519549f79b0356b8c9608bc26be1b4d210dd8388cfedebf2fa9a3722cf9a032a8bdc463228fef0883ddc3365afede42b
+
+pkgname = qloud-qtcharts
+

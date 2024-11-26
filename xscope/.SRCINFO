@@ -1,0 +1,17 @@
+pkgbase = xscope
+	pkgdesc = A program to monitor X11/Client conversations
+	pkgver = 1.4.3
+	pkgrel = 1
+	url = http://cgit.freedesktop.org/xorg/app/xscope/
+	arch = x86_64
+	arch = i686
+	license = MIT
+	makedepends = git
+	makedepends = xorgproto
+	makedepends = xtrans
+	makedepends = xorg-util-macros
+	depends = glibc
+	source = xscope-1.4.3.tar.gz::http://xorg.freedesktop.org/archive/individual/app/xscope-1.4.3.tar.gz
+	sha256sums = 86f9da3cf0422b5964191c9e8f792e107577818de094b38db0a6dbce403a9b54
+
+pkgname = xscope

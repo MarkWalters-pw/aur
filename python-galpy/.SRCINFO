@@ -1,0 +1,31 @@
+pkgbase = python-galpy
+	pkgdesc = Galactic Dynamics in python
+	pkgver = 1.9.2
+	pkgrel = 1
+	url = https://www.galpy.org
+	arch = i686
+	arch = x86_64
+	license = BSD-3-Clause
+	makedepends = python-setuptools
+	makedepends = gsl
+	makedepends = python-wheel
+	makedepends = python-build
+	makedepends = python-installer
+	source = https://files.pythonhosted.org/packages/source/g/galpy/galpy-1.9.2.tar.gz
+	source = torus-200307.tar.gz::https://github.com/jobovy/Torus/archive/b7bf7965db8c3b2034d6a92f5a1c1fefe13e0e5d.tar.gz
+	md5sums = 844b300bc57e9ead0190abc9552b0084
+	md5sums = f84f68196975d1efbac800b1a5703c45
+
+pkgname = python-galpy
+	depends = python-packaging
+	depends = python-scipy
+	depends = python-matplotlib
+	optdepends = python-galpy-doc: Documentation for galpy
+	optdepends = gsl>=1.14: For some advanced features
+	optdepends = python-astropy: For Quantity support
+	optdepends = python-astroquery: For the Orbit.from_name initialization method
+	optdepends = python-numexpr: For or plotting arbitrary expressions of Orbit quantities
+	optdepends = python-numba: for speeding up the evaluation of certain functions when using C orbit integration
+	optdepends = python-jax: For use of constant-anisotropy DFs in galpy.df.constantbetadf
+	optdepends = python-tqdm: For displaying a progress bar for certain operations (e.g., orbit integration of multiple objects at once
+	optdepends = python-pynbody: Foruse of SnapshotRZPotential and InterpSnapshotRZPotential

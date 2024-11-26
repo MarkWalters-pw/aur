@@ -1,0 +1,27 @@
+pkgbase = amxrt-git
+	pkgdesc = Ambiorix application runtime
+	pkgver = 1.5.2.r0.g942f317
+	pkgrel = 1
+	url = https://gitlab.com/soft.at.home/ambiorix/applications/amxrt.git
+	arch = x86_64
+	arch = i686
+	arch = i486
+	arch = pentium4
+	arch = arm
+	arch = armv6h
+	arch = armv7h
+	arch = aarch64
+	license = BSD
+	makedepends = git
+	depends = libevent
+	depends = lib_amxc
+	depends = lib_amxp
+	depends = lib_amxd
+	depends = lib_amxb
+	depends = lib_amxo
+	provides = amxrt
+	conflicts = amxrt
+	source = amxrt-git::git+https://gitlab.com/soft.at.home/ambiorix/applications/amxrt.git#branch=main
+	md5sums = SKIP
+
+pkgname = amxrt-git

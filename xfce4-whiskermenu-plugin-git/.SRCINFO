@@ -1,0 +1,23 @@
+pkgbase = xfce4-whiskermenu-plugin-git
+	pkgdesc = Alternate Xfce menu
+	pkgver = 2.4.0+43+g86b6bff
+	pkgrel = 1
+	url = http://gottcode.org/xfce4-whiskermenu-plugin/
+	arch = x86_64
+	arch = i686
+	arch = armv7h
+	arch = aarch64
+	groups = xfce4-goodies
+	groups = xfce4-goodies-git
+	license = GPL2
+	makedepends = cmake
+	makedepends = git
+	depends = xfce4-panel
+	depends = exo>=0.11
+	provides = xfce4-whiskermenu-plugin=2.4.0+43+g86b6bff
+	conflicts = xfce4-whiskermenu-plugin
+	source = xfce4-whiskermenu-plugin::git+https://gitlab.xfce.org/panel-plugins/xfce4-whiskermenu-plugin
+	md5sums = SKIP
+
+pkgname = xfce4-whiskermenu-plugin-git
+

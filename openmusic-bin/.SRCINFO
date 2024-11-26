@@ -1,0 +1,22 @@
+pkgbase = openmusic-bin
+	pkgdesc = A visual programming language designed for music composition
+	pkgver = 6.19
+	pkgrel = 1
+	url = http://repmus.ircam.fr/openmusic/
+	install = openmusic.install
+	arch = x86_64
+	license = GPL
+	makedepends = rsync
+	depends = desktop-file-utils
+	depends = gdk-pixbuf2
+	depends = portmidi
+	depends = libsndfile
+	optdepends = jack: JACK audio support
+	optdepends = libsamplerate: speed up audio-waveform drawing
+	provides = openmusic
+	conflicts = openmusic
+	options = !strip
+	source = https://github.com/openmusic-project/OM6/releases/download/v6.19/OM_6.19.tar.bz2
+	sha256sums = d6e2d806d375281ed12bf94294735355ec360368ff5b101ba466695691735526
+
+pkgname = openmusic-bin

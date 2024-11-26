@@ -1,0 +1,27 @@
+pkgbase = darkfi-git
+        pkgdesc = A blockchain designed with anonimity at the forefront, utilizing zk cryptography.
+        pkgver = v0.4.1.r977.ge23fb30604
+        pkgrel = 2
+        url = https://darkrenaissance.github.io/darkfi/
+        arch = any
+        license = AGPL
+        makedepends = rustup
+        makedepends = make
+        makedepends = jq
+        makedepends = gcc
+        makedepends = pkgconf
+        makedepends = git
+        makedepends = alsa-lib
+        depends = openssl
+        depends = mpg123
+        provides = darkfid
+        provides = faucetd
+        provides = drk
+        provides = darkirc
+        provides = vanityaddr
+        provides = tau
+        provides = taud
+        source = darkfi-git::git+https://github.com/darkrenaissance/darkfi.git
+        md5sums = SKIP
+
+pkgname = darkfi-git

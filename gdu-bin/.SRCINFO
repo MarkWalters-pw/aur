@@ -1,0 +1,17 @@
+pkgbase = gdu-bin
+	pkgdesc = Fast disk usage analyzer
+	pkgver = 5.28.0
+	pkgrel = 1
+	url = https://github.com/Dundee/gdu
+	arch = x86_64
+	license = MIT
+	provides = gdu
+	conflicts = gdu
+	source = gdu-bin-5.28.0.tgz::https://github.com/dundee/gdu/releases/download/v5.28.0/gdu_linux_amd64.tgz
+	source = gdu-bin.1-5.28.0.tgz::https://github.com/dundee/gdu/releases/download/v5.28.0/gdu.1.tgz
+	source = LICENSE
+	sha256sums = 77b6a4c71d1788b9b86b6eebd1140480a16850eb389302262a3d6271bde20faf
+	sha256sums = 48f2143cdb3d0249d2e67924f8669e8f3ea739ea6bcd8046c5d91623ba9bb48e
+	sha256sums = 613e9144d1403bba9553d64daf6a5e28d4c6bd9fabed81da80efaf91eb573dad
+
+pkgname = gdu-bin

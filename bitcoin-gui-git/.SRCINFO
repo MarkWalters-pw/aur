@@ -1,0 +1,46 @@
+pkgbase = bitcoin-gui-git
+	pkgdesc = Most recent stable branch, UPNP disabled, w/ Bitcoin binaries, dev tools, GUI, and wallet
+	pkgver = v0.21.1.r15.g926f76cb20
+	pkgrel = 1
+	url = https://bitcoin.org/en/download
+	install = bitcoin-qt.install
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = boost
+	makedepends = libevent
+	makedepends = qt5-base
+	makedepends = qt5-tools
+	makedepends = qrencode
+	makedepends = protobuf
+	makedepends = zeromq
+	makedepends = python
+	depends = boost-libs
+	depends = desktop-file-utils
+	depends = libevent
+	depends = protobuf
+	depends = qrencode
+	depends = qt5-base
+	depends = zeromq
+	optdepends = db4.8: Wallet portability/compatibility w/official binaries
+	provides = bitcoin-daemon
+	provides = bitcoin-cli
+	provides = bitcoin-qt
+	provides = bitcoin-tx
+	conflicts = bitcoin-daemon
+	conflicts = bitcoin-cli
+	conflicts = bitcoin-qt
+	conflicts = bitcoin-tx
+	source = git+https://github.com/bitcoin/bitcoin.git#branch=0.21
+	source = git+https://github.com/bitcoin-core/packaging.git
+	source = bitcoin-qt.install
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = ebf7090ca1202e2c2ccd1aa5bb03e6ac911c458141a1cedda9b41f9c26c2602c
+	sha512sums = SKIP
+	sha512sums = SKIP
+	sha512sums = 67383fa1dd2f9576cc3c282f3a9b8c5f2d3eaa13799a6a7eb9eb2969face0ddaf6bb82c286c928b89397d8d2c9ba2efe9a603442f4bf6ed6d89ae9323c169375
+
+pkgname = bitcoin-gui-git
+

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+KERNEL="$(uname -r)"
+TARGET="usr/lib/modules/$KERNEL"
+
+if grep -F -q "$TARGET"; then
+    linux-preserve-modules unlink-all
+    linux-preserve-modules copy
+else
+    echo "info: nothing to copy" >&2
+    exit 0
+fi

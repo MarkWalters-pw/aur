@@ -1,0 +1,16 @@
+pkgbase = edytornc-git
+	pkgdesc = Text editor for CNC programmers
+	pkgver = r191.bebe49f
+	pkgrel = 1
+	url = https://github.com/u-235/edytornc
+	arch = x86_64
+	license = LGPL3
+	makedepends = git
+	depends = hicolor-icon-theme
+	depends = qt5-serialport
+	provides = edytornc
+	source = edytornc::git+https://github.com/u-235/edytornc
+	sha256sums = SKIP
+
+pkgname = edytornc-git
+

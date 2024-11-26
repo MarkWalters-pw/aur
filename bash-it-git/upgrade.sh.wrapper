@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+set -e
+
+if [ "$(whoami)" != "$(
+  logname 2>/dev/null || echo "${USER:-${LOGNAME}}")" ]
+then
+  echo >&2
+  echo >&2 'This command will upgrade files in your' \
+    'home directory. It must be run *without* sudo.'
+  exit 1
+fi
+
+cp -ruvP --preserve=mode,links -t ~/ \
+  "/usr/share/bash-it-git/home_factory/.bash_it"

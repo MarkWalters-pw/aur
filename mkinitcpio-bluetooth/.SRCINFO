@@ -1,0 +1,18 @@
+pkgbase = mkinitcpio-bluetooth
+	pkgdesc = This is an initcpio hook for bluetooth connectivity during boot / in initramfs.
+	pkgver = 1.4
+	pkgrel = 1
+	url = https://github.com/irreleph4nt/mkinitcpio-bluetooth/
+	arch = x86_64
+	arch = i686
+	license = GPLv2
+	makedepends = git
+	depends = bluez
+	depends = bluez-utils
+	depends = dbus
+	replaces = mkinitcpio-btinput
+	source = https://github.com/irreleph4nt/mkinitcpio-bluetooth/archive/v1.4.tar.gz
+	md5sums = a794ec95f1d37a56c824b7adc729ad96
+
+pkgname = mkinitcpio-bluetooth
+

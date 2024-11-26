@@ -1,0 +1,18 @@
+pkgbase = howm-x11-git
+	pkgdesc = A lightweight, tiling X11 window manager that mimics vi by offering operators, motions and modes.
+	pkgver = 0.5.1.81.g3e3d6ee
+	pkgrel = 1
+	url = https://github.com/HarveyHunt/howm
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	depends = xcb-util-wm
+	depends = sxhkd
+	depends = cottage-git
+	provides = howm-x11
+	conflicts = howm-x11
+	source = howm-x11-git::git+https://github.com/HarveyHunt/howm#branch=develop
+	sha256sums = SKIP
+
+pkgname = howm-x11-git

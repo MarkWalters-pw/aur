@@ -1,0 +1,9 @@
+
+post_install() {
+  echo "The game needs to know where Syndicate data files are installed"
+  echo "By setting data_dir in /etc/freesynd/freesynd.ini you can ensure it is found."
+}
+
+post_upgrade() {
+  post_install
+}

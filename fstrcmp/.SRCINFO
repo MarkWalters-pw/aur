@@ -1,0 +1,22 @@
+pkgbase = fstrcmp
+	pkgdesc = A library that is used to make fuzzy comparisons of strings and byte arrays, including multi-byte character strings
+	pkgver = 0.7.D001
+	pkgrel = 3
+	url = http://fstrcmp.sourceforge.net/
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = make
+	makedepends = gcc
+	makedepends = ghostscript
+	makedepends = groff
+	makedepends = libtool
+	depends = glibc
+	noextract = fstrcmp-0.7.D001.tar.gz
+	options = !libtool
+	options = !staticlibs
+	source = http://fstrcmp.sourceforge.net/fstrcmp-0.7.D001.tar.gz
+	md5sums = 9c440bbdfcad9fd22e38f2388715b0cc
+
+pkgname = fstrcmp
+

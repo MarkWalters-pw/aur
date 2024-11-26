@@ -1,0 +1,10 @@
+[Unit]
+Description=Black Python Formatter Daemon
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/blackd
+
+[Install]
+WantedBy=default.target

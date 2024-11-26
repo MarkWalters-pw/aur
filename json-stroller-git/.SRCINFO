@@ -1,0 +1,14 @@
+pkgbase = json-stroller-git
+	pkgdesc = view json files and display differences between json formatted data
+	pkgver = 1.2.r0.g787cbc5
+	pkgrel = 1
+	url = https://github.com/isundil/jsonStroller
+	arch = x86_64
+	license = GPL-3.0-or-later
+	makedepends = cmake
+	makedepends = git
+	depends = ncurses
+	source = json-stroller-git::git+https://github.com/isundil/jsonStroller.git
+	md5sums = SKIP
+
+pkgname = json-stroller-git

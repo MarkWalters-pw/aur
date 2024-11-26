@@ -1,0 +1,27 @@
+--- old/main.js	2024-04-28 10:49:57.978820528 +0200
++++ new/main.js	2024-04-28 10:52:45.394820598 +0200
+@@ -6136,22 +6136,8 @@
+ exports.saveAppArgs = saveAppArgs;
+ function setupCloseEvent(options, window) {
+     window.on('close', (event) => {
+-        var _a, _b;
+-        log.debug('mainWindow.close', event);
+-        if (window.isFullScreen()) {
+-            if ((0, helpers_1.nativeTabsSupported)()) {
+-                window.moveTabToNewWindow();
+-            }
+-            window.setFullScreen(false);
+-            window.once('leave-full-screen', (event) => {
+-                var _a, _b;
+-                return (0, windowHelpers_1.hideWindow)(window, event, (_a = options.fastQuit) !== null && _a !== void 0 ? _a : false, (_b = options.tray) !== null && _b !== void 0 ? _b : 'false');
+-            });
+-        }
+-        (0, windowHelpers_1.hideWindow)(window, event, (_a = options.fastQuit) !== null && _a !== void 0 ? _a : false, (_b = options.tray) !== null && _b !== void 0 ? _b : 'false');
+-        if (options.clearCache) {
+-            (0, windowHelpers_1.clearCache)(window).catch((err) => log.error('clearCache ERROR', err));
+-        }
++        electron_1.app.exit(0);
++        return;
+     });
+ }
+ function setupCounter(options, window, setDockBadge) {

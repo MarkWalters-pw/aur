@@ -1,0 +1,22 @@
+pkgbase = cmvs-pmvs-git
+	pkgdesc = Takes output from structure from motion frameworks (SfM) and produces dense 3D reconstruction from the camera poses and imagery.
+	pkgver = r24.a067274
+	pkgrel = 3
+	url = https://github.com/pmoulon/CMVS-PMVS
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = cmake
+	makedepends = boost
+	depends = libjpeg
+	depends = boost-libs
+	provides = cmvs
+	provides = pmvs
+	conflicts = cmvs
+	conflicts = pmvs
+	source = git+https://github.com/pmoulon/CMVS-PMVS.git
+	md5sums = SKIP
+
+pkgname = cmvs-pmvs-git
+

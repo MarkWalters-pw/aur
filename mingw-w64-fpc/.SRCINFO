@@ -1,0 +1,23 @@
+pkgbase = mingw-w64-fpc
+	pkgdesc = Cross FPC for the MinGW-w64 cross compiler
+	pkgver = 3.2.2
+	pkgrel = 1
+	url = https://freepascal.org/
+	arch = i686
+	arch = x86_64
+	license = GPL
+	license = LGPL
+	license = MPL
+	makedepends = fpc
+	depends = ncurses
+	depends = expat
+	depends = zlib
+	depends = mingw-w64-binutils
+	options = staticlibs
+	options = !emptydirs
+	options = !strip
+	options = !buildflags
+	source = https://sourceforge.net/projects/freepascal/files/Source/3.2.2/fpcbuild-3.2.2.tar.gz
+	b2sums = 88848308c93f949b59197649cc344498082b6520e43eb1d4413bf68eb251fcab75c863794a188a2298d9e8aba47346253a596ac630b30049ac8bd6f6934aa5a2
+
+pkgname = mingw-w64-fpc

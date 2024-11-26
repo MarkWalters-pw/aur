@@ -1,0 +1,26 @@
+pkgbase = gdcm-git
+	pkgdesc = Open source implementation of the DICOM standard
+	pkgver = 3.0.24.r304.gf579a558d
+	pkgrel = 1
+	url = https://sourceforge.net/projects/gdcm
+	arch = i686
+	arch = x86_64
+	license = BSD-3-Clause
+	makedepends = git
+	makedepends = cmake
+	makedepends = swig
+	makedepends = java-environment>=22
+	makedepends = python
+	makedepends = dcmtk-git
+	depends = expat
+	depends = libxml2
+	depends = openssl
+	depends = openjpeg2
+	optdepends = java-runtime>=22: Java wrapper
+	optdepends = python: Python wrapper
+	provides = gdcm
+	conflicts = gdcm
+	source = git+https://github.com/malaterre/gdcm.git
+	sha256sums = SKIP
+
+pkgname = gdcm-git

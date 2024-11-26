@@ -1,0 +1,24 @@
+pkgbase = chatgpt-desktop-git
+	pkgdesc = ChatGPT Desktop Application (Mac, Windows and Linux)
+	pkgver = 1.1.0+r8+gfe4f231
+	pkgrel = 1
+	url = https://github.com/lencx/ChatGPT
+	arch = x86_64
+	arch = i686
+	arch = armv7h
+	arch = aarch64
+	license = Apache
+	makedepends = imagemagick
+	makedepends = git
+	makedepends = cargo
+	depends = hicolor-icon-theme
+	depends = openssl
+	depends = webkit2gtk
+	provides = chatgpt-desktop
+	conflicts = chatgpt-desktop
+	source = git+https://github.com/lencx/ChatGPT.git
+	source = chat-gpt.desktop
+	sha256sums = SKIP
+	sha256sums = fe7aaba6e26b964adba2cbf87bd415cbe928ea06ebea5317d177cfa1576eb9f5
+
+pkgname = chatgpt-desktop-git

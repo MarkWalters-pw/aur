@@ -1,0 +1,23 @@
+pkgbase = ttf-maven-pro
+	pkgdesc = Sans-serif typeface from Google Fonts
+	pkgver = 2.003
+	pkgrel = 3
+	url = https://fonts.google.com/specimen/Maven+Pro
+	install = ttf-maven-pro.install
+	arch = any
+	license = SIL Open Font License v1.1
+	depends = fontconfig
+	depends = xorg-fonts-encodings
+	depends = xorg-mkfontdir
+	depends = xorg-mkfontscale
+	source = https://raw.githubusercontent.com/google/fonts/master/ofl/mavenpro/MavenPro-Black.ttf
+	source = https://raw.githubusercontent.com/google/fonts/master/ofl/mavenpro/MavenPro-Bold.ttf
+	source = https://raw.githubusercontent.com/google/fonts/master/ofl/mavenpro/MavenPro-Medium.ttf
+	source = https://raw.githubusercontent.com/google/fonts/master/ofl/mavenpro/MavenPro-Regular.ttf
+	sha256sums = b46bec61d4507bd08fdda0bf61a07b9241303a13b77be559aff464a93d521dba
+	sha256sums = e82c642ee161c25efa6fc56bf9612a2ddf655900cb85bb85c9c40af02b67108b
+	sha256sums = 37f1e21c1280b56e5274ca9ac990a1f3b446461047e72ba96d95fef3ea46fbb6
+	sha256sums = 347bf2e1fd448c075e39601109ba2fb46a624e7151c9d7f160edb7a38b7e7351
+
+pkgname = ttf-maven-pro
+

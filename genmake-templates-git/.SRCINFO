@@ -1,0 +1,14 @@
+pkgbase = genmake-templates-git
+	pkgdesc = Makefile templates for genmake
+	pkgver = r5.8ae831b
+	pkgrel = 1
+	url = https://gitee.com/duapple/makefile
+	arch = any
+	license = unknown
+	makedepends = git
+	provides = genmake-templates
+	conflicts = genmake-templates
+	source = genmake-templates-git::git+https://gitee.com/duapple/makefile
+	sha256sums = SKIP
+
+pkgname = genmake-templates-git

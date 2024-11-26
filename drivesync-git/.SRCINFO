@@ -1,0 +1,15 @@
+pkgbase = drivesync-git
+	pkgdesc = A command line utility that synchronizes your Google Drive files with a local folder on your machine
+	pkgver = 1.4.0.r0.g1124fc6
+	pkgrel = 1
+	url = https://github.com/MStadlmeier/drivesync
+	install = .INSTALL
+	arch = any
+	license = MIT
+	depends = ruby
+	provides = drivesync
+	source = drivesync-git::git+https://github.com/MStadlmeier/drivesync.git
+	md5sums = SKIP
+
+pkgname = drivesync-git
+

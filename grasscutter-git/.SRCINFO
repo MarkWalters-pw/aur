@@ -1,0 +1,28 @@
+pkgbase = grasscutter-git
+	pkgdesc = A server software reimplementation for a certain anime game.
+	pkgver = 1.4.6.8d09b88
+	pkgrel = 2
+	url = https://github.com/Grasscutters/Grasscutter
+	arch = any
+	license = AGPL3
+	makedepends = java-environment>=17
+	makedepends = gradle
+	depends = java-runtime-headless>=17
+	source = grasscutter::git+https://github.com/Grasscutters/Grasscutter#commit=8d09b8833c216c5f0b12d854d0424c66699dfc05
+	source = grasscutter-resources.tar.bz2::https://gitlab.com/YuukiPS/GC-Resources/-/archive/3.4/GC-Resources-3.4.tar.bz2
+	source = grasscutter-run
+	b2sums = SKIP
+	b2sums = SKIP
+	b2sums = e9b4f7513617d040b41b4720fc611d1038f03ed2b4f86f9bf6276a43e3910e3cacbb7175a92ac068c6e57569c5ab145674b5a41aa9a74976db89a4cf68a7248e
+
+pkgname = grasscutter-git
+	depends = java-runtime-headless>=17
+	optdepends = grasscutter-resources: for game resources
+	optdepends = mongodb: for game database
+	provides = grasscutter
+	conflicts = grasscutter
+
+pkgname = grasscutter-resources-git
+	provides = grasscutter-resources
+	conflicts = grasscutter-resources
+	options = !strip

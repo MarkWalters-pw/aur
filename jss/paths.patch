@@ -1,0 +1,17 @@
+diff -u JSSConfig.cmake.orig JSSConfig.cmake
+--- JSSConfig.cmake.orig	2020-04-07 12:00:25.035475026 -0400
++++ JSSConfig.cmake	2020-04-07 12:01:38.207503180 -0400
+@@ -201,11 +201,11 @@
+     # Find various JARs required by JSS build and test suite
+     find_jar(
+         SLF4J_API_JAR
+-        NAMES api slf4j/api slf4j-api
++        NAMES api slf4j/api slf4j-api slf4j/slf4j-api
+     )
+     find_jar(
+         LANG_JAR
+-        NAMES apache-commons-lang commons-lang
++        NAMES apache-commons-lang commons-lang commons-lang/commons-lang
+     )
+     find_jar(
+         JAXB_JAR

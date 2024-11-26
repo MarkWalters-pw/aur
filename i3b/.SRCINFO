@@ -1,0 +1,21 @@
+pkgbase = i3b
+	pkgdesc = Window manager scripts and configs
+	pkgver = 0.1.r2.g35d5d55
+	pkgrel = 1
+	url = https://github.com/DMBuce/i3b
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = perl
+	depends = i3-wm
+	depends = xorg-xrandr
+	depends = xdotool
+	depends = bash
+	depends = jq
+	depends = rofi
+	depends = awk
+	depends = monit
+	source = i3b::git+https://github.com/DMBuce/i3b.git
+	md5sums = SKIP
+
+pkgname = i3b

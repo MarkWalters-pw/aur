@@ -1,0 +1,22 @@
+pkgbase = intel-llvm-git
+	pkgdesc = Intel oneAPI DPC++ Compiler, sycl branch
+	pkgver = r477988.130919b5bc9c
+	pkgrel = 1
+	url = https://github.com/intel/llvm
+	arch = x86_64
+	license = custom:Apache License v2.0 with LLVM Exception
+	checkdepends = python-psutil
+	makedepends = git
+	makedepends = cmake
+	makedepends = python
+	makedepends = ninja
+	depends = cuda
+	depends = hip-runtime-amd
+	source = intel-llvm::git+https://github.com/intel/llvm.git#branch=sycl
+	source = intel-llvm.sh
+	source = intel-llvm.conf
+	md5sums = SKIP
+	md5sums = 66c25f2ada33c8ac8b706a084383dc11
+	md5sums = 847be655cc4b75f59e1a4c8b433ee3a9
+
+pkgname = intel-llvm-git

@@ -1,0 +1,14 @@
+pkgbase = opensmile
+	pkgdesc = A fast, real-time (audio) feature extraction utility for automatic speech, music and paralinguistic recognition research
+	pkgver = 3.0.2
+	pkgrel = 2
+	url = https://github.com/audeering/opensmile/
+	arch = x86_64
+	license = custom
+	makedepends = cmake
+	depends = portaudio
+	depends = ffmpeg4.4
+	source = opensmile-3.0.2.tar.gz::https://github.com/audeering/opensmile/archive/v3.0.2.tar.gz
+	sha256sums = b423c785c948e6e8d5b84c002419875ba456f048f5f86ce29f5e21bba9ef5bdd
+
+pkgname = opensmile

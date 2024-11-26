@@ -1,0 +1,23 @@
+pkgbase = pods-git
+	pkgdesc = A Podman desktop application
+	pkgver = r2082.0f8a23a
+	pkgrel = 1
+	url = https://github.com/marhkb/pods
+	arch = x86_64
+	license = GPL3
+	checkdepends = appstream-glib
+	makedepends = git
+	makedepends = meson
+	makedepends = rust
+	depends = gtk4
+	depends = libadwaita
+	depends = podman
+	depends = gtksourceview5
+	depends = libpanel-git
+	depends = vte4
+	provides = pods
+	conflicts = pods
+	source = git+https://github.com/marhkb/pods.git
+	md5sums = SKIP
+
+pkgname = pods-git

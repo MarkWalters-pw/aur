@@ -1,0 +1,23 @@
+pkgbase = nodejs-mumble-web
+	pkgdesc = An HTML5 Mumble client - stable
+	pkgver = 0.5.1
+	pkgrel = 2
+	url = https://github.com/johni0702/mumble-web
+	arch = any
+	license = custom:ISC
+	makedepends = npm
+	makedepends = jq
+	optdepends = websockify: Websocket support between the HTML5 client and a Mumble server
+	optdepends = nginx: supported reverse proxy
+	optdepends = apache: supported reverse proxy
+	optdepends = caddy: supported reverse proxy
+	optdepends = hiawatha: supported reverse proxy
+	noextract = mumble-web-0.5.1.tgz
+	backup = usr/lib/node_modules/mumble-web/dist/config.local.js
+	source = https://registry.npmjs.org/mumble-web/-/mumble-web-0.5.1.tgz
+	source = LICENSE
+	sha512sums = 87de66921c5ac00cfd91c6dde064d3427dbbc979c6e94f18cc3e84e77799e9f2bba361818f08ceedc08ded91865decde24da306e6e3d74f3a42ec5d231105bf6
+	sha512sums = 078ee99b369d88e3323d2ae2046b4faa8f61dc8ffa46d0d34788fcd4ca9a9dab1c3542e2798431c95e54a6f6106000489a6face2ce05db80523200c9e5ddfac0
+
+pkgname = nodejs-mumble-web
+

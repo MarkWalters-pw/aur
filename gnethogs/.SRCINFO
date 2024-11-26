@@ -1,0 +1,18 @@
+pkgbase = gnethogs
+	pkgdesc = Graphical interface for nethogs using GTK
+	pkgver = 0.2+6+gbb69c6f
+	pkgrel = 3
+	url = https://github.com/mbfoss/gnethogs
+	install = gnethogs.install
+	arch = any
+	license = GPL3
+	makedepends = git
+	makedepends = intltool
+	makedepends = libxml2
+	depends = gtkmm3
+	depends = nethogs
+	source = git+https://github.com/mbfoss/gnethogs.git#commit=bb69c6f82e059a451174c24a6bb1a21b32173f6c
+	sha512sums = SKIP
+
+pkgname = gnethogs
+

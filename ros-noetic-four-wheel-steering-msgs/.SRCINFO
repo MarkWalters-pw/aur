@@ -1,0 +1,19 @@
+pkgbase = ros-noetic-four-wheel-steering-msgs
+	pkgdesc = ROS - Messages for robots using FourWheelSteering
+	pkgver = 1.1.1
+	pkgrel = 2
+	url = https://wiki.ros.org/four_wheel_steering_msgs
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-catkin
+	makedepends = ros-noetic-message-generation
+	makedepends = ros-noetic-message-runtime
+	makedepends = ros-noetic-std-msgs
+	depends = ros-noetic-std-msgs
+	depends = ros-noetic-message-runtime
+	source = ros-noetic-four-wheel-steering-msgs-1.1.1.tar.gz::https://github.com/ros-drivers/four_wheel_steering_msgs/archive/1.1.1.tar.gz
+	sha256sums = cc1085576b1d659fa494e164bd3113f07fc56cd97f067614f9a8c02b8a8f4f2e
+
+pkgname = ros-noetic-four-wheel-steering-msgs

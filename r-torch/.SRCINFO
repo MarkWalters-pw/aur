@@ -1,0 +1,37 @@
+pkgbase = r-torch
+	pkgdesc = Tensors and Neural Networks with 'GPU' Acceleration
+	pkgver = 0.13.0
+	pkgrel = 1
+	url = https://cran.r-project.org/package=torch
+	arch = x86_64
+	license = MIT
+	depends = r-bit64
+	depends = r-callr
+	depends = r-cli
+	depends = r-coro
+	depends = r-desc
+	depends = r-ellipsis
+	depends = r-glue
+	depends = r-jsonlite
+	depends = r-magrittr
+	depends = r-r6
+	depends = r-rcpp
+	depends = r-rlang
+	depends = r-safetensors
+	depends = r-withr
+	optdepends = r-covr
+	optdepends = r-katex
+	optdepends = r-knitr
+	optdepends = r-mvtnorm
+	optdepends = r-numderiv
+	optdepends = r-palmerpenguins
+	optdepends = r-rmarkdown
+	optdepends = r-testthat
+	source = https://cran.r-project.org/src/contrib/torch_0.13.0.tar.gz
+	source = fix-build.patch
+	md5sums = 6a7a957f4fb12e44cdac33b94ce4377a
+	md5sums = 539874681ec47604d54ac506a0f7a14d
+	b2sums = b38b0de6fc159da6bcad4da5c1bc2c847a323067d09fdfbe76e85583402a247839b3a42b71d52da6c3476ec33a34b7ccfd033facad2b722772ab9f8ad5c1d5c5
+	b2sums = 81629ea7a33491bf8dcec19019d97b90d838559adb023cde8e1bca1165bba58c9d48fb931300f51a717c0b048fd13750b3fdec16c416ed43e1de9296d146ee6e
+
+pkgname = r-torch

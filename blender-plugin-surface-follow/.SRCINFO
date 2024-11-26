@@ -1,0 +1,13 @@
+pkgbase = blender-plugin-surface-follow
+	pkgdesc = Blender addon for binding object to deforming surfaces.
+	pkgver = r20.f15a960
+	pkgrel = 1
+	url = https://blenderartists.org/forum/showthread.php?412706-Surface-Follow-from-2016-Blender-Conference
+	arch = any
+	license = MIT
+	makedepends = git
+	depends = blender
+	source = surface-follow::git+https://github.com/the3dadvantage/BlenderSurfaceFollow.git
+	md5sums = SKIP
+
+pkgname = blender-plugin-surface-follow

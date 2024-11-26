@@ -1,0 +1,20 @@
+pkgbase = perl-mail-gnupg
+	pkgdesc = MIME Email <-> GnuPG::Interface interface
+	pkgver = 0.23
+	pkgrel = 4
+	url = http://search.cpan.org/dist/Mail-GnuPG
+	arch = any
+	license = PerlArtistic
+	license = GPL
+	makedepends = perl-test-pod
+	depends = perl-gnupg-interface
+	depends = perl-mailtools
+	depends = perl-mime-tools
+	depends = perl-moox-late
+	depends = perl-moox-handlesvia
+	depends = perl-data-perl
+	options = !emptydirs
+	source = http://search.cpan.org/CPAN/authors/id/D/DD/DDB/Mail-GnuPG-0.23.tar.gz
+	sha256sums = cf3c00ddb334020c9431e6a3af71fb6651ca647706ef3daab96e5d26347807f4
+
+pkgname = perl-mail-gnupg

@@ -1,0 +1,24 @@
+pkgbase = rtl8761usb-dkms
+	pkgdesc = Realtek bluetooth modules for RTL8761 usb based devices (DKMS)
+	pkgver = 20200610
+	pkgrel = 3
+	url = https://www.xmpow.com/pages/download
+	arch = i686
+	arch = x86_64
+	arch = armv6h
+	arch = armv7h
+	license = unknown
+	depends = dkms
+	depends = bc
+	conflicts = rtl8761usb
+	conflicts = rtl8761b-fw
+	source = https://archive.org/download/mpow_mpbh456ab_driverforlinux/mpow_MPBH456AB_driver%2Bfor%2BLinux.tgz
+	source = rtl8761usb.conf
+	source = dkms.conf
+	source = Makefile.patch
+	sha256sums = 74001cd412363485751a8e11dda7de54919de51a74d7f060ce489d0a9291040b
+	sha256sums = 49fd7d83509ce7ec6797b987719ddbbc9168656374a360a35fe8a1ef8b52cee5
+	sha256sums = 9ff12db0338709ac3b1f6c2c8e14a9e715f89283da716ff83e71012136820027
+	sha256sums = cce5da3c3c05ccac84bda25246200a80747da3f8ec5fb15be860b79c22a6414c
+
+pkgname = rtl8761usb-dkms

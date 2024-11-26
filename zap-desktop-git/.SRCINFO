@@ -1,0 +1,27 @@
+pkgbase = zap-desktop-git
+	pkgdesc = Lightning wallet focused on user experience and ease of use
+	pkgver = 0.7.7.beta.r0.g086533a
+	pkgrel = 1
+	url = https://github.com/LN-Zap/zap-desktop
+	arch = x86_64
+	license = MIT
+	makedepends = npm
+	makedepends = yarn
+	makedepends = git
+	makedepends = python
+	makedepends = glibc
+	makedepends = gcc-libs
+	depends = gtk3
+	depends = nss
+	depends = libxss
+	depends = alsa-lib
+	depends = gnome-keyring
+	provides = zap-desktop
+	conflicts = zap-desktop-bin
+	conflicts = zap-desktop-appimage
+	source = zap-desktop-git::git+https://github.com/LN-Zap/zap-desktop.git
+	source = zap-desktop.desktop
+	sha256sums = SKIP
+	sha256sums = 8c7a0940cced4e02b9d4dc1e2ca98f546117a079f37b91739ef70a321f86d5ee
+
+pkgname = zap-desktop-git

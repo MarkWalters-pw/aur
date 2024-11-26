@@ -1,0 +1,19 @@
+pkgbase = fstl-git
+	pkgdesc = A viewer for .stl files
+	pkgver = 0.9.4.r27.g9da758b
+	pkgrel = 1
+	url = http://www.mattkeeter.com/projects/fstl/
+	arch = x86_64
+	license = MIT
+	makedepends = icoutils
+	makedepends = cmake
+	depends = qt5-base
+	provides = fslt=0.9.4.r27.g9da758b
+	provides = fslt-git=0.9.4.r27.g9da758b
+	conflicts = fslt
+	source = fstl::git+https://github.com/fstl-app/fstl.git
+	source = fstl.desktop
+	sha256sums = SKIP
+	sha256sums = 53d2a7911cacc1ca8e9fe823e8ecf2777c1158f51d2b909ebb106d976c70bec5
+
+pkgname = fstl-git

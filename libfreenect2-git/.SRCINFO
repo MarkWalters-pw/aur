@@ -1,0 +1,22 @@
+pkgbase = libfreenect2-git
+	pkgdesc = Open source drivers for the Kinect for Windows v2
+	pkgver = 0.2.0.r70.gfd64c5d
+	pkgrel = 1
+	url = http://openkinect.org
+	arch = i686
+	arch = x86_64
+	license = Apache
+	license = GPL
+	makedepends = cmake
+	makedepends = opencl-headers
+	depends = libusb
+	depends = glfw
+	depends = libjpeg-turbo
+	depends = ocl-icd
+	provides = libfreenect2
+	conflicts = libfreenect2
+	source = git+https://github.com/OpenKinect/libfreenect2.git
+	sha512sums = SKIP
+
+pkgname = libfreenect2-git
+

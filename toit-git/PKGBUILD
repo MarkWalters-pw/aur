@@ -1,0 +1,54 @@
+# Maintainer: Florian Loitsch <florian@toit.io>
+pkgname=toit-git
+pkgver=VERSION
+pkgrel=10
+pkgdesc="Toit programming language SDK"
+arch=('x86_64')
+url="https://toitlang.org"
+license=('LGPL')
+depends=('gcc-libs' 'esptool')
+makedepends=(
+	'git'
+	'cmake'
+	'ninja'
+	'go'
+	# For xxd.
+	'vim'
+)
+provides=('toit')
+conflicts=('toit')
+source=('git+https://github.com/toitlang/toit')
+noextract=()
+md5sums=('SKIP')
+
+pkgver() {
+	echo "r$(git rev-list --count HEAD).$(git describe --always)"
+}
+
+prepare() {
+	cd "$srcdir/${pkgname%-git}"
+
+	# Initial the top-level modules but not nested ones.
+	git submodule update --init .
+
+	cd third_party/esp-idf
+	# We only need mbedtls of the esp-idf submodule to build the host tools.
+	# Don't bother initializing all the other components.
+	git submodule update --init components/mbedtls
+}
+
+build() {
+	cd "$srcdir/${pkgname%-git}"
+	make -j1 sdk
+}
+
+package() {
+	cd "$srcdir/${pkgname%-git}"
+	make DESTDIR="$pkgdir/" install
+	mkdir -p "$pkgdir/usr/bin"
+	ln -s "/opt/toit-sdk/bin/toit" "$pkgdir/usr/bin"
+	ln -s "/opt/toit-sdk/bin/toit.run" "$pkgdir/usr/bin"
+	ln -s "/opt/toit-sdk/bin/toit.compile" "$pkgdir/usr/bin"
+	ln -s "/opt/toit-sdk/bin/toit.pkg" "$pkgdir/usr/bin"
+	ln -s "/opt/toit-sdk/bin/toit.lsp" "$pkgdir/usr/bin"
+}

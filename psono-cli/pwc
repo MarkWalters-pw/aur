@@ -1,0 +1,90 @@
+#!/bin/bash
+
+
+function help() {
+  echo "Usage: $0 [-a] -p <search for pattern> [-o]"
+  echo "will get all entries like pattern and copy it to your clipboard manager"
+  echo "-a   get all passwords on screen"
+  echo "-p   search for this pattern"
+  echo "-d   debug messages"
+  echo "-o   print password also on screen"
+  exit 0
+}
+
+function debug() {
+  local msg=$1
+  if [ $debug -eq 1 ]; then
+    echo "$msg"
+  fi
+}
+
+onscreen=0
+all=0
+debug=0
+
+while getopts "dap:ho" opt; do
+  case "$opt" in
+    a)
+      all=1
+      ;;
+    p)
+      pattern="$OPTARG"
+      ;;
+    o)
+      onscreen=1
+      ;;
+    d)
+      debug=1
+      ;;
+    h)
+      help
+      ;;
+  esac
+done
+
+if [ -z $pattern ]; then
+  help
+fi
+
+if [ ! -f ~/.config/psoco/config.toml ]; then
+  echo "config file for psoco (~/.config/psoco/config.toml) doesn't exist"
+  echo "please read https://github.com/meldron/psoco \"Setup / Config\" how to create one"
+  exit 0
+fi
+
+declare -A pw
+while IFS="\n" read  -r line; do
+	name=$(echo $line |cut -d',' -f1)
+  debug "name: $name"
+  id=$(echo $line| cut -d',' -f2)
+  debug "id: $id"
+	pw["$name"]=$id
+done <  <(psoco search -js $pattern | jq -r '.[].match|[.name,.id]|@csv' | tr -d \")
+
+if [ $all -gt 0 ]; then
+  for p in "${!pw[@]}"; do
+    echo -e "$p:\t$(psoco user ${pw[$p]})\t$(psoco pwd ${pw[$p]})"
+  done
+  exit 0
+fi
+
+if [ ${#pw[@]} -eq 0 ]; then
+  echo "Nothing found"
+  exit 0
+fi
+
+select p in "${!pw[@]}"; do
+  break
+done
+debug "select: $p"
+debug "array: ${pw[$p]}"
+user=$(psoco user ${pw[$p]})
+password=$(psoco pwd ${pw[$p]})
+
+echo "User: $user"
+echo -n "$password" | xclip -i
+if [ $onscreen -gt 0 ]; then
+  echo "Password: $password"
+fi
+
+exit 0

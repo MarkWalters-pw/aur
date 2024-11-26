@@ -1,0 +1,17 @@
+pkgbase = lime-git
+	pkgdesc = C++ library implementing Open Whisper System Signal protocol
+	pkgver = 5.0.0.alpha.r5.g446599d
+	pkgrel = 1
+	url = http://www.linphone.org/
+	arch = x86_64
+	license = GPL
+	makedepends = cmake
+	makedepends = git
+	depends = bctoolbox-git
+	depends = soci>=4.0.0
+	provides = lime=5.0.0.alpha.r5.g446599d
+	conflicts = lime
+	source = git+https://gitlab.linphone.org/BC/public/lime.git
+	sha256sums = SKIP
+
+pkgname = lime-git

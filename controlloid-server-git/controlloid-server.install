@@ -1,0 +1,9 @@
+post_install() {
+    echo "Adding your user to the 'controlloid' group..."
+    usermod -aG controlloid $USER
+}
+
+post_remove() {
+    echo "Removing the 'controlloid' group..."
+    groupdel controlloid
+}

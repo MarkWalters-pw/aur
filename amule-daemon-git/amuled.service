@@ -1,0 +1,12 @@
+[Unit]
+Description=Amule - ED2K (Edonkey) client
+After=syslog.target network.target
+
+[Service]
+User=amule
+Group=amule
+ExecStart=/usr/bin/amuled
+LimitNOFILE=32768
+
+[Install]
+WantedBy=multi-user.target

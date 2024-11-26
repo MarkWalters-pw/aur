@@ -1,0 +1,26 @@
+pkgbase = mspgcc-ti
+	pkgdesc = GNU toolchain (as, gcc, g++, ld, gdb) for the TI MSP430 processor
+	pkgver = 9.3.1.11
+	pkgrel = 1
+	url = https://www.ti.com/tool/download/MSP430-GCC-OPENSOURCE
+	install = mspgcc-ti.install
+	arch = i686
+	arch = x86_64
+	license = GPL
+	depends = elfutils
+	depends = libmpc
+	depends = zlib
+	options = !strip
+	options = !emptydirs
+	options = !libtool
+	options = staticlibs
+	source = mspgcc-ti.sh
+	source = http://software-dl.ti.com/msp430/msp430_public_sw/mcu/msp430/MSPGCC/9_3_1_2/export/msp430-gcc-support-files-1.212.zip
+	sha1sums = a4a81f1b041bf39c3f9c75d94c22d149d1ceee9e
+	sha1sums = c020f5b8eb124b9e1beadee88877d67ecdf3d3a7
+	source_i686 = http://software-dl.ti.com/msp430/msp430_public_sw/mcu/msp430/MSPGCC/9_3_1_2/export/msp430-gcc-9.3.1.11_linux32.tar.bz2
+	sha1sums_i686 = 004d76733cb381157e4886f3326745d66cb09bab
+	source_x86_64 = http://software-dl.ti.com/msp430/msp430_public_sw/mcu/msp430/MSPGCC/9_3_1_2/export/msp430-gcc-9.3.1.11_linux64.tar.bz2
+	sha1sums_x86_64 = 8a7547625e7c5536a2eab959c3b2181245055632
+
+pkgname = mspgcc-ti

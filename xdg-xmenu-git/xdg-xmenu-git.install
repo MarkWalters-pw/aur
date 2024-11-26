@@ -1,0 +1,10 @@
+post_upgrade() {
+  cat << EOF
+-------------------------------------------------------------------------------
+Note to previous users:
+xdg-xmenu has moved from shell to C in latest versions. Refer to 'man 1
+xdg-xmenu' for usage since there are some braaking CLI option changes from the
+shell script. Most notably, xdg-xmenu now calls xmenu directly by default.
+-------------------------------------------------------------------------------
+EOF
+}

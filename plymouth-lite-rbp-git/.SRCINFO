@@ -1,0 +1,19 @@
+pkgbase = plymouth-lite-rbp-git
+	pkgdesc = Plymouth-lite patched and ready for Raspberry Pi
+	pkgver = r10.76e20e8
+	pkgrel = 3
+	url = https://github.com/T4d3o/Plymouth-lite
+	arch = armv7h
+	license = GPL2
+	makedepends = git
+	provides = plymouth-lite-rbp
+	conflicts = plymouth-lite-rbp
+	source = git+https://github.com/T4d3o/Plymouth-lite.git
+	source = initcpio_hook
+	source = initcpio_install
+	md5sums = SKIP
+	md5sums = 86dcab222ab4be45fc96d2792ff91809
+	md5sums = 4e9d360bbd7b14e097401e7b83f7b682
+
+pkgname = plymouth-lite-rbp-git
+

@@ -1,0 +1,19 @@
+pkgbase = klystrack-git
+	pkgdesc = Tracker for making chiptune-like music on a modern computer (aka klystrack-plus)
+	pkgver = 0.10.0.alpha3.r21.gd037cfb
+	pkgrel = 1
+	url = http://kometbomb.github.io/klystrack/
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	depends = sdl2_image
+	depends = sdl2_mixer
+	provides = klystrack
+	conflicts = klystrack
+	source = git+https://github.com/LTVA1/klystrack
+	source = git+https://github.com/LTVA1/klystron
+	md5sums = SKIP
+	md5sums = SKIP
+
+pkgname = klystrack-git

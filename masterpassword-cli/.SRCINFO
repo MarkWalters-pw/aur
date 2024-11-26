@@ -1,0 +1,21 @@
+pkgbase = masterpassword-cli
+	pkgdesc = CLI version of Master Password
+	pkgver = 2.7
+	pkgrel = 1
+	url = https://spectre.app/
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	checkdepends = jq
+	makedepends = openssl
+	depends = ncurses
+	depends = json-c
+	depends = libsodium
+	optdepends = xclip: copy password to clipboard
+	source = https://gitlab.com/MasterPassword/MasterPassword/-/raw/1e7491e0d9f39ac6d49e4078cf445ca69e71020a/mpw-2.7-cli-1-0-gd5959582.tar.gz
+	source = https://gitlab.com/MasterPassword/MasterPassword/-/raw/1e7491e0d9f39ac6d49e4078cf445ca69e71020a/mpw-2.7-cli-1-0-gd5959582.tar.gz.sig
+	validpgpkeys = 5C2D1D61853F20F2FCDDCCB70EF21226F43EA6BC
+	sha256sums = 480206dfaad5d5a7d71fba235f1f3d9041e70b02a8c1d3dda8ecba1da39d3e96
+	sha256sums = SKIP
+
+pkgname = masterpassword-cli

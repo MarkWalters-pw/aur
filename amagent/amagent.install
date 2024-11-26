@@ -1,0 +1,4 @@
+post_install() {
+  echo "It's necessary to enroll your device:"
+  echo "sudo /opt/amagent/amagent --setkey <your enrollment key>"
+}

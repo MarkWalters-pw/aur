@@ -1,0 +1,26 @@
+pkgbase = jdk17-graalvm-bin
+	pkgdesc = Universal virtual machine for running applications written in a variety of languages (JVM-based, LLVM-based, or other), Java 17 version
+	pkgver = 23.0.1
+	pkgrel = 1
+	url = https://www.graalvm.org/
+	install = jdk17-graalvm-bin.install
+	arch = x86_64
+	arch = aarch64
+	license = custom
+	depends = java-runtime-common
+	depends = java-environment-common
+	optdepends = graaljs-jdk17-bin: JavaScript component (used to be bundled with this package before the 22.2.0 release)
+	optdepends = graal-llvm-jdk17-bin: LLVM component (used to be bundled with this package before the 22.2.0 release)
+	optdepends = graal-visualvm-jdk17-bin: VisualVM component (used to be bundled with this package before the 22.2.0 release)
+	provides = java-runtime=17
+	provides = java-environment=17
+	replaces = native-image-jdk17-bin
+	options = staticlibs
+	source = graalvm-rebuild-libpolyglot.hook
+	sha256sums = SKIP
+	source_x86_64 = https://github.com/graalvm/graalvm-ce-builds/releases/download/jdk-17.0.8/graalvm-community-jdk-17.0.8_linux-x64_bin.tar.gz
+	sha256sums_x86_64 = 1dffdf5c7cc5bf38558e9f093eef6a14072a6dff0be3a9906208b37b53ecc009
+	source_aarch64 = https://github.com/graalvm/graalvm-ce-builds/releases/download/jdk-17.0.8/graalvm-community-jdk-17.0.8_linux-aarch64_bin.tar.gz
+	sha256sums_aarch64 = c4f26318114d6bd125cc95ee070289afdd42c6683867adf832f2ab2819c3b685
+
+pkgname = jdk17-graalvm-bin

@@ -1,0 +1,20 @@
+pkgbase = python-trame-simput
+	pkgdesc = Simput implementation for trame
+	pkgver = 2.4.3
+	pkgrel = 1
+	url = https://github.com/Kitware/trame-simput
+	arch = any
+	license = Apache-2.0
+	checkdepends = python-pytest
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	makedepends = nodejs-lts-hydrogen
+	makedepends = npm
+	depends = python-trame-client
+	depends = python-yaml
+	source = trame-simput-2.4.3.tar.gz::https://github.com/Kitware/trame-simput/archive/v2.4.3.tar.gz
+	sha512sums = e28e9d1a8e5d90f657cdf1822f8e3faf93813d740e714967a7d38c6ff900b3368a5e4bc09e7b6d61f50b2455f66650e7cddf4f4bf8eac2cf5f76097ae97cb8e3
+
+pkgname = python-trame-simput

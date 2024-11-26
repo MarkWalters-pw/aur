@@ -1,0 +1,17 @@
+pkgbase = metasploit-payload-creator
+	pkgdesc = A wrapper to generate multiple types of payloads, based on users choice.
+	pkgver = 1.4.5
+	pkgrel = 1
+	url = https://github.com/g0tmi1k/mpc
+	arch = any
+	license = MIT
+	depends = bash
+	depends = metasploit
+	provides = mpc-git
+	conflicts = mpc-git
+	replaces = mpc-git
+	source = https://github.com/g0tmi1k/mpc/archive/v1.4.5.tar.gz
+	sha512sums = 00e24f4cbd149e95b325ed040b105ad730095f6560fd7abe0f77fccce3bb28b1f4a145750ecb05821873d28650ecc9d2a453d483a707b2dd8187fac4b362c138
+
+pkgname = metasploit-payload-creator
+

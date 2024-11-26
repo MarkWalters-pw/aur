@@ -1,0 +1,19 @@
+pkgbase = tpsutil
+	pkgdesc = tps file utility program
+	pkgver = 2023.03.04
+	pkgrel = 1
+	url = http://sbmorphometrics.org/soft-utility.html
+	arch = any
+	license = custom
+	makedepends = innoextract
+	depends = wine
+	depends = wine_gecko
+	depends = wine-mono
+	source = https://sbmorphometrics.org/morphmet/tpsutilw64.exe
+	source = tpsUtil.desktop
+	source = tpsUtil.png
+	md5sums = 18da32fb82f3521f04b167bd3280bb32
+	md5sums = 64baf6b610dcecc53a15342218579d18
+	md5sums = 6e52ff5a9df8898532610845c973b23a
+
+pkgname = tpsutil

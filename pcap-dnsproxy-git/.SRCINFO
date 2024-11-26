@@ -1,0 +1,37 @@
+pkgbase = pcap-dnsproxy-git
+	pkgdesc = A local DNS server base on WinPcap and LibPcap.
+	pkgver = 0.4.9.13.r0.g70a40bb
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/chengr28/Pcap_DNSProxy
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	makedepends = cmake
+	makedepends = m4
+	makedepends = bison
+	makedepends = flex
+	makedepends = gcc
+	depends = libevent>=2.1.8
+	depends = libpcap
+	depends = libsodium>=1.0.16
+	depends = openssl>=1.0.2
+	provides = pcap-dnsproxy
+	provides = pcap-dnsproxy-bin
+	conflicts = pcap-dnsproxy
+	conflicts = pcap-dnsproxy-bin
+	backup = etc/systemd/system/Pcap_DNSProxy.service
+	backup = etc/pcap-dnsproxy/Config.conf
+	backup = etc/pcap-dnsproxy/Hosts.conf
+	backup = etc/pcap-dnsproxy/IPFilter.conf
+	backup = etc/pcap-dnsproxy/Routing.txt
+	backup = etc/pcap-dnsproxy/WhiteList.txt
+	source = pcap-dnsproxy::git+git://github.com/chengr28/Pcap_DNSProxy.git
+	source = make.patch
+	source = service.patch
+	md5sums = SKIP
+	md5sums = 7d59b750c7375bb77bcb2b6fae326e3b
+	md5sums = abe842d6182ec4be0cc5130433146129
+
+pkgname = pcap-dnsproxy-git
+

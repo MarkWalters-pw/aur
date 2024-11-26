@@ -1,0 +1,21 @@
+pkgbase = ros-noetic-ecl-utilities
+	pkgdesc = ROS - Includes various supporting tools and utilities for c++ programming.
+	pkgver = 0.62.2
+	pkgrel = 1
+	url = https://wiki.ros.org/ecl_utilities
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-ecl-license
+	makedepends = ros-noetic-ecl-mpl
+	makedepends = ros-noetic-catkin
+	makedepends = ros-noetic-ecl-concepts
+	depends = ros-noetic-ecl-license
+	depends = ros-noetic-ecl-mpl
+	depends = ros-noetic-ecl-concepts
+	source = ros-noetic-ecl-utilities-0.62.2.tar.gz::https://github.com/stonier/ecl_core/archive/0.62.2.tar.gz
+	sha256sums = 69d503109878e3a2c4f5be611fc9609078714899cae15fbf7f58119fdbd61e37
+
+pkgname = ros-noetic-ecl-utilities
+

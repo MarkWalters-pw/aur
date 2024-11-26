@@ -1,0 +1,17 @@
+pkgbase = python-numba-scipy
+	pkgdesc = NumPy aware dynamic Python compiler using LLVM
+	pkgver = 0.4.0
+	pkgrel = 1
+	url = https://numba.pydata.org/
+	arch = i686
+	arch = x86_64
+	license = BSD
+	makedepends = cython
+	makedepends = python-setuptools
+	depends = python-numba
+	depends = python-scipy
+	depends = python-setuptools
+	source = numba-scipy-0.4.0.tar.gz::https://github.com/numba/numba-scipy/archive/refs/tags/0.4.0.tar.gz
+	sha256sums = 2c92faac3199948ededc984181756f9507363c521548209006529f51b6d5020e
+
+pkgname = python-numba-scipy

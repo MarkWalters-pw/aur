@@ -1,0 +1,21 @@
+pkgbase = pure-reduce-git
+	pkgdesc = Computer Algebra with Pure: A Reduce Interface
+	pkgver = r5928.fc71134b
+	pkgrel = 1
+	url = https://agraef.github.io/pure-lang/
+	arch = i686
+	arch = x86_64
+	license = BSD
+	license = LGPL
+	makedepends = git
+	depends = pure
+	provides = pure-reduce
+	conflicts = pure-reduce
+	replaces = pure-reduce-hg
+	source = git+https://github.com/agraef/pure-lang.git
+	source = https://bitbucket.org/purelang/pure-lang/downloads/reduce-algebra-csl-r2204.tar.bz2
+	md5sums = SKIP
+	md5sums = dafc1f135921aa7f161fb2ff45675e65
+
+pkgname = pure-reduce-git
+

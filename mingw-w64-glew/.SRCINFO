@@ -1,0 +1,16 @@
+pkgbase = mingw-w64-glew
+	pkgdesc = The OpenGL Extension Wrangler Library (mingw-w64)
+	pkgver = 2.2.0
+	pkgrel = 2
+	url = http://glew.sourceforge.net/
+	arch = any
+	license = Modified BSD/MIT/GPL
+	makedepends = mingw-w64-cmake
+	depends = mingw-w64-crt
+	options = !strip
+	options = !buildflags
+	options = staticlibs
+	source = https://github.com/nigels-com/glew/releases/download/glew-2.2.0/glew-2.2.0.tgz
+	sha256sums = d4fc82893cfb00109578d0a1a2337fb8ca335b3ceccf97b97e5cc7f08e4353e1
+
+pkgname = mingw-w64-glew

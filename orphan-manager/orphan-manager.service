@@ -1,0 +1,6 @@
+[Unit]
+Description=Remove orphaned packages
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/orphan-manager

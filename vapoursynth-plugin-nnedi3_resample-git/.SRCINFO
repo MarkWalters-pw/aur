@@ -1,0 +1,19 @@
+pkgbase = vapoursynth-plugin-nnedi3_resample-git
+	pkgdesc = Plugin for Vapoursynth: nnedi3_resample (GIT version)
+	pkgver = 20.5ef5bf4
+	pkgrel = 1
+	url = https://github.com/HomeOfVapourSynthEvolution/nnedi3_resample
+	arch = any
+	license = GPL
+	makedepends = git
+	depends = vapoursynth-plugin-fmtconv-git
+	depends = vapoursynth-plugin-mvsfunc-git
+	optdepends = vapoursynth-plugin-nnedi3-git
+	optdepends = vapoursynth-plugin-znedi3-git
+	optdepends = vapoursynth-plugin-nnedi3cl-git
+	provides = vapoursynth-plugin-nnedi3_resample
+	conflicts = vapoursynth-plugin-nnedi3_resample
+	source = nnedi3_resample::git+https://github.com/HomeOfVapourSynthEvolution/nnedi3_resample.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-nnedi3_resample-git

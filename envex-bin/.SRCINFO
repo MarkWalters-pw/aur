@@ -1,0 +1,19 @@
+pkgbase = envex-bin
+	pkgdesc = A CLI tool for generating sample dotenv files from existing .env configurations
+	pkgver = 1.2.0
+	pkgrel = 1
+	url = https://github.com/wickes1/envex
+	license = Apache
+	conflicts = envex
+	provides = envex
+	arch = aarch64
+	source_aarch64 = https://github.com/wickes1/envex/releases/download/v1.2.0/envex_Linux_arm64.tar.gz
+	sha256sums_aarch64 = 9235ac38362329e5d03af618cdc491545cb64eb96df0f6488c4485975de31c26
+	arch = i686
+	source_i686 = https://github.com/wickes1/envex/releases/download/v1.2.0/envex_Linux_i386.tar.gz
+	sha256sums_i686 = 72c7b34a84e5ac807b002438bf87e4e2b99d884d7b354bf52a45b18dbcefabfa
+	arch = x86_64
+	source_x86_64 = https://github.com/wickes1/envex/releases/download/v1.2.0/envex_Linux_x86_64.tar.gz
+	sha256sums_x86_64 = c1fc03322b40ee3fd1e3560daced5f6f1eab0726dfda0ae4a4c1123ab798da51
+	
+pkgname = envex-bin

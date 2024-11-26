@@ -1,0 +1,24 @@
+pkgbase = lib32-openal-git
+	pkgdesc = Cross-platform 3D audio library, software implementation (32-bit)
+	pkgver = 1.21.0.r11.g7e767702
+	pkgrel = 1
+	url = https://github.com/kcat/openal-soft
+	arch = x86_64
+	license = LGPL
+	makedepends = lib32-alsa-lib
+	makedepends = lib32-libpulse
+	makedepends = lib32-fluidsynth
+	makedepends = lib32-portaudio
+	makedepends = lib32-jack
+	makedepends = git
+	makedepends = cmake
+	makedepends = gcc-multilib
+	depends = lib32-gcc-libs
+	depends = openal
+	provides = lib32-openal=1.21.0.r11.g7e767702
+	conflicts = lib32-openal
+	source = git+https://github.com/kcat/openal-soft
+	md5sums = SKIP
+
+pkgname = lib32-openal-git
+

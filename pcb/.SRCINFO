@@ -1,0 +1,20 @@
+pkgbase = pcb
+	pkgdesc = Interactive printed circuit board editor
+	pkgver = 4.3.0
+	pkgrel = 3
+	epoch = 1
+	url = http://pcb.geda-project.org/
+	arch = x86_64
+	license = GPL
+	makedepends = intltool
+	makedepends = tk
+	depends = gtkglext
+	depends = gd
+	optdepends = tk: additional tools
+	optdepends = tcl: additional tools
+	optdepends = perl: additional tools
+	optdepends = desktop-file-utils: desktop integration
+	source = https://downloads.sourceforge.net/pcb/pcb-4.3.0.tar.gz
+	sha256sums = ae852f46af84aba7f51d813fb916fc7fcdbeea43f7134f150507024e1743fb5e
+
+pkgname = pcb

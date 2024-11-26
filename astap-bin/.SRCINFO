@@ -1,0 +1,22 @@
+pkgbase = astap-bin
+	pkgdesc = Astrometric (plate) solver, stacking of images, photometry and FITS viewer. Gtk2 version.
+	pkgver = 2023.09.11
+	pkgrel = 1
+	url = http://www.hnsky.org/astap.htm
+	arch = i686
+	arch = x86_64
+	license = GPL
+	optdepends = hyperleda-galaxy-db-astap: 25MB database of 1.3m galaxies and 171k other non-star objects
+	optdepends = w08-star-db-astap: 250KB database of stars up to magnitude 8, reliable above 20° FOV
+	optdepends = d05-star-db-astap: 100MB database of 500 stars per square degree, reliable with 0.6-10° FOV
+	optdepends = d20-star-db-astap: 400MB database of 2000 stars per square degree, reliable with 0.3-10° FOV
+	optdepends = d50-star-db-astap: 900MB database of 5000 stars per square degree, reliable with 0.2-10° FOV
+	conflicts = astap
+	conflicts = astap-bin-qt5
+	conflicts = astap-cli
+	source_i686 = astap_i386.deb::https://sourceforge.net/projects/astap-program/files/linux_installer/astap_i386.deb/download
+	sha256sums_i686 = 7eac349054b72b7ba31ba45f0fa2013900dbeccea1e3440fc9e2cd9f2809181d
+	source_x86_64 = astap_amd64.deb::https://sourceforge.net/projects/astap-program/files/linux_installer/astap_amd64.deb/download
+	sha256sums_x86_64 = b2d09f1425354e6cf3138a69117fbec65fb1fbc5d3425930ad72e5b129569afa
+
+pkgname = astap-bin

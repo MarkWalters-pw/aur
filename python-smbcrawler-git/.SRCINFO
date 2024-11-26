@@ -1,0 +1,24 @@
+pkgbase = python-smbcrawler-git
+	pkgdesc = Crawler for smb shares for the search of credentials.
+	pkgver = r27.6020f9f
+	pkgrel = 1
+	url = https://github.com/SySS-Research/smbcrawler
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = python-setuptools
+	depends = python
+	depends = impacket
+	depends = python-libnmap
+	depends = python-lxml
+	depends = python-magic
+	depends = python-pdftotext
+	provides = python-smbcrawler
+	conflicts = python-smbcrawler
+	source = python-smbcrawler::git+https://github.com/SySS-Research/smbcrawler.git
+	sha512sums = SKIP
+
+pkgname = python-smbcrawler-git

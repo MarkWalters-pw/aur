@@ -1,0 +1,27 @@
+pkgbase = gfxreconstruct-git
+	pkgdesc = Graphics API capture and replay tools for reconstructing graphics application behavior
+	pkgver = 1.0.1.r1.gc988668d
+	pkgrel = 3
+	url = https://github.com/LunarG/gfxreconstruct
+	arch = x86_64
+	license = Apache
+	makedepends = git
+	makedepends = cmake
+	makedepends = libx11
+	makedepends = libxcb
+	makedepends = wayland
+	makedepends = xcb-util-keysyms
+	depends = glibc
+	depends = gcc-libs
+	depends = python
+	depends = zlib
+	depends = lz4
+	depends = zstd
+	provides = gfxreconstruct
+	conflicts = gfxreconstruct
+	source = git+https://github.com/LunarG/gfxreconstruct.git
+	source = git+https://github.com/KhronosGroup/Vulkan-Headers.git
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = gfxreconstruct-git

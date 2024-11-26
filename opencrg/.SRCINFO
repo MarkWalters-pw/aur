@@ -1,0 +1,15 @@
+pkgbase = opencrg
+	pkgdesc = Format to store high-precision elevation data from road surface scans for simulation
+	pkgver = 1.2.0
+	pkgrel = 1
+	url = https://www.asam.net/standards/detail/opencrg/
+	arch = x86_64
+	license = GPL
+	makedepends = cmake
+	makedepends = ninja
+	source = opencrg_1.2.0.zip::manual://www.asam.net/standard_downloads/standard_download611f5bda8ef95_14847.zip
+	source = CMakeLists.txt
+	sha256sums = SKIP
+	sha256sums = bed2ba22e267fe3200614e6e61829c9d3dc04fc7a046d6899869c3a018ae608c
+
+pkgname = opencrg

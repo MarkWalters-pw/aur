@@ -1,0 +1,16 @@
+[Unit]
+Description=FBconDecor console decoration service
+After=systemd-user-sessions.service
+
+[Service]
+Type=simple
+EnvironmentFile=/etc/conf.d/fbcondecor
+ExecStartPre=/usr/bin/sleep 2
+ExecStart=/etc/rc.d/fbcondecor start
+ExecStop=/etc/rc.d/fbcondecor stop
+RemainAfterExit=yes
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+Alias=fbcondecor.service

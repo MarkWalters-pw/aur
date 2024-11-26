@@ -1,0 +1,18 @@
+pkgbase = liesbar
+	pkgdesc = Small Haskell framework for creating status bars with lesbar
+	pkgver = 0.2.0.0
+	pkgrel = 3
+	url = https://git.sr.ht/~salmiak/liesbar
+	arch = x86_64
+	license = MIT
+	depends = ghc
+	depends = ghc-libs
+	depends = haskell-async
+	depends = haskell-xdg-basedir
+	depends = lesbar
+	source = liesbar-0.2.0.0.tar.gz::https://git.sr.ht/~salmiak/liesbar/archive/v0.2.0.0.tar.gz
+	source = dynamic-linking.patch
+	sha256sums = 39420cd9bacbdccf7a9fa9bf8ef68ecdf8e5f15e4770a35f00974b8fc27fe0fd
+	sha256sums = 1581087ea4efddbbc59d3896988a7737135536dee4a80949d3e9407b26c207c8
+
+pkgname = liesbar

@@ -1,0 +1,18 @@
+pkgbase = vapoursynth-plugin-fillborders-git
+	pkgdesc = Plugin for Vapoursynth: fillborders (GIT version)
+	pkgver = 2.4.g78fe680
+	pkgrel = 1
+	url = https://github.com/dubhater/vapoursynth-fillborders
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = yasm
+	makedepends = meson
+	depends = vapoursynth
+	provides = vapoursynth-plugin-fillborders
+	conflicts = vapoursynth-plugin-fillborders
+	options = debug
+	source = fillborders::git+https://github.com/dubhater/vapoursynth-fillborders.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-fillborders-git

@@ -1,0 +1,21 @@
+pkgbase = lxqt-sudo-git
+	pkgdesc = Qt front-end for sudo. Part of but not restricted to LXQt.
+	pkgver = 2.0.0
+	pkgrel = 1
+	url = https://lxqt-project.org
+	arch = i686
+	arch = x86_64
+	license = LGPL-2.1-only
+	makedepends = git
+	makedepends = cmake
+	makedepends = qt6-tools
+	makedepends = lxqt-build-tools-git
+	depends = sudo
+	depends = liblxqt-git
+	optdepends = oxygen-icons: fallback icon theme on systems without LXQt
+	provides = lxqt-sudo
+	conflicts = lxqt-sudo
+	source = git+https://github.com/lxqt/lxqt-sudo.git
+	sha256sums = SKIP
+
+pkgname = lxqt-sudo-git

@@ -1,0 +1,26 @@
+pkgbase = gst-plugins-rs-git
+	pkgdesc = GStreamer plugins written in Rust
+	pkgver = r2644.6346d560
+	pkgrel = 1
+	url = https://gstreamer.freedesktop.org/
+	arch = x86_64
+	license = LGPL
+	license = MIT
+	license = Apache
+	license = MPL
+	makedepends = cargo-c
+	makedepends = clang
+	makedepends = git
+	makedepends = meson
+	makedepends = rust
+	depends = dav1d
+	depends = gstreamer
+	depends = gtk4
+	depends = libsodium
+	depends = libwebp
+	provides = gst-plugins-rs
+	conflicts = gst-plugins-rs
+	source = gst-plugins-rs::git+https://gitlab.freedesktop.org/gstreamer/gst-plugins-rs.git
+	sha256sums = SKIP
+
+pkgname = gst-plugins-rs-git

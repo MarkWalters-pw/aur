@@ -1,0 +1,25 @@
+pkgbase = python-qtconsole-git
+	pkgdesc = Qt-based console for Jupyter with support for rich media output
+	pkgver = 5.1.0.dev0.1730.cf34d5a
+	pkgrel = 1
+	url = https://pypi.python.org/pypi/qtconsole
+	arch = any
+	license = BSD
+	makedepends = python-setuptools
+	depends = python-traitlets
+	depends = python-jupyter-core
+	depends = python-jupyter-client
+	depends = python-pygments
+	depends = python-ipykernel
+	depends = python-qtpy
+	depends = python-pyzmq
+	depends = python-packaging
+	depends = sip
+	optdepends = qt5-svg: Use with Qt5
+	optdepends = qt6-svg: Use with Qt6
+	provides = python-qtconsole
+	conflicts = python-qtconsole
+	source = git+https://github.com/jupyter/qtconsole.git
+	md5sums = SKIP
+
+pkgname = python-qtconsole-git

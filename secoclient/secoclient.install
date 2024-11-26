@@ -1,0 +1,7 @@
+post_install() {
+  echo ">>>> Please start/enable SecoClientPromoteService.service before use SecoClient"
+}
+
+post_remove() {
+  rm -rf /usr/local/SecoClient
+}

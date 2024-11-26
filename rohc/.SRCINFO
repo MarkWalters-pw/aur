@@ -1,0 +1,15 @@
+pkgbase = rohc
+	pkgdesc = RObust Header Compression (ROHC) library
+	pkgver = 2.3.1
+	pkgrel = 1
+	url = https://github.com/didier-barveux/rohc
+	arch = x86_64
+	license = LGPL2.1
+	makedepends = libpcap
+	makedepends = cmocka
+	depends = glibc
+	provides = librohc.so=3-64
+	source = rohc-2.3.1.tar.xz::https://rohc-lib.org/download/rohc-2.3.x/2.3.1/rohc-2.3.1.tar.xz
+	sha256sums = e5c3808518239a6a4673c0c595356d5054b208f32e39015a487a0490d03f9bec
+
+pkgname = rohc

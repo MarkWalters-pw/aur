@@ -1,0 +1,22 @@
+pkgbase = liblomse
+	pkgdesc = A music score renderization/edition library
+	pkgver = 0.30.0
+	pkgrel = 1
+	url = http://www.lenmus.org/en/lomse/intro
+	arch = i686
+	arch = x86_64
+	groups = devel
+	license = MIT
+	makedepends = cmake
+	makedepends = unittestpp
+	makedepends = ttf-liberation
+	depends = freetype2
+	depends = fontconfig
+	depends = zlib
+	depends = libpng
+	source = liblomse-0.30.0.tar.gz::https://codeload.github.com/lenmus/lomse/tar.gz/0.30.0
+	source = 001-add_missing_include.patch
+	sha256sums = d0c83c628f32310fa2df6285eeed16e66d71825532dda753573fa09774441e36
+	sha256sums = 3020063450eaee727717aff68aaabeaa434d1479dac7aca1d0f012ff5ee71d91
+
+pkgname = liblomse

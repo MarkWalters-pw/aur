@@ -1,0 +1,31 @@
+From db74f59959d3708bc882bc5ab33da93d6dfa73ff Mon Sep 17 00:00:00 2001
+From: Franck Duriez <franck.lucien.duriez@gmail.com>
+Date: Sun, 28 Apr 2024 18:50:13 +0200
+Subject: [PATCH 2/3] Fix DKMS config
+
+---
+ dkms.conf | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/dkms.conf b/dkms.conf
+index 753f44c..597a8a7 100644
+--- a/dkms.conf
++++ b/dkms.conf
+@@ -2,10 +2,10 @@ PACKAGE_NAME="aic8800"
+ PACKAGE_VERSION="1.0.5"
+ BUILT_MODULE_NAME[0]="aic8800_fdrv"
+ BUILT_MODULE_LOCATION[0]="aic8800_fdrv/"
+-DEST_MODULE_LOCATION[0]="/updates/dkms/"
++DEST_MODULE_LOCATION[0]="/kernel/drivers/net/wireless"
+ BUILT_MODULE_NAME[1]="aic_load_fw"
+ BUILT_MODULE_LOCATION[1]="aic_load_fw/"
+-DEST_MODULE_LOCATION[1]="/updates/dkms/"
+-MAKE="arch='$arch' kernelver='$kernelver' ./driverctl make all"
++DEST_MODULE_LOCATION[1]="/kernel/drivers/net/wireless"
++MAKE="make all KSRC=/usr/lib/modules/${kernelver}/build KVER=${kernelver} CONFIG_RWNX_DBG=n CONFIG_RWNX_P2P_DEBUGFS=n CONFIG_AIC_FW_PATH=/usr/lib/firmware CONFIG_RFTEST=n"
+ CLEAN="make clean"
+-AUTOINSTALL="YES"
++AUTOINSTALL="yes"
+-- 
+2.44.0
+

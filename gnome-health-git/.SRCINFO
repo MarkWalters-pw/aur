@@ -1,0 +1,18 @@
+pkgbase = gnome-health-git
+	pkgdesc = A health tracking app for the GNOME desktop
+	pkgver = 0.94.0+89+g3023723
+	pkgrel = 1
+	url = https://gitlab.gnome.org/World/Health
+	arch = x86_64
+	license = GPL3
+	makedepends = blueprint-compiler-health=0.8.1+87cedc2c
+	makedepends = git
+	makedepends = meson
+	depends = libadwaita
+	depends = rust
+	provides = gnome-health=0.94.0+89+g3023723
+	conflicts = gnome-health
+	source = git+https://gitlab.gnome.org/World/Health
+	b2sums = SKIP
+
+pkgname = gnome-health-git

@@ -1,0 +1,20 @@
+pkgbase = lv2file-git
+	pkgdesc = A command line program to process audio files with LV2 plugins
+	pkgver = 0.84.r44.9c6fa09
+	pkgrel = 1
+	url = https://github.com/jeremysalwen/lv2file
+	arch = i686
+	arch = x86_64
+	arch = armv7h
+	license = GPL3
+	makedepends = git
+	depends = argtable
+	depends = libsndfile
+	depends = lilv
+	provides = lv2file
+	conflicts = lv2file
+	source = lv2file::git+https://github.com/jeremysalwen/lv2file.git
+	md5sums = SKIP
+
+pkgname = lv2file-git
+

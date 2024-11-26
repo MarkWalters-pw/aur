@@ -1,0 +1,17 @@
+pkgbase = wasm-gc
+	pkgdesc = gc-sections for wasm
+	pkgver = 0.1.6
+	pkgrel = 1
+	url = https://github.com/alexcrichton/wasm-gc
+	arch = i686
+	arch = x86_64
+	arch = armv6h
+	license = MIT
+	license = APACHE
+	makedepends = cargo
+	depends = gcc-libs
+	source = wasm-gc-0.1.6.tar.gz::https://github.com/alexcrichton/wasm-gc/archive/0.1.6.tar.gz
+	sha512sums = 2d00879a914b7741b51d4111930e27020e8a017f3a325abe00394b5a0a02603f4e06c742ba5b4db77f406cc579e31d5b7ad8827ae59c0bf4d48bf84adfd43415
+
+pkgname = wasm-gc
+

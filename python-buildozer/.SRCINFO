@@ -1,0 +1,24 @@
+pkgbase = python-buildozer
+	pkgdesc = Generic Python packager for Android / iOS and Desktop
+	pkgver = 1.4.0
+	pkgrel = 1
+	url = https://github.com/kivy/buildozer
+	arch = any
+	license = MIT
+	makedepends = cmake
+	makedepends = libusb
+	makedepends = python-setuptools
+	depends = python
+	depends = python-colorama
+	depends = python-pexpect
+	depends = python-virtualenv
+	depends = python-sh
+	optdepends = python-paramiko: remote builds
+	provides = buildozer
+	provides = python-buildozer
+	conflicts = buildozer
+	options = !emptydirs
+	source = buildozer-1.4.0.tar.gz::https://github.com/kivy/buildozer/archive/1.4.0.tar.gz
+	sha256sums = 1f96680106a2750ba5b348df86bcbaba67c24b33b9cb7ca275066e7165ba36f7
+
+pkgname = python-buildozer

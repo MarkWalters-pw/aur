@@ -1,0 +1,97 @@
+#!/usr/bin/python
+# coding: utf-8
+#
+# pkgdistcache daemon v0.3.1
+# by Alessio Bianchi <venator85@gmail.com>
+#
+
+import http.server
+import os
+import os.path
+import signal
+import socket
+import sys
+
+import avahi
+import dbus
+from dbus.mainloop.glib import DBusGMainLoop
+
+DBusGMainLoop(set_as_default=True)
+
+avahi_service = None
+
+
+def terminate(signum, frame):
+    avahi_service.unpublish()
+    sys.exit(0)
+
+
+class AvahiPublisher:
+    # Based on http://avahi.org/wiki/PythonPublishExample
+    def __init__(self, name, stype, host, port):
+        self.name = name
+        self.stype = stype
+        self.domain = 'local'
+        self.host = host
+        self.port = port
+        self.systemBus = dbus.SystemBus()
+        self.server = dbus.Interface(
+                self.systemBus.get_object(
+                    avahi.DBUS_NAME, avahi.DBUS_PATH_SERVER),
+                avahi.DBUS_INTERFACE_SERVER)
+
+    def publish(self):
+        self.group = dbus.Interface(
+            self.systemBus.get_object(
+                avahi.DBUS_NAME, self.server.EntryGroupNew()),
+            avahi.DBUS_INTERFACE_ENTRY_GROUP)
+
+        self.group.AddService(
+            avahi.IF_UNSPEC,     # interface
+            avahi.PROTO_UNSPEC,  # protocol
+            dbus.UInt32(0),      # flags
+            self.name, self.stype,
+            self.domain, self.host,
+            dbus.UInt16(self.port),
+            avahi.string_array_to_txt_array([]))
+        self.group.Commit()
+
+    def unpublish(self):
+        self.group.Reset()
+
+
+class HTTPServerV6(http.server.HTTPServer):
+    address_family = socket.AF_INET6
+
+
+def main(args):
+    # load configuration file
+    conf_file = '/etc/pkgdistcache.conf'
+    if os.path.isfile(conf_file):
+        config = eval(open(conf_file).read())
+    else:
+        printerr("Config file " + conf_file + " not found")
+        return 2
+
+    port = config['port']
+    hostname = socket.gethostname()
+    global avahi_service
+    avahi_service = AvahiPublisher(hostname, '_pkgdistcache._tcp', '', port)
+    avahi_service.publish()
+
+    os.chdir('/var/cache/pacman/pkg')
+    handler = http.server.SimpleHTTPRequestHandler
+    httpd = HTTPServerV6(('', port), handler)
+
+    try:
+        # Disable useless polling since we never call shutdown
+        httpd.serve_forever(poll_interval=None)
+    except KeyboardInterrupt:
+        avahi_service.unpublish()
+
+    return 0
+
+
+if __name__ == '__main__':
+    signal.signal(signal.SIGTERM, terminate)
+    main(sys.argv)

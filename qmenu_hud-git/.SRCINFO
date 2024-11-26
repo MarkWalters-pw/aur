@@ -1,0 +1,21 @@
+pkgbase = qmenu_hud-git
+	pkgdesc = a small menu search program, similar to Unity's HUD
+	pkgver = r20.06fcb36
+	pkgrel = 1
+	url = https://github.com/tetzank/qmenu_hud/
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	makedepends = cmake
+	depends = qt5-base
+	depends = libdbusmenu-qt5
+	depends = libx11
+	depends = dmenu
+	optdepends = appmenu-qt4: support for qt4 applications
+	optdepends = appmenu-gtk-module: support for gtk applications
+	source = qmenu_hud::git+https://github.com/tetzank/qmenu_hud.git
+	md5sums = SKIP
+
+pkgname = qmenu_hud-git
+

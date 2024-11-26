@@ -1,0 +1,35 @@
+diff --git a/meson.build b/meson.build
+index 4f7898f..f6f3e94 100644
+--- a/meson.build
++++ b/meson.build
+@@ -302,6 +302,7 @@ if host_machine.system() != 'gba'
+             dependencies : dependencies,
+             link_args : link_args,
+             win_subsystem : 'windows',
++            install_dir : 'lib/apotris',
+             install : true
+         )
+         if host_machine.system() == 'darwin'
+@@ -311,8 +312,7 @@ if host_machine.system() != 'gba'
+             install_subdir(audio_dir, install_dir : 'Contents/Resources')
+             install_subdir('license', install_dir : 'Contents/Resources')
+         else
+-            install_subdir(audio_dir, install_dir : '.')
+-            install_subdir('license', install_dir : '.')
++            install_subdir(audio_dir, install_dir : 'share/apotris')
+         endif
+     endif
+ else
+diff --git a/source/liba_window.cpp b/source/liba_window.cpp
+index 5c05b92..8d44a59 100644
+--- a/source/liba_window.cpp
++++ b/source/liba_window.cpp
+@@ -85,7 +85,7 @@ void windowInit(){
+ 
+     refreshWindowSize();
+ 
+-    loadAudio("");
++    loadAudio("/usr/share/apotris/");
+ 
+     nanotime_step_init(&stepper, (uint64_t) (NANOTIME_NSEC_PER_SEC / FPS_TARGET), nanotime_now_max(),nanotime_now,nanotime_sleep);
+ 

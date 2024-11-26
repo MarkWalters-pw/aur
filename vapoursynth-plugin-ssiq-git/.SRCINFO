@@ -1,0 +1,16 @@
+pkgbase = vapoursynth-plugin-ssiq-git
+	pkgdesc = Plugin for Vapoursynth: ssiq (GIT version)
+	pkgver = 1.0.1.g30b3a47
+	pkgrel = 1
+	url = https://github.com/dubhater/vapoursynth-ssiq
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	depends = vapoursynth
+	provides = vapoursynth-plugin-ssiq
+	conflicts = vapoursynth-plugin-ssiq
+	options = debug
+	source = ssiq::git+https://github.com/dubhater/vapoursynth-ssiq.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-ssiq-git

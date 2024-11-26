@@ -1,0 +1,10 @@
+[Unit]
+Description=Run sabnzbd-docker-update.service daily and on boot
+After=docker.service
+
+[Timer]
+OnBootSec=15min
+OnUnitActiveSec=1d
+
+[Install]
+WantedBy=timers.target

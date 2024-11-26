@@ -1,0 +1,23 @@
+pkgbase = libretro-bsnes-git
+	pkgdesc = Super Nintendo Entertainment System core
+	pkgver = r3093.4f4e22e8
+	pkgrel = 1
+	url = https://github.com/libretro/bsnes-libretro
+	arch = aarch64
+	arch = armv7h
+	arch = i486
+	arch = i686
+	arch = pentium4
+	arch = x86_64
+	groups = libretro
+	license = GPL3
+	makedepends = git
+	depends = gcc-libs
+	depends = glibc
+	depends = libretro-core-info
+	provides = libretro-bsnes=1:3093.4f4e22e8
+	conflicts = libretro-bsnes
+	source = libretro-bsnes::git+https://github.com/libretro/bsnes-libretro.git
+	b2sums = SKIP
+
+pkgname = libretro-bsnes-git

@@ -1,0 +1,24 @@
+pkgbase = daphne-git
+	pkgdesc = A command-line multiple arcade laserdisc emulator. GIT fork
+	pkgver = 134.3675284
+	pkgrel = 1
+	url = http://www.daphne-emu.com/
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	depends = glew
+	depends = sdl_mixer
+	depends = zlib
+	depends = gcc-libs
+	depends = libxmu
+	provides = daphne
+	conflicts = daphne
+	source = git+http://github.com/DavidGriffith/daphne.git
+	source = daphne.sh
+	source = singe.sh
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = daphne-git

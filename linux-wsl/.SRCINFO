@@ -1,0 +1,22 @@
+pkgbase = linux-wsl
+	pkgdesc = Microsoft's Windows Subsystem for Linux 2 (WSL2) kernel
+	pkgver = 5.10.74.3
+	pkgrel = 1
+	url = https://github.com/microsoft/WSL2-Linux-Kernel
+	arch = x86_64
+	license = GPL2
+	makedepends = xmlto
+	makedepends = kmod
+	makedepends = inetutils
+	makedepends = bc
+	makedepends = libelf
+	makedepends = git
+	makedepends = python-sphinx
+	makedepends = python-sphinx_rtd_theme
+	makedepends = graphviz
+	makedepends = imagemagick
+	options = !strip
+	source = linux-wsl-5.10.74.3.tar.gz::https://github.com/microsoft/WSL2-Linux-Kernel/archive/linux-msft-wsl-5.10.74.3.tar.gz
+	sha256sums = 286230c34cccc15c3197b04a19f4e6f3653af6401f9873aa340c85e416b56df4
+
+pkgname = linux-wsl

@@ -1,0 +1,18 @@
+pkgbase = vapoursynth-plugin-fixtelecinedfades-git
+	pkgdesc = Plugin for Vapoursynth: fixtelecinedfades (GIT version)
+	pkgver = 5.30.ge70d7fb
+	pkgrel = 1
+	url = https://forum.doom9.org/showthread.php?t=174151
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	makedepends = meson
+	makedepends = yasm
+	depends = vapoursynth
+	provides = vapoursynth-plugin-fixtelecinedfades
+	conflicts = vapoursynth-plugin-fixtelecinedfades
+	options = debug
+	source = fixtelecinedfades::git+https://github.com/IFeelBloated/Fix-Telecined-Fades.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-fixtelecinedfades-git

@@ -1,0 +1,17 @@
+pkgbase = tfenv
+	pkgdesc = Terraform version manager inspired by rbenv
+	pkgver = 3.0.0
+	pkgrel = 2
+	url = https://github.com/tfutils/tfenv
+	install = tfenv.install
+	arch = any
+	license = MIT
+	depends = bash
+	depends = unzip
+	provides = tfenv
+	provides = terraform
+	conflicts = terraform
+	source = https://github.com/tfutils/tfenv/archive/v3.0.0.tar.gz
+	sha512sums = ea4e72616e9be3613c9bddbeb860736fac241f576a5137408364a826f18503bb9964b9d4a230a0eb1b5d147264000904362e72ace53922fa28aa6c039faaa97c
+
+pkgname = tfenv

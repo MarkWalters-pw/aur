@@ -1,0 +1,69 @@
+Author: Anton Kokalj <tone.kokalj@ijs.si>
+Reviewed-by: Daniel Leidert <dleidert@debian.org>
+Ported to Arch Linux: Adrian Hühn <adrian.huehn@web.de>
+
+Forwarded: not-needed
+
+Author: Anton Kokalj <tone.kokalj@ijs.si>
+Description: Use system libraries of libgl2ps and libtogl. Fix DESTDIR issue and
+xcrysden directory name in Makefile. Fix installation directory to point to
+/usr.
+Forwarded: not-needed
+
+--- a/Makefile
++++ b/Makefile
+@@ -18,7 +18,7 @@
+ 
+ all: tcl tk mesa togl fftw xcrysden
+ #  meschach 
+-xcrysden: usage bwidget bindir src-C src-F src-Tcl
++xcrysden: usage bindir src-C src-F src-Tcl
+ 
+ usage: $(TOPDIR)/docs/xcrysden.1
+ 	man $(TOPDIR)/docs/xcrysden.1 | awk 'BEGIN {lprint=0; print "## do not edit changes will be lost (file automatically generated)\n"; } /SYNOPSIS/ { lprint=1; } /SEE ALSO/ { lprint=0; } /a*/ { if (lprint) print; }' > usage
+@@ -234,9 +234,9 @@
+ #
+ # ------------------------------------------------------------------------
+ 
+-prefix   ?= /usr/local
++prefix   ?= $(DESTDIR)/usr
+ version  := $(shell cat version)
+-xcrysden  = xcrysden-$(version)
++xcrysden  = xcrysden
+ 
+ install: xcrysden
+ 	@echo
+--- a/C/make-objects
++++ b/C/make-objects
+@@ -1,6 +1,5 @@
+ # togl.o
+ EXTERNAL_OBJS = \
+-	gl2ps.o \
+ 	sgiRasterFont.o \
+ 	sgiAux.o
+ 
+--- a/C/gl2psPrintTogl.c
++++ b/C/gl2psPrintTogl.c
+@@ -19,7 +19,7 @@
+ #include <stdio.h>
+ #include <string.h>
+ #include <togl.h>
+-#include "gl2ps.h"
++#include <gl2ps.h>
+ #include "xcfunc.h"
+ 
+ extern struct Togl *mesa_togl;
+--- a/sys_utils/wrappers.sh
++++ b/sys_utils/wrappers.sh
+@@ -5,8 +5,8 @@
+ #!/bin/sh -f
+
+ # simple wrapper to run $cmd
+-XCRYSDEN_TOPDIR="$prefix/share/$xcrysden"
+-XCRYSDEN_LIB_BINDIR="$prefix/lib/$xcrysden"
++XCRYSDEN_TOPDIR=/usr/share/xcrysden
++XCRYSDEN_LIB_BINDIR=/usr/lib/xcrysden
+ export XCRYSDEN_TOPDIR
+ export XCRYSDEN_LIB_BINDIR
+
+ 

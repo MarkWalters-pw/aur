@@ -1,0 +1,20 @@
+pkgbase = ruby-md2man
+	pkgdesc = Converts markdown into UNIX manpages and HTML webpages
+	pkgver = 5.1.2
+	pkgrel = 1
+	url = http://sunaku.github.io/md2man/
+	arch = any
+	license = ISC
+	depends = ruby
+	depends = ruby-binman
+	depends = ruby-redcarpet
+	depends = ruby-rouge
+	provides = md2man
+	provides = ruby-md2man
+	conflicts = md2man
+	noextract = md2man-5.1.2.gem
+	options = !emptydirs
+	source = https://rubygems.org/downloads/md2man-5.1.2.gem
+	b2sums = 4487fb03c72f9b601ccac940369e0bd5511b63390ee6cf63d5e2edee5e8512441c7087e493c69159a0754cde5e999616cecd67cc49ab017238bba375ac96ace6
+
+pkgname = ruby-md2man

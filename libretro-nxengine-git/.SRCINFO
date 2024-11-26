@@ -1,0 +1,19 @@
+pkgbase = libretro-nxengine-git
+	pkgdesc = libretro implementation of NXEngine. (Cave Story)
+	pkgver = r501.f3050ba
+	pkgrel = 1
+	url = https://github.com/libretro/nxengine-libretro
+	install = libretro-nxengine-git.install
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	depends = gcc-libs
+	depends = glibc
+	depends = libretro-core-info
+	provides = libretro-nxengine=r501.f3050ba
+	conflicts = libretro-nxengine
+	source = git+https://github.com/libretro/nxengine-libretro.git
+	md5sums = SKIP
+
+pkgname = libretro-nxengine-git
+

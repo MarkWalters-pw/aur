@@ -1,0 +1,15 @@
+pkgbase = esdk-settings-generator
+	pkgdesc = This is a python tool based on pydevicetree (GitHub/PyPI) which generates the settings.mk files for freedom-e-sdk.
+	pkgver = 20.08.00.00
+	pkgrel = 1
+	url = https://github.com/sifive/esdk-settings-generator
+	arch = any
+	license = Apache
+	depends = python
+	depends = python-pylint
+	depends = python-pydevicetree
+	options = !strip
+	source = esdk-settings-generator-20.08.00.00.tar.gz::https://download.fastgit.org/sifive/esdk-settings-generator/archive/refs/tags/v20.08.00.00.tar.gz
+	sha256sums = e356ceaab461564dbe289897942c2e323ee35b38d018b48859db6d70736c15df
+
+pkgname = esdk-settings-generator

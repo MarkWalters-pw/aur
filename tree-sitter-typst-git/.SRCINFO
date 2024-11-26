@@ -1,0 +1,16 @@
+pkgbase = tree-sitter-typst-git
+	pkgdesc = Typst grammar for tree-sitter
+	pkgver = v0.11.0.r3.g3924cb9
+	pkgrel = 1
+	url = https://github.com/uben0/tree-sitter-typst
+	arch = x86_64
+	groups = tree-sitter-grammars
+	license = MIT
+	makedepends = git
+	makedepends = tree-sitter-cli
+	optdepends = tree-sitter: core library
+	provides = libtree-sitter-typst.so
+	source = tree-sitter-typst::git+https://github.com/uben0/tree-sitter-typst
+	b2sums = SKIP
+
+pkgname = tree-sitter-typst-git

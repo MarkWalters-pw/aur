@@ -1,0 +1,22 @@
+pkgbase = vim-moonfly-git
+	pkgdesc = Monokai and One Dark inspired colorscheme
+	pkgver = r413.5635fa6
+	pkgrel = 1
+	url = https://github.com/bluz71/vim-moonfly-colors
+	arch = any
+	groups = vim-plugins
+	license = MIT
+	makedepends = git
+	depends = vim-plugin-runtime
+	provides = vim-moonfly
+	provides = vim-airline-moonfly
+	provides = vim-lightline-moonfly
+	provides = neovim-lualine-moonfly
+	conflicts = vim-moonfly
+	conflicts = vim-airline-moonfly
+	conflicts = vim-lightline-moonfly
+	conflicts = neovim-lualine-moonfly
+	source = vim-moonfly-git::git+https://github.com/bluz71/vim-moonfly-colors
+	md5sums = SKIP
+
+pkgname = vim-moonfly-git

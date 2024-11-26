@@ -1,0 +1,16 @@
+pkgbase = paramano
+	pkgdesc = Docking battery monitor and CPU governer controller (fork of trayfreq)
+	pkgver = 0.72
+	pkgrel = 1
+	url = https://gitlab.com/dphillips/paramano
+	arch = i686
+	arch = x86_64
+	arch = armv6h
+	license = GPL
+	depends = gtk3
+	depends = sudo
+	backup = etc/paramano.conf
+	source = git+https://gitlab.com/dphillips/paramano.git#tag=0.72
+	sha512sums = SKIP
+
+pkgname = paramano

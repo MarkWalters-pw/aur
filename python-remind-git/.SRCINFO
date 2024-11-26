@@ -1,0 +1,23 @@
+pkgbase = python-remind-git
+	pkgdesc = Remind Python library
+	pkgver = 0.19.1.r1.g197d723
+	pkgrel = 1
+	url = https://github.com/jspricke/python-remind
+	arch = any
+	license = GPL
+	checkdepends = python-coverage
+	checkdepends = python-nose
+	makedepends = python-setuptools
+	makedepends = git
+	depends = remind
+	depends = python
+	depends = python-dateutil
+	depends = python-pytz
+	depends = python-tzlocal
+	depends = python-vobject
+	provides = python-remind
+	conflicts = python-remind
+	source = remind::git+https://github.com/jspricke/python-remind
+	md5sums = SKIP
+
+pkgname = python-remind-git

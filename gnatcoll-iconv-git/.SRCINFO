@@ -1,0 +1,21 @@
+pkgbase = gnatcoll-iconv-git
+	pkgdesc = GNAT Components Collection - Bindings to Libiconv
+	pkgver = r2796.8160d1d9
+	pkgrel = 1
+	url = https://github.com/AdaCore/gnatcoll-bindings/
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = gprbuild
+	depends = gcc-ada
+	depends = libiconv
+	depends = gnatcoll-core
+	provides = gnatcoll-iconv
+	conflicts = gnatcoll-iconv
+	conflicts = gnatcoll
+	source = git+https://github.com/AdaCore/gnatcoll-bindings.git
+	sha1sums = SKIP
+
+pkgname = gnatcoll-iconv-git
+

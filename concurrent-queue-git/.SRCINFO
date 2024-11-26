@@ -1,0 +1,17 @@
+pkgbase = concurrent-queue-git
+	pkgdesc = concurrent-queue trunk (git version)
+	pkgver = 127.7b69a8f
+	pkgrel = 1
+	url = https://github.com/cameron314/concurrentqueue
+	arch = i686
+	arch = x86_64
+	license = BSD
+	options = !libtool
+	options = !debug
+	source = concurrentqueue-git::git+https://github.com/cameron314/concurrentqueue.git
+	md5sums = SKIP
+
+pkgname = concurrent-queue-git
+	pkgdesc = An industrial-strength lock-free queue for C++. (git version)
+	provides = concurrent-queue-git
+

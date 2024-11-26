@@ -1,0 +1,22 @@
+pkgbase = perl-json-rpc
+	pkgdesc = Perl implementation of JSON-RPC 1.1 protocol
+	pkgver = 1.06
+	pkgrel = 5
+	url = http://search.cpan.org/~dmaki/JSON-RPC
+	arch = x86_64
+	license = GPL
+	license = PerlArtistic
+	checkdepends = perl-test-pod
+	makedepends = perl-module-build
+	depends = perl
+	depends = perl-libwww
+	depends = perl-plack
+	depends = perl-router-simple
+	depends = perl-json
+	depends = perl-cgi
+	conflicts = perl-json-rpc-legacy
+	options = !emptydirs
+	source = http://search.cpan.org/CPAN/authors/id/D/DM/DMAKI/JSON-RPC-1.06.tar.gz
+	sha256sums = d75ba8b558988b3fdffa12ff62a55f0f1aaff8aa73b708bff3701ff88a2b8757
+
+pkgname = perl-json-rpc

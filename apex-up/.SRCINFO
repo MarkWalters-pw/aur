@@ -1,0 +1,17 @@
+pkgbase = apex-up
+	pkgdesc = Deploy infinitely scalable serverless apps, apis, and sites in seconds to AWS
+	pkgver = 1.5.1
+	pkgrel = 1
+	url = https://up.docs.apex.sh/
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = binutils
+	provides = apex-up
+	source_i686 = up::https://github.com/apex/up/releases/download/v1.5.1/up_1.5.1_linux_386.tar.gz
+	sha256sums_i686 = 8fa86a92c91221024256ab2a5e179327151ebde0b996af3cb07995c6e5084b55
+	source_x86_64 = up::https://github.com/apex/up/releases/download/v1.5.1/up_1.5.1_linux_amd64.tar.gz
+	sha256sums_x86_64 = 5cd8ad34983a828163ae274a9b6cfdf4dd8c77d7a7ed2c8d49d1ef0dba3b75ca
+
+pkgname = apex-up
+

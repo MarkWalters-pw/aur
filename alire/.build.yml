@@ -1,0 +1,24 @@
+image: archlinux
+sources:
+    - https://git.sr.ht/~ineptattech/aur-alire
+packages:
+    - gprbuild-bootstrap
+    - xmlada
+    - git
+    - unzip
+    - python-e3-testsuite
+    - python-sphinx
+    - python-pexpect
+tasks:
+- prepare: |
+    git clone https://aur.archlinux.org/gprbuild.git
+    cd gprbuild
+    makepkg
+    yay -R --noconfirm gprbuild-bootstrap gprbuild-bootstrap-debug
+    makepkg -i --noconfirm
+- build: |
+    cd aur-alire
+    makepkg
+- install: |
+    cd aur-alire
+    makepkg --install --noconfirm

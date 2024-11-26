@@ -1,0 +1,16 @@
+pkgbase = libindi-eqmod-git
+	pkgdesc = 3rd party drivers for INDI: EQMod
+	pkgver = v1.9.9.36.gf0e823d7
+	pkgrel = 1
+	url = http://www.indilib.org/index.php
+	arch = x86_64
+	license = GPL3
+	makedepends = cmake
+	depends = libindi
+	provides = libindi-eqmod
+	conflicts = libindi-eqmod
+	options = staticlibs
+	source = git+https://github.com/indilib/indi-3rdparty
+	sha512sums = SKIP
+
+pkgname = libindi-eqmod-git

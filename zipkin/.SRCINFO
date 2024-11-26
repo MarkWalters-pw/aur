@@ -1,0 +1,22 @@
+pkgbase = zipkin
+	pkgdesc = Opensource Distributed Tracing System
+	pkgver = 2.23.18
+	pkgrel = 1
+	url = http://zipkin.io
+	install = zipkin.install
+	arch = any
+	license = APACHE
+	depends = java-runtime>=8
+	depends = bash
+	optdepends = kafka
+	optdepends = cassandra
+	source = https://search.maven.org/remotecontent?filepath=io/zipkin/zipkin-server/2.23.18/zipkin-server-2.23.18-exec.jar
+	source = zipkin.sh
+	source = zipkin.sysusers
+	source = zipkin.service
+	sha1sums = 2cdff46c54c452f0b4ae8aa8943d2364046d09c5
+	sha1sums = SKIP
+	sha1sums = SKIP
+	sha1sums = SKIP
+
+pkgname = zipkin

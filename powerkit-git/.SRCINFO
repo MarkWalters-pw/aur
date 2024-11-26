@@ -1,0 +1,26 @@
+pkgbase = powerkit-git
+	pkgdesc = A Lightweight Desktop Independent full featured power manager
+	pkgver = r258.70be27f
+	pkgrel = 1
+	url = https://github.com/rodlie/powerkit
+	install = powerkit-git.install
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	license = BSD
+	makedepends = xorg-xrandr
+	makedepends = qt5-base
+	makedepends = git
+        makedepends = cmake
+	depends = xscreensaver
+	depends = upower
+	depends = qt5-base
+	depends = libxss
+	optdepends = adwaita-icon-theme
+	provides = powerkit
+	conflicts = powerkit
+	source = powerkit::git+https://github.com/rodlie/powerkit
+	sha256sums = SKIP
+
+pkgname = powerkit-git
+

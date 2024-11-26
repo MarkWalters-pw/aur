@@ -1,0 +1,17 @@
+pkgbase = talk-cli-git
+	pkgdesc = A command line interface for using Nextcloud Talk.
+	pkgver = 0.2.0.r0.gcb7072c
+	pkgrel = 1
+	url = https://gitlab.com/severinkaderli/talk-cli
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = cargo
+	makedepends = git
+	depends = openssl
+	conflicts = talk-cli
+	source = git+https://gitlab.com/severinkaderli/talk-cli
+	md5sums = SKIP
+
+pkgname = talk-cli-git
+

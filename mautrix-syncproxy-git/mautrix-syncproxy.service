@@ -1,0 +1,15 @@
+[Unit]
+Description=Mautrix syncproxy
+Replaces=postgresql.service
+After=postgresql.service
+
+[Service]
+ExecStart=/usr/bin/mautrix-syncproxy -config /etc/mautrix-syncproxy/syncproxy.yaml
+Restart=on-failure
+PrivateTmp=yes
+ProtectSystem=full
+ProtectHome=yes
+
+[Install]
+WantedBy=multi-user.target
+

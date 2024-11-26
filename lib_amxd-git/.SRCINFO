@@ -1,0 +1,23 @@
+pkgbase = lib_amxd-git
+	pkgdesc = Generic C-implementation for managing a data model
+	pkgver = 3.6.7.r0.g8318ae5
+	pkgrel = 1
+	url = https://gitlab.com/soft.at.home/ambiorix/libraries/libamxd.git
+	arch = x86_64
+	arch = i686
+	arch = i486
+	arch = pentium4
+	arch = arm
+	arch = armv6h
+	arch = armv7h
+	arch = aarch64
+	license = BSD
+	makedepends = git
+	depends = lib_amxc
+	depends = lib_amxp
+	provides = lib_amxd
+	conflicts = lib_amxd
+	source = lib_amxd-git::git+https://gitlab.com/soft.at.home/ambiorix/libraries/libamxd.git#branch=main
+	md5sums = SKIP
+
+pkgname = lib_amxd-git

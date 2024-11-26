@@ -1,0 +1,17 @@
+all_off="$(tput sgr0)"
+bold="${all_off}$(tput bold)"
+yellow="${bold}$(tput setaf 3)"
+
+post_install() {
+    cat <<EOF
+    ${yellow}completion support for any shells${all_off}
+
+    bash: \`sudo pacman -S bash-completion\`
+    zsh: \`\`\`zshrc
+         autoload -Uz compinit; compinit
+         \`\`\`
+    OR you can read README with bellow command
+    \`cat /usr/share/doc/fzpac/README.md\`
+    \`\$BROWSER https://github.com/sheepla/fzpac\`
+EOF
+}

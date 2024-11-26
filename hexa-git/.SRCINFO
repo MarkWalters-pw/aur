@@ -1,0 +1,15 @@
+pkgbase = hexa-git
+	pkgdesc = Hexa is a programming language in an early stage of development
+	pkgver = 232
+	pkgrel = 1
+	url = https://github.com/hexalang/hexa
+	arch = x86_64
+	license = MIT
+	makedepends = nodejs
+	makedepends = git
+	depends = nodejs
+	provides = hexa
+	source = hexa::git+https://github.com/hexalang/hexa
+	md5sums = SKIP
+
+pkgname = hexa-git

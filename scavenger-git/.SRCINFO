@@ -1,0 +1,21 @@
+pkgbase = scavenger-git
+	pkgdesc = Burstcoin Rust miner
+	pkgver = 1.7.8.r3.gaf3483a
+	pkgrel = 2
+	url = https://github.com/PoC-Consortium/scavenger
+	install = scavenger-git.install
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = rust
+	depends = gcc-libs
+	conflicts = scavenger
+	options = strip
+	options = !emptydirs
+	source = git+https://github.com/PoC-Consortium/scavenger.git
+	source = scavenger.service
+	sha256sums = SKIP
+	sha256sums = 0fa34d211f5dead13c9f5e2a1efd39d3bd14d805497e70b9c18981d76b31dd56
+
+pkgname = scavenger-git
+

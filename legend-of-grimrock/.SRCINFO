@@ -1,0 +1,29 @@
+pkgbase = legend-of-grimrock
+	pkgdesc = A 3D grid-based dungeon crawler inspired by classic 1980s and 1990s action role-playing games Dungeon Master, Eye of the Beholder and Ultima Underworld.
+	pkgver = 2.1.0.5
+	pkgrel = 1
+	url = https://www.gog.com/game/legend_of_grimrock
+	arch = i686
+	arch = x86_64
+	license = custom:commercial
+	depends = freeimage
+	depends = minizip
+	depends = sdl
+	depends = libvorbis
+	depends = freetype2
+	depends = zlib
+	depends = openal
+	depends = libgl
+	depends = libx11
+	depends = libogg
+	depends = libxext
+	depends = desktop-file-utils
+	source = legend-of-grimrock
+	source = legend-of-grimrock.desktop
+	source = gog_legend_of_grimrock_2.1.0.5.sh::gogdownloader://legend_of_grimrock/en3installer3
+	sha256sums = e72d4212b2394bd6038ac13ada2717756b4ce4a9370bbe96501ab1c489410861
+	sha256sums = b93a443998d1fbe415c7228c7d173ea0226dabd028badbe0ce8f6f13a93de819
+	sha256sums = c5fa1064977e4df4389d45be12a655f151227d08a22f3058bc4bc6e9627d1af1
+
+pkgname = legend-of-grimrock
+

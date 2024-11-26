@@ -1,0 +1,17 @@
+pkgbase = pam-ssh-git
+	pkgdesc = A Pluggable Authentication Module (PAM) for use with SSH.
+	pkgver = 2.3.r0.g6b4848e
+	pkgrel = 1
+	url = http://pam-ssh.sourceforge.net/
+	arch = x86_64
+	license = BSD
+	makedepends = git
+	depends = pam
+	depends = openssl
+	provides = pam-ssh
+	conflicts = pam-ssh
+	source = pam-ssh-git::git://git.code.sf.net/p/pam-ssh/git
+	md5sums = SKIP
+
+pkgname = pam-ssh-git
+

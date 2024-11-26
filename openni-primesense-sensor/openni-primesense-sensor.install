@@ -1,0 +1,23 @@
+post_install() {
+    local _module
+    local _MODULES
+    
+    _MODULES='libXnDeviceSensorV2.so libXnDeviceFile.so'
+    
+    for _module in $_MODULES
+    do 
+        /usr/bin/niReg -r "/usr/lib/${_module}" /etc/primesense
+    done
+}
+
+pre_remove() {
+    local _module
+    local _MODULES
+    
+    _MODULES='libXnDeviceSensorV2.so libXnDeviceFile.so'
+    
+    for _module in $_MODULES
+    do 
+        /usr/bin/niReg -u "/usr/lib/${_module}"
+    done
+}

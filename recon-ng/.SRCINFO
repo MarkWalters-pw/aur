@@ -1,0 +1,26 @@
+pkgbase = recon-ng
+	pkgdesc = A full-featured Web Reconnaissance framework written in Python
+	pkgver = 5.1.2
+	pkgrel = 2
+	url = https://github.com/lanmaster53/recon-ng
+	arch = any
+	license = GPL3
+	depends = python
+	depends = python-pyaml
+	depends = python-dnspython
+	depends = python-lxml
+	depends = python-mechanize
+	depends = python-requests
+	depends = python-flask
+	depends = python-flask-restful
+	depends = python-flasgger
+	depends = python-dicttoxml
+	depends = python-xlsxwriter
+	depends = python-unicodecsv
+	depends = python-rq
+	source = https://github.com/lanmaster53/recon-ng/archive/v5.1.2/recon-ng-5.1.2.tar.gz
+	source = opt-in-analytics.patch
+	sha256sums = 18d05030b994c9b37f624628251d3376d590f3d1eec155f67aca88fa5f3490cc
+	sha256sums = 03ec8c0bb7437e7fd2a070b78b76a7dad5a9a0b4c13de0a427dbc0e395130594
+
+pkgname = recon-ng

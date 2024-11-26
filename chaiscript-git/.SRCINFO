@@ -1,0 +1,17 @@
+pkgbase = chaiscript-git
+	pkgdesc = Embedded scripting language designed from the ground up to directly target C++
+	pkgver = 6.0.0.r101.g0c32c50
+	pkgrel = 1
+	url = http://www.chaiscript.com
+	install = chaiscript-git.install
+	arch = any
+	license = BSD
+	makedepends = cmake
+	depends = ncurses
+	provides = chaiscript
+	conflicts = chaiscript
+	source = chaiscript-git::git+https://github.com/Chaiscript/Chaiscript.git
+	sha256sums = SKIP
+
+pkgname = chaiscript-git
+

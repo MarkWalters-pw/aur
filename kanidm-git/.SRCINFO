@@ -1,0 +1,39 @@
+pkgbase = kanidm-git
+	pkgdesc = A identity management service and clients.
+	pkgver = 1.3.0.dev.r3.g1fb816582
+	pkgrel = 1
+	url = https://github.com/kanidm/kanidm
+	arch = x86_64
+	arch = aarch64
+	license = MPL-2.0
+	makedepends = cargo
+	makedepends = git
+	makedepends = systemd
+	source = kanidm-git::git+https://github.com/kanidm/kanidm.git
+	sha256sums = SKIP
+
+pkgname = kanidm-git
+    depends = kanidm-server-git=1.3.0.dev.r3.g1fb816582
+    depends = kanidm-clients-git=1.3.0.dev.r3.g1fb816582
+    depends = kanidm-unixd-clients-git=1.3.0.dev.r3.g1fb816582
+	conflicts = kanidm-bin
+
+pkgname = kanidm-clients-git
+	pkgdesc = kanidm client to interact with kanidm identity management server.
+	depends = libgit2
+	provides = kanidm-clients
+	conflicts = kanidm-clients-bin
+	backup = etc/kanidm/config
+
+pkgname = kanidm-server-git
+	pkgdesc = kanidm server for idendity management, supports RADIUS, ssh key management.
+	depends = libgit2
+	provides = kanidm-server
+	conflicts = kanidm-server-bin
+	backup = etc/kanidm/server.toml
+
+pkgname = kanidm-unixd-clients-git
+	pkgdesc = kanidm localhost resolver to resolve posix identities to a kanidm instance.
+	provides = kanidm-unixd-clients
+	conflicts = kanidm-unixd-clients-bin
+	backup = etc/kanidm/unixd

@@ -1,0 +1,19 @@
+pkgbase = python-lzf
+	pkgdesc = C Extension for liblzf
+	pkgver = 0.2.6
+	pkgrel = 1
+	url = https://github.com/teepark/python-lzf
+	arch = i686
+	arch = x86_64
+	arch = armv7h
+	arch = aarch64
+	license = BSD-3-Clause
+	makedepends = python-setuptools
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = glibc
+	source = python-lzf-0.2.6.tar.gz::https://github.com/teepark/python-lzf/archive/refs/tags/release-0.2.6.tar.gz
+	sha256sums = 19716a98e02a4f2835902642d5f276950131b019737f58b45373d721c10b8190
+
+pkgname = python-lzf

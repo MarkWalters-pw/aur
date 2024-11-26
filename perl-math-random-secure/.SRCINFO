@@ -1,0 +1,18 @@
+pkgbase = perl-math-random-secure
+	pkgdesc = Perl Math::Random::Secure CPAN module - cryptographically-secure, cross-platform replacement for rand()
+	pkgver = 0.080001
+	pkgrel = 5
+	url = http://search.cpan.org/dist/Math-Random-Secure/
+	arch = any
+	license = GPL
+	makedepends = perl-moo
+	makedepends = perl-moose
+	makedepends = perl-test-sharedfork
+	makedepends = perl-test-warn
+	depends = perl-crypt-random-source
+	depends = perl-math-random-isaac
+	options = !emptydirs
+	source = http://search.cpan.org/CPAN/authors/id/F/FR/FREW/Math-Random-Secure-0.080001.tar.gz
+	sha512sums = 2092fc01e224ebb438f927f72e835095efdb8790d8f4ef845fc7c4af3e20a05848e7632b0e752221bbe76cebbfa8186638043457ff4f80ff5727a42baec317ce
+
+pkgname = perl-math-random-secure

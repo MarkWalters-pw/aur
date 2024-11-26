@@ -1,0 +1,18 @@
+pkgbase = qlipper
+	pkgdesc = Lightweight & cross-platform clipboard history applet based on qt
+	pkgver = 5.1.2
+	pkgrel = 1
+	url = https://github.com/pvanek/qlipper
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = cmake
+	makedepends = ninja
+	makedepends = qt5-tools
+	makedepends = git
+	depends = qt5-base
+	source = git+https://github.com/pvanek/qlipper#tag=5.1.2
+	sha256sums = SKIP
+
+pkgname = qlipper
+

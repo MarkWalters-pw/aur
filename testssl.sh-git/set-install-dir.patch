@@ -1,0 +1,11 @@
+--- testssl.sh	2018-09-26 13:03:32.784246841 +0200
++++ testssl.sh	2018-09-26 13:04:13.654496336 +0200
+@@ -192,7 +192,7 @@
+
+ ########### Tuning vars which cannot be set by a cmd line switch. Use instead e.g "HEADER_MAXSLEEP=10 ./testssl.sh <your_args_here>"
+ #
+-TESTSSL_INSTALL_DIR="${TESTSSL_INSTALL_DIR:-""}"  # If you run testssl.sh and it doesn't find it necessary file automagically set TESTSSL_INSTALL_DIR
++TESTSSL_INSTALL_DIR="${TESTSSL_INSTALL_DIR:-"/usr/share/testssl.sh"}"  # If you run testssl.sh and it doesn't find it necessary file automagically set TESTSSL_INSTALL_DIR
+ CA_BUNDLES_PATH="${CA_BUNDLES_PATH:-""}"          # You can have your CA stores some place else
+ EXPERIMENTAL=${EXPERIMENTAL:-false}     # a development hook which allows us to disable code
+ PROXY_WAIT=${PROXY_WAIT:-20}            # waiting at max 20 seconds for socket reply through proxy

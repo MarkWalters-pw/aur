@@ -1,0 +1,21 @@
+pkgbase = qjackctl-git
+	pkgdesc = A Qt front-end for the JACK low-latency audio server
+	pkgver = r1567.a4ed248
+	pkgrel = 1
+	url = https://qjackctl.sourceforge.io/
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = cmake
+	makedepends = git
+	makedepends = qt5-tools
+	depends = jack
+	depends = hicolor-icon-theme
+	depends = portaudio
+	provides = qjackctl
+	conflicts = qjackctl
+	conflicts = qjackctl-svn
+	source = qjackctl-git::git+https://github.com/rncbc/qjackctl.git
+	md5sums = SKIP
+
+pkgname = qjackctl-git

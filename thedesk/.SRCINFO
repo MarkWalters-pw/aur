@@ -1,0 +1,74 @@
+pkgbase = thedesk
+	pkgdesc = Desktop Environment built on Qt
+	pkgver = 2.0
+	pkgrel = 1
+	url = https://github.com/theCheeseboard/thedesk
+	arch = x86_64
+	arch = aarch64
+	license = GPL3
+	makedepends = git
+	makedepends = qt6-tools
+	makedepends = qt6-positioning
+	makedepends = cmake
+	makedepends = clang
+	makedepends = polkit-qt6
+	makedepends = libtdesktopenvironment
+	makedepends = pulseaudio-qt
+	makedepends = networkmanager-qt
+	makedepends = modemmanager-qt
+	makedepends = bluez-qt
+	makedepends = qrencode
+	makedepends = libthefile
+	makedepends = contemporary-icons
+	makedepends = contemporary-widgets
+	makedepends = ttf-contemporary
+	makedepends = xf86-input-libinput
+	makedepends = libxi
+	makedepends = libx11
+	makedepends = qrencode
+	makedepends = wayfire
+	makedepends = glm
+	source = thedesk-2.0::https://github.com/theCheeseboard/thedesk/archive/refs/tags/v2.0.tar.gz
+	sha256sums = 3d89ff199f908cb16443caf900b9f0de03af6d0837c0528135b66f01d0bf3334
+
+pkgname = thedesk
+	depends = kwin
+	depends = libtdesktopenvironment
+	depends = td-polkitagent
+	depends = libthedesk
+	depends = thedesk-platform
+	depends = pulseaudio-qt
+	depends = libx11
+	depends = libxi
+	depends = xf86-input-libinput
+	depends = networkmanager-qt
+	depends = modemmanager-qt
+	depends = accountsservice
+	depends = bluez-qt
+	depends = qrencode
+	depends = thedesk-xdg-utils
+	depends = xdg-desktop-portal-td
+	depends = qt6-positioning
+
+pkgname = td-polkitagent
+	depends = polkit-qt6
+	depends = libtdesktopenvironment
+
+pkgname = xdg-desktop-portal-td
+	depends = libthefile
+
+pkgname = thedesk-platform
+	depends = libcontemporary
+	depends = libx11
+	depends = contemporary-widgets
+	depends = contemporary-icons
+	depends = ttf-contemporary
+
+pkgname = libthedesk
+	depends = libtdesktopenvironment
+
+pkgname = thedesk-wayland
+	depends = wayfire
+	depends = wayfire-plugins-dbusqt
+	depends = thedesk
+	depends = glm

@@ -1,0 +1,24 @@
+pkgbase = swagger-editor-git
+	pkgdesc = Swagger Editor
+	pkgver = 20181227
+	pkgrel = 1
+	url = https://github.com/swagger-api/swagger-editor
+	install = swagger-editor.install
+	arch = i686
+	arch = x86_64
+	license = Apache
+	makedepends = git
+	makedepends = npm
+	makedepends = python2
+	depends = darkhttpd
+	depends = nodejs
+	provides = swagger-editor
+	conflicts = swagger-editor
+	options = !strip
+	source = git+https://github.com/swagger-api/swagger-editor
+	source = swagger-editor.service
+	sha256sums = SKIP
+	sha256sums = ca2474524032867d5ea1662535250d9339d9e8f80be1d4d23e429b73e0a5eed4
+
+pkgname = swagger-editor-git
+

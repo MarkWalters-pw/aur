@@ -1,0 +1,16 @@
+pkgbase = vircadia-appimage
+	pkgdesc = An open-source 3D interface and server foundation that allows for vast social & educational platforms to be created and lived in while also being shared in real-time with others.
+	pkgver = 2022.1.0
+	pkgrel = 1
+	url = https://vircadia.com/
+	arch = x86_64
+	license = APACHE
+	depends = zlib
+	depends = hicolor-icon-theme
+	depends = fuse
+	noextract = vircadia-appimage-2022.1.0.AppImage
+	options = !strip
+	source_x86_64 = vircadia-appimage-2022.1.0.AppImage::https://cdn.vircadia.com/dist/release/Vircadia-x86_64_v2022.1.0-Selene.AppImage
+	sha256sums_x86_64 = 3f0d9959857b4b088434d09d56aacdb9e3a55c925e4ad5af79f0295bac60d82b
+
+pkgname = vircadia-appimage

@@ -1,0 +1,19 @@
+pkgbase = onedrive_tray-git
+	pkgdesc = OneDrive system tray program
+	pkgver = r28.6883538
+	pkgrel = 1
+	url = https://github.com/DanielBorgesOliveira/onedrive_tray
+	arch = i686
+	arch = x86_64
+	license = unknown
+	makedepends = git
+	depends = qt5-base
+	depends = onedrive
+	provides = onedrive_tray=r28.6883538
+	conflicts = onedrive_tray
+	source = git+https://github.com/DanielBorgesOliveira/onedrive_tray.git
+	source = 0001-Fix-binary-location-to-usr-bin.patch
+	md5sums = SKIP
+	md5sums = dad2a29aa7d4eacb4ee9dad0bfaa8eb5
+
+pkgname = onedrive_tray-git

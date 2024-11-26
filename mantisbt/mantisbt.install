@@ -1,0 +1,22 @@
+pre_upgrade() {
+  ln -s mantis_offline.php.sample /usr/share/webapps/mantisbt/mantis_offline.php
+}
+
+post_upgrade() {
+  local new_package_version="${1}"
+  local old_package_version="${2}"
+
+  if [ "$(vercmp "${old_package_version}" "2.22.1")" -le 0 ]; then
+    echo 'The webapp now needs to be run as its own user/group: mantisbt/mantisbt.'
+  fi
+
+  if [ "$(vercmp "${new_package_version}" "2.5.2")" -ge 0 ]; then
+    echo 'Follow the upgrade steps:'
+    echo 'https://mantisbt.org/docs/master/en-US/Admin_Guide/html-desktop/#admin.install.upgrade'
+    echo 'Afterwards, remove /usr/share/webapps/mantisbt/mantis_offline.php'
+  fi
+}
+
+post_install() {
+  echo 'Make sure your HTTP server/PHP is part of the "mantisbt" group'
+}

@@ -1,0 +1,12 @@
+pkgbase = mkinitcpio-systemd-root-password
+	pkgdesc = The root user in the initramfs-image have been locked, without a option to unlock it by setting a password 😢 This mkinitcpio module is made to add the option to unlock the root user in the initramfs-image.
+	pkgver = 0.1.0
+	pkgrel = 1
+	url = https://aur.archlinux.org/packages/mkinitcpio-systemd-root-password
+	arch = any
+	license = BSD0
+	depends = systemd
+	source = systemd-root-password
+	sha256sums = 7c99ed88844d2b913894316f1d1c213cd9aaf8f2327dc9cd681c17b500c346c0
+
+pkgname = mkinitcpio-systemd-root-password

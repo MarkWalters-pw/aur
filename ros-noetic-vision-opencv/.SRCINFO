@@ -1,0 +1,20 @@
+pkgbase = ros-noetic-vision-opencv
+	pkgdesc = ROS - Packages for interfacing ROS with OpenCV, a library of programming functions for real time computer vision.
+	pkgver = 1.16.2
+	pkgrel = 1
+	url = https://wiki.ros.org/vision_opencv
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-catkin
+	depends = ros-noetic-cv-bridge
+	depends = ros-noetic-image-geometry
+	source = ros-noetic-vision-opencv-1.16.2.tar.gz::https://github.com/ros-perception/vision_opencv/archive/1.16.2.tar.gz
+	sha256sums = 046f3bac5dcdaea5678bf5e6be10d895bbd670cc16c7b97ba4c1a6b661f8557e
+
+pkgname = ros-noetic-vision-opencv

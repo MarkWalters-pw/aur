@@ -1,0 +1,23 @@
+pkgbase = buffyboard
+	pkgdesc = Touch-enabled framebuffer keyboard (not only) for vampire slayers
+	pkgver = 3.0.0
+	pkgrel = 1
+	url = https://gitlab.com/postmarketOS/buffybox/-/tree/master/buffyboard
+	arch = x86_64
+	arch = armv7h
+	arch = aarch64
+	license = GPL3
+	makedepends = meson
+	makedepends = libinput
+	makedepends = libxkbcommon
+	makedepends = linux-headers
+	makedepends = udev
+	depends = libinput
+	source = https://gitlab.com/postmarketOS/buffybox/-/archive/3.0.0/buffybox-3.0.0.tar.bz2
+	source = https://github.com/lvgl/lv_drivers/archive/0091dc612facc94dce1061a9b78d641c77f1791a.tar.gz
+	source = https://github.com/lvgl/lvgl/archive/f37aebf3327a02f6a21f543d826710d56cb277f2.tar.gz
+	sha512sums = ee7dfb2c785806c11ac444ed8abcbe912eb39460e97109d62b3716f7257f0cba9c0f774edff9bac49151d97d1178cc30e8773b69a00f27f57693e76773f87387
+	sha512sums = e2a487d618af5db7575fd28f1597d2f856d02b8360c57abaf89146701318cdc49f249feb893c05e98d8f400782ea5f2a8030220f16305c8365388b777da358d8
+	sha512sums = 804e84063ab31258cb628155b0705af2fad33542fbce2c5a4e8cc9e906720deae1b1eee740f1e23be17192565291166be285fe5b6ab1ae92b79382149bb17535
+
+pkgname = buffyboard

@@ -1,0 +1,16 @@
+pkgbase = cisco-hash-sigs-static
+	pkgdesc = A full-featured implementation of the LMS and HSS Hash Based Signature Schemes
+	pkgver = r51.b0631b8
+	pkgrel = 2
+	url = https://github.com/cisco/hash-sigs
+	arch = x86_64
+	license = LicenseRef-Cisco
+	makedepends = git
+	makedepends = openssl
+	provides = hss_lib.a
+	provides = hss_lib_thread.a
+	provides = hss_verify.a
+	source = hash-sigs::git+https://github.com/cisco/hash-sigs#commit=b0631b8891295bf2929e68761205337b7c031726
+	b2sums = b9446e9c881d5d580d8d605236b087d8927527aba2ea70d8d2270ae74bff8ee7ea6cf6648daf7077f4f8a95bd48ac93ab2781b6a624cc67260b180bbb5f9e66a
+
+pkgname = cisco-hash-sigs-static

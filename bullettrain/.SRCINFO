@@ -1,0 +1,16 @@
+pkgbase = bullettrain
+	pkgdesc = Bullettrain prompt builder written in Go
+	pkgver = 0.5beta
+	pkgrel = 3
+	url = https://github.com/bullettrain-sh
+	arch = i686
+	arch = x86_64
+	license = MIT
+	depends = nerd-fonts-complete
+	source_i686 = bullettrain-i686::https://github.com/bullettrain-sh/bullettrain-go-core/releases/download/v0.5-beta/bullettrain.linux-386
+	sha256sums_i686 = 34d8b6b9d2f4e3c6833e7bed089db7ff97d5e05081d967a2132a6f1bc7adbbc2
+	source_x86_64 = bullettrain-x86_64::https://github.com/bullettrain-sh/bullettrain-go-core/releases/download/v0.5-beta/bullettrain.linux-amd64
+	sha256sums_x86_64 = 367fa7d00badd31c05dea19a9c8dee4be68fe1ce31311a8716c838762bcbe418
+
+pkgname = bullettrain
+

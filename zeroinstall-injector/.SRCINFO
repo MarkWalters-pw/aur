@@ -1,0 +1,28 @@
+pkgbase = zeroinstall-injector
+	pkgdesc = A decentralised cross-distribution software installation system
+	pkgver = 2.16
+	pkgrel = 1
+	url = https://0install.net
+	install = zeroinstall-injector.install
+	arch = i686
+	arch = x86_64
+	license = LGPL-2.1
+	makedepends = ocaml-findlib
+	makedepends = dune>=2.1
+	depends = ocaml-curl
+	depends = ocaml-extlib
+	depends = ocaml-lwt
+	depends = ocaml-ounit
+	depends = ocaml-xmlm
+	depends = ocaml-yojson
+	optdepends = ocaml-lablgtk: provides GUI features
+	optdepends = ocaml-obus: for DBUS, packagekit, and NetworkManager integration
+	optdepends = xdg-utils: desktop integration
+	optdepends = packagekit: packagekit integration
+	provides = 0install
+	provides = zeroinstall
+	source = https://github.com/0install/0install/archive/v2.16.tar.gz
+	md5sums = ac054831c5bca558567007a464c4545a
+
+pkgname = zeroinstall-injector
+

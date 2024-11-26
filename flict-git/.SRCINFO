@@ -1,0 +1,20 @@
+pkgbase = flict-git
+	pkgdesc = Open source software license compatibility tool
+	pkgver = 1.1.2.r0.gbca99b7
+	pkgrel = 1
+	url = https://github.com/vinland-technology/flict
+	arch = any
+	license = GPL3
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = python-setuptools
+	depends = python
+	depends = python-license-expression
+	depends = python-osadl-matrix
+	provides = flict
+	conflicts = flict
+	source = flict::git+https://github.com/vinland-technology/flict
+	sha256sums = SKIP
+
+pkgname = flict-git

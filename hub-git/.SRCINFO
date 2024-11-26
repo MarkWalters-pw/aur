@@ -1,0 +1,17 @@
+pkgbase = hub-git
+	pkgdesc = cli interface for Github
+	pkgver = v2.7.0.r31.gddf0d825
+	pkgrel = 1
+	url = https://hub.github.com
+	arch = x86_64
+	arch = i686
+	license = MIT
+	makedepends = go
+	depends = git
+	provides = hub
+	conflicts = hub
+	source = git+https://github.com/github/hub.git
+	sha256sums = SKIP
+
+pkgname = hub-git
+

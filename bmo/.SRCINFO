@@ -1,0 +1,14 @@
+pkgbase = bmo
+	pkgdesc = CLI tool to improve developement experience for traditional compiled web servers
+	pkgver = v2.0.stable
+	pkgrel = 1
+	url = https://github.com/siddhantmadhur/bmo
+	arch = x86_64
+	license = GPL-3.0
+	makedepends = git
+	makedepends = go
+	provides = bmo
+	source = bmo::git+https://github.com/siddhantmadhur/bmo.git
+	sha256sums = SKIP
+
+pkgname = bmo

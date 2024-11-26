@@ -1,0 +1,20 @@
+pkgbase = sphinxchat-appimage-git
+	pkgdesc = The first platform that handles money and speech in the same protocol built on top of Bitcoin
+	pkgver = r636.8159c4e
+	pkgrel = 1
+	url = https://sphinx.chat/
+	arch = x86_64
+	license = MIT
+	makedepends = npm
+	makedepends = yarn
+	makedepends = git
+	depends = electron
+	depends = zlib
+	depends = hicolor-icon-theme
+	options = !strip
+	source = sphinxchat-appimage-git::git+https://github.com/stakwork/sphinx-android.git
+	source = update-electron-builder.patch
+	sha256sums = SKIP
+	sha256sums = 177d18eb86f34ff261557faa06d0d6f49ca18ee110a15ac8591ca7a34387f214
+
+pkgname = sphinxchat-appimage-git

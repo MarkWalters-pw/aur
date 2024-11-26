@@ -1,0 +1,21 @@
+pkgname=confedi-git
+pkgver=1
+pkgrel=1
+pkgdesc="Confedi is designed to help with changing configuration files with one command."
+arch=(any)
+license=('GPL')
+depends=(python3)
+makedepends=(git)
+url="https://bitbucket.org/masterofhoppips/configuration-editor.git"
+source=("git+$url")
+md5sums=('SKIP')
+
+package() {
+    mkdir -p "$pkgdir"/usr/bin
+    cp configuration-editor/src/program.py "$pkgdir"/usr/bin/confedi
+    chmod +x "$pkgdir"/usr/bin/confedi
+
+    mkdir -p "$pkgdir"/usr/share/man/man8
+    cp configuration-editor/confedi "$pkgdir"/usr/share/man/man8/confedi.8
+    gzip "$pkgdir"/usr/share/man/man8/confedi.8
+}

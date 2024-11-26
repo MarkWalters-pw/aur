@@ -1,0 +1,21 @@
+pkgbase = denise-git
+	pkgdesc = Highly accurate C64/Amiga emulator - Git version
+	pkgver = 2.2.1.r0.gafe5d75
+	pkgrel = 1
+	epoch = 1
+	url = https://sourceforge.net/projects/deniseemu/
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	depends = sdl2
+	depends = gtk3
+	depends = openal
+	depends = libpulse
+	provides = denise
+	conflicts = denise-bin
+	conflicts = denise
+	source = git+https://bitbucket.org/piciji/denise.git
+	sha256sums = SKIP
+
+pkgname = denise-git

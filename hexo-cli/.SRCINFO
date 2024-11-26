@@ -1,0 +1,23 @@
+pkgbase = hexo-cli
+	pkgdesc = Command line interface for Hexo
+	pkgver = 4.3.2
+	pkgrel = 1
+	url = https://www.npmjs.com/package/hexo-cli
+	install = newbie-hint.install
+	arch = any
+	license = MIT
+	makedepends = npm
+	depends = nodejs
+	optdepends = git: initialize and deploy websites
+	optdepends = npm: initialize websites, install plugins
+	optdepends = pnpm: npm alternative
+	optdepends = yarn: npm alternative
+	optdepends = rsync: deploy websites
+	conflicts = nodejs-hexo
+	conflicts = nodejs-hexo-cli
+	replaces = nodejs-hexo-cli
+	noextract = hexo-cli-4.3.2.tgz
+	source = https://registry.npmjs.org/hexo-cli/-/hexo-cli-4.3.2.tgz
+	sha256sums = c52c27f5847579e6e57086681951c4ac9922445316c5a6ad03a8415b0846faf6
+
+pkgname = hexo-cli

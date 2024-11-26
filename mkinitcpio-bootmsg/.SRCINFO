@@ -1,0 +1,16 @@
+pkgbase = mkinitcpio-bootmsg
+	pkgdesc = Mkinitcpio hook to display a message on boot
+	pkgver = 0.2.0
+	pkgrel = 1
+	url = https://github.com/ntruessel/mkinitcpio-bootmsg
+	install = mkinitcpio-bootmsg.install
+	arch = any
+	license = custom:UNLICENSE
+	makedepends = git
+	depends = bash
+	backup = etc/bootmsg.conf
+	source = https://github.com/ntruessel/mkinitcpio-bootmsg/archive/v0.2.0.tar.gz
+	b2sums = f958d105ef69290ce575d0ca3428c6dafb00d810ad380a5c069da51e0d5c0cb3d2ca3a240a1a4ddc0d5fce71705af9a935d6274e151e64e74b09b59843e0feea
+
+pkgname = mkinitcpio-bootmsg
+

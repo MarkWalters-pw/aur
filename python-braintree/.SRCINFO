@@ -1,0 +1,14 @@
+pkgbase = python-braintree
+	pkgdesc = Braintree Python Library
+	pkgver = 4.28.0
+	pkgrel = 2
+	url = https://www.braintreepayments.com/docs/python
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python-requests
+	source = git+https://github.com/braintree/braintree_python.git#tag=4.28.0
+	sha512sums = 5d3f1382bf2eaf9ee2d7539aa22e612e9dce3c43c2eb786aedd94d49cb7087b24f7cff3a1904bb47a7d42fe72bdb61b23925a5e77627027c4ce529de6863aec1
+
+pkgname = python-braintree

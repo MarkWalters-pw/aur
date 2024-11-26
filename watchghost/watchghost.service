@@ -1,0 +1,14 @@
+[Unit]
+Description=Watchghost daemon
+After=network.target
+
+[Service]
+Type=simple
+User=watchghost
+Group=watchghost
+ExecStart=/usr/bin/watchghost --config=/etc/watchghost
+ExecReload=/bin/kill -SIGHUP $MAINPID
+
+[Install]
+WantedBy=multi-user.target
+

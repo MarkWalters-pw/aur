@@ -1,0 +1,19 @@
+pkgbase = pacvcs
+	pkgdesc = Pacman VCS version checker
+	pkgver = 1.0.1
+	pkgrel = 0
+	epoch = 1
+	url = https://github.com/pzl/pacvcs
+	arch = any
+	license = MIT
+	makedepends = git
+	depends = bash
+	optdepends = git
+	optdepends = bzr
+	provides = pacvcs
+	conflicts = pacvcs
+	source = pacvcs-1.0.1.tar.gz::https://github.com/pzl/pacvcs/archive/v1.0.1.tar.gz
+	md5sums = 1b0d7876a44506533f4d0a231a6ca88f
+	sha256sums = 37067466db30d6ce4aabc3e1a1684e23542d14bd0c19377c566b8be358fd6a71
+
+pkgname = pacvcs

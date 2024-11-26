@@ -1,0 +1,4 @@
+9c9
+< RULES = yaml.safe_load(open('rules.yaml'))
+---
+> RULES = yaml.safe_load(open('/etc/dumpsterdiver/rules.yaml'))

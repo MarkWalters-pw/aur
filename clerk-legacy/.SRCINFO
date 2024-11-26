@@ -1,0 +1,23 @@
+pkgbase = clerk-legacy
+	pkgdesc = mpd client, based on rofi
+	pkgver = 3.2.1
+	pkgrel = 2
+	url = https://github.com/carnager/clerk
+	install = clerk.install
+	arch = any
+	license = MIT
+	depends = mpc
+	depends = rofi
+	depends = python
+	depends = python-mpd2
+	depends = python-notify2
+	depends = perl
+	optdepends = mpd-sima: similar artist mode
+	provides = clerk
+	conflicts = clerk-git
+	replaces = clerk
+	source = https://github.com/carnager/clerk/archive/3.2.1.tar.gz
+	sha256sums = 954a388cce5a86c1760e130febc59b533651a01938b0c9a6b1f4941dda83db97
+
+pkgname = clerk-legacy
+

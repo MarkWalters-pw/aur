@@ -1,0 +1,17 @@
+pkgbase = imgurqt-git
+	pkgdesc = Console application implementing basic commands of imgur.com APIv3
+	pkgver = 14.f87671e
+	pkgrel = 1
+	url = https://gitlab.com/luspi/imgurqt
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	makedepends = cmake
+	depends = qt5-base
+	provides = imgurqt
+	conflicts = imgurqt
+	source = git+https://gitlab.com/luspi/imgurqt.git
+	md5sums = SKIP
+
+pkgname = imgurqt-git

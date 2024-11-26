@@ -1,0 +1,21 @@
+pkgbase = signus
+	pkgdesc = Signus: The Artefact Wars assic turn-based strategy war game similar to the old Battle Isle series.
+	pkgver = 1.96.1
+	pkgrel = 3
+	url = https://github.com/signus-game/signus
+	arch = x86_64
+	arch = aarch64
+	license = GPL2
+	depends = sdl2
+	depends = sdl2_mixer
+	depends = sdl2_ttf
+	depends = sdl2_image
+	depends = libvorbis
+	depends = libjpeg-turbo
+	conflicts = signus-git
+	source = https://github.com/signus-game/signus/archive/refs/tags/v1.96.1.tar.gz
+	source = signus.desktop
+	sha512sums = d2a9146f6508f5ebee29a6d074c2b40ae767876daf5a92c86ebe990838d25f254159d9ea394a32e9a93ebccdf80dd683aa1145ba6fd4347c78f0236bd50d2bc7
+	sha512sums = 6a791044c16bd93f34e8fd77953f310ae645ee0daad5ec4f469247caf9b8665327c3b799b1ac63d8df357255ec85765f4e329c14266232a058f7445775622656
+
+pkgname = signus

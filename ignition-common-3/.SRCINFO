@@ -1,0 +1,21 @@
+pkgbase = ignition-common-3
+	pkgdesc = Provides a set of libraries that cover many different use cases.
+	pkgver = 3.16.0
+	pkgrel = 1
+	url = https://gazebosim.org/libs/common
+	arch = x86_64
+	groups = development
+	license = Apache
+	makedepends = ignition-cmake=2
+	makedepends = util-linux
+	depends = ignition-math=6
+	depends = tinyxml2
+	depends = freeimage
+	depends = libutil-linux
+	depends = gts
+	depends = ffmpeg4.4
+	provides = ignition-common=3
+	source = ignition-common-3-3.16.0.tar.gz::https://github.com/gazebosim/gz-common/archive/ignition-common3_3.16.0.tar.gz
+	sha256sums = fcf428cf8732654bfee32dab18d431da9bba3ecfc47e0af89598d64128c81b26
+
+pkgname = ignition-common-3

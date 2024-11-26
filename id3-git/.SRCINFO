@@ -1,0 +1,16 @@
+pkgbase = id3-git
+	pkgdesc = id3 mass tagger lists and manipulates ID3 and Lyrics3 tags in multiple files.
+	pkgver = r573.a899eac
+	pkgrel = 1
+	url = https://squell.github.io/id3/
+	arch = i686
+	arch = x86_64
+	license = BSD
+	makedepends = git
+	depends = gcc-libs
+	conflicts = id3
+	options = !makeflags
+	source = id3-git::git+https://github.com/squell/id3.git
+	md5sums = SKIP
+
+pkgname = id3-git

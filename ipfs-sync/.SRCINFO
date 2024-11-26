@@ -1,0 +1,15 @@
+pkgbase = ipfs-sync
+	pkgdesc = A simple daemon which will watch files on your filesystem, mirror them to MFS, automatically update related pins, and update related IPNS keys.
+	pkgver = 0.7.0
+	pkgrel = 1
+	url = https://github.com/TheDiscordian/ipfs-sync
+	arch = any
+	license = custom
+	license = BSD
+	makedepends = go
+	depends = go-ipfs
+	source = https://github.com/TheDiscordian/ipfs-sync/archive/v0.7.0.tar.gz
+	md5sums = 7962b6c318046ea886e1d8cfc7b1e9b8
+	sha512sums = 2ae2db945ece0cd44bc781b9b6092c45f6e8c695dd9a00bffd15a20be83750259431b34f4541ecde4934a09190d84f5c5f629d57ced13ea359f35c28392519c6
+
+pkgname = ipfs-sync

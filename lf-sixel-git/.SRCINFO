@@ -1,0 +1,17 @@
+pkgbase = lf-sixel-git
+	pkgdesc = lf is a terminal file manager written in Go from fork supporting sixel
+	pkgver = 28.1.r1.g8997e5b
+	pkgrel = 1
+	url = https://github.com/horriblename/lf
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = go>=1.6
+	depends = glibc
+	provides = lf
+	conflicts = lf
+	source = lf-sixel::git+https://github.com/horriblename/lf.git
+	sha256sums = SKIP
+
+pkgname = lf-sixel-git

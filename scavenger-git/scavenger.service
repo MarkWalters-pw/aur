@@ -1,0 +1,11 @@
+[Unit]
+Description=Scavenger burstcoin miner
+After=local-fs.target network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/scavenger -c %h/.config/scavenger/config.yaml
+Restart=always
+
+[Install]
+WantedBy=default.target

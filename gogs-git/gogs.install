@@ -1,0 +1,75 @@
+_start_if_enabled() {
+    if systemctl -q is-enabled gogs.service ;then
+        echo "  Starting gogs service"
+        systemctl start gogs.service
+    fi
+}
+
+_stop_if_active() {
+    if systemctl -q is-active gogs.service ;then
+        echo "  Stoping gogs service"
+        systemctl stop gogs.service
+    fi
+}
+
+_disable_if_enabled() {
+    if systemctl -q is-enabled gogs.service 2>/dev/null ;then
+        echo "  Disabling gogs service"
+        systemctl disable gogs.service
+    fi
+}
+
+_gogs_home=/var/lib/gogs
+_CustConf=${_gogs_home}/custom/conf/app.ini
+
+pre_install() {
+    if getent passwd gogs >/dev/null; then
+        local _OldHome="$( getent passwd gogs | cut -d: -f6 )"
+        if [[ ${_OldHome} != "${_gogs_home}" ]]; then
+            echo "  Setting gogs home directory to ${_gogs_home}"
+            echo "  You must migrate from ${_OldHome}" to ${_gogs_home}
+            echo "  before starting or re-enabling service"
+            usermod -c 'Gogs service user' -g gogs -d ${_gogs_home} -L -s /bin/bash gogs
+            _disable_if_enabled
+        fi
+    fi
+}
+
+post_install(){
+    systemctl daemon-reload
+    if [ ! -f ${_CustConf} ] ; then
+        echo "  If you do not have a custom configuration file finish the setup:"
+        echo "   start gogs service and open the installation page http://$(uname -n):3000/"
+        echo "  Otherwise:"
+        echo "    Place your custom configuration file at ${_CustConf}"
+        echo ""
+        echo "  Default configuration can be located at:"
+        echo "  /usr/share/gogs/conf/app.ini.default"
+    fi
+}
+
+pre_upgrade() {
+    _stop_if_active
+    pre_install
+}
+
+post_upgrade() {
+    systemctl daemon-reload
+
+    if [ ! -f ${_CustConf} ] ; then
+        echo "  Gogs old configuration file must be moved to ${_CustConf} before starting or re-enabling service."
+        _disable_if_enabled
+    fi
+    _start_if_enabled
+}
+
+pre_remove() {
+    _stop_if_active
+    _disable_if_enabled
+}
+
+post_remove() {
+    echo "  "
+    echo "  You may want to remove an Gogs home directory ${_gogs_home}, user and group"
+    echo "  "
+}

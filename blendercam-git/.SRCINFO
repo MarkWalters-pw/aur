@@ -1,0 +1,18 @@
+pkgbase = blendercam-git
+	pkgdesc = An open source solution for artistic CAM
+	pkgver = r850.ad130df
+	pkgrel = 1
+	url = http://blendercam.blogspot.com/
+	install = blendercam-git.install
+	arch = any
+	license = GPL2
+	depends = blender
+	depends = python
+	depends = python-equation
+	depends = python-shapely
+	depends = python-numpy
+	depends = vtk
+	source = git+https://github.com/vilemnovak/blendercam.git
+	md5sums = SKIP
+
+pkgname = blendercam-git

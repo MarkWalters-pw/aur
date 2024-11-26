@@ -1,0 +1,16 @@
+pkgbase = apple-sdk-ios
+	pkgdesc = iOS SDKs, from on DragonBuild's repository.
+	pkgver = 13.4
+	pkgrel = 2
+	url = https://github.com/dragonbuild/sdks
+	install = sdk.install
+	arch = any
+	license = custom
+	makedepends = git
+	makedepends = findutils
+	options = !strip
+	source = apple-sdk-ios::git+https://github.com/dragonbuild/sdks.git#commit=0bba3608a865c6e7a11054413de38e3579d70cbe
+	sha512sums = SKIP
+
+pkgname = apple-sdk-ios
+

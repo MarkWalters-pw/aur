@@ -1,0 +1,21 @@
+pkgbase = k480-function-keys-conf-git
+	pkgdesc = Make function keys on the Logitech K480 Bluetooth keyboard default
+	pkgver = r11.67702fb
+	pkgrel = 1
+	url = https://github.com/embuc/k480-function-keys-conf
+	install = k480-function-keys-conf.install
+	arch = x86_64
+	arch = i686
+	license = GPL
+	makedepends = git
+	depends = glibc
+	depends = sh
+	source = k480-function-keys-conf::git+https://github.com/embuc/k480_conf
+	source = 99-k480.rules
+	source = k480-function-keys-conf-enable.sh
+	sha256sums = SKIP
+	sha256sums = 2caee64458f1c921845f22aeae1b034eebfe3b39f9fe9b317fe0bbae500a535c
+	sha256sums = c1696f2f95e8534006ed7578ff4f69a959bcce5c609398240a0ab1ef450b9d1e
+
+pkgname = k480-function-keys-conf-git
+

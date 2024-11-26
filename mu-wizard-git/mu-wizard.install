@@ -1,0 +1,21 @@
+post_install() {
+    echo -e "\n\e[1m Cem Keylan’s mu-wizard $1\e[0m\n"
+    cat <<-EOF
+    Emacs configuration
+    -------------
+    Emacs  will not  be loading  the  configurations, you  will need  to set  it
+    manually. In your init file, you may choose to load the configuration in the
+    following ways.
+        - (load-file "~/.config/mu4e/mu4e-config.el")
+        - (add-to-list 'load-path "~/.config/mu4e")
+          (require 'mu4e-config)
+        - (use-package mu4e-config
+          :after mu4e
+          :load-path "~/.config/mu4e")
+
+    External links
+    --------------
+    - Official repository on GitHub: https://github.com/cemkeylan/mu-wizard
+
+EOF
+}

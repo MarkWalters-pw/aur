@@ -1,0 +1,1391 @@
+From c6305ece3e6b629dc677ef8bbf2b02f049ef8d47 Mon Sep 17 00:00:00 2001
+From: Aseem Athale <athaleaseem@gmail.com>
+Date: Wed, 8 May 2024 20:00:18 +0530
+Subject: [PATCH] langid: Use 2to3 tool
+
+Signed-off-by: Aseem Athale <athaleaseem@gmail.com>
+---
+ langid/examples/_twokenize.py      | 24 +++++-----
+ langid/examples/process_twitter.py |  2 +-
+ langid/langid.py                   | 14 +++---
+ langid/tools/featWeights.py        | 32 ++++++-------
+ langid/train/BLweight.py           | 32 ++++++-------
+ langid/train/DFfeatureselect.py    | 30 ++++++------
+ langid/train/IGweight.py           | 66 +++++++++++++-------------
+ langid/train/LDfeatureselect.py    | 21 +++++----
+ langid/train/NBtrain.py            | 42 ++++++++---------
+ langid/train/common.py             |  6 +--
+ langid/train/index.py              | 36 +++++++-------
+ langid/train/scanner.py            | 24 +++++-----
+ langid/train/tokenize.py           | 76 +++++++++++++++---------------
+ langid/train/train.py              | 71 ++++++++++++++--------------
+ 14 files changed, 239 insertions(+), 237 deletions(-)
+
+diff --git a/langid/examples/_twokenize.py b/langid/examples/_twokenize.py
+index 91fa599..424ed6a 100644
+--- a/langid/examples/_twokenize.py
++++ b/langid/examples/_twokenize.py
+@@ -20,17 +20,17 @@ There have been at least 2 other Java ports, but they are not in the lineage for
+ Ported to Python by Myle Ott <myleott@gmail.com>.
+ """
+ 
+-from __future__ import print_function
++
+ 
+ import operator
+ import re
+-import HTMLParser
++import html.parser
+ 
+ def regex_or(*items):
+     return '(?:' + '|'.join(items) + ')'
+ 
+-Contractions = re.compile(u"(?i)(\w+)(n['’′]t|['’′]ve|['’′]ll|['’′]d|['’′]re|['’′]s|['’′]m)$", re.UNICODE)
+-Whitespace = re.compile(u"[\s\u0020\u00a0\u1680\u180e\u202f\u205f\u3000\u2000-\u200a]+", re.UNICODE)
++Contractions = re.compile("(?i)(\w+)(n['’′]t|['’′]ve|['’′]ll|['’′]d|['’′]re|['’′]s|['’′]m)$", re.UNICODE)
++Whitespace = re.compile("[\s\u0020\u00a0\u1680\u180e\u202f\u205f\u3000\u2000-\u200a]+", re.UNICODE)
+ 
+ punctChars = r"['\"“”‘’.?!…,:;]"
+ #punctSeq   = punctChars+"+"	#'anthem'. => ' anthem '.
+@@ -64,7 +64,7 @@ url        = regex_or(urlStart1, urlStart2) + urlBody + "(?=(?:"+urlExtraCrapBef
+ timeLike   = r"\d+(?::\d+){1,2}"
+ #numNum     = r"\d+\.\d+"
+ numberWithCommas = r"(?:(?<!\d)\d{1,3},)+?\d{3}" + r"(?=(?:[^,\d]|$))"
+-numComb	 = u"[\u0024\u058f\u060b\u09f2\u09f3\u09fb\u0af1\u0bf9\u0e3f\u17db\ua838\ufdfc\ufe69\uff04\uffe0\uffe1\uffe5\uffe6\u00a2-\u00a5\u20a0-\u20b9]?\\d+(?:\\.\\d+)+%?".encode('utf-8')
++numComb	 = "[\u0024\u058f\u060b\u09f2\u09f3\u09fb\u0af1\u0bf9\u0e3f\u17db\ua838\ufdfc\ufe69\uff04\uffe0\uffe1\uffe5\uffe6\u00a2-\u00a5\u20a0-\u20b9]?\\d+(?:\\.\\d+)+%?".encode('utf-8')
+ 
+ # Abbreviations
+ boundaryNotDot = regex_or("$", r"\s", r"[“\"?!,:;]", entity)
+@@ -73,7 +73,7 @@ aa2  = r"[^A-Za-z](?:[A-Za-z]\.){1,}[A-Za-z](?=" + boundaryNotDot + ")"
+ standardAbbreviations = r"\b(?:[Mm]r|[Mm]rs|[Mm]s|[Dd]r|[Ss]r|[Jj]r|[Rr]ep|[Ss]en|[Ss]t)\."
+ arbitraryAbbrev = regex_or(aa1, aa2, standardAbbreviations)
+ separators  = "(?:--+|―|—|~|–|=)"
+-decorations = u"(?:[♫♪]+|[★☆]+|[♥❤♡]+|[\u2639-\u263b]+|[\ue001-\uebbb]+)".encode('utf-8')
++decorations = "(?:[♫♪]+|[★☆]+|[♥❤♡]+|[\u2639-\u263b]+|[\ue001-\uebbb]+)".encode('utf-8')
+ thingsThatSplitWords = r"[^\s\.,?\"]"
+ embeddedApostrophe = thingsThatSplitWords+r"+['’′]" + thingsThatSplitWords + "*"
+ 
+@@ -94,7 +94,7 @@ otherMouths = r"(?:[oO]+|[/\\]+|[vV]+|[Ss]+|[|]+)" # remove forward slash if htt
+ 
+ # myleott: try to be as case insensitive as possible, but still not perfect, e.g., o.O fails
+ #bfLeft = u"(♥|0|o|°|v|\\$|t|x|;|\u0ca0|@|ʘ|•|・|◕|\\^|¬|\\*)".encode('utf-8')
+-bfLeft = u"(♥|0|[oO]|°|[vV]|\\$|[tT]|[xX]|;|\u0ca0|@|ʘ|•|・|◕|\\^|¬|\\*)".encode('utf-8')
++bfLeft = "(♥|0|[oO]|°|[vV]|\\$|[tT]|[xX]|;|\u0ca0|@|ʘ|•|・|◕|\\^|¬|\\*)".encode('utf-8')
+ bfCenter = r"(?:[\.]|[_-]+)"
+ bfRight = r"\2"
+ s3 = r"(?:--['\"])"
+@@ -105,7 +105,7 @@ s5 = "(?:[.][_]+[.])"
+ basicface = "(?:" +bfLeft+bfCenter+bfRight+ ")|" +s3+ "|" +s4+ "|" + s5
+ 
+ eeLeft = r"[＼\\ƪԄ\(（<>;ヽ\-=~\*]+"
+-eeRight= u"[\\-=\\);'\u0022<>ʃ）/／ノﾉ丿╯σっµ~\\*]+".encode('utf-8')
++eeRight= "[\\-=\\);'\u0022<>ʃ）/／ノﾉ丿╯σっµ~\\*]+".encode('utf-8')
+ eeSymbol = r"[^A-Za-z0-9\s\(\)\*:=-]"
+ eastEmote = eeLeft + "(?:"+basicface+"|" +eeSymbol+")+" + eeRight
+ 
+@@ -132,7 +132,7 @@ emoticon = regex_or(
+ 
+ Hearts = "(?:<+/?3+)+" #the other hearts are in decorations
+ 
+-Arrows = regex_or(r"(?:<*[-―—=]*>+|<+[-―—=]*>*)", u"[\u2190-\u21ff]+".encode('utf-8'))
++Arrows = regex_or(r"(?:<*[-―—=]*>+|<+[-―—=]*>*)", "[\u2190-\u21ff]+".encode('utf-8'))
+ 
+ # BTO 2011-06: restored Hashtag, AtMention protection (dropped in original scala port) because it fixes
+ # "hello (#hashtag)" ==> "hello (#hashtag )"  WRONG
+@@ -157,7 +157,7 @@ Email = regex_or("(?<=(?:\W))", "(?<=(?:^))") + r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-
+ # We will be tokenizing using these regexps as delimiters
+ # Additionally, these things are "protected", meaning they shouldn't be further split themselves.
+ Protected  = re.compile(
+-    unicode(regex_or(
++    str(regex_or(
+         Hearts,
+         url,
+         Email,
+@@ -187,7 +187,7 @@ Protected  = re.compile(
+ 
+ # Note the 'smart quotes' (http://en.wikipedia.org/wiki/Smart_quotes)
+ #edgePunctChars    = r"'\"“”‘’«»{}\(\)\[\]\*&" #add \\p{So}? (symbols)
+-edgePunctChars    = u"'\"“”‘’«»{}\\(\\)\\[\\]\\*&" #add \\p{So}? (symbols)
++edgePunctChars    = "'\"“”‘’«»{}\\(\\)\\[\\]\\*&" #add \\p{So}? (symbols)
+ edgePunct    = "[" + edgePunctChars + "]"
+ notEdgePunct = "[a-zA-Z0-9]" # content characters
+ offEdge = r"(^|$|:|;|\s|\.|,)"  # colon here gets "(hello):" ==> "( hello ):"
+@@ -285,7 +285,7 @@ def tokenize(text):
+ # We also first unescape &amp;'s, in case the text has been buggily double-escaped.
+ def normalizeTextForTagger(text):
+     text = text.replace("&amp;", "&")
+-    text = HTMLParser.HTMLParser().unescape(text)
++    text = html.parser.HTMLParser().unescape(text)
+     return text
+ 
+ # This is intended for raw tweet text -- we do some HTML entity unescaping before running the tagger.
+diff --git a/langid/examples/process_twitter.py b/langid/examples/process_twitter.py
+index a6c0d38..ad361b5 100644
+--- a/langid/examples/process_twitter.py
++++ b/langid/examples/process_twitter.py
+@@ -57,7 +57,7 @@ if __name__ == "__main__":
+         if text:
+           lang, conf = langid.classify(clean_tweet(text))
+           if lang_set is None or lang in lang_set:
+-            print "{0}: {1}".format(lang, squeeze_whitespace(text).encode('utf8'))
++            print("{0}: {1}".format(lang, squeeze_whitespace(text).encode('utf8')))
+   except (IOError, KeyboardInterrupt):
+     # Terminate on broken pipe or ^C
+     pass
+diff --git a/langid/langid.py b/langid/langid.py
+index 5c44aab..9b0c5ce 100755
+--- a/langid/langid.py
++++ b/langid/langid.py
+@@ -31,7 +31,7 @@ The views and conclusions contained in the software and documentation are those
+ authors and should not be interpreted as representing official policies, either expressed
+ or implied, of the copyright holder.
+ """
+-from __future__ import print_function
++
+ try:
+   # if running on Python2, mask input() with raw_input()
+   input = raw_input
+@@ -62,10 +62,10 @@ from collections import defaultdict
+ try:
+   from urllib.parse import parse_qs
+ except ImportError:
+-  from urlparse import parse_qs
++  from urllib.parse import parse_qs
+ 
+ try:
+-  from cPickle import loads
++  from pickle import loads
+ except ImportError:
+   from pickle import loads
+ 
+@@ -260,10 +260,10 @@ class LanguageIdentifier(object):
+         text = text.encode('utf8')
+     else:
+       # Python2
+-      if isinstance(text,unicode):
++      if isinstance(text,str):
+         text = text.encode('utf8')
+       # Convert the text to a sequence of ascii values
+-      text = map(ord, text)
++      text = list(map(ord, text))
+ 
+     arr = np.zeros((self.nb_numfeats,), dtype='uint32')
+ 
+@@ -522,7 +522,7 @@ def main():
+     try: 
+         from urllib.request import urlopen
+     except ImportError:
+-        from urllib2 import urlopen
++        from urllib.request import urlopen
+     with contextlib.closing(urlopen(options.url)) as url:
+       text = url.read()
+       output = _process(text)
+@@ -598,7 +598,7 @@ def main():
+       while True:
+         try:
+           print(">>>", end=' ')
+-          text = input()
++          text = eval(input())
+         except Exception as e:
+           print(e)
+           break
+diff --git a/langid/tools/featWeights.py b/langid/tools/featWeights.py
+index ff47807..d2b0a99 100644
+--- a/langid/tools/featWeights.py
++++ b/langid/tools/featWeights.py
+@@ -10,7 +10,7 @@ Marco Lui, February 2013
+ import argparse, os, csv, sys
+ import numpy as np
+ import bz2, base64
+-from cPickle import loads
++from pickle import loads
+ 
+ from langid.train.common import read_weights, read_features
+ 
+@@ -29,16 +29,16 @@ if __name__ == "__main__":
+   # Try to determine the set of features to consider
+   if args.features:
+     # Use a pre-determined feature list
+-    print >>sys.stderr,  "using user-supplied feature list:", args.features
++    print("using user-supplied feature list:", args.features, file=sys.stderr)
+     feats = read_features(args.features)
+   elif os.path.exists(model_file('LDfeats')):
+     # Use LDfeats
+-    print >>sys.stderr,  "using LDfeats"
++    print("using LDfeats", file=sys.stderr)
+     feats = read_features(model_file('LDfeats'))
+   else:
+     raise ValueError("no suitable feature list")
+ 
+-  print >>sys.stderr, "considering {0} features".format(len(feats))
++  print("considering {0} features".format(len(feats)), file=sys.stderr)
+ 
+   records = dict( (k, {}) for k in feats )
+   headers = []
+@@ -50,7 +50,7 @@ if __name__ == "__main__":
+ 
+   # Document Frequency
+   if os.path.exists(model_file('DF_all')):
+-    print >>sys.stderr, "found weights for document frequency"
++    print("found weights for document frequency", file=sys.stderr)
+     w = read_weights(model_file('DF_all'))
+     headers.append('DF')
+     for k in feats:
+@@ -58,7 +58,7 @@ if __name__ == "__main__":
+ 
+   # IG weights for the all-languages event
+   if os.path.exists(model_file('IGweights.lang')):
+-    print >>sys.stderr, "found weights for lang"
++    print("found weights for lang", file=sys.stderr)
+     w = read_weights(model_file('IGweights.lang'))
+     headers.append('IGlang')
+     for k in feats:
+@@ -66,7 +66,7 @@ if __name__ == "__main__":
+ 
+   # IG weights for the all-domains event
+   if os.path.exists(model_file('IGweights.domain')):
+-    print >>sys.stderr, "found weights for domain"
++    print("found weights for domain", file=sys.stderr)
+     w = read_weights(model_file('IGweights.domain'))
+     headers.append('IGdomain')
+     for k in feats:
+@@ -74,21 +74,21 @@ if __name__ == "__main__":
+ 
+   # IG weights for language-binarized
+   if args.bin and os.path.exists(model_file('IGweights.lang.bin')) and os.path.exists(model_file('lang_index')):
+-    print >>sys.stderr, "found weights for lang.bin"
++    print("found weights for lang.bin", file=sys.stderr)
+     w = read_weights(model_file('IGweights.lang.bin'))
+ 
+     # find the list of langs in-order
+     with open(os.path.join(args.model, "lang_index")) as f:
+       reader = csv.reader(f)
+-      langs = zip(*reader)[0]
++      langs = list(zip(*reader))[0]
+ 
+     r_h = ['IGlang.bin.{0}'.format(l) for l in langs]
+     headers.extend( r_h )
+     for k in feats:
+-      records[k].update( dict(zip(r_h, w[k])) )
++      records[k].update( dict(list(zip(r_h, w[k]))) )
+         
+   if os.path.exists(model_file('LDfeats.scanner')) and os.path.exists(model_file('model')):
+-    print >>sys.stderr, "found weights for P(t|c)"
++    print("found weights for P(t|c)", file=sys.stderr)
+     with open(model_file('model')) as f:
+       model = loads(bz2.decompress(base64.b64decode(f.read())))
+     with open(model_file('LDfeats.scanner')) as f:
+@@ -100,12 +100,12 @@ if __name__ == "__main__":
+     # Normalize to 1 on the term axis
+     for i in range(nb_ptc.shape[1]):
+       nb_ptc[:,i] = (1/np.exp(nb_ptc[:,i][None,:] - nb_ptc[:,i][:,None]).sum(1))
+-    w = dict(zip(nb_feats, nb_ptc))
++    w = dict(list(zip(nb_feats, nb_ptc)))
+ 
+     r_h = ['ptc.{0}'.format(l) for l in nb_classes]
+     headers.extend( r_h )
+     for k in feats:
+-      records[k].update( dict(zip(r_h, w[k])) )
++      records[k].update( dict(list(zip(r_h, w[k]))) )
+ 
+   if args.raw:
+     headers.append('feat')
+@@ -114,10 +114,10 @@ if __name__ == "__main__":
+ 
+ 
+ 
+-  print >>sys.stderr, "writing output"
++  print("writing output", file=sys.stderr)
+   with open(args.output, 'w') as f:
+     writer = csv.DictWriter(f,headers)
+     writer.writeheader()
+-    writer.writerows(records.values())
++    writer.writerows(list(records.values()))
+   
+-  print >>sys.stderr, "done"
++  print("done", file=sys.stderr)
+diff --git a/langid/train/BLweight.py b/langid/train/BLweight.py
+index 7b5630e..96221df 100644
+--- a/langid/train/BLweight.py
++++ b/langid/train/BLweight.py
+@@ -12,10 +12,10 @@ import os
+ import argparse
+ import numpy as np
+ 
+-from common import read_features, makedir, write_weights
+-from scanner import build_scanner
+-from index import CorpusIndexer
+-from NBtrain import generate_cm, learn_pc, learn_ptc
++from .common import read_features, makedir, write_weights
++from .scanner import build_scanner
++from .index import CorpusIndexer
++from .NBtrain import generate_cm, learn_pc, learn_ptc
+ 
+ 
+ if __name__ == "__main__":
+@@ -81,11 +81,11 @@ if __name__ == "__main__":
+   langs = sorted(all_langs)
+ 
+   # display paths
+-  print "languages({1}): {0}".format(langs, len(langs))
+-  print "model path:", model_dir
+-  print "feature path:", feat_path
+-  print "output path:", out_dir
+-  print "temp (buckets) path:", buckets_dir
++  print("languages({1}): {0}".format(langs, len(langs)))
++  print("model path:", model_dir)
++  print("feature path:", feat_path)
++  print("output path:", out_dir)
++  print("temp (buckets) path:", buckets_dir)
+ 
+   feats = read_features(feat_path)
+ 
+@@ -94,7 +94,7 @@ if __name__ == "__main__":
+   if len(items) == 0:
+     raise ValueError("found no files!")
+ 
+-  print "will process {0} features across {1} paths".format(len(feats), len(items))
++  print("will process {0} features across {1} paths".format(len(feats), len(items)))
+ 
+   # produce a scanner over all the features
+   tk_nextmove, tk_output = build_scanner(feats)
+@@ -103,13 +103,13 @@ if __name__ == "__main__":
+   cm = generate_cm([ (l,p) for d,l,p in items], len(langs))
+ 
+   # Compute P(t|C)
+-  print "learning P(t|C)"
+-  paths = zip(*items)[2]
++  print("learning P(t|C)")
++  paths = list(zip(*items))[2]
+   nb_ptc = learn_ptc(paths, tk_nextmove, tk_output, cm, buckets_dir, args)
+   nb_ptc = np.array(nb_ptc).reshape(len(feats), len(langs))
+ 
+   # Normalize to 1 on the term axis
+-  print "renormalizing P(t|C)"
++  print("renormalizing P(t|C)")
+   for i in range(nb_ptc.shape[1]):
+     # had to de-vectorize this due to memory consumption
+     newval = np.empty_like(nb_ptc[:,i])
+@@ -118,7 +118,7 @@ if __name__ == "__main__":
+     nb_ptc[:,i] = newval
+     assert (1.0 - newval.sum()) < 0.0001
+ 
+-  print "doing per-pair output"
++  print("doing per-pair output")
+   for lang1, lang2 in pairs:
+     # Where to do output
+     if args.no_norm:
+@@ -129,6 +129,6 @@ if __name__ == "__main__":
+     i1 = indexer.lang_index[lang1]
+     i2 = indexer.lang_index[lang2]
+ 
+-    w = dict(zip(feats, np.abs((nb_ptc[:,i1] - nb_ptc[:,i2]) / (nb_ptc.sum(1) if not args.no_norm else 1))))
++    w = dict(list(zip(feats, np.abs((nb_ptc[:,i1] - nb_ptc[:,i2]) / (nb_ptc.sum(1) if not args.no_norm else 1)))))
+     write_weights(w, weights_path)
+-    print "wrote weights to {0}".format(weights_path)
++    print("wrote weights to {0}".format(weights_path))
+diff --git a/langid/train/DFfeatureselect.py b/langid/train/DFfeatureselect.py
+index ea69c4d..170c0f6 100644
+--- a/langid/train/DFfeatureselect.py
++++ b/langid/train/DFfeatureselect.py
+@@ -48,16 +48,16 @@ import tempfile
+ import marshal
+ import random
+ import numpy
+-import cPickle
++import pickle
+ import multiprocessing as mp
+ import atexit
+ import gzip
+-from itertools import tee, imap, islice
++from itertools import tee, islice
+ from collections import defaultdict
+ from datetime import datetime
+ from contextlib import closing
+ 
+-from common import Enumerator, unmarshal_iter, MapPool, write_features, write_weights
++from .common import Enumerator, unmarshal_iter, MapPool, write_features, write_weights
+ 
+ def pass_sum_df(bucket):
+   """
+@@ -74,7 +74,7 @@ def pass_sum_df(bucket):
+           doc_count[key] += value
+           count += 1
+     
+-    for item in doc_count.iteritems():
++    for item in doc_count.items():
+       docfreq.write(marshal.dumps(item))
+   return count
+ 
+@@ -89,7 +89,7 @@ def tally(bucketlist, jobs=None):
+     pass_sum_df_out = f(pass_sum_df, bucketlist)
+ 
+     for i, keycount in enumerate(pass_sum_df_out):
+-      print "processed bucket (%d/%d) [%d keys]" % (i+1, len(bucketlist), keycount)
++      print("processed bucket (%d/%d) [%d keys]" % (i+1, len(bucketlist), keycount))
+ 
+   # build the global term->df mapping
+   doc_count = {}
+@@ -147,24 +147,24 @@ if __name__ == "__main__":
+     bucketlist_path = os.path.join(args.model, 'bucketlist')
+ 
+   # display paths
+-  print "buckets path:", bucketlist_path
+-  print "features output path:", feature_path
++  print("buckets path:", bucketlist_path)
++  print("features output path:", feature_path)
+   if args.tokens_per_order:
+-    print "max ngram order:", args.max_order
+-    print "tokens per order:", args.tokens_per_order
++    print("max ngram order:", args.max_order)
++    print("tokens per order:", args.tokens_per_order)
+   else:
+-    print "tokens:", args.tokens
++    print("tokens:", args.tokens)
+ 
+   with open(bucketlist_path) as f:
+-    bucketlist = map(str.strip, f)
++    bucketlist = list(map(str.strip, f))
+ 
+   doc_count = tally(bucketlist, args.jobs)
+-  print "unique features:", len(doc_count)
++  print("unique features:", len(doc_count))
+   if args.doc_count:
+     # The constant true is used to indicate output to default location
+     doc_count_path = os.path.join(args.model, 'DF_all') if args.doc_count == True else args.doc_count
+     write_weights(doc_count, doc_count_path)
+-    print "wrote DF counts for all features to:", doc_count_path
++    print("wrote DF counts for all features to:", doc_count_path)
+ 
+   if args.tokens_per_order:
+     # Choose a number of features for each length of token
+@@ -172,9 +172,9 @@ if __name__ == "__main__":
+   else:
+     # Choose a number of features overall
+     feats = sorted( sorted(doc_count, key=doc_count.get, reverse=True)[:args.tokens] )
+-  print "selected features: ", len(feats)
++  print("selected features: ", len(feats))
+ 
+   write_features(feats, feature_path)
+-  print 'wrote features to "%s"' % feature_path 
++  print('wrote features to "%s"' % feature_path) 
+ 
+   
+diff --git a/langid/train/IGweight.py b/langid/train/IGweight.py
+index 209d26c..0ca7f18 100644
+--- a/langid/train/IGweight.py
++++ b/langid/train/IGweight.py
+@@ -1,6 +1,6 @@
+ #!/usr/bin/env python
+ """
+-IGWeight.py - 
++IGWeight.py -
+ Compute IG Weights given a set of tokenized buckets and a feature set
+ 
+ Marco Lui, January 2013
+@@ -34,19 +34,19 @@ authors and should not be interpreted as representing official policies, either
+ or implied, of the copyright holder.
+ """
+ 
+-import os, sys, argparse 
++import os, sys, argparse
+ import csv
+ import numpy
+ import multiprocessing as mp
+-from itertools import tee, imap, islice
++from itertools import tee, islice
+ from collections import defaultdict
+ from contextlib import closing
+ 
+-from common import unmarshal_iter, MapPool, Enumerator, write_weights, read_features 
++from .common import unmarshal_iter, MapPool, Enumerator, write_weights, read_features
+ 
+ def entropy(v, axis=0):
+   """
+-  Optimized implementation of entropy. This version is faster than that in 
++  Optimized implementation of entropy. This version is faster than that in
+   scipy.stats.distributions, particularly over long vectors.
+   """
+   v = numpy.array(v, dtype='float')
+@@ -76,43 +76,43 @@ def setup_pass_IG(features, dist, binarize, suffix):
+ 
+ def pass_IG(buckets):
+   """
+-  In this pass we compute the information gain for each feature, binarized 
+-  with respect to each language as well as unified over the set of all 
+-  classes. 
++  In this pass we compute the information gain for each feature, binarized
++  with respect to each language as well as unified over the set of all
++  classes.
+ 
+   @global __features the list of features to compute IG for
+   @global __dist the background distribution
+   @global __binarize (boolean) compute IG binarized per-class if True
+   @global __suffix of files in bucketdir to process
+-  @param buckets a list of buckets. Each bucket must be a directory that contains files 
+-                 with the appropriate suffix. Each file must contain marshalled 
++  @param buckets a list of buckets. Each bucket must be a directory that contains files
++                 with the appropriate suffix. Each file must contain marshalled
+                  (term, event_id, count) triplets.
+   """
+   global __features, __dist, __binarize, __suffix
+-   
++
+   # We first tally the per-event frequency of each
+   # term in our selected feature set.
+   term_freq = defaultdict(lambda: defaultdict(int))
+   term_index = defaultdict(Enumerator())
+ 
+   for bucket in buckets:
+-		for path in os.listdir(bucket):
+-			if path.endswith(__suffix):
+-				for key, event_id, count in unmarshal_iter(os.path.join(bucket,path)):
+-					# Select only our listed features
+-					if key in __features:
+-						term_index[key]
+-						term_freq[key][event_id] += count
++      for path in os.listdir(bucket):
++          if path.endswith(__suffix):
++              for key, event_id, count in unmarshal_iter(os.path.join(bucket,path)):
++                  # Select only our listed features
++                  if key in __features:
++                      term_index[key]
++                      term_freq[key][event_id] += count
+ 
+   num_term = len(term_index)
+   num_event = len(__dist)
+ 
+   cm_pos = numpy.zeros((num_term, num_event), dtype='int')
+ 
+-  for term,term_id in term_index.iteritems():
++  for term,term_id in term_index.items():
+     # update event matrix
+     freq = term_freq[term]
+-    for event_id, count in freq.iteritems():
++    for event_id, count in freq.items():
+       cm_pos[term_id, event_id] = count
+   cm_neg = __dist - cm_pos
+   cm = numpy.dstack((cm_neg, cm_pos))
+@@ -132,7 +132,7 @@ def pass_IG(buckets):
+     # binarized event space
+     # Compute IG binarized with respect to each event
+     ig = list()
+-    for event_id in xrange(num_event):
++    for event_id in range(num_event):
+       num_doc = __dist.sum()
+       prior = numpy.array((num_doc - __dist[event_id], __dist[event_id]), dtype=float) / num_doc
+ 
+@@ -164,7 +164,7 @@ def compute_IG(bucketlist, features, dist, binarize, suffix, job_count=None):
+     for i, (t, w) in enumerate(pass_IG_out):
+       weights.append(w)
+       terms.extend(t)
+-      print "processed chunk (%d/%d) [%d terms]" % (i+1, num_chunk, len(t))
++      print("processed chunk (%d/%d) [%d terms]" % (i+1, num_chunk, len(t)))
+ 
+   if binarize:
+     weights = numpy.hstack(weights).transpose()
+@@ -172,7 +172,7 @@ def compute_IG(bucketlist, features, dist, binarize, suffix, job_count=None):
+     weights = numpy.concatenate(weights)
+   terms = ["".join(t) for t in terms]
+ 
+-  return zip(terms, weights)
++  return list(zip(terms, weights))
+ 
+ def read_dist(path):
+   """
+@@ -181,7 +181,7 @@ def read_dist(path):
+   """
+   with open(path) as f:
+     reader = csv.reader(f)
+-    return numpy.array(zip(*reader)[1], dtype=int)
++    return numpy.array(list(zip(*reader))[1], dtype=int)
+ 
+ if __name__ == "__main__":
+   parser = argparse.ArgumentParser()
+@@ -228,16 +228,16 @@ if __name__ == "__main__":
+     weights_path = os.path.join(args.model, 'IGweights' + suffix + ('.bin' if args.binarize else ''))
+ 
+   # display paths
+-  print "model path:", args.model 
+-  print "buckets path:", bucketlist_paths
+-  print "features path:", feature_path
+-  print "weights path:", weights_path
+-  print "index path:", index_path
+-  print "suffix:", suffix
+-
+-  print "computing information gain"
++  print("model path:", args.model)
++  print("buckets path:", bucketlist_paths)
++  print("features path:", feature_path)
++  print("weights path:", weights_path)
++  print("index path:", index_path)
++  print("suffix:", suffix)
++
++  print("computing information gain")
+   # Compile buckets together
+-  bucketlist = zip(*(map(str.strip, open(p)) for p in bucketlist_paths))
++  bucketlist = list(zip(*(list(map(str.strip, open(p))) for p in bucketlist_paths)))
+ 
+   # Check that each bucketlist has the same number of buckets
+   assert len(set(map(len,bucketlist))) == 1, "incompatible bucketlists!"
+diff --git a/langid/train/LDfeatureselect.py b/langid/train/LDfeatureselect.py
+index d8c11ee..1c79a06 100644
+--- a/langid/train/LDfeatureselect.py
++++ b/langid/train/LDfeatureselect.py
+@@ -46,14 +46,15 @@ import numpy
+ import multiprocessing as mp
+ from collections import defaultdict
+ 
+-from common import read_weights, Enumerator, write_features
++from .common import read_weights, Enumerator, write_features
++from functools import reduce
+ 
+ def select_LD_features(ig_lang, ig_domain, feats_per_lang, ignore_domain=False):
+   """
+   @param ignore_domain boolean to indicate whether to use domain weights
+   """
+   assert (ig_domain is None) or (len(ig_lang) == len(ig_domain))
+-  num_lang = len(ig_lang.values()[0])
++  num_lang = len(list(ig_lang.values())[0])
+   num_term = len(ig_lang)
+ 
+   term_index = defaultdict(Enumerator())
+@@ -91,10 +92,10 @@ if __name__ == "__main__":
+   feature_path = args.output if args.output else os.path.join(args.model, 'LDfeats')
+ 
+   # display paths
+-  print "model path:", args.model
+-  print "lang weights path:", lang_w_path
+-  print "domain weights path:", domain_w_path
+-  print "feature output path:", feature_path
++  print("model path:", args.model)
++  print("lang weights path:", lang_w_path)
++  print("domain weights path:", domain_w_path)
++  print("feature output path:", feature_path)
+ 
+   lang_w = read_weights(lang_w_path)
+   domain_w = read_weights(domain_w_path) if not args.no_domain_ig else None
+@@ -104,12 +105,12 @@ if __name__ == "__main__":
+     with open(feature_path + '.perlang', 'w') as f:
+       writer = csv.writer(f)
+       for i in range(len(features_per_lang)):
+-        writer.writerow(map(repr,features_per_lang[i]))
++        writer.writerow(list(map(repr,features_per_lang[i])))
+       
+ 
+-  final_feature_set = reduce(set.union, map(set, features_per_lang.values()))
+-  print 'selected %d features' % len(final_feature_set)
++  final_feature_set = reduce(set.union, list(map(set, list(features_per_lang.values()))))
++  print('selected %d features' % len(final_feature_set))
+ 
+   write_features(sorted(final_feature_set), feature_path)
+-  print 'wrote features to "%s"' % feature_path 
++  print('wrote features to "%s"' % feature_path) 
+ 
+diff --git a/langid/train/NBtrain.py b/langid/train/NBtrain.py
+index d2bf1ad..2aed328 100644
+--- a/langid/train/NBtrain.py
++++ b/langid/train/NBtrain.py
+@@ -36,7 +36,7 @@ or implied, of the copyright holder.
+ MAX_CHUNK_SIZE = 100 # maximum number of files to tokenize at once
+ NUM_BUCKETS = 64 # number of buckets to use in k-v pair generation
+ 
+-import base64, bz2, cPickle
++import base64, bz2, pickle
+ import os, sys, argparse, csv
+ import array
+ import numpy as np
+@@ -48,7 +48,7 @@ import gzip
+ from collections import deque, defaultdict
+ from contextlib import closing
+ 
+-from common import chunk, unmarshal_iter, read_features, index, MapPool
++from .common import chunk, unmarshal_iter, read_features, index, MapPool
+ 
+ def state_trace(text):
+   """
+@@ -150,7 +150,7 @@ def pass_ptc(b_dir):
+         terms[f_id][index] = count
+         read_count += 1
+ 
+-  f_ids, f_vs = zip(*terms.items())
++  f_ids, f_vs = list(zip(*list(terms.items())))
+   fm = np.vstack(f_vs)
+   # The calculation of the term-class distribution is done per-chunk rather
+   # than globally for memory efficiency reasons.
+@@ -164,7 +164,7 @@ def learn_nb_params(items, num_langs, tk_nextmove, tk_output, temp_path, args):
+   """
+   global outdir
+ 
+-  print "learning NB parameters on {} items".format(len(items))
++  print("learning NB parameters on {} items".format(len(items)))
+ 
+   # Generate the feature map
+   nm_arr = mp.Array('i', tk_nextmove, lock=False)
+@@ -188,7 +188,7 @@ def learn_nb_params(items, num_langs, tk_nextmove, tk_output, temp_path, args):
+   # Divide all the items to be processed into chunks, and enumerate each chunk.
+   item_chunks = list(chunk(items, chunksize))
+   num_chunks = len(item_chunks)
+-  print "about to tokenize {} chunks".format(num_chunks)
++  print("about to tokenize {} chunks".format(num_chunks))
+   
+   pass_tokenize_arg = enumerate(item_chunks)
+   pass_tokenize_params = (nm_arr, output_states, tk_output, b_dirs, args.line) 
+@@ -202,12 +202,12 @@ def learn_nb_params(items, num_langs, tk_nextmove, tk_output, temp_path, args):
+       write_count += writes
+       chunk_sizes[chunk_id] = doc_count
+       chunk_labels.append((chunk_id, labels))
+-      print "processed chunk ID:{0} ({1}/{2}) [{3} keys]".format(chunk_id, i+1, num_chunks, writes)
++      print("processed chunk ID:{0} ({1}/{2}) [{3} keys]".format(chunk_id, i+1, num_chunks, writes))
+ 
+-  print "wrote a total of %d keys" % write_count
++  print("wrote a total of %d keys" % write_count)
+ 
+   num_instances = sum(chunk_sizes.values())
+-  print "processed a total of %d instances" % num_instances
++  print("processed a total of %d instances" % num_instances)
+ 
+   chunk_offsets = {}
+   for i in range(len(chunk_sizes)):
+@@ -227,13 +227,13 @@ def learn_nb_params(items, num_langs, tk_nextmove, tk_output, temp_path, args):
+     def pass_ptc_progress():
+       for i,v in enumerate(pass_ptc_out):
+         yield v
+-        print "processed chunk ({0}/{1})".format(i+1, len(b_dirs))
++        print("processed chunk ({0}/{1})".format(i+1, len(b_dirs)))
+ 
+-    reads, ids, prods = zip(*pass_ptc_progress())
++    reads, ids, prods = list(zip(*pass_ptc_progress()))
+     read_count = sum(reads)
+-    print "read a total of %d keys (%d short)" % (read_count, write_count - read_count)
++    print("read a total of %d keys (%d short)" % (read_count, write_count - read_count))
+ 
+-  num_features = max( i for v in tk_output.values() for i in v) + 1
++  num_features = max( i for v in list(tk_output.values()) for i in v) + 1
+   prod = np.zeros((num_features, cm.shape[1]), dtype=int)
+   prod[np.concatenate(ids)] = np.vstack(prods)
+ 
+@@ -292,13 +292,13 @@ if __name__ == "__main__":
+   lang_path = os.path.join(args.model, 'lang_index')
+ 
+   # display paths
+-  print "model path:", args.model
+-  print "temp path:", temp_path
+-  print "scanner path:", scanner_path
+-  print "output path:", output_path
++  print("model path:", args.model)
++  print("temp path:", temp_path)
++  print("scanner path:", scanner_path)
++  print("output path:", output_path)
+ 
+   if args.line:
+-    print "treating each LINE as a document"
++    print("treating each LINE as a document")
+ 
+   # read list of training files
+   with open(index_path) as f:
+@@ -307,19 +307,19 @@ if __name__ == "__main__":
+ 
+   # read scanner
+   with open(scanner_path) as f:
+-    tk_nextmove, tk_output, _ = cPickle.load(f)
++    tk_nextmove, tk_output, _ = pickle.load(f)
+ 
+   # read list of languages in order
+   with open(lang_path) as f:
+     reader = csv.reader(f)
+-    langs = zip(*reader)[0]
++    langs = list(zip(*reader))[0]
+     
+   nb_classes = langs
+   nb_pc, nb_ptc = learn_nb_params(items, len(langs), tk_nextmove, tk_output, temp_path, args)
+ 
+   # output the model
+   model = nb_ptc, nb_pc, nb_classes, tk_nextmove, tk_output
+-  string = base64.b64encode(bz2.compress(cPickle.dumps(model)))
++  string = base64.b64encode(bz2.compress(pickle.dumps(model)))
+   with open(output_path, 'w') as f:
+     f.write(string)
+-  print "wrote model to %s (%d bytes)" % (output_path, len(string))
++  print("wrote model to %s (%d bytes)" % (output_path, len(string)))
+diff --git a/langid/train/common.py b/langid/train/common.py
+index 8a31b65..311f766 100644
+--- a/langid/train/common.py
++++ b/langid/train/common.py
+@@ -95,7 +95,7 @@ def read_features(path):
+   @param path path to read from
+   """
+   with open(path) as f:
+-    return map(eval, f)
++    return list(map(eval, f))
+ 
+ def write_features(features, path):
+   """
+@@ -106,7 +106,7 @@ def write_features(features, path):
+   """
+   with open(path,'w') as f:
+     for feat in features:
+-      print >>f, repr(feat)
++      print(repr(feat), file=f)
+ 
+ 
+ def index(seq):
+@@ -120,7 +120,7 @@ def index(seq):
+ 
+       
+ 
+-from itertools import imap
++
+ from contextlib import contextmanager, closing
+ import multiprocessing as mp
+ 
+diff --git a/langid/train/index.py b/langid/train/index.py
+index 998ed76..7d37fc0 100644
+--- a/langid/train/index.py
++++ b/langid/train/index.py
+@@ -65,10 +65,10 @@ import os, sys, argparse
+ import csv
+ import random
+ import numpy
+-from itertools import tee, imap, islice
++from itertools import tee, islice
+ from collections import defaultdict
+ 
+-from common import Enumerator, makedir
++from .common import Enumerator, makedir
+ 
+ class CorpusIndexer(object):
+   """
+@@ -102,7 +102,7 @@ class CorpusIndexer(object):
+           candidates.append(os.path.join(dirpath, docname))
+     else:
+       # root supplied was a file, interpet as list of paths
+-      candidates = map(str.strip, open(root))
++      candidates = list(map(str.strip, open(root)))
+ 
+     if line_level:
+       self.index_line(candidates)
+@@ -177,7 +177,7 @@ class CorpusIndexer(object):
+     # Work out which languages to reject as they are not present in at least 
+     # the required number of domains
+     lang_domain_count = defaultdict(int)
+-    for langs in self.coverage_index.values():
++    for langs in list(self.coverage_index.values()):
+       for lang in langs:
+         lang_domain_count[lang] += 1
+     reject_langs = set( l for l in lang_domain_count if lang_domain_count[l] < min_domain)
+@@ -189,7 +189,7 @@ class CorpusIndexer(object):
+     
+       new_lang_index = defaultdict(Enumerator())
+       lm = dict()
+-      for k,v in self.lang_index.items():
++      for k,v in list(self.lang_index.items()):
+         if v not in reject_ids:
+           new_id = new_lang_index[k]
+           lm[v] = new_id
+@@ -250,14 +250,14 @@ if __name__ == "__main__":
+   index_path = os.path.join(model_dir, 'paths')
+ 
+   # display paths
+-  print "corpus path:", args.corpus
+-  print "model path:", model_dir
+-  print "writing langs to:", langs_path
+-  print "writing domains to:", domains_path
+-  print "writing index to:", index_path
++  print("corpus path:", args.corpus)
++  print("model path:", model_dir)
++  print("writing langs to:", langs_path)
++  print("writing domains to:", domains_path)
++  print("writing index to:", index_path)
+ 
+   if args.line:
+-    print "indexing documents at the line level"
++    print("indexing documents at the line level")
+ 
+   indexer = CorpusIndexer(args.corpus, min_domain=args.min_domain, proportion=args.proportion,
+                           langs = args.lang, domains = args.domain, line_level=args.line)
+@@ -265,27 +265,27 @@ if __name__ == "__main__":
+   # Compute mappings between files, languages and domains
+   lang_dist = indexer.dist_lang
+   lang_index = indexer.lang_index
+-  lang_info = ' '.join(("{0}({1})".format(k, lang_dist[v]) for k,v in lang_index.items()))
+-  print "langs({0}): {1}".format(len(lang_dist), lang_info)
++  lang_info = ' '.join(("{0}({1})".format(k, lang_dist[v]) for k,v in list(lang_index.items())))
++  print("langs({0}): {1}".format(len(lang_dist), lang_info))
+ 
+   domain_dist = indexer.dist_domain
+   domain_index = indexer.domain_index
+-  domain_info = ' '.join(("{0}({1})".format(k, domain_dist[v]) for k,v in domain_index.items()))
+-  print "domains({0}): {1}".format(len(domain_dist), domain_info)
++  domain_info = ' '.join(("{0}({1})".format(k, domain_dist[v]) for k,v in list(domain_index.items())))
++  print("domains({0}): {1}".format(len(domain_dist), domain_info))
+ 
+-  print "identified {0} documents".format(len(indexer.items))
++  print("identified {0} documents".format(len(indexer.items)))
+ 
+   # output the language index
+   with open(langs_path,'w') as f:
+     writer = csv.writer(f)
+     writer.writerows((l, lang_dist[lang_index[l]]) 
+-        for l in sorted(lang_index.keys(), key=lang_index.get))
++        for l in sorted(list(lang_index.keys()), key=lang_index.get))
+ 
+   # output the domain index
+   with open(domains_path,'w') as f:
+     writer = csv.writer(f)
+     writer.writerows((d, domain_dist[domain_index[d]]) 
+-        for d in sorted(domain_index.keys(), key=domain_index.get))
++        for d in sorted(list(domain_index.keys()), key=domain_index.get))
+ 
+   # output items found
+   with open(index_path,'w') as f:
+diff --git a/langid/train/scanner.py b/langid/train/scanner.py
+index 838b54f..03a4415 100644
+--- a/langid/train/scanner.py
++++ b/langid/train/scanner.py
+@@ -35,14 +35,14 @@ authors and should not be interpreted as representing official policies, either
+ or implied, of the copyright holder.
+ """
+ 
+-import cPickle
++import pickle
+ import os, sys, argparse 
+ import array
+ from collections import deque, defaultdict
+-from common import read_features
++from .common import read_features
+ 
+ class Scanner(object):
+-  alphabet = map(chr, range(1<<8))
++  alphabet = list(map(chr, list(range(1<<8))))
+   """
+   Implementation of Aho-Corasick string matching.
+   This class should be instantiated with a set of keywords, which
+@@ -51,7 +51,7 @@ class Scanner(object):
+   @classmethod
+   def from_file(cls, path):
+     with open(path) as f:
+-      tk_nextmove, tk_output, feats = cPickle.load(f)
++      tk_nextmove, tk_output, feats = pickle.load(f)
+     if isinstance(feats, dict):
+       # The old scanner format had two identical dictionaries as the last
+       # two items in the tuple. This format can still be used by langid.py,
+@@ -61,7 +61,7 @@ class Scanner(object):
+     # tk_output is a mapping from state to a list of feature indices.
+     # because of the way the scanner class is written, it needs a mapping
+     # from state to the feature itself. We rebuild this here.
+-    tk_output_f = dict( (k,[feats[i] for i in v]) for k,v in tk_output.iteritems() )
++    tk_output_f = dict( (k,[feats[i] for i in v]) for k,v in tk_output.items() )
+     scanner = cls.__new__(cls)
+     scanner.__setstate__((tk_nextmove, tk_output_f))
+     return scanner
+@@ -143,7 +143,7 @@ class Scanner(object):
+       def nextstate_iter():
+         # State count starts at 0, so the number of states is the number of i
+         # the last state (newstate) + 1
+-        for state in xrange(newstate+1):
++        for state in range(newstate+1):
+           for letter in self.alphabet:
+             yield self.nextmove[(state, letter)]
+       return array.array(typecode, nextstate_iter())
+@@ -190,14 +190,14 @@ def build_scanner(features):
+   feat_index = index(features)
+ 
+   # Build the actual scanner
+-  print "building scanner"
++  print("building scanner")
+   scanner = Scanner(features)
+   tk_nextmove, raw_output = scanner.__getstate__()
+ 
+   # tk_output is the output function of the scanner. It should generate indices into
+   # the feature space directly, as this saves a lookup
+   tk_output = {}
+-  for k,v in raw_output.items():
++  for k,v in list(raw_output.items()):
+     tk_output[k] = tuple(feat_index[f] for f in v)
+   return tk_nextmove, tk_output
+ 
+@@ -228,13 +228,13 @@ if __name__ == "__main__":
+     output_path = input_path + '.scanner'
+ 
+   # display paths
+-  print "input path:", input_path
+-  print "output path:", output_path
++  print("input path:", input_path)
++  print("output path:", output_path)
+ 
+   nb_features = read_features(input_path)
+   tk_nextmove, tk_output = build_scanner(nb_features)
+   scanner = tk_nextmove, tk_output, nb_features
+ 
+   with open(output_path, 'w') as f:
+-    cPickle.dump(scanner, f)
+-  print "wrote scanner to {0}".format(output_path)
++    pickle.dump(scanner, f)
++  print("wrote scanner to {0}".format(output_path))
+diff --git a/langid/train/tokenize.py b/langid/train/tokenize.py
+index 7b18600..ac5e2c2 100644
+--- a/langid/train/tokenize.py
++++ b/langid/train/tokenize.py
+@@ -56,7 +56,7 @@ import tempfile
+ from itertools import tee 
+ from collections import defaultdict, Counter
+ 
+-from common import makedir, chunk, MapPool
++from .common import makedir, chunk, MapPool
+ 
+ class NGramTokenizer(object):
+   def __init__(self, min_order=1, max_order=3):
+@@ -67,17 +67,17 @@ class NGramTokenizer(object):
+     min_order = self.min_order
+     max_order = self.max_order
+     t = tee(seq, max_order)
+-    for i in xrange(max_order):
+-      for j in xrange(i):
++    for i in range(max_order):
++      for j in range(i):
+         # advance iterators, ignoring result
+-        t[i].next()
++        next(t[i])
+     while True:
+-      token = ''.join(tn.next() for tn in t)
++      token = ''.join(next(tn) for tn in t)
+       if len(token) < max_order: break
+-      for n in xrange(min_order-1, max_order):
++      for n in range(min_order-1, max_order):
+         yield token[:n+1]
+-    for a in xrange(max_order-1):
+-      for b in xrange(min_order, max_order-a):
++    for a in range(max_order-1):
++      for b in range(min_order, max_order-a):
+         yield token[a:a+b]
+ 
+ class WordNGramTokenizer(object):
+@@ -90,17 +90,17 @@ class WordNGramTokenizer(object):
+     min_order = self.min_order
+     max_order = self.max_order
+     t = tee(_seq, max_order)
+-    for i in xrange(max_order):
+-      for j in xrange(i):
++    for i in range(max_order):
++      for j in range(i):
+         # advance iterators, ignoring result
+-        t[i].next()
++        next(t[i])
+     while True:
+-      token = [tn.next() for tn in t]
++      token = [next(tn) for tn in t]
+       if len(token) < max_order: break
+-      for n in xrange(min_order-1, max_order):
++      for n in range(min_order-1, max_order):
+         yield ' '.join(token[:n+1])
+-    for a in xrange(max_order-1):
+-      for b in xrange(min_order, max_order-a):
++    for a in range(max_order-1):
++      for b in range(min_order, max_order-a):
+         yield ' '.join(token[a:a+b])
+ 
+ @atexit.register
+@@ -149,7 +149,7 @@ def pass_tokenize(chunk_items):
+         text = f.read()
+         poss = max(1,len(text) - __sample_size) # possibe start locations
+         count = min(poss, __sample_count) # reduce number of samples if document is too short
+-        offsets = random.sample(xrange(poss), count)
++        offsets = random.sample(range(poss), count)
+         for offset in offsets:
+           tokens = extractor(text[offset: offset+__sample_size])
+           if args.__term_freq:
+@@ -158,7 +158,7 @@ def pass_tokenize(chunk_items):
+           else:
+             # Document Frequency
+             tokenset = Counter(set(tokens))
+-          for token, count in tokenset.iteritems():
++          for token, count in tokenset.items():
+             term_lng_freq[token][lang_id] += count
+             term_dom_freq[token][domain_id] += count
+       elif __line_level:
+@@ -171,7 +171,7 @@ def pass_tokenize(chunk_items):
+           else:
+             # Document Frequency
+             tokenset = Counter(set(tokens))
+-          for token, count in tokenset.iteritems():
++          for token, count in tokenset.items():
+             term_lng_freq[token][lang_id] += count
+             term_dom_freq[token][domain_id] += count
+           
+@@ -184,7 +184,7 @@ def pass_tokenize(chunk_items):
+         else:
+           # Document Frequency
+           tokenset = Counter(set(tokens))
+-        for token, count in tokenset.iteritems():
++        for token, count in tokenset.items():
+           term_lng_freq[token][lang_id] += count
+           term_dom_freq[token][domain_id] += count
+ 
+@@ -195,9 +195,9 @@ def pass_tokenize(chunk_items):
+ 
+   for term in term_lng_freq:
+     bucket_index = hash(term) % len(b_freq_lang)
+-    for lang, count in term_lng_freq[term].iteritems():
++    for lang, count in term_lng_freq[term].items():
+       b_freq_lang[bucket_index].write(marshal.dumps((term, lang, count)))
+-    for domain, count in term_dom_freq[term].iteritems():
++    for domain, count in term_dom_freq[term].items():
+       b_freq_domain[bucket_index].write(marshal.dumps((term, domain, count)))
+ 
+   # Close all the open files
+@@ -239,16 +239,16 @@ def build_index(items, tokenizer, outdir, buckets=NUM_BUCKETS,
+ 
+     doc_count = defaultdict(int)
+     chunk_count = len(item_chunks)
+-    print "chunk size: {0} ({1} chunks)".format(chunk_size, chunk_count)
+-    print "job count: {0}".format(jobs)
++    print("chunk size: {0} ({1} chunks)".format(chunk_size, chunk_count))
++    print("job count: {0}".format(jobs))
+ 
+     if sample_count:
+-      print "sampling-based tokenization: size {0} count {1}".format(sample_size, sample_count)
++      print("sampling-based tokenization: size {0} count {1}".format(sample_size, sample_count))
+     else:
+-      print "whole-document tokenization"
++      print("whole-document tokenization")
+ 
+     for i, keycount in enumerate(pass_tokenize_out):
+-      print "tokenized chunk (%d/%d) [%d keys]" % (i+1,chunk_count, keycount)
++      print("tokenized chunk (%d/%d) [%d keys]" % (i+1,chunk_count, keycount))
+ 
+   complete = True
+ 
+@@ -294,12 +294,12 @@ if __name__ == "__main__":
+   index_path = os.path.join(args.model, 'paths')
+ 
+   # display paths
+-  print "index path:", index_path
+-  print "bucketlist path:", bucketlist_path
+-  print "buckets path:", buckets_dir
++  print("index path:", index_path)
++  print("bucketlist path:", bucketlist_path)
++  print("buckets path:", buckets_dir)
+ 
+   if args.line:
+-  	print "treating each LINE as a document"
++  	print("treating each LINE as a document")
+ 
+   with open(index_path) as f:
+     reader = csv.reader(f)
+@@ -309,28 +309,28 @@ if __name__ == "__main__":
+     parser.error('can only specify one of --word, --wordn, --scanner') 
+ 
+   # Tokenize
+-  print "will tokenize %d files" % len(items)
++  print("will tokenize %d files" % len(items))
+   if args.scanner:
+-    from scanner import Scanner
++    from .scanner import Scanner
+     tokenizer = Scanner.from_file(args.scanner)
+-    print "using provided scanner: ", args.scanner
++    print("using provided scanner: ", args.scanner)
+   elif args.word:
+     tokenizer = str.split
+-    print "using str.split to tokenize"
++    print("using str.split to tokenize")
+   elif args.wordn:
+     min_order = args.min_order if args.min_order else MIN_NGRAM_ORDER
+     max_order = args.max_order if args.max_order else MAX_NGRAM_ORDER
+     tokenizer = WordNGramTokenizer(min_order,max_order)
+-    print "using WORD n-gram tokenizer: min_order({0}) max_order({1})".format(min_order,max_order)
++    print("using WORD n-gram tokenizer: min_order({0}) max_order({1})".format(min_order,max_order))
+   else:
+     min_order = args.min_order if args.min_order else MIN_NGRAM_ORDER
+     max_order = args.max_order if args.max_order else MAX_NGRAM_ORDER
+     tokenizer = NGramTokenizer(min_order,max_order)
+-    print "using n-gram tokenizer: min_order({0}) max_order({1})".format(min_order,max_order)
++    print("using n-gram tokenizer: min_order({0}) max_order({1})".format(min_order,max_order))
+   if args.term_freq:
+-    print "counting term frequency"
++    print("counting term frequency")
+   else:
+-    print "counting document frequency"
++    print("counting document frequency")
+   b_dirs = build_index(items, tokenizer, buckets_dir, args.buckets, args.jobs, args.chunksize, args.sample_count, args.sample_size, args.term_freq, args.line)
+ 
+   # output the paths to the buckets
+diff --git a/langid/train/train.py b/langid/train/train.py
+index 7489530..a84223a 100644
+--- a/langid/train/train.py
++++ b/langid/train/train.py
+@@ -44,17 +44,18 @@ FEATURES_PER_LANG = 300 # number of features to select for each language
+ import argparse
+ import os, csv
+ import numpy
+-import base64, bz2, cPickle
++import base64, bz2, pickle
+ import shutil
+ 
+-from common import makedir, write_weights, write_features, read_weights, read_features
+-from index import CorpusIndexer
+-from tokenize import build_index, NGramTokenizer
+-from DFfeatureselect import tally, ngram_select
+-from IGweight import compute_IG
+-from LDfeatureselect import select_LD_features
+-from scanner import build_scanner, Scanner
+-from NBtrain import learn_nb_params
++from .common import makedir, write_weights, write_features, read_weights, read_features
++from .index import CorpusIndexer
++from .tokenize import build_index, NGramTokenizer
++from .DFfeatureselect import tally, ngram_select
++from .IGweight import compute_IG
++from .LDfeatureselect import select_LD_features
++from .scanner import build_scanner, Scanner
++from .NBtrain import learn_nb_params
++from functools import reduce
+ 
+ if __name__ == "__main__":
+   parser = argparse.ArgumentParser()
+@@ -102,8 +103,8 @@ if __name__ == "__main__":
+   makedir(model_dir)
+ 
+   # display paths
+-  print "corpus path:", args.corpus
+-  print "model path:", model_dir
++  print("corpus path:", args.corpus)
++  print("model path:", model_dir)
+ 
+   indexer = CorpusIndexer(args.corpus, min_domain=args.min_domain, proportion=args.proportion,
+                           langs = args.lang, domains = args.domain, line_level=args.line)
+@@ -111,18 +112,18 @@ if __name__ == "__main__":
+   # Compute mappings between files, languages and domains
+   lang_dist = indexer.dist_lang
+   lang_index = indexer.lang_index
+-  lang_info = ' '.join(("{0}({1})".format(k, lang_dist[v]) for k,v in lang_index.items()))
+-  print "langs({0}): {1}".format(len(lang_dist), lang_info)
++  lang_info = ' '.join(("{0}({1})".format(k, lang_dist[v]) for k,v in list(lang_index.items())))
++  print("langs({0}): {1}".format(len(lang_dist), lang_info))
+ 
+   domain_dist = indexer.dist_domain
+   domain_index = indexer.domain_index
+-  domain_info = ' '.join(("{0}({1})".format(k, domain_dist[v]) for k,v in domain_index.items()))
+-  print "domains({0}): {1}".format(len(domain_dist), domain_info)
++  domain_info = ' '.join(("{0}({1})".format(k, domain_dist[v]) for k,v in list(domain_index.items())))
++  print("domains({0}): {1}".format(len(domain_dist), domain_info))
+ 
+-  print "identified {0} documents".format(len(indexer.items))
++  print("identified {0} documents".format(len(indexer.items)))
+ 
+   if args.line:
+-  	print "treating each LINE as a document"
++  	print("treating each LINE as a document")
+ 
+   items = sorted(set( (d,l,p) for (d,l,n,p) in indexer.items ))
+   if args.debug:
+@@ -163,18 +164,18 @@ if __name__ == "__main__":
+ 
+     # Tokenize
+     DFfeats = None
+-    print "will tokenize %d documents" % len(items)
++    print("will tokenize %d documents" % len(items))
+     # TODO: Custom tokenizer if doing custom first-pass features
+     if args.df_feats:
+-      print "reading custom features from:", args.df_feats
++      print("reading custom features from:", args.df_feats)
+       DFfeats = read_features(args.df_feats)
+-      print "building tokenizer for custom list of {0} features".format(len(DFfeats))
++      print("building tokenizer for custom list of {0} features".format(len(DFfeats)))
+       tk = Scanner(DFfeats)
+     elif args.word:
+-      print "using word tokenizer"
++      print("using word tokenizer")
+       tk = str.split
+     else:
+-      print "using byte NGram tokenizer, max_order: {0}".format(args.max_order)
++      print("using byte NGram tokenizer, max_order: {0}".format(args.max_order))
+       tk = NGramTokenizer(1, args.max_order)
+     
+     # First-pass tokenization, used to determine DF of features
+@@ -197,7 +198,7 @@ if __name__ == "__main__":
+       if args.debug:
+         doc_count_path = os.path.join(model_dir, 'DF_all')
+         write_weights(doc_count, doc_count_path)
+-        print "wrote DF counts for all features to:", doc_count_path
++        print("wrote DF counts for all features to:", doc_count_path)
+ 
+     if DFfeats is None:
+       # Choose the first-stage features
+@@ -206,7 +207,7 @@ if __name__ == "__main__":
+     if args.debug:
+       feature_path = os.path.join(model_dir, 'DFfeats')
+       write_features(DFfeats, feature_path)
+-      print 'wrote features to "%s"' % feature_path 
++      print('wrote features to "%s"' % feature_path) 
+ 
+     # Dispose of the first-pass tokenize output as it is no longer 
+     # needed.
+@@ -227,7 +228,7 @@ if __name__ == "__main__":
+     domain_dist_vec = numpy.array([ domain_dist[domain_index[d]]
+             for d in sorted(domain_index, key=domain_index.get)], dtype=int)
+     lang_dist_vec = numpy.array([ lang_dist[lang_index[l]]
+-            for l in sorted(lang_index.keys(), key=lang_index.get)], dtype=int)
++            for l in sorted(list(lang_index.keys()), key=lang_index.get)], dtype=int)
+ 
+     # Compute IG
+     ig_params = [
+@@ -238,7 +239,7 @@ if __name__ == "__main__":
+ 
+     ig_vals = {}
+     for label, dist, suffix, binarize in ig_params:
+-      print "Computing information gain for {0}".format(label)
++      print("Computing information gain for {0}".format(label))
+       ig = compute_IG(b_dirs, DFfeats, dist, binarize, suffix, args.jobs)
+       if args.debug:
+         weights_path = os.path.join(model_dir, 'IGweights' + suffix + ('.bin' if binarize else ''))
+@@ -247,27 +248,27 @@ if __name__ == "__main__":
+ 
+     # Select features according to the LD criteria
+     features_per_lang = select_LD_features(ig_vals['lang'], ig_vals.get('domain'), args.feats_per_lang, ignore_domain = args.no_domain_ig)
+-    LDfeats = reduce(set.union, map(set, features_per_lang.values()))
+-    print 'selected %d features' % len(LDfeats)
++    LDfeats = reduce(set.union, list(map(set, list(features_per_lang.values()))))
++    print('selected %d features' % len(LDfeats))
+ 
+     if args.debug:
+       feature_path = os.path.join(model_dir, 'LDfeats')
+       write_features(sorted(LDfeats), feature_path)
+-      print 'wrote LD features to "%s"' % feature_path 
++      print('wrote LD features to "%s"' % feature_path) 
+ 
+       with open(feature_path + '.perlang', 'w') as f:
+         writer = csv.writer(f)
+         for i in range(len(features_per_lang)):
+-          writer.writerow(map(repr,features_per_lang[i]))
+-      print 'wrote LD.perlang features to "%s"' % feature_path + '.perlang'
++          writer.writerow(list(map(repr,features_per_lang[i])))
++      print('wrote LD.perlang features to "%s"' % feature_path + '.perlang')
+ 
+   # Compile a scanner for the LDfeats
+   tk_nextmove, tk_output = build_scanner(LDfeats)
+   if args.debug:
+     scanner_path = feature_path + '.scanner'
+     with open(scanner_path, 'w') as f:
+-      cPickle.dump((tk_nextmove, tk_output, LDfeats), f)
+-    print "wrote scanner to {0}".format(scanner_path)
++      pickle.dump((tk_nextmove, tk_output, LDfeats), f)
++    print("wrote scanner to {0}".format(scanner_path))
+ 
+   # Assemble the NB model
+   langs = sorted(lang_index, key=lang_index.get)
+@@ -280,10 +281,10 @@ if __name__ == "__main__":
+   # output the model
+   output_path = os.path.join(model_dir, 'model')
+   model = nb_ptc, nb_pc, nb_classes, tk_nextmove, tk_output
+-  string = base64.b64encode(bz2.compress(cPickle.dumps(model)))
++  string = base64.b64encode(bz2.compress(pickle.dumps(model)))
+   with open(output_path, 'w') as f:
+     f.write(string)
+-  print "wrote model to %s (%d bytes)" % (output_path, len(string))
++  print("wrote model to %s (%d bytes)" % (output_path, len(string)))
+ 
+   # remove buckets if debug is off. We don't generate buckets if ldfeats is supplied.
+   if not args.debug and not args.ld_feats:
+-- 
+2.45.0
+

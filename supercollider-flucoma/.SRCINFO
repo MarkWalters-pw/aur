@@ -1,0 +1,22 @@
+pkgbase = supercollider-flucoma
+	pkgdesc = Fluid Corpus Manipulation plugins for Supercollider
+	pkgver = 1.0.6
+	pkgrel = 1
+	url = https://github.com/flucoma/flucoma-sc
+	arch = any
+	groups = pro-audio
+	groups = supercollider-plugins
+	license = GPL
+	makedepends = git
+	makedepends = cmake
+	makedepends = boost
+	makedepends = supercollider-headers-git
+	makedepends = python-schema
+	makedepends = python-jinja
+	makedepends = python-docutils
+	depends = supercollider
+	conflicts = supercollider-flucoma
+	source = supercollider-flucoma-1.0.6-1.zip::https://github.com/flucoma/flucoma-sc/archive/refs/tags/1.0.6.tar.gz
+	md5sums = 5c1763381e276579cef596c2319ee4f7
+
+pkgname = supercollider-flucoma

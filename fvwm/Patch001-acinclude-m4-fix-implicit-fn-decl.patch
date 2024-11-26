@@ -1,0 +1,21 @@
+--- fvwm-2.7.0/acinclude.m4	2022-10-20 20:54:53.000000000 +0200
++++ fvwm-2.7.0/acinclude.m4.new	2024-05-13 08:37:23.016223790 +0200
+@@ -30,7 +30,7 @@
+ #ifdef HAVE_SYS_SOCKET_H
+ #include <sys/socket.h>
+ #endif],
+-[extern select ($ac_cv_type_fd_set_size_t,
++[extern int select ($ac_cv_type_fd_set_size_t,
+  $ac_cv_type_fd_set *,	$ac_cv_type_fd_set *, $ac_cv_type_fd_set *,
+  $ac_type_timeval *);],
+ [ac_found=yes ; break 3],ac_found=no)
+@@ -1154,6 +1154,9 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
++#ifdef HAVE_UNISTD_H
++#include <unistd.h>
++#endif
+ int main(void)
+ {
+   char template[128];

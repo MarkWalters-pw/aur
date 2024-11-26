@@ -1,0 +1,17 @@
+pkgbase = init-headphone
+	pkgdesc = Re-enables headphone jack after sleep/suspend resume on Clevo notebooks
+	pkgver = 0.12
+	pkgrel = 1
+	url = https://bugs.launchpad.net/ubuntu/+source/alsa-driver/+bug/1313904/
+	install = init-headphone.install
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = python
+	source = git::git+https://github.com/Unrud/init-headphone#tag=v0.12
+	source = init-headphone.install
+	md5sums = SKIP
+	md5sums = 81b2f5e44cd18753e64a084eaff563b5
+
+pkgname = init-headphone
+

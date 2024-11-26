@@ -1,0 +1,18 @@
+pkgbase = apertium-es-gl
+	pkgdesc = Apertium translation pair for Spanish and Galician
+	pkgver = 1.0.9
+	pkgrel = 1
+	url = https://github.com/apertium/apertium-es-gl
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = pkgconf
+	makedepends = autoconf
+	depends = apertium>=3.4.2
+	depends = vislcg3
+	depends = apertium-spa
+	source = apertium-es-gl-1.0.9.tar.gz::https://github.com/apertium/apertium-es-gl/archive/refs/tags/v1.0.9.tar.gz
+	sha256sums = 752fe4f805dd6c71bd59ef8d6691aa4703f7eaef1e715b71586a6bb511147f4b
+
+pkgname = apertium-es-gl
+

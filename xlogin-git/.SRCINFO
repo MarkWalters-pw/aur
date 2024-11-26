@@ -1,0 +1,17 @@
+pkgbase = xlogin-git
+	pkgdesc = X login service for systemd
+	pkgver = 14
+	pkgrel = 1
+	url = https://github.com/joukewitteveen/xlogin
+	arch = any
+	license = BSD
+	makedepends = git
+	depends = systemd
+	depends = xorg-server
+	depends = bash
+	provides = xlogin
+	conflicts = xlogin
+	source = git+https://github.com/joukewitteveen/xlogin.git
+	md5sums = SKIP
+
+pkgname = xlogin-git

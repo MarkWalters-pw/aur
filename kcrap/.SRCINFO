@@ -1,0 +1,16 @@
+pkgbase = kcrap
+	pkgdesc = Kerberos Challenge Response Authentication Protocol
+	pkgver = 0.4.0
+	pkgrel = 1
+	url = https://github.com/fuhry/
+	arch = any
+	license = MIT
+	makedepends = autoconf
+	depends = krb5
+	backup = etc/kcrap_server.conf
+	source = https://github.com/fuhry/kcrap/archive/refs/tags/v0.4.0.tar.gz
+	source = kcrap.service
+	sha256sums = fe2adc807622989e1ff811a9415387dfb02114980e4dee07e2afd87d41694e1d
+	sha256sums = f0aaac33b138a07859d860e391eb8177623d3510cfec1897402f528d322e552f
+
+pkgname = kcrap

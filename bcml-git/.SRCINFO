@@ -1,0 +1,40 @@
+pkgbase = bcml-git
+	pkgdesc = Breath of the Wild Cross-Platform Mod Loader: A mod merger and manager for BOTW
+	pkgver = r1178.95cab60
+	pkgrel = 1
+	url = https://github.com/NiceneNerd/BCML
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = npm
+	makedepends = nodejs>=14.0.0
+	makedepends = mkdocs
+	makedepends = mkdocs-material
+	makedepends = python-installer
+	makedepends = gendesk
+	makedepends = cargo-nightly
+	makedepends = maturin
+	makedepends = cmake
+	depends = python>=3.7
+	depends = p7zip
+	depends = python-numpy
+	depends = python-aamp
+	depends = python-byml
+	depends = python-botw-utils
+	depends = python-botw_havok
+	depends = python-oead
+	depends = python-pycrosskit
+	depends = python-pyqtwebengine
+	depends = python-qtpy
+	depends = python-pywebview
+	depends = python-pyaml
+	depends = python-requests
+	depends = python-rstb
+	depends = python-xxhash
+	optdepends = cemu
+	source = git+https://github.com/NiceneNerd/BCML
+	source = BCML.png::https://i.imgur.com/OiqKPx0.png
+	sha256sums = SKIP
+	sha256sums = f20788bc2187b7b5d40d8b63a97b9cacdd986f8d0d77c6c456561e7fbd68179a
+
+pkgname = bcml-git

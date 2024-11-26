@@ -1,0 +1,21 @@
+pkgbase = kicad-footprints-git
+	pkgdesc = Official KiCad Footprint Libraries for KiCad from git
+	pkgver = 5.1.6.r202.g2ba0d5cb6
+	pkgrel = 1
+	url = https://gitlab.com/kicad/libraries/kicad-footprints
+	arch = any
+	license = CC-BY-SA 4.0
+	makedepends = cmake
+	makedepends = git
+	makedepends = ninja
+	provides = kicad-footprints
+	conflicts = kicad-library-bzr
+	conflicts = kicad-library-git
+	conflicts = kicad-library
+	conflicts = kicad-footprints
+	options = !strip
+	source = git+https://gitlab.com/kicad/libraries/kicad-footprints.git
+	md5sums = SKIP
+
+pkgname = kicad-footprints-git
+

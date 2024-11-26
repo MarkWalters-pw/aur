@@ -1,0 +1,15 @@
+pkgbase = frozen
+	pkgdesc = A header-only, constexpr alternative to gperf for C++14 users
+	pkgver = 1.1.1
+	pkgrel = 1
+	url = https://github.com/serge-sans-paille/frozen
+	arch = any
+	license = Apache
+	makedepends = git
+	makedepends = cmake
+	provides = frozen
+	conflicts = frozen-git
+	source = frozen::git+https://github.com/serge-sans-paille/frozen.git#commit=f75fffcc077e5cda0bf3c87121dca103855d2be5
+	sha256sums = SKIP
+
+pkgname = frozen

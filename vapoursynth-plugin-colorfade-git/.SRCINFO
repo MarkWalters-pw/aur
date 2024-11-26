@@ -1,0 +1,15 @@
+pkgbase = vapoursynth-plugin-colorfade-git
+	pkgdesc = Plugin for Vapoursynth: colorfade (GIT Version)
+	pkgver = r9.bed42cc
+	pkgrel = 2
+	url = https://github.com/tormaid/colorfade
+	arch = any
+	license = GPL
+	makedepends = git
+	depends = vapoursynth
+	provides = vapoursynth-plugin-colorfade
+	conflicts = vapoursynth-plugin-colorfade
+	source = colorfade::git+https://github.com/tormaid/colorfade.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-colorfade-git

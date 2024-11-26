@@ -1,0 +1,14 @@
+pkgbase = snowball-c-git
+	pkgdesc = Snowball compiler and stemming algorithms .
+	pkgver = 20211012.662.d29510a
+	pkgrel = 2
+	url = https://github.com/snowballstem/snowball
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	license = BSD-3
+	depends = gcc
+	source = snowball-c-git::git+https://github.com/snowballstem/snowball#branch=master
+	sha1sums = SKIP
+
+pkgname = snowball-c-git

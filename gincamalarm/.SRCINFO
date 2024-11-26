@@ -1,0 +1,17 @@
+pkgbase = gincamalarm
+	pkgdesc = Gin server to manage camera with motion
+	pkgver = 0.0.6
+	pkgrel = 18
+	url = https://github.com/Chipsterjulien/gincamalarm
+	install = gincamalarm.install
+	arch = any
+	license = WTFPL
+	makedepends = go
+	optdepends = wiringpi: GPIO support
+	options = !strip
+	backup = etc/gincamalarm/gincamalarm.toml
+	source = gincamalarm-0.0.6.tar.gz
+	sha512sums = d7583f90c9a643d339757090aa09f0f9c9038f4d13bc9e2215b444edc93b42b08927827fc3d4113c93889ff3ff965096a45de0c33f232e06cb0296b87b42f698
+
+pkgname = gincamalarm
+

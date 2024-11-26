@@ -1,0 +1,21 @@
+pkgbase = sbupdate-mkinitcpio
+	pkgdesc = Generate signed Unified Kernel Images
+	pkgver = 1.6
+	pkgrel = 1
+	url = https://github.com/YHNdnzj/sbupdate
+	install = sbupdate.install
+	arch = any
+	license = GPL3
+	provides = sbupdate
+	conflicts = sbupdate
+	conflicts = sbupdate-git
+	backup = etc/sbupdate.conf
+	source = sbupdate-mkinitcpio-1.6.tar.gz::https://github.com/YHNdnzj/sbupdate/archive/1.6.tar.gz
+	b2sums = a996b176f463efae04c8a0b92f4554deb011d95744c2ca9229a859d18466d9ea626ce3b3625b7870799684187c9533ce3d7253329f44065550475ce15167c498
+
+pkgname = sbupdate-mkinitcpio
+	depends = bash
+	depends = systemd
+	depends = systemd-ukify>=254rc1
+	depends = mkinitcpio
+	depends = sbsigntools

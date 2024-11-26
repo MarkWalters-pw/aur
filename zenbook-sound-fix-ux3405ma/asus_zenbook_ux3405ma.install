@@ -1,0 +1,27 @@
+regenerate_grub_config() {
+    if command -v grub-mkconfig > /dev/null 2>&1; then
+        echo "Regenerating GRUB configuration..."
+        grub-mkconfig -o /boot/grub/grub.cfg
+    fi
+}
+
+regenerate_initramfs() {
+    if command -v mkinitcpio > /dev/null 2>&1; then
+        echo "Regenerating initramfs..."
+        mkinitcpio --allpresets
+    fi
+}
+
+post_install() {
+    regenerate_grub_config
+    regenerate_initramfs
+}
+
+post_remove() {
+    regenerate_grub_config
+    regenerate_initramfs
+}
+
+post_upgrade() {
+    regenerate_initramfs
+}

@@ -1,0 +1,17 @@
+pkgbase = macli
+	pkgdesc = Unofficial CLI-Based MyAnimeList Client
+	pkgver = v1.21.0
+	pkgrel = 1
+	url = https://macli.vidhukant.com
+	arch = x86_64
+	license = GPL
+	depends = gnome-keyring
+	provides = macli
+	conflicts = macli
+	conflicts = macli-git
+	options = !strip
+	options = !emptydirs
+	source_x86_64 = macli-v1.21.0-linux_amd64.tar.gz::https://macli.vidhukant.com/releases/1.21.0/macli-v1.21.0-linux_amd64.tar.gz
+	sha256sums_x86_64 = b65f6613f7a85208cfa6b7e4d14f52525008f0f36890541111943247acdc28b5
+
+pkgname = macli

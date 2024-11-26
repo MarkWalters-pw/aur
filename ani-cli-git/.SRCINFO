@@ -1,0 +1,22 @@
+pkgbase = ani-cli-git
+	pkgdesc = A cli to browse and watch anime. (development version)
+	pkgver = r653.94e78d5
+	pkgrel = 1
+	url = https://github.com/pystardust/ani-cli
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = grep
+	depends = sed
+	depends = curl
+	depends = mpv
+	depends = aria2
+	depends = ffmpeg
+	depends = fzf
+	optdepends = vlc: An alternative video player
+	provides = ani-cli
+	conflicts = ani-cli
+	source = ani-cli::git+https://github.com/pystardust/ani-cli.git
+	md5sums = SKIP
+
+pkgname = ani-cli-git

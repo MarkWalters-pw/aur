@@ -1,0 +1,37 @@
+pkgbase = ros-noetic-turtle-actionlib
+	pkgdesc = ROS - turtle_actionlib demonstrates how to write an action server and client with the turtlesim.
+	pkgver = 0.2.0
+	pkgrel = 1
+	url = https://wiki.ros.org/turtle_actionlib
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-angles
+	makedepends = ros-noetic-turtlesim
+	makedepends = ros-noetic-catkin
+	makedepends = ros-noetic-message-generation
+	makedepends = ros-noetic-actionlib-msgs
+	makedepends = ros-noetic-actionlib
+	makedepends = ros-noetic-rosconsole
+	makedepends = ros-noetic-roscpp
+	makedepends = ros-noetic-std-msgs
+	makedepends = ros-noetic-geometry-msgs
+	depends = ros-noetic-angles
+	depends = ros-noetic-turtlesim
+	depends = ros-noetic-actionlib-msgs
+	depends = ros-noetic-actionlib
+	depends = ros-noetic-rosconsole
+	depends = ros-noetic-roscpp
+	depends = ros-noetic-std-msgs
+	depends = ros-noetic-message-runtime
+	depends = ros-noetic-geometry-msgs
+	source = ros-noetic-turtle-actionlib-0.2.0.tar.gz::https://github.com/ros/common_tutorials/archive/0.2.0.tar.gz
+	sha256sums = 61b4f75a846264debe4f8eb4c7090f21079c5cd368f85124cf13eca6340570f3
+
+pkgname = ros-noetic-turtle-actionlib
+

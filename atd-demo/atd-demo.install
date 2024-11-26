@@ -1,0 +1,11 @@
+
+post_install() {
+  echo " => With using this software you accept the license."
+  echo "    See '/usr/share/licenses/atd-demo/LICENSE' for conditions."
+  echo " => See also 'https://bitbucket.org/runesoftdev/airline_public/wiki/Switches'"
+  echo "    for available parameters, a .desktop shortcut for windowed play is provided."
+}
+
+post_upgrade() {
+  post_install
+}

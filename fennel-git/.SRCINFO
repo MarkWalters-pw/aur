@@ -1,0 +1,17 @@
+pkgbase = fennel-git
+	pkgdesc = A Lua Lisp language
+	pkgver = r1047.beafb1e
+	pkgrel = 1
+	url = https://github.com/bakpakin/Fennel
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = make
+	depends = lua
+	provides = fennel
+	conflicts = fennel
+	source = git+https://git.sr.ht/~technomancy/fennel
+	md5sums = SKIP
+
+pkgname = fennel-git
+

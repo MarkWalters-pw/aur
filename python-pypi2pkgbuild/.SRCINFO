@@ -1,0 +1,18 @@
+pkgbase = python-pypi2pkgbuild
+	pkgdesc = Convert PyPI packages to Arch Linux packages
+	pkgver = 0.3
+	pkgrel = 1
+	url = https://github.com/anntzer/pypi2pkgbuild
+	arch = any
+	license = MIT
+	makedepends = python-setuptools-scm
+	depends = namcap
+	depends = pkgfile
+	depends = python-pip
+	depends = python-wheel
+	conflicts = python-pypi2pkgbuild-git
+	source = https://files.pythonhosted.org/packages/source/p/pypi2pkgbuild/pypi2pkgbuild-0.3.tar.gz
+	sha256sums = eae7aa06c2a05175d5e6a37b91fc07d728a3d788c210af9028ecffb18b69fcdd
+
+pkgname = python-pypi2pkgbuild
+

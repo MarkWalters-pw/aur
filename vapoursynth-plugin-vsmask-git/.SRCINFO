@@ -1,0 +1,25 @@
+pkgbase = vapoursynth-plugin-vsmask-git
+	pkgdesc = Plugin for Vapoursynth: vsmask (GIT version)
+	pkgver = 0.5.1.0.g3cd8ca7
+	pkgrel = 1
+	url = https://github.com/Irrational-Encoding-Wizardry/vsmask.git
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-wheel
+	makedepends = python-installer
+	makedepends = python-setuptools
+	depends = vapoursynth
+	depends = vapoursynth-plugin-vstools-git
+	depends = vapoursynth-plugin-vsutil-git
+	optdepends = vapoursynth-plugin-tcanny-git
+	optdepends = vapoursynth-plugin-tedgemask-git
+	optdepends = vapoursynth-plugin-awarpsharp2-git
+	optdepends = vapoursynth-plugin-awarpsharp2sf-git
+	provides = vapoursynth-plugin-vsmask
+	conflicts = vapoursynth-plugin-vsmask
+	source = vsmask::git+https://github.com/Irrational-Encoding-Wizardry/vsmask.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-vsmask-git

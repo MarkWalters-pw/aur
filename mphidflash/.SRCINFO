@@ -1,0 +1,15 @@
+pkgbase = mphidflash
+	pkgdesc = Flash utility for Microchip PIC microcontrollers with USB HID-Bootloader
+	pkgver = 20200505
+	pkgrel = 2
+	url = https://code.google.com/p/mphidflash
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = svn
+	makedepends = gcc
+	depends = libusb
+	source = mphidflash::git+https://github.com/ApertureLabsLtd/mphidflash
+	md5sums = SKIP
+
+pkgname = mphidflash

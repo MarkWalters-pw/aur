@@ -1,0 +1,20 @@
+pkgbase = lttng-modules
+	pkgdesc = LTTng kernel modules
+	pkgver = 2.13.0
+	pkgrel = 1
+	url = http://lttng.org/
+	install = lttng-modules.install
+	arch = i686
+	arch = x86_64
+	license = LGPL2.1
+	license = GPL2
+	license = MIT
+	makedepends = linux-headers
+	depends = linux>=2.6.38
+	optdepends = lttng-tools: LTTng tracing control tools
+	optdepends = babeltrace: trace viewer
+	source = https://lttng.org/files/lttng-modules/lttng-modules-2.13.0.tar.bz2
+	sha1sums = 62cd6564e6e9d9378a726fe44dafb01f7e973ae2
+
+pkgname = lttng-modules
+

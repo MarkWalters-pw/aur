@@ -1,0 +1,27 @@
+pkgbase = qcef
+	pkgdesc = Qt5 binding of CEF
+	pkgver = 1.1.8
+	pkgrel = 1
+	url = https://github.com/linuxdeepin/qcef
+	arch = x86_64
+	license = GPL
+	makedepends = cmake
+	makedepends = qt5-tools
+	depends = gconf
+	depends = gtk2
+	depends = libxss
+	depends = nss
+	depends = libpulse
+	depends = qt5-webchannel
+	depends = qt5-x11extras
+	source = qcef-1.1.8.tar.gz::https://github.com/linuxdeepin/qcef/archive/1.1.8.tar.gz
+	source = cef-binary-059a0c9cef4e289a50dc7a2f4c91fe69db95035e.zip::https://github.com/linuxdeepin/cef-binary/archive/059a0c9cef4e289a50dc7a2f4c91fe69db95035e.zip
+	source = remove_Werror.patch
+	source = chrome-sandbox_override.patch
+	sha512sums = 72a3a0ca4ef655407e583469f2d55ac38bd6e829e8f9ee270df794a724f192667a97796cb9825a8b08c82810d486091cd504d0387561a3a08615a1e0b2cdfcbd
+	sha512sums = 42c39f7f764f46ed1420d73d5d170fe8ab13b55b939e4a1a60e10c8c8d7fdb31dd381656196546ae404af02066b0c0bd013a34f4d81f44d8dc44881d73b11a6c
+	sha512sums = 7450ae7c33d847c5d82560f5d32508c605b7e593b3aff7418aecd836859c002d177eee081260d3e816cf89ce043b20a17d87fc17569667b0ddc7a2da696c9472
+	sha512sums = 34a3d83abc573d13fd11c85aa85b0ec7dfb9117b297395773996d38f9cda3314561ccbbecbe0312ebe70dfb641a66c124c3d5e9afbdf40ba0487db5cad9bc406
+
+pkgname = qcef
+

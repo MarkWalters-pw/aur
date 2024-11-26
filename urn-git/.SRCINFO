@@ -1,0 +1,23 @@
+pkgbase = urn-git
+	pkgdesc = Split timer for speedrunning
+	pkgver = r133.09c0756
+	pkgrel = 1
+	url = https://github.com/paoloose/urn
+	install = urn-git.install
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = imagemagick
+	makedepends = xxd
+	makedepends = git
+	depends = gtk3
+	depends = jansson
+	depends = hicolor-icon-theme
+	source = git+https://github.com/paoloose/urn.git
+	source = git+https://github.com/3snowp7im/urn-themes.git
+	source = urn.desktop
+	sha1sums = SKIP
+	sha1sums = SKIP
+	sha1sums = 05622115481d0b1485c69ad08ca7f494ea575781
+
+pkgname = urn-git

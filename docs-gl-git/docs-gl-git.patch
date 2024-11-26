@@ -1,0 +1,15 @@
+diff --git a/compile.py b/compile.py
+index f760d50..ec78f84 100644
+--- a/compile.py
++++ b/compile.py
+@@ -996,10 +996,3 @@ for version in major_versions:
+     output.close()
+   
+   print("Wrote " + str(written) + " commands for " + version)
+-
+-with zipfile.ZipFile('docs.gl.zip', 'w', compression=zipfile.ZIP_DEFLATED) as docs_gl_zip:
+-  for dirname, _, files in os.walk('htdocs'):
+-    for filename in files:
+-      docs_gl_zip.write(os.path.join(dirname, filename))
+-
+-shutil.move("docs.gl.zip", "htdocs/") 

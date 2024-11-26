@@ -1,0 +1,38 @@
+# Maintainer: LinRs <LinRs at users.noreply.github.com>
+# Contributor: sballert <sballert@posteo.de>
+
+_gituser="emacsorphanage"
+_gitrepo="org-bullets"
+
+pkgname=emacs-org-bullets-git
+pkgver=0.2.4.r11.gb56f2e3
+pkgrel=1
+pkgdesc="utf-8 bullets for org-mode"
+url="https://github.com/${_gituser}/${_gitrepo}"
+arch=('any')
+license=('GPL3')
+depends=('emacs')
+makedepends=('git')
+provides=('emacs-org-bullets')
+conflicts=('emacs-org-bullets')
+source=("git+https://github.com/${_gituser}/${_gitrepo}.git")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd "$_gitrepo"
+  ( set -o pipefail
+    git describe --long --tags 2>/dev/null | sed 's/\([^-]*-g\)/r\1/;s/-/./g' ||
+    printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+  )
+}
+
+build() {
+  cd "$_gitrepo"
+  emacs -Q -batch -L . -f batch-byte-compile *.el
+}
+
+package() {
+  cd "$_gitrepo"
+  install -d  "$pkgdir/usr/share/emacs/site-lisp/${_gitrepo}/"
+  install -m644 *.el{c,} "$pkgdir/usr/share/emacs/site-lisp/${_gitrepo}/"
+}

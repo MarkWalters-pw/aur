@@ -1,0 +1,18 @@
+pkgbase = orphan-checker
+	pkgdesc = Checks if any AUR installed packaged is orphan
+	pkgver = 1.2.0
+	pkgrel = 1
+	url = https://gitlab.com/Daklon/orphan-checker
+	arch = any
+	license = AGPL-3.0-or-later
+	makedepends = rust
+	makedepends = cargo
+	depends = pacman
+	provides = orphan-checker
+	source = https://gitlab.com/Daklon/orphan-checker/-/archive/v1.2.0/orphan-checker-v1.2.0.tar.gz
+	source = https://gitlab.com/Daklon/orphan-checker/-/releases/v1.2.0/downloads/orphan-checker-v1.2.0.tar.gz.asc
+	validpgpkeys = 1093631AE70F27075947C8DEC47377D56A22D749
+	sha512sums = 9cd0b5a9e3ec5f5dbb1a4b88300ef93895140e7488942e0930b9f5eefda71129659ee4cf4c6f10d967c628100be3ad28ed9c2341bf6ad2fd4652bf9abc59947a
+	sha512sums = 6e80c2e91f74624a57bca2817b3aacde14521f03963c5bbefefb4a84bbbc162ad4cbe8bd91c325762762908e51be172aa9969a54268c195b9ab0ba777c4f6970
+
+pkgname = orphan-checker

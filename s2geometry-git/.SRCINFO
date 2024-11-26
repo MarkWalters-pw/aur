@@ -1,0 +1,18 @@
+pkgbase = s2geometry-git
+	pkgdesc = Computational geometry and spatial indexing on the sphere
+	pkgver = r233
+	pkgrel = 1
+	url = https://s2geometry.io/
+	arch = i686
+	arch = x86_64
+	license = APACHE2
+	makedepends = git
+	makedepends = cmake
+	depends = openssl
+	depends = python
+	depends = gtest
+	source = git+https://github.com/google/s2geometry.git
+	sha256sums = SKIP
+
+pkgname = s2geometry-git
+

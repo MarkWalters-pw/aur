@@ -1,0 +1,20 @@
+pkgbase = oneshot
+	pkgdesc = First-come-first-serve single-fire HTTP/HTTPS server
+	pkgver = 2.1.1
+	pkgrel = 1
+	url = https://github.com/raphaelreyna/oneshot
+	arch = i686
+	arch = x86_64
+	arch = arm
+	arch = armv7h
+	arch = armv6h
+	arch = aarch64
+	license = MIT
+	makedepends = go
+	depends = glibc
+	depends = hicolor-icon-theme
+	options = zipman
+	source = oneshot-2.1.1.tgz::https://github.com/raphaelreyna/oneshot/archive/v2.1.1.tar.gz
+	b2sums = fe90220042d29d4f7037ddebc0d7177c3445d1278da8758a1d862da28ec375f779d22610d47646e6f5b882c8f992ec144bb0b851e3973aa2864c28c5b773979e
+
+pkgname = oneshot

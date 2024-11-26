@@ -1,0 +1,25 @@
+pkgbase = openssl-git
+	pkgdesc = Toolkit for the Transport Layer Security (TLS) and Secure Sockets Layer (SSL) protocols
+	pkgver = 3.1.0.beta1.r2821.g56a51b5a1e
+	pkgrel = 1
+	url = https://www.openssl.org/
+	arch = i686
+	arch = x86_64
+	license = Apache
+	makedepends = git
+	makedepends = perl
+	depends = glibc
+	optdepends = ca-certificates
+	optdepends = perl
+	provides = openssl=3.1.0.beta1.r2821.g56a51b5a1e
+	provides = libcrypto.so
+	provides = libssl.so
+	conflicts = openssl
+	options = staticlibs
+	backup = etc/ssl/openssl.cnf
+	source = git+https://github.com/openssl/openssl.git
+	source = ca-dir.patch::https://gitlab.archlinux.org/archlinux/packaging/packages/openssl/-/raw/main/ca-dir.patch
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = openssl-git

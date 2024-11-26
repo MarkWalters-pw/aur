@@ -1,0 +1,17 @@
+pkgbase = ocaml-ppx_derivers-git
+	pkgdesc = deriving plugin registry
+	pkgver = 20190404
+	pkgrel = 3
+	url = https://github.com/ocaml-ppx/ppx_derivers
+	arch = x86_64
+	license = BSD
+	makedepends = ocamlbuild
+	makedepends = ocaml-findlib
+	makedepends = dune
+	provides = ocaml-ppx_derivers=1.2.1
+	conflicts = ocaml-ppx_derivers
+	source = ocaml-ppx_derivers-git::git://github.com/ocaml-ppx/ppx_derivers.git
+	md5sums = SKIP
+
+pkgname = ocaml-ppx_derivers-git
+

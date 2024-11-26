@@ -1,0 +1,6 @@
+#!/bin/sh
+rm -f $HOME/.xdemorserc
+mkdir -p $HOME/.xdemorse
+cd $HOME/.xdemorse
+cp -ua /usr/share/examples/xdemorse/* .
+exec xdemorse.1

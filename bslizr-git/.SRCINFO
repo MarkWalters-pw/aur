@@ -1,0 +1,24 @@
+pkgbase = bslizr-git
+	pkgdesc = Sequenced audio slicing effect LV2 plugin (git version)
+	pkgver = 1.2.8.r0.gf988a45
+	pkgrel = 1
+	url = https://github.com/sjaehn/BSlizr
+	arch = x86_64
+	groups = lv2-plugins
+	groups = pro-audio
+	license = GPL3
+	checkdepends = lv2lint
+	makedepends = git
+	makedepends = lv2
+	depends = cairo
+	depends = gcc-libs
+	depends = glibc
+	depends = libx11
+	provides = bslizr
+	provides = bslizr=1.2.8
+	conflicts = bslizr
+	source = bslizr::git+https://github.com/sjaehn/BSlizr
+	md5sums = SKIP
+
+pkgname = bslizr-git
+

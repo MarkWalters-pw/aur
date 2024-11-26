@@ -1,0 +1,18 @@
+pkgbase = hcledit
+	pkgdesc = A command line editor for HCL
+	pkgver = 0.2.11
+	pkgrel = 1
+	url = https://github.com/minamijoyo/hcledit
+	changelog = hcledit.changelog
+	arch = i686
+	arch = x86_64
+	arch = arm
+	arch = aarch64
+	license = MIT
+	makedepends = go
+	depends = glibc
+	options = !lto
+	source = hcledit-0.2.11.tar.gz::https://github.com/minamijoyo/hcledit/archive/refs/tags/v0.2.11.tar.gz
+	sha512sums = eb8a363060d9b9408f0eaa57e8f5c76fa7a7f445764a95453229c669e58cf44a35997c0e5f94b75da3d7cd7ea0ff66c62a67ed9ae8eba6e7eb203d1458e73b1a
+
+pkgname = hcledit

@@ -1,0 +1,25 @@
+pkgbase = python-zulip-api
+	pkgdesc = Pyhton bindings for Zulip API.
+	pkgver = 0.8.2
+	pkgrel = 1
+	url = https://github.com/zulip/python-zulip-api
+	arch = i686
+	arch = x86_64
+	arch = arm
+	arch = armv7h
+	arch = armv6h
+	arch = aarch64
+	license = GPL
+	makedepends = cython
+	makedepends = python-setuptools
+	depends = python
+	depends = python-requests
+	depends = python-pyopenssl
+	depends = python-six
+	depends = python-distro
+	depends = python-click
+	optdepends = python-matrix-client-git: For zulip matrix bridge
+	source = https://github.com/zulip/python-zulip-api/archive/0.8.2.tar.gz
+	sha256sums = 257f2bf9fe5caa6b8fd424a4c8549444521f09b918e50bace614295a943aac82
+
+pkgname = python-zulip-api

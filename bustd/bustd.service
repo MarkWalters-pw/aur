@@ -1,0 +1,12 @@
+[Unit]
+Description=An Out-of-Memory Process Killer
+StartLimitIntervalSec=4
+
+[Service]
+Type=simple
+ExecStart=+/usr/bin/bustd --no-daemon
+Restart=on-abnormal
+OOMPolicy=continue
+
+[Install]
+WantedBy=multi-user.target

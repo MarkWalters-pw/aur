@@ -1,0 +1,26 @@
+pkgbase = bittly
+	pkgdesc = 不止是一个串口调试助手 (～￣▽￣)～
+	pkgver = 0.19.1
+	pkgrel = 1
+	url = https://bittly.sigechen.com
+	arch = x86_64
+	license = custom
+	depends = c-ares
+	depends = ffmpeg
+	depends = gtk3
+	depends = libevent
+	depends = libxslt
+	depends = minizip
+	depends = nss
+	depends = re2
+	depends = snappy
+	depends = fuse2
+	options = !strip
+	source = bittly-0.19.1.AppImage::https://res.bittly.sigechen.com/download/0.19.1/bittly-0.19.1-x64.AppImage
+	source = bittly.desktop
+	source = bittly.svg
+	sha256sums = 4608abc2da4cb74223391faae3b9b3aa3c0715c41fd06c7eb47b4cd1f316c274
+	sha256sums = 0b9dbfae82faceb33c027d0686a21d14a3c50b04065458799d2ebe9df87edd03
+	sha256sums = a39dfb8e7dc3466c184cc564c3c8d341c5f38065fe46533d1c59620c4273ccd9
+
+pkgname = bittly

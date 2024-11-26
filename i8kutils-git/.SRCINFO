@@ -1,0 +1,22 @@
+pkgbase = i8kutils-git
+	pkgdesc = Fan control for Dell laptops
+	pkgver = 20170307.83622d1
+	pkgrel = 3
+	url = https://github.com/vitorafsr/i8kutils
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	depends = bash
+	optdepends = tcl: for i8kmon daemon
+	optdepends = acpi: for i8kmon daemon
+	optdepends = tk: for i8kmon GUI mode
+	conflicts = i8kutils
+	backup = etc/i8kutils/i8kmon.conf
+	source = git+https://github.com/vitorafsr/i8kutils.git
+	source = i8kmon.service
+	sha1sums = SKIP
+	sha1sums = 370d2675d98d7754a265f9b1578975693204f681
+
+pkgname = i8kutils-git
+

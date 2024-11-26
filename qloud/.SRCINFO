@@ -1,0 +1,19 @@
+pkgbase = qloud
+	pkgdesc = Tool to measure loudspeaker frequency response and distortions.
+	pkgver = 1.4.2
+	pkgrel = 6
+	url = https://github.com/molke-productions/qloud
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	license = GPL
+	makedepends = qt5-tools
+	makedepends = libsndfile
+	depends = fftw
+	depends = jack
+	depends = qt5-charts
+	conflicts = qloud-qtcharts
+	source = qloud-1.4.2.tar.gz::https://github.com/molke-productions/qloud/archive/v1.4.2.tar.gz
+	sha512sums = 6c402f11850a663aed8f9688065d0d42da75774011d34184aa61db40a8d8e173eab99afe179a9860ef35a8d54c1f51ad9db085bf77bee02f9e9538086764be20
+
+pkgname = qloud

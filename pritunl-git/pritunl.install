@@ -1,0 +1,8 @@
+pre_remove() {
+    systemctl stop pritunl || :
+    systemctl disable pritunl || :
+}
+
+post_remove() {
+    rm -rf /var/lib/pritunl
+}

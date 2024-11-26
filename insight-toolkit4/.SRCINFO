@@ -1,0 +1,21 @@
+pkgbase = insight-toolkit4
+	pkgdesc = Cross-platform system that provides developers with an extensive suite of software tools for image analysis (legacy version 4, installed under /opt)
+	pkgver = 4.13.3
+	pkgrel = 3
+	url = http://www.itk.org/
+	arch = x86_64
+	license = APACHE
+	makedepends = cmake
+	depends = fftw
+	depends = libjpeg-turbo
+	depends = libpng
+	depends = zlib
+	depends = libtiff
+	depends = gdcm
+	depends = expat
+	depends = hdf5
+	depends = gtest
+	source = https://github.com/InsightSoftwareConsortium/ITK/releases/download/v4.13.3/InsightToolkit-4.13.3.tar.gz
+	sha256sums = b8ea18a5c97c62972c00c4679ff5a224eb393a766c334bd20884b379ca2b34ce
+
+pkgname = insight-toolkit4

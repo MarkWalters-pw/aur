@@ -1,0 +1,17 @@
+pkgbase = washdc-git
+	pkgdesc = Open-source Sega Dreamcast emulator
+	pkgver = r2627.cd565102
+	pkgrel = 1
+	url = https://washemu.org/
+	install = washdc.install
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = cmake
+	conflicts = washdc
+	source = git+https://gitlab.com/washemu/washdc.git
+	source = washdc.install
+	md5sums = SKIP
+	md5sums = 0dc7fd8f2618c05371d66dc1882a5725
+
+pkgname = washdc-git

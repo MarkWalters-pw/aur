@@ -1,0 +1,20 @@
+pkgbase = opentsdb
+	pkgdesc = Distributed, scalable Time Series Database (TSDB) written on top of HBase
+	pkgver = 2.4.1
+	pkgrel = 2
+	url = http://opentsdb.net/
+	install = opentsdb.install
+	arch = any
+	license = LGPL2.1
+	makedepends = java-environment=8
+	depends = java-runtime=8
+	depends = hbase
+	depends = gnuplot
+	backup = etc/opentsdb/logback.xml
+	backup = etc/opentsdb/opentsdb.conf
+	source = opentsdb_2.4.1.zip::https://github.com/OpenTSDB/opentsdb/archive/v2.4.1.zip
+	source = opentsdb.service
+	sha512sums = a535e2aea14658fd1eb26d1239091dbcb52aff8d03379999e03b5b7c089ca0866ec7fbe552a617c07e13074c9c3e27c12049c0144b23f0d18482615517502c05
+	sha512sums = SKIP
+
+pkgname = opentsdb

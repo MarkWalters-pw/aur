@@ -1,0 +1,28 @@
+pkgbase = parabolic
+	pkgdesc = Download web video and audio
+	pkgver = 2024.5.0
+	pkgrel = 1
+	url = https://github.com/NickvisionApps/Parabolic
+	arch = x86_64
+	license = MIT
+	makedepends = blueprint-compiler
+	makedepends = dotnet-sdk
+	makedepends = git
+	makedepends = libadwaita
+	depends = bash
+	depends = dotnet-runtime
+	depends = ffmpeg
+	depends = gcc-libs
+	depends = glibc
+	depends = hicolor-icon-theme
+	depends = python-psutil
+	depends = yt-dlp
+	provides = tube-converter
+	conflicts = tube-converter
+	replaces = tube-converter
+	source = git+https://github.com/NickvisionApps/Parabolic#tag=2024.5.0
+	source = git+https://github.com/NickvisionApps/CakeScripts
+	sha256sums = b5a674b4769ca5e2bcb215d409a12869329bd2a5897c33d5aa451c5e62b1c19a
+	sha256sums = SKIP
+
+pkgname = parabolic

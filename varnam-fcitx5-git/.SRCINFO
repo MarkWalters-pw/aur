@@ -1,0 +1,19 @@
+pkgbase = varnam-fcitx5-git
+	pkgdesc = Fcitx5 wrapper for Varnam input method
+	pkgver = r12.b0d3d29
+	pkgrel = 1
+	url = https://www.varnamproject.com/
+	arch = x86_64
+	license = Custom
+	makedepends = git
+	makedepends = cmake
+	makedepends = extra-cmake-modules
+	depends = fcitx5
+	depends = fcitx5-configtool
+	depends = govarnam
+	depends = govarnam-schemes
+	provides = varnam-fcitx5
+	source = git+https://github.com/varnamproject/varnam-fcitx5.git
+	sha256sums = SKIP
+
+pkgname = varnam-fcitx5-git

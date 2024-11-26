@@ -1,0 +1,22 @@
+pkgbase = tiptop-cli
+	pkgdesc = Command-line system monitoring
+	pkgver = 0.2.8
+	pkgrel = 2
+	url = https://github.com/nschloe/tiptop
+	arch = any
+	license = MIT
+	checkdepends = python-pytest-codeblocks
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python-py-cpuinfo
+	depends = python-distro
+	depends = python-psutil
+	depends = python-textual
+	provides = tiptop
+	conflicts = tiptop
+	source = tiptop-0.2.8.tar.gz::https://github.com/nschloe/tiptop/archive/v0.2.8.tar.gz
+	sha512sums = 6347c1a838de1aaaa836b98488d765ac1ebcc6df3507ad9f5b116b1fafb95d31dae42d0346911b7b19fd866530a736cda1a548a30b53cd873932e07e229569dc
+
+pkgname = tiptop-cli

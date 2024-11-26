@@ -1,0 +1,21 @@
+pkgbase = stratagus
+	pkgdesc = A free cross-platform real-time strategy gaming engine
+	pkgver = 3.3.2
+	pkgrel = 1
+	url = https://github.com/Wargus/stratagus
+	changelog = stratagus.changelog
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = cmake
+	makedepends = glu
+	depends = sdl2_image
+	depends = sdl2_mixer
+	depends = libmng
+	depends = libtheora
+	depends = tolua++
+	source = stratagus::git+https://github.com/Wargus/stratagus.git#tag=v3.3.2
+	md5sums = SKIP
+
+pkgname = stratagus

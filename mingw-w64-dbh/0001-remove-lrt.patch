@@ -1,0 +1,9 @@
+--- libdbh2-5.0.22/dbh2.pc.in.orig	2018-08-21 22:29:18.308661574 -0400
++++ libdbh2-5.0.22/dbh2.pc.in	2018-08-21 22:29:21.422011513 -0400
+@@ -7,5 +7,5 @@
+ Description: Diskbased Hashtables
+ Requires: @GLIB_DEPENDS@
+ Version: @VERSION@
+-Libs:   -ldbh -lm @PTHREAD_LIBS@ -lrt
++Libs:   -ldbh -lm @PTHREAD_LIBS@
+ Cflags: -I${includedir} @PTHREAD_CFLAGS@

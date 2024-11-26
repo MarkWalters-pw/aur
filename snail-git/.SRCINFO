@@ -1,0 +1,24 @@
+pkgbase = snail-git
+	pkgdesc = Parasitic network manager
+	pkgver = 0.4.0.r33.gd4d4a3f
+	pkgrel = 1
+	url = https://github.com/kpcyrd/snail
+	arch = i686
+	arch = x86_64
+	arch = armv6h
+	arch = aarch64
+	license = GPL3
+	makedepends = cargo
+	makedepends = git
+	depends = zeromq
+	depends = libseccomp
+	depends = dbus
+	depends = dhcpcd
+	provides = snail
+	conflicts = snail
+	backup = etc/snail/snail.conf
+	source = git+https://github.com/kpcyrd/snail.git
+	sha512sums = SKIP
+
+pkgname = snail-git
+

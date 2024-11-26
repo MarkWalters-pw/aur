@@ -1,0 +1,17 @@
+pkgbase = dmoji
+	pkgdesc = emoji selector program
+	pkgver = 0.6
+	pkgrel = 1
+	url = https://github.com/cedricbu/dmoji
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	depends = icu
+	depends = dmenu
+	depends = xsel
+	optdepends = rofi: to use rofi instead of dmenu
+	optdepends = xdotool: for autotype support
+	source = dmoji-0.6.tar.gz::https://github.com/cedricbu/dmoji/archive/refs/tags/0.6.tar.gz
+	sha256sums = 8494d9c60ef7ab22a8d0cfafd9c0a25f9c6cc680baeecc3c9c8374ce3dd7e1d5
+
+pkgname = dmoji

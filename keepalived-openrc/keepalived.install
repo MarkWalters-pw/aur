@@ -1,0 +1,43 @@
+post_install() {
+   cat << EOF
+
+keepalived has been installed and an init.d script deployed (/etc/init.d/keepalived)
+
+The init.d script has not been registered nor started.
+
+    To register the init.d script:
+      rc-update add keepalived default
+    To start the service:
+      rc-service keepalived start
+    To get keepalived status:
+      rc-service keepalived status
+    To stop keepalived:
+      rc-service keepalived stop
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                          ┳┓┏┓┏┳┓┳┏┓┏┓                              ┃
+┃                          ┃┃┃┃ ┃ ┃┃ ┣                               ┃
+┃                          ┛┗┗┛ ┻ ┻┗┛┗┛                              ┃
+┃                                                                    ┃
+┃ No config file (keepalive.conf) has been deployed, you must        ┃
+┃  create/configure a config file before keepalived will run!        ┃
+┃                                                                    ┃
+┃ A sample config file has been provided and is available at         ┃
+┃  /etc/keepalived/keepalived.conf.sample.                           ┃
+┃                                                                    ┃
+┃ You will need to create the /etc/keepalived/keepalived.conf file   ┃
+┃  and configure it per your needs.                                  ┃
+┃                                                                    ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+EOF
+}
+post_upgrade() {
+cat << EOF
+
+keepalived has been upgraded, do not forget to restart the service
+
+    To restart the service:
+      rc-service keepalived restart
+
+EOF
+}

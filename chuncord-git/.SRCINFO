@@ -1,0 +1,15 @@
+pkgbase = chuncord-git
+	pkgdesc = CLI tool for uploading large files to Discord in parts using webhooks
+	pkgver = 0.2.1.r0.gab5b71b
+	pkgrel = 1
+	url = https://git.lemonsh.moe/lemon/chuncord
+	arch = x86_64
+	license = custom:EUPLv1.2
+	makedepends = cargo
+	makedepends = git
+	provides = chuncord
+	conflicts = chuncord
+	source = chuncord-git::git+https://git.lemonsh.moe/lemon/chuncord
+	sha256sums = SKIP
+
+pkgname = chuncord-git

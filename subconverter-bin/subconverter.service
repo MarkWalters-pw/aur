@@ -1,0 +1,14 @@
+[Unit]
+Description=subconverter service
+After=network-online.target
+
+[Service]
+Type=simple
+User=subconverter
+WorkingDirectory=/opt/subconverter
+ExecStart=/opt/subconverter/subconverter
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

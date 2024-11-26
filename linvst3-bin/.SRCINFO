@@ -1,0 +1,16 @@
+pkgbase = linvst3-bin
+	pkgdesc = Linux Windows vst3 wrapper/bridge
+	pkgver = 4.5.2
+	pkgrel = 1
+	url = https://github.com/osxmidi/LinVst3
+	arch = x86_64
+	groups = pro-audio
+	license = GPL
+	depends = wine
+	depends = gtk3
+	optdepends = jack
+	conflicts = linvst3
+	source = https://github.com/osxmidi/LinVst3/releases/download/4.5/LinVst3-4.5.2-Manjaro.zip
+	md5sums = f777fa8eddb5b3c6ab7badd8cc9c7218
+
+pkgname = linvst3-bin

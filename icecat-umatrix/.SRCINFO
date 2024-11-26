@@ -1,0 +1,19 @@
+pkgbase = icecat-umatrix
+	pkgdesc = Point and click matrix to filter net requests by source, destination and type
+	pkgver = 1.4.4
+	pkgrel = 1
+	url = https://github.com/gorhill/uMatrix
+	arch = any
+	groups = icecat-addons
+	license = GPL3
+	makedepends = git
+	makedepends = python
+	makedepends = strip-nondeterminism
+	makedepends = zip
+	source = git+https://github.com/gorhill/uMatrix.git#commit=1.4.4?signed
+	source = git+https://github.com/uBlockOrigin/uAssets.git
+	validpgpkeys = 603B28AA5D6CD687A554347425E1490B761470C2
+	b2sums = SKIP
+	b2sums = SKIP
+
+pkgname = icecat-umatrix

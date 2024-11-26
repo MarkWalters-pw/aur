@@ -1,0 +1,17 @@
+pkgbase = taskbook-git
+	pkgdesc = Tasks, boards & notes for the command-line habitat (git)
+	pkgver = 0.3.0+10+g21dcadd
+	pkgrel = 1
+	url = https://github.com/klaussinani/taskbook
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = npm
+	depends = nodejs
+	provides = taskbook
+	conflicts = taskbook
+	source = git+https://github.com/klaussinani/taskbook
+	sha512sums = SKIP
+
+pkgname = taskbook-git
+

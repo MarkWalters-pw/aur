@@ -1,0 +1,18 @@
+pkgbase = stag-git
+	pkgdesc = Ncurses based audio file tagger
+	pkgver = v1.0.r1.g0a158e7
+	pkgrel = 2
+	url = https://github.com/smabie/stag
+	arch = i686
+	arch = x86_64
+	license = custom
+	makedepends = git
+	depends = ncurses
+	depends = taglib
+	conflicts = stag
+	source = git+https://github.com/smabie/stag.git
+	source = libs.patch
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = stag-git

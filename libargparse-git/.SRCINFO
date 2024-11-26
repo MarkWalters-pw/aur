@@ -1,0 +1,15 @@
+pkgbase = libargparse-git
+	pkgdesc = A C++ command-line parsing library
+	pkgver = r69.ee74d1b
+	pkgrel = 1
+	url = https://github.com/kmurray/libargparse
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = cmake
+	provides = libargparse
+	conflicts = libargparse
+	source = git+https://github.com/kmurray/libargparse
+	sha256sums = SKIP
+
+pkgname = libargparse-git

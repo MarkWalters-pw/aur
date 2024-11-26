@@ -1,0 +1,119 @@
+diff --git a/AprilTagTrackers/CMakeLists.txt b/AprilTagTrackers/CMakeLists.txt
+index 0b56197..da15ab0 100644
+--- a/AprilTagTrackers/CMakeLists.txt
++++ b/AprilTagTrackers/CMakeLists.txt
+@@ -11,10 +11,13 @@ include("${SUPERPROJECT_SOURCE_DIR}/CMake/shared.cmake")
+ AprilTagTrackers_options()
+ 
+ # Find our dependencies
+-att_find_dep(OpenCV REQUIRED)
+-att_find_dep(apriltag REQUIRED)
+-att_find_dep(openvr REQUIRED)
+-att_find_dep(wxWidgets REQUIRED core base)
++find_package(OpenCV REQUIRED)
++find_library(APRILTAG_LIB apriltag REQUIRED)
++find_library(OPENVR_LIB openvr_api REQUIRED)
++find_package(wxWidgets COMPONENTS core base REQUIRED)
++include(${wxWidgets_USE_FILE})
++
++include_directories("/usr/include/openvr/")
+ 
+ # Explicitly list source files as recommended by cmake
+ set(ATT_SOURCE_FILES
+@@ -61,7 +64,7 @@ endif()
+ 
+ # Link libraries defined as targets, includes are automatic
+ target_link_libraries(AprilTagTrackers PUBLIC
+-    ${OpenCV_LIBS} wx::wx openvr::openvr apriltag::apriltag
++    ${OpenCV_LIBS} ${wxWidgets_LIBRARIES} ${OPENVR_LIB} ${APRILTAG_LIB}
+     common::semver)
+ 
+ # Ensure compiler with c++17 language features
+diff --git a/AprilTagTrackers/GUI/U8String.cpp b/AprilTagTrackers/GUI/U8String.cpp
+index 55d6be3..7f617da 100644
+--- a/AprilTagTrackers/GUI/U8String.cpp
++++ b/AprilTagTrackers/GUI/U8String.cpp
+@@ -4,7 +4,7 @@
+ 
+ U8String::operator wxString() const
+ {
+-    return wxString::FromUTF8Unchecked(str);
++    return wxString::FromUTF8Unchecked(str.c_str());
+ }
+ 
+ U8StringView::operator wxString() const
+diff --git a/AprilTagTrackers/GUI/wxHelpers.h b/AprilTagTrackers/GUI/wxHelpers.h
+index 937cda1..9a8ef19 100644
+--- a/AprilTagTrackers/GUI/wxHelpers.h
++++ b/AprilTagTrackers/GUI/wxHelpers.h
+@@ -145,7 +145,7 @@ inline bool FromWXString(const wxString& str, double& out_val)
+ }
+ inline bool FromWXString(const wxString& str, std::string& out_val)
+ {
+-    out_val = str.utf8_string();
++    out_val = str.utf8_str();
+     return true;
+ }
+ inline bool FromWXString(const wxString& str, wxString& out_val)
+@@ -169,7 +169,7 @@ inline bool FromWXString(const wxString& str, FS::Valid<T>& out_val)
+ /// Must be inverse of FromString.
+ inline wxString ToWXString(const std::string& val)
+ {
+-    return wxString::FromUTF8Unchecked(val);
++    return wxString::FromUTF8Unchecked(val.c_str());
+ }
+ inline wxString ToWXString(const wxString& val)
+ {
+@@ -180,7 +180,7 @@ inline wxString ToWXString(const T& val)
+ {
+     std::ostringstream ss;
+     ss << val;
+-    return wxString::FromUTF8(ss.str());
++    return wxString::FromUTF8(ss.str().c_str());
+ }
+ template <typename T>
+ inline wxString ToWXString(const FS::Valid<T>& val)
+diff --git a/AprilTagTrackers/Serializable.h b/AprilTagTrackers/Serializable.h
+index 6e143ed..98d80e9 100644
+--- a/AprilTagTrackers/Serializable.h
++++ b/AprilTagTrackers/Serializable.h
+@@ -192,7 +192,7 @@ inline void ReadNode(const cv::FileNode&, const char*, const Comment&)
+ void WriteNode(cv::FileStorage& fs, const char*, const cv::Ptr<cv::aruco::DetectorParameters>& field);
+ inline void ReadNode(const cv::FileNode& fn, const char*, cv::Ptr<cv::aruco::DetectorParameters>& field)
+ {
+-    cv::aruco::DetectorParameters::readDetectorParameters(fn, field);
++    field->readDetectorParameters(fn);
+ }
+ 
+ template <typename ST>
+diff --git a/AprilTagTrackers/Tracker.cpp b/AprilTagTrackers/Tracker.cpp
+index 556fe52..462591d 100644
+--- a/AprilTagTrackers/Tracker.cpp
++++ b/AprilTagTrackers/Tracker.cpp
+@@ -944,7 +944,7 @@ void Tracker::CalibrateTracker()
+             {
+                 if (cv::aruco::estimatePoseBoard(corners, ids, arBoard, calib_config.camMat, calib_config.distCoeffs, boardRvec[i], boardTvec[i], false) > 0) // try to estimate current trackers pose
+                 {
+-                    cv::aruco::drawAxis(image, calib_config.camMat, calib_config.distCoeffs, boardRvec[i], boardTvec[i], 0.1f); // if found, draw axis and mark it found
++                    cv::drawFrameAxes(image, calib_config.camMat, calib_config.distCoeffs, boardRvec[i], boardTvec[i], 0.1f); // if found, draw axis and mark it found
+                     boardFound[i] = true;
+                 }
+                 else
+@@ -1265,7 +1265,7 @@ void Tracker::MainLoop()
+                 cv::Vec3d rvec = q.toRotVec();
+                 cv::Vec3d tvec{rpos[0], rpos[1], rpos[2]};
+ 
+-                cv::aruco::drawAxis(drawImg, calib_config.camMat, calib_config.distCoeffs, rvec, tvec, 0.10f);
++                cv::drawFrameAxes(drawImg, calib_config.camMat, calib_config.distCoeffs, rvec, tvec, 0.10f);
+ 
+                 if (!trackerStatus[i].boardFound) // if tracker was found in previous frame, we use that position for masking. If not, we use position from driver for masking.
+                 {
+@@ -1543,7 +1543,7 @@ void Tracker::MainLoop()
+             // convert rodriguez rotation to quaternion
+             cv::Quatd q = cv::Quatd::createFromRvec(trackerStatus[i].boardRvec);
+ 
+-            // cv::aruco::drawAxis(drawImg, user_config.camMat, user_config.distCoeffs, boardRvec[i], boardTvec[i], 0.05);
++            // cv::drawFrameAxes(drawImg, user_config.camMat, user_config.distCoeffs, boardRvec[i], boardTvec[i], 0.05);
+ 
+             q = cv::Quatd{0, 0, 1, 0} * (wrotation * q) * cv::Quatd{0, 0, 1, 0};
+ 

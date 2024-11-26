@@ -1,0 +1,24 @@
+pkgbase = onvifviewer
+	pkgdesc = ONVIF camera viewer for Plasma Mobile and Linux desktop
+	pkgver = 0.13
+	pkgrel = 2
+	arch = x86_64
+	license = GPL3
+	makedepends = cmake
+	makedepends = make
+	makedepends = extra-cmake-modules
+	makedepends = ki18n
+	makedepends = kcoreaddons
+	makedepends = appstream-qt
+	makedepends = git
+	depends = qt5-base
+	depends = kdsoap
+	depends = breeze-icons
+	depends = kxmlgui
+	depends = kdsoap-ws-discovery-client
+	depends = kirigami2
+	depends = qtav
+	source = https://gitlab.com/caspermeijn/onvifviewer/-/archive/v0.13/onvifviewer-v0.13.tar.gz
+	sha256sums = 3a55022f59a9a8c3ccacc6bb8d7f7e329157c3034001c528530751ae7cb2cad2
+
+pkgname = onvifviewer

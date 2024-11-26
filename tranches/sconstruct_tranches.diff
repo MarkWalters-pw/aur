@@ -1,0 +1,98 @@
+--- SConstruct_old	2017-10-15 13:37:29.585811413 +0200
++++ SConstruct	2017-10-15 13:26:22.909172033 +0200
+@@ -1,6 +1,15 @@
+ # ENVIRONMENT
+ env = Environment(CPPFLAGS=' -I/usr/include/libxml2 -I/usr/include/lash-1.0',LIBS=['asound','pthread','xml2','jack'])
+ 
++# CONFIGURATION OPTIONS
++opts = Variables('tranches.conf') 
++opts.Add(PathVariable('PREFIX', 'Directory to install under', '/usr/local', PathVariable.PathIsDir))
++opts.Add(PathVariable("DESTDIR", 'Root directory to install into', '/usr/local', PathVariable.PathIsDir))
++opts.Update(env)
++#opts.Save('tranches.conf', env)  # Save, so user doesn't have to specify PREFIX every time
++
++Help(opts.GenerateHelpText(env))
++
+ # SOURCE FILES
+ base = Glob('src/base/*.cpp')
+ audio = Glob('src/audio/*.cpp')
+@@ -20,10 +29,10 @@
+ 	######## GCC
+ 	f = FindFile('g++', ['/usr/bin', '/usr/local/bin'])
+ 	if f:
+-		print 'Checking for g++...yes'
++		print ('Checking for g++...yes')
+ 	else:
+ 		missing+='g++\n'
+-		print 'Checking for g++...no'
++		print ('Checking for g++...no')
+ 	######## JACK
+ 	if not conf.CheckCHeader('jack/jack.h'):
+ 		missing+='jack\n'
+@@ -50,24 +59,22 @@
+ 			missing+='fltk\n'
+ 		else:
+ 			sources+=ui
+-			env.ParseConfig('fltk-config --libs --cxxflags --ldflags')
++			env.ParseConfig('fltk-config --cxxflags --ldflags')
+ 			env.Append(CPPFLAGS = ' -DWITH_GUI ')
+ 	env = conf.Finish()
+ 
+ 	#IF SOMETHING WAS MISSING
+ 	if(missing!=''):
+ 		if(optlang=='fr'):
+-			print '\nLes dependances suivantes sont manquantes:\n'
+-			print missing
+-			print '\n'
+-			print """Merci de les installer (paquetages -dev ou -devel) puis de re-entrer la commande 'scons lang=fr'
+-				"""
++			print ('\nLes dependances suivantes sont manquantes:\n')
++			print (missing)
++			print ('\n')
++			print (bla)
+ 		else:
+-			print '\nThe following dependencies are missing:\n'
+-			print missing
+-			print '\n'
+-			print """Please install them (packages -dev or -devel) and re-type 'scons'
+-				"""
++			print ('\nThe following dependencies are missing:\n')
++			print (missing)
++			print ('\n')
++			print (hehe)
+ 		Exit(1)
+ 	
+ # BUILD
+@@ -82,9 +89,9 @@
+ 		env['LINKCOMSTR'] = "Linking $TARGET"
+ 
+ # INSTALL
+-bin = env.Install('/usr/local/bin', 'tranches')
+-desktop = env.Install('/usr/local/share/applications', 'data/tranches.desktop')
+-icon = env.Install('/usr/local/share/pixmaps', 'data/tranches.png')
++bin = env.Install('$DESTDIR/$PREFIX/bin', 'tranches')
++desktop = env.Install('$DESTDIR/$PREFIX/share/applications', 'data/tranches.desktop')
++icon = env.Install('$DESTDIR/$PREFIX/share/pixmaps', 'data/tranches.png')
+ env.Alias('install', [bin,desktop,icon])
+ 
+ # HELP
+@@ -98,6 +105,8 @@
+ 
+ 		Si tout se passe bien, entrez 'scons install' en tant qu'administrateur 
+ 		pour installer Tranches dans /usr/local/
++			utilisez DESTDIR ou PREFIX pour installer dans d'autres endroits, 
++			p. ex. 'scons PREFIX="/usr" install'
+ 
+ 		Si vous voulez nettoyer la compilation, entrez 'scons -c'
+ 		Si vous voulez desinstaller Tranches, entrez 'scons -c install'
+@@ -113,7 +122,9 @@
+ 
+ 		If everything went good, type 'scons install' as root 
+ 		to install Tranches in /usr/local/
+-
++			use DESTDIR or PREFIX to install in other places, 
++			e.g. 'scons PREFIX="/usr" install'
++		
+ 		If you want to clean the build, type 'scons -c'
+ 		If you want to uninstall Tranches, type 'scons -c install'
+ 	     """)

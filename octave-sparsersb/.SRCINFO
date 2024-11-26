@@ -1,0 +1,16 @@
+pkgbase = octave-sparsersb
+	pkgdesc = Interface to the librsb package implementing the RSB sparse matrix format.
+	pkgver = 1.0.9
+	pkgrel = 2
+	url = https://gnu-octave.github.io/packages/sparsersb/
+	install = octave-sparsersb.install
+	arch = any
+	groups = octave-forge
+	license = GPL3
+	depends = octave>=4.4.0
+	depends = librsb>=1.2.0.9
+	noextract = sparsersb-1.0.9.tar.gz
+	source = https://downloads.sourceforge.net/octave/sparsersb-1.0.9.tar.gz
+	sha256sums = b98bffc26fc031988106a24e05122d8ca7b6203fe960ac68112f93f0699fdcff
+
+pkgname = octave-sparsersb

@@ -1,0 +1,22 @@
+pkgbase = perl-net-frame
+	pkgdesc = the base framework for frame crafting
+	pkgver = 1.17
+	pkgrel = 3
+	url = https://metacpan.org/release/Net-Frame
+	arch = any
+	license = GPL
+	license = PerlArtistic
+	checkdepends = perl-net-ipv4addr
+	makedepends = perl-module-build
+	depends = perl
+	depends = perl-bit-vector
+	depends = perl-class-gomor
+	depends = perl-net-ipv6addr
+	depends = perl-socket6
+	options = !emptydirs
+	options = purge
+	source = http://search.cpan.org/CPAN/authors/id/G/GO/GOMOR/Net-Frame-1.17.tar.gz
+	md5sums = 9219f01c4ac55e6aba518529df9edb92
+
+pkgname = perl-net-frame
+

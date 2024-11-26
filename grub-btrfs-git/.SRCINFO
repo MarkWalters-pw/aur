@@ -1,0 +1,18 @@
+pkgbase = grub-btrfs-git
+	pkgdesc = Include btrfs snapshots at boot options (grub menu)
+	pkgver = 4.12.r47.g9a8a1b7
+	pkgrel = 1
+	url = https://github.com/Antynea/grub-btrfs
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = grub
+	depends = btrfs-progs
+	depends = bash
+	depends = gawk
+	provides = grub-btrfs
+	conflicts = grub-btrfs
+	source = git+https://github.com/Antynea/grub-btrfs.git
+	md5sums = SKIP
+
+pkgname = grub-btrfs-git

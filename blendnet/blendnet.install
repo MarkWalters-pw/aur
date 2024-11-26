@@ -1,0 +1,17 @@
+post_install() {
+    if [ ! -f /etc/blendnet/server.key ]; then
+        echo
+        echo "Generating openssl certificate with default validity period of 10 years..."
+        openssl req -x509 -nodes -newkey rsa:4096 \
+            -keyout /etc/blendnet/server.key -out /etc/blendnet/server.crt \
+            -subj "/C=US/ST=N/L=N/O=N/OU=N/CN=blendnet-service"
+    fi
+    
+    echo
+    echo "Follow instructions on the BlendNet wiki page to configure your self-hosted render farm: https://wiki.archlinux.org/title/Blender#BlendNet"
+    echo
+}
+
+post_upgrade() {
+    post_install
+}

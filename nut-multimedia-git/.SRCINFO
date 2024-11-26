@@ -1,0 +1,17 @@
+pkgbase = nut-multimedia-git
+	pkgdesc = Free multimedia container format. (Git Version)
+	pkgver = r695.12f6a7a
+	pkgrel = 1
+	url = https://ffmpeg.org/nut.html
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = doxygen
+	depends = glibc
+	provides = nut-multimedia
+	provides = libnut.so
+	conflicts = nut-multimedia
+	source = git+https://git.ffmpeg.org/nut.git
+	sha256sums = SKIP
+
+pkgname = nut-multimedia-git

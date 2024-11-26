@@ -1,0 +1,14 @@
+[Unit]
+Description=Haraka MTA
+After=syslog.target network.target remote-fs.target nss-lookup.target
+
+[Service]
+Type=simple
+PIDFile=/var/run/haraka.pid
+WorkingDirectory=/usr/lib/node_modules/Haraka
+ExecStart=/usr/bin/node haraka.js
+KillMode=process
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

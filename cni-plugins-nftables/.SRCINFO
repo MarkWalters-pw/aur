@@ -1,0 +1,18 @@
+pkgbase = cni-plugins-nftables
+	pkgdesc = CNI plugins compatible with nftables
+	pkgver = 1.0.12
+	pkgrel = 1
+	url = https://github.com/greenpau/cni-plugins
+	arch = x86_64
+	arch = i686
+	arch = pentium4
+	arch = armv7h
+	arch = aarch64
+	license = apache
+	makedepends = go
+	makedepends = git
+	optdepends = cni-plugins: Other network plugins maintained by the CNI team
+	source = cni-plugins-nftables-1.0.12.tar.gz::https://github.com/greenpau/cni-plugins/archive/refs/tags/v1.0.12.tar.gz
+	sha256sums = 51c4b41c61f46c7dfc691d52dba301e7d8189589e1a625772f761ea3ae804fb3
+
+pkgname = cni-plugins-nftables

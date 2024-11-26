@@ -1,0 +1,27 @@
+pkgbase = khard-git
+	pkgdesc = Console CardDAV client
+	pkgver = 0.16.1.r54.gef7e9d8
+	pkgrel = 1
+	url = https://github.com/scheibler/khard
+	arch = any
+	license = GPL3
+	checkdepends = python-pytest
+	makedepends = python-sphinx-autoapi
+	makedepends = python-sphinx-autodoc-typehints
+	makedepends = python-setuptools-scm
+	makedepends = python-sphinx
+	makedepends = git
+	depends = python-atomicwrites
+	depends = python-configobj
+	depends = python-ruamel-yaml
+	depends = python-setuptools
+	depends = python-unidecode
+	depends = python-vobject
+	optdepends = vdirsyncer: Synchronization of address books with a DAV server
+	optdepends = diffutils: Using sdiff_khard_wrapper.sh
+	provides = khard
+	conflicts = khard
+	source = git+https://github.com/scheibler/khard.git
+	sha512sums = SKIP
+
+pkgname = khard-git

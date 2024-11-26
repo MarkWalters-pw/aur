@@ -1,0 +1,18 @@
+pkgbase = dropbear-client
+	pkgdesc = Lightweight SSH client
+	pkgver = 2022.83
+	pkgrel = 1
+	url = https://github.com/mkj/dropbear
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	depends = libxcrypt
+	depends = zlib
+	conflicts = dropbear
+	source = git+https://github.com/mkj/dropbear#commit=a4689e25ec85904b9111f4e96d3994ff17b1c3e6
+	source = localoptions.h
+	validpgpkeys = F7347EF2EE2E07A267628CA944931494F29C6773
+	b2sums = SKIP
+	b2sums = 49628bbce0d26eb33598de276ede705bd592a38b7892c9db0ceebfb0598a1ee6e7e84ed03dbf255ee1adcad0c5214d38dc03e6c04176a405f59a19765cb28388
+
+pkgname = dropbear-client

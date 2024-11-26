@@ -1,0 +1,18 @@
+[Unit]
+Description=Apache ActiveMQ
+After=networki-online.target
+
+[Service]
+Type=forking
+WorkingDirectory=/opt/activemq/current/bin
+#ExecStart=/usr/bin/java -jar /opt/activemq/current/bin/activemq.jar start
+ExecStart=/opt/activemq/current/bin/activemq start
+ExecStop=/opt/activemq/current/bin/activemq stop
+Restart=on-abort
+RestartSec=60
+User=activemq
+Group=activemq
+
+[Install]
+WantedBy=multi-user.target
+

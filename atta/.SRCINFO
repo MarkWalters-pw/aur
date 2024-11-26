@@ -1,0 +1,18 @@
+pkgbase = atta
+	pkgdesc = High-performance simulator for multi-robot systems (early stages)
+	pkgver = 0.0.1.1
+	pkgrel = 2
+	url = https://github.com/Brenocq/Atta.git
+	arch = x86_64
+	arch = i686
+	license = MIT
+	makedepends = git
+	depends = glfw
+	depends = freetype2
+	depends = vulkan-headers
+	provides = atta
+	source = atta::git://github.com/Brenocq/Atta.git
+	md5sums = SKIP
+
+pkgname = atta
+

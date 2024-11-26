@@ -1,0 +1,21 @@
+pkgbase = python-qpid-proton
+	pkgdesc = An AMQP based messaging library
+	pkgver = 0.39.0
+	pkgrel = 2
+	url = http://qpid.apache.org/proton/
+	arch = any
+	license = Apache-2.0
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	makedepends = python-sphinx
+	depends = python
+	depends = python-cffi
+	depends = libsasl
+	depends = openssl
+	depends = gcc-libs
+	source = python-qpid-proton-0.39.0.tar.gz::https://files.pythonhosted.org/packages/source/p/python-qpid-proton/python-qpid-proton-0.39.0.tar.gz
+	b2sums = ca36f7b76b1b97d742494b7d28aa41eb52be8c6c6c0d3f30137c2b908e5774741f866d31ca09e2d796211b1dd5af8a4c0cb51fd3eaa3f5b269becae4cae78796
+
+pkgname = python-qpid-proton

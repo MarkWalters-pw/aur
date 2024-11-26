@@ -1,0 +1,18 @@
+pkgbase = ros-noetic-rosbuild
+	pkgdesc = ROS - rosbuild contains scripts for managing the CMake-based build system for ROS.
+	pkgver = 1.15.8
+	pkgrel = 1
+	url = https://wiki.ros.org/rosbuild
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-catkin
+	makedepends = pkg-config
+	depends = ros-noetic-message-runtime
+	depends = ros-noetic-message-generation
+	depends = ros-noetic-catkin
+	source = ros-noetic-rosbuild-1.15.8.tar.gz::https://github.com/ros/ros/archive/1.15.8.tar.gz
+	sha256sums = 2cece46697585e55db415c5ddb4be935641b70c8a220f761a8e551225f133e40
+
+pkgname = ros-noetic-rosbuild

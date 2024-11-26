@@ -1,0 +1,30 @@
+pkgbase = htop-solarized
+	pkgdesc = Interactive process viewer with solarized patch
+	pkgver = 3.2.2
+	pkgrel = 1
+	url = https://htop.dev/
+	arch = i686
+	arch = x86_64
+	arch = armv7h
+	license = GPL
+	makedepends = git
+	makedepends = lm_sensors
+	depends = libcap
+	depends = libcap.so
+	depends = libnl
+	depends = ncurses
+	depends = libncursesw.so
+	optdepends = lm_sensors: show cpu temperatures
+	optdepends = lsof: show files opened by a process
+	optdepends = strace: attach to a running process
+	provides = htop
+	conflicts = htop
+	options = !emptydirs
+	source = git+https://github.com/htop-dev/htop.git#tag=4dbd0b5c87f4225495d6e0591a1d7227f120ead1?signed
+	source = htop-solarized.patch
+	validpgpkeys = F7ABE8761E6FE68638E6283AFE0842EE36DD8C0C
+	validpgpkeys = 0D316B6ABE022C7798D0324BF1D35CB9E8E12EAD
+	sha256sums = SKIP
+	sha256sums = 2b8e0b3949abd5b45c862963bde55504cd55845e734ff24fb8a310ca091c40f5
+
+pkgname = htop-solarized

@@ -1,0 +1,16 @@
+pkgbase = python-cec-git
+	pkgdesc = libcec bindings for Python
+	pkgver = 0.2.7.r13.gf2d4bd3
+	pkgrel = 1
+	url = https://github.com/trainman419/python-cec
+	arch = any
+	license = GPL
+	makedepends = git
+	makedepends = python-setuptools
+	depends = libcec
+	provides = python-cec
+	conflicts = python-cec
+	source = python-cec-git::git+https://github.com/trainman419/python-cec.git
+	md5sums = SKIP
+
+pkgname = python-cec-git

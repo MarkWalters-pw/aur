@@ -1,0 +1,37 @@
+pkgbase = mingw-w64-python2
+	pkgdesc = A high-level scripting language (mingw-w64)
+	pkgver = 2.7.18
+	pkgrel = 1
+	url = https://www.python.org/
+	arch = any
+	license = PSF
+	makedepends = mingw-w64-pkg-config
+	makedepends = mingw-w64-configure
+	makedepends = python2>=2.7.18
+	makedepends = mingw-w64-wine
+	depends = mingw-w64-crt
+	depends = mingw-w64-expat
+	depends = mingw-w64-bzip2
+	depends = mingw-w64-ncurses
+	depends = mingw-w64-openssl
+	depends = mingw-w64-libffi
+	depends = mingw-w64-sqlite
+	depends = mingw-w64-tcl
+	depends = mingw-w64-tk
+	depends = mingw-w64-zlib
+	optdepends = mingw-w64-wine: runtime support
+	options = staticlibs
+	options = !buildflags
+	options = !strip
+	source = Python-2.7.18.tar.xz::https://www.python.org/ftp/python/2.7.18/Python-2.7.18.tar.xz
+	source = patches.tar.xz
+	source = wine-python.sh
+	sha1sums = 678d4cf483a1c92efd347ee8e1e79326dc82810b
+	sha1sums = 02fe742643efd511ac1af51132587571d7e4050c
+	sha1sums = a024e7fd7eea7984a0d050164a4a015dea762da7
+	sha512sums = a7bb62b51f48ff0b6df0b18f5b0312a523e3110f49c3237936bfe56ed0e26838c0274ff5401bda6fc21bf24337477ccac49e8026c5d651e4b4cafb5eb5086f6c
+	sha512sums = 01249c95858ceb909e9e88ea79e25d0165ce229cacec7829779473657fe42c2cd643cc314d8136a6e661b807cc8d02fa7ffac6d1eed56905cf2332590330e252
+	sha512sums = d0fb7f0e1a3d98a170ebea301226ad8caa7ffab9fc0bee224abc31c22875c892b43d3468dffbdd15eb71ca1b5260e039d0fceb21ecc92341b9bb6949d7e9be6a
+
+pkgname = mingw-w64-python2
+

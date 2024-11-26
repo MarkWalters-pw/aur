@@ -1,0 +1,20 @@
+pkgbase = vim-palenight-git
+	pkgdesc = A dark colorscheme for Vim/Neovim based on Material Pale Night and onedark.vim
+	pkgver = r19.847fcf5
+	pkgrel = 1
+	url = https://github.com/drewtempelmeyer/palenight.vim
+	arch = any
+	groups = vim-plugins
+	license = MIT
+	makedepends = git
+	depends = vim-plugin-runtime
+	provides = vim-palenight
+	provides = vim-airline-palenight
+	provides = vim-lightline-palenight
+	conflicts = vim-palenight
+	replaces = vim-airline-palenight-git
+	replaces = vim-lightline-palenight-git
+	source = vim-palenight-git::git+https://github.com/drewtempelmeyer/palenight.vim
+	md5sums = SKIP
+
+pkgname = vim-palenight-git

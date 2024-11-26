@@ -1,0 +1,58 @@
+pre_install() {
+    ps -ef | grep DigiSignApplication | grep -v grep | awk '{print $2}' | xargs -r kill -9 > /dev/null 2>&1
+}
+
+pre_upgrade() {
+    ps -ef | grep DigiSignApplication | grep -v grep | awk '{print $2}' | xargs -r kill -9 > /dev/null 2>&1
+}
+
+post_install() {
+    if [ ! -d /tmp/.digisign_logs ]; then
+        mkdir -p /tmp/.digisign_logs
+        chmod 777 /tmp/.digisign_logs
+    fi
+
+    exec > /tmp/.digisign_logs/postinst.log 2>&1
+
+    set -x
+
+    ldconfig
+
+    #old certificate will be removed after uninstall
+    /usr/bin/DigiSignApplication.bin /Install
+
+    if [ -x /usr/bin/update-menus ] ; then update-menus ; fi
+}
+
+post_upgrade() {
+    echo 'If a password prompt appears on launch, remove $HOME/.digisign and $HOME/.pki/nssdb'
+
+    if [ ! -d /tmp/.digisign_logs ]; then
+        mkdir -p /tmp/.digisign_logs
+        chmod 777 /tmp/.digisign_logs
+    fi
+
+    exec > /tmp/.digisign_logs/postinst.log 2>&1
+
+    set -x
+
+    ldconfig
+
+    #old certificate will be removed after uninstall
+    /usr/bin/DigiSignApplication.bin /Install
+
+    if [ -x /usr/bin/update-menus ] ; then update-menus ; fi
+}
+
+post_rm() {
+    ldconfig
+    ps -ef | grep DigiSignApplication | grep -v grep | awk '{print $2}' | xargs -r kill -9  > /dev/null 2>&1
+
+    rm /etc/xdg/Fujitsu/Seed.txt
+    rm /etc/xdg/Fujitsu/SSLCA.cer
+    rm /etc/xdg/Fujitsu/SSL.p12
+    rm -rf /tmp/.digisign_logs
+    rm `find /home -name ds_nssdinstalled.txt`
+
+    if [ -x /usr/bin/update-menus ] ; then update-menus ; fi
+}

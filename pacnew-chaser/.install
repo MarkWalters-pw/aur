@@ -1,0 +1,11 @@
+post_install() {
+  mkdir -p  /etc/pacman.d/hooks
+  sudo ln -s /usr/lib/pacnew-chaser/pacnew-chaser.hook /etc/pacman.d/hooks/pacnew-chaser.hook
+}
+
+post_remove() {
+  [ -h /etc/pacman.d/hooks/pacnew-chaser.hook ] && unlink /etc/pacman.d/hooks/pacnew-chaser.hook
+  echo "For a clean home, you can"
+  echo 'remove $HOME/.local/share/pacnew-chaser/'
+  echo 'remove $HOME/.config/pacnew-chaser.ini'
+}

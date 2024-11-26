@@ -1,0 +1,20 @@
+pkgbase = trashy
+	pkgdesc = a cli system trash manager, alternative to rm and trash-cli
+	pkgver = 2.0.0
+	pkgrel = 1
+	url = https://github.com/oberblastmeister/trashy
+	arch = x86_64
+	arch = aarch64
+	license = MIT
+	license = Apache
+	makedepends = cargo
+	conflicts = trash-cli
+	source = trashy-2.0.0.tar.gz::https://github.com/oberblastmeister/trashy/archive/refs/tags/v2.0.0.tar.gz
+	source = Cargo.lock
+	sha256sums = efdcb0eb913855b5339d2b464a1944f1c506143d65ecf85771dfe5419ef4f387
+	sha256sums = 7a301a20bb6bc1d45110d44f97dd5e8f889fa60546dcd2529bc0979794fe56d6
+	b2sums = babdf4caeceaff85d481926d0fc872637910e17d9aa7b0a37b26a3e437cc2f950d785a961b399f3eb93c0466134406904b0fca66ac8ba400e29de9e3ef935bf1
+	b2sums = b611051264d4cc0467c35e3a4b4f0aa2f657f1c98af9ddc15e1de4c41dea1c8cb407ae07bafadd546f65e0e5b7ddb9620c578fc7fa288c52e2a0374609f47454
+	depends_x86_64 = gcc-libs
+
+pkgname = trashy

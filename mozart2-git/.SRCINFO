@@ -1,0 +1,32 @@
+pkgbase = mozart2-git
+	pkgdesc = The Mozart Programming System version 2
+	pkgver = v2.0.1.8.gdb41d83e
+	pkgrel = 1
+	url = https://github.com/mozart/mozart2
+	install = mozart2-git.install
+	arch = x86_64
+	license = BSD
+	makedepends = java-runtime-headless
+	makedepends = emacs
+	makedepends = gcc
+	makedepends = boost>=1.61
+	makedepends = cmake
+	makedepends = gtest
+	makedepends = clang
+	makedepends = clang-tools-extra
+	makedepends = llvm
+	depends = boost-libs
+	depends = tk
+	depends = gmp
+	depends = hicolor-icon-theme
+	depends = xdg-utils
+	optdepends = emacs: Interactive programming interface (recommended)
+	provides = mozart2
+	conflicts = mozart2
+	conflicts = mozart2-bin
+	conflicts = mozart2-compiler
+	source = mozart2-git::git+https://github.com/mozart/mozart2
+	sha256sums = SKIP
+
+pkgname = mozart2-git
+

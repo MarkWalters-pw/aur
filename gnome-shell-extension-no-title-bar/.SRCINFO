@@ -1,0 +1,17 @@
+pkgbase = gnome-shell-extension-no-title-bar
+	pkgdesc = Integrate maximized windows with the top panel (poehlerj fork)
+	pkgver = 11
+	pkgrel = 1
+	url = https://github.com/poehlerj/no-title-bar
+	install = gnome-shell-extension-no-title-bar.install
+	arch = any
+	license = GPL2
+	depends = gnome-shell
+	depends = xorg-xprop
+	conflicts = gnome-shell-extension-pixel-saver
+	conflicts = gnome-shell-extension-pixel-saver-git
+	source = gnome-shell-extension-no-title-bar-11.tar.gz::https://github.com/poehlerj/no-title-bar/archive/V_11.tar.gz
+	sha256sums = 7eb2383d0f2efce028b25f05330db2d4f6f1f28c71a35753a28974f473115cd7
+
+pkgname = gnome-shell-extension-no-title-bar
+

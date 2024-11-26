@@ -1,0 +1,25 @@
+pkgbase = ros-melodic-move-slow-and-clear
+	pkgdesc = ROS - move_slow_and_clear
+	pkgver = 1.16.7
+	pkgrel = 3
+	url = https://wiki.ros.org/move_slow_and_clear
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-melodic-catkin
+	makedepends = ros-melodic-cmake-modules
+	depends = ros-melodic-costmap-2d
+	depends = ros-melodic-geometry-msgs
+	depends = ros-melodic-nav-core
+	depends = ros-melodic-pluginlib
+	depends = ros-melodic-roscpp
+	source = ros-melodic-move-slow-and-clear-1.16.7.tar.gz::https://github.com/ros-planning/navigation/archive/1.16.7.tar.gz
+	sha256sums = 3a4ee70949a07d4f5f84deddb2ee8a4314bc143d10fb2054b90683c7f92a2f33
+
+pkgname = ros-melodic-move-slow-and-clear
+

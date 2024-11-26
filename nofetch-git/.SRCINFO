@@ -1,0 +1,17 @@
+pkgbase = nofetch-git
+	pkgdesc = the simple man's fetch tool
+	pkgver = 05_26_21
+	pkgrel = 1
+	url = https://github.com/jnats/nofetch
+	arch = any
+	license = custom:nolicense
+	depends = coreutils
+	depends = grep
+	depends = sed
+	depends = bash
+	provides = nofetch
+	source = nofetch::git+https://github.com/jnats/nofetch.git
+	md5sums = SKIP
+
+pkgname = nofetch-git
+

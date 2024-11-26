@@ -1,0 +1,15 @@
+pkgbase = obs-frame-interleave-filter
+	pkgdesc = This plugin interleaves video frames to reduce CPU and GPU usage while the source is not displayed to the program
+	pkgver = 0.1.1
+	pkgrel = 1
+	url = https://obsproject.com/forum/resources/obs-frame-interleave-filter.1618/
+	arch = x86_64
+	arch = aarch64
+	license = GPL2
+	makedepends = cmake
+	depends = obs-studio>=28
+	options = debug
+	source = obs-frame-interleave-filter-0.1.1.tar.gz::https://github.com/norihiro/obs-frame-interleave-filter/archive/0.1.1.tar.gz
+	sha256sums = 59ce128c98eddb35766435a4019c574ce115ef24d87f4e93aa37986ea0488f8e
+
+pkgname = obs-frame-interleave-filter

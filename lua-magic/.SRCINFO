@@ -1,0 +1,26 @@
+pkgbase = lua-magic
+	pkgdesc = libmagic binding for lua
+	pkgver = 5.41
+	pkgrel = 1
+	url = https://github.com/mah0x211/lua-magic
+	install = lua-magic.install
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = lua
+	makedepends = lua51
+	makedepends = lua52
+	source = lua-magic-5.41.tar.gz::https://github.com/mah0x211/lua-magic/archive/v5.41.tar.gz
+	sha256sums = de1d8e3923b010ee5c8164d54afbd44bc4ff3585335439318d7230101c2eb568
+
+pkgname = lua-magic
+	depends = file
+	depends = lua
+
+pkgname = lua51-magic
+	depends = file
+	depends = lua51
+
+pkgname = lua52-magic
+	depends = file
+	depends = lua51

@@ -1,0 +1,39 @@
+diff -Naur a/qt/SessionDialog.cc b/qt/SessionDialog.cc
+--- a/qt/SessionDialog.cc	2023-10-29 17:02:03.698960896 +0100
++++ b/qt/SessionDialog.cc	2023-10-29 17:09:25.717684972 +0100
+@@ -17,6 +17,7 @@
+     prefs_.set(Prefs::SESSION_REMOTE_HOST, ui_.hostEdit->text());
+     prefs_.set(Prefs::SESSION_REMOTE_PORT, ui_.portSpin->value());
+     prefs_.set(Prefs::SESSION_REMOTE_AUTH, ui_.authCheck->isChecked());
++    prefs_.set(Prefs::SESSION_REMOTE_HTTPS, ui_.httpsCheck->isChecked());
+     prefs_.set(Prefs::SESSION_REMOTE_USERNAME, ui_.usernameEdit->text());
+     prefs_.set(Prefs::SESSION_REMOTE_PASSWORD, ui_.passwordEdit->text());
+     session_.restart();
+@@ -66,6 +67,10 @@
+     connect(ui_.authCheck, &QAbstractButton::toggled, this, &SessionDialog::resensitize);
+     remote_widgets_ << ui_.authCheck;
+ 
++    ui_.httpsCheck->setChecked(prefs.get<bool>(Prefs::SESSION_REMOTE_HTTPS));
++    connect(ui_.httpsCheck, &QAbstractButton::toggled, this, &SessionDialog::resensitize);
++    remote_widgets_ << ui_.httpsCheck;
++
+     ui_.usernameEdit->setText(prefs.get<QString>(Prefs::SESSION_REMOTE_USERNAME));
+     auth_widgets_ << ui_.usernameLabel << ui_.usernameEdit;
+ 
+diff -Naur a/qt/SessionDialog.ui b/qt/SessionDialog.ui
+--- a/qt/SessionDialog.ui	2023-10-29 17:02:03.698960896 +0100
++++ b/qt/SessionDialog.ui	2023-10-29 17:10:30.632215950 +0100
+@@ -116,6 +116,13 @@
+        </property>
+       </widget>
+      </item>
++     <item row="7" column="0" colspan="2">
++      <widget class="QCheckBox" name="httpsCheck">
++       <property name="text">
++        <string>Use &amp;SSL</string>
++       </property>
++      </widget>
++     </item>
+     </layout>
+    </item>
+    <item>

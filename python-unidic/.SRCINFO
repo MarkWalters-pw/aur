@@ -1,0 +1,19 @@
+pkgbase = python-unidic
+	pkgdesc = UniDic for Contemporary Written Japanese packaged for use with pip (with UniDic 3.1.0)
+	pkgver = 1.1.0.unidic3.1.0
+	pkgrel = 5
+	url = https://github.com/polm/unidic-py
+	arch = any
+	license = BSD-3-Clause
+	license = MIT
+	makedepends = python-setuptools
+	depends = python
+	depends = python-plac
+	depends = python-tqdm
+	depends = python-wasabi
+	source = python-unidic-1.1.0.unidic3.1.0.tar.gz::https://github.com/polm/unidic-py/archive/refs/tags/v1.1.0.tar.gz
+	source = https://cotonoha-dic.s3-ap-northeast-1.amazonaws.com/unidic-3.1.0.zip
+	b2sums = d4dedd082559410ed668282c3bc5ea2a8d7d7b51ea78b1cb6125358ca9ead943d76cd65580cd1ff2f9a7e1f8cce6ee550a9d53bafb9936d2d56742fb9b67ed2b
+	b2sums = becbaf46ac8c210b47461843e8daa2b07681664881d7cb849e4825f37569101e605015eb975390aec123f525550d4eeed4843f811c71a0977da1aa5431b616a9
+
+pkgname = python-unidic

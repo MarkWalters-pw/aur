@@ -1,0 +1,32 @@
+pkgbase = cnijfilter-mp280
+	pkgdesc = Canon IJ Printer Driver (mp280 series)
+	pkgver = 3.40.1
+	pkgrel = 4
+	url = http://support-au.canon.com.au/contents/AU/EN/0100302002.html
+	install = cnijfilter-mp280.install
+	arch = i686
+	arch = x86_64
+	license = custom
+	makedepends = autoconf>=2.59
+	makedepends = automake>=1.9.5
+	depends = libcups
+	depends = popt
+	depends = glibc
+	depends = libpng>=1.0.9
+	depends = libtiff>=3.4
+	depends = gtk2
+	conflicts = cnijfilter-common
+	source = http://gdlp01.c-wss.com/gds/0/0100003020/01/cnijfilter-source-3.40-1.tar.gz
+	source = configure-fixes.patch
+	source = cups-fixes.patch
+	source = cn-ppd-support-mp280.patch
+	source = glibc-deprecated-fix.patch
+	source = compilation-fixes-2024-11-06.diff
+	md5sums = 609975a05d6050fcca88f312d3f35c6a
+	md5sums = d1c346d063e7fc54dc74dc72bc5615ad
+	md5sums = 10e68bf7d29a6206171be05893e826e1
+	md5sums = 1b76cb2d4a46f6a10e6aced051729bb7
+	md5sums = 494a454cc2e91a3e8f14a6fb81131c10
+	md5sums = 2b44507c54f14fb6c8e08af30fdaafe7
+
+pkgname = cnijfilter-mp280

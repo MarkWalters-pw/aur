@@ -1,0 +1,18 @@
+pkgbase = cerebro-bin
+	pkgdesc = Open-source productivity booster with a brain
+	pkgver = 0.11.0
+	pkgrel = 1
+	url = https://www.cerebroapp.com/
+	arch = x86_64
+	license = MIT
+	depends = gtk3
+	depends = nss
+	depends = alsa-lib
+	provides = cerebro
+	conflicts = cerebro
+	source = cerebro-bin-0.11.0.deb::https://github.com/cerebroapp/cerebro/releases/download/v0.11.0/cerebro_0.11.0_amd64.deb
+	source = https://github.com/cerebroapp/cerebro/raw/master/LICENSE
+	sha256sums = 28416ba5274580ae42883f937538fc3d247cf426c744603cebce93273c184e10
+	sha256sums = 9f617ac32be4499f5c478c563a69a202d3c24dbda80b1cb36ea5a2230b40733c
+
+pkgname = cerebro-bin

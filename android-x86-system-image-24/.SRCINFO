@@ -1,0 +1,16 @@
+pkgbase = android-x86-system-image-24
+	pkgdesc = Android x86 Atom System Image, API-24
+	pkgver = r08
+	pkgrel = 1
+	url = https://developer.android.com/studio/index.html
+	arch = any
+	license = custom
+	depends = android-platform-24
+	optdepends = qemu
+	optdepends = libvirt
+	provides = android-x86-system-image-24
+	options = !strip
+	source = https://dl-ssl.google.com/android/repository/sys-img/android/x86-24_r08.zip
+	sha256sums = ef242578ed86f73fd4be27935d094d58f2c4b7ab53362b74978e2257a8df3bba
+
+pkgname = android-x86-system-image-24

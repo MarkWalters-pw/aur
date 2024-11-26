@@ -1,0 +1,47 @@
+pkgbase = atom-ng-bin
+	pkgdesc = The hyper-hackable text editor. Community maintained fork with compiler optimizations.
+	pkgver = 1.66.12
+	pkgrel = 8
+	url = https://thorium.rocks/atom-ng/
+	arch = x86_64
+	license = MIT
+	depends = libxcomposite
+	depends = gdk-pixbuf2
+	depends = at-spi2-core
+	depends = libxdamage
+	depends = bash
+	depends = gtk3
+	depends = perl
+	depends = python
+	depends = libxkbfile
+	depends = dbus
+	depends = libdrm
+	depends = expat
+	depends = mesa
+	depends = curl
+	depends = zlib
+	depends = libxrandr
+	depends = pango
+	depends = cairo
+	depends = python-setuptools
+	depends = libxext
+	depends = nspr
+	depends = alsa-lib
+	depends = libxkbcommon
+	depends = libxshmfence
+	depends = libcups
+	depends = libxfixes
+	depends = libxcb
+	depends = nss
+	depends = openssl-1.1
+	depends = libsecret
+	depends = libx11
+	depends = gendesk
+	provides = atom=1.66.12
+	provides = atom-ng=1.66.12
+	conflicts = atom-ng
+	conflicts = atom
+	source = atom-ng-1.66.12.zip::https://github.com/Alex313031/atom-ng/releases/download/v1.66.10/Atom-ng_linux_1.66.12_AVX.zip
+	sha256sums = 01ec80c0809bef8bb3cf26072b10ca0c254c7cb08da82063cf76b2e0ce7e78d8
+
+pkgname = atom-ng-bin

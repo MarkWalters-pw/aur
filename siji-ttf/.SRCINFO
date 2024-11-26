@@ -1,0 +1,16 @@
+pkgbase = siji-ttf
+	pkgdesc = Siji bitmap font with scalable ttf version
+	pkgver = r22.14e7da9
+	pkgrel = 1
+	url = https://github.com/fauno/siji
+	arch = any
+	license = GPLv2
+	makedepends = git
+	optdepends = xorg-xfd: use view.sh script to view glyphs
+	optdepends = font-manager: alternate way to view glyphs
+	provides = siji
+	conflicts = siji
+	source = siji-ttf-r22.14e7da9::git+https://github.com/fauno/siji/#commit=14e7da94de514c3ada6a2b250ae3a1e76cb6c94f
+	md5sums = SKIP
+
+pkgname = siji-ttf

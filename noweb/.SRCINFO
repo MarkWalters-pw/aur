@@ -1,0 +1,17 @@
+pkgbase = noweb
+	pkgdesc = A Simple, Extensible Tool for Literate Programming build against ICON libs and texlive
+	pkgver = 2_13
+	pkgrel = 1
+	url = https://github.com/nrnrnr/noweb
+	arch = i686
+	arch = x86_64
+	license = custom
+	makedepends = texlive-core
+	makedepends = nawk
+	makedepends = icon
+	depends = bash
+	options = !strip
+	source = noweb-2_13.tar.gz::https://github.com/nrnrnr/noweb/archive/v2_13.tar.gz
+	sha256sums = 7b32657128c8e2cb1114cca55023c58fa46789dcffcbe3dabde2c8a82fe57802
+
+pkgname = noweb

@@ -1,0 +1,34 @@
+diff -uNr ngjackspa-1.0.orig/Makefile ngjackspa-1.0/Makefile
+--- ngjackspa-1.0.orig/Makefile	2013-07-07 08:49:29.000000000 +0200
++++ ngjackspa-1.0/Makefile	2018-01-31 15:24:08.623983438 +0100
+@@ -56,8 +56,8 @@
+ 
+ CFLAGS ?= -Wall -Werror -g
+ CXXFLAGS ?= $(CFLAGS)
+-override CFLAGS += -DG_DISABLE_DEPRECATED `pkg-config --cflags glib-2.0`
+-override CXXFLAGS += -DG_DISABLE_DEPRECATED `pkg-config --cflags glib-2.0`
++override CFLAGS += `pkg-config --cflags glib-2.0`
++override CXXFLAGS += `pkg-config --cflags glib-2.0`
+ override LDFLAGS += -lm -ljack -ldl `pkg-config --libs glib-2.0` -g
+ 
+ PROGS = njackspa gjackspa qjackspa jackspa-cli
+@@ -170,7 +170,7 @@
+ njackspa : njackspa.c curses.c $(COMMONS) $(MODULES)
+ 	$(CC) $(CFLAGS) -o $@ $< $(MODULES) $(LDFLAGS) -lncurses
+ gjackspa : gjackspa.cpp $(COMMONS) $(MODULES)
+-	$(CXX) $(CXXFLAGS) `pkg-config gtkmm-2.4 --cflags` -DGTK_DISABLE_DEPRECATED \
++	$(CXX) $(CXXFLAGS) `pkg-config gtkmm-2.4 --cflags` \
+ 	  -o $@ $< $(MODULES) $(LDFLAGS) `pkg-config gtkmm-2.4 --libs`
+ qjackspa : force $(QMAKE_MAKEFILE)
+ 	$(MAKE) -f $(QMAKE_MAKEFILE)
+diff -uNr ngjackspa-1.0.orig/qjackspa.pro ngjackspa-1.0/qjackspa.pro
+--- ngjackspa-1.0.orig/qjackspa.pro	2013-07-07 08:49:29.000000000 +0200
++++ ngjackspa-1.0/qjackspa.pro	2018-01-31 15:24:30.582983191 +0100
+@@ -6,7 +6,6 @@
+ PKGCONFIG += glib-2.0
+ DEPENDPATH += .
+ INCLUDEPATH += .
+-DEFINES += G_DISABLE_DEPRECATED
+ LIBS += -ljack -ldl -lm
+ 
+ # Input

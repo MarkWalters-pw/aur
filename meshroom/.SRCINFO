@@ -1,0 +1,37 @@
+pkgbase = meshroom
+	pkgdesc = A free, open-source 3D Reconstruction Software based on the AliceVision framework
+	pkgver = 2023.3.0
+	pkgrel = 1
+	url = https://alicevision.github.io/
+	arch = x86_64
+	license = MPL2
+	makedepends = git
+	makedepends = cmake
+	makedepends = python-idna
+	makedepends = python-setuptools
+	makedepends = ninja
+	makedepends = boost
+	makedepends = coin-or-lemon
+	depends = alice-vision
+	depends = alembic
+	depends = openimageio
+	depends = python-psutil
+	depends = popsift
+	depends = pyside2
+	depends = qt5-quickcontrols
+	depends = qt5-quickcontrols2
+	depends = qt5-3d
+	depends = qt5-graphicaleffects
+	depends = qt5-imageformats
+	depends = qt5-location
+	depends = qt5-svg
+	depends = qt5-charts
+	optdepends = alice-vision-cuda: for DepthMap nodes
+	source = meshroom::git+https://github.com/alicevision/meshroom.git#tag=v2023.3.0
+	source = voctree::git+https://gitlab.com/alicevision/trainedVocabularyTreeData.git
+	source = git+https://github.com/alicevision/QtAliceVision.git#tag=v2023.3.0
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = meshroom

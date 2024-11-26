@@ -1,0 +1,13 @@
+pkgbase = tetra-bin
+	pkgdesc = eBPF-based Security Observability and Runtime Enforcement - CLI
+	pkgver = 0.8.3
+	pkgrel = 0
+	url = https://github.com/cilium/tetragon
+	arch = x86_64
+	license = APACHE
+	conflicts = tetra
+	conflicts = tetra-git
+	source = tetra-0.8.3.tar.gz::https://github.com/cilium/tetragon/releases/download/v0.8.3/tetra-linux-amd64.tar.gz
+	sha512sums = 7921283afc15070df96cecccf5171f218f47ac3241267bc2d564976ebe60b5cbfd997432bcbad7049af547d98f782267672872169e4c90e6f85a87d961e92ce6
+
+pkgname = tetra-bin

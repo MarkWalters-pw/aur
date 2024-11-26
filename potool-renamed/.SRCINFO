@@ -1,0 +1,21 @@
+pkgbase = potool-renamed
+	pkgdesc = Program to help editing po files, without poedit name clash
+	pkgver = 0.19
+	pkgrel = 1
+	url = https://marcin.owsiany.pl/potool-page
+	arch = i686
+	arch = x86_64
+	license = GPL
+	depends = perl
+	depends = glib2
+	provides = potool
+	conflicts = potool
+	source = https://marcin.owsiany.pl/potool/potool-0.19.tar.gz
+	source = poedit-rename.patch
+	source = poedit-test.patch
+	sha256sums = 1251621b5e69b660987e8c9497df9e75e0b3e40bcf8304bdbd26a4fbd37c4384
+	sha256sums = b331dde0a64ddac275ce607fe6fff8517b692bb186e2c0ea6ff907acbcb604be
+	sha256sums = fed991e63843b265da85708bc3ce75329e5ead0193e73d0527961122bcd43b3b
+
+pkgname = potool-renamed
+

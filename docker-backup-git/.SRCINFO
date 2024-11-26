@@ -1,0 +1,19 @@
+pkgbase = docker-backup-git
+	pkgdesc = A tool to create & restore complete, self-contained backups of Docker containers
+	pkgver = r37.4fc51ee
+	pkgrel = 1
+	url = https://github.com/muesli/docker-backup
+	arch = x86_64
+	arch = i686
+	arch = armv6h
+	arch = armv7h
+	arch = aarch64
+	license = MIT
+	makedepends = go
+	makedepends = git
+	provides = docker-backup
+	conflicts = docker-backup
+	source = docker-backup-git::git+https://github.com/muesli/docker-backup.git
+	sha256sums = SKIP
+
+pkgname = docker-backup-git

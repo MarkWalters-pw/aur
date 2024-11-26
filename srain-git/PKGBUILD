@@ -1,0 +1,43 @@
+# Maintainer: Shengyu Zhang <la@archlinuxcn.org>
+
+pkgname=srain-git
+pkgver=1.7.0
+pkgrel=3
+pkgdesc="Modern IRC client written in GTK, git version"
+arch=('i686' 'pentium4' 'x86_64' 'arm' 'armv7h' 'armv6h' 'aarch64')
+license=('GPL')
+url="https://srain.silverrainz.me"
+makedepends=('git' 'meson' 'gcc' 'pkg-config' 'gettext' 'python-sphinx')
+depends=('glib2' 'gtk3' 'libconfig' 'libsoup3' 'libayatana-appindicator')
+optdepends=(
+    'glib-networking: TLS connection support'
+    )
+conflicts=('srain')
+provides=('srain')
+source=("git+https://github.com/SrainApp/srain.git#branch=master")
+sha256sums=('SKIP')
+
+_prefix='/usr'
+
+pkgver() {
+    cd ${pkgname%-git}
+    git describe --tags | sed 's/-/./g'
+}
+
+build() {
+    cd ${pkgname%-git}
+
+    meson setup                         \
+        --prefix="${_prefix}"           \
+        --datadir="${_prefix}/share"    \
+        --sysconfdir="/etc"             \
+        --buildtype=release             \
+        builddir
+    ninja -C builddir
+}
+
+package() {
+    cd ${pkgname%-git}
+
+    DESTDIR="${pkgdir}" ninja -C builddir install
+}

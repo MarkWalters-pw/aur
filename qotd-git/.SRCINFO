@@ -1,0 +1,20 @@
+pkgbase = qotd-git
+	pkgdesc = A simple RFC 865-compliant QOTD (quote of the day) daemon. (git version)
+	pkgver = 0.12.0_3_gd9d4f66.d9d4f66
+	pkgrel = 1
+	url = https://github.com/emmiegit/qotd
+	install = qotd-git.install
+	arch = any
+	license = GPL
+	makedepends = git
+	makedepends = gcc
+	makedepends = ghostscript
+	makedepends = gzip
+	provides = qotd
+	conflicts = qotd
+	options = !zipman
+	backup = etc/qotd.conf
+	source = git+https://github.com/emmiegit/qotd.git
+	sha256sums = SKIP
+
+pkgname = qotd-git

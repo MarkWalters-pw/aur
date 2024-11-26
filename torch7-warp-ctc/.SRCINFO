@@ -1,0 +1,18 @@
+pkgbase = torch7-warp-ctc
+	pkgdesc = A fast parallel implementation of CTC, on both CPU and GPU.
+	pkgver = v1.0.r32.gbc29dcf
+	pkgrel = 1
+	url = https://github.com/baidu-research/warp-ctc
+	arch = x86_64
+	arch = i686
+	license = APACHE
+	makedepends = cmake
+	makedepends = git
+	makedepends = torch7-cutorch-git
+	depends = torch7-git>=r819
+	optdepends = torch7-cutorch-git
+	source = torch7-warp-ctc::git+https://github.com/baidu-research/warp-ctc
+	sha512sums = SKIP
+
+pkgname = torch7-warp-ctc
+

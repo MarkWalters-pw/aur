@@ -1,0 +1,18 @@
+pkgbase = python-kaldiio-git
+	pkgdesc = Pure Python module for reading and writing kaldi ark files
+	pkgver = 2.18.0
+	pkgrel = 1
+	url = https://github.com/nttcslab-sp/kaldiio
+	arch = any
+	license = custom:NTT
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python>=3.7
+	depends = python-pytorch-complex-git
+	depends = python-numpy
+	provides = python-kaldiio
+	conflicts = python-kaldi-io
+	source = python-kaldiio-git::git+https://github.com/nttcslab-sp/kaldiio
+	md5sums = SKIP
+
+pkgname = python-kaldiio-git

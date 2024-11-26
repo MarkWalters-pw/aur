@@ -1,0 +1,21 @@
+pkgbase = lyriek
+	pkgver = 0.2.1
+	pkgrel = 1
+	url = https://gitlab.com/bartwillems/lyriek
+	arch = x86_64
+	arch = i686
+	license = GPL3
+	makedepends = rust
+	makedepends = cargo
+	makedepends = git
+	makedepends = desktop-file-utils
+	depends = dbus
+	depends = gtk3
+	conflicts = lyriek-git
+	source = https://github.com/BartWillems/lyriek/archive/0.2.1.tar.gz
+	sha256sums = a5d048248a1575bf3d15e69f12128bf30b38b47deacea7d820504182c433a6a2
+
+pkgname = lyriek
+	pkgdesc = A multi-threaded GTK application to fetch lyrics of currently playing songs
+	provides = lyriek
+

@@ -1,0 +1,25 @@
+pkgbase = krop-git
+	pkgdesc = Simple graphical tool to crop the pages of PDF files
+	pkgver = r114.e96d42b
+	pkgrel = 3
+	url = https://github.com/arminstraub/krop
+	arch = any
+	license = GPL-3.0-or-later
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = python-setuptools
+	depends = python
+	depends = python-pikepdf
+	depends = python-poppler-qt5
+	depends = python-pyqt5
+	optdepends = python-mupdf: alternate backend to pikepdf, initial support only
+	optdepends = python-pypdf: alternate backend to pikepdf
+	optdepends = python-pypdf2: alternate backend to pikepdf
+	provides = krop
+	conflicts = krop
+	source = git+https://github.com/arminstraub/krop.git
+	sha256sums = SKIP
+
+pkgname = krop-git

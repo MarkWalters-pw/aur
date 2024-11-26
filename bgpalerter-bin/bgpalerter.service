@@ -1,0 +1,13 @@
+[Unit]
+Description=BGPalerter
+After=network.target
+
+[Service]
+Type=simple
+Restart=on-failure
+User=bgpalerter
+ExecStart=/opt/bgpalerter/bgpalerter
+WorkingDirectory=/opt/bgpalerter
+
+[Install]
+WantedBy=multi-user.target

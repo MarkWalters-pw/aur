@@ -1,0 +1,26 @@
+pkgbase = python-newspaper
+	pkgdesc = Article scraping & curation
+	pkgver = 0.2.8
+	pkgrel = 3
+	url = https://github.com/codelucas/newspaper
+	arch = any
+	license = BSD
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python-beautifulsoup4
+	depends = python-cssselect
+	depends = python-feedparser
+	depends = python-jieba
+	depends = python-lxml
+	depends = python-nltk
+	depends = python-pillow
+	depends = python-dateutil
+	depends = python-yaml
+	depends = python-requests
+	depends = python-tldextract
+	source = python-newspaper-0.2.8.tar.gz::https://files.pythonhosted.org/packages/source/n/newspaper3k/newspaper3k-0.2.8.tar.gz
+	sha256sums = 9f1bd3e1fb48f400c715abf875cc7b0a67b7ddcd87f50c9aeeb8fcbbbd9004fb
+
+pkgname = python-newspaper

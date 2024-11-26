@@ -1,0 +1,19 @@
+pkgbase = nwscript-code
+	pkgdesc = Setup for a NWScript IDE assembled from VSC and various development tools
+	pkgver = 1.6.1
+	pkgrel = 1
+	url = https://gitlab.com/Taro94/nwscript-code/
+	arch = any
+	license = GPL
+	depends = code
+	depends = astyle
+	depends = neverwinter.nim
+	depends = nasher
+	depends = nssnippets-bin
+	depends = nssdefinitions-bin
+	optdepends = wine
+	options = !strip
+	source = https://gitlab.com/Taro94/nwscript-code/-/archive/1.6.1/nwscript-code-1.6.1.tar.gz
+	md5sums = ee556c383799aa778ccd40aadd51569d
+
+pkgname = nwscript-code

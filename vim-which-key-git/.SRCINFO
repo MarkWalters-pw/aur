@@ -1,0 +1,17 @@
+pkgbase = vim-which-key-git
+	pkgdesc = Vim plugin that shows keybindings in popup
+	pkgver = r104.4c605b1
+	pkgrel = 2
+	url = https://github.com/liuchengxu/vim-which-key
+	arch = any
+	groups = vim-plugins
+	license = MIT
+	makedepends = git
+	depends = vim-plugin-runtime
+	provides = vim-which-key
+	conflicts = vim-which-key
+	source = vim-which-key-git::git+https://github.com/liuchengxu/vim-which-key
+	md5sums = SKIP
+
+pkgname = vim-which-key-git
+

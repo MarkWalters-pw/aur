@@ -1,0 +1,23 @@
+pkgbase = playkey-linux
+	pkgdesc = Client for game streaming service playkey.net
+	pkgver = 1.10
+	pkgrel = 4
+	url = https://www.playkey.net
+	arch = x86_64
+	license = custom
+	makedepends = git
+	makedepends = innoextract
+	depends = chromium
+	depends = wine
+	depends = python3
+	depends = winetricks
+	depends = openal
+	depends = lib32-openal
+	provides = playkey-linux
+	options = !strip
+	source_x86_64 = https://static.playkey.net/clientdownload.aspx?file=windows-desktop/Release/PlaykeySetup.exe&name=PlaykeySetup.exe
+	source_x86_64 = git+https://github.com/vilkoz/playkey-linux-launcher.git
+	sha256sums_x86_64 = d53f9a016635f5c72e8fae86023a4e612f94c8399ee27df7c013c7dc043ad451
+	sha256sums_x86_64 = SKIP
+
+pkgname = playkey-linux

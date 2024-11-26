@@ -1,0 +1,93 @@
+#!/bin/bash
+
+set -e
+
+arch=${1-x86_64}
+file=${2-arch.qcow2}
+loop=/dev/nbd0
+
+(( ! $UID ))
+
+[[ ! -e ${file} ]]
+
+qemu-img create -f qcow2 ${file} 8G
+modprobe nbd max_part=8
+qemu-nbd -c ${loop} ${file}
+
+sfdisk ${loop} <<\EOF
+,131072
+,
+EOF
+partprobe "${loop}"
+
+mkfs.ext2 -L boot ${loop}p1
+mkfs.ext4 -L root ${loop}p2
+
+mnt=${file}.mnt
+install -d ${mnt}
+mount ${loop}p2 ${mnt}
+
+pushd ${mnt}
+
+install -d boot
+mount ${loop}p1 boot
+
+setarch ${arch} pacstrap -C /usr/share/devtools/pacman-extra.conf -c . base base-devel syslinux mkinitcpio haveged openssh sudo
+
+systemctl --root=. enable systemd-{networkd,resolved} haveged sshd
+ln -sf ../run/systemd/resolve/resolv.conf etc/resolv.conf
+
+install -d home/user/.ssh
+cat ~/.ssh/id_*.pub > home/user/.ssh/authorized_keys
+
+install -d boot/syslinux
+
+cat > boot/syslinux/syslinux.cfg <<EOF
+DEFAULT arch
+LABEL arch
+LINUX ../vmlinuz-linux
+APPEND root=LABEL=root ro
+INITRD ../initramfs-linux-fallback.img
+EOF
+
+cat > etc/fstab <<EOF
+tmpfs       /tmp   tmpfs  nodev,nosuid  0  0
+LABEL=boot  /boot  ext2   defaults      0  1
+LABEL=root  /      ext4   defaults      0  1
+EOF
+
+cat > etc/hostname <<EOF
+guest
+EOF
+
+cat > etc/locale.gen <<EOF
+en_US.UTF-8 UTF-8
+EOF
+
+cat > etc/sudoers.d/user <<EOF
+user ALL=(ALL) NOPASSWD: ALL
+EOF
+
+cat > etc/systemd/network/any.network <<EOF
+[Match]
+Name=en* eth* usb* wl*
+
+[Network]
+DHCP=yes
+EOF
+
+setarch ${arch} arch-chroot . <<EOF
+sudo pacman --noconfirm -S linux
+syslinux-install_update -i -m
+locale-gen
+useradd -p 00as1wm0AZG56 user
+chown -R user:users /home/user
+EOF
+
+sfdisk --activate ${loop} 1
+
+umount boot
+popd
+umount ${mnt}
+rmdir ${mnt}
+killall qemu-nbd

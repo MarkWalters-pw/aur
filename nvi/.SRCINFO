@@ -1,0 +1,15 @@
+pkgbase = nvi
+	pkgdesc = Portable OpenBSD vi, originally distributed as part of 4BSD.
+	pkgver = 1.79
+	pkgrel = 3
+	url = https://github.com/lacamera/nvi
+	arch = i686
+	arch = x86_64
+	license = BSD
+	depends = libtool
+	depends = readline
+	depends = ncurses
+	source = git+https://github.com/lacamera/nvi.git
+	md5sums = SKIP
+
+pkgname = nvi

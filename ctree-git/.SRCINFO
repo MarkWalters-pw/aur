@@ -1,0 +1,16 @@
+pkgbase = ctree-git
+	pkgdesc = A Christmas tree right from your terminal (git)
+	pkgver = 1.0.4.r0.g00dc880
+	pkgrel = 1
+	url = https://github.com/gleich/ctree
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = go
+	depends = glibc
+	provides = ctree
+	conflicts = ctree
+	source = git+https://github.com/gleich/ctree
+	sha256sums = SKIP
+
+pkgname = ctree-git

@@ -1,0 +1,27 @@
+pkgbase = dektec-dkms
+	pkgdesc = DekTec DKMS
+	pkgver = 2023.08.0
+	pkgrel = 1
+	url = https://www.dektec.com/
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	depends = dkms
+	source = https://www.dektec.com//products/SDK/DTAPI/Downloads/LinuxSDK_v2023.08.0.tar.gz
+	source = linux-3.18-dma-changes.patch
+	source = linux-3.18-netif-changes.patch
+	source = linux-6.2+-prefix-symbols.patch
+	source = linux-6.2+-prefix-symbols.2022.06.0.patch
+	source = linux-6.3+-vm_flags_set.patch
+	source = dkms.conf
+	source = Makefile
+	md5sums = 59f6a7ef2f735aad2be649767d2725ea
+	md5sums = 732658890611d0c44c9a69e0e7832936
+	md5sums = 7bcb9def37608558fbdef4053af96792
+	md5sums = 8c4c8d92a5840ad03c5f6e0bcd27500b
+	md5sums = 5817a31229c1f12ea0b3c6fc3fea05fa
+	md5sums = facbf2c909bded3ca94c93360f02a7e2
+	md5sums = 539fb620aadf7fcab3f29156b6e8bdc4
+	md5sums = e0a9e12767006053c4e71ecd49dd2769
+
+pkgname = dektec-dkms

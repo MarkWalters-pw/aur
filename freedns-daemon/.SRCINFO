@@ -1,0 +1,16 @@
+pkgbase = freedns-daemon
+	pkgdesc = Lighweight, barebone and almost dependency free daemon for freedns.afraid.org
+	pkgver = 2.0
+	pkgrel = 2
+	url = http://www.github.com/lestofante/freedns
+	install = freedns-daemon.install
+	arch = any
+	license = GPL
+	depends = curl
+	depends = bash
+	backup = usr/bin/freedns-daemon.sh
+	source = freedns-daemon-2.0::git+http://www.github.com/lestofante/freedns.git#tag=2.0
+	md5sums = SKIP
+
+pkgname = freedns-daemon
+

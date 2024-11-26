@@ -1,0 +1,22 @@
+pkgbase = lib32-libtiff5
+	pkgdesc = Library for manipulation of TIFF images
+	pkgver = 4.4.0
+	pkgrel = 3
+	url = http://www.simplesystems.org/libtiff/
+	arch = x86_64
+	license = custom
+	depends = lib32-gcc-libs
+	depends = lib32-glibc
+	depends = lib32-libjpeg-turbo
+	depends = libtiff5
+	depends = zstd
+	depends = xz
+	depends = zstd
+	source = https://download.osgeo.org/libtiff/tiff-4.4.0.tar.gz
+	source = lib32-libtiff5-4.4.0-fpe_tiffcrop.patch::https://gitlab.com/libtiff/libtiff/-/commit/dd1bcc7abb26094e93636e85520f0d8f81ab0fab.patch
+	source = lib32-libtiff5-4.4.0-CVE-2022-34526.patch::https://gitlab.com/libtiff/libtiff/-/commit/275735d0354e39c0ac1dc3c0db2120d6f31d1990.patch
+	sha512sums = 78ffab7667d0feb8d38571bc482390fc6dd20b93a798ab3a8b5cc7d5ab00b44a37f67eb8f19421e4ab33ad89ab40e382128f8a4bbdf097e0efb6d9fca5ac6f9e
+	sha512sums = c3af9cf5d4e76637195e31a2c8f4635da996a145cee14b821d10e795b289ee3800f22c44e6574ebd0b1aa26bebf5c3103ee72468c2c57b30dde2911450da3923
+	sha512sums = 469f30b24335dd8dff4704dbf6464146785cdb4974988e7c0156d626dfea3d0586242b9ad265c2e7786c6edbdba92460a13cd02786d35a64d9cdfdf15ed582bc
+
+pkgname = lib32-libtiff5

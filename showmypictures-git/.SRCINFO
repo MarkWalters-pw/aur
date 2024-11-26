@@ -1,0 +1,24 @@
+pkgbase = showmypictures-git
+	pkgdesc = Memories is an photo manager for Pantheon, developed by Artem Anufrij
+	pkgver = 0.3.0.r11.g034d917
+	pkgrel = 2
+	url = http://anufrij.org/memories
+	arch = x86_64
+	license = GPL3
+	makedepends = vala
+	makedepends = cmake
+	makedepends = cmake-modules-elementary-git
+	makedepends = git
+	depends = libgranite.so
+	depends = gtk3
+	depends = libgexiv2
+	depends = sqlite
+	depends = libraw
+	depends = webkit2gtk
+	provides = showmypictures
+	conflicts = showmypictures
+	source = git+https://github.com/artemanufrij/showmypictures.git
+	sha256sums = SKIP
+
+pkgname = showmypictures-git
+

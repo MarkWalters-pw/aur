@@ -1,0 +1,31 @@
+pkgbase = plausible-git
+	pkgdesc = Simple and privacy-friendly alternative to Google Analytics
+	pkgver = r456.b29afde
+	pkgrel = 3
+	url = https://plausible.io
+	arch = any
+	license = MIT
+	makedepends = nodejs
+	makedepends = yarn
+	makedepends = python
+	makedepends = npm
+	makedepends = nodejs-webpack
+	makedepends = wget
+	makedepends = ca-certificates
+	makedepends = gnupg
+	makedepends = elixir
+	provides = plausible
+	conflicts = plausible
+	source = plausible::git+https://github.com/plausible/analytics.git
+	source = plausible.sysusers
+	source = plausible.service
+	source = plausible.tmpfiles
+	source = plausible.env
+	sha1sums = SKIP
+	sha1sums = b52729ab148fcf4e2be54abc37f01aebd02b1655
+	sha1sums = 1ddfc6e48f8b39c9e0a59ba1bd12a827b34716f1
+	sha1sums = 9c2569c4529612916f808637697195b1e5dd780a
+	sha1sums = ecf4f528744d597eb21cfc9e4a946dcf6e15bd78
+
+pkgname = plausible-git
+

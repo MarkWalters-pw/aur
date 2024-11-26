@@ -1,0 +1,17 @@
+pkgbase = ros-noetic-gennodejs
+	pkgdesc = ROS - Javascript ROS message and service generators.
+	pkgver = 2.0.1
+	pkgrel = 1
+	url = https://wiki.ros.org/gennodejs
+	arch = any
+	license = Apache 2.0
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-genmsg
+	makedepends = ros-noetic-catkin
+	depends = ros-noetic-genmsg
+	source = ros-noetic-gennodejs-2.0.1.tar.gz::https://github.com/RethinkRobotics-opensource/gennodejs/archive/2.0.1.tar.gz
+	sha256sums = 6380efc25d0c80e0372d1f57dea5e3bd3ab05b537f0477a702fd472965035478
+
+pkgname = ros-noetic-gennodejs
+

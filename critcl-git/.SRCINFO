@@ -1,0 +1,19 @@
+pkgbase = critcl-git
+	pkgdesc = Critcl lets you easily embed C code in Tcl.
+	pkgver = 3.1.16rc0.r10.21a4e10
+	pkgrel = 3
+	url = http://andreas-kupries.github.io/critcl/
+	arch = any
+	license = BSD
+	makedepends = git
+	makedepends = tcl>=8.5
+	depends = tcl
+	depends = tcllib
+	depends = gcc
+	provides = critcl
+	conflicts = critcl
+	source = critcl::git+http://github.com/andreas-kupries/critcl#branch=master
+	md5sums = SKIP
+	
+pkgname = critcl-git
+

@@ -1,0 +1,17 @@
+pkgbase = python-jep
+	pkgdesc = Java Embedded Python - Embeds CPython in Java through JNI
+	pkgver = 4.1.1
+	pkgrel = 1
+	url = https://github.com/ninia/jep
+	arch = any
+	license = ZLIB
+	makedepends = python-setuptools
+	depends = python-numpy>=1.7
+	depends = java-environment
+	depends = python>=3.5
+	provides = python-jep
+	conflicts = python-jep
+	source = python-jep-4.1.1.tar.gz::https://github.com/ninia/jep/archive/refs/tags/v4.1.1.tar.gz
+	sha256sums = SKIP
+
+pkgname = python-jep

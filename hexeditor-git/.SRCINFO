@@ -1,0 +1,18 @@
+pkgbase = hexeditor-git
+	pkgdesc = A cross-platform Hex Editor. Development version.
+	pkgver = 1.4.0.12.ga7a78fb
+	pkgrel = 2
+	url = https://github.com/chipmunk-sm/HexEditor
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = qt5-tools
+	makedepends = git
+	depends = qt5-base
+	depends = hicolor-icon-theme
+	provides = hexeditor=1.4.0.12.ga7a78fb
+	conflicts = hexeditor
+	source = git+https://github.com/chipmunk-sm/HexEditor.git
+	sha512sums = SKIP
+
+pkgname = hexeditor-git

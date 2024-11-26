@@ -1,0 +1,13 @@
+[Unit]
+Description=Sentry scheduled tasks runner.
+After=network.target
+PartOf=sentry.service
+
+[Service]
+User=sentry
+Restart=always
+Environment=PYTHONPATH=/opt/sentry/usr/lib/python3.10/site-packages/
+ExecStart=/opt/sentry/bin/sentry --config=/etc/sentry run cron --loglevel=ERROR
+
+[Install]
+WantedBy=multi-user.target

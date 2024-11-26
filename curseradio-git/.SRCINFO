@@ -1,0 +1,21 @@
+pkgbase = curseradio-git
+	pkgdesc = Command line radio player
+	pkgver = r15.1bd4bd0
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/chronitis/curseradio
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python
+	depends = python-requests
+	depends = python-xdg
+	depends = python-lxml
+	depends = mpv
+	provides = curseradio
+	conflicts = curseradio
+	source = git+https://github.com/chronitis/curseradio.git
+	md5sums = SKIP
+
+pkgname = curseradio-git

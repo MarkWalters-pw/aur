@@ -1,0 +1,18 @@
+pkgbase = yarn-completion-git
+	pkgdesc = Bash completion for Yarn
+	pkgver = 0.17.0.r0.g30262cf
+	pkgrel = 5
+	url = https://github.com/dsifford/yarn-completion
+	arch = any
+	license = MIT
+	makedepends = git
+	depends = bash
+	depends = bash-completion
+	depends = yarn
+	source = git+https://github.com/dsifford/yarn-completion.git
+	source = 0001-fix-tests.patch
+	sha256sums = SKIP
+	sha256sums = e00774fa650fb037ae62e0963308baee7509a4bbeea445193684db2c2e8a18d2
+
+pkgname = yarn-completion-git
+

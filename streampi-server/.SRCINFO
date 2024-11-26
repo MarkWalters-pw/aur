@@ -1,0 +1,19 @@
+pkgbase = streampi-server
+	pkgdesc = An Opensource Alternative to the Elgato Stream Deck for the Raspberry Pi
+	pkgver = 1.0.0_EA+3
+	pkgrel = 4
+	url = https://stream-pi.com
+	arch = x86_64
+	license = GPL3
+	makedepends = gendesk
+	depends = java-runtime>=11
+	depends = alsa-lib
+	depends = libnet
+	depends = gtk3
+	depends = gtk2
+	source = streampi-server-1.0.0_EA+3.zip::https://github.com/stream-pi/server/releases/download/1.0.0-EA+3/stream-pi-server-linux-x64-1.0.0-EA+3-executable.zip
+	source = LICENSE::https://raw.githubusercontent.com/stream-pi/server/master/LICENSE
+	sha256sums = ee16c0aff017260608a7fbc299449bf9a9e3d7c18f3c33ee8eb2745f94112e75
+	sha256sums = 8b1ba204bb69a0ade2bfcf65ef294a920f6bb361b317dba43c7ef29d96332b9b
+
+pkgname = streampi-server

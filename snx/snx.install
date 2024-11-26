@@ -1,0 +1,6 @@
+# Maintainer: Vianney Bouchaud <aur dot vianney at bouchaud dot org>
+# Contributor: Dimitris Kiziridis <ragouel at outlook dot com>
+
+pre_remove() {
+  rm -rf /etc/snx
+}

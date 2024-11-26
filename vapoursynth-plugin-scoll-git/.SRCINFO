@@ -1,0 +1,19 @@
+pkgbase = vapoursynth-plugin-scoll-git
+	pkgdesc = Plugin for Vapoursynth: scoll (GIT version)
+	pkgver = r2.3fb6aba
+	pkgrel = 1
+	url = https://gist.github.com/4re
+	arch = any
+	license = GPL
+	makedepends = git
+	depends = vapoursynth-plugin-vshelpers-git
+	depends = vapoursynth-plugin-nnedi3-git
+	depends = vapoursynth-plugin-sangnom-git
+	depends = vapoursynth-plugin-msmoosh-git
+	depends = vapoursynth-plugin-genericfilters-git
+	provides = vapoursynth-plugin-scoll
+	conflicts = vapoursynth-plugin-scoll
+	source = scoll::git+https://gist.github.com/3acdb8d90abf78643d4e.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-scoll-git

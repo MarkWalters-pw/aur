@@ -1,0 +1,15 @@
+pkgbase = repo-git
+	pkgdesc = The Multiple Git Repository Tool
+	pkgver = 2.27.r5.ga8cf575d
+	pkgrel = 1
+	url = https://source.android.com/source/developing.html
+	arch = any
+	license = Apache
+	depends = git
+	depends = python
+	provides = repo
+	conflicts = repo
+	source = repo::git+https://gerrit.googlesource.com/git-repo
+	sha256sums = SKIP
+
+pkgname = repo-git

@@ -1,0 +1,30 @@
+pkgbase = llpp
+	pkgdesc = opengl accelerated pdf viewer based on mupdf
+	pkgver = 42
+	pkgrel = 1
+	url = https://github.com/criticic/llpp
+	arch = x86_64
+	license = GPL3
+	makedepends = asciidoc
+	makedepends = git
+	makedepends = ocaml
+	makedepends = ocaml-lablgl
+	depends = freetype2
+	depends = gumbo-parser
+	depends = jbig2dec
+	depends = libgl
+	depends = libjpeg
+	depends = openjpeg2
+	depends = libmupdf
+	optdepends = djvulibre: for llppac djvu conversion
+	optdepends = ghostscript: for llppac ps, dvi, and djvu conversion
+	optdepends = imagemagick: for llppac image conversion
+	optdepends = inotify-tools: for the llpp.inotify autoreload wrapper
+	optdepends = librsvg: for llppac svg conversion
+	optdepends = unoconv: for llppac office conversion
+	options = !strip
+	options = !debug
+	source = git+https://github.com/criticic/llpp#commit=dbf07cf23e006d4bcb23469b41da50697c1907b8
+	b2sums = SKIP
+
+pkgname = llpp

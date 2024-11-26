@@ -1,0 +1,24 @@
+pkgbase = cbqn-git
+	pkgdesc = A BQN implementation in C.
+	pkgver = r1761.fef8cfa
+	pkgrel = 2
+	url = https://github.com/dzaima/CBQN
+	arch = x86_64
+	arch = i686
+	arch = aarch64
+	arch = arm
+	license = Apache
+	license = Boost
+	license = GPL3
+	license = MIT
+	makedepends = git
+	makedepends = clang
+	depends = glibc
+	depends = libffi
+	optdepends = ttf-bqn386: BQN and APL compatible font
+	provides = cbqn
+	conflicts = cbqn
+	source = cbqn::git+https://github.com/dzaima/CBQN.git
+	md5sums = SKIP
+
+pkgname = cbqn-git

@@ -1,0 +1,23 @@
+pkgbase = link-grammar-git
+	pkgdesc = A Grammar Checking library
+	pkgver = 5.10.2.r82.ga5a52cbf3
+	pkgrel = 1
+	epoch = 2
+	url = http://www.abisource.com/projects/link-grammar/
+	arch = x86_64
+	license = LGPL
+	makedepends = git
+	makedepends = swig
+	makedepends = flex
+	makedepends = graphviz
+	depends = hunspell
+	depends = sqlite
+	depends = libedit
+	depends = pcre2
+	depends = python
+	provides = link-grammar
+	conflicts = link-grammar
+	source = git+https://github.com/opencog/link-grammar
+	md5sums = SKIP
+
+pkgname = link-grammar-git

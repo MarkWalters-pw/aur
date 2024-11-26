@@ -1,0 +1,17 @@
+pkgbase = mingw-w64-gflags
+	pkgdesc = C++ Library for commandline flag processing (mingw-w64)
+	pkgver = 2.2.2
+	pkgrel = 1
+	url = https://github.com/schuhschuh/gflags
+	arch = any
+	license = BSD
+	makedepends = mingw-w64-cmake
+	makedepends = make
+	options = !strip
+	options = !buildflags
+	options = staticlibs
+	source = gflags-2.2.2.tar.gz::https://github.com/schuhschuh/gflags/archive/v2.2.2.tar.gz
+	sha512sums = 98c4703aab24e81fe551f7831ab797fb73d0f7dfc516addb34b9ff6d0914e5fd398207889b1ae555bac039537b1d4677067dae403b64903577078d99c1bdb447
+
+pkgname = mingw-w64-gflags
+

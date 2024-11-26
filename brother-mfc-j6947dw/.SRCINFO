@@ -1,0 +1,19 @@
+pkgbase = brother-mfc-j6947dw
+	pkgdesc = Brother MFC-J6947DW CUPS driver.
+	pkgver = 1.0.0
+	pkgrel = 1
+	url = https://support.brother.com/g/b/downloadtop.aspx?c=gb&lang=en&prod=mfcj6947dw_eu
+	arch = i686
+	arch = x86_64
+	license = GPL
+	depends = cups
+	depends = ghostscript
+	depends = psutils
+	depends = sed
+	depends = grep
+	depends = file
+	source = https://download.brother.com/pub/com/linux/linux/packages/mfcj6947dwpdrv-1.0.0-0.i386.rpm
+	md5sums = 1297cceab28ba128ff04a6f642f07952
+	depends_x86_64 = lib32-gcc-libs
+
+pkgname = brother-mfc-j6947dw

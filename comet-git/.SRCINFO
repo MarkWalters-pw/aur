@@ -1,0 +1,17 @@
+pkgbase = comet-git
+	pkgdesc = A python implementation of the VOEvent Transport Protocol for transient celestial events
+	pkgver = 2.0.0.r178.gf4ea4c8
+	pkgrel = 1
+	url = https://github.com/jdswinbank/Comet
+	arch = any
+	license = BSD
+	makedepends = git
+	makedepends = java-environment
+	makedepends = python-twisted
+	makedepends = python-lxml
+	depends = bash
+	depends = python
+	source = comet-git::git+https://github.com/jdswinbank/Comet.git
+	sha1sums = SKIP
+
+pkgname = comet-git

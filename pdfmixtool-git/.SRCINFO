@@ -1,0 +1,22 @@
+pkgbase = pdfmixtool-git
+	pkgdesc = An application to perform common editing operations on PDF files
+	pkgver = r601.3b3f7a4
+	pkgrel = 1
+	url = https://www.scarpetta.eu/pdfmixtool
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = cmake
+	makedepends = qt6-tools
+	depends = qt6-base
+	depends = qt6-svg
+	depends = qpdf
+	depends = imagemagick
+	depends = poppler-qt6
+	provides = pdfmixtool
+	conflicts = pdfmixtool
+	source = git+https://gitlab.com/scarpetta/pdfmixtool.git
+	sha256sums = SKIP
+
+pkgname = pdfmixtool-git

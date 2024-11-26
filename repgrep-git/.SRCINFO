@@ -1,0 +1,20 @@
+pkgbase = repgrep-git
+	pkgdesc = An interactive command line replacer for ripgrep (git)
+	pkgver = 0.12.1.r16.g0ff1f62
+	pkgrel = 1
+	url = https://github.com/acheronfail/repgrep
+	arch = x86_64
+	license = MIT
+	license = Apache
+	license = Unlicense
+	makedepends = cargo
+	makedepends = git
+	makedepends = asciidoctor
+	depends = gcc-libs
+	depends = ripgrep
+	provides = repgrep
+	conflicts = repgrep
+	source = git+https://github.com/acheronfail/repgrep
+	sha512sums = SKIP
+
+pkgname = repgrep-git

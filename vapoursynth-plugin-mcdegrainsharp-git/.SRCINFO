@@ -1,0 +1,16 @@
+pkgbase = vapoursynth-plugin-mcdegrainsharp-git
+	pkgdesc = Plugin for Vapoursynth: mcdegrainsharp (GIT version)
+	pkgver = r6.abdc093
+	pkgrel = 1
+	url = https://gist.github.com/4re
+	arch = any
+	license = GPL
+	makedepends = git
+	depends = vapoursynth-plugin-tcanny-git
+	depends = vapoursynth-plugin-mvtools
+	provides = vapoursynth-plugin-mcdegrainsharp
+	conflicts = vapoursynth-plugin-mcdegrainsharp
+	source = mcdegrainsharp::git+https://gist.github.com/b5399b1801072458fc80.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-mcdegrainsharp-git

@@ -1,0 +1,16 @@
+pkgbase = tango-accesscontrol
+	pkgdesc = combined from svn/TangoAccessControl and svn/TangoAccessControl/AbstractClasses
+	pkgver = 2.20
+	pkgrel = 1
+	url = https://gitlab.com/tango-controls/TangoAccessControl
+	arch = x86_64
+	groups = tango-controls
+	license = GPL3
+	depends = tango-cpp
+	depends = tango-database
+	source = https://gitlab.com/tango-controls/TangoAccessControl/-/archive/TangoAccessControl-Release-2.20/TangoAccessControl-TangoAccessControl-Release-2.20.tar.gz
+	source = tango-access.service
+	sha256sums = 5ee39b580971a541f4dcc317cf69125fbecfd206a5b8b6544e1314e6bc914ee6
+	sha256sums = 883e32ba0309313d0929a329d11b2843c7dee018aa71d4c316779f0888fa4c48
+
+pkgname = tango-accesscontrol

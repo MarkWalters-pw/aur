@@ -1,0 +1,17 @@
+pkgbase = websocketd-bin
+	pkgdesc = Like inetd, but for WebSockets. Turn any application that uses STDIO/STDOUT into a WebSocket server.
+	pkgver = 0.4.1
+	pkgrel = 1
+	url = https://github.com/joewalnes/websocketd
+	arch = x86_64
+	arch = i686
+	arch = arm
+	license = BSD-2-Clause
+	provides = websocketd
+	conflicts = websocketd
+	source_x86_64 = https://github.com/joewalnes/websocketd/releases/download/v0.4.1/websocketd-0.4.1-linux_amd64.zip
+	sha256sums_x86_64 = 7f3d70598cb6596328ab4193419515e220696f3451f05b8173156d28c324a113
+	source_i686 = https://github.com/joewalnes/websocketd/releases/download/v0.4.1/websocketd-0.4.1-linux_386.zip
+	sha256sums_i686 = 563606e3465283114ab9e28bcdd2f48e12b237e4c1f5857cede5b9eb9be124f4
+
+pkgname = websocketd-bin

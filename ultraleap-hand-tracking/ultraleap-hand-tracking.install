@@ -1,0 +1,7 @@
+post_install() {
+    ldconfig
+	systemctl enable ultraleap-hand-tracking-service --now
+	printf "$(tput setaf 2)Ultraleap Hand tracking has been installed.$(tput sgr0)\n"
+	printf "Read and accept the Ultraleap EULA before using run the command:\n"
+	printf "  * leapctl eula\n"
+}

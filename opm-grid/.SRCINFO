@@ -1,0 +1,23 @@
+pkgbase = opm-grid
+	pkgdesc = DUNE module supporting grids in a corner-point format
+	pkgver = 2024.10
+	pkgrel = 1
+	url = https://github.com/OPM/opm-grid
+	arch = x86_64
+	license = GPL-3.0-or-later
+	makedepends = cppcheck
+	makedepends = doxygen
+	makedepends = graphviz
+	depends = opm-common>=2024.10
+	depends = dune-grid>=2.10.0
+	depends = dune-istl>=2.10.0
+	depends = suitesparse
+	depends = zoltan
+	optdepends = man-db: manual pages for grdecl2vtu and mirror_grid
+	provides = grdecl2vtu
+	provides = mirror_grid
+	options = !emptydirs
+	source = opm-grid-release-2024.10-final.tar.gz::https://github.com/OPM/opm-grid/archive/release/2024.10/final.tar.gz
+	sha512sums = 41600c23f63ba5368ede6d805ef40873cad1afa221cedf002ca2ae02eda6b610f9cf1dca83fe7fa7a51ee44cf461a1f317376287e1bf6c98ac6a4763844f8a4a
+
+pkgname = opm-grid

@@ -1,0 +1,16 @@
+pkgbase = mod_auth_radius
+	pkgdesc = Radius authentication module for Apache
+	pkgver = 1.6.0
+	pkgrel = 1
+	url = http://freeradius.org/mod_auth_radius/
+	arch = x86_64
+	arch = i686
+	license = GPL
+	depends = apache
+	conflicts = apache-mod_auth_radius
+	replaces = apache-mod_auth_radius
+	source = mod_auth_radius-1.6.0.tar.gz::https://github.com/FreeRADIUS/mod_auth_radius/archive/v1.6.0.tar.gz
+	sha256sums = 018a2f9887fb838a256fcc76c37ca996928392e2aaee0a0ef936b6381de60a51
+
+pkgname = mod_auth_radius
+

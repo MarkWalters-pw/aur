@@ -1,0 +1,19 @@
+[Unit]
+Description=OpenNebula Web UI Server
+After=syslog.target network.target remote-fs.target opennebula.service opennebula-novnc.service
+BindsTo=opennebula.service
+Wants=opennebula-novnc.service
+AssertFileNotEmpty=/var/lib/one/.one/sunstone_auth
+
+[Service]
+User=oneadmin
+Group=cloud
+Type=simple
+PermissionsStartOnly=true
+
+ExecStart=/usr/bin/ruby /usr/lib/one/sunstone/sunstone-server.rb
+PIDFile=/run/one/sunstone.pid
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

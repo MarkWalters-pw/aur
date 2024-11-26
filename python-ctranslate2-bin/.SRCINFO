@@ -1,0 +1,19 @@
+pkgbase = python-ctranslate2-bin
+	pkgdesc = CTranslate2 is a C++ and Python library for efficient inference with Transformer models.
+	pkgver = 4.2.1
+	pkgrel = 1
+	url = https://github.com/OpenNMT/CTranslate2
+	arch = x86_64
+	license = MIT
+	depends = gcc-libs
+	depends = python-numpy
+	depends = python-pytorch
+	depends = python-setuptools
+	depends = python-yaml
+	provides = ctranslate2
+	conflicts = ctranslate2-git
+	conflicts = python-ctranslate2-git
+	source = https://files.pythonhosted.org/packages/cp312/c/ctranslate2/ctranslate2-4.2.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+	sha256sums = 1681fb06fa5714e3d440b4a9fce8f1fb71cfadfcc912e0346eaea4385269b347
+
+pkgname = python-ctranslate2-bin

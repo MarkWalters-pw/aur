@@ -1,0 +1,24 @@
+pkgbase = starwm-git
+	pkgdesc = StarWM is an extensible, floating and tiling, X window manager for Linux-based operating systems written in Rust.
+	pkgver = r64.da02779
+	pkgrel = 1
+	epoch = 2
+	url = https://github.com/starwm/starwm
+	install = starwm.install
+	arch = any
+	license = GPL
+	makedepends = cargo
+	makedepends = git
+	depends = libx11
+	depends = libxcb
+	depends = alacritty
+	depends = rofi
+	optdepends = maim: take a screenshot
+	optdepends = xclip: save screenshots in clipboard
+	provides = starwm-git
+	conflicts = starwm
+	conflicts = starwm-git
+	source = starwm-git::git+https://github.com/starwm/starwm
+	md5sums = SKIP
+
+pkgname = starwm-git

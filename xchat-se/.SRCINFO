@@ -1,0 +1,24 @@
+pkgbase = xchat-se
+	pkgdesc = An xchat fork with a few different features
+	pkgver = 1.2.21
+	pkgrel = 4
+	url = https://xchat.servx.org/
+	arch = x86_64
+	depends = gtk2
+	depends = openssl-1.0
+	depends = dbus-glib
+	depends = libnotify
+	optdepends = enchant: for spell checking support
+	optdepends = perl: for perl plugin
+	optdepends = tcl: for tcl plugin
+	optdepends = python2: for python plugin
+	provides = xchat
+	conflicts = xchat
+	options = !strip
+	source = https://xchat.servx.org/linux/x86_64/linuxmint/stable/18/xchat-se_1.2.21-1_amd64.deb
+	source = xchat-se.install
+	md5sums = 16ef377b9e708a89968edf80f35c52ea
+	md5sums = 8de528b549f6fffa56fb492162faed63
+
+pkgname = xchat-se
+

@@ -1,0 +1,18 @@
+pkgbase = rtl8821au-dkms-git
+	pkgdesc = rtl8821AU and rtl8811AU chipset driver with firmware v5.12.5.2
+	pkgver = 5.12.5.2.r148.g0bfe654
+	pkgrel = 1
+	url = https://github.com/morrownr/8821au-20210708
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	depends = dkms
+	depends = bc
+	conflicts = 8821au
+	source = git+https://github.com/morrownr/8821au-20210708.git
+	source = dkms.conf
+	sha256sums = SKIP
+	sha256sums = d9a4b788cf3ea9b82a920c927f2de72ddb7e50a3e424219e93f74816c4fa8bd9
+
+pkgname = rtl8821au-dkms-git

@@ -1,0 +1,21 @@
+pkgbase = blurble-git
+	pkgdesc = Word guessing game
+	pkgver = 0.1.0.r58.gf5f35b9
+	pkgrel = 1
+	url = https://gitlab.gnome.org/World/Blurble
+	arch = x86_64
+	arch = aarch64
+	license = GPL3
+	checkdepends = appstream-glib
+	makedepends = git
+	makedepends = meson
+	makedepends = blueprint-compiler
+	makedepends = gobject-introspection
+	makedepends = vala
+	depends = libadwaita
+	provides = blurble
+	conflicts = blurble
+	source = git+https://gitlab.gnome.org/World/Blurble.git
+	b2sums = SKIP
+
+pkgname = blurble-git

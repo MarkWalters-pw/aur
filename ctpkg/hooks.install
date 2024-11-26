@@ -1,0 +1,13 @@
+post_install() {
+/usr/bin/ctpkg grab ctpkg -y
+/usr/bin/ctpkg grab upg -y
+}
+
+pre_remove() {
+/usr/bin/ctpkg ctpm p sys ctpkg
+}
+
+op=$1
+shift
+
+$op "$@"

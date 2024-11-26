@@ -1,0 +1,20 @@
+pkgbase = esphome-flasher
+	pkgdesc = ESP8266/ESP32 firmware flasher GUI for ESPHome
+	pkgver = 1.4.0
+	pkgrel = 1
+	url = https://github.com/esphome/esphome-flasher
+	arch = any
+	license = MIT
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = esptool
+	depends = python
+	depends = python-pillow
+	depends = python-requests
+	depends = python-wxpython
+	provides = esphomeflasher
+	conflicts = esphomeflasher
+	source = esphome-flasher-1.4.0.tar.gz::https://github.com/esphome/esphome-flasher/archive/1.4.0.tar.gz
+	md5sums = 4aa6f8d4149a80eba86731b15ea97102
+
+pkgname = esphome-flasher

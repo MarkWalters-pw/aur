@@ -1,0 +1,17 @@
+pkgbase = dpic
+	pkgdesc = A pic language interpreter.
+	pkgver = 2024.01.01
+	pkgrel = 1
+	url = https://ece.uwaterloo.ca/~aplevich/dpic
+	changelog = CHANGES
+	arch = x86_64
+	license = BSD
+	source = dpic-2024.01.01.tar.gz::https://ece.uwaterloo.ca/~aplevich/dpic/dpic-2024.01.01.tar.gz
+	sha256sums = 161901ac9af86d7305512ba1b5649404fb4c803a0fab062627cc3c5895ad872f
+
+pkgname = dpic
+	depends = glibc
+	optdepends = dpic-docs: Documentation for using dpic
+
+pkgname = dpic-docs
+	arch = any

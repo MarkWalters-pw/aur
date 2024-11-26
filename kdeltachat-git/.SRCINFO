@@ -1,0 +1,23 @@
+pkgbase = kdeltachat-git
+	pkgdesc = KDeltaChat is a Delta Chat client using Kirigami framework
+	pkgver = r195.8cce6d2
+	pkgrel = 2
+	url = https://git.sr.ht/~link2xt/kdeltachat
+	arch = x86_64
+	arch = aarch64
+	license = GPL3
+	makedepends = git
+	depends = kirigami2
+	depends = libdeltachat-git
+	depends = qt5-quickcontrols
+	depends = extra-cmake-modules
+	depends = qt5-imageformats
+	depends = qt5-webengine
+	depends = qt5-multimedia
+	depends = qt5ct
+	provides = kdeltachat
+	conflicts = kdeltachat
+	source = git+https://git.sr.ht/~link2xt/kdeltachat
+	sha256sums = SKIP
+
+pkgname = kdeltachat-git

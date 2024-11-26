@@ -1,0 +1,15 @@
+pkgbase = mingw-w64-optpp
+	pkgdesc = An Object-Oriented Nonlinear Optimization Library (mingw-w64)
+	pkgver = 2.4
+	pkgrel = 3
+	url = https://software.sandia.gov/opt++/
+	arch = any
+	license = LGPL2.1
+	makedepends = mingw-w64-configure
+	depends = mingw-w64-blas
+	options = staticlibs
+	options = !buildflags
+	options = !strip
+
+pkgname = mingw-w64-optpp
+

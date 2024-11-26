@@ -1,0 +1,20 @@
+pkgbase = virglrenderer-git
+	pkgdesc = A virtual 3D GPU library, that allows the guest operating system to use the host GPU to accelerate 3D rendering, git version
+	pkgver = 0.10.4_290_gd74a494a
+	pkgrel = 1
+	url = https://virgil3d.github.io/
+	arch = x86_64
+	license = MIT
+	checkdepends = check
+	makedepends = python
+	makedepends = meson
+	makedepends = ninja
+	depends = libepoxy
+	depends = mesa
+	provides = virglrenderer
+	conflicts = virglrenderer
+	source = virglrenderer::git+https://gitlab.freedesktop.org/virgl/virglrenderer.git
+	md5sums = SKIP
+	sha512sums = SKIP
+
+pkgname = virglrenderer-git

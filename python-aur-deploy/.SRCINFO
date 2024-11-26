@@ -1,0 +1,24 @@
+pkgbase = python-aur-deploy
+	pkgdesc = Automate updating pkgbuild and deploying to AUR
+	pkgver = 0.9.3
+	pkgrel = 1
+	url = https://github.com/codeswhite/aur-deploy
+	arch = any
+	license = MIT
+	makedepends = python-setuptools
+	depends = python
+	depends = twine
+	depends = python-wheel
+	depends = python-beautifulsoup4
+	depends = pip2pkgbuild
+	depends = python-interutils
+	source = https://files.pythonhosted.org/packages/source/a/aur-deploy/aur-deploy-0.9.3.tar.gz
+	sha256sums = 4707f157862fb61d6eda6da8d68698b47ddf6f2315e2981ce7f93dfd5a30f006
+
+pkgname = python-aur-deploy
+	depends = python
+	depends = twine
+	depends = python-wheel
+	depends = python-beautifulsoup4
+	depends = pip2pkgbuild
+	depends = python-interutils

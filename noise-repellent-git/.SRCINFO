@@ -1,0 +1,19 @@
+pkgbase = noise-repellent-git
+	pkgdesc = An lv2 plugin for broadband noise reduction.
+	pkgver = r574.9efdd0b
+	pkgrel = 1
+	url = https://github.com/lucianodato/noise-repellent
+	arch = i686
+	arch = x86_64
+	license = LGPL3
+	makedepends = git
+	makedepends = lv2
+	makedepends = meson
+	depends = fftw
+	provides = noise-repellent
+	conflicts = noise-repellent
+	source = noise-repellent::git+https://github.com/lucianodato/noise-repellent.git
+	md5sums = SKIP
+
+pkgname = noise-repellent-git
+

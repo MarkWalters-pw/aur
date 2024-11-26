@@ -1,0 +1,37 @@
+pkgbase = cairo-git
+	pkgdesc = 2D graphics library with support for multiple output devices
+	pkgver = 1.18.0.r29.g057a949bb
+	pkgrel = 1
+	url = https://cairographics.org/
+	arch = x86_64
+	license = LGPL-2.1-only OR MPL-1.1
+	makedepends = git
+	makedepends = gtk-doc
+	makedepends = meson
+	makedepends = valgrind
+	depends = fontconfig
+	depends = freetype2
+	depends = glib2
+	depends = libpng
+	depends = libx11
+	depends = libxcb
+	depends = libxext
+	depends = libxrender
+	depends = lzo
+	depends = pixman
+	depends = zlib
+	source = git+https://gitlab.freedesktop.org/cairo/cairo.git
+	sha256sums = SKIP
+
+pkgname = cairo-git
+	provides = libcairo-gobject.so
+	provides = libcairo-script-interpreter.so
+	provides = libcairo.so
+	provides = cairo
+	conflicts = cairo
+
+pkgname = cairo-docs-git
+	pkgdesc = 2D graphics library with support for multiple output devices (documentation)
+	depends = 
+	provides = cairo-docs
+	conflicts = cairo-docs

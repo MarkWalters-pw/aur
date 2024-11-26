@@ -1,0 +1,32 @@
+pkgbase = lua-lsqlite3
+	pkgdesc = A binding for Lua to the SQLite3 database library
+	pkgver = 0.9.6
+	pkgrel = 5
+	url = http://lua.sqlite.org
+	arch = x86_64
+	arch = i686
+	license = MIT
+	makedepends = lua
+	makedepends = lua51
+	makedepends = lua52
+	makedepends = lua53
+	makedepends = luarocks
+	depends = sqlite
+	source = lsqlite3_v096-5.zip::http://lua.sqlite.org/index.cgi/zip/lsqlite3_v096-5.zip?uuid=v0.9.6
+	sha256sums = 8c9ab3b01b08583b21d1081f3e2c0146bf16c25333a9e6bfd65be4014585865f
+
+pkgname = lua-lsqlite3
+	depends = sqlite
+	depends = lua
+
+pkgname = lua53-lsqlite3
+	depends = sqlite
+	depends = lua53
+
+pkgname = lua52-lsqlite3
+	depends = sqlite
+	depends = lua52
+
+pkgname = lua51-lsqlite3
+	depends = sqlite
+	depends = lua51

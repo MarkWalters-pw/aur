@@ -1,0 +1,23 @@
+pkgbase = kclock-git
+	pkgdesc = Clock app for Plasma Mobile
+	pkgver = 22.06.r8.gd256998
+	pkgrel = 1
+	url = https://invent.kde.org/plasma-mobile/kclock
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = cmake
+	makedepends = extra-cmake-modules
+	depends = ki18n
+	depends = kconfig
+	depends = kcoreaddons
+	depends = knotifications
+	depends = kdbusaddons
+	depends = kirigami2
+	depends = kirigami-addons-git
+	provides = kclock
+	conflicts = kclock
+	source = git+https://invent.kde.org/plasma-mobile/kclock.git
+	sha256sums = SKIP
+
+pkgname = kclock-git

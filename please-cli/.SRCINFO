@@ -1,0 +1,19 @@
+pkgbase = please-cli
+	pkgdesc = An AI helper script to create CLI commands.
+	pkgver = 0.3.0
+	pkgrel = 1
+	install = please-cli.install
+	arch = any
+	license = Apache
+	makedepends = sed
+	makedepends = git
+	depends = bash
+	depends = jq
+	depends = curl
+	optdepends = libsecret: store OpenApi key in keychain
+	optdepends = xclip: copy command to clipboard on X
+	optdepends = wl-clipboard: copy command to clipboard on Wayland
+	source = git+https://github.com/TNG/please-cli.git
+	sha256sums = SKIP
+
+pkgname = please-cli

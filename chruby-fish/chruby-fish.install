@@ -1,0 +1,9 @@
+post_upgrade() {
+  echo "
+chruby-fish no longer depends on chruby and is loaded automatically.
+
+You can remove chruby if you don't need it, and you should remove any source
+references from your config.fish file as chruby-fish automatically registers
+itself.
+"
+}

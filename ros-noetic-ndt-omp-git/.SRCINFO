@@ -1,0 +1,24 @@
+pkgbase = ros-noetic-ndt-omp-git
+	pkgdesc = OpenMP boosted NDT and GICP algorithms
+	pkgver = r41.399d613
+	pkgrel = 2
+	url = https://github.com/koide3/ndt_omp
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-catkin
+	makedepends = ros-noetic-cpp-common
+	makedepends = ros-noetic-pcl-ros
+	depends = ros-noetic-cpp-common
+	depends = ros-noetic-pcl-ros
+	optdepends = openmp
+	provides = ros-noetic-ndt-omp
+	source = ros-noetic-ndt-omp-git::git://github.com/koide3/ndt_omp.git
+	sha256sums = SKIP
+
+pkgname = ros-noetic-ndt-omp-git

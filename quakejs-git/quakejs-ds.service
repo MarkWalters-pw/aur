@@ -1,0 +1,20 @@
+[Unit]
+Description=QuakeJS dedicated server
+After=network.target
+
+[Service]
+User=quakejs
+Type=simple
+EnvironmentFile=/etc/conf.d/quakejs
+ExecStart=/bin/bash -c "/usr/bin/node build/ioq3ded.js ${QUAKEJS_DS_PARAMS}"
+WorkingDirectory=/usr/share/webapps/quakejs
+LimitNOFILE=1048576
+LimitNPROC=64
+PrivateTmp=true
+PrivateDevices=true
+ProtectHome=true
+ProtectSystem=strict
+ReadOnlyPaths=/etc/webapps/quakejs/server.cfg
+
+[Install]
+WantedBy=multi-user.target

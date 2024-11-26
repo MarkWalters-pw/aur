@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# WINE Launcher script for PocketNES Menu Builder
+
+export WINEPREFIX=~/.gba-emu
+export PNESDIR=/usr/share/pocketnes # installation dir for AUR package
+
+cat << EOF
+PocketNES Linux Loader by Atapi/Sterophonick
+Original Program: (c) 2003 Titney from PocketHeaven
+                  (c) 2013 FluBBa and Dwedit
+
+EOF
+
+wine $PNESDIR/pnesmmw.exe

@@ -1,0 +1,20 @@
+pkgbase = esdm-git
+	pkgdesc = Entropy Source and DRNG Manager
+	pkgver = 1.0.1.r4.g346953a
+	pkgrel = 1
+	url = https://github.com/smuellerDD/esdm
+	arch = x86_64
+	license = GPL2
+	license = BSD
+	makedepends = meson
+	makedepends = git
+	depends = protobuf-c
+	depends = jitterentropy
+	depends = libselinux
+	depends = fuse3
+	provides = esdm
+	conflicts = esdm
+	source = git+https://github.com/smuellerDD/esdm
+	sha256sums = SKIP
+
+pkgname = esdm-git

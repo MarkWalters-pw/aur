@@ -1,0 +1,15 @@
+pkgbase = cstatus
+	pkgdesc = statusbar for dwm written in C99.
+	pkgver = 1.1.0
+	pkgrel = 1
+	url = https://git.sr.ht/~andreafeletto/cstatus
+	arch = x86_64
+	license = MIT
+	depends = libx11
+	depends = alsa-lib
+	provides = cstatus
+	conflicts = cstatus-git
+	source = cstatus-1.1.0.tar.gz::https://git.sr.ht/~andreafeletto/cstatus/archive/1.1.0.tar.gz
+	sha256sums = c4bab6e65c151288b1eed56836f6d5b1173abb5fc4543cdb8e8b720dc93fb5b0
+
+pkgname = cstatus

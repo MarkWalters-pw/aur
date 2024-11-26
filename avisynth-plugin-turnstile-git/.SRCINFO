@@ -1,0 +1,20 @@
+pkgbase = avisynth-plugin-turnstile-git
+	pkgdesc = Plugin for Avisynth: turnstile (GIT version)
+	pkgver = 1.0.0.0.g9174d07
+	pkgrel = 1
+	url = https://github.com/ItEndsWithTens/TurnsTile
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = cmake
+	depends = avisynthplus
+	provides = avisynth-plugin-turnstile
+	conflicts = avisynth-plugin-turnstile
+	source = turnstile::git+https://github.com/ItEndsWithTens/TurnsTile.git
+	source = git+https://github.com/lvandeve/lodepng.git
+	source = esee
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = ca3cff98459311e4f3e219a3a4122562e737624ef9026048dc89b19bcc3568ab
+
+pkgname = avisynth-plugin-turnstile-git

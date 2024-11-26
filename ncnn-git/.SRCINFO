@@ -1,0 +1,26 @@
+pkgbase = ncnn-git
+	pkgdesc = High-performance neural network inference framework optimized for the mobile platform
+	pkgver = 20240410.r16.g1b7e6358c
+	pkgrel = 1
+	url = https://github.com/Tencent/ncnn
+	arch = i686
+	arch = x86_64
+	license = BSD-3-Clause AND BSD-2-Clause AND Zlib
+	makedepends = git
+	makedepends = cmake
+	makedepends = vulkan-icd-loader
+	makedepends = protobuf
+	makedepends = vulkan-headers
+	depends = glibc
+	depends = gcc-libs
+	optdepends = protobuf: for onnx2ncnn
+	provides = ncnn
+	conflicts = ncnn
+	source = git+https://github.com/Tencent/ncnn.git
+	source = git+https://github.com/KhronosGroup/glslang
+	source = git+https://github.com/pybind/pybind11
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = ncnn-git

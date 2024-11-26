@@ -1,0 +1,13 @@
+[Unit]
+Description=ritned daemon
+After=network-online.target
+
+[Service]
+Type=forking
+PIDFile=/run/rinetd.pid
+ExecStart=/usr/bin/rinetd
+ExecReload=/bin/kill -HUP $MAINPID
+
+[Install]
+WantedBy=multi-user.target
+

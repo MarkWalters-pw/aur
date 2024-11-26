@@ -1,0 +1,33 @@
+diff --git a/GNUmakefile.in b/GNUmakefile.in
+index 7d4d21c..646197f 100644
+--- a/GNUmakefile.in
++++ b/GNUmakefile.in
+@@ -96250,8 +96250,8 @@ $(GENSOURCES_WEBKIT)/webkitmarshal.h: stamp-webkitmarshal.h
+ 	@true
+ 
+ stamp-webkitmarshal.cpp: $(WEBKIT_MARSHAL_LIST)
+-	$(AM_V_GEN) echo "extern \"C\" {" > $(GENSOURCES_WEBKIT)/webkitmarshal.cpp && \
+-	$(GLIB_GENMARSHAL) --prefix=webkit_marshal $(WEBKIT_MARSHAL_LIST) --body >> $(GENSOURCES_WEBKIT)/webkitmarshal.cpp && \
++	$(AM_V_GEN)	$(GLIB_GENMARSHAL) --prefix=webkit_marshal $(WEBKIT_MARSHAL_LIST) --body >> $(GENSOURCES_WEBKIT)/webkitmarshal.cpp && \
++	sed -i '1,10s/#ifdef/extern "C" {\n#ifdef/gm' $(GENSOURCES_WEBKIT)/webkitmarshal.cpp && \
+ 	echo '}' >> $(GENSOURCES_WEBKIT)/webkitmarshal.cpp && \
+ 	echo timestamp > $(@F)
+ 
+diff --git a/Source/WTF/wtf/gobject/GRefPtr.h b/Source/WTF/wtf/gobject/GRefPtr.h
+index b25b7bb..447015e 100644
+--- a/Source/WTF/wtf/gobject/GRefPtr.h
++++ b/Source/WTF/wtf/gobject/GRefPtr.h
+@@ -25,11 +25,11 @@
+ 
+ #if USE(GLIB)
+ 
++#include <glib-object.h>
++
+ #include <wtf/RefPtr.h>
+ #include <algorithm>
+ 
+-extern "C" void g_object_unref(gpointer);
+-extern "C" gpointer g_object_ref_sink(gpointer);
+ 
+ namespace WTF {
+ 

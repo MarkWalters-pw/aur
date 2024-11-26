@@ -1,0 +1,20 @@
+pkgbase = ocaml-ppx_custom_printf
+	pkgdesc = Printf-style format-strings for user-defined string conversion
+	pkgver = 0.17.0
+	pkgrel = 2
+	epoch = 1
+	url = https://github.com/janestreet/ppx_custom_printf
+	arch = x86_64
+	arch = aarch64
+	license = MIT
+	makedepends = dune>=3.11.0
+	depends = ocaml>=5.1.0
+	depends = ocaml-base>=0.17.0
+	depends = ocaml-ppx_sexp_conv>=0.17.0
+	depends = ocaml-ppxlib>=0.28.0
+	depends = zstd
+	options = !strip
+	source = ocaml-ppx_custom_printf-0.17.0.tar.gz::https://github.com/janestreet/ppx_custom_printf/archive/v0.17.0.tar.gz
+	b2sums = a447fb5ed5762f64d2e249555d5f5e6b6375474769fd57539bae61d172f660780d5321f4cfef51445340a644b42532fbcdb8ee23979e753c949d05b07d603ec3
+
+pkgname = ocaml-ppx_custom_printf

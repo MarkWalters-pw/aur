@@ -1,0 +1,27 @@
+pkgbase = ags-git
+	pkgdesc = Adventure Game Studio, a development tool that is primarily used to create graphical adventure games
+	pkgver = 3.4.1.6.r56.g234c69ef
+	pkgrel = 1
+	url = http://www.adventuregamestudio.co.uk/
+	arch = i686
+	arch = x86_64
+	license = custom: Artistic 2.0
+	makedepends = git
+	depends = allegro
+	depends = dumb
+	depends = freetype2
+	depends = libogg
+	depends = libtheora
+	depends = libvorbis
+	optdepends = wine: For non-native games
+	provides = ags
+	conflicts = ags
+	source = git+https://github.com/adventuregamestudio/ags.git
+	source = agslua::git+https://github.com/duncanc/Lua-for-AGS.git
+	source = git+https://github.com/google/googletest.git
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = ags-git
+

@@ -1,0 +1,5 @@
+post_install() {
+  echo 'To play against computers, you must manually add GTP Engines in preferences:'
+  echo '- For GNU Go, use "gnugo --mode gtp --quiet" as the command'
+  echo '- For GRhino, use "gtp-rhino" as the command'
+}

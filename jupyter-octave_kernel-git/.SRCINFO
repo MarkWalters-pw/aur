@@ -1,0 +1,17 @@
+pkgbase = jupyter-octave_kernel-git
+	pkgdesc = A Jupyter kernel for Octave (git version)
+	pkgver = 347.git.a613c29
+	pkgrel = 1
+	url = https://github.com/Calysto/octave_kernel
+	arch = any
+	license = BSD
+	makedepends = python-pip
+	depends = jupyter-metakernel>=0.24.2
+	depends = jupyter-notebook
+	depends = octave
+	optdepends = jupyterlab-git: JupyterLab computational environment
+	provides = jupyter-octave_kernel
+	source = git+https://github.com/Calysto/octave_kernel.git
+	sha256sums = SKIP
+
+pkgname = jupyter-octave_kernel-git

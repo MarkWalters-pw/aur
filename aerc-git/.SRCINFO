@@ -1,0 +1,20 @@
+pkgbase = aerc-git
+	pkgdesc = Email Client for your Terminal
+	pkgver = 0.15.2.r131.ga5d6a70
+	pkgrel = 1
+	url = https://aerc-mail.org/
+	arch = x86_64
+	license = MIT
+	makedepends = go
+	makedepends = git
+	makedepends = scdoc
+	depends = notmuch
+	optdepends = w3m: html viewer support
+	optdepends = dante: proxy support
+	provides = aerc
+	conflicts = aerc
+	options = !buildflags
+	source = aerc::git+https://git.sr.ht/~rjarry/aerc
+	sha512sums = SKIP
+
+pkgname = aerc-git

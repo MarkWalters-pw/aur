@@ -1,0 +1,22 @@
+pkgbase = python-alpaca-trade-api
+	pkgdesc = Python client for Alpaca's trade API
+	pkgver = 2.1.0
+	pkgrel = 1
+	url = https://github.com/alpacahq/alpaca-trade-api-python
+	arch = any
+	license = Apache-2.0
+	depends = python
+	depends = python-pandas
+	depends = python-numpy
+	depends = python-requests
+	depends = python-urllib3
+	depends = python-websocket-client
+	depends = python-websockets
+	depends = python-msgpack
+	depends = python-aiohttp
+	depends = python-pyaml
+	options = !emptydirs
+	source = https://github.com/alpacahq/alpaca-trade-api-python/archive/refs/tags/v2.1.0.tar.gz
+	sha384sums = ee2a824d7ee39d2b4bdadc027987bb170577e61a29692ab5155ee378479975f491669895ff5473d9fc02a82c80839529
+
+pkgname = python-alpaca-trade-api

@@ -1,0 +1,20 @@
+pkgbase = python-laspec
+	pkgdesc = A toolkit for LAMOST spectra.
+	pkgver = 2023.819.0
+	pkgrel = 1
+	url = https://laspec.readthedocs.io
+	arch = any
+	license = MIT
+	checkdepends = python-nose
+	makedepends = python-setuptools
+	source = https://files.pythonhosted.org/packages/source/l/laspec/laspec-2023.819.0.tar.gz
+	source = fix-for-numpy1.24.patch
+	md5sums = 4156c6a305778072f819fe20b0cfe90a
+	md5sums = 19980615410650239f75866a4e89c335
+
+pkgname = python-laspec
+	depends = python>=3.7
+	depends = python-scipy
+	depends = python-astropy
+	depends = python-lmfit
+	depends = python-tensorflow

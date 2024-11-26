@@ -1,0 +1,18 @@
+pkgbase = minijail-git
+	pkgdesc = Tool to run a process in jailed environment
+	pkgver = r1383.902a449
+	pkgrel = 1
+	url = https://android.googlesource.com/platform/external/minijail/
+	arch = i686
+	arch = x86_64
+	license = custom:chromiumos
+	makedepends = git
+	makedepends = make
+	depends = libcap
+	provides = minijail
+	conflicts = minijail
+	source = git+https://android.googlesource.com/platform/external/minijail
+	sha256sums = SKIP
+
+pkgname = minijail-git
+

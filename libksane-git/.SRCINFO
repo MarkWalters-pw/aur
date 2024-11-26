@@ -1,0 +1,24 @@
+pkgbase = libksane-git
+	pkgdesc = An image scanning library
+	pkgver = r547.08ea3fb
+	pkgrel = 1
+	url = http://www.kde.org
+	arch = i686
+	arch = x86_64
+	groups = digikamsc-git
+	license = GPL
+	license = LGPL
+	license = FDL
+	makedepends = git
+	makedepends = extra-cmake-modules-git
+	makedepends = kdoctools
+	depends = qt5-base
+	depends = sane
+	depends = ktextwidgets
+	depends = kwallet
+	provides = libksane
+	conflicts = libksane
+	source = libksane::git+https://invent.kde.org/graphics/libksane.git/
+	md5sums = SKIP
+
+pkgname = libksane-git

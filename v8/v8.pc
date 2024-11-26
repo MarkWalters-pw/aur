@@ -1,0 +1,12 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: V8
+Description: @DESCRIPTION@
+Version: @VERSION@
+URL: @URL@
+Requires: icu-i18n
+Libs: -L${libdir}/@PKGNAME@ -lv8_monolith
+Cflags: -I${includedir}/@PKGNAME@ -pthread -std=c++11 @CFLAGS@

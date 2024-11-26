@@ -1,0 +1,21 @@
+pkgbase = arcan-waybridge-git
+	pkgdesc = Wayland bridge/frameserver for Arcan
+	pkgver = 0.5.4.6.r10.gdb2f991e
+	pkgrel = 1
+	url = https://arcan-fe.com/
+	arch = x86_64
+	license = GPL2
+	license = LGPL
+	license = custom:BSD
+	makedepends = cmake
+	makedepends = wayland-protocols
+	makedepends = git
+	depends = wayland
+	depends = arcan
+	provides = arcan-waybridge
+	conflicts = arcan-waybridge
+	source = arcan-waybridge-git::git+https://github.com/letoram/arcan.git
+	sha512sums = SKIP
+
+pkgname = arcan-waybridge-git
+

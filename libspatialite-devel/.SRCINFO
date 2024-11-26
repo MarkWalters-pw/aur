@@ -1,0 +1,22 @@
+pkgbase = libspatialite-devel
+	pkgdesc = SQLite extension to support spatial data types and operations. Development version
+	pkgver = r960.a02cd88
+	pkgrel = 1
+	url = https://www.gaia-gis.it/fossil/libspatialite
+	arch = x86_64
+	license = MPL
+	license = GPL
+	license = LGPL
+	makedepends = fossil
+	depends = geos
+	depends = libfreexl
+	depends = libxml2
+	depends = proj
+	depends = sqlite
+	depends = librttopo
+	provides = libspatialite
+	conflicts = libspatialite
+	replaces = libspatialite
+
+pkgname = libspatialite-devel
+

@@ -1,0 +1,27 @@
+pkgbase = python-onnxsim
+	pkgdesc = ONNX Simplifier is presented to simplify the ONNX model.
+	pkgver = 0.4.33
+	pkgrel = 5
+	url = https://github.com/daquexian/onnx-simplifier
+	arch = any
+	license = MIT
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python
+	depends = python-onnx
+	depends = python-onnxoptimizer
+	depends = python-onnxruntime
+	depends = python-protobuf
+	depends = python-rich
+	source = onnx-simplifier-master.zip::https://github.com/daquexian/onnx-simplifier/archive/refs/heads/master.zip
+	sha256sums = 8fa93121d62fb42956ea6e69cbb2bab1609a319ad9404e1004473c1ae3299ea0
+
+pkgname = python-onnxsim
+	depends = python
+	depends = python-onnx
+	depends = python-onnxoptimizer
+	depends = python-onnxruntime
+	depends = python-protobuf
+	depends = python-rich

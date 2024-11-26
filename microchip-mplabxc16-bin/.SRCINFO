@@ -1,0 +1,21 @@
+pkgbase = microchip-mplabxc16-bin
+	pkgdesc = Microchip's MPLAB XC16 C compiler toolchain for their dsPIC and PIC24 microcontroller families
+	pkgver = 2.10
+	pkgrel = 1
+	url = http://www.microchip.com/xc16
+	install = microchip-mplabxc16-bin.install
+	arch = i686
+	arch = x86_64
+	license = custom
+	makedepends = bitrock-unpacker
+	options = !strip
+	options = docs
+	options = libtool
+	options = emptydirs
+	options = !zipman
+	options = staticlibs
+	source = https://ww1.microchip.com/downloads/aemDocuments/documents/DEV/ProductDocuments/SoftwareTools/xc16-v2.10-full-install-linux64-installer.run
+	sha256sums = d64d5e7391ec862d4dd169361b6680b725f8960435121709b45eb1a4afe15dc8
+	depends_x86_64 = lib32-gcc-libs
+
+pkgname = microchip-mplabxc16-bin

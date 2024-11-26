@@ -1,0 +1,21 @@
+pkgbase = pagmo-git
+	pkgdesc = Perform parallel computations of optimisation tasks (global and local) via the asynchronous generalized island model (git version)
+	pkgver = r4252.1525ce0d
+	pkgrel = 2
+	url = https://github.com/esa/pagmo2
+	arch = i686
+	arch = x86_64
+	license = GPLv3
+	makedepends = git
+	makedepends = cmake
+	depends = boost
+	depends = tbb
+	depends = coin-or-ipopt
+	depends = eigen
+	depends = nlopt
+	provides = pagmo
+	conflicts = pagmo
+	source = git+https://github.com/esa/pagmo2.git
+	sha256sums = SKIP
+
+pkgname = pagmo-git

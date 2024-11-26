@@ -1,0 +1,83 @@
+diff --color --unified --recursive --text ../xeus-cling-0.15.2-fixed/CMakeLists.txt xeus-cling-0.15.2/CMakeLists.txt
+--- ../xeus-cling-0.15.2-fixed/CMakeLists.txt	2023-07-12 10:01:11.000000000 -0500
++++ xeus-cling-0.15.2/CMakeLists.txt	2023-07-21 21:05:07.308285729 -0500
+@@ -50,59 +50,6 @@
+     "${CMAKE_CURRENT_SOURCE_DIR}/share/jupyter/kernels/xcpp17/kernel.json"
+ )
+ 
+-#######################
+-# Rely on llvm-config #
+-#######################
+-
+-set(CONFIG_OUTPUT)
+-find_program(LLVM_CONFIG "llvm-config")
+-if(LLVM_CONFIG)
+-    message(STATUS "Found LLVM_CONFIG as ${LLVM_CONFIG}")
+-    set(CONFIG_COMMAND ${LLVM_CONFIG}
+-        "--assertion-mode"
+-        "--bindir"
+-        "--libdir"
+-        "--includedir"
+-        "--prefix"
+-        "--src-root")
+-    execute_process(COMMAND ${CONFIG_COMMAND}
+-                    RESULT_VARIABLE HAD_ERROR
+-                    OUTPUT_VARIABLE CONFIG_OUTPUT)
+-    if(NOT HAD_ERROR)
+-        string(REGEX REPLACE
+-               "[ \t]*[\r\n]+[ \t]*" ";"
+-               CONFIG_OUTPUT ${CONFIG_OUTPUT})
+-    else()
+-        string(REPLACE ";" " " CONFIG_COMMAND_STR "${CONFIG_COMMAND}")
+-        message(STATUS "${CONFIG_COMMAND_STR}")
+-        message(FATAL_ERROR "llvm-config failed with status ${HAD_ERROR}")
+-    endif()
+-else()
+-    message(FATAL_ERROR "llvm-config not found -- ${LLVM_CONFIG}")
+-endif()
+-
+-list(GET CONFIG_OUTPUT 0 ENABLE_ASSERTIONS)
+-list(GET CONFIG_OUTPUT 1 TOOLS_BINARY_DIR)
+-list(GET CONFIG_OUTPUT 2 LIBRARY_DIR)
+-list(GET CONFIG_OUTPUT 3 INCLUDE_DIR)
+-list(GET CONFIG_OUTPUT 4 LLVM_OBJ_ROOT)
+-list(GET CONFIG_OUTPUT 5 MAIN_SRC_DIR)
+-
+-if(NOT MSVC_IDE)
+-    set(LLVM_ENABLE_ASSERTIONS ${ENABLE_ASSERTIONS} CACHE BOOL "Enable assertions")
+-    mark_as_advanced(LLVM_ENABLE_ASSERTIONS)
+-endif()
+-
+-set(LLVM_TOOLS_BINARY_DIR ${TOOLS_BINARY_DIR} CACHE PATH "Path to llvm/bin")
+-set(LLVM_LIBRARY_DIR ${LIBRARY_DIR} CACHE PATH "Path to llvm/lib")
+-set(LLVM_MAIN_INCLUDE_DIR ${INCLUDE_DIR} CACHE PATH "Path to llvm/include")
+-set(LLVM_BINARY_DIR ${LLVM_OBJ_ROOT} CACHE PATH "Path to LLVM build tree")
+-set(LLVM_MAIN_SRC_DIR ${MAIN_SRC_DIR} CACHE PATH "Path to LLVM source tree")
+-
+-include_directories(${LLVM_MAIN_INCLUDE_DIR})
+-link_directories(${LLVM_LIBRARY_DIR})
+-add_definitions(-DLLVM_DIR="${LLVM_BINARY_DIR}")
+-
+ ################
+ # Dependencies #
+ ################
+@@ -112,8 +59,10 @@
+ find_package(xeus-zmq ${xeus-zmq_REQUIRED_VERSION} REQUIRED)
+ find_package(pugixml REQUIRED)
+ 
+-find_package(Clang REQUIRED)
+ find_package(Cling REQUIRED)
++find_package(Clang REQUIRED)
++find_package(LLVM REQUIRED)
++add_definitions(-DLLVM_DIR="${LLVM_INSTALL_PREFIX}")
+ find_package(argparse REQUIRED)
+ 
+ #########
+@@ -219,6 +168,7 @@
+ 
+ target_include_directories(xeus-cling
+                            PUBLIC
++                           $<BUILD_INTERFACE:${LLVM_INCLUDE_DIR}>
+                            $<BUILD_INTERFACE:${XEUS_CLING_INCLUDE_DIR}>
+                            $<INSTALL_INTERFACE:include>)
+ target_link_libraries(xeus-cling PUBLIC clingInterpreter clingMetaProcessor clingUtils xeus-zmq pugixml argparse::argparse)

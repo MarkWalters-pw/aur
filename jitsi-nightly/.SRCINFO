@@ -1,0 +1,37 @@
+pkgbase = jitsi-nightly
+	pkgdesc = Audio/video SIP VoIP phone and instant messenger (formerly SIP-Communicator)
+	pkgver = 2.11.20210926
+	pkgrel = 2
+	url = https://jitsi.org
+	install = jitsi-nightly.install
+	arch = i686
+	arch = x86_64
+	license = Apache
+	makedepends = ant
+	depends = java-environment=8
+	depends = bash
+	depends = gtk2
+	depends = libxv
+	depends = alsa-lib
+	depends = libxss
+	depends = ffmpeg
+	depends = archlinux-java-run
+	optdepends = libpulse: PulseAudio support
+	provides = jitsi
+	conflicts = jitsi
+	conflicts = jitsi-stable
+	options = !strip
+	options = !emptydirs
+	options = zipman
+	options = !libtool
+	options = docs
+	source = git+https://github.com/jitsi/jitsi.git
+	source = jitsi.desktop
+	source = jitsi.sh
+	source = MANIFEST.MF
+	md5sums = SKIP
+	md5sums = f5c21e511756458172dc0ae8020c7bd5
+	md5sums = 345b5ab9e26038952eef90ce18b78002
+	md5sums = 92f6b21cdfa361c430cb837956967b20
+
+pkgname = jitsi-nightly

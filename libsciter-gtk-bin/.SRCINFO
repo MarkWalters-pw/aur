@@ -1,0 +1,17 @@
+pkgbase = libsciter-gtk-bin
+	pkgdesc = Embeddable HTML/CSS/JavaScript engine for modern UI development (Gtk library)
+	pkgver = 4.4.8.23
+	pkgrel = 1
+	url = https://sciter.com
+	arch = x86_64
+	license = custom
+	depends = gtk3
+	provides = libsciter-gtk
+	provides = libsciter-gtk.so
+	conflicts = libsciter-gtk
+	source = https://github.com/c-smile/sciter-sdk/raw/0298f1b34e9a0ff1dffb889d82c506a5da8bfb1e/bin.lnx/x64/libsciter-gtk.so
+	source = https://github.com/c-smile/sciter-sdk/raw/0298f1b34e9a0ff1dffb889d82c506a5da8bfb1e/license.htm
+	sha256sums = a1682fbf55e004f1862d6ace31b5220121d20906bdbf308d0a9237b451e4db86
+	sha256sums = a52733cc90fb112a730b67bbbe6fc1102fad644753af9bd584cab8ba0da3db49
+
+pkgname = libsciter-gtk-bin

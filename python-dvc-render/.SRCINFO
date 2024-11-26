@@ -1,0 +1,23 @@
+pkgbase = python-dvc-render
+	pkgdesc = Library for rendering DVC plots
+	pkgver = 1.0.2
+	pkgrel = 2
+	url = https://github.com/iterative/dvc-render
+	arch = any
+	license = Apache-2.0
+	checkdepends = mypy
+	checkdepends = python-pytest
+	checkdepends = python-pytest-sugar
+	checkdepends = python-pytest-mock
+	checkdepends = python-pylint
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = python-setuptools-scm
+	depends = python
+	depends = python-funcy
+	depends = python-tabulate
+	source = https://files.pythonhosted.org/packages/source/d/dvc-render/dvc-render-1.0.2.tar.gz
+	sha256sums = 40d1cd81760daf34b48fa8362b5002fcbe415e3cdbcf42369b6347d01497ffc0
+
+pkgname = python-dvc-render

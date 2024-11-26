@@ -1,0 +1,16 @@
+pkgbase = vapoursynth-plugin-tcomb-git
+	pkgdesc = Plugin for Vapoursynth: tcomb (GIT version)
+	pkgver = 4.0.g29318d2
+	pkgrel = 1
+	url = https://forum.doom9.org/showthread.php?t=171124
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	depends = vapoursynth
+	provides = vapoursynth-plugin-tcomb
+	conflicts = vapoursynth-plugin-tcomb
+	options = debug
+	source = tcomb::git+https://github.com/dubhater/vapoursynth-tcomb.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-tcomb-git

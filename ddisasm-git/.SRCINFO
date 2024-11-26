@@ -1,0 +1,23 @@
+pkgbase = ddisasm-git
+	pkgdesc = A fast and accurate disassembler
+	pkgver = v0.1.1.r628.gcd19fb5
+	pkgrel = 1
+	url = https://github.com/grammatech/ddisasm
+	arch = x86_64
+	license = aGPLv3
+	makedepends = git
+	makedepends = cmake
+	makedepends = souffle
+	makedepends = mcpp
+	makedepends = lief
+	makedepends = gtirb
+	makedepends = gtirb-pprinter
+	depends = capstone
+	depends = libehp
+	depends = boost
+	provides = ddisasm
+	source = git+https://github.com/grammatech/ddisasm.git
+	sha512sums = SKIP
+
+pkgname = ddisasm-git
+

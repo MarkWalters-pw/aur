@@ -1,0 +1,15 @@
+pkgbase = ros-noetic-moveit-planners
+	pkgdesc = ROS - Metapacakge that installs all available planners for MoveIt.
+	pkgver = 1.1.13
+	pkgrel = 1
+	url = https://moveit.ros.org
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-catkin
+	depends = ros-noetic-moveit-planners-ompl
+	source = ros-noetic-moveit-planners-1.1.13.tar.gz::https://github.com/ros-planning/moveit/archive/1.1.13.tar.gz
+	sha256sums = 91735df0ec1a7bdbcdad9028352a0d78d44fad2076584319120e2e10ecb5882c
+
+pkgname = ros-noetic-moveit-planners

@@ -1,0 +1,24 @@
+pkgbase = enblend-hg
+	pkgdesc = Intelligent blend tool for overlapping pictures
+	pkgver = 1517.8849e927f614
+	pkgrel = 1
+	url = http://enblend.sourceforge.net/
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = mercurial
+	makedepends = cmake
+	makedepends = boost
+	depends = boost-libs
+	depends = gsl
+	depends = lcms2
+	depends = vigra
+	provides = enblend
+	provides = enblend-enfuse
+	conflicts = enblend
+	conflicts = enblend-enfuse
+	source = enblend-hg::hg+http://hg.code.sf.net/p/enblend/code
+	md5sums = SKIP
+
+pkgname = enblend-hg
+

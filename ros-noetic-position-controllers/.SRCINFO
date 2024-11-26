@@ -1,0 +1,18 @@
+pkgbase = ros-noetic-position-controllers
+	pkgdesc = ROS - position_controllers.
+	pkgver = 0.21.1
+	pkgrel = 1
+	url = https://github.com/ros-controls/ros_controllers/wiki
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-controller-interface
+	makedepends = ros-noetic-catkin
+	makedepends = ros-noetic-forward-command-controller
+	depends = ros-noetic-controller-interface
+	depends = ros-noetic-forward-command-controller
+	source = ros-noetic-position-controllers-0.21.1.tar.gz::https://github.com/ros-controls/ros_controllers/archive/0.21.1.tar.gz
+	sha256sums = f3768fe4ee700cc4e1bc69370fbbcf04cc4b31a77989f639dd4091fe9ed35e4a
+
+pkgname = ros-noetic-position-controllers

@@ -1,0 +1,14 @@
+pkgbase = powertop-auto-tune
+	pkgdesc = A systemd service for powertop that sets all tunable options to their GOOD setting.
+	pkgver = 2021.9
+	pkgrel = 2
+	url = https://wiki.archlinux.org/index.php/Powertop
+	install = powertop-auto-tune.install
+	arch = any
+	license = FDL
+	depends = systemd
+	depends = powertop
+	source = powertop.service
+	sha256sums = 6c8f5d252c5924e3fb589b787423be693e0c5cb8c99f2da1aedd29c0ab8ce976
+
+pkgname = powertop-auto-tune

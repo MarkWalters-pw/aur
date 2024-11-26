@@ -1,0 +1,15 @@
+pkgbase = borgweb-git
+	pkgdesc = Web front-end for Borg
+	pkgver = 0.3.0.r8.ge609ec4
+	pkgrel = 1
+	url = https://github.com/borgbackup/borgweb
+	arch = i686
+	arch = x86_64
+	makedepends = git
+	makedepends = python-setuptools-scm
+	makedepends = npm
+	depends = python-flask
+	source = git+https://github.com/borgbackup/borgweb.git
+	sha512sums = SKIP
+
+pkgname = borgweb-git

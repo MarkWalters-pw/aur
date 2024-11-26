@@ -1,0 +1,17 @@
+pkgbase = textbar-lua-git
+	pkgdesc = Text status bar for X11, lua branch
+	pkgver = 2a1142c709
+	pkgrel = 1
+	url = https://gitea.itycodes.org/itycodes/textbar
+	arch = x86_64
+	license = BSD-3-Clause
+	makedepends = gcc>=11.0.0
+	depends = cairo>=1.17.8
+	depends = libx11>=1.8.0
+	depends = lua>=5.4.0
+	provides = textbar
+	conflicts = textbar
+	source = https://gitea.itycodes.org/itycodes/textbar/archive/2a1142c709bc7795d800f8c3e80ab9851fa8a166.tar.gz
+	sha256sums = 69fe6786b4687c5041e112a0f5be24cbc5fed4bd15ca36f5dfa75d62ba803366
+
+pkgname = textbar-lua-git

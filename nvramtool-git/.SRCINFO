@@ -1,0 +1,13 @@
+pkgbase = nvramtool-git
+	pkgdesc = Reads and writes coreboot parameters and displays information from the coreboot table in CMOS/NVRAM
+	pkgver = 4.20.78.g78881e1006
+	pkgrel = 1
+	url = https://coreboot.org
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	provides = nvramtool
+	source = git+https://github.com/coreboot/coreboot.git
+	sha256sums = SKIP
+
+pkgname = nvramtool-git

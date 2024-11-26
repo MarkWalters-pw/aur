@@ -1,0 +1,8 @@
+post_install() {
+    echo "You must accept the terms of the EULA before using SpriteIlluminator!"
+    echo "Can be found in /usr/share/licenses/spriteilluminator/LicenseAgreement.html"
+}
+
+post_upgrade() {
+  post_install
+}

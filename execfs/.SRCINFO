@@ -1,0 +1,17 @@
+pkgbase = execfs
+	pkgdesc = The superior FUSE filesystem for exec on file open
+	pkgver = 1.1.0
+	pkgrel = 1
+	url = http://github.com/MaanooAk/execfs
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python
+	depends = python-fusepy
+	provides = execfs
+	source = execfs-1.1.0.tar.gz::https://github.com/MaanooAk/execfs/archive/v1.1.0.tar.gz
+	sha1sums = e8fb41c72cbd667fc4eaabaae374994dac7d8054
+
+pkgname = execfs
+

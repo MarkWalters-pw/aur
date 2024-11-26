@@ -1,0 +1,25 @@
+pkgbase = python-orbax
+	pkgdesc = Orbax is a library providing common utilities for JAX users.
+	pkgver = 0.1.7
+	pkgrel = 1
+	url = https://github.com/google/orbax
+	arch = any
+	groups = jax
+	license = Apache
+	makedepends = python-build
+	makedepends = python-flit-core
+	makedepends = python-installer
+	depends = python-absl
+	depends = python-cached-property
+	depends = python-etils
+	depends = python-flax
+	depends = python-importlib_resources
+	depends = python-jax
+	depends = python-numpy
+	depends = python-tensorstore
+	depends = python-yaml
+	optdepends = python-flax: Deep learning library from Google
+	source = python-orbax-0.1.7.tar.gz::https://github.com/google/orbax/archive/refs/tags/v0.1.7.tar.gz
+	sha256sums = 322c1e8670a65e52dd71c12f9e3e7204c7db5ce9d7e651503a5c7702e2640908
+
+pkgname = python-orbax

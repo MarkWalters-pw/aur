@@ -1,0 +1,18 @@
+pkgbase = latex2rtf
+	pkgdesc = LaTeX to RTF converter
+	pkgver = 2.3.18
+	pkgrel = 1
+	url = http://latex2rtf.sourceforge.net
+	arch = x86_64
+	license = GPL-2.0-or-later
+	checkdepends = texlive-fontsrecommended
+	checkdepends = texlive-latexextra
+	makedepends = texlive-bin
+	depends = bash
+	depends = ghostscript
+	depends = glibc
+	depends = imagemagick
+	source = https://downloads.sourceforge.net/sourceforge/latex2rtf/latex2rtf-2.3.18a.tar.gz
+	sha512sums = b6caef616e8e63e8779a86dae6cbe0993de5421bd6700fe9118bee2af528c496c0e849ae5315ed6fc86be6c7fbe7fa073e41b39e8c5da2da4e65b26784135589
+
+pkgname = latex2rtf

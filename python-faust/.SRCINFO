@@ -1,0 +1,25 @@
+pkgbase = python-faust
+	pkgdesc = Python Stream Processing
+	pkgver = 1.10.4
+	pkgrel = 2
+	url = https://github.com/robinhood/faust
+	arch = x86_64
+	license = BSD
+	makedepends = python-setuptools
+	makedepends = cython
+	depends = python-aiohttp
+	depends = python-aiohttp-cors
+	depends = python-robinhood-aiokafka
+	depends = python-click
+	depends = python-colorclass
+	depends = python-mode
+	depends = python-opentracing
+	depends = python-terminaltables
+	depends = python-venusian
+	depends = python-yarl
+	depends = python-croniter
+	depends = python-mypy_extensions
+	source = python-faust-1.10.4.tar.gz::https://files.pythonhosted.org/packages/source/f/faust/faust-1.10.4.tar.gz
+	sha256sums = ffcd350ea29d528f6814fc9a42b5e50e130310da054a93e9d8216ef89a254611
+
+pkgname = python-faust

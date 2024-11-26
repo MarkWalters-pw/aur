@@ -1,0 +1,23 @@
+pkgbase = 8192cu-dkms
+	pkgdesc = Driver for Realtek RTL8188CUS (8188C, 8192C) chipset wireless cards
+	pkgver = v4.0.2_9000
+	pkgrel = 24
+	url = http://www.realtek.com.tw/
+	arch = any
+	license = GPL
+	depends = dkms
+	makedepends = git
+	conflicts = 8192cu
+	conflicts = rt8192cu
+	conflicts = dkms-8192cu
+	replaces = dkms-8192cu
+	options = !strip
+	source = 8192cu::git+https://github.com/Rick-Moba/rtl8192cu.git
+	source = dkms.conf
+	source = blacklist-8192cu-dkms.conf
+	sha256sums = SKIP
+	sha256sums = 22853908c2ae147399ce3847c175a25134db668d36c3141814eafcc8fddacc98
+	sha256sums = 67a7831317d75c3ecdb351cd515b8b980ae17de66ef9f78d8d1aa86820cef5c6
+
+pkgname = 8192cu-dkms
+

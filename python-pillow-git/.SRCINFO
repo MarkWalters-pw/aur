@@ -1,0 +1,33 @@
+pkgbase = python-pillow-git
+	pkgdesc = Python Imaging Library (PIL) fork.
+	pkgver = 7.2.0.r319.g7e06a91c
+	pkgrel = 1
+	url = https://python-pillow.github.io/
+	arch = x86_64
+	license = BSD
+	makedepends = python-setuptools
+	makedepends = freetype2
+	makedepends = libraqm
+	makedepends = libwebp
+	makedepends = tk
+	makedepends = git
+	depends = python
+	depends = lcms2
+	depends = libtiff
+	depends = openjpeg2
+	depends = libimagequant
+	depends = libxcb
+	optdepends = freetype2: for the ImageFont module
+	optdepends = libraqm: for complex text scripts
+	optdepends = libwebp: for webp images
+	optdepends = tk: for the ImageTK module
+	optdepends = python-olefile: OLE2 file support
+	optdepends = python-pyqt5: for the ImageQt module
+	provides = python-pillow
+	conflicts = python-pillow
+	options = !emptydirs
+	source = git+https://github.com/python-pillow/Pillow.git
+	md5sums = SKIP
+
+pkgname = python-pillow-git
+

@@ -1,0 +1,17 @@
+pkgbase = elementary-mixer
+	pkgdesc = Change the volume of apps
+	pkgver = 1.1.0
+	pkgrel = 1
+	url = https://appcenter.elementary.io/com.github.childishgiant.mixer/
+	arch = x86_64
+	license = GPL3
+	makedepends = meson
+	makedepends = vala
+	depends = granite
+	depends = libhandy
+	provides = com.github.childishgiant.mixer
+	conflicts = com.github.childishgiant.mixer
+	source = mixer-1.1.0.tar.gz::https://github.com/ChildishGiant/mixer/archive/refs/tags/1.1.0.tar.gz
+	sha256sums = bb932aedecfd79e74fea5a14953364306f55f8cc3ee789caa90976b7395c9002
+
+pkgname = elementary-mixer

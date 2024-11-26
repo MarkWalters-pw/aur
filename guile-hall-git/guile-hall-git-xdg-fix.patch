@@ -1,0 +1,28 @@
+diff --git a/scripts/hall.in b/scripts/hall.in
+index d14269e..71da3d7 100644
+--- a/scripts/hall.in
++++ b/scripts/hall.in
+@@ -149,8 +149,7 @@ distribution file.")
+ create a new project.  You can use a number of arguments (see above) to
+ provide additional metadata — but the project name is mandatory.
+ 
+-Defaults for the author, prefix, website & license arguments can be set in the
+-~/.hall configuration file.
++Defaults for the author, prefix, website & license arguments can be set in ~/.hall or ~/.config/hall/hall.
+ 
+ '--convert' can be used when you have an existing project that you want to
+ start using hall for.
+@@ -221,7 +220,12 @@ first.")
+          (handler (cut string-split <> #\,))
+          (synopsis "CSV list regexp patterns to indicate files to skip.")
+          (example "scripts/foo,AUTHORS,^.*rgp$")))))))
+-   (directory (in-home "."))
++   (directory (list
++	       (path (given (string-append (let ((xdg (getenv "XDG_CONFIG_HOME")))
++					       (if (> (string-length xdg) 0)
++						   xdg
++						   (string-append (getenv "HOME") "/.config"))) "/hall/"))
++		     (eager? #t))))
+    (parser simple-sexp-parser)))
+ 
+ (define* (main #:optional (args (command-line)))

@@ -1,0 +1,19 @@
+pkgbase = savagewheels
+	pkgdesc = Savage Wheels is a 2D car crashing arcade game similar to the old classic Destruction Derby.
+	pkgver = 1.6.1
+	pkgrel = 2
+	url = https://github.com/petarov/savagewheels
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	license = MIT
+	makedepends = cmake
+	depends = sdl
+	depends = sdl_mixer
+	noextract = savagewheels-gamedata.tar.gz
+	source = https://github.com/petarov/savagewheels/archive/1.6.1.tar.gz
+	source = https://github.com/petarov/savagewheels/releases/download/v1.4/savagewheels-gamedata.tar.gz
+	md5sums = 9785c07d85d89517e6167bffb002381c
+	md5sums = 98f2c9750c0dab008fbb74fa97a5f10d
+
+pkgname = savagewheels

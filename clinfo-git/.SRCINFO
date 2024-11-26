@@ -1,0 +1,18 @@
+pkgbase = clinfo-git
+	pkgdesc = Print all known information about all available OpenCL platforms and devices in the system
+	pkgver = 3.0.23.01.25.r5.g47c78bf
+	pkgrel = 1
+	url = https://github.com/Oblomov/clinfo
+	arch = i686
+	arch = x86_64
+	license = custom:Public Domain
+	makedepends = git
+	makedepends = opencl-headers
+	depends = opencl-icd-loader
+	provides = clinfo
+	conflicts = clinfo
+	replaces = clinfo
+	source = git+https://github.com/oblomov/clinfo.git
+	md5sums = SKIP
+
+pkgname = clinfo-git

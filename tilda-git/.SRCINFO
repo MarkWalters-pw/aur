@@ -1,0 +1,17 @@
+pkgbase = tilda-git
+	pkgdesc = A Gtk based drop down terminal for Linux and Unix.
+	pkgver = 1.5.0.r0.gbdf581e
+	pkgrel = 2
+	url = https://github.com/lanoxx/tilda
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	depends = confuse
+	depends = vte3
+	provides = tilda
+	conflicts = tilda
+	source = git+https://github.com/lanoxx/tilda.git
+	sha1sums = SKIP
+
+pkgname = tilda-git
+

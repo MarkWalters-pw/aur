@@ -1,0 +1,14 @@
+pkgbase = vex
+	pkgdesc = Executes all permutations of a shell command with a pattern syntax
+	pkgver = 0.0.1
+	pkgrel = 2
+	url = https://github.com/briansteffens/vex
+	arch = x86_64
+	license = GPL
+	makedepends = rust
+	makedepends = cargo
+	depends = gcc-libs
+	source = vex::git+https://github.com/briansteffens/vex.git
+	md5sums = SKIP
+
+pkgname = vex

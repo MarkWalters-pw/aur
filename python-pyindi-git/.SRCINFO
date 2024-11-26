@@ -1,0 +1,16 @@
+pkgbase = python-pyindi-git
+	pkgdesc = An INDI Client Python API, auto-generated from the official C++ API using SWIG.
+	pkgver = v1.9
+	pkgrel = 1
+	arch = x86_64
+	license = GPL3
+	makedepends = swig
+	depends = libindi
+	depends = python
+	depends = python-setuptools
+	provides = python-pyindi
+	conflicts = python-pyindi
+	source = git+https://github.com/indilib/pyindi-client
+	md5sums = SKIP
+
+pkgname = python-pyindi-git

@@ -1,0 +1,19 @@
+pkgbase = mellis
+	pkgdesc = Official GUI wallet for Themelio
+	pkgver = 0.3.6
+	pkgrel = 2
+	url = https://themelio.org/
+	arch = x86_64
+	arch = i686
+	arch = aarch64
+	license = unknown
+	makedepends = npm
+	makedepends = cargo
+	makedepends = git
+	depends = melwalletd
+	source = git+https://github.com/themeliolabs/mellis.git#tag=v0.3.6
+	source = file://ginkou-loader-wrapper
+	sha256sums = SKIP
+	sha256sums = ab8068086631322ff4f85ae126d2a7e0c0cc30b33ec2ff42849d48c454ed3863
+
+pkgname = mellis

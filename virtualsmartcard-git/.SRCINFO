@@ -1,0 +1,29 @@
+pkgbase = virtualsmartcard-git
+	pkgdesc = Smart card emulator written in Python
+	pkgver = 0.9.r9.gd2e607f
+	pkgrel = 1
+	url = https://frankmorgner.github.io/vsmartcard/virtualsmartcard/README.html
+	arch = aarch64
+	arch = armv7h
+	arch = i486
+	arch = i686
+	arch = pentium4
+	arch = x86_64
+	license = GPL-3.0-only
+	makedepends = git
+	makedepends = help2man
+	depends = glibc
+	depends = pcsclite
+	depends = python
+	depends = python-qrcode
+	depends = qrencode
+	optdepends = openpace: emulation of German identity card with –type=nPA
+	optdepends = python-pillow: emulation of electronic passport with –type=ePass
+	optdepends = python-pycryptodomex: emulation of electronic passport with –type=ePass
+	optdepends = python-pyscard: relaying a local smart card with –type=relay
+	provides = virtualsmartcard=0.9.r9.gd2e607f
+	conflicts = virtualsmartcard
+	source = vsmartcard::git+https://github.com/frankmorgner/vsmartcard.git
+	b2sums = SKIP
+
+pkgname = virtualsmartcard-git

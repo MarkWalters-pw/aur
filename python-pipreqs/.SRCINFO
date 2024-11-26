@@ -1,0 +1,22 @@
+pkgbase = python-pipreqs
+	pkgdesc = Pip requirements.txt generator based on imports in project
+	pkgver = 0.5.0
+	pkgrel = 3
+	url = https://github.com/bndr/pipreqs
+	arch = any
+	license = Apache-2.0
+	checkdepends = jupyter-nbconvert
+	makedepends = python-setuptools
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = python-poetry-core
+	depends = python
+	depends = python-docopt
+	depends = python-yarg
+	depends = python-requests
+	optdepends = jupyter-nbconvert: for scanning jupyter notebooks
+	source = python-pipreqs-0.5.0.tar.gz::https://github.com/bndr/pipreqs/archive/v0.5.0.tar.gz
+	sha512sums = 0a15f1b675006ce24408fbca5f87d782c479d33db2a98ec60f619547b74e9220387321bf19c94a312039f50a51f8e47ec8b766e4e631cac740306965b64abb43
+
+pkgname = python-pipreqs

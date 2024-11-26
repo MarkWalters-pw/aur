@@ -1,0 +1,21 @@
+pkgbase = libkexiv2-git
+	pkgdesc = A library to manipulate pictures metadata
+	pkgver = 22.03.80.r0.gd8dbd19
+	pkgrel = 1
+	url = https://invent.kde.org/graphics/libkexiv2
+	arch = x86_64
+	groups = digikamsc-git
+	license = GPL
+	license = LGPL
+	license = FDL
+	makedepends = git
+	makedepends = extra-cmake-modules
+	makedepends = kdoctools
+	depends = qt5-base
+	depends = exiv2
+	provides = libkexiv2=22.03.80
+	conflicts = libkexiv2
+	source = libkexiv2-git::git+https://invent.kde.org/graphics/libkexiv2
+	md5sums = SKIP
+
+pkgname = libkexiv2-git

@@ -1,0 +1,15 @@
+pkgbase = halp-bin
+	pkgdesc = A CLI tool to get help with CLI tools
+	pkgver = 0.1.7
+	pkgrel = 1
+	url = https://github.com/orhun/halp
+	arch = x86_64
+	license = MIT
+	license = Apache
+	depends = gcc-libs
+	provides = halp
+	conflicts = halp
+	source_x86_64 = halp-bin-0.1.7.tar.gz::https://github.com/orhun/halp/releases/download/v0.1.7/halp-0.1.7-x86_64-unknown-linux-gnu.tar.gz
+	sha512sums_x86_64 = 275074f1246647ccb2c0b2575fe1ee254e8608904f8c346fcdeaba206bd329aa41c947f576086d604025d2785e3a5a6a44a289085ecb0be5565c5e984e6dec59
+
+pkgname = halp-bin

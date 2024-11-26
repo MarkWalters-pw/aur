@@ -1,0 +1,20 @@
+pkgbase = vapoursynth-tools-acsuite-git
+	pkgdesc = Frame-based cutting/trimming/splicing of audio with VapourSynth (GIT version)
+	pkgver = 6.0.0.4.ge40f503
+	pkgrel = 2
+	url = https://github.com/OrangeChannel/acsuite
+	arch = x86_64
+	license = Unlicense
+	makedepends = git
+	makedepends = python-pip
+	makedepends = python-wheel
+	depends = vapoursynth
+	depends = ffmpeg
+	provides = vapoursynth-tools-acsuite
+	provides = vapoursynth-plugin-acsuite-git
+	conflicts = vapoursynth-tools-acsuite
+	conflicts = vapoursynth-plugin-acsuite-git
+	source = acsuite::git+https://github.com/OrangeChannel/acsuite.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-tools-acsuite-git

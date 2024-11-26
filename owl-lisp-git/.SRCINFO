@@ -1,0 +1,18 @@
+pkgbase = owl-lisp-git
+	pkgdesc = Simple purely functional lisp
+	pkgver = 0.1.13+569+g64730ee
+	pkgrel = 1
+	url = https://gitlab.com/owl-lisp/owl.git
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = pandoc
+	depends = glibc
+	provides = owl-lisp
+	conflicts = owl-lisp
+	options = !makeflags
+	source = owl-lisp-git::git+https://gitlab.com/owl-lisp/owl
+	sha512sums = SKIP
+
+pkgname = owl-lisp-git
+

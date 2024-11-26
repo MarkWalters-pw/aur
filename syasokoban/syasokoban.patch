@@ -1,0 +1,12 @@
+diff -ru syasokoban-2.0.1.orig/src/djDesktop.cpp syasokoban-2.0.1/src/djDesktop.cpp
+--- syasokoban-2.0.1.orig/src/djDesktop.cpp	2007-07-21 22:22:10.000000000 +0200
++++ syasokoban-2.0.1/src/djDesktop.cpp	2016-03-16 10:17:44.332718779 +0100
+@@ -15,7 +15,7 @@
+ 
+ std::string GetDataPath()
+ {
+-	return std::string("data/");
++	return std::string("/usr/share/syasokoban/");
+ }
+ 
+ CdjDesktop::CdjDesktop()

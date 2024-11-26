@@ -1,0 +1,21 @@
+pkgbase = youki-git
+	pkgdesc = A container runtime written in rust
+	pkgver = 0.2.0.r81.g646c1034
+	pkgrel = 1
+	url = https://github.com/containers/youki
+	arch = x86_64
+	license = Apache
+	makedepends = git
+	makedepends = dbus-glib
+	makedepends = libelf
+	makedepends = pkg-config
+	makedepends = rust
+	makedepends = systemd
+	depends = dbus
+	depends = gcc-libs
+	depends = libseccomp
+	provides = youki
+	source = git+https://github.com/containers/youki
+	sha512sums = SKIP
+
+pkgname = youki-git

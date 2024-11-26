@@ -1,0 +1,19 @@
+pkgbase = aeron-git
+	pkgdesc = Efficient reliable UDP unicast, UDP multicast, and IPC message transport
+	pkgver = 1.41.3.r9.g58e8582e4
+	pkgrel = 1
+	url = https://github.com/real-logic/aeron
+	arch = i686
+	arch = x86_64
+	license = Apache
+	makedepends = cmake
+	depends = gcc-libs
+	depends = libbsd
+	depends = util-linux-libs
+	depends = zlib
+	source = git+https://github.com/real-logic/aeron.git
+	source = aeronmd.service
+	sha256sums = SKIP
+	sha256sums = 3e6f3d61880ef39743c77103a169f53074337adbe382c78a768bd001d8a646be
+
+pkgname = aeron-git

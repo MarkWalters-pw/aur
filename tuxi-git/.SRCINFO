@@ -1,0 +1,18 @@
+pkgbase = tuxi-git
+	pkgdesc = A CLI tool that scrapes Google search results and SERPs to provide instant and concise answers
+	pkgver = r320.2b7ef7d
+	pkgrel = 1
+	url = https://github.com/Bugswriter/tuxi
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = jq
+	depends = pup
+	depends = recode
+	provides = tuxi
+	conflicts = tuxi
+	source = tuxi-git::git+https://github.com/Bugswriter/tuxi
+	md5sums = SKIP
+
+pkgname = tuxi-git
+

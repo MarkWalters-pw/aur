@@ -1,0 +1,15 @@
+pkgbase = kickstart-git
+	pkgdesc = Bash only provisioning tool
+	pkgver = r144.fe17004
+	pkgrel = 1
+	url = https://github.com/bltavares/kickstart
+	arch = any
+	license = unknown
+	makedepends = git
+	makedepends = which
+	depends = bash
+	depends = which
+	source = kickstart::git+https://github.com/bltavares/kickstart.git
+	sha256sums = SKIP
+
+pkgname = kickstart-git

@@ -1,0 +1,25 @@
+pkgbase = flashbrowser-bin
+	pkgdesc = A browser dedicating to supporting adobe flash.
+	pkgver = 0.8.1
+	pkgrel = 2
+	url = https://flash.pm/browser/
+	arch = x86_64
+	arch = aarch64
+	arch = i686
+	license = unknown
+	makedepends = imagemagick
+	makedepends = git
+	makedepends = innoextract
+	depends = electron9
+	depends = nodejs
+	depends = bash
+	provides = flashbrowser
+	conflicts = flashbrowser
+	source = https://github.com/radubirsan/FlashBrowser/releases/download/v0.81/v0.81_FlashBrowser_x64.exe
+	source = git+https://github.com/Hadaward/flashplayer-plugin.git
+	source = flashbrowser-bin.desktop
+	sha256sums = ce573c0b8c54161b468056ab6c62214edea12b05c1c25e1bbb6e54ace8a703ec
+	sha256sums = SKIP
+	sha256sums = de78027fba577b69923ef2d59598f3426a7632c7192a20d6d2fbe5dfcf26655b
+
+pkgname = flashbrowser-bin

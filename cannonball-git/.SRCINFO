@@ -1,0 +1,22 @@
+pkgbase = cannonball-git
+	pkgdesc = CannonBall: The Enhanced OutRun Engine (git version)
+	pkgver = 0.34.r19.g27493eb
+	pkgrel = 1
+	url = https://reassembler.blogspot.com/
+	arch = x86_64
+	license = custom
+	makedepends = git
+	makedepends = cmake
+	makedepends = boost
+	makedepends = imagemagick
+	depends = sdl
+	depends = gcc-libs
+	provides = cannonball
+	source = cannonball-git::git+https://github.com/djyt/cannonball.git
+	source = git+https://github.com/jacktang/outrun-roms.git
+	source = cannonball.desktop
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = 44ee4b1b0fd4561d2a5e66f51a987d05ddc38a7fd023e4f85d8c5b1cf4efcd7c
+
+pkgname = cannonball-git

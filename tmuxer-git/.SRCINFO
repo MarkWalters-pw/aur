@@ -1,0 +1,20 @@
+pkgbase = tmuxer-git
+	pkgdesc = Tmux layout generator and command executor
+	pkgver = 2.3.1
+	pkgrel = 1
+	url = https://github.com/tjhop/tmuxer
+	arch = any
+	license = MIT
+	makedepends = git
+	depends = bash
+	depends = coreutils
+	depends = sed
+	depends = tmux
+	optdepends = openssh
+	provides = tmuxer
+	conflicts = tmuxer
+	source = tmuxer-git::git+https://github.com/tjhop/tmuxer.git
+	md5sums = SKIP
+
+pkgname = tmuxer-git
+

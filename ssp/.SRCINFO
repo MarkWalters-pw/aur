@@ -1,0 +1,16 @@
+pkgbase = ssp
+	pkgdesc = Software that is capable of protect your password by changing it every single minute
+	pkgver = 20200323.27_00d3cd2
+	pkgrel = 1
+	url = https://github.com/azratul/ssp.git
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = go
+	makedepends = git
+	depends = man
+	source = ssp::git://github.com/azratul/ssp.git#branch=master
+	md5sums = SKIP
+
+pkgname = ssp
+

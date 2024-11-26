@@ -1,0 +1,19 @@
+pkgbase = nanopolish
+	pkgdesc = Provide signal-level analysis of Oxford Nanopore sequencing data
+	pkgver = 0.14.0
+	pkgrel = 1
+	url = https://github.com/jts/nanopolish
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = eigen
+	makedepends = wget
+	depends = glibc
+	depends = hdf5
+	depends = htslib
+	depends = zlib
+	source = git+https://github.com/jts/nanopolish.git#tag=v0.14.0
+	sha256sums = SKIP
+
+pkgname = nanopolish

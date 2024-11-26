@@ -1,0 +1,19 @@
+pkgbase = lib32-sord
+	pkgdesc = A lightweight C library for storing RDF data in memory (32-bit)
+	pkgver = 0.16.14
+	pkgrel = 1
+	url = https://drobilla.net/software/sord.html
+	arch = x86_64
+	license = custom:ISC
+	makedepends = meson
+	depends = lib32-serd
+	depends = sord
+	source = https://download.drobilla.net/sord-0.16.14.tar.xz
+	source = https://download.drobilla.net/sord-0.16.14.tar.xz.sig
+	validpgpkeys = 907D226E7E13FA337F014A083672782A9BF368F3
+	sha512sums = f6f254518d5dccece7975529b1fcfd552fd9c37e49dc7e9f8a46756b85e476dac064a39af42bfb3078e999e75d1aa75dcc30ec91e08753defa9363adafdfd3bd
+	sha512sums = SKIP
+	b2sums = 399f4bf5d1b8ae557fa7e2d2e92e74ed646d0554235f4527a4b9ad53aa6beb0e90e2d80c9e65ab3c872b5c8d45a7948b7746284bb1fd2352320a0aa33e97e305
+	b2sums = SKIP
+
+pkgname = lib32-sord

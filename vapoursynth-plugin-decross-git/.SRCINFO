@@ -1,0 +1,17 @@
+pkgbase = vapoursynth-plugin-decross-git
+	pkgdesc = Plugin for Vapoursynth: decross (GIT version)
+	pkgver = 1.4.g889fd9c
+	pkgrel = 1
+	url = https://forum.doom9.org/showthread.php?t=175527
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = meson
+	depends = vapoursynth
+	provides = vapoursynth-plugin-decross
+	conflicts = vapoursynth-plugin-decross
+	options = debug
+	source = decross::git+https://github.com/dubhater/vapoursynth-decross.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-decross-git

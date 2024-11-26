@@ -1,0 +1,20 @@
+pkgbase = foldersync
+	pkgdesc = Folder synchronisation software
+	pkgver = 1.0.1
+	pkgrel = 1
+	url = https://github.com/j4321/FolderSync
+	arch = any
+	license = GPL3
+	makedepends = python-setuptools
+	depends = python
+	depends = tk
+	depends = gettext
+	depends = desktop-file-utils
+	optdepends = libnotify: notification when the scan/sync is finished,
+	optdepends = python-tkfilebrowser: nicer file browser,
+	optdepends = zenity: nicer file browser,
+	source = foldersync-1.0.1.tar.gz::https://github.com/j4321/FolderSync/archive/v1.0.1.tar.gz
+	sha512sums = b531491b4eaf39bfe31255c0725745d131036edbed8c9816ce87777d711213630c1a904b26bb47b7792aa3e490880d56fd97748b744a5679142369d4952c2a65
+
+pkgname = foldersync
+

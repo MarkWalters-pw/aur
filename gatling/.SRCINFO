@@ -1,0 +1,20 @@
+pkgbase = gatling
+	pkgdesc = A high performance http and ftp server
+	pkgver = 0.16
+	pkgrel = 4
+	url = https://www.fefe.de/gatling
+	install = gatling.install
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = libowfat
+	makedepends = dietlibc
+	conflicts = gatling-bin
+	source = https://www.fefe.de/gatling/gatling-0.16.tar.xz
+	source = gatling.service
+	source = gatling-ftp.service
+	sha256sums = 5f96438ee201d7f1f6c2e0849ff273b196bdc7493f29a719ce8ed08c8be6365b
+	sha256sums = c8a2116962ca0bfd18a056c520e2ad4331235edc620fb58dbc8b24beef876eed
+	sha256sums = 49843648501a3b038af512f0cac98b86aed77efb06cc732a1a58bd0118d98b11
+
+pkgname = gatling

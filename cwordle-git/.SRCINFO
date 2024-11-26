@@ -1,0 +1,17 @@
+pkgbase = cwordle-git
+	pkgdesc = Wordle clone for Unix Terminals in C
+	pkgver = r18.87322fe
+	pkgrel = 1
+	url = https://github.com/velorek1/cwordle
+	arch = x86_64
+	license = MIT
+	makedepends = gcc
+	makedepends = cmake
+	makedepends = git
+	depends = glibc
+	provides = cwordle
+	conflicts = cwordle
+	source = cwordle::git+https://github.com/velorek1/cwordle
+	sha256sums = SKIP
+
+pkgname = cwordle-git

@@ -1,0 +1,17 @@
+pkgbase = zerotier-systemd-manager-git
+	pkgdesc = Get ZeroTier playing nice with systemd-networkd and -resolved
+	pkgver = r52.b4db027
+	pkgrel = 1
+	url = https://github.com/zerotier/zerotier-systemd-manager
+	arch = any
+	license = BSD-3-Clause
+	makedepends = go
+	makedepends = git
+	depends = zerotier-one
+	provides = zerotier-systemd-manager
+	conflicts = zerotier-systemd-manager
+	conflicts = zerotier-systemd-manager-bin
+	source = git+https://github.com/zerotier/zerotier-systemd-manager
+	md5sums = SKIP
+
+pkgname = zerotier-systemd-manager-git

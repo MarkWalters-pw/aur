@@ -1,0 +1,27 @@
+pkgbase = sidef-git
+	pkgdesc = A modern object-oriented programming language (-git version).
+	pkgver = 24.05.r0.ge7e12037
+	pkgrel = 1
+	url = https://github.com/trizen/sidef
+	arch = any
+	license = Artistic2.0
+	makedepends = git
+	depends = perl>=5.22.0
+	depends = perl-data-dump
+	depends = perl-math-gmpq>=0.45
+	depends = perl-math-gmpz>=0.39
+	depends = perl-math-mpfr>=3.36
+	depends = perl-math-mpc
+	depends = perl-math-prime-util-gmp>=0.52
+	depends = perl-term-readline-gnu
+	depends = perl-algorithm-combinatorics
+	depends = perl-algorithm-loops
+	optdepends = perl-math-prime-util: for better performance in several functions
+	optdepends = perl-forks: for better threading support
+	provides = sidef
+	conflicts = sidef
+	options = !emptydirs
+	source = git+https://github.com/trizen/sidef.git
+	sha512sums = SKIP
+
+pkgname = sidef-git

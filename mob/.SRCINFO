@@ -1,0 +1,19 @@
+pkgbase = mob
+	pkgdesc = 一个有颜值的喜马拉雅桌面客户端
+	pkgver = 0.2.2
+	pkgrel = 1
+	url = https://github.com/zenghongtu/Mob
+	arch = x86_64
+	arch = i686
+	license = GPL
+	makedepends = yarn
+	makedepends = jq
+	makedepends = moreutils
+	depends = electron4
+	provides = mob
+	conflicts = mob-bin
+	source = mob-0.2.2.src.tar.gz::https://github.com/zenghongtu/Mob/archive/v0.2.2.tar.gz
+	sha256sums = 27b049d6ad234345b4b7a723e1924c302b14857f901d800e15519730046103f7
+
+pkgname = mob
+

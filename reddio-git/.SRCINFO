@@ -1,0 +1,21 @@
+pkgbase = reddio-git
+	pkgdesc = A command-line interface for Reddit written in POSIX sh
+	pkgver = 0.45.r0.185d044
+	pkgrel = 1
+	url = https://gitlab.com/aaronNG/reddio
+	arch = any
+	license = custom:MIT
+	makedepends = git
+	depends = curl
+	depends = jq
+	optdepends = gnu-netcat: authenticate with your Reddit account credentials
+	optdepends = openbsd-netcat: authenticate with your Reddit account credentials
+	provides = reddio
+	conflicts = reddio
+	source = git+https://gitlab.com/aaronNG/reddio.git
+	source = archlinux.patch
+	sha256sums = SKIP
+	sha256sums = 9fadb87b583840fcbcee0845c411c0beda4c471298bf6b8d390eadd5980caf19
+
+pkgname = reddio-git
+

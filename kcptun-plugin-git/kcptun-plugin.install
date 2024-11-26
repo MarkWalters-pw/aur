@@ -1,0 +1,8 @@
+post_install() {
+	echo "Run 'kcptun-client-plugin upgrade' or 'kcptun-server-plugin upgrade' as root to download kcptun and udp2raw binaries"
+	echo "You can only have one set of binaries installed"
+}
+
+post_remove() {
+	echo "To remove kcptun and udp2raw binaries, run 'rm -r /usr/share/kcptun-plugin/bin' as root"
+}

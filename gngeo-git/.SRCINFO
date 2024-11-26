@@ -1,0 +1,26 @@
+pkgbase = gngeo-git
+	pkgdesc = A portable command-line NeoGeo Emulator (development version)
+	pkgver = 0.8.r21.ged06739
+	pkgrel = 2
+	url = https://github.com/pepone42/gngeo
+	install = gngeo-git.install
+	arch = i686
+	arch = x86_64
+	license = custom GPL
+	makedepends = git
+	makedepends = glu
+	depends = zlib
+	depends = sdl
+	optdepends = libgl: OpenGL renderer backend
+	provides = gngeo
+	conflicts = gngeo
+	replaces = gngeo-hg
+	source = gngeo::git+https://github.com/pepone42/gngeo.git#branch=gngeo
+	source = gngeo-git.desktop
+	source = gngeo-git.png
+	sha256sums = SKIP
+	sha256sums = 75f5aee2e7d33c61ed220aad8baf0db0d05aa93752aa99dd9e9a3771605dfc62
+	sha256sums = b543425d51bd669fe5081b0b89492f18163c292194ac2a4acff683ba2a60063e
+	makedepends_i686 = nasm
+
+pkgname = gngeo-git

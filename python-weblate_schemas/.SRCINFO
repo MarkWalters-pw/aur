@@ -1,0 +1,21 @@
+pkgbase = python-weblate_schemas
+	pkgdesc = Schemas used in Weblate
+	pkgver = 2023.2
+	pkgrel = 1
+	url = https://github.com/WeblateOrg/weblate_schemas
+	arch = any
+	license = MIT
+	checkdepends = python-pytest
+	makedepends = python-setuptools
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = python
+	depends = python-jsonschema
+	depends = python-strict-rfc3339
+	depends = python-rfc3987
+	depends = python-fqdn
+	source = https://github.com/WeblateOrg/weblate_schemas/archive/2023.2.tar.gz
+	sha256sums = 513312709c6da605d71bba7902ac8a5ed6da760ba31a50f30168589bb36242a5
+
+pkgname = python-weblate_schemas

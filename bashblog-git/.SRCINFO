@@ -1,0 +1,17 @@
+pkgbase = bashblog-git
+	pkgdesc = A single Bash script to create blogs.
+	pkgver = 3
+	pkgrel = 2
+	url = https://github.com/cfenollosa/bashblog
+	install = bashblog-git.install
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = bash
+	optdepends = discount: markdown support
+	provides = bb
+	conflicts = bb
+	source = git+https://github.com/cfenollosa/bashblog.git
+	md5sums = SKIP
+
+pkgname = bashblog-git

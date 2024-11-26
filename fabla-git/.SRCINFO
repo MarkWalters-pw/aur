@@ -1,0 +1,22 @@
+pkgbase = fabla-git
+	pkgdesc = A sampler LV2 plugin
+	pkgver = 1.3.2.r9.gabeb3e9
+	pkgrel = 1
+	url = http://openavproductions.com/fabla/
+	arch = i686
+	arch = x86_64
+	groups = lv2-plugins
+	license = GPL
+	makedepends = git
+	depends = lv2
+	depends = cairomm
+	depends = libsndfile
+	depends = ntk
+	provides = fabla
+	conflicts = fabla
+	conflicts = openav-fabla
+	source = fabla::git+https://github.com/openAVproductions/openAV-Fabla.git
+	md5sums = SKIP
+
+pkgname = fabla-git
+

@@ -1,0 +1,19 @@
+pkgbase = coreterminal
+	pkgdesc = A terminal emulator from the C Suite
+	pkgver = 4.5.0
+	pkgrel = 1
+	url = https://gitlab.com/cubocore/coreapps/coreterminal
+	arch = x86_64
+	arch = aarch64
+	groups = coreapps
+	license = GPL3
+	makedepends = cmake
+	makedepends = ninja
+	depends = qt5-base
+	depends = qt5-serialport
+	depends = libcprime>=2.7.1
+	depends = qtermwidget
+	source = https://gitlab.com/cubocore/coreapps/coreterminal/-/archive/v4.5.0/coreterminal-v4.5.0.tar.gz
+	md5sums = 4878e64e45097c61825b018f359a6edc
+
+pkgname = coreterminal

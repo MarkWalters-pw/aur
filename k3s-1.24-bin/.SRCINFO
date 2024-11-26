@@ -1,0 +1,26 @@
+pkgbase = k3s-1.24-bin
+	pkgdesc = Lightweight Kubernetes
+	pkgver = 1.24.17+k3s1
+	pkgrel = 1
+	url = https://k3s.io
+	arch = x86_64
+	arch = armv7h
+	arch = aarch64
+	license = Apache
+	provides = k3s
+	conflicts = k3s
+	backup = etc/systemd/system/k3s.service.env
+	source = k3s.service
+	source = k3s.service.env
+	source = k3s-killall.sh
+	sha256sums = 4f613d87b6fca9b2f2d15700f448538b5537b846405451a1fdc060727445c529
+	sha256sums = cde96553e9609791cd9fe1ff33482e33c4cfec22761f7766f5c278a9ce2ec679
+	sha256sums = a09747c9541cd22df97adcabc44c09d97a4305a9d976e9bf8191849cb1ce30b6
+	source_x86_64 = k3s-1.24.17+k3s1-x86_64::https://github.com/k3s-io/k3s/releases/download/v1.24.17+k3s1/k3s
+	sha256sums_x86_64 = 16029d70086c36804ef4c1c9e146a9cb81823f769f28988a7e26e6a11f296523
+	source_armv7h = k3s-1.24.17+k3s1-armv7h::https://github.com/k3s-io/k3s/releases/download/v1.24.17+k3s1/k3s-armhf
+	sha256sums_armv7h = d8794912dbff1ae6ef8a6a2c067559361cb3b3cee1b9c4eecce32b9902cf9a82
+	source_aarch64 = k3s-1.24.17+k3s1-aarch64::https://github.com/k3s-io/k3s/releases/download/v1.24.17+k3s1/k3s-arm64
+	sha256sums_aarch64 = 89bf22af16d33ec818eb21336a3af1b1a4fceea1a581d96d0c1b852103338e1f
+
+pkgname = k3s-1.24-bin

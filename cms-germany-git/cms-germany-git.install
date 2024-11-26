@@ -1,0 +1,30 @@
+post_upgrade() {
+  su -c \
+  "chown root:cmsuser /usr/bin/isolate; \
+  chmod 4750 /usr/bin/isolate; \
+  chown cmsuser:cmsuser /var/local/log/cms; \
+  chown cmsuser:cmsuser /var/local/cache/cms; \
+  chown cmsuser:cmsuser /var/local/lib/cms; \
+  chown cmsuser:cmsuser /var/log/cms; \
+  chown cmsuser:cmsuser /var/cache/cms; \
+  chown cmsuser:cmsuser /var/lib/cms;" \
+  - root
+}
+
+post_install() {
+  if ! getent passwd cmsuser >/dev/null; then
+    useradd cmsuser -M -r -s /bin/false
+  fi
+
+  echo ">>> You should add yourself to the cmsuser group:"
+  echo ">>>   # usermod -a -G cmsuser <your user>"
+  echo ">>> Logout to make the change effective"
+
+  post_upgrade
+}
+
+post_remove() {
+  echo ">>> You may want to"
+  echo ">>>   # userdel cmsuser"
+  echo ">>>   # groupdel cmsuser"
+}

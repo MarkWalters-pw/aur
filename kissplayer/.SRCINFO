@@ -1,0 +1,24 @@
+pkgbase = kissplayer
+	pkgdesc = A Simple and Lightweight Music Player
+	pkgver = 0.7.1
+	pkgrel = 2
+	url = https://github.com/andreldm/kissplayer
+	install = kissplayer.install
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = pkgconf>=0.9.0
+	makedepends = gettext
+	depends = fmodex
+	depends = zlib
+	depends = libpng
+	depends = sqlite
+	depends = taglib
+	depends = fltk
+	depends = libxpm
+	provides = kissplayer
+	source = https://github.com/andreldm/kissplayer/releases/download/v0.7.1/kissplayer-0.7.1-linux.tar.gz
+	sha256sums = 29aa056f41c1ba556315e47181dad1b70d234519c7436c31c810e580e9c2a870
+
+pkgname = kissplayer
+

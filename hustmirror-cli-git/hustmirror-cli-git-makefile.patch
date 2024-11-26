@@ -1,0 +1,25 @@
+From 929298624cba4789689d0bbae5fb3453f5446f59 Mon Sep 17 00:00:00 2001
+From: TurtleRuss <tttturtleruss@gmail.com>
+Date: Sat, 11 May 2024 20:04:14 +0800
+Subject: [PATCH] update Makefile
+
+---
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Makefile b/Makefile
+index 04866dd..eba1c7c 100644
+--- a/Makefile
++++ b/Makefile
+@@ -11,7 +11,7 @@ OUT_DIR := output
+ OUT_FILE := $(OUT_DIR)/hustmirror-cli
+ OUT_MIRROR_DIR := $(OUT_DIR)/mirrors
+ OUT_MIRROR_FILES := $(patsubst $(MIRROR_DIR)/%,$(OUT_MIRROR_DIR)/%,$(MIRROR_FILES))
+-PREFIX := /usr/local
++PREFIX := /usr
+ DPREFIX := $(DESTDIR)$(PREFIX)
+ INSTALL_DIR := $(DPREFIX)/bin/
+ 
+-- 
+2.45.0
+

@@ -1,0 +1,22 @@
+pkgbase = php-dompdf
+	pkgdesc = HTML to PDF converter
+	pkgver = 1.1.1
+	pkgrel = 1
+	url = https://github.com/dompdf/dompdf
+	arch = any
+	license = APACHE
+	depends = php>=5.3
+	depends = php-gd
+	depends = php-font-lib
+	depends = php-svg-lib
+	optdepends = httpd: web support
+	optdepends = pdflib: preferred rendering library
+	optdepends = cpdf: acceptable rendering library
+	optdepends = php-gmagick: improves handling of transparent PNG images
+	optdepends = php-imagick: improves handling of transparent PNG images
+	options = !strip
+	source = dompdf-1.1.1.tar.gz::https://github.com/dompdf/dompdf/archive/v1.1.1.tar.gz
+	md5sums = 303fa80d806d33005ff714ae77e00971
+	sha256sums = 27536ff9f25602957933b4ced68b5063df38c3947cc2b36df4625e3c1e6161c0
+
+pkgname = php-dompdf

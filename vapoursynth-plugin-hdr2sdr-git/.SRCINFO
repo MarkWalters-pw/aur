@@ -1,0 +1,15 @@
+pkgbase = vapoursynth-plugin-hdr2sdr-git
+	pkgdesc = Plugin for Vapoursynth: hdr2sdr (GIT version)
+	pkgver = r3.afc6b8d
+	pkgrel = 1
+	url = https://gist.github.com/4re
+	arch = any
+	license = GPL
+	makedepends = git
+	depends = vapoursynth
+	provides = vapoursynth-plugin-hdr2sdr
+	conflicts = vapoursynth-plugin-hdr2sdr
+	source = hdr2sdr::git+https://gist.github.com/4re/34ccbb95732c1bef47c3d2975ac62395
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-hdr2sdr-git

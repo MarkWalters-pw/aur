@@ -1,0 +1,16 @@
+pkgbase = dmidecode-git
+	pkgdesc = Desktop Management Interface table related utilities
+	pkgver = r594.74dfb85
+	pkgrel = 1
+	url = http://www.nongnu.org/dmidecode
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	depends = glibc
+	provides = dmidecode
+	conflicts = dmidecode
+	source = git://git.savannah.nongnu.org/dmidecode.git
+	sha256sums = SKIP
+
+pkgname = dmidecode-git

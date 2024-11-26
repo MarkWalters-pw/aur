@@ -1,0 +1,19 @@
+pkgbase = libdab-git
+	pkgdesc = DAB decoding library
+	pkgver = r333.d996709
+	pkgrel = 2
+	url = https://github.com/JvanKatwijk/dab-cmdline
+	arch = x86_64
+	license = GPL
+	makedepends = cmake
+	makedepends = git
+	depends = fftw
+	depends = faad2
+	provides = libdab
+	provides = libdab_lib.so
+	conflicts = libdab
+	source = git+https://github.com/JvanKatwijk/dab-cmdline.git
+	sha256sums = SKIP
+
+pkgname = libdab-git
+

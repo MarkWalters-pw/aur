@@ -1,0 +1,19 @@
+post_install() {
+    echo "Reloading daemons..."
+    systemctl daemon-reload
+    systemctl condrestart snapman
+}
+
+post_upgrade() {
+    echo "Reloading daemons..."
+    systemctl daemon-reload
+    systemctl condrestart snapman
+}
+
+pre_remove() {
+    echo "Stopping snapman service..."
+    systemctl stop snapman
+    echo "Disabling snapman service..."
+    systemctl disable snapman
+}
+

@@ -1,0 +1,40 @@
+diff '--color=auto' -rupN lightdm.orig/data/lightdm.conf lightdm/data/lightdm.conf
+--- lightdm.orig/data/lightdm.conf	2022-08-11 11:40:58.405893860 +0200
++++ lightdm/data/lightdm.conf	2022-08-11 11:42:53.916423755 +0200
+@@ -22,13 +22,13 @@
+ #start-default-seat=true
+ #greeter-user=lightdm
+ #minimum-display-number=0
+-#minimum-vt=7
++#minimum-vt=7 # Setting this to a value < 7 implies security issues, see FS#46799
+ #lock-memory=true
+ #user-authority-in-system-dir=false
+ #guest-account-script=guest-account
+ #logind-check-graphical=true
+ #log-directory=/var/log/lightdm
+-#run-directory=/var/run/lightdm
++run-directory=/run/lightdm
+ #cache-directory=/var/cache/lightdm
+ #sessions-directory=/usr/share/lightdm/sessions:/usr/share/xsessions:/usr/share/wayland-sessions
+ #remote-sessions-directory=/usr/share/lightdm/remote-sessions
+@@ -108,7 +108,7 @@
+ #allow-user-switching=true
+ #allow-guest=true
+ #guest-session=
+-#session-wrapper=lightdm-session
++session-wrapper=/etc/lightdm/Xsession
+ #greeter-wrapper=
+ #guest-wrapper=
+ #display-setup-script=
+diff '--color=auto' -rupN lightdm.orig/data/users.conf lightdm/data/users.conf
+--- lightdm.orig/data/users.conf	2022-08-11 11:40:58.405893860 +0200
++++ lightdm/data/users.conf	2022-08-11 11:43:18.091960884 +0200
+@@ -9,6 +9,6 @@
+ # hidden-shells = Shells that indicate a user cannot login
+ #
+ [UserList]
+-minimum-uid=500
++minimum-uid=1000
+ hidden-users=nobody nobody4 noaccess
+-hidden-shells=/bin/false /usr/sbin/nologin /sbin/nologin
++hidden-shells=/bin/false /usr/bin/nologin /bin/nologin

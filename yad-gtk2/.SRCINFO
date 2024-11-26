@@ -1,0 +1,18 @@
+pkgbase = yad-gtk2
+	pkgdesc = A fork of zenity - display graphical dialogs from shell scripts or command line - for gtk2
+	pkgver = 0.42.0
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/v1cont/yad
+	arch = x86_64
+	arch = i686
+	license = GPL3
+	makedepends = intltool
+	depends = gtk2
+	provides = yad
+	conflicts = yad
+	source = https://github.com/v1cont/yad/archive/v0.42.0.tar.gz
+	sha512sums = 700b11f449b63ec1bc8fecf0d2df3ed18bc7078472de0f3ee034c28e3e096eb61559529cc094c76fc8a9959bbb3e5f159d621ad9739d857b0d9b8d7ff386deaa
+
+pkgname = yad-gtk2
+

@@ -1,0 +1,19 @@
+pkgbase = baph
+	pkgdesc = Basic AUR Package Helper
+	pkgver = 1.71
+	pkgrel = 1
+	url = https://bitbucket.org/natemaia/baph
+	arch = any
+	license = GPL
+	depends = awk
+	depends = curl
+	depends = sed
+	depends = coreutils
+	optdepends = git: download AUR packages via git
+	optdepends = sudo: for privilege escalation
+	optdepends = doas: for privilege escalation
+	optdepends = pacman-contrib: for checkupdates
+	source = git+https://bitbucket.org/natemaia/baph.git#tag=v1.71
+	md5sums = SKIP
+
+pkgname = baph

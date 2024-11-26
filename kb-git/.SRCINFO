@@ -1,0 +1,21 @@
+pkgbase = kb-git
+	pkgdesc = A command line minimalist knowledge base manager
+	pkgver = 0.1.7.r8.g862a1ab
+	pkgrel = 1
+	url = https://github.com/gnebbia/kb
+	arch = any
+	license = GPL3
+	checkdepends = python-pytest-cov
+	makedepends = git
+	depends = python-attrs
+	depends = python-colored
+	depends = python-gitpython
+	depends = python-setuptools
+	depends = python-toml
+	provides = kb
+	conflicts = kb
+	replaces = python-kb-git
+	source = git+https://github.com/gnebbia/kb
+	sha256sums = SKIP
+
+pkgname = kb-git

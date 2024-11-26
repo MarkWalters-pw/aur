@@ -1,0 +1,22 @@
+pkgbase = python-restfly
+	pkgdesc = Simple framework for building RESTful API libraries
+	pkgver = 1.4.7
+	pkgrel = 1
+	url = https://github.com/librestfly/restfly
+	changelog = CHANGELOG.md
+	arch = any
+	license = MIT
+	checkdepends = python-pytest
+	checkdepends = python-responses
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-sphinx
+	makedepends = python-wheel
+	depends = python-arrow
+	depends = python-box
+	depends = python-requests
+	source = python-restfly-1.4.7.tar.gz::https://github.com/librestfly/restfly/archive/1.4.7.tar.gz
+	sha256sums = b3a5a225a7d829180386276b649ec9fef44a98c1b32db24287273e0a69e65022
+
+pkgname = python-restfly

@@ -1,0 +1,17 @@
+pkgbase = mate-window-buttons-applet
+	pkgdesc = An applet for mate-panel to shows the close,minimize,actions in a panel.
+	pkgver = 21.04.0
+	pkgrel = 1
+	url = https://github.com/ubuntu-mate/mate-window-applets
+	arch = x86_64
+	arch = i686
+	arch = armv7h
+	arch = aarch64
+	license = GPL3
+	makedepends = meson
+	makedepends = vala
+	depends = mate-panel
+	source = mate-window-applets-21.04.0.tar.gz::https://github.com/ubuntu-mate/mate-window-applets/archive/21.04.0.tar.gz
+	sha256sums = 721c1a65fb47f0d80a12798897c65e9c48ef6cc78d1132e2018681e22f00a89d
+
+pkgname = mate-window-buttons-applet

@@ -1,0 +1,34 @@
+pkgbase = libbitcoin-system
+	pkgdesc = Bitcoin Cross-Platform C++ Development Toolkit
+	pkgver = 20190105
+	pkgrel = 1
+	url = https://github.com/libbitcoin/libbitcoin-system
+	arch = aarch64
+	arch = arm
+	arch = armv6h
+	arch = armv7h
+	arch = i686
+	arch = x86_64
+	groups = libbitcoin
+	license = AGPL3
+	makedepends = autoconf
+	makedepends = automake
+	makedepends = gcc
+	makedepends = git
+	makedepends = libtool
+	makedepends = m4
+	makedepends = make
+	makedepends = pkg-config
+	depends = boost
+	depends = boost-libs
+	depends = icu
+	depends = libpng
+	depends = libsecp256k1
+	depends = qrencode
+	source = git+https://github.com/libbitcoin/libbitcoin-system#tag=v3.6.0
+	source = git+https://github.com/libbitcoin/libbitcoin-system.wiki
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = libbitcoin-system
+

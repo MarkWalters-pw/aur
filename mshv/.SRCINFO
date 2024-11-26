@@ -1,0 +1,26 @@
+pkgbase = mshv
+	pkgdesc = Amateur radio software by LZ2HV for digital modes MSK, JTMS, FSK, ISCAT, JT6M, FT8/4, JT65, PI4, Q65.
+	pkgver = 270
+	pkgrel = 1
+	url = http://lz2hv.org/mshv
+	arch = any
+	license = GPL3
+	depends = fftw
+	depends = alsa-lib
+	depends = libpulse
+	depends = qt5-base
+	depends = qt5-websockets
+	depends = hamradio-menus
+	provides = mshv
+	conflicts = mshv
+	source = https://downloads.sourceforge.net/project/mshv/MSHV_270_Full_Source_Code.zip
+	source = mshv_launcher.sh
+	source = mshv.desktop
+	md5sums = a7ba795e5a895eb8c69e4b9afc5cd786
+	md5sums = SKIP
+	md5sums = SKIP
+	sha256sums = SKIP
+	sha256sums = 5ccd21e3d585efb4f37aff8a3470aefa78a8689dad3b00334b9a8467840adbab
+	sha256sums = 85c256463746cb8a06ff1eee71677dcbe1d1c54d7aaf0f27156ebe9632269dba
+
+pkgname = mshv

@@ -1,0 +1,27 @@
+pkgbase = heka
+	pkgdesc = Data collection and processing made easy
+	pkgver = 0.10.0
+	pkgrel = 7
+	url = https://github.com/mozilla-services/heka
+	install = install.sh
+	arch = i686
+	arch = x86_64
+	license = MPL2
+	makedepends = cmake
+	makedepends = gcc
+	makedepends = git
+	makedepends = go
+	makedepends = make
+	makedepends = mercurial
+	makedepends = patch
+	depends = geoip
+	optdepends = geoip-database-extra: GeoIpDecoder
+	source = heka::git+https://github.com/mozilla-services/heka.git#tag=v0.10.0
+	source = heka.service
+	source = cmake.patch
+	sha512sums = SKIP
+	sha512sums = SKIP
+	sha512sums = SKIP
+
+pkgname = heka
+

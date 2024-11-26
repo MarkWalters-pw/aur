@@ -1,0 +1,179 @@
+# 10.0.25-1 / 2023-09-01
+
+* bump to new library version
+	* coroutine support is reaching next level of maturity
+	* AVX support for mixing audio
+	* various bugfixes
+	* see library changelog for full list
+* releases are now being GPG signed, package reflects that
+
+# 10.0.24-1 / 2023-05-25
+
+* bump to new library version
+	* new gateway events supported
+	* support for voice messages
+	* new permissions supported
+	* fix for MIME status in out of Discord HTTP requests
+	* see library changelog for full list
+
+# 10.0.23-2 / 2023-05-16
+
+* quick patch for gcc13 compatibility
+	* one of the headers depended on transient include
+	* gcc13 broke it
+	* already fixed upstream
+
+# 10.0.23-1 / 2023-03-01
+
+* bump to new library version
+	* support for various new small Discord features
+	* various fixes
+	* see library for full changelog
+* upstream cmake now lets us use systemwide nlohmann::json
+	* was able to drop majority of our patches
+	* we still ship symlink
+	* mind that you may now need to add a define to your build
+
+# 10.0.22-1 / 2023-01-08
+
+* bump to new library version
+	* major cmake rehaul, fixes several longstanding issues
+	* support for various new small Discord features
+	* various fixes
+	* see library changelog for full list
+* changes to upstream cmake changed way we deal with that
+	* all cmake specific patches have been dropped
+	* find_package should now work as intended
+	* pkg-config should continue to work as before
+
+# 10.0.21-1 / 2022-11-02
+
+* bump to new library version
+	* support for various new small Discord features
+	* fixes for several race conditions and other stuff
+	* see library changelog for full list
+* symlink is now provided in place of the embedded nlohmann/json
+	* package still uses systemwide packaged version
+	* helps easier adoption of online tutorials and similar resources
+	* helps with compatibility with other installations
+
+# 10.0.20-1 / 2022-09-30
+
+* bump to new library version
+	* forums support
+	* see library changelog for full list
+* pkgconf now a makedep
+	* has been causing some issues with sodium
+* patch for the coroutines from last version upstreamed
+
+# 10.0.19-1 / 2022-09-13
+
+* bump to new library version
+	* fixes more issues with reconnection
+	* see library changelog for full list
+* known issue with the coroutine code
+	* patched in the package
+	* feedback for the coroutines still wanted
+
+# 10.0.18-1 / 2022-09-05
+
+* bump to new library version
+	* fixes the reconnection issue
+	* see library changelog for full list
+
+# 10.0.17-1 / 2022-09-05
+
+* bump to new library version
+	* snowflakes are now a full blown class
+	* experimental coroutines support
+		* this is not considered production ready
+		* any feedback is welcome on any official channels
+	* see library changelog for full list
+* this version has a known issue on reconnect
+	* you should be using 10.0.18 instead
+* late release for continuity
+
+# 10.0.16-1 / 2022-08-18 (2022-09-04)
+
+* bump to new library version
+	* ETF 60% faster
+	* experimental coroutines feature not packaged atm
+		* has issues to build
+		* it could be patched, but the feature itself has issues
+	* see library changelog for full list
+* resolved build warning about link to $srcdir
+	* vendored nlohmann/json now gets removed before the build
+	* this somehow removes a "link" to it in the .so
+	* patched out the pchs while at it
+		* the package wasn't using these anyway
+* originally packaged two weeks back but just releasing now
+	* was trying to fix reprobuilds, we'll get there eventually
+	* wrote the package and changelog at the first date
+	* keeping it for reflection of things
+	* actually releasing at the second date along with future versions
+
+# 10.0.15-1 / 2022-08-02
+
+* bump to new library version
+	* vendored fmt removed in upstream (by accident :) )
+		* less patching on our end
+	* see library changelog for full list
+
+# 10.0.14-1 / 2022-08-02
+
+* bump to new library version
+	* internal use of fmt got removed
+		* library still vendored for now
+	* clusters an now shutdown and start
+	* see library changelog for full list
+* late release for continuity
+
+# 10.0.13-1 / 2022-07-12
+
+* bump to new library version
+	* adds large bot sharding
+	* see library changelog for full list
+* include issue from last version patched in upstream
+
+# 10.0.12-1 / 2022-06-30
+
+* bump to new library version
+	* adds dns caching
+	* see library changelog for full list
+* introduces include issue in the new feature
+	* patched on package
+	* reported upstream
+* fixed date on previous changelog :)
+
+# 10.0.11-1 / 2022-06-24
+
+* bump to new library version
+	* automod is now supported
+	* see library changelog for full list
+* nothing changed for the package itself
+	* all previously mentioned issues are still present
+
+# 10.0.10-1 / 2022-06-14
+
+* first build on the AUR
+	* preceded by a bunch of test builds and finetuning
+	* consulted and collaborated with upstream
+* cmake integration is semibroken as mentioned in .install
+	* attempts were made to narrow it down a bit
+	* it at least doesn't outright fail after the patches
+	* reported to upstream, may hopefully be eventually fixed
+	* not high priority to upstream
+	* officially recommended to just -ldpp
+* tarballs are not currently signed
+	* commits are but pubkey is not available (on purpose)
+	* may or may not change in the future
+* tests currently turned off as one is failing
+	* shouldn't affect deployments on UTC bound servers
+	* also reported and in investigation
+* embedded fmt and nlohmann/json replaced by packaged versions
+	* other packages follow the fashion, may become cmake flag
+	* mind that when looking up online tutorials
+* attempts have been made to reprobuild
+	* while build should be reproducible, observing discrepancies
+	* likely stemming from slight difference between chroot setup
+	* to be further researched

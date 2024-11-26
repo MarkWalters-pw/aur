@@ -1,0 +1,26 @@
+pkgbase = libcurl3-gnutls
+	pkgdesc = An URL retrieval library (linked against gnutls) with libcurl3 versioned symbols
+	pkgver = 7.85.0
+	pkgrel = 0
+	url = https://curl.haxx.se
+	arch = x86_64
+	license = MIT
+	depends = curl
+	depends = glibc
+	depends = gnutls
+	depends = libpsl
+	depends = nettle
+	depends = zlib
+	depends = libssh2.so
+	provides = libcurl-gnutls
+	conflicts = libcurl-gnutls
+	options = strip
+	source = https://curl.haxx.se/download/curl-7.85.0.tar.gz
+	source = https://curl.haxx.se/download/curl-7.85.0.tar.gz.asc
+	source = 03_keep_symbols_compat.patch
+	validpgpkeys = 27EDEAF22F3ABCEB50DB9A125CC908FDB71E12C2
+	sha512sums = bbad693bcde9c55e5942499950d76011f53ad43d3270eee2c8db486bcf46f5fc92b32dd8752caf4c5976fe493d083e2d34fa299cb96fb8e76d8f5fcc2cc56a36
+	sha512sums = SKIP
+	sha512sums = 596c227bb5ede8182831c5c92b3ac7b74b770f51fae99277e2aabb02d38b7a5d4d06003731042ab5403ca89e719827d7080c3a179e29ef08b41a1993a7788a33
+
+pkgname = libcurl3-gnutls

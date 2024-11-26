@@ -1,0 +1,16 @@
+pkgbase = pinboard-git
+	pkgdesc = a full-featured Python wrapper for the Pinboard API (development version)
+	pkgver = latest
+	pkgrel = 2
+	url = https://github.com/lionheart/pinboard.py
+	arch = i686
+	arch = x86_64
+	license = Apache
+	makedepends = git
+	depends = python
+	provides = pinboard
+	conflicts = pinboard
+	source = git+https://github.com/lionheart/pinboard.py.git
+	md5sums = SKIP
+
+pkgname = pinboard-git

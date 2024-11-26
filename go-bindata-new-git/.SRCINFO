@@ -1,0 +1,17 @@
+pkgbase = go-bindata-new-git
+	pkgdesc = A small utility which generates Go code from any file. Useful for embedding binary data in a Go program.
+	pkgver = 3.24.0.r0.g1b67e2d
+	pkgrel = 2
+	url = https://github.com/kevinburke/go-bindata
+	arch = x86_64
+	license = CC0-1.0
+	makedepends = git
+	makedepends = go
+	provides = go-bindata
+	conflicts = go-bindata
+	conflicts = go-bindata-git
+	options = !strip
+	source = git+https://github.com/kevinburke/go-bindata.git
+	sha256sums = SKIP
+
+pkgname = go-bindata-new-git

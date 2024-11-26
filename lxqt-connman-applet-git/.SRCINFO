@@ -1,0 +1,21 @@
+pkgbase = lxqt-connman-applet-git
+	pkgdesc = LXQt system-tray applet for ConnMan
+	pkgver = r85.672ade9
+	pkgrel = 1
+	url = https://github.com/lxqt/lxqt-connman-applet
+	arch = i686
+	arch = x86_64
+	license = LGPL
+	makedepends = git
+	makedepends = cmake
+	makedepends = qt5-tools
+	makedepends = lxqt-build-tools
+	depends = liblxqt
+	depends = qt5-svg
+	depends = connman
+	provides = lxqt-connman-applet
+	conflicts = lxqt-connman-applet
+	source = git+https://github.com/lxqt/lxqt-connman-applet.git
+	sha256sums = SKIP
+
+pkgname = lxqt-connman-applet-git

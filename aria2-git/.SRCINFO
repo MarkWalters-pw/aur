@@ -1,0 +1,23 @@
+pkgbase = aria2-git
+	pkgdesc = Download utility that supports HTTP(S), FTP, BitTorrent, and Metalink
+	pkgver = 1.35.0.r13.g15cad965
+	pkgrel = 1
+	url = https://aria2.github.io/
+	arch = i686
+	arch = x86_64
+	license = GPL
+	checkdepends = cppunit
+	makedepends = git
+	depends = gnutls
+	depends = libxml2
+	depends = sqlite
+	depends = c-ares
+	depends = ca-certificates
+	depends = libssh2
+	provides = aria2=1.35.0.r13
+	conflicts = aria2
+	source = aria2-git::git+https://github.com/tatsuhiro-t/aria2.git
+	sha256sums = SKIP
+
+pkgname = aria2-git
+

@@ -1,0 +1,29 @@
+pkgbase = mesquite
+	pkgver = 3.81_build955
+	pkgrel = 1
+	url = http://mesquiteproject.org
+	arch = any
+	license = LGPL
+	makedepends = java-environment=8
+	makedepends = maven
+	makedepends = git
+	makedepends = libicns
+	makedepends = gendesk
+	source = mesquite::git+https://github.com/MesquiteProject/MesquiteCore.git#tag=v3.81-build955
+	source = mesquite.patch::https://github.com/MesquiteProject/MesquiteCore/pull/108.patch
+	md5sums = SKIP
+	md5sums = 530fb128307845f75633ee897715b2c3
+
+pkgname = mesquite
+	pkgdesc = A modular, extendible software for evolutionary biology, designed to help biologists organize and analyze comparative data about organisms
+	depends = java-runtime=8
+	depends = sh
+	depends = python
+	optdepends = mesquite-doc: doc for mesquite
+	optdepends = mesquite-extra: extra data for mesquite
+
+pkgname = mesquite-extra
+	pkgdesc = extra data for mesquite
+
+pkgname = mesquite-doc
+	pkgdesc = doc for mesquite

@@ -1,0 +1,14 @@
+pkgbase = nextcloud-app-camerarawpreviews
+	pkgdesc = A Nextcloud app that provides previews for camera RAW images
+	pkgver = 0.8.2
+	pkgrel = 1
+	url = https://apps.nextcloud.com/apps/camerarawpreviews
+	arch = any
+	license = AGPL3
+	makedepends = nextcloud
+	makedepends = yq
+	options = !strip
+	source = nextcloud-app-camerarawpreviews-0.8.2.tar.gz::https://github.com/ariselseng/camerarawpreviews/releases/download/v0.8.2/camerarawpreviews_nextcloud.tar.gz
+	sha512sums = 58dae401055f38bcdfba5dc84b56d8be788b866a7e1f4a95dfcbf0c839be46c92fe7a2bbe53db1b2ce78f48a1f5050e367dfa664b7b09d5356fb2a8bdc34ee0d
+
+pkgname = nextcloud-app-camerarawpreviews

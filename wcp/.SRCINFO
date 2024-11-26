@@ -1,0 +1,22 @@
+pkgbase = wcp
+	pkgdesc = Script-driven control panel/system menu for Wayland
+	pkgver = 0.74b
+	pkgrel = 1
+	url = https://github.com/milgra/wcp
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = meson
+	makedepends = ninja
+	makedepends = pkg-config
+	makedepends = wayland-protocols
+	depends = wayland
+	depends = freetype2
+	depends = libpng
+	depends = libgl
+	depends = libegl
+	depends = glew
+	source = wcp-0.74b.tar.xz::https://github.com/milgra/wcp/releases/download/0.74b/wcp-0.74b.tar.xz
+	sha256sums = 5d1eb736acc607be1f7efce83f1159f96208f47a2d86497379d30159f37f1a70
+
+pkgname = wcp

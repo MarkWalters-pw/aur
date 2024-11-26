@@ -1,0 +1,17 @@
+pkgbase = highly-quixotic-git
+	pkgdesc = Highly Quixotic Capcom QSound (QSF) emulator library
+	pkgver = r35.977f8ea
+	pkgrel = 1
+	url = https://bitbucket.org/losnoco/highly_quixotic
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = qt5-base
+	depends = glibc
+	provides = highly-quixotic
+	conflicts = highly-quixotic
+	source = highly-quixotic-git::git+https://bitbucket.org/losnoco/highly_quixotic.git
+	sha256sums = SKIP
+
+pkgname = highly-quixotic-git

@@ -1,0 +1,16 @@
+pkgbase = fql
+	pkgdesc = A SQL interpreter for text processing
+	pkgver = 1.2.0
+	pkgrel = 1
+	url = https://github.com/jasonKercher/fql
+	arch = x86_64
+	license = MIT
+	checkdepends = check
+	depends = antlr4-runtime
+	depends = pcre
+	depends = stdcsv
+	provides = libfql.so
+	source = fql-1.2.0.tar.gz::https://github.com/jasonKercher/fql/archive/refs/tags/1.2.0.tar.gz
+	md5sums = b4c49366c32d3acd6ff48c171b5edd35
+
+pkgname = fql

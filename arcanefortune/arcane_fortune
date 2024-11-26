@@ -1,0 +1,22 @@
+#!/bin/sh
+# Running this script with --ncurses will start the game in the current terminal.
+
+pkgname=arcanefortune
+
+if [ ! -d "${HOME}/.${pkgname}" ]; then
+  mkdir -p "${HOME}/.${pkgname}/game"
+  mkdir -p "${HOME}/.${pkgname}/game/saves"
+  for f in nn arcane_fortune_linux arcane_fortune_linux_ncurses icon.ico; do
+    ln -s "/opt/${pkgname}/game/$f" "${HOME}/.${pkgname}/game/$f"
+  done
+  cp -rn "/opt/${pkgname}/game/fonts" "${HOME}/.${pkgname}/game/fonts"
+  cp -rn "/opt/${pkgname}/game/config" "${HOME}/.${pkgname}/game/config"
+fi
+
+cd "${HOME}/.${pkgname}/game"
+if [ "$1" = "--ncurses" ]; then
+  shift
+  exec ./arcane_fortune_linux_ncurses "${@}"
+else
+  exec ./arcane_fortune_linux "${@}"
+fi

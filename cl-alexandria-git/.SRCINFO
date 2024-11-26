@@ -1,0 +1,17 @@
+pkgbase = cl-alexandria-git
+	pkgdesc = A set of common-lisp help functions
+	pkgver = r264.f35e232
+	pkgrel = 1
+	url = https://common-lisp.net/project/alexandria/
+	arch = any
+	license = custom
+	makedepends = git
+	depends = common-lisp
+	depends = cl-asdf
+	provides = cl-alexandria
+	conflicts = cl-alexandria
+	source = git+https://gitlab.common-lisp.net/alexandria/alexandria.git
+	md5sums = SKIP
+
+pkgname = cl-alexandria-git
+

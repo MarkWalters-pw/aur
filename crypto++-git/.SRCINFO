@@ -1,0 +1,16 @@
+pkgbase = crypto++-git
+	pkgdesc = A free C++ class library of cryptographic schemes
+	pkgver = 8.8.0.r12.g6ecc789d
+	pkgrel = 1
+	url = https://www.cryptopp.com/
+	arch = x86_64
+	license = custom: public domain
+	license = boost
+	makedepends = git
+	depends = gcc-libs
+	provides = crypto++
+	conflicts = crypto++
+	source = git+https://github.com/weidai11/cryptopp.git
+	b2sums = SKIP
+
+pkgname = crypto++-git

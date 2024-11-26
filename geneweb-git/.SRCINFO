@@ -1,0 +1,23 @@
+pkgbase = geneweb-git
+	pkgdesc = Genealogy Software
+	pkgver = 20170321
+	pkgrel = 1
+	url = http://www.geneweb.org/
+	install = geneweb.install
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = ocaml
+	makedepends = camlp5
+	depends = glibc
+	options = !makeflags
+	source = gwd.conf
+	source = gwd.service
+	source = geneweb.install
+	md5sums = 8219a070e2bbf6aaeeb9c0f42825720d
+	md5sums = a89d188febe37b82ab7d936a7cafccc2
+	md5sums = 42c8da80f6b1e24f0cd3243840574d58
+
+pkgname = geneweb-git
+

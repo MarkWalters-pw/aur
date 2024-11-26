@@ -1,0 +1,15 @@
+pkgbase = streampager
+	pkgdesc = A pager for command output or large files
+	pkgver = 0.10.3
+	pkgrel = 1
+	url = https://github.com/markbt/streampager
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = rust
+	depends = gcc-libs
+	source = streampager::git+https://github.com/markbt/streampager.git#commit=3c558526ce047e50530c2d89ca19b25f8424b4ab
+	sha256sums = SKIP
+	b2sums = SKIP
+
+pkgname = streampager

@@ -1,0 +1,7 @@
+## arg 1:  the new package version
+post_install() {
+    echo "Don't forget to enable x4daemon: 'sudo systemctl enable x4daemon.service'."
+	echo "If you want to start x4daemon now use 'sudo systemctl start x4daemon.service'."
+}
+
+# vim:set ts=2 sw=2 et:

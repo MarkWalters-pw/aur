@@ -1,0 +1,27 @@
+pkgbase = yarp
+	pkgdesc = Yet Another Robot Platform
+	pkgver = 3.3.3
+	pkgrel = 1
+	url = http://www.yarp.it
+	arch = x86_64
+	arch = i686
+	license = LGPL
+	makedepends = cmake
+	depends = cmake
+	depends = subversion
+	depends = wget
+	depends = qt5-base
+	depends = qt5-declarative
+	depends = qt5-multimedia
+	depends = qt5-svg
+	depends = goocanvasmm
+	depends = tinyxml
+	depends = gtkmm
+	depends = ace
+	depends = gsl
+	depends = eigen
+	source = https://github.com/robotology/yarp/archive/v3.3.3.tar.gz
+	sha256sums = c41056353540de983a434e8cda4e7046b06062121745d1b6149839982b199b94
+
+pkgname = yarp
+

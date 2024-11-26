@@ -1,0 +1,21 @@
+[Unit]
+Description=Zerotier controller WebUI
+Wants=network-online.target
+After=network.target network-online.target
+
+[Service]
+User=root
+Group=root
+LimitNOFILE=16384
+EnvironmentFile=/etc/zero-ui.conf
+WorkingDirectory=/usr/share/webapps/zero-ui/backend
+ExecStart=/usr/bin/node /usr/share/webapps/zero-ui/backend/bin/www
+ExecReload=/bin/kill -HUP $MAINPID
+PrivateTmp=true
+ProtectHome=true
+ReadWritePaths=/usr/share/webapps/zero-ui
+ReadOnlyPaths=/var/lib/zerotier-one
+ProtectSystem=strict
+
+[Install]
+WantedBy=multi-user.target

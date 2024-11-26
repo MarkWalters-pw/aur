@@ -1,0 +1,16 @@
+pkgbase = osl-git
+	pkgdesc = OpenScop Library
+	pkgver = 0.9.6.r4.g22f2d8b
+	pkgrel = 1
+	url = http://icps.u-strasbg.fr/people/bastoul/public_html/development/openscop/index.html
+	arch = i686
+	arch = x86_64
+	license = BSD
+	makedepends = git
+	depends = gmp
+	provides = osl
+	conflicts = osl
+	source = osl-git::git+https://github.com/periscop/openscop.git
+	md5sums = SKIP
+
+pkgname = osl-git

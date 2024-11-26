@@ -1,0 +1,18 @@
+pkgbase = gnome-tour-git
+	pkgdesc = A guided tour and greeter for GNOME
+	pkgver = 43.beta.r0.ged523b7
+	pkgrel = 1
+	url = https://gitlab.gnome.org/GNOME/gnome-tour
+	arch = x86_64
+	license = GPL
+	checkdepends = appstream-glib
+	makedepends = rust
+	makedepends = meson
+	makedepends = git
+	depends = libadwaita
+	provides = gnome-tour
+	conflicts = gnome-tour
+	source = git+https://gitlab.gnome.org/GNOME/gnome-tour
+	md5sums = SKIP
+
+pkgname = gnome-tour-git

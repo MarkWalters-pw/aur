@@ -1,0 +1,16 @@
+pkgbase = graal-nodejs-jdk20-bin
+	pkgdesc = GraalVM-based, ployglot-enabled implementation of Node.js, Java 20 version
+	pkgver = 23.0.1
+	pkgrel = 1
+	url = https://github.com/oracle/graaljs
+	arch = x86_64
+	arch = aarch64
+	license = custom
+	depends = jdk20-graalvm-bin
+	optdepends = graaljs-jdk20-bin: JavaScript support for non-native mode (with --jvm)
+	source_x86_64 = https://github.com/oracle/graaljs/releases/download/graal-23.0.1/nodejs-installable-svm-java20-linux-amd64-23.0.1.jar
+	sha256sums_x86_64 = 553e321dafcbf1a05c7f5f372f80643b30105df410e5c15171b0f1536588a1a3
+	source_aarch64 = https://github.com/oracle/graaljs/releases/download/graal-23.0.1/nodejs-installable-svm-java20-linux-aarch64-23.0.1.jar
+	sha256sums_aarch64 = ba58a9375cee9ce0daf42c14f583e12d1892b3ee36b70c5bca5c2d7ecbe1d076
+
+pkgname = graal-nodejs-jdk20-bin

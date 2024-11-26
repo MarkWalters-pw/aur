@@ -1,0 +1,23 @@
+pkgbase = plata-theme-gnome
+	pkgdesc = Plata theme for GTK apps and GNOME Shell only
+	pkgver = 0.9.9
+	pkgrel = 0
+	url = https://gitlab.com/tista500/plata-theme
+	arch = any
+	license = CCPL
+	license = GPL2
+	makedepends = git
+	makedepends = gnome-shell
+	makedepends = inkscape
+	makedepends = libxml2
+	makedepends = parallel
+	makedepends = sassc
+	optdepends = gtk-engine-murrine: for gtk2 themes
+	optdepends = ttf-roboto: Recommended font
+	provides = plata-theme
+	conflicts = plata-theme
+	source = git+https://gitlab.com/tista500/plata-theme.git#tag=0.9.9
+	sha256sums = SKIP
+
+pkgname = plata-theme-gnome
+

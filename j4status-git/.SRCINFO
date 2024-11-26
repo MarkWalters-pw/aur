@@ -1,0 +1,33 @@
+pkgbase = j4status-git
+	pkgdesc = A plugin-based status line generator: j4status generates a status line to use with bar programs (like i3bar). It is plugin-based to allow anyone to extend it easily.
+	pkgver = 458.e86c6d3
+	pkgrel = 1
+	url = https://sardemff7.github.io/j4status/
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = docbook-xsl
+	makedepends = meson
+	makedepends = ninja
+	depends = dbus
+	depends = yajl
+	depends = networkmanager
+	depends = upower
+	depends = lm_sensors
+	depends = systemd
+	depends = libnl
+	depends = pulseaudio
+	depends = libmpdclient
+	depends = eventd
+	provides = j4status
+	options = !libtool
+	source = j4status::git+https://github.com/sardemff7/j4status
+	source = libgwater::git+https://github.com/sardemff7/libgwater
+	source = libnkutils::git+https://github.com/sardemff7/libnkutils
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = j4status-git
+

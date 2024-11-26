@@ -1,0 +1,23 @@
+pkgbase = ocrdesktop-git
+	pkgdesc = OCR the current window or desktop and make it browsable for the user (development version)
+	pkgver = 3.0.r0.g196a287
+	pkgrel = 2
+	url = http://www.crivatec.de
+	install = ocrdesktop.install
+	arch = any
+	license = GPL
+	makedepends = git
+	depends = libwnck3
+	depends = python-atspi
+	depends = python-pillow
+	depends = python-pytesseract
+	depends = tesseract-data-eng
+	optdepends = python-webcolors: For color analyzing support
+	optdepends = python-scipy: For color analyzing support
+	optdepends = python-pdf2image: for PDF support
+	provides = ocrdesktop
+	conflicts = ocrdesktop
+	source = git+https://github.com/chrys87/ocrdesktop.git
+	md5sums = SKIP
+
+pkgname = ocrdesktop-git

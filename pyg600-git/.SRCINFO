@@ -1,0 +1,17 @@
+pkgbase = pyg600-git
+	pkgdesc = Utility program for binding actions to keys on the Logitech G600 gaming mouse
+	pkgver = 1.2.0.r1.g6105f6d
+	pkgrel = 1
+	url = https://github.com/j-waters/pyg600
+	arch = any
+	license = GPL
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python-click
+	depends = pymacropad
+	provides = pyg600
+	conflicts = pyg600
+	source = pyg600::git+https://github.com/j-waters/pyg600.git
+	md5sums = SKIP
+
+pkgname = pyg600-git

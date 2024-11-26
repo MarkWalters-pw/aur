@@ -1,0 +1,15 @@
+pkgbase = freediag
+	pkgdesc = OBD-II vehicle diagnostic software and (mostly) J1978 compliant scan tool.
+	pkgver = 1.09
+	pkgrel = 1
+	url = http://freediag.sourceforge.net/
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = cmake
+	depends = glibc
+	optdepends = readline: better CLI
+	source = http://downloads.sourceforge.net/project/freediag/freediag/1.0/freediag-1.09-src.tar.gz
+	sha256sums = 23a12f417303361aebc08e931a9543d041169ba329b4c5569765de7a93de9bbc
+
+pkgname = freediag

@@ -1,0 +1,25 @@
+pkgbase = simp_le-git
+	pkgdesc = Simple Let's Encrypt client.
+	pkgver = 0.20.0.r0.g86d2858
+	pkgrel = 2
+	epoch = 1
+	url = https://github.com/zenhack/simp_le
+	arch = any
+	license = GPL
+	makedepends = git
+	depends = ca-certificates
+	depends = python-setuptools
+	depends = python-pip
+	depends = python-wheel
+	depends = python-cryptography
+	depends = python-mock
+	depends = python-pyopenssl
+	depends = python-acme
+	provides = simp_le
+	conflicts = simp_le
+	source = simp_le::git+https://github.com/zenhack/simp_le.git
+	source = remove-deps-version-bounds.patch
+	sha256sums = SKIP
+	sha256sums = 806cffa689bd0e8046122d7f554232b628b2dedd383a95605f36d104d61ffb41
+
+pkgname = simp_le-git

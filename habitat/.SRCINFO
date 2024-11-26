@@ -1,0 +1,21 @@
+pkgbase = habitat
+	pkgdesc = Application automation framework that allows you to build applications that have automation built-in
+	pkgver = 1.6.139
+	pkgrel = 1
+	url = https://www.habitat.sh/
+	arch = x86_64
+	license = Apache
+	makedepends = git
+	makedepends = cargo
+	makedepends = zeromq
+	depends = libarchive
+	depends = libsodium
+	depends = openssl
+	provides = habitat
+	conflicts = habitat-bin
+	conflicts = habitat-git
+	source = habitat::git+https://github.com/habitat-sh/habitat.git#tag=1.6.139
+	sha256sums = SKIP
+
+pkgname = habitat
+

@@ -1,0 +1,17 @@
+pkgbase = mpz-qt6
+	pkgdesc = Music player for the large local collections
+	pkgver = 1.0.23
+	pkgrel = 0
+	url = https://github.com/olegantonyan/mpz
+	arch = x86_64
+	license = GPL3
+	depends = qt6-multimedia
+	depends = hicolor-icon-theme
+  depends = yaml-cpp
+  depends = taglib
+  provides = mpz
+  conflicts = mpz
+	source = mpz-qt6-1.0.23-0.zip::https://github.com/olegantonyan/mpz/archive/d76a0d1fdded0ee8a144f752ac63d225218564b6.zip
+	sha256sums = 7e617484191840bb4ba2c6750671d589e7394b61f6c2461fa76b4a39e41646fa
+
+pkgname = mpz-qt6

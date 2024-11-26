@@ -1,0 +1,24 @@
+pkgbase = tomoyo-tools-25
+	pkgdesc = TOMOYO Linux 2.5.x userspace tools for Linux kernel 3.5 to 5.1
+	pkgver = 2.5.0.20170102
+	pkgrel = 2
+	url = https://tomoyo.osdn.jp
+	install = tomoyo-tools.install
+	arch = x86_64
+	license = GPL
+	depends = ncurses>=6.0
+	optdepends = linux-lts: TOMOYO Linux enabled kernel
+	conflicts = tomoyo-tools
+	replaces = tomoyo-tools<2.6
+	source = https://jaist.dl.osdn.jp/tomoyo/53357/tomoyo-tools-2.5.0-20170102.tar.gz
+	source = https://jaist.dl.osdn.jp/tomoyo/53357/tomoyo-tools-2.5.0-20170102.tar.gz.asc
+	source = tomoyo-tools.install
+	source = tomoyo-auditd.service
+	validpgpkeys = 43C83369623D7AD3A96C2FC7425F128D0C64F52A
+	sha256sums = 00fedfac5e514321250bbe69eaccc732c8a8158596f77a785c2e3ae9f9968283
+	sha256sums = SKIP
+	sha256sums = 733cec41707f27abaf2da3bfc66a40fa02c5da539dd0352a1f497e5fabd6311c
+	sha256sums = faf16938762902a73e50fdaa82d17c0fe13ef3c305508b55fa2cc64bacf998dd
+
+pkgname = tomoyo-tools-25
+

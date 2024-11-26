@@ -1,0 +1,25 @@
+pkgbase = ruby-fog-google
+	pkgdesc = This library can be used as a module for fog or as standalone provider to use the Google in applications.
+	pkgver = 1.22.0
+	pkgrel = 1
+	url = https://github.com/fog/fog-google
+	arch = any
+	license = MIT
+	depends = ruby-addressable
+	depends = ruby-fog-core
+	depends = ruby-fog-json
+	depends = ruby-fog-xml
+	depends = ruby-google-apis-compute_v1
+	depends = ruby-google-apis-dns_v1
+	depends = ruby-google-apis-iamcredentials_v1
+	depends = ruby-google-apis-monitoring_v3
+	depends = ruby-google-apis-pubsub_v1
+	depends = ruby-google-apis-sqladmin_v1beta4
+	depends = ruby-google-apis-storage_v1
+	depends = ruby-google-cloud-env
+	noextract = fog-google-1.22.0.gem
+	options = !emptydirs
+	source = https://rubygems.org/downloads/fog-google-1.22.0.gem
+	sha256sums = 0719c4b243a8cdfb2790ac5fe7ca798bdb2e95b7f87d6601d4258c2004013123
+
+pkgname = ruby-fog-google

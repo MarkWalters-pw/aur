@@ -1,0 +1,19 @@
+pkgbase = micropython-lib-git
+	pkgdesc = Core Python libraries ported to MicroPython (git version)
+	pkgver = 1.9.3.r144.geae01bd
+	pkgrel = 1
+	epoch = 2
+	url = http://micropython.org/
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = python
+	depends = micropython
+	provides = micropython-lib
+	conflicts = micropython-lib
+	options = !emptydirs
+	source = git+https://github.com/micropython/micropython-lib.git
+	md5sums = SKIP
+
+pkgname = micropython-lib-git
+

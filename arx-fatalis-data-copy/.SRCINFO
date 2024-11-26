@@ -1,0 +1,17 @@
+pkgbase = arx-fatalis-data-copy
+	pkgdesc = Arx Fatalis game data from existing win32 installation (for use with arx-libertatis)
+	pkgver = 1.21
+	pkgrel = 2
+	url = https://arx-libertatis.org/
+	arch = i686
+	arch = x86_64
+	license = custom:commercial
+	depends = inkscape
+	optdepends = arx-libertatis: native Linux game executable
+	provides = arx-fatalis-data
+	conflicts = arx-fatalis-data-gog
+	conflicts = arx-fatalis-data-demo
+	source = https://raw.githubusercontent.com/arx/ArxLibertatis/master/scripts/arx-install-data
+	sha1sums = 0474a514b9c650ea1b09c2dc7e424988d9a2c188
+
+pkgname = arx-fatalis-data-copy

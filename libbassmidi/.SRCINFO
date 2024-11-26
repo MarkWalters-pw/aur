@@ -1,0 +1,16 @@
+pkgbase = libbassmidi
+	pkgdesc = An extension enabling the playback of MIDI files and custom event sequences.
+	pkgver = 2.4.14
+	pkgrel = 1
+	url = https://www.un4seen.com/bass.html#addons
+	arch = i686
+	arch = x86_64
+	license = custom:basslicence
+	makedepends = unzip
+	depends = libbass
+	source = libbassmidi-2.4.14.zip::https://www.un4seen.com/files/bassmidi24-linux.zip
+	source = LICENSE
+	sha512sums = 270f9b310d4206c9f88ab17452b4df391c5d89cf21b5a677b74dad01bdfe0a3eb5c02f0dbf00e88e8ec18b6826180c7d9d0b68a9f37715891e00552281d18d48
+	sha512sums = 0010ec376b29b12c15ea182675dcec6fad3219abc605e8f7b14b5e05957e68ef6a87ab13b70ea5ba80b72f030185fdd426a6ffd90d0c1c6ab716a2f12c4056a9
+
+pkgname = libbassmidi

@@ -1,0 +1,22 @@
+pkgbase = opentyrian-git
+	pkgdesc = Open-source port of the DOS shoot-em-up Tyrian
+	pkgver = 2.1.20220318+r4+g74245db
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/opentyrian/opentyrian
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	depends = sdl2
+	depends = sdl2_net
+	provides = opentyrian
+	conflicts = opentyrian
+	replaces = opentyrian-svn
+	replaces = opentyrian-hg
+	source = git+https://github.com/opentyrian/opentyrian
+	source = http://www.camanis.net/opentyrian/tyrian21.zip
+	sha256sums = SKIP
+	sha256sums = 7790d09a2a3addcd33c66ef063d5900eb81cc9c342f4807eb8356364dd1d9277
+
+pkgname = opentyrian-git

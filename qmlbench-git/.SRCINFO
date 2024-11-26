@@ -1,0 +1,15 @@
+pkgbase = qmlbench-git
+	pkgdesc = QML benchmarking tool
+	pkgver = r185.afbd34b
+	pkgrel = 1
+	url = https://github.com/CrimsonAS/qmlbench
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = qt5-base
+	provides = qmlbench
+	conflicts = qmlbench
+	source = git+https://github.com/CrimsonAS/qmlbench.git
+	sha256sums = SKIP
+
+pkgname = qmlbench-git

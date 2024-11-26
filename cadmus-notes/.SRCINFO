@@ -1,0 +1,35 @@
+pkgbase = cadmus-notes
+	pkgdesc = Modular Shell Scripts for an MD Notebook
+	pkgver = 1.0
+	pkgrel = 1
+	url = https://ryangreenup.github.io/cadmus
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	depends = recoll
+	depends = tmsu
+	depends = ripgrep
+	depends = fd
+	depends = nodejs
+	depends = bat
+	depends = coreutils
+	depends = jq
+	depends = wmctrl
+	depends = pandoc
+	depends = ranger
+	depends = recode
+	depends = sd
+	depends = skim
+	depends = xclip
+	optdepends = nodejs-markserv: Preview Support
+	optdepends = tectonic: Additional option for PDF Export
+	optdepends = mdcat: Pretty Print
+	optdepends = texlive-core: PDF Export
+	optdepends = wmctrl: Move Windows
+	optdepends = wl-clipboard: Clipboard for Wayland
+	provides = cadmus
+	source = https://github.com/RyanGreenup/cadmus/releases/download/1.0/cadmus.tar.xz
+	sha256sums = 370d6ef60507aeaa8dfbc53e704bafa068df14cc891d5d700750be3e072b1d4d
+
+pkgname = cadmus-notes
+

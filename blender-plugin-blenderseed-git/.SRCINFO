@@ -1,0 +1,14 @@
+pkgbase = blender-plugin-blenderseed-git
+	pkgdesc = appleseed Blender integrator
+	pkgver = 2.0.0.beta.r55.ge13f09b
+	pkgrel = 1
+	url = https://github.com/appleseedhq/blenderseed
+	arch = any
+	license = MIT
+	makedepends = git
+	depends = blender
+	depends = appleseed-git
+	source = blenderseed::git+https://github.com/appleseedhq/blenderseed.git
+	md5sums = SKIP
+
+pkgname = blender-plugin-blenderseed-git

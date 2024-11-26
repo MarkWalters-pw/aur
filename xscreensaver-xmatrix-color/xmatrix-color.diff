@@ -1,0 +1,202 @@
+--- hacks/xmatrix.c	2019-08-21 22:45:53.000000000 -0500
++++ hacks/xmatrix.c.mod	2020-03-22 16:23:50.436339568 -0500
+@@ -221,6 +221,14 @@
+ {
+   const unsigned char *png = 0;
+   unsigned long size = 0;
++  unsigned long pixel;
++  unsigned short int dark_val, light_val;
++  int x, y;
++  const char *shift_text = get_string_resource(dpy, "colorShift", "String");
++  XGCValues gcv;
++  GC gc;
++  XImage *ximg;
++
+   if (which == 1)
+     {
+       if (state->small_p)
+@@ -238,6 +246,46 @@
+   state->images[which] =
+     image_data_to_pixmap (state->dpy, state->window, png, size,
+                           &state->image_width, &state->image_height, 0);
++  
++  ximg = XGetImage (state->dpy, state->images[which], 0, 0, state->image_width, state->image_height, AllPlanes, ZPixmap);
++  /*fprintf(stderr, "XImage dimensions: %d : %d\n", ximg->width, ximg->height);
++  fprintf(stderr, "XImage color masks: Red[%lu] : Green[%lu] : Blue[%lu]\n", ximg->red_mask, ximg->green_mask, ximg->blue_mask);
++  fprintf(stderr, "XImage depth: %d, Bits per pixel: %d\n", ximg->depth, ximg->bits_per_pixel);*/
++  
++  if (shift_text != NULL)
++  {
++	  for (y = 0; y < ximg->height; y++)
++	  {
++		  for (x = 0; x < ximg->width; x++)
++		  {
++			  pixel = XGetPixel(ximg, x, y);
++			  /*fprintf(stderr, "Pixel %d, %d: %lX\n", x, y, pixel);*/
++			  dark_val = (pixel & 0xff);
++			  light_val = (pixel & 0xff00) >> 8;
++			  /*fprintf(stderr, "Colors: red[%X], green[%X], blue[%X]\n", red, green, blue);*/
++			  if (!strcasecmp(shift_text, "yellow"))
++				pixel = (light_val << 16) | (light_val << 8) | (dark_val);
++			  else if (!strcasecmp(shift_text, "red"))
++			    pixel = (light_val << 16) | (dark_val << 8) | (dark_val);
++			  else if (!strcasecmp(shift_text, "purple"))
++			    pixel = (light_val << 16) | (dark_val << 8) | (light_val);
++			  else if (!strcasecmp(shift_text, "blue"))
++			    pixel = (dark_val << 16) | (dark_val << 8) | (light_val);
++			  else if (!strcasecmp(shift_text, "aqua"))
++			    pixel = (dark_val << 16) | (light_val << 8) | (light_val);
++			  else if (!strcasecmp(shift_text, "white"))
++			    pixel = (light_val << 16) | (light_val << 8) | (light_val);
++			  else if (!strcasecmp(shift_text, "grey"))
++			    pixel = (dark_val << 16) | (dark_val << 8) | (dark_val);
++			  /*fprintf(stderr, "New Pixel: %lX\n", pixel);*/
++			  XPutPixel(ximg, x, y, pixel);
++		  }
++	  }
++	  gc = XCreateGC (dpy, state->images[which], 0, &gcv);
++	  XPutImage (dpy, state->images[which], gc, ximg, 0, 0, 0, 0, ximg->width, ximg->height);
++	  XFreeGC (dpy, gc);
++	  XDestroyImage(ximg);
++  }
+ }
+ 
+ 
+@@ -565,6 +613,39 @@
+     }
+ }
+ 
++static int
++densitizer (int x)
++{
++  /* Best fit curve to replace old table.
++   * Now you can twiddle single % values 
++   * and its technically doing something.
++   * y = a * exp(b*x)
++   * See 'densitizer.sce' for comparison. */
++   
++  /* Declare variables */
++  double a, b;
++  int y;
++  
++  /* Clean input */
++  if (x > 100) {
++	  x = 100;
++  }
++  else if (x < 1) {
++	  x = 1;
++  }
++  
++  /* Set exp function params */
++  a=211.538187957;
++  b=-0.0488730165089;
++  
++  /* Calculate result, used in xmatrix_init()
++   * and hack_matrix() */
++  y=a*exp(b*x);
++  
++  /*printf("\nDensitizer. x=%d, y=%d", x, y);*/
++  return(y);
++}
++
+ 
+ static void *
+ xmatrix_init (Display *dpy, Window window)
+@@ -644,7 +725,7 @@
+     calloc (sizeof(m_cell), state->grid_width * state->grid_height);
+   state->feeders = (m_feeder *) calloc (sizeof(m_feeder), state->grid_width);
+ 
+-  state->density = get_integer_resource (dpy, "density", "Integer");
++  state->density = (get_integer_resource (dpy, "density", "Integer"));
+ 
+   insert = get_string_resource(dpy, "insert", "Insert");
+   if (insert && !strcmp(insert, "top"))
+@@ -1054,28 +1135,6 @@
+ }
+ 
+ 
+-static int
+-densitizer (m_state *state)
+-{
+-  /* Horrid kludge that converts percentages (density of screen coverage)
+-     to the parameter that actually controls this.  I got this mapping
+-     empirically, on a 1024x768 screen.  Sue me. */
+-  if      (state->density < 10) return 85;
+-  else if (state->density < 15) return 60;
+-  else if (state->density < 20) return 45;
+-  else if (state->density < 25) return 25;
+-  else if (state->density < 30) return 20;
+-  else if (state->density < 35) return 15;
+-  else if (state->density < 45) return 10;
+-  else if (state->density < 50) return 8;
+-  else if (state->density < 55) return 7;
+-  else if (state->density < 65) return 5;
+-  else if (state->density < 80) return 3;
+-  else if (state->density < 90) return 2;
+-  else return 1;
+-}
+-
+-
+ static void
+ hack_text (m_state *state)
+ {
+@@ -1502,7 +1561,7 @@
+       if (f->remaining > 0)	/* never change if pipe isn't empty */
+         continue;
+ 
+-      if ((random() % densitizer(state)) != 0) /* then change N% of the time */
++      if ((random() % densitizer(state->density)) != 0) /* then change N% of the time */
+         continue;
+ 
+       f->remaining = 3 + (random() % state->grid_height);
+@@ -1861,6 +1920,7 @@
+   { "-pipe",	        ".usePipe",		XrmoptionNoArg, "True" },
+   { "-no-pipe",	        ".usePipe",		XrmoptionNoArg, "False" },
+   { "-program",	        ".program",		XrmoptionSepArg, 0 },
++  { "-color-shift",	        ".colorShift",		XrmoptionSepArg, 0 },
+   { 0, 0, 0, 0 }
+ };
+ 
+--- hacks/config/xmatrix.xml	2016-04-07 21:15:38.000000000 -0500
++++ hacks/config/xmatrix.xml.mod	2020-03-22 16:23:50.436339568 -0500
+@@ -25,6 +25,17 @@
+      <option id="top"    _label="Slider algorithm"    arg-set="-insert top"/>
+      <option id="bottom" _label="Expansion algorithm" arg-set="-insert bottom"/>
+    </select>
++   
++   <select id="color">
++     <option id="color_green" _label="Green"/>
++     <option id="color_blue" _label="Blue"  arg-set="--color-shift blue"/>
++     <option id="color_aqua" _label="Aqua"  arg-set="--color-shift aqua"/>
++     <option id="color_red" _label="Red"  arg-set="--color-shift red"/>
++     <option id="color_red" _label="Purple"  arg-set="--color-shift purple"/>
++     <option id="color_yellow" _label="Yellow"  arg-set="--color-shift yellow"/>
++     <option id="color_white" _label="White"  arg-set="--color-shift white"/>
++     <option id="color_grey" _label="Grey"  arg-set="--color-shift grey"/>
++  </select>
+   </hgroup>
+ 
+   <hgroup>
+--- hacks/xmatrix.man	2022-09-04 11:40:03.613534185 -0500
++++ hacks/xmatrix.man.mod	2022-10-09 09:09:15.744682643 -0500
+@@ -14,6 +14,7 @@
+ [\-\-mode \fImode\fP]
+ [\-\-phone \fInumber\fP]
+ [\-\-fps]
++[\-color\-shift \fIcolor\fP]
+ .SH DESCRIPTION
+ The \fIxmatrix\fP program draws the 2D "digital rain" effect, as seen on
+ the computer monitors in the 1999 film, "The Matrix".
+@@ -113,6 +114,10 @@
+ 	xmatrix -ascii -program 'ps -eo comm | rev'
+ 	xmatrix -program 'od -txC -w6 /dev/random'
+ 	xmatrix -program 'cat /dev/random'
++.TP 8
++.B \-color\-shift \fIcolor\fP
++Specify a simple color, one of:
++red, purple, blue, aqua, yellow, white, grey
+ .sp
+ .fi
+ .SH ENVIRONMENT
+
+

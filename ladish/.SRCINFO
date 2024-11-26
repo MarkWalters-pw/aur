@@ -1,0 +1,30 @@
+pkgbase = ladish
+	pkgdesc = Session management system for JACK.
+	pkgver = 1.1
+	pkgrel = 1
+	url = https://ladish.org
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	license = custom:AFL2.1
+	makedepends = boost
+	makedepends = git
+	makedepends = intltool
+	depends = a2jmidid
+	depends = cdbus
+	depends = dbus-glib
+	depends = dbus-python
+	depends = expat
+	depends = glibc
+	depends = gtkmm
+	depends = jack2-dbus
+	depends = libgnomecanvasmm
+	depends = python
+	depends = util-linux-libs
+	optdepends = laditools: Provides ladi-control-center the default JACK configuration tool in gladish
+	provides = lash
+	conflicts = lash
+	source = git+https://gitea.ladish.org/LADI/ladish.git#tag=1.1
+	sha256sums = SKIP
+
+pkgname = ladish

@@ -1,0 +1,32 @@
+pkgbase = ros-noetic-warehouse-ros
+	pkgdesc = ROS - Persistent storage of ROS messages.
+	pkgver = 0.9.3
+	pkgrel = 3
+	url = https://wiki.ros.org/warehouse_ros
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-tf
+	makedepends = ros-noetic-std-msgs
+	makedepends = ros-noetic-roscpp
+	makedepends = ros-noetic-catkin
+	makedepends = ros-noetic-pluginlib
+	makedepends = ros-noetic-geometry-msgs
+	makedepends = ros-noetic-rostime
+	depends = ros-noetic-tf
+	depends = ros-noetic-std-msgs
+	depends = ros-noetic-roscpp
+	depends = ros-noetic-pluginlib
+	depends = ros-noetic-geometry-msgs
+	depends = ros-noetic-rostime
+	depends = boost
+	source = ros-noetic-warehouse-ros-0.9.3.tar.gz::https://github.com/ros-planning/warehouse_ros/archive/0.9.3.tar.gz
+	sha256sums = 11782f721259698c4bfcbe99957687c827b92850866b42fb931cf9d134c34a7e
+
+pkgname = ros-noetic-warehouse-ros
+

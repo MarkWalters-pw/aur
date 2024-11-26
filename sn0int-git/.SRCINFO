@@ -1,0 +1,28 @@
+pkgbase = sn0int-git
+	pkgdesc = Semi-automatic OSINT framework and package manager
+	pkgver = 0.18.0.r7.g62204e2
+	pkgrel = 1
+	url = https://github.com/kpcyrd/sn0int
+	install = sn0int.install
+	arch = i686
+	arch = x86_64
+	arch = armv6h
+	arch = aarch64
+	license = GPL3
+	makedepends = cargo
+	makedepends = git
+	makedepends = python-sphinx
+	makedepends = make
+	depends = libcap
+	depends = sqlite
+	depends = libseccomp
+	depends = libsodium
+	depends = geoip2-database
+	depends = publicsuffix-list
+	provides = sn0int
+	conflicts = sn0int
+	source = git+https://github.com/kpcyrd/sn0int.git
+	sha512sums = SKIP
+
+pkgname = sn0int-git
+

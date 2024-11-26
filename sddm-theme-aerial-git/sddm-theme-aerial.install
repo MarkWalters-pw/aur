@@ -1,0 +1,13 @@
+post_install() {
+  cat << _EOF
+
+==> Installation:
+==> To use this theme, add the following lines to /etc/sddm.conf:"
+==> 
+==> [Theme]"
+==> Current=archlinux"
+==> 
+==> To use default configuration copy (as root):"
+==> cp /usr/share/sddm/themes/aerial/theme.conf /usr/share/sddm/themes/aerial/theme.conf.user"
+_EOF
+}

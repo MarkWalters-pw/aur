@@ -1,0 +1,21 @@
+pkgbase = mpop-gnome
+	pkgdesc = A small, fast POP3 client with GNOME Keyring support
+	pkgver = 1.4.10
+	pkgrel = 1
+	url = https://marlam.de/mpop/
+	install = mpop-gnome.install
+	arch = x86_64
+	license = GPL3
+	depends = gnutls
+	depends = libsecret
+	provides = mpop
+	conflicts = mpop
+	replaces = mpop
+	source = https://marlam.de/mpop/releases/mpop-1.4.10.tar.xz
+	source = https://marlam.de/mpop/releases/mpop-1.4.10.tar.xz.sig
+	validpgpkeys = 2F61B4828BBA779AECB3F32703A2A4AB1E32FD34
+	sha256sums = 9e9b6523f08df50a3d3eec75d94d4c0104ee016c0c913baaf8fbf178bf828388
+	sha256sums = SKIP
+
+pkgname = mpop-gnome
+

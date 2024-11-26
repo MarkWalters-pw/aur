@@ -1,0 +1,16 @@
+pkgbase = lib32-libxkbfile
+	pkgdesc = X11 keyboard file manipulation library
+	pkgver = 1.1.2
+	pkgrel = 1
+	url = http://xorg.freedesktop.org/
+	arch = x86_64
+	license = custom
+	makedepends = xorg-util-macros
+	depends = lib32-libx11
+	source = http://xorg.freedesktop.org//releases/individual/lib/libxkbfile-1.1.2.tar.xz
+	source = http://xorg.freedesktop.org//releases/individual/lib/libxkbfile-1.1.2.tar.xz.sig
+	validpgpkeys = 3BB639E56F861FA2E86505690FDD682D974CA72A
+	sha512sums = 0639fad7b64b36a85f8d24cdd40085e0ec18d7a671793b8b5c26449e9cc5a84c37117e7757fb1238ac353044935dd00013e42166de5af9dec428e873a47e598d
+	sha512sums = SKIP
+
+pkgname = lib32-libxkbfile

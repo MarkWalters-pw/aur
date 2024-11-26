@@ -1,0 +1,20 @@
+pkgbase = mingw-w64-unshield
+	pkgdesc = Extracts CAB files from InstallShield installers (mingw-w64)
+	pkgver = 1.5.1
+	pkgrel = 1
+	url = https://github.com/twogood/unshield
+	arch = any
+	license = custom
+	makedepends = mingw-w64-gcc
+	makedepends = mingw-w64-cmake
+	depends = mingw-w64-crt
+	depends = mingw-w64-zlib
+	depends = mingw-w64-openssl
+	options = !buildflags
+	options = !strip
+	options = !libtool
+	options = staticlibs
+	source = unshield-1.5.1.tar.gz::https://github.com/twogood/unshield/archive/1.5.1.tar.gz
+	sha256sums = 34cd97ff1e6f764436d71676e3d6842dc7bd8e2dd5014068da5c560fe4661f60
+
+pkgname = mingw-w64-unshield

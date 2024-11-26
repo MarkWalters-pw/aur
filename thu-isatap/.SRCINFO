@@ -1,0 +1,19 @@
+pkgbase = thu-isatap
+	pkgdesc = Creating an ISATAP IPv6 tunnel to Tsinghua ISATAP Server
+	pkgver = 1.1.7
+	pkgrel = 1
+	url = https://github.com/panda2134/thu-isatap
+	arch = any
+	license = GPL
+	depends = iproute2
+	depends = bash
+	depends = grep
+	depends = sed
+	provides = thu-isatap
+	conflicts = thu-isatap
+	source = https://github.com/panda2134/thu-isatap/raw/v1.1.7/thu-isatap
+	source = https://github.com/panda2134/thu-isatap/raw/v1.1.7/thu-isatap.service
+	sha256sums = 755bf6b06077bd3cfed4495b8b1dd7cb05a92d35d1144f0b089d8ae621b0d03d
+	sha256sums = 94e0e17053abc65405e34b1f5f69e89ce26f57ed8bed7ed92644a71789b3d832
+
+pkgname = thu-isatap

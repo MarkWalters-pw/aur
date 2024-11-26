@@ -1,0 +1,18 @@
+pkgbase = guile-git-lib-git
+	pkgdesc = Guile-Git is a GNU Guile library providing bindings to libgit3. (git repo)
+	pkgver = r318.e709df0
+	pkgrel = 1
+	url = https://gitlab.com/guile-git/guile-git
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	depends = guile
+	depends = guile-bytestructures
+	depends = libgit2
+	provides = guile-git-lib
+	conflicts = guile-git-lib
+	options = !strip
+	source = git+https://gitlab.com/guile-git/guile-git.git
+	md5sums = SKIP
+
+pkgname = guile-git-lib-git

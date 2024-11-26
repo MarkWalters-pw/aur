@@ -1,0 +1,32 @@
+pkgbase = go-swarm
+	pkgdesc = Censorship resistant storage and communication infrastructure for a truly sovereign digital society
+	pkgver = 0.5.7
+	pkgrel = 1
+	url = https://swarm.ethereum.org
+	install = go-swarm.install
+	changelog = CHANGELOG_v0.5.6
+	arch = x86_64
+	groups = eth-swarm
+	license = LGPL3
+	makedepends = go>=1.10.0
+	makedepends = git
+	optdepends = python-scrypt
+	optdepends = python-ecdsa
+	optdepends = python-pycryptodome
+	optdepends = go-ethereum
+	optdepends = systemd
+	provides = go-swarm
+	source = https://github.com/ethersphere/swarm/archive/v0.5.7.tar.gz
+	source = v0.5.7.tar.gz.sig
+	source = swarm-resources.tar.gz
+	source = swarm-resources.tar.gz.sig
+	source = README
+	validpgpkeys = 0826EDA1702D1E87C6E2875121D2E7BB88C2A746
+	md5sums = e2252e28aa4ff45ea1d3466f3643b835
+	md5sums = SKIP
+	md5sums = 2fa858d7e4cb420ee9cdf53a33bf0a67
+	md5sums = SKIP
+	md5sums = 02f48077fb06278a5b9eed4950b2ce3e
+
+pkgname = go-swarm
+

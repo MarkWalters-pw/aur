@@ -1,0 +1,25 @@
+pkgbase = mtls
+	pkgdesc = A short-lived certificate tool based on the Zero Trust network model
+	pkgver = 0.17.0
+	pkgrel = 1
+	url = https://github.com/drgrove/mtls-cli
+	arch = any
+	license = Apache
+	makedepends = python-setuptools
+	makedepends = python-setuptools-scm
+	makedepends = python-build
+	makedepends = python-installer
+	depends = nss
+	depends = python-click
+	depends = python-cryptography
+	depends = python-gnupg
+	depends = python-pyopenssl
+	depends = python-requests
+	depends = python-urllib3
+	source = https://github.com/drGrove/mtls-cli/releases/download/v0.17.0/mtls-0.17.0.tar.gz
+	source = https://github.com/drGrove/mtls-cli/releases/download/v0.17.0/mtls-0.17.0.tar.gz.asc
+	validpgpkeys = C92FE5A3FBD58DD3EC5AA26BB10116B8193F2DBD
+	sha256sums = f432008694b778caec659a66f8bcb399b62da6e525ade8861529b586a0fb9886
+	sha256sums = SKIP
+
+pkgname = mtls

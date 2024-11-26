@@ -1,0 +1,23 @@
+pkgbase = opendds-git
+	pkgdesc = Open source C++ implementation of OMG Data Distribution Service (DDS)
+	pkgver = 3.13
+	pkgrel = 2
+	url = http://www.opendds.org/
+	arch = i686
+	arch = x86_64
+	license = custom
+	makedepends = git
+	depends = perl
+	depends = bash
+	options = !buildflags
+	source = MPC.tar.gz::https://github.com/DOCGroup/MPC/tarball/master
+	source = ACE_TAO.tar.gz::https://github.com/DOCGroup/ACE_TAO/tarball/master
+	source = OpenDDS.tar.gz::https://github.com/objectcomputing/OpenDDS/tarball/master
+	source = build.patch
+	md5sums = SKIP
+	md5sums = SKIP
+	md5sums = SKIP
+	md5sums = c44b0c8d7ebccc2b9be0a040ec9f8c2b
+
+pkgname = opendds-git
+

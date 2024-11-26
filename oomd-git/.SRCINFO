@@ -1,0 +1,16 @@
+pkgbase = oomd-git
+	pkgdesc = A userspace out-of-memory killer
+	pkgver = v0.5.0.r6.g7ccc7035
+	pkgrel = 1
+	url = https://github.com/facebookincubator/oomd
+	arch = x86_64
+	license = GPL2
+	makedepends = meson
+	makedepends = ninja
+	makedepends = git
+	makedepends = jsoncpp
+	depends = jsoncpp
+	source = oomd::git+https://github.com/facebookincubator/oomd.git
+	md5sums = SKIP
+
+pkgname = oomd-git

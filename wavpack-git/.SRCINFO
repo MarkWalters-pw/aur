@@ -1,0 +1,17 @@
+pkgbase = wavpack-git
+	pkgdesc = An open audio compression format providing lossless, high-quality lossy, and a unique hybrid compression mode
+	pkgver = 5.6.0.r35.g9b33692
+	pkgrel = 1
+	url = https://www.wavpack.com/
+	arch = i686
+	arch = x86_64
+	license = BSD
+	makedepends = git
+	depends = glibc
+	provides = wavpack=5.6.0.r35.g9b33692
+	conflicts = wavpack
+	options = staticlibs
+	source = git+https://github.com/dbry/WavPack.git
+	sha256sums = SKIP
+
+pkgname = wavpack-git

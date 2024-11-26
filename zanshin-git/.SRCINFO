@@ -1,0 +1,19 @@
+pkgbase = zanshin-git
+	pkgdesc = To-do management application for KDE
+	pkgver = v21.11.90.r292.31195a7a
+	pkgrel = 1
+	url = https://invent.kde.org/pim/zanshin
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = extra-cmake-modules
+	makedepends = kdoctools5
+	makedepends = boost
+	depends = kdepim-runtime
+	depends = kontactinterface
+	provides = zanshin
+	conflicts = zanshin
+	source = git+https://invent.kde.org/pim/zanshin.git
+	sha256sums = SKIP
+
+pkgname = zanshin-git

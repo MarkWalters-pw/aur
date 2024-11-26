@@ -1,0 +1,16 @@
+--- a/dirsyncpro.sh	2015-09-27 15:00:39.000000000 +0200
++++ b/dirsyncpro.sh	2016-02-05 11:31:34.947479153 +0100
+@@ -1,7 +1,10 @@
+ #!/bin/bash
+ 
+ # get dirsyncpro home
+-DIRSYNCPRO_HOME=$(dirname "$0")
++DIRSYNCPRO_HOME=/opt/dirsyncpro
++WORKING_DIRECTORY="${HOME}/.dirsyncpro"
++
++[ ! -d "${WORKING_DIRECTORY}" ] && mkdir -p "${WORKING_DIRECTORY}"
+ 
+ # start programm and pass any parameters
+-java -Xmx512M -Dfile.encoding=UTF-8 -jar "$DIRSYNCPRO_HOME/dirsyncpro.jar" $* 
++java -Xmx512M -Duser.dir="${WORKING_DIRECTORY}" -Dfile.encoding=UTF-8 -jar "$DIRSYNCPRO_HOME/dirsyncpro.jar" $* 
+

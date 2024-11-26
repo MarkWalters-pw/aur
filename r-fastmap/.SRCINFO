@@ -1,0 +1,19 @@
+pkgbase = r-fastmap
+	pkgdesc = Fast Data Structures
+	pkgver = 1.2.0
+	pkgrel = 1
+	url = https://cran.r-project.org/package=fastmap
+	arch = x86_64
+	license = MIT
+	checkdepends = r-testthat
+	makedepends = hopscotch-map
+	depends = r
+	optdepends = r-testthat
+	source = https://cran.r-project.org/src/contrib/fastmap_1.2.0.tar.gz
+	source = system-hopscotch-map.patch
+	md5sums = f53773acd6ba9a86413e8c2dc6441544
+	md5sums = bb23578b236de5d3de6a2fd2505814ba
+	b2sums = dff9cceb0859b47b182da062f7844ccfa703f077c92c1e1954681394c9cc8c2aca889bbd61220db4dcefb461834af0715128b3db2ddba6c853b41806b7d8c1d5
+	b2sums = c8b327935db8add02be58fba70f99fc71b83322b293c9284897cbf34a5f31cb3151e3268f99088380528cbd53fd35b3d873bc8707ff3dac36ef382412722b82e
+
+pkgname = r-fastmap

@@ -1,0 +1,15 @@
+pkgbase = sponsorblock-chromium-git
+	pkgdesc = SponsorBlock extension for chromium-based browsers
+	pkgver = 2.1.2.r6.1b96e210
+	pkgrel = 1
+	url = https://github.com/ajayyy/SponsorBlock
+	arch = any
+	license = GPL
+	makedepends = git
+	makedepends = npm
+	provides = sponsorblock-chromium
+	conflicts = sponsorblock-chromium
+	source = sponsorblock-chromium::git+https://github.com/ajayyy/SponsorBlock.git
+	sha256sums = SKIP
+
+pkgname = sponsorblock-chromium-git

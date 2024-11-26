@@ -1,0 +1,21 @@
+pkgbase = plasma5-applets-caffeine-plus
+	pkgdesc = Disable screensaver and auto suspend
+	pkgver = 1.4
+	pkgrel = 3
+	url = https://github.com/qunxyz/plasma-applet-caffeine-plus
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = gcc
+	makedepends = make
+	makedepends = cmake
+	makedepends = extra-cmake-modules
+	makedepends = pkg-config
+	makedepends = qconf
+	makedepends = plasma-framework5
+	provides = plasma5-applets-caffeine-plus
+	conflicts = plasma5-applets-caffeine-plus
+	source = https://github.com/qunxyz/plasma-applet-caffeine-plus/archive/v1.4.tar.gz
+	sha256sums = f15ac283d5adbdbd909dc76b258aa406b7ba05d0156bef76c9632ef7da67ce8f
+
+pkgname = plasma5-applets-caffeine-plus

@@ -1,0 +1,26 @@
+pkgbase = libwpe-git
+	pkgdesc = General-purpose library specifically developed for the WPE-flavored port of WebKit.
+	pkgver = 1.9.1.r0.g6458ea3
+	pkgrel = 1
+	url = https://github.com/WebPlatformForEmbedded/libwpe
+	arch = x86_64
+	arch = i686
+	arch = aarch64
+	arch = armv7l
+	arch = armv7h
+	groups = wpe
+	license = custom:BSD
+	makedepends = mesa
+	makedepends = git
+	makedepends = meson
+	depends = gcc-libs
+	depends = libxkbcommon
+	provides = libwpe
+	provides = libwpe-1.0.so
+	conflicts = libwpe
+	replaces = wpebackend-git
+	source = libwpe-git::git+https://github.com/WebPlatformForEmbedded/libwpe
+	sha256sums = SKIP
+
+pkgname = libwpe-git
+

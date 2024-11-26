@@ -1,0 +1,17 @@
+pkgbase = sget-git
+	pkgdesc = Program for automatic verification of signatures and integration with Sigstore's binary transparency log
+	pkgver = r266.g99e7b91
+	pkgrel = 1
+	url = https://github.com/sigstore/sget
+	arch = i686
+	arch = x86_64
+	license = Apache
+	makedepends = git
+	makedepends = go
+	depends = glibc
+	provides = sget=r266.g99e7b91
+	conflicts = sget
+	source = git+https://github.com/sigstore/sget.git
+	sha256sums = SKIP
+
+pkgname = sget-git

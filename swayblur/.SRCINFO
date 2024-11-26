@@ -1,0 +1,17 @@
+pkgbase = swayblur
+	pkgdesc = Blurs the wallpaper when a client is present
+	pkgver = 1.1.1
+	pkgrel = 1
+	url = https://github.com/willpower3309/swayblur
+	arch = any
+	license = MIT
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = imagemagick
+	depends = python-i3ipc
+	depends = oguri
+	provides = swayblur
+	source = swayblur-1.1.1.tar.gz::https://github.com/willpower3309/swayblur/archive/v1.1.1.tar.gz
+	sha256sums = 660d4667570b0391d4c7839efb64b280c78b0f12cca0b19bc6c4a98499ef0557
+
+pkgname = swayblur

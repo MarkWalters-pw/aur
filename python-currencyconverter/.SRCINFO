@@ -1,0 +1,19 @@
+pkgbase = python-currencyconverter
+	pkgdesc = A currency converter using the European Central Bank data.
+	pkgver = 0.13.10
+	pkgrel = 2
+	url = https://pypi.python.org/pypi/CurrencyConverter
+	arch = any
+	license = Apache
+	makedepends = python-setuptools
+	makedepends = python2-setuptools
+	conflicts = python3-currencyconverter
+	source = https://files.pythonhosted.org/packages/source/C/CurrencyConverter/CurrencyConverter-0.13.10.tar.gz
+	md5sums = e44756a4cbbc7b0c35f33f956c47224f
+
+pkgname = python-currencyconverter
+	depends = python
+
+pkgname = python2-currencyconverter
+	depends = python2
+

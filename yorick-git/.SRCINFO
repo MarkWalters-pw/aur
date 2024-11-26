@@ -1,0 +1,21 @@
+pkgbase = yorick-git
+	pkgdesc = Interpreted language for data processing
+	pkgver = 20200916
+	pkgrel = 1
+	url = http://yorick.sourceforge.net
+	arch = i686
+	arch = x86_64
+	groups = science
+	groups = yorick-all
+	license = BSD
+	makedepends = git
+	depends = glibc
+	depends = rlwrap
+	provides = yorick
+	conflicts = yorick
+	replaces = yorick
+	source = https://raw.githubusercontent.com/frigaut/frigaut-arch-abs-files/master/yorick-git-xft.patch
+	md5sums = ada3b2618196bb908f23175f79970b48
+
+pkgname = yorick-git
+

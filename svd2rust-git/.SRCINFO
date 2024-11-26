@@ -1,0 +1,16 @@
+pkgbase = svd2rust-git
+	pkgdesc = Generate Rust register maps (structs) from SVD files
+	pkgver = 0.24.0.r2.g298f1f9
+	pkgrel = 1
+	url = https://github.com/rust-embedded/svd2rust
+	arch = i686
+	arch = x86_64
+	license = Apache
+	license = MIT
+	makedepends = rust
+	provides = svd2rust
+	conflicts = svd2rust
+	source = git+https://github.com/rust-embedded/svd2rust
+	sha256sums = SKIP
+
+pkgname = svd2rust-git

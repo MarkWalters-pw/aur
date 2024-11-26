@@ -1,0 +1,36 @@
+pkgbase = foobnix-git
+	pkgdesc = GTK+ music player
+	pkgver = 3.2.r2.g17d5891f
+	pkgrel = 1
+	url = http://www.foobnix.com
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python-chardet
+	depends = python-simplejson
+	depends = python-mutagen
+	depends = gst-plugins-good
+	depends = gst-plugins-base
+	depends = gst-plugins-ugly
+	depends = gst-plugins-bad
+	depends = gst-libav
+	depends = gst-python
+	depends = webkit2gtk
+	depends = libkeybinder3
+	depends = fuseiso
+	depends = python-notify2
+	depends = python3-keybinder
+	depends = lame
+	depends = faac
+	depends = ffmpeg
+	depends = python-dbus
+	depends = python-pylast
+	provides = foobnix
+	conflicts = foobnix
+	source = git+https://github.com/foobnix/foobnix.git
+	sha256sums = SKIP
+
+pkgname = foobnix-git
+

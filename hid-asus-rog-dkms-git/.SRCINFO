@@ -1,0 +1,15 @@
+pkgbase = hid-asus-rog-dkms-git
+	pkgdesc = Kernel module to patch hid-asus to support more ROG laptops
+	pkgver = 0.4.4.r0.gd14d2fb
+	pkgrel = 1
+	url = https://gitlab.com/asus-linux/hid-asus-rog
+	arch = x86_64
+	depends = dkms
+	depends = linux-headers
+	source = git+https://gitlab.com/asus-linux/hid-asus-rog.git
+	source = dkms.conf
+	sha256sums = SKIP
+	sha256sums = a9d78677756306c7687bef847f81425b5d04a53bb16cee8c586a6fce1e93777d
+
+pkgname = hid-asus-rog-dkms-git
+

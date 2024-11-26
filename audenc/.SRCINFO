@@ -1,0 +1,26 @@
+pkgbase = audenc
+	pkgdesc = a batch shell script for encoding audio files in directories from one format to another.
+	pkgver = 3.3.9
+	pkgrel = 1
+	url = https://audenc.sourceforge.io/
+	arch = any
+	license = GPL2
+	depends = mediainfo
+	depends = mplayer
+	optdepends = aacplusenc: AAC+ encoder
+	optdepends = aften: A/52 encoder
+	optdepends = amrenc: AMR encoder
+	optdepends = dcaenc: DTS encoder
+	optdepends = faac: FAAC encoder
+	optdepends = fdk-aac-enc: FDK-AAC encoder
+	optdepends = flac: FLAC encoder
+	optdepends = gpac: MP4 container for AAC+/FDK-AAC
+	optdepends = lame: MP3 encoder
+	optdepends = neroaacenc-bin: Nero AAC encoder (deprecated)
+	optdepends = neroaactag-bin: Nero AAC tagger (deprecated)
+	optdepends = opus-tools: Opus encoder
+	optdepends = vorbis-tools: OGG encoder
+	source = https://downloads.sourceforge.net/audenc/audenc-3.3.9.tar.gz
+	sha256sums = e235fb1e7092839241045ea95bbe412ea14c7b095d4018e2595d144e74f71cfc
+
+pkgname = audenc

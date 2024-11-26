@@ -1,0 +1,26 @@
+pkgbase = mingw-w64-qca-qt5
+	pkgdesc = Qt Cryptographic Architecture (mingw-w64)
+	pkgver = 2.3.8
+	pkgrel = 1
+	url = https://userbase.kde.org/QCA
+	arch = any
+	license = LGPL
+	makedepends = mingw-w64-cmake
+	makedepends = mingw-w64-qt5-base
+	makedepends = mingw-w64-qt6-5compat
+	makedepends = qt6-base
+	makedepends = ninja
+	options = !strip
+	options = !buildflags
+	options = staticlibs
+	source = https://download.kde.org/stable/qca/2.3.8/qca-2.3.8.tar.xz
+	source = https://download.kde.org/stable/qca/2.3.8/qca-2.3.8.tar.xz.sig
+	validpgpkeys = CB9387521E1EE0127DA804843FDBB55084CC5D84
+	sha256sums = 48759ca86a0202461d908ba66134380cc3bb7d20fed3c031b9fc0289796a8264
+	sha256sums = SKIP
+
+pkgname = mingw-w64-qca-qt5
+	depends = mingw-w64-qt5-base
+
+pkgname = mingw-w64-qca-qt6
+	depends = mingw-w64-qt6-5compat

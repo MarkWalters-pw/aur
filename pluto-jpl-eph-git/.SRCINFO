@@ -1,0 +1,14 @@
+pkgbase = pluto-jpl-eph-git
+	pkgdesc = Code to read, use, and manipulate JPL DE ephemeris data
+	pkgver = r104.5fccf11
+	pkgrel = 1
+	url = http://www.projectpluto.com/jpl_eph.htm
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = pluto-lunar
+	provides = pluto-jpl-eph
+	source = git+https://github.com/Bill-Gray/jpl_eph.git
+	sha512sums = SKIP
+
+pkgname = pluto-jpl-eph-git

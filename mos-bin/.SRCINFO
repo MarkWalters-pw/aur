@@ -1,0 +1,22 @@
+pkgbase = mos-bin
+	pkgdesc = This package contains the Mongoose OS CLI tool.
+	pkgver = 2.19.1
+	pkgrel = 2
+	url = https://mongoose-os.com
+	arch = x86_64
+	arch = i686
+	arch = arm64
+	license = GLPv2
+	depends = libftdi-compat
+	depends = libusb>=1.0.16
+	options = !strip
+	options = !emptydirs
+	source_x86_64 = https://launchpad.net/~mongoose-os/+archive/ubuntu/mos/+files/mos_2.19.1+9bf406d~xenial0_amd64.deb
+	sha512sums_x86_64 = 9660dcae949360c43343430fa2df9498e6f3ea21d60d25832ba378ad39d5fd5a4826fc6a40e339d6041f9d1cebfbd442da71734c2aabda8c70d6695c7c44d040
+	source_i686 = https://launchpad.net/~mongoose-os/+archive/ubuntu/mos/+files/mos_2.19.1+9bf406d~xenial0_i386.deb
+	sha512sums_i686 = 62022e5fdc6975fa896aac64df1c87438851deb650eb206f4e661597e48ef6fab02962283af83d5edd1b8b6e14617d42655bc455820274011aa743b3269797b5
+	source_arm64 = https://launchpad.net/~mongoose-os/+archive/ubuntu/mos/+files/mos_2.19.1+9bf406d~xenial0_arm64.deb
+	sha512sums_arm64 = ec439846268de9289e9f8aa23d05a1119e9bb7f1faf260e466346f8a8ac5c9c38bbb09e17d6012a97b34ace5fdb7b2d2787b752910f58536d2aef0351d64758f
+
+pkgname = mos-bin
+

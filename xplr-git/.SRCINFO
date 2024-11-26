@@ -1,0 +1,18 @@
+pkgbase = xplr-git
+	pkgdesc = A hackable, minimal, fast TUI file explorer (git)
+	pkgver = 0.20.2.r21.g6595e2e
+	pkgrel = 1
+	url = https://github.com/sayanarijit/xplr
+	arch = x86_64
+	license = MIT
+	makedepends = cargo
+	makedepends = git
+	depends = gcc-libs
+	depends = hicolor-icon-theme
+	provides = xplr
+	conflicts = xplr
+	options = !lto
+	source = git+https://github.com/sayanarijit/xplr
+	sha512sums = SKIP
+
+pkgname = xplr-git

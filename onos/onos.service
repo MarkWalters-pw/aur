@@ -1,0 +1,18 @@
+[Unit]
+Description=Open Network Operating System
+After=network-online.target
+After=local-fs.target
+
+[Service]
+Type=exec
+ExecStart=/opt/onos/bin/onos-service server
+ExecStop=/opt/onos/bin/onos-service stop
+Restart=always
+RestartSec=2s
+User=sdn
+Group=sdn
+
+[Install]
+WantedBy=multi-user.target
+
+# vim: set ft=systemd :

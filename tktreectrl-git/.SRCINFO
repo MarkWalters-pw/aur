@@ -1,0 +1,20 @@
+pkgbase = tktreectrl-git
+	pkgdesc = Multi-column hierarchical listbox widget for the Tk GUI toolkit
+	pkgver = 2.4.2
+	pkgrel = 1
+	url = https://github.com/apnadkarni/tktreectrl
+	install = .INSTALL
+	arch = x86_64
+	license = custom
+	makedepends = git
+	depends = tk
+	depends = libx11
+	provides = tktreectrl
+	conflicts = tktreectrl
+	source = git+https://github.com/apnadkarni/tktreectrl.git
+	source = arch-paths.patch
+	md5sums = SKIP
+	md5sums = 82fa47b8779466ccd9740e5aad3e47cf
+
+pkgname = tktreectrl-git
+

@@ -1,0 +1,53 @@
+diff -up ./lvm2c_install.orig ./lvm2c_install
+--- ./lvm2c_install.orig	2018-08-29 13:56:33.000000000 -0600
++++ ./lvm2c_install	2018-08-29 13:55:18.000000000 -0600
+@@ -3,9 +3,21 @@
+ build() {
+     local mod
+     local symlink
++    local major
++    local minor
++    local dm_cache_smq
+ 
+     # device mapper modules
+-    for mod in dm-mod dm-snapshot dm-mirror dm-cache dm-cache-smq dm-thin-pool; do
++    major=$(echo $KERNELVERSION|awk 'BEGIN{FS="."}{print$1}')
++   minor=$(echo $KERNELVERSION|awk 'BEGIN{FS="."}{print$2}')
++
++    if [ $major -lt 4 -o \( $major -eq 4 -a $minor -lt 4 \) ]; then
++        dm_cache_smq='dm-cache-mq'
++    else
++        dm_cache_smq='dm-cache-smq'
++    fi
++
++    for mod in dm-mod dm-snapshot dm-mirror dm-cache $dm_cache_smq dm-thin-pool; do
+         add_module "$mod"
+     done
+ 
+diff -up ./sd-lvm2c_install.orig ./sd-lvm2c_install
+--- ./sd-lvm2c_install.orig	2018-08-29 13:56:27.000000000 -0600
++++ ./sd-lvm2c_install	2018-08-29 13:56:14.000000000 -0600
+@@ -3,9 +3,22 @@
+ build() {
+     local mod
+     local symlink
++    local major
++    local minor
++    local dm_cache_smq
+ 
+     # device mapper modules
+-    for mod in dm-mod dm-snapshot dm-mirror dm-cache dm-cache-smq dm-thin-pool; do
++    major=$(echo $KERNELVERSION|awk 'BEGIN{FS="."}{print$1}')
++    minor=$(echo $KERNELVERSION|awk 'BEGIN{FS="."}{print$2}')
++
++    if [ $major -lt 4 -o \( $major -eq 4 -a $minor -lt 4 \) ]; then
++        dm_cache_smq='dm-cache-mq'
++    else
++        dm_cache_smq='dm-cache-smq'
++    fi
++
++
++    for mod in dm-mod dm-snapshot dm-mirror dm-cache $dm_cache_smq dm-thin-pool; do
+         add_module "$mod"
+     done
+ 

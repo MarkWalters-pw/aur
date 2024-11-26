@@ -1,0 +1,19 @@
+pkgbase = ros-noetic-rosservice
+	pkgdesc = ROS - rosservice contains the rosservice command-line tool for listing and querying ROS Services.
+	pkgver = 1.16.0
+	pkgrel = 1
+	url = https://wiki.ros.org/rosservice
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-catkin
+	depends = ros-noetic-genpy
+	depends = ros-noetic-rosmsg
+	depends = ros-noetic-rosgraph
+	depends = ros-noetic-rospy
+	depends = ros-noetic-roslib
+	source = ros-noetic-rosservice-1.16.0.tar.gz::https://github.com/ros/ros_comm/archive/1.16.0.tar.gz
+	sha256sums = 0a51857a50cf646db4af85469cb0e4877b1484f7aa0c00ec65a8be7ff574a886
+
+pkgname = ros-noetic-rosservice

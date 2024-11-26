@@ -1,0 +1,11 @@
+[Unit]
+Description=VirtualHere Server
+After=network.target
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/vhusbd -b -c /etc/virtualhere/config.ini
+
+[Install]
+WantedBy=multi-user.target
+

@@ -1,0 +1,34 @@
+pkgbase = yambar
+	pkgdesc = Modular status panel for X11 and Wayland, inspired by polybar
+	pkgver = 1.11.0
+	pkgrel = 1
+	url = https://codeberg.org/dnkl/yambar
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = meson
+	makedepends = scdoc
+	makedepends = tllist
+	makedepends = xorgproto
+	depends = fcft
+	depends = libpulse
+	depends = libudev.so
+	depends = libxcb
+	depends = libyaml
+	depends = libpipewire-0.3.so
+	depends = pipewire
+	depends = pixman
+	depends = wayland
+	depends = wayland-protocols
+	depends = xcb-util
+	depends = xcb-util-cursor
+	depends = xcb-util-wm
+	optdepends = alsa-lib: ALSA module
+	optdepends = json-c: XKB module
+	optdepends = libmpdclient: MPD module
+	optdepends = xcb-util-errors: better X error messages
+	source = git+https://codeberg.org/dnkl/yambar.git?signed#commit=a2d30b96fbb026621ec11692272f0117f35a00fd
+	validpgpkeys = B19964FBBA09664CC81027ED5BBD4992C116573F
+	b2sums = SKIP
+
+pkgname = yambar

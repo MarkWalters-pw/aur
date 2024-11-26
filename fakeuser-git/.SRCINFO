@@ -1,0 +1,18 @@
+pkgbase = fakeuser-git
+	pkgdesc = LD_PRELOAD module to create fake users
+	pkgver = r8.2f456e0
+	pkgrel = 1
+	url = https://github.com/progandy/fakeuser
+	arch = i686
+	arch = x86_64
+	license = GPL
+	depends = bash
+	provides = fakeuser
+	conflicts = fakeuser
+	source = git+https://github.com/progandy/fakeuser.git
+	source = fakeuser.patch
+	md5sums = SKIP
+	md5sums = f09d97532d85fe51b0108e2f0c32acfc
+
+pkgname = fakeuser-git
+

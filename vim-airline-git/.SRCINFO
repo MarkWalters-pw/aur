@@ -1,0 +1,19 @@
+pkgbase = vim-airline-git
+	pkgdesc = A lean & mean statusline for vim that's light as air.
+	pkgver = 0.11.r509.gebb89a08
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/vim-airline/vim-airline
+	arch = any
+	groups = vim-plugins
+	license = MIT
+	makedepends = git
+	depends = vim
+	optdepends = otf-powerline-symbols-git: use the Powerline symbols
+	optdepends = vim-airline-themes-git: alternative themes
+	provides = vim-airline
+	conflicts = vim-airline
+	source = git+https://github.com/vim-airline/vim-airline.git
+	md5sums = SKIP
+
+pkgname = vim-airline-git

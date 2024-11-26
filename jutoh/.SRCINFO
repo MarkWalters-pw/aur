@@ -1,0 +1,19 @@
+pkgbase = jutoh
+	pkgdesc = An ebook creation tool
+	pkgver = 3.16
+	pkgrel = 1
+	url = http://www.jutoh.com
+	arch = x86_64
+	license = custom: Jutoh
+	depends = gtk2
+	depends = libpng
+	depends = libsm
+	depends = desktop-file-utils
+	optdepends = libjpeg6: jpeg support
+	optdepends = java-runtime: epubcheck support
+	source = jutoh.sh
+	sha512sums = 620b4f443129c87dab2a49669d466a2e78979a52a4068e61f2b8f2c318100d2c453261b80250fe78be144c11aa2a41f91a178fb70281ac138727c096e67727fd
+	source_x86_64 = http://www.jutoh.com/Jutoh-3.16-x86_64.tar.gz
+	sha512sums_x86_64 = 9c622ad129d1cdb52f4da1b721d3f336bb90530b867900a1c769cc1390b55759ae8b39e4125315762f1c8453cc30bfe2e92672274baae5825ff5feca2ec55415
+
+pkgname = jutoh

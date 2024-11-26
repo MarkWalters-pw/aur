@@ -1,0 +1,19 @@
+pkgbase = mwic
+	pkgdesc = Misspelled Words In Context
+	pkgver = 0.7.8
+	pkgrel = 1
+	url = https://github.com/jwilk/mwic
+	arch = any
+	license = MIT
+	checkdepends = aspell-en
+	checkdepends = python-nose
+	depends = python-pyenchant
+	depends = python-regex
+	source = https://github.com/jwilk/mwic/releases/download/0.7.8/mwic-0.7.8.tar.gz
+	source = https://github.com/jwilk/mwic/releases/download/0.7.8/mwic-0.7.8.tar.gz.asc
+	validpgpkeys = CDB5A1243ACDB63009AD07212D4EB3A6015475F5
+	sha512sums = 1045d34f18c9da844a31111c19f3a4fc617dd84db2e1566bfb838ec4fe098041d8836703b630e8e7093b48449da3a2cdf93105772e1bee1f3e64a45d76ccaa42
+	sha512sums = SKIP
+
+pkgname = mwic
+

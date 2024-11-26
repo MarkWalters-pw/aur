@@ -1,0 +1,30 @@
+pkgbase = macports-base
+	pkgdesc = The MacPorts command-line client
+	pkgver = 2.5.4
+	pkgrel = 6
+	epoch = 1
+	url = https://www.macports.org/
+	arch = i686
+	arch = x86_64
+	license = BSD
+	makedepends = tcl
+	makedepends = nmtree
+	depends = curl
+	depends = openssl
+	depends = sqlite
+	depends = libreadline.so
+	optdepends = rsync: for syncing sources via rsync
+	optdepends = nmtree: for building ports
+	backup = opt/local/etc/macports/archive_sites.conf
+	backup = opt/local/etc/macports/macports.conf
+	backup = opt/local/etc/macports/pubkeys.conf
+	backup = opt/local/etc/macports/sources.conf
+	backup = opt/local/etc/macports/variants.conf
+	source = https://github.com/macports/macports-base/releases/download/v2.5.4/MacPorts-2.5.4.tar.bz2
+	source = https://github.com/macports/macports-base/releases/download/v2.5.4/MacPorts-2.5.4.tar.bz2.asc
+	validpgpkeys = C403793657236DCF2E580C0201FF673FB4AAE6CD
+	sha256sums = 0276c6cf9a9adbb65743ffcfbb3b0c3425ae22431d58c77e353d35c89e898e8b
+	sha256sums = SKIP
+
+pkgname = macports-base
+

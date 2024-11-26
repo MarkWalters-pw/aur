@@ -1,0 +1,37 @@
+pkgbase = smuxi-git
+	pkgdesc = free, distributed and user-friendly IRC / Twitter / XMPP / Campfire / JabbR client for GNOME/GTK+
+	pkgver = 1.2.1.r0.g6692e128
+	pkgrel = 1
+	url = https://www.smuxi.im/
+	arch = any
+	license = GPL
+	makedepends = intltool
+	makedepends = git
+	makedepends = notify-sharp
+	makedepends = log4net
+	makedepends = nini
+	makedepends = gtkspell
+	makedepends = stfl
+	makedepends = sqlite
+	source = git+https://gitlab.gnome.org/GNOME/smuxi.git
+	md5sums = SKIP
+
+pkgname = smuxi-server-git
+	pkgdesc = free, distributed and user-friendly IRC / Twitter / XMPP / Campfire / JabbR client for GNOME/GTK+ (common files and server)
+	depends = log4net
+	depends = nini
+	optdepends = sqlite: alternative for persistent message storing
+	provides = smuxi-server=1.1
+	conflicts = smuxi-server
+
+pkgname = smuxi-git
+	pkgdesc = free, distributed and user-friendly IRC / Twitter / XMPP / Campfire / JabbR client for GNOME/GTK+ (frontends)
+	depends = smuxi-server
+	depends = notify-sharp
+	depends = gtkspell
+	depends = stfl
+	depends = desktop-file-utils
+	depends = gtk-update-icon-cache
+	depends = xdg-utils
+	provides = smuxi=1.1
+	conflicts = smuxi

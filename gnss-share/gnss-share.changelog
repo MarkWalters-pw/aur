@@ -1,0 +1,62 @@
+## 0.7.2
+
+* `Fixes`
+        - stm: perform a safe shutdown when closing device
+
+## 0.7.1
+
+* `Fixes`
+        - Set socket permissions to allow group write access
+
+## 0.7
+
+* `Features`
+        - Initial support for writing to the underlying device through
+          the gnss-share socket
+
+* `Fixes`
+        - Issue with not all NMEA messages coming through from STM modules (issue #14)
+        - Reduced memory and CPU usage
+        - Eliminated some race-y behavior
+        - gosec 1.15.0 compliance
+
+* `Other`
+        - Removed stmctl utility: no longer necessary with the ability
+          to proxy writes to the device from the socket
+        - New dependency on Go module: "github.com/google/uuid"
+
+## 0.6
+
+* `Features`
+        - Add manpages for `gnss-share` and `gnss-share.conf`
+        - Internal improvements to facilitate adding more device drivers later
+
+## 0.5
+
+* `Features`
+        - Module time is set to system time on startup if it is incorrect
+        - `stmctl`: add -debug flag for debug output
+        - `gnss-share`: add -d flag for debug output
+        - `gnss-share`: print number of remaining clients when one disconnects
+
+* `Fixes`
+        - `gnss-share`: resolve several situations that can lead to deadlocks/hanging in the app
+        - `gnss-share`: Errors from the driver are now printed to console
+        - `gnss-share`: timeout and disconnect if socket client isn't receiving
+        - `stm`: fix reading lines from almanac/ephemeris txt files
+        - `stm`: handle "stuck" module by sending resume command when opening
+
+* `Other`
+        - Added a makefile to facilitate building, installing, testing
+        
+## 0.4
+
+* `Features`
+	- complete re-write in Go
+	- Eliminated extraneous CPU usage when idle
+	- Added tool `stmctl` for manipulating GPS module config, restoring defaults
+
+* `Breaking changes`
+	- Meson build system replaced with Go
+	- project and binary renamed to "gnss-share" (from "gnss_share")
+	- Some cmdline options were dropped from 0.3, see `-h`

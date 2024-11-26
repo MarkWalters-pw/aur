@@ -1,0 +1,16 @@
+pkgbase = llvm-mingw-w64-configure
+	pkgdesc = configure wrapper for MinGW (mingw-w64) (i686, x86_64, armv7, and aarch64)
+	pkgver = 0.1.1
+	pkgrel = 11
+	url = http://fedoraproject.org/wiki/MinGW
+	arch = any
+	license = GPL
+	depends = llvm-mingw-w64-toolchain
+	depends = llvm-mingw-w64-pkg-config
+	depends = llvm-mingw-w64-environment
+	provides = mingw-w64-configure
+	conflicts = mingw-w64-configure
+	source = mingw-configure.sh
+	md5sums = SKIP
+
+pkgname = llvm-mingw-w64-configure

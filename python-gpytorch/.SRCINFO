@@ -1,0 +1,30 @@
+pkgbase = python-gpytorch
+	pkgdesc = A highly efficient and modular implementation of GPs, with GPU acceleration. Implemented in PyTorch.
+	pkgver = 1.11
+	pkgrel = 1
+	url = https://gpytorch.ai
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = python
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = python-setuptools
+	makedepends = python-setuptools-scm
+	depends = python
+	depends = python-scikit-learn
+	depends = python-linear-operator
+	depends = python-pytorch
+	optdepends = ipython: for [examples] module
+	optdepends = jupyter: for [examples] module
+	optdepends = python-matplotlib: for [examples] module
+	optdepends = python-scipy: for [examples] module
+	optdepends = python-torchvision: for [examples] module
+	optdepends = python-tqdm: for [examples] module
+	optdepends = python-pyro-ppl: for [pyro] module
+	optdepends = python-pykeops: for [keops] module
+	source = python-gpytorch-1.11::git+https://github.com/cornellius-gp/gpytorch.git#tag=v1.11
+	sha256sums = SKIP
+
+pkgname = python-gpytorch

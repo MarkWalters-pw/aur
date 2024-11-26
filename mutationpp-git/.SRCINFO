@@ -1,0 +1,23 @@
+pkgbase = mutationpp-git
+	pkgdesc = MUlticomponent Thermodynamic And Transport properties for partially IONized gases in C++
+	pkgver = r643.b100af0
+	pkgrel = 1
+	url = https://sync.vki.ac.be/mpp/mutationpp
+	arch = i686
+	arch = x86_64
+	license = LGPL3
+	makedepends = git
+	makedepends = gcc
+	makedepends = cmake
+	makedepends = gcc-fortran
+	depends = eigen3
+	depends = gcc-libs
+	provides = mutationpp
+	provides = mutation++
+	source = mutationpp::git+https://sync.vki.ac.be/mpp/mutationpp.git
+	source = 0001-Fix-some-issues-with-CMake.patch
+	sha256sums = SKIP
+	sha256sums = 3471a798bc7a046d3b74c067ede3a953bdaeadae9b37f7a98898a31ff5ea09e2
+
+pkgname = mutationpp-git
+

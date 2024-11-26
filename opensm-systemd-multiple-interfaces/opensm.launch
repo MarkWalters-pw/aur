@@ -1,0 +1,47 @@
+#!/bin/bash
+# Upstream doesn't provide a systemd .service file
+# There is a timing bug that intermittently causes signal 15 failures on start
+# Fedora's workaround is to use a separate script
+# Copied from Fedora's opensm-3.3.17-4.fc22.x86_64.rpm
+# Modified for Arch
+#
+# Launch the necessary OpenSM daemons for systemd
+#
+# Config files: /etc/opensm.conf (created by opensm), and additional /etc/opensm_extra.conf and /etc/opensm/opensm.conf.[0-9]*
+
+shopt -s nullglob
+
+prog=/usr/bin/opensm
+[ -f /etc/opensm_extra.conf ] && . /etc/opensm_extra.conf
+
+[ -n "$PRIORITY" ] && prio="-p $PRIORITY"
+
+if [ -z "$GUIDS" ]; then
+	CONFIGS=""
+	CONFIG_CNT=0
+	for conf in /etc/opensm/opensm.conf.[0-9]*; do
+		CONFIGS="$CONFIGS $conf"
+		let CONFIG_CNT++
+	done
+else
+	GUID_CNT=0
+	for guid in $GUIDS; do
+		let GUID_CNT++
+	done
+fi
+# Start opensm
+if [ -n "$GUIDS" ]; then
+	SUBNET_COUNT=0
+	for guid in $GUIDS; do
+		SUBNET_PREFIX=`printf "0xfe800000000000%02d" $SUBNET_COUNT`
+		(while true; do $prog $prio -g $guid --subnet_prefix $SUBNET_PREFIX; sleep 30; done) &
+		let SUBNET_COUNT++
+	done
+elif [ -n "$CONFIGS" ]; then
+	for config in $CONFIGS; do
+		(while true; do $prog $prio -F $config; sleep 30; done) &
+	done
+else
+	(while true; do $prog $prio; sleep 30; done) &
+fi
+exit 0

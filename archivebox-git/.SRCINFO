@@ -1,0 +1,20 @@
+pkgbase = archivebox-git
+	pkgdesc = Create a local, staticm browsable archive of websites.
+	pkgver = 0.5.4.r330.efebd8e
+	pkgrel = 1
+	url = https://github.com/pirate/ArchiveBox/
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	depends = python
+	depends = git
+	depends = wget
+	depends = curl
+	depends = youtube-dl
+	depends = chromium
+	provides = archivebox
+	conflicts = archivebox
+	source = archivebox::git+https://github.com/pirate/ArchiveBox/#branch=dev
+	sha256sums = SKIP
+
+pkgname = archivebox-git

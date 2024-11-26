@@ -1,0 +1,25 @@
+pkgbase = lv2lint-git
+	pkgdesc = Check whether a given LV2 plugin is up to the specification (git version)
+	pkgver = 0.16.2.r44.g5f72b03
+	pkgrel = 1
+	url = https://git.open-music-kontrollers.ch/~hp/lv2lint
+	arch = x86_64
+	license = Artistic2.0
+	checkdepends = reuse
+	makedepends = curl
+	makedepends = git
+	makedepends = lilv
+	makedepends = lv2
+	makedepends = meson
+	depends = glibc
+	depends = libelf
+	provides = lv2lint
+	conflicts = lv2lint
+	source = lv2lint::git+https://git.open-music-kontrollers.ch/~hp/lv2lint
+	md5sums = SKIP
+
+pkgname = lv2lint-git
+	depends = glibc
+	depends = libelf
+	depends = libcurl.so
+	depends = liblilv-0.so

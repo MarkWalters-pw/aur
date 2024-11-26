@@ -1,0 +1,18 @@
+pkgbase = luky-borg-backup
+	pkgdesc = Automated backup scripts using Borg Backup, systemd and optionally Nextcloud/ownCloud/Stack
+	pkgver = 1.0.3
+	pkgrel = 2
+	url = https://github.com/AlexMekkering/luky-borg-backup
+	arch = any
+	license = MIT
+	depends = borg
+	optdepends = owncloud-client: For backing up to Nextcloud/ownCloud/Stack
+	optdepends = systemd-unit-status-mail: For mailing the backup unit's status
+	optdepends = sudo: For sending notifications to users
+	optdepends = libnotify: For sending notifications to users
+	backup = etc/luky-borg-backup.conf
+	source = https://github.com/AlexMekkering/luky-borg-backup/archive/v1.0.3.tar.gz
+	sha256sums = efda174c8e4832d6b2af7cea0534094a322848d35f2ababf6883ac3fbd851e99
+
+pkgname = luky-borg-backup
+

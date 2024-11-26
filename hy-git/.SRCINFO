@@ -1,0 +1,19 @@
+pkgbase = hy-git
+	pkgdesc = A dialect of Lisp that's embedded in Python
+	pkgver = 0.27.0.r23.g2d6d5f9c
+	pkgrel = 1
+	url = http://hylang.org/
+	arch = any
+	license = MIT
+	makedepends = python-setuptools
+	makedepends = python-build
+	makedepends = python-wheel
+	makedepends = python-installer
+	depends = python-funcparserlib
+	provides = hy
+	conflicts = hy
+	options = !emptydirs
+	source = git+https://github.com/hylang/hy.git
+	md5sums = SKIP
+
+pkgname = hy-git

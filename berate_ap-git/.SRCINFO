@@ -1,0 +1,19 @@
+pkgbase = berate_ap-git
+	pkgdesc = A shell script to create a NATed/Bridged Software Access Point
+	pkgver = r324.0b85d05
+	pkgrel = 1
+	url = https://github.com/sensepost/berate_ap
+	arch = any
+	license = BSD
+	makedepends = git
+	depends = hostapd-mana-git
+	depends = iw
+	depends = dnsmasq
+	depends = iptables
+	optdepends = haveged: boost low entropy
+	provides = berate_ap
+	backup = usr/lib/systemd/system/berate_ap.service
+	source = berate_ap-git::git+https://github.com/sensepost/berate_ap.git
+	sha256sums = SKIP
+
+pkgname = berate_ap-git

@@ -1,0 +1,31 @@
+pkgbase = rsync-git
+	pkgdesc = A fast and versatile file copying tool for remote and local files - git checkout
+	pkgver = 3.2.3.r47.gec1d5d56
+	pkgrel = 1
+	url = https://rsync.samba.org/
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = python-commonmark
+	depends = acl
+	depends = libacl.so
+	depends = lz4
+	depends = openssl
+	depends = perl
+	depends = popt
+	depends = xxhash
+	depends = libxxhash.so
+	depends = zlib
+	depends = zstd
+	provides = rsync
+	conflicts = rsync
+	backup = etc/rsyncd.conf
+	backup = etc/xinetd.d/rsync
+	source = git+https://github.com/WayneD/rsync
+	source = rsyncd.conf
+	sha256sums = SKIP
+	sha256sums = 733ccb571721433c3a6262c58b658253ca6553bec79c2bdd0011810bb4f2156b
+
+pkgname = rsync-git
+

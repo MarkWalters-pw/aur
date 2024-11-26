@@ -1,0 +1,7 @@
+post_install() {
+  echo "Make sure to add /usr/lib/libwlclipblock.so to /etc/ld.so.preload (or use LD_PRELOAD)"
+}
+
+post_upgrade() {
+  post_install
+}

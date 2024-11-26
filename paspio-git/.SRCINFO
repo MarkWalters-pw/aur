@@ -1,0 +1,16 @@
+pkgbase = paspio-git
+	pkgdesc = A password entropy calculator and library.
+	pkgver = 1.0.0.f24017c
+	pkgrel = 1
+	url = https://git.sr.ht/~grtcdr/paspio
+	arch = x86_64
+	license = MIT
+	makedepends = rust
+	makedepends = cargo
+	makedepends = git
+	depends = gcc-libs
+	depends = glibc
+	source = paspio-git::git+https://git.sr.ht/~grtcdr/paspio
+	md5sums = SKIP
+
+pkgname = paspio-git

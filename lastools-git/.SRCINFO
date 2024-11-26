@@ -1,0 +1,19 @@
+pkgbase = lastools-git
+	pkgdesc = Efficient tools for LiDAR processing. Contains LASlib, a C++ programming API for reading / writing LIDAR data stored in standard LAS format
+	pkgver = 2.0.3.r95.g11ae4c9
+	pkgrel = 1
+	url = https://lastools.org/
+	arch = i686
+	arch = x86_64
+	license = LGPL
+	makedepends = git
+	makedepends = cmake
+	depends = gcc-libs
+	provides = laslib
+	provides = lastools
+	conflicts = laslib
+	conflicts = lastools
+	source = git+https://github.com/LAStools/LAStools.git
+	sha256sums = SKIP
+
+pkgname = lastools-git

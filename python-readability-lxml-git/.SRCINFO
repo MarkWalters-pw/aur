@@ -1,0 +1,20 @@
+pkgbase = python-readability-lxml-git
+	pkgdesc = A python port of a ruby port of arc90 readability project
+	pkgver = v0.8.1.r4.gf166003
+	pkgrel = 1
+	url = https://pypi.org/project/readability-lxml/
+	arch = any
+	license = custom:Apache
+	depends = python
+	depends = python-chardet
+	depends = python-cssselect
+	depends = python-lxml
+	provides = python-readability-lxml
+	conflicts = python-readability-lxml
+	source = readability::git+https://github.com/buriy/python-readability
+	source = LICENSE
+	sha256sums = SKIP
+	sha256sums = 1f2afa61a3e7d62e5cf62b471c60c40853effc3428289f5961c84e24cf60447a
+
+pkgname = python-readability-lxml-git
+

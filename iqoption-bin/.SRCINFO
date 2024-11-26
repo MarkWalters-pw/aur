@@ -1,0 +1,20 @@
+pkgbase = iqoption-bin
+	pkgdesc = Ultimate trading experience
+	pkgver = 1247.3.5090
+	pkgrel = 1
+	url = https://iqoption.com
+	arch = x86_64
+	license = custom:iqoption
+	makedepends = binutils
+	makedepends = tar
+	makedepends = sed
+	depends = sdl2
+	depends = sdl2_image
+	depends = sdl2_mixer
+	depends = mesa
+	depends = libnotify
+	source = iqoption.deb::https://updates.iqoption.com/api/v1/build/current/pkg/LinuxGL
+	sha256sums = SKIP
+
+pkgname = iqoption-bin
+

@@ -1,0 +1,30 @@
+#!/bin/sh
+
+post_upgrade() {
+  # We used to package /boot/grub/grub.cfg, but there is no reason to.
+  # Remove the file from package, but move real file back in place.
+  if [ ! -f /boot/grub/grub.cfg -a -f /boot/grub/grub.cfg.pacsave ]; then
+    mv /boot/grub/grub.cfg.pacsave /boot/grub/grub.cfg
+  fi
+}
+
+post_install() {
+  cat << 'EOM'
+Generate your dom0 bootloader configuration with:
+  grub-mkconfig -o /boot/grub/grub.cfg
+
+Generate a simple pvgrub2 image with:
+  cat > grub.cfg <<EOF
+    search -s root -f /boot/grub/grub.cfg
+    configfile /boot/grub/grub.cfg
+  EOF
+
+  grub-mkstandalone -O x86_64-xen -o /usr/lib/xen/boot/pvgrub2-x86_64-xen grub.cfg
+
+and set the generated image as the value for the kernel in the domU config
+file. For i386-xen and i386-xen_pvh images, substitute the desired platform
+for 'x86_64' in the command above. See https://wiki.xen.org/wiki/PvGrub2 for
+more possibilities.
+EOM
+}
+

@@ -1,0 +1,22 @@
+# Maintainer: Zhuoyun Wei <wzyboy@wzyboy.org>
+
+pkgname=beancount
+pkgdesc='Double-Entry Accounting from Text Files'
+pkgver=2.3.6
+pkgrel=1
+arch=('i686' 'x86_64' 'armv7h')
+url="http://furius.ca/beancount/"
+license=('GPL')
+source=("https://files.pythonhosted.org/packages/source/${pkgname::1}/${pkgname}/${pkgname}-${pkgver}.tar.gz")
+sha256sums=('801f93bed6b57d2e22436688c489d5a1bf1f76e210f3ced18680757e60d3475a')
+depends=('python>=3.6' 'mpdecimal' 'python-dateutil' 'python-ply'
+         'python-bottle' 'python-lxml' 'python-magic' 'python-beautifulsoup4'
+         'python-chardet' 'python-google-api-python-client' 'python-requests'
+         'python-pytest')
+makedepends=('python-setuptools')
+conflicts=('beancount-hg')
+
+package () {
+  cd "${pkgname}-${pkgver}"
+  python setup.py install --prefix=/usr --root="${pkgdir}"
+}

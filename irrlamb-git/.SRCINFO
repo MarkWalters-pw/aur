@@ -1,0 +1,23 @@
+pkgbase = irrlamb-git
+	pkgdesc = A 3D game that probably involves a lot of physics and frustrating gameplay.
+	pkgver = r652
+	pkgrel = 1
+	url = https://irrlamb.gitlab.io
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = cmake
+	depends = gcc-libs
+	depends = freetype2
+	depends = sqlite
+	depends = openal
+	depends = libvorbis
+	depends = libogg
+	depends = libjpeg-turbo
+	depends = libpng
+	depends = zlib
+	conflicts = irrlamb
+	source = irrlamb-git::git+https://gitlab.com/irrlamb/code.git
+	sha256sums = SKIP
+
+pkgname = irrlamb-git

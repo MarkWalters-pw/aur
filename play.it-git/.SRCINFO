@@ -1,0 +1,27 @@
+pkgbase = play.it-git
+	pkgver = 2.22.2.r0.gc95b1519
+	pkgrel = 1
+	url = https://wiki.dotslashplay.it
+	arch = any
+	license = BSD
+	source = git+https://forge.dotslashplay.it/play.it/scripts.git
+	source = git+https://forge.dotslashplay.it/play.it/games.git
+	sha1sums = SKIP
+	sha1sums = SKIP
+
+pkgname = play.it-git
+	pkgdesc = Easy way to install games on Linux - git version
+	depends = bash
+	optdepends = imagemagick: to convert images between formats
+	optdepends = libarchive: to extract various archive formats
+	optdepends = icoutils: to manipulate Windows icon files
+	optdepends = innoextract: to extract some Windows installers
+	optdepends = unzip: to extract some archives
+	provides = play.it
+	conflicts = play.it
+
+pkgname = play.it-games-git
+	pkgdesc = Easy way to install games on Linux, game scripts - git version
+	depends = play.it-git
+	provides = play.it-games
+	conflicts = play.it-games

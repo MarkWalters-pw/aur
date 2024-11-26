@@ -1,0 +1,13 @@
+pkgbase = xmss
+	pkgdesc = eXtended Merkle Signature Scheme reference code (RFC 8391)
+	pkgver = r136.171ccbd
+	pkgrel = 2
+	url = https://github.com/XMSS/xmss-reference
+	arch = x86_64
+	license = Unlicense
+	makedepends = git
+	depends = openssl
+	source = xmss-reference::git+https://github.com/XMSS/xmss-reference#commit=171ccbd26f098542a67eb5d2b128281c80bd71a6
+	b2sums = 1f9c0cc684bcf2ad1a7ef3e43cf8239d09b3e39065ead002b8440c382a43f80d99379fb576bbbebc82859afce262591a5b022eb342bc00acec7bc2c8b406ef6b
+
+pkgname = xmss

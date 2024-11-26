@@ -1,0 +1,17 @@
+pkgbase = cano-git
+	pkgdesc = Terminal-based modal text editor
+	pkgver = r311.af4a963
+	pkgrel = 1
+	url = https://github.com/CobbCoding1/cano
+	arch = x86_64
+	license = APACHE
+	makedepends = git
+	makedepends = make
+	makedepends = gcc
+	depends = ncurses
+	depends = glibc
+	conflicts = cano
+	source = cano::git+https://github.com/CobbCoding1/cano.git
+	md5sums = SKIP
+
+pkgname = cano-git

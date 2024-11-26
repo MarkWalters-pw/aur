@@ -1,0 +1,15 @@
+pkgbase = wsk-git
+	pkgdesc = Apache OpenWhisk Command Line Interface (CLI) https://openwhisk.apache.org/
+	pkgver = 1.0.0
+	pkgrel = 1
+	url = https://github.com/apache/incubator-openwhisk-cli
+	arch = i686
+	arch = x86_64
+	license = Apache
+	conflicts = wsk-git
+	replaces = wsk-git
+	source = wsk-git-src.tar.gz::https://github.com/apache/openwhisk-cli/releases/download/1.0.0/OpenWhisk_CLI-1.0.0-linux-386.tgz
+	md5sums = SKIP
+
+pkgname = wsk-git
+

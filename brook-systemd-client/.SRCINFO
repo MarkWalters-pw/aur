@@ -1,0 +1,36 @@
+pkgbase = brook-systemd-client
+	pkgdesc = Install brook(client) with client systemd
+	pkgver = v20190205
+	pkgrel = 1
+	url = https://github.com/txthinking/brook
+	arch = x86_64
+	arch = i686
+	arch = arm
+	arch = armv6h
+	arch = armv7h
+	arch = aarch64
+	license = GPL
+	depends = systemd
+	noextract = brook
+	noextract = brook-client.service,
+	noextract = client-config.sh
+	backup = etc/brook/client-config.sh
+	source = brook-client.service
+	source = client-config.sh
+	md5sums = 65e83334eccd0e702ce54d3f08c738e3
+	md5sums = 6e64f843a57d009d5d888ee970208153
+	source_x86_64 = brook_linux_amd64::https://github.com/txthinking/brook/releases/download/v20190205/brook
+	md5sums_x86_64 = c0999724f679120c029a5c55d8db240f
+	source_i686 = https://github.com/txthinking/brook/releases/download/v20190205/brook_linux_386
+	md5sums_i686 = 56df060f40a1775e03fbd59f7c3d38bb
+	source_arm = https://github.com/txthinking/brook/releases/download/v20190205/brook_linux_arm5
+	md5sums_arm = 2f78ca0448402da780cc8364aa74c931
+	source_armv6h = https://github.com/txthinking/brook/releases/download/v20190205/brook_linux_arm6
+	md5sums_armv6h = 44ab2eb253199afe8100e63ec3c61a7e
+	source_armv7h = https://github.com/txthinking/brook/releases/download/v20190205/brook_linux_arm7
+	md5sums_armv7h = 8ce9f09074134c5f34372011392c3875
+	source_aarch64 = https://github.com/txthinking/brook/releases/download/v20190205/brook_linux_arm64
+	md5sums_aarch64 = 42c30651462c9d57cdebf719047f57ad
+
+pkgname = brook-systemd-client
+

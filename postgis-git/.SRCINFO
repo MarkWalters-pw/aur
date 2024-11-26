@@ -1,0 +1,26 @@
+pkgbase = postgis-git
+	pkgdesc = Postgres GIS extensions (from git)
+	pkgver = 3.1.0rc1.r48.g5148c43e3
+	pkgrel = 1
+	url = https://postgis.net/
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = clang
+	makedepends = git
+	makedepends = llvm
+	depends = postgresql
+	depends = protobuf-c
+	depends = gdal
+	depends = geos
+	depends = json-c
+	depends = libxml2
+	depends = libxslt
+	provides = postgis
+	conflicts = postgis
+	replaces = postgis-svn
+	source = postgis-git::git+https://git.osgeo.org/gitea/postgis/postgis.git
+	md5sums = SKIP
+
+pkgname = postgis-git
+

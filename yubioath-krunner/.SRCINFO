@@ -1,0 +1,23 @@
+pkgbase = yubioath-krunner
+	pkgdesc = Displays your YubiKey OATH credentials in krunner when you search for them.
+	pkgver = 2.0.0
+	pkgrel = 1
+	url = https://github.com/odensc/yubioath-krunner
+	install = yubioath-krunner.install
+	arch = any
+	license = LGPL
+	depends = python
+	depends = python-configargparse
+	depends = python-dbus
+	depends = python-fuzzywuzzy
+	depends = python-levenshtein
+	depends = python-gobject
+	depends = libnotify
+	depends = yubikey-manager
+	depends = xclip
+	depends = xdotool
+	source = https://github.com/odensc/yubioath-krunner/archive/v2.0.0.tar.gz
+	md5sums = 02d2fa1bc52dfa6eb62ef8af983fd6e7
+
+pkgname = yubioath-krunner
+

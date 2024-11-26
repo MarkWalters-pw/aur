@@ -1,0 +1,18 @@
+pkgbase = raul-git
+	pkgdesc = Realtime Audio Utility Library for audio and musical applications (git version)
+	pkgver = 2.0.1.r684.3e37783
+	pkgrel = 2
+	epoch = 1
+	url = https://drobilla.net/software/raul.html
+	arch = any
+	license = GPL3
+	makedepends = git
+	makedepends = meson
+	depends = gcc-libs
+	provides = raul
+	provides = raul=2.0.1
+	conflicts = raul
+	source = raul::git+https://gitlab.com/drobilla/raul.git
+	sha256sums = SKIP
+
+pkgname = raul-git

@@ -1,0 +1,21 @@
+pkgbase = escrotum-git
+	pkgdesc = Screen capture using pygtk, inspired by scrot
+	pkgver = 0.2.1.r46.27dfa4e
+	pkgrel = 1
+	url = https://github.com/Roger/escrotum
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python
+	depends = python-cairo
+	depends = python-gobject
+	depends = python-xcffib
+	optdepends = python-numpy: fast image generation
+	optdepends = ffmpeg: screen recording
+	provides = escrotum
+	source = git+https://github.com/Roger/escrotum.git
+	md5sums = SKIP
+
+pkgname = escrotum-git
+

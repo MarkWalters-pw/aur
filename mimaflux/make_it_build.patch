@@ -1,0 +1,27 @@
+--- a/build.gradle
++++ b/build.gradle
+@@ -4,7 +4,6 @@ plugins {
+     id 'antlr'
+     id "com.github.johnrengelman.shadow" version "7.1.2"
+     id 'com.github.hierynomus.license' version '0.16.1'
+-    id "org.ajoberstar.grgit" version "1.7.2"
+ }
+ 
+ group 'edu.kit.kastel.formal'
+@@ -15,7 +14,7 @@ task versionFile()  {
+     outputs.dir resourcesDir
+     doFirst {
+         resourcesDir.mkdirs()
+-        new File(resourcesDir, "VERSION").text = "$version (${grgit.head().abbreviatedId})"
++        new File(resourcesDir, "VERSION").text = "$version"
+         print( "$resourcesDir/VERSION created.")
+     }
+ }
+@@ -36,7 +35,7 @@ jar {
+ 
+ java {
+     toolchain {
+-        languageVersion = JavaLanguageVersion.of(16)
++        languageVersion = JavaLanguageVersion.of(17)
+     }
+ }

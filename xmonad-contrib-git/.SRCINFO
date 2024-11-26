@@ -1,0 +1,23 @@
+pkgbase = xmonad-contrib-git
+	pkgdesc = Add-ons for xmonad
+	pkgver = v0.17.0.r89.g41ca7998
+	pkgrel = 1
+	url = http://xmonad.org/
+	arch = x86_64
+	license = BSD
+	makedepends = git
+	depends = ghc
+	depends = xmonad-git
+	depends = sh
+	depends = haskell-x11>=1.10
+	depends = haskell-x11<1.11
+	depends = haskell-x11-xft>=0.2
+	depends = haskell-utf8-string
+	depends = haskell-random
+	depends = haskell-old-time
+	provides = xmonad-contrib
+	conflicts = xmonad-contrib
+	source = git+https://github.com/xmonad/xmonad-contrib
+	md5sums = SKIP
+
+pkgname = xmonad-contrib-git

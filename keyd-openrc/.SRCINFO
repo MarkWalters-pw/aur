@@ -1,0 +1,21 @@
+pkgbase = keyd-openrc
+	pkgdesc = A key remapping daemon for linux
+	pkgver = 2.4.3.r63.02c77af
+	pkgrel = 1
+	url = https://github.com/rvaiya/keyd
+	arch = x86_64
+	arch = aarch64
+	license = MIT
+	makedepends = git
+	depends = openrc
+	optdepends = python3: for keyd-application-mapper
+	provides = keyd
+	conflicts = keyd
+	source = git+https://github.com/rvaiya/keyd.git
+	source = tweaks.patch
+	source = keyd.init
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = keyd-openrc

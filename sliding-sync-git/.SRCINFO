@@ -1,0 +1,22 @@
+pkgbase = sliding-sync-git
+	pkgdesc = Run a sliding sync proxy. An implementation of MSC3575.
+	pkgver = 0.99.15.r17.g8750e1c4
+	pkgrel = 1
+	url = https://github.com/matrix-org/sliding-sync
+	install = sliding-sync-git.install
+	arch = x86_64
+	license = Apache
+	makedepends = go
+	makedepends = git
+	depends = postgresql>13
+	provides = sliding-sync
+	provides = matrix-sliding-sync
+	conflicts = sliding-sync
+	conflicts = matrix-sliding-sync
+	backup = etc/default/sliding-sync
+	source = git+https://github.com/matrix-org/sliding-sync.git
+	source = sliding-sync-git.service
+	sha256sums = SKIP
+	sha256sums = 732a62fa9edd235022a8fc9ede32d7c4a0fb5235a9e49097f3a9df46cacca289
+
+pkgname = sliding-sync-git

@@ -1,0 +1,36 @@
+pkgbase = ros-noetic-kinect2-bridge
+	pkgdesc = libfreenect2 binding for ROS.
+	pkgver = 0.0.1
+	pkgrel = 2
+	url = https://github.com/code-iai/iai_kinect2
+	arch = any
+	license = apache
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = libfreenect2
+	makedepends = ros-noetic-roscpp
+	makedepends = ros-noetic-rostime
+	makedepends = ros-noetic-tf
+	makedepends = ros-noetic-std-msgs
+	makedepends = ros-noetic-sensor-msgs
+	makedepends = ros-noetic-message-filters
+	makedepends = ros-noetic-compressed-depth-image-transport
+	makedepends = ros-noetic-kinect2-registration
+	makedepends = ros-noetic-nodelet
+	depends = ros-noetic-roscpp
+	depends = ros-noetic-rostime
+	depends = ros-noetic-tf
+	depends = ros-noetic-std-msgs
+	depends = ros-noetic-sensor-msgs
+	depends = ros-noetic-message-filters
+	depends = ros-noetic-compressed-depth-image-transport
+	depends = ros-noetic-kinect2-registration
+	depends = ros-noetic-nodelet
+	depends = ros-noetic-depth-image-proc
+	depends = libfreenect2
+	source = ros-noetic-kinect2-bridge::git+https://github.com/code-iai/iai_kinect2.git
+	source = patch.patch
+	sha256sums = SKIP
+
+pkgname = ros-noetic-kinect2-bridge
+

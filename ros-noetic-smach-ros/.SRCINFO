@@ -1,0 +1,23 @@
+pkgbase = ros-noetic-smach-ros
+	pkgdesc = ROS - The smach_ros package contains extensions for the SMACH library to integrate it tightly with ROS.
+	pkgver = 2.5.1
+	pkgrel = 1
+	url = https://wiki.ros.org/smach_ros
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-catkin
+	makedepends = ros-noetic-rostest
+	depends = ros-noetic-std-srvs
+	depends = ros-noetic-smach-msgs
+	depends = ros-noetic-std-msgs
+	depends = ros-noetic-rostopic
+	depends = ros-noetic-actionlib
+	depends = ros-noetic-actionlib-msgs
+	depends = ros-noetic-smach
+	depends = ros-noetic-rospy
+	source = ros-noetic-smach-ros-2.5.1.tar.gz::https://github.com/ros/executive_smach/archive/2.5.1.tar.gz
+	sha256sums = e0fa3efcac6eed2b6dbe45f376c6b8e9a1080c2d84a116c1591ec60fbb8e0065
+
+pkgname = ros-noetic-smach-ros

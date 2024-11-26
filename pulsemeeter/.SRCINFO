@@ -1,0 +1,27 @@
+pkgbase = pulsemeeter
+	pkgdesc = A pulseaudio audio routing application
+	pkgver = 1.2.14
+	pkgrel = 1
+	url = https://github.com/theRealCarneiro/pulsemeeter
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = python-setuptools
+	depends = gtk3
+	depends = libappindicator-gtk3
+	depends = python
+	depends = python-gobject
+	depends = python-appdirs
+	depends = python-pulsectl
+	depends = pulse-vumeter-git
+	depends = noise-suppression-for-voice
+	depends = swh-plugins
+	optdepends = glade: customize interface
+	optdepends = pulseaudio
+	optdepends = pipewire-pulse
+	provides = pulsemeeter
+	source = https://github.com/theRealCarneiro/pulsemeeter/archive/refs/tags/v1.2.14.tar.gz
+	md5sums = 12453797344223ed23344bd9c02c9f74
+
+pkgname = pulsemeeter

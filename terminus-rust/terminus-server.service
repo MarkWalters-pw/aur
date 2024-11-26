@@ -1,0 +1,12 @@
+[Unit]
+Description=Terminus server.
+After=network.target
+
+[Service]
+Type=exec
+Restart=on-abort
+ExecStart=/usr/bin/terminus-server
+WorkingDirectory=/usr/share/terminus/
+
+[Install]
+WantedBy=network-online.target

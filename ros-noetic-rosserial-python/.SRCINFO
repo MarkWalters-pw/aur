@@ -1,0 +1,19 @@
+pkgbase = ros-noetic-rosserial-python
+	pkgdesc = ROS - A Python-based implementation of the rosserial protocol.
+	pkgver = 0.9.1
+	pkgrel = 1
+	url = https://wiki.ros.org/rosserial_python
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-catkin
+	depends = python-pyserial
+	depends = ros-noetic-rospy
+	depends = ros-noetic-rosserial-msgs
+	depends = ros-noetic-diagnostic-msgs
+	source = ros-noetic-rosserial-python-0.9.1.tar.gz::https://github.com/ros-drivers/rosserial/archive/0.9.1.tar.gz
+	sha256sums = 0e4dbb4d6e456c354ee04f552cc36b43d053dc3f5a8bbfccff7f8adf3ae48534
+
+pkgname = ros-noetic-rosserial-python
+

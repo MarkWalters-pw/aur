@@ -1,0 +1,16 @@
+pkgbase = unity-editor-lts-webgl
+	pkgdesc = Allows building your Unity projects for the WebGL platform
+	pkgver = 2018.4.15f1
+	pkgrel = 1
+	url = https://unity3d.com/
+	arch = x86_64
+	license = custom
+	depends = unity-editor-lts
+	depends = ffmpeg
+	depends = gzip
+	options = !strip
+	source = 2018.4.15f1.4.15f1.tar.xz::https://download.unity3d.com/download_unity/13f5a1bf9ca1/LinuxEditorTargetInstaller/UnitySetup-WebGL-Support-for-Editor-2018.4.15f1.tar.xz
+	md5sums = 0c5a858ae4558bb73b8a8cffaf0c8322
+
+pkgname = unity-editor-lts-webgl
+

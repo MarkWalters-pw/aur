@@ -1,0 +1,20 @@
+pkgbase = pyg3t-git
+	pkgdesc = Python GetText Translation Toolkit
+	pkgver = 0.5.1.r401.3939d89
+	pkgrel = 1
+	url = https://gitlab.com/pyg3t/pyg3t
+	arch = any
+	license = GPL-3.0-or-later
+	checkdepends = python-pytest
+	makedepends = git
+	makedepends = python-setuptools
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = python
+	provides = pyg3t
+	conflicts = pyg3t
+	source = git+https://gitlab.com/pyg3t/pyg3t.git
+	md5sums = SKIP
+
+pkgname = pyg3t-git

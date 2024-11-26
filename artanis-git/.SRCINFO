@@ -1,0 +1,17 @@
+pkgbase = artanis-git
+	pkgdesc = A fast monolithic web-framework of Scheme
+	pkgver = 0.5.1.r3.g6528821
+	pkgrel = 4
+	url = https://gitlab.com/hardenedlinux/artanis
+	arch = x86_64
+	license = LGPL
+	makedepends = git
+	makedepends = texlive-core
+	depends = guile
+	provides = artanis
+	conflicts = artanis
+	options = !strip
+	source = git+https://gitlab.com/hardenedlinux/artanis.git#commit=6528821de90a93d140c2c8fd50a3b5e88fd7b4aa
+	sha256sums = SKIP
+
+pkgname = artanis-git

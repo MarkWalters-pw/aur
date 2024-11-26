@@ -1,0 +1,14 @@
+pkgbase = vim-session
+	pkgdesc = Extended session management for Vim (:mksession on steroids)
+	pkgver = 2.13.1
+	pkgrel = 3
+	url = https://github.com/xolox/vim-session
+	arch = any
+	license = MIT
+	depends = vim-misc-xolox
+	source = https://github.com/xolox/vim-session/archive/refs/tags/2.13.1.tar.gz
+	source = https://patch-diff.githubusercontent.com/raw/xolox/vim-session/pull/155.patch
+	sha256sums = 827dc571b22d8f6bce4da6a939950164a915894781444920cda07dd5113df29c
+	sha256sums = eaf6a9775262f2cd259a1e64cc5ae01efd67570bf0c5a1b48ed9d1651382a2cf
+
+pkgname = vim-session

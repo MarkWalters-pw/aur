@@ -1,0 +1,17 @@
+pkgbase = sigen
+	pkgdesc = Tool that generates standalone EFI executables from Linux kernel images
+	pkgver = 1.1.3
+	pkgrel = 1
+	url = https://github.com/gmes78/sigen
+	install = sigen.install
+	arch = x86_64
+	arch = i686
+	license = GPL
+	makedepends = rust
+	depends = binutils
+	depends = systemd
+	optdepends = sbsigntools: signing support
+	source = sigen-1.1.3.tar.gz::https://github.com/gmes78/sigen/archive/v1.1.3.tar.gz
+	sha512sums = 325aacaf66b17b8feec307eef7f4cf14b554a8a0cd9366dd1dd728c727ebf87b6e1b7c66afc97906d87929dd3e95f7462da8fcafca0b7b0958dccabcda7a6ff8
+
+pkgname = sigen

@@ -1,0 +1,22 @@
+pkgbase = cine-encoder
+	pkgdesc = Cine Encoder 2023
+	pkgver = 3.5.5
+	pkgrel = 1
+	url = https://github.com/CineEncoder/cine-encoder.git
+	arch = x86_64
+	license = GPL3
+	depends = gcc
+	depends = qt5-base>=5.15
+	depends = qt5-multimedia>=5.15
+	depends = qt5-svg>=5.15
+	depends = qt5-x11extras>=5.15
+	depends = libmediainfo>=20.03
+	depends = libxext
+	depends = ffmpeg>=4.2
+	depends = mkvtoolnix-cli>=49.0
+	depends = intel-media-driver>=22.2
+	depends = libva-intel-driver>=2.4
+	source = https://github.com/CineEncoder/cine-encoder/archive/3.5.5.tar.gz
+	md5sums = 6128d9389113822c1d5e77aa3db0d6e4
+
+pkgname = cine-encoder

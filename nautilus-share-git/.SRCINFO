@@ -1,0 +1,18 @@
+pkgbase = nautilus-share-git
+	pkgdesc = Nautilus extension to share folder using new version Samba
+	pkgver = r240.58323684
+	pkgrel = 1
+	url = https://git.gnome.org/browse/nautilus-share
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = intltool
+	depends = nautilus
+	depends = samba
+	conflicts = nautilus-share
+	source = git+https://git.gnome.org/browse/nautilus-share.git
+	source = shares.patch
+	sha256sums = SKIP
+	sha256sums = eae42871a7a1d0a493dadb72f498db9fa530f347e5b801b5d85188be6f3f6794
+
+pkgname = nautilus-share-git

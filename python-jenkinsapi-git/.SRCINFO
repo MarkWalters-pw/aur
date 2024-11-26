@@ -1,0 +1,23 @@
+pkgbase = python-jenkinsapi-git
+	pkgdesc = A Python API for accessing resources on a Jenkins continuous-integration server.
+	pkgver = 0.3.11.r30.g4494278
+	pkgrel = 3
+	url = https://github.com/pycontribs/jenkinsapi
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-flit-core
+	makedepends = python-installer
+	source = jenkinsapi::git+https://github.com/pycontribs/jenkinsapi.git
+	sha256sums = SKIP
+
+pkgname = python-jenkinsapi-git
+	depends = python
+	depends = python-urllib3
+	depends = python-setuptools
+	depends = python-requests
+	depends = python-pytz
+	optdepends = python-requests-kerberos: for Kerberos support
+	provides = python-jenkinsapi
+	conflicts = python-jenkinsapi

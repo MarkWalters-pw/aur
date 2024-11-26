@@ -1,0 +1,35 @@
+pkgbase = powerline-fonts-git
+	pkgdesc = Patched fonts for Powerline users
+	pkgver = r202.e80e3eb
+	pkgrel = 1
+	url = https://github.com/powerline/fonts
+	install = powerline-fonts-git.install
+	arch = any
+	license = CPL
+	makedepends = git
+	depends = fontconfig
+	depends = xorg-mkfontscale
+	provides = powerline-fonts
+	provides = ttf-hack
+	conflicts = powerline-fonts
+	conflicts = otf-droid-sans-mono-powerline-git
+	conflicts = otf-fura-mono-powerline-git
+	conflicts = otf-inconsolata-dz-powerline-git
+	conflicts = otf-inconsolata-g-powerline-git
+	conflicts = otf-inconsolata-powerline-git
+	conflicts = otf-sauce-code-powerline-git
+	conflicts = terminess-powerline-font-git
+	conflicts = ttf-anonymice-powerline-git
+	conflicts = ttf-dejavu-sans-mono-powerline-git
+	conflicts = ttf-droid-sans-mono-dotted-powerline-git
+	conflicts = ttf-droid-sans-mono-slashed-powerline-git
+	conflicts = ttf-hack
+	conflicts = ttf-hack-powerline-git
+	conflicts = ttf-literation-mono-powerline-git
+	conflicts = ttf-monofur-powerline-git
+	conflicts = ttf-ubuntu-mono-derivative-powerline-git
+	source = git+https://github.com/powerline/fonts.git
+	sha1sums = SKIP
+
+pkgname = powerline-fonts-git
+

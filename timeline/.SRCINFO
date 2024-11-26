@@ -1,0 +1,17 @@
+pkgbase = timeline
+	pkgdesc = A plain-text based distributed social network build on top of git configuration manager
+	pkgver = 1.9
+	pkgrel = 1
+	url = https://ajdiaz.me/timeline/
+	arch = any
+	license = GPL3
+	makedepends = pandoc
+	depends = bash
+	depends = git
+	conflicts = timeline-git
+	source = timeline-1.9.tar.gz::https://github.com/ajdiaz/timeline/archive/1.9.tar.gz
+	source = timeline.service
+	b2sums = f492c9dc1da6f07ad8e5b6894bc4a5abbfbb35ee4b479f084f001d6b8bc45c42d2bcced5f0415d239e2b51506f192f5d9df7f6412af458a706d89f255dec7cb0
+	b2sums = 1ea9905ee31a8f722111e7aad4197326f5cbeffa7953c1678432172af1fbd72c8363ea00a94d2c1f3b332a3e85f6eeadd551a05b62ac00c3d42562b333e475f9
+
+pkgname = timeline

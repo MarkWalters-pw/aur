@@ -1,0 +1,24 @@
+pkgbase = yfel-git
+	pkgdesc = Yet another Allwinner FEL Toolkit
+	pkgver = r327.f643e1e
+	pkgrel = 1
+	url = https://github.com/YuzukiTsuru/YFEL
+	arch = x86_64
+	arch = aarch64
+	arch = riscv64
+	license = GPL-3.0-or-later
+	makedepends = cmake
+	makedepends = git
+	makedepends = ninja
+	makedepends = qt6-tools
+	depends = gcc-libs
+	depends = glibc
+	depends = libusb
+	depends = qt6-base
+	optdepends = xfel
+	provides = yfel
+	conflicts = yfel
+	source = yfel-git::git+https://github.com/YuzukiTsuru/YFEL.git
+	sha256sums = SKIP
+
+pkgname = yfel-git

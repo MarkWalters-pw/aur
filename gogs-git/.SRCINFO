@@ -1,0 +1,38 @@
+pkgbase = gogs-git
+	pkgdesc = Self Hosted Git Service in the Go Programming Language. This is the current git version from master branch.
+	pkgver = 0.11.86.0130+3+d862c43be
+	pkgrel = 1
+	url = https://gogs.io
+	install = gogs.install
+	arch = i686
+	arch = x86_64
+	arch = armv6h
+	arch = armv7h
+	arch = aarch64
+	license = MIT
+	makedepends = git
+	makedepends = go
+	makedepends = go-bindata
+	makedepends = nodejs-less
+	makedepends = sqlite
+	depends = git
+	optdepends = sqlite: SQLite support
+	optdepends = mariadb: MariaDB support
+	optdepends = postgresql: PostgreSQL support
+	optdepends = redis: Redis support
+	optdepends = memcached: MemCached support
+	optdepends = openssh: GIT over SSH support
+	provides = gogs
+	conflicts = gogs
+	options = !buildflags
+	source = gogs::git+https://github.com/gogs/gogs.git#branch=master
+	source = gogs.service
+	source = gogs.sysusers
+	source = gogs.tmpfiles
+	sha512sums = SKIP
+	sha512sums = 26fa3b9579ec2780e56f4a52870461b9cc1e4c1608e006b0759de7c5de137895d48e94a1694341b545be0dae87c966a982d8b581397d56fad83ab12e297f98df
+	sha512sums = 0a546902ffb9fe99f61b301183059cc85c75408cd735f04ee93829ad6e3d66a07ebc73ce663743f109ea6303c1815933a17fe2b83bf9104d1528acb5aa63faf8
+	sha512sums = ffd60cd6fa08786e6d53580a43597013753c16a0e7dec93b8ba9aef944f3225e74b032bf8a9819e0a60e1b5fb503b8378b5710d84d5dd52159b91641ee483876
+
+pkgname = gogs-git
+

@@ -1,0 +1,22 @@
+post_install() {
+    esp=$(df --output=source /boot | sed -n '2p')
+    if [ -z "${esp}" ];then
+        esp=$(df --output=source /esp | sed -n '2p')
+        if [ -z "${esp}" ];then
+            echo -e "\033[31m Error: No boot partition or unsupported mount point. \033[0m" >&2
+            exit -1
+        fi
+    fi
+
+    disk="/dev/$(lsblk -no pkname ${esp})"
+    partnum=$(echo ${esp: ${#disk}} | tr -cd "[0-9]")
+    cat>/etc/efistub.conf<<EOF
+start-bootnum: 0000
+disk: ${disk}
+partnum: ${partnum}
+default-cmdline: root=PARTUUID=$(lsblk -no partuuid $(df --output=source / | sed -n '2p')) rw
+EOF
+
+    echo -e "\e[32m Default config has been written to /etc/efistub.conf \e[0m"
+    echo -e "\e[32m For more infomation, see https://github.com/misaka19465/EFISTUBHelper \e[0m"
+}

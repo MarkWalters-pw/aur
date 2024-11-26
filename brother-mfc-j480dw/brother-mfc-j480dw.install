@@ -1,0 +1,9 @@
+post_install() {
+	post_upgrade;
+}
+
+post_upgrade() {
+	printf 'Restart CUPS to load new driver files:\n'
+	printf '    sudo systemctl restart org.cups.cupsd\n'
+	printf 'You can register your printer via the web interface at http://localhost:631/'
+}

@@ -1,0 +1,21 @@
+pkgbase = ros-melodic-moveit
+	pkgdesc = ROS - Meta package that contains all essential package of MoveIt!.
+	pkgver = 1.0.8
+	pkgrel = 1
+	url = https://moveit.ros.org
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-melodic-catkin
+	depends = ros-melodic-moveit-core
+	depends = ros-melodic-moveit-commander
+	depends = ros-melodic-moveit-setup-assistant
+	depends = ros-melodic-moveit-planners
+	depends = ros-melodic-moveit-plugins
+	depends = ros-melodic-moveit-ros
+	source = ros-melodic-moveit-1.0.8.tar.gz::https://github.com/ros-planning/moveit/archive/1.0.8.tar.gz
+	sha256sums = 9f94cac094e0cd73caf2fb75ff85870045239806852aa00f6122f4785da23c14
+
+pkgname = ros-melodic-moveit
+

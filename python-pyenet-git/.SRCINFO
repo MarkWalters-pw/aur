@@ -1,0 +1,22 @@
+pkgbase = python-pyenet-git
+	pkgdesc = pyenet is a python wrapper for the ENet library
+	pkgver = 24
+	pkgrel = 2
+	url = https://github.com/aresch/pyenet
+	arch = i686
+	arch = x86_64
+	arch = armv7h
+	license = BSD
+	license = MIT
+	makedepends = git
+	depends = python
+	depends = cython
+	provides = pyenet
+	conflicts = pyenet
+	source = git+https://github.com/aresch/pyenet.git
+	source = http://enet.bespin.org/download/enet-1.3.13.tar.gz
+	md5sums = SKIP
+	md5sums = b83b9a7791417b6b6f5c68231f6e218b
+
+pkgname = python-pyenet-git
+

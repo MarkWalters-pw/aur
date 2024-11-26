@@ -1,0 +1,26 @@
+pkgbase = radiotray
+	pkgdesc = An online radio streaming player that runs on a Linux system tray.
+	pkgver = 0.7.3
+	pkgrel = 16
+	url = https://radiotray.wordpress.com/
+	arch = any
+	license = GPL
+	makedepends = git
+	depends = dbus-python
+	depends = gstreamer
+	depends = gst-plugins-base
+	depends = gst-plugins-good
+	depends = python-gobject
+	depends = python-lxml
+	depends = python-notify2
+	depends = python-pyxdg
+	optdepends = gst-plugins-bad: extra codec support
+	optdepends = gst-plugins-ugly: extra codec support
+	optdepends = gst-libav: nonfree media decoding
+	optdepends = libappindicator-gtk3: indicator applet support
+	source = git+https://github.com/lubosz/radiotray.git#commit=0303ad6017a9a81caa71d046ef270ba6ebefed39
+	source = radiotray-gi.patch::https://github.com/lubosz/radiotray/pull/16.patch
+	b2sums = SKIP
+	b2sums = e1944018119584495d480b74e745fb1ddd8d2e6c33d72b8f185bda406b680331e71549259ae7c2f3dd5c93631c2f3156df75d95376d00c07c4f40cfe6d48b81e
+
+pkgname = radiotray

@@ -1,0 +1,19 @@
+pkgbase = spaceclones-git
+	pkgdesc = Space invaders clone
+	pkgver = v1.0.r17.gc651b3f
+	pkgrel = 1
+	url = https://github.com/L603/SpaceClones
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = cmake
+	depends = sfml
+	depends = fontconfig
+	depends = ttf-liberation
+	provides = spaceclones
+	conflicts = spaceclones
+	source = spaceclones-git::git+https://github.com/L603/SpaceClones.git
+	md5sums = SKIP
+
+pkgname = spaceclones-git
+

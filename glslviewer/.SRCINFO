@@ -1,0 +1,22 @@
+pkgbase = glslviewer
+	pkgdesc = Console-based GLSL Sandbox for 2D/3D shaders
+	pkgver = 3.2.4
+	pkgrel = 1
+	url = https://github.com/patriciogonzalezvivo/glslViewer
+	arch = i686
+	arch = x86_64
+	license = BSD-3-Clause
+	makedepends = cmake
+	makedepends = git
+	depends = glu
+	depends = glfw-x11
+	depends = ncurses
+	depends = ffmpeg
+	source = glslviewer::git+https://github.com/patriciogonzalezvivo/glslViewer#tag=3.2.4
+	md5sums = SKIP
+
+pkgname = glslviewer
+
+pkgname = glslviewer-examples
+	pkgdesc = Console-based GLSL Sandbox for 2D/3D shaders (shader examples)
+	depends = 

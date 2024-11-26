@@ -1,0 +1,31 @@
+pkgbase = vdr-mp3
+	pkgver = 0.10.4
+	pkgrel = 7
+	url = https://github.com/vdr-projects/vdr-plugin-mp3
+	arch = x86_64
+	arch = i686
+	arch = arm
+	arch = armv6h
+	arch = armv7h
+	license = GPL2
+	depends = gcc-libs
+	depends = libid3tag
+	depends = libmad
+	depends = libsndfile
+	depends = vdr-api=2.6.7
+	source = vdr-mp3-0.10.4.tar.gz::https://github.com/vdr-projects/vdr-plugin-mp3/archive/refs/tags/0.10.4.tar.gz
+	source = 50-mp3.conf
+	source = 50-mplayer.conf
+	sha256sums = 76c1af908b588b46a18f8f3a0f3db77f5859ef318654a7ee242d7a8e5db1ca2a
+	sha256sums = 20e317563665dde7d87e947199218a8ae818e266dfc8708fd02f183b2e544e10
+	sha256sums = af37a97a79d9ec79b50d59d45e8f7e0c7660a71090162d69610d13469260d804
+
+pkgname = vdr-mp3
+	pkgdesc = Allows playback of MP3 and other audio files.
+	backup = var/lib/vdr/plugins/mp3sources.conf
+	backup = etc/vdr/conf.avail/50-mp3.conf
+
+pkgname = vdr-mplayer
+	pkgdesc = Call MPlayer for playback of video
+	backup = var/lib/vdr/plugins/mp3sources.conf
+	backup = etc/vdr/conf.avail/50-mp3.conf

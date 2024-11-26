@@ -1,0 +1,26 @@
+pkgbase = cyanrip-git
+	pkgdesc = Fully featured CD ripping program
+	pkgver = 0.9.2.r19.g67ad970
+	pkgrel = 1
+	url = https://github.com/cyanreg/cyanrip
+	arch = x86_64
+	license = LGPL-2.1-or-later
+	makedepends = git
+	makedepends = meson
+	makedepends = ninja
+	depends = curl
+	depends = glibc
+	depends = libavcodec.so
+	depends = libavformat.so
+	depends = libswresample.so
+	depends = libavfilter.so
+	depends = libavutil.so
+	depends = libcdio
+	depends = libcdio-paranoia
+	depends = libmusicbrainz5
+	provides = cyanrip
+	conflicts = cyanrip
+	source = git+https://github.com/cyanreg/cyanrip.git#branch=master
+	b2sums = SKIP
+
+pkgname = cyanrip-git

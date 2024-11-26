@@ -1,0 +1,20 @@
+pkgbase = lynx-git
+	pkgdesc = The text web browser
+	pkgver = 2.9.0dev.10k.r714.g09edd94f
+	pkgrel = 1
+	url = https://lynx.invisible-island.net/lynx.html
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	depends = glibc
+	depends = libidn2
+	depends = ncurses
+	depends = openssl
+	provides = lynx=2.9.0dev.10k.r714.g09edd94f
+	conflicts = lynx
+	backup = etc/lynx.cfg
+	source = git+https://github.com/ThomasDickey/lynx-snapshots.git
+	sha256sums = SKIP
+
+pkgname = lynx-git

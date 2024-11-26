@@ -1,0 +1,19 @@
+post_install() {
+  printf "\nTo use dispad, start with:\n"
+  printf "systemctl --user start dispad\n"
+  printf "\nTo autostart on login\n"
+  printf "\ncp /usr/share/dispad/user-applications.target ~/.config/systemd/user/"
+  printf "\nsystemctl --user enable dispad"
+  printf "\necho 'systemctl --user start user-applications.target' >> ~/.xprofile"
+  printf "\n\nOr:"
+  printf "\necho 'systemctl --user start dispad.service' >> ~/.xprofile"
+  printf "\n\nExample configuration can be found at /usr/share/dispad/dispad.conf.example and can optionally be copied to ~/.dispad\n"
+  printf "\n"
+}
+
+post_upgrade() {
+  printf "\nRemember to reload systemd user daemons before restarting dispad\n"
+  printf "systemctl --user daemon-reload\n"
+  printf "systemctl --user restart dispad\n"
+  printf "\n"
+}

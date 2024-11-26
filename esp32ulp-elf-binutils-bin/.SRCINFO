@@ -1,0 +1,15 @@
+pkgbase = esp32ulp-elf-binutils-bin
+	pkgdesc = Binutils fork with support for the ESP32 ULP co-processor
+	pkgver = 2.28.51.20180809
+	pkgrel = 1
+	url = https://esp-idf.readthedocs.io/en/latest/api-guides/ulp.html
+	arch = x86_64
+	license = GPL
+	depends = glibc
+	options = !strip
+	options = staticlibs
+	source = https://github.com/espressif/binutils-esp32ulp/releases/download/v2.28.51-esp32ulp-20180809/binutils-esp32ulp-linux64-2.28.51-esp32ulp-20180809.tar.gz
+	sha256sums = c1bbcd65e1e30c7312a50344c8dbc70c2941580a79aa8f8abbce8e0e90c79566
+
+pkgname = esp32ulp-elf-binutils-bin
+

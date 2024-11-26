@@ -1,0 +1,20 @@
+pkgbase = eclim
+	pkgdesc = Brings Eclipse functionality to Vim
+	pkgver = 2.21.0
+	pkgrel = 1
+	url = http://eclim.org/
+	install = eclim.install
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = java-environment<=11
+	makedepends = ant
+	makedepends = python-sphinx
+	depends = java-environment
+	depends = eclipse>=4.21
+	depends = vim>=7.1
+	optdepends = eclipse-pydev
+	source = https://github.com/ervandew/eclim/releases/download/2.21.0/eclim_2.21.0.tar.gz
+	sha256sums = 0b943a47e01f4d1454637969ac84d148a607d5508d5452d54b797e52ff76c15a
+
+pkgname = eclim

@@ -1,0 +1,17 @@
+pkgbase = cmtp-responder-git
+	pkgdesc = Media Transfer Protocol daemon (responder) written in C, with minimal dependencies
+	pkgver = r244.a10d015c37
+	pkgrel = 1
+	url = https://github.com/cmtp-responder/cmtp-responder
+	arch = x86_64
+	license = Apache
+	makedepends = cmake
+	depends = glib2
+	depends = systemd-libs
+	provides = cmtp-responder
+	conflicts = cmtp-responder
+	source = https://github.com/cmtp-responder/cmtp-responder
+	sha256sums = SKIP
+
+pkgname = cmtp-responder-git
+

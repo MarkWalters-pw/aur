@@ -1,0 +1,20 @@
+pkgbase = vim-a-git
+	pkgdesc = vim plugin for switching between header and source files quickly
+	pkgver = 2.18.r88.gdca99f8
+	pkgrel = 1
+	url = https://github.com/nacitar/a.vim
+	arch = any
+	groups = vim-plugins
+	license = custom
+	makedepends = git
+	depends = vim-plugin-runtime
+	provides = vim-a
+	conflicts = vim-a
+	conflicts = neovim-a
+	source = vim-a-git::git+https://github.com/nacitar/a.vim
+	source = LICENSE
+	sha256sums = SKIP
+	sha256sums = fa5cd5adcfc6a34910fc9f580b7d9a31b1c7ff958268c24f58fb0e9664c60246
+
+pkgname = vim-a-git
+

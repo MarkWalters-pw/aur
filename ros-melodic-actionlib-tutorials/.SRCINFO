@@ -1,0 +1,29 @@
+pkgbase = ros-melodic-actionlib-tutorials
+	pkgdesc = ROS - The actionlib_tutorials package.
+	pkgver = 0.1.11
+	pkgrel = 5
+	url = https://www.wiki.ros.org/actionlib/Tutorials
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-melodic-catkin
+	makedepends = ros-melodic-message-generation
+	makedepends = ros-melodic-std-msgs
+	makedepends = ros-melodic-actionlib
+	makedepends = ros-melodic-actionlib-msgs
+	makedepends = ros-melodic-roscpp
+	makedepends = boost1.69
+	depends = ros-melodic-message-runtime
+	depends = ros-melodic-actionlib
+	depends = ros-melodic-roscpp
+	depends = boost1.69
+	source = ros-melodic-actionlib-tutorials-0.1.11.tar.gz::https://github.com/ros/common_tutorials/archive/0.1.11.tar.gz
+	sha256sums = e6015c289219df58253809254baa53dbf2f3190b61d77fac2b2fb8b8c12f3ec1
+
+pkgname = ros-melodic-actionlib-tutorials
+

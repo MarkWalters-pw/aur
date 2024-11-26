@@ -1,0 +1,17 @@
+pkgbase = vapoursynth-plugin-depan-git
+	pkgdesc = Plugin for Vapoursynth: depan. (GIT Version)
+	pkgver = 1.0.g2f05589
+	pkgrel = 1
+	url = https://forum.doom9.org/showthread.php?t=173505
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	depends = vapoursynth
+	depends = fftw
+	provides = vapoursynth-plugin-depan
+	conflicts = vapoursynth-plugin-depan
+	options = debug
+	source = depan::git+https://github.com/Vapoursynth-Plugins-Gitify/DePan.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-depan-git

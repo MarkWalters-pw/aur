@@ -1,0 +1,38 @@
+pkgbase = r-rsamtools
+	pkgdesc = Binary alignment (BAM), FASTA, variant call (BCF), and tabix file import
+	pkgver = 2.18.0
+	pkgrel = 1
+	url = https://bioconductor.org/packages/release/bioc/html/Rsamtools.html
+	arch = i686
+	arch = x86_64
+	license = Artistic2.0
+	makedepends = make
+	depends = r>=3.5.0
+	depends = r-biocgenerics>=0.25.1
+	depends = r-biocparallel
+	depends = r-biostrings>=2.47.6
+	depends = r-bitops
+	depends = r-genomeinfodb>=1.1.3
+	depends = r-genomicranges>=1.31.8
+	depends = r-iranges>=2.13.12
+	depends = r-rhtslib>=1.99.3
+	depends = r-s4vectors>=0.17.25
+	depends = r-xvector>=0.19.7
+	depends = r-zlibbioc
+	optdepends = r-biocstyle
+	optdepends = r-bsgenome.hsapiens.ucsc.hg19
+	optdepends = r-genomicalignments
+	optdepends = r-genomicfeatures
+	optdepends = r-knitr
+	optdepends = r-rnaseqdata.hnrnpc.bam.chr14
+	optdepends = r-runit
+	optdepends = r-shortread>=1.19.10
+	optdepends = r-txdb.dmelanogaster.ucsc.dm3.ensgene
+	optdepends = r-txdb.hsapiens.ucsc.hg18.knowngene
+	options = !lto
+	options = !buildflags
+	options = staticlibs
+	source = https://bioconductor.org/packages/release/bioc/src/contrib/Rsamtools_2.18.0.tar.gz
+	b2sums = 9c880a2869e87a9a24ac5afcb2c191dd58308da3f08fe456e30ff93f84693dc5f86754a390ecbeaa87426a8a23f32bcc8ab3b7495ac0ed0c762be6232f004763
+
+pkgname = r-rsamtools

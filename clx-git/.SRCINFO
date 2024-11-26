@@ -1,0 +1,21 @@
+pkgbase = clx-git
+	pkgdesc = An X11 client for Common Lisp
+	pkgver = r377.5db3a0d
+	pkgrel = 1
+	url = https://github.com/sharplispers/clx
+	install = clx.install
+	arch = any
+	license = custom
+	makedepends = git
+	makedepends = texinfo
+	depends = xorg-server
+	depends = sbcl
+	provides = clx
+	conflicts = clx
+	source = clx-git::git+https://github.com/sharplispers/clx.git
+	source = README.licensing
+	md5sums = SKIP
+	md5sums = 74858379015567928f1eee186d9db1a4
+
+pkgname = clx-git
+

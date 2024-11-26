@@ -1,0 +1,18 @@
+pkgbase = osx-el-capitan-theme-git
+	pkgdesc = Theme mimics OS X 10.12 macOS Sierra, formaly osx-el-capitan-theme, for GTK3 and some DEs (GNOME Shell, Xfce, Cinnamon)
+	pkgver = 4.1.r2.gb245f91
+	pkgrel = 1
+	url = https://github.com/Elbullazul/macOS-Sierra
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = gtk3>=3.18
+	depends = gtk-engine-murrine
+	depends = gtk-engines
+	optdepends = gnome-themes-standard: Required for the GTK3 theme
+	conflicts = gnome-shell-theme-osx-el-capitan
+	source = git+https://github.com/B00merang-Project/macOS-Sierra
+	sha256sums = SKIP
+
+pkgname = osx-el-capitan-theme-git
+

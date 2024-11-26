@@ -1,0 +1,24 @@
+pkgbase = razorsql
+	pkgdesc = An SQL query tool, database browser, SQL editor, and database administration tool (Trial)
+	pkgver = 9.3.0
+	pkgrel = 1
+	url = https://razorsql.com
+	arch = x86_64
+	license = custom:razorsql
+	makedepends = unzip
+	makedepends = gendesk
+	depends = java-runtime>=8
+	depends = libxrender
+	depends = alsa-lib
+	depends = freetype2
+	depends = libxtst
+	depends = libnet
+	depends = sqlite
+	depends = python
+	depends = lib32-glibc
+	noextract = razorsql-9.3.0.zip
+	source = razorsql-9.3.0.zip::https://s3.dualstack.us-east-1.amazonaws.com/downloads.razorsql.com/downloads/9_3_0/razorsql9_3_0_linux_x64.zip
+	sha256sums = 346bd4b724b0b81fa2606de09df3209f8c90f50f4af1f888745faded484a250c
+
+pkgname = razorsql
+

@@ -1,0 +1,23 @@
+pkgbase = rtl-sdr-blog-git
+	pkgdesc = Tuner for DVB-T sticks based on the Realtek RTL2832U, which can be used as a cheap SDR, since the chip allows transferring the raw I/Q samples to the host. RTL Blog edition to support RTL-SDR V4 dongles.
+	pkgver = 1.3.5.r0.g065e3d1
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/rtlsdrblog/rtl-sdr-blog
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	license = GPL
+	makedepends = git
+	makedepends = cmake
+	depends = libusb
+	provides = rtl-sdr
+	conflicts = rtl-sdr
+	conflicts = rtl-sdr-git
+	conflicts = rtl-sdr-librtlsdr-git
+	source = git+https://github.com/rtlsdrblog/rtl-sdr-blog
+	source = rtl-sdr-blog.conf
+	md5sums = SKIP
+	md5sums = e88d2a4b140e31b97436489825a1e941
+
+pkgname = rtl-sdr-blog-git

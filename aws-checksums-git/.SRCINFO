@@ -1,0 +1,19 @@
+pkgbase = aws-checksums-git
+	pkgdesc = Cross-Platform HW accelerated CRC32c and CRC32 with fallback to efficient SW implementations.
+	pkgver = 0.1.14.r1.g9a0ff99
+	pkgrel = 1
+	url = https://github.com/awslabs/aws-checksums
+	arch = x86_64
+	license = Apache
+	makedepends = cmake
+	makedepends = openssl
+	makedepends = curl
+	makedepends = zlib
+	makedepends = libutil-linux
+	depends = aws-c-common
+	provides = aws-checksums
+	conflicts = aws-checksums
+	source = aws-checksums-git::git+https://github.com/awslabs/aws-checksums#branch=main
+	sha256sums = SKIP
+
+pkgname = aws-checksums-git

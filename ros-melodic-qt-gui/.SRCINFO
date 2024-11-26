@@ -1,0 +1,20 @@
+pkgbase = ros-melodic-qt-gui
+	pkgdesc = ROS - qt_gui provides the infrastructure for an integrated graphical user interface based on Qt.
+	pkgver = 0.4.2
+	pkgrel = 2
+	url = https://wiki.ros.org/qt_gui
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-melodic-catkin
+	makedepends = python-pyqt5
+	makedepends = qt5-base
+	depends = ros-melodic-python-qt-binding
+	depends = python-rospkg
+	depends = tango-icon-theme
+	source = ros-melodic-qt-gui-0.4.2.tar.gz::https://github.com/ros-visualization/qt_gui_core/archive/0.4.2.tar.gz
+	sha256sums = fbc5a7b0a4da43f80e9216845aec2e247fac0a63512053c03a9f89024d026aad
+
+pkgname = ros-melodic-qt-gui
+

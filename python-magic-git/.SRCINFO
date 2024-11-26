@@ -1,0 +1,22 @@
+pkgbase = python-magic-git
+	pkgdesc = File type identification library; compatible with official file/libmagic Python wrapper (git)
+	pkgver = 0.4.27.r22.g54d86fd
+	pkgrel = 3
+	url = https://pypi.org/project/python-magic
+	arch = any
+	license = MIT
+	checkdepends = python-pytest
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = file
+	depends = python
+	provides = python-magic=1:0.4.27
+	conflicts = python-magic
+	conflicts = python-file-magic
+	source = python-magic::git+https://github.com/ahupp/python-magic.git
+	b2sums = SKIP
+
+pkgname = python-magic-git

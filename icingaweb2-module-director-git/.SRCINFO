@@ -1,0 +1,17 @@
+pkgbase = icingaweb2-module-director-git
+	pkgdesc = Manage Icinga 2 configuration from Icinga Web 2
+	pkgver = v1.8.1.r67.087ce05
+	pkgrel = 1
+	url = https://www.icinga.org
+	arch = any
+	license = GPL
+	depends = icingaweb2
+	depends = icingaweb2-module-ipl
+	depends = icingaweb2-module-incubator
+	depends = icingaweb2-module-reactbundle
+	provides = icingaweb2-module-director
+	conflicts = icingaweb2-module-director
+	source = git+https://github.com/Icinga/icingaweb2-module-director.git
+	sha256sums = SKIP
+
+pkgname = icingaweb2-module-director-git

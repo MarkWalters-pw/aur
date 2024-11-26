@@ -1,0 +1,20 @@
+pkgbase = skribilo
+	pkgdesc = The Ultimate Document Programming Framework
+	pkgver = 0.10.0
+	pkgrel = 1
+	url = http://www.nongnu.org/skribilo/
+	arch = x86_64
+	license = GPL
+	makedepends = guile
+	makedepends = guile-reader
+	makedepends = ploticus
+	depends = bash
+	optdepends = texlive-core: for postscript or pdf output
+	optdepends = lout: for postscript or pdf output
+	optdepends = ploticus: for pie-charts
+	optdepends = guile-lib: to be able to use the RSS-2-reader
+	options = !makeflags
+	source = http://download.savannah.gnu.org/releases/skribilo/skribilo-0.10.0.tar.gz
+	sha256sums = 8cff48ee176cedfd5032649a349a46952bea50ec06720f829c1ccca29212f50e
+
+pkgname = skribilo

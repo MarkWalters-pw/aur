@@ -1,0 +1,16 @@
+pkgbase = mingw-w64-spirv-cross
+	pkgdesc = A tool and library for parsing and converting SPIR-V to other shader languages (mingw-w64)
+	pkgver = 2021.01.15
+	pkgrel = 1
+	url = https://github.com/KhronosGroup/SPIRV-Cross/
+	arch = any
+	license = Apache
+	makedepends = mingw-w64-cmake
+	depends = mingw-w64-crt
+	options = !strip
+	options = !buildflags
+	options = staticlibs
+	source = https://github.com/KhronosGroup/SPIRV-Cross/archive/2021-01-15.tar.gz
+	sha256sums = d700863b548cbc7f27a678cee305f561669a126eb2cc11d36a7023dfc462b9c4
+
+pkgname = mingw-w64-spirv-cross

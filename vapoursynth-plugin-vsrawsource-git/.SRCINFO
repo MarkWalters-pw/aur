@@ -1,0 +1,17 @@
+pkgbase = vapoursynth-plugin-vsrawsource-git
+	pkgdesc = Plugin for Vapoursynth: vsrawsource (GIT version)
+	pkgver = 20191105.0.g82400b7
+	pkgrel = 1
+	url = https://forum.doom9.org/showthread.php?t=166075
+	arch = x86_64
+	license = LGPL2.1
+	makedepends = git
+	makedepends = meson
+	depends = vapoursynth
+	provides = vapoursynth-plugin-vsrawsource
+	conflicts = vapoursynth-plugin-vsrawsource
+	source = git+https://github.com/HolyWu/vsrawsource.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-vsrawsource-git
+

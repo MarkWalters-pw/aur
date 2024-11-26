@@ -1,0 +1,41 @@
+pkgbase = gplugin
+	pkgdesc = A GObject based library that implements a reusable plugin system
+	pkgver = 0.39.1
+	pkgrel = 3
+	url = https://keep.imfreedom.org/gplugin/gplugin
+	arch = i868
+	arch = x86_64
+	license = LGPL2
+	makedepends = meson
+	makedepends = mercurial
+	makedepends = gcc
+	makedepends = gobject-introspection
+	makedepends = pkg-config
+	makedepends = help2man
+	makedepends = gettext
+	makedepends = gi-docgen
+	makedepends = lua-lgi
+	makedepends = perl-glib-object-introspection
+	makedepends = python-gobject
+	makedepends = vala
+	depends = gtk3
+	depends = gtk4
+	depends = glib-perl
+	depends = lua
+	depends = python
+	options = strip
+	options = !debug
+	options = staticlibs
+	source = gplugin::hg+https://keep.imfreedom.org/gplugin/gplugin/#tag=v0.39.1
+	sha256sums = SKIP
+
+pkgname = gplugin
+	depends = gtk3
+	depends = gtk4
+	depends = glib-perl
+	depends = lua
+	depends = python
+
+pkgname = gplugin-docs
+	pkgdesc = A GObject based library that implements a reusable plugin system (documentation)
+	depends = 

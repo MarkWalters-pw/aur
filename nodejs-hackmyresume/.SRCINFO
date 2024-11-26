@@ -1,0 +1,17 @@
+pkgbase = nodejs-hackmyresume
+	pkgdesc = Generate polished résumés and CVs in HTML, Markdown, LaTeX, MS Word, PDF, plain text, JSON, XML, YAML, smoke signal, and carrier pigeon.
+	pkgver = 1.9.0_beta
+	pkgrel = 1
+	url = https://github.com/hacksalot/HackMyResume
+	arch = any
+	depends = nodejs
+	depends = npm
+	optdepends = phantomjs: PDF support
+	optdepends = python-weasyprint: PDF support
+	optdepends = wkhtmltopdf: PDF support
+	noextract = hackmyresume-1.9.0-beta.tgz
+	source = http://registry.npmjs.org/hackmyresume/-/hackmyresume-1.9.0-beta.tgz
+	sha256sums = c9c23dd946712642309275ad12d15bb1753e0e4235e27c5542181dd3ddfe0ba6
+
+pkgname = nodejs-hackmyresume
+

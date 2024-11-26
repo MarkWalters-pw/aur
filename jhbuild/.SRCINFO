@@ -1,0 +1,24 @@
+pkgbase = jhbuild
+	pkgdesc = Tool to build the whole GNOME desktop from sources
+	pkgver = 3.38.0.r0.g30ef98f3
+	pkgrel = 3
+	url = https://wiki.gnome.org/Projects/Jhbuild
+	arch = any
+	license = GPL
+	makedepends = yelp-tools
+	depends = python
+	depends = git
+	depends = plymouth
+	depends = spice-protocol
+	depends = gtk-sharp-2
+	depends = libevent
+	depends = unicode-character-database
+	optdepends = subversion: fetch subversion repositories
+	optdepends = cvs: fetch CVS repositories
+	optdepends = bzr: fetch Bazaar repositories
+	optdepends = mercurial: fetch Mercurial repositories
+	optdepends = darcs: fetch Darcs repositories
+	source = jhbuild::git+https://gitlab.gnome.org/GNOME/jhbuild.git#commit=30ef98f3
+	sha256sums = SKIP
+
+pkgname = jhbuild

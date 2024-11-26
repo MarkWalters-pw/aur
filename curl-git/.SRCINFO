@@ -1,0 +1,68 @@
+pkgbase = curl-git
+	pkgdesc = A command line tool and library for transferring data with URLs
+	pkgver = 8.7.1.r201.gc8e0cd1de8
+	pkgrel = 1
+	url = https://curl.se/
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = gnutls
+	makedepends = openssl
+	makedepends = patchelf
+	depends = glibc
+	depends = ca-certificates
+	depends = brotli
+	depends = krb5
+	depends = libbrotlidec.so
+	depends = libgssapi_krb5.so
+	depends = libidn2
+	depends = libidn2.so
+	depends = libnghttp2
+	depends = libpsl
+	depends = libpsl.so
+	depends = libssh2
+	depends = libssh2.so
+	depends = libzstd.so
+	depends = zlib
+	depends = zstd
+	options = staticlibs
+	source = git+https://github.com/curl/curl.git
+	sha256sums = SKIP
+
+pkgname = curl-git
+	depends = glibc
+	depends = ca-certificates
+	depends = brotli
+	depends = krb5
+	depends = libbrotlidec.so
+	depends = libgssapi_krb5.so
+	depends = libidn2
+	depends = libidn2.so
+	depends = libnghttp2
+	depends = libpsl
+	depends = libpsl.so
+	depends = libssh2
+	depends = libssh2.so
+	depends = libzstd.so
+	depends = zlib
+	depends = zstd
+	depends = openssl
+	provides = curl=8.7.1.r201.gc8e0cd1de8
+	provides = libcurl.so
+	conflicts = curl
+
+pkgname = libcurl-compat-git
+	pkgdesc = A command line tool and library for transferring data with URLs (no versioned symbols)
+	depends = curl
+	provides = libcurl-compat=8.7.1.r201.gc8e0cd1de8
+	provides = libcurl-compat.so
+	conflicts = libcurl-compat
+
+pkgname = libcurl-gnutls-git
+	pkgdesc = A command line tool and library for transferring data with URLs (no versioned symbols, linked against gnutls)
+	depends = curl
+	depends = gnutls
+	provides = libcurl-gnutls=8.7.1.r201.gc8e0cd1de8
+	provides = libcurl-gnutls.so
+	conflicts = libcurl-gnutls

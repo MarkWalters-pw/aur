@@ -1,0 +1,18 @@
+pkgbase = xseticon-detiam
+	pkgdesc = Set the X11 window icon for any given window to that of a given image file
+	pkgver = 0.1+bzr14
+	pkgrel = 1
+	url = https://github.com/detiam/xseticon
+	arch = i686
+	arch = x86_64
+	license = GPL-2.0-or-later
+	depends = libx11
+	depends = libxmu
+	depends = gd
+	depends = imagemagick
+	provides = xseticon
+	conflicts = xseticon
+	source = git+https://github.com/detiam/xseticon#tag=0.1+bzr14
+	sha256sums = 6ed8b8c1e75c03425e5a4d55c978bc10e49e72de012afeb28a3083f0b5290290
+
+pkgname = xseticon-detiam

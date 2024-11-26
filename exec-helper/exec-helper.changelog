@@ -1,0 +1,52 @@
+Changelog
+=========
+
+
+0.6.0 (2020-06-22)
+------------------
+
+New
+~~~
+- Usr: Added a command line option to keep on executing commands, even
+  if they fail. [Bart Verhagen]
+
+  Use the --keep-going or -k option for this
+- Usr: Using sphinx for usage documentation. [Bart Verhagen]
+
+  The result is now hosted on readthedocs at https://exec-helper.readthedocs.io
+- Usr: Added the Docker plugin. [Bart Verhagen]
+- Usr: Added the CMake plugin. [Bart Verhagen]
+
+
+0.5.0 (2020-04-25)
+------------------
+
+New
+~~~
+- Usr: Added some more documentation on shell auto-completion. [Bart
+  Verhagen]
+- Usr: Added Bash and Zsh auto-completion support. [Bart Verhagen]
+- Usr: Changed copyright in the documentation to the BSD 3-clause.
+  Upgraded the end year of the copyright to this year. [Bart Verhagen]
+- Usr: Added the custom plugins as a major way to do more advanced
+  workflow optimization. [Bart Verhagen]
+- Usr: The PWD environment variable is set to the actual working
+  directory of a task. [Bart Verhagen]
+- Usr: Added documentation on writing custom plugins. [Bart Verhagen]
+- Usr: Added --list-plugins option for listing all available plugins.
+  [Bart Verhagen]
+
+
+0.4.2 (2020-02-12)
+------------------
+
+New
+~~~
+- Usr: Documentation now also complies to the ENABLE_WERROR setting for
+  enabling/disabling warning as error when building. [Bart Verhagen]
+- Usr: Moved to MSVC14.2 (2019) and Boost 1.71 for the pre-compiled
+  Windows installer. [Bart Verhagen]
+- Usr: Most of the built-in modules are now converted to lua modules.
+  [Bart Verhagen]
+
+

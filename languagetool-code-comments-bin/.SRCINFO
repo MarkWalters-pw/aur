@@ -1,0 +1,16 @@
+pkgbase = languagetool-code-comments-bin
+	pkgdesc = Integrates the LanguageTool API to parse, spell check, and correct the grammar of your code comments!
+	pkgver = 0.6.3
+	pkgrel = 1
+	url = https://github.com/dustinblackman/languagetool-code-comments
+	license = MIT
+	conflicts = languagetool-code-comments
+	provides = languagetool-code-comments
+	arch = aarch64
+	source_aarch64 = https://github.com/dustinblackman/languagetool-code-comments/releases/download/v0.6.3/languagetool-code-comments_0.6.3_linux_arm64.tar.gz
+	sha256sums_aarch64 = bfd68a2e8c1dcca07cb57ead8fe6ca10f783c41497af9acddc18a0abe7bc37ae
+	arch = x86_64
+	source_x86_64 = https://github.com/dustinblackman/languagetool-code-comments/releases/download/v0.6.3/languagetool-code-comments_0.6.3_linux_amd64.tar.gz
+	sha256sums_x86_64 = d90cc89b36774b0b9f58cfc9e84eafdd667167525096391cdf944402ba819b64
+	
+pkgname = languagetool-code-comments-bin

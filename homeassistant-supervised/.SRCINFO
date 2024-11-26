@@ -1,0 +1,28 @@
+pkgbase = homeassistant-supervised
+	pkgdesc = Home Assistant Supervised
+	pkgver = 1.7.0
+	pkgrel = 1
+	url = https://www.home-assistant.io/
+	install = .INSTALL
+	arch = any
+	license = APACHE
+	makedepends = git
+	depends = docker>=20.10
+	depends = systemd>=239
+	depends = jq
+	depends = wget
+	depends = curl
+	depends = udisks2
+	depends = glib2
+	depends = dbus
+	depends = homeassistant-osagent
+	optdepends = cifs-utils: support for SMB/CIFS mounts
+	optdepends = nfs-utils: support for NFS mounts
+	optdepends = networkmanager: support for built-in network management
+	optdepends = apparmor: enhanced security
+	conflicts = docker-desktop
+	backup = etc/docker/daemon.json
+	source = git+https://github.com/home-assistant/supervised-installer.git#tag=b345d3ee653aaccc7f5fc756315961e7a4a2ec8f
+	md5sums = SKIP
+
+pkgname = homeassistant-supervised

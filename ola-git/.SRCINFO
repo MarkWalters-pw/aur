@@ -1,0 +1,35 @@
+pkgbase = ola-git
+	pkgdesc = The Open Lighting Architecture (OLA) provides a plugin framework for distributing DMX512 control signals on Mac and Linux
+	pkgver = 0.10.6.r1355.g671e66b85
+	pkgrel = 1
+	url = https://www.openlighting.org/ola/
+	arch = i686
+	arch = x86_64
+	license = LGPL2.1
+	license = GPL2
+	makedepends = git
+	makedepends = liblo
+	makedepends = avahi
+	makedepends = libusb
+	makedepends = libusb-compat
+	makedepends = libftdi-compat
+	makedepends = flex
+	makedepends = bison
+	makedepends = python
+	makedepends = python-protobuf
+	depends = libmicrohttpd
+	depends = cppunit
+	depends = protobuf
+	optdepends = liblo
+	optdepends = libftdi-compat
+	optdepends = libusb
+	optdepends = openslp
+	optdepends = avahi
+	optdepends = python-protobuf
+	provides = ola
+	conflicts = ola
+	source = git+https://github.com/OpenLightingProject/ola.git
+	sha256sums = SKIP
+
+pkgname = ola-git
+

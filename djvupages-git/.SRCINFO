@@ -1,0 +1,18 @@
+pkgbase = djvupages-git
+	pkgdesc = Shell utility to manipulate pages of a DjVu file
+	pkgver = r5.3b9ab4f
+	pkgrel = 2
+	url = https://github.com/ashipunov/djvupages
+	arch = any
+	license = custom: public domain
+	makedepends = git
+	depends = djvulibre
+	depends = img2djvu-git
+	optdepends = gimp: edit in gimp
+	optdepends = imagemagick: convert pages
+	provides = djvupages
+	source = git+https://github.com/ashipunov/djvupages.git
+	sha256sums = SKIP
+
+pkgname = djvupages-git
+

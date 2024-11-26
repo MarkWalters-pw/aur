@@ -1,0 +1,24 @@
+pkgbase = filament
+	pkgdesc = A real-time physically based engine
+	pkgver = 1.5.2
+	pkgrel = 1
+	url = https://github.com/google/filament/tree/v1.5.2
+	arch = x86_64
+	license = Apache
+	makedepends = cmake
+	makedepends = clang
+	depends = assimp
+	depends = libc++
+	depends = libc++abi
+	depends = mesa
+	depends = libxi
+	depends = embree
+	depends = libpng
+	depends = zlib
+	depends = openimagedenoise
+	conflicts = mono
+	source = https://github.com/google/filament/archive/v1.5.2.tar.gz
+	sha256sums = 250475d8de6093b4fa18f4ebea6e09d982e0d0fc2af94b9456b90d2badb87d85
+
+pkgname = filament
+

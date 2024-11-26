@@ -1,0 +1,23 @@
+pkgbase = toa
+	pkgdesc = "toa" is simple music player made by Electron.
+	pkgver = 0.0.1
+	pkgrel = 3
+	url = https://github.com/yuki540net/toa
+	arch = any
+	license = MIT
+	makedepends = unzip
+	makedepends = gendesk
+	depends = gtk2
+	depends = gconf
+	depends = xdg-utils
+	depends = libxtst
+	depends = libxss
+	depends = nss
+	depends = alsa-lib
+	depends = xdg-utils
+	noextract = toa-linux-x64.zip
+	source = https://github.com/yuki540net/toa/releases/download/v0.0.1/toa-linux-x64.zip
+	md5sums = 869b089bd96d2fe936836595239c3a8e
+
+pkgname = toa
+

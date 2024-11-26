@@ -1,0 +1,58 @@
+pkgbase = ncid
+	pkgdesc = Network caller ID.
+	pkgver = 1.10.1
+	pkgrel = 1
+	url = http://ncid.sourceforge.net/
+	arch = x86_64
+	license = GPL3
+	makedepends = libnotify
+	makedepends = perl
+	depends = libpcap
+	depends = pcre
+	source = https://downloads.sourceforge.net/project/ncid/ncid/1.10.1/ncid-1.10.1-src.tar.gz
+	source = ncidd_pause.patch
+	md5sums = 659937bb876b666e6a486809272a3324
+	md5sums = 57da2c9ee2bd6eac8e3ba3aac82e1bb9
+
+pkgname = ncid
+	pkgdesc = Network caller ID server.
+	depends = bash>=4.3.046
+	backup = etc/ncid/ncidd.alias
+	backup = etc/ncid/ncidd.blacklist
+	backup = etc/ncid/ncidd.conf
+	backup = etc/ncid/ncidd.whitelist
+
+pkgname = ncid-client
+	pkgdesc = Network caller ID client.
+	arch = any
+	depends = bash>=4.3.046
+	backup = etc/ncid/ncid.conf
+
+pkgname = ncid-tools
+	pkgdesc = Network caller ID tools.
+	arch = any
+	depends = perl>=5.24.0
+
+pkgname = ncid-extensions
+	pkgdesc = Network caller ID extensions.
+	arch = any
+	depends = bash>=4.3.046
+
+pkgname = ncid-module-alert
+	pkgdesc = Network caller ID alert module.
+	arch = any
+	depends = libnotify>=0.7.6
+	depends = bash>=4.3.046
+	backup = etc/ncid/conf.d/ncid-alert.conf
+
+pkgname = ncid-module-initmodem
+	pkgdesc = Network caller ID initmodem module.
+	arch = any
+	depends = bash>=4.3.046
+
+pkgname = ncid-module-skel
+	pkgdesc = Network caller ID skel module.
+	arch = any
+	depends = bash>=4.3.046
+	backup = etc/ncid/conf.d/ncid-skel.conf
+

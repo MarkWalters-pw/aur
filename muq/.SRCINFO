@@ -1,0 +1,20 @@
+pkgbase = muq
+	pkgdesc = MIT Uncertainty Quantification Library
+	pkgver = 2
+	pkgrel = 1
+	url = http://muq.mit.edu/
+	arch = x86_64
+	license = MIT
+	makedepends = cmake
+	makedepends = eigen
+	makedepends = nanoflann
+	depends = boost-libs
+	depends = nlopt
+	depends = python
+	depends = sundials
+	depends = nlopt
+	source = git+https://bitbucket.org/mituq/muq2.git
+	sha256sums = SKIP
+
+pkgname = muq
+

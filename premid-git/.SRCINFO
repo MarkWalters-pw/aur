@@ -1,0 +1,17 @@
+pkgbase = premid-git
+	pkgdesc = PreMiD adds Discord Rich Presence support to a lot of services you use and love.
+	pkgver = r120.9066f98
+	pkgrel = 1
+	url = https://github.com/PreMiD/Linux
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	depends = nodejs>=10.11.0
+	depends = yarn
+	optdepends = discord: Proper Rich Presence support
+	conflicts = premid
+	source = git+https://github.com/PreMiD/Linux.git
+	md5sums = SKIP
+
+pkgname = premid-git

@@ -1,0 +1,23 @@
+pkgbase = chatd-bin
+	pkgdesc = Chat with your documents using local AI
+	pkgver = 1.1.1
+	pkgrel = 1
+	url = https://chatd.ai/
+	arch = x86_64
+	license = MIT
+	depends = electron24-bin
+	depends = python>=3
+	depends = ollama
+	depends = nodejs
+	provides = chatd=1.1.1
+	conflicts = chatd
+	options = !emptydirs
+	options = !strip
+	source = chatd-1.1.1.zip::https://github.com/BruceMacD/chatd/releases/download/v1.1.1/chatd-linux-x64.zip
+	source = LICENSE-1.1.1::https://raw.githubusercontent.com/BruceMacD/chatd/v1.1.1/LICENSE
+	source = chatd.sh
+	sha256sums = c91afeade68061f1f84b3a9733098831e759111d4a24d04b9dc0f772102e3df7
+	sha256sums = 2482d360377c8e4d4ef1432e93f9e67e6f6d76ce0e69eee6f2647c3f1c296dd2
+	sha256sums = 2b2e8aeed33fd71c521e49fd54fb2fa81218d16aef8bccb88d77909055ab8051
+
+pkgname = chatd-bin

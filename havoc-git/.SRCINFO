@@ -1,0 +1,17 @@
+pkgbase = havoc-git
+	pkgdesc = A minimal terminal emulator for Wayland on Linux.
+	pkgver = 0
+	pkgrel = 3
+	url = https://github.com/ii8/havoc
+	arch = x86_64
+	license = MIT
+	license = custom
+	makedepends = wayland-protocols
+	makedepends = git
+	depends = wayland
+	provides = havoc
+	source = git+https://github.com/ii8/havoc
+	md5sums = SKIP
+
+pkgname = havoc-git
+

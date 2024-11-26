@@ -1,0 +1,18 @@
+pkgbase = wavemon-git
+	pkgdesc = Ncurses-based monitoring application for wireless network devices
+	pkgver = 0.8.2.343.324b151
+	pkgrel = 1
+	url = https://github.com/uoaerg/wavemon
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	depends = ncurses
+	depends = libcap
+	depends = libnl
+	provides = wavemon
+	conflicts = wavemon
+	source = wavemon-git::git+https://github.com/uoaerg/wavemon
+	sha512sums = SKIP
+
+pkgname = wavemon-git
+

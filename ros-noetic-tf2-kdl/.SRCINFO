@@ -1,0 +1,23 @@
+pkgbase = ros-noetic-tf2-kdl
+	pkgdesc = ROS - KDL binding for tf2.
+	pkgver = 0.7.6
+	pkgrel = 1
+	url = https://wiki.ros.org/tf2
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-tf2
+	makedepends = ros-noetic-cmake-modules
+	makedepends = ros-noetic-catkin
+	makedepends = ros-noetic-tf2-ros
+	makedepends = eigen
+	makedepends = orocos-kdl
+	depends = ros-noetic-tf2
+	depends = ros-noetic-tf2-ros
+	depends = eigen
+	depends = orocos-kdl
+	source = ros-noetic-tf2-kdl-0.7.6.tar.gz::https://github.com/ros/geometry2/archive/0.7.6.tar.gz
+	sha256sums = cd6014745564bc9fc926999820a22742058a3a0bafd4b71795324026d4491db3
+
+pkgname = ros-noetic-tf2-kdl

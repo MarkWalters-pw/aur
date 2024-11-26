@@ -1,0 +1,23 @@
+pkgbase = emacs-ess-git
+	pkgdesc = A Universal Interface for Statistical Analysis - git-version
+	pkgver = 18.10.3.git.9041.39eba283
+	pkgrel = 1
+	url = https://ess.r-project.org
+	install = ess.install
+	arch = any
+	license = GPL
+	makedepends = git
+	makedepends = wget
+	makedepends = texlive-latexextra
+	depends = r
+	depends = emacs
+	provides = ess
+	provides = emacs-ess
+	conflicts = emacs-ess
+	conflicts = emacs-ess-svn
+	options = docs
+	options = !makeflags
+	source = emacs-ess::git+https://github.com/emacs-ess/ESS.git
+	sha512sums = SKIP
+
+pkgname = emacs-ess-git

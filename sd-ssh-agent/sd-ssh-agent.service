@@ -1,0 +1,9 @@
+[Unit]
+Description=SSH key agent
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/sd-ssh-agent -D -a %t/sd-ssh-agent.sock
+
+[Install]
+Also=sd-ssh-agent.socket

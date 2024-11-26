@@ -1,0 +1,25 @@
+pkgbase = dappy
+	pkgdesc = Secure browser and name system based on blockchain
+	pkgver = 0.5.4
+	pkgrel = 1
+	url = https://dappy.tech/
+	install = dappy.install
+	arch = x86_64
+	license = custom:dappy
+	depends = gtk3
+	depends = libnotify
+	depends = nss
+	depends = libxss
+	depends = libxtst
+	depends = xdg-utils
+	depends = util-linux
+	depends = libappindicator-gtk3
+	depends = libsecret
+	options = !emptydirs
+	options = !strip
+	source = https://github.com/fabcotech/dappy/releases/download/0.5.4/dappy-0.5.4-linux-amd64.deb
+	source = https://raw.githubusercontent.com/fabcotech/dappy/master/LICENSE
+	sha256sums = d7f792017e1629fefd1bde083ab3b35c2064d57adb26765a780950752e107f7b
+	sha256sums = SKIP
+
+pkgname = dappy

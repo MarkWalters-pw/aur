@@ -1,0 +1,18 @@
+pkgbase = gspiceui
+	pkgdesc = A GUI to various freely available Spice electronic ciruit simulators
+	pkgver = 1.2.87
+	pkgrel = 2
+	url = http://users.tpg.com.au/micksw012/gspiceui.html
+	arch = i686
+	arch = x86_64
+	license = GPL
+	depends = wxwidgets-gtk2
+	optdepends = gnucap: simulation backend
+	optdepends = ngspice: simulation backend
+	optdepends = gaw: wave viewer
+	source = http://downloads.sourceforge.net/sourceforge/gspiceui/gspiceui-v1.2.87.tar.gz
+	source = gspiceui.desktop
+	md5sums = ae580ac1665674fda3b7029392695157
+	md5sums = ee8b733d2bdb46f8c526fa0b04310bb9
+
+pkgname = gspiceui

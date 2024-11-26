@@ -1,0 +1,26 @@
+pkgbase = ds3os-loader-rs-git
+	pkgdesc = Loader for the Dark Souls 3 Open Server
+	pkgver = r19.e7b4045
+	pkgrel = 2
+	url = https://github.com/clague/ds3os-loader-rs
+	arch = x86_64
+	license = unknown
+	makedepends = cargo
+	makedepends = git
+	depends = openssl
+	depends = fontconfig
+	depends = freetype2
+	depends = gcc-libs
+	depends = glibc
+	depends = expat
+	depends = zlib
+	depends = bzip2
+	depends = libpng
+	depends = harfbuzz
+	depends = brotli
+	provides = ds3os-loader
+	conflicts = ds3os-loader
+	source = ds3os-loader-rs-git::git+https://github.com/clague/ds3os-loader-rs
+	md5sums = SKIP
+
+pkgname = ds3os-loader-rs-git

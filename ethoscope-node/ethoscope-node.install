@@ -1,0 +1,69 @@
+## arg 1:  the new package version
+#pre_install() {
+	# do something here
+#}
+
+# arg 1:  the new package version
+post_install() {
+    #echo "changing the remote GIT source to local BARE created during installation"
+    cd /opt/ethoscope-node
+    git remote set-url origin /srv/git/ethoscope.git
+
+    #setting branch
+    git checkout dev
+    
+    #installing python module
+    cd /opt/ethoscope-node/node_src/
+    python setup.py develop
+    
+    echo "enabling NODE specific systemd service files"
+    systemctl enable ethoscope_node.service ethoscope_update_node.service ethoscope_backup.service ethoscope_video_backup.service 
+    echo "enabling the GIT server on the node and NTP service"
+    systemctl enable git-daemon.socket ntpd.service 
+    
+    #changing hostname on node
+    hostnamectl set-hostname node
+    
+    #setting host settings on node
+    echo "127.0.0.1    node" > /etc/hosts
+
+    #Link scripts that need to run automatically
+    ln -s /opt/ethoscope-node/node_src/scripts/make_index.py /etc/cron.daily/make_index.py
+
+    echo "PLEASE REBOOT NOW."
+}
+
+## arg 1:  the new package version
+## arg 2:  the old package version
+#pre_upgrade() {
+	# do something here
+#}
+
+# arg 1:  the new package version
+# arg 2:  the old package version
+post_upgrade() {
+    echo "changing the remote GIT source to local BARE created during installation"
+    cd /opt/ethoscope-node
+    git remote set-url origin /srv/git/ethoscope.git
+
+    #setting branch
+    git checkout dev
+}
+
+# arg 1:  the old package version
+pre_remove() {
+    echo "disabling systemd service files"
+    systemctl stop ethoscope_node.service ethoscope_update_node.service ethoscope_backup.service ethoscope_video_backup.service
+    systemctl disable ethoscope_node.service ethoscope_update_node.service ethoscope_backup.service ethoscope_video_backup.service
+    systemctl stop git-daemon.socket
+    systemctl disable git-daemon.socket
+
+}
+
+# arg 1:  the old package version
+post_remove() {
+    #removes the git directorie just in case
+    rm -rf /opt/ethoscope-node
+    rm -rf /opt/ethoscope-updater
+    rm -rf /srv/git/ethoscope.git
+}

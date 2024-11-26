@@ -1,0 +1,16 @@
+pkgbase = libmatchbox
+	pkgdesc = Base library for Matchbox WM
+	pkgver = 1.12
+	pkgrel = 2
+	url = https://www.yoctoproject.org/software-item/matchbox/
+	arch = x86_64
+	license = LGPL
+	depends = pango
+	depends = libpng
+	depends = libjpeg-turbo
+	depends = xsettings-client
+	depends = libxext
+	source = https://git.yoctoproject.org/libmatchbox/snapshot/libmatchbox-1.12.tar.gz
+	sha256sums = 648d7e1af82e69b79c0932ff9f85e6781584eada5da8662f70196916dd208f55
+
+pkgname = libmatchbox

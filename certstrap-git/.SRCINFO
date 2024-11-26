@@ -1,0 +1,15 @@
+pkgbase = certstrap-git
+	pkgdesc = Tools to bootstrap CAs, certificate requests, and signed certificates.
+	pkgver = v1.2.0.r36.g14dbcb0
+	pkgrel = 1
+	url = https://github.com/square/certstrap
+	arch = x86_64
+	license = Apache
+	makedepends = git
+	depends = go>=1.13
+	options = !emptydirs
+	source = git+https://github.com/square/certstrap
+	sha256sums = SKIP
+
+pkgname = certstrap-git
+

@@ -1,0 +1,11 @@
+pre_install() {
+    pre_upgrade
+}
+
+pre_upgrade() {
+  cat << EOF
+
+  The name of the executable is 'mdn'
+
+EOF
+}

@@ -1,0 +1,14 @@
+pkgbase = aura-gpu-dkms-git
+	pkgdesc = Kernel module to expose aura gpu so we can access it from example OpenRGB.
+	pkgver = r15.f168495
+	pkgrel = 1
+	url = https://github.com/hartmark/aura-gpu
+	arch = i686
+	arch = x86_64
+	license = Unknown
+	depends = dkms
+	provides = aura-gpu
+	source = git+https://github.com/hartmark/aura-gpu
+	sha256sums = SKIP
+
+pkgname = aura-gpu-dkms-git

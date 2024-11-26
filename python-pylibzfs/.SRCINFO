@@ -1,0 +1,15 @@
+pkgbase = python-pylibzfs
+	pkgdesc = Python libzfs bindings.
+	pkgver = 22.12.2
+	pkgrel = 1
+	url = https://github.com/truenas/py-libzfs
+	arch = x86_64
+	license = custom
+	makedepends = python-setuptools
+	makedepends = cython
+	depends = zfs-utils
+	depends = python
+	source = https://github.com/truenas/py-libzfs/archive/refs/tags/TS-22.12.2.tar.gz
+	sha512sums = 568100986cec58e0e79d3024fb7d8b6a864e6f67d0f51bd63e16c2c0097d0868e4e7bbf5c63c2541158dec672bebb8285cf2ac3933054216c491b03f39041048
+
+pkgname = python-pylibzfs

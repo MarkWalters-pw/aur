@@ -1,0 +1,18 @@
+mksrcinfo:
+  image: archlinux:latest
+  stage: build
+  before_script:
+    - groupadd -r makepkg
+    - useradd -u 1000 -g makepkg -m makepkg
+    - pacman -Sy --noconfirm base base-devel git
+  script:
+    - su makepkg -- makepkg --printsrcinfo
+
+publish:
+  image: archlinux:latest
+  stage: deploy
+  before_script:
+    - pacman -S --refresh --noconfirm git
+  script:
+    - git remote add aur ssh://aur@aur.archlinux.org/$CI_PROJECT_NAME
+    - git push aur master

@@ -1,0 +1,7 @@
+post_install() {
+	useradd -M -r -s /usr/bin/nologin dump1090
+}
+
+post_remove() {
+	userdel dump1090
+}

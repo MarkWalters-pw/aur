@@ -1,0 +1,21 @@
+pkgbase = auctex-git
+	pkgdesc = TeX/LaTeX writing environment for Emacs - git checkout
+	pkgver = 12.2.r32.g07efee4e
+	pkgrel = 1
+	epoch = 1
+	url = http://savannah.gnu.org/projects/auctex
+	install = auctex.install
+	arch = any
+	license = GPL3
+	makedepends = git
+	makedepends = texinfo
+	makedepends = perl
+	depends = texlive-core
+	depends = emacs
+	provides = auctex
+	conflicts = auctex
+	source = git://git.sv.gnu.org/auctex.git
+	md5sums = SKIP
+
+pkgname = auctex-git
+

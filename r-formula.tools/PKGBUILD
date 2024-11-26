@@ -1,0 +1,32 @@
+# Maintainer: Guoyi Zhang <guoyizhang at malacology dot net>
+# Contributor: Viktor Drobot (aka dviktor) linux776 [at] gmail [dot] com
+
+_pkgname=formula.tools
+_pkgver=1.7.1
+pkgname=r-${_pkgname,,}
+pkgver=${_pkgver//-/.}
+pkgrel=9
+pkgdesc="Programmatic Utilities for Manipulating Formulas, Expressions, Calls, Assignments and Other R Objects"
+arch=(any)
+url="https://cran.r-project.org/package=$_pkgname"
+license=('GPL-2.0-only')
+depends=(
+  r-operator.tools
+)
+optdepends=(
+  r-magrittr
+  r-testthat
+)
+source=("https://cran.r-project.org/src/contrib/${_pkgname}_${_pkgver}.tar.gz")
+md5sums=('ab6ac9a593b99ef94148b2c908abc07d')
+b2sums=('9ac3f837e38cb02d6716ca3a76e1fd2db733109f8024bf7c4f5cea31b9757e71516df61d31f53cdc926193aa2936325871753571d21e2e1a8c73cc1337053644')
+
+build() {
+  mkdir build
+  R CMD INSTALL -l build "$_pkgname"
+}
+
+package() {
+  install -d "$pkgdir/usr/lib/R/library"
+  cp -a --no-preserve=ownership "build/$_pkgname" "$pkgdir/usr/lib/R/library"
+}

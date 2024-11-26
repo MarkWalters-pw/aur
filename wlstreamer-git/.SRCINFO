@@ -1,0 +1,24 @@
+pkgbase = wlstreamer-git
+	pkgdesc = Wrapper around wf-recorder and ffmpeg that automatically switches the screen being recorded based on current window focus. Works with sway.
+	pkgver = 0.4.0.23.g2dbdd83
+	pkgrel = 1
+	url = https://git.b12f.io/b12f/wlstreamer
+	arch = i686
+	arch = x86_64
+	arch = armv6h
+	arch = armv7h
+	license = GPL3
+	makedepends = git
+	makedepends = openssl
+	makedepends = zlib
+	makedepends = rust
+	makedepends = cargo
+	depends = sway
+	depends = wf-recorder
+	depends = ffmpeg
+	depends = v4l2loopback-dkms
+	source = wlstreamer::git+https://git.b12f.io/b12f/wlstreamer.git
+	md5sums = SKIP
+
+pkgname = wlstreamer-git
+

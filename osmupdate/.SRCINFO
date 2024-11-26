@@ -1,0 +1,16 @@
+pkgbase = osmupdate
+	pkgdesc = Download, manipulate and apply OpenStreetMap changefiles
+	pkgver = 0.4.5
+	pkgrel = 1
+	url = https://wiki.openstreetmap.org/wiki/Osmupdate
+	arch = i686
+	arch = x86_64
+	license = AGPL3
+	depends = osmconvert
+	depends = wget
+	optdepends = gzip: to write gzip compressed files
+	source = http://m.m.i24.cc/osmupdate.c
+	sha256sums = 9e72144bef15e461ce39c066a3015088d2126c27e2f78636d0deccab380f3cc1
+
+pkgname = osmupdate
+

@@ -1,0 +1,29 @@
+[Unit]
+Description=OpenNebula management
+After=syslog.target network.target local-fs.target remote-fs.target
+Requires=mysqld.service
+Before=opennebula-scheduler.service
+BindTo=opennebula-scheduler.service
+Wants=opennebula-sunstone.service opennebula-econe.service opennebula-onegate.service opennebula-oneflow.service opennebula-scheduler.service
+
+[Service]
+User=oneadmin
+Group=cloud
+Type=simple
+PermissionsStartOnly=true
+
+# Start daemon in forground mode, when starting as forking process the
+# daemon shuts down without obvious reason.
+ExecStart=/usr/bin/oned -f
+# Log file location must exist
+ExecStartPre=/bin/mkdir -p /var/log/one
+ExecStartPre=/bin/chown oneadmin:cloud /var/log/one
+ExecStartPre=-/usr/bin/logrotate -s /tmp/logrotate.state -f /etc/logrotate.d/opennebula
+ExecStop=/bin/kill -TERM $MAINPID
+ExecStopPost=/usr/bin/rm -f /var/lock/one/one
+ExecStopPost=/usr/share/one/follower_cleanup
+PIDFile=/run/one/oned.pid
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

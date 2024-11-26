@@ -1,0 +1,16 @@
+pkgbase = imgp-git
+	pkgdesc = Resize or rotate JPEG and PNG images.
+	pkgver = r262.9d570e3
+	pkgrel = 1
+	url = https://github.com/jarun/imgp
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = python3
+	depends = python-pillow
+	provides = imgp
+	conflicts = imgp
+	source = imgp::git+https://github.com/jarun/imgp.git
+	sha256sums = SKIP
+
+pkgname = imgp-git

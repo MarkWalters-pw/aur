@@ -1,0 +1,16 @@
+pkgbase = vim-sneak-git
+	pkgdesc = Motion plugin for Vim
+	pkgver = 1.9.r6.g94c2de4
+	pkgrel = 1
+	url = https://github.com/justinmk/vim-sneak
+	arch = any
+	groups = vim-plugins
+	license = MIT
+	makedepends = git
+	depends = vim-plugin-runtime
+	provides = vim-sneak
+	conflicts = vim-sneak
+	source = vim-sneak-git::git+https://github.com/justinmk/vim-sneak
+	sha256sums = SKIP
+
+pkgname = vim-sneak-git

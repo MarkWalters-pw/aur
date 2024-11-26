@@ -1,0 +1,31 @@
+#!/bin/sh
+
+pre_install() {
+	if ! id -u hornet > /dev/null 2>&1; then
+		useradd --no-create-home --system hornet > /dev/null
+	fi
+	mkdir -p /etc/hornet /var/lib/hornet
+}
+
+post_install() {
+	chown -R hornet:hornet /var/lib/hornet /etc/hornet
+}
+
+post_upgrade () {
+	chown -R hornet:hornet /var/lib/hornet /etc/hornet
+	
+	printf  "##########################################################################################\
+		\n# Please diff your config in /etc/hornet/config.json with the new one provided by the    #\
+		\n# package in /etc/hornet/config.json.pacnew for any changes made upstream as the upgrade #\
+		\n# process doesn't touch your existing configuration.                                     #\
+		\n##########################################################################################\n"
+}
+
+pre_remove() {
+	systemctl stop hornet.service
+}
+
+post_remove() {
+	userdel hornet > /dev/null
+}
+

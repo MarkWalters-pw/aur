@@ -1,0 +1,24 @@
+pkgbase = curtail-git
+	pkgdesc = Simple & useful image compressor (latest commit)
+	pkgver = 1.10.0.r2.ge6900c9
+	pkgrel = 1
+	url = https://github.com/Huluti/Curtail
+	arch = x86_64
+	arch = aarch64
+	license = GPL-3.0-or-later
+	checkdepends = appstream-glib
+	makedepends = git
+	makedepends = meson
+	depends = jpegoptim
+	depends = libadwaita
+	depends = libwebp
+	depends = oxipng
+	depends = pngquant
+	depends = python-gobject
+	depends = scour
+	provides = curtail
+	conflicts = curtail
+	source = git+https://github.com/Huluti/Curtail.git
+	sha256sums = SKIP
+
+pkgname = curtail-git

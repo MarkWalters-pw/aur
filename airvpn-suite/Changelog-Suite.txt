@@ -1,0 +1,280 @@
+Changelog for AirVPN Suite
+
+Version 1.3.0 - 1 June 2023
+
+- [ProMIND] updated to OpenVPN3 AirVPN 3.8.4
+- [ProMIND] replaced include guards with #pragma once in all include files
+- [ProMIND] added file continent_names.csv
+- [ProMIND] installation script: improved group management for specific system cases
+
+
+airvpnmanifest
+
+- [ProMIND] updated to AirVPN document version 288
+- [ProMIND] loadManifest() can now force the loading of the local instance (if any)
+- [ProMIND] loadManifest() statistics are now counted for continent and earth as well
+- [ProMIND] loadManifest() added support for new AirVPNServer class members compliance
+- [ProMIND] processXmlManifest() countryStats now includes closed servers as well
+- [ProMIND] getServerListByCountry() now accepts continents as well
+
+
+airvpnserver
+
+- [ProMIND] renamed specific OpenVPN members
+- [ProMIND] added members for WireGuard support
+- [ProMIND] added members for Perfect Forward Secrecy (PFS) support
+- [ProMIND] members supportIPv4 renamed to IPv4Available
+- [ProMIND] members supportIPv6 renamed to IPv6Available
+
+
+airvpnserverprovider
+
+- [ProMIND] members supportIPv4 renamed to IPv4Available
+- [ProMIND] members supportIPv6 renamed to IPv6Available
+
+
+airvpntools
+
+- [ProMIND] updated to AirVPN document version 288
+- [ProMIND] added int AirVpnDocumentVersion
+- [ProMIND] added std::string wireguardPublicKey
+- [ProMIND] added method getAirVpnDocumentVersion()
+- [ProMIND] requestAirVPNDocument(): in case document version is not set by caller, it is then set to the default value
+- [ProMIND] added methods getWireGuardPublicKey() and setWireGuardPublicKey()
+- [ProMIND] added method getWireGuardProfile()
+- [ProMIND] added method realCountryName(): return the normalized country/continent name
+- [ProMIND] added method loadLinuxModule()
+- [ProMIND] added method replaceAll()
+- [ProMIND] added method formatTimestamp()
+- [ProMIND] added methods getVPNConfigFileType() and getVPNProfileType()
+- [ProMIND] added unit of measure mode to formatTransferRate() and formatDataVolume() methods (defaults to decimal mode)
+
+
+airvpnuser
+
+- [ProMIND] updated to AirVPN document version 288
+- [ProMIND] added WireGuard members to struct UserKey
+- [ProMIND] added method getWireGuardProfile()
+- [ProMIND] getOpenVPNProfile(): replaced "cipher" with "data-ciphers"
+- [ProMIND] getOpenVPNProfile(): removed "comp-lzo" support
+
+
+countrycontinent
+
+- [ProMIND] added method isContinent()
+- [ProMIND] added method getContinentCode()
+- [ProMIND] added method getContinentName()
+
+
+dbusconnector
+
+- [ProMIND] mutex lock operations are now depending on timeout
+
+
+loadmod
+
+- [ProMIND] added MODULE_IS_EMBEDDED, MODULE_DEP_FILE_NOT_FOUND and MODULE_BUILTIN_FILE_NOT_FOUND macros
+- [ProMIND] load_kernel_module(): added check to modules.builtin
+
+
+localnetwork
+
+- [ProMIND] added struct IPAddress and enum IPFamily
+- [ProMIND] removed local struct IPEntry (superseeded by IPAddress and IPFamily)
+- [ProMIND] added method parseIpSpecification()
+
+
+netfilter
+
+- [ProMIND] removed method loadLinuxModule() (moved to airvpntools)
+- [ProMIND] enum Direction replaced by enum Hook
+- [ProMIND] Replaced enum IP with LocalNetwork's enum IPFamily
+- [ProMIND] extensive and complete re-engineering and revision in order to allow a full and dynamic management of rules (notably nftables)
+
+
+openvpnclient
+
+- [ProMIND] added method profileNeedsResolution()
+- [ProMIND] added method resolveProfile()
+- [ProMIND] system DNS operations are now handled by methods saveSystemDNS(), allowSystemDNS() and rejectSystemDNS()
+- [ProMIND] bypass routes are now added at connection establishment in order to allow "redirect-gateway" ignore to work properly
+- [ProMIND] onAssignIpEvent(): add local gateway to netFilter in case gateway has not been redirected (pull-filter ignore "redirect-gateway")
+- [ProMIND] print_stats(): stats are now shown only in case of connection to VPN server
+- [ProMIND] removed references to LocalNetwork::IPEntry and replaced with IPAddress and IPFamily
+- [ProMIND] implemented and overridden all virtual tun_builder_* methods
+- [ProMIND] tun_builder_set_mtu(): now correctly sets MTU according to tun-mtu directive
+- [ProMIND] Replaced struct IPClass with LocalNetwork's enum IPFamily
+- [ProMIND] onResolveEvent(): proxy is now properly added to the network filter
+
+
+vpnclient
+
+- [ProMIND] refactored and renamed to openvpnclient
+
+
+wireguardclient
+
+- [ProMIND] new class
+
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+
+Version 1.2.1 - 9 December 2022
+
+- [ProMIND] production release
+
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+
+Version 1.2.1 RC 1 - 30 November 2022
+
+- [ProMIND] updated all dependencies and libraries
+- [ProMIND] package is now realeased both for OpenSSL 3.0 and OpenSSL 1.1.x (legacy)
+
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+
+Version 1.2.0 - 22 March 2022
+
+- [ProMIND] production release
+
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+
+Version 1.2.0 RC 3 - 17 March 2022
+
+- [ProMIND] updated to OpenVPN3 AirVPN 3.8.1
+- [ProMIND] vpnclient.hpp: changed references of ClientAPI::OpenVPNClient class to ClientAPI::OpenVPNClientHelper to conform to the new OpenVPN3 client class names
+- [ProMIND] vpnclient.hpp: added private members event_error and event_fatal_error to reflect client's event errors
+- [ProMIND] vpnclient.hpp: added public methods eventError() and eventFatalError()
+- [ProMIND] vpnclient.hpp: get_connection_stats() added topology, cipher, ping and ping_restart values from OpenVPN3 options
+
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+
+Version 1.2.0 RC 2 - 8 March 2022
+
+- [ProMIND] vpnclient.hpp: added methods init(), initSupportedDataCiphers(), isDataCipherSupported() and getSupportedDataCiphers()
+- [ProMIND] vpnclient.hpp: added getPushedDns() method
+- [ProMIND] airvpntools.cpp: added normalizeBoolValue() method for the normalization of "simple" bools to extended values conforming to Suite's option parser and to be used to extend OpenVPN3 "simple" bool options
+- [ProMIND] logger.hpp: class is now synchronized and thread safe
+
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+
+Version 1.2.0 RC 1 - 15 February 2022
+
+- [ProMIND] Updated to OpenVPN 3.7.2 AirVPN
+
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+
+Version 1.2.0 Beta 1 - 7 February 2022
+
+- [ProMIND] Updated to OpenVPN 3.7.1 AirVPN, latest support libraries and support projects
+- [ProMIND] vpnclient.hpp: added methods openVPNInfo(), openVPNCopyright() and sslLibraryVersion()
+- [ProMIND] vpnclient.hpp: added event management (subscription, unsubscription, raising) via callback functions for all native ClientEvent::Type
+- [ProMIND] loadmod.c: added support for gz and zstd modules
+- [ProMIND] netfilter.cpp: changed firewall priority scheme into nftables, iptables-legacy, iptables, pf
+- [ProMIND] netfilter.cpp: added workaround for iptables modules in order to comply to kernel 5.15.x
+- [ProMIND] netfilter.cpp: init(): in case netlock is set to iptables, force the initial loading of system rules by adding and then immediately removing two IPv4 and IPv6 "fake rules" in order to have netlock work in distributions running under kernel 5.15.x and iptables 1.8.7
+- [ProMIND] dnsmanager.cpp: systemHasResolved() method renamed as systemHasSystemdResolved()
+- [ProMIND] dnsmanager.cpp: added systemHasResolvectl() method
+- [ProMIND] optionparser.cpp: added description and order members to OptionConfig and Option structures
+- [ProMIND] airvpntools.cpp: added automatic support and selection for AirVPN IPv6 bootstrap servers
+- [ProMIND] airvpnserverprovider.cpp: getFilteredServerList() includes all AirVPN server. Those not meeting the connection priority scheme are sent to the bottom of the list with the highest possible penalty. This is needed in case the country black list includes all of the connection priority scheme's countries
+
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+
+Version 1.1.0 - 4 June 2021
+
+- [ProMIND] updated all dependencies and libraries
+- [ProMIND] vpnclient.hpp: restoreNetworkSettings() now returns a warning in case backup files are not found
+- [ProMIND] vpnclient.hpp: restoreNetworkSettings() improved restoring management with more cases/scenarios
+
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+
+Version 1.1.0 RC 4 - 14 May 2021
+
+- [ProMIND] optionparser.cpp: added proper message errors in case of invalid argument and allocation
+            memory error
+- [ProMIND] netfilter.cpp: systemBackupExists() now evaluate every firewall mode backup file name
+- [ProMIND] netfilter.cpp: restore() now check for every firewall mode backup and restore it accordingly
+- [ProMIND] netfilter.cpp: IPv6 rules are now allowed or added only in case IPv6 is available in the system
+
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+
+Version 1.1.0 RC 3 - 16 April 2021
+
+- [ProMIND] Updated to OpenVPN 3.7 AirVPN
+- [ProMIND] vpnclient.hpp: avoid netFilter setup in case NetFilter object is not private
+- [ProMIND] dbusconnector.cpp: fine tuned D-Bus wait cycle in R/W dispatch. Implemented a thread
+            safe wait in order to avoid D-Bus timeout policy
+
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+
+Version 1.1.0 RC 2 - 14 April 2021
+
+- [ProMIND] Updated to OpenVPN 3.6.7 AirVPN
+
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+
+Version 1.1.0 RC 1 - 7 April 2021
+
+- [ProMIND] Release Candidate 1
+
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+
+Version 1.1.0 Beta 2 - 2 April 2021
+
+- [ProMIND] localnetwork.cpp: added getDefaultGatewayInterface() method
+
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+
+Version 1.1.0 Beta 1 - 11 March 2021
+
+- [ProMIND] rcparser.cpp: removed formal list control for STRING type
+- [ProMIND] netfilter.hpp, netfilter.cpp: added functions to set the availability of specific iptables tables
+            in order to properly use available tables only
+- [ProMIND] vpnclient.hpp: onResolveEvent() sets iptables tables according to the loaded modules
+- [ProMIND] vpnclient.hpp: Changed constructor in order to use both private and external NetFilter object
+- [ProMIND] localnetwork.cpp: added getLoopbackInterface(), getLocalIPaddresses() and getLocalInterfaces() methods
+- [ProMIND] airvpntools.cpp: added detectLocation() method to retrieve location data from ipleak.net
+- [ProMIND] airvpnuser.cpp: detectUserLocation() now uses AirVPNTools::detectLocation()
+- [ProMIND] airvpnuser.cpp: loadUserProfile() now correctly sets userProfileErrorDescription in case of network failure
+- [ProMIND] airvpnserverprovider.cpp: added "DEFAULT" rule to getUserConnectionPriority() in case user's country or
+            continent is undefined
+- [ProMIND] airvpnmanifest.cpp: loadManifest() now correctly sets the status STORED in case of network failure
+- [ProMIND] Added Semaphore class
+- [ProMIND] dnsmanager.hpp: method revertAllResolved() renamed to restoreResolved(). Besides reverting all interfaces
+            it now restarts systemd-resolved service as well.
+- [ProMIND] install.sh: improved update/upgrade process
+
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+
+Version 1.0.0 - 7 January 2021
+
+- [ProMIND] Production release

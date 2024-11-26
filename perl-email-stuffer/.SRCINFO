@@ -1,0 +1,20 @@
+pkgbase = perl-email-stuffer
+	pkgdesc = A more casual approach to creating and sending emails
+	pkgver = 0.020
+	pkgrel = 1
+	url = https://metacpan.org/pod/Email::Stuffer
+	arch = any
+	license = PerlArtistic
+	makedepends = perl-email-sender>=0.120000
+	makedepends = perl-moo
+	makedepends = perl-test-fatal
+	depends = perl-email-mime>=1.943
+	depends = perl-email-sender
+	depends = perl-module-runtime
+	depends = perl-params-util>=1.05
+	depends = perl-scalar-list-utils
+	options = !emptydirs
+	source = https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Email-Stuffer-0.020.tar.gz
+	sha512sums = 62de0ed98ae892dfa79a6c19b0ddc82f932e7edb048323633810aefef26eed41501a672457f22ecf22846836ca731bfb10e29e2b1295125bc9540bbf04b7e18f
+
+pkgname = perl-email-stuffer

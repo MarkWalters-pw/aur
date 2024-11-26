@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+#set -o xtrace
+set -o errexit -o nounset -o pipefail -o errtrace
+IFS=$'\n\t'
+
+cd /usr/lib/modules/saved-kernel-modules
+
+running_kernel=$(uname -r)
+
+# remove symlink if it exists as a precaution
+if [ -L /usr/lib/modules/"$running_kernel" ] ; then
+    rm -f /usr/lib/modules/"$running_kernel"
+fi
+
+# is it already saved?
+if [ -e modules/"$running_kernel" ] ; then
+    exit 0
+fi
+
+mkdir -p modules
+
+# copy with hardlinks, much faster
+cp --archive --link /usr/lib/modules/"$running_kernel" modules/

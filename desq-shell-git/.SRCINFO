@@ -1,0 +1,21 @@
+pkgbase = desq-shell-git
+	pkgdesc = The Desktop Shell for Desq
+	pkgver = r62.29820a7
+	pkgrel = 1
+	url = https://gitlab.com/DesQ
+	arch = any
+	groups = desq-git
+	license = none
+	makedepends = git
+	depends = libdesqwl-git
+	depends = libdesqui-git
+	depends = pam
+	depends = qt5-svg
+	depends = libdbusmenu-qt5
+	provides = desq-shell
+	conflicts = desq-shell
+	source = git+https://gitlab.com/Desq/Shell.git
+	md5sums = SKIP
+
+pkgname = desq-shell-git
+

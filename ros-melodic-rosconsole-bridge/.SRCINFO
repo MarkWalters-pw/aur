@@ -1,0 +1,19 @@
+pkgbase = ros-melodic-rosconsole-bridge
+	pkgdesc = ROS - rosconsole_bridge is a package used in conjunction with console_bridge and rosconsole for connecting console_bridge-based logging to rosconsole-based logging.
+	pkgver = 0.5.3
+	pkgrel = 2
+	url = https://www.wiki.ros.org/rosconsole_bridge
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-melodic-rosconsole
+	makedepends = ros-melodic-catkin
+	makedepends = console-bridge
+	depends = ros-melodic-rosconsole
+	depends = console-bridge
+	source = ros-melodic-rosconsole-bridge-0.5.3.tar.gz::https://github.com/ros/rosconsole_bridge/archive/0.5.3.tar.gz
+	sha256sums = e2aca7171b599a65c630e0be199cc642f7bfde266f58a34501def4644ec52fb1
+
+pkgname = ros-melodic-rosconsole-bridge
+

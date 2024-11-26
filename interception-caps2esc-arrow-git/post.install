@@ -1,0 +1,17 @@
+post_install() {
+    echo "running post install triggers"
+
+    if [[ $(systemctl is-enabled udevmon.service | grep disabled) ]]; then
+        systemctl enable udevmon.service
+        echo enabled udevmon.service
+    fi
+    echo "restarting udevmon.service"
+    systemctl restart udevmon.service
+}
+
+post_upgrade() {
+    echo "running post upgrade triggers"
+    systemctl restart udevmon.service
+    echo "restarting udevmon.service"
+}
+

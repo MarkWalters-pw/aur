@@ -1,0 +1,29 @@
+pkgbase = python-zulip-term-git
+	pkgdesc = An interactive terminal interface for Zulip
+	pkgver = 0.6.0.r539.a9d354c608
+	pkgrel = 1
+	url = https://github.com/zulip/zulip-terminal
+	arch = any
+	license = GPL
+	checkdepends = python-pytest
+	checkdepends = python-pytest-mock
+	checkdepends = python-pytest-cov
+	makedepends = python-setuptools
+	depends = python
+	depends = python-urwid
+	depends = python-urwid_readline
+	depends = python-lxml
+	depends = python-beautifulsoup4
+	depends = python-zulip-api
+	depends = python-typing_extensions
+	depends = python-dateutil
+	depends = python-tzlocal
+	depends = python-pygments
+	depends = python-pytz
+	depends = python-pyperclip
+	provides = python-zulip-term
+	conflicts = python-zulip-term
+	source = git+https://github.com/zulip/zulip-terminal#branch=main
+	sha512sums = SKIP
+
+pkgname = python-zulip-term-git

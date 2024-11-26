@@ -1,0 +1,4 @@
+post_install() {
+  echo -n "Updating font cache"
+  fc-cache -fs > /dev/null
+}

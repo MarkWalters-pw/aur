@@ -1,0 +1,21 @@
+pkgbase = linux_install-git
+	pkgdesc = Install various distros from Linux to any architecture.
+	pkgver = v0.5.8.r0.g7f05c8a
+	pkgrel = 1
+	url = https://github.com/alealexpro100/linux_install
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = coreutils
+	depends = util-linux
+	depends = bash
+	depends = wget
+	depends = tar
+	depends = zstd
+	optdepends = debootstrap: debian support
+	optdepends = qemu-user-static: foreign architectures support
+	optdepends = rpmextract: rpm-bootstrap support
+	source = git+https://github.com/alealexpro100/linux_install.git
+	md5sums = SKIP
+
+pkgname = linux_install-git

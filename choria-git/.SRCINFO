@@ -1,0 +1,23 @@
+pkgbase = choria-git
+	pkgdesc = Finally, an MMORPG that's all about grinding and doing chores
+	pkgver = e55de87f
+	pkgrel = 1
+	url = https://choria.gitlab.io
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = cmake
+	depends = gcc-libs
+	depends = sdl2
+	depends = sdl2_image
+	depends = openal
+	depends = libvorbis
+	depends = libogg
+	depends = freetype2
+	depends = sqlite
+	depends = zlib
+	conflicts = choria
+	source = choria-git::git+https://gitlab.com/choria/code.git#branch=dev
+	sha256sums = SKIP
+
+pkgname = choria-git

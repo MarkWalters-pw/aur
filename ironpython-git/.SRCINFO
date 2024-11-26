@@ -1,0 +1,21 @@
+pkgbase = ironpython-git
+	pkgdesc = Python implementation for the .NET framework
+	pkgver = 2.7.12.r1.gaa0526d4b
+	pkgrel = 1
+	url = http://ironpython.net
+	arch = any
+	license = Apache
+	makedepends = git
+	makedepends = powershell
+	makedepends = dotnet-sdk
+	makedepends = dos2unix
+	makedepends = dpkg
+	depends = mono>=5.18
+	depends = dotnet-runtime
+	options = !strip
+	options = emptydirs
+	options = libtool
+	source = git+https://github.com/IronLanguages/ironpython2.git
+	sha256sums = SKIP
+
+pkgname = ironpython-git

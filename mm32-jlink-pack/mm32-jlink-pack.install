@@ -1,0 +1,5 @@
+
+post_remove() {
+    echo "deleting the mm32-jlink-pack ..."
+    find /home -maxdepth 5 -name "mm32" -exec rm -rf {} \;
+}

@@ -1,0 +1,26 @@
+pkgbase = dmenu-bud
+	pkgdesc = Generic menu for X. Patched to fit i3menu
+	pkgver = 5.2.1
+	pkgrel = 1
+	url = https://github.com/budRich/dmenu
+	arch = x86_64
+	license = MIT
+	depends = sh
+	depends = glibc
+	depends = coreutils
+	depends = libx11
+	depends = libxinerama
+	depends = libxft
+	depends = freetype2
+	depends = fontconfig
+	depends = libfontconfig.so
+	provides = dmenu
+	conflicts = dmenu
+	source = https://dl.suckless.org/tools/dmenu-5.2.tar.gz
+	source = patchfile
+	sha512sums = 7be9bb76b11225ec86a30e643e9b884f6d13af581526085212cb7401383d448a72fe4dffc3ce84ffb8319dbf36ca8384597a89070cd27d39d5618f239a2da6e3
+	sha512sums = 4d8a8b3f4c5785d45a6f8a2f5fcaf24126d3a46fe678c4702dc63b930d6375e30526f84184ae70005ea4404300af07e62690aa8cb3d183366c2942ce197e498e
+	b2sums = f827f0d0d935f9da8103dbb73ed8b67818f1213d2f8e5a406de5e8c9496ea0479b4ccb50d3a29004abc1e4e679cac177163c02458ed144d323bb50fc120f936d
+	b2sums = 2d267a10bb0fe1c515fbc3ae3239f5413861be5c4fdc81ef4acfcfc4b6fcf2ebf4f6d50b2d7b1a009ef925f68a0db58e03cb5fb5b685539a186a476abd2a4019
+
+pkgname = dmenu-bud

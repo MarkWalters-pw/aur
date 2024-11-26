@@ -1,0 +1,17 @@
+pkgbase = fbpad-mkfn-git
+	pkgdesc = Create fbpad font files.
+	pkgver = r8.3ed3d3d
+	pkgrel = 1
+	url = http://litcave.rudi.ir/
+	arch = i686
+	arch = x86_64
+	license = ISC
+	makedepends = git
+	depends = freetype2
+	provides = ft2tf
+	provides = fbpad-mkfn
+	conflicts = fbpad-mkfn
+	source = fbpad-mkfn-git::git+git://repo.or.cz/fbpad_mkfn.git
+	md5sums = SKIP
+
+pkgname = fbpad-mkfn-git

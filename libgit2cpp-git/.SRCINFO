@@ -1,0 +1,18 @@
+pkgbase = libgit2cpp-git
+	pkgdesc = C++ wrapper for libgit2. It contains libgit2 as submodule (libs/libgit2).
+	pkgver = r192.4bf4ea5
+	pkgrel = 1
+	url = https://github.com/AndreyG/libgit2cpp
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = cmake
+	makedepends = ninja
+	optdepends = clang: for building with clang
+	optdepends = gcc: for building with gcc
+	provides = libgit2cpp
+	conflicts = libgit2cpp
+	source = libgit2cpp::git+https://github.com/AndreyG/libgit2cpp.git
+	sha512sums = SKIP
+
+pkgname = libgit2cpp-git

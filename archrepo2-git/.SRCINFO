@@ -1,0 +1,20 @@
+pkgbase = archrepo2-git
+	pkgdesc = Arch Linux repository manager
+	pkgver = 0.5.r23.g954068b
+	pkgrel = 2
+	epoch = 2
+	url = https://github.com/lilydjwg/archrepo2
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python
+	depends = python-tornado
+	depends = python-pyinotify
+	depends = pacman
+	depends = pyalpm
+	backup = etc/archrepo2.ini
+	source = git+https://github.com/lilydjwg/archrepo2.git
+	md5sums = SKIP
+
+pkgname = archrepo2-git

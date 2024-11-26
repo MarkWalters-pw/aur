@@ -1,0 +1,15 @@
+pkgbase = jagr-bin
+	pkgdesc = Java AutoGrader, implemented in Kotlin
+	pkgver = 0.9.0
+	pkgrel = 0
+	url = https://github.com/sourcegrade/jagr
+	arch = x86_64
+	license = AGPL-3.0
+	depends = jre-openjdk
+	provides = jagr
+	conflicts = jagr-git
+	source = https://github.com/SourceGrade/Jagr/releases/download/v0.9.0/Jagr-0.9.0.jar
+	source = jagr
+
+pkgname = jagr-bin
+

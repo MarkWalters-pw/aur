@@ -1,0 +1,20 @@
+pkgbase = bustd
+	pkgdesc = Process Killer Daemon for Out-of-Memory Scenarios, written in Rust
+	pkgver = 0.1.0
+	pkgrel = 1
+	url = https://github.com/vrmiguel/bustd
+	arch = x86_64
+	groups = bustd
+	license = MIT
+	makedepends = cargo
+	makedepends = git
+	depends = gcc-libs
+	optdepends = bustd-pacman-hooks: restart executable after pacman transaction
+	provides = bustd
+	conflicts = oomd
+	source = bustd::git+https://github.com/vrmiguel/bustd
+	source = bustd.service
+	sha1sums = SKIP
+	sha1sums = 0ed07411677251c1f26d8a482f898b1d49807730
+
+pkgname = bustd

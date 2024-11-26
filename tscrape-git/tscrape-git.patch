@@ -1,0 +1,26 @@
+Chunk 1:	Change PREFIX variables
+Chunk 2:	Append local CPPFLAGS
+diff -ura tscrape.old/Makefile tscrape.new/Makefile
+--- tscrape.old/Makefile	2020-03-30 21:06:13.524958558 +1100
++++ tscrape.new/Makefile	2020-03-30 21:07:54.628158194 +1100
+@@ -4,16 +4,16 @@
+ VERSION = 0.4
+ 
+ # paths
+-PREFIX = /usr/local
+-MANPREFIX = ${PREFIX}/man
+-DOCPREFIX = ${PREFIX}/share/doc/tscrape
++PREFIX = /usr
++MANPREFIX = ${PREFIX}/share/man
++DOCPREFIX = ${PREFIX}/share/doc/tscrape-git
+ 
+ RANLIB = ranlib
+ 
+ # use system flags.
+ TSCRAPE_CFLAGS = ${CFLAGS}
+ TSCRAPE_LDFLAGS = ${LDFLAGS}
+-TSCRAPE_CPPFLAGS = -D_DEFAULT_SOURCE
++TSCRAPE_CPPFLAGS = ${CPPFLAGS} -D_DEFAULT_SOURCE
+ 
+ BIN = \
+ 	tscrape\

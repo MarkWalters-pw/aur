@@ -1,0 +1,22 @@
+pkgbase = g2o-git
+	pkgdesc = A General Framework for Graph Optimization
+	pkgver = r798.2e35669
+	pkgrel = 1
+	url = https://github.com/RainerKuemmerle/g2o
+	arch = i686
+	arch = x86_64
+	license = BSD
+	makedepends = git
+	makedepends = cmake
+	depends = suitesparse
+	depends = qt5-base
+	depends = eigen
+	depends = glu
+	optdepends = libqglviewer: for building the g2o_viewer app
+	provides = g2o
+	conflicts = g2o-svn
+	source = g2o-git::git+https://github.com/RainerKuemmerle/g2o.git
+	md5sums = SKIP
+
+pkgname = g2o-git
+

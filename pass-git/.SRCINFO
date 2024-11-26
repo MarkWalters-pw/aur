@@ -1,0 +1,27 @@
+pkgbase = pass-git
+	pkgdesc = Stores, retrieves, generates, and synchronizes passwords securely
+	pkgver = 1.7.4.r12.28cec11
+	pkgrel = 2
+	url = https://passwordstore.org
+	arch = any
+	license = GPL2
+	checkdepends = git
+	makedepends = git
+	depends = bash
+	depends = gnupg
+	depends = tree
+	optdepends = dmenu: for passmenu
+	optdepends = dmenu-wayland: for passmenu in Wayland
+	optdepends = git: for git support
+	optdepends = qrencode: for QR code support
+	optdepends = wl-clipboard: for wlroots-based Wayland clipboard support
+	optdepends = xclip: for X11 clipboard support
+	optdepends = xdotool: to type passwords with passmenu
+	optdepends = ydotool: to type passwords with passmenu in Wayland
+	provides = pass
+	provides = passmenu
+	conflicts = pass
+	source = git+https://git.zx2c4.com/password-store.git
+	sha256sums = SKIP
+
+pkgname = pass-git

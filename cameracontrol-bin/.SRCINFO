@@ -1,0 +1,22 @@
+pkgbase = cameracontrol-bin
+	pkgdesc = Webcam, camera and microphone control for Linux - Έλεγχος webcam και camera και μικροφώνου για Linux
+	pkgver = 2.2.0
+	pkgrel = 2
+	url = https://gitea.artixlinux.org/linuxer/camera-control-webcam-switch-indicator
+	install = cameracontrol.install
+	arch = any
+	license = FPC modified LGPL Version 2
+	depends = qt5pas
+	depends = lsof
+	depends = kvantum-qt5
+	depends = libnotify
+	depends = notify-osd
+	optdepends = qt5ct: Qt5 Configuration Utility
+	optdepends = qt5gtk2: another GTK+2.0 integration plugins for Qt5
+	optdepends = qt5-styleplugins: additional style plugins for Qt5
+	conflicts = cameramonitor
+	conflicts = cameracontrol-bin
+	source = Cameracontrol-2.2.0.tar.bz2::https://codeberg.org/attachments/d1fdd3ee-963c-4f46-904e-bc660721be9c
+	sha256sums = ec781c9981d741ee5ca2aaa8afcabb8abc5e60c6dedfa3a09d4b2065e4ecff2a
+
+pkgname = cameracontrol-bin

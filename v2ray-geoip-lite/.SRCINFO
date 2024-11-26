@@ -1,0 +1,13 @@
+pkgbase = v2ray-geoip-lite
+	pkgdesc = GeoIP List for V2Ray (only-cn-private version)
+	pkgver = 202112061314
+	pkgrel = 2
+	url = https://github.com/v2fly/geoip
+	arch = any
+	license = CCPL:by-sa
+	provides = v2ray-geoip
+	conflicts = v2ray-geoip
+	source = geoip-202112061314.dat::https://github.com/v2fly/geoip/releases/download/202112061314/geoip-only-cn-private.dat
+	b2sums = 8c5ecf2128dd1cebd68d544ba130928902cdc5d2fd878fe5ee7a0bf625582c550f96abf9d544d218310a942017b8985e61a61df799926228e48b13fee142b709
+
+pkgname = v2ray-geoip-lite

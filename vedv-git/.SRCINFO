@@ -1,0 +1,23 @@
+pkgbase = vedv-git
+	pkgdesc = A tool for developing applications in a secure and reproducible environment using virtual machines with a Docker-like flavor.
+	pkgver = 0.2.3
+	pkgrel = 1
+	url = https://gitlab.com/yunielrc/vedv
+	install = vedv-git.install
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = make
+	makedepends = python-pip
+	depends = bash
+	depends = python
+	depends = virtualbox
+	depends = openbsd-netcat
+	depends = sshpass
+	depends = libxml2
+	provides = vedv=0.2.3
+	conflicts = vedv
+	source = vedv-git::git+https://gitlab.com/yunielrc/vedv.git
+	md5sums = SKIP
+
+pkgname = vedv-git

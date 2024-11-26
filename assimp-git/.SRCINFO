@@ -1,0 +1,20 @@
+pkgbase = assimp-git
+	pkgdesc = Portable Open Source library to import various well-known 3D model formats in an uniform manner
+	pkgver = 5.1.0.r10655.gfe7321342
+	pkgrel = 1
+	url = https://www.assimp.org/
+	arch = i686
+	arch = x86_64
+	license = BSD
+	makedepends = cmake
+	makedepends = git
+	depends = boost
+	depends = minizip
+	provides = assimp=5.1.0
+	conflicts = assimp
+	options = makeflags
+	options = !emptydirs
+	source = git://github.com/assimp/assimp.git
+	md5sums = SKIP
+
+pkgname = assimp-git

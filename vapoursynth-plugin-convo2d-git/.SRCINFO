@@ -1,0 +1,16 @@
+pkgbase = vapoursynth-plugin-convo2d-git
+	pkgdesc = Plugin for Vapoursynth: convo2d (GIT version)
+	pkgver = r15.39fdd09
+	pkgrel = 1
+	url = https://github.com/chikuzen/convo2d
+	arch = x86_64
+	license = LGPL2.1
+	makedepends = git
+	depends = vapoursynth
+	provides = vapoursynth-plugin-convo2d
+	conflicts = vapoursynth-plugin-convo2d
+	options = debug
+	source = git+https://github.com/chikuzen/convo2d.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-convo2d-git

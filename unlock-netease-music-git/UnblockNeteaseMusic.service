@@ -1,0 +1,16 @@
+[Unit]
+Description=UnblockNeteaseMusic
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+PIDFile=/var/run/UnblockNeteaseMusic.pid
+StandardOutput=null
+WorkingDirectory=/opt/UnblockNeteaseMusic/
+ExecStart=node app.js -s -e http://music.163.com 
+RestartPreventExitStatus=23
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

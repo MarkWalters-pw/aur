@@ -1,0 +1,22 @@
+pkgbase = textsnatcher-git
+	pkgdesc = Copy Text from Images with ease, Perform OCR operations in seconds
+	pkgver = 2.0.0.r0.g7192ac1
+	pkgrel = 1
+	url = https://github.com/RajSolai/TextSnatcher
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = meson
+	makedepends = vala
+	depends = granite
+	depends = libhandy
+	depends = libportal
+	depends = tesseract
+	optdepends = scrot: screenshot engine for X11 systems
+	optdepends = xdg-desktop-portal: for wayland support, you will need the implementation for your wayland desktop environment
+	provides = textsnatcher
+	conflicts = textsnatcher
+	source = textsnatcher::git+https://github.com/RajSolai/TextSnatcher.git
+	sha256sums = SKIP
+
+pkgname = textsnatcher-git

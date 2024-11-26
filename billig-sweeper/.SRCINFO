@@ -1,0 +1,19 @@
+pkgbase = billig-sweeper
+	pkgdesc = A cheap Minesweeper clone
+	pkgver = 1.3
+	pkgrel = 1
+	url = https://github.com/riscygeek/billig-sweeper
+	arch = x86_64
+	arch = aarch64
+	license = GPL3
+	makedepends = git
+	makedepends = meson
+	makedepends = ninja
+	depends = sdl2
+	depends = sdl2_image
+	source = https://github.com/riscygeek/billig-sweeper/archive/refs/tags/v1.3.tar.gz
+	source = git+https://github.com/cktan/tomlc99
+	sha256sums = 94b6ac8d2ae4a5745728aed0bb0702bb624e9f6072f4252f84f334dadb8cdf57
+	sha256sums = SKIP
+
+pkgname = billig-sweeper

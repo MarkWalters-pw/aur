@@ -1,0 +1,22 @@
+pkgbase = ros-melodic-diagnostic-analysis
+	pkgdesc = ROS - The diagnostic_analysis package can convert a log of diagnostics data into a series of CSV files.
+	pkgver = 1.9.7
+	pkgrel = 2
+	url = https://www.wiki.ros.org/diagnostics_analysis
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-melodic-rostest
+	makedepends = ros-melodic-diagnostic-msgs
+	makedepends = ros-melodic-rosbag
+	makedepends = ros-melodic-catkin
+	makedepends = ros-melodic-roslib
+	depends = ros-melodic-roslib
+	depends = ros-melodic-rosbag
+	depends = ros-melodic-diagnostic-msgs
+	source = ros-melodic-diagnostic-analysis-1.9.7.tar.gz::https://github.com/ros/diagnostics/archive/1.9.7.tar.gz
+	sha256sums = ca97cc9391fda16b48834c0bc5f745c67e59bd2cfc9b73f22a93406c4226c52a
+
+pkgname = ros-melodic-diagnostic-analysis
+

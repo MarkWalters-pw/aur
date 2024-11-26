@@ -1,0 +1,15 @@
+pkgbase = twspace-dl-git
+	pkgdesc = A python module to download twitter spaces.
+	pkgver = 2023.7.24.1
+	pkgrel = 1
+	url = https://github.com/HoloArchivists/twspace-dl
+	arch = any
+	license = custom
+	makedepends = git
+	makedepends = python-poetry
+	depends = python
+	depends = python-mutagen
+	source = twspace-dl::git+https://github.com/HoloArchivists/twspace-dl
+	sha256sums = SKIP
+
+pkgname = twspace-dl-git

@@ -1,0 +1,16 @@
+pkgbase = i3lockmore-git
+	pkgdesc = A wrapper for i3lock that adds additional functionality
+	pkgver = r14.2cfed53
+	pkgrel = 1
+	url = https://github.com/SammysHP/i3lockmore
+	arch = any
+	license = MIT
+	makedepends = git
+	depends = i3lock
+	depends = imagemagick
+	depends = xorg-xset
+	depends = xorg-xrandr
+	source = i3lockmore::git+https://github.com/SammysHP/i3lockmore.git
+	md5sums = SKIP
+
+pkgname = i3lockmore-git

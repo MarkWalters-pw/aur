@@ -1,0 +1,27 @@
+pkgbase = skycoin-explorer
+	pkgdesc = Skycoin Blockchain Explorer: https://explorer.skycoin.com/
+	pkgver = 20230423.647_5409e9a
+	pkgrel = 1
+	url = https://github.com/skycoin/skycoin-explorer
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv8
+	arch = armv7
+	arch = armv7l
+	arch = armv7h
+	arch = armv6h
+	arch = armhf
+	arch = armel
+	arch = arm
+	makedepends = git
+	makedepends = go
+	makedepends = npm
+	makedepends = musl
+	makedepends = kernel-headers-musl
+	makedepends = npm
+	makedepends = angular-cli
+	source = git+https://github.com/skycoin/skycoin-explorer.git#branch=develop
+	sha256sums = SKIP
+
+pkgname = skycoin-explorer

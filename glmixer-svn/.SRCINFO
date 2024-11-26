@@ -1,0 +1,22 @@
+pkgbase = glmixer-svn
+	pkgdesc = Real-time graphics mixing for video performance
+	pkgver = 1.7.1674
+	pkgrel = 1
+	url = http://sourceforge.net/projects/glmixer/
+	changelog = .Changelog
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = subversion
+	makedepends = cmake
+	depends = qt4
+	depends = qtwebkit
+	depends = ffmpeg
+	depends = opencv
+	provides = glmixer
+	conflicts = glmixer
+	source = /glmixer::svn+http://svn.code.sf.net/p/glmixer/Source/trunk
+	md5sums = SKIP
+
+pkgname = glmixer-svn
+

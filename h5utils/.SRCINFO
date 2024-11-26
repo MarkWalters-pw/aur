@@ -1,0 +1,19 @@
+pkgbase = h5utils
+	pkgdesc = Software for visualization/conversion of scientific data in the HDF5 format
+	pkgver = 1.13.2
+	pkgrel = 1
+	url = https://github.com/NanoComp/h5utils
+	arch = i686
+	arch = x86_64
+	license = MIT
+	license = GPL
+	depends = hdf5
+	depends = libpng
+	depends = gcc-libs
+	depends = glibc
+	optdepends = libmatheval: support symbolic expressions
+	options = !makeflags
+	source = https://github.com/stevengj/h5utils/releases/download/1.13.2/h5utils-1.13.2.tar.gz
+	sha256sums = eea7855a8235facb7c454e61103098e55658da0ddf4b6de5b82a992e5f024351
+
+pkgname = h5utils

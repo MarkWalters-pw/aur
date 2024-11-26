@@ -1,0 +1,19 @@
+pkgbase = ros-melodic-novatel-gps-msgs
+	pkgdesc = ROS - Messages for proprietary (non-NMEA) sentences from Novatel GPS receivers.
+	pkgver = 3.9.0
+	pkgrel = 2
+	url = h
+	arch = any
+	license = Southwest Research Institute Proprietary
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-melodic-message-generation
+	makedepends = ros-melodic-std-msgs
+	makedepends = ros-melodic-catkin
+	depends = ros-melodic-message-runtime
+	depends = ros-melodic-std-msgs
+	source = git://github.com/swri-robotics/novatel_gps_driver.git#commit=1a4626fda13b89dfca504e717b8cf7cb25314499
+	sha256sums = SKIP
+
+pkgname = ros-melodic-novatel-gps-msgs
+

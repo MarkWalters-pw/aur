@@ -1,0 +1,23 @@
+pkgbase = python-pdf2docx
+	pkgdesc = A Python library for converting pdf to docx
+	pkgver = 0.5.8
+	pkgrel = 2
+	url = https://github.com/artifexsoftware/pdf2docx
+	arch = any
+	license = GPL
+	makedepends = python-setuptools
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = python-pip
+	depends = python
+	depends = python-pymupdf
+	depends = python-docx
+	depends = python-fonttools
+	depends = python-numpy
+	depends = python-opencv
+	depends = python-fire
+	source = python-pdf2docx-0.5.8.tar.gz::https://github.com/artifexsoftware/pdf2docx/archive/refs/tags/v0.5.8.tar.gz
+	sha512sums = 40b95aafb7f2117d2eb275c6a3d89c4c2f02693f9545c8524af3ae25f3602ec180dc4a60fd62755ad728556bf61df7a9eaaae55c29ae4953885d6e86b6d32dc4
+
+pkgname = python-pdf2docx

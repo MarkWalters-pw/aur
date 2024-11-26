@@ -1,0 +1,18 @@
+pkgbase = shiv
+	pkgdesc = CLI for building self-contained Python zipapps
+	pkgver = 1.0.3
+	pkgrel = 1
+	url = https://github.com/linkedin/shiv
+	arch = any
+	license = BSD
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-sphinx
+	makedepends = python-sphinx-click
+	makedepends = python-wheel
+	depends = python-click
+	source = shiv-1.0.3.tar.gz::https://github.com/linkedin/shiv/archive/1.0.3.tar.gz
+	sha256sums = 3c8e9ed893be7828b2ab1366e6d2cdc70b471fe88f5668b8ac713f8f8fd4fa58
+
+pkgname = shiv

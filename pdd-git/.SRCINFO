@@ -1,0 +1,17 @@
+pkgbase = pdd-git
+	pkgdesc = Tiny date, time diff calculator with piggybacked timers.
+	pkgver = r148.3def901
+	pkgrel = 1
+	url = https://github.com/jarun/pdd
+	arch = any
+	license = GPL3
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python
+	depends = python-dateutil
+	provides = pdd
+	conflicts = pdd
+	source = git+https://github.com/jarun/pdd.git
+	sha256sums = SKIP
+
+pkgname = pdd-git

@@ -1,0 +1,17 @@
+pkgbase = ccsh-shell-git
+	pkgdesc = C++ shell
+	pkgver = r127.44f6458
+	pkgrel = 1
+	url = https://github.com/cpp-ftw/ccsh
+	arch = any
+	license = GPL3
+	makedepends = git
+	makedepends = cmake
+	makedepends = make
+	depends = ccsh-git
+	depends = cling-git
+	source = git+https://github.com/cpp-ftw/ccsh.git
+	md5sums = SKIP
+
+pkgname = ccsh-shell-git
+

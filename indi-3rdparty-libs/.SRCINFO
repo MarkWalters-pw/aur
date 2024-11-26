@@ -1,0 +1,20 @@
+pkgbase = indi-3rdparty-libs
+	pkgdesc = Indi 3rd party libraries
+	pkgver = 2.0.8
+	pkgrel = 2
+	url = https://indilib.org
+	arch = x86_64
+	arch = aarch64
+	license = LGPLv2
+	makedepends = cmake
+	depends = libindi
+	depends = ffmpeg
+	depends = libgphoto2
+	depends = pipewire-jack
+	depends = wireplumber
+	depends = libftdi
+	options = !lto
+	source = https://github.com/indilib/indi-3rdparty/archive/refs/tags/v2.0.8.tar.gz
+	sha256sums = dbee5d88788266b9a17878e354fed12afea6716cf905351b62d0ec6f90bfdc73
+
+pkgname = indi-3rdparty-libs

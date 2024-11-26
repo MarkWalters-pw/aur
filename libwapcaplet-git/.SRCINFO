@@ -1,0 +1,16 @@
+pkgbase = libwapcaplet-git
+	pkgdesc = String internment library with rapid string comparison
+	pkgver = 0.4.3.r0.gb5e42b1
+	pkgrel = 1
+	url = http://www.netsurf-browser.org/projects/libwapcaplet/
+	arch = x86_64
+	arch = i686
+	license = MIT
+	makedepends = git
+	makedepends = netsurf-buildsystem-git
+	provides = libwapcaplet
+	conflicts = libwapcaplet
+	source = git://git.netsurf-browser.org/libwapcaplet.git
+	sha256sums = SKIP
+
+pkgname = libwapcaplet-git

@@ -1,0 +1,17 @@
+pkgbase = kmetronome
+	pkgdesc = MIDI metronome with KDE interface and based on the ALSA sequencer
+	pkgver = 1.4.0
+	pkgrel = 1
+	url = http://sourceforge.net/projects/kmetronome/
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = cmake
+	depends = alsa-lib
+	depends = drumstick
+	depends = pandoc
+	depends = qt6-tools
+	source = https://sourceforge.net/projects/kmetronome/files/kmetronome/1.4.0/kmetronome-1.4.0.tar.bz2
+	md5sums = 7e8bc58fc18195b471c8cadd73e700f9
+
+pkgname = kmetronome

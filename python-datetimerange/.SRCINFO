@@ -1,0 +1,22 @@
+pkgbase = python-datetimerange
+	pkgdesc = Python library for handling time ranges
+	pkgver = 1.2.0
+	pkgrel = 2
+	url = https://github.com/thombashi/DateTimeRange
+	arch = any
+	license = MIT
+	checkdepends = python-pytest
+	checkdepends = python-pytz
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python-dateutil
+	depends = python-typepy
+	source = python-datetimerange-1.2.0.tar.gz::https://files.pythonhosted.org/packages/source/D/DateTimeRange/DateTimeRange-1.2.0.tar.gz
+	source = python-datetimerange-1.2.0.tar.gz.asc::https://files.pythonhosted.org/packages/source/D/DateTimeRange/DateTimeRange-1.2.0.tar.gz.asc
+	validpgpkeys = BCF9203E5E80B5607EAE6FDD98CDA9A5F0BFC367
+	sha256sums = 47bc10e5df23bb1f0d3ee493a26cb8d1d99e179884aabff62d3e51033b6a73ce
+	sha256sums = SKIP
+
+pkgname = python-datetimerange

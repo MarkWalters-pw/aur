@@ -1,0 +1,18 @@
+pkgbase = inkscape-multipage-export
+	pkgdesc = Inkscape extension to export selected objects to various file formats
+	pkgver = 3.0
+	pkgrel = 2
+	url = https://github.com/olibia/inkscape-multipage-export
+	arch = any
+	license = GPL
+	depends = inkscape
+	depends = python-lxml
+	depends = librsvg
+	depends = pdftk
+	provides = inkscape-multipage-export
+	conflicts = inkscape-multipage-export-git
+	source = inkscape-multipage-export-3.0.tar.gz::https://github.com/olibia/inkscape-multipage-export/archive/v3.0.tar.gz
+	md5sums = fde65e344e68696bb1efae72bf286e93
+
+pkgname = inkscape-multipage-export
+

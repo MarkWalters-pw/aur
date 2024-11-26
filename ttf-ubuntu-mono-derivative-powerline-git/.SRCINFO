@@ -1,0 +1,16 @@
+pkgbase = ttf-ubuntu-mono-derivative-powerline-git
+	pkgdesc = Ubuntu Mono derivative Powerline
+	pkgver = r202.e80e3eb
+	pkgrel = 1
+	url = https://github.com/powerline/fonts
+	arch = any
+	license = custom:Ubuntu Font License, Version 1.0
+	makedepends = git
+	depends = fontconfig
+	conflicts = powerline-fonts
+	conflicts = powerline-fonts-git
+	source = git+https://github.com/powerline/fonts.git
+	sha256sums = SKIP
+
+pkgname = ttf-ubuntu-mono-derivative-powerline-git
+

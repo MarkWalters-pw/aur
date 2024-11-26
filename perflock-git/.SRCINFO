@@ -1,0 +1,17 @@
+pkgbase = perflock-git
+	pkgdesc = RWMutex for sharing of multicore machines
+	pkgver = r7.7650760
+	pkgrel = 1
+	url = https://github.com/mit-pdos/perflock
+	arch = any
+	license = MIT
+	makedepends = git
+	provides = perflock
+	conflicts = perflock
+	source = git+https://github.com/mit-pdos/perflock.git
+	source = perflock.tmpfiles
+	md5sums = SKIP
+	md5sums = b9b34e13088f9f50e86206e1ae23fbe7
+
+pkgname = perflock-git
+

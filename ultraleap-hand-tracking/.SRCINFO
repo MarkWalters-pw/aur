@@ -1,0 +1,14 @@
+pkgbase = ultraleap-hand-tracking
+	pkgdesc = Combined packages for Ultraleap hand tracking.
+	pkgver = 2023.09.20
+	pkgrel = 2
+	url = https://gitlab.com/northstar-archlinux/ultraleap-hand-tracking.git
+	install = ultraleap-hand-tracking.install
+	arch = x86_64
+	groups = ultraleap-hand-tracking
+	license = PROPRIETARY
+	depends = openxr-layer-ultraleap
+	depends = ultraleap-hand-tracking-service
+	depends = ultraleap-hand-tracking-control-panel
+
+pkgname = ultraleap-hand-tracking

@@ -1,0 +1,18 @@
+pkgbase = minq-nhentai-git
+	pkgdesc = Browse hnehtai in your terminal. Full image resolution in supported terminals. Beta version automatically caches all network requests so that hentai can be enjoyed during an ISP outage.
+	pkgver = r51.a7dcc6d8820f85f72d52f87e9bd5c97512c213aa
+	pkgrel = 1
+	url = https://github.com/kuche1/minq-nhentai.git
+	arch = any
+	license = GPL
+	makedepends = git
+	depends = python
+	depends = python-beautifulsoup4
+	depends = viu
+	optdepends = wezterm: an example terminal that supports full image resolution
+	optdepends = python-minq-caching-thing-git: needed for the beta version
+	provides = minq-nhentai
+	source = git+https://github.com/kuche1/minq-nhentai.git
+	md5sums = SKIP
+
+pkgname = minq-nhentai-git

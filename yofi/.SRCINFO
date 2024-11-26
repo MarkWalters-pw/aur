@@ -1,0 +1,18 @@
+pkgbase = yofi
+	pkgdesc = Minimalistic menu for Wayland-based compositors.
+	pkgver = 0.2.2
+	pkgrel = 1
+	url = https://github.com/l4l/yofi
+	arch = x86_64
+	license = MIT
+	makedepends = cargo
+	depends = fontconfig
+	depends = expat
+	depends = graphite
+	depends = pcre
+	depends = wayland-protocols
+	depends = libxkbcommon
+	source = yofi-0.2.2.tar.gz::https://github.com/l4l/yofi/archive/0.2.2.tar.gz
+	sha256sums = a4dd8df03a6083b977f1085b5115dd76c09e3d9654837fe2ead5c3b4b78d3b24
+
+pkgname = yofi

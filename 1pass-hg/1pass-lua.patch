@@ -1,0 +1,36 @@
+Binary files 1pass.orig/.hg/dirstate and 1pass/.hg/dirstate differ
+diff -ruN 1pass.orig/1pass.c 1pass/1pass.c
+--- 1pass.orig/1pass.c	2015-07-31 21:12:34.129148857 +0300
++++ 1pass/1pass.c	2015-07-31 20:59:43.000000000 +0300
+@@ -579,7 +579,7 @@
+     lua_setglobal(luaState, "argv");
+ 
+     // Transfer control to Lua...
+-    if (luaL_dofile(luaState, "1pass.lua") != 0)
++    if (luaL_dofile(luaState, "/usr/share/1pass/1pass.lua") != 0)
+         luaFatal(luaState);
+ 
+     return 1;
+diff -ruN 1pass.orig/1pass.lua 1pass/1pass.lua
+--- 1pass.orig/1pass.lua	2015-07-31 21:12:34.132482075 +0300
++++ 1pass/1pass.lua	2015-07-31 21:10:44.000000000 +0300
+@@ -1,7 +1,7 @@
+-JSON = (loadfile "JSON.lua")()
+-dofile("dumptable.lua")
++JSON = (loadfile "/usr/share/1pass/JSON.lua")()
++dofile("/usr/share/1pass/dumptable.lua")
+ 
+-local basedir = "1Password/1Password.agilekeychain/data/default"  -- !!! FIXME
++local basedir = os.getenv("HOME") .. "/1Password/1Password.agilekeychain/data/default"  -- !!! FIXME
+ local password = argv[2]
+ local items = nil
+ local faveitems = nil
+@@ -349,7 +349,7 @@
+ 
+ local function build_secret_menuitem_creditcard(menu, info, secure)
+     -- !!! FIXME: there's more data than this in a generic dictionary.
+-    local expiredate = secure.expiry_yy .. "/" .. string.sub("00" .. secure.expiry_mm, -2)
++    local expiredate = (secure.expiry_yy or "") .. "/" .. string.sub("00" .. (secure.expiry_mm or ""), -2)
+     build_secret_menuitem(menu, "Type", secure.type)
+     build_secret_menuitem(menu, "CC number", secure.ccnum, true)
+     build_secret_menuitem(menu, "CVV", secure.cvv, true)

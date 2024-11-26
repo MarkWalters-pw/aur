@@ -1,0 +1,25 @@
+pkgbase = pianobarfly-git
+	pkgdesc = A console client for the personalized web radio pandora
+	pkgver = 20161028
+	pkgrel = 1
+	url = https://github.com/nega0/pianobarfly
+	arch = any
+	license = custom
+	makedepends = pkgconfig>=0.9
+	makedepends = git
+	makedepends = automake
+	depends = libao
+	depends = ffmpeg
+	depends = readline
+	depends = json-c
+	depends = libgcrypt
+	depends = gnutls
+	depends = faad2
+	optdepends = libmad
+	provides = pianobarfly
+	conflicts = pianobarfly
+	source = pianobarfly-git::git://github.com/nega0/pianobarfly.git
+	sha256sums = SKIP
+
+pkgname = pianobarfly-git
+

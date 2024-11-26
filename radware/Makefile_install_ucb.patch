@@ -1,0 +1,12 @@
+--- src/rw05/src/Makefile.install_ucb	2022-11-04 15:38:59.174478050 +0000
++++ Makefile.install_ucb	2022-11-04 15:18:43.891146852 +0000
+@@ -23,3 +23,9 @@
+ 	for program in $(EXE) ; \
+ 	   do $(INSTALL_BIN) $$program $(INSTALL_DIR)/bin; \
+ 	done
++	for program in $(GTK) ; \
++	   do $(INSTALL_BIN) $$program $(INSTALL_DIR)/bin; \
++	done
++	for program in $(XM) ; \
++	   do $(INSTALL_BIN) $$program $(INSTALL_DIR)/bin; \
++	done

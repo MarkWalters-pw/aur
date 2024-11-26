@@ -1,0 +1,18 @@
+pkgbase = wimboot-git
+	pkgdesc = iPXE kernel to boot wim images from network for both UEFI and BIOS system
+	pkgver = v2.6.0.r3.91be50c
+	pkgrel = 1
+	url = https://git.ipxe.org/wimboot.git
+	install = wimboot-git.install
+	arch = any
+	license = GPL
+	makedepends = git
+	makedepends = pesign
+	makedepends = gcab
+	optdepends = ipxe-git: iPXE network boot program
+	optdepends = ipxe-netboot: Alternative iPXE network boot program, with Archlinux network install support
+	source = wimboot::git+https://git.ipxe.org/wimboot.git
+	sha256sums = SKIP
+
+pkgname = wimboot-git
+

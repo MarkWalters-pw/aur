@@ -1,0 +1,15 @@
+pkgbase = sipvicious
+	pkgdesc = Set of security tools that can be used to audit SIP based VoIP systems
+	pkgver = 0.3.4
+	pkgrel = 1
+	url = https://github.com/EnableSecurity/sipvicious
+	changelog = sipvicious.changelog
+	arch = any
+	license = GPL3
+	makedepends = python-setuptools
+	depends = python>=3.6
+	optdepends = python-scapy: allow svcrash to crash SIPVicious toolset
+	source = sipvicious-0.3.4.tar.gz::https://github.com/EnableSecurity/sipvicious/archive/refs/tags/v0.3.4.tar.gz
+	b2sums = 75f3d190cb4224ada84cd7c714eb545e44a9759589890a559d3cb5243c5430c0aa81138e3cd294926901e961a5ec156c8d991b648c70e1d8fc2dc906473d507d
+
+pkgname = sipvicious

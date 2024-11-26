@@ -1,0 +1,28 @@
+pkgbase = ros-noetic-robot
+	pkgdesc = ROS - A metapackage which extends ros_base and includes ROS libaries for any robot hardware.
+	pkgver = 1.5.0
+	pkgrel = 1
+	url = https://wiki.ros.org/robot
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-catkin
+	depends = ros-noetic-filters
+	depends = ros-noetic-ros-base
+	depends = ros-noetic-joint-state-publisher
+	depends = ros-noetic-executive-smach
+	depends = ros-noetic-urdf-parser-plugin
+	depends = ros-noetic-xacro
+	depends = ros-noetic-diagnostics
+	depends = ros-noetic-robot-state-publisher
+	depends = ros-noetic-kdl-parser-py
+	depends = ros-noetic-geometry
+	depends = ros-noetic-urdf
+	depends = ros-noetic-control-msgs
+	depends = ros-noetic-kdl-parser
+	source = ros-noetic-robot-1.5.0.tar.gz::https://github.com/ros/metapackages/archive/1.5.0.tar.gz
+	sha256sums = 5e055b7528d088cf62035d88c78cfd5aefcac2a96d0ce2ac62242f6d6f76d3b0
+
+pkgname = ros-noetic-robot
+

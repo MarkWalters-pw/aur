@@ -1,0 +1,159 @@
+#!/usr/bin/env bash
+
+die () {
+  echo "$1"
+  exit 1
+}
+
+if [[ -f "$HOME"/.config/haurrc ]]; then
+  # shellcheck source=/dev/null
+  source "$HOME"/.config/haurrc
+else
+  if [[ -f /usr/share/haur/haurrc ]]; then
+    # shellcheck source=/dev/null
+    source /usr/share/haur/haurrc
+  else
+    die "fatal: No configuration file found"
+  fi
+fi
+
+if [[ ! "$HAUR_NO_COLORS" == "y" ]]; then
+  if test -t 1; then
+
+    # see if it supports colors...
+    ncolors=$(tput colors 2>/dev/null)
+
+    if test -n "$ncolors" && test "$ncolors" -ge 8; then
+      bold="$(tput bold 2>/dev/null)"
+      # underline="$(tput smul 2>/dev/null)"
+      # standout="$(tput smso 2>/dev/null)"
+      normal="$(tput sgr0 2>/dev/null)"
+      # black="$(tput setaf 0 2>/dev/null)"
+      red="$(tput setaf 1 2>/dev/null)"
+      green="$(tput setaf 2 2>/dev/null)"
+      # yellow="$(tput setaf 3 2>/dev/null)"
+      blue="$(tput setaf 4 2>/dev/null)"
+      # magenta="$(tput setaf 5 2>/dev/null)"
+      # cyan="$(tput setaf 6 2>/dev/null)"
+      # white="$(tput setaf 7 2>/dev/null)"
+    fi
+  fi
+fi
+
+search () {
+  search_term=$1
+  mapfile -t name < <(curl -s "https://aur.archlinux.org/rpc/?v=5&type=search&arg=$search_term" | jq -r ".results" | jq -r ".[] | .Name")
+  mapfile -t version < <(curl -s "https://aur.archlinux.org/rpc/?v=5&type=search&arg=$search_term" | jq -r ".results" | jq -r ".[] | .Version")
+  mapfile -t description < <(curl -s "https://aur.archlinux.org/rpc/?v=5&type=search&arg=$search_term" | jq -r ".results" | jq -r ".[] | .Description")
+  for (( i=0; i<${#name[@]}; i++ )); do
+    echo "${bold}${blue}${name[i]} ${green}${version[i]}${normal}: ${description[i]}"
+  done
+}
+
+REMOVE=false
+CLEAR_CACHE=false
+UPDATE=false
+SEARCH=false
+
+for arg in "$@"; do
+  shift
+  case "$arg" in
+    "--search") set -- "$@" "-s" ;;
+    "--update") set -- "$@" "-u" ;;
+    "--remove") set -- "$@" "-r" ;;
+    "--clear-cache") set -- "$@" "-c" ;;
+    "--help") set -- "$@" "-h" ;;
+    "--"*) die "Invalid Option: ${arg}" ;;
+    *) set -- "$@" "$arg"
+  esac
+done
+shift $((OPTIND -1))
+
+while getopts ":surch" opt; do
+  case $opt in
+    s )
+      SEARCH=true
+      ;;
+    u )
+      UPDATE=true
+      ;;
+    r )
+      REMOVE=true
+      ;;
+    c )
+      CLEAR_CACHE=true
+      ;;
+    h )
+      echo "Usage: haur [[--remove | -r]] | [[--clear-cache | -c]] [[--update | -u]] [[--search | -s]]<package names>"
+      exit 0
+      ;;
+    \?)
+      die "${red}Invalid Option: -$OPTARG${normal}" 1>&2
+      ;;
+    esac
+done
+shift $((OPTIND -1))
+
+if [[ "$HAUR_ALWAYS_CLEAR_CACHE" == "y" ]]; then
+  CLEAR_CACHE=true
+fi
+
+if [[ $SEARCH == true ]]; then
+  for PACKAGE_NAME in "$@"; do
+    search "${PACKAGE_NAME}" || die "Something went wrong while searching for that package."
+  done
+  exit 0
+fi
+
+if [[ $REMOVE == true ]]; then
+  for PACKAGE_NAME in "$@"; do
+    echo "${blue}Removing $PACKAGE_NAME...${normal}"
+    sudo pacman -Rns "$PACKAGE_NAME"
+    echo "$PACKAGE_NAME" >> ~/.haur_cache
+  done
+elif [[ $UPDATE == true ]]; then
+  for PACKAGE_NAME in "$@"; do
+    echo "${blue}Updating $PACKAGE_NAME...${normal}"
+    cd ~/.haur || die "Could not navigate to ~/.haur"
+    cd "$PACKAGE_NAME" || die "Could not navigate to $PACKAGE_NAME"
+    git pull origin master
+    rm -rf pkg src
+    rm -f ./*.pkg.tar.gz
+    makepkg -si
+  done
+else
+  for PACKAGE_NAME in "$@"; do
+    echo "${blue}Installing $PACKAGE_NAME...${normal}"
+    mkdir -p ~/.haur
+    cd ~/.haur || die "Could not navigate to ~/.haur"
+    git clone https://aur.archlinux.org/"$PACKAGE_NAME".git
+    cd "$PACKAGE_NAME" || die "Could not navigate to $PACKAGE_NAME"
+    makepkg -si
+  done
+fi
+
+if [[ $CLEAR_CACHE == true ]]; then
+  REMOVED=false
+  if test -f "$HOME/.haur_cache"; then
+    echo "${blue}Clearing cache...${normal}"
+    while IFS= read -r line || [[ -n "$line" ]]; do
+      echo "${blue}Removing $line${normal}"
+      rm -rf "$HOME/.haur/$line"
+    done < "$HOME/.haur_cache"
+    rm ~/.haur_cache
+    REMOVED=true
+  fi
+
+  dirs=()
+  while IFS= read -r -d '' dir; do
+    dirs+=($(basename "${dir#*/}"))
+  done < <(find ~/.haur -maxdepth 1 -mindepth 1 -type d -print0)
+
+  for DIRECTORY in "${dirs[@]}"; do
+    pacman -Q $DIRECTORY &>/dev/null || echo "${blue}Removing $DIRECTORY${normal}" && rm -rf "$HOME/.haur/$DIRECTORY" && REMOVED=true
+  done
+
+  if [[ $REMOVED == false ]]; then
+    echo "${blue}Nothing to clear${normal}"
+  fi
+fi

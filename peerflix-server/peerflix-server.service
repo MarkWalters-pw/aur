@@ -1,0 +1,10 @@
+[Unit]
+Description=Peerflix Server
+
+[Service]
+Type=simple
+User=peerflix
+ExecStart=/usr/bin/peerflix-server
+
+[Install]
+WantedBy=multi-user.target

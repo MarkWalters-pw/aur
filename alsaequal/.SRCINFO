@@ -1,0 +1,17 @@
+pkgbase = alsaequal
+	pkgdesc = Real-time adjustable equalizer plugin for ALSA sound server
+	pkgver = v0.7.1
+	pkgrel = 1
+	url = https://github.com/bassdr/alsaequal
+	install = alsaequal.install
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	depends = alsa-lib
+	depends = caps
+	depends = ladspa
+	optdepends = swh-plugins: to use the mbeq equalizer (15-band)
+	source = alsaequal::git+https://github.com/bassdr/alsaequal#tag=v0.7.1
+	sha256sums = SKIP
+
+pkgname = alsaequal

@@ -1,0 +1,24 @@
+pkgbase = artifactory-cpp-ce
+	pkgdesc = Artifactory is an advanced Binary Repository Manager for use by build tools, dependency management tools and build servers
+	pkgver = 6.16.0
+	pkgrel = 1
+	url = https://bintray.com/jfrog/product/JFrog-Artifactory-Cpp-CE/view
+	install = artifactory-cpp-ce.install
+	arch = any
+	license = GPLv3
+	depends = java-runtime-headless
+	depends = net-tools
+	depends = bash
+	conflicts = artifactory-oss
+	options = !strip
+	source = jfrog-artifactory-cpp-ce-6.16.0.zip::https://bintray.com/api/ui/download/jfrog/artifactory/jfrog-artifactory-cpp-ce-6.16.0.zip
+	source = artifactory.service
+	source = artifactory.conf
+	source = artifactory.default
+	sha256sums = df28f01a3615cb12d556a255f49f36892e4db23133c63049a230aa6f41bd6372
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = artifactory-cpp-ce
+

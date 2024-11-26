@@ -1,0 +1,20 @@
+pkgbase = sun-git
+	pkgdesc = Simple library and application that shows sunset and sunrise based on your latitude,longitude
+	pkgver = 1.1+13.r68.20190928.5fa5be2
+	pkgrel = 1
+	url = https://github.com/troglobit/sun.git
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	license = LicenseRef-FreeSoftware
+	makedepends = autoconf
+	makedepends = automake
+	makedepends = libtool
+	makedepends = git
+	depends = glibc
+	provides = sun=1.1+13.r68.20190928.5fa5be2
+	conflicts = sun
+	source = sun::git+https://github.com/troglobit/sun.git
+	sha256sums = SKIP
+
+pkgname = sun-git

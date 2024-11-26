@@ -1,0 +1,15 @@
+pkgbase = rofi-tmpmail-git
+	pkgdesc = This tool if a rofi wrapper for the tmpmail tool
+	pkgver = master
+	pkgrel = 1
+	url = https://github.com/dadav/rofi-tmpmail
+	arch = x86_64
+	license = GPL
+	depends = xclip
+	depends = tmpmail-git
+	depends = rofi
+	provides = rofi-tmpmail
+	source = https://github.com/dadav/rofi-tmpmail/archive/refs/heads/master.zip
+	sha256sums = SKIP
+
+pkgname = rofi-tmpmail-git

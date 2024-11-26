@@ -1,0 +1,16 @@
+pkgbase = simplehttp-git
+	pkgdesc = Pretty simple and lightweight http server for serving local files
+	pkgver = r11.ca3634f
+	pkgrel = 1
+	url = https://github.com/snwfdhmp/simplehttp
+	arch = x86_64
+	license = Apache
+	makedepends = go
+	makedepends = git
+	depends = glibc
+	provides = simplehttp
+	source = simplehttp::git+https://github.com/snwfdhmp/simplehttp
+	sha256sums = SKIP
+
+pkgname = simplehttp-git
+

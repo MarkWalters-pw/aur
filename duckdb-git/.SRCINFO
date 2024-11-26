@@ -1,0 +1,25 @@
+pkgbase = duckdb-git
+	pkgdesc = Embeddable SQL OLAP Database Management System
+	pkgver = v0.3.1.r996.gf1c8c7ae2
+	pkgrel = 1
+	url = https://www.duckdb.org/
+	arch = x86_64
+	license = MIT
+	checkdepends = python-pytest
+	makedepends = git
+	makedepends = cmake
+	makedepends = python-setuptools
+	makedepends = pybind11
+	makedepends = python-numpy
+	makedepends = python-pandas
+	depends = gcc-libs
+	source = duckdb-git::git+https://github.com/cwida/duckdb.git
+	md5sums = SKIP
+
+pkgname = duckdb-git
+	provides = duckdb
+
+pkgname = python-duckdb-git
+	optdepends = python-numpy
+	optdepends = python-pandas
+	provides = python-duckdb

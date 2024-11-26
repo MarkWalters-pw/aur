@@ -1,0 +1,25 @@
+pkgbase = stairspeedtest-reborn-bin
+	pkgdesc = Proxy performance batch tester based on Shadowsocks(R) and V2Ray
+	pkgver = 0.7.1
+	pkgrel = 4
+	url = https://github.com/tindy2013/stairspeedtest-reborn
+	arch = x86_64
+	arch = armv7h
+	arch = aarch64
+	license = MIT
+	depends = bash
+	provides = stairspeedtest
+	conflicts = stairspeedtest
+	options = !strip
+	source = stairspeedtest-webgui.service
+	source = stairspeedtest-webserver.service
+	sha256sums = d1e7fdf0317c3a621232f046d543706f98aae26b7ed87be7b59bb5c9a4d3858e
+	sha256sums = 0c3ab114616693a7ea6ad0abefec4f6c5b1da6c44735b16a3ea0809467f49900
+	source_x86_64 = https://github.com/tindy2013/stairspeedtest-reborn/releases/download/v0.7.1/stairspeedtest_reborn_linux64.tar.gz
+	sha256sums_x86_64 = 236f328f7dbeaa1a63e59aa62c9ee8fdda30ebfdc6379edf5e1f8f191a120c6c
+	source_armv7h = https://github.com/tindy2013/stairspeedtest-reborn/releases/download/v0.7.1/stairspeedtest_reborn_armhf.tar.gz
+	sha256sums_armv7h = 7e854bc19b23d9e4352ce6cf724a356eb5ebe310ebda1ba2c2d7f48e9b489a54
+	source_aarch64 = https://github.com/tindy2013/stairspeedtest-reborn/releases/download/v0.7.1/stairspeedtest_reborn_arm64.tar.gz
+	sha256sums_aarch64 = 8b9398f01eb5c8ef5b28b237754cbf94cbc26123fb6b481aa3ea1599a26e1253
+
+pkgname = stairspeedtest-reborn-bin

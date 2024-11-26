@@ -1,0 +1,25 @@
+pkgbase = watson
+	pkgdesc = A wonderful CLI to track your time!
+	pkgver = 2.1.0
+	pkgrel = 4
+	url = https://jazzband.github.io/Watson/
+	arch = any
+	license = MIT
+	makedepends = python-setuptools
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = python
+	depends = python-arrow
+	depends = python-click
+	depends = python-click-didyoumean
+	depends = python-requests
+	options = !emptydirs
+	source = watson-2.1.0.tar.gz::https://github.com/jazzband/Watson/archive/2.1.0.tar.gz
+	source = watson.completion.patch
+	source = watson.zsh-completion.patch
+	sha256sums = ba0d23a1437e022f7d331c5a5923e24b3996099a4e140edeb5785f992e0b705b
+	sha256sums = caf2d2e95e5fd82a3e9075a78a9f516b126b00a30655ef9802cd976dca50cda6
+	sha256sums = dcdbd820d157fe79798ad0c33e81dc1edb6052894f8eb47d0429f5d949972f26
+
+pkgname = watson

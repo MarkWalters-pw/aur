@@ -1,0 +1,27 @@
+pkgbase = uranium
+	pkgdesc = Python framework for building 3D printing related applications
+	pkgver = 5.0.0
+	pkgrel = 2
+	url = https://github.com/Ultimaker/Uranium
+	arch = any
+	license = LGPL
+	checkdepends = mypy
+	checkdepends = python-pytest
+	checkdepends = python-twisted
+	makedepends = cmake
+	makedepends = ninja
+	depends = python
+	depends = qt5-quickcontrols
+	depends = qt5-quickcontrols2
+	depends = python-pyqt5
+	depends = python-numpy
+	depends = arcus
+	depends = python-shapely
+	depends = python-scipy
+	depends = python-cryptography
+	depends = python-certifi
+	options = debug
+	source = uranium-5.0.0.tar.gz::https://github.com/Ultimaker/uranium/archive/5.0.0.tar.gz
+	sha256sums = 3a6482c0698320ecb87f41f725565fdee1e99cb4258043130816d5181ead8603
+
+pkgname = uranium

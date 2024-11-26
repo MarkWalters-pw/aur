@@ -1,0 +1,22 @@
+pkgbase = autopano-sift-c
+	pkgdesc = Identify key feature points within arbitrary images
+	pkgver = 2.5.1
+	pkgrel = 5
+	url = http://hugin.sourceforge.net/
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = cmake
+	depends = libxml2
+	depends = libpano13
+	depends = gcc-libs
+	depends = libtiff
+	depends = bash
+	depends = glibc
+	provides = autopano-sift
+	conflicts = autopano-sift
+	replaces = autopano-sift
+	source = http://downloads.sourceforge.net/sourceforge/hugin/autopano-sift-C-2.5.1.tar.gz
+	md5sums = b9bade07e8c4f2ea383c22a082c260e0
+
+pkgname = autopano-sift-c

@@ -1,0 +1,16 @@
+pkgbase = vapoursynth-plugin-autocrop-git
+	pkgdesc = Plugin for Vapoursynth: autocrop (GIT version)
+	pkgver = 0.1.5.g418189c
+	pkgrel = 1
+	url = https://github.com/Irrational-Encoding-Wizardry/vapoursynth-autocrop
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	depends = vapoursynth
+	provides = vapoursynth-plugin-autocrop
+	conflicts = vapoursynth-plugin-autocrop
+	options = debug
+	source = autocrop::git+https://github.com/Irrational-Encoding-Wizardry/vapoursynth-autocrop.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-autocrop-git

@@ -1,0 +1,22 @@
+[Unit]
+Description=Distributed pacman package cache
+Requires=avahi-daemon.service
+After=avahi-daemon.service
+
+[Service]
+ExecStart=/usr/lib/pkgdistcache/pkgdistcache-daemon
+User=nobody
+Group=nobody
+NoNewPrivileges=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectSystem=strict
+ProtectHome=yes
+ProtectControlGroups=yes
+ProtectKernelTunables=yes
+MemoryDenyWriteExecute=yes
+RestrictRealtime=yes
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,18 @@
+pkgbase = python-lzo
+	pkgdesc = Python bindings for the LZO data compression library
+	pkgver = 1.15
+	pkgrel = 1
+	url = https://pypi.python.org/pypi/python-lzo
+	arch = x86_64
+	license = GPL2
+	checkdepends = python-pytest
+	makedepends = lzo
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = python-setuptools
+	depends = python
+	source = https://pypi.org/packages/source/p/python-lzo/python-lzo-1.15.tar.gz
+	sha256sums = a57aaa00c5c3a0515dd9f7426ba2cf601767dc19dc023d8b99d4a13b0a327b49
+
+pkgname = python-lzo

@@ -1,0 +1,18 @@
+pkgbase = amagent
+	pkgdesc = Automox agent
+	pkgver = 1.43.142
+	pkgrel = 1
+	url = https://www.automox.com
+	install = amagent.install
+	arch = x86_64
+	license = custom
+	depends = curl
+	depends = dmidecode
+	depends = lsb-release
+	depends = lshw
+	source = file://amagent_1.43.142_amd64.deb
+	source = fix-systemd-unit.patch
+	sha256sums = 4d602c741eca4e0e41a7e7b203519f427c61349bdb2de55c10c7bff436a6b862
+	sha256sums = ce29f4b5d2f22ada1f0354ba71a9014248e3837b5abc416146d1afcb07ad2665
+
+pkgname = amagent

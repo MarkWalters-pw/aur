@@ -1,0 +1,16 @@
+pkgbase = cargo-outofdate-git
+	pkgdesc = Check outdated cargo dependencies
+	pkgver = 0.3.0.19.gddd4adf
+	pkgrel = 1
+	url = https://github.com/quininer/cargo-outofdate
+	arch = x86_64
+	arch = i686
+	license = MIT
+	makedepends = cargo
+	depends = cargo
+	provides = cargo-outofdate
+	conflicts = cargo-outofdate
+	source = cargo-outofdate-git::git+https://github.com/quininer/cargo-outofdate
+	sha256sums = SKIP
+
+pkgname = cargo-outofdate-git

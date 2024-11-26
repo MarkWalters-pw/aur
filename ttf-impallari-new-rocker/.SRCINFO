@@ -1,0 +1,16 @@
+pkgbase = ttf-impallari-new-rocker
+	pkgdesc = NewRocker is a loud, harsh, screaming font, from Pablo Impallari
+	pkgver = 1.0
+	pkgrel = 1
+	url = http://www.impallari.com/projects/overview/new-rocker/
+	install = updatefont.install
+	arch = any
+	groups = impallari-fonts
+	license = custom:OFL
+	depends = fontconfig
+	depends = xorg-font-utils
+	source = New_Rocker.zip::https://fonts.google.com/download?family=New%20Rocker
+	md5sums = 447c5e7bde1c79d779ea3ff7e1f764d3
+
+pkgname = ttf-impallari-new-rocker
+

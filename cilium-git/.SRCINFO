@@ -1,0 +1,21 @@
+pkgbase = cilium-git
+	pkgdesc = API-aware Networking and Security for Containers based on BPF
+	pkgver = 1.14.0.pre.2.r36.gd254723790
+	pkgrel = 1
+	url = https://cilium.io/
+	arch = x86_64
+	license = Apache
+	makedepends = go
+	makedepends = lib32-glibc
+	makedepends = bazel
+	makedepends = ninja
+	makedepends = docker
+	depends = docker
+	depends = iproute2
+	depends = clang
+	optdepends = consul
+	optdepends = etcd
+	source = cilium-git::git+https://github.com/cilium/cilium
+	sha256sums = SKIP
+
+pkgname = cilium-git

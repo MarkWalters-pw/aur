@@ -1,0 +1,21 @@
+pkgbase = webp-pixbuf-loader-git
+	pkgdesc = WebM GDK Pixbuf Loader library - Git version
+	pkgver = 0.0.4.r2.g631c1ec
+	pkgrel = 1
+	url = https://github.com/aruiz/webp-pixbuf-loader
+	arch = i686
+	arch = x86_64
+	arch = i486
+	arch = pentium4
+	arch = aarch64
+	arch = armv7h
+	license = GPL
+	makedepends = meson
+	makedepends = git
+	depends = gdk-pixbuf2
+	depends = libwebp
+	conflicts = webp-pixbuf-loader
+	source = webp-pixbuf-loader::git+https://github.com/aruiz/webp-pixbuf-loader.git
+	sha256sums = SKIP
+
+pkgname = webp-pixbuf-loader-git

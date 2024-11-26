@@ -1,0 +1,20 @@
+pkgbase = warp-git
+	pkgdesc = Fast and secure file transfer
+	pkgver = 0.3.0.r1.g58a554f
+	pkgrel = 1
+	url = https://gitlab.gnome.org/World/warp
+	arch = x86_64
+	arch = aarch64
+	license = GPL3
+	checkdepends = appstream-glib
+	makedepends = git
+	makedepends = meson
+	makedepends = cargo
+	makedepends = itstool
+	depends = libadwaita
+	provides = warp
+	conflicts = warp
+	source = git+https://gitlab.gnome.org/World/warp.git
+	b2sums = SKIP
+
+pkgname = warp-git

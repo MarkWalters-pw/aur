@@ -1,0 +1,26 @@
+pkgbase = irssi-passwd
+	pkgdesc = Modular text mode IRC client with Perl scripting, with irssi-passwd patch
+	pkgver = 1.2.0
+	pkgrel = 3
+	url = https://github.com/gandalf3/irssi-passwd
+	install = irssi-passwd.install
+	arch = x86_64
+	license = GPL
+	depends = glib2
+	depends = openssl
+	depends = libotr
+	optdepends = perl-libwww: for the scriptassist script
+	conflicts = irssi
+	backup = etc/irssi.conf
+	source = https://github.com/irssi/irssi/releases/download/1.2.0/irssi-1.2.0.tar.xz
+	source = https://github.com/irssi/irssi/releases/download/1.2.0/irssi-1.2.0.tar.xz.asc
+	source = https://raw.githubusercontent.com/gandalf3/irssi-passwd/master/irssi-connection-set-key.patch
+	source = https://raw.githubusercontent.com/gandalf3/irssi-passwd/master/passwd.pl
+	validpgpkeys = 7EE65E3082A5FB06AC7C368D00CCB587DDBEF0E1
+	sha512sums = 343530ca63355dd6683e84f31602c9162e1e3158e52ce81e37519d1e42abbdcb621fb710fcb605fcafd7e7ea3f2c30ed62607d4ea91d8c8dc29bf893e54aee40
+	sha512sums = SKIP
+	sha512sums = b9be4bb568838fa2f31735b3290b31d6a88a9f31f1d6d1ac367391d951620ac0fcdbf664efa7fdbcc2ce181f2ff32bfa0ffc3146058836ec4ffcae9b3e11f36f
+	sha512sums = 8e5694e5dd56caac3fae268160e0d82544ce1ee8690972a5f502ac728cb189cd71baf09b14425c2d4d42bb799cc7336eb1a1258cc648bc3237906eb804da6092
+
+pkgname = irssi-passwd
+

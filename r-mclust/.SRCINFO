@@ -1,0 +1,20 @@
+pkgbase = r-mclust
+	pkgdesc = Gaussian Mixture Modelling for Model-Based Clustering, Classification, and Density Estimation
+	pkgver = 6.1.1
+	pkgrel = 1
+	url = https://cran.r-project.org/package=mclust
+	arch = x86_64
+	license = GPL-2.0-or-later
+	makedepends = gcc-fortran
+	depends = blas
+	depends = lapack
+	depends = r
+	optdepends = r-geometry
+	optdepends = r-knitr
+	optdepends = r-mix
+	optdepends = r-rmarkdown
+	source = https://cran.r-project.org/src/contrib/mclust_6.1.1.tar.gz
+	md5sums = b8feb881391b91082fe3ef2b5a436c4d
+	b2sums = 6512b5b3bff9b2ae95efdc5e2251f8519b89868ac98df35f50841f677fd8fff87af71bec326a05856f2930799f9d1a3e273a9dcbde71df262c52567d3eebda99
+
+pkgname = r-mclust

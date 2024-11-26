@@ -1,0 +1,26 @@
+pkgbase = ros-noetic-openni-launch
+	pkgdesc = ROS - Drivers for the Microsoft Kinect, Asus Xtion, and Primesense Devices.
+	pkgver = 1.11.1
+	pkgrel = 3
+	url = https://wiki.ros.org/openni_launch
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-nodelet
+	makedepends = ros-noetic-roscpp
+	makedepends = ros-noetic-openni-camera
+	makedepends = ros-noetic-catkin
+	makedepends = openni
+	depends = ros-noetic-nodelet
+	depends = ros-noetic-roscpp
+	depends = openni
+	source = ros-noetic-openni-launch-1.11.1.tar.gz::https://github.com/ros-drivers/openni_camera/archive/1.11.1.tar.gz
+	sha256sums = 4dd0109628b5f8ed497ed11b35023ac82a9ecd3658469dc35b1a04f52ba14daf
+
+pkgname = ros-noetic-openni-launch
+

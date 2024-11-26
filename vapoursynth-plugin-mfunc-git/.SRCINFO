@@ -1,0 +1,16 @@
+pkgbase = vapoursynth-plugin-mfunc-git
+	pkgdesc = Plugin for Vapoursynth: mfunc (GIT version)
+	pkgver = r33.6472770
+	pkgrel = 2
+	url = https://github.com/MonoS/MonoS-VS-Func
+	arch = any
+	license = GPL
+	makedepends = git
+	depends = vapoursynth-plugin-havsfunc-git
+	depends = vapoursynth-plugin-nnedi3_resample-git
+	provides = vapoursynth-plugin-mfunc
+	conflicts = vapoursynth-plugin-mfunc
+	source = mfunc::git+https://github.com/MonoS/MonoS-VS-Func.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-mfunc-git

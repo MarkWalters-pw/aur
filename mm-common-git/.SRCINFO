@@ -1,0 +1,16 @@
+pkgbase = mm-common-git
+	pkgdesc = The build infrastructure and utilities shared among the GNOME C++ binding libraries
+	pkgver = 0.9.12.r7.gcca2cf9
+	pkgrel = 1
+	url = https://github.com/GNOME/mm-common
+	arch = any
+	license = GPL
+	makedepends = git
+	makedepends = wget
+	depends = bash
+	provides = mm-common
+	conflicts = mm-common
+	source = git+https://github.com/GNOME/mm-common
+	sha512sums = SKIP
+
+pkgname = mm-common-git

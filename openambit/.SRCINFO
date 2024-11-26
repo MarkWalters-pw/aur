@@ -1,0 +1,21 @@
+pkgbase = openambit
+	pkgdesc = Open software for the Suunto Ambit(2)
+	pkgver = 0.5
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/openambitproject/openambit
+	arch = i686
+	arch = x86_64
+	license = GPL3+
+	makedepends = gcc
+	makedepends = make
+	makedepends = cmake
+	makedepends = qt5-tools
+	depends = qt5-base
+	conflicts = openambit-git
+	options = !strip
+	options = !emptydirs
+	source = openambit::git+https://github.com/openambitproject/openambit.git#branch=master
+	sha512sums = SKIP
+
+pkgname = openambit

@@ -1,0 +1,19 @@
+pkgbase = faraday-bin
+	pkgdesc = Faraday is a suite of tools built to help node operators and businesses run lnd, the leading implementation of the Lightning Network.
+	pkgver = 0.2.13_alpha
+	pkgrel = 1
+	url = https://github.com/lightninglabs/faraday
+	arch = any
+	license = MIT
+	depends = lnd
+	provides = faraday
+	provides = frcli
+	source = https://github.com/lightninglabs/faraday/releases/download/v0.2.13-alpha/faraday-linux-amd64-v0.2.13-alpha.tar.gz
+	source = manifest-v0.2.13-alpha.txt.sig::https://github.com/lightninglabs/faraday/releases/download/v0.2.13-alpha/manifest-v0.2.13-alpha.sig
+	source = https://github.com/lightninglabs/faraday/releases/download/v0.2.13-alpha/manifest-v0.2.13-alpha.txt
+	validpgpkeys = F4FC70F07310028424EFC20A8E4256593F177720
+	sha256sums = 1b86881bcf726938c67bad5e645d781b9574dcb8c0e4dff53b4afa90ca0044d0
+	sha256sums = SKIP
+	sha256sums = 7626b65a02ca84eeaa1e7126da1d7eff45d767a1f024646091bd34bd935427b5
+
+pkgname = faraday-bin

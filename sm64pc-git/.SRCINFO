@@ -1,0 +1,17 @@
+pkgbase = sm64pc-git
+	pkgdesc = Super Mario 64 PC (sm64ex aka. sm64pc) - OpenGL adaptation of n64decomp/sm64
+	pkgver = r513.57c20346
+	pkgrel = 1
+	url = https://github.com/sm64pc/sm64ex
+	arch = any
+	license = reverse-engineered and unlicensed
+	makedepends = git
+	makedepends = python
+	makedepends = libglvnd
+	makedepends = audiofile
+	depends = sdl2
+	provides = sm64ex
+	source = git+https://github.com/sm64pc/sm64ex.git
+	sha256sums = SKIP
+
+pkgname = sm64pc-git

@@ -1,0 +1,16 @@
+pkgbase = bore-git
+	pkgdesc = A command line tool for making tunnels to localhost (git)
+	pkgver = 0.5.0.r1.gf8ccbae
+	pkgrel = 1
+	url = https://github.com/ekzhang/bore
+	arch = x86_64
+	license = MIT
+	makedepends = cargo
+	makedepends = git
+	depends = gcc-libs
+	provides = bore
+	conflicts = bore
+	source = git+https://github.com/ekzhang/bore
+	sha512sums = SKIP
+
+pkgname = bore-git

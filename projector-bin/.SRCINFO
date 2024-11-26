@@ -1,0 +1,18 @@
+pkgbase = projector-bin
+	pkgdesc = Common and client-related code for running Swing applications remotely.
+	pkgver = 1.1.0
+	pkgrel = 1
+	url = https://github.com/JetBrains/projector-client
+	arch = x86_64
+	license = MIT
+	depends = electron16
+	conflicts = projector
+	options = !strip
+	source = projector.desktop
+	source = projector.sh
+	sha1sums = 9e5295435b2b5eef024a39a5a62fe1c3e81a4b0d
+	sha1sums = 530cfc10f8d6198a24e5c98cdf39b386ed1733d0
+	source_x86_64 = projector-bin-1.1.0.zip::https://github.com/JetBrains/projector-client/releases/download/launcher-v1.1.0/projector-linux-x64-launcher-v1.1.0.zip
+	sha1sums_x86_64 = 93162dc4968ddd2695f1a0a0e4dd1f0be10c019b
+
+pkgname = projector-bin

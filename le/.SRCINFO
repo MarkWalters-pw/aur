@@ -1,0 +1,19 @@
+pkgbase = le
+	pkgdesc = A text editor in memorial to Norton Editor with block and binary operations
+	pkgver = 1.16.8
+	pkgrel = 1
+	url = https://github.com/lavv17/le
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	source = git://git.sv.gnu.org/gnulib
+	source = le-1.16.8.tar.gz::https://github.com/lavv17/le/archive/refs/tags/v1.16.8.tar.gz
+	md5sums = SKIP
+	md5sums = 94a24b344084324f07ab1a4fd3181fda
+	sha256sums = SKIP
+	sha256sums = 6c5a0e3bfbc522e57953f237269c1772283454fb6947f6257fde99d48ea9c3b1
+
+pkgname = le
+	depends = gcc-libs
+	depends = ncurses

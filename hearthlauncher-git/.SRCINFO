@@ -1,0 +1,22 @@
+pkgbase = hearthlauncher-git
+	pkgdesc = Minecraft launcher and modpack installer
+	pkgver = 0.058.r0.gf972f3c
+	pkgrel = 1
+	url = https://gitlab.com/HearthProject/HearthLauncher
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = cmake
+	makedepends = clang
+	makedepends = ninja
+	depends = qt5-base
+	depends = zlib
+	depends = quazip
+	depends = qt5-svg
+	provides = hearthlauncher
+	conflicts = hearthlauncher
+	source = hearthlauncher-git::git+https://gitlab.com/HearthProject/HearthLauncher.git
+	sha512sums = SKIP
+
+pkgname = hearthlauncher-git
+

@@ -1,0 +1,16 @@
+pkgbase = douane-dkms-git
+	pkgdesc = Douane Firewall Kernel Module (DKMS)
+	pkgver = 0.8.2+5.gdf94296dea10b3a5ce3e
+	pkgrel = 1
+	url = http://douaneapp.com/
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	depends = dkms
+	provides = douane-dkms=0.8.2
+	conflicts = douane-dkms
+	source = https://gitlab.com/douaneapp/douane-dkms.git
+	md5sums = SKIP
+
+pkgname = douane-dkms-git
+

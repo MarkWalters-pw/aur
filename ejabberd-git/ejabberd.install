@@ -1,0 +1,7 @@
+post_install() {
+  systemd-sysusers ejabberd.conf
+}
+
+post_upgrade() {
+  systemd-sysusers ejabberd.conf
+}

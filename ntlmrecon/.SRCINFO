@@ -1,0 +1,22 @@
+pkgbase = ntlmrecon
+	pkgdesc = A tool to enumerate information from NTLM authentication enabled web endpoints.
+	pkgver = 0.1
+	pkgrel = 1
+	url = https://github.com/sachinkamath/ntlmrecon
+	arch = any
+	groups = blackarch
+	groups = blackarch-scanner
+	groups = blackarch-recon
+	license = MIT
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python
+	depends = python-ordered-set
+	depends = python-iptools
+	depends = python-colorama
+	depends = python-termcolor
+	source = git+https://github.com/sachinkamath/ntlmrecon.git
+	sha512sums = SKIP
+
+pkgname = ntlmrecon
+

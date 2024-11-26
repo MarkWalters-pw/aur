@@ -1,0 +1,13 @@
+[Unit]
+Description=ZeroNet: a decentralized web platform
+
+[Service]
+User=zeronet
+Group=zeronet
+WorkingDirectory=/opt/zeronet
+ExecStart=/usr/bin/env python zeronet.py --config_file /etc/zeronet.conf
+SyslogIdentifier=zeronet
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

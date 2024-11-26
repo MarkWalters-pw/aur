@@ -1,0 +1,20 @@
+pkgbase = moros-git
+	pkgdesc = A modern http(s) benchmark tool
+	pkgver = r45.6e12809
+	pkgrel = 1
+	url = https://github.com/condy0919/moros
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = cmake
+	makedepends = make
+	makedepends = boost
+	depends = boost
+	depends = openssl
+	provides = moros
+	conflicts = moros
+	source = moros-git::git+https://github.com/condy0919/moros.git
+	md5sums = SKIP
+
+pkgname = moros-git
+

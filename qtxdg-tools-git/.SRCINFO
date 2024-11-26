@@ -1,0 +1,17 @@
+pkgbase = qtxdg-tools-git
+	pkgdesc = User tools for libqtxdg
+	pkgver = 4.0.0
+	pkgrel = 1
+	url = https://lxqt-project.org
+	arch = x86_64
+	license = LGPL-2.1-only
+	makedepends = git
+	makedepends = cmake
+	makedepends = lxqt-build-tools-git
+	depends = libqtxdg-git
+	provides = qtxdg-tools=4.0.0
+	conflicts = qtxdg-tools
+	source = git+https://github.com/lxqt/qtxdg-tools.git
+	sha256sums = SKIP
+
+pkgname = qtxdg-tools-git

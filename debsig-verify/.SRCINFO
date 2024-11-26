@@ -1,0 +1,15 @@
+pkgbase = debsig-verify
+	pkgdesc = Debian package signature verification tool
+	pkgver = 0.29
+	pkgrel = 1
+	url = https://git.dpkg.org/git/dpkg/debsig-verify.git
+	arch = x86_64
+	arch = armv7h
+	arch = aarch64
+	license = GPL2
+	depends = dpkg
+	depends = expat
+	source = git+https://git.dpkg.org/git/dpkg/debsig-verify.git#tag=0.29
+	sha256sums = SKIP
+
+pkgname = debsig-verify

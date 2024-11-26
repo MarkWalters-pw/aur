@@ -1,0 +1,15 @@
+pkgbase = ddnet-maps-git
+	pkgdesc = All released maps with configs for DDraceNetwork server
+	pkgver = r1679.g142b9c0a
+	pkgrel = 1
+	url = https://ddnet.org
+	arch = any
+	license = custom
+	makedepends = git
+	backup = usr/share/ddnet/data/autoexec_server_maps.cfg
+	backup = usr/share/ddnet/data/reset.cfg
+	backup = usr/share/ddnet/data/storage.cfg
+	source = git+https://github.com/ddnet/ddnet-maps.git
+	md5sums = SKIP
+
+pkgname = ddnet-maps-git

@@ -1,0 +1,15 @@
+pkgbase = ifetch-git
+	pkgdesc = A fetch tool to display network interface information
+	pkgver = r142.8118ca8
+	pkgrel = 1
+	url = https://github.com/deivshon/ifetch
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = make
+	depends = glibc
+	backup = etc/ifetch/ifetchrc
+	source = ifetch-git::git+https://github.com/deivshon/ifetch.git
+	md5sums = SKIP
+
+pkgname = ifetch-git

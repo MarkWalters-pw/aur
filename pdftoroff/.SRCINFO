@@ -1,0 +1,17 @@
+pkgbase = pdftoroff
+	pkgdesc = pdf conversion, scaling and viewing by blocks of text
+	pkgver = git
+	pkgrel = 1
+	url = http://github.com/sgerwk/pdftoroff
+	arch = x86_64
+	arch = i686
+	license = GPL3
+	makedepends = gcc
+	makedepends = make
+	depends = poppler-glib
+	depends = ncurses
+	depends = libx11
+	source = git+https://github.com/sgerwk/pdftoroff
+	sha256sums = SKIP
+
+pkgname = pdftoroff

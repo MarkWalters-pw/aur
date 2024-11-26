@@ -1,0 +1,17 @@
+post_install() {
+    fc-cache -s
+    mkfontscale usr/share/fonts/truetype
+    mkfontdir usr/share/fonts/truetype
+    mkfontscale usr/share/fonts/opentype
+    mkfontdir usr/share/fonts/opentype
+    mkfontscale usr/share/fonts/woff
+    mkfontdir usr/share/fonts/woff
+}
+
+post_upgrade() {
+    post_install
+}
+
+post_remove() {
+    post_install
+}

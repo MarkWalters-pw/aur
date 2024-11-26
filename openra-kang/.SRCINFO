@@ -1,0 +1,29 @@
+pkgbase = openra-kang
+	pkgdesc = An open-source implementation of the Red Alert engine using .NET/Mono and OpenGL, Kang Version. (Warning: Upstream Unmaintained since 2017)
+	pkgver = 20210822.g7bbfe86d7kang
+	pkgrel = 1
+	url = https://github.com/BangL/OpenRA
+	install = openra.install
+	arch = any
+	license = GPL3
+	makedepends = git
+	makedepends = unzip
+	depends = mono
+	depends = ttf-dejavu
+	depends = openal
+	depends = libgl
+	depends = freetype2
+	depends = sdl2
+	depends = lua51
+	depends = hicolor-icon-theme
+	depends = gtk-update-icon-cache
+	depends = desktop-file-utils
+	depends = xdg-utils
+	depends = zenity
+	provides = openra
+	conflicts = openra
+	options = !strip
+	source = openra-kang::git+https://github.com/BangL/OpenRA.git#branch=bleed
+	md5sums = SKIP
+
+pkgname = openra-kang

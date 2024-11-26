@@ -1,0 +1,20 @@
+pkgbase = nldev-runit
+	pkgdesc = runit service scripts for nldev
+	pkgver = 20210913
+	pkgrel = 1
+	arch = any
+	license = MIT/X
+	depends = nldev
+	depends = runit
+	source = nldev.run
+	source = nldev.conf
+	source = nltrigger.run
+	source = nldev.early
+	source = nltrigger.early
+	sha256sums = a5d3b4faeb2033f26e09e30238f0bd9aad4bd0170008c7324294dd5252e4133e
+	sha256sums = 4aa815aa1fd06c6f794cc00bf21d9d808ce2137c5e4a77bac8ef7e9d20083809
+	sha256sums = cad0f0842390c60c985daf86da80a8c64a44f03cd9bb465e777380ed5ac9f1f7
+	sha256sums = ee667ba8d060325b2e524955320e34d32a9919b6fb016b1266aaf7c1e3b99e86
+	sha256sums = 0e9b7c35e4cc2a984f259643ad10496dd928468ed1374f92ee20eef63213f243
+
+pkgname = nldev-runit

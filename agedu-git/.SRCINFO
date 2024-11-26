@@ -1,0 +1,18 @@
+pkgbase = agedu-git
+	pkgdesc = Track down wasted disk space
+	pkgver = 20211128.r150.8cd63c5
+	pkgrel = 1
+	url = http://www.chiark.greenend.org.uk/~sgtatham/agedu/
+	arch = i686
+	arch = x86_64
+	license = custom:MIT
+	makedepends = git
+	makedepends = halibut
+	makedepends = cmake
+	depends = glibc
+	provides = agedu
+	conflicts = agedu
+	source = git+https://git.tartarus.org/simon/agedu.git
+	md5sums = SKIP
+
+pkgname = agedu-git

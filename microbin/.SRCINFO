@@ -1,0 +1,25 @@
+pkgbase = microbin
+	pkgdesc = A tiny, self-contained, configurable paste bin and URL shortener written in Rust.
+	pkgver = 2.0.4
+	pkgrel = 1
+	url = https://github.com/szabodanika/microbin
+	arch = i686
+	arch = pentium4
+	arch = x86_64
+	arch = arm
+	arch = armv7h
+	arch = armv6h
+	arch = aarch64
+	license = BSD
+	checkdepends = cargo
+	makedepends = cargo
+	options = !lto
+	backup = etc/microbin.conf
+	source = https://github.com/szabodanika/microbin/archive/refs/tags/v2.0.4.tar.gz
+	source = microbin.service
+	source = microbin.conf
+	sha256sums = 89bc6fac9c8c5f918da348740c7f5e7260be935c46009804a61f433f939cb320
+	sha256sums = 3704d0a839585b6e6a38dda635f7c8119a3c8286420f62a028ae1b7d27a89ad0
+	sha256sums = 8e943fc702637b1b7441491db945c078d190c4208cd202e5e360cad90ca793ab
+
+pkgname = microbin

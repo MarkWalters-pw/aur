@@ -1,0 +1,16 @@
+pkgbase = zfsnap
+	pkgdesc = A portable, performant script to make rolling ZFS snapshots easy.
+	pkgver = 2.0.0beta3
+	pkgrel = 1
+	url = https://www.zfsnap.org/
+	arch = any
+	license = BSD
+	depends = sh
+	optdepends = bash: for the corresponding completions,
+	optdepends = tcsh: for the corresponding completions,
+	optdepends = zsh: for the corresponding completions
+	source = https://github.com/zfsnap/zfsnap/archive/v2.0.0-beta3.tar.gz
+	sha256sums = d73be34b58d94b89010e2be6fc3d34bdc34b9675aaa2bebfe446dffb683e45d3
+
+pkgname = zfsnap
+

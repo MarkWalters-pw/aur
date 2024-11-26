@@ -1,0 +1,24 @@
+pkgbase = ros-noetic-rqt-robot-monitor
+	pkgdesc = ROS - rqt_robot_monitor displays diagnostics_agg topics messages that are published by diagnostic_aggregator.
+	pkgver = 0.5.14
+	pkgrel = 1
+	url = https://wiki.ros.org/rqt_robot_monitor
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-catkin
+	depends = ros-noetic-rqt-gui-py
+	depends = ros-noetic-diagnostic-msgs
+	depends = ros-noetic-qt-gui-py-common
+	depends = ros-noetic-rqt-gui
+	depends = ros-noetic-qt-gui
+	depends = ros-noetic-rqt-bag
+	depends = ros-noetic-python-qt-binding
+	depends = ros-noetic-rqt-py-common
+	depends = ros-noetic-rospy
+	depends = python-rospkg
+	source = ros-noetic-rqt-robot-monitor-0.5.14.tar.gz::https://github.com/ros-visualization/rqt_robot_monitor/archive/0.5.14.tar.gz
+	sha256sums = 898cc073a4eb2cf9d90e3af536ed68cc097a3fd69708df93e7746fa8430f971d
+
+pkgname = ros-noetic-rqt-robot-monitor

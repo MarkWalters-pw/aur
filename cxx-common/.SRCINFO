@@ -1,0 +1,19 @@
+pkgbase = cxx-common
+	pkgdesc = Common dependency management for various Trail of Bits C++ codebases
+	pkgver = 0.4.1
+	pkgrel = 1
+	url = https://github.com/lifting-bits/cxx-common
+	arch = x86_64
+	license = Apache
+	makedepends = clang
+	makedepends = lld
+	makedepends = cmake
+	makedepends = ninja
+	makedepends = git
+	makedepends = python
+	makedepends = python-setuptools
+	options = staticlibs
+	source = https://github.com/lifting-bits/cxx-common/archive/refs/tags/v0.4.1.tar.gz
+	sha256sums = 922b92b1fc99e16e4828b2e2463dec5605d131b152de138b5f1990e21bdeee0b
+
+pkgname = cxx-common

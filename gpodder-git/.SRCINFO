@@ -1,0 +1,23 @@
+pkgbase = gpodder-git
+	pkgdesc = A podcast receiver/catcher
+	pkgver = 3.10.17.r41.ge78f54b0
+	pkgrel = 2
+	url = http://gpodder.org/
+	arch = any
+	license = GPL3
+	makedepends = git
+	makedepends = intltool
+	depends = gtk3
+	depends = python-cairo
+	depends = python-dbus
+	depends = python-gobject
+	depends = python-mygpoclient
+	depends = python-podcastparser
+	optdepends = youtube-dl: for Youtube-dl extension
+	provides = gpodder
+	conflicts = gpodder
+	source = gpodder::git+https://github.com/gpodder/gpodder.git
+	md5sums = SKIP
+
+pkgname = gpodder-git
+

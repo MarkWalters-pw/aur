@@ -1,0 +1,24 @@
+pkgbase = gplates-bin
+	pkgdesc = GPlates - a plate tectonics program. Built as an AppImage from the .deb
+	pkgver = 2.3
+	pkgrel = 1
+	url = https://www.gplates.org
+	arch = x86_64
+	license = GPL2
+	makedepends = dpkg
+	makedepends = imagemagick
+	makedepends = wget
+	makedepends = desktop-file-utils
+	options = !strip
+	source = gplates.sh
+	source = gplates-appimage.yml
+	source = gplates.png
+	source = https://raw.githubusercontent.com/AppImage/pkg2appimage/master/pkg2appimage
+	source = gplates_2.3.0_ubuntu-20.04-amd64.deb::https://www.earthbyte.org/download/8430
+	md5sums = 5f40760e7d3448a413354bbdcb72e529
+	md5sums = 6a85bf12313cd662f7cd23a05f978ca2
+	md5sums = 4476faf94d5d8c919aeaa34aa0b2ed04
+	md5sums = 29b5588e48f5705029ab3e954d16e40b
+	md5sums = 871ab30b353286f2e812ee22667ebb83
+
+pkgname = gplates-bin

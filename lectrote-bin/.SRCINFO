@@ -1,0 +1,24 @@
+pkgbase = lectrote-bin
+	pkgdesc = The IF interpreter in an Electron shell
+	pkgver = 1.4.5
+	pkgrel = 1
+	url = https://github.com/erkyrath/lectrote
+	install = lectrote.install
+	arch = x86_64
+	license = MIT
+	depends = electron
+	depends = alsa-lib
+	depends = gconf
+	depends = gtk2
+	depends = libxtst
+	depends = libxss
+	depends = nss
+	provides = lectrote
+	source = https://github.com/erkyrath/lectrote/releases/download/lectrote-1.4.5/Lectrote-1.4.5-linux-x64.zip
+	source = lectrote.desktop
+	source = lectrote
+	sha256sums = 64d38de080f417bd16965cb5a51edf6a9022da8b209c28f66ff05a71c125e5a3
+	sha256sums = facacc25f091eec64a619c52423231785ebfb911d954229faeea3676acda21fe
+	sha256sums = b47e65391b0cca22d023fabd3e74d403cd30d8e99ef8be0b0107db283b74b484
+
+pkgname = lectrote-bin

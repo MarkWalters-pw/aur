@@ -1,0 +1,16 @@
+pkgbase = terminess-powerline-font-git
+	pkgdesc = Terminess Powerline
+	pkgver = r202.e80e3eb
+	pkgrel = 2
+	url = https://github.com/powerline/fonts
+	install = terminess-powerline-font-git.install
+	arch = any
+	license = custom:SIL Open Font License, Version 1.1
+	makedepends = git
+	depends = fontconfig
+	depends = xorg-mkfontscale
+	conflicts = powerline-fonts-git
+	source = git+https://github.com/powerline/fonts.git
+	md5sums = SKIP
+
+pkgname = terminess-powerline-font-git

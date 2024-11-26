@@ -1,0 +1,15 @@
+pkgbase = cpuid2cpuflags-git
+	pkgdesc = Tool to get the instruction sets supported by the local CPU (git version)
+	pkgver = 12.r0.g1ca20a2
+	pkgrel = 1
+	url = https://github.com/mgorny/cpuid2cpuflags/
+	arch = x86_64
+	license = BSD
+	makedepends = git
+	depends = glibc
+	provides = cpuid2cpuflags
+	conflicts = cpuid2cpuflags
+	source = git+https://github.com/mgorny/cpuid2cpuflags.git
+	sha256sums = SKIP
+
+pkgname = cpuid2cpuflags-git

@@ -1,0 +1,23 @@
+pkgbase = pacman-utils
+	pkgdesc = Some utils and helper scripts for archlinux packages
+	pkgver = 1.1.0
+	pkgrel = 1
+	url = https://github.com/kata198/pacman-utils
+	arch = any
+	license = apache
+	makedepends = python
+	makedepends = python-setuptools
+	makedepends = python-cmp_version>=3.0.0
+	makedepends = python-func_timeout
+	depends = wget
+	depends = curl
+	depends = python
+	depends = python-setuptools
+	depends = python-cmp_version>=3.0.0
+	depends = python-func_timeout
+	optdepends = pacman-utils-data: Data for whatprovides_upstream
+	source = https://github.com/kata198/pacman-utils/archive/1.1.0.tar.gz
+	sha512sums = 36c202bdfe7a86ce004ca9f731c8bb8458257ab6652b173b0324faf15e45877943b4617946ba4893af8f8bcf657d0e1cf29b5133ffdbd9b14af6df1ce7dc9c96
+
+pkgname = pacman-utils
+

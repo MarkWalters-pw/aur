@@ -1,0 +1,16 @@
+pkgbase = mingw-w64-libsass
+	pkgdesc = C implementation of Sass CSS preprocessor (library) (mingw-w64)
+	pkgver = 3.6.5
+	pkgrel = 1
+	url = https://sass-lang.com/libsass
+	arch = any
+	license = MIT
+	makedepends = mingw-w64-configure
+	depends = mingw-w64-crt
+	options = !strip
+	options = !buildflags
+	options = staticlibs
+	source = libsass-3.6.5.tar.gz::https://github.com/sass/libsass/archive/3.6.5.tar.gz
+	sha256sums = 89d8f2c46ae2b1b826b58ce7dde966a176bac41975b82e84ad46b01a55080582
+
+pkgname = mingw-w64-libsass

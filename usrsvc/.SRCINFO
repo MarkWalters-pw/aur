@@ -1,0 +1,21 @@
+pkgbase = usrsvc
+	pkgdesc = A service manager for running/managing/monitoring/auto-restarting daemons and services at the user (non-root) level
+	pkgver = 1.5.13
+	pkgrel = 1
+	url = http://github.com/kata198/usrsvc
+	install = install.sh
+	arch = any
+	license = GPLv2
+	makedepends = python-setuptools
+	makedepends = python
+	depends = python-setuptools
+	depends = python
+	depends = python-configobj
+	depends = python-namedatomiclock
+	depends = python-func_timeout
+	depends = python-subprocess2
+	source = https://github.com/kata198/usrsvc/archive/1.5.13.tar.gz
+	sha512sums = f08598f10d7db775dc725f3f70d2eb768085cfa79ebfd0ab1d2649b92a4b2867a8d7cde8e7349ad998101804a45aaf8d9a04f03d40ee91faedb7d685db24d05b
+
+pkgname = usrsvc
+

@@ -1,0 +1,27 @@
+pkgbase = pat-bin
+	pkgdesc = A modern Winlink client
+	pkgver = 0.13.1
+	pkgrel = 1
+	url = http://getpat.io
+	arch = i686
+	arch = x86_64
+	arch = armhf
+	arch = armv6h
+	license = MIT
+	optdepends = gpsd>=2.90
+	optdepends = hamlib>=1.2
+	optdepends = ncurses
+	provides = pat
+	conflicts = pat
+	options = !strip
+	options = !emptydirs
+	source_i686 = https://github.com/la5nta/pat/releases/download/v0.13.1/pat_0.13.1_linux_i386.deb
+	sha512sums_i686 = 4d45bdb6ef794d1d6fd4ba097b25b119dfeb91e82af0f1d9894918a421f57e0ae399c962d6e35a26745d7114f2c033379f01a089ceda7c4139a33ebab0156df7
+	source_x86_64 = https://github.com/la5nta/pat/releases/download/v0.13.1/pat_0.13.1_linux_amd64.deb
+	sha512sums_x86_64 = 1c347d12f643affefa9900f9d9863f3220c887541785d3212abcaabc11b477d15589c1053bd773bc096479c05cc9c0382ba628e4d2a3de9da6967614ff3feba4
+	source_armhf = https://github.com/la5nta/pat/releases/download/v0.13.1/pat_0.13.1_linux_armhf.deb
+	sha512sums_armhf = a1a325be20893488f6f0c41594f0b38dd643d8a15c874d88746f7153bd39acaac840e75d3cdc2463d8e6859813a91a9f6f2a62cb88f2799a52d09e27711acd22
+	source_armv6h = https://github.com/la5nta/pat/releases/download/v0.13.1/pat_0.13.1_linux_armhf.deb
+	sha512sums_armv6h = a1a325be20893488f6f0c41594f0b38dd643d8a15c874d88746f7153bd39acaac840e75d3cdc2463d8e6859813a91a9f6f2a62cb88f2799a52d09e27711acd22
+
+pkgname = pat-bin

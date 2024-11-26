@@ -1,0 +1,17 @@
+pkgbase = cmake-remake-git
+	pkgdesc = A set of CMake macros for restructuring GNU Automake/Autoconf projects.
+	pkgver = 1
+	pkgrel = 3
+	url = https://github.com/kralf/remake
+	arch = any
+	license = LGPL
+	makedepends = git
+	provides = cmake-remake
+	conflicts = cmake-remake
+	source = remake::git+https://github.com/kralf/remake.git
+	source = remove_debian_crap.patch
+	md5sums = SKIP
+	md5sums = 5e25c8aba4976390a2b401e8732dec5a
+
+pkgname = cmake-remake-git
+

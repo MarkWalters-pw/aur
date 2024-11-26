@@ -1,0 +1,17 @@
+pkgbase = tricks-bin
+	pkgdesc = The social network for programmers!
+	pkgver = 1.0.0
+	pkgrel = 1
+	url = https://tricks.aseman.io/
+	arch = x86_64
+	license = GPL3
+	provides = tricks
+	conflicts = tricks
+	options = !emptydirs
+	options = !strip
+	source = https://tricks.aseman.io/tricks/static/downloads/Tricks-1.0.0_linux.AppImage
+	source = https://raw.githubusercontent.com/Aseman-Land/Tricks/main/LICENSE
+	sha256sums = b40ac37ad95179f91a76d4ae65802504df34dfa3f0d64996ab3a6b2092b77162
+	sha256sums = 2ca9503d76d1ffab14f599b4741382eec11face60ad1f0d7a41897809003a286
+
+pkgname = tricks-bin

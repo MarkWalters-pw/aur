@@ -1,0 +1,22 @@
+pkgbase = quicktile-git
+	pkgdesc = Adds window-tiling hotkeys to any X11 desktop
+	pkgver = 463.ce0c088
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/ssokolow/quicktile
+	arch = any
+	license = GPL2
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python
+	depends = gtk3
+	depends = libwnck3
+	depends = python-gobject
+	depends = python-xlib
+	optdepends = python-dbus: required if you want to interact with QuickTile over D-Bus
+	provides = quicktile
+	conflicts = quicktile
+	source = git+https://github.com/ssokolow/quicktile.git
+	sha512sums = SKIP
+
+pkgname = quicktile-git

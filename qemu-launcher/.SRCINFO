@@ -1,0 +1,18 @@
+pkgbase = qemu-launcher
+	pkgdesc = GNOME/Gtk front-end for the Qemu x86 PC emulator
+	pkgver = 1.7.4
+	pkgrel = 6
+	url = http://gna.org/projects/qemulaunch
+	arch = any
+	license = GPL
+	makedepends = libxml2
+	depends = qemu
+	depends = gtk2-perl
+	depends = glade-perl
+	depends = perl-locale-gettext
+	depends = xdg-utils
+	source = qemu-launcher_1.7.4.tar.gz::https://launchpad.net/debian/+archive/primary/+sourcefiles/qemu-launcher/1.7.4-1/qemu-launcher_1.7.4.orig.tar.gz
+	sha256sums = 6d55c6e15b1733ca5d580a8eca7505124acb0a15948429b99dc8f700bb05efe6
+
+pkgname = qemu-launcher
+

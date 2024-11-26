@@ -1,0 +1,19 @@
+pkgbase = zsa-wally-cli-git
+	pkgdesc = Wally: Flash your ZSA Keyboard the EZ way.
+	pkgver = 2.0.1.r0.e488ddd
+	pkgrel = 3
+	url = https://github.com/zsa/wally-cli
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = go
+	makedepends = git
+	depends = libusb
+	depends = zsa-udev
+	provides = zsa-wally-cli
+	conflicts = zsa-wally-cli
+	conflicts = zsa-wally-cli-bin
+	source = git+https://github.com/zsa/wally-cli.git
+	sha256sums = SKIP
+
+pkgname = zsa-wally-cli-git

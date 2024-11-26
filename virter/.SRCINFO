@@ -1,0 +1,24 @@
+pkgbase = virter
+	pkgdesc = Virter is a command line tool for simple creation and cloning of virtual machines based on libvirt
+	pkgver = 0.14.3
+	pkgrel = 1
+	url = https://github.com/LINBIT/virter
+	arch = i686
+	arch = pentium4
+	arch = x86_64
+	arch = arm
+	arch = armv7h
+	arch = armv6h
+	arch = aarch64
+	license = Apache2
+	makedepends = go
+	depends = libvirt
+	depends = git
+	optdepends = docker
+	optdepends = dnsmasq
+	optdepends = sudo
+	options = !lto
+	source = virter-0.14.3.tar.gz::https://github.com/LINBIT/virter/archive/v0.14.3.tar.gz
+	sha256sums = e269df23553cb6351346356c201b7b3d7c919262eae5e39b9478e98edc4243d5
+
+pkgname = virter

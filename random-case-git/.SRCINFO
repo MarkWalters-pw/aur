@@ -1,0 +1,17 @@
+pkgbase = random-case-git
+	pkgdesc = Randomize case of your input text.
+	pkgver = 1.0.5
+	pkgrel = 1
+	url = https://gitlab.com/ykkzde/random-case
+	arch = x86_64
+	license = GPL3
+	makedepends = rust
+	makedepends = cargo
+	depends = gcc-libs
+	provides = random-case
+	conflicts = random-case-bin
+	source = random-case-git-1.0.5-1.tar.gz::https://gitlab.com/ykkzde/random-case/-/archive/v1.0.5/random-case-v1.0.5.tar.gz
+	sha512sums = 3d70f2e632757a37c022d0a058f97da53f87b543ac3b32dfe02f115e6fcb63c2cb66fdfc31d3bcd5b0208dea83bd5b356483b69c77ce541464e2ca71d523b85a
+
+pkgname = random-case-git
+

@@ -1,0 +1,23 @@
+pkgbase = pianobooster-git
+	pkgdesc = A MIDI file player that teaches you how to play the piano
+	pkgver = v1.0.0.r20.gaaafb07
+	pkgrel = 1
+	url = https://www.pianobooster.org
+	arch = x86_64
+	license = GPL3+
+	makedepends = git
+	makedepends = cmake
+	makedepends = qt5-tools
+	depends = fluidsynth
+	depends = ftgl
+	depends = hicolor-icon-theme
+	depends = qt5-base
+	depends = rtmidi
+	optdepends = qt5-translations
+	conflicts = pianobooster
+	replaces = pianobooster
+	source = git+https://github.com/pianobooster/PianoBooster
+	sha256sums = SKIP
+
+pkgname = pianobooster-git
+

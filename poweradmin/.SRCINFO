@@ -1,0 +1,15 @@
+pkgbase = poweradmin
+	pkgdesc = A web-based control panel for PowerDNS
+	pkgver = 3.4.2
+	pkgrel = 1
+	url = https://www.poweradmin.org
+	arch = any
+	license = GPL
+	optdepends = php: to locally host poweradmin
+	provides = poweradmin
+	conflicts = poweradmin
+	backup = etc/webapps/poweradmin/config.inc.php
+	source = https://github.com/poweradmin/poweradmin/archive/refs/tags/v3.4.2.tar.gz
+	sha256sums = e0ea1fa87ed2e4fd1f499e379211e47524e11725b0f5d2ed46884d853c1dcdc1
+
+pkgname = poweradmin

@@ -1,0 +1,21 @@
+pkgbase = the-rock-git
+	pkgdesc = A command line King James bible viewer
+	pkgver = 0.3.2
+	pkgrel = 1
+	url = https://gitlab.com/NoahJelen/the-rock
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = cargo
+	makedepends = git
+	makedepends = gzip
+	depends = ncurses
+	depends = glibc
+	depends = gcc-libs
+	conflicts = the-rock
+	conflicts = bible-kjv
+	source = git+https://gitlab.com/NoahJelen/the-rock
+	md5sums = SKIP
+
+pkgname = the-rock-git
+

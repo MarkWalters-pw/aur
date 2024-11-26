@@ -1,0 +1,18 @@
+pkgbase = oshu
+	pkgdesc = Fast port of the osu! rhythm game
+	pkgver = 2.0.2
+	pkgrel = 1
+	url = https://github.com/fmang/oshu/
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = cmake
+	depends = sdl2
+	depends = sdl2_image
+	depends = ffmpeg
+	depends = cairo
+	depends = pango
+	source = oshu-2.0.2.tar.gz::https://github.com/fmang/oshu/archive/2.0.2.tar.gz
+	sha256sums = 2f576ffd87af58bc246f7e3277ec4193799648b56909a309990ba73af6070ad4
+
+pkgname = oshu

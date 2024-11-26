@@ -1,0 +1,18 @@
+pkgbase = avisynth-plugin-bifrost-git
+	pkgdesc = Plugin for Avisynth: bifrost (GIT version)
+	pkgver = 2.1.0.1.g31cf836
+	pkgrel = 1
+	url = https://github.com/Asd-g/AviSynth-bifrost
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = cmake
+	makedepends = avisynthplus
+	depends = libavisynth.so
+	provides = avisynth-plugin-bifrost
+	conflicts = avisynth-plugin-bifrost
+	options = debug
+	source = bifrost::git+https://github.com/Asd-g/AviSynth-bifrost.git
+	sha256sums = SKIP
+
+pkgname = avisynth-plugin-bifrost-git

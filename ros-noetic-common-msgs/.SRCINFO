@@ -1,0 +1,24 @@
+pkgbase = ros-noetic-common-msgs
+	pkgdesc = ROS - common_msgs contains messages that are widely used by other ROS packages.
+	pkgver = 1.13.1
+	pkgrel = 1
+	url = https://wiki.ros.org/common_msgs
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-catkin
+	depends = ros-noetic-diagnostic-msgs
+	depends = ros-noetic-trajectory-msgs
+	depends = ros-noetic-stereo-msgs
+	depends = ros-noetic-nav-msgs
+	depends = ros-noetic-actionlib-msgs
+	depends = ros-noetic-shape-msgs
+	depends = ros-noetic-visualization-msgs
+	depends = ros-noetic-sensor-msgs
+	depends = ros-noetic-geometry-msgs
+	source = ros-noetic-common-msgs-1.13.1.tar.gz::https://github.com/ros/common_msgs/archive/1.13.1.tar.gz
+	sha256sums = 74af8cc88bdc9c23cbc270d322e50562857e2c877359423f389d51c0735ee230
+
+pkgname = ros-noetic-common-msgs
+

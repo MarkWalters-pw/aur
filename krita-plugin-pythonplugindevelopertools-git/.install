@@ -1,0 +1,11 @@
+# arg 1:  the new package version
+post_install() {
+    echo ""
+    echo "***************************************************************"
+    echo "After installed this plugin, please open Krita then go to:"
+    echo "\"Settings -> Configure Krita -> Python Plugins Manager\""
+    echo "to enable the plugin."
+    echo "***************************************************************"
+    echo ""
+}
+

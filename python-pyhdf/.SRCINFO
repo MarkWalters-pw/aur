@@ -1,0 +1,25 @@
+pkgbase = python-pyhdf
+	pkgdesc = Python bindings for the HDF4 library
+	pkgver = 0.10.1
+	pkgrel = 1
+	url = https://github.com/fhs/pyhdf
+	arch = x86_64
+	license = MIT
+	makedepends = python
+	makedepends = python2
+	makedepends = python-numpy
+	makedepends = python2-numpy
+	makedepends = hdf4
+	source = https://pypi.io/packages/source/p/pyhdf/pyhdf-0.10.1.tar.gz
+	sha256sums = c939cf92487c37da61b41867b4ab032711ccde407340f7ef7d18917631cf62b2
+
+pkgname = python-pyhdf
+	depends = python
+	depends = python-numpy
+	depends = hdf4
+
+pkgname = python2-pyhdf
+	depends = python2
+	depends = python2-numpy
+	depends = hdf4
+

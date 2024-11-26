@@ -1,0 +1,20 @@
+pkgbase = python-pynbt-git
+	pkgdesc = Tiny, liberally-licensed NBT library
+	pkgver = 3.1.0.r0.gbd7e545
+	pkgrel = 1
+	url = https://github.com/TkTech/PyNBT
+	arch = any
+	license = MIT
+	checkdepends = python-pytest
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python-mutf8
+	provides = python-pynbt
+	conflicts = python-pynbt
+	source = python-pynbt-git::git+https://github.com/TkTech/PyNBT
+	sha256sums = SKIP
+
+pkgname = python-pynbt-git

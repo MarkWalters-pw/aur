@@ -1,0 +1,22 @@
+pkgbase = featherpad-git
+	pkgdesc = Lightweight Qt5 plain text editor for Linux
+	pkgver = 1.5.1.r6.gd72f662b
+	pkgrel = 1
+	url = https://github.com/tsujan/featherpad
+	arch = i686
+	arch = x86_64
+	license = GPL-3.0-only
+	makedepends = git
+	makedepends = cmake
+	makedepends = qt6-tools
+	depends = qt6-svg
+	depends = hunspell
+	depends = desktop-file-utils
+	depends = gtk-update-icon-cache
+	optdepends = qt6-translations: localized keyboard shortcuts
+	provides = featherpad
+	conflicts = featherpad
+	source = git+https://github.com/tsujan/featherpad.git
+	sha256sums = SKIP
+
+pkgname = featherpad-git

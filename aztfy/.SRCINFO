@@ -1,0 +1,17 @@
+pkgbase = aztfy
+	pkgdesc = Bring existing Azure resources under Terraform's management
+	pkgver = 0.8.0
+	pkgrel = 1
+	url = https://github.com/Azure/aztfy
+	arch = x86_64
+	arch = i686
+	arch = aarch64
+	arch = armv7h
+	license = MPL2
+	makedepends = go
+	depends = glibc
+	optdepends = terraform
+	source = aztfy-0.8.0.tar.gz::https://github.com/Azure/aztfy/archive/v0.8.0.tar.gz
+	sha256sums = 3cc9d79892c428a69b196c30302b6c773177be6830e28c3ef2116753eb13ee91
+
+pkgname = aztfy

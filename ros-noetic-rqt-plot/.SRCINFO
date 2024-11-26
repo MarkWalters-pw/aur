@@ -1,0 +1,27 @@
+pkgbase = ros-noetic-rqt-plot
+	pkgdesc = ROS - rqt_plot provides a GUI plugin visualizing numeric values in a 2D plot using different plotting backends.
+	pkgver = 0.4.13
+	pkgrel = 1
+	url = https://wiki.ros.org/rqt_plot
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-catkin
+	depends = ros-noetic-rqt-py-common
+	depends = ros-noetic-rqt-gui-py
+	depends = ros-noetic-qwt-dependency
+	depends = ros-noetic-qt-gui-py-common
+	depends = ros-noetic-std-msgs
+	depends = ros-noetic-rostopic
+	depends = ros-noetic-rosgraph
+	depends = ros-noetic-python-qt-binding
+	depends = ros-noetic-rqt-gui
+	depends = python-rospkg
+	depends = python-matplotlib
+	depends = python-numpy
+	source = ros-noetic-rqt-plot-0.4.13.tar.gz::https://github.com/ros-visualization/rqt_plot/archive/0.4.13.tar.gz
+	sha256sums = 137f2b2c4751074b7d2ff0556e94c4ace6fe7e51f0392fbea985cad6e00e544a
+
+pkgname = ros-noetic-rqt-plot
+

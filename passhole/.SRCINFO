@@ -1,0 +1,18 @@
+pkgbase = passhole
+	pkgdesc = KeePass CLI + dmenu interface
+	pkgver = 1.10.0
+	pkgrel = 2
+	url = https://github.com/Evidlo/passhole
+	arch = any
+	makedepends = python-setuptools
+	makedepends = git
+	depends = python-pynput
+	depends = python-pykeepass
+	depends = python-pykeepass_cache
+	depends = python-colorama
+	depends = python-future
+	depends = python-pyotp
+	source = https://github.com/Evidlo/passhole/archive/v1.10.0.tar.gz
+	sha512sums = 7a23553026033ec37be90ae5bbac11063322b4e87774f4b4dadf1e2da1bc750548500cafdaa6ddb4eb1487d0cf2d635a14c1e7145a6c53e44fdf4bae64610973
+
+pkgname = passhole

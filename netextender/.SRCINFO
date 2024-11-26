@@ -1,0 +1,23 @@
+pkgbase = netextender
+	pkgdesc = SonicWALL SSL VPN Client
+	pkgver = 10.2.850
+	pkgrel = 1
+	url = https://www.sonicwall.com/en-us/products/remote-access/vpn-client
+	install = netextender.install
+	arch = i686
+	arch = x86_64
+	license = custom
+	depends = bash
+	depends = ppp
+	depends = net-tools
+	depends = java-runtime
+	source_i686 = https://software.sonicwall.com/NetExtender/NetExtender.Linux-10.2.850.x86.tgz
+	source_i686 = https://www.sonicwall.com/legal/general-product-agreement
+	sha256sums_i686 = 8033d321cf34fdf6b4b9f5855bedc4f16681c113d4dd15d880c03fa090a0c079
+	sha256sums_i686 = SKIP
+	source_x86_64 = https://software.sonicwall.com/NetExtender/NetExtender.Linux-10.2.850.x86_64.tgz
+	source_x86_64 = https://www.sonicwall.com/legal/general-product-agreement
+	sha256sums_x86_64 = 56a6b42d2f1841145d47f1c9c93b3054b29adf92da2857715f78fbcaa74141bc
+	sha256sums_x86_64 = SKIP
+
+pkgname = netextender

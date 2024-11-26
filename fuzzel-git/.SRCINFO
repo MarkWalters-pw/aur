@@ -1,0 +1,26 @@
+pkgbase = fuzzel-git
+	pkgdesc = Application launcher for wlroots based Wayland compositors.
+	pkgver = 1.8.2.r12.gf1ab7eb
+	pkgrel = 1
+	url = https://codeberg.org/dnkl/fuzzel
+	arch = x86_64
+	license = MIT
+	makedepends = meson
+	makedepends = ninja
+	makedepends = wayland-protocols
+	makedepends = scdoc
+	makedepends = tllist
+	depends = git
+	depends = pixman
+	depends = wayland
+	depends = libxkbcommon
+	depends = cairo
+	depends = libpng
+	depends = librsvg
+	depends = fcft
+	provides = fuzzel
+	conflicts = fuzzel
+	source = git+https://codeberg.org/dnkl/fuzzel
+	sha256sums = SKIP
+
+pkgname = fuzzel-git

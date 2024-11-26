@@ -1,0 +1,20 @@
+pkgbase = zdiu-git
+	pkgdesc = CLI tool for uploading large files to Discord in parts using webhooks
+	pkgver = 0.1.1.r0.gc56402b
+	pkgrel = 1
+	url = https://git.karx.xyz/karx/zdiu
+	arch = x86_64
+	license = MIT
+	makedepends = cargo
+	makedepends = git
+	depends = gtk3
+	depends = gcc-libs
+	depends = gdk-pixbuf2
+	provides = zdiu
+	conflicts = zdiu
+	source = zdiu-git::git+https://git.karx.xyz/karx/zdiu
+	source = zdiu.desktop
+	sha256sums = SKIP
+	sha256sums = b259282b904509c1ac8ff64e48e972a44d63086ad6fe7c952567a922a79126ed
+
+pkgname = zdiu-git

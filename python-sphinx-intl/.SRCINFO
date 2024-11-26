@@ -1,0 +1,17 @@
+pkgbase = python-sphinx-intl
+	pkgdesc = Sphinx utility to facilitate creating/applying translations
+	pkgver = 2.1.0
+	pkgrel = 1
+	url = https://pypi.org/project/sphinx-intl
+	arch = any
+	license = BSD
+	makedepends = python-babel
+	makedepends = python-click
+	depends = python-click
+	depends = python-importlib-metadata
+	depends = python-setuptools
+	optdepends = transifex-client: for using transifex
+	source = python-sphinx-intl-2.1.0.tar.gz::https://github.com/sphinx-doc/sphinx-intl/archive/refs/tags/2.1.0.tar.gz
+	b2sums = 2b2a8b2f0f2f381d563d69e1250d713604ae73ed9c4be1ac8f04674ef23b54817e4516d18e82390a9c538c362bfe26f2318e37048d90f68a05c65d85c44004bd
+
+pkgname = python-sphinx-intl

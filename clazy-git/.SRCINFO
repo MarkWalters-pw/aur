@@ -1,0 +1,22 @@
+pkgbase = clazy-git
+	pkgdesc = Static C++ code checker
+	pkgver = r1747.cc2466f
+	pkgrel = 1
+	url = http://www.kdab.com/use-static-analysis-improve-performance/
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	makedepends = cmake
+	makedepends = make
+	makedepends = gcc
+	depends = clang
+	depends = llvm
+	optdepends = clazy-mkspec: to use clazy from qmake
+	provides = clazy
+	conflicts = clazy
+	source = git+https://invent.kde.org/sdk/clazy.git
+	sha256sums = SKIP
+
+pkgname = clazy-git
+

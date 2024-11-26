@@ -1,0 +1,18 @@
+pkgbase = irvm
+	pkgdesc = virtual machine for Andrew W. Appel's tree intermediate representation
+	pkgver = 0.0.4
+	pkgrel = 1
+	url = https://github.com/pablooliveira/irvm
+	install = irvm.install
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = autoconf
+	makedepends = automake
+	makedepends = bison>=2.7
+	makedepends = flex
+	depends = glibc
+	source = https://github.com/pablooliveira/irvm/archive/v0.0.4.tar.gz
+	sha256sums = eb63d4497237d686ca44f8909fce01f6c906c637aa35ba248526ea521648d635
+
+pkgname = irvm

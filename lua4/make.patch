@@ -1,0 +1,92 @@
+diff --git a/Makefile b/Makefile
+index adf018f..173dd22 100644
+--- a/Makefile
++++ b/Makefile
+@@ -16,15 +16,16 @@ all clean co klean:
+ 
+ # remove debug information from binaries
+ strip:
+-	strip bin/lua bin/luac
++	strip bin/lua4 bin/luac4
+ 
+ # official installation
+ install: all strip
+-	mkdir -p $(INSTALL_BIN) $(INSTALL_INC) $(INSTALL_LIB) $(INSTALL_MAN)
++	mkdir -p $(INSTALL_BIN) $(INSTALL_INC) $(INSTALL_LIB) $(INSTALL_MAN) $(INSTALL_DOC)
+ 	$(INSTALL_EXEC) bin/* $(INSTALL_BIN)
+ 	$(INSTALL_DATA) include/*.h $(INSTALL_INC)
+ 	$(INSTALL_DATA) lib/lib* $(INSTALL_LIB)
+ 	$(INSTALL_DATA) doc/*.1 $(INSTALL_MAN)
++	$(INSTALL_DATA) doc/*.{html,gif} $(INSTALL_DOC)
+ 
+ # shared libraries (for Linux)
+ so:
+diff --git a/config b/config
+index 6a271ea..6ac4885 100644
+--- a/config
++++ b/config
+@@ -72,11 +72,12 @@ RANLIB= ranlib
+ # ------------------------------------------------------------------ install
+ 
+ # Locations for "make install". You may need to be root do "make install".
+-INSTALL_ROOT= /usr/local
++INSTALL_ROOT= /usr
+ INSTALL_BIN= $(INSTALL_ROOT)/bin
+-INSTALL_INC= $(INSTALL_ROOT)/include
+-INSTALL_LIB= $(INSTALL_ROOT)/lib
+-INSTALL_MAN= $(INSTALL_ROOT)/man/man1
++INSTALL_INC= $(INSTALL_ROOT)/include/lua4
++INSTALL_LIB= $(INSTALL_ROOT)/lib/lua4
++INSTALL_MAN= $(INSTALL_ROOT)/share/man/man1
++INSTALL_DOC= $(INSTALL_ROOT)/share/doc/lua4
+ 
+ # You might prefer to use "install" if you have it.
+ INSTALL_EXEC= cp
+@@ -93,7 +94,8 @@ LIB= $(LUA)/lib
+ INCS= -I$(INC) $(EXTRA_INCS)
+ DEFS= $(COMPAT) $(NUMBER) $(OLD_ANSI) $(EXTRA_DEFS)
+ 
+-CFLAGS= -O2 $(WARN) $(INCS) $(DEFS)
++CFLAGS= -O2 -m32 $(WARN) $(INCS) $(DEFS)
++LDFLAGS= -m32
+ 
+ V=4.0
+ 
+diff --git a/src/lua/Makefile b/src/lua/Makefile
+index 5b47161..d42769f 100644
+--- a/src/lua/Makefile
++++ b/src/lua/Makefile
+@@ -9,12 +9,12 @@ EXTRA_DEFS= $(POSIX)
+ OBJS= lua.o
+ SRCS= lua.c
+ 
+-T= $(BIN)/lua
++T= $(BIN)/lua4
+ 
+ all: $T
+ 
+ $T: $(OBJS) $(LIB)/liblua.a $(LIB)/liblualib.a
+-	$(CC) -o $@ $(OBJS) -L$(LIB) -llua -llualib $(EXTRA_LIBS)
++	$(CC) $(LDFLAGS) -o $@ $(OBJS) -L$(LIB) -llua -llualib $(EXTRA_LIBS)
+ 
+ $(LIB)/liblua.a:
+ 	cd ..; $(MAKE)
+diff --git a/src/luac/Makefile b/src/luac/Makefile
+index 4517d82..4e4dc9b 100644
+--- a/src/luac/Makefile
++++ b/src/luac/Makefile
+@@ -8,12 +8,12 @@ INCS= -I$(INC) $(EXTRA_INCS) -I..
+ OBJS= dump.o luac.o opt.o print.o stubs.o
+ SRCS= dump.c luac.c opt.c print.c stubs.c luac.h print.h
+ 
+-T= $(BIN)/luac
++T= $(BIN)/luac4
+ 
+ all: $T
+ 
+ $T: $(OBJS) $(LIB)/liblua.a
+-	$(CC) -o $@ $(OBJS) -L$(LIB) -llua
++	$(CC) $(LDFLAGS) -o $@ $(OBJS) -L$(LIB) -llua
+ 
+ $(LIB)/liblua.a:
+ 	cd ..; $(MAKE)

@@ -1,0 +1,16 @@
+pkgbase = gebaar-libinput-fork
+	pkgdesc = A Super Simple WM Independent Touchpad Gesture Daemon for libinput. Forked version with new features
+	pkgver = 0.1.5
+	pkgrel = 1
+	url = https://github.com/9ary/gebaar-libinput-fork
+	arch = x86_64
+	license = GPL3
+	makedepends = cmake
+	makedepends = ninja
+	depends = libinput
+	provides = gebaar
+	conflicts = gebaar
+	source = gebaar-libinput-fork-0.1.5.tar.gz::https://github.com/9ary/gebaar-libinput-fork/archive/refs/tags/v0.1.5.tar.gz
+	md5sums = b7af34d8ffb7a24e234adef5b8aa6faf
+
+pkgname = gebaar-libinput-fork

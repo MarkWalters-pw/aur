@@ -1,0 +1,28 @@
+pkgbase = guile-git
+	pkgdesc = A portable, embeddable Scheme implementation (Git snapshot)
+	pkgver = 3.0.8.r86.gf72cd7915
+	pkgrel = 1
+	epoch = 1
+	url = http://www.gnu.org/software/guile/
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	license = GPL
+	makedepends = git
+	makedepends = gperf
+	depends = gc
+	depends = libxcrypt
+	depends = libffi
+	depends = libunistring
+	depends = gmp
+	depends = readline
+	optdepends = texinfo: for using texinfo scheme sources
+	provides = guile=3.0.8.r86.gf72cd7915
+	conflicts = guile
+	options = !strip
+	options = !makeflags
+	options = libtool
+	source = git+https://git.savannah.gnu.org/git/guile.git
+	sha256sums = SKIP
+
+pkgname = guile-git

@@ -1,0 +1,15 @@
+pkgbase = posh-git-sh
+	pkgdesc = Bash/Zsh version of the posh-git command prompt
+	pkgver = 1.5.1
+	pkgrel = 1
+	url = https://github.com/lyze/posh-git-sh
+	install = posh-git-sh.install
+	arch = any
+	license = GPL3
+	depends = bash
+	depends = git
+	optdepends = zsh: alternative supported shell
+	source = posh-git-sh-1.5.1.tar.gz::https://github.com/lyze/posh-git-sh/archive/v1.5.1.tar.gz
+	sha512sums = b18e09539bfff422fda112ea4643c081f990e25a641bef8f3089aec2f878fdd0efde9f1846437b78c70d3f4b8abef54074cd818a9f2086be565970b3ddbce1bf
+
+pkgname = posh-git-sh

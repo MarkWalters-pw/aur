@@ -1,0 +1,20 @@
+pkgbase = python-adafruit-gpio-git
+	pkgdesc = Library to provide a cross-platform GPIO interface on the Raspberry Pi and Beaglebone Black using the RPi.GPIO and Adafruit_BBIO libraries.
+	pkgver = r75.cdf7a7b
+	pkgrel = 2
+	url = https://github.com/adafruit/Adafruit_Python_GPIO
+	arch = any
+	license = MIT
+	makedepends = git
+	depends = python
+	depends = python-smbus
+	optdepends = python-raspberry-gpio: for Raspberry Pi support
+	optdepends = python-adafruit_bbio-git: for BeagleBone support
+	optdepends = libftdi: for FT232H support
+	provides = python-adafruit-gpio
+	conflicts = python-adafruit-gpio
+	source = python-adafruit-gpio::git+https://github.com/adafruit/Adafruit_Python_GPIO.git
+	md5sums = SKIP
+
+pkgname = python-adafruit-gpio-git
+

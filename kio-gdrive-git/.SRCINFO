@@ -1,0 +1,22 @@
+pkgbase = kio-gdrive-git
+	pkgdesc = KIO Slave to access Google Drive
+	pkgver = 1.2.4.r82.gecf8a41
+	pkgrel = 2
+	url = https://projects.kde.org/kio-gdrive
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = extra-cmake-modules
+	makedepends = git
+	makedepends = kdesignerplugin
+	makedepends = intltool
+	makedepends = kdoctools
+	depends = libkgapi
+	depends = kaccounts-providers
+	provides = kio-gdrive
+	conflicts = kio-gdrive
+	source = git://anongit.kde.org/kio-gdrive.git
+	md5sums = SKIP
+
+pkgname = kio-gdrive-git
+

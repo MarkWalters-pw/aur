@@ -1,0 +1,24 @@
+pkgbase = grv-git
+	pkgdesc = terminal interface for viewing git repositories
+	pkgver = v0.2.0.r11.g7ed2346
+	pkgrel = 1
+	url = https://github.com/rgburke/grv
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = pkgconfig
+	makedepends = make
+	makedepends = cmake
+	makedepends = go
+	makedepends = gcc
+	depends = zlib
+	depends = readline
+	depends = http-parser
+	provides = grv
+	conflicts = grv
+	source = git+https://github.com/rgburke/grv.git
+	md5sums = SKIP
+
+pkgname = grv-git
+

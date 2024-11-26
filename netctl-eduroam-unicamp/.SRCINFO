@@ -1,0 +1,17 @@
+pkgbase = netctl-eduroam-unicamp
+	pkgdesc = Example configuration for eduroam at Unicamp using netctl
+	pkgver = 2
+	pkgrel = 1
+	url = https://www.ccuec.unicamp.br/ccuec/servicos/rede_sem_fio_eduroam
+	install = install
+	arch = any
+	license = GPL
+	depends = ca-certificates
+	depends = netctl
+	source = eduroam-unicamp
+	source = https://www.ccuec.unicamp.br/ccuec/sites/default/files/tutoriais/ca.pem
+	sha256sums = e07ad95816c9fe63b4d9b118f751ac6d5ff3989e708753ccb303578d35f44e1c
+	sha256sums = a54dcdb56032bbc5f2aab8cc37793404e94696e854bc3a888ff4144f3c847853
+
+pkgname = netctl-eduroam-unicamp
+

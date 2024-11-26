@@ -1,0 +1,15 @@
+pkgbase = gerbv
+	pkgdesc = An open source Gerber file (RS-274X only) viewer
+	pkgver = 2.10.0
+	pkgrel = 1
+	url = http://gerbv.geda-project.org/
+	changelog = ChangeLog
+	arch = x86_64
+	license = GPL
+	depends = gtk2
+	depends = dconf
+	optdepends = cairo: for better graphics
+	source = gerbv-2.10.0.tgz::https://github.com/gerbv/gerbv/archive/refs/tags/v2.10.0.tar.gz
+	sha256sums = 3eef8eb8a2755da8400e7a4394229475ad4cf1a2f85345720ee1da135a1aec44
+
+pkgname = gerbv

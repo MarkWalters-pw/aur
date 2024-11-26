@@ -1,0 +1,15 @@
+pkgbase = cami
+	pkgdesc = C Abstract Machine Interpreter. A detector of undefined behavior and other common defects
+	pkgver = 0.2.1
+	pkgrel = 2
+	url = https://github.com/Liu-Xiangzhi/CAMI
+	arch = x86_64
+	license = GPL-2.0-or-later
+	makedepends = cmake>=3.20
+	makedepends = python>=3.11
+	depends = glibc
+	depends = gcc-libs
+	source = https://github.com/Liu-Xiangzhi/CAMI/archive/refs/tags/0.2.1.tar.gz
+	sha256sums = bee5e27fa56791e7fe050a4c3006a87dfb4bc552ce5538592931aba198cc760c
+
+pkgname = cami

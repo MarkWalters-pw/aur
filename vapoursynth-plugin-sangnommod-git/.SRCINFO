@@ -1,0 +1,16 @@
+pkgbase = vapoursynth-plugin-sangnommod-git
+	pkgdesc = Plugin for Vapoursynth: sangnommod (GIT version)
+	pkgver = 0.1.fix.3.gf956a1e
+	pkgrel = 1
+	url = https://github.com/HomeOfVapourSynthEvolution/VapourSynth-SangNomMod
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	depends = vapoursynth
+	provides = vapoursynth-plugin-sangnommod
+	conflicts = vapoursynth-plugin-sangnommod
+	options = debug
+	source = sangnommod::git+https://github.com/HomeOfVapourSynthEvolution/VapourSynth-SangNomMod.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-sangnommod-git

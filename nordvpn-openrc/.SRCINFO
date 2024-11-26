@@ -1,0 +1,16 @@
+pkgbase = nordvpn-openrc
+	pkgdesc = OpenRC service script for nordvpn-bin
+	pkgver = 1.0
+	pkgrel = 1
+	url = https://github.com/mrkajetanp/aur/tree/main/nordvpn-openrc
+	arch = any
+	license = unknown
+	depends = nordvpn-bin
+	depends = openrc
+	optdepends = wireguard-tools: necessary for NordLynx support
+	source = nordvpnd.initd
+	sha256sums = e86938a27c5da04cc61314fa6b5d9a8016614e059882187abac791331c342b54
+
+pkgname = nordvpn-openrc
+	install = nordvpnd.install
+

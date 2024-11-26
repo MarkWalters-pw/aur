@@ -1,0 +1,27 @@
+pkgbase = cope-git
+	pkgdesc = A colourful wrapper for terminal programs
+	pkgver = 170.0dc82a9
+	pkgrel = 2
+	url = http://stuff.cytzol.org/cope/
+	install = cope-git.install
+	arch = any
+	license = GPL
+	license = PerlArtistic
+	makedepends = git
+	depends = perl>=5.10
+	depends = perl-class-inspector
+	depends = perl-env-path
+	depends = perl-file-sharedir
+	depends = perl-io-stty
+	depends = perl-io-tty
+	depends = perl-list-moreutils
+	depends = perl-params-util
+	depends = perl-regexp-common
+	depends = perl-regexp-ipv6
+	depends = perl-module-install
+	provides = cope
+	conflicts = cope
+	source = git+https://github.com/lotrfan/cope.git
+	md5sums = SKIP
+
+pkgname = cope-git

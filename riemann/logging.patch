@@ -1,0 +1,6 @@
+--- a/pkg/tar/riemann.config
++++ b/pkg/tar/riemann.config
+@@ -3,3 +3,3 @@
+
+-(logging/init {:file "riemann.log"})
++(logging/init {:file "/var/log/riemann/riemann.log"})

@@ -1,0 +1,24 @@
+pkgbase = urbit-git
+	pkgdesc = An Operating Function
+	pkgver = 0.4.r100.g83d0f8871
+	pkgrel = 1
+	url = http://www.urbit.org
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = cmake
+	makedepends = python
+	makedepends = ragel
+	makedepends = re2c
+	depends = libsigsegv
+	depends = libuv
+	depends = curl
+	provides = urbit
+	conflicts = urbit
+	options = !makeflags
+	source = git+https://github.com/urbit/urbit.git
+	sha1sums = SKIP
+
+pkgname = urbit-git
+

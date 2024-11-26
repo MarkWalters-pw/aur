@@ -1,0 +1,22 @@
+pkgbase = rtmpdump-git
+	pkgdesc = A tool to download rtmp and rtmpe streams (git version)
+	pkgver = 2.4.r98.gc5f04a5
+	pkgrel = 1
+	url = http://rtmpdump.mplayerhq.hu/
+	arch = x86_64
+	license = GPL2
+	license = LGPL2.1
+	makedepends = git
+	depends = glibc
+	depends = gnutls
+	depends = zlib
+	depends = nettle
+	depends = gmp
+	provides = rtmpdump
+	provides = librtmp.so
+	conflicts = rtmpdump
+	source = git+https://git.ffmpeg.org/rtmpdump
+	md5sums = SKIP
+
+pkgname = rtmpdump-git
+

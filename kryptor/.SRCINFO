@@ -1,0 +1,15 @@
+pkgbase = kryptor
+	pkgdesc = A simple, modern, and secure encryption and signing tool that aims to be a better version of age and Minisign.
+	pkgver = 4.1.0
+	pkgrel = 1
+	url = https://www.kryptor.co.uk/
+	arch = x86_64
+	arch = aarch64
+	license = GPL3
+	depends = dotnet-sdk-6.0
+	provides = kryptor-bin
+	options = !strip
+	source = kryptor-4.1.0.tar.gz::https://github.com/samuel-lucas6/Kryptor/archive/v4.1.0.tar.gz
+	sha512sums = 95a2a74499bd2e3d0729bc2b78aa68e8d1c12a7ead3acf57a626d646c9a4de474f06a09912a773c7ff4849cb5039513a26d7daeb0bdc874ea19104a6f27b6521
+
+pkgname = kryptor

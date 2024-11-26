@@ -1,0 +1,9 @@
+post_install() {
+    echo '
+> config file: /etc/Multiwfn/settings.ini
+'
+}
+
+post_upgrade() {
+  post_install
+}

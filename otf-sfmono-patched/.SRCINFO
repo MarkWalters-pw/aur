@@ -1,0 +1,15 @@
+pkgbase = otf-sfmono-patched
+	pkgdesc = Apple's SF Mono font patched for Powerline support
+	pkgver = 20191114
+	pkgrel = 1
+	url = http://www.apple.com/safari/
+	arch = any
+	license = custom
+	makedepends = git
+	provides = otf-sfmono
+	conflicts = otf-sfmono
+	source = otf-sfmono-patched::git+https://github.com/Twixes/SF-Mono-Powerline.git
+	sha256sums = SKIP
+
+pkgname = otf-sfmono-patched
+

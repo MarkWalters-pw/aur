@@ -1,0 +1,22 @@
+pkgbase = vocal-git
+	pkgdesc = Powerful, beautiful, and simple podcast client for the modern free desktop
+	pkgver = 2.4.2.r73.gfeacd31
+	pkgrel = 1
+	url = https://github.com/VocalPodcastProject/vocal
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = meson
+	makedepends = vala
+	depends = clutter-gst
+	depends = granite
+	depends = libadwaita
+	depends = libgee
+	depends = sqlite
+	depends = webkit2gtk-4.1
+	provides = vocal
+	conflicts = vocal
+	source = vocal-git::git+https://github.com/VocalPodcastProject/vocal.git
+	sha256sums = SKIP
+
+pkgname = vocal-git

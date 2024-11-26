@@ -1,0 +1,15 @@
+pkgbase = usbguard-qt
+	pkgdesc = USBGuard Qt GUI
+	pkgver = 0.8.1
+	pkgrel = 4
+	url = https://gitlab.com/WheelchairArtist/usbguard-qt
+	arch = x86_64
+	license = GPL-2.0-or-later
+	makedepends = qt6-base
+	depends = usbguard
+	conflicts = usbguard-applet-qt
+	replaces = usbguard-applet-qt
+	source = https://gitlab.com/WheelchairArtist/usbguard-qt/-/archive/0.8.1/usbguard-qt-0.8.1.tar.gz?path=src
+	sha512sums = SKIP
+
+pkgname = usbguard-qt

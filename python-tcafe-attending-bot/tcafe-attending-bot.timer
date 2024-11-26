@@ -1,0 +1,10 @@
+[Unit]
+Description=TCafe auto attender timer
+
+[Timer]
+OnCalendar=daily
+RandomizedDelaySec=2h
+Persistent=yes
+
+[Install]
+WantedBy=timers.target

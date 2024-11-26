@@ -1,0 +1,18 @@
+pkgbase = xbrzscale
+	pkgdesc = New Generation Image Upscaling Tool
+	pkgver = 1.8
+	pkgrel = 2
+	url = https://github.com/atheros/xbrzscale
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	license = GPL3
+	depends = sdl2_image
+	noextract = xbrzscale.zip
+	source = xbrzscale.zip::https://github.com/atheros/xbrzscale/archive/ef36908831c058df7a202c8175d575a1fdfaf156.zip
+	source = 001-makefile.patch
+	sha256sums = 5b418a271d79f5e7b7add2cc487785c05dbbfd8342e3c18ed7c0a4f70e121bfa
+	sha256sums = 3c6fabff0ce6b6f988aaec4dcc0a350d10c11753fed8729936dab2fc87fbb051
+
+pkgname = xbrzscale
+

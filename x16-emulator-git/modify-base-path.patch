@@ -1,0 +1,11 @@
+--- /src/main.c    	2022-11-12 16:00:02.304722696 +0100
++++ /src/main.c		2022-11-12 16:00:53.152202388 +0100
+@@ -519,7 +519,7 @@
+ 
+ 	run_after_load = false;
+ 
+-	char *base_path = SDL_GetBasePath();
++	char *base_path = "/usr/share/x16-rom/";
+ 
+ 	// This causes the emulator to load ROM data from the executable's directory when
+ 	// no ROM file is specified on the command line.

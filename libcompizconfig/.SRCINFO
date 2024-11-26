@@ -1,0 +1,25 @@
+pkgbase = libcompizconfig
+	pkgdesc = Compiz configuration system library
+	pkgver = 0.8.18
+	pkgrel = 1
+	url = https://gitlab.com/compiz/libcompizconfig/
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = intltool
+	makedepends = libxrandr
+	makedepends = libice
+	makedepends = libsm
+	makedepends = mesa
+	depends = compiz-core
+	depends = libxml2
+	depends = libxcomposite
+	depends = libxinerama
+	depends = protobuf
+	depends = startup-notification
+	options = !emptydirs
+	source = https://gitlab.com/compiz/libcompizconfig/-/archive/v0.8.18/libcompizconfig-v0.8.18.tar.bz2
+	sha256sums = b18f733e7f52bbbf10170b09e2cd41ea324376bf4af9b103514602f2647046cd
+
+pkgname = libcompizconfig
+

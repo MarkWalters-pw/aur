@@ -1,0 +1,23 @@
+pkgbase = pacpush
+	pkgdesc = Utility to push an Arch hosts package and AUR caches to other hosts
+	pkgver = 3.2.2
+	pkgrel = 1
+	url = https://github.com/bulletmark/pacpush
+	arch = any
+	license = GPL3
+	makedepends = python-setuptools
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = python-setuptools-scm
+	depends = python>=3.8
+	depends = rsync
+	depends = sudo
+	depends = openssh
+	depends = python-platformdirs
+	depends = python-requests
+	depends = pyalpm
+	source = pacpush-3.2.2.tar.gz::https://github.com/bulletmark/pacpush/archive/3.2.2.tar.gz
+	sha1sums = 84cf1ef3ca7bd4848d76e9f33f3c0ec7d091a271
+
+pkgname = pacpush

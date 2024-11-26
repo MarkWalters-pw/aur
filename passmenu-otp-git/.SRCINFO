@@ -1,0 +1,18 @@
+pkgbase = passmenu-otp-git
+	pkgdesc = A simple extension of passmenu friendly to one-time passwords (OTP), often used in two-factor authentication (2FA).
+	pkgver = 2623a08
+	pkgrel = 1
+	url = https://github.com/petrmanek/passmenu-otp
+	arch = any
+	license = MIT
+	depends = git
+	depends = pass-otp
+	depends = bash
+	depends = dmenu
+	depends = xdotool
+	provides = passmenu-otp=2623a08
+	conflicts = passmenu-otp
+	source = git+https://github.com/petrmanek/passmenu-otp
+	sha256sums = SKIP
+
+pkgname = passmenu-otp-git

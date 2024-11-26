@@ -1,0 +1,17 @@
+pkgbase = octave-bim
+	pkgdesc = Package for solving Diffusion Advection Reaction (DAR) Partial Differential Equations
+	pkgver = 1.1.6
+	pkgrel = 1
+	url = https://github.com/carlodefalco/bim
+	install = octave-bim.install
+	arch = any
+	groups = octave-forge
+	license = GPL
+	depends = octave>=3.8.0
+	depends = octave-fpl
+	depends = octave-msh
+	noextract = bim-1.1.6.tar.gz
+	source = bim-1.1.6.tar.gz::https://github.com/carlodefalco/bim/archive/refs/tags/v1.1.6.tar.gz
+	sha512sums = 983c53778bddc83784b9828811a135204301ffba699bc72f294016db793b632750a95fa6267a3ee58c7fa804d8b1e212f589ebbd89e1bfc016318c446c5ef679
+
+pkgname = octave-bim

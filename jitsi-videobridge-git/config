@@ -1,0 +1,12 @@
+# Jitsi Videobridge settings
+
+# adds java system props that are passed to jvb (default are for home and logging config file)
+JAVA_SYS_PROPS="\
+  -Dnet.java.sip.communicator.SC_HOME_DIR_LOCATION=/etc\
+  -Dnet.java.sip.communicator.SC_HOME_DIR_NAME=jitsi-videobridge-git\
+  -Dnet.java.sip.communicator.SC_LOG_DIR_LOCATION=/var/log/jitsi-videobridge-git\
+  -Djava.util.logging.config.file=/etc/jitsi-videobridge-git/logging.properties\
+  -Dconfig.file=/etc/jitsi-videobridge-git/jvb.conf\
+  -Djava.util.prefs.userRoot=/var/lib/jitsi-videobridge-git\
+"
+

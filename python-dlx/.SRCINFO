@@ -1,0 +1,18 @@
+pkgbase = python-dlx
+	pkgdesc = Implementation of Donald Knuth's Dancing Links algorithm
+	pkgver = 1.0.4
+	pkgrel = 7
+	url = https://github.com/sraaphorst/dlx-python
+	arch = any
+	license = Apache-2.0
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-flit-scm
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python
+	source = dlx::git+https://github.com/sraaphorst/dlx-python#commit=bc5529846486509da00ce25b73c8cd736b57c9fa
+	b2sums = a52f94c9a706ab4c41326e649cc6a3790bf6466a4c99286456a44f1e20c60cfdfc8ed72563d8ac4e1c34d8b63eb16566c35d7889468d9796b7ed9d7f4afdd67c
+
+pkgname = python-dlx

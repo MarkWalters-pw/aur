@@ -1,0 +1,3 @@
+post_install() {
+  echo "To create the default database, run 'sudo -u rethinkdb rethinkdb create -d /var/lib/rethinkdb/default'"
+}

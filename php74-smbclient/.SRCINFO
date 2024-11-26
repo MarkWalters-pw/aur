@@ -1,0 +1,16 @@
+pkgbase = php74-smbclient
+	pkgdesc = PHP 7.4 bindings for libsmbclient.
+	pkgver = 1.0.6
+	pkgrel = 1
+	url = https://github.com/eduardok/libsmbclient-php
+	arch = i686
+	arch = x86_64
+	license = BSD
+	depends = php74
+	depends = smbclient
+	source = https://github.com/eduardok/libsmbclient-php/archive/1.0.6.tar.gz
+	sha256sums = 9200f6799451d2388e92739fb47c377494b24f20369c4e0be47c505536b6bd3f
+
+pkgname = php74-smbclient
+	backup = etc/php74/conf.d/smbclient.ini
+

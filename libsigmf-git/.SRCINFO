@@ -1,0 +1,17 @@
+pkgbase = libsigmf-git
+	pkgdesc = A header-only C++ library for working with SigMF metadata
+	pkgver = r18.94445d4
+	pkgrel = 1
+	url = https://github.com/deepsig/libsigmf
+	arch = any
+	license = Apache
+	makedepends = cmake
+	makedepends = git
+	makedepends = flatbuffers
+	makedepends = nlohmann-json
+	provides = libsigmf
+	conflicts = libsigmf
+	source = git+https://github.com/deepsig/libsigmf.git
+	sha256sums = SKIP
+
+pkgname = libsigmf-git

@@ -1,0 +1,35 @@
+pkgbase = maya
+	pkgdesc = Autodesk Maya 3D Animation, Modelling, Simulation and Rendering Software
+	pkgver = 2024.2
+	pkgrel = 1
+	url = http://www.autodesk.com/products/maya/overview
+	install = maya.install
+	arch = x86_64
+	license = custom
+	depends = audiofile
+	depends = xorg-fonts-75dpi
+	depends = xorg-fonts-100dpi
+	depends = adsklicensing>=13.0.0.8122
+	depends = libxp
+	depends = gtk2
+	depends = libxcrypt-compat
+	depends = libjpeg6-turbo
+	depends = libffi6
+	depends = nss
+	depends = libxaw
+	depends = libpng15
+	depends = libtool
+	depends = ncurses5-compat-libs
+	depends = libpulse
+	depends = glu
+	depends = gst-plugins-base-libs
+	depends = libxtst
+	depends = libtiff5
+	optdepends = opencl-driver: OpenCL support
+	options = !strip
+	source = manual://Maya2024_64-2024.2-1191.x86_64.rpm
+	source = application-home-workaround.patch
+	b2sums = d98630b22f8a4171c577b6f1cd8aac13a16da60b26587d21b455bfc60042319e3eddabf78155a3dc711d2a550e85d378293a7be71d4889af998cd06b9d624504
+	b2sums = b4f09a64402e54e0067ca381efbc921a7f3cd595aef10135d423fc4a405b105b7cbd4d6907851cf9563cf02be3ec514d48d0a555a976f5daa7d4a66edee594ee
+
+pkgname = maya

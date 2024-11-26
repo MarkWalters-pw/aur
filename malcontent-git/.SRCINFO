@@ -1,0 +1,28 @@
+pkgbase = malcontent-git
+	pkgdesc = Parental control support for applications
+	pkgver = 0.9.0+5+gbbe53b5
+	pkgrel = 1
+	url = https://gitlab.freedesktop.org/pwithnall/malcontent
+	arch = x86_64
+	license = LGPL2.1
+	makedepends = git
+	makedepends = meson
+	makedepends = gobject-introspection
+	makedepends = gtk-doc
+	makedepends = libglib-testing
+	makedepends = yelp-tools
+	depends = accountsservice
+	depends = dbus
+	depends = flatpak
+	depends = glib2
+	depends = gtk3
+	depends = polkit
+	provides = libmalcontent-0.so
+	provides = libmalcontent-ui-0.so
+	provides = malcontent
+	conflicts = malcontent
+	source = git+https://gitlab.freedesktop.org/pwithnall/malcontent.git
+	sha512sums = SKIP
+
+pkgname = malcontent-git
+

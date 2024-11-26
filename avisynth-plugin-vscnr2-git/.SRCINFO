@@ -1,0 +1,18 @@
+pkgbase = avisynth-plugin-vscnr2-git
+	pkgdesc = Plugin for Avisynth: vscnr2 (GIT version)
+	pkgver = 1.0.1.0.g6ddf8a8
+	pkgrel = 1
+	url = https://github.com/Asd-g/AviSynth-vsCnr2
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = cmake
+	makedepends = avisynthplus
+	depends = libavisynth.so
+	provides = avisynth-plugin-vscnr2
+	conflicts = avisynth-plugin-vscnr2
+	options = debug
+	source = vscnr2::git+https://github.com/Asd-g/AviSynth-vsCnr2.git
+	sha256sums = SKIP
+
+pkgname = avisynth-plugin-vscnr2-git

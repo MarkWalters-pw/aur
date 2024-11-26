@@ -1,0 +1,21 @@
+pkgbase = tophat
+	pkgdesc = fast splice junction mapper for RNA-Seq reads
+	pkgver = 2.1.2
+	pkgrel = 3
+	url = http://ccb.jhu.edu/software/tophat/index.shtml
+	arch = x86_64
+	arch = i686
+	license = custom
+	makedepends = boost
+	makedepends = clang
+	depends = boost-libs
+	depends = bowtie2
+	depends = python
+	source = tophat-2.1.2.tar.gz::https://github.com/DaehwanKimLab/tophat/archive/refs/tags/v2.1.2.tar.gz
+	source = make_pair.patch
+	source = configure.patch
+	md5sums = db844fd7f53c519e716cd6222e6195b2
+	md5sums = 4f53cd3e611c2a0744babede14c3ae66
+	md5sums = 175420b0b08f2979d9585ec55cbeb0ee
+
+pkgname = tophat

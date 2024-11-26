@@ -1,0 +1,33 @@
+pkgbase = python-trezor-agent-git
+	pkgdesc = Hardware-based SSH/PGP agent (Trezor only)
+	pkgver = v0.14.7.r6.gba8a1ba
+	pkgrel = 1
+	url = https://github.com/romanz/trezor-agent
+	arch = any
+	license = LGPL3
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python
+	depends = python-backports.shutil_which
+	depends = python-bech32
+	depends = python-configargparse
+	depends = python-construct-classes
+	depends = python-cryptography
+	depends = python-daemon
+	depends = python-docutils
+	depends = python-ecdsa
+	depends = python-hidapi
+	depends = python-mnemonic
+	depends = python-pymsgbox
+	depends = python-pynacl
+	depends = python-semver
+	depends = python-simple-rlp
+	depends = python-trezor
+	depends = python-unidecode
+	depends = python-wheel
+	provides = python-trezor-agent
+	conflicts = python-trezor-agent
+	source = python-trezor-agent-git::git+https://github.com/romanz/trezor-agent.git#branch=master
+	b2sums = SKIP
+
+pkgname = python-trezor-agent-git

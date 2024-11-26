@@ -1,0 +1,12 @@
+[Unit]
+Description=BurstCoin Wallet
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/burstcoin-wallet
+ExecStart=java -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -cp /opt/burstcoin-wallet/burst.jar:conf brs.Burst
+Restart=on-abort
+
+[Install]
+WantedBy=default.target

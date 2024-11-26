@@ -1,0 +1,17 @@
+pkgbase = beets-copyartifacts-git
+	pkgdesc = A beets plugin that moves non-music files during the import process.
+	pkgver = 0.1.5.r1.2583e59
+	pkgrel = 1
+	url = https://github.com/adammillerio/beets-copyartifacts
+	arch = any
+	license = MIT
+	makedepends = git
+	depends = python
+	depends = beets
+	provides = beets-copyartifacts
+	conflicts = beets-copyartifacts
+	source = git+https://github.com/adammillerio/beets-copyartifacts.git
+	md5sums = SKIP
+
+pkgname = beets-copyartifacts-git
+

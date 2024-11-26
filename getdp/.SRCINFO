@@ -1,0 +1,25 @@
+pkgbase = getdp
+	pkgdesc = general environment for the Treatment of Discrete Problems
+	pkgver = 3.5.0
+	pkgrel = 2
+	url = http://getdp.info/
+	arch = x86_64
+	license = GPL-2.0-or-later
+	makedepends = gcc
+	makedepends = gcc-libs
+	makedepends = cmake
+	makedepends = git
+	makedepends = arpack
+	makedepends = openblas
+	makedepends = lapack
+	makedepends = swig
+	makedepends = flex
+	makedepends = bison
+	makedepends = texinfo
+	makedepends = ninja
+	depends = python
+	depends = gmsh
+	source = git+https://gitlab.onelab.info/getdp/getdp.git#tag=getdp_3_5_0
+	sha256sums = SKIP
+
+pkgname = getdp

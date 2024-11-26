@@ -1,0 +1,22 @@
+pkgbase = zsync2-git
+	pkgdesc = A rewrite of the advanced file download/sync tool zsync
+	pkgver = 2.0.0.alpha.1.20230304.r7.g9337846
+	pkgrel = 1
+	url = https://github.com/AppImageCommunity/zsync2
+	arch = x86_64
+	license = PerlArtistic
+	makedepends = git
+	makedepends = cmake
+	makedepends = args
+	makedepends = gtest
+	depends = glibc
+	depends = gcc-libs
+	depends = cpr
+	depends = curl
+	depends = libgcrypt
+	provides = zsync2
+	conflicts = zsync2
+	source = git+https://github.com/AppImageCommunity/zsync2.git
+	b2sums = SKIP
+
+pkgname = zsync2-git

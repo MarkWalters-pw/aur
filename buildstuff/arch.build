@@ -1,0 +1,92 @@
+#!/bin/bash
+
+set -e
+
+arch=$1
+shift
+repo=$@
+
+case $arch in
+	x86_64) cpu=qemu64 ;;
+	i686) cpu=qemu32 ;;
+	*) exit 1 ;;
+esac
+
+img=/var/lib/buildstuff/$arch.qcow2
+vport=$((32768+$RANDOM))
+vhost="
+	-o ConnectTimeout=3
+	-o StrictHostKeyChecking=no
+	-o UserKnownHostsFile=/dev/null
+	-o Port=$vport user@localhost
+"
+
+start_vm() {
+	qemu-system-x86_64 \
+		-cpu $cpu -smp 4 -m 2G \
+		-machine accel=kvm:tcg \
+		-device virtio-net,netdev=vlan \
+		-netdev user,id=vlan,hostfwd=::$vport-:22 \
+		-drive file=$1 &
+	while sleep 1; do
+		ssh $vhost 'curl -o /dev/null -s vesath.org' &&
+		break
+	done
+	sed 's/127.0.0.1/10.0.2.2/g' /etc/pacman.d/mirrorlist |
+	ssh $vhost 'sudo dd of=/etc/pacman.d/mirrorlist'
+}
+
+stop_vm() {
+	ssh $vhost 'sudo poweroff' || true
+	wait
+	rm -f /tmp/$vport
+}
+
+trap_err() {
+	trap - ERR
+	trap - INT
+	cat <<EOF
+
+Investigate the error with \`ssh -p $vport user@localhost\`
+then press enter here to terminate the virtual machine.
+EOF
+	read x
+	stop_vm
+}
+trap trap_err ERR
+trap trap_err INT
+set -E
+
+
+[[ -e $img ]] || {
+	sudo arch.install $arch $img
+	sudo chown "$USER" $img
+}
+
+(( $(date +%s) - $(stat -c%Y $img) > 86400 )) && {
+	start_vm $img
+	ssh $vhost 'sudo pacman --noconfirm -Syu'
+	ssh $vhost 'sudo pacman --noconfirm -Su'
+	ssh $vhost 'sudo rm --force /var/cache/pacman/pkg/*'
+	stop_vm
+}
+
+qemu-img create -f qcow2 -o backing_file=$img /tmp/$vport 8G
+
+start_vm /tmp/$vport
+for r in $repo; do
+	echo "sudo sed '/\[core\]/i [$r]\nInclude = /etc/pacman.d/mirrorlist\n' -i /etc/pacman.conf"
+done | ssh $vhost
+ssh $vhost 'sudo pacman --noconfirm -Syu'
+ssh $vhost 'sudo pacman --noconfirm -Su'
+ssh $vhost 'sudo rm --force /var/cache/pacman/pkg/*'
+ssh $vhost 'sudo install -o user -g user -d /build'
+sftp $vhost <<<"mkdir .gnupg"
+sftp $vhost <<<"put $HOME/.makepkg.conf"
+sftp $vhost <<<"put $HOME/.gnupg/pubring.kbx .gnupg/pubring.kbx"
+sftp $vhost <<<'put -r . /build' # fake chroot build for db-update
+ssh $vhost 'rm -fr /build/{src,pkg}' # fix source repo relocation
+ssh $vhost 'cd /build; makepkg --log --noconfirm --syncdeps'
+sftp $vhost <<<'get /build/*.pkg.tar.*'
+sftp $vhost <<<'get /build/*.log'
+stop_vm

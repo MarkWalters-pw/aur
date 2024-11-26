@@ -1,0 +1,15 @@
+pkgbase = fairy-stockfish-git
+	pkgdesc = A chess engine derived from Stockfish designed for the support of fairy chess variants and easy extensibility with more games.
+	pkgver = r6550.b8274a7a
+	pkgrel = 1
+	url = https://github.com/ianfab/Fairy-Stockfish
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	optdepends = polyglot-winboard: For xboard support
+	conflicts = fairy-stockfish
+	source = fairy-stockfish-git::git+https://github.com/ianfab/Fairy-Stockfish
+	md5sums = SKIP
+
+pkgname = fairy-stockfish-git

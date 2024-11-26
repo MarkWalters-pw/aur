@@ -1,0 +1,18 @@
+pkgbase = ananicy-cpp-runit
+	pkgdesc = Ananicy rewritten in C++ for much lower CPU and memory usage. (runit service)
+	pkgver = 1
+	pkgrel = 6
+	url = https://gitlab.com/ananicy-cpp/ananicy-cpp/
+	install = ananicy-cpp-runit.install
+	arch = any
+	license = GPLv3
+	depends = ananicy-cpp-nosystemd
+	depends = runit
+	source = ananicy-cpp-runit.finish
+	source = ananicy-cpp-runit.run
+	source = ananicy-cpp-runit.start
+	b2sums = SKIP
+	b2sums = SKIP
+	b2sums = SKIP
+
+pkgname = ananicy-cpp-runit

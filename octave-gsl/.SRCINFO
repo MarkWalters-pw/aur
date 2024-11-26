@@ -1,0 +1,16 @@
+pkgbase = octave-gsl
+	pkgdesc = Octave bindings to the GNU Scientific Library
+	pkgver = 2.1.1
+	pkgrel = 1
+	url = https://gnu-octave.github.io/packages/gsl/
+	install = octave-gsl.install
+	arch = any
+	groups = octave-forge
+	license = GPL
+	makedepends = gsl
+	depends = octave>=2.9.7
+	noextract = gsl-2.1.1.tar.gz
+	source = https://downloads.sourceforge.net/octave/gsl-2.1.1.tar.gz
+	sha256sums = d028c52579e251c3f21ebfdf065dffab3ad7893434efda33b501225ef1ea6ed3
+
+pkgname = octave-gsl

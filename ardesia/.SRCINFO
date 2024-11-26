@@ -1,0 +1,23 @@
+pkgbase = ardesia
+	pkgdesc = Tool for drawing on the screen of a X11 session
+	pkgver = 1.1
+	pkgrel = 2
+	url = https://code.google.com/archive/p/ardesia/
+	arch = x86_64
+	license = GPL3
+	makedepends = intltool
+	makedepends = xdg-utils
+	depends = gtk3
+	depends = cairo
+	depends = gdk-pixbuf2
+	depends = glib2
+	depends = gsl
+	depends = libgsf
+	depends = libxml2
+	source = https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/ardesia/ardesia-1.1.tar.gz
+	source = 010-ardesia-gcc10-fix.patch
+	sha256sums = b65e0153f5239c270bb1734d1cd257738339ba163081509ee42499da8dd6ee18
+	sha256sums = 212984a4d9c8654f2e111125e6034bbf06f0d687f110f3b5451789119af34fc9
+
+pkgname = ardesia
+

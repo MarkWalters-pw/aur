@@ -1,0 +1,15 @@
+pkgbase = catbin-git
+	pkgdesc = A pastebin server meant for the terminal. A clone of termbin.com (fiche).
+	pkgver = r64.e4334fa
+	pkgrel = 1
+	url = https://github.com/LevitatingBusinessMan/catbin
+	arch = x86_64
+	license = MIT
+	makedepends = make
+	depends = leveldb
+	depends = libmicrohttpd
+	provides = catbin
+	source = catbin-git::git+https://github.com/LevitatingBusinessMan/catbin.git
+	sha256sums = SKIP
+
+pkgname = catbin-git

@@ -1,0 +1,19 @@
+post_install() {
+    getent passwd otrs > /dev/null 2>&1 || useradd -r -M -N -g http -s /bin/bash -d /usr/share/webapps/otrs otrs > /dev/null 2>&1
+    /usr/share/webapps/otrs/bin/otrs.SetPermissions.pl --otrs-user=otrs --web-group=http /usr/share/webapps/otrs > /dev/null 2>&1
+    chmod 2775 /usr/share/webapps/otrs
+}
+
+post_remove() {
+    getent passwd otrs > /dev/null 2>&1 && userdel -rf otrs > /dev/null 2>&1
+}
+
+pre_upgrade() {
+    chown 0:0 -R /etc/webapps/otrs
+    chown 0:0 -R /usr/share/webapps/otrs
+}
+
+post_upgrade() {
+    /usr/share/webapps/otrs/bin/otrs.SetPermissions.pl --otrs-user=otrs --web-group=http /usr/share/webapps/otrs > /dev/null 2>&1
+    chmod 2775 /usr/share/webapps/otrs
+}

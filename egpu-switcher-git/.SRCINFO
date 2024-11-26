@@ -1,0 +1,16 @@
+pkgbase = egpu-switcher-git
+	pkgdesc = Automatically detect and use eGPU on startup, git version
+	pkgver = 0.18.0.r0.ge4bf70a
+	pkgrel = 1
+	url = https://github.com/hertg/egpu-switcher
+	install = egpu-switcher-git.install
+	arch = any
+	license = GPL
+	makedepends = git
+	makedepends = go
+	provides = egpu-switcher
+	conflicts = egpu-switcher
+	source = egpu-switcher-git::git+https://github.com/hertg/egpu-switcher.git
+	md5sums = SKIP
+
+pkgname = egpu-switcher-git

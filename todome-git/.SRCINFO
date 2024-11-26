@@ -1,0 +1,18 @@
+pkgbase = todome-git
+	pkgdesc = Language agnostic tool that collects TODOs, FIXMEs ,BUGs, NOTEs and DONEs in the source code.
+	pkgver = 37__2022.06.01
+	pkgrel = 1
+	url = https://www.github.com/BishrGhalil/todome.git
+	arch = x86_64
+	arch = i686
+	license = GPL
+	makedepends = git
+	makedepends = make
+	depends = git
+	optdepends = 
+	provides = todome
+	conflicts = todome
+	source = git+https://www.github.com/BishrGhalil/todome.git
+	md5sums = SKIP
+
+pkgname = todome-git

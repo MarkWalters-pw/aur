@@ -1,0 +1,19 @@
+pkgbase = kovhernetes-git
+	pkgdesc = kOVHernetes (kovh) is a command-line utility for managing Kubernetes clusters on the OVH Cloud platform.
+	pkgver = r32.bb8a7fe
+	pkgrel = 1
+	url = https://github.com/antoineco/kOVHernetes
+	arch = any
+	license = Apache
+	makedepends = git
+	depends = python-ovh
+	depends = python-cryptography
+	depends = python-docopt
+	depends = python-pyopenssl
+	provides = kovhernetes-git
+	conflicts = kovhernetes-git
+	source = git+https://github.com/antoineco/kOVHernetes.git
+	sha256sums = SKIP
+
+pkgname = kovhernetes-git
+

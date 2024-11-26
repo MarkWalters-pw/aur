@@ -1,0 +1,13 @@
+post_install() {
+    echo "check_nrpe is now installed in /usr/share/nagios/libexec."
+    echo "If you are using monitoring-plugins, it is recommended"
+    echo "that /usr/share/nagios/libexec *not* be symlinked to"
+    echo "/usr/lib/monitoring-plugins. Instead, in /etc/nagios/resource.cfg"
+    echo "set $USER1$=/usr/lib/monitoring-plugins and in"
+    echo "/etc/nagios/objects/commands.cfg change the relevant lines to"
+    echo "to 'command_line  /usr/share/nagios/libexec/check_nrpe ...'."
+}
+
+post_upgrade() {
+    post_install $1
+}

@@ -1,0 +1,17 @@
+pkgbase = ruby-livesync
+	pkgdesc = Live sync solution using ssh + rsync
+	pkgver = 1.0.0.rc1
+	pkgrel = 1
+	url = https://github.com/brauliobo/ruby-livesync
+	arch = any
+	license = GPL-3.0-only
+	depends = ruby
+	depends = ruby-pry
+	depends = ruby-activesupport
+	depends = ruby-rb-inotify
+	noextract = ruby-livesync-1.0.0.rc1.gem
+	backup = etc/livesync/config.rb
+	source = https://rubygems.org/downloads/ruby-livesync-1.0.0.rc1.gem
+	sha256sums = 3d4b1f17e519e3ad374e4d5f583191f17463a4cb9e354b4227711212a43524de
+
+pkgname = ruby-livesync

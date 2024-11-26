@@ -1,0 +1,11 @@
+[Trigger]
+Type = Path
+Operation = Remove
+Target = usr/lib/modules/*/pkgbase
+Target = usr/src/*/dkms.conf
+
+[Action]
+Description = Removing linux images...
+When = PreTransaction
+Exec = /usr/share/libalpm/scripts/dracut-uefi-remove
+NeedsTargets

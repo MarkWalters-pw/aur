@@ -1,0 +1,20 @@
+pkgbase = vapoursynth-plugin-dfttest2-cpu-git
+	pkgdesc = Plugin for Vapoursynth: dfttest2-cpu (GIT Version)
+	pkgver = v7.0.g235f6ef
+	pkgrel = 1
+	url = https://github.com/AmusementClub/vs-dfttest2
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	makedepends = cmake
+	makedepends = ninja
+	makedepends = gcc
+	depends = vapoursynth
+	provides = vapoursynth-plugin-dfttest2
+	provides = vapoursynth-plugin-dfttest2-git
+	conflicts = vapoursynth-plugin-dfttest2
+	conflicts = vapoursynth-plugin-dfttest2-git
+	source = dfttest2::git+https://github.com/AmusementClub/vs-dfttest2
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-dfttest2-cpu-git

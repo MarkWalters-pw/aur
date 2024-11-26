@@ -1,0 +1,42 @@
+pkgbase = snapcast-git
+	pkgdesc = Synchronous multi-room audio player
+	pkgver = v0.27.0.r65.g86cd4b2b
+	pkgrel = 3
+	url = https://github.com/badaix/snapcast
+	install = snapcast.install
+	arch = x86_64
+	arch = armv6h
+	arch = armv7h
+	arch = aarch64
+	license = GPL
+	makedepends = cmake
+	makedepends = alsa-utils
+	makedepends = boost
+	depends = alsa-lib
+	depends = avahi
+	depends = libvorbis
+	depends = flac
+	depends = opus
+	depends = expat
+	depends = libsoxr
+	depends = libpulse
+	optdepends = python-websocket-client: stream plugin script
+	optdepends = python-mpd2: stream plugin script
+	optdepends = python-musicbrainzngs: stream plugin script
+	provides = snapcast
+	conflicts = snapcast
+	backup = etc/default/snapserver
+	backup = etc/default/snapclient
+	backup = etc/snapserver.conf
+	source = snapcast-git::git+https://github.com/badaix/snapcast.git#branch=develop
+	source = snapos-git::git+https://github.com/badaix/snapos.git#branch=develop
+	source = snapcast.sysusers
+	source = snapcast.tmpfiles
+	source = snapcast.install
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = 9fe6e9e07adb77f555a617b772e6d01e098e1dfaad1e8075e03a7d7ba76141de
+	sha256sums = e8c3441c4ca646a9b66d61355e90862fd3481562ae3b4e0a4bc1c978464ae2c7
+	sha256sums = 87945989ce215c3720e12e9d53642d7b1112f8276cd02d999fd7e27517aea126
+
+pkgname = snapcast-git

@@ -1,0 +1,184 @@
+2021-01-31 GregTheMadMonk <yagreg7@gmail.com>
+	* 1.4.6: Bugfix release
+	- Replace potentially problematic time_s::fmt_sprintf with time_s::fmt_str
+	- Update cmd::retval (command return value) after every command
+	- Update cui::status (program status line) after with every return value that is not empty
+	- Codebase: file naming changes, with errors causeed by it fixed
+
+2021-01-28 GregTheMadMonk <yagreg7@gmail.com>
+	* 1.4.5r355.faca540
+	- Replace sprintf usage case that caused error when compiled with _FORTIFY_SOURCE
+
+2021-01-28 GregTheMadMonk <yagreg7@gmail.com>
+	* 1.4.5: TIMELINE mode release
+	- Added TIMELINE mode:
+	  + Displays tasks (surprizse) on a timeline
+	  + Added commands:
+	    > 'timeline.focus'
+	    > 'timeline.focus_closest'
+	    > 'timeline.next'
+	    > 'timeline.prev'
+	    > 'timeline.scale_up'
+	    > 'timeline.scale_down'
+	  + Added cvars:
+	    > 'timeline.position'
+	    > 'timeline.unit'
+	    > 'charset.timeline.marker'
+	    > 'charset.timeline.marker_now'
+	    > 'charset.timeline.line'
+	    > 'charset.timeline.vline'
+	    > 'charset.timeline.vline_now'
+	    > 'charset.timeline.rarrow'
+	- Added durations to tasks:
+	  + Set in 'duration' meta property of a task
+	  + Specified while adding after '+' delimiter in due time field
+	  + New task flag: due (due already passed, but duration not expired). Task becomes due, then after its duration is expired, is failed
+	  + Added cvars:
+	    > 'colors.entry_due'
+	    > 'on_task_due_action'
+	    > 'task_duration_default' - duration for tasks for which duration was not explicitly specified
+	  + Added special task meta fields:
+	    > 'duration'
+	    > 'on_due'
+	- Added 'r' ("Due in") column (off by default)
+	- Allow negative offset in command-line time input format
+	- Add a string to default config to set window title on startup
+	- Save dues in the list as seconds since epoch to preserve due times when switching timezones
+	- Allow to specify task dues in seconds since epoch in commands
+	- Remove hardcoded startup mode
+	- Bugfixes:
+	  + LISTVIEW freeze when hiding slelected list
+	  + :q not exiting program when called from COMMAND mode
+	  + Screen not updating on task state chages
+	  + prettier_status.conf fix
+	- Build:
+	  + Allow to override platform build flags
+	- Codebase and program logic:
+	  + Add noaftodo_macro.h for macros
+	  + Create CONST_DPL macro do declare const and non-const duplicating methods
+	  + Create a mode declaration macro
+	  + Add init() method to mode definition
+	  + Move li::entry methods definitions to a separate header
+	  + Rewrite time system based on the new time_s struct (and removed noaftodo_time.cpp)
+	  + Entry flags system reworked
+	  + Call cui:init() before loading list and config to make sure mode-specific variables and commands are initialized
+	- Documentation generator fixes and improvements
+
+2020-09-14 GregTheMadMonk <yagreg7@gmail.com>
+	* 1.4.4r323....
+	- Make tools/docgen.sh compatible with POSIX shell
+	- Fix NORMAL and LISTVIEW table renderer glitch
+	- Rework modes implementation (means nothing to an end-user, but allows better extensibility)
+	- Accidentaly break all upstream repo branches so had to remove them >:[
+
+2020-09-14 GregTheMadMonk <yagreg7@gmail.com>
+	* 1.4.4r320....
+	- Mirgate to cmake, eliminating all mistakes in the Makefile
+	- Fix building on clang
+
+2020-08-15 GregTheMadMonk <yagreg7@gmail.com>
+	* 1.4.4
+	- Add custom status fields:
+		+ Custom status field is set via "fields.status.X" where X - is a field letter (uppercase or lowercase)
+		+ ":set fields.status.X value" - value is a string, that, after being "formatted" (cvars replaced with values), is displayed in status
+		+ %fields.status.X% returns field as it would be displayed in UI
+		+ See scripts/prettier_status.conf for an example of "prettyifying" the status
+	- Allow to access meta properties directly through %meta.prop_name% cvars (read/write)
+	- Allow to access alias code through %alias.alias_name% (read-only)
+	- Add more keys that ":bind" recognizes:
+		+ "home"
+		+ "end"
+		+ "backspace"
+		+ "delete"
+		+ "codeNUMBER" for key with code NUMBER
+		+ PageUp as "pgup"
+		+ PageDown as "pgdn"
+	- Make ":bind" recognize multi-key input:
+		+ "c^key" for ctrl+key
+		+ "a^key" for alt+key
+		+ can be combined like "a^c^key" or "c^a^key"
+	- Changing only background or foreground color with terminal sequence does not reset the
+	other color from now
+	- Move [prefix]_[name] to namespaces [prefix] in code
+	- Move cvar initialization to noaftodo_def.cpp
+
+2020-08-07 GregTheMadMonk <yagreg7@gmail.com>
+	* 1.4.3r276.ff71532
+	- Fix a stupiddd typo in default config
+
+2020-07-21 GregTheMadMonk <yagreg7@gmail.com>
+	* 1.4.3
+	- Add basic markdown support
+	- Add !! command to execute system commands without reading their output.
+	Useful for running programs with terminal UI (e.g. vim)
+	- Allow multistr_c elements be more than one wchar_t in length (allows for multi-
+	character separators, basically)
+	- Rework colors
+		* Initialize all color pairs on startup, set colors throught setting its
+		pair index (pair_index = fg_col + 1 + (bg_col + 1) * 17, fg_colr and bg_col
+		are integers from -1 to 15)
+		* Remove colors.bg and colors.status_standout
+	- Support color switching with terminal sequences (^[[3*;4*m)
+	- Specify status fields in cvars left-to-right instead of right-to-left
+	- Add manpage generation, show only relevant (well...) help in program
+	- Fix unnamed lists sometimes not displaying in LISTVIEW even if they
+	had visible entries
+	- Fix DETAILS and HELP mode scrolling and do an overall reworking
+	of some UI code
+
+2020-07-16 GregTheMadMonk <yagreg7@gmail.com>
+
+	* 1.4.2r243.6261a4a
+	- Fix %%varname%% replacement
+	- Add git revision name to version suffix
+
+	* 1.4.2r231.9f82b84
+	- Improve cvars replacement: %varname% now is replaced with bare varibale value, %%varname%% runs replace_special(value) (mostly for putting '\' before special symbols)
+	- Change package verionening to match (hopefully) VCS packaging guidelines
+
+2020-07-16 GregTheMadMonk <yagreg7@gmail.com>
+
+	* 1.4.2-2
+	- Fix entries created between saves being assigned same IDs causing for on_edited events
+	being fired on them every time daemon re-loads the list
+
+2020-07-08 GregTheMadMonk <yagreg7@gmail.com>
+
+	* 1.4.2-1
+	- Added interpreter mode
+	- Added list status indication in list view (colors + flags ('f') listview column)
+	- Added task sorting priority switching (basically, allows to sort by due, tag, title and desciption)
+	- Added task ids ("eid" meta property)
+	- Added on_edited events for tasks
+	- Added command return values (%ret%)
+	- Command interpreter now replaces environment variables with their values and ~/ with $HOME value
+	- Made executing a system command return its stdout output
+	- Added "load" command
+	- Added "pure" output mode
+	- Added WS_IGNORE to "mode" cvar
+
+2020-07-05 GregTheMadMonk <yagreg7@gmail.com>
+
+	* 1.4.1-2
+	- Fix mistake in default config that made "gg" and "G" not working. It was
+	present since 1.4.0-1, probably. Shame, shame, shame on me.
+
+2020-07-03 GregTheMadMonk <yagreg7@gmail.com>
+
+	* 1.4.1-1
+	- Added meta options for a task to ignore global events.
+	- Added signal handling. Yep, you can close daemon with Ctrl+C and not run
+	noaftodo-k after.
+	- Package built from AUR will now have corresponding fuccix to its version
+	- Unnnecessary screen updates are now skipped.
+
+2020-07-02 GregTheMadMonk <yagreg7@gmail.com>
+
+	* 1.4.0-3
+	- Added "warn_time" task meta property (for custom "upcoming" time)
+	- Fixed last default config string not being executed
+
+2020-07-02 GregTheMadMonk <yagreg7@gmail.com>
+
+	* 1.4.0-2 :
+	- Fixed a crash when entering DETAILS mode on an empty list.

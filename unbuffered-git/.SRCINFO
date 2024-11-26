@@ -1,0 +1,16 @@
+pkgbase = unbuffered-git
+	pkgdesc = Copy stdin to stdout and stderr, unbuffered, development version
+	pkgver = r1.a8f4f91
+	pkgrel = 1
+	url = http://www.scylla-charybdis.com/tool.php/unbuffered
+	changelog = ChangeLog
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	depends = glibc
+	source = unbuffered-git-r1.a8f4f91::git+https://github.com/hilbix/unbuffered.git#commit=a8f4f91e0c6eed03487fb8b6998e0814b3066a96
+	sha512sums = SKIP
+
+pkgname = unbuffered-git
+

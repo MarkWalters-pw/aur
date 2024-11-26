@@ -1,0 +1,16 @@
+pkgbase = cstatus-git
+	pkgdesc = Minimal statusbar for dwm written in c99.
+	pkgver = 1.0.0.r0.gcab32ee
+	pkgrel = 1
+	url = https://git.sr.ht/~andreafeletto/cstatus
+	arch = x86_64
+	license = MIT
+	depends = libx11
+	depends = alsa-lib
+	provides = cstatus
+	conflicts = cstatus
+	source = git+https://git.sr.ht/~andreafeletto/cstatus
+	sha256sums = SKIP
+
+pkgname = cstatus-git
+

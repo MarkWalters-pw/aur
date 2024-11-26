@@ -1,0 +1,18 @@
+pkgbase = pbrt-v4-git
+	pkgdesc = Physically based rendering system (CUDA disabled)
+	pkgver = r1127.e98b6a1
+	pkgrel = 1
+	url = https://pbrt.org
+	arch = x86_64
+	license = APACHE
+	makedepends = cmake
+	makedepends = git
+	depends = zlib
+	depends = gcc-libs
+	conflicts = pbrt-v3-git
+	source = pbrt-v4::git+https://github.com/mmp/pbrt-v4#branch=master
+	source = DisableCuda.patch
+	md5sums = SKIP
+	md5sums = 89f724d6b0ac88fb95c2510a9a895009
+
+pkgname = pbrt-v4-git

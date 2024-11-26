@@ -1,0 +1,20 @@
+pkgbase = nautilus-metadata-editor-git
+	pkgdesc = Nautilus extension with simple Metadata Editor
+	pkgver = r61.5dd32b9
+	pkgrel = 1
+	url = https://github.com/nvlgit/nautilus-metadata-editor-extension
+	install = nautilus-metadata-editor.install
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = meson
+	makedepends = vala
+	depends = glib2
+	depends = libnautilus-extension
+	depends = taglib
+	conflicts = nautilus-metadata-editor
+	conflicts = nautilus-metadata-editor-bin
+	source = git+https://github.com/nvlgit/nautilus-metadata-editor-extension.git
+	sha256sums = SKIP
+
+pkgname = nautilus-metadata-editor-git

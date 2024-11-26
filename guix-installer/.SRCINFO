@@ -1,0 +1,25 @@
+pkgbase = guix-installer
+	pkgdesc = A command line installer for Guix
+	pkgver = 1.4.0
+	pkgrel = 2
+	url = https://www.gnu.org/software/guix/
+	arch = any
+	license = GPL3
+	depends = coreutils
+	depends = glibc
+	depends = gnupg
+	depends = grep
+	depends = sed
+	depends = shadow
+	depends = tar
+	depends = wget
+	depends = which
+	depends = xz
+	source = https://git.savannah.gnu.org/cgit/guix.git/plain/etc/guix-install.sh?h=v1.4.0
+	source = https://git.savannah.gnu.org/cgit/guix.git/plain/COPYING?h=v1.4.0
+	sha256sums = ca78fa55d34d2a442c0677dc703aa56ef775859e8d8f2f8725e7ac064fb5fecb
+	sha256sums = 8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903
+	sha512sums = 5210d6f2f1a61bc178d6e7bc466d50bc902195a9c93f62a72710cc039270016828013d87744d3c99ed5939e1df8c9d3be703041a944bcc5ffb5cd65f4ca19f3c
+	sha512sums = 7633623b66b5e686bb94dd96a7cdb5a7e5ee00e87004fab416a5610d59c62badaf512a2e26e34e2455b7ed6b76690d2cd47464836d7d85d78b51d50f7e933d5c
+
+pkgname = guix-installer

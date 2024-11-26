@@ -1,0 +1,20 @@
+pkgbase = hmm
+	pkgdesc = A small command-line note taking app written in Rust.
+	pkgver = 0.6.0
+	pkgrel = 1
+	url = https://github.com/samwho/hmm
+	arch = x86_64
+	license = MIT
+	checkdepends = rust
+	checkdepends = git
+	makedepends = rust
+	makedepends = gcc
+	makedepends = binutils
+	depends = gcc-libs
+	provides = hmm
+	provides = hmmq
+	provides = hmmp
+	source = hmm-0.6.0.tar.gz::https://github.com/samwho/hmm/archive/v0.6.0.tar.gz
+	sha256sums = ad34d1bdf0cc73dd03c9de85d27343c31443a3e573c1b5cd085f9a148d4c1e4e
+
+pkgname = hmm

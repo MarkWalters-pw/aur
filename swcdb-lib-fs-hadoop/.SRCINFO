@@ -1,0 +1,22 @@
+pkgbase = swcdb-lib-fs-hadoop
+	pkgdesc = The SWC-DB FileSystem Hadoop library (dev-stage)
+	pkgver = 0.5.12
+	pkgrel = 1
+	url = https://www.swcdb.org
+	install = README.md
+	arch = x86_64
+	groups = swcdb
+	license = GPLv3
+	makedepends = git
+	makedepends = cmake
+	makedepends = make
+	makedepends = gcc
+	makedepends = swcdb-lib-fs
+	makedepends = hdfs-lib-cpp
+	depends = swcdb-lib-fs
+	depends = hdfs-lib-cpp
+	provides = libswcdb_fs_hadoop.so
+	source = swcdb-lib-fs-hadoop-0.5.12-source::git+https://github.com/kashirin-alex/swc-db.git#tag=v0.5.12
+	sha256sums = SKIP
+
+pkgname = swcdb-lib-fs-hadoop

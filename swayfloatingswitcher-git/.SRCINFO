@@ -1,0 +1,23 @@
+pkgbase = swayfloatingswitcher-git
+	pkgdesc = A simple Alt+Tab switcher for floating windows
+	pkgver = 0.2.r6.1e792be
+	pkgrel = 1
+	url = https://github.com/ErikReider/SwayFloatingSwitcher
+	arch = x86_64
+	license = GPL
+	makedepends = vala
+	makedepends = meson
+	makedepends = git
+	depends = gtk3
+	depends = gtk-layer-shell
+	depends = glib2
+	depends = gobject-introspection
+	depends = libgee
+	depends = json-glib
+	depends = granite
+	optdepends = swaync-git
+	optdepends = swaysettings-git
+	source = git+https://github.com/ErikReider/SwayFloatingSwitcher
+	sha256sums = SKIP
+
+pkgname = swayfloatingswitcher-git

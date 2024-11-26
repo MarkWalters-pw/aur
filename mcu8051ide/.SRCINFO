@@ -1,0 +1,27 @@
+pkgbase = mcu8051ide
+	pkgdesc = Graphical IDE for MCS-51 based microcontrollers
+	pkgver = 1.4.10
+	pkgrel = 3
+	url = https://sourceforge.net/projects/mcu8051ide/
+	arch = any
+	license = GPLv3
+	depends = tcl>=8.5.9
+	depends = tk>=8.5.9
+	depends = tcllib>=1.6
+	depends = bwidget>=1.8
+	depends = itcl3>=3.4
+	depends = tdom>=0.8
+	depends = tkimg>=1.3
+	depends = tclx>=8.4
+	optdepends = cmake: cross-platform make system
+	optdepends = rxvt-unicode: for unicode support
+	optdepends = vim: for text-editing
+	optdepends = emacs: for text-editing
+	optdepends = nano: for text-editing
+	optdepends = le: for text-editing
+	optdepends = hunspell: for spell-checking
+	source = mcu8051ide-1.4.10.rpm::https://sourceforge.net/projects/mcu8051ide/files/mcu8051ide/1.4.9/mcu8051ide-1.4-10.noarch.rpm/download
+	md5sums = 7c3fc2a212e0fe203856bbe27566d3bf
+
+pkgname = mcu8051ide
+

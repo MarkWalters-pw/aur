@@ -1,0 +1,17 @@
+pkgbase = darknet-git
+	pkgdesc = An open source neural network framework written in C and CUDA
+	pkgver = r437.0ff23438
+	pkgrel = 1
+	url = https://pjreddie.com/darknet
+	arch = x86_64
+	license = Unlicense
+	depends = bash
+	optdepends = opencv
+	optdepends = cuda
+	optdepends = python
+	provides = darknet
+	source = darknet::git+https://github.com/pjreddie/darknet
+	sha256sums = SKIP
+
+pkgname = darknet-git
+

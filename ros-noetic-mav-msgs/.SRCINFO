@@ -1,0 +1,30 @@
+pkgbase = ros-noetic-mav-msgs
+	pkgdesc = ROS - Package containing messages for communicating with rotary wing MAVs
+	pkgver = 3.3.2
+	pkgrel = 1
+	url = https://wiki.ros.org/mav_msgs
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = ASL 2.0
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-catkin
+	makedepends = ros-noetic-cmake-modules
+	makedepends = ros-noetic-geometry-msgs
+	makedepends = ros-noetic-message-generation
+	makedepends = ros-noetic-std-msgs
+	makedepends = ros-noetic-trajectory-msgs
+	makedepends = eigen
+	depends = ros-noetic-geometry-msgs
+	depends = ros-noetic-message-generation
+	depends = ros-noetic-std-msgs
+	depends = ros-noetic-trajectory-msgs
+	depends = eigen
+	source = ros-noetic-mav-msgs-3.3.2.tar.gz::https://github.com/ethz-asl/mav_comm/archive/3.3.2.tar.gz
+	sha256sums = 5c24fd711d32a024d226707aca6e18ed31e5ebd01e5bfe725098d07619223459
+
+pkgname = ros-noetic-mav-msgs
+

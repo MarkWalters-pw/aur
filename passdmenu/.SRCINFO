@@ -1,0 +1,17 @@
+pkgbase = passdmenu
+	pkgdesc = A dmenu frontend to pass with clipboard and autotype functionality for user and password.
+	pkgver = 1.2.0
+	pkgrel = 1
+	url = https://github.com/klaasb/passdmenu
+	arch = any
+	license = ISC
+	depends = python
+	depends = xclip
+	depends = dmenu
+	optdepends = xdotool: autotype functionality
+	conflicts = passdmenu-git
+	source = passdmenu-1.2.0.tar.gz::https://github.com/klaasb/passdmenu/archive/v1.2.0.tar.gz
+	sha256sums = 879d984d28b24b3335ddcae204e7b8b9430a3b5e05ba332e53c94de7d9cb6d74
+
+pkgname = passdmenu
+

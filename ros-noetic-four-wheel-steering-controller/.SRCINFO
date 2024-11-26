@@ -1,0 +1,26 @@
+pkgbase = ros-noetic-four-wheel-steering-controller
+	pkgdesc = ROS - Controller for a four wheel steering mobile base
+	pkgver = 0.21.2
+	pkgrel = 1
+	url = https://wiki.ros.org/four_wheel_steering_controller
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-catkin
+	makedepends = ros-noetic-controller-interface
+	makedepends = ros-noetic-nav-msgs
+	makedepends = ros-noetic-four-wheel-steering-msgs
+	makedepends = ros-noetic-realtime-tools
+	makedepends = ros-noetic-tf
+	makedepends = ros-noetic-urdf-geometry-parser
+	depends = ros-noetic-controller-interface
+	depends = ros-noetic-nav-msgs
+	depends = ros-noetic-four-wheel-steering-msgs
+	depends = ros-noetic-realtime-tools
+	depends = ros-noetic-tf
+	depends = ros-noetic-urdf-geometry-parser
+	source = ros-noetic-four-wheel-steering-controller-0.21.2.tar.gz::https://github.com/ros-controls/ros_controllers/archive/0.21.2.tar.gz
+	sha256sums = 19e710b944e972ffb7fadb2d149f97bcdc1c2c0cf38a20405c09afced1543ba4
+
+pkgname = ros-noetic-four-wheel-steering-controller

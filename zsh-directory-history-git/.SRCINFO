@@ -1,0 +1,17 @@
+pkgbase = zsh-directory-history-git
+	pkgdesc = Per directory history plugin for zsh
+	pkgver = 1.1.0.r9.g7abeca2
+	pkgrel = 1
+	url = https://github.com/tymm/zsh-directory-history
+	install = zsh-directory-history-git.install
+	arch = any
+	license = BSD
+	makedepends = git
+	depends = zsh
+	depends = python2
+	provides = zsh-directory-history
+	conflicts = zsh-directory-history
+	source = git+https://github.com/tymm/zsh-directory-history
+	md5sums = SKIP
+
+pkgname = zsh-directory-history-git

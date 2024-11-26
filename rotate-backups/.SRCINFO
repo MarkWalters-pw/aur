@@ -1,0 +1,27 @@
+pkgbase = rotate-backups
+	pkgdesc = Simple command line interface for backup rotation
+	pkgver = 8.1
+	pkgrel = 3
+	url = https://github.com/xolox/python-rotate-backups
+	arch = any
+	license = MIT
+	makedepends = python-setuptools
+	depends = python
+	depends = python-coloredlogs
+	depends = python-dateutil
+	depends = python-executor
+	depends = python-humanfriendly
+	depends = python-naturalsort
+	depends = python-property-manager
+	depends = python-simpleeval
+	depends = python-six
+	depends = python-update-dotdee
+	depends = python-verboselogs
+	source = https://files.pythonhosted.org/packages/source/r/rotate-backups/rotate-backups-8.1.tar.gz
+	sha256sums = f8fe4012cb0b6768ffebe12d995bfd558fafaf636275ff016dd9135344b33980
+
+pkgname = rotate-backups
+	depends = python-rotate-backups
+	depends = python-setuptools
+
+pkgname = python-rotate-backups

@@ -1,0 +1,15 @@
+pkgbase = uhe-hive-vst
+	pkgdesc = Commercial virtual-analog synthesizer from u-he
+	pkgver = 12092
+	pkgrel = 1
+	url = http://www.u-he.com/products/hive
+	install = user.install
+	arch = x86_64
+	arch = i686
+	license = custom
+	makedepends = xxd
+	depends = gtk3
+	source = https://uhe-dl.b-cdn.net/releases/Hive_211_12092_Linux.tar.xz
+	sha256sums = d24c2488121556afb63a4989278fe1e246baae80a726f3b802ee29c2a157124f
+
+pkgname = uhe-hive-vst

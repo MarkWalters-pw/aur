@@ -1,0 +1,20 @@
+pkgbase = mingw-w64-babl
+	pkgdesc = Dynamic, any to any, pixel format conversion library (mingw-w64)
+	pkgver = 0.1.68
+	pkgrel = 1
+	url = http://gegl.org/babl/
+	arch = any
+	license = LGPL3
+	makedepends = mingw-w64-configure
+	makedepends = mingw-w64-wine
+	makedepends = git
+	makedepends = librsvg
+	depends = mingw-w64-crt
+	options = !strip
+	options = !buildflags
+	options = staticlibs
+	source = git+https://gitlab.gnome.org/GNOME/babl.git#commit=d725728eb4fe44e6e766e971c35d41e658e4b46d
+	sha256sums = SKIP
+
+pkgname = mingw-w64-babl
+

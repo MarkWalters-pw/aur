@@ -1,0 +1,22 @@
+pkgbase = appimage-appimage
+	pkgdesc = Generate, extract, and inspect AppImages - appimage version
+	pkgver = 13
+	pkgrel = 1
+	url = https://github.com/AppImage/AppImageKit
+	arch = x86_64
+	license = MIT
+	optdepends = appstream
+	provides = appimage
+	conflicts = appimage-git
+	noextract = appimagetool
+	noextract = AppRun
+	noextract = runtime
+	options = !strip
+	source_x86_64 = appimagetool::https://github.com/AppImage/AppImageKit/releases/download/13/appimagetool-x86_64.AppImage
+	source_x86_64 = AppRun::https://github.com/AppImage/AppImageKit/releases/download/13/AppRun-x86_64
+	source_x86_64 = runtime::https://github.com/AppImage/AppImageKit/releases/download/13/runtime-x86_64
+	sha256sums_x86_64 = df3baf5ca5facbecfc2f3fa6713c29ab9cefa8fd8c1eac5d283b79cab33e4acb
+	sha256sums_x86_64 = fd0e2c14a135e7741ef82649558150f141a04c280ed77a5c6f9ec733627e520e
+	sha256sums_x86_64 = 328e0d745c5c6817048c27bc3e8314871703f8f47ffa81a37cb06cd95a94b323
+
+pkgname = appimage-appimage

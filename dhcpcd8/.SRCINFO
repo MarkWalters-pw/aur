@@ -1,0 +1,24 @@
+pkgbase = dhcpcd8
+	pkgdesc = A DHCP and DHCPv6 client (8.x releases)
+	pkgver = 8.1.9
+	pkgrel = 5
+	url = https://roy.marples.name/projects/dhcpcd/
+	arch = i686
+	arch = x86_64
+	license = BSD
+	depends = glibc
+	depends = sh
+	depends = systemd-libs
+	optdepends = openresolv: resolvconf support
+	provides = dhcpcd=8.1.9
+	conflicts = dhcpcd
+	options = emptydirs
+	backup = etc/dhcpcd.conf
+	source = dhcpcd8-8.1.9-src.tar.gz::https://github.com/NetworkConfiguration/dhcpcd/archive/refs/tags/v8.1.9.tar.gz
+	source = dhcpcd.service::https://gitlab.archlinux.org/archlinux/packaging/packages/dhcpcd/-/raw/main/dhcpcd.service
+	source = dhcpcd_.service::https://gitlab.archlinux.org/archlinux/packaging/packages/dhcpcd/-/raw/main/dhcpcd_.service
+	sha256sums = aa62732df3bfa26b0610a70e4f696e49a9d198896876b5e721dbaa6f7097dd29
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = dhcpcd8

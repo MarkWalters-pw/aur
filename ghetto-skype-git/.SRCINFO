@@ -1,0 +1,24 @@
+pkgbase = ghetto-skype-git
+	pkgdesc = This is an electron client that uses Web Skype to better integrate with desktop environments found on Linux.
+	pkgver = 1.6.0+7+g5ae7d28
+	pkgrel = 1
+	url = https://github.com/stanfieldr/ghetto-skype
+	arch = x86_64
+	license = GPL3
+	makedepends = asar
+	makedepends = gcc
+	makedepends = npm
+	makedepends = pkgconf
+	depends = electron
+	provides = ghetto-skype
+	conflicts = ghetto-skype
+	options = !emptydirs
+	source = ghetto-skype-git::git+https://github.com/stanfieldr/ghetto-skype.git
+	source = ghetto-skype.desktop
+	source = ghetto-skype
+	md5sums = SKIP
+	md5sums = 44aa5d2772bedba2598dbd46b0b0b4f4
+	md5sums = fd5e7e49294ee8dc3a171f882ce60a70
+
+pkgname = ghetto-skype-git
+

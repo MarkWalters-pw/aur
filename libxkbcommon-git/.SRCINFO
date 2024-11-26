@@ -1,0 +1,44 @@
+pkgbase = libxkbcommon-git
+	pkgdesc = Keymap handling library for toolkits and window systems
+	pkgver = 1.4.1_r2102.g57af9cb
+	pkgrel = 1
+	url = https://xkbcommon.org/
+	arch = x86_64
+	license = custom
+	checkdepends = libgl
+	checkdepends = xorg-server-xvfb
+	makedepends = git
+	makedepends = doxygen
+	makedepends = libxcb
+	makedepends = libxml2
+	makedepends = meson
+	makedepends = wayland
+	makedepends = wayland-protocols
+	makedepends = xkeyboard-config
+	makedepends = xorgproto
+	source = git+https://github.com/xkbcommon/libxkbcommon.git
+	sha256sums = SKIP
+
+pkgname = libxkbcommon-git
+	depends = libxml2
+	depends = xkeyboard-config
+	optdepends = libxkbcommon-x11: xkbcli interactive-x11
+	optdepends = wayland: xkbcli interactive-wayland
+	provides = libxkbcommon
+	provides = libxkbcommon.so
+	provides = libxkbregistry.so
+	conflicts = libxkbcommon
+
+pkgname = libxkbcommon-x11-git
+	pkgdesc = Keyboard handling library using XKB data for X11 XCB clients
+	depends = libxcb
+	depends = libxkbcommon-git
+	depends = libxkbcommon.so
+	provides = libxkbcommon-x11
+	provides = libxkbcommon-x11.so
+	conflicts = libxkbcommon-x11
+
+pkgname = libxkbcommon-doc-git
+	pkgdesc = API documentation for libxkbcommon
+	provides = libxkbcommon-doc
+	conflicts = libxkbcommon-doc

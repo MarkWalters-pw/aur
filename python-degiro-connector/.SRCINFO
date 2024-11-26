@@ -1,0 +1,24 @@
+pkgbase = python-degiro-connector
+	pkgdesc = Yet another library to access Degiro's API
+	pkgver = 3.0.11
+	pkgrel = 2
+	url = https://github.com/Chavithra/degiro-connector
+	arch = any
+	license = BSD-3
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = python-poetry
+	depends = python
+	depends = python-grpcio
+	depends = python-onetimepass
+	depends = python-pandas
+	depends = python-protobuf
+	depends = python-requests
+	depends = python-wrapt
+	provides = degiro-connector
+	options = !strip
+	source = https://files.pythonhosted.org/packages/source/d/degiro_connector/degiro_connector-3.0.11.tar.gz
+	b2sums = ab7d3a6f77d0d0e3f224d47c9c2ac3864b910792a7b21cb72b00f19fbf13a454e13f2a8bb51bb5c189985fb3e8d800a46a9c46cee3cf5d7dbbc05dea5689b4a3
+
+pkgname = python-degiro-connector

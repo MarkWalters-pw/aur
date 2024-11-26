@@ -1,0 +1,14 @@
+pkgbase = zeronsd
+	pkgdesc = Unicast DNS resolver for ZeroTier networks
+	pkgver = 0.5.2
+	pkgrel = 1
+	url = https://github.com/zerotier/zeronsd
+	arch = any
+	license = BSD-3-Clause
+	makedepends = rustup
+	makedepends = git
+	depends = zerotier-one
+	source = zeronsd-0.5.2.tar.gz::https://github.com/zerotier/zeronsd/archive/refs/tags/v0.5.2.tar.gz
+	sha256sums = e0334a519f24e1380d4f94c7bd0a860f232c77e1f0c06236b4f0bf39000ec55d
+
+pkgname = zeronsd

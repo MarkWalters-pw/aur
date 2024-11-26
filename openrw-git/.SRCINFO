@@ -1,0 +1,27 @@
+pkgbase = openrw-git
+	pkgdesc = A re-implementation of Rockstar Games' Grand Theft Auto III
+	pkgver = r1.51b7264
+	pkgrel = 3
+	url = https://github.com/rwengine/openrw
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = cmake
+	makedepends = make
+	depends = bullet
+	depends = glm
+	depends = libmad
+	depends = openal
+	depends = libsndfile
+	depends = sdl2
+	depends = boost
+	depends = ffmpeg
+	provides = openrw
+	conflicts = openrw
+	source = openrw-git::git+https://github.com/rwengine/openrw.git
+	source = openrw.desktop
+	sha256sums = SKIP
+	sha256sums = 78f96261cf22a5413f4e17480b9cb08ce4da8683fb2f8399018e80c96246d0b0
+
+pkgname = openrw-git
+

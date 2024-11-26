@@ -1,0 +1,25 @@
+pkgbase = lugaru
+	pkgdesc = A third-person action game featuring a unique close-range combat system
+	pkgver = 1.2
+	pkgrel = 2
+	url = https://osslugaru.gitlab.io
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = cmake
+	depends = sdl2
+	depends = glu
+	depends = libjpeg-turbo
+	depends = libpng
+	depends = openal
+	depends = libvorbis
+	depends = zlib
+	conflicts = lugaru-hg
+	conflicts = lugaruhd-hg
+	conflicts = lugaro-git
+	source = https://gitlab.com/osslugaru/lugaru/-/archive/1.2/lugaru-1.2.tar.bz2
+	source = lugaru.desktop
+	sha256sums = b165ff8948f634fc788dc29b9269746340a290fc2101d843e270190a49c2ef00
+	sha256sums = c97bbd82701c07692f35fd86d0a4b4fdb2d5380a5672dde75617ae15389bfd15
+
+pkgname = lugaru

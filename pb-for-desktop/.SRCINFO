@@ -1,0 +1,21 @@
+pkgbase = pb-for-desktop
+	pkgdesc = The Desktop application for Pushbullet
+	pkgver = 11.0.2
+	pkgrel = 1
+	url = https://github.com/sidneys/pb-for-desktop
+	arch = i686
+	arch = x86_64
+	license = MIT
+	depends = libnotify
+	depends = notify-osd
+	depends = gconf
+	depends = libappindicator-gtk2
+	depends = libappindicator-gtk3
+	depends = libxtst
+	depends = nss
+	provides = pb-for-desktop
+	source_x86_64 = https://github.com/sidneys/pb-for-desktop/releases/download/v11.0.2/pb-for-desktop-11.0.2-x64.pacman
+	sha256sums_x86_64 = bb5b29578b0685ed3c5356df18e72b17bc88cc52f9cc8a63bc1e6d2a1f9074f5
+
+pkgname = pb-for-desktop
+

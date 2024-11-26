@@ -1,0 +1,18 @@
+pkgbase = ros-noetic-smach-msgs
+	pkgdesc = ROS - this package contains a set of messages that are used by the introspection interfaces for smach.
+	pkgver = 2.5.1
+	pkgrel = 1
+	url = https://wiki.ros.org/smach_msgs
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-message-generation
+	makedepends = ros-noetic-std-msgs
+	makedepends = ros-noetic-catkin
+	depends = ros-noetic-message-runtime
+	depends = ros-noetic-std-msgs
+	source = ros-noetic-smach-msgs-2.5.1.tar.gz::https://github.com/ros/executive_smach/archive/2.5.1.tar.gz
+	sha256sums = e0fa3efcac6eed2b6dbe45f376c6b8e9a1080c2d84a116c1591ec60fbb8e0065
+
+pkgname = ros-noetic-smach-msgs

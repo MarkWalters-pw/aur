@@ -1,0 +1,23 @@
+pkgbase = smaragd-git
+	pkgdesc = KWin plugin to support Emerald themes in KDE
+	pkgver = 0.0.8.r46.g3bc7310
+	pkgrel = 1
+	url = https://invent.kde.org/plasma/smaragd
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = extra-cmake-modules
+	depends = kconfig
+	depends = kcoreaddons
+	depends = ki18n
+	depends = kwidgetsaddons
+	depends = kdecoration
+	depends = glib2
+	depends = cairo
+	optdepends = emerald-themes: extra themes
+	provides = smaragd
+	conflicts = smaragd
+	source = git+https://invent.kde.org/plasma/smaragd.git
+	sha256sums = SKIP
+
+pkgname = smaragd-git

@@ -1,0 +1,12 @@
+post_install() {
+	echo ""
+	echo "Installed to '/opt/pvs'"
+	echo "Remember to add '/opt/pvs' to your PATH"
+	echo ""
+}
+
+post_remove() {
+	echo ""
+	echo "Remember to remove '/opt/pvs' to your PATH"
+	echo ""
+}

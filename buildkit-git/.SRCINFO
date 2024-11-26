@@ -1,0 +1,15 @@
+pkgbase = buildkit-git
+	pkgdesc = BuildKit is a toolkit for converting source code to build artifacts in an efficient, expressive and repeatable manner.
+	pkgver = r3441.ba673bbd
+	pkgrel = 1
+	url = https://github.com/moby/buildkit
+	arch = any
+	license = Apache
+	makedepends = git
+	depends = docker
+	provides = buildkit
+	conflicts = buildkit
+	source = git+https://github.com/moby/buildkit.git
+	sha256sums = SKIP
+
+pkgname = buildkit-git

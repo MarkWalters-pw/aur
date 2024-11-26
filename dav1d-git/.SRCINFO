@@ -1,0 +1,32 @@
+pkgbase = dav1d-git
+	pkgdesc = AV1 cross-platform decoder focused on speed and correctness
+	pkgver = 1.4.1.r29.g37d5243
+	pkgrel = 1
+	url = https://code.videolan.org/videolan/dav1d
+	arch = x86_64
+	license = BSD-2-Clause
+	makedepends = doxygen
+	makedepends = git
+	makedepends = graphviz
+	makedepends = meson
+	makedepends = nasm
+	makedepends = ninja
+	makedepends = vulkan-headers
+	makedepends = xxhash
+	source = git+https://code.videolan.org/videolan/dav1d.git
+	source = git+https://code.videolan.org/videolan/dav1d-test-data.git
+	b2sums = SKIP
+	b2sums = SKIP
+
+pkgname = dav1d-git
+	depends = glibc
+	optdepends = dav1d-doc-git: HTML documentation
+	provides = libdav1d.so
+	provides = dav1d
+	conflicts = dav1d
+
+pkgname = dav1d-doc-git
+	pkgdesc = AV1 cross-platform decoder focused on speed and correctness (documentation)
+	arch = any
+	provides = dav1d-doc
+	conflicts = dav1d-doc

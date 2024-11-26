@@ -1,0 +1,21 @@
+pkgbase = kibot-git
+	pkgdesc = Helps you to generate the fabrication and documentation files for your KiCad projects.
+	pkgver = 2986.1af4204d
+	pkgrel = 1
+	url = https://github.com/INTI-CMNB/kibot
+	arch = i686
+	arch = x86_64
+	license = Apache2.0
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python
+	depends = kibom
+	depends = pcbdraw
+	depends = kiauto
+	depends = python-yaml
+	provides = kibot
+	conflicts = kibot
+	source = kibot::git+https://github.com/INTI-CMNB/kibot.git
+	md5sums = SKIP
+
+pkgname = kibot-git

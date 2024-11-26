@@ -1,0 +1,20 @@
+pkgbase = rivercarro-git
+	pkgdesc = A slightly modified version of rivertile layout generator for river.
+	pkgver = r17.4f714a5
+	pkgrel = 1
+	url = https://git.sr.ht/~novakane/rivercarro
+	arch = i686
+	arch = x86_64
+	arch = armv7h
+	arch = armv6h
+	arch = aarch64
+	license = GPL3
+	makedepends = git
+	makedepends = zig
+	provides = rivercarro
+	conflicts = rivercarro
+	options = !strip
+	source = rivercarro-git::git+https://git.sr.ht/~novakane/rivercarro
+	sha256sums = SKIP
+
+pkgname = rivercarro-git

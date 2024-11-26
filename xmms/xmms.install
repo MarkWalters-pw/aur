@@ -1,0 +1,14 @@
+post_install() {
+  ldconfig -v
+
+  [[ $(type -p gtk-update-icon-cache) ]] && usr/bin/gtk-update-icon-cache -qtf usr/share/icons/hicolor
+  [[ $(type -p update-desktop-database) ]] && usr/bin/update-desktop-database -q usr/share/applications
+  
+  update-desktop-database
+  
+}
+
+post_remove() {
+  [[ $(type -p gtk-update-icon-cache) ]] && usr/bin/gtk-update-icon-cache -qtf usr/share/icons/hicolor
+  [[ $(type -p update-desktop-database) ]] && usr/bin/update-desktop-database -q usr/share/applications
+}

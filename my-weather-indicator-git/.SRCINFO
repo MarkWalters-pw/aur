@@ -1,0 +1,27 @@
+pkgbase = my-weather-indicator-git
+	pkgdesc = A simple indicator for the weather
+	pkgver = 0.10.6.0+r221+63258d2
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/atareao/my-weather-indicator
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = libayatana-appindicator
+	depends = libnotify
+	depends = webkit2gtk
+	depends = geocode-glib
+	depends = python-pytz
+	depends = python-cairo
+	depends = python-lxml
+	depends = python-dateutil
+	depends = osm-gps-map
+	depends = python-requests-oauthlib
+	depends = geoclue
+	depends = geoip
+	provides = my-weather-indicator
+	conflicts = my-weather-indicator
+	source = my-weather-indicator::git+https://github.com/atareao/my-weather-indicator
+	sha256sums = SKIP
+
+pkgname = my-weather-indicator-git

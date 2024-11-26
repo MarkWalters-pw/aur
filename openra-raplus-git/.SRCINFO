@@ -1,0 +1,37 @@
+pkgbase = openra-raplus-git
+	pkgdesc = A Command & Conquer: Red Alert-inspired mod of OpenRA
+	pkgver = 21.git.511dfd6
+	pkgrel = 1
+	url = https://github.com/MlemandPurrs/raplusmod
+	install = openra-raplus.install
+	arch = any
+	license = GPL3
+	makedepends = dos2unix
+	makedepends = git
+	makedepends = unzip
+	makedepends = msbuild
+	depends = mono
+	depends = ttf-dejavu
+	depends = openal
+	depends = libgl
+	depends = freetype2
+	depends = sdl2
+	depends = lua51
+	depends = hicolor-icon-theme
+	depends = gtk-update-icon-cache
+	depends = desktop-file-utils
+	depends = xdg-utils
+	depends = zenity
+	provides = openra-raplus
+	options = !strip
+	source = git+https://github.com/MlemandPurrs/raplusmod.git
+	source = openra-raplus
+	source = openra-raplus.appdata.xml
+	source = openra-raplus.desktop
+	md5sums = SKIP
+	md5sums = d48259a154b7a72b2377ac1a632ec1d3
+	md5sums = e79c9aebc225384175810be58d9f9ddf
+	md5sums = 9400d5c8bea3196e9af96f6aa5c2f879
+
+pkgname = openra-raplus-git
+

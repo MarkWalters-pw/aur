@@ -1,0 +1,20 @@
+pkgbase = perl-font-freetype
+	pkgdesc = read font files and render glyphs from Perl using FreeType2
+	pkgver = 0.16
+	pkgrel = 1
+	url = https://metacpan.org/release/Font-FreeType
+	arch = i686
+	arch = x86_64
+	license = PerlArtistic
+	license = GPL
+	checkdepends = perl-test-warnings
+	checkdepends = perl-devel-checklib
+	checkdepends = perl-file-which
+	depends = freetype2>=2.6.3
+	depends = perl
+	options = !emptydirs
+	source = https://cpan.metacpan.org/authors/id/D/DM/DMOL/Font-FreeType-0.16.tar.gz
+	sha256sums = b689fe2fa8c890abcfe1a257916a8bedd0806b7c295f1ac70be7b284e31598f3
+
+pkgname = perl-font-freetype
+

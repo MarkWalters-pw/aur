@@ -1,0 +1,16 @@
+#!/bin/sh
+source /etc/xdm-hallo/xdm-hallo.rc
+
+# kill all and clean-up.
+if [ -r $XDM_HALLO_BUTTONS_PID ]; then
+	kill $(cat $XDM_HALLO_BUTTONS_PID) > /dev/null 2>&1
+	rm $XDM_HALLO_BUTTONS_PID
+fi
+if [ -r $XDM_HALLO_CLOCK_PID ]; then
+	kill $(cat $XDM_HALLO_CLOCK_PID) > /dev/null 2>&1
+	rm $XDM_HALLO_CLOCK_PID
+fi
+
+chown $USER /dev/console
+exec /usr/bin/sessreg  -a -w "/var/log/wtmp" -u "/run/utmp" \
+        -x "/etc/X11/xdm/Xservers" -l $DISPLAY -h "" $USER

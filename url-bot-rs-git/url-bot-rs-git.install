@@ -1,0 +1,17 @@
+post_install() {
+  cat << EOF
+For fresh installs, follow these steps:
+
+Install the config directory and file:
+# install -Dm640 -g url-bot-rs -o url-bot-rs /usr/share/doc/url-bot-rs-git/example.config.toml /etc/url-bot-rs/config.toml
+
+Configure url-bot-rs:
+https://github.com/nuxeh/url-bot-rs#configuration-file-options
+
+Install the database directory (optional):
+# install -dm700 -g url-bot-rs -o url-bot-rs /var/lib/url-bot-rs
+
+Start url-bot-rs and enable its systemd service:
+# systemctl enable --now url-bot-rs
+EOF
+}

@@ -1,0 +1,26 @@
+pkgbase = switchboard-plug-display-git
+	pkgdesc = Switchboard Display Plug
+	pkgver = 2.2.2.r82.g7098f7b
+	pkgrel = 1
+	url = https://github.com/elementary/switchboard-plug-display
+	arch = x86_64
+	groups = pantheon-unstable
+	license = GPL3
+	makedepends = git
+	makedepends = granite-git
+	makedepends = switchboard
+	makedepends = meson
+	makedepends = vala
+	depends = glib2
+	depends = glibc
+	depends = gnome-desktop
+	depends = gtk3
+	depends = libgee
+	depends = libgranite.so
+	depends = libswitchboard-2.0.so
+	provides = switchboard-plug-display
+	conflicts = switchboard-plug-display
+	source = git+https://github.com/elementary/switchboard-plug-display.git
+	sha256sums = SKIP
+
+pkgname = switchboard-plug-display-git

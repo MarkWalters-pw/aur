@@ -1,0 +1,31 @@
+pkgbase = apple-darwin-osxcross
+	pkgdesc = OS X cross toolchain for Linux, FreeBSD and NetBSD
+	pkgver = 325.16efae8
+	pkgrel = 1
+	url = https://github.com/tpoechtrager/osxcross
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = libxml2
+	makedepends = clang>=3.2
+	makedepends = cmake
+	makedepends = python
+	makedepends = libc++
+	optdepends = clang>=3.2: Use Clang (rather than GCC)
+	optdepends = llvm: Link Time Optimization support and ld64 -bitcode_bundle support
+	optdepends = uuid: ld64 -random_uuid support
+	optdepends = xar: ld64 -bitcode_bundle support
+	provides = osxcross
+	conflicts = osxcross
+	options = !strip
+	source = git+https://github.com/tpoechtrager/osxcross.git#commit=16efae8
+	source = https://github.com/phracker/MacOSX-SDKs/releases/download/10.13/MacOSX10.13.sdk.tar.xz
+	source = apple-darwin-cmake.sh
+	source = toolchain-apple-darwin.cmake
+	sha256sums = SKIP
+	sha256sums = b28b6489ae9287b4f3575bdd6d5450f33e6ea1d2f706d5579f839a494937e8ab
+	sha256sums = 23fc0013add1d33857019ea539851af20a70efa3c387fc289625ba1dbd755573
+	sha256sums = 8de19cc38ac2f7b8c4bec060eb36df167d814353c1139f88ed9a1cfb5bc03bc0
+
+pkgname = apple-darwin-osxcross
+

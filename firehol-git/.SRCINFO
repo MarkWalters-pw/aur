@@ -1,0 +1,27 @@
+pkgbase = firehol-git
+	pkgdesc = The iptables stateful packet filtering firewall builder.
+	pkgver = v3.1.7.r1.g52549e0
+	pkgrel = 1
+	epoch = 1
+	url = http://firehol.org/
+	arch = any
+	license = GPL
+	makedepends = git
+	makedepends = dblatex
+	makedepends = pandoc
+	depends = iptables
+	depends = gawk
+	depends = iproute
+	depends = iprange
+	depends = ipset
+	depends = traceroute
+	depends = procps-ng
+	provides = firehol
+	conflicts = firehol
+	backup = etc/firehol/firehol.conf
+	backup = etc/firehol/fireqos.conf
+	source = firehol::git+https://github.com/firehol/firehol
+	md5sums = SKIP
+
+pkgname = firehol-git
+

@@ -1,0 +1,23 @@
+pkgbase = growl-for-linux-git
+	pkgdesc = Growl for Linux - git release
+	pkgver = r4.edac6d9
+	pkgrel = 1
+	url = http://mattn.github.com/growl-for-linux/
+	arch = i686
+	arch = x86_64
+	license = BSD
+	depends = git
+	depends = openssl
+	depends = curl
+	depends = gtk2
+	depends = sqlite3
+	depends = dbus-glib
+	depends = desktop-file-utils
+	optdepends = libnotify
+	conflicts = growl-for-linux
+	options = !libtool
+	source = growl-for-linux-git::git+https://github.com/mattn/growl-for-linux.git#branch=master
+	md5sums = SKIP
+
+pkgname = growl-for-linux-git
+

@@ -1,0 +1,22 @@
+pkgbase = opencamlib-git
+	pkgdesc = Multi-Purpose CNC Toolpath Library
+	pkgver = 2023.01.11.4.ge4a5a7d
+	pkgrel = 1
+	url = https://github.com/aewallin/opencamlib
+	arch = i686
+	arch = x86_64
+	license = LGPL
+	makedepends = boost
+	makedepends = cmake
+	makedepends = doxygen
+	makedepends = git
+	depends = python
+	depends = boost
+	provides = opencamlib
+	conflicts = opencamlib
+	source = git+https://github.com/aewallin/opencamlib.git
+	source = opencamlib.conf
+	md5sums = SKIP
+	md5sums = a47c8358b60c11c4d620e6a0c24c0b50
+
+pkgname = opencamlib-git

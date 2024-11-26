@@ -1,0 +1,14 @@
+
+post_install() {
+  echo ":: To use Cannonball you will need the ROM files from Rev. B of OutRun."
+  echo ":: Copy the files to '~/.cannonball/roms' and optionally edit the"
+  echo ":: '~/.cannonball/config.xml'"
+}
+
+post_upgrade() {
+  post_install
+}
+
+post_remove() {
+  echo ":: Cannonball game data located in ~/.cannonball/"
+}

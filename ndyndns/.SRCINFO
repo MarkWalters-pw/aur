@@ -1,0 +1,27 @@
+pkgbase = ndyndns
+	pkgdesc = Update client for the dynamic DNS services from DynDNS and Namecheap
+	pkgver = 2.3.1
+	pkgrel = 1
+	url = https://github.com/niklata/ndyndns
+	install = ndyndns.install
+	arch = i686
+	arch = x86_64
+	arch = armv5h
+	arch = armv6h
+	arch = armv7h
+	license = GPL3
+	depends = curl
+	backup = etc/ndyndns.conf
+	source = https://github.com/niklata/ndyndns/archive/v2.3.1.tar.gz
+	source = ndyndns.service
+	source = ndyndns.sysusers
+	source = ndyndns.conf
+	source = ndyndns.install
+	sha256sums = b610579adfb89505439c4f69e6633cec632b8abe8de4ceecb16c01746d5debb4
+	sha256sums = f59f189536536f4ee55f8c38a5df537bbc9ce5f9fb52d15ea3ecc6ae9c610221
+	sha256sums = 47b3b368a43a42fb9ca7cad4c6a3d95f5eae978b8654d55e5b82a6859c5fc7cf
+	sha256sums = c71c313a08cdd9261a331f1dace91d423d63c506582f69dac6f52d4b73d25ed7
+	sha256sums = 8cda5abbbeeb4e8af44fb0fb7ec683bea775e617c1a8c08715a28ee00db28c40
+
+pkgname = ndyndns
+

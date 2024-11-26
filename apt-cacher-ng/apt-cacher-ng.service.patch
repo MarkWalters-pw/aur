@@ -1,0 +1,11 @@
+--- systemd/apt-cacher-ng.service	2020-02-05 15:20:30.368488828 +0800
++++ systemd/apt-cacher-ng.service.arch	2020-02-05 15:20:50.328452488 +0800
+@@ -9,7 +9,7 @@
+
+ [Service]
+ # the SocketPath option can be removed if the inetd bridge functionality is not needed
+-ExecStart=/usr/sbin/apt-cacher-ng -c "/etc/apt-cacher-ng" ForeGround=1
++ExecStart=/usr/bin/apt-cacher-ng -c "/etc/apt-cacher-ng" ForeGround=1
+ User=apt-cacher-ng
+ Group=apt-cacher-ng
+ # This can be changed to notify if the support was enabled at build time

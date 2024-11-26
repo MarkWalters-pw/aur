@@ -1,0 +1,12 @@
+#!/sbin/openrc-run
+# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# 
+# It is not recommended to use this script if you do not use a DM.
+
+description="Disk Manager"
+command=/usr/lib/udisks2/udisksd
+
+depend() {
+	after xdm
+}

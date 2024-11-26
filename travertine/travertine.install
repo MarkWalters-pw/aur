@@ -1,0 +1,36 @@
+_game="travertine"
+_user="travertine"
+_server_root="/srv/travertine"
+
+post_install() {
+	getent group "${_user}" &>/dev/null
+	if [ $? -ne 0 ]; then
+		echo "Adding ${_user} system group..."
+		groupadd -r ${_user} 1>/dev/null
+	fi
+
+	getent passwd "${_user}" &>/dev/null
+	if [ $? -ne 0 ]; then
+		echo "Adding ${_user} system user..."
+		useradd -r -g ${_user} -d "${_server_root}" ${_user} 1>/dev/null
+	fi
+
+	chown -R ${_user}:${_user} "${_server_root}"
+
+	echo "The server data is stored under ${_server_root} and the server runs as ${_user} user to increase security."
+	echo "Use the ${_game} script under /usr/bin/${_game} to start, stop or backup each individual server, specifying its name."
+	echo "Adjust the global configuration file under /etc/conf.d/${_game} to your liking."
+        echo "You can create as many servers as you want. Just create a servername folder and servername.conf under ${_server_root}/servers for each one, tweak the configuration to your liking and put whichever server software you need (spigot, paper, etc)."
+        echo "By default, ${_game} is installed as subserver proxy, under ${_server_root}/servers/proxy"
+        echo "You can start it by using ${_game} proxy start"
+}
+
+post_upgrade() {
+	chown -R ${_user}:${_user} "${_server_root}"
+}
+
+post_remove() {
+	# Notifying the user of kept dirs
+	[[ -d "${_server_root}" ]] && echo "Game saves in ${_server_root} were kept on your system."
+	echo "The ${_user} user was preserved on your system."
+}

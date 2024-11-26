@@ -1,0 +1,24 @@
+pkgbase = grafana-git
+	pkgdesc = The tool for beautiful monitoring and metric analytics & dashboards for Graphite, InfluxDB & Prometheus & More
+	pkgver = v6.0.0.beta1.r3707.g649fa6789e
+	pkgrel = 1
+	url = https://grafana.com
+	install = grafana.install
+	arch = any
+	license = APACHE
+	makedepends = go
+	makedepends = npm
+	makedepends = git
+	makedepends = yarn
+	makedepends = python2
+	provides = grafana
+	conflicts = grafana
+	options = !strip
+	options = !emptydirs
+	source = git+https://github.com/grafana/grafana
+	source = grafana.service
+	md5sums = SKIP
+	md5sums = bb223073eac39f0ccf9cb8b57fe8d685
+
+pkgname = grafana-git
+

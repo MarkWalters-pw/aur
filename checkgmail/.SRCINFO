@@ -1,0 +1,19 @@
+pkgbase = checkgmail
+	pkgdesc = An alternative Gmail Notifier for Linux and other *nix systems
+	pkgver = 1.15
+	pkgrel = 1
+	url = http://checkgmail.sourceforge.net
+	arch = any
+	license = GPL
+	makedepends = gendesk
+	depends = perl-gtk2-trayicon
+	depends = perl-lwp-protocol-https
+	depends = perl-xml-simple
+	depends = perl-freezethaw
+	depends = perl-crypt-simple
+	depends = perl-crypt-blowfish
+	optdepends = perl-gtk2-sexy
+	source = http://downloads.sourceforge.net/checkgmail/checkgmail-1.15pre2.tar.bz2
+	md5sums = 41532e5341d72139b8a6c922d52e7dc9
+
+pkgname = checkgmail

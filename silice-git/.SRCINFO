@@ -1,0 +1,31 @@
+pkgbase = silice-git
+	pkgdesc = An open source language that simplifies prototyping and writing algorithms on FPGA architectures.
+	pkgver = 3d12246b
+	pkgrel = 8
+	url = https://github.com/sylefeb/Silice
+	arch = i686
+	arch = x86_64
+	arch = armv7h
+	arch = armv8
+	arch = riscv64
+	license = GPLv3
+	depends = yosys
+	depends = icestorm-git
+	depends = prjoxide-git
+	depends = prjapicula
+	depends = nextpnr-git
+	depends = vtr
+	depends = verilator
+	depends = iverilog
+	depends = freeglut
+	depends = java-runtime>=11
+	optdepends = openfpgaloader
+	optdepends = tinyprog
+	optdepends = java-environment>=11
+	provides = silice
+	source = Silice::git+https://github.com/sylefeb/Silice.git
+	source = frameworks_path.patch
+	sha512sums = SKIP
+	sha512sums = faea4abdb6df04b7e4b0ac8a80a71f301e20085e3e9e1823b6b6d3f4ffc8a4d2d84ea077666799ce087ea2c341459a358d90c5e01c7bc6848ee5f042d66274a7
+
+pkgname = silice-git

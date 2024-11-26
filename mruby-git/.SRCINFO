@@ -1,0 +1,21 @@
+pkgbase = mruby-git
+	pkgdesc = Lightweight Ruby
+	pkgver = 1.0.0.r5216.g14c21793
+	pkgrel = 1
+	url = https://github.com/mruby/mruby
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = bison
+	makedepends = ruby
+	depends = readline
+	provides = mruby
+	conflicts = mruby
+	replaces = mruby
+	options = staticlibs
+	source = git+https://github.com/mruby/mruby
+	sha1sums = SKIP
+
+pkgname = mruby-git
+

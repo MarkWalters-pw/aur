@@ -1,0 +1,26 @@
+pkgbase = keyman-onboard
+	pkgdesc = fork of onboard to adapt it to use it as an OSK for Keyman on Linux
+	pkgver = 1.4.3
+	pkgrel = 3
+	url = https://github.com/keymanapp/onboard-keyman
+	arch = x86_64
+	arch = armv7h
+	arch = aarch64
+	arch = powerpc64le
+	license = GPL3
+	makedepends = python-distutils-extra
+	depends = dbus-python
+	depends = gtk3
+	depends = hunspell
+	depends = libcanberra
+	depends = libxkbfile
+	depends = python-cairo
+	depends = python-gobject
+	depends = python-lxml
+	optdepends = mousetweaks: hover click with mouse
+	provides = onboard
+	conflicts = onboard
+	source = https://launchpad.net/~keymanapp/+archive/ubuntu/keyman/+sourcefiles/onboard-keyman/1.4.3+onboard1.4.1-5.0~lunar/onboard-keyman_1.4.3+onboard1.4.1.orig.tar.gz
+	sha256sums = fd7561cc296f64bff3e87ef35f3a7fa905e749e58940dd4e7c26e6ceee5108db
+
+pkgname = keyman-onboard

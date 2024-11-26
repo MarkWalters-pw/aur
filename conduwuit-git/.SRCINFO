@@ -1,0 +1,23 @@
+pkgbase = conduwuit-git
+	pkgdesc = a very cool, featureful fork of Conduit matrix server
+	pkgver = 0.4.0.3327.geb8dd9cb
+	pkgrel = 1
+	url = https://github.com/girlbossceo/conduwuit
+	arch = any
+	license = Apache-2.0
+	makedepends = rust
+	makedepends = cargo
+	makedepends = git
+	makedepends = clang
+	depends = gcc-libs
+	depends = glibc
+	depends = liburing
+	provides = conduwuit
+	options = !lto
+	backup = etc/conduwuit.toml
+	source = git+https://github.com/girlbossceo/conduwuit
+	source = conduwuit.service
+	sha512sums = SKIP
+	sha512sums = 563b2fbfb79a018737005a2ec5232afd85b70d463b05e889d092a45cb00038c4cf9f19c9a89a28838d9dc8d7e4178ebd2edf756e1e13c18e9a02b949f7e9c286
+
+pkgname = conduwuit-git

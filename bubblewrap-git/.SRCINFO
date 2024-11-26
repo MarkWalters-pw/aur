@@ -1,0 +1,21 @@
+pkgbase = bubblewrap-git
+	pkgdesc = Unprivileged sandboxing tool
+	pkgver = v0.3.1.r6.g94147e2
+	pkgrel = 1
+	url = https://github.com/projectatomic/bubblewrap
+	install = bubblewrap.install
+	arch = x86_64
+	arch = i686
+	license = LGPL
+	makedepends = autoconf
+	makedepends = automake
+	makedepends = libxslt
+	makedepends = docbook-xsl
+	makedepends = git
+	provides = bubblewrap
+	conflicts = bubblewrap
+	source = bubblewrap-git::git+https://github.com/projectatomic/bubblewrap
+	sha512sums = SKIP
+
+pkgname = bubblewrap-git
+

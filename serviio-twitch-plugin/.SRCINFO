@@ -1,0 +1,13 @@
+pkgbase = serviio-twitch-plugin
+	pkgdesc = Twitch.tv plugin for Serviio
+	pkgver = 18
+	pkgrel = 1
+	url = http://forum.serviio.org/viewtopic.php?f=20&t=9216
+	arch = any
+	license = LGPL3
+	makedepends = git
+	depends = serviio
+	source = git+https://github.com/bogenpirat/serviio-plugins.git#commit=a206cdb6b5e08f17d0daafa5f956ecf239854c8d
+	sha256sums = SKIP
+
+pkgname = serviio-twitch-plugin

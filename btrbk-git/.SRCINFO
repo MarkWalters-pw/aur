@@ -1,0 +1,22 @@
+pkgbase = btrbk-git
+	pkgdesc = Tool for creating snapshots and remote backups of btrfs subvolumes
+	pkgver = 0.32.6.r0.g5e44bc6
+	pkgrel = 1
+	url = https://digint.ch/btrbk/
+	arch = any
+	license = GPL3
+	makedepends = asciidoctor
+	makedepends = git
+	depends = btrfs-progs
+	depends = perl
+	optdepends = bash: for contrib scripts
+	optdepends = mbuffer: for rate limiting and progress bars
+	optdepends = openssh: for transfering backups to/from remote hosts
+	optdepends = python: for contrib scripts
+	optdepends = sudo: for btrfs-progs-sudo backend
+	provides = btrbk
+	conflicts = btrbk
+	source = btrbk-git::git+https://github.com/digint/btrbk.git
+	sha256sums = SKIP
+
+pkgname = btrbk-git

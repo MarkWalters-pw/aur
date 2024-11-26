@@ -1,0 +1,28 @@
+pkgbase = liri-settings-git
+	pkgdesc = Settings application and modules for Liri OS
+	pkgver = v0.9.0.r235.gebf3b01
+	pkgrel = 1
+	url = https://liri.io
+	arch = i686
+	arch = x86_64
+	arch = armv6h
+	arch = armv7h
+	groups = liri-git
+	license = GPL3
+	makedepends = git
+	makedepends = qt5-tools
+	makedepends = liri-cmake-shared-git
+	depends = fluid-git
+	depends = libliri-git
+	depends = qt5-accountsservice-git
+	depends = polkit-qt5
+	depends = xkeyboard-config
+	provides = liri-settings
+	conflicts = liri-settings
+	replaces = liri-settings
+	options = debug
+	options = !strip
+	source = settings::git+https://github.com/lirios/settings.git#branch=develop
+	md5sums = SKIP
+
+pkgname = liri-settings-git

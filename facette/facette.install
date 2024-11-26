@@ -1,0 +1,9 @@
+post_install() {
+  post_upgrade
+}
+
+post_upgrade() {
+  chown -R facette:facette /etc/facette
+  chown -R facette:facette /var/run/facette
+  chown -R facette:facette /var/log/facette
+}

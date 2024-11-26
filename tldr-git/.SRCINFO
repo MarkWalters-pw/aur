@@ -1,0 +1,22 @@
+pkgbase = tldr-git
+	pkgdesc = C command line client for tldr
+	pkgver = 1.5.0.g821e08c4df
+	pkgrel = 1
+	url = https://github.com/tldr-pages/tldr-c-client
+	arch = i686
+	arch = x86_64
+	arch = armv6h
+	license = MIT
+	makedepends = git
+	makedepends = make
+	makedepends = clang
+	makedepends = curl
+	makedepends = libzip
+	depends = curl
+	depends = libzip
+	provides = tldr
+	conflicts = tldr
+	source = git+https://github.com/tldr-pages/tldr-c-client
+	md5sums = SKIP
+
+pkgname = tldr-git

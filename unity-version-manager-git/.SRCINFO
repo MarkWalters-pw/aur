@@ -1,0 +1,16 @@
+pkgbase = unity-version-manager-git
+	pkgdesc = cli utility to install and manager unity versions
+	pkgver = 2.6.0
+	pkgrel = 1
+	url = https://github.com/Larusso/unity-version-manager
+	arch = x86_64
+	license = Apache
+	makedepends = cargo
+	makedepends = git
+	depends = p7zip
+	provides = unity-version-manager
+	conflicts = unity-version-manager
+	source = git+https://github.com/Larusso/unity-version-manager.git
+	sha256sums = SKIP
+
+pkgname = unity-version-manager-git

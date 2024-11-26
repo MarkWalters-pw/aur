@@ -1,0 +1,16 @@
+pkgbase = arch-test-bin
+	pkgdesc = detect architectures supported by your machine/kernel
+	pkgver = 0.20
+	pkgrel = 2
+	url = https://github.com/kilobyte/arch-test/
+	arch = any
+	license = MIT
+	depends = bash
+	depends = perl
+	provides = arch-test
+	conflicts = arch-test
+	options = !strip
+	source = http://ftp.debian.org/debian/pool/main/a/arch-test/arch-test_0.20-1_all.deb
+	sha256sums = f8b4659feef23095e3c9f678d5607f34f3db6972ae6619c53ff9b28dc920a72e
+
+pkgname = arch-test-bin

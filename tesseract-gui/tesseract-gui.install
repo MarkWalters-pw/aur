@@ -1,0 +1,8 @@
+post_install() {
+  echo "===> NOTE package tesseract requires at least one tesseract-data-* package from the tesseract-data(-git) package group"
+}
+
+post_upgrade() {
+  post_install
+}
+

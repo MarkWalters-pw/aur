@@ -1,0 +1,23 @@
+pkgbase = kodi-addon-vfs-rar
+	pkgdesc = Rar Addon for Kodi Leia
+	pkgver = 2.3.1
+	pkgrel = 1
+	url = https://github.com/xbmc/vfs.rar
+	arch = i686
+	arch = x86_64
+	arch = armv6h
+	arch = armv7h
+	arch = aarch64
+	groups = kodi-addons
+	license = GPL
+	makedepends = cmake
+	makedepends = kodi-platform
+	makedepends = git
+	makedepends = kodi-dev>=18.0
+	depends = kodi
+	depends = p8-platform
+	source = https://github.com/xbmc/vfs.rar/archive/2.3.1-Leia.zip
+	md5sums = 4f8015cc32c1449c3e25c2bcc4454fa3
+
+pkgname = kodi-addon-vfs-rar
+

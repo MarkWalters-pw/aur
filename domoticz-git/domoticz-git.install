@@ -1,0 +1,7 @@
+post_install() {
+	gpasswd -a http uucp
+}
+
+post_remove() {
+	echo "run 'gpasswd -d http uucp' if group entry isn't needed anymore"
+}

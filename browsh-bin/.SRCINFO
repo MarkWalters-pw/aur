@@ -1,0 +1,37 @@
+pkgbase = browsh-bin
+	pkgdesc = A fully-modern text-based browser, rendering to TTY and browsers
+	pkgver = 1.8.2
+	pkgrel = 1
+	url = https://www.brow.sh
+	arch = x86_64
+	arch = i386
+	arch = i486
+	arch = i586
+	arch = i686
+	arch = armv6h
+	arch = armv7h
+	arch = aarch64
+	license = LGPL2.1
+	depends = firefox>=63
+	provides = browsh
+	conflicts = browsh
+	conflicts = browsh-git
+	options = !strip
+	source_x86_64 = https://github.com/browsh-org/browsh/releases/download/v1.8.2/browsh_1.8.2_linux_amd64
+	sha256sums_x86_64 = a20aeaad841e41634d5a4ca43845e9bf81a4fd3e8123efcc870668e2091ccb1f
+	source_i386 = https://github.com/browsh-org/browsh/releases/download/v1.8.2/browsh_1.8.2_linux_386
+	sha256sums_i386 = eb5518aaba26f1c56787ec18751729337dc7c9b58a2439a814fe3d7c807a8d91
+	source_i486 = https://github.com/browsh-org/browsh/releases/download/v1.8.2/browsh_1.8.2_linux_386
+	sha256sums_i486 = eb5518aaba26f1c56787ec18751729337dc7c9b58a2439a814fe3d7c807a8d91
+	source_i586 = https://github.com/browsh-org/browsh/releases/download/v1.8.2/browsh_1.8.2_linux_386
+	sha256sums_i586 = eb5518aaba26f1c56787ec18751729337dc7c9b58a2439a814fe3d7c807a8d91
+	source_i686 = https://github.com/browsh-org/browsh/releases/download/v1.8.2/browsh_1.8.2_linux_386
+	sha256sums_i686 = eb5518aaba26f1c56787ec18751729337dc7c9b58a2439a814fe3d7c807a8d91
+	source_armv6h = https://github.com/browsh-org/browsh/releases/download/v1.8.2/browsh_1.8.2_linux_armv6
+	sha256sums_armv6h = e8351245f099d50844cb1aa932238082dc71660235795352bfa1b2320c0cd4b7
+	source_armv7h = https://github.com/browsh-org/browsh/releases/download/v1.8.2/browsh_1.8.2_linux_armv7
+	sha256sums_armv7h = 49d4f568dd328ad74c9a28f4818d78b26a2841c4824d0d9ee3b7472c364bc97e
+	source_aarch64 = https://github.com/browsh-org/browsh/releases/download/v1.8.2/browsh_1.8.2_linux_arm64
+	sha256sums_aarch64 = c805136292ba03c5520752819c532909c70411c811a15cd7bc4c0d3d92f9d8e1
+
+pkgname = browsh-bin

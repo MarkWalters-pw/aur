@@ -1,0 +1,16 @@
+pkgbase = buttermilk
+	pkgdesc = A basic personal terminal emulator based on VTE
+	pkgver = 0.2.0
+	pkgrel = 1
+	url = https://github.com/jzbor/buttermilk
+	arch = x86_64
+	arch = aarch64
+	license = MIT
+	depends = vte3
+	depends = libinih
+	provides = buttermilk=0.2.0
+	conflicts = buttermilk
+	source = https://github.com/jzbor/buttermilk/archive/refs/tags/0.2.0.tar.gz
+	sha512sums = 4c29abe620cbf4e466ff46cfaba09c1411244d9eb3e057ff732137716f3a02580bf9285e82d2614d61973f3beac4108c68cc9cca2cae662aa8d553961427c8a1
+
+pkgname = buttermilk

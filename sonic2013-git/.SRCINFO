@@ -1,0 +1,26 @@
+pkgbase = sonic2013-git
+	pkgdesc = A full decompilation of Sonic 1 & 2 (2013).
+	pkgver = r953.b78db1b
+	pkgrel = 1
+	url = https://github.com/Rubberduckycooly/Sonic-1-2-2013-Decompilation
+	install = sonic2013.install
+	arch = any
+	license = custom:RSDKv3/4 Decompilation Source Code License v1
+	makedepends = git
+	makedepends = cmake
+	makedepends = pkg-config
+	depends = glew
+	depends = sdl2
+	depends = libogg
+	depends = libvorbis
+	provides = sonic2013
+	source = git+https://github.com/Rubberduckycooly/Sonic-1-2-2013-Decompilation.git
+	source = git+https://github.com/leethomason/tinyxml2.git
+	source = template-launcher
+	source = template.desktop
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = 53ea1912492a15bf54f6dba1859aaf0f9ca0c01615f021faa8a3c67449b1fd55
+	sha256sums = 55df140227c69094fac5ee7dd1b8a8e8beef9abe4072dee00e1688a0b9966353
+
+pkgname = sonic2013-git

@@ -1,0 +1,21 @@
+pkgbase = openjk-launcher
+	pkgdesc = A launcher and installer for OpenJK the opensource engine for Star Wars Jedi Knight: Jedi Academy
+	pkgver = 0.2
+	pkgrel = 1
+	url = https://github.com/gort818/openjk-launcher
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	depends = python3
+	depends = python-gobject
+	depends = gtk3
+	depends = python-requests
+	depends = python-pygame
+	provides = openjk-launcher
+	conflicts = openjk-launcher
+	options = !emptydirs
+	source = https://github.com/gort818/openjk-launcher.git
+	sha1sums = SKIP
+
+pkgname = openjk-launcher
+

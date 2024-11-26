@@ -1,0 +1,45 @@
+pkgbase = python-sdbus-git
+	pkgdesc = Modern Python library for D-Bus
+	pkgver = r649.938ca81
+	pkgrel = 1
+	url = https://github.com/python-sdbus/python-sdbus
+	arch = x86_64
+	license = LGPL2.1
+	makedepends = git
+	makedepends = python-setuptools
+	makedepends = gcc
+	makedepends = pkgconf
+	depends = python
+	depends = systemd-libs
+	source = python-sdbus-git::git+https://github.com/python-sdbus/python-sdbus
+	source = python-sdbus-notifications::git+https://github.com/python-sdbus/python-sdbus-notifications
+	source = python-sdbus-networkmanager::git+https://github.com/python-sdbus/python-sdbus-networkmanager
+	source = python-sdbus-secrets::git+https://github.com/python-sdbus/python-sdbus-secrets
+	md5sums = SKIP
+	md5sums = SKIP
+	md5sums = SKIP
+	md5sums = SKIP
+
+pkgname = python-sdbus-git
+	optdepends = python-jinja: Code generator for dbus XML introspection
+	optdepends = python-sphinx: Autodoc for dbus members
+	provides = python-sdbus
+	conflicts = python-sdbus
+
+pkgname = python-sdbus-notifications-git
+	pkgdesc = Freedesktop Notifications binds for python-sdbus
+	arch = any
+	depends = python-sdbus
+	provides = python-sdbus-notifications
+
+pkgname = python-sdbus-networkmanager-git
+	pkgdesc = NetworkManager binds for python-sdbus
+	arch = any
+	depends = python-sdbus
+	provides = python-sdbus-networkmanager
+
+pkgname = python-sdbus-secrets-git
+	pkgdesc = Freedesktop secrets binds for python-sdbus
+	arch = any
+	depends = python-sdbus
+	provides = python-sdbus-secrets

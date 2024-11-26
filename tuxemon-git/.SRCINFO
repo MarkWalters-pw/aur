@@ -1,0 +1,26 @@
+pkgbase = tuxemon-git
+	pkgdesc = A free, open source monster-fighting RPG.
+	pkgver = 0.4.33.r47.gee807080
+	pkgrel = 1
+	url = http://www.tuxemon.org
+	arch = any
+	groups = games
+	license = GPL3
+	makedepends = git
+	depends = python
+	depends = python-cbor
+	depends = python-pytmx
+	depends = python-neteria
+	depends = python-pyscroll
+	depends = python-babel
+	depends = python-lxml
+	depends = python-natsort
+	depends = python-pillow
+	depends = python-click
+	depends = python-prompt_toolkit
+	provides = tuxemon
+	conflicts = tuxemon
+	source = tuxemon-git::git+https://github.com/Tuxemon/Tuxemon.git#branch=development
+	sha256sums = SKIP
+
+pkgname = tuxemon-git

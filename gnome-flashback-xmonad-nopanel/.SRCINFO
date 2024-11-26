@@ -1,0 +1,23 @@
+pkgbase = gnome-flashback-xmonad-nopanel
+	pkgdesc = XMonad support for Gnome Flashback
+	pkgver = 0.2.2
+	pkgrel = 1
+	arch = any
+	license = GPL2
+	depends = gnome-flashback
+	optdepends = xmonad: some xmonad binary is required, you may place your own instead of relying on the package manager
+	provides = gnome-flashback-xmonad
+	conflicts = gnome-flashback-xmonad
+	replaces = gnome-flashback-xmonad
+	source = gnome-flashback-xmonad
+	source = gnome-flashback-xmonad.desktop
+	source = gnome-flashback-xmonad.session
+	source = session.conf
+	source = xmonad.desktop
+	sha256sums = ead1c94c4ed1ef2da76fed2793a57ac7a94e4743f8829f747eb2f8e5d4c1d13b
+	sha256sums = 34ef0f4664ebba1e9877be67df23506b74968327689bdca02dccd0ecf1b670f2
+	sha256sums = fdfe8bf784bd7f5806a693034f28702296c8a7cefab7f3e01af1a91c8d03bca2
+	sha256sums = 323c0f8b0c04d5580067816d2a23bf34c0818462181a7a08f29c4aba097ca111
+	sha256sums = 525f7e792f4bb545a7ec2da97da6e07960468fdff48f9a5f51699287511a64d9
+
+pkgname = gnome-flashback-xmonad-nopanel

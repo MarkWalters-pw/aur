@@ -1,0 +1,27 @@
+pkgbase = enigma_sdl
+	pkgdesc = Puzzle game inspired by Oxyd on the Atari ST and Rock'n'Roll on the Amiga.
+	pkgver = 1.30
+	pkgrel = 1
+	url = http://www.nongnu.org/enigma/
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = imagemagick
+	makedepends = pkgconf
+	depends = libpng
+	depends = sdl_image
+	depends = sdl_mixer
+	depends = sdl_ttf
+	depends = xerces-c
+	depends = xdg-utils
+	depends = curl
+	depends = hicolor-icon-theme
+	depends = sdl2_ttf
+	depends = sdl2_mixer
+	depends = sdl2_image
+	source = https://github.com/Enigma-Game/Enigma/releases/download/1.30/Enigma-1.30-src.tar.gz
+	source = fix_invalid_access.patch
+	sha256sums = ae64b91fbc2b10970071d0d78ed5b4ede9ee3868de2e6e9569546fc58437f8af
+	sha256sums = 61709cbf9fe420d062fb8b24e56a6165242626f4f211bf798ee90155a0208bb2
+
+pkgname = enigma_sdl

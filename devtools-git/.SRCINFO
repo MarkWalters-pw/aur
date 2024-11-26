@@ -1,0 +1,28 @@
+pkgbase = devtools-git
+	pkgdesc = Tools for Arch Linux package maintainers
+	pkgver = 1.0.3.r4.g5f4fd52
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/archlinux/devtools
+	arch = any
+	license = GPL
+	makedepends = asciidoc
+	makedepends = git
+	depends = bash
+	depends = openssh
+	depends = subversion
+	depends = rsync
+	depends = arch-install-scripts
+	depends = git
+	depends = bzr
+	depends = mercurial
+	depends = diffutils
+	depends = util-linux
+	depends = awk
+	optdepends = btrfs-progs: btrfs support
+	provides = devtools=1.0.3
+	conflicts = devtools
+	source = devtools-git::git+https://github.com/archlinux/devtools.git
+	sha512sums = SKIP
+
+pkgname = devtools-git

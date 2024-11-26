@@ -1,0 +1,26 @@
+pkgbase = pcompress-git
+	pkgdesc = Utility to do compression/decompression and deduplication in parallel by splitting input data into chunks.
+	pkgver = 3.1Bugfix.r75.gc6e779c
+	pkgrel = 1
+	epoch = 1
+	url = https://moinakg.github.io/pcompress/
+	arch = x86_64
+	license = LGPL3
+	makedepends = git
+	makedepends = yasm
+	depends = bzip2
+	depends = zlib
+	depends = openssl-1.0
+	options = !makeflags
+	source = git+https://github.com/moinakg/pcompress.git
+	source = http://wavpack.com/wavpack-4.70.0.tar.bz2
+	source = openssl.patch::https://github.com/moinakg/pcompress/pull/55.patch
+	source = gcc11.patch::https://github.com/moinakg/pcompress/pull/56.patch
+	source = advance_opts.patch
+	sha256sums = SKIP
+	sha256sums = 2cade379b0aba99fbc4e442ccc6dac6c609f6212e46516a083e24c8c364430a4
+	sha256sums = 6138cd04fe61ebfbe8f43ecf81a0f9e986a8ef4d2bffc474ee3622a33088699e
+	sha256sums = 4e246ab296ccdab436d66dc356b2e41700f334f4ccbe04c914eafd9c2dbaade6
+	sha256sums = 0dfbad3cb21260e90196ab6bda653480ae38cb01c35eef834242b5cff73eaccb
+
+pkgname = pcompress-git

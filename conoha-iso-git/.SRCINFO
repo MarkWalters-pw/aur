@@ -1,0 +1,15 @@
+pkgbase = conoha-iso-git
+	pkgdesc = ISO image management tool for ConoHa
+	pkgver = 0.4.4.r80.g0bf6cca
+	pkgrel = 1
+	url = https://github.com/hironobu-s/conoha-iso
+	arch = x86_64
+	license = MIT
+	makedepends = go
+	makedepends = git
+	provides = conoha-iso
+	conflicts = conoha-iso
+	source = git+https://github.com/hironobu-s/conoha-iso.git
+	md5sums = SKIP
+
+pkgname = conoha-iso-git

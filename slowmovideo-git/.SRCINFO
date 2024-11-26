@@ -1,0 +1,21 @@
+pkgbase = slowmovideo-git
+	pkgdesc = Video slow motion effect via interpolation
+	pkgver = 0.6.2.r0.g0787a45
+	pkgrel = 1
+	url = http://slowmovideo.granjow.net/index.html
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = cmake
+	makedepends = git
+	depends = opencv
+	depends = qt5-script
+	optdepends = v3d-flow-builder
+	provides = slowmovideo
+	conflicts = slowmovideo
+	source = git+https://github.com/slowmoVideo/slowmoVideo.git
+	source = git+https://github.com/slowmoVideo/libsvflow.git
+	md5sums = SKIP
+	md5sums = SKIP
+
+pkgname = slowmovideo-git

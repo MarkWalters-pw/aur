@@ -1,0 +1,142 @@
+--- src/wingpanel/src/PanelWindow.vala	2016-10-21 23:51:49.434036000 +0900
++++ src/wingpanel/src/PanelWindow.vala	2016-10-22 00:21:00.991151961 +0900
+@@ -86,7 +86,6 @@
+     private void on_realize () {
+         update_panel_dimensions ();
+ 
+-        Services.BackgroundManager.initialize (this.monitor_number, panel_height);
+ 
+         timeout = Timeout.add (100 / panel_height, animation_step);
+     }
+@@ -152,7 +152,6 @@
+ 
+     public void set_expanded (bool expanded) {
+         if (expand && !this.expanded) {
+-            Services.BackgroundManager.get_default ().remember_window ();
+ 
+             this.expanded = true;
+ 
+@@ -163,7 +163,6 @@
+ 
+             this.set_size_request (monitor_width, monitor_height);
+         } else if (!expand) {
+-            Services.BackgroundManager.get_default ().restore_window ();
+ 
+             this.expanded = false;
+ 
+--- src/wingpanel/src/Widgets/Panel.vala	2018-06-04 19:55:35.553769970 +0900
++++ src/wingpanel/src/Widgets/Panel.vala	2018-06-04 21:39:40.293996810 +0900
+@@ -25,7 +25,6 @@
+     private Gtk.MenuBar center_menubar;
+ 
+     private unowned Gtk.StyleContext style_context;
+-    private Gtk.CssProvider? style_provider = null;
+ 
+     private static Gtk.CssProvider resource_provider;
+ 
+@@ -82,39 +81,6 @@
+         style_context.add_class (StyleClass.PANEL);
+         style_context.add_provider (resource_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+ 
+-        Services.BackgroundManager.get_default ().background_state_changed.connect (update_background);
+-    }
+-
+-    public override bool button_press_event (Gdk.EventButton event) {
+-        if (event.button != Gdk.BUTTON_PRIMARY) {
+-            return Gdk.EVENT_PROPAGATE;
+-        }
+-
+-        var window = get_window ();
+-        if (window == null) {
+-            return Gdk.EVENT_PROPAGATE;
+-        }
+-
+-        // Grabbing with touchscreen on X does not work unfortunately
+-        if (event.device.get_source () == Gdk.InputSource.TOUCHSCREEN) {
+-            return Gdk.EVENT_PROPAGATE;
+-        }
+-
+-        uint32 time = event.time;
+-
+-        window.get_display ().get_default_seat ().ungrab ();
+-
+-        Gdk.ModifierType state;
+-        event.get_state (out state);
+-
+-        popover_manager.close ();
+-
+-        var scale_factor = this.get_scale_factor ();
+-        var x = (int)event.x_root * scale_factor;
+-        var y = (int)event.y_root * scale_factor;
+-
+-        var background_manager = Services.BackgroundManager.get_default ();
+-        return background_manager.begin_grab_focused_window (x, y, (int)event.button, time, state);
+     }
+ 
+     public void cycle (bool forward) {
+@@ -282,55 +248,4 @@
+         }
+     }
+ 
+-    private void update_background (Services.BackgroundState state, uint animation_duration) {
+-        if (style_provider == null) {
+-            style_provider = new Gtk.CssProvider ();
+-            style_context.add_provider (style_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+-        }
+-
+-        string css = """
+-            .panel {
+-                transition: all %ums ease-in-out;
+-            }
+-        """.printf (animation_duration);
+-
+-        try {
+-            style_provider.load_from_data (css, css.length);
+-        } catch (Error e) {
+-            warning ("Parsing own style configuration failed: %s", e.message);
+-        }
+-
+-        switch (state) {
+-            case Services.BackgroundState.DARK :
+-                style_context.add_class ("color-light");
+-                style_context.remove_class ("color-dark");
+-                style_context.remove_class ("maximized");
+-                style_context.remove_class ("translucent");
+-                break;
+-            case Services.BackgroundState.LIGHT:
+-                style_context.add_class ("color-dark");
+-                style_context.remove_class ("color-light");
+-                style_context.remove_class ("maximized");
+-                style_context.remove_class ("translucent");
+-                break;
+-            case Services.BackgroundState.MAXIMIZED:
+-                style_context.add_class ("maximized");
+-                style_context.remove_class ("color-light");
+-                style_context.remove_class ("color-dark");
+-                style_context.remove_class ("translucent");
+-                break;
+-            case Services.BackgroundState.TRANSLUCENT_DARK:
+-                style_context.add_class ("translucent");
+-                style_context.add_class ("color-light");
+-                style_context.remove_class ("color-dark");
+-                style_context.remove_class ("maximized");
+-                break;
+-            case Services.BackgroundState.TRANSLUCENT_LIGHT:
+-                style_context.add_class ("translucent");
+-                style_context.add_class ("color-dark");
+-                style_context.remove_class ("color-light");
+-                style_context.remove_class ("maximized");
+-                break;
+-        }
+-    }
+ }
+--- src/wingpanel/src/meson.build	2018-12-02 05:25:42.153643446 +0900
++++ src/wingpanel/src/meson.build	2018-12-02 05:27:27.293643581 +0900
+@@ -1,7 +1,6 @@
+     'PanelWindow.vala',
+     'SessionManager.vala',
+     'Application.vala',
+     'Utils.vala',
+-    'Services/BackgroundManager.vala',
+     'Services/IndicatorSorter.vala',
+     'Services/PopoverManager.vala',

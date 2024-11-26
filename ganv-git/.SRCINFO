@@ -1,0 +1,34 @@
+pkgbase = ganv-git
+	pkgdesc = An interactive Gtkmm canvas widget for graph-based interfaces (git version)
+	pkgver = 1.6.0.r354.662bcbc
+	pkgrel = 1
+	url = https://drobilla.net/software/ganv/
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = python
+	depends = atk
+	depends = cairo
+	depends = fontconfig
+	depends = gcc-libs
+	depends = gdk-pixbuf2
+	depends = glib2
+	depends = glibc
+	depends = glibmm
+	depends = graphviz
+	depends = gtk2
+	depends = gtkmm
+	depends = libfreetype.so
+	depends = pango
+	provides = ganv
+	provides = ganv=1.6.0
+	provides = libganv-1.so
+	conflicts = ganv
+	source = ganv::git+https://gitlab.com/drobilla/ganv.git
+	source = autowaf::git+https://gitlab.com/drobilla/autowaf.git
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = ganv-git
+

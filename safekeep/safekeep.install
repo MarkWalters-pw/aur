@@ -1,0 +1,39 @@
+post_install() {
+  cat << _EOF
+
+	NOTE: You will have to manually take care of a number of
+	steps such as installing the cron job script, creating the
+	safekeep user, and generating and deploying ssh keys on
+	the backup server machine.
+
+	To create a new user called "safekeep," issue:
+		useradd -g users -m -d /var/lib/safekeep -s /sbin/nologin
+			-c "Used by SafeKeep to run and store backups." safekeep 
+
+	To install the cron job script, issue:
+		cp /usr/share/safekeep/safekeep.cron /etc/cron.daily/safekeep
+	
+	Please see the following link for a quick setup example:
+		http://safekeep.sourceforge.net/documentation.shtml
+
+_EOF
+}
+
+post_remove() {
+  cat << _EOF
+
+	NOTE: You will have to manually take care of a number of
+	steps such as removing the cron job script, removing the
+	safekeep user and group, and removing ssh keys.
+
+	To remove the user called "safekeep," issue:
+		userdel -r safekeep
+
+	To remove the user called "safekeep," issue:
+		groupdel safekeep
+		
+	To remove the cron job script, issue:
+		rm /etc/cron.daily/safekeep
+
+_EOF
+}

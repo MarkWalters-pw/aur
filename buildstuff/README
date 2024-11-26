@@ -1,0 +1,37 @@
+IF YOU ARE IN A HURRY
+=====================
+
+From a directory that contains a PKGBUILD, run:
+
+	arch.build i686
+
+This will build the package for the given architecture. You may also
+append a list of repositories to use on top of [core], [extra], and
+[community], for instance:
+
+	arch.build x86_64 testing multilib-testing multilib
+
+
+FOR BETTER PERFORMANCE
+======================
+
+Enable hardware virtualization.
+
+Make /tmp a tmpfs. (This is where the copy-on-write drive is stored.)
+
+Use a fast package mirror, ideally a caching proxy on your local network.
+Entries from /etc/pacman.d/mirrorlist are used as-is except that 127.0.0.1 gets
+translated to 10.0.2.2 which is the host address from the qemu guest viewpoint.
+
+
+REQUIREMENTS FOR ARCH.INSTALL
+=============================
+
+The arch.install script creates an Arch Linux disk image which:
+- has [base] and [base-devel] installed
+- has a "user" user able to sudo at will
+- boots unattended with networking enabled
+- runs an SSH daemon accepting the host user's keys
+
+Once created, this disk image is read-only most of the time: the virtual
+machines created in arch.build use copy-on-write on top of it.

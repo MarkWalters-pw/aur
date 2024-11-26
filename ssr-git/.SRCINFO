@@ -1,0 +1,26 @@
+pkgbase = ssr-git
+	pkgdesc = A tool for real-time spatial audio reproduction providing a variety of rendering algorithms, e.g. Wave Field Synthesis, Higher-Order Ambisonics and binaural techniques.
+	pkgver = 0.4.2.r78.g989568c
+	pkgrel = 7
+	url = http://spatialaudio.net/ssr/
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = help2man
+	depends = asio
+	depends = ecasound
+	depends = fftw
+	depends = glu
+	depends = jack
+	depends = libsndfile
+	depends = libxml2
+	depends = qt4
+	provides = ssr
+	conflicts = ssr
+	source = git+https://github.com/SoundScapeRenderer/ssr
+	source = ssr-ip-interface-gcc7.patch
+	sha512sums = SKIP
+	sha512sums = a3dea2ed58729b181e2f6a7fdece3ed5dd80eba06fcafadc78778cd11842079792b2bbf7e695c135d605ac31bb98634dd24a818d861011820c0d74ecf49112ae
+
+pkgname = ssr-git
+

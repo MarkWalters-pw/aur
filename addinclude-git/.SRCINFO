@@ -1,0 +1,16 @@
+pkgbase = addinclude-git
+	pkgdesc = Add include statements to header and sourcefiles, for C and C++
+	pkgver = 1.2.0
+	pkgrel = 1
+	url = https://github.com/xyproto/addinclude
+	arch = x86_64
+	license = GPL2
+	makedepends = go
+	makedepends = git
+	provides = addinclude
+	conflicts = addinclude
+	source = addinclude::git+https://github.com/xyproto/addinclude.git#branch=main
+	md5sums = SKIP
+	sha256sums = SKIP
+
+pkgname = addinclude-git

@@ -1,0 +1,21 @@
+pkgbase = python-torchvision-git
+	pkgdesc = Datasets, Transforms and Models specific to Computer Vision
+	pkgver = 0.2.1.r62.g8bd05e6
+	pkgrel = 1
+	url = https://github.com/pytorch/vision
+	arch = any
+	license = BSD
+	makedepends = python-setuptools
+	depends = python
+	depends = python-numpy
+	depends = python-pillow
+	depends = python-six
+	depends = python-pytorch
+	depends = python-tqdm
+	provides = python-torchvision
+	conflicts = python-torchvision
+	source = git+https://github.com/pytorch/vision
+	sha256sums = SKIP
+
+pkgname = python-torchvision-git
+

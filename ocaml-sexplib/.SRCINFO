@@ -1,0 +1,20 @@
+pkgbase = ocaml-sexplib
+	pkgdesc = Library for serializing OCaml values to and from S-expressions
+	pkgver = 0.17.0
+	pkgrel = 2
+	epoch = 1
+	url = https://github.com/janestreet/sexplib
+	arch = x86_64
+	arch = aarch64
+	license = MIT
+	license = BSD-3-Clause
+	makedepends = dune>=3.11.0
+	depends = ocaml>=5.1.0
+	depends = ocaml-parsexp>=0.17.0
+	depends = ocaml-sexplib0>=0.17.0
+	depends = ocaml-num
+	options = !strip
+	source = ocaml-sexplib-0.17.0.tar.gz::https://github.com/janestreet/sexplib/archive/v0.17.0.tar.gz
+	b2sums = feff6594ce144e1f25efec60009874210e71ba19fff5edffe46e25510a73a235ce28333888c2bc6839c5cffb901a70b2463853b4ca02cf93d89aaa6a15f154b7
+
+pkgname = ocaml-sexplib

@@ -1,0 +1,27 @@
+pkgbase = pritunl-git
+	pkgdesc = Enterprise VPN Server
+	pkgver = 1.32.3602.80
+	pkgrel = 1
+	url = https://github.com/pritunl/pritunl
+	install = pritunl.install
+	arch = x86_64
+	license = custom
+	makedepends = git
+	makedepends = python-setuptools
+	makedepends = python-virtualenv
+	makedepends = python-pip
+	optdepends = mongodb
+	provides = pritunl
+	conflicts = pritunl
+	options = emptydirs
+	backup = etc/pritunl.conf
+	source = git+https://github.com/pritunl/pritunl
+	sha256sums = SKIP
+
+pkgname = pritunl-git
+	depends = pritunl-dns
+	depends = pritunl-web
+	depends = python3
+	depends = net-tools
+	depends = iproute2
+	depends = openvpn

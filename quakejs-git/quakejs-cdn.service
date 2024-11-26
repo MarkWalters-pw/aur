@@ -1,0 +1,18 @@
+Unit]
+Description=QuakeJS content server
+After=network.target
+
+[Service]
+User=quakejs
+Type=simple
+ExecStart=/usr/bin/node bin/content.js
+WorkingDirectory=/usr/share/webapps/quakejs
+LimitNOFILE=1048576
+LimitNPROC=64
+PrivateTmp=true
+PrivateDevices=true
+ProtectHome=true
+ProtectSystem=strict
+
+[Install]
+WantedBy=multi-user.target

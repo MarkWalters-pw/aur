@@ -1,0 +1,19 @@
+pkgbase = liri-wallpapers-git
+	pkgdesc = Wallpapers for Liri OS
+	pkgver = v0.10.0.r43.ge06adbb
+	pkgrel = 1
+	url = https://liri.io
+	arch = any
+	groups = liri-git
+	license = CCPL
+	makedepends = git
+	makedepends = liri-cmake-shared-git
+	provides = liri-wallpapers
+	conflicts = hawaii-wallpapers-git
+	conflicts = liri-wallpapers
+	replaces = hawaii-wallpapers-git
+	replaces = liri-wallpapers
+	source = wallpapers::git+https://github.com/lirios/wallpapers.git#branch=develop
+	md5sums = SKIP
+
+pkgname = liri-wallpapers-git

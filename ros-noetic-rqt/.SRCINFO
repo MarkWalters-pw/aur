@@ -1,0 +1,22 @@
+pkgbase = ros-noetic-rqt
+	pkgdesc = ROS - rqt is a Qt-based framework for GUI development for ROS.
+	pkgver = 0.5.0
+	pkgrel = 4
+	url = https://wiki.ros.org/rqt
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-catkin
+	depends = ros-noetic-rqt-gui-cpp
+	depends = ros-noetic-rqt-gui-py
+	depends = ros-noetic-rqt-gui
+	source = ros-noetic-rqt-0.5.0.tar.gz::https://github.com/ros-visualization/rqt/archive/0.5.0.tar.gz
+	sha256sums = 3f62f90db254e111483b9a7cb9d486d0bf07c863b2a987808dc3636ee7004c22
+
+pkgname = ros-noetic-rqt
+

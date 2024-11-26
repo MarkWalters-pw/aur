@@ -1,0 +1,17 @@
+pkgbase = habito
+	pkgdesc = Simple commandline habits tracker.
+	pkgver = 1.1.0
+	pkgrel = 1
+	url = https://github.com/codito/habito
+	arch = any
+	license = MIT
+	makedepends = python-setuptools
+	depends = python>=3.5
+	depends = python-click
+	depends = python-peewee>=3.0.15
+	depends = python-terminaltables
+	provides = habito
+	source = habito-1.1.0.tar.gz::https://github.com/codito/habito/archive/v1.1.0.tar.gz
+	sha512sums = 78c39e1f18c8e0459001e6d7158886e403fc193c8c574063136df6e450e3308aeac4d4f70d57f4088caaaedf1be36717daec3dfab1feb89efb81708cf47c3ebd
+
+pkgname = habito

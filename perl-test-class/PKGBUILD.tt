@@ -1,0 +1,46 @@
+# CPAN Name  : Test::Class
+# Contributor: [% packager %]
+# Generator  : CPANPLUS::Dist::Arch [% version %]
+
+pkgname=[% pkgname %]
+pkgver=[% pkgver %]
+pkgrel=[% pkgrel %]
+pkgdesc='Perl module to easily create test classes in an xUnit/JUnit style'
+arch=('any')
+url='[% url %]'
+license=('GPL')
+options=(!emptydirs)
+depends=(
+	'perl-attribute-handlers>=0.77'
+	'perl-mro-compat>=0.11'
+	'perl-try-tiny'
+	'perl-module-runtime')
+checkdepends=(
+	'perl-test-exception>=0.25')
+source=([% source %])
+md5sums=('[% md5sums %]')
+
+sanitize() {
+	unset PERL5LIB PERL_MM_OPT PERL_MB_OPT PERL_LOCAL_LIB_ROOT
+	export PERL_MM_USE_DEFAULT=1 PERL_AUTOINSTALL="--skipdeps" MODULEBUILDRC=/dev/null
+}
+
+build() {
+	cd [% distdir %]
+	sanitize
+	/usr/bin/perl Makefile.PL INSTALLDIRS=vendor
+	make
+}
+
+check() {
+	cd [% distdir %]
+	sanitize
+	make test
+}
+
+package() {
+	cd [% distdir %]
+	sanitize
+	make install DESTDIR="$pkgdir"
+	find "$pkgdir" \( -name .packlist -o -name perllocal.pod \) -delete
+}

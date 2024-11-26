@@ -1,0 +1,10 @@
+[Unit]
+Description=Stair Speedtest Web service
+
+[Service]
+User=root
+Type=simple
+ExecStart=/opt/stairspeedtest/webserver.sh
+
+[Install]
+WantedBy=multi-user.target

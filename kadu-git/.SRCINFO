@@ -1,0 +1,33 @@
+pkgbase = kadu-git
+	pkgdesc = Qt-based Jabber/XMPP and Gadu-Gadu client
+	pkgver = 20240330
+	pkgrel = 2
+	url = https://github.com/piotr-wrobel/kadu
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = cmake
+	makedepends = qt5-tools
+	depends = enchant
+	depends = boost
+	depends = hicolor-icon-theme
+	depends = injeqt
+	depends = libarchive
+	depends = libgadu
+	depends = libmpdclient
+	depends = libotr
+	depends = libxss
+	depends = qt5-multimedia
+	depends = qt5-script
+	depends = qt5-svg
+	depends = qt5-webkit
+	depends = qt5-x11extras
+	depends = qt5-xmlpatterns
+	depends = qxmpp-qt5
+	provides = kadu
+	conflicts = kadu
+	options = !emptydirs
+	source = kadu-git::git+https://github.com/piotr-wrobel/kadu.git#commit=7338f16
+	sha256sums = SKIP
+
+pkgname = kadu-git

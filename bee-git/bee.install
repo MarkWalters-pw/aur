@@ -1,0 +1,37 @@
+#!/bin/sh
+
+pre_install() {
+	if ! id -u bee > /dev/null 2>&1; then
+		useradd --no-create-home --system bee > /dev/null
+	fi
+	mkdir -p /etc/bee /var/lib/bee
+}
+
+post_install() {
+	chown -R bee:bee /var/lib/bee /etc/bee
+	(cd /etc/bee && sudo -u bee sh -c 'bee p2p-identity > id' && chmod 600 id && rm error.log)
+	
+	printf	"######################################################################################\
+		\n# Don't forget to add your identity to /etc/bee/config.toml, if you don't have one   #\
+		\n# the installer generated an ID in /etc/bee/id, otherwise the systemd unit will fail #\
+		\n######################################################################################\n"
+}
+
+post_upgrade () {
+	chown -R bee:bee /var/lib/bee /etc/bee
+
+	printf  "#######################################################################################\
+		\n# Please diff your config in /etc/bee/config.toml with the new one provided by the    #\
+		\n# package in /etc/bee/config.toml.pacnew for any changes made upstream as the upgrade #\
+		\n# process doesn't touch your existing configuration.                                  #\
+		\n#######################################################################################\n"
+}
+
+pre_remove() {
+	systemctl stop bee.service
+}
+
+post_remove() {
+	userdel bee > /dev/null
+}
+

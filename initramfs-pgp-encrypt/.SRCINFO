@@ -1,0 +1,14 @@
+pkgbase = initramfs-pgp-encrypt
+	pkgdesc = initramfs hook that adds PGP smartcard and Dvorak support while keeping regular LUKS support
+	pkgver = 1.0
+	pkgrel = 1
+	install = initramfs-pgp-encrypt.install
+	arch = any
+	license = AGPL-3.0
+	depends = gnupg
+	source = pgp-encrypt-hook
+	source = pgp-encrypt-install
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = initramfs-pgp-encrypt

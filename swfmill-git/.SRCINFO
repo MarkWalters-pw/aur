@@ -1,0 +1,18 @@
+pkgbase = swfmill-git
+	pkgdesc = xml2swf and swf2xml processor with import functionalities
+	pkgver = r543.53d7690
+	pkgrel = 1
+	url = http://swfmill.org
+	arch = i686
+	arch = x86_64
+	license = GPL
+	depends = libxslt
+	depends = freetype2
+	depends = libpng
+	provides = swfmill
+	conflicts = swfmill
+	source = git+https://github.com/djcsdy/swfmill
+	md5sums = SKIP
+
+pkgname = swfmill-git
+

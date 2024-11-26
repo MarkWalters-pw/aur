@@ -1,0 +1,24 @@
+pkgbase = ros-noetic-tf2-geometry-msgs
+	pkgdesc = ROS - tf2_geometry_msgs.
+	pkgver = 0.7.6
+	pkgrel = 1
+	url = https://wiki.ros.org/tf2_ros
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-tf2
+	makedepends = ros-noetic-catkin
+	makedepends = ros-noetic-tf2-ros
+	makedepends = ros-noetic-geometry-msgs
+	makedepends = orocos-kdl
+	makedepends = orocos-kdl-python
+	depends = ros-noetic-tf2
+	depends = ros-noetic-tf2-ros
+	depends = ros-noetic-geometry-msgs
+	depends = orocos-kdl
+	depends = orocos-kdl-python
+	source = ros-noetic-tf2-geometry-msgs-0.7.6.tar.gz::https://github.com/ros/geometry2/archive/0.7.6.tar.gz
+	sha256sums = cd6014745564bc9fc926999820a22742058a3a0bafd4b71795324026d4491db3
+
+pkgname = ros-noetic-tf2-geometry-msgs

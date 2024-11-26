@@ -1,0 +1,17 @@
+pkgbase = pkgbuild-version-updater
+	pkgdesc = This script allows you to automatic update a large nummner of PKGBUILD files and push them to the aur, if only the pkgver and the checksum has been changed. As example this is very useful for gog games with many DLCs.
+	pkgver = 1.0.1
+	pkgrel = 2
+	url = https://gitlab.com/Lukas1818/pkgbuild-version-updater
+	arch = x86_64
+	license = LGPL3
+	depends = git
+	depends = coreutils
+	depends = pacman
+	depends = bash
+	depends = openssh
+	source = https://gitlab.com/Lukas1818/pkgbuild-version-updater/-/archive/1.0.1/pkgbuild-version-updater-1.0.1.tar.gz
+	sha512sums = c51cc6866c3bcdd280ed4236ebebd4f8bd3cdcbbb428d0d75b54f807a022b430045adeca0178b9330c61938bb83db2b1ae5f51b883750b8339ef71c2f9fccddf
+
+pkgname = pkgbuild-version-updater
+

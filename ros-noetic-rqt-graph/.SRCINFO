@@ -1,0 +1,27 @@
+pkgbase = ros-noetic-rqt-graph
+	pkgdesc = ROS - rqt_graph provides a GUI plugin for visualizing the ROS computation graph.
+	pkgver = 0.4.14
+	pkgrel = 1
+	url = https://wiki.ros.org/rqt_graph
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-catkin
+	depends = ros-noetic-rqt-gui-py
+	depends = ros-noetic-rosservice
+	depends = ros-noetic-rqt-gui
+	depends = ros-noetic-rosnode
+	depends = ros-noetic-rosgraph-msgs
+	depends = ros-noetic-rostopic
+	depends = ros-noetic-rosgraph
+	depends = ros-noetic-python-qt-binding
+	depends = ros-noetic-qt-dotgraph
+	depends = ros-noetic-rospy
+	depends = ros-noetic-roslib
+	depends = python-rospkg
+	source = ros-noetic-rqt-graph-0.4.14.tar.gz::https://github.com/ros-visualization/rqt_graph/archive/0.4.14.tar.gz
+	sha256sums = 2b5f6440cb826362043a35ac561151033688560bfe1b84fb2dd2533424b017bc
+
+pkgname = ros-noetic-rqt-graph
+

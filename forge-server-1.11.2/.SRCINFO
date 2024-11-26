@@ -1,0 +1,44 @@
+pkgbase = forge-server-1.11.2
+	pkgdesc = Minecraft Forge server unit files, script and jar
+	pkgver = 1.11.2_13.20.1.2386
+	pkgrel = 12
+	url = https://minecraftforge.net
+	install = forge-server.install
+	arch = any
+	license = custom
+	depends = java-runtime-headless=8
+	depends = screen
+	depends = sudo
+	depends = bash
+	depends = awk
+	depends = sed
+	optdepends = tar: needed in order to create world backups
+	optdepends = netcat: required in order to suspend an idle server
+	provides = forge-server=1.11.2_13.20.1.2386
+	noextract = forge-1.11.2-13.20.1.2386.jar
+	backup = etc/conf.d/forge-1.11.2
+	source = forged-backup.service
+	source = forged-backup.timer
+	source = forged.service
+	source = forged.conf
+	source = forged.sh
+	source = forge-1.11.2-13.20.1.2386-installer.jar::https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.11.2-13.20.1.2386/forge-1.11.2-13.20.1.2386-installer.jar
+	source = MinecraftForge-License-forge-server-1.11.2-1.11.2-13.20.1.2386.txt::https://raw.githubusercontent.com/MinecraftForge/MinecraftForge/1.11.x/MinecraftForge-License.txt
+	source = Paulscode%20IBXM%20Library%20License-forge-server-1.11.2-1.11.2-13.20.1.2386.txt::https://raw.githubusercontent.com/MinecraftForge/MinecraftForge/1.11.x/Paulscode%20IBXM%20Library%20License.txt
+	source = Paulscode%20SoundSystem%20CodecIBXM%20License-forge-server-1.11.2-1.11.2-13.20.1.2386.txt::https://raw.githubusercontent.com/MinecraftForge/MinecraftForge/1.11.x/Paulscode%20SoundSystem%20CodecIBXM%20License.txt
+	source = LICENSE-fml-forge-server-1.11.2-1.11.2-13.20.1.2386.txt::https://raw.githubusercontent.com/MinecraftForge/MinecraftForge/1.11.x/LICENSE-fml.txt
+	source = LICENSE-new-forge-server-1.11.2-1.11.2-13.20.1.2386.txt::https://raw.githubusercontent.com/MinecraftForge/MinecraftForge/1.11.x/LICENSE-new.txt
+	sha512sums = 9a0fc13387a50315693963ffbf7879b23bf489db36a8ddf073f4943bba2cfd23d7c9f64d851036e8fd9ff43a75410b1225109ad585c81541efc90f61ae6e1c2b
+	sha512sums = 4a1ddf0bfb98fc7759cf281abb026aefb197267d72f9fc8d25dba48c964f7060216ebdca2cb3a9de021f41d9f8efb057cee061a41af003f7919c925350e6da7f
+	sha512sums = 652d954918eeed849268b1b96abffafac531ccd033674905620f566459a8454bdf41092201d92b8298ba740ecafa60a199007e0ac37bb7c8cd70cfd3114c432a
+	sha512sums = 8c36eeabc6159bf517ef586af5e668e8ae1e69c27e6e3719903b68310ea582e3e2315f9e3426c742e101732f08250068795f9993122af5a0a1f89348845d0298
+	sha512sums = fb9e915db0dbce1eb94feccb897c61fa38f4b57648ac59534c8a5031647b7cfb557a4830008b7a9ffa530c9af9deb356dda6b612e84ba2a0cec5e1bceb50e4c4
+	sha512sums = 4eef89201fb6f8662912a5ceb3cfaa0c68da6ca874e403b02f40afa7132f48c339815b987dc190903e4053531957c009f46d388b88083f54f349a3dd6ad26b42
+	sha512sums = dedd8e121e79bdd39c824a2d4acbc231ae6339cfd29894c4e7299359d23bc92423f4a865865372745be996b0bc14f5777e06baae8b1f4e5c302eadeac5aecf15
+	sha512sums = 7f158bed6957e5285ce45a480f6a222065af5427bd48481ef24eb770ff540aa67b2d1c1ed976d216db94323017f7c7ee1dfe16e3f222b14189f9823e0b49f0f3
+	sha512sums = 2c9bdefe7d022be139e7aec2e5f1cc1f83ea9d35d2c945e26422e140027b5107ce32c56f0b97e7dbf6b6edb282075df4a18c156a6ed6b064bcb10a3b4481a9aa
+	sha512sums = 07860198b7d40726e9597f9ac748904a8e27bdcf87151f0b1c8c2ade024ad16aa83d412b70f900a7de3f58773f325ee45eb6c30cb1395e45a4d8092a19b4f845
+	sha512sums = 7fe8163f3f1bb86e59508aff851eb571e280da36c24a6faf49ae51d6a000282bac8c388ac1c0c1208220b3f8fb62466285a306213f5a014faa1b619f4c48bf9b
+
+pkgname = forge-server-1.11.2
+

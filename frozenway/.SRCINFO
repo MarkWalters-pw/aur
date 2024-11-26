@@ -1,0 +1,22 @@
+pkgbase = frozenway
+	pkgdesc = A project that gives those involved the ability to pass through any firewall or proxy
+	pkgver = 1.6.7
+	pkgrel = 1
+	url = http://www.frozendo.com/frozenway
+	arch = x86_64
+	license = custom
+	depends = openssl
+	depends = lzo
+	depends = qt4
+	depends = net-tools
+	backup = opt/frozenway/etc/auth.key
+	backup = opt/frozenway/etc/frozenway.crt
+	source = frozenway.desktop
+	source = frozenway.png
+	source = frozenway-1.6.7-x86_64.tar.gz::http://www.frozendo.com/frozenway/download/linux-x86_64/1.6.7
+	sha512sums = c2d456ea7acbd830f0e9315a4b2f7782b966706ad3d9b89e5ab4363c595c8b54773c0a2138abadec94db75659797521b3b4e97509abfc68b0c8db31065aa5b9e
+	sha512sums = 6d7f694eb31bfda193dc4d33ad1e40fec1af0a64988358e7a26f1e80fd201275f0b357d8b7cecaa7961bb6d66502973d31cec7ec43bad2c59982cd8a21a0c09e
+	sha512sums = 72836acd2b569a34345b7b2789aa75d60eac46956a4e4d68b66f9e344dbe4677ed28b647edff0c0af940159b97eac310cb04a0880869fcf4cb0655860a8d2077
+
+pkgname = frozenway
+

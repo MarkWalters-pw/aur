@@ -1,0 +1,21 @@
+pkgbase = clutter-git
+	pkgdesc = A toolkit for creating fast, portable, compelling dynamic UIs
+	pkgver = 1.26.2.r81.g3e3901c0a
+	pkgrel = 1
+	url = http://clutter-project.org/
+	arch = i686
+	arch = x86_64
+	license = LGPL
+	makedepends = git
+	makedepends = gobject-introspection
+	makedepends = gtk-doc
+	depends = gtk3
+	depends = cogl
+	depends = libinput
+	provides = clutter=1.26.2.r81.g3e3901c0a
+	conflicts = clutter
+	source = git+https://gitlab.gnome.org/GNOME/clutter.git
+	md5sums = SKIP
+
+pkgname = clutter-git
+

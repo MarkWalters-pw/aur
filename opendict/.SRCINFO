@@ -1,0 +1,19 @@
+pkgbase = opendict
+	pkgdesc = Multiplatform computer dictionary software
+	pkgver = 0.6.8
+	pkgrel = 3
+	url = http://opendict.sourceforge.net/
+	arch = any
+	license = GPL
+	depends = python-wxpython
+	depends = xdg-utils
+	depends = desktop-file-utils
+	depends = gtk-update-icon-cache
+	source = opendict-0.6.8.tar.gz::https://github.com/nerijus/opendict/archive/0.6.8.tar.gz
+	source = opendict-python3.diff::https://github.com/nerijus/opendict/commit/49021ad558733189d33789200748f0007fc67b9f.diff
+	source = opendict-python3-2.diff::https://github.com/nerijus/opendict/commit/27b7f8e752f31b16ef4cbd11110bdf14bfae470e.diff
+	md5sums = 0802d2b1b05ac477339084f3cdda6b3f
+	md5sums = 06b2b3bac041bdf4cb56e4a84f632500
+	md5sums = b6d2371ef426ce68359011aed67967ec
+
+pkgname = opendict

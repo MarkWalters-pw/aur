@@ -1,0 +1,21 @@
+pkgbase = ydcv-rs-git
+	pkgdesc = A Rust version of ydcv.
+	pkgver = 0.6.1.203
+	pkgrel = 2
+	url = https://github.com/farseerfc/ydcv-rs
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	makedepends = cargo
+	makedepends = python
+	depends = openssl
+	depends = libdbus
+	depends = libxcb
+	provides = ydcv
+	conflicts = ydcv
+	options = !lto
+	source = git+https://github.com/farseerfc/ydcv-rs.git
+	sha256sums = SKIP
+
+pkgname = ydcv-rs-git

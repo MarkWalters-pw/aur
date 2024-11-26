@@ -1,0 +1,31 @@
+pkgbase = easybuild-framework-git
+	pkgdesc = A software build and installation framework for HPC systems (development)
+	pkgver = 4.8.2.r41.ga2eaf2365
+	pkgrel = 2
+	url = https://github.com/easybuilders
+	arch = any
+	license = GPL2
+	makedepends = git
+	depends = python
+	depends = env-modules
+	depends = python-setuptools
+	depends = python-distro
+	depends = python-yaml
+	depends = python-configobj
+	depends = python-packaging
+	depends = python-humanfriendly
+	depends = python-requests
+	optdepends = lmod: another module management tool
+	optdepends = fpm: Generate packages of your modules to be installed later
+	optdepends = easybuild-easyconfigs: collection of build parameters
+	optdepends = easybuild-easyblocks: collection of module recipes
+	optdepends = python-gitpython: for using Git with EasyBuild
+	optdepends = graphviz: for building nice looking dependency graphs
+	optdepends = python-keyring: for handling authentication with GitHub
+	optdepends = python-rich: lets EasyBuild show rich-output, i.e. nice progress bars
+	provides = easybuild-framework
+	conflicts = easybuild-framework
+	source = git+https://github.com/easybuilders/easybuild-framework.git#branch=develop
+	md5sums = SKIP
+
+pkgname = easybuild-framework-git

@@ -1,0 +1,20 @@
+pkgbase = nntpit-git
+	pkgdesc = A simple reddit2nntp gateway server that lets you use a newsreader to follow discussions on reddit.
+	pkgver = r45.9076121
+	pkgrel = 1
+	url = https://github.com/taviso/nntpit
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	depends = curl
+	depends = json-c
+	depends = glib2
+	depends = libev
+	conflicts = nntpit
+	replaces = nntpit
+	source = nntpit::git+https://github.com/taviso/nntpit
+	source = LICENSE-r45.9076121::https://github.com/taviso/nntpit/raw/main/LICENSE
+	sha256sums = SKIP
+	sha256sums = 8535fefdac77bd012a69fab8402b016daa4827498863fa2d8dbaebe1caa0ae12
+
+pkgname = nntpit-git

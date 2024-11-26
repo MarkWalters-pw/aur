@@ -1,0 +1,20 @@
+pkgbase = jnethack
+	pkgdesc = Japanized Nethack, A single player dungeon exploration game
+	pkgver = 3.6.6_0.2
+	pkgrel = 1
+	url = http://jnethack.osdn.jp/
+	install = jnethack.install
+	arch = i686
+	arch = x86_64
+	license = custom
+	makedepends = bzip2
+	makedepends = nkf
+	depends = ncurses
+	depends = gzip
+	options = !makeflags
+	source = https://osdn.net/dl/jnethack/nethack-366-src.tgz
+	source = https://osdn.net/projects/jnethack/downloads/74756/jnethack-3.6.6-0.2.diff.gz
+	md5sums = 6c9a75f556d24c66801d74d8727a602e
+	md5sums = 1f6e19b44a4cee04a7ebda275b1ea90a
+
+pkgname = jnethack

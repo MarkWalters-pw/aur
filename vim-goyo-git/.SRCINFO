@@ -1,0 +1,20 @@
+pkgbase = vim-goyo-git
+	pkgdesc = Distraction-free writing in Vim
+	pkgver = 1.6.0.r37.ga865dec
+	pkgrel = 4
+	url = https://github.com/junegunn/goyo.vim
+	arch = any
+	groups = vim-plugins
+	license = MIT
+	makedepends = git
+	depends = vim-plugin-runtime
+	optdepends = vim-limelight
+	provides = vim-goyo
+	conflicts = vim-goyo
+	source = vim-goyo-git::git+https://github.com/junegunn/goyo.vim
+	source = LICENSE
+	sha256sums = SKIP
+	sha256sums = 766b8d101c8d237f236e8727f0ee9c04efffb12316e084cf6340bb11ce112ccf
+
+pkgname = vim-goyo-git
+

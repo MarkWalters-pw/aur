@@ -1,0 +1,14 @@
+pkgbase = pluto-sat-code-git
+	pkgdesc = Code for the SGP4/SDP4 satellite motion model, and for manipulating TLEs (Two-Line Elements)
+	pkgver = r299.3db65bb
+	pkgrel = 1
+	url = http://www.projectpluto.com/sat_code.htm
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = pluto-lunar
+	provides = pluto-sat-code
+	source = git+https://github.com/Bill-Gray/sat_code.git
+	sha512sums = SKIP
+
+pkgname = pluto-sat-code-git

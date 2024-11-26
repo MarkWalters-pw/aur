@@ -1,0 +1,18 @@
+pkgbase = snmpsim
+	pkgdesc = A SNMP simulator
+	pkgver = 0.4.7
+	pkgrel = 1
+	url = https://github.com/etingof/snmpsim
+	arch = any
+	license = BSD
+	makedepends = python-setuptools
+	depends = python
+	depends = python-pysnmp
+	depends = python-pyasn1
+	depends = python-pycryptodome
+	options = !emptydirs
+	source = snmpsim-0.4.7.tar.gz::https://github.com/etingof/snmpsim/archive/v0.4.7.tar.gz
+	sha256sums = 6a27013abcea789886b44f02d3bd963a62537f2f6cae4d8c6d7351cec86d0d47
+
+pkgname = snmpsim
+

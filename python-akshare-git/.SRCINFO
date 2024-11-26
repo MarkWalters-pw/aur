@@ -1,0 +1,36 @@
+pkgbase = python-akshare-git
+	pkgdesc = Financial data interface library
+	pkgver = 1.4.50.r45.g27d1bdea
+	pkgrel = 1
+	url = https://www.akshare.xyz
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = python-setuptools
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = python-beautifulsoup4
+	depends = python-lxml
+	depends = python-matplotlib
+	depends = python-numpy
+	depends = python-pandas
+	depends = python-requests
+	depends = python-urllib3
+	depends = python-pillow
+	depends = python-pinyin
+	depends = python-websocket-client
+	depends = python-html5lib
+	depends = python-tqdm
+	depends = python-xlrd
+	depends = python-openpyxl
+	depends = python-jsonpath-ng
+	depends = python-tabulate
+	depends = python-decorator
+	depends = python-pyminiracer
+	provides = python-akshare=1.4.50
+	conflicts = python-akshare
+	source = python-akshare-git::git+https://github.com/akfamily/akshare
+	sha256sums = SKIP
+
+pkgname = python-akshare-git

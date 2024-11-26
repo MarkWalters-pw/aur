@@ -1,0 +1,7 @@
+#!/bin/sh
+[ -r conf ] && . ./conf
+[ -f /run/nldev.pid ] && {
+    kill $(cat /run/nldev.pid)
+    rm /run/nldev.pid
+}
+exec nldev -k $optargs 2>&1

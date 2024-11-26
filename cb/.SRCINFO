@@ -1,0 +1,20 @@
+pkgbase = cb
+	pkgdesc = Command line interface to manage clipboard
+	pkgver = 0.1.0
+	pkgrel = 4
+	url = https://github.com/yaa110/cb
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = rust
+	makedepends = python3
+	depends = gcc-libs
+	depends = libxcb
+	provides = cb
+	conflicts = cb-git
+	conflicts = cb-bin
+	source = 0.1.0.tar.gz::https://github.com/yaa110/cb/archive/0.1.0.tar.gz
+	sha512sums = 7cd81941d8313d4c195c5104e16c2e61c4cef654cdacef7ffec112690f53c7e937708da8456755e4926ae38526648a4a097d96398e8be54f66834fafc09a20e1
+
+pkgname = cb
+

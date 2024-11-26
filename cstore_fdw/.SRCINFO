@@ -1,0 +1,16 @@
+pkgbase = cstore_fdw
+	pkgdesc = Columnar store for analytics with PostgreSQL
+	pkgver = 1.7.0
+	pkgrel = 1
+	url = https://citusdata.github.io/cstore_fdw/
+	arch = i686
+	arch = x86_64
+	license = Apache
+	depends = protobuf-c
+	depends = postgresql>=9.3,
+	depends = postgresql<13
+	source = https://github.com/citusdata/cstore_fdw/archive/v1.7.0.tar.gz
+	sha256sums = bd8a06654b483d27b48d8196cf6baac0c7828b431b49ac097923ac0c54a1c38c
+
+pkgname = cstore_fdw
+

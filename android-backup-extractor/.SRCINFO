@@ -1,0 +1,18 @@
+pkgbase = android-backup-extractor
+	pkgdesc = Utility to extract and repack Android backups created with adb backup
+	pkgver = 2022.03.04
+	pkgrel = 2
+	epoch = 1
+	url = https://github.com/nelenkov/android-backup-extractor
+	arch = any
+	license = custom:Apache
+	makedepends = apache-ant
+	makedepends = java-environment>=11
+	depends = bcprov>=1.71
+	depends = java-runtime-headless>=11
+	depends = sh
+	provides = abe.jar
+	source = android-backup-extractor-2022.03.04.tar.gz::https://github.com/nelenkov/android-backup-extractor/archive/20220304.tar.gz
+	b2sums = a29750e12704285f6a2e24acd903929e83456c271741bb2f907b3ec2d41a3334a34dcaa6fe45aedc06adc6cd5c3ab0dc757c762fd059b5c44db04fdf7c6923d6
+
+pkgname = android-backup-extractor

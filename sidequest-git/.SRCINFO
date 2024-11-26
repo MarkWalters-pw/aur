@@ -1,0 +1,25 @@
+pkgbase = sidequest-git
+	pkgdesc = A tool to help simplify getting content onto Oculus Quest, Go, and other VR headsets.
+	pkgver = v0.10.19
+	pkgrel = 1
+	url = https://sidequestvr.com/
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = yarn
+	depends = electron7-bin
+	depends = android-udev
+	provides = sidequest
+	conflicts = sidequest
+	options = !strip
+	source = git+https://github.com/SideQuestVR/SideQuest
+	source = sidequest
+	source = openUrl-fix.patch
+	source = SideQuest.desktop
+	md5sums = SKIP
+	md5sums = 62f3bd6ab5f01a302a0f977d383cdd0c
+	md5sums = 8412856865e2253c13f257f73bfe7e75
+	md5sums = aa393219b320d8b96c83714882de8b32
+
+pkgname = sidequest-git
+

@@ -1,0 +1,22 @@
+pkgbase = xdot-git
+	pkgdesc = Interactive viewer for Graphviz dot files (git version)
+	pkgver = 1.2.r7.g6f0a5cc
+	pkgrel = 1
+	url = https://github.com/jrfonseca/xdot.py
+	arch = any
+	license = LGPL2.1
+	makedepends = git
+	depends = graphviz
+	depends = python
+	depends = gtk3
+	depends = python-gobject
+	depends = python-cairo
+	depends = python-setuptools
+	depends = python-graphviz
+	depends = python-numpy
+	provides = xdot
+	conflicts = xdot
+	source = git+https://github.com/jrfonseca/xdot.py.git
+	sha512sums = SKIP
+
+pkgname = xdot-git

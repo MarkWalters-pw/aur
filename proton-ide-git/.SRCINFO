@@ -1,0 +1,37 @@
+pkgbase = proton-ide-git
+	pkgdesc = A new IDE made with Vala.
+	pkgver = r182.e6b754e
+	pkgrel = 3
+	url = https://gitlab.com/raggesilver-proton/proton
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = meson>=0.50.0
+	makedepends = vala
+	depends = gtk3
+	depends = granite
+	depends = editorconfig-core-c
+	depends = glib2
+	depends = gtksourceview4
+	depends = json-glib
+	depends = libdazzle
+	depends = marble-gtk
+	depends = vte3
+	optdepends = 
+	provides = proton-ide
+	provides = proton-ide-git
+	conflicts = proton-ide
+	source = git+https://gitlab.com/raggesilver-proton/proton.git
+	source = git+https://gitlab.com/raggesilver-proton/proton-runner-plugin.git
+	source = git+https://gitlab.com/raggesilver-proton/proton-editorconfig-plugin.git
+	source = git+https://gitlab.com/raggesilver-proton/proton-autobracket-plugin.git
+	source = git+https://gitlab.com/raggesilver-proton/proton-templates.git
+	md5sums = SKIP
+	md5sums = SKIP
+	md5sums = SKIP
+	md5sums = SKIP
+	md5sums = SKIP
+
+pkgname = proton-ide-git
+

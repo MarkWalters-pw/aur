@@ -1,0 +1,18 @@
+pkgbase = gpu-burn-git
+	pkgdesc = Multi-GPU CUDA stress test
+	pkgver = r76.5f0a86c
+	pkgrel = 1
+	url = https://github.com/wilicc/gpu-burn
+	arch = x86_64
+	license = BSD
+	makedepends = git
+	depends = nvidia-utils
+	depends = cuda
+	provides = gpu-burn
+	conflicts = gpu_burn-git
+	conflicts = gpu-burn
+	replaces = gpu_burn-git
+	source = gpu-burn-git::git+https://github.com/wilicc/gpu-burn.git
+	sha256sums = SKIP
+
+pkgname = gpu-burn-git

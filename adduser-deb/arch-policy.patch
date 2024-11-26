@@ -1,0 +1,150 @@
+diff '--color=auto' -rupN adduser-debian-3.137.orig/AdduserCommon.pm adduser-debian-3.137/AdduserCommon.pm
+--- adduser-debian-3.137.orig/AdduserCommon.pm	2023-07-02 10:32:42.759707646 +0930
++++ adduser-debian-3.137/AdduserCommon.pm	2023-07-02 10:34:38.413283193 +0930
+@@ -293,18 +293,18 @@ sub preseed_config {
+         backup => 0,
+         backup_to => ".",
+         dshell => "/bin/bash",
+-        first_system_uid => 100,
++        first_system_uid => 500,
+         last_system_uid => 999,
+         first_uid => 1000,
+-        last_uid => 59999,
+-        first_system_gid => 100,
++        last_uid => 60000,
++        first_system_gid => 500,
+         last_system_gid => 999,
+         first_gid => 1000,
+-        last_gid => 59999,
++        last_gid => 60000,
+         dhome => "/home",
+         skel => "/etc/skel",
+         usergroups => "yes",
+-        users_gid => undef,
++        users_gid => -1,
+         users_group => undef,
+         grouphomes => "no",
+         letterhomes => "no",
+@@ -313,8 +313,8 @@ sub preseed_config {
+         sys_dir_mode => "0755",
+         setgid_home => "no",
+         no_del_paths => "^/bin\$ ^/boot\$ ^/dev\$ ^/etc\$ ^/initrd ^/lib ^/lost+found\$ ^/media\$ ^/mnt\$ ^/opt\$ ^/proc\$ ^/root\$ ^/run\$ ^/sbin\$ ^/srv\$ ^/sys\$ ^/tmp\$ ^/usr\$ ^/var\$ ^/vmlinu",
+-        name_regex => "^[a-z][a-z0-9_-]*\\\$?\$",
+-        sys_name_regex => "^[a-z_][a-z0-9_-]*\\\$?\$",
++        name_regex => "^[a-zA-Z0-9_][a-zA-Z0-9_-]*\\\$?\$",
++        sys_name_regex => "^[a-zA-Z0-9_][a-zA-Z0-9_-]*\\\$?\$",
+         exclude_fstypes => "(proc|sysfs|usbfs|devpts|devtmpfs|devfs|afs)",
+         skel_ignore_regex => "\.(dpkg|ucf)-(old|new|dist)\$",
+         extra_groups => "users",
+diff '--color=auto' -rupN adduser-debian-3.137.orig/adduser.conf adduser-debian-3.137/adduser.conf
+--- adduser-debian-3.137.orig/adduser.conf	2023-07-02 10:32:42.759707646 +0930
++++ adduser-debian-3.137/adduser.conf	2023-07-02 10:34:38.413283193 +0930
+@@ -31,21 +31,21 @@
+ # Specify inclusive ranges of UIDs and GIDs from which UIDs and GIDs
+ # for system users, system groups, non-system users and non-system groups
+ # can be dynamically allocated.
+-# Default: FIRST_SYSTEM_UID=100, LAST_SYSTEM_UID=999
+-#FIRST_SYSTEM_UID=100
++# Default: FIRST_SYSTEM_UID=500, LAST_SYSTEM_UID=999
++#FIRST_SYSTEM_UID=500
+ #LAST_SYSTEM_UID=999
+ 
+-# Default: FIRST_SYSTEM_GID=100, LAST_SYSTEM_GID=999
+-#FIRST_SYSTEM_GID=100
++# Default: FIRST_SYSTEM_GID=500, LAST_SYSTEM_GID=999
++#FIRST_SYSTEM_GID=500
+ #LAST_SYSTEM_GID=999
+ 
+-# Default: FIRST_UID=1000, LAST_UID=59999
++# Default: FIRST_UID=1000, LAST_UID=60000
+ #FIRST_UID=1000
+-#LAST_UID=59999
++#LAST_UID=60000
+ 
+-# Default: FIRST_GID=1000, LAST_GID=59999
++# Default: FIRST_GID=1000, LAST_GID=60000
+ #FIRST_GID=1000
+-#LAST_GID=59999
++#LAST_GID=60000
+ 
+ # Specify a file or a directory containing UID and GID pool.
+ #UID_POOL=/etc/adduser-pool.conf
+@@ -62,7 +62,8 @@
+ # non-system users are placed into.
+ # It is a configuration error to define both variables
+ # even if the values are consistent.
+-# Default: USERS_GID=undefined, USERS_GROUP=users
++# Set USERS_GID=-1 to disable this functionality.
++# Default: USERS_GID=-1, USERS_GROUP is undefined
+ #USERS_GID=100
+ #USERS_GROUP=users
+ 
+@@ -81,13 +82,13 @@
+ 
+ # Non-system user- and groupnames are checked against this regular
+ # expression.
+-# Default: NAME_REGEX="^[a-z][-a-z0-9_]*\$?$"
+-#NAME_REGEX="^[a-z][-a-z0-9_]*\$?$"
++# Default: NAME_REGEX="^[a-zA-Z0-9_][-a-zA-Z0-9_]*\$?$"
++#NAME_REGEX="^[a-zA-Z0-9][-a-zA-Z0-9_]*\$?$"
+ 
+ # System user- and groupnames are checked against this regular
+ # expression.
+-# Default: SYS_NAME_REGEX="^[a-z_][-a-z0-9_]*\$?$"
+-#SYS_NAME_REGEX="^[a-z_][-a-z0-9_]*\$?$"
++# Default: SYS_NAME_REGEX="^[a-zA-Z0-9_][-a-zA-Z0-9_]*\$?$"
++#SYS_NAME_REGEX="^[a-zA-Z0-9_][-a-zA-Z0-9_]*\$?$"
+ 
+ # When populating the newly created home directory of a non-system user,
+ # files in SKEL matching this regex are not copied.
+diff '--color=auto' -rupN adduser-debian-3.137.orig/doc/adduser.conf.5 adduser-debian-3.137/doc/adduser.conf.5
+--- adduser-debian-3.137.orig/doc/adduser.conf.5	2023-07-02 10:32:42.763041082 +0930
++++ adduser-debian-3.137/doc/adduser.conf.5	2023-07-02 10:34:38.413283193 +0930
+@@ -76,17 +76,17 @@ Defaults to \fIusers\fP.
+ .B FIRST_SYSTEM_GID " and " LAST_SYSTEM_GID
+ specify an inclusive range of GIDs from which GIDs
+ for system groups can be dynamically allocated.
+-Defaults to \fI100\fP - \fI999\fP.
++Defaults to \fI500\fP - \fI999\fP.
+ .TP
+ .B FIRST_GID " and " LAST_GID
+ specify an inclusive range of GIDs from which GIDs
+ for non-system groups can be dynamically allocated.
+-Defaults to \fI1000\fP - \fI59999\fP.
++Defaults to \fI1000\fP - \fI60000\fP.
+ .TP
+ .B FIRST_SYSTEM_UID " and " LAST_SYSTEM_UID
+ specify an inclusive range of UIDs from which UIDs
+ for system users can be dynamically allocated.
+-Defaults to \fI100\fP - \fI999\fP.
++Defaults to \fI500\fP - \fI999\fP.
+ Please note that system software,
+ such as the users allocated by the \fIbase-passwd\fP package,
+ may assume that UIDs less than 100 are unallocated.
+@@ -94,7 +94,7 @@ may assume that UIDs less than 100 are u
+ .B FIRST_UID " and " LAST_UID
+ specify an inclusive range of UIDs from which UIDs
+ for non-system users can be dynamically allocated.
+-Defaults to \fI1000\fP - \fI59999\fP.
++Defaults to \fI1000\fP - \fI60000\fP.
+ .TP
+ .B GID_POOL
+ See \fBUID_POOL\fP.
+@@ -127,7 +127,7 @@ user and group creation in \fBadduser\fR
+ unless \fB\-\-allow\-bad\-names\fR is set.
+ With \fB\-\-allow\-bad\-names\fR set,
+ weaker checks are performed.
+-Defaults to the most conservative \fI^[a\-z][\-a\-z0\-9_]*$\fP.
++Defaults to the Arch policy \fI^[a\-zA\-Z0\-9_][\-a\-zA\-Z0\-9_]*\\$?$\fP.
+ See \fBSYS_NAME_REGXEX\fP and \fBValid names\fP,
+ below, for more information.
+ .TP
+@@ -175,7 +175,7 @@ system user and group creation in adduse
+ unless \fB\-\-allow\-bad\-names\fP is set.
+ With \fB\-\-allow\-bad\-names\fP set,
+ weaker checks are performed.
+-Defaults to the most conservative \fI^[a\-z_][\-a\-z0\-9_]*$\fP.
++Defaults to the Arch policy \fI^[a\-zA\-Z0\-9_][\-a\-zA\-Z0\-9_]*\\$?$\fP.
+ See \fBNAME_REGEX\fP, above, and \fBValid names\fP,
+ below, for more information.
+ .TP

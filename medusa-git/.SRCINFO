@@ -1,0 +1,25 @@
+pkgbase = medusa-git
+	pkgdesc = Speedy, massively parallel and modular login brute-forcer for network
+	pkgver = 2.2.20.52ba417
+	pkgrel = 1
+	url = http://www.foofus.net/jmk/medusa/medusa.html
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	makedepends = libssh2
+	makedepends = libpqxx
+	makedepends = afpfs-ng
+	makedepends = subversion
+	makedepends = freerdp
+	depends = openssl
+	optdepends = openssl: HTTP, MSSQL, SMBNT and SSL-based connection support
+	optdepends = libssh2: SSH support
+	optdepends = postgresql-libs: PostgreSQL support
+	optdepends = afpfs-ng: AFP support
+	optdepends = subversion: Subversion support
+	source = medusa-git::git+https://github.com/jmk-foofus/medusa
+	sha512sums = SKIP
+
+pkgname = medusa-git
+

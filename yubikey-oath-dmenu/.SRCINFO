@@ -1,0 +1,24 @@
+pkgbase = yubikey-oath-dmenu
+	pkgdesc = dmenu interface for getting OATH codes from a YubiKey
+	pkgver = 0.14.0
+	pkgrel = 1
+	url = https://github.com/emlun/yubikey-oath-dmenu
+	arch = any
+	license = GPL3
+	depends = dmenu
+	depends = python
+	depends = python-click
+	depends = yubikey-manager>=4.0.0
+	optdepends = libnotify: Use --notify for user feedback via notifications
+	optdepends = pinentry: YubiKey OATH password support
+	optdepends = wl-clipboard: Use --clipboard to copy code to clipboard (Wayland)
+	optdepends = wtype: Use --type to type code into focused window (Wayland)
+	optdepends = xclip: Use --clipboard to copy code to clipboard (X11)
+	optdepends = xdotool: Use --type to type code into focused window (X11)
+	source = yubikey-oath-dmenu-0.14.0.tar.gz::https://github.com/emlun/yubikey-oath-dmenu/archive/v0.14.0.tar.gz
+	source = yubikey-oath-dmenu-0.14.0.tar.gz.sig::https://github.com/emlun/yubikey-oath-dmenu/releases/download/v0.14.0/yubikey-oath-dmenu-0.14.0.tar.gz.sig
+	validpgpkeys = EB8627616EC1971DF076F2FF2BF5FD22FCABDE73
+	sha256sums = 6c3b6288cc7963720f31d94df036300ea062304b05df5b3985944551eb1da7d4
+	sha256sums = SKIP
+
+pkgname = yubikey-oath-dmenu

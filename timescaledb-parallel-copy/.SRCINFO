@@ -1,0 +1,15 @@
+pkgbase = timescaledb-parallel-copy
+	pkgdesc = A tool for parallel copying of CSV data into a TimescaleDB hypertable
+	pkgver = 0.4.0
+	pkgrel = 1
+	url = https://github.com/timescale/timescaledb-parallel-copy
+	arch = x86_64
+	license = Apache
+	makedepends = git
+	makedepends = go
+	depends = glibc
+	options = !lto
+	source = timescaledb-parallel-copy::git+https://github.com/timescale/timescaledb-parallel-copy#commit=c0b5b0d8cefaacc9929f96e28e06b4c782ea3e90
+	b2sums = SKIP
+
+pkgname = timescaledb-parallel-copy

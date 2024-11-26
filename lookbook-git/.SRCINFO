@@ -1,0 +1,21 @@
+pkgbase = lookbook-git
+	pkgdesc = Browse and find system icons designed for elementary OS
+	pkgver = r112.56f35ba
+	pkgrel = 1
+	url = https://github.com/danrabbit/lookbook
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = meson
+	makedepends = vala
+	depends = gtk3
+	depends = granite
+	depends = gtksourceview3
+	provides = lookbook
+	conflicts = lookbook
+	source = git+https://github.com/danrabbit/lookbook.git
+	md5sums = SKIP
+
+pkgname = lookbook-git
+

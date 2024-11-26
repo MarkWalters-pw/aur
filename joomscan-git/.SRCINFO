@@ -1,0 +1,16 @@
+pkgbase = joomscan-git
+	pkgdesc = OWASP Joomla! security scanner
+	pkgver = 0.0.7+38+g7931539
+	pkgrel = 1
+	url = https://www.owasp.org/index.php/Category:OWASP_Joomla_Vulnerability_Scanner_Project
+	changelog = CHANGELOG.md
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = perl
+	provides = joomscan
+	conflicts = joomscan
+	source = git+https://github.com/rezasp/joomscan
+	sha256sums = SKIP
+
+pkgname = joomscan-git

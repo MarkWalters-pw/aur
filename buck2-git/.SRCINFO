@@ -1,0 +1,17 @@
+pkgbase = buck2-git
+	pkgdesc = Successor to the Buck build system
+	pkgver = r6774.d43cf3a51
+	pkgrel = 1
+	url = https://github.com/facebook/buck2
+	arch = x86_64
+	license = Apache
+	makedepends = git
+	makedepends = protobuf
+	makedepends = rust-nightly
+	makedepends = yq
+	depends = sqlite
+	provides = buck2
+	source = git+https://github.com/facebook/buck2
+	md5sums = SKIP
+
+pkgname = buck2-git

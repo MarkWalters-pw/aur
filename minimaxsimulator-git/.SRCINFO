@@ -1,0 +1,24 @@
+pkgbase = minimaxsimulator-git
+	pkgdesc = a platform independent GUI-based Minimax simulator written in Java
+	pkgver = v2.0.0.r14.ge281d59
+	pkgrel = 1
+	url = https://github.com/luhsra/MinimaxSimulator
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = java-environment>=11
+	makedepends = maven>=3.0.5
+	depends = bash
+	depends = java-runtime>=11
+	optdepends = libcanberra: for smoother GUI
+	provides = minimaxsimulator-git
+	conflicts = minimaxsimulator
+	source = git+https://github.com/luhsra/minimaxsimulator.git
+	source = minimaxsimulator.desktop
+	source = minimaxsimulator.sh
+	sha512sums = SKIP
+	sha512sums = 9d2abb18a4ff60fa9734367fcba2bc7e3b6fecda1b8437ec5e0a8b3e5c9968cf8d9b04212e135d1e846b59e761530034796c85282446a111b706b7be61158761
+	sha512sums = 3cc9c22697828818fa2c8b5c805c5e672b998666208a66d138b96d0b4457964db3e4ea8ee06accd326f304ef79574435a9c29daf017bddf953b99a7ce169d8be
+
+pkgname = minimaxsimulator-git
+

@@ -1,0 +1,21 @@
+pkgbase = vcvrack-eseries
+	pkgdesc = E-Series VCV modules
+	pkgver = 1.0
+	pkgrel = 1
+	url = https://github.com/VCVRack/ESeries
+	install = vcvrack-eseries.install
+	arch = i686
+	arch = x86_64
+	license = BSD
+	makedepends = git
+	makedepends = zip
+	depends = vcvrack
+	depends = libsamplerate
+	conflicts = vcvrack-eseries-git
+	source = vcvrack-ESeries::git+https://github.com/vcvrack/ESeries.git#branch=v1
+	source = vcvrack-eseries.install
+	sha256sums = SKIP
+	sha256sums = b93fd2a12cdf82d3844c4cfcafcc15a1c923715b1f7a174d4aaec6ddb9f74d4d
+
+pkgname = vcvrack-eseries
+

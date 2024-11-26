@@ -1,0 +1,21 @@
+pkgbase = apidb-core
+	pkgdesc = API Generator for Database acces.
+	pkgver = 5.13.18
+	pkgrel = 1
+	url = https://github.com/azaeldevel/apidb
+	arch = x86_64
+	license = GPL
+	depends = octetos-db-abstract
+	depends = libxml2
+	depends = boost
+	depends = bison
+	depends = flex
+	depends = libtar
+	depends = librsvg
+	depends = cmake
+	depends = cunit
+	conflicts = apidb
+	source = https://github.com/azaeldevel/apidb/archive/5.13.18-alpha.tar.gz
+	md5sums = 02c5dbaeb0cd59bb9864bf394377e0da
+
+pkgname = apidb-core

@@ -1,0 +1,16 @@
+pkgbase = libnsfb-git
+	pkgdesc = Framebuffer abstraction library (git version)
+	pkgver = r150.d5b4c96
+	pkgrel = 1
+	url = https://www.netsurf-browser.org/projects/libnsfb/
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = netsurf-buildsystem
+	depends = glibc
+	provides = libnsfb
+	conflicts = libnsfb
+	source = git://git.netsurf-browser.org/libnsfb.git
+	sha512sums = SKIP
+
+pkgname = libnsfb-git

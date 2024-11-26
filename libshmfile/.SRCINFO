@@ -1,0 +1,16 @@
+pkgbase = libshmfile
+	pkgdesc = Small shared library to use shared memory as a FILE* stream , with interprocess communication in mind
+	pkgver = 1.1.0
+	pkgrel = 2
+	url = http://github.com/kata198/shmfile
+	arch = i686
+	arch = x86_64
+	license = apache
+	makedepends = gcc
+	makedepends = make
+	depends = glibc
+	source = https://github.com/kata198/shmfile/archive/1.1.0.tar.gz
+	sha512sums = 60643388cf64b190c9bbbe0f8f0f254fdb05c43c5ab2d74cd43036149b865ff92c084659c912f0561be3a115023635597f91307d2d8aa55fced5f300cce7279a
+
+pkgname = libshmfile
+

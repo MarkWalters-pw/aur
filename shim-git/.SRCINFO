@@ -1,0 +1,20 @@
+pkgbase = shim-git
+	pkgdesc = UEFI shim loader
+	pkgver = 15.6.r0.505cdb6
+	pkgrel = 1
+	url = https://github.com/rhboot/shim
+	arch = x86_64
+	license = BSD
+	checkdepends = efivar
+	checkdepends = xxd
+	makedepends = git
+	provides = shim
+	conflicts = shim
+	replaces = shim-efi-git
+	options = !buildflags
+	source = git+https://github.com/rhboot/shim.git
+	source = rhboot-gnu-efi::git+https://github.com/rhboot/gnu-efi.git
+	sha512sums = SKIP
+	sha512sums = SKIP
+
+pkgname = shim-git

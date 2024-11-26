@@ -1,0 +1,18 @@
+pkgbase = ros-melodic-laser-pipeline
+	pkgdesc = ROS - Meta-package of libraries for processing laser data, including converting laser data into 3D representations.
+	pkgver = 1.6.3
+	pkgrel = 3
+	url = https://wiki.ros.org/laser_pipeline
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-melodic-catkin
+	depends = ros-melodic-laser-geometry
+	depends = ros-melodic-laser-assembler
+	depends = ros-melodic-laser-filters
+	source = ros-melodic-laser-pipeline-1.6.3.tar.gz::https://github.com/ros-perception/laser_pipeline/archive/1.6.3.tar.gz
+	sha256sums = 6af841344ecd0c42808772bf0d8022e4dc6281cb225d37c67999f503111bbfb8
+
+pkgname = ros-melodic-laser-pipeline
+

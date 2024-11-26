@@ -1,0 +1,14 @@
+pkgbase = graal-bin
+	pkgdesc = Virtual package for backwards compatibility; please directly install jdk8-graalvm-bin instead
+	pkgver = 19.3.0
+	pkgrel = 1
+	url = https://www.graalvm.org/
+	arch = x86_64
+	license = custom
+	depends = jdk8-graalvm-bin
+	optdepends = graal-native-image-bin: plugin to generate native binary images (used to be bundled with this package before the 19.0.0 release)
+	provides = graal
+	conflicts = graal
+
+pkgname = graal-bin
+

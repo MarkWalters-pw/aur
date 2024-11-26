@@ -1,0 +1,24 @@
+pkgbase = atom-community-git
+	pkgdesc = A hackable text editor for the 21st century, built on Electron, and based on everything we love about our favorite editors.
+	pkgver = 1.63.0_dev.r39017.g0f7c5c1
+	pkgrel = 1
+	url = https://github.com/atom-community/atom
+	arch = x86_64
+	makedepends = git
+	makedepends = node-gyp
+	makedepends = nodejs
+	makedepends = npm
+	makedepends = python
+	depends = libsecret
+	depends = libx11
+	depends = libxkbfile
+	conflicts = atom
+	conflicts = apm
+	source = git+https://github.com/atom-community/atom.git
+	source = atom.desktop.in.patch
+	source = test.js.patch
+	sha256sums = SKIP
+	sha256sums = 36cd22b6610978686409114361ee32edbb16a021408feb71d44e4e1119e397b4
+	sha256sums = cf45abaa2754fdc8c7e7796cf9f3da3c9363126c62f57aed4e4c9075bc496e37
+
+pkgname = atom-community-git

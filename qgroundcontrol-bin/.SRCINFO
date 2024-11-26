@@ -1,0 +1,36 @@
+pkgbase = qgroundcontrol-bin
+	pkgdesc = Ground control for unmanned vehicles.
+	pkgver = 4.0.11
+	pkgrel = 1
+	url = https://github.com/mavlink/qgroundcontrol
+	arch = x86_64
+	license = GPL3
+	depends = bzip2
+	depends = dbus
+	depends = flac
+	depends = gst-plugins-base-libs
+	depends = libasyncns
+	depends = libffi
+	depends = libgcrypt
+	depends = libgpg-error
+	depends = libogg
+	depends = libsndfile
+	depends = libsystemd
+	depends = libunwind
+	depends = libx11
+	depends = libxau
+	depends = libxcb
+	depends = libxdmcp
+	depends = libxext
+	depends = lz4
+	depends = orc
+	depends = pcre
+	depends = sdl2
+	depends = xz
+	depends = zlib
+	depends = icu
+	source = qgroundcontrol-4.0.11-1.tar.bz2::https://github.com/mavlink/qgroundcontrol/releases/download/v4.0.11/qgroundcontrol.tar.bz2
+	sha256sums = dc65e595738fd89f165dc9f618205e08b2c1f9ee5bc1e354f53c98418c2c8a26
+
+pkgname = qgroundcontrol-bin
+

@@ -1,0 +1,20 @@
+pkgbase = zuu
+	pkgdesc = A program to check your code quality before all commit
+	pkgver = 20.0.1
+	pkgrel = 1
+	url = https://github.com/otechdo/zuu
+	arch = any
+	license = AGPL-3.0
+	makedepends = cargo
+	depends = rustup
+	depends = cargo-outdated
+	depends = cargo-spellcheck
+	depends = cargo-watch
+	depends = cargo-deny
+	depends = cargo-audit
+	depends = cargo-auditable
+	provides = zuu
+	source = zuu-20.0.1.tar.gz::https://static.crates.io/crates/zuu/zuu-20.0.1.crate
+	sha512sums = dd1ddd64ccaec5f3e901042ca7a94aa4f840d70d4635d50c17b80dd6d64282e18f36cc9a5407dce14ced240cef35bfa49323fa4817f7d23ab69f1dee573c4bcc
+
+pkgname = zuu

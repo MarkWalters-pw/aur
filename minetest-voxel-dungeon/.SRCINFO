@@ -1,0 +1,15 @@
+pkgbase = minetest-voxel-dungeon
+	pkgdesc = This is a recreation and adaptation of an Android rogue-like game, Pixel Dungeon by Watabou.
+	pkgver = 1.6.1
+	pkgrel = 1
+	url = https://content.minetest.net/packages/Noodlemire/voxeldungeon/
+	arch = any
+	license = GPLv3
+	makedepends = unzip
+	depends = minetest-common
+	noextract = voxeldungeon-1.6.1.zip
+	options = !strip
+	source = voxeldungeon-1.6.1.zip::https://content.minetest.net/packages/Noodlemire/voxeldungeon/releases/9212/download/
+	sha256sums = f40319b6db064d046ac19f2c48cd1be12d7b6cb53d473711ae364b84b9168fe7
+
+pkgname = minetest-voxel-dungeon

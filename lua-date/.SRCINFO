@@ -1,0 +1,21 @@
+pkgbase = lua-date
+	pkgdesc = Date & Time module for Lua
+	pkgver = 2.2
+	pkgrel = 1
+	url = https://github.com/tieske/date
+	arch = any
+	license = MIT
+	source = lua-date-2.2.tar.gz::https://github.com/tieske/date/archive/version_2.2.tar.gz
+	sha256sums = ea8c34cb18245c5219806a00c97ef92f452a33f3528bac2ae72743e4420897db
+
+pkgname = lua-date
+	depends = lua
+
+pkgname = lua51-date
+	depends = lua51
+
+pkgname = lua52-date
+	depends = lua52
+
+pkgname = lua53-date
+	depends = lua53

@@ -1,0 +1,24 @@
+pkgbase = electronplayer
+	pkgdesc = An Electron-based web video player, supporting multiple services
+	pkgver = 2.0.8
+	pkgrel = 4
+	url = https://github.com/oscartbeaumont/ElectronPlayer
+	arch = x86_64
+	license = custom:MIT
+	makedepends = yarn
+	makedepends = npm
+	makedepends = git
+	depends = gtk3
+	depends = libxss
+	depends = nss
+	depends = alsa-lib
+	depends = libcups
+	optdepends = libpulse: For pulseaudio support
+	provides = electronplayer
+	conflicts = electronplayer
+	source = electronplayer::git+https://github.com/oscartbeaumont/ElectronPlayer.git
+	source = electronplayer.desktop
+	sha512sums = SKIP
+	sha512sums = 280a252895e641f4bd009b4acf7f9f42959f0b9d51424ea71bf564600533de3867a652efd9d982643c34907bb5e57fa677e6c73315cb69a2f12dfd52e6f09f03
+
+pkgname = electronplayer

@@ -1,0 +1,16 @@
+pkgbase = lua-moses-git
+	pkgdesc = Utility library for functional programming in Lua
+	pkgver = 1.6.1.1.r1.gded0a9b
+	pkgrel = 1
+	url = https://github.com/Yonaba/Moses
+	arch = x86_64
+	arch = i686
+	license = MIT
+	makedepends = cmake
+	makedepends = git
+	depends = lua
+	source = lua-moses-git::git+https://github.com/Yonaba/Moses
+	md5sums = SKIP
+
+pkgname = lua-moses-git
+

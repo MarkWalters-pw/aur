@@ -1,0 +1,16 @@
+pkgbase = hexeditor
+	pkgdesc = A cross-platform Hex Editor
+	pkgver = 1.17.0
+	pkgrel = 1
+	url = https://github.com/chipmunk-sm/HexEditor
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = qt5-tools
+	depends = qt5-base
+	depends = hicolor-icon-theme
+	provides = hexeditor=1.17.0
+	source = hexeditor-1.17.0.tar.gz::https://github.com/chipmunk-sm/HexEditor/archive/refs/tags/v1.17.0.tar.gz
+	sha512sums = 6cf8e8e875bec9499b13e6a48ed6b12d628f05aa032f7a8639279d514210588c8c4309471a0f8f45c45bdda551d940d4cda9182d50b42174255c7fcd203e554b
+
+pkgname = hexeditor

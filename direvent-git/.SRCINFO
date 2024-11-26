@@ -1,0 +1,19 @@
+pkgbase = direvent-git
+	pkgdesc = Daemon that monitors events in the file system directories
+	pkgver = 5.2.r2.g152e1ec
+	pkgrel = 1
+	url = https://www.gnu.org.ua/software/direvent/
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = rsync
+	depends = glibc
+	provides = direvent
+	conflicts = direvent
+	source = git://git.gnu.org.ua/direvent.git
+	source = git://git.gnu.org.ua/grecs.git
+	md5sums = SKIP
+	md5sums = SKIP
+
+pkgname = direvent-git
+

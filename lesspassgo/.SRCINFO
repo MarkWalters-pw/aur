@@ -1,0 +1,21 @@
+pkgbase = lesspassgo
+	pkgver = 2020.08.02
+	pkgrel = 1
+	url = https://github.com/tuxlinuxien/lesspassgo
+	arch = any
+	license = MIT
+	makedepends = go
+	source = https://github.com/tuxlinuxien/lesspassgo/archive/ecb58e0f90ed65d4bde3e1254294593dc5406c30.tar.gz
+	source = lesspassgo-server.conf
+	source = lesspassgo-server.service
+	sha256sums = 7f4948e80364d5e6d8ad8a6a2b2bf13998a725d519d6bea3b3ddcabde3f70ffa
+	sha256sums = 732503800bd05bb2f443d6f1fecb1d3fc3fa82074e8dc8cf01aa746817236e5b
+	sha256sums = bfaaca8ad7d1bcbc0a92d7d5ceadf7dc00592fe23084a70b18c8c89ede897d1d
+
+pkgname = lesspassgo
+	pkgdesc = LessPass password generator cli written in Go
+
+pkgname = lesspassgo-server
+	pkgdesc = LessPass API compatible server written in Go
+	backup = etc/lesspassgo-server.conf
+

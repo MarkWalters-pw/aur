@@ -1,0 +1,25 @@
+pkgbase = ambulant-player-gtk-git
+	pkgdesc = open-source media player with support for SMIL 3.0
+	pkgver = 2.6
+	pkgrel = 2
+	url = https://www.ambulantplayer.org/
+	install = AmbulantPlayer_gtk.install
+	arch = x86_64
+	license = LGPL
+	makedepends = make
+	makedepends = automake
+	makedepends = git
+	makedepends = autoconf
+	makedepends = ed
+	makedepends = python
+	depends = ffmpeg
+	depends = sdl_pango
+	depends = sdl_image
+	depends = sdl2_ttf
+	depends = xerces-c
+	provides = AmbulantPlayer_gtk
+	conflicts = AmbulantPlayer_gtk
+	source = git+https://e.coding.net/Baytars/ambulant-2.6.git
+	sha256sums = SKIP
+
+pkgname = ambulant-player-gtk-git

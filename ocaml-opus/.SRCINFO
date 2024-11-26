@@ -1,0 +1,18 @@
+pkgbase = ocaml-opus
+	pkgdesc = OCaml bindings for Opus audio codec
+	pkgver = 0.2.2
+	pkgrel = 1
+	url = https://github.com/savonet/ocaml-opus
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = dune
+	makedepends = ocaml-findlib
+	depends = ocaml
+	depends = opus
+	depends = ocaml-ogg
+	options = !strip
+	source = https://github.com/savonet/ocaml-opus/archive/v0.2.2.tar.gz
+	sha256sums = 9070dbc5dc9a29c11796e485fd2cddb1a7b81989d08e81b86ab958967cd3f0ce
+
+pkgname = ocaml-opus

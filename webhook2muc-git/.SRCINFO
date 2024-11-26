@@ -1,0 +1,22 @@
+pkgbase = webhook2muc-git
+	pkgdesc = Webhook to MUC bot
+	pkgver = r25.d651a59
+	pkgrel = 4
+	url = https://gitlab.com/xmpp-rs/tokio-webhook2muc
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = rust
+	depends = openssl
+	provides = webhook2muc
+	conflicts = webhook2muc
+	backup = etc/webhook2muc/webhook2muc.env
+	source = webhook2muc::git+https://gitlab.com/ppjet6/tokio-webhook2muc#commit=41d339927006c3f19e8ede76f5f0dc35a47a0278
+	source = webhook2muc.env
+	source = webhook2muc.service
+	sha256sums = SKIP
+	sha256sums = 3a3878cf71075383074bb9cea0613fc590f98285652db3d39c8fd97c1d79e0e7
+	sha256sums = 324a0b4cb5e2151d8284a7644d570cc68d477cd8cd1109d961578e98f86c7a60
+
+pkgname = webhook2muc-git
+

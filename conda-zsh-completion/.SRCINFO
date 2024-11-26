@@ -1,0 +1,14 @@
+pkgbase = conda-zsh-completion
+	pkgdesc = Zsh completion for conda, mamba, and micromamba
+	pkgver = 0.11
+	pkgrel = 1
+	url = https://github.com/conda-incubator/conda-zsh-completion
+	arch = any
+	license = custom
+	depends = zsh
+	depends = python
+	options = !debug
+	source = conda-zsh-completion-v0.11.tar.gz::https://github.com/conda-incubator/conda-zsh-completion/archive/v0.11.tar.gz
+	sha256sums = 584d5817e276f01f5d789e01ba5c6688667b38d3c9f4ad2cd735a9901e27aa33
+
+pkgname = conda-zsh-completion

@@ -1,0 +1,22 @@
+pkgbase = python-adaptive
+	pkgdesc = Parallel active learning of mathematical functions
+	pkgver = 1.3.0
+	pkgrel = 1
+	url = https://github.com/python-adaptive/adaptive
+	arch = x86_64
+	license = BSD-3-Clause
+	checkdepends = python-pytest-cov
+	checkdepends = python-flaky
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python-cloudpickle
+	depends = python-loky
+	depends = python-scipy
+	depends = python-sortedcollections
+	depends = python-versioningit
+	source = adaptive-1.3.0.tar.gz::https://github.com/python-adaptive/adaptive/archive/v1.3.0.tar.gz
+	sha512sums = baa1edb24972f5f613cbc1772afa8009f6e8b5a87cab34d1e2addb03096eeadb7b1fa2337807f292a9383dd5d28dca31eb6a2ddbc130757db0ff2200a25e3d8a
+
+pkgname = python-adaptive

@@ -1,0 +1,14 @@
+pkgbase = vmutils
+	pkgdesc = Victoria Metrics utils
+	pkgver = 1.76.1
+	pkgrel = 2
+	url = https://victoriametrics.github.io
+	arch = x86_64
+	license = Apache
+	makedepends = go
+	depends = glibc
+	backup = etc/default/victoriametrics
+	source = https://github.com/VictoriaMetrics/VictoriaMetrics/releases/download/v1.76.1/vmutils-amd64-v1.76.1.tar.gz
+	sha256sums = f35f247cf670d6a633f665b58e1cfb052af48018ba4d25ee812ceb1ebbe697e1
+
+pkgname = vmutils

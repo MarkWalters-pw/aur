@@ -1,0 +1,25 @@
+pkgbase = opentimelineio-git
+	pkgdesc = Open Source API and interchange format for editorial timeline information
+	pkgver = last_pure_python.r412.gf7123d0b
+	pkgrel = 1
+	url = http://opentimeline.io/
+	arch = x86_64
+	license = Apache
+	makedepends = cmake
+	makedepends = git
+	makedepends = imath
+	makedepends = python-pip
+	makedepends = pybind11
+	depends = python-aaf2
+	depends = python-setuptools
+	optdepends = pyside2: Required to run otioview
+	source = OpenTimelineIO::git+https://github.com/AcademySoftwareFoundation/OpenTimelineIO
+	source = any::git+https://github.com/thelink2012/any
+	source = optional-lite::git+https://github.com/martinmoene/optional-lite
+	source = rapidjson::git+https://github.com/Tencent/rapidjson
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = opentimelineio-git

@@ -1,0 +1,18 @@
+pkgbase = rtl8192su-git
+	pkgdesc = Kernel module for Realtek RTL8188SU/RTL8191SU/RTL8192SU devices
+	pkgver = r579.1f09c7a
+	pkgrel = 1
+	url = https://github.com/chunkeey/rtl8192su
+	install = rtl8192su.install
+	arch = x86_64
+	arch = i686
+	license = GPL
+	makedepends = linux-headers
+	makedepends = git
+	makedepends = bc
+	depends = dkms
+	source = git+https://github.com/chunkeey/rtl8192su.git
+	sha256sums = SKIP
+
+pkgname = rtl8192su-git
+

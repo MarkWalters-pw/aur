@@ -1,0 +1,23 @@
+# Maintainer: Charlie Haley <charlie.haley@hotmail.com>
+
+pkgname=udev-notify-daemon-bin
+pkgver=0.1.4
+pkgrel=13
+pkgdesc="A simple daemon that listens for udev USB events and sends out a notification to dbus"
+url="https://github.com/charlie-haley/udev-notify-daemon"
+arch=("x86_64")
+license=("MIT")
+source=(
+  "udev-notify-daemon_amd64::https://github.com/charlie-haley/udev-notify-daemon/releases/download/v${pkgver}/udev-notify-daemon_amd64"
+  "https://raw.githubusercontent.com/charlie-haley/udev-notify-daemon/v${pkgver}/udev-notify-daemon.service"
+)
+sha256sums=(
+    '206daa47fa8e6e7b3366cf2ccfc89f0ac505b2f46a88d2da6e2cb330f8d29cc2'
+    '5aa5dd0cc12a3cd1e9490f410db68917b55a31b873f9153b1a71e62c39eb7e01'
+)
+_srcname=udev-notify-daemon
+
+package() {
+    install -Dm755 udev-notify-daemon_amd64 ${pkgdir}/usr/local/bin/udev-notify-daemon
+    install -Dm755 udev-notify-daemon.service ${pkgdir}/usr/lib/systemd/user/udev-notify-daemon.service
+}

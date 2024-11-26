@@ -1,0 +1,24 @@
+pkgbase = teaiso
+	pkgdesc = The ISO generation tool for GNU/Linux.
+	pkgver = 2.2.0
+	pkgrel = 1
+	url = https://gitlab.com/tearch-linux/applications-and-tools/teaiso
+	arch = any
+	license = GPL3
+	makedepends = git
+	makedepends = make
+	makedepends = gcc
+	makedepends = wget
+	depends = xorriso
+	depends = mtools
+	depends = squashfs-tools
+	depends = python-yaml
+	depends = busybox
+	depends = unzip
+	depends = binutils
+	depends = grub
+	provides = mkteaiso
+	source = https://gitlab.com/tearch-linux/applications-and-tools/teaiso/-/archive/2.2.0/teaiso-2.2.0.tar.gz
+	sha256sums = 999618745afed1167aff345e8a59c07eb93efe1db1fad8df78f5d9f1cce0865e
+
+pkgname = teaiso

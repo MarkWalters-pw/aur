@@ -1,0 +1,17 @@
+pkgbase = windows95-electron-bin
+	pkgdesc = Windows 95, running in an Electron app
+	pkgver = 3.1.1
+	pkgrel = 1
+	url = https://github.com/felixrieseberg/windows95
+	arch = x86_64
+	license = custom
+	depends = gtk3
+	depends = libxss
+	depends = nss
+	provides = windows95
+	source = https://github.com/felixrieseberg/windows95/releases/download/v3.1.1/windows95_3.1.1_amd64.deb
+	source = windows95-3.1.1-LICENSE.md::https://github.com/felixrieseberg/windows95/raw/v3.1.1/LICENSE.md
+	sha256sums = 7e4c11f683b58374d2e80e961387865ef11d0ea9bd8e0f3ccbc8012332a85412
+	sha256sums = 29b033609720d6977aaf4f537319ab136fb8b84022a3c847daf2ffca88d8eb20
+
+pkgname = windows95-electron-bin

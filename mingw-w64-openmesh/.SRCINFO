@@ -1,0 +1,16 @@
+pkgbase = mingw-w64-openmesh
+	pkgdesc = A generic and efficient data structure for representing and manipulating polygonal meshes (mingw-w64)
+	pkgver = 11.0.0
+	pkgrel = 1
+	url = http://www.openmesh.org
+	arch = any
+	license = BSD
+	makedepends = mingw-w64-cmake
+	depends = mingw-w64-crt
+	options = !buildflags
+	options = !strip
+	options = staticlibs
+	source = https://www.graphics.rwth-aachen.de/media/openmesh_static/Releases/11.0/OpenMesh-11.0.0.tar.bz2
+	sha256sums = 9d22e65bdd6a125ac2043350a019ec4346ea83922cafdf47e125a03c16f6fa07
+
+pkgname = mingw-w64-openmesh

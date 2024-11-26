@@ -1,0 +1,31 @@
+pkgbase = powershell-git
+	pkgdesc = A cross-platform automation and configuration tool/framework (git version)
+	pkgver = 7.0.0.preview.6.293.g5da06978b
+	pkgrel = 1
+	url = https://github.com/PowerShell/PowerShell
+	install = powershell.install
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = cmake
+	makedepends = dotnet-sdk
+	depends = krb5
+	depends = gcc-libs
+	depends = glibc
+	depends = lttng-ust
+	depends = zlib
+	depends = openssl-1.0
+	depends = icu
+	provides = powershell
+	conflicts = powershell
+	options = staticlibs
+	options = !strip
+	source = powershell::git+https://github.com/PowerShell/PowerShell.git
+	source = powershell-native::git+https://github.com/PowerShell/PowerShell-Native.git
+	source = Microsoft.PowerShell.SDK.csproj.TypeCatalog.targets
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = 8d10afb45883813f805bdf74ec445ae3f2fdbd4d30ab2ce7ce3a55df80693696
+
+pkgname = powershell-git
+

@@ -1,0 +1,15 @@
+pkgbase = qt-gtk-platform-plugin-git
+	pkgdesc = GTK platform backend for Qt
+	pkgver = 20200318.1149f4f
+	pkgrel = 1
+	url = https://github.com/CrimsonAS/gtkplatform
+	install = qt-gtk-platform-plugin-git.install
+	arch = any
+	license = LGPL3
+	provides = qt-gtk-platform-plugin
+	conflicts = qt-gtk-platform-plugin
+	source = git://github.com/CrimsonAS/gtkplatform.git
+	sha256sums = SKIP
+
+pkgname = qt-gtk-platform-plugin-git
+

@@ -1,0 +1,18 @@
+pkgbase = convert-pgn-bin
+	pkgdesc = Convert format of given chess book from one format to PGN, the Portable Game Notation format.
+	pkgver = 0.29.6
+	pkgrel = 2
+	url = http://www.xqbase.com/
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = libarchive
+	conflicts = convert-pgn
+	conflicts = gmchess
+	source_i686 = http://security.ubuntu.com/ubuntu/pool/universe/g/gmchess/convert-pgn_0.29.6.3-1_i386.deb
+	sha1sums_i686 = 29e2430f490b847b1088cbd852cf481777eb7a92
+	source_x86_64 = http://security.ubuntu.com/ubuntu/pool/universe/g/gmchess/convert-pgn_0.29.6.3-1_amd64.deb
+	sha1sums_x86_64 = 9ef30e5bc55b8525e248418ce1ef0ca6d3c8e589
+
+pkgname = convert-pgn-bin
+

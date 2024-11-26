@@ -1,0 +1,17 @@
+pkgbase = purelibc-git
+	pkgdesc = A glibc overlay library for process self-virtualization
+	pkgver = r16.0fa9d69
+	pkgrel = 1
+	url = https://github.com/virtualsquare/purelibc
+	arch = any
+	groups = virtualsquare
+	license = LGPL
+	makedepends = git
+	makedepends = cmake
+	provides = purelibc
+	conflicts = purelibc
+	source = git+https://github.com/virtualsquare/purelibc.git
+	md5sums = SKIP
+
+pkgname = purelibc-git
+

@@ -1,0 +1,16 @@
+pkgbase = ros-noetic-libuvc-ros
+	pkgdesc = ROS - libuvc_ros metapackage.
+	pkgver = 0.0.10
+	pkgrel = 2
+	url = https://wiki.ros.org/libuvc_ros
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-catkin
+	depends = ros-noetic-libuvc-camera
+	source = ros-noetic-libuvc-ros-0.0.10.tar.gz::https://github.com/ros-drivers/libuvc_ros/archive/0.0.10.tar.gz
+	sha256sums = 33c356df370f548be1dbc1d21a13bf2704b6ea0218f77d3d6f305392266629d3
+
+pkgname = ros-noetic-libuvc-ros
+

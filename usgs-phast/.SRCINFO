@@ -1,0 +1,18 @@
+pkgbase = usgs-phast
+	pkgdesc = A Computer Program for Simulating Groundwater Flow, Solute Transport, and Multicomponent Geochemical Reactions (no MPI)
+	pkgver = 3.7.3
+	pkgrel = 1
+	url = http://wwwbrr.cr.usgs.gov/projects/GWC_coupled/phast/
+	arch = i686
+	arch = x86_64
+	license = custom
+	makedepends = boost
+	depends = gmp
+	depends = boost-libs
+	depends = gcc-fortran
+	depends = hdf5
+	depends = zlib
+	source = http://water.usgs.gov/water-resources/software/PHAST/phast-3.7.3-15968.tar.gz
+	md5sums = 3d9dc5f1e9c6dfa433941948f73dd849
+
+pkgname = usgs-phast

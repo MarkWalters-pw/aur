@@ -1,0 +1,19 @@
+pkgbase = aws-azure-login
+	pkgdesc = Use Microsoft Azure AD SAML Single Sign-On to log into AWS
+	pkgver = 2.2.4
+	pkgrel = 1
+	url = https://github.com/sportradar/aws-azure-login
+	arch = x86_64
+	license = MIT
+	makedepends = jq
+	makedepends = npm
+	makedepends = typescript
+	depends = gtk3
+	depends = nodejs
+	depends = nss
+	depends = libxss
+	source = aws-azure-login-2.2.4.tar.gz::https://github.com/sportradar/aws-azure-login/archive/v2.2.4.tar.gz
+	sha256sums = 9e7739330fe2fcfcbb5ec2a0b1ad27c0a6e0b35b3a2848fc9ab7e2e71c379d04
+
+pkgname = aws-azure-login
+

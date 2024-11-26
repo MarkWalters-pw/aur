@@ -1,0 +1,23 @@
+pkgbase = sxiv-photoorg-git
+	pkgdesc = Simple X Image Viewer, photo organiser version
+	pkgver = 0.r907.e907737
+	pkgrel = 1
+	url = https://github.com/cdown/sxiv
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	depends = imlib2
+	depends = desktop-file-utils
+	depends = xdg-utils
+	depends = hicolor-icon-theme
+	depends = libexif
+	depends = libxft
+	depends = giflib
+	depends = libwebp
+	provides = nsxiv
+	conflicts = nsxiv
+	source = sxiv::git+https://github.com/cdown/sxiv.git
+	sha256sums = SKIP
+
+pkgname = sxiv-photoorg-git

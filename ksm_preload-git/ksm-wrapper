@@ -1,0 +1,9 @@
+#!/bin/sh
+# Rewrite of ksm-wrapper to use standard lib path
+sofile=libksm_preload.so
+case " $LD_PRELOAD " in
+    (*[:\ ]"$sofile"[:\ ]*) ;;
+    (*) LD_PRELOAD="${LD_PRELOAD:+$LD_PRELOAD }$sofile"
+        export LD_PRELOAD;;
+esac
+exec "$@"

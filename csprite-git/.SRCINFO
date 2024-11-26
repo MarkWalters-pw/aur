@@ -1,0 +1,24 @@
+pkgbase = csprite-git
+	pkgdesc = a tiny pixel art tool
+	pkgver = 0.1.0.r464.g8652b75
+	pkgrel = 1
+	url = https://github.com/pegvin/csprite
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = make
+	makedepends = scons
+	makedepends = pkg-config
+	makedepends = python
+	makedepends = python-pillow
+	makedepends = python-numpy
+	depends = sdl2
+	provides = csprite-git
+	conflicts = csprite
+	conflicts = csprite-git
+	conflicts = csprite-bin
+	source = git+https://github.com/pegvin/csprite.git
+	sha512sums = SKIP
+
+pkgname = csprite-git

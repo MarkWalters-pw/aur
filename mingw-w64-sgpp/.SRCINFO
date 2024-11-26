@@ -1,0 +1,20 @@
+pkgbase = mingw-w64-sgpp
+	pkgdesc = A numerical library for adaptive Sparse Grids (mingw-w64)
+	pkgver = 3.3.0
+	pkgrel = 1
+	url = http://sgpp.sparsegrids.org
+	arch = any
+	license = BSD
+	makedepends = scons
+	makedepends = mingw-w64-eigen
+	depends = mingw-w64-armadillo
+	depends = mingw-w64-gsl
+	depends = mingw-w64-suitesparse
+	options = !buildflags
+	options = !strip
+	options = staticlibs
+	source = https://github.com/SGpp/SGpp/archive/v3.3.0.tar.gz
+	sha256sums = ca4d5b79f315b425ce69b04940c141451a76848bf1bd7b96067217304c68e2d4
+
+pkgname = mingw-w64-sgpp
+

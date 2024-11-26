@@ -1,0 +1,16 @@
+pkgbase = python-pyinsane
+	pkgdesc = Python library to access and use image scanners
+	pkgver = 2.0.13
+	pkgrel = 2
+	url = https://gitlab.gnome.org/World/OpenPaperwork/pyinsane
+	arch = any
+	license = GPL3
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python-pillow
+	depends = sane
+	source = git+https://gitlab.gnome.org/World/OpenPaperwork/pyinsane.git#commit=3e509e6bdd2c07ac715cfc27946f86123744a46e
+	sha256sums = SKIP
+
+pkgname = python-pyinsane
+

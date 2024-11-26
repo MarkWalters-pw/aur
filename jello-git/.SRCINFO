@@ -1,0 +1,19 @@
+pkgbase = jello-git
+	pkgdesc = Filter JSON and JSON Lines data with Python syntax
+	pkgver = 1.5.5.r0.ge8055fb
+	pkgrel = 1
+	url = https://github.com/kellyjonbrazil/jello
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python-pygments
+	provides = jello
+	conflicts = jello
+	source = jello-git::git+https://github.com/kellyjonbrazil/jello
+	sha256sums = SKIP
+
+pkgname = jello-git

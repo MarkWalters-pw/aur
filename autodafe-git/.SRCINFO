@@ -1,0 +1,16 @@
+pkgbase = autodafe-git
+	pkgdesc = Tools for converting an autotools recipe to a plain Makefile.
+	pkgver = 0.7.r85.g96c07c1
+	pkgrel = 1
+	url = http://www.catb.org/~esr/autodafe
+	arch = any
+	license = BSD-2-Clause
+	makedepends = git
+	makedepends = asciidoctor
+	depends = python3
+	provides = autodafe
+	conflicts = autodafe
+	source = git+https://gitlab.com/esr/autodafe
+	sha256sums = SKIP
+
+pkgname = autodafe-git

@@ -1,0 +1,27 @@
+pkgbase = python-sbi
+	pkgdesc = sbi: simulation-based inference
+	pkgver = 0.22.0
+	pkgrel = 3
+	url = https://github.com/sbi-dev/sbi
+	arch = any
+	license = APGL3
+	makedepends = python-build
+	makedepends = python-installer
+	depends = python-matplotlib
+	depends = python-arviz
+	depends = python-joblib
+	depends = python-numpy
+	depends = python-pillow
+	depends = python-pyknos
+	depends = python-pyro-ppl
+	depends = python-scikit-learn
+	depends = python-scipy
+	depends = tensorboard
+	depends = python-pytorch
+	depends = python-tqdm
+	provides = lsbi
+	options = !emptydirs
+	source = https://files.pythonhosted.org/packages/source/s/sbi/sbi-0.22.0.tar.gz
+	sha256sums = e632994c0bcfbc63c110d6eb04c6e1bdf6ae4ca42211d67ab4946d9b394dc360
+
+pkgname = python-sbi

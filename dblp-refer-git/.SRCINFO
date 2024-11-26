@@ -1,0 +1,14 @@
+pkgbase = dblp-refer-git
+	pkgdesc = Convert DBLP search results to refer records
+	pkgver = r9.9dc9c5f
+	pkgrel = 1
+	url = https://github.com/aligrudi/dblp
+	arch = i686
+	arch = x86_64
+	license = ISC
+	makedepends = git
+	optdepends = neatrefer-git: refer preprocessor for neatroff
+	source = dblp-refer-git::git+https://github.com/aligrudi/dblp.git
+	md5sums = SKIP
+
+pkgname = dblp-refer-git

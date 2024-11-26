@@ -1,0 +1,20 @@
+pkgbase = galileo-dev
+	pkgdesc = Utility to securely synchronize a Fitbit tracker with the Fitbit server. Development version, which supports synchronization without dongle, through bluetooth (experimental)
+	pkgver = 0.5.1.r128.g1f62d5d
+	pkgrel = 1
+	url = https://github.com/benallard/galileo
+	install = galileo.install
+	arch = any
+	license = LGPL3
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python-pyusb
+	depends = python-requests
+	depends = python-pydbus
+	conflicts = galileo
+	options = !emptydirs
+	backup = etc/galileo/config
+	source = galileo-dev::git+https://github.com/benallard/galileo.git
+	md5sums = SKIP
+
+pkgname = galileo-dev

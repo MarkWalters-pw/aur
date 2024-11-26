@@ -1,0 +1,17 @@
+pkgbase = gli-git
+	pkgdesc = OpenGL Image (GLI) is a header only C++ image library for graphics software
+	pkgver = 0.8.2.0.r70.g559cbe1e
+	pkgrel = 1
+	url = http://gli.g-truc.net
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = cmake
+	depends = glm>=0.9.7.0
+	provides = gli
+	conflicts = gli
+	source = git+https://github.com/g-truc/gli.git
+	sha512sums = SKIP
+
+pkgname = gli-git
+

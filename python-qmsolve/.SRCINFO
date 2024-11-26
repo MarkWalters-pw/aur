@@ -1,0 +1,23 @@
+pkgbase = python-qmsolve
+	pkgdesc = A module for solving and visualizing the Schrödinger equation
+	pkgver = 2.0.0
+	pkgrel = 1
+	url = https://github.com/quantum-visualizations/qmsolve
+	arch = any
+	license = BSD-3-Clause
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python-h5py
+	depends = python-matplotlib
+	depends = python-numpy
+	depends = python-progressbar
+	depends = python-scipy
+	optdepends = mayavi: for 3D graphics
+	optdepends = python-pyqt5: for 3D graphics
+	optdepends = vtk: for 3D graphics
+	source = https://github.com/quantum-visualizations/qmsolve/archive/2.0.0.tar.gz
+	b2sums = ab7cc38f6a15e1fddc5f0bb234c3a2d72e869a46149639f79945c6f092597c95db62d98fdba43792862f70ec168fd6ce5d355869536c68ff1d80b1a427594a5f
+
+pkgname = python-qmsolve

@@ -1,0 +1,16 @@
+pkgbase = openkim-models
+	pkgdesc = This package contains the models from OpenKIM.org
+	pkgver = 2021.01.28
+	pkgrel = 1
+	url = https://openkim.org
+	arch = i686
+	arch = x86_64
+	license = CDDL
+	makedepends = cmake
+	makedepends = gcc-fortran
+	depends = kim-api
+	replaces = kim-api-models
+	source = https://s3.openkim.org/archives/collection/openkim-models-2021-01-28.txz
+	sha512sums = 524f10fa53a88db289f48bb59c84a545d0f6d14940b8a254d2531d499a33b6a5efa86ce565d9979af9fbae2387ac75b106a931427cb786f3631df7c39f3d0fdd
+
+pkgname = openkim-models

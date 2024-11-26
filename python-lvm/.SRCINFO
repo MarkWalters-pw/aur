@@ -1,0 +1,23 @@
+pkgbase = python-lvm
+	pkgdesc = Python 3 bindings for LVM
+	pkgver = 2.02.188
+	pkgrel = 1
+	url = http://sourceware.org/lvm2/
+	arch = x86_64
+	arch = i686
+	arch = pentium4
+	arch = aarch64
+	arch = armv7h
+	license = LGPL2.1
+	makedepends = python-build
+	makedepends = python-installer
+	depends = python
+	depends = lvm2
+	source = https://ftp.gwdg.de/pub/linux/sources.redhat.com/lvm2/LVM2.2.02.188.tgz
+	source = https://ftp.gwdg.de/pub/linux/sources.redhat.com/lvm2/LVM2.2.02.188.tgz.asc
+	validpgpkeys = 88437EF5C077BD113D3B7224228191C1567E2C17
+	validpgpkeys = D501A478440AE2FD130A1BE8B9112431E509039F
+	sha256sums = 7101e8b0816ad77e4390fed9749a090214ba520061cd083437871e19e50cc9bd
+	sha256sums = SKIP
+
+pkgname = python-lvm

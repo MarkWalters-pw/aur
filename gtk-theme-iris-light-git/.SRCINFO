@@ -1,0 +1,17 @@
+pkgbase = gtk-theme-iris-light-git
+	pkgdesc = A flat theme that uses varying shades and tones to create distinction and a modern experience.
+	pkgver = 105.aca7c34
+	pkgrel = 1
+	url = https://thevirtualdragon.deviantart.com/art/Iris-Light-Gtk-Theme-v1-7-5-428948909
+	changelog = CHANGELOG
+	arch = any
+	license = GPL3
+	makedepends = git
+	optdepends = gtk-engine-murrine: gtk2 bindings
+	optdepends = gtk3: gtk3 bindings
+	provides = gtk-theme-iris-light=105.aca7c34
+	conflicts = gtk-theme-iris-light
+	source = iris-light::git+https://github.com/xyl0n/iris-light.git
+	sha512sums = SKIP
+
+pkgname = gtk-theme-iris-light-git

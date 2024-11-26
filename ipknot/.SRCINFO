@@ -1,0 +1,15 @@
+pkgbase = ipknot
+	pkgdesc = IPknot for predicting RNA pseudoknot structures using integer programming
+	pkgver = 1.0.0
+	pkgrel = 1
+	url = http://rtips.dna.bio.keio.ac.jp/ipknot/
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = cmake
+	makedepends = viennarna>=2.2.0
+	depends = glpk>=4.41
+	source = https://github.com/satoken/ipknot/archive/v1.0.0.tar.gz
+	md5sums = b33756e236f7401cff82d3d4516348b9
+
+pkgname = ipknot

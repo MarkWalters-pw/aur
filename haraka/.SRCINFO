@@ -1,0 +1,18 @@
+pkgbase = haraka
+	pkgdesc = A fast, highly extensible, and event driven SMTP server
+	pkgver = 3.0.2
+	pkgrel = 1
+	url = http://haraka.github.io/
+	install = haraka.install
+	arch = x86_64
+	arch = aarch64
+	license = MIT
+	makedepends = npm
+	depends = nodejs
+	options = !strip
+	source = https://github.com/haraka/Haraka/archive/refs/tags/v3.0.2.tar.gz
+	source = haraka.service
+	sha256sums = 23e793439eb39543f645b43b5a013a329beaa85911a80f4b6814235b81bdf28f
+	sha256sums = 91b8d8f1f8742c103753588c50adecb36ad348e604b98a87e29d48570bdea00a
+
+pkgname = haraka

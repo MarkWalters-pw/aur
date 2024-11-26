@@ -1,0 +1,26 @@
+pkgbase = honk-hg
+	pkgdesc = ActivityPub compatible server with web frontend. Mercurialtip.
+	pkgver = 1349.47ad620a35db
+	pkgrel = 2
+	epoch = 0
+	url = https://humungus.tedunangst.com/r/honk
+	install = honk.install
+	changelog = honk-hg.changelog
+	arch = x86_64
+	license = custom:ISC
+	makedepends = go
+	makedepends = sqlite
+	makedepends = mercurial
+	depends = go
+	depends = sqlite
+	optdepends = nginx: for TLS and reverse proxying
+	provides = honk-hg
+	conflicts = honk-hg
+	conflicts = honk
+	options = strip
+	options = zipman
+	options = docs
+	source = hg+https://humungus.tedunangst.com/r/honk
+	sha512sums = SKIP
+
+pkgname = honk-hg

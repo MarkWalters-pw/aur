@@ -1,0 +1,19 @@
+pkgbase = ibus-libzhuyin
+	pkgdesc = New Zhuyin engine based on libzhuyin for IBus
+	pkgver = 1.10.3
+	pkgrel = 1
+	url = https://github.com/libzhuyin/ibus-libzhuyin
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	makedepends = intltool
+	makedepends = gnome-common
+	makedepends = wget
+	depends = ibus
+	depends = opencc
+	depends = python-xdg
+	depends = libpinyin
+	source = ibus-libzhuyin-1.10.3.tar.gz::https://github.com/libzhuyin/ibus-libzhuyin/archive/1.10.3.tar.gz
+	sha512sums = e4f18852d68df0928d36f02a23cf7a94f770b7a57eaa9f5ff5deecf722dceb65b9e253d8ba63f56914e786a0fbce2271631bdb4c411cd04c27b5d496dabe26a5
+
+pkgname = ibus-libzhuyin

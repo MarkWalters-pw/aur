@@ -1,0 +1,22 @@
+pkgbase = openshift-origin-server-bin
+	pkgdesc = OpenShift Origin is a platform for developing, building, and deploying containerized applications. See https://docs.openshift.org/latest for more on running OpenShift Origin.
+	pkgver = 3.11.0
+	pkgrel = 1
+	url = https://github.com/openshift/origin
+	arch = x86_64
+	license = Apache
+	depends = docker
+	options = !strip
+	source = bash-completions-oc::https://raw.githubusercontent.com/openshift/origin/0cbc58b/contrib/completions/bash/oc
+	source = bash-completions-openshift::https://raw.githubusercontent.com/openshift/origin/0cbc58b/contrib/completions/bash/openshift
+	source = zsh-completions-oc::https://raw.githubusercontent.com/openshift/origin/0cbc58b/contrib/completions/zsh/oc
+	source = zsh-completions-openshift::https://raw.githubusercontent.com/openshift/origin/0cbc58b/contrib/completions/zsh/openshift
+	source = https://github.com/openshift/origin/releases/download/v3.11.0/openshift-origin-server-v3.11.0-0cbc58b-linux-64bit.tar.gz
+	sha512sums = 362ff81995d27b7ed204f9a6dff92a75ebc920dbc3fa3a8ed775cd9ed642c393e2f09819f1d1b2d3ecd31af7010575ea36364623b83ad2c249c5e3cae3756123
+	sha512sums = fb2e3f9c3df7ffb6f924a46f4a389390276f16862585f7bc6f4cedb5a73fd5df8d897f4236b0a9a35efa5e13e2ef7d108b904379907bc3c5f5c904410c494f6b
+	sha512sums = 69cccd2b6aa1ca63adb7e70ab63fd203ccd5d9bf12485d3fe42ba675cd51216d3d0e0566e03e83ef68f25b682e63595f078a99b1084a65cdec4f5463410c9a51
+	sha512sums = d369e1e3484b253800707d2aa312179d6b3a2553b952e7d4d60453a633b97411c24a07d055924c94ca095803d3325b9d8d05c6a0d7e914d8fe6c5d639299c665
+	sha512sums = 9d85f343ec5538abaef91634331c5eb37351e7af5d327f3a6924c2b61d5a5d7e8e22b64585431e44e16ed6c536bd2a79eb17f3085d5f86654337512ed995f653
+
+pkgname = openshift-origin-server-bin
+

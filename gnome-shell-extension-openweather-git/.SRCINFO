@@ -1,0 +1,17 @@
+pkgbase = gnome-shell-extension-openweather-git
+	pkgdesc = Gnome shell extension for displaying weather information
+	pkgver = r1268.9117377
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/toppk/gnome-shell-extension-openweather
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = dconf
+	depends = gnome-shell
+	provides = gnome-shell-extension-weather-git
+	conflicts = gnome-shell-extension-weather-git
+	source = git+https://github.com/toppk/gnome-shell-extension-openweather.git
+	sha256sums = SKIP
+
+pkgname = gnome-shell-extension-openweather-git

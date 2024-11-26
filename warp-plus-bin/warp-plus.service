@@ -1,0 +1,12 @@
+[Unit]
+Description=Warp-Plus Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+WorkingDirectory=/etc/warp-plus
+ExecStart=/usr/bin/warp-plus -c /etc/warp-plus/config.json
+ExecStop=/bin/kill -HUP ${MAINPID}
+
+[Install]
+WantedBy=multi-user.target

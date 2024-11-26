@@ -1,0 +1,19 @@
+pkgbase = gnome-search-tool-no-nautilus
+	pkgdesc = Utility to search for files without nautilus or gnome-desktop
+	pkgver = 3.6.0+82+g4a8f34e
+	pkgrel = 1
+	url = https://gitlab.gnome.org/Archive/gnome-search-tool
+	arch = x86_64
+	license = GPL2
+	makedepends = intltool
+	makedepends = yelp-tools
+	makedepends = git
+	makedepends = gnome-common
+	depends = nautilus-data
+	depends = libsm
+	provides = gnome-search-tool
+	conflicts = gnome-search-tool
+	source = git+https://gitlab.gnome.org/Archive/gnome-search-tool.git#commit=4a8f34e050fb794852264cf54feb7d449dd15965
+	sha256sums = SKIP
+
+pkgname = gnome-search-tool-no-nautilus

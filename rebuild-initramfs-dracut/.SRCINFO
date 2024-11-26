@@ -1,0 +1,28 @@
+pkgbase = rebuild-initramfs-dracut
+	pkgver = 2.1.1
+	pkgrel = 1
+	url = https://github.com/xuanruiqi/rebuild-initramfs-dracut-arch
+	arch = any
+	license = MIT
+	makedepends = ruby-ronn-ng
+	makedepends = python-installer
+	makedepends = python-build
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	source = rebuild-initramfs-dracut-2.1.1.tar.gz::https://github.com/xuanruiqi/rebuild-initramfs-dracut-arch/archive/2.1.1.tar.gz
+	sha256sums = d377dad9c810a76dff4afe1028fe848c146b71eb37562c7188f2e6543d0e1468
+
+pkgname = rebuild-initramfs-dracut
+	pkgdesc = A helper script to rebuild initramfs images using dracut
+	depends = dracut
+	depends = pyalpm
+	depends = python-termcolor
+	depends = python-yaml
+	optdepends = sbsigntools: to sign kernel image
+	conflicts = rebuild-initramfs-dracut-legacy
+	backup = etc/rebuild-initramfs.yaml
+
+pkgname = rebuild-initramfs-dracut-hook
+	pkgdesc = Install/remove hooks for dracut, based on rebuild-initramfs
+	depends = rebuild-initramfs-dracut
+	conflicts = rebuild-initramfs-dracut-legacy-hook

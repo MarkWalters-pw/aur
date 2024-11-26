@@ -1,0 +1,23 @@
+pkgbase = dune-localfunctions
+	pkgdesc = Local Finite Elements
+	pkgver = 2.10.0
+	pkgrel = 1
+	url = https://dune-project.org/modules/dune-localfunctions
+	arch = x86_64
+	license = LicenseRef-GPL-2.0-only-with-DUNE-exception
+	makedepends = texlive-basic
+	makedepends = doxygen
+	makedepends = graphviz
+	makedepends = python-scikit-build
+	depends = dune-geometry>=2.10.0
+	optdepends = texlive-basic: Type setting system
+	optdepends = doxygen: Generate the class documentation from C++ sources
+	optdepends = graphviz: Graph visualization software
+	options = !emptydirs
+	source = https://dune-project.org/download/2.10.0/dune-localfunctions-2.10.0.tar.gz
+	source = https://dune-project.org/download/2.10.0/dune-localfunctions-2.10.0.tar.gz.asc
+	validpgpkeys = 703607A1FD9AF4205E735522B95BE0EFB19724A1
+	sha512sums = 32f6b440c6a8c036fcdfb1507c716bb6273cd3f3e0bba625454d7dd59f23bc274188eb2179450df1c1937959cb93703ee6d5198ef968e13bb4fcc7e5d947da27
+	sha512sums = SKIP
+
+pkgname = dune-localfunctions

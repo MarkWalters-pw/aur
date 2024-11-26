@@ -1,0 +1,16 @@
+pkgbase = bashtuner
+	pkgdesc = A guitar tuner written in bash with several tunings, and support for some other stringed instruments
+	pkgver = 2019.04.20
+	pkgrel = 1
+	url = https://git.stormux.org/storm/bashtuner
+	arch = any
+	license = unlicense
+	makedepends = git
+	depends = dialog
+	depends = sox
+	provides = bashtuner
+	conflicts = bashtuner
+	source = git+https://git.stormux.org/storm/bashtuner.git
+	sha512sums = SKIP
+
+pkgname = bashtuner

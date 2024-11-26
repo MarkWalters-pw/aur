@@ -1,0 +1,17 @@
+pkgbase = libcprime-git
+	pkgdesc = A library for bookmarking, saving recent activites, managing settings of C-Suite
+	pkgver = 4.5.0.r2.gbc990a2
+	pkgrel = 1
+	url = https://gitlab.com/cubocore/libcprime
+	arch = x86_64
+	arch = aarch64
+	license = GPL3
+	makedepends = cmake
+	makedepends = git
+	depends = qt6-base
+	provides = libcprime=4.5.0
+	conflicts = libcprime
+	source = libcprime::git+https://gitlab.com/cubocore/libcprime.git
+	sha256sums = SKIP
+
+pkgname = libcprime-git

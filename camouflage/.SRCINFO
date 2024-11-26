@@ -1,0 +1,18 @@
+pkgbase = camouflage
+	pkgdesc = a mux websocket over TLS proxy
+	pkgver = 2.0.0
+	pkgrel = 2
+	epoch = 1
+	url = https://github.com/Sherlock-Holo/camouflage
+	arch = x86_64
+	license = MPL
+	makedepends = go>=2:1.15
+	makedepends = git
+	backup = etc/camouflage/example.toml
+	source = https://github.com/Sherlock-Holo/camouflage/archive/v2.0.0.tar.gz
+	source = camouflage.install
+	md5sums = a3b7c3ba4368ac44fadf8900aa308ef4
+	md5sums = d506ec62e984c89ddea0cec157292d42
+
+pkgname = camouflage
+

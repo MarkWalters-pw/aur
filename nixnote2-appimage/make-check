@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# A convenience script for the package maintainers.
+# This file is neither installed nor run on package installation.
+
+set -euo pipefail
+
+unset PACMAN
+PATH=/usr/bin:$PATH
+
+# Compressing is slow when building many times, and
+# it's mostly an already compressed AppImage anyway
+export PKGEXT=.pkg.tar
+
+pkgdir=${0%%/*}  # dirname $0
+cd -P -- "$pkgdir" || exit 1  # Allow to be called from any directory
+
+if [[ -d src ]]; then
+  makepkg -ef "$@"
+else
+  makepkg -f "$@"
+fi
+
+shopt -s nullglob
+for specimen in PKGBUILD *pkg.tar{,.{xz,zst}}; do
+  echo "++ namcap of $specimen"
+  namcap "$specimen"
+done
+
+makepkg --printsrcinfo >| .SRCINFO && echo "Updated .SRCINFO" >&2

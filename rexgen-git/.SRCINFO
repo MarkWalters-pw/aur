@@ -1,0 +1,18 @@
+pkgbase = rexgen-git
+	pkgdesc = A tool to create words based on regular expressions
+	pkgver = 2.1.5.r0.gdbac1c2
+	pkgrel = 1
+	url = https://github.com/teeshop/rexgen
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = gcc
+	makedepends = cmake
+	makedepends = flex
+	makedepends = bison
+	makedepends = clang
+	depends = git
+	source = rexgen-git::git+https://github.com/teeshop/rexgen
+	sha256sums = SKIP
+
+pkgname = rexgen-git

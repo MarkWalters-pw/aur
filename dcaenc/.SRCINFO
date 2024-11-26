@@ -1,0 +1,16 @@
+pkgbase = dcaenc
+	pkgdesc = An open-source implementation of the DTS Coherent Acoustics lossy audio codec
+	pkgver = 3
+	pkgrel = 1
+	url = https://gitlab.com/patrakov/dcaenc
+	arch = x86_64
+	arch = i686
+	arch = armv6h
+	arch = armv7h
+	license = LGPL
+	depends = alsa-lib
+	options = !libtool
+	source = https://gitlab.com/patrakov/dcaenc/-/archive/v3/dcaenc-v3.tar.gz
+	sha256sums = c928071679be586891c06bdd56aaadbef59b2f38c13d54d01a1fb868dee24c10
+
+pkgname = dcaenc

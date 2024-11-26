@@ -1,0 +1,24 @@
+pkgbase = kodi-addon-game-libretro
+	pkgdesc = Libretro wrapper for Kodi's Game API
+	pkgver = 20.2.7
+	pkgrel = 1
+	url = https://github.com/kodi-game/game.libretro
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	groups = kodi-addons
+	groups = kodi-addons-game
+	license = GPL
+	makedepends = cmake
+	makedepends = libretro-core-info
+	makedepends = kodi-platform
+	makedepends = kodi-dev
+	options = !lto
+	options = debug
+	source = kodi-addon-game-libretro-20.2.7.tar.gz::https://github.com/kodi-game/game.libretro/archive/20.2.7-Nexus.tar.gz
+	sha512sums = e5da3d055a97152ace6bc78d969c5a1dcc9917e85ef34181e7ecb9cdf2d9c669fae359b1b76320bb0ef2a6c83e2813d362de57cc3d7ed48fc553ad720c3fffac
+
+pkgname = kodi-addon-game-libretro
+	depends = kodi
+	depends = kodi-platform
+	depends = libretro-core-info

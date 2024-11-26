@@ -1,0 +1,19 @@
+pkgbase = python-jax-jumpy
+	pkgdesc = Common backend for Jax or Numpy
+	pkgver = 1.0.0
+	pkgrel = 1
+	url = https://github.com/Farama-Foundation/Jumpy
+	arch = any
+	license = Apache
+	checkdepends = python-pytest
+	checkdepends = python-jax
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python-numpy
+	optdepends = python-jax: for JAX backend
+	source = Jumpy-1.0.0.tar.gz::https://github.com/Farama-Foundation/Jumpy/archive/1.0.0.tar.gz
+	sha512sums = 38d365fe15a8533650b89610cbaa589ff6b948201cab0e5d272a24f971d58fe29552d6517627434a35089d47db5f580cd07e8263039bd824111dfe45ae56cffa
+
+pkgname = python-jax-jumpy

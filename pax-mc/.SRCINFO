@@ -1,0 +1,17 @@
+pkgbase = pax-mc
+	pkgdesc = The MC modpack manager for professionals.
+	pkgver = 1.9.14
+	pkgrel = 1
+	url = https://github.com/froehlicha/pax
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = nim
+	makedepends = nimble
+	provides = pax-mc
+	conflicts = pax-mc-bin
+	conflicts = pax-mc-git
+	source = pax-1.9.14.tar.gz::https://github.com/froehlichA/pax/archive/refs/tags/v1.9.14.tar.gz
+	sha256sums = b499af45c1e1f70f20d067d009bfd5b656f0b4430694973990e9fdb2003c5cac
+
+pkgname = pax-mc

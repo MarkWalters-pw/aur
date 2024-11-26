@@ -1,0 +1,25 @@
+pkgbase = kubedee-git
+	pkgdesc = Multi-node Kubernetes clusters on LXD
+	pkgver = 0.7.0.r25.c12a800
+	pkgrel = 1
+	url = https://github.com/schu/kubedee
+	arch = any
+	license = APACHE
+	depends = lxd
+	depends = btrfs-progs
+	depends = cfssl
+	depends = jq
+	depends = kubectl
+	optdepends = kubernetes
+	optdepends = etcd
+	optdepends = cri-o
+	optdepends = runc
+	optdepends = cni-plugins
+	optdepends = docker-registry2
+	provides = kubedee
+	conflicts = kubedee
+	source = kubedee-git::git+https://github.com/schu/kubedee
+	sha512sums = SKIP
+
+pkgname = kubedee-git
+

@@ -1,0 +1,18 @@
+pkgbase = system76-firmware-daemon-git
+	pkgdesc = System76 Firmware Daemon provides a daemon for installing firmware updates.
+	pkgver = 1.0.52.r0.ga900b63
+	pkgrel = 1
+	url = https://github.com/pop-os/system76-firmware
+	arch = any
+	license = GPL
+	makedepends = rust
+	depends = dbus
+	depends = systemd
+	depends = openssl-1.0
+	provides = system76-firmware-daemon
+	conflicts = system76-driver<=17.10.32
+	conflicts = system76-firmware-daemon
+	source = system76-firmware-daemon-git::git+https://github.com/pop-os/system76-firmware.git
+	sha256sums = SKIP
+
+pkgname = system76-firmware-daemon-git

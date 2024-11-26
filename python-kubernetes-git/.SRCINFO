@@ -1,0 +1,25 @@
+pkgbase = python-kubernetes-git
+	pkgdesc = Python Kubernetes-client git version.
+	pkgver = r1756.94e42113a
+	pkgrel = 1
+	url = https://github.com/kubernetes-client/python
+	arch = x86_64
+	license = Apache-2.0
+	makedepends = git
+	depends = python
+	depends = python-certifi
+	depends = python-six
+	depends = python-dateutil
+	depends = python-urllib3
+	depends = python-yaml
+	depends = python-google-auth
+	depends = python-websocket-client
+	depends = python-requests
+	depends = python-requests-oauthlib
+	depends = python-adal
+	provides = python-kubernetes
+	conflicts = python-kubernetes
+	source = python-kubernetes::git+https://github.com/kubernetes-client/python#branch=master
+	md5sums = SKIP
+
+pkgname = python-kubernetes-git

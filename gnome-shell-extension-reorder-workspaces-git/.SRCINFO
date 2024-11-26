@@ -1,0 +1,16 @@
+pkgbase = gnome-shell-extension-reorder-workspaces-git
+	pkgdesc = Move workspaces up or down in the GNOME overview
+	pkgver = 11.r0.gfd8628a
+	pkgrel = 1
+	url = https://github.com/jeremiahmegel/gnome-reorder-workspaces
+	arch = any
+	license = GPL3
+	makedepends = git
+	makedepends = unzip
+	makedepends = yarn
+	depends = gnome-shell>=1:40
+	provides = gnome-shell-extension-reorder-workspaces
+	source = git+https://github.com/jeremiahmegel/gnome-reorder-workspaces.git
+	sha256sums = SKIP
+
+pkgname = gnome-shell-extension-reorder-workspaces-git

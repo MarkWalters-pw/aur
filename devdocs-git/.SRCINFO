@@ -1,0 +1,25 @@
+pkgbase = devdocs-git
+	pkgdesc = API Documentation Browser
+	pkgver = r1033.ddf87bb
+	pkgrel = 2
+	url = http://devdocs.io
+	arch = any
+	license = MPL
+	makedepends = git
+	depends = ruby
+	depends = ruby-bundler
+	depends = curl
+	depends = nodejs
+	depends = coffee-script
+	provides = devdocs-git
+	source = devdocs-git::git+https://github.com/Thibaut/devdocs
+	source = devdocs-server.sh
+	source = devdocs-cli.sh
+	source = devdocs.service
+	md5sums = SKIP
+	md5sums = SKIP
+	md5sums = SKIP
+	md5sums = SKIP
+
+pkgname = devdocs-git
+

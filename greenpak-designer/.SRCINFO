@@ -1,0 +1,28 @@
+pkgbase = greenpak-designer
+	pkgdesc = GreenPAK3-6 Designer
+	pkgver = 6.25.003
+	pkgrel = 1
+	url = https://www.dialog-semiconductor.com/greenpak-designer-software
+	install = greenpak-designer.install
+	arch = i686
+	arch = x86_64
+	license = custom
+	makedepends = patchelf
+	depends = desktop-file-utils
+	depends = graphviz
+	depends = gtk-update-icon-cache
+	depends = libusb
+	depends = qt5-svg
+	depends = qt5-webview
+	depends = qwt
+	depends = shared-mime-info
+	conflicts = greenpak-designer-dev
+	replaces = greenpak-designer-dev
+	options = !strip
+	source_i686 = https://support.dialog-semiconductor.com/downloads/GP_Designer_v6.25.003_Debian-testing_i386_Setup.deb
+	sha256sums_i686 = 34bea41fdd706d4a7ed34ee18769ff0fa299c0950f2d477a11fa06109671f349
+	source_x86_64 = https://support.dialog-semiconductor.com/downloads/GP_Designer_v6.25.003_Debian-testing_amd64_Setup.deb
+	sha256sums_x86_64 = 93f6ba4899bf9efe7e3316eb497763a52db1cfa93ef2806c6d83536db9a39095
+
+pkgname = greenpak-designer
+

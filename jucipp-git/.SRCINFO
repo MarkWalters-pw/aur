@@ -1,0 +1,28 @@
+pkgbase = jucipp-git
+	pkgdesc = A lightweight platform-independent C++ IDE
+	pkgver = r2120.7d53bca
+	pkgrel = 1
+	url = https://gitlab.com/cppit/jucipp
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = cmake
+	makedepends = pkg-config
+	makedepends = boost
+	depends = gtksourceviewmm
+	depends = clang
+	depends = aspell-en
+	depends = lldb
+	depends = boost-libs
+	depends = libgit2
+	depends = ctags
+	source = jucipp::git+https://gitlab.com/cppit/jucipp.git
+	source = git+https://gitlab.com/cppit/libclangmm.git
+	source = git+https://gitlab.com/eidheim/tiny-process-library
+	sha1sums = SKIP
+	sha1sums = SKIP
+	sha1sums = SKIP
+
+pkgname = jucipp-git
+

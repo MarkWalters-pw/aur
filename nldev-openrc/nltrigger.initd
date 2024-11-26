@@ -1,0 +1,17 @@
+#!/usr/bin/openrc-run
+
+description="triggerring device uevents"
+
+depend()
+{
+	need nldev
+	provide dev-settle
+}
+
+start()
+{
+	ebegin "Triggering device uevents"
+	nltrigger /sys add 0
+	sleep 1s
+	eend $?
+}

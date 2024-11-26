@@ -1,0 +1,7 @@
+#!/bin/bash
+
+rm /usr/bin/heroic
+echo -e "#! /bin/bash\n\n/opt/Heroic/heroic --ozone-platform-hint=auto" > /usr/bin/heroic
+sed -E "s|/opt/Heroic/heroic|/opt/Heroic/heroic --ozone-platform-hint=auto|" -i /usr/share/applications/heroic.desktop
+chmod +x /usr/bin/heroic
+

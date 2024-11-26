@@ -1,0 +1,19 @@
+pkgbase = theweb
+	pkgdesc = Web Browser based on QtWebEngine
+	pkgver = 16.0
+	pkgrel = 0
+	url = https://github.com/vicr123/theweb
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = nodejs
+	makedepends = npm
+	depends = xdg-utils
+	depends = qt5-base
+	depends = the-libs
+	depends = qt5-webengine
+	source = theweb-16.0::git+https://github.com/vicr123/theweb#branch=master
+	md5sums = SKIP
+
+pkgname = theweb
+

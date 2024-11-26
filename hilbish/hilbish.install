@@ -1,0 +1,13 @@
+post_install()  {
+  echo ":: Adding hilbish to /etc/shells..."
+  grep -qe '^/usr/bin/hilbish$' /etc/shells || echo '/usr/bin/hilbish' >> /etc/shells
+}
+
+post_upgrade()  {
+  post_install
+}
+
+post_remove()  {
+  echo ":: Removing hilbish from /etc/shells..."
+  sed -ri -e '\|^/usr/bin/hilbish$|d' /etc/shells
+}

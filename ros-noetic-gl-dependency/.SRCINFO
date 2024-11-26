@@ -1,0 +1,16 @@
+pkgbase = ros-noetic-gl-dependency
+	pkgdesc = ROS - This encapsulates the GL dependency for a specific ROS distribution and its Qt version.
+	pkgver = 1.1.2
+	pkgrel = 1
+	url = https://wiki.ros.org/gl_dependency
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-catkin
+	depends = python-pyqt5
+	source = ros-noetic-gl-dependency-1.1.2.tar.gz::https://github.com/ros-visualization/gl_dependency/archive/1.1.2.tar.gz
+	sha256sums = c0502c7cc5841e03bdc59f57c0461665a45ec03d7bd9cdda3cd147f87ca67b8c
+
+pkgname = ros-noetic-gl-dependency
+

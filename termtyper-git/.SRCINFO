@@ -1,0 +1,20 @@
+pkgbase = termtyper-git
+	pkgdesc = A TUI application written in python for typing!
+	pkgver = 2.0.0
+	pkgrel = 1
+	url = https://github.com/kraanzu/termtyper
+	arch = any
+	license = MIT
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-poetry
+	makedepends = git
+	depends = python-rich
+	depends = python-textual
+	depends = python-playsound
+	provides = termtyper
+	conflicts = termtyper
+	source = git+https://github.com/kraanzu/termtyper
+	md5sums = SKIP
+
+pkgname = termtyper-git

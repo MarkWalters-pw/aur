@@ -1,0 +1,23 @@
+pkgbase = headmaster-git
+	pkgdesc = translate c header files to another language
+	pkgver = 0.28.r15.g96c3387
+	pkgrel = 2
+	url = https://github.com/ytomino/headmaster
+	arch = x86_64
+	license = BSD
+	makedepends = git
+	makedepends = ocamlbuild
+	makedepends = python-docutils
+	depends = mpfr
+	provides = headmaster
+	conflicts = headmaster
+	options = !makeflags
+	source = git+https://github.com/ytomino/headmaster
+	source = git+https://github.com/ytomino/gmp-ocaml
+	source = git+https://github.com/ytomino/unicode-ocaml
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = headmaster-git
+

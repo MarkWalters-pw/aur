@@ -1,0 +1,20 @@
+pkgbase = libby-git
+	pkgdesc = a simple cli tool to download books from Library Genesis
+	pkgver = r30.f253e26
+	pkgrel = 1
+	url = https://github.com/carterprince/libby
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = python-requests
+	depends = python-tqdm
+	depends = python-beautifulsoup4
+	optdepends = neomutt
+	optdepends = rofi
+	optdepends = calibre
+	provides = libby
+	conflicts = libby
+	source = libby-git::git+https://github.com/carterprince/libby
+	md5sums = SKIP
+
+pkgname = libby-git

@@ -1,0 +1,26 @@
+pkgbase = openauto-git
+	pkgdesc = AndroidAuto headunit emulator
+	pkgver = r121.d7041aa
+	pkgrel = 1
+	url = https://github.com/f1xpl/openauto
+	arch = x86_64
+	license = GPL3
+	makedepends = boost
+	makedepends = cmake
+	makedepends = chrpath
+	makedepends = git
+	depends = aasdk-git
+	depends = qt5-connectivity
+	depends = qt5-multimedia
+	depends = pulseaudio
+	depends = gst-libav
+	depends = gst-plugins-bad
+	depends = rtaudio
+	optdepends = android-udev: make phone visible to autoapp via USB
+	provides = openauto
+	conflicts = openauto
+	source = openauto-git::git+https://github.com/abraha2d/openauto#branch=development
+	md5sums = SKIP
+
+pkgname = openauto-git
+

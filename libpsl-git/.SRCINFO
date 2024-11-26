@@ -1,0 +1,21 @@
+pkgbase = libpsl-git
+	pkgdesc = Public Suffix List library
+	pkgver = libpsl.0.21.0.r41.g72365d3
+	pkgrel = 1
+	url = https://github.com/rockdaboot/libpsl
+	arch = x86_64
+	license = MIT
+	makedepends = libxslt
+	makedepends = python
+	makedepends = publicsuffix-list
+	makedepends = gtk-doc
+	makedepends = git
+	depends = libidn2
+	depends = libunistring
+	provides = libpsl
+	conflicts = libpsl
+	source = git+https://github.com/rockdaboot/libpsl.git
+	sha512sums = SKIP
+
+pkgname = libpsl-git
+

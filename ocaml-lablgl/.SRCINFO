@@ -1,0 +1,22 @@
+pkgbase = ocaml-lablgl
+	pkgdesc = OCaml interface to OpenGL
+	pkgver = 1.07
+	pkgrel = 1
+	url = https://github.com/garrigue/lablgl
+	arch = x86_64
+	license = BSD
+	makedepends = ocaml-findlib
+	depends = camlp-streams
+	depends = glu
+	depends = glut
+	depends = libxi
+	depends = libxmu
+	depends = libgl
+	depends = ocaml>=4.14.0
+	options = !strip
+	options = !makeflags
+	options = staticlibs
+	source = ocaml-lablgl-1.07.tar.gz::https://github.com/garrigue/lablgl/archive/v1.07.tar.gz
+	sha256sums = 845477ed8d5aeaad63907a9edfc1d8f8d62b932c6e37a32502926ee402a6271f
+
+pkgname = ocaml-lablgl

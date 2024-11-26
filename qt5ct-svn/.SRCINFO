@@ -1,0 +1,20 @@
+pkgbase = qt5ct-svn
+	pkgdesc = Qt5 Configuration Tool - svn version.
+	pkgver = 1.9.r690
+	pkgrel = 2
+	url = https://sourceforge.net/projects/qt5ct/
+	arch = x86_64
+	license = BSD-2-Clause
+	makedepends = cmake
+	makedepends = qt5-tools
+	makedepends = subversion
+	depends = gcc-libs
+	depends = glibc
+	depends = qt5-base
+	depends = qt5-svg
+	provides = qt5ct
+	conflicts = qt5ct
+	source = qt5ct::svn://svn.code.sf.net/p/qt5ct/code/trunk/qt5ct
+	md5sums = SKIP
+
+pkgname = qt5ct-svn

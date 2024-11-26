@@ -1,0 +1,16 @@
+pkgbase = god-git
+	pkgdesc = Utility for simplifying the Git usage (git)
+	pkgver = 1.10.r1.gf7c054c
+	pkgrel = 1
+	url = https://github.com/orhun/god
+	arch = x86_64
+	license = GPL3
+	makedepends = go
+	makedepends = git
+	provides = god
+	conflicts = god
+	source = git+https://github.com/orhun/god
+	sha256sums = SKIP
+
+pkgname = god-git
+

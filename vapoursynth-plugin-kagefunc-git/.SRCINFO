@@ -1,0 +1,26 @@
+pkgbase = vapoursynth-plugin-kagefunc-git
+	pkgdesc = Plugin for Vapoursynth: kagefunc (GIT version)
+	pkgver = r61.ee61e8f
+	pkgrel = 1
+	url = https://github.com/Irrational-Encoding-Wizardry/kagefunc
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	depends = vapoursynth-plugin-mvsfunc-git
+	depends = vapoursynth-plugin-fvsfunc-git
+	depends = vapoursynth-plugin-retinex-git
+	depends = vapoursynth-plugin-vsutil-git
+	depends = vapoursynth-plugin-descale-git
+	depends = vapoursynth-plugin-fmtconv-git
+	depends = vapoursynth-plugin-wwxd-git
+	depends = vapoursynth-plugin-addgrain-git
+	depends = vapoursynth-plugin-bm3d-git
+	depends = vapoursynth-plugin-knlmeanscl-git
+	depends = vapoursynth-plugin-tcanny-git
+	depends = vapoursynth-plugin-adaptivegrain-git
+	provides = vapoursynth-plugin-kagefunc
+	conflicts = vapoursynth-plugin-kagefunc
+	source = kagefunc::git+https://github.com/Irrational-Encoding-Wizardry/kagefunc.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-kagefunc-git

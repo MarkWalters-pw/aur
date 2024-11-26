@@ -1,0 +1,16 @@
+pkgbase = resnap-git
+	pkgdesc = reMarkable screenshots over SSH.
+	pkgver = r110.fa7d712
+	pkgrel = 1
+	url = https://github.com/cloudsftp/reSnap
+	arch = any
+	license = MIT
+	makedepends = git
+	depends = openssh
+	depends = ffmpeg
+	depends = lz4
+	depends = feh
+	source = git+https://github.com/cloudsftp/reSnap.git
+	md5sums = SKIP
+
+pkgname = resnap-git

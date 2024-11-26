@@ -1,0 +1,23 @@
+pkgbase = alpine-minirootfs
+	pkgdesc = Minimal root filesystem in a chroot
+	pkgver = 3.17.2
+	pkgrel = 2
+	url = https://alpinelinux.org/
+	install = alpine-minirootfs.install
+	arch = x86_64
+	license = MIT
+	depends = coreutils
+	depends = grep
+	depends = util-linux
+	depends = sh
+	source = https://dl-cdn.alpinelinux.org/alpine/v3.17/releases/x86_64/alpine-minirootfs-3.17.2-x86_64.tar.gz
+	source = https://dl-cdn.alpinelinux.org/alpine/v3.17/releases/x86_64/alpine-minirootfs-3.17.2-x86_64.tar.gz.asc
+	source = enter-chroot.sh
+	source = exit-chroot.sh
+	validpgpkeys = 0482D84022F52DF1C4E7CD43293ACD0907D9495A
+	sha256sums = b10fc6a33e462b9ccf704436071771051728d30f5d8b48adcddb9523c4c45328
+	sha256sums = 78c1271cb0c5221a7960223fba2487081a71929c74e9f59d7638090031acfe6b
+	sha256sums = e7d45319f5107d446ffc86f01e85eb79a34696669e91fa732b6242923febae8e
+	sha256sums = 19137bcce680558ff4428d2fbbac08360ffcc69b9efc3b876b4fa384dcbbe9c5
+
+pkgname = alpine-minirootfs

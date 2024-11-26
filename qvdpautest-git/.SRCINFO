@@ -1,0 +1,19 @@
+pkgbase = qvdpautest-git
+	pkgdesc = A VDPAU Benchmark. (GIT version)
+	pkgver = r31.1538ce0
+	pkgrel = 1
+	epoch = 1
+	url = http://www.nvnews.net/vbulletin/showthread.php?p=2015214
+	arch = i686
+	arch = x86_64
+	license = LGPL
+	makedepends = cmake
+	depends = qt4
+	depends = libvdpau
+	provides = qvdpautest
+	conflicts = qvdpautest
+	source = git+https://github.com/robertmassaioli/qvdpautest.git
+	sha1sums = SKIP
+
+pkgname = qvdpautest-git
+

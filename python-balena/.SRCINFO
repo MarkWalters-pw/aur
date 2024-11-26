@@ -1,0 +1,21 @@
+pkgbase = python-balena
+	pkgdesc = Balena SDK for Python
+	pkgver = 10.1.1
+	pkgrel = 1
+	url = https://github.com/balena-io/balena-sdk-python
+	arch = any
+	license = Apache
+	makedepends = python-setuptools
+	depends = python-pyjwt>=1.5.0
+	depends = python-twisted>=18.7.0
+	depends = python-pyotp>=2.2.5
+	depends = python-pyopenssl>=18.0.0
+	depends = python-semver
+	depends = python-service-identity
+	depends = python-requests>=2.19.1
+	provides = python-balena
+	source = https://github.com/balena-io/balena-sdk-python/archive/v10.1.1.tar.gz
+	sha256sums = 2d44e19b4c66444ea1bae39e6702c2214889c8a01d0350b827ca75556fbf95e0
+
+pkgname = python-balena
+

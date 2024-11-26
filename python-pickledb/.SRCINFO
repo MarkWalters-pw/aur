@@ -1,0 +1,18 @@
+pkgbase = python-pickledb
+	pkgdesc = A lightweight, fast and simple database based on Python’s own json module
+	pkgver = 0.9.3.r13.g68b24d6
+	pkgrel = 1
+	url = https://pypi.org/project/pickleDB
+	arch = any
+	license = BSD-3-Clause
+	checkdepends = python-pytest
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python
+	source = pickledb::git+https://github.com/patx/pickledb.git#commit=68b24d6291a89923ae604feab1f8817d9b1792b6
+	b2sums = SKIP
+
+pkgname = python-pickledb

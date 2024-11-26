@@ -1,0 +1,18 @@
+pkgbase = lib32-fakechroot
+	pkgdesc = Gives a fake chroot environment (32-bit)
+	pkgver = 2.20.1
+	pkgrel = 1
+	url = https://github.com/dex4er/fakechroot/wiki
+	install = fakechroot.install
+	arch = x86_64
+	license = LGPL
+	makedepends = lib32-gcc-libs
+	depends = fakechroot
+	depends = lib32-glibc
+	source = fakechroot-2.20.1.tar.gz::https://github.com/dex4er/fakechroot/archive/2.20.1.tar.gz
+	source = stat.patch
+	md5sums = 69612efa06636e79a56898512222b0fc
+	md5sums = 474a72c077719676a42d7fbea8ea53f8
+
+pkgname = lib32-fakechroot
+

@@ -1,0 +1,27 @@
+pkgbase = onthespot-git
+	pkgdesc = Qt based music downloader written in python.
+	pkgver = 0.5
+	pkgrel = 1
+	url = https://github.com/casualsnek/onthespot
+	arch = any
+	license = GPLv2
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = ffmpeg
+	depends = python-requests
+	depends = python-pyqt5
+	depends = python-pillow
+	depends = python-show-in-file-manager
+	depends = python-certifi
+	depends = python-pyxdg
+	depends = python-librespot
+	depends = python-music-tag
+	depends = python-mutagen
+	provides = onthespot
+	conflicts = onthespot
+	source = https://github.com/casualsnek/onthespot/archive/refs/heads/main.zip
+	sha256sums = SKIP
+
+pkgname = onthespot-git

@@ -1,0 +1,20 @@
+pkgbase = libxtrx-git
+	pkgdesc = High level API for the xtrx SDR
+	pkgver = r77.acb0b1cf7ab9
+	pkgrel = 2
+	url = https://github.com/xtrx-sdr/libxtrx
+	arch = any
+	license = LGPL
+	makedepends = git
+	makedepends = cmake
+	depends = liblms7002m-xtrx
+	depends = libxtrxdsp
+	depends = libxtrxll
+	depends = qcustomplot
+	depends = soapysdr
+	provides = libxtrx
+	conflicts = libxtrx
+	source = git+https://github.com/xtrx-sdr/libxtrx
+	md5sums = SKIP
+
+pkgname = libxtrx-git

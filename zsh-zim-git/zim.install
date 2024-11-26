@@ -1,0 +1,34 @@
+#!/bin/bash
+
+post_install() {
+  [[ -f ~root/.zimrc ]] || ln -s /etc/zsh/zimrc ~root/.zimrc
+  compile_scripts
+  echo
+  echo "    Zim is enabled by default for all zsh users"
+  echo
+  echo "    ~root/.zimrc was symlinked to /etc/zsh/zimrc"
+  echo "    Global settings reside in the /etc/zsh/ directory."
+  echo "    To personalize Zsh and Zim, edit your local ~/.zshrc and ~/.zimrc files."
+  echo "    A user can also have a custom, overriding Zim installation in ~/.zim/"
+  echo
+  echo "    NOTE: Zim errors are suppressed, so if you're experiencing any issues"
+  echo "          with Zim, remove &>/dev/null from /etc/zsh/zshrc"
+  echo "    NOTE: /etc/zsh/zlogin is not needed by this package anymore and can be removed"
+  echo
+}
+
+post_upgrade() {
+  compile_scripts
+}
+
+post_remove() {
+  remove_compiled_scripts
+}
+
+compile_scripts() {
+  zsh -c 'export ZIM_HOME=/usr/lib/zim; source /etc/zsh/zshrc;'
+}
+
+remove_compiled_scripts() {
+  find /usr/lib/zim -name "*.zwc" | xargs rm -f
+}

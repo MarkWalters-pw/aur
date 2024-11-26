@@ -1,0 +1,25 @@
+pkgbase = tr1pd-git
+	pkgdesc = tamper resistant audit log
+	pkgver = 0.3.1.r24.geddc242
+	pkgrel = 1
+	url = https://github.com/kpcyrd/tr1pd
+	install = tr1pd.install
+	arch = i686
+	arch = x86_64
+	arch = armv6h
+	arch = aarch64
+	license = AGPL3
+	makedepends = cargo
+	makedepends = git
+	depends = gcc-libs
+	depends = libsodium
+	depends = libseccomp
+	depends = libcap
+	depends = zeromq
+	provides = tr1pd
+	conflicts = tr1pd
+	source = git+https://github.com/kpcyrd/tr1pd.git
+	sha512sums = SKIP
+
+pkgname = tr1pd-git
+

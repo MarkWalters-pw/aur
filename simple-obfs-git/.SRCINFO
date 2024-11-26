@@ -1,0 +1,17 @@
+pkgbase = simple-obfs-git
+	pkgdesc = A simple obfusacting tool designed as plugin server of shadowsocks (git version)
+	pkgver = 0.0.5.r46.g486bebd
+	pkgrel = 1
+	url = https://github.com/shadowsocks/simple-obfs
+	arch = x86_64
+	license = GPL
+	makedepends = asciidoc
+	makedepends = xmlto
+	depends = libev
+	depends = libcork
+	conflicts = simple-obfs
+	source = simple-obfs-git::git+https://github.com/shadowsocks/simple-obfs.git
+	sha512sums = SKIP
+
+pkgname = simple-obfs-git
+

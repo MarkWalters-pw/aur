@@ -1,0 +1,19 @@
+pkgbase = farpdf-git
+	pkgdesc = A experimental PDF software designed for serious readers.
+	pkgver = v0.1.r29.g15cc8d7
+	pkgrel = 1
+	url = https://gitlab.com/slbtty/far2
+	arch = i686
+	arch = x86_64
+	license = AGPL3
+	makedepends = git
+	makedepends = cmake
+	makedepends = ninja
+	depends = libmupdf
+	depends = qt6-base
+	provides = farpdf
+	conflicts = farpdf
+	source = farpdf-git::git+https://gitlab.com/slbtty/far2
+	md5sums = SKIP
+
+pkgname = farpdf-git

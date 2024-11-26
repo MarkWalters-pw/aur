@@ -1,0 +1,26 @@
+pkgbase = khefin
+	pkgdesc = A simple way to generate password-proteceted secrets from a FIDO2 authenticator with the hmac-secret extension
+	pkgver = 0.6.1
+	pkgrel = 3
+	url = https://github.com/mjec/khefin
+	install = khefin.install
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	depends = bash
+	depends = libfido2
+	depends = libcbor
+	depends = libsodium
+	depends = libcap
+	optdepends = bash-completion: bash completion support
+	optdepends = mkinitcpio: initramfs support
+	optdepends = openssh: ssh-askpass support
+	optdepends = libnotify: ssh-askpass support
+	replaces = fido2-hmac-secret
+	source = https://github.com/mjec/khefin/archive/v0.6.1.tar.gz
+	source = https://github.com/mjec/khefin/releases/download/v0.6.1/v0.6.1.tar.gz.sig
+	validpgpkeys = 6927F7D45F567621E14121DDFD1D670D31F82A81
+	sha256sums = 0655c4a7d258e976337c3b0154a712187cc01f737478aaa0a02115a6d3a5ef12
+	sha256sums = b860ad459d112bdec0be28f7c36721978cfe183db9ca762bee05b09a9746e5c6
+
+pkgname = khefin

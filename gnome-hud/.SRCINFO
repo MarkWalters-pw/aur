@@ -1,0 +1,29 @@
+pkgbase = gnome-hud
+	pkgdesc = Unity like HUD menu for the GNOME Desktop Environment
+	pkgver = 1.4.1
+	pkgrel = 1
+	url = https://github.com/hardpixel/gnome-hud
+	arch = any
+	license = GPL
+	makedepends = python-setuptools
+	depends = gtk3
+	depends = bamf
+	depends = libkeybinder3
+	depends = python
+	depends = python-gobject
+	depends = python-dbus
+	depends = python-fuzzysearch
+	optdepends = rofi: Use rofi as menu dialog
+	optdepends = appmenu-gtk-module: AppMenu support for GTK2
+	optdepends = libdbusmenu-gtk2: DbusMenu support for GTK2
+	optdepends = libdbusmenu-gtk3: DbusMenu support for GTK3
+	optdepends = appmenu-qt4: AppMenu support for Qt4
+	optdepends = libdbusmenu-qt4: DbusMenu support for Qt4
+	optdepends = libdbusmenu-qt5: DbusMenu support for Qt5
+	conflicts = gnome-hud
+	conflicts = gnome-hud-git
+	source = gnome-hud-1.4.1.tar.gz::https://github.com/hardpixel/gnome-hud/archive/v1.4.1.tar.gz
+	md5sums = 925e481b406838b8dd3ee6067931ed2a
+
+pkgname = gnome-hud
+

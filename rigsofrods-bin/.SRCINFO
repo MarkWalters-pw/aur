@@ -1,0 +1,23 @@
+pkgbase = rigsofrods-bin
+	pkgdesc = An open source vehicle simulator based on soft-body physics
+	pkgver = 2022.04
+	pkgrel = 1
+	url = https://www.rigsofrods.org
+	arch = x86_64
+	license = GPLv3
+	depends = openal
+	depends = nvidia-cg-toolkit
+	depends = openjpeg2
+	conflicts = rigsofrods
+	conflicts = rigsofrods-git
+	conflicts = rigsofrods-noangelscript-git
+	source = https://update.rigsofrods.org/rigs-of-rods-linux-2022.04.zip
+	source = rigsofrods-bin
+	source = RoR.desktop
+	source = rigsofrods.png
+	md5sums = 1ffa755c741ad0044039f615e7f6177b
+	md5sums = a2b0a314317baca59bf00b3dbbc19c96
+	md5sums = d08fa6b90c78d12de7772b15af0380a4
+	md5sums = eb771473d8e14a8814c6d1d68f25f02d
+
+pkgname = rigsofrods-bin

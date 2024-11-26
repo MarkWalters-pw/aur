@@ -1,0 +1,22 @@
+pkgbase = xu4-svn
+	pkgdesc = Remake of the computer game Ultima IV
+	pkgver = r3095
+	pkgrel = 1
+	url = http://xu4.sourceforge.net/
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = cmake
+	makedepends = sdl
+	makedepends = subversion
+	makedepends = unzip
+	makedepends = zlib
+	depends = libpng
+	depends = libxml2
+	depends = sdl_mixer
+	provides = xu4
+	conflicts = xu4
+	source = xu4::svn+https://svn.code.sf.net/p/xu4/code/trunk
+	sha256sums = SKIP
+
+pkgname = xu4-svn

@@ -1,0 +1,27 @@
+pkgbase = cling
+	pkgdesc = Interactive C++ interpreter, built on the top of LLVM and Clang libraries
+	pkgver = 1.0
+	pkgrel = 1
+	url = https://root.cern/cling/
+	arch = i686
+	arch = x86_64
+	license = custom:Cling Release License
+	makedepends = git
+	makedepends = cmake
+	makedepends = ninja
+	makedepends = python
+	depends = libxml2
+	optdepends = perl: support for scan-build, ccc-analyzer and c++-analyzer
+	optdepends = python: support for scan-view and Jupyter
+	optdepends = python-pygments: support for opt-viewer
+	optdepends = python-yaml: support for opt-viewer
+	provides = cling
+	conflicts = cling
+	options = !lto
+	options = !debug
+	source = cling-llvm::git+https://github.com/root-project/llvm-project.git#tag=cling-llvm13-20240318-01
+	source = cling::git+https://github.com/root-project/cling.git#tag=v1.0
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = cling

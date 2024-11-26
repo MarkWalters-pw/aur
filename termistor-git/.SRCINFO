@@ -1,0 +1,17 @@
+pkgbase = termistor-git
+	pkgdesc = A drop-down terminal for Wayland
+	pkgver = 50.bc0843f
+	pkgrel = 1
+	url = https://github.com/giucam/termistor
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	depends = wayland
+	depends = libxkbcommon
+	provides = termistor
+	conflicts = termistor
+	source = termistor::git+https://github.com/giucam/termistor
+	md5sums = SKIP
+
+pkgname = termistor-git

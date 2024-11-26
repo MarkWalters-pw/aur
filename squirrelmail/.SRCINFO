@@ -1,0 +1,18 @@
+pkgbase = squirrelmail
+	pkgdesc = Webmail for Nuts!
+	pkgver = 1.4.22
+	pkgrel = 2
+	url = http://www.squirrelmail.org
+	install = squirrelmail.install
+	arch = any
+	license = GPL
+	depends = php
+	depends = perl
+	depends = imap-server
+	backup = srv/http/squirrelmail/.htaccess
+	backup = srv/http/squirrelmail/config/config.php
+	source = http://downloads.sourceforge.net/sourceforge/squirrelmail/squirrelmail-webmail-1.4.22.tar.bz2
+	sha1sums = 46819275be27e9119e9a2fd976d441cee261ea55
+
+pkgname = squirrelmail
+

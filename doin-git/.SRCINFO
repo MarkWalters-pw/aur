@@ -1,0 +1,16 @@
+pkgbase = doin-git
+	pkgdesc = Run any command inside any namespace-based Linux container
+	pkgver = r8.f783ea6
+	pkgrel = 1
+	url = https://github.com/aperezdc/doin
+	arch = x86_64
+	arch = i686
+	license = MIT
+	makedepends = git
+	depends = glibc
+	provides = doin
+	conflicts = doin
+	source = doin-git::git+https://github.com/aperezdc/doin
+	sha512sums = SKIP
+
+pkgname = doin-git

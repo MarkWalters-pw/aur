@@ -1,0 +1,16 @@
+pkgbase = tunneler-git
+	pkgdesc = port of an old DOS game written using SDL
+	pkgver = r2.cd75602
+	pkgrel = 2
+	url = https://github.com/jose1711/tunneler
+	arch = x86_64
+	arch = i686
+	license = GPL
+	makedepends = git
+	makedepends = gendesk
+	depends = sdl
+	conflicts = tunneler
+	source = tunneler-git::git+https://github.com/jose1711/tunneler.git
+	md5sums = SKIP
+
+pkgname = tunneler-git

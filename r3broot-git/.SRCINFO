@@ -1,0 +1,29 @@
+pkgbase = r3broot-git
+	pkgdesc = Analysis framework based on root for the R3B experiment provided by GSI/FAIR.
+	pkgver = apr17
+	pkgrel = 1
+	url = http://www.r3broot.gsi.de
+	install = r3broot.install
+	arch = x86_64
+	license = unknown
+	makedepends = cmake
+	makedepends = clang
+	makedepends = bison
+	makedepends = flex
+	makedepends = gcc-fortran
+	makedepends = subversion
+	makedepends = curl
+	depends = fairsoft
+	depends = fairroot
+	provides = r3broot
+	options = !emptydirs
+	options = staticlibs
+	options = libtool
+	options = !strip
+	source = r3broot-git::git+https://github.com/R3BRootGroup/R3BRoot#branch=dev
+	source = r3broot.install
+	md5sums = SKIP
+	md5sums = 29d9cea27a2cf33f7dfd028447f300d1
+
+pkgname = r3broot-git
+

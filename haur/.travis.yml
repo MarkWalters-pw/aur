@@ -1,0 +1,18 @@
+language: bash
+script:
+  - "curl -s https://raw.githubusercontent.com/mikkeloscar/arch-travis/master/arch-travis.sh | bash"
+services:
+  - docker
+archlinux:
+  packages:
+    - bash
+    - git
+    - namcap
+    - shellcheck-static
+  mount:
+    - ~/.pkg-cache:/var/cache/pacman/pkg
+  script:
+    - "bash test.sh"
+    - "shellcheck ./haur"
+    - "namcap PKGBUILD"
+    - "makepkg -Ccsi --noconfirm"

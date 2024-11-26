@@ -1,0 +1,33 @@
+pkgbase = ros-melodic-interactive-markers
+	pkgdesc = ROS - 3D interactive marker communication library for RViz and similar tools.
+	pkgver = 1.11.5
+	pkgrel = 4
+	url = https://wiki.ros.org/interactive_markers
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-melodic-rostest
+	makedepends = ros-melodic-catkin
+	makedepends = ros-melodic-tf
+	makedepends = ros-melodic-std-msgs
+	makedepends = ros-melodic-rosconsole
+	makedepends = ros-melodic-roscpp
+	makedepends = ros-melodic-visualization-msgs
+	makedepends = ros-melodic-rospy
+	depends = ros-melodic-rostest
+	depends = ros-melodic-tf
+	depends = ros-melodic-std-msgs
+	depends = ros-melodic-rosconsole
+	depends = ros-melodic-roscpp
+	depends = ros-melodic-visualization-msgs
+	depends = ros-melodic-rospy
+	source = ros-melodic-interactive-markers-1.11.5.tar.gz::https://github.com/ros-visualization/interactive_markers/archive/1.11.5.tar.gz
+	sha256sums = 24bb9a8b116e442cd1b7982b496278106416b1ec32fc9f6a47835ec57fbd92d7
+
+pkgname = ros-melodic-interactive-markers
+

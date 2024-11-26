@@ -1,0 +1,14 @@
+pkgbase = ps2-ee
+	pkgdesc = EE compiler which is used in the creation of homebrew software for the Sony PlayStation® 2 videogame system.
+	pkgver = v1.0
+	pkgrel = 1
+	url = https://github.com/ps2dev/ps2toolchain-ee
+	arch = x86_64
+	license = BSD
+	depends = mips64r5900el-ps2-elf-binutils
+	depends = mips64r5900el-ps2-elf-gcc
+	depends = mips64r5900el-ps2-elf-newlib
+	depends = mips64r5900el-ps2-elf-newlib-nano
+	depends = mips64r5900el-ps2-elf-pthread-embedded
+
+pkgname = ps2-ee

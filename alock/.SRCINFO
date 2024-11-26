@@ -1,0 +1,25 @@
+pkgbase = alock
+	pkgdesc = simple screen lock application for X server
+	pkgver = 2.5.1
+	pkgrel = 1
+	url = https://github.com/Arkq/alock
+	arch = i686
+	arch = x86_64
+	license = MIT
+	depends = libx11
+	depends = libxext
+	depends = libxrender
+	depends = libxcursor
+	depends = libxpm
+	depends = imlib2
+	depends = pam
+	depends = libgcrypt
+	optdepends = dunst
+	optdepends = xorg-xbacklight
+	provides = alock
+	conflicts = alock-svn
+	conflicts = alock-git
+	source = alock-2.5.1.tar.gz::https://github.com/Arkq/alock/archive/refs/tags/v2.5.1.tar.gz
+	sha256sums = b74cd18ecddce013b38b8fca8687e140d89c1a42cb4a2970a5d864adafb39df8
+
+pkgname = alock

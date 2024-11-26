@@ -1,0 +1,15 @@
+pkgbase = es
+	pkgdesc = Extensible Shell derived from Plan9 rc
+	pkgver = 0.9.2
+	pkgrel = 1
+	url = http://wryun.github.io/es-shell/
+	install = es.install
+	arch = x86_64
+	license = custom:Public Domain
+	makedepends = bison
+	depends = readline
+	depends = termcap
+	source = https://github.com/wryun/es-shell/releases/download/v0.9.2/es-0.9.2.tar.gz
+	b2sums = 7d317e046f7211eb4ce3c79573a5f6809e9e5928f63b3c3a08fe07c27af5cf50f2ecd30f7406a787d8a228b263e18bbc35d9025f7b94223b5b2b7d2f32eb730e
+
+pkgname = es

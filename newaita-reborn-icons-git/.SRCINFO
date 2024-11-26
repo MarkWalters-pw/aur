@@ -1,0 +1,18 @@
+pkgbase = newaita-reborn-icons-git
+	pkgdesc = Remaster Newaita icon theme
+	pkgver = r88.5b19f46a
+	pkgrel = 1
+	url = https://github.com/cbrnix/Newaita-reborn
+	arch = any
+	license = GPL3
+	makedepends = git
+	makedepends = rsync
+	provides = newaita-reborn
+	provides = newaita-reborn-icons
+	conflicts = newaita-reborn
+	conflicts = newaita-reborn-icons
+	options = !strip
+	source = git+https://github.com/cbrnix/Newaita-reborn.git
+	md5sums = SKIP
+
+pkgname = newaita-reborn-icons-git

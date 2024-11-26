@@ -1,0 +1,31 @@
+pkgbase = verovio
+	pkgdesc = A music notation engraving library
+	pkgver = 4.3.1
+	pkgrel = 1
+	url = https://www.verovio.org
+	arch = x86_64
+	license = LGPL-3.0-only
+	makedepends = cmake
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	makedepends = swig
+	depends = gcc-libs
+	depends = glibc
+	source = https://github.com/rism-digital/verovio/archive/version-4.3.1/verovio-4.3.1.tar.gz
+	source = no-assert.patch
+	source = resource-path.patch
+	sha256sums = de488c6bfa0312412a746e3a59e2de21e81c0859372faa68f30a393b8c12de02
+	sha256sums = d7f93d7f995541ebd94cae6a972bf13db92d43680aa56018ebe7270400f52677
+	sha256sums = 9e753f91b2da85dc7fb6e1fe36d8d3de85957ed91d331a1e4b65af121415b50f
+
+pkgname = verovio
+	pkgdesc = A music notation engraving library (CLI and library)
+
+pkgname = python-verovio
+	pkgdesc = A music notation engraving library (Python bindings)
+	depends = verovio
+	depends = gcc-libs
+	depends = glibc
+	depends = python

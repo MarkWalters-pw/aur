@@ -1,0 +1,38 @@
+pkgbase = r-odbc
+	pkgdesc = Connect to ODBC Compatible Databases (using the DBI Interface)
+	pkgver = 1.5.0
+	pkgrel = 1
+	url = https://cran.r-project.org/package=odbc
+	arch = i686
+	arch = x86_64
+	license = MIT
+	checkdepends = r-covr
+	checkdepends = r-dbitest
+	checkdepends = r-magrittr
+	checkdepends = r-rmarkdown
+	checkdepends = r-rsqlite
+	checkdepends = r-tibble
+	checkdepends = r-withr
+	checkdepends = r-testthat>=3.0.0
+	makedepends = r-cpp11
+	depends = r>=3.6.0
+	depends = r-bit64
+	depends = r-blob>=1.2.0
+	depends = r-cli
+	depends = r-dbi>=1.1.0
+	depends = r-hms
+	depends = r-lifecycle
+	depends = r-rcpp>=0.12.11
+	depends = r-rlang>=1.1.0
+	depends = unixodbc
+	optdepends = r-covr
+	optdepends = r-dbitest
+	optdepends = r-magrittr
+	optdepends = r-rmarkdown
+	optdepends = r-rsqlite
+	optdepends = r-tibble
+	optdepends = r-withr
+	source = https://cran.r-project.org/src/contrib/odbc_1.5.0.tar.gz
+	b2sums = e387d2ac256227c160679f6ea13175c5632c756f03106daeb6ce1281eab3c4a3e594a11f7d9e8235eecac2d246cc3e86c61406999a4150d6ee4ca38d5cd696dc
+
+pkgname = r-odbc

@@ -1,0 +1,22 @@
+pkgbase = webvirtd-git
+	pkgdesc = A libvirt JSON API
+	pkgver = 1.0.1.r3.g1d9c9bd
+	pkgrel = 1
+	url = https://github.com/kevr/webvirtd
+	install = webvirtd.install
+	arch = i686
+	arch = x86_64
+	groups = webvirt-git
+	license = Apache
+	makedepends = meson
+	makedepends = ninja
+	makedepends = libvirt
+	makedepends = boost-libs
+	depends = libvirt
+	depends = boost-libs
+	provides = webvirtd
+	conflicts = webvirtd
+	source = webvirtd-git::git+https://github.com/kevr/webvirtd
+	sha256sums = SKIP
+
+pkgname = webvirtd-git

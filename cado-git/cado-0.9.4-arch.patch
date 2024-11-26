@@ -1,0 +1,20 @@
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index 9a3562b..e3f3a4d 100644
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -33,15 +33,3 @@ install(
+         RUNTIME
+         DESTINATION ${CMAKE_INSTALL_BINDIR}
+ )
+-
+-if(NOT DEBUILD)
+-        install(
+-                CODE "execute_process(
+-                        COMMAND ${CMAKE_COMMAND}
+-                        -DBINDIR=${CMAKE_INSTALL_FULL_BINDIR}
+-                        -DLIBDIR=${CMAKE_INSTALL_FULL_LIBDIR}
+-                        -DCADO_SPOOL_DIR=${CADO_SPOOL_DIR}
+-                        -P ${PROJECT_SOURCE_DIR}/PostInstall.cmake
+-                )"
+-        )
+-endif()

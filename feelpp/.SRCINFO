@@ -1,0 +1,27 @@
+pkgbase = feelpp
+	pkgdesc = Finite Element Embedded Language and Library in C++
+	pkgver = 0.109.0
+	pkgrel = 1
+	url = https://github.com/feelpp
+	arch = x86_64
+	license = LGPL
+	makedepends = cmake
+	makedepends = clang
+	makedepends = eigen
+	makedepends = openmp
+	depends = cln
+	depends = mumps
+	depends = slepc
+	depends = gmsh
+	depends = fftw
+	depends = ann
+	depends = glpk
+	depends = gsl
+	depends = python
+	depends = elastic-git
+	depends = openvr
+	depends = libharu
+	source = feelpp-0.109.0::git+https://github.com/feelpp/feelpp.git#tag=v0.109.0
+	sha256sums = SKIP
+
+pkgname = feelpp

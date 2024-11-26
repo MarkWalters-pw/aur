@@ -1,0 +1,31 @@
+# Maintainer: lilydjwg <lilydjwg@gmail.com>
+
+_pkgname=cld3
+_reponame=$_pkgname
+pkgname=python-${_pkgname}-git
+pkgver=0.2.3.20200117
+pkgrel=11
+pkgdesc='Python bindings for cld3 (Compact Language Detector v3)'
+arch=('i686' 'x86_64')
+url='https://github.com/iamthebot/cld3'
+license=('Apache')
+depends=('python' 'protobuf')
+makedepends=('git' 'python-setuptools' 'cython')
+source=('git+https://github.com/iamthebot/cld3.git')
+md5sums=('SKIP')
+
+pkgver() {
+  cd "$srcdir/$_reponame"
+  echo $(awk -F'"' '/version=/ { print $2 }' setup.py).$(TZ=UTC git log -1 --pretty='%cd' --date=short-local | tr -d '-')
+}
+
+build() {
+  cd "$srcdir/$_reponame"
+  sed -i 's/c++11/c++17/' setup.py
+  python setup.py build
+}
+
+package() {
+  cd "$srcdir/$_reponame"
+  python setup.py install --root=$pkgdir --optimize=1 --skip-build
+}

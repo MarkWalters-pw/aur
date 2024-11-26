@@ -1,0 +1,21 @@
+pkgbase = ros-melodic-gencpp
+	pkgdesc = ROS - C++ ROS message and service generators.
+	pkgver = 0.6.5
+	pkgrel = 3
+	url = https://wiki.ros.org/gencpp
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-melodic-genmsg
+	makedepends = ros-melodic-catkin
+	depends = ros-melodic-genmsg
+	source = ros-melodic-gencpp-0.6.5.tar.gz::https://github.com/ros/gencpp/archive/0.6.5.tar.gz
+	sha256sums = 05acfeeb1bbc374356bf7674fee2a7aab3bf6a48ebad4a06fd0f0d4455a60720
+
+pkgname = ros-melodic-gencpp
+

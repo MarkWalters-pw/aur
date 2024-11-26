@@ -1,0 +1,19 @@
+pkgbase = perl-email-localdelivery
+	pkgdesc = Perl module to deliver an email to a list of mailboxes
+	pkgver = 1.201
+	pkgrel = 1
+	url = https://metacpan.org/release/Email-LocalDelivery
+	arch = any
+	license = PerlArtistic
+	license = GPL
+	checkdepends = perl>=5.13.4
+	checkdepends = perl-capture-tiny
+	depends = perl>=5.8.8
+	depends = perl-email-foldertype>=0.7
+	depends = perl-email-simple>=1.998
+	depends = perl-file-path-expand>=1.01
+	options = !emptydirs
+	source = http://search.cpan.org/CPAN/authors/id/R/RJ/RJBS/Email-LocalDelivery-1.201.tar.gz
+	md5sums = ce108d9b905719d811b290d08f98079e
+
+pkgname = perl-email-localdelivery

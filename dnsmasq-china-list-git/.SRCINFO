@@ -1,0 +1,19 @@
+pkgbase = dnsmasq-china-list-git
+	pkgdesc = Configuration for hot China domains to accelerate via Dnsmasq
+	pkgver = 0.96984.ab47aca5b5
+	pkgrel = 1
+	url = https://github.com/felixonmars/dnsmasq-china-list
+	arch = any
+	license = WTFPL
+	makedepends = git
+	source = git+https://github.com/felixonmars/dnsmasq-china-list.git
+	md5sums = SKIP
+
+pkgname = dnsmasq-china-list-git
+	pkgdesc = Configuration for hot China domains to accelerate via Dnsmasq
+	depends = dnsmasq
+
+pkgname = smartdns-china-list-git
+	pkgdesc = Configuration for hot China domains to accelerate via smartdns
+	depends = smartdns
+

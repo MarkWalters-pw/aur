@@ -1,0 +1,16 @@
+pkgbase = libdvdcss-git
+	pkgdesc = A portable abstraction library for DVD decryption. (GIT version)
+	pkgver = 1.4.3.3.gd0b6a29
+	pkgrel = 1
+	url = https://www.videolan.org/libdvdcss
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	depends = glibc
+	provides = libdvdcss
+	provides = libdvdcss.so
+	conflicts = libdvdcss
+	source = git+https://code.videolan.org/videolan//libdvdcss.git
+	sha256sums = SKIP
+
+pkgname = libdvdcss-git

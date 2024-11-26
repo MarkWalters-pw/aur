@@ -1,0 +1,23 @@
+pkgbase = ros-noetic-moveit-ros
+	pkgdesc = ROS - Components of MoveIt that use ROS.
+	pkgver = 1.1.13
+	pkgrel = 1
+	url = https://moveit.ros.org
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-catkin
+	depends = ros-noetic-moveit-ros-planning
+	depends = ros-noetic-moveit-ros-move-group
+	depends = ros-noetic-moveit-ros-warehouse
+	depends = ros-noetic-moveit-ros-planning-interface
+	depends = ros-noetic-moveit-ros-visualization
+	depends = ros-noetic-moveit-ros-robot-interaction
+	depends = ros-noetic-moveit-ros-benchmarks
+	depends = ros-noetic-moveit-ros-manipulation
+	depends = ros-noetic-moveit-ros-perception
+	source = ros-noetic-moveit-ros-1.1.13.tar.gz::https://github.com/ros-planning/moveit/archive/1.1.13.tar.gz
+	sha256sums = 91735df0ec1a7bdbcdad9028352a0d78d44fad2076584319120e2e10ecb5882c
+
+pkgname = ros-noetic-moveit-ros

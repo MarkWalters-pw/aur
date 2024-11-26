@@ -1,0 +1,19 @@
+pkgbase = packwiz-bin-git
+	pkgdesc = A CLI tool for creating Minecraft modpacks (pulls latest build artifact from GitHub)
+	pkgver = r309.ac6a590
+	pkgrel = 1
+	url = https://packwiz.infra.link/
+	arch = x86_64
+	arch = aarch64
+	license = MIT
+	makedepends = git
+	provides = packwiz
+	conflicts = packwiz
+	source = packwiz.git_(only_used_for_pkgver)::git+https://github.com/packwiz/packwiz
+	sha256sums = SKIP
+	source_x86_64 = packwiz-x86_64-r309.ac6a590.zip::https://nightly.link/packwiz/packwiz/workflows/go/main/Linux%2064-bit%20x86.zip
+	sha256sums_x86_64 = SKIP
+	source_aarch64 = packwiz-aarch64-r309.ac6a590.zip::https://nightly.link/packwiz/packwiz/workflows/go/main/Linux%2064-bit%20ARM.zip
+	sha256sums_aarch64 = SKIP
+
+pkgname = packwiz-bin-git

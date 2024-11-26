@@ -1,0 +1,18 @@
+pkgbase = netboard-git
+	pkgdesc = A multiplatform network clipboard sharing service
+	pkgver = 0.0.1
+	pkgrel = 1
+	url = https://github.com/primalmotion/netboard
+	arch = x86_64
+	arch = arm64
+	license = GPL3
+	makedepends = go
+	depends = wl-clipboard
+	provides = netboard
+	conflicts = netboard
+	source = netboard-git::git+https://github.com/primalmotion/netboard
+	source = netboard.service
+	sha256sums = SKIP
+	sha256sums = fe470319810d17f929d983d1f8de2a474bcb9897e1cd1e68a33039c0d50d03e3
+
+pkgname = netboard-git

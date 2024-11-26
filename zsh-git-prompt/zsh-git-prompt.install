@@ -1,0 +1,15 @@
+post_install() {
+  cat << EOF
+
+==> File to source is /usr/lib/zsh-git-prompt/zshrc.sh
+
+EOF
+}
+
+post_remove() {
+  cat << EOF
+
+==> Please make sure your zsh config no longer sources /usr/lib/zsh-git-prompt/zshrc.sh
+
+EOF
+}

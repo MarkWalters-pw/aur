@@ -1,0 +1,15 @@
+pkgbase = mpv-last-fm-scrobbler-git
+	pkgdesc = last.fm scrobbler for mpv
+	pkgver = r9.43178a4
+	pkgrel = 1
+	url = https://github.com/Feqzz/mpv-lastfm-scrobbler
+	install = echo.install
+	arch = any
+	license = MIT
+	makedepends = git
+	depends = mpv
+	depends = scrobbler
+	source = mpv-last-fm-scrobbler-git::git+https://github.com/Feqzz/mpv-lastfm-scrobbler
+	md5sums = SKIP
+
+pkgname = mpv-last-fm-scrobbler-git

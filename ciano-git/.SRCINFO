@@ -1,0 +1,24 @@
+pkgbase = ciano-git
+	pkgdesc = A simple multimedia file converter for elementary OS
+	pkgver = 0.2.4.r0.ge7dd4bd
+	pkgrel = 1
+	url = https://robertsanseries.github.io/ciano/
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = vala
+	makedepends = meson
+	makedepends = ninja
+	depends = libgranite.so
+	depends = gtk3
+	depends = ffmpeg
+	depends = imagemagick
+	optdepends = elementary-icon-theme
+	provides = ciano
+	conflicts = ciano
+	source = git+https://github.com/robertsanseries/ciano.git
+	md5sums = SKIP
+
+pkgname = ciano-git
+

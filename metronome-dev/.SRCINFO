@@ -1,0 +1,29 @@
+pkgbase = metronome-dev
+	pkgdesc = Metronome IM XMPP Server Development
+	pkgver = 3.12.1
+	pkgrel = 1
+	url = https://metronome.im/
+	install = metronome.install
+	arch = i686
+	arch = x86_64
+	license = MIT
+	license = ISC
+	makedepends = git
+	depends = lua52
+	depends = lua52-socket
+	depends = lua52-expat
+	depends = lua52-filesystem
+	depends = lua52-event
+	depends = lua52-sec
+	depends = libidn
+	depends = openssl
+	depends = libevent
+	optdepends = lua52-zlib: compression support
+	backup = etc/metronome/metronome.cfg.lua
+	source = metronome.service
+	source = metronome::git+https://github.com/maranda/metronome.git
+	md5sums = 1f2e66ce577c22ad07b7876cfc379b79
+	md5sums = SKIP
+
+pkgname = metronome-dev
+

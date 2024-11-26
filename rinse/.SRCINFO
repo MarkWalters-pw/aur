@@ -1,0 +1,24 @@
+pkgbase = rinse
+	pkgdesc = Bootstrap a rpm based distribution like debootstrap
+	pkgver = 3.3
+	pkgrel = 1
+	url = https://salsa.debian.org/debian/rinse
+	arch = any
+	license = GPL
+	makedepends = make
+	depends = glibc
+	depends = perl
+	depends = perl-html-parser
+	depends = perl-uri
+	depends = perl-libwww
+	depends = wget
+	depends = rpm-org
+	depends = cpio
+	backup = etc/rinse/rinse.conf
+	source = https://salsa.debian.org/debian/rinse/-/archive/3.3/rinse-3.3.tar.gz
+	source = sbin.patch
+	md5sums = aad4821a80959981769ea03302c65187
+	md5sums = 4cf97714bbd4785cf39f2f729b5cc6fa
+
+pkgname = rinse
+

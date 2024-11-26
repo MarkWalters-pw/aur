@@ -1,0 +1,32 @@
+pkgbase = dot-bin
+	pkgdesc = Dot Browser is a privacy-conscious web browser based on Firefox. (Binary)
+	pkgver = 87.0
+	pkgrel = 0
+	url = https://github.com/dothq/browser
+	arch = x86_64
+	license = MPL-2.0
+	depends = gtk3
+	depends = libxt
+	depends = mime-types
+	depends = dbus-glib
+	depends = nss
+	depends = ttf-font
+	optdepends = ffmpeg: H264/AAC/MP3 decoding
+	optdepends = networkmanager: Location detection via available WiFi networks
+	optdepends = libnotify: Notification integration
+	optdepends = pulseaudio: Audio support
+	optdepends = speech-dispatcher: Text-to-Speech
+	optdepends = hunspell-en_US: Spell checking, American English
+	provides = dot
+	conflicts = dot
+	conflicts = dot-git
+	replaces = dot
+	source = dot-87.0.tar.bz2::https://download.dothq.co/dot/releases/linux/x86/raw
+	source = dot.desktop
+	source = dot.sh
+	sha256sums = 453a414b90fb0dfab47804c4164eb4922cce3f62cf305684d6a9556a5f137745
+	sha256sums = 646598d45de69426e660c7c43ce97c5b5104143ea190a6ec8e39477345030662
+	sha256sums = ad3a13116d5dfd8241d57138c5355d258960b732204fae499f1f942a967a5ff7
+
+pkgname = dot-bin
+

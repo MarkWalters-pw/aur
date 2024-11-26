@@ -1,0 +1,21 @@
+pkgbase = liblscp-svn
+	pkgdesc = LinuxSampler Control Protocol (LSCP) wrapper library
+	pkgver = 0.9.0.r3843
+	pkgrel = 1
+	url = http://www.linuxsampler.org/
+	arch = i686
+	arch = x86_64
+	license = LGPL2.1
+	makedepends = subversion
+	makedepends = doxygen
+	makedepends = libtool
+	depends = glibc
+	provides = liblscp
+	provides = liblscp=0.9.0
+	provides = liblscp.so
+	conflicts = liblscp
+	source = liblscp::svn+https://svn.linuxsampler.org/svn/liblscp/trunk
+	sha256sums = SKIP
+
+pkgname = liblscp-svn
+

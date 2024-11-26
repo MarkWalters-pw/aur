@@ -1,0 +1,20 @@
+pkgbase = medialibrary-git
+	pkgdesc = VideoLAN Media Library
+	pkgver = 4692.725ff59a
+	pkgrel = 1
+	url = https://code.videolan.org/videolan/medialibrary
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = meson
+	depends = vlc
+	depends = libvlcpp
+	depends = libjpeg-turbo
+	depends = sqlite
+	provides = medialibrary
+	conflicts = medialibrary
+	source = git+https://code.videolan.org/videolan/medialibrary.git
+	sha256sums = SKIP
+
+pkgname = medialibrary-git

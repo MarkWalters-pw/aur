@@ -1,0 +1,19 @@
+pkgbase = wooting-rgb-sdk-git
+	pkgdesc = Customize colors on Wooting Keyboard #WootDev
+	pkgver = r105.bfadbce
+	pkgrel = 1
+	url = https://github.com/WootingKb/wooting-rgb-sdk
+	arch = any
+	license = MPL2
+	makedepends = git
+	makedepends = hidapi
+	makedepends = libusb
+	depends = libusb
+	provides = libwooting-rgb-sdk
+	provides = wooting-rgb-sdk
+	conflicts = libwooting-rgb-sdk
+	source = git+https://github.com/WootingKb/wooting-rgb-sdk.git#branch=feature/lekker-support
+	md5sums = SKIP
+
+pkgname = wooting-rgb-sdk-git
+

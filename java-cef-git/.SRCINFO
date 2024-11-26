@@ -1,0 +1,18 @@
+pkgbase = java-cef-git
+	pkgdesc = Java Chromium Embedded Framework (JCEF). A simple framework for embedding Chromium-based browsers in other applications using the Java programming language.
+	pkgver = r285.23a6e96
+	pkgrel = 1
+	url = https://bitbucket.org/chromiumembedded/java-cef/src/master/
+	arch = x86_64
+	license = BSD
+	makedepends = cmake
+	makedepends = git
+	makedepends = ninja
+	depends = java-environment=11
+	provides = java-cef
+	source = java-cef-git::git://github.com/chromiumembedded/java-cef.git
+	source = 0001-update-gsutil-for-python3-compatibility.patch
+	md5sums = SKIP
+	md5sums = SKIP
+
+pkgname = java-cef-git

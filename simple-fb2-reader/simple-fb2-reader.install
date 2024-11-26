@@ -1,0 +1,13 @@
+pkgname=simple-fb2-reader
+
+post_install() {
+  return 0
+}
+
+post_upgrade() {
+  post_install
+}
+
+post_remove() {
+  post_install
+}

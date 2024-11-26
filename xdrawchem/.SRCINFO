@@ -1,0 +1,16 @@
+pkgbase = xdrawchem
+	pkgdesc = A two-dimensional molecule drawing program
+	pkgver = 1.10.2
+	pkgrel = 3
+	url = http://www.woodsidelabs.com/chemistry/xdrawchem.php
+	arch = x86_64
+	license = GPL
+	depends = openbabel
+	depends = qt5-base
+	options = !libtool
+	source = xdrawchem-1.10.2.tar.gz::https://github.com/bryanherger/xdrawchem/archive/1.10.2-1.tar.gz
+	source = obabel3.patch
+	sha256sums = 009b525e570cd79b3e59880877871e258071fecdef6c397d7533f3920faa9a7e
+	sha256sums = 0bbeea4a28a43641a11c7a54d925c9b31f1301d5d836aae2d0e95a42cb53cd0a
+
+pkgname = xdrawchem

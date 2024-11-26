@@ -1,0 +1,26 @@
+pkgbase = alpaca-electron-git
+	pkgdesc = The simplest way to run Alpaca (and other LLaMA-based local LLMs) on your own computer
+	pkgver = 1.0.6.r3.g04bad63
+	pkgrel = 1
+	url = https://github.com/ItsPi3141/alpaca-electron
+	arch = aarch64
+	arch = x86_64
+	license = MIT
+	makedepends = npm
+	makedepends = git
+	makedepends = nvm
+	makedepends = gendesk
+	makedepends = curl
+	depends = electron13
+	depends = python>3
+	depends = nodejs
+	provides = alpaca-electron=1.0.6
+	conflicts = alpaca-electron
+	options = !strip
+	options = !emptydirs
+	source = alpaca-electron.git::git+https://github.com/ItsPi3141/alpaca-electron.git
+	source = alpaca-electron.sh
+	sha256sums = SKIP
+	sha256sums = 2b2e8aeed33fd71c521e49fd54fb2fa81218d16aef8bccb88d77909055ab8051
+
+pkgname = alpaca-electron-git

@@ -1,0 +1,31 @@
+pkgbase = perl-dancer
+	pkgdesc = lightweight yet powerful web application framework
+	pkgver = 1.3521
+	pkgrel = 1
+	url = https://metacpan.org/release/Dancer
+	arch = any
+	license = PerlArtistic
+	license = GPL
+	checkdepends = perl-test-longstring>=0
+	checkdepends = perl-test-nowarnings>=0
+	depends = perl-data-dump>=0
+	depends = perl-devel-hide>=0
+	depends = perl-http-body>=0
+	depends = perl-http-cookiejar>=0.008
+	depends = perl-http-date>=0
+	depends = perl-http-message>=0
+	depends = perl-http-server-simple-psgi>=0
+	depends = perl-hash-merge-simple>=0
+	depends = perl-json>=2.90
+	depends = perl-mime-types>=0
+	depends = perl-module-runtime>=0
+	depends = perl-plack>=0
+	depends = perl-try-tiny>=0
+	depends = perl-uri>=0
+	depends = perl>=5.006
+	options = !emptydirs
+	source = http://search.cpan.org/CPAN/authors/id/Y/YA/YANICK/Dancer-1.3521.tar.gz
+	md5sums = 4df0f801ceaee7d4bebd9f2e3af85b39
+	sha512sums = e6f8ddfd3ee5049821843ceda418bcc89cb976bb75ec21eff0879c612106484c035db536340efee2e00adde4f31d5de556d16ae5423924d4ca49129baac68707
+
+pkgname = perl-dancer

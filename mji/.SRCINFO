@@ -1,0 +1,14 @@
+pkgbase = mji
+	pkgdesc = A tool for easily creating git commit messages using gitmoji
+	pkgver = 0.1.0
+	pkgrel = 1
+	url = https://github.com/unlink2/mji
+	arch = any
+	license = MIT
+	makedepends = cargo
+	makedepends = git
+	provides = mji
+	source = mji::git+https://github.com/unlink2/mji
+	sha256sums = SKIP
+
+pkgname = mji

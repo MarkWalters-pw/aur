@@ -1,0 +1,21 @@
+pkgbase = diodon-git
+	pkgdesc = GTK+ clipboard manager
+	pkgver = 1.11.0.r3.g42f0c80
+	pkgrel = 1
+	url = https://launchpad.net/diodon
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	makedepends = meson
+	makedepends = vala
+	depends = gobject-introspection
+	depends = libappindicator-gtk3
+	depends = libpeas
+	depends = xorg-server-xvfb
+	depends = zeitgeist
+	provides = diodon
+	conflicts = diodon
+	source = diodon-git::git+https://github.com/diodon-dev/diodon.git
+	sha256sums = SKIP
+
+pkgname = diodon-git

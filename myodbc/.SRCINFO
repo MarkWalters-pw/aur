@@ -1,0 +1,18 @@
+pkgbase = myodbc
+	pkgdesc = ODBC driver/connector for MySQL
+	pkgver = 8.0.32
+	pkgrel = 1
+	url = https://dev.mysql.com/downloads/connector/odbc/
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = cmake
+	makedepends = gtk3
+	depends = unixodbc
+	depends = libmysqlclient
+	optdepends = gtk3: graphical interface
+	options = libtool
+	source = https://cdn.mysql.com/Downloads/Connector-ODBC/8.0/mysql-connector-odbc-8.0.32-src.tar.gz
+	md5sums = 400b96bb94375717f0a824feeab420ff
+
+pkgname = myodbc

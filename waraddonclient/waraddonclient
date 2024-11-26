@@ -1,0 +1,11 @@
+#!/bin/bash
+# by xpander
+ 
+# WARAddonClient wrapper
+
+# WARAddonClient path
+addon_path="/opt/WARAddonClient/WARAddonClient.jar"
+
+# Start
+java -jar $addon_path $@
+

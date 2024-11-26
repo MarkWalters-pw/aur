@@ -1,0 +1,19 @@
+pkgbase = arm-image-installer
+	pkgdesc = Install and manipulate ARM disk images
+	pkgver = 3.7
+	pkgrel = 1
+	url = https://pagure.io/arm-image-installer
+	arch = any
+	license = GPL2
+	depends = btrfs-progs
+	depends = e2fsprogs
+	depends = libselinux
+	depends = parted
+	depends = sudo
+	depends = util-linux
+	depends = xfsprogs
+	depends = xz
+	source = https://pagure.io/arm-image-installer/archive/arm-image-installer-3.7/arm-image-installer-arm-image-installer-3.7.tar.gz
+	md5sums = 3a9990874dc9ec8fcf14a9a582e47b26
+
+pkgname = arm-image-installer

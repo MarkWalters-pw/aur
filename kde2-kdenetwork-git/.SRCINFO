@@ -1,0 +1,22 @@
+pkgbase = kde2-kdenetwork-git
+	pkgdesc = Historical copy of the network module of KDE 2, adapted to compile on modern systems
+	pkgver = 2.2.2.r18.5746f09
+	pkgrel = 1
+	url = https://invent.kde.org/sandsmark/kde2-kdenetwork
+	arch = i686
+	arch = x86_64
+	groups = kde2
+	license = GPL2
+	makedepends = cmake
+	makedepends = git
+	depends = kde2-kdelibs
+	depends = hicolor-icon-theme
+	depends = qt2-git
+	provides = kde2-kdenetwork
+	conflicts = kde2-kdenetwork
+	options = libtool
+	source = git+https://invent.kde.org/sandsmark/kde2-kdenetwork.git
+	md5sums = SKIP
+
+pkgname = kde2-kdenetwork-git
+

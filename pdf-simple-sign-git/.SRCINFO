@@ -1,0 +1,19 @@
+pkgbase = pdf-simple-sign-git
+	pkgdesc = Simple PDF signer
+	pkgver = v1.1.1.r1.gd4ff9a6
+	pkgrel = 2
+	url = https://git.janouch.name/p/pdf-simple-sign
+	arch = i686
+	arch = x86_64
+	license = custom:0BSD
+	makedepends = meson
+	makedepends = git
+	makedepends = asciidoctor
+	depends = openssl
+	provides = pdf-simple-sign
+	conflicts = pdf-simple-sign
+	options = zipman
+	source = git+https://git.janouch.name/p/pdf-simple-sign.git
+	md5sums = SKIP
+
+pkgname = pdf-simple-sign-git

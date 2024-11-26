@@ -1,0 +1,16 @@
+pkgbase = vapoursynth-plugin-hqdn3d-git
+	pkgdesc = Plugin for Vapoursynth: hqdn3d (GIT version)
+	pkgver = r10.eb820cb
+	pkgrel = 1
+	url = https://github.com/Hinterwaeldlers/vapoursynth-hqdn3d
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	depends = vapoursynth
+	provides = vapoursynth-plugin-hqdn3d
+	conflicts = vapoursynth-plugin-hqdn3d
+	options = debug
+	source = hqdn3d::git+https://github.com/Hinterwaeldlers/vapoursynth-hqdn3d.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-hqdn3d-git

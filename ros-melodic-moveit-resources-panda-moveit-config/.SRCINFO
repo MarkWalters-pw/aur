@@ -1,0 +1,25 @@
+pkgbase = ros-melodic-moveit-resources-panda-moveit-config
+	pkgdesc = ROS - MoveIt Resources for testing: Franka Emika Panda A project-internal configuration for testing in MoveIt.
+	pkgver = 0.7.3
+	pkgrel = 1
+	url = h
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-melodic-catkin
+	depends = ros-melodic-xacro
+	depends = ros-melodic-robot-state-publisher
+	depends = ros-melodic-moveit-resources-panda-description
+	depends = ros-melodic-joint-state-publisher
+	depends = ros-melodic-joint-state-publisher-gui
+	depends = ros-melodic-topic-tools
+	source = ros-melodic-moveit-resources-panda-moveit-config-0.7.3.tar.gz::https://github.com/ros-planning/moveit_resources/archive/0.7.3.tar.gz
+	sha256sums = cad98a19a93856f5b49bcbff2e9671ab1c27e266af981586e908833cca5d9c86
+
+pkgname = ros-melodic-moveit-resources-panda-moveit-config
+

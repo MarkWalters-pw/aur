@@ -1,0 +1,20 @@
+pkgbase = ros-noetic-simulators
+	pkgdesc = ROS - A metapackage to aggregate several packages.
+	pkgver = 1.5.0
+	pkgrel = 1
+	url = https://github.com/ros/metapackages
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-catkin
+	depends = ros-noetic-rqt-common-plugins
+	depends = ros-noetic-robot
+	depends = ros-noetic-gazebo-ros-pkgs
+	depends = ros-noetic-rqt-robot-plugins
+	depends = ros-noetic-stage-ros
+	source = ros-noetic-simulators-1.5.0.tar.gz::https://github.com/ros/metapackages/archive/1.5.0.tar.gz
+	sha256sums = 5e055b7528d088cf62035d88c78cfd5aefcac2a96d0ce2ac62242f6d6f76d3b0
+
+pkgname = ros-noetic-simulators
+

@@ -1,0 +1,21 @@
+pkgbase = satysfi-git
+	pkgdesc = A statically-typed, functional typesetting system
+	pkgver = r2148.e1e0270
+	pkgrel = 1
+	url = https://github.com/gfngfn/SATySFi
+	arch = x86_64
+	license = LGPL3
+	makedepends = git
+	makedepends = libx11
+	makedepends = ocaml-findlib
+	makedepends = opam
+	makedepends = rsync
+	makedepends = wget
+	depends = glibc
+	provides = satysfi
+	conflicts = satysfi
+	source = git+https://github.com/gfngfn/SATySFi
+	md5sums = SKIP
+
+pkgname = satysfi-git
+

@@ -1,0 +1,26 @@
+pkgbase = ros-noetic-jackal-bringup
+	pkgdesc = ROS - Scripts for installing Jackal's robot software.
+	pkgver = 0.7.10
+	pkgrel = 1
+	url = https://github.com/jackal/jackal_robot
+	arch = x86_64
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-catkin
+	depends = ros-noetic-jackal-base
+	depends = ros-noetic-lms1xx
+	depends = ros-noetic-urg-node
+	depends = ros-noetic-velodyne-pointcloud
+	depends = ros-noetic-pointgrey-camera-driver
+	depends = ros-noetic-microstrain-inertial-driver
+	depends = ros-noetic-nmea-comms
+	depends = ros-noetic-nmea-navsat-driver
+	depends = ros-noetic-robot-upstart
+	depends = ros-noetic-sick-tim
+	depends = ros-noetic-spinnaker-camera-driver
+	depends = python-scipy
+	source = ros-noetic-jackal-bringup-0.7.10.tar.gz::https://github.com/jackal/jackal_robot/archive/0.7.10.tar.gz
+	sha256sums = ea7047d8bb868cbbf3f3a59c86477b6e3a740dcb19e3f21dbdd8f27ad8ec03b2
+
+pkgname = ros-noetic-jackal-bringup

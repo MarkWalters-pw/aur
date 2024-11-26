@@ -1,0 +1,30 @@
+pkgbase = scissy
+	pkgdesc = Lightweight and standalone git repository server
+	pkgver = 0.13.11
+	pkgrel = 1
+	url = https://github.com/abique/scissy
+	install = scissy.install
+	arch = i686
+	arch = x86_64
+	license = MIT
+	depends = git
+	depends = sqlite3
+	depends = libgit2
+	depends = gnutls
+	depends = protobuf
+	depends = xz
+	depends = cracklib
+	depends = re2
+	depends = mime-types
+	backup = etc/scissy/config.json
+	source = scissy::git://github.com/abique/scissy#tag=0.13.11
+	source = scissy.install
+	source = scissy.service
+	source = scissy.tmpfiles
+	md5sums = SKIP
+	md5sums = 0bbb3e6a2601df538c204d7439a5ced6
+	md5sums = 98690f1002f7d80af6cb9b939209a4dd
+	md5sums = 6c652e0203eb62fd67ed28bfa7fc9d0c
+
+pkgname = scissy
+

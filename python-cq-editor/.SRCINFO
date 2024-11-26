@@ -1,0 +1,22 @@
+pkgbase = python-cq-editor
+	pkgdesc = CadQuery GUI editor based on spyder
+	pkgver = 0.2
+	pkgrel = 1
+	url = https://github.com/CadQuery/CQ-editor
+	arch = x86_64
+	license = Apache 2.0
+	makedepends = python-setuptools
+	depends = python-cadquery
+	depends = python-pyqt5
+	depends = python-qtconsole
+	depends = python-logbook
+	depends = python-pyparsing
+	depends = python-pyqtgraph
+	depends = python-path.py
+	depends = python-requests
+	depends = spyder
+	source = python-cq-editor-0.2.tar.gz::https://github.com/CadQuery/CQ-editor/archive/0.2.tar.gz
+	sha256sums = 4acb02a6b73d3098570da0eb73419728318a08f73b17079b88230f109ee91489
+
+pkgname = python-cq-editor
+

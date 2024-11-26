@@ -1,0 +1,20 @@
+pkgbase = menda-themes-git
+	pkgver = r85.0ee4e31
+	pkgrel = 3
+	url = https://github.com/manjaro/artwork-menda
+	arch = any
+	license = GPL3
+	depends = gtk-engine-murrine
+	source = menda-themes-git::git+https://github.com/manjaro/artwork-menda.git
+	sha1sums = SKIP
+
+pkgname = menda-themes-git
+	pkgdesc = Manjaro's official Gtk2, Gtk3, Metacity, Xfwm, Openbox, Cinnamon and GNOME Shell themes
+	conflicts = menda-themes
+	replaces = menda-themes
+
+pkgname = menda-themes-dark-git
+	pkgdesc = Manjaro's official Gtk2, Gtk3, Metacity, Xfwm, Openbox, Cinnamon and GNOME Shell themes. Dark version.
+	conflicts = menda-themes-dark
+	replaces = menda-themes-dark
+

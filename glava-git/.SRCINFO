@@ -1,0 +1,25 @@
+pkgbase = glava-git
+	pkgdesc = OpenGL audio spectrum visualizer
+	pkgver = r329.3cc5e22
+	pkgrel = 2
+	url = https://github.com/wacossusca34/glava
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = meson
+	makedepends = obs-studio
+	depends = x-server
+	depends = pulseaudio
+	depends = libxext
+	depends = libxcomposite
+	depends = libxrender
+	optdepends = obs-studio: OBS integration
+	provides = glava
+	conflicts = glava
+	source = git+https://github.com/wacossusca34/glava
+	source = git+https://github.com/Dav1dde/glad
+	md5sums = SKIP
+	md5sums = SKIP
+
+pkgname = glava-git
+

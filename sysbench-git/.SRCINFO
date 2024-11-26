@@ -1,0 +1,16 @@
+pkgbase = sysbench-git
+	pkgdesc = Multi-threaded benchmark for evaluating OS parameters for database-loads (git)
+	pkgver = 1.1.0.r1193.b04e5fd
+	pkgrel = 2
+	url = https://github.com/akopytov/sysbench
+	arch = x86_64
+	arch = i686
+	license = GPL2
+	makedepends = git
+	depends = libmariadbclient
+	depends = postgresql-libs
+	source = git+https://github.com/akopytov/sysbench
+	sha256sums = SKIP
+
+pkgname = sysbench-git
+

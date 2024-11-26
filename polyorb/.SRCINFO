@@ -1,0 +1,24 @@
+pkgbase = polyorb
+	pkgdesc = Provides the Distributed Systems Annex (DSA) to build distributed applications with Ada.
+	pkgver = 20240520
+	pkgrel = 1
+	url = https://github.com/AdaCore/PolyORB
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = gprbuild
+	makedepends = autoconf
+	makedepends = automake
+	makedepends = python-sphinx
+	makedepends = python-sphinx_rtd_theme
+	makedepends = texlive-meta
+	depends = gcc-ada
+	depends = xmlada
+	depends = gnatcoll-core
+	depends = openssl
+	source = git+https://github.com/AdaCore/PolyORB.git#branch=24.2
+	source = patch-Makefile.in
+	sha256sums = SKIP
+	sha256sums = c0703efe44949b5adb1be9fcb44110a132fbca81dda690a6623bc326df94328a
+
+pkgname = polyorb

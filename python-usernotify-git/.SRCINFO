@@ -1,0 +1,16 @@
+pkgbase = python-usernotify-git
+	pkgdesc = Python 3 library and scripts for notifying desktop users
+	pkgver = r32.cf66096
+	pkgrel = 3
+	url = https://github.com/conqp/usernotify
+	arch = any
+	license = GPLv3
+	makedepends = git
+	makedepends = python
+	depends = python
+	depends = libnotify
+	source = python-usernotify-git::git+https://github.com/conqp/usernotify.git
+	md5sums = SKIP
+
+pkgname = python-usernotify-git
+

@@ -1,0 +1,28 @@
+pkgbase = texlive-tubs
+	pkgdesc = LaTeX-Templates for the Corporate Design of TU Braunschweig
+	pkgver = 1.2.0
+	pkgrel = 1
+	url = https://www.tu-braunschweig.de/latex
+	arch = any
+	license = LPPL
+	depends = urw-arial
+	depends = texlive-core
+	depends = texlive-bibtexextra
+	depends = texlive-fontsextra
+	depends = texlive-formatsextra
+	depends = texlive-latexextra
+	depends = texlive-science
+	provides = texlive-tubslatex
+	conflicts = texlive-tubslatex
+	source = https://gitlab.ibr.cs.tu-bs.de/api/v4/projects/tubslatex%2Ftubslatex/jobs/artifacts/1.2.0/raw/builds/tubslatex.tds.zip?job=build_installer
+	source = texlive-tubs.maps
+	source = CONTENTS
+	md5sums = 
+	md5sums = 9308c3138886469377a8d975a43cde39
+	md5sums = 0c3f2dd8a9de10032ebf04caa355c1a8
+	sha512sums = 
+	sha512sums = ef2db742d543ccde08d40386b4625b8bfdfda50354f18d7e256ad732901cbd4046c776bcf2d79b5ec0950cd51310a9e4709586473fbdb3925240faec92e15b1f
+	sha512sums = c82b6a1afe0b36286b5c824acf29197d3a7ef5cbbdd00ed251af81aae1f5ea20f7964c8d3b213f3a2169d946f3fa0bf84f6115a8464ff91c13e959873bcd3ed4
+
+pkgname = texlive-tubs
+

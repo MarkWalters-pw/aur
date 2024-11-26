@@ -1,0 +1,18 @@
+pkgbase = papirus-smplayer-theme-git
+	pkgdesc = Papirus theme for SMPlayer (git version)
+	pkgver = 20181024
+	pkgrel = 2
+	url = https://github.com/PapirusDevelopmentTeam/papirus-smplayer-theme
+	arch = any
+	license = GPL
+	makedepends = git
+	makedepends = make
+	depends = smplayer
+	conflicts = smplayer-themes
+	conflicts = papirus-smplayer-theme
+	options = !strip
+	source = papirus-smplayer-theme-git::git+https://github.com/PapirusDevelopmentTeam/papirus-smplayer-theme.git
+	sha256sums = SKIP
+
+pkgname = papirus-smplayer-theme-git
+

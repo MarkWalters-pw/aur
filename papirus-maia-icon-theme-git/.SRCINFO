@@ -1,0 +1,18 @@
+pkgbase = papirus-maia-icon-theme-git
+	pkgdesc = Manjaro variation of Papirus icon theme (git version)
+	pkgver = 20200417.7338bf0
+	pkgrel = 1
+	url = https://github.com/Ste74/papirus-maia-icon-theme
+	arch = any
+	license = LGPL3
+	makedepends = cmake
+	makedepends = git
+	depends = gtk-update-icon-cache
+	depends = papirus-icon-theme-git
+	conflicts = papirus-maia-icon-theme
+	options = !strip
+	source = git+https://github.com/Ste74/papirus-maia-icon-theme.git
+	sha256sums = SKIP
+
+pkgname = papirus-maia-icon-theme-git
+

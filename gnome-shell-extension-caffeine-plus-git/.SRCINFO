@@ -1,0 +1,14 @@
+pkgbase = gnome-shell-extension-caffeine-plus-git
+	pkgdesc = Disable screensaver and auto suspend
+	pkgver = r174.a6fba34
+	pkgrel = 2
+	url = https://github.com/tonylambiris/gnome-shell-extension-caffeine-plus.git
+	install = caffeine-plus.install
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = gnome-shell
+	source = gnome-shell-extension-caffeine-plus-git::git+https://github.com/tonylambiris/gnome-shell-extension-caffeine-plus.git
+	sha256sums = SKIP
+
+pkgname = gnome-shell-extension-caffeine-plus-git

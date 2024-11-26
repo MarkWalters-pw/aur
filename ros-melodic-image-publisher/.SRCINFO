@@ -1,0 +1,33 @@
+pkgbase = ros-melodic-image-publisher
+	pkgdesc = ROS - Contains a node publish an image stream from single image file or avi motion file.
+	pkgver = 1.15.0
+	pkgrel = 2
+	url = https://wiki.ros.org/image_publisher
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-melodic-nodelet
+	makedepends = ros-melodic-dynamic-reconfigure
+	makedepends = ros-melodic-catkin
+	makedepends = ros-melodic-cv-bridge
+	makedepends = ros-melodic-camera-info-manager
+	makedepends = ros-melodic-roscpp
+	makedepends = ros-melodic-sensor-msgs
+	makedepends = ros-melodic-image-transport
+	depends = ros-melodic-nodelet
+	depends = ros-melodic-dynamic-reconfigure
+	depends = ros-melodic-cv-bridge
+	depends = ros-melodic-camera-info-manager
+	depends = ros-melodic-roscpp
+	depends = ros-melodic-sensor-msgs
+	depends = ros-melodic-image-transport
+	source = ros-melodic-image-publisher-1.15.0.tar.gz::https://github.com/ros-perception/image_pipeline/archive/melodic-1.15.0.tar.gz
+	sha256sums = 453ab2347197614806c92bc8c6fd8c8cf9c04cfab4ad6b4ac47063a24835ce5b
+
+pkgname = ros-melodic-image-publisher
+

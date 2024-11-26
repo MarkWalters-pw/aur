@@ -1,0 +1,17 @@
+pkgbase = daemonize
+	pkgdesc = Run a program as a Unix daemon
+	pkgver = 1.7.8
+	pkgrel = 3
+	url = https://github.com/bmc/daemonize
+	arch = i686
+	arch = x86_64
+	arch = armv7h
+	license = BSD
+	makedepends = python-markdown
+	depends = glibc
+	provides = daemonize
+	conflicts = daemonize-git
+	source = daemonize-1.7.8.tar.gz::https://github.com/bmc/daemonize/tarball/release-1.7.8
+	md5sums = 5030b6914aab6721b04b35fa8bb4b222
+
+pkgname = daemonize

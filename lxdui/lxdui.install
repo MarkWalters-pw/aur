@@ -1,0 +1,31 @@
+post_install()
+{
+	cat <<EOF
+
+To change the default admin password run
+
+	lxdui user update -u admin [-p password]
+
+To start LXDUI, run
+
+	systemctl start lxdui
+
+To enable LXDUI at boot, run
+
+	systemctl enable lxdui
+
+EOF
+}
+
+post_upgrade()
+{
+	find /usr/lib/lxdui/lib -name __pycache__ -exec rm -rf {} \; 2>/dev/null
+	systemctl daemon-reload
+}
+
+pre_remove()
+{
+	systemctl disable --now lxdui
+	find /usr/lib/lxdui/lib -name __pycache__ -exec rm -rf {} \; 2>/dev/null
+}
+

@@ -1,0 +1,18 @@
+pkgbase = lice-git
+	pkgdesc = Generate license files for your projects
+	pkgver = 0.4.64.g9940116
+	pkgrel = 1
+	url = https://github.com/licenses/lice
+	arch = any
+	license = custom:BSD3
+	checkdepends = python-pytest
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python
+	provides = lice
+	conflicts = lice
+	source = git+https://github.com/licenses/lice.git
+	md5sums = SKIP
+
+pkgname = lice-git
+

@@ -1,0 +1,19 @@
+pkgbase = asusctltray-git
+	pkgdesc = Simple tray profile switcher for asusctl
+	pkgver = r28.c8ef0ba
+	pkgrel = 1
+	url = https://github.com/Baldomo/asusctltray
+	arch = any
+	license = MIT
+	makedepends = git
+	depends = python3
+	depends = supergfxctl
+	depends = asusctl
+	depends = dbus
+	depends = dbus-python
+	provides = asusctltray
+	conflicts = asusctltray
+	source = asusctltray::git+https://github.com/Baldomo/asusctltray.git
+	md5sums = SKIP
+
+pkgname = asusctltray-git

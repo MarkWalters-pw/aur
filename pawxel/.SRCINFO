@@ -1,0 +1,32 @@
+pkgbase = pawxel
+	pkgdesc = Lightweight screenshot tool for designers & developers
+	pkgver = 0.1.4
+	pkgrel = 1
+	url = https://pawxel.rocks/
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	depends = qt5-base
+	depends = qt5-x11extras
+	depends = gtk3
+	depends = libxcb
+	depends = libx11
+	depends = glib2
+	source = git+https://github.com/yeahitsjan/pawxel.git#tag=521526e9d29f4b830ab3d20de531168ff406a828
+	source = git+https://github.com/yeahitsjan/phantomstyle.git
+	source = git+https://github.com/yeahitsjan/easyloggingpp.git
+	source = git+https://github.com/yeahitsjan/SingleApplication.git
+	source = git+https://github.com/yeahitsjan/QHotkey.git
+	source = git+https://github.com/yeahitsjan/resizer-item.git
+	source = git+https://github.com/yeahitsjan/FHNotifier.git
+	source = git+https://github.com/yeahitsjan/framelesshelper.git#branch=qmake_mods
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = pawxel

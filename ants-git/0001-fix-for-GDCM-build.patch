@@ -1,0 +1,29 @@
+From cb5ff0856fffcb11797b0584941415b051d3914b Mon Sep 17 00:00:00 2001
+From: Liam Timms <timms5000@gmail.com>
+Date: Thu, 7 Oct 2021 20:40:25 -0400
+Subject: [PATCH] fix for GDCM build
+
+---
+ SuperBuild/External_ITKv5.cmake | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+diff --git a/SuperBuild/External_ITKv5.cmake b/SuperBuild/External_ITKv5.cmake
+index ae5db29c..d89f39e8 100644
+--- a/SuperBuild/External_ITKv5.cmake
++++ b/SuperBuild/External_ITKv5.cmake
+@@ -119,7 +119,11 @@ if(NOT DEFINED ${extProjName}_DIR AND NOT ${USE_SYSTEM_${extProjName}})
+       -DITK_FUTURE_LEGACY_REMOVE:BOOL=ON
+       -DITKV3_COMPATIBILITY:BOOL=OFF
+       -DITK_BUILD_DEFAULT_MODULES:BOOL=ON
+-      -DITK_USE_SYSTEM_PNG=${ITK_USE_SYSTEM_PNG}
++      -DITK_USE_SYSTEM_JPEG:BOOL=ON
++      -DITK_USE_SYSTEM_PNG:BOOL=ON
++      -DITK_USE_SYSTEM_ZLIB:BOOL=ON
++      -DITK_USE_SYSTEM_TIFF:BOOL=ON
++      -DITK_USE_SYSTEM_GDCM:BOOL=ON
+ #      -DITK_MODULE_Core:BOOL=ON
+ #      -DITK_MODULE_IO:BOOL=ON
+ #      -DITK_MODULE_Filtering:BOOL=ON
+-- 
+2.33.0
+

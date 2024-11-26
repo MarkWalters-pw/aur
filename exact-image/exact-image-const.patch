@@ -1,0 +1,20 @@
+diff -ruN a/codecs/jpeg2000.cc b/codecs/jpeg2000.cc
+--- a/codecs/jpeg2000.cc	2017-07-21 10:19:01.000000000 -0400
++++ b/codecs/jpeg2000.cc	2020-08-08 05:16:24.680041474 -0400
+@@ -67,14 +67,14 @@
+   return stream;
+ }
+ 
+-static int cpp_jas_read (jas_stream_obj_t* obj, char* buf, int cnt)
++static int cpp_jas_read (jas_stream_obj_t* obj, char* buf, unsigned int cnt)
+ {
+   std::istream* stream = (std::istream*) obj;
+   stream->read (buf, cnt);
+   return cnt;
+ }
+ 
+-static int cpp_jas_write (jas_stream_obj_t* obj, char* buf, int cnt)
++static int cpp_jas_write (jas_stream_obj_t* obj, char* buf, unsigned int cnt)
+ {
+   std::ostream* stream = (std::ostream*) obj;
+   stream->write (buf, cnt);

@@ -1,0 +1,20 @@
+pkgbase = kochmorse
+	pkgdesc = A easy to use Morse Code (Ham Radio) trainer using the Koch-method.
+	pkgver = 3.5.1
+	pkgrel = 2
+	url = https://github.com/hmatuschek/kochmorse
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = cmake
+	makedepends = qt5-tools
+	depends = qt5-multimedia
+	depends = hamradio-menus
+	provides = kochmorse
+	conflicts = kochmorse-py
+	conflicts = kochmorse-git
+	source = https://github.com/hmatuschek/kochmorse/archive/v3.5.1.tar.gz
+	md5sums = 1de7be803338d5cbaddb143e76eb7b55
+	sha256sums = b394fe151cc6bbcb2f24ada9cbab08cbbc3e8538a95a00d190884e9428d8a775
+
+pkgname = kochmorse

@@ -1,0 +1,31 @@
+pkgbase = fontforge-git
+	pkgdesc = Full-featured outline and bitmap font editor.
+	pkgver = 20190801.r246.gf28b9e6b5
+	pkgrel = 1
+	epoch = 1
+	url = https://fontforge.github.io/
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	license = BSD
+	makedepends = git
+	makedepends = cmake
+	makedepends = ninja
+	depends = libtool
+	depends = pango
+	depends = giflib
+	depends = libtiff
+	depends = libxml2
+	depends = libspiro
+	depends = python
+	depends = potrace
+	depends = woff2
+	depends = gtk3
+	depends = libuninameslist
+	provides = fontforge
+	conflicts = fontforge
+	source = git+https://github.com/fontforge/fontforge.git
+	sha256sums = SKIP
+
+pkgname = fontforge-git
+

@@ -1,0 +1,15 @@
+pkgbase = php-kore-git
+	pkgdesc = kore php functions
+	pkgver = r15.cbcdb6e
+	pkgrel = 1
+	url = https://github.com/krakjoe/kore
+	arch = i686
+	arch = x86_64
+	license = PHP
+	makedepends = git
+	depends = php
+	backup = etc/php/conf.d/kore.ini
+	source = php-kore-git::git+https://github.com/krakjoe/kore.git
+	md5sums = SKIP
+
+pkgname = php-kore-git

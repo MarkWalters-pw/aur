@@ -1,0 +1,15 @@
+pkgbase = license-detector
+	pkgdesc = Reliable project licenses detector
+	pkgver = 4.3.0
+	pkgrel = 1
+	url = https://github.com/go-enry/go-license-detector
+	arch = x86_64
+	license = Apache
+	makedepends = git
+	makedepends = go
+	depends = glibc
+	options = !lto
+	source = license-detector::git+https://github.com/go-enry/go-license-detector#commit=4f2ca6af2ab943d9b5fa3a02782eebc06f79a5f4
+	b2sums = SKIP
+
+pkgname = license-detector

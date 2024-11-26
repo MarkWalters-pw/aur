@@ -1,0 +1,24 @@
+pkgbase = qt5-jsonserializer
+	pkgdesc = A library to perform generic seralization and deserialization of QObjects
+	pkgver = 3.4.0
+	pkgrel = 1
+	url = https://github.com/Skycoder42/QtJsonSerializer
+	arch = i686
+	arch = x86_64
+	license = BSD
+	makedepends = git
+	makedepends = qt5-tools
+	makedepends = python
+	makedepends = doxygen
+	makedepends = graphviz
+	depends = qt5-base
+	source = qt5-jsonserializer-3.4.0::git+https://github.com/Skycoder42/QtJsonSerializer.git#tag=3.4.0
+	source = qt5-jsonserializer.rule
+	sha256sums = SKIP
+	sha256sums = 1b52eef5216017cfb4b399df1775950db544550a68a542053efe00eb8ef34911
+
+pkgname = qt5-jsonserializer
+
+pkgname = qt5-jsonserializer-doc
+	depends = qt5-jsonserializer
+	optdepends = 

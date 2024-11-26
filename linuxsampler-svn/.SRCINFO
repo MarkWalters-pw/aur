@@ -1,0 +1,30 @@
+pkgbase = linuxsampler-svn
+	pkgdesc = Sampler backend, including sampler engine, audio and MIDI drivers, network layer (LSCP) API and native C++ API
+	pkgver = r3751
+	pkgrel = 1
+	url = http://www.linuxsampler.org/
+	arch = i686
+	arch = x86_64
+	license = GPL
+	license = custom
+	makedepends = subversion
+	makedepends = ladspa
+	makedepends = dssi
+	makedepends = bison
+	makedepends = flex
+	depends = libgig-svn
+	depends = jack
+	depends = sqlite
+	depends = perl-xml-parser
+	provides = linuxsampler
+	conflicts = linuxsampler
+	options = libtool
+	source = linuxsampler-svn::svn+https://svn.linuxsampler.org/svn/linuxsampler/trunk
+	source = http://www.steinberg.net/sdk_downloads/vstsdk366_27_06_2016_build_61.zip
+	source = license.txt
+	sha256sums = SKIP
+	sha256sums = 71c609fe74d4bfef9e76e9dd26ebc699105bb7a614ee4cc68550c4bb46c8fa15
+	sha256sums = fe9613dc00d4dafdbe9132ba00e82b0c6f333c53dffe02e29a8dfe1753c7b622
+
+pkgname = linuxsampler-svn
+

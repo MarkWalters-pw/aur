@@ -1,0 +1,24 @@
+pkgbase = zulu21-fx-bin
+	pkgdesc = Azul Zulu Builds of OpenJDK With OpenJFX are open source, TCK-tested and certified builds of OpenJDK.
+	pkgver = 21.0.5
+	pkgrel = 1
+	url = https://www.azul.com/downloads/
+	install = zulu21-fx-bin.install
+	arch = x86_64
+	license = custom
+	depends = java-environment-common>=3
+	depends = java-runtime-common>=3
+	depends = ca-certificates-utils
+	provides = java-environment=21
+	provides = java-environment-openjdk=21
+	provides = java-runtime=21
+	provides = java-runtime-openjdk=21
+	provides = java-runtime-headless=21
+	provides = java-runtime-headless-openjdk=21
+	provides = java-openjfx=21
+	conflicts = zulu-21-bin
+	options = !debug
+	source_x86_64 = https://cdn.azul.com/zulu/bin/zulu21.38.21-ca-fx-jdk21.0.5-linux_x64.tar.gz
+	sha256sums_x86_64 = 01735b97399ec9facc8e9937622da9b505a3b10ce7ffc877d83fe581d13b13c5
+
+pkgname = zulu21-fx-bin

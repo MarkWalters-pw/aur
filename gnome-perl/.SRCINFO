@@ -1,0 +1,19 @@
+pkgbase = gnome-perl
+	pkgdesc = Perl bindings for libgnome
+	pkgver = 1.048
+	pkgrel = 1
+	url = https://metacpan.org/dist/Gnome2
+	arch = i686
+	arch = x86_64
+	license = LGPL
+	makedepends = perl-extutils-pkgconfig
+	makedepends = perl-extutils-depends
+	depends = gnomecanvas-perl
+	depends = gnome-vfs-perl
+	depends = libgnomeui
+	depends = perl
+	options = !emptydirs
+	source = https://cpan.metacpan.org/authors/id/X/XA/XAOC/Gnome2-1.048.tar.gz
+	md5sums = 38408e8195e86b1dda0704a0054ae5a8
+
+pkgname = gnome-perl

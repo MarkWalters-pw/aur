@@ -1,0 +1,18 @@
+pkgbase = llmnrd-git
+	pkgdesc = Link-Local Multicast Resolution Daemon
+	pkgver = 0.7.r6.gc1e7429
+	pkgrel = 1
+	url = https://github.com/tklauser/llmnrd
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	makedepends = patch
+	source = llmnrd::git+https://github.com/tklauser/llmnrd.git
+	source = llmnrd-sbin.patch
+	source = llmnrd.service
+	sha256sums = SKIP
+	sha256sums = 3a4b13580c7119a2d267d60235ace8a21ad460848da1446ee8c3f75569633cd2
+	sha256sums = 25d4b95f21112bee6eb9fce3c24bd460af5cbe9d1fcfefda7a0509527020334e
+
+pkgname = llmnrd-git

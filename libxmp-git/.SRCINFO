@@ -1,0 +1,17 @@
+pkgbase = libxmp-git
+	pkgdesc = Library that supports over 90 module formats (Amiga, Atari, ..)
+	pkgver = 4.5.0.r758.g2e008819
+	pkgrel = 2
+	url = https://xmp.sourceforge.net/
+	arch = x86_64
+	arch = aarch64
+	license = LGPL2.1
+	makedepends = git
+	depends = glibc
+	provides = libxmp
+	conflicts = libxmp
+	options = !emptydirs
+	source = git+https://github.com/cmatsuoka/libxmp.git
+	sha256sums = SKIP
+
+pkgname = libxmp-git

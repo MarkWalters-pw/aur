@@ -1,0 +1,14 @@
+pkgbase = dict-freedict-fra-eng
+	pkgdesc = French -> English dictionary for dictd et al. from FreeDict.org
+	pkgver = 0.4.1
+	pkgrel = 3
+	url = https://freedict.org/
+	install = dict-freedict-fra-eng.install
+	arch = any
+	license = GPL
+	makedepends = freedict-tools
+	optdepends = dictd: dict client and server
+	source = https://download.freedict.org/dictionaries/fra-eng/0.4.1/freedict-fra-eng-0.4.1.src.tar.xz
+	sha512sums = bf234cfc9aedea3e322ee9bc518f6b1addfcc4a96c6b9c42d2bd1de765ae2011b057888134c9c4361422d4632e289455c92c6c429fcfab566a95cdc49ac2a2fb
+
+pkgname = dict-freedict-fra-eng

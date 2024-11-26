@@ -1,0 +1,21 @@
+pkgbase = upsource
+	pkgdesc = Repository Browsing and Code Review tool from JetBrains
+	pkgver = 2020.1
+	pkgrel = 1
+	url = https://www.jetbrains.com/upsource/
+	install = upsource.install
+	arch = any
+	license = Commercial
+	depends = java-runtime-headless
+	options = !strip
+	backup = opt/upsource/data,
+	backup = opt/upsource/conf,
+	backup = opt/upsource/backups
+	source = https://download.jetbrains.com/upsource/upsource-2020.1.1802.zip
+	source = upsource.service
+	source = upsource.conf
+	sha256sums = 68b4a13712cd4c48dc0109c5bcb1bee28b299ecaa70e773a7ed00854bc523c8e
+	sha256sums = 1d216f3e4494a665860a5ca2b295bb22640b6fe5a34e7149fcfd2dfb3026c55f
+
+pkgname = upsource
+

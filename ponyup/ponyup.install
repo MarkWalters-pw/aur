@@ -1,0 +1,17 @@
+post_install() {
+    echo
+    echo 'NOTE: ponyup was installed to ~/.local/share/ponyup/bin/ponyup'
+    echo
+    echo 'NOTE: consider export PATH=~s/.local/share/ponyup/bin/ponyup:$PATH'
+    echo
+    echo 'NOTE: if this is your first time using ponyup please visit https://github.com/ponylang/ponyup'
+    echo 'NOTE: if you would just like to get going, install the compiler with:'
+    echo
+    echo '    $  ponyup update ponyc release'
+    echo
+    echo
+}
+
+post_remove() {
+    echo 'Warning: ponyup was removed but applications installed through ponyup remains in "~/.local/share/ponyup/", which is no longer in PATH, consider removing it manually'
+}

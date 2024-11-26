@@ -1,0 +1,19 @@
+pkgbase = unigine-sanctuary
+	pkgdesc = Unigine Sanctuary Benchmark
+	pkgver = 2.3
+	pkgrel = 3
+	url = http://www.unigine.com
+	arch = x86_64
+	license = custom:UNIGINE Engine
+	makedepends = patchelf
+	makedepends = lib32-openal
+	depends = libopenal.so=1-32
+	depends = lib32-libgl
+	depends = lib32-libxinerama
+	depends = lib32-libxrandr
+	source = https://assets.unigine.com/d/Unigine_Sanctuary-2.3.run
+	source = unigine-sanctuary
+	sha256sums = 28a8bbd1cb64126fadc7492304c59528c2c3ac9d53b0f1fe08a2c331703a39d5
+	sha256sums = 296724e5977ae81f05f479c7f91364633ce83489c7d160e8a9b03ec98926ec31
+
+pkgname = unigine-sanctuary

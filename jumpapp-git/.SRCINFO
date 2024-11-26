@@ -1,0 +1,19 @@
+pkgbase = jumpapp-git
+	pkgdesc = A run-or-raise application switcher for any X11 desktop (git version)
+	pkgver = 1.1.r105.944723f
+	pkgrel = 1
+	url = https://github.com/mkropat/jumpapp
+	arch = any
+	license = MIT
+	makedepends = git
+	depends = inetutils
+	depends = wmctrl
+	depends = xdotool
+	provides = jumpapp
+	provides = jumpappify-desktop-entry
+	conflicts = jumpapp
+	source = jumpapp::git+https://github.com/mkropat/jumpapp
+	sha256sums = SKIP
+
+pkgname = jumpapp-git
+

@@ -1,0 +1,9 @@
+[Unit]
+Description=Insync Headless
+
+[Service]
+ExecStart=/usr/bin/insync-headless start --no-daemon
+ExecStop=/usr/bin/insync-headless quit
+
+[Install]
+WantedBy=default.target

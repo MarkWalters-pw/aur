@@ -1,0 +1,32 @@
+[Unit]
+Description=Valheim Dedicated Server
+After=network.target
+
+[Service]
+Type=simple
+User=valheim
+Group=valheim
+Environment="LD_LIBRARY_PATH=./linux64:$LD_LIBRARY_PATH"
+EnvironmentFile=/etc/valheim/server.conf
+ExecStart=/opt/valheim-server/valheim_server.x86_64 -name ${NAME} -password ${PASSWORD} -port ${PORT} -world ${WORLD} -public ${PUBLIC}
+WorkingDirectory=/opt/valheim-server
+KillSignal=SIGINT
+NoNewPrivileges=true
+ProtectSystem=full
+ProtectHome=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectKernelLogs=true
+ProtectControlGroups=true
+LockPersonality=true
+MemoryDenyWriteExecute=false
+RestrictRealtime=true
+RestrictSUIDSGID=true
+RemoveIPC=true
+SystemCallFilter=@system-service
+SystemCallArchitectures=native
+
+[Install]
+WantedBy=multi-user.target

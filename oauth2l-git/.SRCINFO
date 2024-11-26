@@ -1,0 +1,15 @@
+pkgbase = oauth2l-git
+	pkgdesc = Simple CLI for interacting with Google API authentication - git version
+	pkgver = v1.3.0.r4.g55ad5ab
+	pkgrel = 1
+	url = https://github.com/google/oauth2l
+	arch = x86_64
+	license = Apache
+	makedepends = go
+	makedepends = git
+	provides = oauth2l
+	conflicts = oauth2l
+	source = oauth2l::git+https://github.com/google/oauth2l
+	b2sums = SKIP
+
+pkgname = oauth2l-git

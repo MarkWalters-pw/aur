@@ -1,0 +1,20 @@
+pkgbase = nettle-git
+	pkgdesc = A cryptographic library that is designed to fit easily in any context
+	pkgver = 3.8.r111.g76ad2fa6
+	pkgrel = 1
+	url = https://www.lysator.liu.se/~nisse/nettle/
+	arch = i686
+	arch = x86_64
+	license = GPL
+	license = LGPL
+	makedepends = git
+	depends = glibc
+	depends = gmp
+	provides = nettle=3.8.r111.g76ad2fa6
+	provides = libhogweed.so
+	provides = libnettle.so
+	conflicts = nettle
+	source = git+https://git.lysator.liu.se/nettle/nettle.git
+	sha256sums = SKIP
+
+pkgname = nettle-git

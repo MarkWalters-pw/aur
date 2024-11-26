@@ -1,0 +1,16 @@
+pkgbase = makefile2graph
+	pkgdesc = Creates a graph of dependencies from GNU-Make
+	pkgver = 2021.11.06
+	pkgrel = 1
+	url = https://github.com/lindenb/makefile2graph
+	arch = i686
+	arch = x86_64
+	license = MIT
+	checkdepends = graphviz
+	depends = gcc
+	depends = make
+	depends = sh
+	source = https://github.com/lindenb/makefile2graph/archive/2021.11.06/makefile2graph-2021.11.06.tar.gz
+	sha256sums = 5be8e528fa2945412357a8ef233e68fa3729639307ec1c38fd63768aad642c41
+
+pkgname = makefile2graph

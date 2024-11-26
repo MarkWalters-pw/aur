@@ -1,0 +1,31 @@
+diff --git a/meson.build b/meson.build
+index 4f7898f..3b4cf46 100644
+--- a/meson.build
++++ b/meson.build
+@@ -98,8 +98,6 @@ endif
+ 
+ # Various helper libraries, subprojects, and scripts common to all builds
+ fs = import('fs')
+-tools = subproject('general-tools')
+-padbin = tools.get_variable('padbin_executable')
+ bin2s = files('tools/bin2s.py')
+ call_bin2s = files('tools/callBin2S.py')
+ if host_machine.system() == 'horizon'
+@@ -152,7 +150,7 @@ if host_machine.system() != 'gba'
+         soloud = dependency('SoLoud', static : true, default_options : ['default_library=static'], fallback : ['SoLoud', 'soloud_dep'])
+     else
+         # Other required dependencies
+-        openmpt = dependency('openmpt', static : true, default_options : ['default_library=static'], fallback : ['openmpt', 'openmpt_dep'])
++        openmpt = dependency('libopenmpt', static : true, default_options : ['default_library=static'], fallback : ['openmpt', 'openmpt_dep'])
+         tilengine = dependency('Tilengine', static : true, default_options : ['default_library=static'], fallback : ['Tilengine', 'tilengine_dep'])
+         if host_machine.system() == 'darwin'
+             sdl2_dep = subproject('sdl2', default_options : ['use_audio_jack=disabled', 'default_library=static', 'test=false']).get_variable('sdl2_dep')
+@@ -160,7 +158,7 @@ if host_machine.system() != 'gba'
+         else
+             if not get_option('portmaster')
+                 sdl2_dep = dependency('sdl2', static : true, default_options : ['default_library=static', 'test=false'], fallback : ['sdl2', 'sdl2_dep'])
+-                sdl_mixer = dependency('sdl2_mixer', static : true, default_options : ['default_library=static'], fallback : ['sdl2_mixer', 'sdl2_mixer_dep'])
++                sdl_mixer = dependency('SDL2_mixer', static : true, default_options : ['default_library=static'], fallback : ['sdl2_mixer', 'sdl2_mixer_dep'])
+             else
+                 sdl2_dep = dependency('sdl2', static : false, default_options : ['default_library=shared', 'test=false'], fallback : ['sdl2', 'sdl2_dep'])
+                 sdl_mixer = dependency('sdl2_mixer', static : false, default_options : ['default_library=shared'], fallback : ['sdl2_mixer', 'sdl2_mixer_dep'])

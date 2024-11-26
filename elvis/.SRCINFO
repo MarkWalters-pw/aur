@@ -1,0 +1,19 @@
+pkgbase = elvis
+	pkgdesc = A vi clone with optional X support. Stable or beta version.
+	pkgver = 2.2_1+pre3
+	pkgrel = 1
+	url = http://elvis.the-little-red-haired-girl.org/
+	arch = i686
+	arch = x86_64
+	license = PerlArtistic
+	depends = glibc
+	depends = ncurses
+	depends = fontconfig
+	depends = expat
+	depends = zlib
+	replaces = elvis_patched-withx
+	replaces = elvis_slack
+	source = elvis-2.2_1+pre3.tar.gz::https://github.com/mbert/elvis/archive/refs/tags/v2.2_1-pre3.tar.gz
+	sha256sums = 59a0c561de4dfef40a46162c82dc68c48ac633674250746e0e3a9ffc9cc0878d
+
+pkgname = elvis

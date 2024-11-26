@@ -1,0 +1,15 @@
+pkgbase = db-wifi-login
+	pkgdesc = Captive portal login script for WIFIonICE/ WLAN@DB public WiFi by Deutsche Bahn.
+	pkgver = 0.1_20220904.1
+	pkgrel = 1
+	epoch = 0
+	url = https://aur.archlinux.org/pkgbase/db-wifi-login
+	arch = any
+	license = GPL3
+	depends = awk
+	depends = bash
+	optdepends = db-wifi-login-woice-compat: To act as a drop-in replacement for 'woice'.
+	source = db-wifi-login.sh
+	sha256sums = b991497117a588a975af67fe9682ac8e32cf5514fe566ecad7869089d623d64e
+
+pkgname = db-wifi-login

@@ -1,0 +1,18 @@
+pkgbase = python-wokkel-git
+	pkgdesc = Twisted Jabber support library - git version
+	pkgver = 0.7.1.r45.g9df5060
+	pkgrel = 1
+	url = http://wokkel.ik.nu/
+	arch = any
+	license = custom:"Wokkel License"
+	makedepends = git
+	makedepends = python-setuptools
+	source = python-wokkel::git+https://github.com/ralphm/wokkel#branch=remove-py2-compat
+	md5sums = SKIP
+
+pkgname = python-wokkel-git
+	depends = python-twisted
+	provides = python-wokkel=0.8
+	conflicts = python-wokkel
+	conflicts = python-wokkel-hg
+	replaces = python-wokkel-hg

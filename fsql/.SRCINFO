@@ -1,0 +1,19 @@
+pkgbase = fsql
+	pkgdesc = Search through your filesystem with SQL-esque queries
+	pkgver = 0.4.0
+	pkgrel = 1
+	url = https://github.com/kashav/fsql
+	arch = x86_64
+	license = MIT
+	makedepends = go
+	makedepends = git
+	provides = fsql=0.4.0
+	conflicts = fsql-git
+	replaces = fsaql-git
+	options = !strip
+	options = !emptydirs
+	source = https://github.com/kashav/fsql/archive/v0.4.0.tar.gz
+	sha256sums = 5f028446e31f1a8be2f8a72cd2c1ae888e748220e4c4ece38a62fd8fe41bf70a
+
+pkgname = fsql
+

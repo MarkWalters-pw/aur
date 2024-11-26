@@ -1,0 +1,29 @@
+pkgbase = lesana-git
+	pkgdesc = Manage collection inventories throught yaml files, develop version
+	pkgver = v0.10.1.r0.gad2b595
+	pkgrel = 1
+	url = https://lesana.trueelena.org/
+	arch = any
+	license = AGPL-3.0-or-later
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = python-setuptools-scm
+	depends = python
+	depends = python-dateutil
+	depends = python-jinja
+	depends = python-ruamel-yaml
+	depends = python-xapian
+	depends = python-setuptools
+	depends = python-hazwaz
+	optdepends = python-argcomplete: enable commandline tab completion
+	optdepends = git: git integration
+	optdepends = sh: git integration
+	optdepends = python-gitpython: git integration
+	provides = lesana=v0.10.1.r0.gad2b595
+	conflicts = lesana
+	source = git+https://git.sr.ht/~valhalla/lesana
+	md5sums = SKIP
+
+pkgname = lesana-git

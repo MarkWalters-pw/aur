@@ -1,0 +1,16 @@
+pkgbase = ppfetch-rs-git
+	pkgdesc = ppfetch, but written in Rust.
+	pkgver = 2.0.0.r0.gbb6974c
+	pkgrel = 1
+	url = https://gitlab.com/redsonbr/ppfetch-rs
+	arch = x86_64
+	license = MIT
+	makedepends = rust
+	makedepends = git
+	depends = wmctrl
+	provides = ppfetch-rs-bin
+	conflicts = ppfetch-rs-bin
+	source = ppfetch-rs-git::git+https://gitlab.com/redsonbr/ppfetch-rs.git
+	sha256sums = SKIP
+
+pkgname = ppfetch-rs-git

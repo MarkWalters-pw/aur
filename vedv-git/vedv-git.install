@@ -1,0 +1,18 @@
+post_install() {
+    source /tmp/vedv-git/packages.env
+
+    pip install --break-system-packages "${PKG_PROD_MANJARO_PIP[@]}"
+
+    cat <<'EOF'
+
+    >>> INSTALL VIRTUALBOX-HOST-MODULES
+    sudo pacman -Syu --noconfirm --needed "$(mhwd-kernel -li | grep -Po '\(\Klinux\d+\S*(?=\))')-virtualbox-host-modules"
+    
+    >>> LOAD VBOX KERNEL MODULES
+    sudo vboxreload
+
+    >>> CONFIGURE VEDV
+    For more information about how to configure vedv, 
+    visit: <https://github.com/yunielrc/vedv#configure>
+EOF
+}

@@ -1,0 +1,22 @@
+pkgbase = mad-metasploit-git
+	pkgdesc = A Collection of Metasploit Plugins, Modules and Scripts
+	pkgver = r178.0ebe2c0
+	pkgrel = 1
+	url = https://www.hahwul.com/p/mad-metasploit.html
+	arch = any
+	license = MIT
+	makedepends = git
+	depends = ruby
+	depends = metasploit
+	optdepends = exploitdb: db_exploit plugin
+	provides = mad-metasploit
+	conflicts = mad-metasploit
+	source = mad-metasploit::git+https://github.com/hahwul/mad-metasploit.git
+	sha256sums = SKIP
+
+pkgname = mad-metasploit-git
+
+pkgname = mad-metasploit-archive-git
+	provides = mad-metasploit-archive
+	conflicts = mad-metasploit-archive
+

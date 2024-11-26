@@ -1,0 +1,21 @@
+pkgbase = quikc-git
+	pkgdesc = A minimalistic, safety-focused build system for C/C++
+	pkgver = r374.fa09550
+	pkgrel = 4
+	url = https://git.missingno.dev/quikc
+	arch = x86_64
+	arch = i686
+	arch = aarch64
+	license = MIT
+	makedepends = cargo
+	makedepends = git
+	optdepends = gcc: GNU C/C++ compiler
+	optdepends = clang: LLVM C/C++ frontend
+	optdepends = pkgconf: for automatic third party dependency resolution
+	optdepends = python: for quikc-init
+	provides = quikc
+	conflicts = quikc
+	source = quikc::git+https://git.missingno.dev/quikc
+	b2sums = SKIP
+
+pkgname = quikc-git

@@ -1,0 +1,22 @@
+pkgbase = diesel-cli-git
+	pkgdesc = CLI for the Diesel crate
+	pkgver = 2.0.2.r118.g6521ace25
+	pkgrel = 1
+	url = http://diesel.rs/
+	arch = i686
+	arch = x86_64
+	license = MIT
+	license = Apache
+	makedepends = cargo
+	makedepends = git
+	depends = openssl
+	depends = sqlite
+	depends = postgresql-libs
+	depends = libmariadbclient
+	provides = diesel-cli
+	conflicts = diesel-cli
+	replaces = diesel_cli_git
+	source = git+https://github.com/diesel-rs/diesel.git
+	sha256sums = SKIP
+
+pkgname = diesel-cli-git

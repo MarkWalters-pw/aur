@@ -1,0 +1,14 @@
+pkgbase = pwsafe
+	pkgdesc = A commandline program for managing encrypted password databases
+	pkgver = r5.3e23fa2
+	pkgrel = 1
+	url = https://github.com/nsd20463/pwsafe
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	depends = openssl
+	depends = libxmu
+	source = git+https://github.com/nsd20463/pwsafe
+	md5sums = SKIP
+
+pkgname = pwsafe

@@ -1,0 +1,18 @@
+pkgbase = wlopm-git
+	pkgdesc = Wayland output power management.
+	pkgver = 0.1.0.r5.g54230d7
+	pkgrel = 1
+	url = https://git.sr.ht/~leon_plickat/wlopm
+	arch = x86_64
+	license = GPL-3.0-only
+	makedepends = git
+	depends = wayland
+	depends = wayland-protocols
+	provides = wlopm
+	conflicts = wlopm
+	source = git+https://git.sr.ht/~leon_plickat/wlopm
+	source = 0001_makefile.patch
+	md5sums = SKIP
+	md5sums = 2c6d3e6c75f398f0223ce6ffc6477eaa
+
+pkgname = wlopm-git

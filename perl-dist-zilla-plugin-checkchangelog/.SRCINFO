@@ -1,0 +1,23 @@
+pkgbase = perl-dist-zilla-plugin-checkchangelog
+	pkgdesc = Dist::Zilla with Changes check
+	pkgver = 0.05
+	pkgrel = 1
+	url = http://search.cpan.org/dist/Dist-Zilla-Plugin-CheckChangeLog
+	arch = any
+	license = PerlArtistic
+	license = GPL
+	checkdepends = perl-pod-coverage>=0
+	checkdepends = perl-pod-coverage-trustpod>=0
+	checkdepends = perl-test-exception>=0.43
+	checkdepends = perl-test-pod>=0
+	checkdepends = perl-test-pod-coverage>=0
+	depends = perl>=5.004
+	depends = perl-dist-zilla>=6.005
+	depends = perl-path-class>=0
+	depends = perl-pod-markdown>=0
+	options = !emptydirs
+	source = http://search.cpan.org/CPAN/authors/id/F/FA/FAYLAND/Dist-Zilla-Plugin-CheckChangeLog-0.05.tar.gz
+	md5sums = 1c0c8e2c7887d2dbbbd760bed69cbed4
+
+pkgname = perl-dist-zilla-plugin-checkchangelog
+

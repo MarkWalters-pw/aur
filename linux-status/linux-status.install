@@ -1,0 +1,21 @@
+pkgname=linux-status
+
+post_install() {
+    systemctl --system daemon-reload
+    systemctl --system enable "$pkgname.service"
+    systemctl --system start "$pkgname.service"
+}
+
+pre_remove() {
+    systemctl --system stop "$pkgname.service"
+    systemctl --system disable "$pkgname.service"
+    systemctl --system daemon-reload
+}
+
+pre_upgrade() {
+    pre_remove "$1"
+}
+
+post_upgrade() {
+    post_install "$1"
+}

@@ -1,0 +1,20 @@
+pkgbase = digital-bitbox-app
+	pkgdesc = A Qt based application for the Digital Bitbox hardware wallet.
+	pkgver = 3.0.0
+	pkgrel = 1
+	url = https://digitalbitbox.com/
+	arch = x86_64
+	license = MIT
+	depends = hidapi
+	depends = curl
+	depends = libevent
+	depends = avahi
+	depends = qrencode
+	depends = qt5-base
+	depends = qt5-tools
+	depends = qt5-websockets
+	source = https://github.com/digitalbitbox/dbb-app/archive/v3.0.0.tar.gz
+	sha256sums = 50f88caac92b1254e446de722d1cac3935ae775190ada44a55560581c14a3016
+
+pkgname = digital-bitbox-app
+

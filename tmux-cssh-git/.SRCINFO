@@ -1,0 +1,17 @@
+pkgbase = tmux-cssh-git
+	pkgdesc = TMUX with a "ClusterSSH"-like behaviour
+	pkgver = r76.48c9ed8
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/zinic/tmux-cssh
+	arch = any
+	license = Apache
+	makedepends = git
+	depends = tmux
+	provides = tmux-cssh
+	conflicts = tmux-cssh
+	source = git+https://github.com/zinic/tmux-cssh.git
+	md5sums = SKIP
+
+pkgname = tmux-cssh-git
+

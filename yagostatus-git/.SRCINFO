@@ -1,0 +1,17 @@
+pkgbase = yagostatus-git
+	pkgdesc = Yet Another i3status replacement written in Go.
+	pkgver = v1.0.0.r0.gb784b35
+	pkgrel = 1
+	url = https://github.com/burik666/yagostatus
+	arch = x86_64
+	arch = i686
+	license = GPL3
+	makedepends = go
+	makedepends = git
+	options = !strip
+	options = !emptydirs
+	source = git+https://github.com/burik666/yagostatus.git
+	md5sums = SKIP
+
+pkgname = yagostatus-git
+

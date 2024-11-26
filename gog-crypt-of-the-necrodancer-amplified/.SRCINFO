@@ -1,0 +1,33 @@
+pkgbase = gog-crypt-of-the-necrodancer-amplified
+	pkgdesc = A roguelike rhythm game! (with the Amplified DLC)
+	pkgver = 1.29.14917
+	pkgrel = 2
+	epoch = 1
+	install = gog-crypt-of-the-necrodancer-amplified.install
+	arch = i686
+	arch = x86_64
+	license = custom
+	backup = opt/gog/crypt-of-the-necrodancer-amplified/game/data/{played.dat,save_data.xml,save_data.xml_TEMP}
+	backup = opt/gog/crypt-of-the-necrodancer-amplified/game/replays/
+	backup = opt/gog/crypt-of-the-necrodancer-amplified/game/logs/
+	source = local://crypt_of_the_necrodancer_en_1_29_14917.sh
+	source = local://crypt_of_the_necrodancer_amplified_dlc_en_2_59_21255.sh
+	source = gog-crypt-of-the-necrodancer-amplified
+	source = gog-crypt-of-the-necrodancer-amplified.desktop
+	source = gog-crypt-of-the-necrodancer-amplified.install
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = 070ec64e6d5bc1a4b68e73fd25a716b116b279718b338f071f0bea953532d4ff
+	sha256sums = 1542f20660e4bf1fc78a35759a71d6d658d3b80279fe5223fc0d60f25d309f0e
+	sha256sums = bf6f3b593bfeef411cc0ff660bd2f469a41b14e1b5b4176f748cc70bf58a64e4
+
+pkgname = gog-crypt-of-the-necrodancer-amplified
+	depends_i686 = libglvnd
+	depends_i686 = openal
+	depends_i686 = libxrandr
+	depends_i686 = libpulse
+	depends_x86_64 = lib32-libglvnd
+	depends_x86_64 = lib32-openal
+	depends_x86_64 = lib32-libxrandr
+	depends_x86_64 = lib32-libpulse
+

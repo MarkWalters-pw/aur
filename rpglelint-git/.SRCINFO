@@ -1,0 +1,16 @@
+pkgbase = rpglelint-git
+	pkgdesc = Lint ILE/RPG programs
+	pkgver = 0.8.2
+	pkgrel = 1
+	url = https://github.com/andlrc/rpglelint
+	arch = any
+	license = PerlArtistic
+	makedepends = git
+	depends = perl>=5.16
+	depends = perl-json
+	provides = rpglelint
+	source = rpglelint::git+git://github.com/andlrc/rpglelint#branch=master
+	md5sums = SKIP
+
+pkgname = rpglelint-git
+

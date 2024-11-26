@@ -1,0 +1,15 @@
+pkgbase = mylg-git
+	pkgdesc = An open source software utility which combines the functions of the different network probes in one network diagnostic tool
+	pkgver = 0.2.6.r60.gfaba867
+	pkgrel = 1
+	url = http://mylg.io
+	arch = x86_64
+	license = MIT
+	makedepends = go
+	makedepends = git
+	depends = libpcap
+	source = mylg::git+https://github.com/mehrdadrad/mylg
+	sha256sums = SKIP
+
+pkgname = mylg-git
+

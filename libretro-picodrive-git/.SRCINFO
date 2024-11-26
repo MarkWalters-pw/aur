@@ -1,0 +1,20 @@
+pkgbase = libretro-picodrive-git
+	pkgdesc = libretro implementation of PicoDrive (Sega MD/MS/GG/CD/32X)
+	pkgver = 1208.25b12c1
+	pkgrel = 1
+	url = https://github.com/libretro/picodrive
+	arch = i686
+	arch = x86_64
+	arch = arm
+	arch = armv6h
+	arch = armv7h
+	groups = libretro
+	license = custom:Picodrive license
+	makedepends = git
+	depends = glibc
+	depends = sdl
+	source = git+https://github.com/libretro/picodrive.git
+	md5sums = SKIP
+
+pkgname = libretro-picodrive-git
+

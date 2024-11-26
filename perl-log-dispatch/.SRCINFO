@@ -1,0 +1,24 @@
+pkgbase = perl-log-dispatch
+	pkgdesc = Dispatches messages to one or more outputs
+	pkgver = 2.71
+	pkgrel = 1
+	url = https://metacpan.org/release/Log-Dispatch
+	arch = any
+	license = PerlArtistic
+	license = GPL
+	checkdepends = perl-test-fatal
+	checkdepends = perl-test-needs
+	depends = perl>=5.006
+	depends = perl-devel-globaldestruction
+	depends = perl-dist-checkconflicts>=0.02
+	depends = perl-ipc-run3
+	depends = perl-module-runtime
+	depends = perl-namespace-autoclean
+	depends = perl-params-validationcompiler
+	depends = perl-specio>=0.32
+	depends = perl-try-tiny
+	options = !emptydirs
+	source = https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Log-Dispatch-2.71.tar.gz
+	sha256sums = 9d60d9648c35ce2754731eb4deb7f05809ece1bd633b74d74795aed9ec732570
+
+pkgname = perl-log-dispatch

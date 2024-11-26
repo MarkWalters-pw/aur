@@ -1,0 +1,15 @@
+pkgbase = cloudabi-clang
+	pkgdesc = Symlinks for the clang toolchain for CloudABI.
+	pkgver = 1
+	pkgrel = 5
+	url = http://clang.llvm.org/
+	arch = any
+	license = custom:LLVM
+	depends = clang>=3.9
+	depends = lld>=3.9
+	provides = cloudabi-binutils
+	conflicts = cloudabi-binutils
+	replaces = cloudabi-binutils
+
+pkgname = cloudabi-clang
+

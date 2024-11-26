@@ -1,0 +1,22 @@
+pkgbase = boundary-desktop
+	pkgdesc = Desktop Client for Boundary
+	pkgver = 2.0.3
+	pkgrel = 1
+	url = https://www.boundaryproject.io/
+	arch = x86_64
+	license = MPL-2.0
+	depends = gtk3
+	depends = libnotify
+	depends = nss
+	depends = libxtst
+	depends = xdg-utils
+	depends = at-spi2-core
+	depends = libdrm
+	depends = mesa
+	depends = libxcb
+	depends = gvfs
+	depends = glib2
+	source = boundary-desktop_2.0.3_linux_amd64.deb::https://releases.hashicorp.com/boundary-desktop/2.0.3/boundary-desktop_2.0.3_amd64.deb
+	b2sums = 7a6027ebcc23a50477aeb853e7dfe1e5f6a5795bfb5462d5c7025e7cf26d285bb0ec6369fdebda402d2d0033256c3d50af71c77a91783c91cc325369a70f2bbf
+
+pkgname = boundary-desktop

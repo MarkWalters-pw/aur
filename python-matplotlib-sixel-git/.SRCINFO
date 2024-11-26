@@ -1,0 +1,18 @@
+pkgbase = python-matplotlib-sixel-git
+	pkgdesc = a sixel graphics backend for matplotlib
+	pkgver = r15.a6c632d
+	pkgrel = 2
+	url = https://github.com/jonathf/matplotlib-sixel
+	arch = any
+	license = BSD
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python
+	depends = python-matplotlib
+	depends = python-numpy
+	provides = python-matplotlib-sixel
+	conflicts = python-matplotlib-sixel
+	source = git+https://github.com/jonathf/matplotlib-sixel
+	sha256sums = SKIP
+
+pkgname = python-matplotlib-sixel-git

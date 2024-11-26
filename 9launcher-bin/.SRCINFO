@@ -1,0 +1,18 @@
+pkgbase = 9launcher-bin
+	pkgdesc = 9Launcher is a FOSS Launcher for Touhou games written in Tauri and Typescript
+	pkgver = 1.2.1
+	pkgrel = 1
+	epoch = 0
+	url = https://github.com/wearrrrr/9Launcher
+	arch = x86_64
+	license = MIT
+	depends = webkit2gtk
+	depends = gtk3
+	provides = 9launcher-bin
+	conflicts = 9launcher-bin
+	source = https://github.com/wearrrrr/9Launcher/releases/download/v1.2.1/9launcher
+	source = https://github.com/wearrrrr/9Launcher/releases/download/v1.2.1/assets.tar.gz
+	sha256sums = 4d58993cee2a9e6e87a4139bf44d5594fa4a54c6e873f22b754910dfcaf2f060
+	sha256sums = 5389ec3850c1784cb1c237666e72b9d84fdd21957851b0f28ab6ae574950e2dc
+
+pkgname = 9launcher-bin

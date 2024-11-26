@@ -1,0 +1,19 @@
+pkgbase = python-cmp_version
+	pkgdesc = A script and python module to compare version numbers. Use this to compare the version strings of packages, modules, really anything.
+	pkgver = 3.0.0
+	pkgrel = 2
+	url = http://github.com/kata198/cmp_version
+	arch = any
+	license = LGPLv3
+	makedepends = python-setuptools
+	makedepends = python
+	depends = python-setuptools
+	depends = python
+	source = https://github.com/kata198/cmp_version/archive/3.0.0.tar.gz
+	sha512sums = 20a6e4d8885793ab742d441f45dd0516cd023232e4da93904169fcba67d106ae9fb3e00c11703fe82f9ccc6a80860b1a4a2090cd4dc0f36c708e7c5fdb1dd11a
+
+pkgname = python-cmp_version
+
+pkgname = cmp_version
+	depends = python-cmp_version
+

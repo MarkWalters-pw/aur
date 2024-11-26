@@ -1,0 +1,26 @@
+#!/bin/sh -e
+
+choose() {
+	awk ' 
+	BEGIN { print "."; print ".." } 
+	/[/@]$/ { print substr($0, 1, length-1) }
+	' | dmenu -i -p "$(pwd)/"
+}
+
+askdir() {
+	while :
+	do
+		outdir=$(/bin/ls -F | choose)
+		if [ "$outdir" = "." ]; then
+			return 0
+		fi
+		cd "$outdir"
+	done
+}
+
+for i in "$@"
+do
+	askdir $(pwd)
+	aunpack "$i"
+done
+

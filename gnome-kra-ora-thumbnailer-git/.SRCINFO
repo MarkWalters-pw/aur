@@ -1,0 +1,20 @@
+pkgbase = gnome-kra-ora-thumbnailer-git
+	pkgdesc = A thumbnailer for KRA ( Krita native file ) and ORA ( open-raster ) for the Gnome desktop
+	pkgver = 1.4.r0.g53b68a1
+	pkgrel = 2
+	epoch = 1
+	url = https://gitlab.gnome.org/GNOME/gnome-kra-ora-thumbnailer
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = gnome-common
+	makedepends = automake
+	makedepends = intltool
+	depends = libarchive
+	depends = gdk-pixbuf2
+	source = git+https://gitlab.gnome.org/GNOME/gnome-kra-ora-thumbnailer.git
+	md5sums = SKIP
+
+pkgname = gnome-kra-ora-thumbnailer-git
+

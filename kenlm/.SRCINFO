@@ -1,0 +1,17 @@
+pkgbase = kenlm
+	pkgdesc = Faster and Smaller Language Model Queries
+	pkgver = r2268.217e219
+	pkgrel = 1
+	url = https://kheafield.com/code/kenlm/
+	arch = x86_64
+	license = LGPL
+	makedepends = cmake
+	makedepends = eigen
+	makedepends = git
+	makedepends = cython
+	depends = boost-libs
+	depends = python
+	source = git+https://github.com/kpu/kenlm.git
+	sha256sums = SKIP
+
+pkgname = kenlm

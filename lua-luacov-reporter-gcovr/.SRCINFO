@@ -1,0 +1,29 @@
+pkgbase = lua-luacov-reporter-gcovr
+	pkgdesc = A luacov reporter that creates gcovr json files
+	pkgver = 0.0.4
+	pkgrel = 1
+	url = https://github.com/jprjr/luacov-reporter-gcovr
+	arch = any
+	license = MIT
+	source = luacov-reporter-gcovr-0.0.4.tar.gz::https://github.com/jprjr/luacov-reporter-gcovr/archive/0.0.4.tar.gz
+	md5sums = 6aa8a3f6dbe6fd504a27613dc80bb1ae
+
+pkgname = lua-luacov-reporter-gcovr
+	pkgdesc = A luacov reporter that creates gcovr json files
+	depends = lua
+	depends = lua-luacov
+
+pkgname = lua51-luacov-reporter-gcovr
+	pkgdesc = A luacov reporter that creates gcovr json files for Lua 5.1
+	depends = lua51
+	depends = lua51-luacov
+
+pkgname = lua52-luacov-reporter-gcovr
+	pkgdesc = A luacov reporter that creates gcovr json files for Lua 5.2
+	depends = lua52
+	depends = lua52-luacov
+
+pkgname = lua53-luacov-reporter-gcovr
+	pkgdesc = A luacov reporter that creates gcovr json files for Lua 5.3
+	depends = lua53
+	depends = lua53-luacov

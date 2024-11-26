@@ -1,0 +1,25 @@
+pkgbase = ros-noetic-image-pipeline
+	pkgdesc = ROS - image_pipeline fills the gap between getting raw images from a camera driver and higher-level vision processing.
+	pkgver = 1.16.0
+	pkgrel = 1
+	url = https://wiki.ros.org/image_pipeline
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-catkin
+	depends = ros-noetic-image-rotate
+	depends = ros-noetic-stereo-image-proc
+	depends = ros-noetic-depth-image-proc
+	depends = ros-noetic-image-view
+	depends = ros-noetic-image-proc
+	depends = ros-noetic-image-publisher
+	depends = ros-noetic-camera-calibration
+	source = ros-noetic-image-pipeline-1.16.0.tar.gz::https://github.com/ros-perception/image_pipeline/archive/1.16.0.tar.gz
+	sha256sums = 310004d402930a059bb2c4811301e6f8aabc517143d094662de7e047e6e2b429
+
+pkgname = ros-noetic-image-pipeline

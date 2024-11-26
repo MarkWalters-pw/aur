@@ -1,0 +1,18 @@
+pkgbase = libkrun-git
+	pkgdesc = A dynamic library providing Virtualization-based process isolation capabilities
+	pkgver = v1.7.2.r0.gadb5eb1
+	pkgrel = 1
+	url = https://github.com/containers/libkrun
+	arch = x86_64
+	license = GPL2
+	makedepends = cargo
+	makedepends = git
+	makedepends = gcc
+	makedepends = patchelf
+	depends = libkrunfw
+	provides = libkrun
+	conflicts = libkrun
+	source = libkrun-git::git+https://github.com/containers/libkrun
+	md5sums = SKIP
+
+pkgname = libkrun-git

@@ -1,0 +1,23 @@
+pkgbase = kalamine-git
+	pkgdesc = A text-based, cross-platform Keyboard Layout Maker.
+	pkgver = v0.38.r1.5ad53d1
+	pkgrel = 1
+	url = https://github.com/OneDeadKey/kalamine
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = python-hatchling
+	makedepends = python-build
+	makedepends = python-installer
+	depends = python-click
+	depends = python-pyyaml
+	depends = python-setuptools
+	depends = python-tomli
+	depends = python-lxml
+	depends = python-livereload
+	provides = kalamine
+	conflicts = kalamine
+	source = git+https://github.com/OneDeadKey/kalamine.git
+	md5sums = SKIP
+
+pkgname = kalamine-git

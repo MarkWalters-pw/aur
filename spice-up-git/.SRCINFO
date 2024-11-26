@@ -1,0 +1,26 @@
+pkgbase = spice-up-git
+	pkgdesc = Create simple and beautiful presentations on the Linux desktop
+	pkgver = 1.8.0+4+ga262d29
+	pkgrel = 1
+	url = https://github.com/Philip-Scott/Spice-up
+	arch = i686
+	arch = x86_64
+	groups = gnome
+	license = GPL
+	makedepends = git
+	makedepends = cmake
+	makedepends = vala
+	depends = granite
+	depends = libgee
+	depends = gtk3
+	depends = json-glib
+	depends = libgudev
+	depends = libevdev
+	provides = spice-up
+	conflicts = spice-up
+	replaces = spice-up
+	source = git+https://github.com/Philip-Scott/Spice-up.git
+	sha256sums = SKIP
+
+pkgname = spice-up-git
+

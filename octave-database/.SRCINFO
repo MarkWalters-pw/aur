@@ -1,0 +1,17 @@
+pkgbase = octave-database
+	pkgdesc = Interface to SQL databases, currently only postgresql using libpq.
+	pkgver = 2.4.4
+	pkgrel = 1
+	url = https://gnu-octave.github.io/packages/database/
+	install = octave-database.install
+	arch = any
+	groups = octave-forge
+	license = GPL3
+	depends = octave>=3.6.2
+	depends = octave-struct>=1.0.12
+	depends = postgresql-libs>=8.3
+	noextract = database-2.4.4.tar.gz
+	source = https://downloads.sourceforge.net/octave/database-2.4.4.tar.gz
+	sha256sums = 3761962f08beed41aadae27f8a14336b1ad5bcdc046861fa325c82d8943916b0
+
+pkgname = octave-database

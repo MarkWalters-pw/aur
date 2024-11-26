@@ -1,0 +1,42 @@
+pkgbase = zeronet-conservancy
+	pkgdesc = modern client for decentralized p2p web platform 0net
+	pkgver = 0.7.10
+	pkgrel = 1
+	url = https://github.com/zeronet-conservancy/zeronet-conservancy/
+	install = zeronet.install
+	arch = any
+	license = GPL3
+	checkdepends = python-pytest
+	checkdepends = python-mock
+	makedepends = git
+	depends = python
+	depends = python-gevent>=1.1.0
+	depends = python-gevent-websocket
+	depends = python-msgpack>=0.4.4
+	depends = python-websocket-client
+	depends = python-rsa
+	depends = python-pysocks
+	depends = python-pyasn1
+	depends = python-pyasn1-modules
+	depends = python-bitcoinlib
+	depends = python-pyaes
+	depends = geoip2-database
+	depends = python-defusedxml
+	depends = python-rich
+	depends = python-base58
+	depends = python-merkletools
+        depends = python-requests
+	optdepends = tor: anonymity
+	optdepends = namecoin-core: local name resolution
+	provides = zeronet
+	conflicts = zeronet
+	options = !strip
+	backup = etc/zeronet.conf
+	source = git+https://github.com/zeronet-conservancy/zeronet-conservancy.git#tag=v0.7.8.1
+	source = zeronet.conf
+	source = zeronet.service
+	sha256sums = SKIP
+	sha256sums = ea735e82dbb10a2c1fda7abfeb2f38c2429044d8254f9e2396c50cecb6f778f8
+	sha256sums = 2ee64a1b671a49a1626901a11d4d7fa338c77cb9b7c9facd2f56b087a4a0bb83
+
+pkgname = zeronet-conservancy

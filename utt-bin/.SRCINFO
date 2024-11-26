@@ -1,0 +1,17 @@
+pkgbase = utt-bin
+	pkgdesc = utt is the universal text transformer
+	pkgver = 0.0.6
+	pkgrel = 3
+	url = https://github.com/queer/utt
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = maven
+	makedepends = java-environment=11
+	depends = java-environment
+	source = utt.sh
+	source = utt.tar.gz::https://github.com/queer/utt/archive/refs/tags/0.0.6.tar.gz
+	sha256sums = 746ba41a80ff0017c104eba91160b05e25bd3cdb887b238a7e63289154123b7c
+	sha256sums = 1abf3a062636906baaf58b10925622cf36d8a190134bdca41b99454690194063
+
+pkgname = utt-bin

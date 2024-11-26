@@ -1,0 +1,11 @@
+#!/bin/sh
+
+echo "Running KTS3wrap..."
+
+# The teamspeak3 package exports environemnt variables, which
+# prevent the successful execution of xdg-open on KDE.
+unset QT_PLUGIN_PATH
+unset LD_LIBRARY_PATH
+
+# Strip /opt/kts3wrap-bin from PATH so we don't re-exec this script.
+PATH="${PATH#/opt/kts3wrap-bin:}" xdg-open "$@"

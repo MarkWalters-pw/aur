@@ -1,0 +1,6 @@
+post_install() {
+	echo "Use <sonic1|sonic2>-launcher to make RSDKv4 look for data in "\
+"<\$XDG_DATA_HOME|~/.local/share>/<sonic1|sonic2>"
+	echo "Alternatively, running RSDKv4 directly will have it look in "\
+"<\$XDG_DATA_HOME|~/.local/share>/RSDKv4"
+}

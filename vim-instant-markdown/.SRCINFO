@@ -1,0 +1,23 @@
+pkgbase = vim-instant-markdown
+	pkgdesc = Instant Markdown previews from vim in a browser
+	pkgver = 0.3.0
+	pkgrel = 2
+	url = https://github.com/instant-markdown/vim-instant-markdown
+	install = install.sh
+	arch = any
+	license = Apache
+	makedepends = jq
+	depends = nodejs
+	depends = npm
+	depends = wget
+	depends = xdg-utils
+	depends = curl
+	optdepends = neovim: neovim support
+	optdepends = vim: vim support
+	noextract = 0.3.0.tar.gz
+	source = https://github.com/instant-markdown/instant-markdown-d/archive/0.3.0.tar.gz
+	source = https://github.com/instant-markdown/vim-instant-markdown/archive/v0.3.0.tar.gz
+	sha256sums = 22ecc56d63b1810f84383f206fb3b8f165a7942cb1771b2bfb0223693c9d0212
+	sha256sums = 02193901308c894639976afa01331608dd46697a0c14dcb360b25679052f336a
+
+pkgname = vim-instant-markdown

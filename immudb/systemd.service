@@ -1,0 +1,50 @@
+[Unit]
+Description=immudb database daemon
+Documentation=https://github.com/codenotary/immudb
+Documentation=https://docs.immudb.io/@@PKGVER@@/
+Requires=network-online.target
+After=network-online.target
+
+[Service]
+User=immu
+Group=immu
+PIDFile=/var/lib/immudb/immudb.pid
+ExecStartPre=/bin/rm -f /var/lib/immudb/immudb.pid
+ExecStart=/usr/bin/immudb --config /etc/immudb/immudb.toml
+WorkingDirectory=/var/lib/immudb
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=20
+
+# Hardening
+ReadWritePaths=/var/log/immudb
+ReadWritePaths=/var/lib/immudb
+UMask=0027
+NoNewPrivileges=true
+LimitNOFILE=1048576
+ProtectSystem=strict
+ProtectHome=true
+PrivateUsers=yes
+PrivateTmp=true
+PrivateDevices=true
+ProtectHostname=true
+ProtectClock=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectKernelLogs=true
+ProtectControlGroups=true
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+RestrictNamespaces=true
+LockPersonality=true
+MemoryDenyWriteExecute=true
+RestrictRealtime=true
+RestrictSUIDSGID=true
+RemoveIPC=true
+CapabilityBoundingSet=
+AmbientCapabilities=
+SystemCallFilter=@system-service
+SystemCallFilter=~@privileged @resources
+SystemCallArchitectures=native
+
+[Install]
+WantedBy=multi-user.target

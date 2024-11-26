@@ -1,0 +1,13 @@
+#!/bin/bash
+export MONO_IOMAP=all
+arch=$(uname -m)
+args=("$@")
+for (( i=0; i<$#; ++i ))
+do
+        # For every existing file, get the real path for the binary.
+        if [ -f ${args[$i]} ]
+        then
+                args[$i]=$(realpath ${args[$i]});
+        fi
+done
+mono /opt/terraria-server/TerrariaServer.exe "${args[@]}"

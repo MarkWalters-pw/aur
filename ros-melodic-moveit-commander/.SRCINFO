@@ -1,0 +1,27 @@
+pkgbase = ros-melodic-moveit-commander
+	pkgdesc = ROS - Python interfaces to MoveIt.
+	pkgver = 1.0.8
+	pkgrel = 1
+	url = https://moveit.ros.org
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-melodic-catkin
+	makedepends = ros-melodic-moveit-resources
+	makedepends = python
+	makedepends = python-catkin-pkg
+	depends = ros-melodic-moveit-msgs
+	depends = ros-melodic-tf
+	depends = ros-melodic-geometry-msgs
+	depends = ros-melodic-rospy
+	depends = ros-melodic-moveit-ros-planning-interface
+	depends = ros-melodic-sensor-msgs
+	depends = ros-melodic-shape-msgs
+	depends = python
+	depends = python-pyassimp
+	source = ros-melodic-moveit-commander-1.0.8.tar.gz::https://github.com/ros-planning/moveit/archive/1.0.8.tar.gz
+	sha256sums = 9f94cac094e0cd73caf2fb75ff85870045239806852aa00f6122f4785da23c14
+
+pkgname = ros-melodic-moveit-commander
+

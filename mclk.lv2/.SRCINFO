@@ -1,0 +1,17 @@
+pkgbase = mclk.lv2
+	pkgdesc = A MIDI clock and realtime-message generator LV2 plugin
+	pkgver = 0.2.3
+	pkgrel = 1
+	url = https://github.com/x42/mclk.lv2
+	arch = x86_64
+	arch = aarch64
+	groups = lv2-plugins
+	groups = pro-audio
+	license = GPL2
+	checkdepends = lv2lint
+	makedepends = lv2
+	depends = glibc
+	source = mclk.lv2-0.2.3.tar.gz::https://github.com/x42/mclk.lv2/archive/v0.2.3.tar.gz
+	sha256sums = 13140a27f022845374df5f3683fa1be15792fded01cde9540ab3b418c1628774
+
+pkgname = mclk.lv2

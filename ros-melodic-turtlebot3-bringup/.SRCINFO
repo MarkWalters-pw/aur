@@ -1,0 +1,30 @@
+pkgbase = ros-melodic-turtlebot3-bringup
+	pkgdesc = ROS - roslaunch scripts for starting the TurtleBot3
+	pkgver = 1.2.5
+	pkgrel = 2
+	url = https://wiki.ros.org/turtlebot3_bringup
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = Apache-2.0
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-melodic-catkin
+	depends = ros-melodic-roscpp
+	depends = ros-melodic-std-msgs
+	depends = ros-melodic-diagnostic-msgs
+	depends = ros-melodic-sensor-msgs
+	depends = ros-melodic-turtlebot3-msgs
+	depends = ros-melodic-turtlebot3-description
+	depends = ros-melodic-turtlebot3-teleop
+	depends = ros-melodic-joint-state-publisher
+	depends = ros-melodic-robot-state-publisher
+	depends = ros-melodic-rosserial-python
+	depends = ros-melodic-hls-lfcd-lds-driver
+	source = ros-melodic-turtlebot3-bringup-1.2.5.tar.gz::https://github.com/ROBOTIS-GIT/turtlebot3/archive/1.2.5.tar.gz
+	sha256sums = cee1be2249f18084075e4604b70463eb40a96d6f5c2e63efc7f2c501399dee3d
+
+pkgname = ros-melodic-turtlebot3-bringup
+

@@ -1,0 +1,18 @@
+pkgbase = dippi-git
+	pkgdesc = Calculate display info like DPI and aspect ratio
+	pkgver = 4.0.0.r1.g8fc23f4
+	pkgrel = 1
+	url = https://github.com/cassidyjames/dippi
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = meson
+	makedepends = vala
+	depends = gtk4
+	depends = libadwaita
+	provides = dippi
+	conflicts = dippi
+	source = dippi-git::git+https://github.com/cassidyjames/dippi
+	sha256sums = SKIP
+
+pkgname = dippi-git

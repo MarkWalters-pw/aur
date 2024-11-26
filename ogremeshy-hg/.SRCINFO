@@ -1,0 +1,20 @@
+pkgbase = ogremeshy-hg
+	pkgdesc = Ogre Meshy is a tool for viewing OGRE mesh files.
+	pkgver = r49.15c39553d143
+	pkgrel = 1
+	url = http://www.yosoygames.com.ar/wp/ogre-meshy/
+	arch = i686
+	arch = x86_64
+	license = GLPv3
+	makedepends = cmake
+	makedepends = mercurial
+	depends = ogre
+	depends = wxgtk2
+	depends = nvidia-cg-toolkit
+	provides = ogremeshy
+	conflicts = ogremeshy
+	source = hg+https://bitbucket.org/dark_sylinc/ogremeshy
+	sha1sums = SKIP
+
+pkgname = ogremeshy-hg
+

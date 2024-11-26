@@ -1,0 +1,25 @@
+pkgbase = xkcd-git
+	pkgdesc = CLI tool to fetch XKCD comics
+	pkgver = r56.9c26c67
+	pkgrel = 2
+	epoch = 1
+	url = https://github.com/itsron717/XKCD
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = python-setuptools
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	depends = python-click
+	depends = python-pillow
+	depends = python-requests
+	optdepends = python-sh: to display the XKCD banner
+	optdepends = lolcat: to display the XKCD banner
+	optdepends = figlet: to display the XKCD banner
+	provides = xkcd
+	conflicts = xkcd
+	source = xkcd-git::git+https://github.com/itsron717/XKCD
+	sha256sums = SKIP
+
+pkgname = xkcd-git

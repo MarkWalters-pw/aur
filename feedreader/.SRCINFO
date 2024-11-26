@@ -1,0 +1,21 @@
+pkgbase = feedreader
+	pkgdesc = Modern desktop application designed to complement existing web-based RSS accounts
+	pkgver = 2.11.0
+	pkgrel = 1
+	url = https://jangernert.github.io/FeedReader/
+	arch = x86_64
+	license = GPL3
+	makedepends = gobject-introspection
+	makedepends = meson
+	makedepends = vala
+	depends = curl
+	depends = org.freedesktop.secrets
+	depends = gnome-online-accounts
+	depends = gumbo-parser
+	depends = libgee
+	depends = libpeas
+	source = https://github.com/jangernert/FeedReader/archive/v2.11.0/feedreader-2.11.0.tar.gz
+	sha256sums = 9f679cc08e5673e9e90541b0a0c4066990deacddfe2692f6611799d99bdf5b3e
+
+pkgname = feedreader
+

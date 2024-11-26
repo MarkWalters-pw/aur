@@ -1,0 +1,18 @@
+pkgbase = mons-git
+	pkgdesc = KISS and POSIX Shell script to quickly manage three monitors on X
+	pkgver = r120.375bbba
+	pkgrel = 2
+	url = https://github.com/Ventto/mons
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = help2man
+	depends = xorg-xrandr
+	provides = mons
+	conflicts = mons
+	source = git+https://github.com/Ventto/mons
+	source = git+https://github.com/Ventto/libshlist
+	md5sums = SKIP
+	md5sums = SKIP
+
+pkgname = mons-git

@@ -1,0 +1,22 @@
+pkgbase = finja
+	pkgdesc = Index and find your stuff
+	pkgver = 1.1.1
+	pkgrel = 1
+	url = http://github.com/adfinis-sygroup/finja
+	arch = any
+	license = AGPL3
+	depends = python
+	depends = python-six
+	depends = python-binaryornot
+	depends = python-chardet
+	depends = sqlite3
+	depends = python-termcolor
+	provides = finja
+	conflicts = finja-git
+	source = https://pypi.python.org/packages/source/f/finja/finja-1.1.1.tar.gz
+	source = LICENSE::https://www.gnu.org/licenses/agpl.txt
+	sha256sums = c2a28bff364dac07dc34929af6ca46d6f09ba38e5469b19c9629ba174620b790
+	sha256sums = 0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0
+
+pkgname = finja
+

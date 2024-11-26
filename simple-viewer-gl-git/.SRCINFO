@@ -1,0 +1,31 @@
+pkgbase = simple-viewer-gl-git
+	pkgdesc = Simple and tiny image viewer based on OpenGL
+	pkgver = 3.05.r3.g4bab22c
+	pkgrel = 1
+	url = https://bitbucket.org/andreyu/simple-viewer-gl
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	makedepends = cmake
+	depends = glfw
+	depends = libjpeg
+	depends = libpng
+	depends = giflib
+	depends = libtiff
+	depends = libwebp
+	depends = freetype2
+	depends = lcms2
+	depends = zlib
+	depends = libexif
+	depends = libxrandr
+	depends = libxcursor
+	depends = imlib2
+	depends = openexr
+	provides = simple-viewer-gl
+	conflicts = simple-viewer-gl
+	source = simple-viewer-gl::git+https://bitbucket.org/andreyu/simple-viewer-gl.git
+	md5sums = SKIP
+
+pkgname = simple-viewer-gl-git
+

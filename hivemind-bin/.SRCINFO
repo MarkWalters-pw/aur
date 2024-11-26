@@ -1,0 +1,16 @@
+pkgbase = hivemind-bin
+	pkgdesc = Hivemind is a process manager for Procfile-based applications
+	pkgver = 1.1.0
+	pkgrel = 1
+	url = https://github.com/DarthSim/hivemind
+	arch = x86_64
+	license = MIT
+	makedepends = gzip
+	provides = hivemind
+	conflicts = hivemind
+	conflicts = hivemind-git
+	noextract = hivemind-bin-1.1.0.gz
+	source = hivemind-bin-1.1.0.gz::https://github.com/DarthSim/hivemind/releases/download/v1.1.0/hivemind-v1.1.0-linux-amd64.gz
+	md5sums = 39993ced0c70e11d6a9966c280a385b0
+
+pkgname = hivemind-bin

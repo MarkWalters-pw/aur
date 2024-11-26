@@ -1,0 +1,17 @@
+ahoyapi: v2
+commands:
+
+  configure:
+    cmd: "updpkgsums && makepkg --printsrcinfo > .SRCINFO"
+
+  build:
+    cmd: "makepkg --printsrcinfo > .SRCINFO && makepkg"
+
+  test:
+    cmd: "namcap PKGBUILD && read newest < <(ls -t *.zst) && namcap $newest"
+
+  publish:
+    cmd: "git add .SRCINFO PKGBUILD && git commit -m'Update upstream' && git push"
+
+  clean:
+    cmd: "rm -Rf php-cs-fixer pkg src *.tar.zst"

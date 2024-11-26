@@ -1,0 +1,39 @@
+pkgbase = capnproto-git
+	pkgdesc = Cap'n Proto serialization/RPC system (git version)
+	pkgver = 0.9.r3463.b5ab41ea
+	pkgrel = 1
+	url = https://capnproto.org/
+	arch = x86_64
+	license = MIT
+	makedepends = cmake
+	makedepends = git
+	depends = gcc-libs
+	depends = glibc
+	depends = openssl
+	depends = zlib
+	provides = capnproto
+	provides = capnproto=0.9
+	provides = libcapnp.so
+	provides = libcapnp.so=0.9
+	provides = libcapnp-json.so
+	provides = libcapnp-json.so=0.9
+	provides = libcapnp-rpc.so
+	provides = libcapnp-rpc.so=0.9
+	provides = libcapnpc.so
+	provides = libcapnpc.so=0.9
+	provides = libkj-async.so
+	provides = libkj-async.so=0.9
+	provides = libkj-gzip.so
+	provides = libkj-gzip.so=0.9
+	provides = libkj-http.so
+	provides = libkj-http.so=0.9
+	provides = libkj-test.so
+	provides = libkj-test.so=0.9
+	provides = libkj.so
+	provides = libkj.so=0.9
+	conflicts = capnproto
+	source = capnproto::git+https://github.com/capnproto/capnproto.git
+	sha512sums = SKIP
+
+pkgname = capnproto-git
+

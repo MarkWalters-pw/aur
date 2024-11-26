@@ -1,0 +1,20 @@
+pkgbase = patrjprof-git
+	pkgdesc = A Free Java profiler written in Java
+	pkgver = 1.2.3r149
+	pkgrel = 1
+	url = https://git.rwth-aachen.de/patrick_laszlo.hechler/patr-java-profiler
+	arch = any
+	license = AGPL-3.0-or-later
+	makedepends = git
+	makedepends = maven
+	makedepends = java-environment>=8
+	depends = java-runtime-headless>=8
+	optdepends = java-runtime-headless>=16: support for socket files for server/client communication
+	optdepends = java-runtime>=8: graphical user interface
+	optdepends = java-runtime>=16: socket files + graphical user interface
+	provides = patrjprof=1.2.3r149
+	conflicts = patrjprof
+	source = git+https://git.rwth-aachen.de/patrick_laszlo.hechler/patr-java-profiler.git#branch=latest-snapshot
+	sha512sums = SKIP
+
+pkgname = patrjprof-git

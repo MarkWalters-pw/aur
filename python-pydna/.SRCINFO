@@ -1,0 +1,30 @@
+pkgbase = python-pydna
+	pkgdesc = Representing double stranded DNA and functions for simulating cloning and homologous recombination between DNA molecules
+	pkgver = 5.2.0
+	pkgrel = 1
+	url = https://github.com/bjornfjohansson/pydna
+	arch = any
+	license = custom:BSD-3-clause
+	checkdepends = python-pytest
+	checkdepends = python-requests-mock
+	checkdepends = ipython
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-poetry-dynamic-versioning
+	makedepends = python-wheel
+	makedepends = git
+	depends = python-appdirs
+	depends = python-biopython
+	depends = python-networkx
+	depends = python-prettytable
+	depends = python-pyperclip
+	depends = python-pyfiglet
+	optdepends = python-scipy: gel simulation
+	optdepends = python-matplotlib: gel simulation
+	optdepends = python-pyparsing: download
+	optdepends = python-requests: download
+	optdepends = python-cai2: express
+	source = git+https://github.com/bjornfjohansson/pydna.git?#tag=v5.2.0
+	sha512sums = SKIP
+
+pkgname = python-pydna

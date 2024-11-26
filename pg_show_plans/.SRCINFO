@@ -1,0 +1,13 @@
+pkgbase = pg_show_plans
+	pkgdesc = Shows the query plans of all currently running SQL statements
+	pkgver = 2.1.2
+	pkgrel = 1
+	url = https://www.cybertec-postgresql.com/en/products/pg-show-plans/
+	arch = x86_64
+	license = The PostgreSQL Licence
+	makedepends = clang
+	depends = postgresql
+	source = https://github.com/cybertec-postgresql/pg_show_plans/archive/refs/tags/v2.1.2.tar.gz
+	sha256sums = fb8a23163e7f95adda919c45cb86537ea47a3489244b7c44980164b790ec625d
+
+pkgname = pg_show_plans

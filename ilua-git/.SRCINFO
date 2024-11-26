@@ -1,0 +1,25 @@
+pkgbase = ilua-git
+	pkgdesc = Portable Lua kernel for Jupyter
+	pkgver = 0.2.1.r135.05eb181
+	pkgrel = 3
+	url = https://github.com/guysv/ilua
+	arch = any
+	license = GPL2
+	makedepends = python-setuptools
+	makedepends = python-setuptools-scm
+	makedepends = python-wheel
+	makedepends = git
+	depends = python
+	depends = lua
+	depends = python-jupyter_core
+	depends = jupyter_console
+	depends = python-txzmq
+	depends = python-twisted
+	depends = python-termcolor
+	depends = python-pygments
+	optdepends = python-service-identity: for TLS client hostname verification
+	provides = ilua
+	source = git+https://github.com/guysv/ilua
+	sha256sums = SKIP
+
+pkgname = ilua-git

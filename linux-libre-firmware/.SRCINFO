@@ -1,0 +1,24 @@
+pkgbase = linux-libre-firmware
+	pkgdesc = Firmware files for Linux-libre
+	pkgver = 1.4
+	pkgrel = 1
+	url = https://jxself.org/firmware
+	arch = any
+	license = GPL2
+	makedepends = arm-none-eabi-gcc
+	makedepends = avr-libc
+	makedepends = cmake
+	makedepends = dfu-util
+	makedepends = wget
+	provides = linux-firmware
+	conflicts = linux-firmware
+	conflicts = linux-firmware-git
+	options = !buildflags
+	source = https://jxself.org/firmware/linux-libre-firmware-1.4.tar.lz
+	source = https://jxself.org/firmware/linux-libre-firmware-1.4.tar.lz.asc
+	validpgpkeys = F611A908FFA165C699584ED49D0DB31B545A3198
+	sha512sums = 3b4c8afb63c55f05df0b2686459c6bb2c0cb56db8384d5527506ff4a14b8de80e1a3037a9b57cccccd6953d869c6a71a6500c4c7b735253ea0b57c79854d9457
+	sha512sums = SKIP
+
+pkgname = linux-libre-firmware
+

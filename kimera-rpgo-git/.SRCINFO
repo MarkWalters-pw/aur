@@ -1,0 +1,17 @@
+pkgbase = kimera-rpgo-git
+	pkgdesc = Robust backend optimization
+	pkgver = r409.19436dc
+	pkgrel = 1
+	url = https://github.com/MIT-SPARK/kimera-rpgo
+	arch = i686
+	arch = x86_64
+	license = BSD
+	makedepends = cmake
+	makedepends = boost
+	makedepends = git
+	depends = gtsam
+	provides = kimera-rpgo
+	source = git+https://github.com/MIT-SPARK/kimera-rpgo.git
+	sha256sums = SKIP
+
+pkgname = kimera-rpgo-git

@@ -1,0 +1,19 @@
+pkgbase = drbd-dkms-git
+	pkgdesc = Kernel module for Distributed Replicated Block Device. (Git)
+	pkgver = drbd.9.0.16.1.r0.gab9777df
+	pkgrel = 1
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	depends = dkms
+	depends = drbd-utils>=9.3.1
+	provides = drbd
+	conflicts = drbd
+	conflicts = drbd-dkms
+	source = git+https://github.com/LINBIT/drbd-9.0.git
+	source = dkms.conf
+	sha256sums = SKIP
+	sha256sums = 1035849ccc4e50b2edd86a5e12d5b79bd8f92cb898d063fdc82c877436d56261
+
+pkgname = drbd-dkms-git
+

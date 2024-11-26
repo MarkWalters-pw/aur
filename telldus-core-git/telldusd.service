@@ -1,0 +1,14 @@
+[Unit]
+Description=Telldus-core service telldusd
+After=basic.target
+
+[Service]
+Type=forking
+PIDFile=/run/telldusd.pid
+
+ExecStart=/usr/bin/telldusd
+
+ExecReload=/usr/bin/kill --signal HUP "${MAINPID}"
+
+[Install]
+WantedBy=multi-user.target

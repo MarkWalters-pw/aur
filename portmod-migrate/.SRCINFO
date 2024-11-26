@@ -1,0 +1,19 @@
+pkgbase = portmod-migrate
+	pkgdesc = A tool to help migrate from manually installed OpenMW mods to Portmod
+	pkgver = 0.2.2
+	pkgrel = 1
+	url = https://gitlab.com/portmod/portmodmigrate
+	arch = any
+	license = GPL3
+	makedepends = python
+	makedepends = python-setuptools
+	makedepends = python-setuptools-scm
+	depends = python
+	depends = portmod
+	depends = python-fuzzywuzzy
+	provides = portmod-migrate
+	conflicts = portmod-migrate
+	source = https://gitlab.com/portmod/portmodmigrate/-/archive/v0.2.2/portmodmigrate-v0.2.2.tar.gz
+	sha512sums = 6c92c6c825efe76fea1409a11b259e2618dabdfb4dce9f07717023586b6147f9206fa4f57e6ce255c61847ff77ac602c1adc7907f8696d654f1e6feead578893
+
+pkgname = portmod-migrate

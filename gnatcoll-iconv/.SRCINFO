@@ -1,0 +1,18 @@
+pkgbase = gnatcoll-iconv
+	pkgdesc = GNAT Components Collection - Bindings to Libiconv
+	pkgver = 2019
+	pkgrel = 2
+	url = https://github.com/AdaCore/gnatcoll-bindings/
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = gprbuild
+	depends = libiconv
+	depends = gnatcoll-core
+	depends = python2
+	conflicts = gnatcoll-iconv-git
+	source = https://community.download.adacore.com/v1/964ece4f78755a2fb3c1c84cec2c375cda66bd98?filename=gnatcoll-bindings-2019-20190430-1928C-src.tar.gz
+	sha1sums = 964ece4f78755a2fb3c1c84cec2c375cda66bd98
+
+pkgname = gnatcoll-iconv
+

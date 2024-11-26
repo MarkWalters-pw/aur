@@ -1,0 +1,43 @@
+pkgbase = android-sdk-dummy
+	pkgdesc = Google Android SDK, dummy package
+	pkgver = 26.1.1
+	pkgrel = 1
+	url = https://developer.android.com/studio/releases/sdk-tools.html
+	install = android-sdk-dummy.install
+	arch = i686
+	arch = x86_64
+	license = custom
+	optdepends = android-emulator: emulator has become standalone since 25.3.0
+	optdepends = android-sdk-platform-tools: adb, aapt, aidl, dexdump and dx
+	optdepends = android-udev: udev rules for Android devices
+	provides = android-sdk
+	conflicts = android-sdk
+	source = android-sdk.sh::https://aur.archlinux.org/cgit/aur.git/plain/android-sdk.sh?h=android-sdk
+	source = android-sdk.csh::https://aur.archlinux.org/cgit/aur.git/plain/android-sdk.csh?h=android-sdk
+	source = android-sdk.conf::https://aur.archlinux.org/cgit/aur.git/plain/android-sdk.conf?h=android-sdk
+	source = license.html::https://aur.archlinux.org/cgit/aur.git/plain/license.html?h=android-sdk
+	sha1sums = bc48fea40da956ce4d1afdd7e8d378f5b120e65c
+	sha1sums = 71bfc50d6b0ea1650c981b24f358020ad2ca7bd6
+	sha1sums = 145bdf3eb41a56574b289c1577a24bc47097ec83
+	sha1sums = bfb91be7e0b602d765b7a1fcaf0ce1b7e1a93faa
+	depends_i686 = java-environment
+	depends_i686 = libxtst
+	depends_i686 = fontconfig
+	depends_i686 = freetype2
+	depends_i686 = gcc-libs
+	depends_i686 = libx11
+	depends_i686 = libxext
+	depends_i686 = libxrender
+	depends_i686 = zlib
+	depends_x86_64 = java-environment
+	depends_x86_64 = libxtst
+	depends_x86_64 = fontconfig
+	depends_x86_64 = freetype2
+	depends_x86_64 = lib32-gcc-libs
+	depends_x86_64 = lib32-glibc
+	depends_x86_64 = libx11
+	depends_x86_64 = libxext
+	depends_x86_64 = libxrender
+	depends_x86_64 = zlib
+
+pkgname = android-sdk-dummy

@@ -1,0 +1,21 @@
+pkgbase = cryptkeeper
+	pkgdesc = Cryptkeeper is a FreeDesktop.org (KDE, Gnome, XFce, etc.) system tray applet that manages EncFS encrypted folders
+	pkgver = 0.9.5
+	pkgrel = 6
+	url = https://github.com/tomm/cryptkeeper/
+	arch = x86_64
+	arch = aarch64
+	arch = i386
+	license = GPL3
+	makedepends = autoconf
+	depends = gtk2
+	depends = gconf
+	depends = encfs
+	source = git+https://github.com/tomm/cryptkeeper.git#commit=de57c19e14ddd86eaaa2a6baa45b692180940b2f
+	source = cryptkeeper-0.9.5-fix-linking.patch
+	source = cryptkeeper-0.9.5-add-unistd-to-lsof.patch
+	md5sums = SKIP
+	md5sums = aa864cea6a81ef8e8cb3efa5ef2b9541
+	md5sums = 2e21a1e82942213108774d768e12e4ee
+
+pkgname = cryptkeeper

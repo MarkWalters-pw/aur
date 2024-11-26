@@ -1,0 +1,24 @@
+pkgbase = python-noiseprotocol-git
+	pkgdesc = A Python implementation of Noise Protocol Framework
+	pkgver = 0.3.1.r0.g7337544
+	pkgrel = 2
+	url = https://github.com/plizonczyk/noiseprotocol
+	arch = any
+	license = MIT
+	makedepends = python-setuptools
+	makedepends = python-pytest
+	makedepends = python-pytest-aiohttp
+	makedepends = python-pytest-asyncio
+	makedepends = git
+	depends = python
+	depends = python-cryptography
+	optdepends = python-pypandoc: Thin wrapper for pandoc - development
+	optdepends = twine: Collection of utilities for interacting with PyPI - development
+	optdepends = python-sphinx: Python documentation generator - development
+	optdepends = python-sphinx-autobuild: Rebuild Sphinx documentation on changes, with live-reload in the browser - development
+	optdepends = python-sphinx_rtd_theme: Read the Docs theme for Sphinx - development
+	options = !emptydirs
+	source = git+https://github.com/plizonczyk/noiseprotocol.git
+	sha256sums = SKIP
+
+pkgname = python-noiseprotocol-git

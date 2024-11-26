@@ -1,0 +1,24 @@
+pkgbase = python-django-dbbackup-git
+	pkgdesc = Management commands to help backup and restore your project database and media files
+	pkgver = 2.5.0.r194.ge0d3eaf
+	pkgrel = 1
+	url = https://django-dbbackup.readthedocs.io/en/stable/
+	arch = any
+	makedepends = python-setuptools
+	makedepends = python-mock
+	makedepends = python-pep8
+	makedepends = python-pylint
+	makedepends = python-coverage
+	makedepends = python-gnupg
+	makedepends = python-django-storages
+	makedepends = python-testfixtures
+	depends = python
+	depends = python-django>=1.5
+	depends = python-six
+	depends = python-pytz
+	provides = python-django-dbbackup
+	source = python-django-dbbackup-git::git+https://github.com/django-dbbackup/django-dbbackup
+	md5sums = SKIP
+
+pkgname = python-django-dbbackup-git
+

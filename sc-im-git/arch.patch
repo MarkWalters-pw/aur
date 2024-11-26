@@ -1,0 +1,11 @@
+--- Makefile.orig	2017-12-14 04:48:59.000000000 +1100
++++ Makefile	2017-12-15 09:23:07.776195283 +1100
+@@ -2,7 +2,7 @@
+ name = scim
+ 
+ # The base directory where everything should be installed.
+-prefix  = /usr/local
++prefix  = /usr
+ 
+ EXDIR   = $(prefix)/bin
+ HELPDIR = $(prefix)/share/$(name)

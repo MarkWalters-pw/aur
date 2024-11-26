@@ -1,0 +1,19 @@
+pkgbase = perl-pdl-io-hdf5
+	pkgdesc = Perl module providing PDL interface to the HDF5 data format
+	pkgver = 0.75
+	pkgrel = 2
+	epoch = 1
+	url = https://metacpan.org/dist/PDL-IO-HDF5
+	arch = i686
+	arch = x86_64
+	license = PerlArtistic
+	license = GPL
+	checkdepends = perl-file-which
+	makedepends = perl-pod-parser
+	depends = perl-pdl
+	depends = hdf5
+	options = !emptydirs
+	source = https://cpan.metacpan.org/authors/id/E/ET/ETJ/PDL-IO-HDF5-0.75.tar.gz
+	md5sums = 6c497da659ca929ee78203d63dfe48d4
+
+pkgname = perl-pdl-io-hdf5

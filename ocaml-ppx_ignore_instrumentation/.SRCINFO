@@ -1,0 +1,17 @@
+pkgbase = ocaml-ppx_ignore_instrumentation
+	pkgdesc = Ignore Jane Street specific instrumentation extensions
+	pkgver = 0.17.0
+	pkgrel = 2
+	url = https://github.com/janestreet/ppx_ignore_instrumentation
+	arch = x86_64
+	arch = aarch64
+	license = MIT
+	makedepends = dune>=3.11.0
+	depends = ocaml>=5.1.0
+	depends = ocaml-ppxlib>=0.28.0
+	depends = zstd
+	options = !strip
+	source = ocaml-ppx_ignore_instrumentation-0.17.0.tar.gz::https://github.com/janestreet/ppx_ignore_instrumentation/archive/v0.17.0.tar.gz
+	b2sums = 0502380f0d26f740f8f2bebeb1dd16087e6f10041468fb805e4d5062cf0dd0583278b5f5ba75c834f40a90735c9c723f70a1fa479836819bd0cc60e969ec45fb
+
+pkgname = ocaml-ppx_ignore_instrumentation

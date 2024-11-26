@@ -1,0 +1,19 @@
+pkgbase = python-babelfont-git
+	pkgdesc = Interrogate and manipulate UFO, TTF and OTF fonts with a common interface
+	pkgver = 2.0.2.r5.ge30aba5
+	pkgrel = 2
+	url = https://github.com/simoncozens/babelfont
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = python-setuptools-scm
+	depends = python
+	depends = python-defcon
+	depends = python-fontparts
+	depends = python-fonttools
+	provides = python-babelfont
+	conflicts = python-babelfont
+	source = python-babelfont-git::git+https://github.com/simoncozens/babelfont.git
+	sha256sums = SKIP
+
+pkgname = python-babelfont-git

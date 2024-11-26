@@ -1,0 +1,19 @@
+pkgbase = ctwm-bzr
+	pkgdesc = Claude's Tab Window Manager
+	pkgver = 4.1.0.r711
+	pkgrel = 1
+	url = http://ctwm.org/
+	arch = i686
+	arch = x86_64
+	license = custom:MIT/X Consortium
+	makedepends = breezy
+	makedepends = cmake
+	depends = libxmu
+	depends = libxpm
+	depends = libjpeg
+	provides = ctwm
+	conflicts = ctwm
+	source = ctwm::bzr+https://code.launchpad.net/~ctwm/ctwm/trunk
+	md5sums = SKIP
+
+pkgname = ctwm-bzr

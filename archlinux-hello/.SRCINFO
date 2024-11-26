@@ -1,0 +1,18 @@
+pkgbase = archlinux-hello
+	pkgdesc = A tool providing access to documentation and support for new Arch Linux users.
+	pkgver = 0.8.3
+	pkgrel = 1
+	url = https://github.com/KoraggKnightWolf/archlinux-hello
+	arch = any
+	license = GPL
+	makedepends = git
+	depends = gtk3
+	depends = python-gobject
+	provides = archlinux-hello
+	conflicts = manjaro-welcome
+	conflicts = manjaro-hello
+	replaces = manjaro-welcome
+	source = git+https://github.com/KoraggKnightWolf/archlinux-hello.git
+	md5sums = SKIP
+
+pkgname = archlinux-hello

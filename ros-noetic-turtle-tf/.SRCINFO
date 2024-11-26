@@ -1,0 +1,31 @@
+pkgbase = ros-noetic-turtle-tf
+	pkgdesc = ROS - turtle_tf demonstrates how to write a tf broadcaster and listener with the turtlesim.
+	pkgver = 0.2.3
+	pkgrel = 1
+	url = https://wiki.ros.org/turtle_tf
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-turtlesim
+	makedepends = ros-noetic-catkin
+	makedepends = ros-noetic-tf
+	makedepends = ros-noetic-std-msgs
+	makedepends = ros-noetic-roscpp
+	makedepends = ros-noetic-rospy
+	makedepends = ros-noetic-geometry-msgs
+	depends = ros-noetic-turtlesim
+	depends = ros-noetic-tf
+	depends = ros-noetic-std-msgs
+	depends = ros-noetic-roscpp
+	depends = ros-noetic-rospy
+	depends = ros-noetic-geometry-msgs
+	source = ros-noetic-turtle-tf-0.2.3.tar.gz::https://github.com/ros/geometry_tutorials/archive/0.2.3.tar.gz
+	sha256sums = 7346c3a2d595cbac3d4d2f2e5aa01ff2c7fbafe1c21374efb09244629303ea2f
+
+pkgname = ros-noetic-turtle-tf
+

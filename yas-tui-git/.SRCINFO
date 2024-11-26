@@ -1,0 +1,16 @@
+pkgbase = yas-tui-git
+	pkgdesc = A sudo replacement, written in rust, with a tui
+	pkgver = 1.0.0
+	pkgrel = 1
+	url = https://github.com/alx365/yas
+	arch = any
+	license = MIT
+	makedepends = rust
+	makedepends = cargo
+	makedepends = git
+	conflicts = yas-git
+	source = yas-tui-git::git+https://github.com/alx365/yas
+	sha256sums = SKIP
+
+pkgname = yas-tui-git
+

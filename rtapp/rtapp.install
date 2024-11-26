@@ -1,0 +1,17 @@
+post_install() {
+  echo "
+========================================================================
+
+To start rtapp you must start the systemctl timer:
+  systemctl start rtapp.timer
+
+Then you can enable the service at boot:
+  systemctl enable rtapp.timer
+
+Please look at the readme file
+/usr/share/doc/rtapp/readme.txt
+before using it
+
+========================================================================
+"
+}

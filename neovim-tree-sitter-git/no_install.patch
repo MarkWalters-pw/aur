@@ -1,0 +1,12 @@
+diff --git a/lua/nvim-treesitter.lua b/lua/nvim-treesitter.lua
+index 0165b53..5784692 100644
+--- a/lua/nvim-treesitter.lua
++++ b/lua/nvim-treesitter.lua
+@@ -12,7 +12,6 @@ require "nvim-treesitter.query_predicates"
+ local M = {}
+ 
+ function M.setup()
+-  utils.setup_commands("install", install.commands)
+   utils.setup_commands("info", info.commands)
+   utils.setup_commands("configs", configs.commands)
+   configs.init()

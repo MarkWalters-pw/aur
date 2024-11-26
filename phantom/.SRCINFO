@@ -1,0 +1,20 @@
+pkgbase = phantom
+	pkgdesc = Scalable I/O engine
+	pkgver = r22.63981f1
+	pkgrel = 2
+	url = https://github.com/yandex-load/phantom
+	arch = i686
+	arch = x86_64
+	license = LGPL2.1
+	makedepends = git
+	makedepends = gcc
+	makedepends = binutils
+	makedepends = openssl
+	depends = openssl
+	source = phantom::git+https://github.com/yandex-load/phantom.git
+	source = phantom_gcc8_gcc9.patch
+	sha256sums = SKIP
+	sha256sums = 26fb0233cabc93cfdbbac4c479d4621edde5008b18c5a590ab82d2e9867512b8
+
+pkgname = phantom
+

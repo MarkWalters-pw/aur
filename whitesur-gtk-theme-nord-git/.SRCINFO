@@ -1,0 +1,23 @@
+pkgbase = whitesur-gtk-theme-nord-git
+	pkgdesc = MacOS Big Sur like theme for GNOME desktops, but just the nord colourscheme
+	pkgver = 2022.02.21.r7.g16a845f
+	pkgrel = 2
+	url = https://github.com/vinceliuice/WhiteSur-gtk-theme
+	install = whitesur-gtk-theme-nord.install
+	arch = any
+	license = GPL
+	makedepends = git
+	makedepends = sassc
+	optdepends = gtk-engine-murrine: GTK2 theme support
+	optdepends = gtk-engines: GTK2 theme support
+	optdepends = whitesur-icon-theme-git: matching icon theme
+	optdepends = whitesur-cursor-theme-git: matching cursor theme
+	optdepends = whitesur-kvantum-theme: matching Kvantum theme
+	optdepends = gnome-shell-extension-dash-to-dock: recommended GNOME extension
+	optdepends = gnome-shell-extension-blur-my-shell: recommended GNOME extension
+	provides = whitesur-gtk-theme-nord-git
+	options = !strip
+	source = git+https://github.com/vinceliuice/WhiteSur-gtk-theme.git
+	b2sums = SKIP
+
+pkgname = whitesur-gtk-theme-nord-git

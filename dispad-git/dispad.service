@@ -1,0 +1,8 @@
+[Unit]
+Description=dispad daemon
+
+[Service]
+ExecStart=/usr/bin/dispad -F
+
+[Install]
+WantedBy=user-applications.target

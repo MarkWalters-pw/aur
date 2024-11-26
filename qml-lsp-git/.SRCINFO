@@ -1,0 +1,16 @@
+pkgbase = qml-lsp-git
+	pkgdesc = QML Language Server
+	pkgver = rjienrlwey.number.two.r33.g19c7dec
+	pkgrel = 3
+	url = https://invent.kde.org/sdk/qml-lsp
+	arch = x86_64
+	license = GPLv3
+	makedepends = go
+	makedepends = git
+	provides = qml-lsp
+	conflicts = qml-lsp
+	conflicts = qml-lsp-static
+	source = git+https://invent.kde.org/sdk/qml-lsp
+	sha256sums = SKIP
+
+pkgname = qml-lsp-git

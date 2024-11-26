@@ -1,0 +1,16 @@
+pkgbase = graal-nodejs-jdk19-bin
+	pkgdesc = GraalVM-based, ployglot-enabled implementation of Node.js, Java 19 version
+	pkgver = 22.3.1
+	pkgrel = 1
+	url = https://github.com/oracle/graaljs
+	arch = x86_64
+	arch = aarch64
+	license = custom
+	depends = jdk19-graalvm-bin
+	optdepends = graaljs-jdk19-bin: JavaScript support for non-native mode (with --jvm)
+	source_x86_64 = https://github.com/oracle/graaljs/releases/download/vm-22.3.1/nodejs-installable-svm-java19-linux-amd64-22.3.1.jar
+	sha256sums_x86_64 = bb583b4c8794b60fbf392ee67272f9f68ad0a63f1ab980d8b10bc19935b0b3bd
+	source_aarch64 = https://github.com/oracle/graaljs/releases/download/vm-22.3.1/nodejs-installable-svm-java19-linux-aarch64-22.3.1.jar
+	sha256sums_aarch64 = 947176de505c17c7a4ded530380eba90f2c838e348f965c8f5138cf2dd929089
+
+pkgname = graal-nodejs-jdk19-bin

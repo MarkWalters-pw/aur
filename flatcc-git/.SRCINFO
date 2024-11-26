@@ -1,0 +1,19 @@
+pkgbase = flatcc-git
+	pkgdesc = FlatBuffers Compiler and Library in C for C
+	pkgver = 0.6.0.r195.g07ae7dc
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/dvidelabs/flatcc
+	arch = x86_64
+	license = Apache
+	makedepends = cmake
+	makedepends = git
+	depends = glibc
+	provides = flatcc
+	provides = libflatcc.so
+	provides = libflatccrt.so
+	conflicts = flatcc
+	source = flatcc-git::git+https://github.com/dvidelabs/flatcc
+	sha256sums = SKIP
+
+pkgname = flatcc-git

@@ -1,0 +1,9 @@
+post_install() {
+	# Create Symlink of /oot/Dotto/dotto Binary To /usr/bin
+	mkdir -p "/usr/bin/" # Just Ensure The Directory Exists
+	ln -sf "/opt/Dotto/dotto" "/usr/bin/dotto" # Not Using $pkdir because it was causing issues
+}
+
+post_remove() {
+	rm -f "$pkgdir/usr/bin/dotto"
+}

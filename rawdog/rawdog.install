@@ -1,0 +1,11 @@
+post_install() {
+  cat <<EOF
+
+Required files are located in /usr/share/doc/rawdog
+
+Copy config & style.css to ~/.rawdog
+
+Move style.css if the html output location is changed
+
+EOF
+}

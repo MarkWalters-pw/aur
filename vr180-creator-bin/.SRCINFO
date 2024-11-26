@@ -1,0 +1,17 @@
+pkgbase = vr180-creator-bin
+	pkgdesc = VR video editor and toolkit
+	pkgver = 4.0.0
+	pkgrel = 1
+	url = https://vr.google.com/vr180/apps/
+	arch = x86_64
+	license = MIT
+	license = custom:Chromium
+	provides = vr180-creator
+	conflicts = vr180-creator
+	source = vr180-creator-bin-4.0.0.tar.gz::https://storage.googleapis.com/vr180-creator/download/VR180_Creator_linux_4.0.0.tar.gz
+	source = vr180-creator.desktop
+	sha512sums = a63aecd6a5b761ef3d811821839033d41e055bc6b79afc74d1ef342404a8453af6e08e39f08fda53cd5ce85deac8679138a9b4d67ac96b7c72eb370880044716
+	sha512sums = a430a9f1671f392ddae11f2e5051de5c3fe3179cd2c0d37f733ec295606a263b76ca7067477f04bafed49a124113ffc07211d65b9780b2c366814a4affdde351
+
+pkgname = vr180-creator-bin
+

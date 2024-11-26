@@ -1,0 +1,15 @@
+pkgbase = uwufetch-git
+	pkgdesc = A meme system info tool for Linux, based on nyan/uwu trend on r/linuxmasterrace.
+	pkgver = 2.1.r1.g162c64c
+	pkgrel = 1
+	url = https://github.com/TheDarkBug/uwufetch
+	arch = any
+	license = GPL3
+	makedepends = gcc
+	optdepends = viu: Display distro logos as images
+	optdepends = lshw: Better GPU detection
+	conflicts = uwufetch
+	source = uwufetch-git::git+https://github.com/TheDarkBug/uwufetch.git
+	sha256sums = SKIP
+
+pkgname = uwufetch-git

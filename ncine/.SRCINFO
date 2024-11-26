@@ -1,0 +1,23 @@
+pkgbase = ncine
+	pkgdesc = A multi-platform 2D game engine
+	pkgver = 2020.05
+	pkgrel = 1
+	url = http://ncine.github.io
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = cmake
+	makedepends = doxygen
+	depends = glfw
+	depends = openal
+	depends = libvorbis
+	depends = libwebp
+	depends = lua
+	depends = hicolor-icon-theme
+	options = !strip
+	source = https://github.com/nCine/nCine/archive/2020.05.tar.gz
+	md5sums = f20906dfe9a0cf6558b1ef9621d6c9df
+
+pkgname = ncine
+

@@ -1,0 +1,52 @@
+diff -r -u -N luckydonald-utils-0.52/luckydonaldUtils/dependencies/install.py luckydonald-utils-0.52-mod/luckydonaldUtils/dependencies/install.py
+--- luckydonald-utils-0.52/luckydonaldUtils/dependencies/install.py	2016-07-23 13:51:21.000000000 +1000
++++ luckydonald-utils-0.52-mod/luckydonaldUtils/dependencies/install.py	2017-01-07 21:04:43.537892820 +1100
+@@ -1,23 +1,9 @@
+ # -*- coding: utf-8 -*-
+ from luckydonaldUtils.logger import logging
+ 
+-try:
+-    from .pip_interface import pip_install
+-except ImportError as e:
+-    logger = logging.getLogger(__name__)
+-    logger.warn("Could not apply logger workaround. Falling back to using pip directly.")
+-    from .pip_interface_fallback import pip_install
+-# end try
+-
+ from setuptools import find_packages
+ 
+-try:
+-    import importlib
+-except ImportError:
+-    # pip install importlib
+-    pip_install(["importlib"])
+-    import importlib
+-# end try
++import importlib
+ 
+ __author__ = 'luckydonald'
+ logger = logging.getLogger(__name__)
+diff -r -u -N luckydonald-utils-0.52/setup.py luckydonald-utils-0.52-mod/setup.py
+--- luckydonald-utils-0.52/setup.py	2016-08-15 04:19:47.000000000 +1000
++++ luckydonald-utils-0.52-mod/setup.py	2017-01-07 21:12:08.581241594 +1100
+@@ -12,12 +12,6 @@
+ 
+ main_package = 'luckydonaldUtils'
+ 
+-install_requires = ["pip", "setuptools", "DictObject"]  # both should be installed by default.
+-try:
+-    import importlib
+-except ImportError:
+-    install_requires.append('importlib')
+-
+ setup(
+     name="luckydonald-utils",
+     packages=find_submodules(main_package),
+@@ -30,7 +24,6 @@
+              "interactions json update store text xml time network logger color images webserver django CSRF headers "
+              "eastereggs decorator holder assert raise is None",
+     url="https://github.com/luckydonald/luckydonald-utils",
+-    install_requires=install_requires,
+     long_description=long_description,
+     # test_suite = 'nose.collector',
+     classifiers=[

@@ -1,0 +1,24 @@
+pkgbase = vapoursynth-plugin-astdr-git
+	pkgdesc = Plugin for Vapoursynth: astdr (GIT version)
+	pkgver = 4.0.g9cd2154
+	pkgrel = 1
+	url = https://github.com/dubhater/vapoursynth-astdr
+	arch = any
+	license = GPL
+	makedepends = git
+	depends = vapoursynth-plugin-awarpsharp2-git
+	depends = vapoursynth-plugin-decross-git
+	depends = vapoursynth-plugin-fluxsmooth
+	depends = vapoursynth-plugin-hqdn3d-git
+	depends = vapoursynth-plugin-temporalsoften2-git
+	depends = vapoursynth-plugin-fft3dfilter-git
+	depends = vapoursynth-plugin-motionmask-git
+	depends = vapoursynth-plugin-adjust-git
+	optdepends = vapoursynth-plugin-mvtools
+	optdepends = vapoursynth-plugin-ctmf-git
+	provides = vapoursynth-plugin-astdr
+	conflicts = vapoursynth-plugin-astdr
+	source = astdr::git+https://github.com/dubhater/vapoursynth-astdr.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-astdr-git

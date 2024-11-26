@@ -1,0 +1,18 @@
+pkgbase = easyconnect-rpc
+	pkgdesc = Accessing RPC's network resources over vpn connection.
+	pkgver = 7.6.7.3
+	pkgrel = 2
+	url = https://vpn.rpc.edu.cn
+	install = easyconnect-rpc.install
+	arch = x86_64
+	license = custom
+	makedepends = meson
+	makedepends = gobject-introspection
+	depends = gtk2
+	depends = lib32-gtk2
+	source = https://download.sangfor.com.cn/download/product/sslvpn/pkg/linux_767/EasyConnect_x64_7_6_7_3.deb
+	source = https://download.gnome.org/sources/pango/1.43/pango-1.43.0.tar.xz
+	md5sums = a87cd6e5ecd521491b82d66682fe88f5
+	md5sums = 2df040d3f6a4ed9bc316a70b35adcd8b
+
+pkgname = easyconnect-rpc

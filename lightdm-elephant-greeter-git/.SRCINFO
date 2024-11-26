@@ -1,0 +1,18 @@
+pkgbase = lightdm-elephant-greeter-git
+	pkgdesc = Simple LightDM greeter that does not need X11
+	pkgver = r12.bfa6ea4
+	pkgrel = 1
+	url = https://github.com/max-moser/lightdm-elephant-greeter
+	arch = any
+	license = MIT
+	makedepends = git
+	depends = lightdm
+	depends = python>=3.8
+	depends = cage
+	depends = python-gobject
+	provides = lightdm-elephant-greeter
+	source = git+https://github.com/max-moser/lightdm-elephant-greeter.git
+	sha256sums = SKIP
+
+pkgname = lightdm-elephant-greeter-git
+

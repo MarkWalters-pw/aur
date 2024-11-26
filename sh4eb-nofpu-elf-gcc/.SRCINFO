@@ -1,0 +1,24 @@
+pkgbase = sh4eb-nofpu-elf-gcc
+	pkgdesc = The GNU Compiler Collection for the sh4eb-nofpu-elf target.
+	pkgver = 8.2.1+20181127
+	pkgrel = 1
+	url = http://gcc.gnu.org
+	arch = i686
+	arch = x86_64
+	license = GPL
+	license = LGPL
+	depends = sh4eb-nofpu-elf-binutils
+	depends = libmpc
+	depends = elfutils
+	options = staticlibs
+	options = !buildflags
+	options = !libtool
+	options = !emptydirs
+	options = zipman
+	options = docs
+	options = !strip
+	source = https://sources.archlinux.org/other/gcc/gcc-8.2.1-20181127.tar.xz
+	sha256sums = 6f64ffda2839e96a8551b767bf4f92be4e7a09377ea40058355b4eeb13bc3800
+
+pkgname = sh4eb-nofpu-elf-gcc
+

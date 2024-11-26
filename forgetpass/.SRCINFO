@@ -1,0 +1,18 @@
+pkgbase = forgetpass
+	pkgdesc = Simple password generator for websites
+	pkgver = 1.0.17
+	pkgrel = 1
+	url = https://github.com/alexkdeveloper/forgetpass
+	arch = x86_64
+	arch = aarch64
+	license = GPL-3.0-or-later
+	checkdepends = appstream-glib
+	makedepends = git
+	makedepends = meson
+	makedepends = vala
+	depends = libadwaita
+	depends = libgee
+	source = git+https://github.com/alexkdeveloper/forgetpass.git#commit=3255be06cb47eaf6d838073f7b975c48e4f489cb
+	sha256sums = SKIP
+
+pkgname = forgetpass

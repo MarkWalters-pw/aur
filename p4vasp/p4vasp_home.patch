@@ -1,0 +1,25 @@
+--- Makefile	2018-05-16 17:24:55.841286901 +0200
++++ Makefile	2018-05-16 17:28:02.736120648 +0200
+@@ -50,7 +50,7 @@
+ 	cd odpdom && $(MAKE) libODP.a	
+ 	cd src && $(MAKE)
+ p4vasp_config:
+-	echo "p4vasp_home='$(P4VASP_HOME)'" >$(P4VCONFIG)
++	echo "p4vasp_home='/usr/share/p4vasp'" >$(P4VCONFIG)
+ 	cat $(VINFO) >> $(P4VCONFIG)
+ devver:
+ 	echo "name       ='p4vasp-devel'" > $(VINFO)
+@@ -63,11 +63,9 @@
+ launcher:
+ 	echo "#!`which sh`" >$(P4V)
+ 	echo "export LD_PRELOAD=libstdc++.so.6" >>$(P4V)
+-	echo "export PYTHONPATH=\$$PYTHONPATH:"$(SITE_PACKAGES) >>$(P4V)
+-	echo "#export APPMENU_DISPLAY_BOTH=1" >>$(P4V)
+ 	echo "export UBUNTU_MENUPROXY=0" >>$(P4V)
+-	echo "export P4VASP_HOME="$(P4VASP_HOME) >> $(P4V)
+-	echo "exec python2 "$(BINDIR)"/p4v.py \"\$$@\"" >>$(P4V)
++	echo "export P4VASP_HOME=/usr/share/p4vasp" >> $(P4V)
++	echo "exec /usr/bin/python2 /usr/bin/p4v.py \"\$$$$@@\"" >>$(P4V)
+ appletlist:
+ 	cd install && python2 makeappletlist.py
+ bashrc:setenvironment

@@ -1,0 +1,14 @@
+pkgbase = disable-resolved-llmnr
+	pkgdesc = Disable Link Local Multicast Name Resolution (LLMNR).
+	pkgver = 1.0.0
+	pkgrel = 1
+	url = https://github.com/drichardson/arch_packages
+	install = disable-llmnr.install
+	arch = any
+	license = BSD
+	depends = systemd
+	source = disable-llmnr.conf
+	sha512sums = 774e08792428b8aec4c07e0f73d9b99eff17f8805eb99ff016062c567ec3c7ea253d3dca15f483977b451ceccec13fe142e573284e605c769e28b3196599a92a
+
+pkgname = disable-resolved-llmnr
+

@@ -1,0 +1,22 @@
+pkgbase = jupyterlab-git
+	pkgdesc = JupyterLab computational environment
+	pkgver = 3.0.0.r0.g63c5989cdd
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/jupyterlab/jupyterlab
+	arch = any
+	license = custom
+	makedepends = python-setuptools
+	makedepends = nodejs
+	makedepends = python-recommonmark
+	makedepends = jsx-lexer
+	makedepends = python-sphinx_rtd_theme
+	makedepends = python-sphinx-copybutton
+	depends = jupyterlab_server
+	source = git+https://github.com/jupyterlab/jupyterlab.git
+	source = jupyter-lab.desktop
+	sha256sums = SKIP
+	sha256sums = d7ed2287b823a78b7fe05194180ad9b4602657d5e32b8ed548418039451c0434
+
+pkgname = jupyterlab-git
+

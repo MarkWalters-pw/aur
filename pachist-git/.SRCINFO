@@ -1,0 +1,14 @@
+pkgbase = pachist-git
+	pkgdesc = A small bash program to show installed package history in Arch Linux.
+	pkgver = r51.3f5521b
+	pkgrel = 1
+	url = https://github.com/shellkr/pachist
+	arch = any
+	license = GPL3
+	makedepends = git
+	provides = pachist
+	conflicts = pachist
+	source = pachist::git+https://github.com/shellkr/pachist.git#branch=master
+	sha256sums = SKIP
+
+pkgname = pachist-git

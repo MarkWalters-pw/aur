@@ -1,0 +1,20 @@
+pkgbase = hiccup-git
+	pkgdesc = a python script to help keep you up to date
+	pkgver = r18.22378ab
+	pkgrel = 1
+	url = https://github.com/getchoo/hiccup
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = python-flit-core
+	depends = python
+	depends = xdg-user-dirs
+	provides = hiccup
+	conflicts = hiccup
+	source = hiccup::git+https://github.com/getchoo/hiccup.git#branch=main
+	sha256sums = SKIP
+
+pkgname = hiccup-git

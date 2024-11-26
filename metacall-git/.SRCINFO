@@ -1,0 +1,21 @@
+pkgbase = metacall-git
+	pkgdesc = A CLI for a library providing inter-language foreign function interface calls
+	pkgver = v0.5.20.r12.g2a4a9ee1
+	pkgrel = 1
+	url = https://github.com/metacall/core
+	arch = x86_64
+	license = Apache
+	makedepends = cmake
+	makedepends = git
+	optdepends = dotnet-sdk-bin: C# support
+	optdepends = python: Python3 support
+	optdepends = ruby: Ruby support
+	optdepends = clang: C support
+	optdepends = jre-openjdk-headless: JAVA support
+	optdepends = nodejs: NodeJS support
+	optdepends = typescript: TypeScript support
+	provides = metacall
+	source = metacall-git::git+https://github.com/metacall/core
+	sha256sums = SKIP
+
+pkgname = metacall-git

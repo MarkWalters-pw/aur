@@ -1,0 +1,19 @@
+pkgbase = soccerwindow2
+	pkgdesc = A visualization tool for the RoboCup Soccer Simulation
+	pkgver = rc2023
+	pkgrel = 1
+	url = https://github.com/helios-base/soccerwindow2
+	arch = x86_64
+	license = GPL-3.0-or-later
+	makedepends = boost
+	depends = bash
+	depends = gcc-libs
+	depends = glibc
+	depends = librcsc
+	depends = qt5-base
+	optdepends = rcssserver: RCSS Server
+	optdepends = rcssmonitor: RCSS Monitor
+	source = soccerwindow2-rc2023.tar.gz::https://github.com/helios-base/soccerwindow2/archive/refs/tags/rc2023.tar.gz
+	sha256sums = 244d3044db82ff163812b76f5b8c8a2a90a9ac6a61aa28d0855d224f64460812
+
+pkgname = soccerwindow2

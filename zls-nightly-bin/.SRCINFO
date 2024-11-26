@@ -1,0 +1,18 @@
+pkgbase = zls-nightly-bin
+	pkgdesc = A Zig language server. [YOU MUST USE ZIG MASTER VERSION]
+	pkgver = 0.13.0_dev.64_bcd7784
+	pkgrel = 2
+	url = https://github.com/zigtools/zls/wiki/Installation
+	arch = x86_64
+	arch = x86
+	arch = aarch64
+	license = MIT
+	makedepends = grep
+	makedepends = awk
+	makedepends = jq
+	optdepends = curl: for downloading JSON data
+	optdepends = wget: for downloading JSON data
+	provides = zls
+	conflicts = zls
+
+pkgname = zls-nightly-bin

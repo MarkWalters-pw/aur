@@ -1,0 +1,24 @@
+pkgbase = python-pyraf
+	pkgdesc = Python interface for IRAF
+	pkgver = 2.2.2
+	pkgrel = 1
+	url = https://github.com/spacetelescope/pyraf
+	arch = i686
+	arch = x86_64
+	license = BSD-1-Clause
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = python-setuptools
+	depends = iraf-bin
+	depends = python-stsci.tools
+	depends = python-matplotlib
+	depends = python-numpy
+	depends = python-urwid
+	depends = tcl
+	depends = tk
+	optdepends = ipython
+	source = pyraf-2.2.2.tar.gz::https://github.com/iraf-community/pyraf/archive/refs/tags/v2.2.2.tar.gz
+	md5sums = 218b2db197f425b9b6ecaf7f4d26f492
+
+pkgname = python-pyraf

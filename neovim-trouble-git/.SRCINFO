@@ -1,0 +1,19 @@
+pkgbase = neovim-trouble-git
+	pkgdesc = A pretty diagnostics list for Neovim powered by LSP
+	pkgver = 2.9.0.r0.g2ea761f
+	pkgrel = 1
+	url = https://github.com/folke/trouble.nvim
+	install = trouble.install
+	arch = any
+	groups = neovim-plugins
+	license = unknown
+	makedepends = git
+	depends = neovim
+	provides = neovim-trouble
+	conflicts = neovim-trouble
+	source = neovim-trouble-git::git+https://github.com/folke/trouble.nvim?signed
+	validpgpkeys = E57804F976F0B5CE416F56B341F8B1FBACAE2040
+	validpgpkeys = 5DE3E0509C47EA3CF04A42D34AEE18F83AFDEB23
+	sha256sums = SKIP
+
+pkgname = neovim-trouble-git

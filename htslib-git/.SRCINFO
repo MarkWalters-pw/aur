@@ -1,0 +1,21 @@
+pkgbase = htslib-git
+	pkgdesc = C library for high-throughput sequencing data formats
+	pkgver = 1.17.r16.g93434e04
+	pkgrel = 1
+	url = https://github.com/samtools/htslib
+	arch = i686
+	arch = x86_64
+	license = custom
+	makedepends = git
+	depends = glibc
+	depends = bzip2
+	depends = curl
+	depends = openssl
+	depends = xz
+	provides = htslib=1.17.r16.g93434e04
+	conflicts = htslib
+	options = staticlibs
+	source = git+https://github.com/samtools/htslib.git
+	sha256sums = SKIP
+
+pkgname = htslib-git

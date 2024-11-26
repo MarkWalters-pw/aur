@@ -1,0 +1,26 @@
+pkgbase = ros-melodic-image-pipeline
+	pkgdesc = ROS - image_pipeline fills the gap between getting raw images from a camera driver and higher-level vision processing.
+	pkgver = 1.15.0
+	pkgrel = 2
+	url = https://wiki.ros.org/image_pipeline
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-melodic-catkin
+	depends = ros-melodic-image-rotate
+	depends = ros-melodic-stereo-image-proc
+	depends = ros-melodic-depth-image-proc
+	depends = ros-melodic-image-view
+	depends = ros-melodic-image-proc
+	depends = ros-melodic-image-publisher
+	depends = ros-melodic-camera-calibration
+	source = ros-melodic-image-pipeline-1.15.0.tar.gz::https://github.com/ros-perception/image_pipeline/archive/1.15.0.tar.gz
+	sha256sums = d13a78ccdbd1b3a89c0d7b14a69cc097a3ce4a6a85edbc89831781a4a024fff8
+
+pkgname = ros-melodic-image-pipeline
+

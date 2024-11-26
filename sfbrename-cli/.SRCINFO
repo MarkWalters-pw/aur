@@ -1,0 +1,18 @@
+pkgbase = sfbrename-cli
+	pkgdesc = Simple bulk rename utility (CLI tool)
+	pkgver = 1.0.0
+	pkgrel = 1
+	url = https://github.com/karwler/sfbrename
+	arch = x86_64
+	license = custom
+	makedepends = cmake
+	makedepends = gcc
+	makedepends = git
+	makedepends = make
+	depends = glib2
+	provides = sfbrename
+	conflicts = sfbrename-gtk
+	source = sfbrename::git+https://github.com/karwler/sfbrename.git#tag=70d9967d46b209ac1247cb863bfbb42f0549213f
+	sha256sums = SKIP
+
+pkgname = sfbrename-cli

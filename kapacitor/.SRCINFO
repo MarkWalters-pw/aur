@@ -1,0 +1,25 @@
+pkgbase = kapacitor
+	pkgdesc = Open source framework for processing, monitoring, and alerting on time series data
+	pkgver = 1.5.1
+	pkgrel = 1
+	url = https://github.com/InfluxData/kapacitor
+	install = kapacitor.install
+	arch = i686
+	arch = x86_64
+	arch = armv7h
+	license = MIT
+	makedepends = go
+	makedepends = git
+	provides = kapacitor
+	backup = etc/kapacitor/kapacitor.conf
+	source = git+https://github.com/influxdata/kapacitor#tag=v1.5.1
+	source = kapacitor.install
+	source = kapacitor.sysusers
+	source = kapacitor.tmpfiles
+	sha256sums = SKIP
+	sha256sums = f2db9b53ee3f36f7011f9fa6dec80c582434db636b3645f8803f11b93873c380
+	sha256sums = 0110debb39c33b7eb6b8260d70f33dacb4f22028e902dcb9099e6cacc9990294
+	sha256sums = f1d375eed50a1218b1fb0e94f831737688bc2d1aea8dc0152eb11cb2c7e24f2e
+
+pkgname = kapacitor
+

@@ -1,0 +1,19 @@
+pkgbase = avisynth-plugin-dedot-git
+	pkgdesc = Plugin for Avisynth: dedot (GIT version)
+	pkgver = 1.2.1.1.gb49fea2
+	pkgrel = 1
+	url = https://github.com/Asd-g/AviSynth-DeDot
+	arch = x86_64
+	license = GPL
+	license = Apache
+	makedepends = git
+	makedepends = cmake
+	makedepends = avisynthplus
+	depends = libavisynth.so
+	provides = avisynth-plugin-dedot
+	conflicts = avisynth-plugin-dedot
+	options = debug
+	source = dedot::git+https://github.com/Asd-g/AviSynth-DeDot.git
+	sha256sums = SKIP
+
+pkgname = avisynth-plugin-dedot-git

@@ -1,0 +1,17 @@
+pkgbase = sshpass-svn
+	pkgdesc = A tool for non-interactivly performing password authentication
+	pkgver = r79
+	pkgrel = 2
+	url = https://sourceforge.net/projects/sshpass/
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = subversion
+	depends = glibc
+	depends = openssh
+	provides = sshpass=r79
+	conflicts = sshpass
+	source = svn+https://svn.code.sf.net/p/sshpass/code/trunk
+	sha256sums = SKIP
+
+pkgname = sshpass-svn

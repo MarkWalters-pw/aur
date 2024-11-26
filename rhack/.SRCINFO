@@ -1,0 +1,17 @@
+pkgbase = rhack
+	pkgdesc = rhack - easily hack on your Rust dependencies
+	pkgver = 0.1.0
+	pkgrel = 3
+	url = https://github.com/nakabonne/rhack
+	arch = i686
+	arch = x86_64
+	license = BSD
+	makedepends = cargo
+	makedepends = git
+	depends = gcc-libs
+	provides = rhack
+	source = https://github.com/nakabonne/rhack/archive/5381a730c58652642a0e8eaabca9abf21cbb542d.zip
+	sha512sums = cd5e030803f44bdf5080d0d5b76c56cc85bb2d109155d2f17d17a986bf68b7a67e66188d03c3978119c34750b0c6c217b36d165088d6acd7fc987a30b9134a61
+
+pkgname = rhack
+

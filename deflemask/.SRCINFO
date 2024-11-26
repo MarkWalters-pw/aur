@@ -1,0 +1,29 @@
+pkgbase = deflemask
+	pkgdesc = A Multi-System music tracker (Genesis/MegaDrive, NES/Famicom (nsf), Commodore 64 (sid), and many others)
+	pkgver = 0.12.1
+	pkgrel = 5
+	url = https://deflemask.com
+	arch = i686
+	arch = x86_64
+	license = unknown
+	depends = freeglut
+	depends = unionfs-fuse
+	source = https://www.deflemask.com/DefleMask_Legacy_inux.tar.gz
+	source = launcher.sh
+	source = deflemask.desktop
+	md5sums = d6b52441a2abc5cd15d55b22d564c592
+	md5sums = 81d19468cae85f038ad2999bebc2f026
+	md5sums = 98d2e13db3f8902dd697b6fab5235b4e
+	depends_i686 = sdl
+	depends_i686 = gtk2
+	depends_i686 = glu
+	depends_i686 = libglvnd
+	depends_i686 = libao
+	depends_x86_64 = lib32-sdl
+	depends_x86_64 = lib32-gtk2
+	depends_x86_64 = lib32-glu
+	depends_x86_64 = lib32-libglvnd
+	depends_x86_64 = lib32-libao
+
+pkgname = deflemask
+

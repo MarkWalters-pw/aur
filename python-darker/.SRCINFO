@@ -1,0 +1,32 @@
+pkgbase = python-darker
+	pkgdesc = Apply black reformatting to Python files only in regions changed since a given commit
+	pkgver = 2.1.1
+	pkgrel = 1
+	url = https://github.com/akaihola/darker
+	arch = any
+	license = BSD-3-Clause
+	checkdepends = python-pytest
+	checkdepends = python-pytest-kwparametrize
+	checkdepends = git
+	checkdepends = python-regex
+	checkdepends = python-pathspec
+	checkdepends = python-pygments
+	checkdepends = python-toml
+	checkdepends = python-flynt
+	checkdepends = python-isort
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python
+	depends = python-black
+	depends = python-darkgraylib
+	depends = python-graylint
+	optdepends = python-isort: for sorting import statements
+	optdepends = python-pygments: terminal syntax highlighting
+	optdepends = python-flynt: convert string literals to f-strings
+	source = python-darker::git+https://github.com/akaihola/darker.git#tag=v2.1.1
+	sha256sums = 05f5b60cb0098d2ba934fa457e273087eb3c284b34d766cd69ec548532dbccb0
+
+pkgname = python-darker

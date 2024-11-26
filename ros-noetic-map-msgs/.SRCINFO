@@ -1,0 +1,23 @@
+pkgbase = ros-noetic-map-msgs
+	pkgdesc = ROS - This package defines messages commonly used in mapping packages.
+	pkgver = 1.14.1
+	pkgrel = 1
+	url = https://wiki.ros.org/map_msgs
+	arch = any
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-catkin
+	makedepends = ros-noetic-message-generation
+	makedepends = ros-noetic-std-msgs
+	makedepends = ros-noetic-nav-msgs
+	makedepends = ros-noetic-sensor-msgs
+	depends = ros-noetic-message-runtime
+	depends = ros-noetic-sensor-msgs
+	depends = ros-noetic-std-msgs
+	depends = ros-noetic-nav-msgs
+	source = ros-noetic-map-msgs-1.14.1.tar.gz::https://github.com/ros-planning/navigation_msgs/archive/1.14.1.tar.gz
+	sha256sums = 897e2809fa07330f3b01fbd99163dbed5669eec89d4b7fd742d62cf57b690149
+
+pkgname = ros-noetic-map-msgs
+

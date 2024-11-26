@@ -1,0 +1,21 @@
+pkgbase = python-milksnake
+	pkgdesc = Distribute dynamic linked libraries in Python wheels
+	pkgver = 0.1.5.r3.gef0723e
+	pkgrel = 4
+	url = https://github.com/getsentry/milksnake
+	arch = any
+	license = Apache
+	checkdepends = cargo
+	checkdepends = python-pytest
+	checkdepends = python-virtualenv
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python-cffi
+	source = python-milksnake-0.1.5.r3.gef0723e.tar.gz::https://github.com/getsentry/milksnake/archive/ef0723e41df23d8f6357570c69c1e69cb31f9e9e.tar.gz
+	source = python-milksnake-0.1.5-distutils.patch
+	sha256sums = 42b89da523e0c530b3b9744dcd660adce3ff4a5dd4b11121a59c53ce992a76cc
+	sha256sums = e3ec3c530bc606def7806a2a604ac943e7c191e2f3b5c35fa8f465bf63b1e52b
+
+pkgname = python-milksnake

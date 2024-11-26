@@ -1,0 +1,23 @@
+pkgbase = libthinkpad-git
+	pkgdesc = A general purpose userspace ThinkPad library
+	pkgver = 2.6.r4.gd8a8681
+	pkgrel = 1
+	url = https://github.com/libthinkpad/libthinkpad
+	install = libthinkpad.install
+	arch = i686
+	arch = x86_64
+	license = BSD
+	makedepends = cmake
+	makedepends = git
+	makedepends = pkg-config
+	makedepends = systemd
+	depends = libsystemd
+	provides = libthinkpad
+	conflicts = libthinkpad
+	options = !strip
+	source = git+https://github.com/libthinkpad/libthinkpad
+	source = libthinkpad.install
+	md5sums = SKIP
+	md5sums = b44e3c7ddac879d57b45a709544df785
+
+pkgname = libthinkpad-git

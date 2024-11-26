@@ -1,0 +1,21 @@
+pkgbase = cribl
+	pkgdesc = Cribl Suite: Real-time log and machine data management. Ingest, transform, and route data for observability and analytics
+	pkgver = 4.6.0
+	pkgrel = 1
+	url = https://cribl.io
+	install = cribl.install
+	arch = x86_64
+	arch = aarch64
+	license = custom
+	source = cribl.service
+	source = cribl.sysusers
+	source = cribl.tmpfiles
+	sha256sums = 5701672085e61606516519489e65df53db939c0111ee47a0c175b0fa8b9e2f26
+	sha256sums = 37a2028501e3242e67b2e98ab5ff25805ff436a32f1e8373ea9dbe1e91cf6c57
+	sha256sums = 7b03bae0c9cc4e0b36b4126f9de9e866bb6a5a29e6af33da87858407bc17d624
+	source_x86_64 = https://cdn.cribl.io/dl/4.6.0/cribl-4.6.0-b495abf6-linux-x64.tgz
+	sha256sums_x86_64 = 8f0c4b29c1320798650c1682521e1ff631ed7b5f5b7d1125a6a92a1d04c550ef
+	source_aarch64 = https://cdn.cribl.io/dl/4.6.0/cribl-4.6.0-b495abf6-linux-arm64.tgz
+	sha256sums_aarch64 = 5cc632210fd5b744cb3d19f92103d97b479d78d9393513a6ee000d5143105e79
+
+pkgname = cribl

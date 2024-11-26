@@ -1,0 +1,22 @@
+pkgbase = tgui-git
+	pkgdesc = Cross-platform modern c++ GUI library
+	pkgver = nightly_build.r0.gddac6f47
+	pkgrel = 1
+	url = https://tgui.eu/
+	arch = i686
+	arch = x86_64
+	license = ZLIB
+	makedepends = cmake
+	makedepends = doxygen
+	makedepends = git
+	depends = sfml
+	depends = sdl2
+	depends = sdl2_ttf
+	depends = glfw-x11
+	depends = freetype2
+	provides = tgui
+	conflicts = tgui
+	source = git+https://github.com/texus/TGUI.git#branch=1.x
+	sha256sums = SKIP
+
+pkgname = tgui-git

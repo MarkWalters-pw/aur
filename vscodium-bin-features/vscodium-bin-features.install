@@ -1,0 +1,16 @@
+post_install() {
+  /usr/share/vscodium-bin-features/patch.py vscodium-bin-features patch
+}
+
+pre_upgrade() {
+  /usr/share/vscodium-bin-features/patch.py vscodium-bin-features restore
+}
+
+post_upgrade() {
+  /usr/share/vscodium-bin-features/patch.py vscodium-bin-features patch
+}
+
+pre_remove() {
+  /usr/share/vscodium-bin-features/patch.py vscodium-bin-features restore
+  /usr/bin/rm -f /usr/share/vscodium-bin-features/cache.json
+}

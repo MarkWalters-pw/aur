@@ -1,0 +1,25 @@
+pkgbase = mingw-w64-ois
+	pkgdesc = Object Oriented Input System (mingw-w64)
+	pkgver = 1.5
+	pkgrel = 1
+	url = https://github.com/wgois/OIS
+	arch = any
+	license = custom:zlib/libpng
+	makedepends = mingw-w64-gcc
+	makedepends = mingw-w64-cmake
+	depends = mingw-w64-crt
+	options = !strip
+	options = !buildflags
+	options = !libtool
+	options = staticlibs
+	source = https://github.com/wgois/OIS/archive/v1.5.tar.gz
+	source = dxsdk.patch
+	source = cmake.patch
+	source = xinput.patch
+	sha512sums = 5ab1dda7c25c1959ccbbb758ea3fda36bd62ad65f46e2c6b418317a5eb39e0bace52a44ae079dfb69fc58c90df54f8e50d589daae1100ec615325363c9d77513
+	sha512sums = f9cbaa72acf16982533ce9687efd9c1321b7f38dfeeb5401cc75eaa2ab094927217be87bafcf574120a4a486b46be47a6cd06eeafdfa858693cce661e1585a1a
+	sha512sums = 057f65d3ea564daf5661f91c323554ed356830242ce0597eaa562b229fb70be983ba4443003eec9164da3ed7a4a17ecdf312da4e54e78fb93474562db86e1531
+	sha512sums = 37e9a63e9de1ee71fef8331c3fedf84f4a22827c90b62150d57c1780a30cbda6c41a5470a017acf68bb9977c14c00cea315214544d812044e28ff5825a386a76
+
+pkgname = mingw-w64-ois
+

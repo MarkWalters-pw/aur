@@ -1,0 +1,17 @@
+pkgbase = otf-apple-sf-arabic
+	pkgdesc = Apples San Francisco typeface family. Arabic font.
+	pkgver = 17.0d16e1
+	pkgrel = 1
+	url = https://developer.apple.com/fonts/
+	arch = any
+	license = custom:apple-restricted-font
+	makedepends = texlive-bin
+	makedepends = p7zip
+	source = https://devimages-cdn.apple.com/design/resources/download/SF-Arabic.dmg
+	source = license.awk
+	source = version.awk
+	sha256sums = be583464111a9f90507c9a525c70ea3d3a6f54a3ff6353029c30ccd8bde2a32a
+	sha256sums = cd45a6edaa3829837b090a5a18d3c906816931e7a779b33b6ada23b49b5a5889
+	sha256sums = 55a4e9e108e50b07481044fad445636e502f2d95d7e8964e1d4cda3e9618b198
+
+pkgname = otf-apple-sf-arabic

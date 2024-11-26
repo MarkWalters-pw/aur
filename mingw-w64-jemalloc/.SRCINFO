@@ -1,0 +1,18 @@
+pkgbase = mingw-w64-jemalloc
+	pkgdesc = General-purpose scalable concurrent malloc implementation (mingw-w64)
+	pkgver = 5.2.1
+	pkgrel = 1
+	url = http://www.canonware.com/jemalloc/
+	arch = i686
+	arch = x86_64
+	license = BSD
+	makedepends = mingw-w64-configure
+	depends = mingw-w64-crt
+	options = staticlibs
+	options = !strip
+	options = !buildflags
+	source = https://github.com/jemalloc/jemalloc/releases/download/5.2.1/jemalloc-5.2.1.tar.bz2
+	sha256sums = 34330e5ce276099e2e8950d9335db5a875689a4c6a56751ef3b1d8c537f887f6
+
+pkgname = mingw-w64-jemalloc
+

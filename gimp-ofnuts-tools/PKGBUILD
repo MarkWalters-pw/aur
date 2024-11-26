@@ -1,0 +1,211 @@
+# Maintainer: Matrix <thysupremematrix atttttttttt tuta dottttttt io>
+# Contributor: dracorp aka Piotr Rogoza <piotr.r.public at gmail.com>
+
+pkgname=gimp-ofnuts-tools
+pkgver=20240416T073402Z # To get timestamp go to <https://sourceforge.net/p/gimp-tools/activity/?page=0&limit=100#661e29ea83f8c45370ac9815>, inspect element the date (e.g. "2 months ago"), it should be in the attribute "datetime". Use ISO 8601 format <https://en.wikipedia.org/wiki/ISO_8601>.
+pkgrel=1
+epoch=1
+pkgdesc="Ofnuts' Gimp Tools"
+arch=(any)
+url='http://gimp-tools.sourceforge.net/'
+license=('GPL')
+depends=('gimp<2.99' python2-gimp)
+options=(!strip)
+_base_source='https://sourceforge.net/projects/gimp-tools/files/scripts/'
+# To get sources, you can do the command "curl "https://sourceforge.net/projects/gimp-tools/rss?path=/scripts" | grep "<link>.*</link>" | sed 's|<link>||;s|</link>||' | while read url; do url=`echo $url | sed 's|/download$||'`; echo $url ; done" then find and replace "https://sourceforge.net/projects/gimp-tools/files/scripts" with nothing.
+_source=(
+ofn-move-copy-layers.zip
+ofn-color-input.zip
+ofn-unlink-all.zip
+ofn-unlock-all.zip
+ofn-layer-decompose.zip
+ofn-brush-to-layer.zip
+ofn-random-pattern.zip
+readme.md
+ofn-luminosity-tiler.zip
+ofn-export-layers.zip
+ofn-metadata-to-text.zip
+ofn-autoscale-layer.zip
+ofn-crop-grid.zip
+ofn-shred-layer.zip
+ofn-flatten-cylinder.zip
+ofn-tiles.zip
+ofn-replace-font.zip
+ofn-centered-autocrop.zip
+ofn-color-select.zip
+ofn-random-fill.zip
+ofn-export-layers-cumulative.zip
+ofn-export-sizes.zip
+ofn-preset-guides.zip
+ofn-export-layers-combinations.zip
+ofn-quick-export.zip
+ofn-reorder-colormap.zip
+ofn-palette-to-gradient.zip
+ofn-manual-stippling.zip
+ofn-pixel-grid.zip
+ofn-trapeze-transform.zip
+ofn-difference-layer.zip
+ofn-tartan.zip
+ofn-retime-layers.zip
+ofn-brush-strokes-on-path.zip
+ofn-replace-colormap.zip
+ofn-shrink-grow-selection.zip
+ofn-select-layer-box.zip
+ofn-enclosing-circle.zip
+ofn-engraving.zip
+ofn-swap-strips.zip
+ofn-list-guides.zip
+ofn-remove-grid.zip
+ofn-hatching.zip
+ofn-extract-objects.zip
+ofn-save-next.zip
+ofn-colormap-to-layer.zip
+ofn-recolor-text-layers.zip
+ofn-file-next.zip
+ofn-ungroup-layers.zip
+ofn-layer-modes.zip
+ofn-interleave-layers.zip
+ofn-scroll-layer.zip
+ofn-outline-layer.zip
+ofn-luminosity-masks.zip
+ofn-settings-cleaner.zip
+ofn-name-image.zip
+ofn-layer-tiles.zip
+ofn-points-sequence.zip
+ofn-perspective-stack.zip
+ofn-erase-background.zip
+ofn-layers-to-image-size.zip
+ofn-rotate-layer.zip
+ofn-guillotine-layer.zip
+ofn-remove-top-layer.zip
+ofn-reorder-copy-layers.zip
+ofn-average-fill.zip
+ofn-coalesce-images.zip
+progressive-merge-0.1.py
+ofn-symmetries.zip
+ofn-layer-over-background.zip
+ofn-layer-straightener.zip
+ofn-layer-aligner.zip
+ofn-dump-layer-hierarchy.zip
+text-info-0.1.py
+flatten-groups-0.0.py
+crop-chart-0.0.py
+brush-size-to-native-0.0.py
+invert-colormap-0.0.py
+luminosity-tiler-0.1.py
+scanning-images-0.1.py
+replace-foreground-by-background-0.0.py
+seamless-helper-1.0.py
+addonCollectionManager-3.0.py
+random-pixels-from-palette-0.0.py
+density-brush-fill-0.2.py
+arrange-layers-0.2.py
+mirror-layers-0.1.py
+autocrop-linked-layers-0.2.py
+clear-layers-0.2.py
+random-ellipses-0.3.py
+) 
+source=(
+  "$pkgname-$pkgver-readme.md::${_base_source}/readme.md"
+  "${_source[@]/#/${_base_source}}")
+sha256sums=('3b3367511bb6797117135a298015e127c1b5db08fee12750e97c94afdd352f3a'
+            '9c50a7543a0c89749203bf97ac5ffdc60df9cd3a0513098fe4e7e70f08a95608'
+            '9f4927233fd9a0adb3520e81d0f493f02b17c519266f9c38b58d9b87184d9738'
+            '25082202fcac973451e5d64c28c347b58fc8dfed102dd76fddda29bbef0c1f29'
+            'd5fd9c63e4e3aaf9d739c0a7658b1d98a118b841280c0062ad53b391efc11400'
+            '020bbea73694ad0f2d7805d32de01cfb66cb8e7c72badc26752d1729d6637ff5'
+            '1cecb03df421f86367ed7ed4e3fe628521309bb2b7c4cf1681413e8398165119'
+            'dbf7bb2e682afdac42be29cdc0a79d615d2d03e939eaa09e19936971cea4c20d'
+            '3b3367511bb6797117135a298015e127c1b5db08fee12750e97c94afdd352f3a'
+            '736edb313672027557bd4d19dbf8095bba5864b7c8215bba6937718bbac873dd'
+            'a3d5edb2151a0cee6a6ad4c39b9a9a214c2488f243ff86ef42fbc6560b9ae002'
+            '37f7af1fc6b1d562f4f1e00d2c247c39371176e763931337a122c1aeefff097f'
+            '67ee643984d28dbf7a353e0bed4391a5e503111ea75165bc751048f8f29808f7'
+            '29e281e321ae93ab91b2bbc0fd4d17acdaea84af876a7dd14d091af03e2c3a08'
+            '8ab00911c61f982a220823770eacab827f759589587e8665d59d9628fc3fd69a'
+            '7b1d31ea6d574e2c72e8245e1500311cadef19d870944c3977a46cd1566b781d'
+            '0e2e0ca154fff18d87a9df13c3cd5776f254d1d7e062baf220e51e15826220f0'
+            'd678f07b74aebe36f4dadc2039b00d75e0ac4b1a05fd1394f4792604e2367b4b'
+            '5f04a21b160ab87b21ab7c41186dbbb4a41989399520f3ca7d271ed2065ac534'
+            '774234fa50232be93a770e2d2f1470cd3cf7ec7680bb789d291f9023348ad000'
+            '5dcda79e1871a4a6acfe3c5a9cbea24bfdd84b31ac9423447e1236b8e0a5db21'
+            '25399ad0c26b757fa0ed3cf93f5cb4f4c61f3a6e1cea5b4ce37850ef220833bc'
+            '0301dd87a93105cea7a771b4b15862fbc6ac54a85c3f4f2487c5301886457dcf'
+            '2f9d773313521bf1890d8df504410486bf60f85fa621aacc5d822921f3473cf9'
+            '51114672276c27c4766e7944ff9de24a46566981dc06fd48434187aff5c17390'
+            '51f3928dde696d6008ab2ea601bf6dcaf846b3192af877c361ea941a08bfe3c2'
+            'cc2424c1aedff4640e915e9714d409605d164a9c3d699517544d441991595ecf'
+            '1de05026549b6c3f30bd49958fa53cd5065bf6235e8b26f2b96978838027cc46'
+            'df21884dbb534889096f263811d6e048c31b54f2b458cac04f5658107d52e271'
+            '56eae4fbd420c3ef4dbd3fcb7557651bd3e572e2165e74d7701206f305fb133f'
+            'ceed8c9cbcb476a251538240396c4600f3195afb48ae29a03493815162c7c4e9'
+            '840a8694442aa9cf79cbb035569e9da1853c968e0b69b1b4cfac431030f22103'
+            'ef4322263f3f859c2f81d57f6d50e5b1d235a65f160f1bdba051f036527f92ec'
+            '1b0982a44060ecf4fbb4d800233304113aa021559ed2e79f0bead77a4952b645'
+            '0b2bd847ed56a2ec1391579353c2000f88fd282cdd0838f78b43a55ad269ba8b'
+            'de9b1651267e5f5ca96d8cdabe160ad5ad9d75052e4bc860bb2a13005d03556a'
+            'f5a76a9147572ef79fccc9cd9ec52eec3f79cdc328894002542f6fe3773c4aa0'
+            '481c219d1a79bcf4884cb8e317c74ce1a4ff511e6f7310b65a4bf0ae09ee7e65'
+            '1aec1ed1622145dc45dfe5c48b0d7f38c430bf16283c43a1071501b58befba3d'
+            '35bbb7249ac64352c0be2df3e0f250424e476cd291504c41e6a25d520c0c985e'
+            '5ca67250c7fd6268a783e43710cabe6a1ee97636075bf3b46da931c983be05d2'
+            '8a260660ca4ca9397447c44c971a6ea884d1a9c96d8fc7b4229d1574ae44001e'
+            'a9329355e5abac5e8f15cc9f0310a712db21f8695b6d9a1176057e825a62e6bd'
+            'fb38ea89c3ab77671cd3b8f5b0cf804052a53bf6b62b6e7585d3464a0f002827'
+            '39d5cf7fb52e8cd5061d679a39aa0886f18c91be15763d0995be86f7ebb8553b'
+            'ea3af54be727a65efdfa7e2bb7caa6c0c69800d889ad54e6f15458a1478ef8e2'
+            '14ccda6ee5dbd934f1990fb9b832d294e50c486e59a024a67076ac4b392520e0'
+            'da186ebbcc926813f53c985619fae36d2a1ce80bf8d14e0c580263bfa31be488'
+            '09f455e84f39e1fcdeac7b6fb49d64d5636e00fed2416926a8b7dfa68946a130'
+            '9bb819950156b060b21d12674bd442fe0bdd3e6b027e8352785ad73090779216'
+            '7e167356f6ee74af65f6cc9147e524ab5e55277652a24a26cc988273a41943e3'
+            '267f92a9414024cdb6611c602bfd66eaa1786dc755a437d1e2e2f9492ab8930a'
+            'b6940fb77827c54ff51a3975a9c09f5e71d23c0e1b128484c8bcc4d354312840'
+            'a0fb7d4c344b28265b620e739297f0dcfe66216eb43c6e8398659705ba80bc2b'
+            'b39cc0d0194524612f54be0682e2ab0dbeeba304b4529780740b62daaec4f1cd'
+            'bc48a2f232fd3b599aa5d92a7e9b585f73915bdddde0e9606426899552ef21d4'
+            'e0ec95c209ac7c0903d13a4fc140159ee09f1bc74c793bf1fe0c10ad2683a7c7'
+            '4b34e7f53a47befd05a56bfec96ae8487b75a2d90a3521865c596c3bd75e3455'
+            'd75fa211fa601c0747f5ebf767e0ef73e2eca68f59ab04c07d7aa69d03490d3f'
+            '6afa9e5f9600e956ba93f13c1985c2c92f424ebe38dfd7542b1e9b21fddc8152'
+            'b5a5752c1616678a7ca36160b8e75b47f0586e8ded2e6b41ecce823ca94aa80c'
+            'f3aef384eb9ddbf9237093364fb1660528bb86acb9251f9c4a02226399174cd5'
+            '255c224b4b25078300204b14ace88ad44602cf1b27b10a13b8e99db0e55c994c'
+            '9e463d12e1c4a24cb5c2939ce8972cd3d1b3bf7a23f2ffd0a82828fe19f4bd5f'
+            '778e9c0d8fc3e52ded233c01ae82df81fba4f6ba613c48cb03ad8b0c247485a1'
+            '081fd126de57465195ffac24fc9ec03a15c71f6265cbd7ffb64e5954a783e2ed'
+            '42e66af736dd519dd1a2379f4112656582547f4c04edf0bd51a1fc539fe0bf71'
+            '199f765d6a1dafce75ba342c67c8348d353044214c92a7f5ea5737b5add84d25'
+            '9f767541846b0eecadd0b5b5e21a9c7f8831834664cdaf276984fc12ca8acbe0'
+            'f6cd8b7b8607d97ceef4aa167ca74a2d1d1cfad70d3a0390d5f1d6070f43e32a'
+            'e77bb54243ffebbc5f0ee23d895f4b7c1ff16305891a817ec97964a8b2e094d4'
+            '639319d3b8816b30a5d5b7187cebb9a54b7271bdfc1922ed9c4750b70490aae5'
+            '3ce3a48ce68bbc8fd90d6380a5be711a494981f7b1f50fa0b0feaaf86ada08a5'
+            'be04320124b6da035428c6bcea26dee65dee6ffe472625e50359e0dbab9f8cd9'
+            '9121634fbb9e1624a82afd6e093489c2ff656b206ccfc0265762341e608679d4'
+            '25830a102ec5cb609299b89a1f9ccc137074c011a4df5180eda8e4d0895c2eb2'
+            'b811a7c976cbeaa4aada4c1509a39aa3bb8db7decf29a0c6b6894c2fc0dd5ce5'
+            '84ec454022b8e6bba380c1e5b762c6911caae0c632ca43244fed6bacad29efcd'
+            '4ba3c02af49bb6817bc41e1aed9a87838747a3c26a09568b70de2eec858fbd4d'
+            '4d318a07001cfad59ac9163e45d200ae05ebd01e5a32f77e993371218dd5ce76'
+            '923f8487d3dc41fb6edef0373d852b5828cd5c4cd52bdbd9f659270a824c78a6'
+            'e1dcec7dd7dbd37c7e5ec4083ac16db3fbe972c712b00e5db43b6be573238702'
+            'aedd90e501c393f67e0b356b4ac80ed466ba5dbef42d85a071cb26976c40b74f'
+            'f7951c4364d39b880372cafe66f36b2c7fffb9af71aefb3749a33d21915db651'
+            '033a15d3aad8ee189d338c657ab04a03532ccbc0d5249de9d3786aa33698c96b'
+            'd7624da24cd93315b66d7ac3dce667d141901dbff688cacbabb036b6b50c7a2d'
+            'e2c71c56d30711e55e041242d4799a9b80359f344f4108ea1cfe75ca092a4d34'
+            'e9dcd736f06519002acbb53be57981cf7c190e0c52602d0a9a61cc6c1a2a12a0'
+            '626af84cc13f009c93fc26511c74e4840cd9d8a861f4c8f60a577e1970d4d08b'
+            '1803aae057d5ddcf2b62edc6750a935d7ba9c7d6a8862281512151172ff4e805'
+            '10fd568e673d810b6309a820601f2aa3427022c0808a91d0deeaeba199ee6c25')
+
+package (){
+  cd "$srcdir"
+  _scriptsdir="$pkgdir"/usr/lib/gimp/2.0/plug-ins
+  install -dm755 "$_scriptsdir"
+  for i in *.py; do
+    install -Dm644  $i "$_scriptsdir"/$i
+  done
+  install -Dm644 "$pkgname-$pkgver-readme.md" "$pkgdir/usr/share/doc/$pkgname/readme.md"
+}

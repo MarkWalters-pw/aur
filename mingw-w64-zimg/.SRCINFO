@@ -1,0 +1,16 @@
+pkgbase = mingw-w64-zimg
+	pkgdesc = Scaling, colorspace conversion, and dithering library (mingw-w64)
+	pkgver = 3.0.5
+	pkgrel = 1
+	url = https://github.com/sekrit-twc/zimg
+	arch = any
+	license = custom:WTFPL
+	makedepends = mingw-w64-configure
+	depends = mingw-w64-crt
+	options = !strip
+	options = !buildflags
+	options = staticlibs
+	source = zimg-3.0.5.tar.gz::https://github.com/sekrit-twc/zimg/archive/release-3.0.5.tar.gz
+	sha256sums = a9a0226bf85e0d83c41a8ebe4e3e690e1348682f6a2a7838f1b8cbff1b799bcf
+
+pkgname = mingw-w64-zimg

@@ -1,0 +1,57 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 30008d6..c9f1912 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -23,10 +23,11 @@ ENDIF(NOT WIN32)
+ ADD_SUBDIRECTORY(avida-core)
+
+ # Default location for installed software/configs/ docs is the build directory.
++IF(NOT CMAKE_INSTALL_PREFIX)
+ SET(CMAKE_INSTALL_PREFIX
+   "${PROJECT_BINARY_DIR}"
+   CACHE PATH
+   "Install path prefix, prepended onto install directories."
+   FORCE
+ )
+-
++ENDIF(NOT CMAKE_INSTALL_PREFIX)
+diff --git a/avida-core/CMakeLists.txt b/avida-core/CMakeLists.txt
+index d9d063e..30c4f6a 100644
+--- a/avida-core/CMakeLists.txt
++++ b/avida-core/CMakeLists.txt
+@@ -12,13 +12,14 @@ ENDIF(COMMAND cmake_policy)
+ # PROJECT_BINARY_DIR, since the project didn't exist yet.
+
+ # Default location for installed software/configs/ docs is the build directory.
++IF(NOT CMAKE_INSTALL_PREFIX)
+ SET(CMAKE_INSTALL_PREFIX
+   "${PROJECT_BINARY_DIR}"
+   CACHE PATH
+   "Install path prefix, prepended onto install directories."
+   FORCE
+ )
+-
++ENDIF(NOT CMAKE_INSTALL_PREFIX)
+ # Final software is built directly into the work subdirectory.
+ SET(EXECUTABLE_OUTPUT_PATH
+   "${PROJECT_BINARY_DIR}/bin"
+diff --git a/libs/tcmalloc-1.4/CMakeLists.txt b/libs/tcmalloc-1.4/CMakeLists.txt
+index 59f8f1a..54873b1 100644
+--- a/libs/tcmalloc-1.4/CMakeLists.txt
++++ b/libs/tcmalloc-1.4/CMakeLists.txt
+@@ -3,13 +3,14 @@ PROJECT(TCMALLOC CXX)
+ CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
+
+ # Default location for installed software/configs/ docs is the build directory.
++IF(NOT CMAKE_INSTALL_PREFIX)
+ SET(CMAKE_INSTALL_PREFIX
+   "${PROJECT_BINARY_DIR}"
+   CACHE PATH
+   "Install path prefix, prepended onto install directories."
+   FORCE
+ )
+-
++ENDIF(NOT CMAKE_INSTALL_PREFIX)
+ # Final software is built directly into the work subdirectory.
+ SET(EXECUTABLE_OUTPUT_PATH
+   "${PROJECT_BINARY_DIR}/bin"

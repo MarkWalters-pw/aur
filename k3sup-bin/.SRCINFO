@@ -1,0 +1,21 @@
+pkgbase = k3sup-bin
+	pkgdesc = k3sup is a light-weight utility to get from zero to KUBECONFIG with k3s on any local or remote VM.
+	pkgver = 0.12.8
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/alexellis/k3sup/
+	arch = x86_64
+	license = MIT
+	depends = openssh
+	optdepends = k3s
+	optdepends = kubernetes-bin
+	optdepends = helm
+	optdepends = terraform
+	optdepends = azure-cli: Command-line tools for Azure
+	optdepends = aws-cli: cli for Amazon Web Services
+	optdepends = google-cloud-sdk: gcloud - command-line tools for the Google Cloud Platform
+	provides = k3sup
+	source = k3sup-bin-0.12.8::https://github.com/alexellis/k3sup/releases/download/0.12.8/k3sup
+	sha256sums = 80d3d3a3aab38617667330ed05adea8b332492b7fec54b29393f85de27045da9
+
+pkgname = k3sup-bin

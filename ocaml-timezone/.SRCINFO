@@ -1,0 +1,18 @@
+pkgbase = ocaml-timezone
+	pkgdesc = Time-zone handling for OCaml
+	pkgver = 0.17.0
+	pkgrel = 2
+	epoch = 1
+	url = https://github.com/janestreet/timezone
+	arch = x86_64
+	arch = aarch64
+	license = MIT
+	makedepends = dune>=3.11.0
+	depends = ocaml>=5.1.0
+	depends = ocaml-core>=0.17.0
+	depends = ocaml-ppx_jane>=0.17.0
+	options = !strip
+	source = ocaml-timezone-0.17.0.tar.gz::https://github.com/janestreet/timezone/archive/v0.17.0.tar.gz
+	b2sums = 64bf7ebc1d06c224637c33a63f6b402aeecdafc3c627ef91e52241178d8312a39dc7821e6acd578993b5fa203465e62b60f0765b9bd82728c9334763dc76e4e6
+
+pkgname = ocaml-timezone

@@ -1,0 +1,26 @@
+From b3116376e7fe711e9348de13d9941773bf874821 Mon Sep 17 00:00:00 2001
+From: psykose <alice@ayaya.dev>
+Date: Thu, 15 Jun 2023 07:45:15 +0000
+Subject: [PATCH 1/2] fix compatibility with exiv2 on 32-bit systems
+
+---
+ gexiv2/gexiv2-metadata.cpp  | 2 +-
+ gexiv2/gexiv2-stream-io.cpp | 2 +-
+ gexiv2/gexiv2-stream-io.h   | 2 +-
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/gexiv2/gexiv2-metadata.cpp b/gexiv2/gexiv2-metadata.cpp
+index c67529e..53535d1 100644
+--- a/gexiv2/gexiv2-metadata.cpp
++++ b/gexiv2/gexiv2-metadata.cpp
+@@ -60,7 +60,7 @@ public:
+ #if defined(_MSC_VER)
+     typedef int64_t seek_offset_t;
+ #else
+-    typedef long seek_offset_t;
++    typedef int64_t seek_offset_t;
+ #endif
+ 
+ #if EXIV2_TEST_VERSION(0,27,99)
+-- 
+GitLab

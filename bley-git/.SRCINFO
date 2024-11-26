@@ -1,0 +1,27 @@
+pkgbase = bley-git
+	pkgdesc = Intelligent greylisting daemon for postfix and exim
+	pkgver = r543.9e350b0
+	pkgrel = 1
+	url = http://bley.mx
+	install = bley.sysusers
+	arch = any
+	license = BSD
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python-pyspf
+	depends = python-twisted
+	depends = python-publicsuffix2
+	optdepends = postfix: mail server (Message Transfer Agent)
+	optdepends = exim: mail server (Message Transfer Agent)
+	optdepends = sqlite: required for SQLite support
+	optdepends = python-psycopg2: required for PostgreSQL support
+	optdepends = python-mysqlclient: required for MySQL support
+	optdepends = python-matplotlib: required for bleygraph
+	provides = bley
+	conflicts = bley
+	source = bley-git::git+https://github.com/evgeni/bley.git
+	source = bley.sysusers
+	md5sums = SKIP
+	md5sums = 4c5d548dd75a3b40c8b5b8f5c74f76ef
+
+pkgname = bley-git

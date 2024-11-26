@@ -1,0 +1,23 @@
+pkgbase = pypeek-git
+	pkgdesc = Simple animated GIF screen recorder with an easy to use interface
+	pkgver = r1540.4e0fce8
+	pkgrel = 4
+	url = https://github.com/firatkiral/pypeek
+	arch = any
+	license = GPL3
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = python-hatchling
+	makedepends = gendesk
+	depends = python
+	depends = python-requests
+	depends = pyside6
+	depends = ffmpeg
+	provides = pypeek
+	conflicts = pypeek
+	source = git+https://github.com/firatkiral/pypeek.git
+	sha256sums = SKIP
+
+pkgname = pypeek-git

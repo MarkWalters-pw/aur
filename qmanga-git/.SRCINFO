@@ -1,0 +1,21 @@
+pkgbase = qmanga-git
+	pkgdesc = Manga and book reader written with Qt
+	pkgver = 20220203.e1234c1
+	pkgrel = 4
+	url = https://github.com/kernel1024/qmanga
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	depends = qt6-base
+	depends = libzip
+	depends = zlib
+	depends = poppler>=0.83.0
+	depends = tbb
+	optdepends = djvulibre: DJVU files support
+	optdepends = tesseract: OCR support
+	optdepends = ebook-tools: EPUB support
+	source = git+https://github.com/kernel1024/qmanga.git
+	md5sums = SKIP
+
+pkgname = qmanga-git

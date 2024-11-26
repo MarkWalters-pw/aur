@@ -1,0 +1,19 @@
+pkgbase = opensm
+	pkgdesc = OpenFabrics Alliance InfiniBand Subnet Manager and Administrator
+	pkgver = 3.3.24
+	pkgrel = 1
+	url = https://www.openfabrics.org/index.php/overview.html
+	arch = x86_64
+	arch = i686
+	license = GPL2
+	license = custom:"OpenIB.org BSD"
+	depends = rdma-core
+	depends = bash
+	source = opensm-3.3.24.tar.gz::https://github.com/linux-rdma/opensm/archive/3.3.24.tar.gz
+	source = opensm.service
+	source = opensm.launch
+	sha256sums = a3335e371a4b044427574dff9d324c6c334e502e8facdf58bc070ee151d7e460
+	sha256sums = cfe2efc3a1d332abdfa1a13497c9fbbc7451fa55f1e981db5457a98b79e83d87
+	sha256sums = 6fe01543d11d9fe0b4d3eeb9a6c6abf42c60da2e90c2dea829452a3bcfa6b3ce
+
+pkgname = opensm

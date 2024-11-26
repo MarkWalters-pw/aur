@@ -1,0 +1,24 @@
+pkgbase = communicator-git
+	pkgdesc = Contacts and dialer application
+	pkgver = 2.1.2.r4.g4c8bde7
+	pkgrel = 1
+	url = https://invent.kde.org/maui/communicator
+	arch = x86_64
+	groups = maui-apps
+	license = GPL3
+	makedepends = git
+	makedepends = extra-cmake-modules
+	makedepends = qt5-tools
+	makedepends = qt5-svg
+	depends = mauikit-git
+	depends = mauikit-filebrowsing-git
+	depends = mauikit-texteditor-git
+	depends = ki18n
+	depends = kcoreaddons
+	depends = kservice
+	provides = communicator
+	conflicts = communicator
+	source = git+https://invent.kde.org/maui/communicator.git
+	sha256sums = SKIP
+
+pkgname = communicator-git

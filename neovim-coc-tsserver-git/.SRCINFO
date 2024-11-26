@@ -1,0 +1,17 @@
+pkgbase = neovim-coc-tsserver-git
+	pkgdesc = JavaScript & TypeScript support for coc.nvim
+	pkgver = 1.5.8.r0.g334a3dd
+	pkgrel = 1
+	url = https://github.com/neoclide/coc-tsserver
+	arch = any
+	license = MIT
+	makedepends = yarn
+	makedepends = npm
+	makedepends = git
+	depends = neovim-coc
+	provides = neovim-coc-tsserver
+	conflicts = neovim-coc-tsserver
+	source = coc-tsserver::git+https://github.com/neoclide/coc-tsserver.git
+	sha256sums = SKIP
+
+pkgname = neovim-coc-tsserver-git

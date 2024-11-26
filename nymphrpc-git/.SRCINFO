@@ -1,0 +1,18 @@
+pkgbase = nymphrpc-git
+	pkgdesc = Versatile and fast remote procedure call library.
+	pkgver = 0.1.r7.g6e25d3a
+	pkgrel = 1
+	url = https://github.com/MayaPosch/NymphRPC
+	arch = x86_64
+	arch = i686
+	arch = armv7h
+	arch = aarch64
+	license = BSD
+	makedepends = git
+	depends = poco
+	provides = nymphrpc
+	conflicts = nymphrpc
+	source = git+https://github.com/MayaPosch/NymphRPC.git
+	sha256sums = SKIP
+
+pkgname = nymphrpc-git

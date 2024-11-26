@@ -1,0 +1,20 @@
+pkgbase = stalk-bin
+	pkgdesc = Cross-platform file watcher.
+	pkgver = 1.0.7
+	pkgrel = 1
+	url = https://github.com/AppleGamer22/stalk
+	license = GPL3
+	optdepends = bash
+	optdepends = fish
+	optdepends = zsh
+	depends = inotify-tools
+	conflicts = stalk
+	provides = stalk
+	arch = aarch64
+	source_aarch64 = https://github.com/AppleGamer22/stalk/releases/download/v1.0.7/stalk_1.0.7_linux_arm64.tar.gz
+	sha256sums_aarch64 = 75c3afb5ac836f3be26015139b3d2754fab6788c8683186e77df78a2e022ea50
+	arch = x86_64
+	source_x86_64 = https://github.com/AppleGamer22/stalk/releases/download/v1.0.7/stalk_1.0.7_linux_amd64.tar.gz
+	sha256sums_x86_64 = 67a1cf883fb8f6ba983f9ca37d30e290545c708f49bde7354e0a9b8f07519492
+	
+pkgname = stalk-bin

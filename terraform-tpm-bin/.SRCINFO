@@ -1,0 +1,12 @@
+pkgbase = terraform-tpm-bin
+	pkgdesc = A package manager for Terraform providers
+	pkgver = 0.4.0
+	pkgrel = 1
+	arch = x86_64
+	arch = arm64
+	license = MIT
+	makedepends = unzip
+	source = tpm-Linux-x86_64.tar.gz::https://github.com/Madh93/tpm/releases/download/v0.4.0/tpm_Linux_x86_64.tar.gz
+	sha512sums = e0c7acc22d76233fc97d51f7a7aeaf18d27315e339108ca2aa73ffc62d36363a97c36dc4e02c3a21cda9f224117575eaef83c0c30d3c9cc08a80231e8924a533
+
+pkgname = terraform-tpm-bin

@@ -1,0 +1,10 @@
+[Unit]
+Description='serial console remote sharing and logging daemon'
+After=network.target
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/conserver -d
+
+[Install]
+WantedBy=multi-user.target

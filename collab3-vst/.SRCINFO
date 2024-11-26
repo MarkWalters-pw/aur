@@ -1,0 +1,16 @@
+pkgbase = collab3-vst
+	pkgdesc = CollaB3 Tone Wheel Organ (VST)
+	pkgver = 1.0.0
+	pkgrel = 2
+	url = https://github.com/augustofilocamo/superOrgan
+	arch = x86_64
+	groups = pro-audio
+	groups = vst-plugins
+	license = EULA
+	makedepends = xdg-user-dirs
+	depends = glibc
+	depends = libcurl-gnutls
+	source = https://github.com/augustofilocamo/superOrgan/releases/download/v1.0.0/CollaB3-Installer-1.0.0.sh
+	sha256sums = 9e4c14c53ba17e9871147423016f6644f2ca366c1e8c7062e6f63a36127ed381
+
+pkgname = collab3-vst

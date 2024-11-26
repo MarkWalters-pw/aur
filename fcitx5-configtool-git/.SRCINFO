@@ -1,0 +1,35 @@
+pkgbase = fcitx5-configtool-git
+	pkgdesc = Config tools for Fcitx5, nightly build from git
+	pkgver = 5.1.2.r1.g3f7dca9
+	pkgrel = 1
+	url = https://github.com/fcitx/fcitx5-configtool
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = extra-cmake-modules
+	makedepends = python
+	makedepends = git
+	makedepends = kirigami2
+	makedepends = kdeclarative5
+	makedepends = ninja
+	makedepends = plasma-framework5
+	depends = fcitx5-qt5-git
+	depends = kwidgetsaddons5
+	depends = kitemviews5
+	depends = qt5-x11extras
+	optdepends = kdeclarative5: for KCM support
+	optdepends = plasma-framework5: for plasma theme generator
+	optdepends = kirigami2: for KCM support
+	provides = fcitx5-configtool
+	provides = fcitx5-config-qt
+	provides = kbd-layout-viewer5
+	conflicts = fcitx5-configtool
+	conflicts = fcitx5-config-qt
+	conflicts = kbd-layout-viewer5
+	replaces = kcm-fcitx5-git
+	replaces = kbd-layout-viewer5-git<=r332.734741d-2
+	replaces = fcitx5-config-qt-git<=r332.734741d-2
+	source = git+https://github.com/fcitx/fcitx5-configtool.git
+	sha512sums = SKIP
+
+pkgname = fcitx5-configtool-git

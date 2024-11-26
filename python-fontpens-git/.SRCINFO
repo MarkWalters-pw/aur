@@ -1,0 +1,22 @@
+pkgbase = python-fontpens-git
+	pkgdesc = A collection of classes implementing the pen protocol for manipulating glyphs.
+	pkgver = 0.2.4.r14.gd8d26fe
+	pkgrel = 1
+	url = https://github.com/robotools/fontpens
+	arch = any
+	license = BSD
+	checkdepends = python-fontparts
+	checkdepends = python-pytest
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = python-setuptools-scm
+	makedepends = git
+	depends = python
+	depends = python-fonttools
+	provides = python-fontpens
+	conflicts = python-fontpens
+	source = python-fontpens-git::git+https://github.com/robotools/fontpens.git
+	sha256sums = SKIP
+
+pkgname = python-fontpens-git

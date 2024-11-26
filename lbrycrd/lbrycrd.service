@@ -1,0 +1,17 @@
+[Unit]
+Description=Blockchain daemon for LBRY
+
+[Service]
+User=lbrycrd
+Group=lbrycrd
+#WorkingDirectory=/var/lib/lbrycrd
+RuntimeDirectory=lbrycrd
+RuntimeDirectoryMode=0700
+Type=forking
+ExecStart=/usr/bin/lbrycrdd -conf=/etc/lbrycrd.conf -pid=/run/lbrycrd/lbrycrd.pid
+PIDFile=/run/lbrycrd/lbrycrd.pid
+#SyslogIdentifier=lbrycrd
+#Restart=on-failure
+
+[Install]
+WantedBy=default.target

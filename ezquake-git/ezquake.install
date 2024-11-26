@@ -1,0 +1,19 @@
+
+post_install() {
+    echo ">>> You need the demo/shareware pak0.pak (included in the nquake AUR package)"
+    echo ">>> and pak1.pak (retail) in order to play."
+    echo ">>>   Copy or symlink them into /opt/quake/id1/"
+}
+
+post_upgrade() {
+    post_install $1
+}
+
+pre_remove() {
+    /bin/true
+}
+
+op=$1
+shift
+
+$op $*

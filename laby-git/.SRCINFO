@@ -1,0 +1,19 @@
+pkgbase = laby-git
+	pkgdesc = Learn programming, playing with ants and spider webs
+	pkgver = r363.b29fda9
+	pkgrel = 1
+	url = https://sgimenez.github.io/laby/
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = ocamlbuild
+	makedepends = ocaml-findlib
+	depends = lablgtk3
+	provides = laby
+	conflicts = laby
+	source = laby::git+https://github.com/sgimenez/laby
+	md5sums = SKIP
+
+pkgname = laby-git
+

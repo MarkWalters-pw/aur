@@ -1,0 +1,17 @@
+pkgbase = python-cmocean
+	pkgdesc = Colormap setup for standardizing commonly-plotting oceanographic variables
+	pkgver = 4.0.3
+	pkgrel = 1
+	url = https://github.com/matplotlib/cmocean
+	arch = any
+	license = MIT
+	checkdepends = python-pytest
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-setuptools
+	makedepends = python-wheel
+	depends = python-matplotlib
+	source = cmocean-4.0.3.tar.gz::https://github.com/matplotlib/cmocean/archive/v4.0.3.tar.gz
+	sha512sums = 03b81cc24f0d0bb38a4d3430c6b79f007fb462c2d5710d8ce6eb1fb3c6a6da4501b2ad207b4b6d2ab6bff48d93f77db375dfa1f26e52110ace3cb4ff5a42d6aa
+
+pkgname = python-cmocean

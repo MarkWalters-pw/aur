@@ -1,0 +1,19 @@
+pkgbase = strip-nondeterminism-git
+	pkgdesc = Tool for stripping bits of non-deterministic information from files
+	pkgver = 0.041
+	pkgrel = 1
+	url = https://salsa.debian.org/reproducible-builds/strip-nondeterminism.git
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = perl
+	depends = perl-archive-zip
+	depends = perl-archive-cpio
+	provides = strip-nondeterminism
+	conflicts = strip-nondeterminism
+	options = !emptydirs
+	source = strip-nondeterminism-git::git+https://salsa.debian.org/reproducible-builds/strip-nondeterminism.git#branch=master
+	sha512sums = SKIP
+
+pkgname = strip-nondeterminism-git
+

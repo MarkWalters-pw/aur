@@ -1,0 +1,15 @@
+pkgbase = ttysterm
+	pkgdesc = Simple serial terminal
+	pkgver = 20171215
+	pkgrel = 1
+	url = https://rtime.felk.cvut.cz/gitweb/sojka/sterm.git
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	depends = lockdev
+	source = ttysterm::git://rtime.felk.cvut.cz/sojka/sterm.git
+	md5sums = SKIP
+
+pkgname = ttysterm
+

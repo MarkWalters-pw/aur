@@ -1,0 +1,21 @@
+pkgbase = rescreen
+	pkgdesc = Display Manager with fractional scaling support for X11
+	pkgver = 1.0.4
+	pkgrel = 1
+	url = https://github.com/lagmoellertim/rescreen
+	arch = any
+	license = MIT
+	makedepends = python-wheel
+	makedepends = python-setuptools
+	makedepends = desktop-file-utils
+	depends = xorg-xrandr
+	depends = xorg-xev
+	depends = python3
+	depends = pyside2
+	depends = python-loguru
+	depends = python-pydantic
+	depends = edid-decode-git
+	source = rescreen-1.0.4.tar.gz::https://github.com/lagmoellertim/rescreen/archive/1.0.4.tar.gz
+	sha512sums = eadd7e39f36965f09ce2ae289d5298418aa1f1691d796c79b6017f722dde36cf62b458bd6c98e8364e2f7a4c946deba84a3899196555b570fbf75140eff7e612
+
+pkgname = rescreen

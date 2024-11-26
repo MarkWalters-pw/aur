@@ -1,0 +1,17 @@
+pkgbase = napture-git
+	pkgdesc = An alternative for the World Wide Web
+	pkgver = r365.18941be
+	pkgrel = 1
+	url = https://github.com/face-hh/webx
+	arch = x86_64
+	license = Apache-2.0
+	makedepends = rust
+	depends = glib2
+	depends = gtk4
+	depends = libadwaita
+	depends = lua
+	provides = napture
+	source = git+https://github.com/face-hh/webx.git
+	sha256sums = SKIP
+
+pkgname = napture-git

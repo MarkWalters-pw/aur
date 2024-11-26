@@ -1,0 +1,18 @@
+pkgbase = python-wget
+	pkgdesc = Python Package: wget (GIT version)
+	pkgver = 3.2
+	pkgrel = 1
+	url = https://pypi.org/project/wget/
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-wheel
+	makedepends = python-installer
+	makedepends = python-setuptools
+	provides = python-wget
+	conflicts = python-wget
+	source = wget::https://files.pythonhosted.org/packages/47/6a/62e288da7bcda82b935ff0c6cfe542970f04e29c756b0e147251b2fb251f/wget-3.2.zip
+	sha256sums = SKIP
+
+pkgname = python-wget

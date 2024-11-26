@@ -1,0 +1,16 @@
+pkgbase = mustream-git
+	pkgdesc = A script to play music (with spotify) through the command line.
+	pkgver = r55.2f0cb52
+	pkgrel = 4
+	url = https://github.com/belkadev/mustream
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = spotify
+	depends = bash
+	provides = mustream
+	source = mustream::git+https://github.com/belkadev/mustream.git
+	md5sums = SKIP
+
+pkgname = mustream-git
+

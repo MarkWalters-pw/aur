@@ -1,0 +1,17 @@
+[Trigger]
+Type = Package
+Operation = Install
+Operation = Upgrade
+Target = whatsapp-nativefier
+
+[Trigger]
+Type = Package
+Operation = Install
+Operation = Upgrade
+Target = whatsapp-nativefier-nomaximize-hook
+
+
+[Action]
+Description = Disabling minimize on close...
+When = PostTransaction
+Exec = /usr/share/libalpm/scripts/whatsapp-nativefier-nomaximize

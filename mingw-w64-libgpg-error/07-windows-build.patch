@@ -1,0 +1,18 @@
+--- a/src/Makefile.am	2020-12-25 22:45:42.869911385 -0500
++++ b/src/Makefile.am	2020-12-25 22:48:09.942175930 -0500
+@@ -329,10 +329,15 @@
+ mkheader_opts =
+ parts_of_gpg_error_h += ./lock-obj-pub.native.h
+ 
++if HAVE_W32_SYSTEM
++./lock-obj-pub.native.h: Makefile gen-w32-lock-obj$(EXEEXT) w32-lock-obj.h
++	./gen-w32-lock-obj >$@
++else
+ ./lock-obj-pub.native.h: Makefile gen-posix-lock-obj$(EXEEXT) posix-lock-obj.h
+ 	./gen-posix-lock-obj >$@
+ endif
+ endif
++endif
+ 
+ # We also depend on versioninfo.rc because that is build by
+ # config.status and thus has up-to-date version numbers.

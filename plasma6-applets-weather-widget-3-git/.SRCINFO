@@ -1,0 +1,20 @@
+pkgbase = plasma6-applets-weather-widget-3-git
+	pkgdesc = Weather Widget 3 for KDE Plasma 6
+	pkgver = r366.6f7ea94
+	pkgrel = 1
+	url = https://github.com/blackadderkate/weather-widget-2
+	arch = x86_64
+	license = GPL-2.0-or-later
+	makedepends = git
+	makedepends = extra-cmake-modules
+	depends = plasma-workspace
+	depends = qt6-5compat
+	depends = qt6-declarative
+	provides = plasma-applets-weather-widget-3
+	conflicts = plasma5-applets-weather-widget
+	conflicts = plasma-applets-weather-widget-2
+	conflicts = plasma-applets-weather-widget-3
+	source = git+https://github.com/blackadderkate/weather-widget-2.git#branch=QT6
+	sha256sums = SKIP
+
+pkgname = plasma6-applets-weather-widget-3-git

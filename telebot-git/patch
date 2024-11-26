@@ -1,0 +1,31 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index ca33532..0accd1e 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -16,7 +16,7 @@ SET(SRCS
+     src/telebot.c
+ )
+ 
+-ADD_DEFINITIONS("-DDEBUG=1")
++# ADD_DEFINITIONS("-DDEBUG=1")
+ INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}/include)
+ SET(DEPENDENTS "libcurl json-c")
+ INCLUDE(FindPkgConfig)
+@@ -29,7 +29,7 @@ SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${EXTRA_LIB_CFLAGS} -Werror -Wall -Wno-unuse
+ 
+ # libtelebot
+ ADD_LIBRARY(${PROJECT_NAME} SHARED ${SRCS})
+-ADD_LIBRARY(${PROJECT_NAME}_static STATIC ${SRCS})
++# ADD_LIBRARY(${PROJECT_NAME}_static STATIC ${SRCS})
+ TARGET_LINK_LIBRARIES(${PROJECT_NAME} ${PKGS_LDFLAGS})
+ SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES VERSION ${VERSION})
+ 
+@@ -37,7 +37,7 @@ SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES VERSION ${VERSION})
+ CONFIGURE_FILE(telebot.pc.in telebot.pc @ONLY)
+ 
+ # echobot (test)
+-ADD_SUBDIRECTORY(test)
++# ADD_SUBDIRECTORY(test)
+ 
+ # CMake Policy (CMP0002)
+ # The logical name of executable and library targets

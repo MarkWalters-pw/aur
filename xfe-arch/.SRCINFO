@@ -1,0 +1,20 @@
+pkgbase = xfe-arch
+	pkgdesc = An MS-Explorer like file manager for X with Archlinux xfp support.
+	pkgver = 1.43.2
+	pkgrel = 1
+	url = http://roland65.free.fr/xfe
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = intltool
+	depends = fox
+	depends = xcb-util
+	provides = xfe=1.43.2
+	conflicts = xfe
+	source = http://downloads.sourceforge.net/sourceforge/xfe/xfe-1.43.2.tar.gz
+	source = arch-pacman.patch
+	md5sums = 246214140eca11079d97988c4e9fc9fc
+	md5sums = 109d9a6de10865a7f2104c43d8eef94a
+
+pkgname = xfe-arch
+

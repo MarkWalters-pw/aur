@@ -1,0 +1,11 @@
+[Unit]
+Description=FlexNet server daemon
+After=network.target
+
+[Service]
+User=nobody
+Type=forking
+ExecStart=/usr/bin/nohup /usr/bin/lmgrd -l +/var/log/flexnet/flexnet.log -c /etc/flexnet/license.dat
+
+[Install]
+WantedBy=multi-user.target

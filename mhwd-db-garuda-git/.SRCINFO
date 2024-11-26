@@ -1,0 +1,28 @@
+pkgbase = mhwd-db-garuda-git
+	pkgdesc = mhwd-db-garuda(manjaro's mhwd-db backported to archlinux with additional features and limited to only dkms drivers)
+	pkgver = r17.e3f7adf
+	pkgrel = 1
+	url = https://gitlab.com/garuda-linux/applications/mhwd-db-garuda
+	arch = any
+	license = GPL
+	makedepends = git
+	makedepends = cmake
+	depends = gcc-libs
+	depends = hwinfo
+	source = git+https://gitlab.com/garuda-linux/applications/mhwd-db-garuda.git#branch=master
+	sha256sums = SKIP
+
+pkgname = mhwd-db-garuda-git
+	pkgdesc = mhwd-db-garuda(manjaro's mhwd-db backported to archlinux with additional features and limited to only dkms drivers)
+	install = mhwd-db.install
+	arch = any
+	depends = mhwd-nvidia
+	depends = mhwd-ati
+	depends = mhwd-amdgpu
+	depends = mhwd-nvidia-470xx
+	depends = mhwd-nvidia-390xx
+	provides = mhwd-db
+	provides = mhwd-db-garuda
+	conflicts = mhwd-db
+	conflicts = mhwd-db-garuda
+	replaces = mhwd-db-garuda

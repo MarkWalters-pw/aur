@@ -1,0 +1,20 @@
+pkgbase = coreinfo-git
+	pkgdesc = A file information tool from the CoreApps family.
+	pkgver = 2.8.0.r1.2c235a0
+	pkgrel = 1
+	url = https://gitlab.com/cubocore
+	arch = any
+	groups = coreapps-git
+	license = GPL3
+	makedepends = git
+	depends = libcprime-git
+	depends = libzen
+	depends = libmediainfo
+	depends = zlib
+	provides = coreinfo
+	conflicts = coreinfo
+	source = git+https://gitlab.com/cubocore/coreinfo.git
+	md5sums = SKIP
+
+pkgname = coreinfo-git
+

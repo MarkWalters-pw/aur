@@ -1,0 +1,16 @@
+pkgbase = qconf-git
+	pkgdesc = Qt5 compatible qconf - Qt configuration tool
+	pkgver = r3.28751dd
+	pkgrel = 1
+	url = https://github.com/psi-plus/qconf
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	depends = qt5-base
+	provides = qconf
+	conflicts = qconf
+	source = git+https://github.com/psi-plus/qconf.git
+	md5sums = SKIP
+
+pkgname = qconf-git

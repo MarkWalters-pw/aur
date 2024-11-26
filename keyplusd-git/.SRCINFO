@@ -1,0 +1,22 @@
+pkgbase = keyplusd-git
+	pkgdesc = keyboard remapping tool that emulates keyplus firmware
+	pkgver = 0.4.0a1.r2.g9793bd3
+	pkgrel = 2
+	url = https://github.com/ahtn/keyplus/tree/master/ports/linux
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = make
+	makedepends = gcc
+	makedepends = python
+	depends = keyplus-git
+	depends = systemd
+	depends = libevdev
+	provides = keyplusd
+	conflicts = keyplusd
+	source = git+https://github.com/ahtn/keyplus.git
+	md5sums = SKIP
+
+pkgname = keyplusd-git
+

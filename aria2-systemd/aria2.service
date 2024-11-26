@@ -1,0 +1,9 @@
+[Unit]
+Description=Aria2 Service
+After=network.target
+
+[Service]
+ExecStart=/etc/aria2/start-daemon.sh
+
+[Install]
+WantedBy=default.target

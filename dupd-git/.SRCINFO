@@ -1,0 +1,18 @@
+pkgbase = dupd-git
+	pkgdesc = CLI utility to find duplicate files
+	pkgver = 1.7.r43.gf137a38
+	pkgrel = 1
+	url = http://www.virkki.com/dupd
+	arch = i686
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	depends = openssl
+	depends = sqlite
+	provides = dupd=1.7.r43.gf137a38
+	conflicts = dupd
+	source = dupd::git+https://github.com/jvirkki/dupd.git
+	md5sums = SKIP
+
+pkgname = dupd-git
+

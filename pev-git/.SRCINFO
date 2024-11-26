@@ -1,0 +1,18 @@
+pkgbase = pev-git
+	pkgdesc = command line toolkit to work with and analyze PE (Portable Executables) binaries
+	pkgver = 0.83
+	pkgrel = 1
+	url = https://github.com/mentebinaria/readpe
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	depends = glibc
+	depends = openssl
+	provides = pev=0.83
+	conflicts = pev
+	source = git+https://github.com/mentebinaria/readpe.git
+	md5sums = SKIP
+	sha256sums = SKIP
+
+pkgname = pev-git

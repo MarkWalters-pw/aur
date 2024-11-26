@@ -1,0 +1,34 @@
+pkgbase = chromium-fullscreen
+	pkgdesc = A script in order to run Chromium in fullscreen mode under the chromium user
+	pkgver = 3
+	pkgrel = 6
+	url = https://aur.archlinux.org/packages/chromium-fullscreen/
+	install = chromium-fullscreen.install
+	arch = x86_64
+	arch = i686
+	arch = arm
+	arch = armv6h
+	arch = armv7h
+	license = MIT
+	depends = xorg-server
+	depends = xorg-xinit
+	depends = xorg-xset
+	depends = xorg-xrandr
+	depends = unclutter
+	depends = chromium
+	depends = xlogin-git
+	source = https://raw.githubusercontent.com/julianxhokaxhiu/AUR/master/chromium-fullscreen/chromium-fullscreen.sysuser
+	source = https://raw.githubusercontent.com/julianxhokaxhiu/AUR/master/chromium-fullscreen/chromium-fullscreen.xinitrc
+	source = https://raw.githubusercontent.com/julianxhokaxhiu/AUR/master/chromium-fullscreen/disable-x-frame-option-background.js
+	source = https://raw.githubusercontent.com/julianxhokaxhiu/AUR/master/chromium-fullscreen/disable-x-frame-option-manifest.json
+	source = https://raw.githubusercontent.com/julianxhokaxhiu/AUR/master/chromium-fullscreen/aw-snap-reloader-background.js
+	source = https://raw.githubusercontent.com/julianxhokaxhiu/AUR/master/chromium-fullscreen/aw-snap-reloader-manifest.json
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = chromium-fullscreen
+

@@ -1,0 +1,17 @@
+pkgbase = selenoid-bin
+	pkgdesc = Selenium Hub successor running browsers within containers
+	pkgver = 1.11.3
+	pkgrel = 1
+	url = https://aerokube.com/selenoid
+	arch = x86_64
+	arch = aarch64
+	license = Apache-2.0
+	provides = selenoid
+	conflicts = selenoid
+	options = strip
+	source_x86_64 = selenoid-1.11.3-amd64::https://github.com/aerokube/selenoid/releases/download/1.11.3/selenoid_linux_amd64
+	sha512sums_x86_64 = bc7a68b1ea88c9d4a1fb8d0dffc15d2aba105fee69bcda142f7b9bfc3503f6df811d1e86cd209cec671186c201ef4e74b1966a8e043311d8502f21d49fc6d44c
+	source_aarch64 = selenoid-1.11.3-arm64::https://github.com/aerokube/selenoid/releases/download/1.11.3/selenoid_linux_arm64
+	sha512sums_aarch64 = 5378cf995cb95e58ff734936bd2bdd8eeb6e62ae63d20b072aa19ec61d3b36316b476df67b8424fa95bc0518d1f19097e5689e78720d13daf7040a60a35e6f0f
+
+pkgname = selenoid-bin

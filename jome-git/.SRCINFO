@@ -1,0 +1,15 @@
+pkgbase = jome-git
+	pkgdesc = Jome is a keyboard centric emoji picker desktop application.
+	pkgver = r119.409e2fc8
+	pkgrel = 1
+	url = https://github.com/eepp/jome
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = cmake
+	makedepends = boost
+	depends = qt5-base
+	source = jome-git::git+https://github.com/eepp/jome
+	md5sums = SKIP
+
+pkgname = jome-git

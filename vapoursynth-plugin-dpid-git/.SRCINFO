@@ -1,0 +1,18 @@
+pkgbase = vapoursynth-plugin-dpid-git
+	pkgdesc = Plugin for Vapoursynth: dpid (GIT version)
+	pkgver = 5.3.g5c7513a
+	pkgrel = 1
+	url = https://github.com/WolframRhodium/VapourSynth-dpid
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = meson
+	depends = vapoursynth
+	depends = cuda
+	provides = vapoursynth-plugin-dpid
+	conflicts = vapoursynth-plugin-dpid
+	options = debug
+	source = dpid::git+https://github.com/WolframRhodium/VapourSynth-dpid.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-dpid-git

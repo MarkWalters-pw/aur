@@ -1,0 +1,16 @@
+pkgbase = dantalian-git
+	pkgdesc = Transparent tag-based file organization system.
+	pkgver = 78f4cb9
+	pkgrel = 1
+	url = http://darkfeline.github.io/dantalian/
+	arch = any
+	license = mit
+	makedepends = python-sphinx
+	depends = python
+	depends = git
+	optdepends = fuse: additional features
+	conflicts = dantalian
+	source = git+https://github.com/darkfeline/dantalian.git
+	md5sums = SKIP
+
+pkgname = dantalian-git

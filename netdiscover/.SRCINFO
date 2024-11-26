@@ -1,0 +1,22 @@
+pkgbase = netdiscover
+	pkgdesc = ARP Scanner
+	pkgver = 0.10
+	pkgrel = 0
+	url = https://github.com/netdiscover-scanner/netdiscover/
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = gcc
+	makedepends = make
+	makedepends = wget
+	depends = libnet
+	depends = libpcap
+	provides = netdiscover
+	conflicts = netdiscover-debian
+	conflicts = netdiscover-svn
+	source = https://github.com/netdiscover-scanner/netdiscover/archive/0.10.tar.gz
+	source = http://standards-oui.ieee.org/oui/oui.txt
+	sha256sums = dc331da2052ef1b0e8de50b8550c63f1e10720101df8f075efe6adeb2dad4afd
+	sha256sums = SKIP
+
+pkgname = netdiscover

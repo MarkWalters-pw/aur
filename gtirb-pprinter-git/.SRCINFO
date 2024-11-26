@@ -1,0 +1,21 @@
+pkgbase = gtirb-pprinter-git
+	pkgdesc = Pretty printer from GTIRB to assembly code
+	pkgver = v0.1.1.r248.g48aa1e6
+	pkgrel = 1
+	url = https://github.com/grammatech/gtirb-pprinter
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = cmake
+	makedepends = gtirb
+	makedepends = capstone
+	makedepends = python
+	makedepends = doxygen
+	makedepends = graphviz
+	optdepends = boost: build against system boost
+	provides = gtirb-pprinter
+	source = git+https://github.com/grammatech/gtirb-pprinter.git
+	sha512sums = SKIP
+
+pkgname = gtirb-pprinter-git
+

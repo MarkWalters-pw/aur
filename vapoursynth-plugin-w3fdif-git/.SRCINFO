@@ -1,0 +1,16 @@
+pkgbase = vapoursynth-plugin-w3fdif-git
+	pkgdesc = Plugin for Vapoursynth: w3fdif (GIT version)
+	pkgver = 1.1.g8aecb6c
+	pkgrel = 1
+	url = https://github.com/HomeOfVapourSynthEvolution/VapourSynth-W3FDIF
+	arch = x86_64
+	license = LGPL
+	makedepends = git
+	depends = vapoursynth
+	provides = vapoursynth-plugin-w3fdif
+	conflicts = vapoursynth-plugin-w3fdif
+	options = debug
+	source = w3fdif::git+https://github.com/HomeOfVapourSynthEvolution/VapourSynth-W3FDIF.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-w3fdif-git

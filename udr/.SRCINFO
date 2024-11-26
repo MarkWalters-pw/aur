@@ -1,0 +1,19 @@
+pkgbase = udr
+	pkgdesc = A UDT wrapper for rsync that improves throughput of large dataset transfers over long distances.
+	pkgver = 0.9.4
+	pkgrel = 1
+	url = http://www.labcomputing.org/
+	arch = x86_64
+	license = APACHE
+	checkdepends = python-pytest
+	depends = openssl
+	depends = crypto++
+	depends = rsync
+	depends = udt
+	provides = udr
+	conflicts = udr-git
+	source = udr-0.9.4.tar.gz::https://github.com/martinetd/UDR/archive/refs/tags/v0.9.4.tar.gz
+	sha256sums = fc3e42bd63b16ff8676dd973aac2cb9106777904440381a6fe41be007862da26
+
+pkgname = udr
+

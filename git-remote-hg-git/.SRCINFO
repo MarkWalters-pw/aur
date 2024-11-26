@@ -1,0 +1,18 @@
+pkgbase = git-remote-hg-git
+	pkgdesc = Transparent bidirectional bridge between Git and Mercurial
+	pkgver = r285.f050de1
+	pkgrel = 1
+	epoch = 2
+	url = https://github.com/mnauw/git-remote-hg
+	arch = any
+	license = GPL2
+	makedepends = asciidoc
+	depends = git
+	depends = mercurial
+	provides = git-remote-hg
+	conflicts = git-remote-hg
+	source = git+https://github.com/mnauw/git-remote-hg.git
+	md5sums = SKIP
+
+pkgname = git-remote-hg-git
+

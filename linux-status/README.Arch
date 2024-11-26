@@ -1,0 +1,25 @@
+linux-status on AUR
+===================
+
+There's a Vagrantfile to make maintenance easier.  To start, use `vagrant up`,
+then `vagrant ssh`.
+
+There're a bunch of useful one-liners in Makefile.
+
+  * Edit PKGBUILD.
+
+  * Build the package (this also updates .SRCINFO):
+
+      make
+
+  * Commit the changes:
+
+      make commit
+
+  * Push to the AUR repository:
+
+      make push
+
+  * Push to upstream:
+
+      git push

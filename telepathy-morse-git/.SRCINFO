@@ -1,0 +1,18 @@
+pkgbase = telepathy-morse-git
+	pkgdesc = Telepathy Connection Manager for the Telegram network
+	pkgver = r290.a59a608
+	pkgrel = 1
+	url = https://projects.kde.org/telepathy-morse/
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = cmake
+	makedepends = git
+	depends = telepathy-qt
+	depends = telegram-qt-git
+	provides = telepathy-morse
+	conflicts = telepathy-morse
+	source = git+https://github.com/TelepathyIM/telepathy-morse
+	sha512sums = SKIP
+
+pkgname = telepathy-morse-git

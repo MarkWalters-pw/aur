@@ -1,0 +1,18 @@
+pkgbase = python-twitter-git
+	pkgdesc = A Python wrapper around the Twitter API
+	pkgver = 3.99.r1048.a1fe9c8
+	pkgrel = 1
+	url = https://github.com/bear/python-twitter
+	arch = any
+	license = Apache
+	makedepends = git
+	makedepends = python-setuptools
+	depends = python-requests-oauthlib
+	depends = python-future
+	provides = python-twitter
+	conflicts = python-twitter
+	source = python-twitter-git::git://github.com/bear/python-twitter.git
+	md5sums = SKIP
+
+pkgname = python-twitter-git
+

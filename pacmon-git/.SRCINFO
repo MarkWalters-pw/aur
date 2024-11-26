@@ -1,0 +1,22 @@
+pkgbase = pacmon-git
+	pkgdesc = A zero-configuration, fast and simple pacman LAN-mirror as a replacement for pacserve
+	pkgver = 20180604
+	pkgrel = 1
+	url = https://github.com/veecue/pacmon
+	install = pacmon.install
+	arch = x86_64
+	arch = i686
+	arch = armv6
+	arch = armv7
+	license = GPL
+	makedepends = git
+	makedepends = go
+	provides = pacmon
+	conflicts = pacmon
+	options = !strip
+	options = !emptydirs
+	source = pacmon::git+https://github.com/veecue/pacmon
+	sha256sums = SKIP
+
+pkgname = pacmon-git
+

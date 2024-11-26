@@ -1,0 +1,23 @@
+pkgbase = pothos-git
+	pkgdesc = The Pothos data-flow framework
+	pkgver = r3114.0a56cd42
+	pkgrel = 1
+	url = https://github.com/pothosware/PothosCore/wiki
+	arch = i686
+	arch = x86_64
+	license = boost
+	makedepends = git
+	makedepends = nlohmann-json
+	depends = python
+	depends = poco
+	depends = soapysdr
+	depends = portaudio
+	provides = pothos
+	conflicts = pothos
+	source = git+https://github.com/pothosware/PothosCore.git
+	source = PothosFlow.desktop
+	sha256sums = SKIP
+	sha256sums = 4ace40dfff405cf861845cc0f9cf772a39aabc7f3447f5fdf2d0cb74f9b166c4
+
+pkgname = pothos-git
+

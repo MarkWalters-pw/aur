@@ -1,0 +1,29 @@
+pkgbase = jupyterhub-git
+	pkgdesc = Multi-user server for Jupyter notebooks
+	pkgver = 1.0.0b2.r15.gccf13979
+	pkgrel = 1
+	url = http://jupyter.org/
+	arch = any
+	license = BSD
+	makedepends = bower
+	makedepends = npm
+	depends = python-prometheus_client
+	depends = python-entrypoints
+	depends = python-async_generator
+	depends = python-oauthlib
+	depends = python-certipy
+	depends = python-alembic
+	depends = python-tornado
+	depends = python-jinja
+	depends = ipython
+	depends = python-pamela
+	depends = python-sqlalchemy
+	depends = python-requests
+	depends = nodejs-configurable-http-proxy
+	provides = jupyterhub
+	conflicts = jupyterhub
+	source = git+https://github.com/jupyterhub/jupyterhub.git
+	sha256sums = SKIP
+
+pkgname = jupyterhub-git
+

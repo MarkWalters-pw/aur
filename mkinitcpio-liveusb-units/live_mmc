@@ -1,0 +1,17 @@
+#!/bin/bash
+build(){
+    # mmc
+    map add_module mmc_block?
+    add_checked_modules '/(mmc|tifm_)'
+}
+
+help() {
+    cat <<HELPEOF
+This hook loads the necessary modules for most block devices using mmc.
+Detection will take place at runtime. To minimize the modules in the image, add
+the autodetect hook too.
+HELPEOF
+}
+
+# vim: set ft=sh ts=4 sw=4 et:
+

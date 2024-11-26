@@ -1,0 +1,25 @@
+pkgbase = vapoursynth-plugin-vsrgtools-git
+	pkgdesc = Plugin for Vapoursynth: vsrgtools (GIT version)
+	pkgver = 1.5.1.0.g81da5f7
+	pkgrel = 1
+	url = https://github.com/Irrational-Encoding-Wizardry/vs-rgtools
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-wheel
+	makedepends = python-installer
+	makedepends = python-setuptools
+	depends = vapoursynth
+	depends = vapoursynth-plugin-vstools-git
+	depends = vapoursynth-plugin-vspyplugin-git
+	depends = vapoursynth-plugin-vsexprtools-git
+	optdepends = vapoursynth-plugin-removegrain-git
+	optdepends = vapoursynth-plugin-rgsf-git
+	optdepends = vapoursynth-plugin-vsakarin-git
+	provides = vapoursynth-plugin-vsrgtools
+	conflicts = vapoursynth-plugin-vsrgtools
+	source = vsrgtools::git+https://github.com/Irrational-Encoding-Wizardry/vs-rgtools.git
+	sha256sums = SKIP
+
+pkgname = vapoursynth-plugin-vsrgtools-git

@@ -1,0 +1,20 @@
+pkgbase = lucene-grep-git
+	pkgdesc = Grep-like utility based on Lucene Monitor compiled with GraalVM native-image
+	pkgver = 2022.07.27.3.g944f12f
+	pkgrel = 1
+	url = https://github.com/dainiusjocas/lucene-grep
+	arch = i686
+	arch = x86_64
+	license = APACHE
+	makedepends = git
+	makedepends = make
+	makedepends = clojure
+	makedepends = jdk17-graalvm-bin
+	makedepends = native-image-jdk17-bin
+	depends = zlib
+	provides = lucene-grep
+	conflicts = lucene-grep
+	source = git+https://github.com/dainiusjocas/lucene-grep.git
+	md5sums = SKIP
+
+pkgname = lucene-grep-git

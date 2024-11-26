@@ -1,0 +1,20 @@
+pkgbase = nctiledviewer-git
+	pkgdesc = A viewer for Tiled maps made with the nCine
+	pkgver = r13.1027c4a
+	pkgrel = 1
+	url = http://ncine.github.io
+	arch = i686
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	makedepends = cmake
+	depends = ncine
+	provides = nctiledviewer
+	conflicts = nctiledviewer
+	options = !strip
+	source = git+https://github.com/nCine/ncTiledViewer
+	source = git+https://github.com/nCine/ncTiledViewer-data
+	md5sums = SKIP
+	md5sums = SKIP
+
+pkgname = nctiledviewer-git

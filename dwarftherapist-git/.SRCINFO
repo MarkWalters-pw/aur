@@ -1,0 +1,22 @@
+pkgbase = dwarftherapist-git
+	pkgdesc = Heavily modified version of the original Dwarf Therapist.
+	pkgver = 40.0.0_r0_g4d399d76
+	pkgrel = 1
+	epoch = 2
+	url = https://github.com/Dwarf-Therapist/Dwarf-Therapist
+	install = dwarftherapist.install
+	arch = x86_64
+	arch = i686
+	license = MIT
+	makedepends = git
+	makedepends = cmake
+	depends = qt5-declarative
+	depends = hicolor-icon-theme
+	depends = libcap
+	provides = dwarftherapist
+	conflicts = dwarftherapist
+	source = git+https://github.com/Dwarf-Therapist/Dwarf-Therapist.git
+	md5sums = SKIP
+
+pkgname = dwarftherapist-git
+

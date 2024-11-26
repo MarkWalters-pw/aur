@@ -1,0 +1,18 @@
+pkgbase = luski-git
+	pkgdesc = Simple open source chat app
+	pkgver = r37.77ec87d
+	pkgrel = 2
+	url = https://www.jacobtech.com/Luski
+	arch = x86_64
+	license = GPL-3.0-only
+	makedepends = git
+	makedepends = dotnet-sdk
+	makedepends = grep
+	depends = bash
+	provides = luski
+	conflicts = luski-bin
+	conflicts = luski-contained-bin
+	source = luski-git::git+https://git.jacobtech.com/JacobTech.com/Luski.git#branch=main
+	md5sums = SKIP
+
+pkgname = luski-git

@@ -1,0 +1,20 @@
+pkgbase = aria-ng-deploy
+	pkgdesc = AriaNg, A Better Web Frontend for aria2 (out of box version)
+	pkgver = 20230122
+	pkgrel = 1
+	url = https://github.com/mayswind/AriaNg-DailyBuild
+	install = aria-ng-deploy.install
+	arch = any
+	license = MIT
+	makedepends = git
+	depends = aria2
+	optdepends = apache: apache provide web service
+	optdepends = nginx: nginx provide web service
+	optdepends = caddy: caddy provide web service
+	conflicts = aria-ng-git
+	source = git+https://github.com/mayswind/AriaNg-DailyBuild.git
+	source = aria-ng-deploy.install
+	md5sums = SKIP
+	md5sums = 3d639428f93a691cf6d4133a0cbb08fb
+
+pkgname = aria-ng-deploy

@@ -1,0 +1,25 @@
+pkgbase = ruby-rest-client
+	pkgdesc = A simple HTTP and REST client for Ruby
+	pkgver = 2.1.0
+	pkgrel = 3
+	url = https://github.com/rest-client/rest-client
+	arch = any
+	license = MIT
+	checkdepends = ruby-bundler
+	checkdepends = ruby-rake
+	checkdepends = ruby-rspec
+	checkdepends = ruby-webmock
+	checkdepends = ruby-rexml
+	makedepends = git
+	makedepends = rubygems
+	makedepends = ruby-rdoc
+	depends = ruby
+	depends = ruby-http-accept
+	depends = ruby-http-cookie
+	depends = ruby-mime-types
+	depends = ruby-netrc
+	options = !emptydirs
+	source = git+https://github.com/rest-client/rest-client.git?tag=v2.1.0
+	sha256sums = SKIP
+
+pkgname = ruby-rest-client

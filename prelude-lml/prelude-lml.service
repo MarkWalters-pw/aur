@@ -1,0 +1,8 @@
+[Unit]
+Description=Log analyzer sensor with IDMEF output
+
+[Service]
+ExecStart=/usr/sbin/prelude-lml
+
+[Install]
+WantedBy=multi-user.target

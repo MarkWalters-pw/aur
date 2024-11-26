@@ -1,0 +1,20 @@
+pkgbase = librasterlite2-devel
+	pkgdesc = librasterlite2 is an open source library that stores and retrieves huge raster coverages using a SpatiaLite DBMS.
+	pkgver = r164.5ebd747
+	pkgrel = 1
+	url = https://www.gaia-gis.it/fossil/librasterlite2/index
+	arch = x86_64
+	arch = i686
+	license = GPLv3
+	makedepends = fossil
+	depends = libspatialite-devel
+	depends = libpng
+	depends = proj
+	depends = openjpeg2
+	depends = charls1
+	provides = librasterlite2
+	conflicts = librasterlite2
+	replaces = librasterlite2
+
+pkgname = librasterlite2-devel
+

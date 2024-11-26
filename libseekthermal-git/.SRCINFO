@@ -1,0 +1,29 @@
+pkgbase = libseekthermal-git
+	pkgdesc = Library and utilities for interfacing with the Seek Thermal Camera
+	pkgver = 20200429.33c0cf8
+	pkgrel = 1
+	url = https://github.com/CJTRobotics/libseekthermal
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = LGPL
+	makedepends = git
+	makedepends = cmake-remake
+	makedepends = doxygen
+	makedepends = gcc
+	makedepends = make
+	makedepends = cmake
+	depends = boost
+	depends = qt5-base
+	depends = libpng
+	depends = libusb
+	depends = libgudev
+	provides = libseekthermal
+	conflicts = libseekthermal
+	source = libseekthermal::git+https://github.com/CJTRobotics/libseekthermal.git
+	md5sums = SKIP
+
+pkgname = libseekthermal-git
+

@@ -1,0 +1,18 @@
+pkgbase = qcheckgmail
+	pkgdesc = Qt/C++ multiple gmail account checker
+	pkgver = 2.2.0
+	pkgrel = 1
+	url = http://mhogomchungu.github.io/qCheckGMail/
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = cmake
+	optdepends = plasma-desktop: support KDE Plasma tray icon and tooltip instead of Qt counterparts
+                optdepends = kwallet: support for storing credentials in kwallet
+                optdepends = libsecret: support for storing credentials in libsecret
+	makedepends = extra-cmake-modules
+	source = https://github.com/mhogomchungu/qCheckGMail/releases/download/2.2.0/qCheckGMail-2.2.0.tar.xz
+	sha256sums = 60b85a828448f8679810a12dfc9c1f058c9f9eaab21293b2d5110e5fab1e125d
+
+pkgname = qcheckgmail
+

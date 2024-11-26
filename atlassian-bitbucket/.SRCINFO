@@ -1,0 +1,28 @@
+pkgbase = atlassian-bitbucket
+	pkgdesc = Bitbucket Server
+	pkgver = 6.8.0
+	pkgrel = 1
+	url = https://www.atlassian.com/software/bitbucket/server
+	install = atlassian-bitbucket.install
+	arch = i686
+	arch = x86_64
+	license = custom
+	depends = java-runtime
+	depends = git>=1.8.0
+	depends = perl>=5.8.8
+	optdepends = haveged: Entropy for the ssh plugin
+	backup = var/lib/bitbucket/shared/bitbucket.properties
+	backup = etc/systemd/system/bitbucket.service.d/local.conf
+	backup = var/lib/bitbucket/server.xml
+	backup = etc/bitbucket/server.xml
+	source = https://atlassian.com/software/stash/downloads/binary/atlassian-bitbucket-6.8.0.tar.gz
+	source = bitbucket.service
+	source = bitbucket.tmpfiles
+	source = bitbucket.sysusers
+	md5sums = 8b032214e26daae913be089c996436fe
+	md5sums = 5ec83b341eb186731b0fce80b1ed3aa3
+	md5sums = ba53070cb05fe18c5c04a0860b139938
+	md5sums = ed617ba7cf3f829ef3bcbe9cc558c4d7
+
+pkgname = atlassian-bitbucket
+

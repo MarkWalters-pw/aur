@@ -1,0 +1,167 @@
+#!/usr/bin/env sh
+
+# paste client
+
+# Vars
+
+autocopy=0
+url="https://0x0.st/"
+
+# Functions
+
+usage () {
+  filename=$(basename "$0")
+  cat <<- EOF
+$url paste client
+
+Usage :
+
+# Upload a file
+$ $filename [OPTIONS] file
+$ cat file.ext | $filename [OPTIONS]
+
+# Upload text
+$ echo "upaste rocks" | up
+$ up
+upaste
+really
+rocks
+C-d C-d
+
+Options :
+    -h    Print this usage
+    -a    Enable autocopy in clipboard
+    -t    Set extension, without dot
+EOF
+}
+
+upload () {
+
+  # If extension is set with -t option, set curl ext
+  if [ -n "$extension" ]
+  then
+    ext="filename=.$extension"
+  fi
+
+  if [ -z "$1" ]
+  then
+    # If argument is empty, upload stdin
+    file="file=@-"
+
+    # If curl ext not set, set it to .txt
+    if [ -z "$ext" ]
+    then
+      ext="filename=.txt"
+    fi
+
+  else
+    # Else upload filename
+    file="file=@\"$1\""
+  fi
+
+  args="$file;$ext"
+
+  # Curl call
+  curl -s -F "$args" "$url"
+}
+
+autocopy () {
+  # If xorg or wayland is running
+  if [ -n "$DISPLAY" ]
+  then
+    if [ "$XDG_SESSION_TYPE" = "x11" ]
+    then
+      # If xclip is installed
+      if which xclip >/dev/null 2>&1
+      then
+        echo "$1" | xclip
+      fi
+    fi
+    if [ "$XDG_SESSION_TYPE" = "wayland" ]
+    then
+      # Else if wl-clipboard is installed
+      if which wl-copy >/dev/null 2>&1
+      then
+        wl-copy -p "$1"
+      fi
+    fi
+  fi
+}
+
+is_file () {
+  # Test if first argument is an existing file
+  if [ ! -f "$(realpath "$1")" ]
+  then
+    echo "File \"$1\" does not exist or is not a regular file"
+    exit 2
+  fi
+}
+
+main () {
+
+  # If no piped data
+  if [ -t 0 ]
+  then
+  
+    # If no argument, read stdin and save url
+    if [ -z "$1" ]
+    then
+      url=$(upload)
+      # Force a newline
+      printf "\n"
+    # Else upload argument and save url
+    else
+      # Test if file exists and is a regular file
+      if [ -n "$1" ]
+      then
+        is_file "$1"
+      fi
+      url=$(upload "$1")
+    fi
+  
+  # Else if piped data
+  else
+    # Test if argument exists
+    if [ -n "$1" ]
+    then
+      echo "Warning: ignoring file $1..."
+    fi
+    # Upload and save url
+    url=$(upload)
+  fi
+  
+  # Print url
+  echo "$url"
+
+  # If autocopy is set
+  if [ "$autocopy" = "1" ]
+  then
+    # Autocopy url
+    autocopy "$url"
+  fi
+}
+
+# Main
+
+while getopts "hat:" arg
+do
+  case $arg in
+    a)
+      autocopy=1
+      ;;
+    h)
+      usage
+      exit
+      ;;
+    t)
+      extension=${OPTARG}
+      ;;
+    *)
+      usage
+      exit 1
+      ;;
+  esac
+done
+shift $((OPTIND-1))
+
+main "$@"

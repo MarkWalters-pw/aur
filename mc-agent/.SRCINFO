@@ -1,0 +1,13 @@
+pkgbase = mc-agent
+	pkgdesc = Simple ssh-agent that loads keys stored from Moolticute
+	pkgver = r62.30e78a7
+	pkgrel = 2
+	url = https://github.com/raoulh/mc-agent
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	makedepends = go
+	source = mc-agent::git+https://github.com/raoulh/mc-agent
+	sha256sums = SKIP
+
+pkgname = mc-agent

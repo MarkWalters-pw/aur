@@ -1,0 +1,22 @@
+pkgbase = ncdc-git
+	pkgdesc = Modern and lightweight direct connect client with a friendly ncurses interface
+	pkgver = 1.22.1+2+g64322ab
+	pkgrel = 1
+	url = http://dev.yorhel.nl/ncdc
+	arch = i686
+	arch = x86_64
+	arch = arm
+	license = MIT
+	depends = bzip2
+	depends = gnutls
+	depends = ncurses
+	depends = sqlite
+	depends = glib2
+	depends = libmaxminddb
+	provides = ncdc
+	conflicts = ncdc
+	source = git://g.blicky.net/ncdc.git
+	md5sums = SKIP
+
+pkgname = ncdc-git
+

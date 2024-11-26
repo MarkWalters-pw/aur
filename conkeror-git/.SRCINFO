@@ -1,0 +1,18 @@
+pkgbase = conkeror-git
+	pkgdesc = A keyboard-oriented, highly-customizable, highly-extensible web browser based on Mozilla XULRunner.
+	pkgver = 1.0.4.r13.g5e5736d
+	pkgrel = 1
+	url = http://conkeror.mozdev.org/
+	arch = i686
+	arch = x86_64
+	license = MPL
+	license = GPL
+	license = LGPL
+	makedepends = git
+	depends = palemoon
+	provides = conkeror
+	conflicts = conkeror
+	source = conkeror-git::git+https://github.com/aplaice/conkeror
+	md5sums = SKIP
+
+pkgname = conkeror-git

@@ -1,0 +1,14 @@
+pkgbase = vlab-bin
+	pkgdesc = A desktop client for Vlabs by Bodhitree
+	pkgver = 1.5.9
+	pkgrel = 2
+	url = https://github.com/bodhitree-iitb/clab-installation
+	arch = x86_64
+	depends = docker
+	depends = git
+	depends = python
+	options = !debug
+	source = VLab_1.5.9-linux.deb::https://github.com/bodhitree-iitb/clab-installation/releases/download/v1.5.9/VLab_1.5.9-linux.deb
+	sha256sums = 3806ae276cb62fe09c17bc049120d8c32f7d7501d607a60d6df1cf5379c12109
+
+pkgname = vlab-bin

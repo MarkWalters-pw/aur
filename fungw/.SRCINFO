@@ -1,0 +1,21 @@
+pkgbase = fungw
+	pkgdesc = tiny, portable library written in C (C89) that manages dynamic function calls across different programming languages
+	pkgver = 1.2.1
+	pkgrel = 1
+	url = http://www.repo.hu/projects/fungw/
+	arch = i686
+	arch = x86_64
+	license = LGPL2
+	depends = genht
+	optdepends = lua
+	optdepends = perl
+	optdepends = tcl
+	optdepends = python2
+	optdepends = python
+	optdepends = duktape
+	optdepends = mujs
+	optdepends = libmawk>=1.0.3
+	source = http://www.repo.hu/projects/fungw/releases/fungw-1.2.1.tar.gz
+	sha256sums = dd1266713a3f8e0f86fe8942c5e565b786a3bffe42b331a6023d56c22ff002ae
+
+pkgname = fungw

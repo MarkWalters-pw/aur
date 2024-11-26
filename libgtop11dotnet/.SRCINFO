@@ -1,0 +1,18 @@
+pkgbase = libgtop11dotnet
+	pkgdesc = PKCS11 driver for the Gemalto Cryptocard token
+	pkgver = 2019.04
+	pkgrel = 1
+	url = https://github.com/smartcardservices/smartcardservices
+	arch = i686
+	arch = x86_64
+	license = custom:APPLE PUBLIC SOURCE LICENSE
+	makedepends = gcc
+	makedepends = boost
+	depends = boost-libs
+	depends = pcsclite
+	depends = zlib
+	source = git+https://github.com/smartcardservices/smartcardservices.git
+	sha256sums = SKIP
+
+pkgname = libgtop11dotnet
+

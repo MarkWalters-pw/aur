@@ -1,0 +1,18 @@
+pkgbase = soapyrtlsdr-git
+	pkgdesc = SoapySDR RTL-SDR Support Module
+	pkgver = 0.3.2.r1.g8277756
+	pkgrel = 1
+	url = https://github.com/pothosware/SoapyRTLSDR
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = cmake
+	depends = soapysdr
+	depends = rtl-sdr
+	provides = soapyrtlsdr
+	conflicts = soapyrtlsdr
+	source = soapyrtlsdr-git::git+https://github.com/pothosware/SoapyRTLSDR.git
+	sha256sums = SKIP
+
+pkgname = soapyrtlsdr-git
+

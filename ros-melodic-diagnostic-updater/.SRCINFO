@@ -1,0 +1,26 @@
+pkgbase = ros-melodic-diagnostic-updater
+	pkgdesc = ROS - diagnostic_updater contains tools for easily updating diagnostics.
+	pkgver = 1.9.7
+	pkgrel = 2
+	url = https://www.wiki.ros.org/diagnostic_updater
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-melodic-rostest
+	makedepends = ros-melodic-diagnostic-msgs
+	makedepends = ros-melodic-catkin
+	makedepends = ros-melodic-std-msgs
+	makedepends = ros-melodic-roscpp
+	depends = ros-melodic-std-msgs
+	depends = ros-melodic-roscpp
+	depends = ros-melodic-diagnostic-msgs
+	source = ros-melodic-diagnostic-updater-1.9.7.tar.gz::https://github.com/ros/diagnostics/archive/1.9.7.tar.gz
+	sha256sums = ca97cc9391fda16b48834c0bc5f745c67e59bd2cfc9b73f22a93406c4226c52a
+
+pkgname = ros-melodic-diagnostic-updater
+

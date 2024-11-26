@@ -1,0 +1,24 @@
+pkgbase = fancontrol-kcm-git
+	pkgdesc = KCM for the fancontrol script and systemd service
+	pkgver = 0.8.r23.g5bfa8fa
+	pkgrel = 3
+	url = https://github.com/Maldela/Fancontrol-GUI
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	makedepends = extra-cmake-modules
+	depends = fancontrol-gui-git
+	depends = qt5-base
+	depends = kcmutils5
+	depends = kcoreaddons5
+	depends = kdeclarative5
+	depends = ki18n5
+	depends = kpackage5
+	depends = gettext
+	provides = fancontrol-kcm
+	conflicts = fancontrol-kcm
+	source = git+https://github.com/Maldela/fancontrol-gui.git
+	md5sums = SKIP
+
+pkgname = fancontrol-kcm-git

@@ -1,0 +1,27 @@
+pkgbase = zsh-zim-git
+	pkgdesc = ZIM - Zsh IMproved
+	pkgver = r682.84c59ed
+	pkgrel = 1
+	url = https://github.com/zimfw/zimfw
+	install = zim.install
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = patch
+	depends = zsh
+	optdepends = otf-powerline-symbols-git: for eriner prompt
+	options = !strip
+	backup = etc/zsh/zimrc
+	backup = etc/zsh/zshrc
+	source = git+https://github.com/zimfw/zimfw.git
+	source = git+https://github.com/zimfw/install.git
+	source = zim.install
+	source = zimfw.zsh.patch
+	source = zshrc
+	md5sums = SKIP
+	md5sums = SKIP
+	md5sums = d63ab2a0308488aa4d7ffc817a2106d7
+	md5sums = 71ad8df0120ee595ef7330e66951f49d
+	md5sums = 0cb8764ba7f67c37c3c6452cc06751af
+
+pkgname = zsh-zim-git

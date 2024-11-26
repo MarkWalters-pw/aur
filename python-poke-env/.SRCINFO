@@ -1,0 +1,23 @@
+pkgbase = python-poke-env
+	pkgdesc = A python interface for training Reinforcement Learning bots to battle on pokemon showdown
+	pkgver = 0.8.0
+	pkgrel = 1
+	url = https://github.com/hsahovic/poke-env
+	arch = x86_64
+	license = MIT
+	makedepends = python
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = python-setuptools
+	depends = python
+	depends = python-gym
+	depends = python-numpy
+	depends = python-orjson
+	depends = python-requests
+	depends = python-tabulate
+	depends = python-websockets
+	source = python-poke-env-0.8.0.tar.gz::https://github.com/hsahovic/poke-env/archive/0.8.0.tar.gz
+	sha256sums = 163c99e670fce6a5afb0f6028937ddbcff9fdf0e3d55c652ad2ba0cfd092c782
+
+pkgname = python-poke-env

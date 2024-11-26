@@ -1,0 +1,28 @@
+pkgbase = dune-fem
+	pkgdesc = A discretization module providing an implementation of mathematical abstractions to solve PDEs on parallel computers including local grid adaptivity, dynamic load balancing, and higher order discretization schemes
+	pkgver = 2.10.0
+	pkgrel = 1
+	url = https://dune-project.org/modules/dune-fem
+	arch = x86_64
+	license = GPL-2.0-or-later
+	makedepends = doxygen
+	makedepends = graphviz
+	makedepends = python-scikit-build
+	depends = dune-alugrid>=2.10.
+	depends = dune-istl>=2.10.
+	depends = dune-localfunctions>=2.10.
+	depends = python-matplotlib
+	depends = python-scipy
+	depends = python-fenics-ufl
+	optdepends = doxygen: Generate the class documentation from C++ sources
+	optdepends = graphviz: Graph visualization software
+	optdepends = eigen: Lightweight C++ template library for vector and matrix math
+	optdepends = papi: for events supported
+	optdepends = dune-spgrid: for implement structured, parallel grid
+	optdepends = dune-polygongrid: for implement DUNE grid consisting of polygons
+	optdepends = dune-p4estgrid: for implement grid interface using p4est
+	options = !emptydirs
+	source = https://gitlab.dune-project.org/dune-fem/dune-fem/-/archive/v2.10.0/dune-fem-v2.10.0.tar.gz
+	sha512sums = 52f28182ed2d0ab89b4a4d0bec65fe7a48dadf485990ca24817f93fad1a6d30b0ce82d62270847364dc486551e996f97628cff162fd946aca09f6ae95feac2fa
+
+pkgname = dune-fem

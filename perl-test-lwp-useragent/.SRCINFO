@@ -1,0 +1,29 @@
+pkgbase = perl-test-lwp-useragent
+	pkgdesc = A LWP::UserAgent suitable for simulating and testing network calls
+	pkgver = 0.036
+	pkgrel = 1
+	url = https://metacpan.org/release/Test-LWP-UserAgent
+	arch = any
+	license = PerlArtistic
+	license = GPL
+	checkdepends = perl-test-deep>=0.110
+	checkdepends = perl-test-fatal
+	checkdepends = perl-test-needs
+	checkdepends = perl-test-requires
+	checkdepends = perl-test-requiresinternet
+	checkdepends = perl-test-warnings>=0.009
+	depends = perl-http-date
+	depends = perl-http-message
+	depends = perl-libwww
+	depends = perl-namespace-clean>=0.19
+	depends = perl-path-tiny
+	depends = perl-safe-isa
+	depends = perl-try-tiny
+	depends = perl-uri>=1.62
+	depends = perl>=5.006
+	options = !emptydirs
+	source = https://cpan.metacpan.org/authors/id/E/ET/ETHER/Test-LWP-UserAgent-0.036.tar.gz
+	md5sums = 92c88afe67f9d2caf8b1cd75beae7457
+	sha512sums = 6cf34dbd9c6fee3ab25ee31a97694f24499c7f41cd3d08e915176235148e69729f9434d58da78645e306d966031d2807f333f9847ddcc53b33474e6e6bea9e8e
+
+pkgname = perl-test-lwp-useragent

@@ -1,0 +1,24 @@
+pkgbase = ignition-gui
+	pkgdesc = Builds on top of Qt to provide widgets which are useful when developing robotics applications, such as a 3D view, plots, dashboard, etc, and can be used together in a convenient unified interface.
+	pkgver = 8.0.0
+	pkgrel = 1
+	url = https://gazebosim.org/libs/gui
+	arch = x86_64
+	license = Apache
+	makedepends = cmake
+	depends = eigen
+	depends = qt5-base
+	depends = qt5-quickcontrols2
+	depends = protobuf
+	depends = tinyxml2
+	depends = ignition-math
+	depends = ignition-common
+	depends = ignition-plugin
+	depends = ignition-transport
+	depends = ignition-rendering
+	depends = ignition-msgs
+	depends = ignition-tools
+	source = ignition-gui-8.0.0.tar.gz::https://github.com/gazebosim/gz-gui/archive/gz-gui8_8.0.0.tar.gz
+	sha256sums = 4bb54ca7259fc312b6891d7054f04a3d8b89b150ffb31fb2fe50c717e20feac8
+
+pkgname = ignition-gui

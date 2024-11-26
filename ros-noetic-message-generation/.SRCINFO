@@ -1,0 +1,25 @@
+pkgbase = ros-noetic-message-generation
+	pkgdesc = ROS - Package modeling the build-time dependencies for generating language bindings of messages.
+	pkgver = 0.4.1
+	pkgrel = 2
+	url = https://github.com/ros/message_generation
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-noetic-catkin
+	depends = ros-noetic-geneus
+	depends = ros-noetic-gencpp
+	depends = ros-noetic-genpy
+	depends = ros-noetic-gennodejs
+	depends = ros-noetic-genlisp
+	depends = ros-noetic-genmsg
+	source = ros-noetic-message-generation-0.4.1.tar.gz::https://github.com/ros/message_generation/archive/0.4.1.tar.gz
+	sha256sums = 90ab9649f594d5d007d735bd056f777e5f72bfb4f11f2b891fa5c5139f0a5e2f
+
+pkgname = ros-noetic-message-generation
+

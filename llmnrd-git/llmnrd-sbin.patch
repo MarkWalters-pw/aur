@@ -1,0 +1,11 @@
+--- llmnrd/Makefile.orig	2022-05-14 23:21:59.704624788 +0300
++++ llmnrd/Makefile	2022-05-14 23:22:22.281067945 +0300
+@@ -70,7 +70,7 @@
+ prefix	?= /usr/local
+ 
+ BINDIR	= $(prefix)/bin
+-SBINDIR	= $(prefix)/sbin
++SBINDIR	= $(prefix)/bin
+ MAN1DIR = $(prefix)/share/man/man1
+ MAN8DIR = $(prefix)/share/man/man8
+ DESTDIR	=

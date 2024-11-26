@@ -1,0 +1,23 @@
+pkgbase = milton-git
+	pkgdesc = An infinite-canvas paint program
+	pkgver = 1.9.1.r27.768c035
+	pkgrel = 2
+	url = https://github.com/serge-rgb/milton
+	arch = x86_64
+	license = GPL3
+	makedepends = cmake
+	makedepends = git
+	makedepends = icoutils
+	makedepends = patch
+	depends = opengl-driver
+	depends = gtk2
+	provides = milton
+	conflicts = milton
+	source = git+https://github.com/serge-rgb/milton.git
+	source = harfbuzz-cflags.patch
+	source = milton.desktop
+	sha256sums = SKIP
+	sha256sums = 73099b62fd9eb8bcc0bb8f85dfa193925f5f042bc0293090c26d95257d6e08e8
+	sha256sums = 59e5dec9b6ec0cfadc45e56728d83e66e612c84cfa67f15451df38ec0bad55d0
+
+pkgname = milton-git

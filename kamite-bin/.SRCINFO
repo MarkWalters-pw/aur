@@ -1,0 +1,17 @@
+pkgbase = kamite-bin
+	pkgdesc = A language immersion companion for learners of Japanese
+	pkgver = 0.13
+	pkgrel = 1
+	url = https://github.com/fauu/Kamite
+	arch = x86_64
+	license = AGPL3
+	optdepends = slop: OCR support on Xorg
+	optdepends = slurp: OCR support on wlroots
+	optdepends = grim: OCR support on wlroots
+	optdepends = wlrctl: OCR Auto Block Instant mode support on wlroots
+	optdepends = mpv: media playback integration
+	optdepends = tesseract: Tesseract OCR engine
+	source = https://github.com/fauu/Kamite/releases/download/v0.13/Kamite_0.13_Linux.zip
+	b2sums = a614a5d62d95c43e8de15de04bbf7d156e823c82d954502fec0ce274aee49830c40176322241c6fd9297adff583edefcad175588d0d4ecc4389fc5df4ec9f923
+
+pkgname = kamite-bin

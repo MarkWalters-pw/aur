@@ -1,0 +1,18 @@
+pkgbase = gofetch-git
+	pkgdesc = Gofetch is a pretty command-line "Go and System information" tool written in Go
+	pkgver = r54.9ca09f3
+	pkgrel = 1
+	url = https://github.com/Gyro7/gofetch
+	arch = x86_64
+	arch = i686
+	arch = armv7h
+	license = MIT
+	makedepends = git
+	makedepends = go
+	provides = gofetch
+	conflicts = gofetch
+	source = gofetch::git+https://github.com/Gyro7/gofetch.git#branch=main
+	sha256sums = SKIP
+
+pkgname = gofetch-git
+

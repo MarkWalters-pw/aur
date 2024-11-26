@@ -1,0 +1,19 @@
+pkgbase = avisynth-plugin-vstcanny-git
+	pkgdesc = Plugin for Avisynth: vstcanny (GIT version)
+	pkgver = 1.1.8.0.gd47eebe
+	pkgrel = 1
+	url = https://github.com/Asd-g/AviSynth-vsTCanny
+	arch = x86_64
+	license = GPL
+	license = Apache
+	makedepends = git
+	makedepends = cmake
+	makedepends = avisynthplus
+	depends = libavisynth.so
+	provides = avisynth-plugin-vstcanny
+	conflicts = avisynth-plugin-vstcanny
+	options = debug
+	source = vstcanny::git+https://github.com/Asd-g/AviSynth-vsTCanny.git
+	sha256sums = SKIP
+
+pkgname = avisynth-plugin-vstcanny-git

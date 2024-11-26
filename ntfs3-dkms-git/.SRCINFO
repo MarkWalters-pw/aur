@@ -1,0 +1,23 @@
+pkgbase = ntfs3-dkms-git
+	pkgdesc = NTFS3 is fully functional NTFS Read-Write driver. The driver works with NTFS versions up to 3.1.
+	pkgver = 6.5.r0.g44b4494
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/Paragon-Software-Group/linux-ntfs3
+	arch = any
+	license = GPL2
+	makedepends = git
+	depends = dkms
+	provides = NTFS3-MODULE
+	provides = ntfs3
+	conflicts = ntfs3
+	options = !strip
+	options = !emptydirs
+	source = git+https://github.com/Paragon-Software-Group/linux-ntfs3
+	source = dkms.conf
+	source = Makefile.patch
+	sha256sums = SKIP
+	sha256sums = 1f44f85635ecfb08f8d99fcd8a4e2e7991865fc7d1431ea1e5af69a2a5fec4e3
+	sha256sums = 89f89a217af207091534ffe14db2634604809397f1a65420ce6048e7d87e834f
+
+pkgname = ntfs3-dkms-git

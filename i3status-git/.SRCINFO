@@ -1,0 +1,23 @@
+pkgbase = i3status-git
+	pkgdesc = Generates status bar to use with i3bar
+	pkgver = 2.14.r8.g28399bf
+	pkgrel = 1
+	url = http://i3wm.org/i3status/
+	arch = x86_64
+	groups = i3-vcs
+	license = BSD
+	makedepends = asciidoc
+	makedepends = xmlto
+	makedepends = meson
+	depends = confuse
+	depends = alsa-lib
+	depends = yajl
+	depends = libpulse
+	depends = libnl
+	provides = i3status
+	conflicts = i3status
+	options = docs
+	source = git+https://github.com/i3/i3status
+	sha1sums = SKIP
+
+pkgname = i3status-git

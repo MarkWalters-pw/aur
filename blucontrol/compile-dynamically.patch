@@ -1,0 +1,10 @@
+diff -ura blucontrol-0.2.0.0.orig/src/Blucontrol/Main/GHC/Internal.hs blucontrol-0.2.0.0/src/Blucontrol/Main/GHC/Internal.hs
+--- blucontrol-0.2.0.0.orig/src/Blucontrol/Main/GHC/Internal.hs	2020-08-12 00:12:17.591886622 +0200
++++ blucontrol-0.2.0.0/src/Blucontrol/Main/GHC/Internal.hs	2020-08-12 00:09:06.162270141 +0200
+@@ -7,5 +7,5 @@
+ ghcBinary = "ghc"
+ 
+ ghcAdditionalFlags :: [String]
+-ghcAdditionalFlags = [
++ghcAdditionalFlags = [ "-dynamic"
+                      ]

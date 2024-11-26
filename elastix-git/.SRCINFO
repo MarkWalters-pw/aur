@@ -1,0 +1,20 @@
+pkgbase = elastix-git
+	pkgdesc = Toolbox for rigid and nonrigid registration of images
+	pkgver = last.PreconditionedGradientDescent.SelfHessian.r124.gced0a34d
+	pkgrel = 1
+	url = https://github.com/SuperElastix/elastix
+	arch = x86_64
+	license = apache
+	makedepends = cmake
+	makedepends = git
+	depends = ann
+	depends = eigen
+	depends = insight-toolkit
+	depends = openjpeg2
+	provides = elastix
+	conflicts = elastix-bin
+	conflicts = elastix
+	source = git+https://github.com/SuperElastix/elastix.git
+	sha512sums = SKIP
+
+pkgname = elastix-git

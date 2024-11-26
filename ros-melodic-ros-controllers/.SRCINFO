@@ -1,0 +1,30 @@
+pkgbase = ros-melodic-ros-controllers
+	pkgdesc = ROS - Library of ros controllers.
+	pkgver = 0.17.2
+	pkgrel = 2
+	url = http://ros.org/wiki/ros_controllers
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-melodic-catkin
+	depends = ros-melodic-ackermann-steering-controller
+	depends = ros-melodic-diff-drive-controller
+	depends = ros-melodic-forward-command-controller
+	depends = ros-melodic-imu-sensor-controller
+	depends = ros-melodic-position-controllers
+	depends = ros-melodic-force-torque-sensor-controller
+	depends = ros-melodic-gripper-action-controller
+	depends = ros-melodic-joint-state-controller
+	depends = ros-melodic-joint-trajectory-controller
+	depends = ros-melodic-effort-controllers
+	depends = ros-melodic-velocity-controllers
+	source = ros-melodic-ros-controllers-0.17.2.tar.gz::https://github.com/ros-controls/ros_controllers/archive/0.17.2.tar.gz
+	sha256sums = fdd93a3aea7d140b1c04849790e81195f76fb421c7dfa51c86dcf22698f32b3e
+
+pkgname = ros-melodic-ros-controllers
+

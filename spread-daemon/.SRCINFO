@@ -1,0 +1,21 @@
+pkgbase = spread-daemon
+	pkgdesc = An open source high performance messaging service - Daemon and C API
+	pkgver = 5.0.1
+	pkgrel = 1
+	url = http://www.spread.org
+	install = spread-daemon.install
+	arch = x86_64
+	arch = i686
+	arch = armv6h
+	license = custom
+	depends = glibc
+	options = !makeflags
+	source = http://www.spread.org/download/spread-src-5.0.1.tar.gz?FILE=spread-src-5.0.1.tar.gz&name=aur&company=archlinux&email=foo@example.org
+	source = spread-daemon.install
+	source = spread.service
+	md5sums = ca2e9da39bdaddb93178d33a52a6b00b
+	md5sums = 05e01e6f5e775be72608854e6f0d7695
+	md5sums = 93a08034a2a55644b8c57cd821e3a353
+
+pkgname = spread-daemon
+

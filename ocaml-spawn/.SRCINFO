@@ -1,0 +1,17 @@
+pkgbase = ocaml-spawn
+	pkgdesc = A small OCaml library for spawning sub-processes
+	pkgver = 0.15.1
+	pkgrel = 3
+	url = https://github.com/janestreet/spawn
+	arch = x86_64
+	arch = aarch64
+	license = MIT
+	checkdepends = ocaml-ppx_expect
+	makedepends = dune>=2.8.0
+	depends = ocaml>=4.05.0
+	depends = ocaml-ppx_bench
+	options = !strip
+	source = ocaml-spawn-0.15.1.tar.gz::https://github.com/janestreet/spawn/archive/v0.15.1.tar.gz
+	b2sums = 95478f0f575688ba66dc69229463c6cf029c39e6edf8cead2d38dfa0fc01bacf85d63f09d6d084d96a2537c55b02184ce69166be12628a8046c7e007222f648c
+
+pkgname = ocaml-spawn

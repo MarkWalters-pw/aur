@@ -1,0 +1,28 @@
+pkgbase = ros-melodic-filters
+	pkgdesc = ROS - This library provides a standardized interface for processing data as a sequence of filters.
+	pkgver = 1.8.1
+	pkgrel = 5
+	url = https://wiki.ros.org/filters
+	arch = i686
+	arch = x86_64
+	arch = aarch64
+	arch = armv7h
+	arch = armv6h
+	license = BSD
+	makedepends = cmake
+	makedepends = ros-build-tools
+	makedepends = ros-melodic-rostest
+	makedepends = ros-melodic-catkin
+	makedepends = ros-melodic-rosconsole
+	makedepends = ros-melodic-roscpp
+	makedepends = ros-melodic-pluginlib
+	makedepends = ros-melodic-roslib
+	depends = ros-melodic-pluginlib
+	depends = ros-melodic-rosconsole
+	depends = ros-melodic-roscpp
+	depends = ros-melodic-roslib
+	source = ros-melodic-filters-1.8.1.tar.gz::https://github.com/ros/filters/archive/1.8.1.tar.gz
+	sha256sums = 647958f9eba1cb304fe0e7899c3ee884b3b748720a41afb1c509ac8badf610c2
+
+pkgname = ros-melodic-filters
+

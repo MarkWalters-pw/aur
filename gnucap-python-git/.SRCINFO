@@ -1,0 +1,18 @@
+pkgbase = gnucap-python-git
+	pkgdesc = Python bindings for Gnucap
+	pkgver = r291.86868e8
+	pkgrel = 1
+	url = https://codeberg.org/gnucap/gnucap-python/src/branch/develop/README
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	depends = gnucap
+	depends = python-scipy
+	depends = swig
+	provides = gnucap-python
+	conflicts = gnucap-python
+	source = git+https://codeberg.org/gnucap/gnucap-python.git#branch=develop
+	md5sums = SKIP
+
+pkgname = gnucap-python-git
+

@@ -1,0 +1,24 @@
+pkgbase = emqx-git
+	pkgdesc = EMQX, a distributed, massively scalable, highly extensible MQTT message broker.
+	pkgver = 5.0.3.49
+	pkgrel = 1
+	url = https://github.com/emqx/emqx
+	install = emqx.install
+	arch = x86_64
+	license = APACHE
+	makedepends = cmake
+	makedepends = erlang-nox
+	makedepends = git
+	makedepends = unzip
+	makedepends = systemd
+	depends = ncurses
+	depends = erlang-nox
+	provides = emqx
+	provides = emqx-git
+	conflicts = emqx
+	conflicts = emqx-bin
+	backup = etc/emqx/emqx.conf
+	source = git+https://github.com/emqx/emqx.git
+	sha256sums = SKIP
+
+pkgname = emqx-git

@@ -1,0 +1,17 @@
+pkgbase = python-papis-rofi-git
+	pkgdesc = Create simple GUIs using the Rofi application (fork for papis)
+	pkgver = 0.1.1.r2.5a60ed2
+	pkgrel = 1
+	url = https://pypi.org/project/papis-rofi/
+	arch = any
+	license = GPL
+	makedepends = python-setuptools
+	depends = python
+	depends = papis
+	depends = python-papis-python-rofi
+	provides = python-papis-rofi
+	source = git+https://github.com/papis/papis-rofi.git
+	sha256sums = SKIP
+
+pkgname = python-papis-rofi-git
+

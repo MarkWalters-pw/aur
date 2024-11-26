@@ -1,0 +1,18 @@
+pkgbase = spdk-git
+	pkgdesc = spdk-git: headers, libs, and scripts
+	pkgver = r0.0
+	pkgrel = 9
+	url = https://spdk.io/
+	arch = x86_64
+	license = BSD
+	makedepends = cmake
+	makedepends = meson
+	depends = glibc
+	provides = spdk
+	conflicts = spdk
+	conflicts = dpdk
+	source = spdk-git::git+https://github.com/spdk/spdk.git
+	sha256sums = SKIP
+
+pkgname = spdk-git
+

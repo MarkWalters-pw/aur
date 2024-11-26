@@ -1,0 +1,18 @@
+post_install() {
+  instruct
+  echo "and enable this extension with the gnome-tweaks tool."
+}
+
+post_upgrade() {
+  instruct
+  echo "for the upgrade to have an effect."
+}
+
+post_remove() {
+  glib-compile-schemas usr/share/glib-2.0/schemas/
+}
+
+instruct() {
+  post_remove
+  echo -n "Don't forget to restart GNOME Shell ([Alt]+[F2], r) "
+}

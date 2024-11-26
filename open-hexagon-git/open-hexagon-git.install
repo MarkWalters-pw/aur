@@ -1,0 +1,26 @@
+_create_files() {
+	# Ensure that these files exist and are writeable for 'games' group, but the package should not own them.
+	cd /var/lib/open-hexagon/
+
+	mkdir -p Replays
+	chmod 2775 Replays
+	chown :games -R Replays
+
+	mkdir -p Profiles
+	chmod 2775 Profiles
+	chown :games -R Profiles
+
+	touch log.txt
+	chmod 664 log.txt
+	chown :games log.txt
+
+	touch config.json
+	chmod 664 config.json
+	chown :games config.json
+}
+post_upgrade() {
+	_create_files
+}
+post_install() {
+	_create_files
+}
